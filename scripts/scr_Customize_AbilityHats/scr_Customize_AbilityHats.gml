@@ -327,7 +327,7 @@ function scr_Customize_AbilityHats()
 	abilityHatPaintOffset[i][k][h] = 0;
 	abilityHatPaintOffsetLerp[i][k][h] = 0;
 	h += 1;
-	abilityHatPaintTitle[i][k][h] = "Flyx Nostalgia";
+	abilityHatPaintTitle[i][k][h] = "Flux Nostalgia";
 	abilityHatPaint[i][k][h] = spr_Kirby_AbilityHat_Fire_KSSU_Palette_FluxNostalgia;
 	abilityHatPaintUnlocked[i][k][h] = true;
 	abilityHatPaintOffset[i][k][h] = 0;

@@ -65,7 +65,7 @@ function scr_Player_Climb()
 		
 		//Go Under The Ladder
 		
-		if ((place_meeting(x,y + 1,obj_Wall)) and ((keyboard_check(keyDown)) or (gamepad_button_check(0,gp_padd)))) state = playerStates.normal;
+		if ((place_meeting(x,y + 1,obj_Wall)) and (!instance_place(x,y + 1,obj_Wall).platform) and ((keyboard_check(keyDown)) or (gamepad_button_check(0,gp_padd)))) state = playerStates.normal;
 		
 		//Collision
 		

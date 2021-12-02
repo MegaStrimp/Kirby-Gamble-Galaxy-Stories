@@ -943,7 +943,7 @@ if (!global.pause)
 				case "Bell":
 				if (selectedPlayer == 0)
 				{
-					playerHatSkin = global.hatTypBellP1;
+					playerHatSkin = global.hatTypeBellP1;
 				}
 				else if (selectedPlayer == 1)
 				{

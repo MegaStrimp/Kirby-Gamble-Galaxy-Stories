@@ -35,6 +35,7 @@ itemYOffset = 0;
 itemYOffsetSpd = .075;
 itemYOffsetMax = 2;
 itemYOffsetDir = 1;
+imageAlpha = 1;
 
 //Timers
 

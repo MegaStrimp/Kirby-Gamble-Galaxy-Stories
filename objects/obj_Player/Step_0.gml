@@ -847,6 +847,17 @@ if (!global.pause)
 	    }
 	}
 	
+	//Ability Trophy Timer
+	
+	if (abilityTrophyTimer > 0)
+	{
+		abilityTrophyTimer -= 1;
+	}
+	else if (abilityTrophyTimer == 0)
+	{
+	    abilityTrophyTimer = -1;
+	}
+	
 	//Attack Timer
 	
 	if (attackTimer > 0)

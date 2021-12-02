@@ -28,6 +28,8 @@ if (!global.pause)
 	
 	//Give Ability
 	
+	imageAlpha = 1;
+	
 	if (place_meeting(x,y,obj_Player))
 	{
 		var collidedPlayer = instance_place(x,y,obj_Player);
@@ -41,8 +43,9 @@ if (!global.pause)
 			var playerAbility = global.abilityP2;
 			var playerCharacter = global.characterP2;
 		}
-		if ((playerCharacter == "kirby") and (ability != playerAbility))
+		if ((collidedPlayer.abilityTrophyTimer == -1) and (playerCharacter == "kirby") and (ability != playerAbility))
 		{
+			collidedPlayer.abilityTrophyTimer = collidedPlayer.abilityTrophyTimerMax;
 			if (ability != "none") collidedPlayer.blackAlphaBox = true;
 			collidedPlayer.swallowActionTimer = 0;
 			global.pause = true;
@@ -75,12 +78,8 @@ if (!global.pause)
 		}
 		else
 		{
-			image_alpha = .75;
+			imageAlpha = .5;
 		}
-	}
-	else
-	{
-		image_alpha = 1;
 	}
 	
 	//Slopes

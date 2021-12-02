@@ -7,9 +7,6 @@ var hudY = (camera_get_view_y(gameView) + camera_get_view_height(gameView)) - 24
 var paletteP1 = scr_SprayPaint_Setup(global.sprayPaintP1,global.characterP1);
 var paletteP2 = scr_SprayPaint_Setup(global.sprayPaintP2,global.characterP2);
 
-if (global.isHelperP1) paletteP1 = spr_Hud_Palette_Helper;
-if (global.isHelperP2) paletteP2 = spr_Hud_Palette_Helper;
-
 //P1 Ability
 
 var textIndex = scr_Hud_AbilityText("none",global.characterP1);
