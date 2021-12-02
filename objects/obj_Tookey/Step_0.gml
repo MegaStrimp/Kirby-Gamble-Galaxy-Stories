@@ -106,6 +106,8 @@ if (!global.pause)
 		}
 		else
 		{
+			hasXCollision = true;
+			hasYCollision = true;
 			hasGravity = true;
 		}
 		
@@ -124,7 +126,7 @@ if (!global.pause)
 			else
 			{
 				image_speed = 1;
-				sprite_index = sprReady;
+				sprite_index = sprIdle;
 			}
 		}
 		break;

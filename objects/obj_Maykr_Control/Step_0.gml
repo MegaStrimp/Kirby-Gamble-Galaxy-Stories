@@ -14,10 +14,26 @@ if (global.gambleMaykr)
 			{
 				if (deathRestartTimer == 0)
 				{
-					with (obj_Particle) instance_destroy();
-					with (obj_Projectile) instance_destroy();
-					scr_Render();
-					other.openMaykrMenu = true;
+					global.abilityP1 = "none";
+			global.abilityP2 = "none";
+			if (instance_exists(obj_Hud)) instance_destroy(obj_Hud);
+			with (obj_Particle) instance_destroy();
+			with (obj_Projectile) instance_destroy();
+			global.pause = true;
+			if (instance_exists(obj_Camera)) obj_Camera.freezeFrameTimer = -1;
+			active = false;
+			with (obj_Maykr_Spawner)
+			{
+				active = false;
+				visible = true;
+				if ((spawnedItemIndex == obj_Player) and (instance_exists(obj_Camera)))
+				{
+					obj_Camera.cameraX = x - (obj_Camera.viewWidth / 2);
+					obj_Camera.cameraY = y - (obj_Camera.viewHeight / 2);
+				}
+				if (spawnedItem != -1) instance_destroy(spawnedItem);
+			}
+			openMaykrMenu = false;
 				}
 			}
 		}

@@ -993,6 +993,7 @@ function scr_Player_HatPalette(argument0,argument1)
 				}
 				break;
 			}
+			break;
 			
 			case "bell":
 			if (player == 0)
@@ -1056,6 +1057,7 @@ function scr_Player_HatPalette(argument0,argument1)
 				}
 				break;
 			}
+			break;
 			
 			case "sleep":
 			if (player == 0)
