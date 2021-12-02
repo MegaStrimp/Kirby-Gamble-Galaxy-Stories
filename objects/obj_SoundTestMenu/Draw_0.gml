@@ -32,7 +32,10 @@ switch (page)
 	subgameOffsetLerp = lerp(subgameOffsetLerp,subgameOffset * 8,.25);
 	miscOffsetLerp = lerp(miscOffsetLerp,miscOffset * 8,.25);
 	
-	draw_sprite_ext(spr_Menu_Box_Tall2,0,10,45,image_xscale,image_yscale,image_angle,image_blend,.75);
+	draw_set_color(c_black);
+	draw_set_alpha(.75);
+	draw_roundrect(10,45,160,265,false);
+	draw_set_alpha(1);
 	
 	draw_sprite(spr_Menu_Options_CursorArrow,0,8,47 + (selection * 36));
 	

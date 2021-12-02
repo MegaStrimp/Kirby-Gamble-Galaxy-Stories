@@ -8,7 +8,10 @@ draw_sprite(spr_Menu_Saves_Medals_Empty,0,4 + hudOffset,5);
 
 //Draw Text
 
-draw_sprite_ext(spr_Menu_Box_Wide1,0,65,188,image_xscale,image_yscale,image_angle,image_blend,.75);
+draw_set_color(c_black);
+draw_set_alpha(.75);
+draw_roundrect(65,188,415,268,false);
+draw_set_alpha(1);
 
 draw_set_color(c_white);
 if (global.language == 0)

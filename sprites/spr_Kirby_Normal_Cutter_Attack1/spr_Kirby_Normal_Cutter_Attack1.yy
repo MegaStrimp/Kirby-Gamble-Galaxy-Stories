@@ -44,7 +44,7 @@
     "spriteId": {"name":"spr_Kirby_Normal_Cutter_Attack1","path":"sprites/spr_Kirby_Normal_Cutter_Attack1/spr_Kirby_Normal_Cutter_Attack1.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 21.0,
+    "playbackSpeed": 27.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

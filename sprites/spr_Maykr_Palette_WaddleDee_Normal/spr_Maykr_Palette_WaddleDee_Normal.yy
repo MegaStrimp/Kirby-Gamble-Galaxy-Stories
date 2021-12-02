@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Palettes",
-    "path": "folders/Sprites/Maykr/Palettes.yy",
+    "path": "folders/Sprites/Subgames/Maykr/Palettes.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Maykr_Palette_WaddleDee_Normal",

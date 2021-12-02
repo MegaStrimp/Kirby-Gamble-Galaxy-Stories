@@ -20,15 +20,15 @@ function scr_Customize_Familiars()
 	
 	familiarLevel[i] = global.gambleFamiliarLevel;
 	familiarExp[i] = global.gambleFamiliarExp;
-	familiarMaxExp[i][1] = -1;
-	familiarMaxExp[i][2] = -1;
-	familiarMaxExp[i][3] = -1;
-	familiarMaxExp[i][4] = -1;
-	familiarMaxExp[i][5] = -1;
-	familiarMaxExp[i][6] = -1;
-	familiarMaxExp[i][7] = -1;
-	familiarMaxExp[i][8] = -1;
-	familiarMaxExp[i][9] = -1;
+	familiarMaxExp[i][1] = 100;
+	familiarMaxExp[i][2] = 100;
+	familiarMaxExp[i][3] = 100;
+	familiarMaxExp[i][4] = 100;
+	familiarMaxExp[i][5] = 100;
+	familiarMaxExp[i][6] = 100;
+	familiarMaxExp[i][7] = 100;
+	familiarMaxExp[i][8] = 100;
+	familiarMaxExp[i][9] = 100;
 	
 	var h = 0;
 	familiarStatTitle[i][h] = "ATK";
@@ -75,15 +75,15 @@ function scr_Customize_Familiars()
 	
 	familiarLevel[i] = global.happyPeaFamiliarLevel;
 	familiarExp[i] = global.happyPeaFamiliarExp;
-	familiarMaxExp[i][1] = -1;
-	familiarMaxExp[i][2] = -1;
-	familiarMaxExp[i][3] = -1;
-	familiarMaxExp[i][4] = -1;
-	familiarMaxExp[i][5] = -1;
-	familiarMaxExp[i][6] = -1;
-	familiarMaxExp[i][7] = -1;
-	familiarMaxExp[i][8] = -1;
-	familiarMaxExp[i][9] = -1;
+	familiarMaxExp[i][1] = 100;
+	familiarMaxExp[i][2] = 100;
+	familiarMaxExp[i][3] = 100;
+	familiarMaxExp[i][4] = 100;
+	familiarMaxExp[i][5] = 100;
+	familiarMaxExp[i][6] = 100;
+	familiarMaxExp[i][7] = 100;
+	familiarMaxExp[i][8] = 100;
+	familiarMaxExp[i][9] = 100;
 	
 	var h = 0;
 	familiarStatTitle[i][h] = "ATK";
@@ -118,15 +118,15 @@ function scr_Customize_Familiars()
 	
 	familiarLevel[i] = global.epicJarFamiliarLevel;
 	familiarExp[i] = global.epicJarFamiliarExp;
-	familiarMaxExp[i][1] = -1;
-	familiarMaxExp[i][2] = -1;
-	familiarMaxExp[i][3] = -1;
-	familiarMaxExp[i][4] = -1;
-	familiarMaxExp[i][5] = -1;
-	familiarMaxExp[i][6] = -1;
-	familiarMaxExp[i][7] = -1;
-	familiarMaxExp[i][8] = -1;
-	familiarMaxExp[i][9] = -1;
+	familiarMaxExp[i][1] = 100;
+	familiarMaxExp[i][2] = 100;
+	familiarMaxExp[i][3] = 100;
+	familiarMaxExp[i][4] = 100;
+	familiarMaxExp[i][5] = 100;
+	familiarMaxExp[i][6] = 100;
+	familiarMaxExp[i][7] = 100;
+	familiarMaxExp[i][8] = 100;
+	familiarMaxExp[i][9] = 100;
 	
 	var h = 0;
 	familiarStatTitle[i][h] = "ATK";
@@ -161,15 +161,15 @@ function scr_Customize_Familiars()
 	
 	familiarLevel[i] = global.krackleFamiliarLevel;
 	familiarExp[i] = global.krackleFamiliarExp;
-	familiarMaxExp[i][1] = -1;
-	familiarMaxExp[i][2] = -1;
-	familiarMaxExp[i][3] = -1;
-	familiarMaxExp[i][4] = -1;
-	familiarMaxExp[i][5] = -1;
-	familiarMaxExp[i][6] = -1;
-	familiarMaxExp[i][7] = -1;
-	familiarMaxExp[i][8] = -1;
-	familiarMaxExp[i][9] = -1;
+	familiarMaxExp[i][1] = 100;
+	familiarMaxExp[i][2] = 100;
+	familiarMaxExp[i][3] = 100;
+	familiarMaxExp[i][4] = 100;
+	familiarMaxExp[i][5] = 100;
+	familiarMaxExp[i][6] = 100;
+	familiarMaxExp[i][7] = 100;
+	familiarMaxExp[i][8] = 100;
+	familiarMaxExp[i][9] = 100;
 	
 	var h = 0;
 	familiarStatTitle[i][h] = "ATK";

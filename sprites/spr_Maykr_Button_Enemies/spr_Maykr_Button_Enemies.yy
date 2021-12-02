@@ -74,7 +74,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Buttons",
-    "path": "folders/Sprites/Maykr/Buttons.yy",
+    "path": "folders/Sprites/Subgames/Maykr/Buttons.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Maykr_Button_Enemies",

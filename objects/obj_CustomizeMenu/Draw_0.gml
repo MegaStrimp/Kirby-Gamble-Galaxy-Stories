@@ -29,7 +29,10 @@ switch (page)
 	player1OffsetLerp = lerp(player1OffsetLerp,player1Offset * 8,.25);
 	player2OffsetLerp = lerp(player2OffsetLerp,player2Offset * 8,.25);
 	
-	draw_sprite_ext(spr_Menu_Box_Tall2,0,10,45,image_xscale,image_yscale,image_angle,image_blend,.75);
+	draw_set_color(c_black);
+	draw_set_alpha(.75);
+	draw_roundrect(10,45,160,265,false);
+	draw_set_alpha(1);
 	
 	switch (selection)
 	{
@@ -55,7 +58,10 @@ switch (page)
 	hatPaintsOffsetLerp = lerp(hatPaintsOffsetLerp,hatPaintsOffset * 8,.25);
 	familiarsOffsetLerp = lerp(familiarsOffsetLerp,familiarsOffset * 8,.25);
 	
-	draw_sprite_ext(spr_Menu_Box_Tall2,0,10,45,image_xscale,image_yscale,image_angle,image_blend,.75);
+	draw_set_color(c_black);
+	draw_set_alpha(.75);
+	draw_roundrect(10,45,160,265,false);
+	draw_set_alpha(1);
 	
 	switch (selection)
 	{
@@ -94,7 +100,10 @@ switch (page)
 	
 	textY = lerp(textY,147 - (selection * 36),.25);
 	
-	draw_sprite_ext(spr_Menu_Box_Tall2,0,10,45,image_xscale,image_yscale,image_angle,image_blend,.75);
+	draw_set_color(c_black);
+	draw_set_alpha(.75);
+	draw_roundrect(10,45,160,265,false);
+	draw_set_alpha(1);
 	
 	draw_sprite(spr_Menu_Options_CursorArrow,0,8,141);
 	
@@ -932,9 +941,24 @@ switch (page)
 	draw_roundrect(336,64,476,184,false);
 	draw_set_alpha(1);
 	
+	draw_sprite(spr_Menu_Collection_Customize_Text_Lvl,0,239,4);
+	scr_Draw_Text_Color_Outline(290,4,familiarLevel[selection],-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	
+	draw_sprite(spr_Menu_Collection_Customize_Text_Exp,0,285,45);
+	scr_Draw_Text_Color_Outline(332,45,string(familiarExp[selection]) + " / " + string(familiarMaxExp[selection][familiarLevel[selection]]),-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	
+	draw_sprite(spr_Menu_Collection_Customize_ExpBar_Border,0,297,32);
+	draw_sprite_part(spr_Menu_Collection_Customize_ExpBar_Inner,0,0,0,sprite_get_width(spr_Menu_Collection_Customize_ExpBar_Inner) * (familiarExp[selection] / familiarMaxExp[selection][familiarLevel[selection]]),sprite_get_height(spr_Menu_Collection_Customize_ExpBar_Inner),298,33);
+	
 	draw_set_halign(fa_center);
-	scr_Draw_Text_Color_Outline(406,66,familiarPaintTitle[selection][0],-1,350,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	scr_Draw_Text_Color_Outline(406,66,familiarPaintTitle[selection][0],-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 	draw_set_halign(fa_left);
+	//ADD THE RING HERE
+	draw_sprite(spr_Menu_Collection_Customize_FamiliarPalette_Border,0,340,86);
+	for (var i = 0; i < 5; i++)
+	{
+		draw_sprite(spr_Menu_Collection_Customize_FamiliarPalette_Default,0,344 + (26 * i),91);
+	}
 	
 	for (var i = 0; i < array_length(familiarStatTitle[selection]); i++)
 	{

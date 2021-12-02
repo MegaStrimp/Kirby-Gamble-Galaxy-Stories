@@ -1,5 +1,5 @@
 ///@description Draw
-
+/*
 //Draw Hud
 
 hudOffset = lerp(hudOffset,0,.1);

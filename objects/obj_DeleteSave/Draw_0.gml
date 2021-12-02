@@ -10,7 +10,10 @@ draw_sprite(spr_Menu_Saves_Medals_Empty,0,4 + hudOffset,5);
 
 if (page != 3)
 {
-	draw_sprite_ext(spr_Menu_Box_Wide2,0,105,45,image_xscale,image_yscale,image_angle,image_blend,.75);
+	draw_set_color(c_black);
+	draw_set_alpha(.75);
+	draw_roundrect(105,45,375,245,false);
+	draw_set_alpha(1);
 	
 	draw_set_color(c_white);
 	if (global.language == 0)

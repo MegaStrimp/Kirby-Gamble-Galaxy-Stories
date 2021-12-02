@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Debug Skins",
-    "path": "folders/Sprites/Maykr/Debug Skins.yy",
+    "path": "folders/Sprites/Subgames/Maykr/Debug Skins.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Maykr_Debug_Wall",

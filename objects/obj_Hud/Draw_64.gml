@@ -3,7 +3,7 @@
 //Variables
 
 var hudX = 29;
-var hudY = camera_get_view_height(gameView) - 29;
+var hudY = 270 - 29;
 var characterP1 = global.characterP1;
 var characterP2 = global.characterP2;
 var paletteP1 = global.sprayPaintP1;
@@ -20,7 +20,7 @@ cutsceneLineOffset = lerp(cutsceneLineOffset,-580 + (580 * global.cutscene),.1);
 
 draw_set_color(c_black);
 draw_rectangle(-50 + cutsceneLineOffset,0,530 + cutsceneLineOffset,24,false);
-draw_rectangle(-50 - cutsceneLineOffset,camera_get_view_height(gameView),530 - cutsceneLineOffset,camera_get_view_height(gameView) - 24,false);
+draw_rectangle(-50 - cutsceneLineOffset,270,530 - cutsceneLineOffset,270 - 24,false);
 
 //Halberd Escape
 
@@ -35,7 +35,7 @@ if (global.halberdEscape)
 	
 	//Draw Timer
 	
-	var timerX = (camera_get_view_width(gameView) / 2) - 32;
+	var timerX = (480 / 2) - 32;
 	var timerY = 4;
 	
 	draw_sprite_ext(spr_Hud_Timer,0,timerX,timerY,1,1,image_angle,image_blend,drawAlpha);
@@ -126,7 +126,7 @@ if (global.isHub)
 		break;
 	}
 	stageTitleOffset = lerp(stageTitleOffset,0,.1);
-	draw_sprite(stageTitleSprite,0,camera_get_view_width(gameView) + stageTitleOffset,0);
+	draw_sprite(stageTitleSprite,0,480 + stageTitleOffset,0);
 }
 else
 {
@@ -287,11 +287,11 @@ if (instance_number(obj_Player) > 1)
 	
 	var iconIndex = scr_Hud_AbilityIcon(global.abilityP2,global.characterP2);
 	if ((global.shaders) and (global.abilityP2 == "none")) pal_swap_set(pal,1 + (flashP2 * 2),false);
-	draw_sprite_ext(iconIndex,0,hudX + camera_get_view_width(gameView) - (sprite_get_width(spr_Hud_Icon_Kirby) / 2) - 38,hudY,1,1,image_angle,image_blend,drawAlpha);
+	draw_sprite_ext(iconIndex,0,hudX + 480 - (sprite_get_width(spr_Hud_Icon_Kirby) / 2) - 38,hudY,1,1,image_angle,image_blend,drawAlpha);
 	if ((global.shaders) and (global.abilityP2 == "none")) pal_swap_reset();
 	
-	//draw_sprite_ext(spr_Hud_IconGlow,0,hudX + camera_get_view_width(gameView) - (sprite_get_width(spr_Hud_Icon_Kirby) / 2) - 33,hudY,1,1,image_angle,image_blend,drawAlpha);
-	//draw_sprite_ext(spr_Hud_IconBorder,0,hudX + camera_get_view_width(gameView) - (sprite_get_width(spr_Hud_Icon_Kirby) / 2) - 33,hudY,1,1,image_angle,image_blend,drawAlpha);
+	//draw_sprite_ext(spr_Hud_IconGlow,0,hudX + 480 - (sprite_get_width(spr_Hud_Icon_Kirby) / 2) - 33,hudY,1,1,image_angle,image_blend,drawAlpha);
+	//draw_sprite_ext(spr_Hud_IconBorder,0,hudX + 480 - (sprite_get_width(spr_Hud_Icon_Kirby) / 2) - 33,hudY,1,1,image_angle,image_blend,drawAlpha);
 	
 	//P2 Health
 	
@@ -373,7 +373,7 @@ if (instance_number(obj_Player) > 1)
 			break;
 		}
 		
-	    draw_sprite_ext(spr_Hud_HealthbarBack_Kirby,i,hudX + camera_get_view_width(gameView) - (sprite_get_width(spr_Hud_Icon_Kirby) / 2) - sprite_get_width(spr_Hud_HealthbarBack_Kirby) - 40 - offset,hudY + 11,-1,1,image_angle,image_blend,drawAlpha);
+	    draw_sprite_ext(spr_Hud_HealthbarBack_Kirby,i,hudX + 480 - (sprite_get_width(spr_Hud_Icon_Kirby) / 2) - sprite_get_width(spr_Hud_HealthbarBack_Kirby) - 40 - offset,hudY + 11,-1,1,image_angle,image_blend,drawAlpha);
 	}
 	if (global.shaders) pal_swap_reset();
 	
@@ -402,13 +402,13 @@ if (instance_number(obj_Player) > 1)
 			break;
 		}
 		
-		draw_sprite_ext(spr_Hud_Healthbar_Kirby,i,hudX + camera_get_view_width(gameView) - (sprite_get_width(spr_Hud_Icon_Kirby) / 2) - sprite_get_width(spr_Hud_HealthbarBack_Kirby) - 40 - offset,hudY + 11,-1,1,image_angle,image_blend,drawAlpha);
+		draw_sprite_ext(spr_Hud_Healthbar_Kirby,i,hudX + 480 - (sprite_get_width(spr_Hud_Icon_Kirby) / 2) - sprite_get_width(spr_Hud_HealthbarBack_Kirby) - 40 - offset,hudY + 11,-1,1,image_angle,image_blend,drawAlpha);
 	}
 	if (global.shaders) pal_swap_reset();
 	
 	//P2 Health Background
 	
-	draw_sprite_ext(hbackground,0,hudX + camera_get_view_width(gameView) - (sprite_get_width(spr_Hud_Icon_Kirby) / 2) - 38,hudY,-1,1,image_angle,image_blend,image_alpha);
+	draw_sprite_ext(hbackground,0,hudX + 480 - (sprite_get_width(spr_Hud_Icon_Kirby) / 2) - 38,hudY,-1,1,image_angle,image_blend,image_alpha);
 	
 	//P2 Text
 	
@@ -417,13 +417,13 @@ if (instance_number(obj_Player) > 1)
 	
 	var textIndex = scr_Hud_AbilityText(global.abilityP2,global.characterP2);
 	if ((global.shaders) and (global.abilityP2 == "none")) pal_swap_set(pal,1 + (flashP2 * 2),false);
-	draw_sprite_ext(textIndex,0,hudX + camera_get_view_width(gameView) - sprite_get_width(textIndex) - (sprite_get_width(spr_Hud_Icon_Kirby) / 2) - 64,hudY - 20,1,1,image_angle,image_blend,drawAlpha);
+	draw_sprite_ext(textIndex,0,hudX + 480 - sprite_get_width(textIndex) - (sprite_get_width(spr_Hud_Icon_Kirby) / 2) - 64,hudY - 20,1,1,image_angle,image_blend,drawAlpha);
 	if ((global.shaders) and (global.abilityP2 == "none")) pal_swap_reset();
 	
 	//P2 Big Shot
 	
-	//draw_sprite_ext(spr_Hud_BigShot_Back,0,camera_get_view_width(gameView) - 18,121,-1,1,image_angle,image_blend,drawAlpha);
-	//draw_sprite_ext(spr_Hud_BigShot_Border,0,camera_get_view_width(gameView) - 2,91,-1,1,image_angle,image_blend,drawAlpha);
+	//draw_sprite_ext(spr_Hud_BigShot_Back,0,480 - 18,121,-1,1,image_angle,image_blend,drawAlpha);
+	//draw_sprite_ext(spr_Hud_BigShot_Border,0,480 - 2,91,-1,1,image_angle,image_blend,drawAlpha);
 }
 
 //Variables

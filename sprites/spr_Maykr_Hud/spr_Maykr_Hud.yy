@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Hud",
-    "path": "folders/Sprites/Maykr/Hud.yy",
+    "path": "folders/Sprites/Subgames/Maykr/Hud.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Maykr_Hud",

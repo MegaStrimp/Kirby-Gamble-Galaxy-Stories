@@ -74,7 +74,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Misc",
-    "path": "folders/Sprites/Maykr/Misc.yy",
+    "path": "folders/Sprites/Subgames/Maykr/Misc.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Maykr_BorderLarge",

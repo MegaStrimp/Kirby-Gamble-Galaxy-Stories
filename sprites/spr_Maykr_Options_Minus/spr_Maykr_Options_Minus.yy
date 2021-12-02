@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Options",
-    "path": "folders/Sprites/Maykr/Options.yy",
+    "path": "folders/Sprites/Subgames/Maykr/Options.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Maykr_Options_Minus",
