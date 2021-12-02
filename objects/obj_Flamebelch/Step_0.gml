@@ -1,0 +1,353 @@
+///@description Main
+
+//Characters
+
+if (setupTimer == 0)
+{
+	switch (character)
+	{
+		//Normal
+		
+		case 0:
+		sprIdle = spr_Flamebelch_Normal_Idle;
+		sprWalk = spr_Flamebelch_Normal_Walk;
+		sprDuck = spr_WaddleDee_Normal_Duck;
+		sprJump = spr_WaddleDee_Normal_Jump;
+		sprFall = spr_WaddleDee_Normal_Fall;
+		sprSwing = spr_WaddleDee_Normal_Swing;
+		sprHurt = spr_Flamebelch_Normal_Hurt;
+		break;
+	}
+}
+
+//Event Inherited
+
+event_inherited();
+
+if (!global.pause)
+{
+	//Get Inhaled
+	
+	if (!parasol) scr_Object_Inhale();
+	
+	//Hurt Player
+	
+	scr_Enemy_HurtsPlayer();
+	
+	//States
+	state = 1;
+	switch (state)
+	{
+		//Horizontal Wave Movement
+		
+		case 0:
+		if ((!hurt) and (!attack) and (!duck) and (!walkDuck))
+		{
+			if (parasol)
+			{
+				scr_AI_HorizontalWaveMovement(false);
+			}
+			else
+			{
+				scr_AI_HorizontalWaveMovement(true);
+			}
+		}
+		else
+		{
+			hsp = 0;
+		}
+		
+		if ((hurt) and (sprHurt != "self"))
+		{
+			image_speed = 1;
+			sprite_index = sprHurt;
+		}
+		else
+		{
+			if (parasol)
+			{
+				image_speed = 0;
+				
+				if (sign(dirX) == 1)
+				{
+					if (abs(hsp) < (movespeed / 1.25))
+					{
+						if (sign(walkDirX) == 1)
+						{
+							image_index = 0;
+						}
+						else
+						{
+							image_index = 2;
+						}
+					}
+					else
+					{
+						image_index = 1;
+					}
+				}
+				else
+				{
+					if (abs(hsp) < (movespeed / 1.25))
+					{
+						if (sign(walkDirX) == 1)
+						{
+							image_index = 2;
+						}
+						else
+						{
+							image_index = 0;
+						}
+					}
+					else
+					{
+						image_index = 1;
+					}
+				}
+				
+				sprite_index = sprSwing;
+			}
+			else
+			{
+				if (abs(hsp) < (movespeed / 2))
+				{
+					image_speed = 0;
+				}
+				else
+				{
+					image_speed = 1;
+				}
+				
+				if (place_meeting(x,y + 1,collisionY))
+				{
+					if ((duck) or (walkDuck))
+					{
+						sprite_index = sprDuck;
+					}
+					else
+					{
+					    sprite_index = sprWalk;
+					}
+				}
+				else
+				{
+				    if (vsp < 0)
+					{
+						sprite_index = sprJump;
+					}
+					else
+					{
+						sprite_index = sprFall;
+					}
+				}
+			}
+		}
+		break;
+		
+		//Horizontal Straight Movement
+		
+		case 1:
+		if ((!hurt) and (!attack) and (!duck) and (!walkDuck))
+		{
+			if (parasol)
+			{
+				scr_AI_HorizontalStraightMovement(false,true);
+			}
+			else
+			{
+				scr_AI_HorizontalStraightMovement(true,true);
+			}
+		}
+		else
+		{
+			hsp = 0;
+		}
+		
+		if ((hurt) and (sprHurt != "self"))
+		{
+			image_speed = 1;
+			sprite_index = sprHurt;
+		}
+		else
+		{
+			image_speed = 1;
+			
+			if (parasol)
+			{
+				image_speed = 0;
+				
+				if (sign(dirX) == 1)
+				{
+					if (abs(hsp) < (movespeed / 1.25))
+					{
+						if (sign(walkDirX) == 1)
+						{
+							image_index = 0;
+						}
+						else
+						{
+							image_index = 2;
+						}
+					}
+					else
+					{
+						image_index = 1;
+					}
+				}
+				else
+				{
+					if (abs(hsp) < (movespeed / 1.25))
+					{
+						if (sign(walkDirX) == 1)
+						{
+							image_index = 2;
+						}
+						else
+						{
+							image_index = 0;
+						}
+					}
+					else
+					{
+						image_index = 1;
+					}
+				}
+				
+				sprite_index = sprSwing;
+			}
+			else
+			{
+				if (abs(hsp) < (movespeed / 2))
+				{
+					image_speed = 0;
+				}
+				else
+				{
+					image_speed = 1;
+				}
+				
+				if (place_meeting(x,y + 1,collisionY))
+				{
+					if ((duck) or (walkDuck))
+					{
+						sprite_index = sprDuck;
+					}
+					else
+					{
+					    if (hsp == 0)
+						{
+							sprite_index = sprIdle;
+						}
+						else
+						{
+							sprite_index = sprWalk;
+						}
+					}
+				}
+				else
+				{
+				    if (vsp < 0)
+					{
+						sprite_index = sprJump;
+					}
+					else
+					{
+						sprite_index = sprFall;
+					}
+				}
+			}
+		}
+		break;
+	}
+	
+	//Walk Duck
+	
+	if ((!walkDuck) and (place_meeting(x,y + (1 + vspFinal),collisionY)) and (vsp > 1) and (!attack))
+	{
+		walkDuck = true;
+		walkDuckTimer = walkDuckTimerMax;
+		scaleExX = .25;
+		scaleExY = -.25;
+		audio_play_sound(snd_Squish,0,false);
+		var parDirection = irandom_range(0,359);
+		var parScaleDir = 1;
+		if ((parDirection > 90) and (parDirection <= 270))
+		{
+			parScaleDir = -1;
+		}
+		var parSquish = instance_create_depth(x,y,depth + 1,obj_Particle);
+		parSquish.sprite_index = spr_Particle_SmallStar;
+		parSquish.destroyTimer = 30;
+		parSquish.spdBuiltIn = 6;
+		parSquish.fricSpd = .6;
+		parSquish.direction = parDirection;
+		parSquish.dir = parScaleDir;
+	}
+	
+	//Walk Duck Timer
+	
+	if (walkDuckTimer > 0)
+	{
+		walkDuckTimer -= 1;
+	}
+	else if (walkDuckTimer == 0)
+	{
+		walkDuck = false;
+		walkDuckTimer = -1;
+	}
+	
+	//Jump Timer
+	
+	if (!parasol)
+	{
+		if (jumpTimer > 0)
+		{
+			jumpTimer -= 1;
+		}
+		else if (jumpTimer == 0)
+		{
+			if ((!hurt) and (place_meeting(x,y + 1,collisionY)) and (!place_meeting(x,y - jumpspeed,collisionY)))
+			{
+				switch (jumpState)
+				{
+					case 0:
+					jump = true;
+					duck = true;
+					jumpState += 1;
+					jumpTimer = 30;
+					break;
+				
+					case 1:
+					var jumpSound = choose(snd_WaddleDee1,snd_WaddleDee6,snd_WaddleDee7,snd_WaddleDee8,snd_WaddleDee9,snd_WaddleDee10,snd_WaddleDee11);
+					audio_play_sound(jumpSound,0,false);
+					var parJump = instance_create_depth(x - (7 * dirX),y + 5,depth + 1,obj_Particle);
+					parJump.sprite_index = spr_Particle_Jump;
+					parJump.destroyAfterAnimation = true;
+					parJump.spdBuiltIn = 6;
+					parJump.fricSpd = .6;
+					parJump.direction = 90 + (20 * dirX);
+					scaleExX = -.25;
+					scaleExY = .25;
+					vsp = -jumpspeed;
+					jump = false;
+					duck = false;
+					jumpState = 0;
+					jumpTimer = jumpTimerMax;
+					break;
+				}
+			}
+			else
+			{
+				jump = false;
+				duck = false;
+				jumpTimer = jumpTimerMax;
+			}
+		}
+	}
+}
+else
+{
+	image_speed = 0;
+	shakeX = 0;
+	shakeY = 0;
+}

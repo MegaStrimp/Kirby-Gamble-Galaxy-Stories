@@ -1,0 +1,51 @@
+///@description Room Start
+
+//Enable View
+
+view_enabled = true;
+view_visible[0] = true;
+
+//Movement
+
+switch (room)
+{
+	case rm_StageSelect:
+	{
+		cameraX = (obj_StageSelect.x - ((viewWidth / zoom) / 2) + ((offsetX + cinematicXOffset) / zoom));
+		cameraY = (obj_StageSelect.y - ((viewHeight / zoom) / 2) + ((offsetY + cinematicYOffset) / zoom));
+	}
+	break;
+	
+	case rm_Cutscene_Intro:
+	{
+		x = 24;
+		y = 840;
+		path_start(pth_Cutscene_Intro,1,path_action_stop,0);
+	}
+	break;
+	
+	case rm_Maykr:
+	{
+		x = 0;
+		y = 0;
+	}
+	break;
+	
+	default:
+	if (instance_exists(obj_Player))
+	{
+		cameraX = obj_Player.x - ((viewWidth / zoom) / 2);
+		cameraY = obj_Player.y - ((viewHeight / zoom) / 2);
+	}
+	else if ((objectFollowing != -1) and (instance_exists(objectFollowing)))
+	{
+		cameraX = objectFollowing.x - ((viewWidth / zoom) / 2);
+		cameraY = objectFollowing.y - ((viewHeight / zoom) / 2);
+	}
+	else
+	{
+		cameraX = room_width / 2;
+		cameraY = room_height / 2;
+	}
+	break;
+}

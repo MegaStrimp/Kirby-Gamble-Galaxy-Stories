@@ -1,0 +1,161 @@
+/// Perform movement
+
+// <<<< Initialize constant >>>>
+
+//  gridW (short for grid width)
+//- the width of a wall tile
+//- may be any strictly positive natural number
+var gridW = 24;
+//  gridH (short for grid width)
+//- the width of a wall tile
+//- may be any strictly positive natural number
+var gridH = 24;
+
+//  ldx (short for left distance on x-axis)
+//- indicates the horizontal distance between the x-coordinate of this instance
+//  and the x-coordinate of the left edge of te hitbox of this instance
+//  with respect to the wall tiles
+//- in other words, the x-coordinate of this instance relative to its hitbox
+//- may be any integer
+var ldx = 8;
+//  rdx (short for right distance on x-axis)
+//- indicates the horizontal distance between the x-coordinate of this instance
+//  and the x-coordinate of the right edge of te hitbox of this instance
+//  with respect to the wall tiles
+//- in other words, the width of the hitbox of this instance minus "ldx"
+//- may be any integer
+var rdx = 8;
+//  tdy (short for top distance on y-axis)
+//- indicates the vertical distance between the y-coordinate of this instance
+//  and the y-coordinate of the top edge of te hitbox of this instance
+//  with respect to the wall tiles
+//- in other words, the y-coordinate of this instance relative to its hitbox
+//- may be any integer
+var tdy = 8;
+//  bdy (short for bottom distance on y-axis)
+//- indicates the vertical distance between the y-coordinate of this instance
+//  and the y-coordinate of the bottom edge of te hitbox of this instance
+//  with respect to the wall tiles
+//- in other words, the height of the hitbox of this instance minus "tdy"
+//- may be any integer
+var bdy = 8;
+
+// <<<< Main loop >>>>
+
+//  tries
+//- indicates the amount of times this instance is still allowed
+//  to rotate in succession without moving in the meanwhile
+//  in this step
+//- this prevents an infinite loop when this instance gets stuck in a tight spot
+//- this variable may be aany integer in the range [0,5],
+//  but must be initialized to 4 or 5
+var tries = 5;
+
+// Set maximal precision for comparisons
+var eps = math_get_epsilon();
+math_set_epsilon(0);
+
+//  t (short for time remaining)
+//- indicates the amount of pixels this instance still has to move this step
+var t = abs(spd);
+// As long as this instance still has to move
+while t > 0 {
+    
+    // <<<< Perform movement >>>>
+    
+    /*\
+    | | The movement of this instance consists of several line segments.
+    | | Points at the path where the direction of this instance may change are called "events".
+    | | Events occur where one of the edges of this hitbox of this instance with respect to wall tiles
+    | | enters a new wall tile (a collision may happen or the instance may have just crosed a corner)
+    | | or when the current step ends.
+    | | The first next line segment of the path starts at the current position of the instance
+    | | and ends at the first next occuring event.
+    \*/
+    
+    //  d (short for distance)
+    //- indicates the length of the next line segment
+    var d;
+    // make a case distinction over the moving direction (dir, dir + 180 or dir - 180)
+    switch (dir + (1 - sign(spd)) * 90) % 360 {
+    case 0: // case moving right
+        // let d be the shortest distance of 3 line segments:
+        // 1) till the step ends: t
+        // 2) till the left edge enters a new tile: floor((x - ldx) / gridW + 1) * gridW - (x - ldx)
+        // 3) till the right edge enters a new tile: floor((x + rdx) / gridW + 1) * gridW - (x + rdx)
+        d = min(t, floor((x - ldx) / gridW + 1) * gridW - (x - ldx), floor((x + rdx) / gridW + 1) * gridW - (x + rdx));
+        break;
+    case 90: // case moving up
+        // let d be the shortest distance of 3 line segments:
+        // 1) till the step ends: t
+        // 2) till the top edge enters a new tile: (y - tdy) - ceil((y - tdy) / gridH - 1) * gridH
+        // 3) till the bottom edge enters a new tile: (y + bdy) - ceil((y + bdy) / gridH - 1) * gridH
+        d = min(t, (y - tdy) - ceil((y - tdy) / gridH - 1) * gridH, (y + bdy) - ceil((y + bdy) / gridH - 1) * gridH);
+        break;
+    case 180: // case moving left
+        // let d be the shortest distance of 3 line segments:
+        // 1) till the step ends: t
+        // 2) till the left edge enters a new tile: (x - ldx) - ceil((x - ldx) / gridW - 1) * gridW
+        // 3) till the right edge enters a new tile: (x + rdx) - ceil((x + rdx) / gridW - 1) * gridW
+        d = min(t, (x - ldx) - ceil((x - ldx) / gridW - 1) * gridW, (x + rdx) - ceil((x + rdx) / gridW - 1) * gridW);
+        break;
+    case 270: // case moving down
+        // let d be the shortest distance of 3 line segments:
+        // 1) till the step ends: t
+        // 2) till the top edge enters a new tile: floor((y - tdy) / gridH + 1) * gridH - (y - tdy)
+        // 3) till the bottom edge enters a new tile: floor((y + bdy) / gridH + 1) * gridH - (y + bdy)
+        d = min(t, floor((y - tdy) / gridH + 1) * gridH - (y - tdy), floor((y + bdy) / gridH + 1) * gridH - (y + bdy));
+        break;
+    }
+    
+    // <<<< Collision checks >>>>
+    
+    // if the instance just hit a wall
+    if x == round(x) && y == round(y)
+    && place_meeting(round(x + lengthdir_x(sign(spd), dir)), round(y + lengthdir_y(sign(spd), dir)), obj_parent_wall) {
+        // rotate to scale the wall
+        dir = (dir + (2 - sign(spd)) * 90) mod 360;
+        // fix small imprecisions in coordinates (fixes bugs)
+        x = round(x);
+        y = round(y);
+        // we just rotated without moving, so update the "tries" counter
+        tries -= 1;
+        // if we've been rotating for too long without moving
+        if tries == 0 {
+            // we detected an infinite loop!
+            // end the loop prematurely
+            t = 0;
+        }
+    } else {
+        //  dx (short for difference in x-coordinates)
+        //- the amount of pixels on the x-axis we move along the next line segment
+        var dx = lengthdir_x(d * sign(spd), dir);
+        //  dy (short for difference in y-coordinates)
+        //- the amount of pixels on the y-axis we move along the next line segment
+        var dy = lengthdir_y(d * sign(spd), dir);
+        // if we don't move at all (this check prevents a bug where lengthdir results get rounded and near-infinite loops are created)
+        if dx == 0 && dy == 0 {
+            // fix small imprecisions in coordinates
+            x = round(x);
+            y = round(y);
+        } else {
+            // update the coordinates of this instance
+            x += dx;
+            y += dy;
+        }
+        // update the remaining distance "t" to move in this step
+        t -= d;
+        // we just moved, so we may reset the "tries" counter
+        tries = 5;
+        
+        // if we cross a corner
+        if x == round(x) && y == round(y)
+        && !place_meeting(round(x + dcos(dir - 90)), round(y - dsin(dir - 90)), obj_parent_wall)
+        && place_meeting(round(x + dcos(dir - 90) - lengthdir_x(sign(spd), dir)), round(y - dsin(dir - 90) - lengthdir_y(sign(spd), dir)), obj_parent_wall) {
+            // rotate along with the coner
+            dir = (dir + (2 + sign(spd)) * 90) mod 360;
+        }
+    }
+}
+
+math_set_epsilon(eps);
