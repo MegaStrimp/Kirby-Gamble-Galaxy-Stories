@@ -697,7 +697,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		//Spring
 	
 		case 13:
-		debugSpriteSelectedMax = 1;
+		debugSpriteSelectedMax = 0;
 		switch (debugSpriteSelected)
 		{
 			//Normal
@@ -724,7 +724,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		//Trampoline
 	
 		case 14:
-		debugSpriteSelectedMax = 1;
+		debugSpriteSelectedMax = 0;
 		switch (debugSpriteSelected)
 		{
 			//Normal

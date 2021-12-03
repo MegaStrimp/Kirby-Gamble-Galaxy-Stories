@@ -18,7 +18,7 @@ gravLimitNormal = 5;
 mask_index = spr_Anemonee_Mask;
 
 sprIdle = spr_Anemonee_Normal_Idle;
-sprHurt = "self";
+sprHurt = spr_Anemonee_Normal_Hurt;
 
 //Other Variables
 

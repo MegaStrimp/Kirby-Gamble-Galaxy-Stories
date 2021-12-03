@@ -128,7 +128,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	{
 		if (instance_exists(owner))
 		{
-			var projBeam = instance_create_depth(x ,y,depth + 1,obj_Projectile_Beam);
+			var projBeam = instance_create_depth(x,y - 4,depth + 1,obj_Projectile_Beam);
 			projBeam.imageSpeed = 1;
 			projBeam.owner = owner;
 			projBeam.dmg = 12;

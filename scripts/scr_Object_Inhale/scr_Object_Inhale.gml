@@ -13,6 +13,7 @@ function scr_Object_Inhale()
 			{
 				var shroom = instance_create_depth(x - 1,y - 9,depth - 1,obj_CappyShroom);
 				shroom.owner = id;
+				shroom.sprite_index = sprShroom;
 				thrown = false;
 				attack = false;
 				attackStopTimer = -1;

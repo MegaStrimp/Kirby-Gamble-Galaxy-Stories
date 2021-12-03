@@ -10,7 +10,7 @@ hsp = 0;
 vsp = 0;
 jumpspeed = 1;
 decel = .35;
-decelMax = 8;
+decelMax = 8.25;
 
 //Sprites
 

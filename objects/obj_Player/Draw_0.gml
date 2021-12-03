@@ -153,5 +153,5 @@ if ((playerIsHelper) and (helperTimer != -1))
 
 draw_set_font(fnt_DebugConsole);
 draw_set_color(c_black);
-
+/*
 draw_text(x,y - 12,string(global.hatPaletteBellModernP1));

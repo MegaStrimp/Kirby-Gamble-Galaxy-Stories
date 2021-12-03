@@ -655,6 +655,7 @@
     {"id":{"name":"snd_Jump","path":"sounds/snd_Jump/snd_Jump.yy",},"order":25,},
     {"id":{"name":"spr_Kirby_Normal_Spark_Attack1","path":"sprites/spr_Kirby_Normal_Spark_Attack1/spr_Kirby_Normal_Spark_Attack1.yy",},"order":158,},
     {"id":{"name":"spr_Kirby_Normal_ItemCarry_Light_Idle_SteepSlopeRBlink","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_Idle_SteepSlopeRBlink/spr_Kirby_Normal_ItemCarry_Light_Idle_SteepSlopeRBlink.yy",},"order":19,},
+    {"id":{"name":"bg_PopstarMoon_Space","path":"sprites/bg_PopstarMoon_Space/bg_PopstarMoon_Space.yy",},"order":5,},
     {"id":{"name":"spr_Kirby_Normal_Jump","path":"sprites/spr_Kirby_Normal_Jump/spr_Kirby_Normal_Jump.yy",},"order":28,},
     {"id":{"name":"spr_Kirby_AbilityHat_Beam_KSSU_FloatReady","path":"sprites/spr_Kirby_AbilityHat_Beam_KSSU_FloatReady/spr_Kirby_AbilityHat_Beam_KSSU_FloatReady.yy",},"order":13,},
     {"id":{"name":"spr_Kirby_AbilityHat_Scan_KSSU_Palette_Bitcrushed","path":"sprites/spr_Kirby_AbilityHat_Scan_KSSU_Palette_Bitcrushed/spr_Kirby_AbilityHat_Scan_KSSU_Palette_Bitcrushed.yy",},"order":1,},

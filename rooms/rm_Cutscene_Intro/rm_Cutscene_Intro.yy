@@ -15,7 +15,6 @@
   "layers": [
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_Cutscene_Control_Intro","path":"objects/obj_Cutscene_Control_Intro/obj_Cutscene_Control_Intro.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":0.0,"resourceVersion":"1.0","name":"inst_6EC8A41A","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[],"isDnd":false,"objectId":{"name":"obj_CutsceneControl","path":"objects/obj_CutsceneControl/obj_CutsceneControl.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":24.0,"y":0.0,"resourceVersion":"1.0","name":"inst_2D09ED76","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":24,"gridY":24,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Player","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":6,"gridY":6,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Enemies","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
@@ -104,7 +103,6 @@
     {"name":"inst_1072F43D","path":"rooms/rm_Cutscene_Intro/rm_Cutscene_Intro.yy",},
     {"name":"inst_61C0D586","path":"rooms/rm_Cutscene_Intro/rm_Cutscene_Intro.yy",},
     {"name":"inst_6EC8A41A","path":"rooms/rm_Cutscene_Intro/rm_Cutscene_Intro.yy",},
-    {"name":"inst_2D09ED76","path":"rooms/rm_Cutscene_Intro/rm_Cutscene_Intro.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

@@ -16,8 +16,8 @@ if (!global.pause)
 	//Animation
 	
 	image_speed = imageSpeed;
-	image_xscale = 1 + scaleOffset;
-	image_yscale = 1 - scaleOffset;
+	image_xscale = scale + scaleOffset;
+	image_yscale = scale - scaleOffset;
 	
 	sprite_index = sprIdle;
 }

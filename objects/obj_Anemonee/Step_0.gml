@@ -10,7 +10,7 @@ if (setupTimer == 0)
 		
 		case 0:
 		sprIdle = spr_Anemonee_Normal_Idle;
-		sprHurt = "self";
+		sprHurt = spr_Anemonee_Normal_Hurt;
 		break;
 	}
 }
