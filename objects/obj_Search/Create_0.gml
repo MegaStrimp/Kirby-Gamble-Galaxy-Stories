@@ -35,6 +35,7 @@ scaleExTempSpd = .01;
 scaleExTempSpdMax = .03;
 scaleExTempDir = 1;
 scaleExTempMax = .1;
+explosionResistance = true;
 
 //Timers
 

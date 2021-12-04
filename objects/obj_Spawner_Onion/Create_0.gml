@@ -2,8 +2,7 @@
 
 //Physics
 
-movespeed = 1;
-jumpspeed = 1;
+spd = 1;
 
 //Other Variables
 

@@ -93,6 +93,7 @@ sprBossIcon = -1;
 drawShakeX = 0;
 drawShakeY = 0;
 squadType = -1;
+explosionResistance = false;
 
 //Timers
 

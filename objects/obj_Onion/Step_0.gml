@@ -20,6 +20,8 @@ if (setupTimer == 0)
 			direction = point_direction(x,y,nearestPlayer.x,nearestPlayer.y);
 			image_angle = direction + 90;
 		}
+		
+		spd = random_range(spd / 2,spd * 1.5);
 	}
 }
 
@@ -57,8 +59,8 @@ if (!global.pause)
 			imageAngle = direction + 90;
 		}
 		
-		hsp = lengthdir_x(movespeed,direction);
-		vsp = lengthdir_y(jumpspeed,direction);
+		hsp = lengthdir_x(spd,direction);
+		vsp = lengthdir_y(spd,direction);
 		
 		image_speed = 1;
 		sprite_index = sprIdle;

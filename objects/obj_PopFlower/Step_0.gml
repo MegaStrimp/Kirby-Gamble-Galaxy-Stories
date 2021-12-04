@@ -51,7 +51,7 @@ if (!global.pause)
 	
 	//Open
 	
-	if ((!open) and (place_meeting(x,y,obj_Player)))
+	if ((!open) and ((place_meeting(x,y,obj_Player)) or ((place_meeting(x,y,obj_Projectile)) and (!instance_place(x,y,obj_Projectile).enemy))))
 	{
 		var touchedPlayer = instance_place(x,y,obj_Player);
 		open = true;

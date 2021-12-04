@@ -511,7 +511,9 @@ if (!global.pause)
 		{
 			if (place_meeting(x,y,other))
 			{
-				if ((owner != other) and (((!other.isBoss) and (hurtsEnemy)) or ((other.isBoss) and (hurtsEnemy) and (hurtsBoss))))
+				var canBeHurt = false;
+				if ((owner != other) and (enemy != other.enemy) and (((damageType == "explosion") and (!other.explosionResistance)) or (damageType != "explosion")) and (((!other.isBoss) and (hurtsEnemy)) or ((other.isBoss) and (hurtsEnemy) and (hurtsBoss)))) canBeHurt = true;
+				if (canBeHurt)
 				{
 					if (audio_is_playing(snd_EnemyHurt)) audio_stop_sound(snd_EnemyHurt);
 					audio_play_sound(snd_EnemyHurt,0,false);

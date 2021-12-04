@@ -6,3 +6,4 @@ var rm = rm_Startup;
 if (global.firstTimeBooting) rm = rm_Language;
 rm = rm_Language;
 room_goto(rm);
+room_goto_next();

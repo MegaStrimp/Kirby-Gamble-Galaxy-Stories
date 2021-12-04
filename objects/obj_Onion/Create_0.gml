@@ -4,10 +4,13 @@
 
 event_inherited();
 
+//Randomize
+
+randomize();
+
 //Physics
 
-movespeed = 1;
-jumpspeed = 1;
+spd = 1;
 
 //Sprites
 
@@ -31,3 +34,4 @@ hasDeathKnockback = false;
 objectOnDeath = true;
 objectOnDeathObj = obj_Projectile_ExplosionMask;
 hasDeathParticles = false;
+explosionResistance = true;

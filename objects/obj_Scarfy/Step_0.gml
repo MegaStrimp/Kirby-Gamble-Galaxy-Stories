@@ -126,7 +126,9 @@ if (!global.pause)
 				if (audio_is_playing(snd_Explosion1)) audio_stop_sound(snd_Explosion1);
 				audio_play_sound(snd_Explosion1,0,false);
 				
-				instance_create_depth(x,y,depth,obj_Projectile_ExplosionMask);
+				var par = instance_create_depth(x,y,depth,obj_Projectile_ExplosionMask);
+				par.owner = id;
+				par.enemy = true;
 				
 				var explosion = instance_create_depth(x,y,depth,obj_DeathParticles);
 				explosion.state = "explosion1";

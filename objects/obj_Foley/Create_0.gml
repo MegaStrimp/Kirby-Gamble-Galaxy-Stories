@@ -39,6 +39,7 @@ attack = false;
 attackState = 0;
 scaleOffset = 0;
 scaleDir = 1;
+explosionResistance = true;
 
 //Timers
 

@@ -2,8 +2,10 @@
 
 //Move Snap
 
-move_snap(snap,snap);
+//move_snap(24,24);
 
+x = floor(x / 24) * 24;
+y = floor(y / 24) * 24;
 if (global.gambleMaykr)
 {
 	if (active)
