@@ -476,6 +476,7 @@
     {"id":{"name":"ts_AbilityChallenge_Transparent","path":"tilesets/ts_AbilityChallenge_Transparent/ts_AbilityChallenge_Transparent.yy",},"order":11,},
     {"id":{"name":"spr_AbilityDropStar_Bell","path":"sprites/spr_AbilityDropStar_Bell/spr_AbilityDropStar_Bell.yy",},"order":23,},
     {"id":{"name":"spr_Kirby_AbilityHat_Fighter_KSSU_Palette_Bitcrushed","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Palette_Bitcrushed/spr_Kirby_AbilityHat_Fighter_KSSU_Palette_Bitcrushed.yy",},"order":1,},
+    {"id":{"name":"spr_Maykr_Cursor","path":"sprites/spr_Maykr_Cursor/spr_Maykr_Cursor.yy",},"order":3,},
     {"id":{"name":"spr_Kirby_AbilityHat_Beam_MarxSoul_Palette_SummerFruits","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_Palette_SummerFruits/spr_Kirby_AbilityHat_Beam_MarxSoul_Palette_SummerFruits.yy",},"order":1,},
     {"id":{"name":"spr_Hud_Icon_Ninja","path":"sprites/spr_Hud_Icon_Ninja/spr_Hud_Icon_Ninja.yy",},"order":5,},
     {"id":{"name":"spr_Hud_Icon_MysticIce","path":"sprites/spr_Hud_Icon_MysticIce/spr_Hud_Icon_MysticIce.yy",},"order":2,},
