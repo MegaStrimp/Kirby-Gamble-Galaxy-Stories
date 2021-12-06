@@ -2,7 +2,7 @@
 
 //Move Snap
 
-move_snap(snap,snap);
+scr_MaykrGrid(snap,snap);
 
 //Spawn Item
 
@@ -399,7 +399,10 @@ else
 
 if (visible)
 {
-	if ((spawnedItemIndex != obj_Player) and (spawnedLayer == global.gambleMaykrMenu) and (position_meeting(mouse_x,mouse_y,id)) and (mouse_check_button(mb_right)))
+	var mx, my;
+	mx = floor(mouse_x / snap) * snap;
+	my = floor(mouse_y / snap) * snap;
+	if ((spawnedItemIndex != obj_Player) and (spawnedLayer == global.gambleMaykrMenu) and (position_meeting(mx,my,id)) and (mouse_check_button(mb_right)))
 	{
 		instance_destroy();
 	}
