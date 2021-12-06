@@ -615,6 +615,7 @@
     {"id":{"name":"spr_SirKibble_Normal_Palette_Stone","path":"sprites/spr_SirKibble_Normal_Palette_Stone/spr_SirKibble_Normal_Palette_Stone.yy",},"order":5,},
     {"id":{"name":"spr_Kirby_AbilityHat_Mirror_Modern_Backflip","path":"sprites/spr_Kirby_AbilityHat_Mirror_Modern_Backflip/spr_Kirby_AbilityHat_Mirror_Modern_Backflip.yy",},"order":5,},
     {"id":{"name":"spr_Kirby_HatShadow_Ice_KSSU_FloatHurt","path":"sprites/spr_Kirby_HatShadow_Ice_KSSU_FloatHurt/spr_Kirby_HatShadow_Ice_KSSU_FloatHurt.yy",},"order":16,},
+    {"id":{"name":"scr_MaykrGrid","path":"scripts/scr_MaykrGrid/scr_MaykrGrid.yy",},"order":15,},
     {"id":{"name":"spr_Kirby_HatShadow_Stone_KSSU_FloatHurt","path":"sprites/spr_Kirby_HatShadow_Stone_KSSU_FloatHurt/spr_Kirby_HatShadow_Stone_KSSU_FloatHurt.yy",},"order":14,},
     {"id":{"name":"spr_Kirby_Normal_Idle_NormalSlopeR","path":"sprites/spr_Kirby_Normal_Idle_NormalSlopeR/spr_Kirby_Normal_Idle_NormalSlopeR.yy",},"order":4,},
     {"id":{"name":"spr_AbilityBlock_Fighter_Idle","path":"sprites/spr_AbilityBlock_Fighter_Idle/spr_AbilityBlock_Fighter_Idle.yy",},"order":0,},
