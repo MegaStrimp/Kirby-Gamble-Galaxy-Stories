@@ -124,7 +124,8 @@ else if (keyboard_check(vk_control))
 	}
 }
 
-if ((global.gambleMaykr) and (!obj_Maykr_ControlO.active))
+//if ((global.gambleMaykr) and (!obj_Maykr_ControlO.active))
+if ((global.gambleMaykr))
 {
 	if (keyboard_check(vk_control))
 	{

@@ -23,6 +23,7 @@
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_Door","path":"objects/obj_Door/obj_Door.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.02777779,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":84.3333359,"y":376.0,"resourceVersion":"1.0","name":"inst_4ECD6334","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_Door","path":"objects/obj_Door/obj_Door.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.02777779,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":183.0,"y":376.0,"resourceVersion":"1.0","name":"inst_15B1CB08","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"obj_Door","path":"objects/obj_Door/obj_Door.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.02777779,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":36.0,"y":376.0,"resourceVersion":"1.0","name":"inst_F219596","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":300,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":6,"gridY":6,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Environment","tags":[],"resourceType":"GMRInstanceLayer",},
     {"tilesetId":{"name":"ts_Debug","path":"tilesets/ts_Debug/ts_Debug.yy",},"x":0,"y":0,"tiles":{"SerialiseWidth":45,"SerialiseHeight":20,"TileSerialiseData":[
 2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,
@@ -153,6 +154,7 @@
     {"name":"inst_2F385A8D","path":"rooms/rm_Starcutter/rm_Starcutter.yy",},
     {"name":"inst_4ECD6334","path":"rooms/rm_Starcutter/rm_Starcutter.yy",},
     {"name":"inst_15B1CB08","path":"rooms/rm_Starcutter/rm_Starcutter.yy",},
+    {"name":"inst_F219596","path":"rooms/rm_Starcutter/rm_Starcutter.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

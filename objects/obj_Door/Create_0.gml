@@ -8,6 +8,7 @@ sprStar = spr_Particle_BigStar_Yellow;
 
 //Other Variables
 
+state = "goToRoom";
 targetRoom = rm_Setup;
 doorVisible = true;
 locked = false;

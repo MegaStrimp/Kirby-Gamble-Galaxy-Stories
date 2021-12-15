@@ -2938,16 +2938,27 @@ function scr_Player_Normal()
 		if (enterDoor)
 		{
 			var nearbyDoor = instance_position(x,y,obj_Door);
-			if (!nearbyDoor.locked)
+			switch (nearbyDoor.state)
 			{
-				if (audio_is_playing(snd_Enter)) audio_stop_sound(snd_Enter);
-				audio_play_sound(snd_Enter,0,false);
-				var fade = instance_create_depth(x,y,-999,obj_Fade);
-				fade.targetRoom = nearbyDoor.targetRoom;
-				hsp = 0;
-				vsp = 0;
-				image_index = 0;
-				state = playerStates.enter;
+				case "goToRoom":
+				if (!nearbyDoor.locked)
+				{
+					if (audio_is_playing(snd_Enter)) audio_stop_sound(snd_Enter);
+					audio_play_sound(snd_Enter,0,false);
+					var fade = instance_create_depth(x,y,-999,obj_Fade);
+					fade.targetRoom = nearbyDoor.targetRoom;
+					hsp = 0;
+					vsp = 0;
+					image_index = 0;
+					state = playerStates.enter;
+				}
+				break;
+				
+				case "openShop":
+				{
+					instance_create_depth(0,0,-999,obj_Shop_Control);
+				}
+				break;
 			}
 			enterDoor = false;
 		}

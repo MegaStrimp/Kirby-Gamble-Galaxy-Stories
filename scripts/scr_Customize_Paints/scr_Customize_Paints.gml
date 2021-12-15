@@ -215,9 +215,9 @@ function scr_Customize_Paints()
 	i += 1;
 
 	sprayPaintTitle[i] = "Smiley White";
-	sprayPaintDescription[i] = "It's Yellow";
+	sprayPaintDescription[i] = "...";
 	sprayPaintUnlocked[i] = global.smileyWhiteSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = "Log Into Discord";
+	sprayPaintUnlockMethod[i] = "...";
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_SmileyWhite;
 	sprayPaintColor[i] = make_color_rgb(30,30,30);
 	sprayPaintOffset[i] = 0;
@@ -227,7 +227,7 @@ function scr_Customize_Paints()
 	sprayPaintTitle[i] = "Edd";
 	sprayPaintDescription[i] = "Subhuman!";
 	sprayPaintUnlocked[i] = global.eddSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = "Log Into Discord";
+	sprayPaintUnlockMethod[i] = "...";
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Edd;
 	sprayPaintColor[i] = make_color_rgb(115,102,98);
 	sprayPaintOffset[i] = 0;

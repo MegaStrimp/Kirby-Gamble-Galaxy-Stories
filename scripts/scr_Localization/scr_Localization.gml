@@ -157,6 +157,7 @@ function scr_Localization(argument0,argument1,argument2,argument3)
 	dialogue[1][7][i][8] = "鋭いブーメランを振り回して、敵を切り裂いたり、ダッシュしたりすることがで きます!";
 	dialogue[1][7][i][9] = "Bruk en skarp boomerang for å kutte og stikke gjennom fiender!";
 	dialogue[1][7][i][10] = "Empunhe um bumerangue afiado para cortar e atravessar os inimigos!";
+	dialogue[1][7][i][11] = "إستخدم بوميرانج حاد لتقطيع الأعداء والإندفاع بينهم";
 	#endregion
 	
 	#region Beam
@@ -172,6 +173,7 @@ function scr_Localization(argument0,argument1,argument2,argument3)
 	dialogue[1][8][i][8] = "電気の光線を出します。チャージすると遠くから飛ばすことができます!";
 	dialogue[1][8][i][9] = "Tryll frem stråler av elektrisitet for å svinge rundt. Lad opp for å skyte Fra avstand!";
 	dialogue[1][8][i][10] = "Invoque raios de eletricidade e agite-os por aí. Carregue para atirar à distância!";
+	dialogue[1][8][i][11] = "استحضر اشعة كهربائية لتدور حولها، اشحن الاشعة لتطلقها من مسافة بعيدة!";
 	#endregion
 	
 	#region Mystic Beam
@@ -187,6 +189,7 @@ function scr_Localization(argument0,argument1,argument2,argument3)
 	dialogue[1][9][i][8] = "フラックスの力で「ビーム」が「ミスティックビーム」に!? ビームシールドは攻撃にもなります!";
 	dialogue[1][9][i][9] = "O poder do fluxo transformou o nosso Raio no Raio Místico! O escudo de raio também funciona como um ataque!";
 	dialogue[1][9][i][10] = "Fluxens makten har gjort vår stråle til Mystic Beam! Bjelkeskjoldet dobler som et angrep!";
+	dialogue[1][9][i][11] = "قوة التدفق حولت الشعاع إلى شعاع روحاني! الشعاع هذا يستخدم كدرع ايضا!";
 	#endregion
 	
 	#region Stone
@@ -202,6 +205,7 @@ function scr_Localization(argument0,argument1,argument2,argument3)
 	dialogue[1][10][i][8] = "岩になって不可侵になります! この不思議な像は何でしょうか?";
 	dialogue[1][10][i][9] = "Transforme-se em uma pedra e torne-se impenetrável! Mas o que são essas estátuas estranhas?";
 	dialogue[1][10][i][10] = "Slå om til en stein og bli ugjennomtrengelig! Hva er disse merkelige statuer?";
+	dialogue[1][10][i][11] = "تحول لحجرة وصر منيعا! ما هذه التماثيل الغريبة؟";
 	#endregion
 	
 	#region UFO
@@ -217,6 +221,7 @@ function scr_Localization(argument0,argument1,argument2,argument3)
 	dialogue[1][11][i][8] = "エイリアンの船に変身してレーザーでピューピュー敵を撃ちまくり!";
 	dialogue[1][11][i][9] = "Transforme-se em uma nave alienígena e atire em inimigos com lasers, pew pew!";
 	dialogue[1][11][i][10] = "Gjør om til et fremmed skip og spreng fiender med lasere, pew pew!";
+	dialogue[1][11][i][11] = "تحول لسفينة فضائية واطلق على الأعداء بالليزر، بيو بيو!";
 	#endregion
 	
 	#region Mirror
@@ -232,6 +237,7 @@ function scr_Localization(argument0,argument1,argument2,argument3)
 	dialogue[1][12][i][8] = "反射の力を使って、敵の攻撃を跳ね返します!";
 	dialogue[1][12][i][9] = "Use o poder de reflexos para mandar ataques de inimigos de volta a eles!";
 	dialogue[1][12][i][10] = "Bruk refleksjonskraften til å sende fiendtlige angrep rett tilbake til dem!";
+	dialogue[1][12][i][11] = "استخدم قوة الانعكاس لتعيد ضربات الأعداء عليهم";
 	#endregion
 	
 	#region Ninja
@@ -247,6 +253,7 @@ function scr_Localization(argument0,argument1,argument2,argument3)
 	dialogue[1][13][i][8] = "影の暗殺者となって、こっそりと攻撃を仕掛けよう。";
 	dialogue[1][13][i][9] = "Torne-se um assassino das sombras e ataque sorrateiramente!";
 	dialogue[1][13][i][10] = "Bli en leiemorder og slå lurt!";
+	dialogue[1][13][i][11] = "صر من مقاتلي الظلال واهجم بخفة";
 	#endregion
 	
 	#region Bomb
@@ -262,6 +269,7 @@ function scr_Localization(argument0,argument1,argument2,argument3)
 	dialogue[1][14][i][8] = "爆弾を掴んで投げて攻撃しますが、あまり長く持たないように!";
 	dialogue[1][14][i][9] = "Pegue uma bomba e lance ela, mas não espere por muito tempo!";
 	dialogue[1][14][i][10] = "Ta en bombe og kaste det, men ikke holde det for lenge!";
+	dialogue[1][14][i][11] = "امسك قنبلة وارمها لتنفجر، لكن لا تمسكها طويلا";
 	#endregion
 	
 	#region Fire
@@ -277,6 +285,7 @@ function scr_Localization(argument0,argument1,argument2,argument3)
 	dialogue[1][15][i][8] = "強力な炎で相手を焼き尽くしていくぞ。ヤッホーイ!";
 	dialogue[1][15][i][9] = "Queime a competição com labaredas poderosas, aii!";
 	dialogue[1][15][i][10] = "Brenn opp konkurransen med kraftige flammer, jøss!";
+	dialogue[1][15][i][11] = "احرق اعدائك بهذه النيران الملتهبة! ياوتش";
 	#endregion
 	
 	#region Mystic Fire
@@ -292,6 +301,7 @@ function scr_Localization(argument0,argument1,argument2,argument3)
 	dialogue[1][16][i][8] = "フラックスの力でFireが強くなった！？狙いをつける必要なし、敵を焼き尽くしまくれ!";
 	dialogue[1][16][i][9] = "O poder do fluxo fez o seu Fogo ficar mais forte! Não precisa mais mirar, então bote seus inimigos pra queimar!";
 	dialogue[1][16][i][10] = "Fluxens makten har gjort brannen vår sterkere! Ikke nødvendig sikte lenger, så brenn fiendene dine til bakken!";
+	dialogue[1][16][i][11] = "قوة التدفق جعلت النيران أقوى! لا حاجة إلى التصويب بعد الان، فاحرق اعدائك الى الارض!";
 	#endregion
 	
 	#region Ice
@@ -307,6 +317,7 @@ function scr_Localization(argument0,argument1,argument2,argument3)
 	dialogue[1][17][i][8] = "スケートしながら冷たい息で敵を凍らせていこう。";
 	dialogue[1][17][i][9] = "Patine por aí e congele adversários com seu sopro congelante!";
 	dialogue[1][17][i][10] = "Skøyter rundt og frys fiender med ditt kalde pust!";
+	dialogue[1][17][i][11] = "Skøyter rundt og frys fiender med ditt kalde pust!";
 	#endregion
 	
 	#region Spark
@@ -322,6 +333,7 @@ function scr_Localization(argument0,argument1,argument2,argument3)
 	dialogue[1][18][i][8] = "方向キーを押しまくってチャージし、敵を倒していこう。";
 	dialogue[1][18][i][9] = "Aperte rapidamente as setas direcionais para carregar eletricidade e eletrocutar inimigos";
 	dialogue[1][18][i][10] = "Mash retningstastene for å lade opp og zappe fiender";
+	dialogue[1][18][i][11] = "Mash retningstastene for å lade opp og zappe fiender";
 	#endregion
 	
 	#region Yoyo
@@ -337,6 +349,7 @@ function scr_Localization(argument0,argument1,argument2,argument3)
 	dialogue[1][19][i][8] = "アクションをスライドさせて、スタイリッシュなパワーでヨーヨーを振ることができます。";
 	dialogue[1][19][i][9] = "Entre em ação e agite um ioiô com poder estiloso!";
 	dialogue[1][19][i][10] = "Dra til handling og vink en yoyo med stilig kraft!";
+	dialogue[1][19][i][11] = "Dra til handling og vink en yoyo med stilig kraft!";
 	#endregion
 	
 	#region Wheel
@@ -352,6 +365,7 @@ function scr_Localization(argument0,argument1,argument2,argument3)
 	dialogue[1][20][i][8] = "無敵の状態で敵の群れをスピードで切り抜けていこう。ブルーンブルーーン!!";
 	dialogue[1][20][i][9] = "Acelere por multidões de inimigos ao mesmo tempo que é quase invencível, vrum vrum!";
 	dialogue[1][20][i][10] = "Kjør gjennom mengder fiender mens du er nesten uovervinnelig, vroom vroom!";
+	dialogue[1][20][i][11] = "Kjør gjennom mengder fiender mens du er nesten uovervinnelig, vroom vroom!";
 	#endregion
 	
 	#region Artist
@@ -367,6 +381,7 @@ function scr_Localization(argument0,argument1,argument2,argument3)
 	dialogue[1][21][i][8] = "ブラシで相手を叩いたり絵の軍隊を作って一緒に戦ったり......";
 	dialogue[1][21][i][9] = "Bata em inimigos com seu pincel ou pinte um exército de desenhos para lutar com você!";
 	dialogue[1][21][i][10] = "Slå motstandere med penselen din eller mal opp en hær av tegninger for å kjempe sammen med deg!";
+	dialogue[1][21][i][11] = "Slå motstandere med penselen din eller mal opp en hær av tegninger for å kjempe sammen med deg!";
 	#endregion
 	
 	#region Fighter
