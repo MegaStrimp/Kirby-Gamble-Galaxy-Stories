@@ -65,6 +65,10 @@ if (!global.pause)
 	
 	hsp = scr_Friction(hsp,decel);
 	
+	//Gravity
+	
+	if (!falling) hasGravity = hurt;
+	
 	//States
 	
 	switch (state)
@@ -234,6 +238,7 @@ if (!global.pause)
 			gravNormal = .2;
 			gravLimitNormal = 5;
 			hasGravity = true;
+			falling = true;
 			attackState = 2;
 			attackTimer = -1;
 			break;

@@ -30,6 +30,10 @@ if (!global.pause)
 	
 	scr_Enemy_HurtsPlayer();
 	
+	//Gravity
+	
+	hasGravity = hurt;
+	
 	//Friction
 	
 	hsp = scr_Friction(hsp,decel);
@@ -49,7 +53,7 @@ if (!global.pause)
 	
 	switch (state)
 	{
-		//Horizontal Straight Movement And Vertical Wave Movement With Attack
+		//Floating
 		
 		case 0:
 		if (!hurt)

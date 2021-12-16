@@ -371,29 +371,7 @@ else
 		spawnedStateMax = 1;
 		break;
 	}
-	
-	//Select Cancel Timer
-	
-	if (selectCancelTimer > 0)
-	{
-		selectCancelTimer -= 1;
-	}
-	else if (selectCancelTimer == 0)
-	{
-		selectCancelTimer = -1;
-	}
 }
-
-//Selected
-
-/*if (selected == 1)
-{
-	if (mouse_check_button(mb_left))
-	{
-		x = dragX - mouse_x;
-		y = dragY - mouse_y;
-	}
-}*/
 
 //Delete
 

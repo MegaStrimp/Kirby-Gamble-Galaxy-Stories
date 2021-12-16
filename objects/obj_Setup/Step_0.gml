@@ -4,7 +4,6 @@
 
 if (global.gambleMaykr)
 {
-	cursor_sprite = spr_Maykr_Cursor;
 	window_set_cursor(cr_none);
 }
 else

@@ -1,8 +1,8 @@
 ///@description Main
 
 #region Variables
-mouseX = device_mouse_x_to_gui(0);
-mouseY = device_mouse_y_to_gui(0);
+mouseX = floor(mouse_x / 24) * 24;
+mouseY = floor(mouse_y / 24) * 24;
 #endregion
 
 #region Spawn Object

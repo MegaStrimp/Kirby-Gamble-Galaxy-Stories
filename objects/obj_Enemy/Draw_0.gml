@@ -83,5 +83,5 @@ if (!isBoss)
 }
 
 //Debug
-
+/*
 draw_text(x,y - 12,string(explosionResistance));

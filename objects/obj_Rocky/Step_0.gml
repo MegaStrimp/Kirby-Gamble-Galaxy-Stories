@@ -119,7 +119,7 @@ if (!global.pause)
 	
 	//Fall
 	
-	if ((place_meeting(x,y + vsp + 1,collisionY)) and (sign(vsp) == 1))
+	if ((hp > 0) and (place_meeting(x,y + vsp + 1,collisionY)) and (sign(vsp) == 1) and (abs(vsp) >= gravLimit * .9))
 	{
 		if (audio_is_playing(snd_StoneFallen)) audio_stop_sound(snd_StoneFallen);
 		audio_play_sound(snd_StoneFallen,0,false);

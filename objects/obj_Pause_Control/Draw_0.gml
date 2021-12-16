@@ -623,10 +623,10 @@ if ((gamePaused) and (visible))
 			if ((!instance_exists(obj_Pause_Fade)) and (!instance_exists(obj_Fade)))
 			{
 				var pauseFade = instance_create_depth(x,y,depth - 1,obj_Pause_Fade);
-				alphaSpd = .02;
+				pauseFade.alphaSpd = .02;
 		        pauseFade.fade = 1;
 				var fadeTrans = instance_create_depth(0,0,depth - 1,obj_Fade);
-				alphaSpd = .02;
+				pauseFade.alphaSpd = .02;
 				fadeTrans.targetRoom = rm_MainMenu;
 			}
 		}

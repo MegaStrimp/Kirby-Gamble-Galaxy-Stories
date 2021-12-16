@@ -73,6 +73,10 @@ function scr_Hud_AbilityIcon(argument0,argument1)
 			iconIndex = spr_Hud_Icon_Helper;
 			break;
 			
+			case "mysticDoo":
+			iconIndex = spr_Hud_Icon_MysticHelper;
+			break;
+			
 			default:
 			iconIndex = spr_Hud_Icon_Kirby;
 			break;
@@ -81,6 +85,10 @@ function scr_Hud_AbilityIcon(argument0,argument1)
 		
 		case "cutter":
 		iconIndex = spr_Hud_Icon_Cutter;
+		break;
+		
+		case "mysticCutter":
+		iconIndex = spr_Hud_Icon_MysticCutter;
 		break;
 		
 		case "beam":

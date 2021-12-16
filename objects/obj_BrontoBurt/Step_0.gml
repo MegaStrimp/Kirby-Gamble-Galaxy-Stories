@@ -48,6 +48,10 @@ if (!global.pause)
 	
 	hsp = scr_Friction(hsp,decel);
 	
+	//Gravity
+	
+	hasGravity = hurt;
+	
 	//States
 	
 	switch (state)

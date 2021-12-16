@@ -27,7 +27,7 @@ if (!global.pause)
 	
 	with (obj_Enemy)
 	{
-		if (collision_line(other.x,other.y,other.xEnd,other.yEnd,id,false,false))
+		if ((collision_line(other.x,other.y - 5,other.xEnd,other.yEnd - 5,id,false,false)) or (collision_line(other.x,other.y + 5,other.xEnd,other.yEnd + 5,id,false,false)))
 		{
 			var projectile = instance_create_depth(x,y,depth,obj_Projectile_MysticBeamLaserShot);
 			projectile.owner = other.owner;

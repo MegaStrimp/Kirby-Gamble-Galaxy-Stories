@@ -838,6 +838,7 @@ if (!global.pause)
 		if ((!keyboard_check(keyLeft)) and (!keyboard_check(keyRight)) and (!gamepad_button_check(0,gp_padl)) and (!gamepad_button_check(0,gp_padr)))
 	    {
 	        runCancelTimer = runCancelTimerMax;
+	        runCancelTimer = -1;
 	        run = false;
 	        runDoubleTap = 0;
 	    }
