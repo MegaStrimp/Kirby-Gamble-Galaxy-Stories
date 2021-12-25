@@ -492,13 +492,15 @@ if ((instance_exists(obj_Maykr_ControlO)) and (instance_exists(obj_Maykr_HudO)))
 						
 						file_text_write_string(savedFile,"spawnerStart");
 						file_text_writeln(savedFile);
-						with (obj_Maykr_SpawnerO)
+						with (obj_Maykr_Spawner)
 						{
 							file_text_write_string(savedFile,object_get_name(spawnedItemIndex));
 							file_text_writeln(savedFile);
 							file_text_write_string(savedFile,x);
 							file_text_writeln(savedFile);
 							file_text_write_string(savedFile,y);
+							file_text_writeln(savedFile);
+							file_text_write_string(savedFile,spawnedItemString);
 							file_text_writeln(savedFile);
 							file_text_write_string(savedFile,spawnedLayer);
 							file_text_writeln(savedFile);
@@ -587,6 +589,73 @@ if ((instance_exists(obj_Maykr_ControlO)) and (instance_exists(obj_Maykr_HudO)))
 											var spawner = instance_create_layer(spawnerItemX,spawnerItemY,"enemies",obj_Maykr_SpawnerO);
 											spawner.spawnedItemIndex = asset_get_index(spawnerItemIndex);
 											spawner.spawnedSprite = asset_get_index(spawnerSprite);
+											spawner.spawnedLayer = spawnerItemLayer;
+											spawner.spawnedState = spawnerState;
+											spawner.spawnedDirX = spawnerDirX;
+											spawner.spawnedPaletteIndex = asset_get_index(spawnerPalette);
+											
+											switch (spawner.spawnedItemIndex)
+											{
+												case obj_Wall:
+												var spawnerSlopeType = real(file_text_read_string(loadedFile));
+												file_text_readln(loadedFile);
+												spawner.spawnedSlopeType = spawnerSlopeType;
+												break;
+												
+												case obj_AbilityTrophy:
+												var spawnerAbilityIndex = file_text_read_string(loadedFile);
+												file_text_readln(loadedFile);
+												spawner.spawnedAbilityIndex = spawnerAbilityIndex;
+												break;
+											}
+											break;
+											
+											default:
+											file_text_readln(loadedFile);
+											break;
+										}
+									}
+								}
+								break;
+								
+								case "Version - 0.6.0":
+								for (;;)
+								{
+									creationIndex = file_text_read_string(loadedFile);
+									if (creationIndex == "stageEnd") break;
+									file_text_readln(loadedFile);
+									for (;;)
+									{
+										var spawnerItemIndex = file_text_read_string(loadedFile);
+										file_text_readln(loadedFile);
+										
+										if (spawnerItemIndex == "spawnerEnd") break;
+										
+										switch (creationIndex)
+										{
+											case "spawnerStart":
+											
+											var spawnerItemX = real(file_text_read_string(loadedFile));
+											file_text_readln(loadedFile);
+											var spawnerItemY = real(file_text_read_string(loadedFile));
+											file_text_readln(loadedFile);
+											var spawnedItemString = file_text_read_string(loadedFile);
+											file_text_readln(loadedFile);
+											var spawnerItemLayer = file_text_read_string(loadedFile);
+											file_text_readln(loadedFile);
+											var spawnerSprite = file_text_read_string(loadedFile);
+											file_text_readln(loadedFile);
+											var spawnerState = file_text_read_string(loadedFile);
+											file_text_readln(loadedFile);
+											var spawnerDirX = real(file_text_read_string(loadedFile));
+											file_text_readln(loadedFile);
+											var spawnerPalette = file_text_read_string(loadedFile);
+											file_text_readln(loadedFile);
+											
+											var spawner = instance_create_layer(spawnerItemX,spawnerItemY,"enemies",obj_Maykr_SpawnerO);
+											spawner.spawnedItemIndex = asset_get_index(spawnerItemIndex);
+											spawner.spawnedSprite = asset_get_index(spawnerSprite);
+											spawner.spawnedItemString = spawnedItemString;
 											spawner.spawnedLayer = spawnerItemLayer;
 											spawner.spawnedState = spawnerState;
 											spawner.spawnedDirX = spawnerDirX;

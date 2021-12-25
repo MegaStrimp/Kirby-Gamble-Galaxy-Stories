@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Misc.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_MaykrGrid",
+  "name": "scr_MaykrClear",
   "tags": [],
   "resourceType": "GMScript",
 }

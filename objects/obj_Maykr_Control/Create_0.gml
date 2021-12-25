@@ -6,7 +6,7 @@ mouseY = mouse_y;
 mouseXGui = device_mouse_x_to_gui(0);
 mouseYGui = device_mouse_y_to_gui(0);
 #endregion
-
+errorMsg = "";
 #region Spawn Values
 spawnedLayer = "collision";
 spawnedItemString = "debugWall";
@@ -29,8 +29,14 @@ bottomHudVisible = true;
 bottomHudOpen = false;
 #endregion
 
+#region Save Values
+maykrFileVersion = "0.6.0";
+maykrStartMsg = "This is Gamble Maykr's custom data file made by MegaStrimp for the fangame Kirby Gamble Galaxy Stories. Modifying this file may cause major issues.";
+#endregion
+
 #region Mouse On Top
 mouseOnHud = false;
+mouseOnTopMap = false;
 mouseOnTopSave = false;
 mouseOnTopLoad = false;
 mouseOnTopOptions = false;
@@ -41,6 +47,7 @@ mouseOnTopBlocks = false;
 mouseOnTopEnemies = false;
 mouseOnTopItems = false;
 mouseOnTopExpand = false;
+mouseOnTopHide = false;
 collidingSpawner = false;
 #endregion
 

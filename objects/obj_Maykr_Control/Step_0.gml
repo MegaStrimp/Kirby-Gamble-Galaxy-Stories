@@ -16,41 +16,358 @@ if (windowIndex != -1) canBeInteracted = false;
 if (canBeInteracted)
 {
 	#region Mouse On Top
-	if (point_in_rectangle(mouseXGui,mouseYGui,460,49,480,70)) mouseOnTopSave = true;
-	if (!point_in_rectangle(mouseXGui,mouseYGui,420,49,480,70)) mouseOnTopSave = false;
 	
-	if (point_in_rectangle(mouseXGui,mouseYGui,460,72,480,93)) mouseOnTopLoad = true;
-	if (!point_in_rectangle(mouseXGui,mouseYGui,420,72,480,93)) mouseOnTopLoad = false;
+	if (hudVisible)
+	{
+		if (point_in_rectangle(mouseXGui,mouseYGui,324,49,345,70))
+		{
+			mouseOnTopMap = true;
+		}
+		else
+		{
+			mouseOnTopMap = false;
+		}
+		
+		if (point_in_rectangle(mouseXGui,mouseYGui,460,49,480,70)) mouseOnTopSave = true;
+		if (!point_in_rectangle(mouseXGui,mouseYGui,420,49,480,70)) mouseOnTopSave = false;
+		
+		if (point_in_rectangle(mouseXGui,mouseYGui,460,72,480,93)) mouseOnTopLoad = true;
+		if (!point_in_rectangle(mouseXGui,mouseYGui,420,72,480,93)) mouseOnTopLoad = false;
+		
+		if (point_in_rectangle(mouseXGui,mouseYGui,460,95,480,116)) mouseOnTopOptions = true;
+		if (!point_in_rectangle(mouseXGui,mouseYGui,399,95,480,116)) mouseOnTopOptions = false;
+		
+		if (point_in_rectangle(mouseXGui,mouseYGui,460,118,480,139)) mouseOnTopReset = true;
+		if (!point_in_rectangle(mouseXGui,mouseYGui,394,118,480,139)) mouseOnTopReset = false;
+		
+		if (point_in_rectangle(mouseXGui,mouseYGui,0,49,20,70)) mouseOnTopLeave = true;
+		if (!point_in_rectangle(mouseXGui,mouseYGui,0,49,69,70)) mouseOnTopLeave = false;
+		
+		if (point_in_rectangle(mouseXGui,mouseYGui,12,0,84,20)) mouseOnTopPlay = true;
+		if (!point_in_rectangle(mouseXGui,mouseYGui,12,0,84,47)) mouseOnTopPlay = false;
+		
+		if (point_in_rectangle(mouseXGui,mouseYGui,95,0,167,20)) mouseOnTopBlocks = true;
+		if (!point_in_rectangle(mouseXGui,mouseYGui,95,0,167,47)) mouseOnTopBlocks = false;
+		
+		if (point_in_rectangle(mouseXGui,mouseYGui,171,0,243,20)) mouseOnTopEnemies = true;
+		if (!point_in_rectangle(mouseXGui,mouseYGui,171,0,243,47)) mouseOnTopEnemies = false;
+		
+		if (point_in_rectangle(mouseXGui,mouseYGui,247,0,319,20)) mouseOnTopItems = true;
+		if (!point_in_rectangle(mouseXGui,mouseYGui,247,0,319,47)) mouseOnTopItems = false;
+	}
+	else
+	{
+		mouseOnTopMap = false;
+		mouseOnTopSave = false;
+		mouseOnTopLoad = false;
+		mouseOnTopOptions = false;
+		mouseOnTopReset = false;
+		mouseOnTopLeave = false;
+		mouseOnTopPlay = false;
+		mouseOnTopBlocks = false;
+		mouseOnTopEnemies = false;
+		mouseOnTopItems = false;
+	}
 	
-	if (point_in_rectangle(mouseXGui,mouseYGui,460,95,480,116)) mouseOnTopOptions = true;
-	if (!point_in_rectangle(mouseXGui,mouseYGui,399,95,480,116)) mouseOnTopOptions = false;
+	if (point_in_rectangle(mouseXGui,mouseYGui,2,234,24,269))
+	{
+		mouseOnTopHide = true;
+	}
+	else
+	{
+		mouseOnTopHide = false;
+	}
 	
-	if (point_in_rectangle(mouseXGui,mouseYGui,460,118,480,139)) mouseOnTopReset = true;
-	if (!point_in_rectangle(mouseXGui,mouseYGui,394,118,480,139)) mouseOnTopReset = false;
-	
-	if (point_in_rectangle(mouseXGui,mouseYGui,0,49,20,70)) mouseOnTopLeave = true;
-	if (!point_in_rectangle(mouseXGui,mouseYGui,0,49,69,70)) mouseOnTopLeave = false;
-	
-	if (point_in_rectangle(mouseXGui,mouseYGui,12,0,84,20)) mouseOnTopPlay = true;
-	if (!point_in_rectangle(mouseXGui,mouseYGui,12,0,84,47)) mouseOnTopPlay = false;
-	
-	if (point_in_rectangle(mouseXGui,mouseYGui,95,0,167,20)) mouseOnTopBlocks = true;
-	if (!point_in_rectangle(mouseXGui,mouseYGui,95,0,167,47)) mouseOnTopBlocks = false;
-	
-	if (point_in_rectangle(mouseXGui,mouseYGui,171,0,243,20)) mouseOnTopEnemies = true;
-	if (!point_in_rectangle(mouseXGui,mouseYGui,171,0,243,47)) mouseOnTopEnemies = false;
-	
-	if (point_in_rectangle(mouseXGui,mouseYGui,247,0,319,20)) mouseOnTopItems = true;
-	if (!point_in_rectangle(mouseXGui,mouseYGui,247,0,319,47)) mouseOnTopItems = false;
-	
-	mouseOnTopExpand = false;
-	if (point_in_rectangle(mouseXGui,mouseYGui,224,226 + bottomHudOffset,256,233 + bottomHudOffset)) mouseOnTopExpand = true;
+	if (point_in_rectangle(mouseXGui,mouseYGui,224,226 + bottomHudOffset,256,233 + bottomHudOffset))
+	{
+		mouseOnTopExpand = true;
+	}
+	else
+	{
+		mouseOnTopExpand = false;
+	}
 	#endregion
 	
 	#region Buttons
 	if (mouse_check_button_pressed(mb_left))
 	{
 		if (mouseOnTopExpand) bottomHudOpen = !bottomHudOpen;
+		
+		if (mouseOnTopSave)
+		{
+			var file;
+			file = get_save_filename("maykr file|*.maykr","");
+			if (file != "")
+			{
+				var savedFile = file_text_open_write(file);
+				file_text_write_string(savedFile,maykrStartMsg);
+				file_text_writeln(savedFile);
+				file_text_write_string(savedFile,"Version - " + maykrFileVersion);
+				file_text_writeln(savedFile);
+				
+				#region Save Tiles
+				file_text_write_string(savedFile,"tileStart");
+				file_text_writeln(savedFile);
+				if (tileDebug != -1)
+				{
+					for (var h = 0; h < 120; h++)
+					{
+						for (var w = 0; w < 200; w++)
+						{
+							var tileIndex = tilemap_get(tileDebug,w,h);
+							if (tileIndex != 0)
+							{
+								file_text_write_string(savedFile,"tileDebug");
+								file_text_writeln(savedFile);
+								file_text_write_string(savedFile,tileIndex);
+								file_text_writeln(savedFile);
+								file_text_write_string(savedFile,w);
+								file_text_writeln(savedFile);
+								file_text_write_string(savedFile,h);
+								file_text_writeln(savedFile);
+							}
+						}
+					}
+				}
+				
+				if (tileAsteroidFieldsFront != -1)
+				{
+					for (var h = 0; h < 120; h++)
+					{
+						for (var w = 0; w < 200; w++)
+						{
+							var tileIndex = tilemap_get(tileAsteroidFieldsFront,w,h);
+							if (tileIndex != 0)
+							{
+								file_text_write_string(savedFile,"tileAsteroidFieldsFront");
+								file_text_writeln(savedFile);
+								file_text_write_string(savedFile,tileIndex);
+								file_text_writeln(savedFile);
+								file_text_write_string(savedFile,w);
+								file_text_writeln(savedFile);
+								file_text_write_string(savedFile,h);
+								file_text_writeln(savedFile);
+							}
+						}
+					}
+				}
+				file_text_write_string(savedFile,"tileEnd");
+				file_text_writeln(savedFile);
+				#endregion
+				
+				file_text_write_string(savedFile,"spawnerStart");
+				file_text_writeln(savedFile);
+				with (obj_Maykr_Spawner)
+				{
+					file_text_write_string(savedFile,object_get_name(spawnedItemIndex));
+					file_text_writeln(savedFile);
+					file_text_write_string(savedFile,x);
+					file_text_writeln(savedFile);
+					file_text_write_string(savedFile,y);
+					file_text_writeln(savedFile);
+					file_text_write_string(savedFile,spawnedItemString);
+					file_text_writeln(savedFile);
+					file_text_write_string(savedFile,spawnedLayer);
+					file_text_writeln(savedFile);
+					file_text_write_string(savedFile,sprite_get_name(spawnedSprite));
+					file_text_writeln(savedFile);
+					file_text_write_string(savedFile,spawnedState);
+					file_text_writeln(savedFile);
+					file_text_write_string(savedFile,spawnedDirX);
+					file_text_writeln(savedFile);
+					var spawnedPalette = spawnedPaletteIndex;
+					if (spawnedPalette != -1) spawnedPalette = sprite_get_name(spawnedPaletteIndex);
+					file_text_write_string(savedFile,spawnedPalette);
+					file_text_writeln(savedFile);
+					switch (spawnedItemIndex)
+					{
+						case obj_Wall:
+						file_text_write_string(savedFile,spawnedSlopeType);
+						file_text_writeln(savedFile);
+						break;
+						
+						case obj_AbilityTrophy:
+						file_text_write_string(savedFile,spawnedAbilityIndex);
+						file_text_writeln(savedFile);
+						break;
+					}
+				}
+				file_text_write_string(savedFile,"spawnerEnd");
+				file_text_writeln(savedFile);
+				
+				file_text_write_string(savedFile,"stageEnd");
+				file_text_close(savedFile);
+				//var spr = sprite_duplicate(bg_Aquatia_Harbor_Day);
+				//sprite_save(spr,0,file);
+				//sprite_delete(spr);
+			}
+		}
+		
+		if (mouseOnTopLoad)
+		{
+			var file;
+			file = get_open_filename(working_directory + "maykr file|*.maykr","");
+			if (file != "")
+			{
+				var creationIndex = -1;
+				var loadedFile = file_text_open_read(file);
+				var maykrStart = file_text_read_string(loadedFile);
+				if (maykrStart == maykrStartMsg)
+				{
+					scr_MaykrClear();
+					file_text_readln(loadedFile);
+					var versionNumber = file_text_read_string(loadedFile);
+					file_text_readln(loadedFile);
+					switch (versionNumber)
+					{
+						case "Version - 0.6.0":
+						for (;;)
+						{
+							creationIndex = file_text_read_string(loadedFile);
+							if (creationIndex == "stageEnd") break;
+							file_text_readln(loadedFile);
+							#region Load Tiles
+							for (;;)
+							{
+								var tileLayerIndexLoad = file_text_read_string(loadedFile);
+								show_debug_message(tileLayerIndexLoad);
+								file_text_readln(loadedFile);
+								
+								if (tileLayerIndexLoad == "tileEnd") break;
+								
+								switch (creationIndex)
+								{
+									case "tileStart":
+									
+									var tileIndexLoad = real(file_text_read_string(loadedFile));
+									show_debug_message(tileIndexLoad);
+									file_text_readln(loadedFile);
+									var tileXLoad = real(file_text_read_string(loadedFile));
+									show_debug_message(tileXLoad);
+									file_text_readln(loadedFile);
+									var tileYLoad = real(file_text_read_string(loadedFile));
+									show_debug_message(tileYLoad);
+									file_text_readln(loadedFile);
+									
+									var tileSetIndex = -1;
+									switch (tileLayerIndexLoad)
+									{
+										case "tileAsteroidFieldsFront":
+										if (tileAsteroidFieldsFront == -1)
+										{
+											layer_create(299,"tileAsteroidFieldsFront");
+											tileAsteroidFieldsFront = layer_tilemap_create("tileAsteroidFieldsFront",0,0,ts_AsteroidFields,200,120);
+										}
+										tileSetIndex = tileAsteroidFieldsFront;
+										break;
+										
+										case "tileDebug":
+										if (tileDebug == -1)
+										{
+											layer_create(299,"tileDebug");
+											tileDebug = layer_tilemap_create("tileDebug",0,0,ts_Debug,200,120);
+										}
+										tileSetIndex = tileDebug;
+										break;
+									}
+									
+									if (tileSetIndex != -1) tilemap_set(tileSetIndex,tileIndexLoad,tileXLoad,tileYLoad);
+									break;
+									
+									default:
+									file_text_readln(loadedFile);
+									break;
+								}
+							}
+							#endregion
+							
+							creationIndex = file_text_read_string(loadedFile);
+							if (creationIndex == "stageEnd") break;
+							file_text_readln(loadedFile);
+							
+							#region Load Spawners
+							for (;;)
+							{
+								var spawnerItemIndexLoad = file_text_read_string(loadedFile);
+								file_text_readln(loadedFile);
+								
+									show_debug_message(spawnerItemIndexLoad);
+								if (spawnerItemIndexLoad == "spawnerEnd") break;
+								
+								switch (creationIndex)
+								{
+									case "spawnerStart":
+									
+									show_debug_message("oi");
+									var spawnerItemXLoad = real(file_text_read_string(loadedFile));
+									file_text_readln(loadedFile);
+									var spawnerItemYLoad = real(file_text_read_string(loadedFile));
+									file_text_readln(loadedFile);
+									var spawnedItemStringLoad = file_text_read_string(loadedFile);
+									file_text_readln(loadedFile);
+									var spawnerItemLayerLoad = file_text_read_string(loadedFile);
+									file_text_readln(loadedFile);
+									var spawnerSpriteLoad = file_text_read_string(loadedFile);
+									file_text_readln(loadedFile);
+									var spawnerStateLoad = file_text_read_string(loadedFile);
+									file_text_readln(loadedFile);
+									var spawnerDirXLoad = real(file_text_read_string(loadedFile));
+									file_text_readln(loadedFile);
+									var spawnerPaletteLoad = file_text_read_string(loadedFile);
+									file_text_readln(loadedFile);
+									
+									var spawner = instance_create_layer(spawnerItemXLoad,spawnerItemYLoad,"enemies",obj_Maykr_Spawner);
+									show_debug_message("spawn");
+									spawner.spawnedItemIndex = asset_get_index(spawnerItemIndexLoad);
+									spawner.spawnedSprite = asset_get_index(spawnerSpriteLoad);
+									spawner.spawnedItemString = spawnedItemStringLoad;
+									spawner.spawnedLayer = spawnerItemLayerLoad;
+									spawner.spawnedState = spawnerStateLoad;
+									spawner.spawnedDirX = spawnerDirXLoad;
+									spawner.spawnedPaletteIndex = asset_get_index(spawnerPaletteLoad);
+									
+									switch (spawner.spawnedItemIndex)
+									{
+										case obj_Wall:
+										var spawnerSlopeTypeLoad = real(file_text_read_string(loadedFile));
+										file_text_readln(loadedFile);
+										spawner.spawnedSlopeType = spawnerSlopeTypeLoad;
+										spawner.spawnedSprite = -1;
+										break;
+										
+										case obj_AbilityTrophy:
+										var spawnerAbilityIndexLoad = file_text_read_string(loadedFile);
+										file_text_readln(loadedFile);
+										spawner.spawnedAbilityIndex = spawnerAbilityIndexLoad;
+										break;
+									}
+									break;
+									
+									default:
+									file_text_readln(loadedFile);
+									break;
+								}
+							}
+							#endregion
+						}
+						break;
+					}
+					file_text_close(loadedFile);
+				}
+				else
+				{
+					show_debug_message("Invalid Maykr File");
+					//errorAlpha = 1;
+					//errorAlphaTimer = errorAlphaTimerMax;
+				}
+			}
+			else
+			{
+				show_debug_message("Open A Maykr File");
+				//errorAlpha = 1;
+				//errorAlphaTimer = errorAlphaTimerMax;
+			}
+		}
 		
 		if (mouseOnTopReset)
 		{
@@ -148,7 +465,7 @@ if (canBeInteracted)
 			}
 		}
 		
-		if (point_in_rectangle(mouseXGui,mouseYGui,2,234,24,269)) hudVisible = !hudVisible;
+		if (mouseOnTopHide) hudVisible = !hudVisible;
 	}
 	#endregion
 	
@@ -157,7 +474,7 @@ if (canBeInteracted)
 	if (mouse_check_button(mb_left))
 	{
 		mouseOnHud = false;
-		if ((mouseOnTopSave) or (mouseOnTopLoad) or (mouseOnTopOptions) or (mouseOnTopReset) or (mouseOnTopExpand)) mouseOnHud = true;
+		if (((point_in_rectangle(mouseXGui,mouseYGui,0,0,325,27))) or ((point_in_rectangle(mouseXGui,mouseYGui,324,0,480,47))) or ((point_in_rectangle(mouseXGui,mouseYGui,26 + bottomHudOffset,137 + bottomHudOffset,454,270))) or (mouseOnTopMap) or (mouseOnTopSave) or (mouseOnTopLoad) or (mouseOnTopOptions) or (mouseOnTopReset) or (mouseOnTopLeave) or (mouseOnTopPlay) or (mouseOnTopBlocks) or (mouseOnTopEnemies) or (mouseOnTopItems) or (mouseOnTopExpand) or (mouseOnTopHide)) mouseOnHud = true;
 		
 		if ((!collidingSpawner) and (!mouseOnHud) and (!spawnTimer))
 		{
@@ -171,7 +488,7 @@ if (canBeInteracted)
 			switch (spawnedItemIndex)
 			{
 				case obj_Wall:
-				spawner.visible = false;
+				spawner.spawnedSprite = -1;
 				spawner.spawnedSlopeType = spawnedSlopeType;
 				break;
 			}
@@ -180,8 +497,8 @@ if (canBeInteracted)
 				case "debugWall":
 				if (tileDebug == -1)
 				{
-					layer_create(299,spawnedItemString);
-					tileDebug = layer_tilemap_create(spawnedItemString,0,0,ts_Debug,24,24);
+					layer_create(299,"tileDebug");
+					tileDebug = layer_tilemap_create("tileDebug",0,0,ts_Debug,200,120);
 				}
 				var wx = mouseX / 24;
 				var wy = mouseY / 24;
@@ -192,8 +509,8 @@ if (canBeInteracted)
 				case "asteroidFieldsRedFront":
 				if (tileAsteroidFieldsFront == -1)
 				{
-					layer_create(299,spawnedItemString);
-					tileAsteroidFieldsFront = layer_tilemap_create(spawnedItemString,0,0,ts_AsteroidFields,24,24);
+					layer_create(299,"tileAsteroidFieldsFront");
+					tileAsteroidFieldsFront = layer_tilemap_create("tileAsteroidFieldsFront",0,0,ts_AsteroidFields,200,120);
 				}
 				var wx = mouseX / 24;
 				var wy = mouseY / 24;
@@ -205,8 +522,8 @@ if (canBeInteracted)
 				case "asteroidFieldsGreenFront":
 				if (tileAsteroidFieldsFront == -1)
 				{
-					layer_create(299,spawnedItemString);
-					tileAsteroidFieldsFront = layer_tilemap_create(spawnedItemString,0,0,ts_AsteroidFields,24,24);
+					layer_create(299,"tileAsteroidFieldsFront");
+					tileAsteroidFieldsFront = layer_tilemap_create("tileAsteroidFieldsFront",0,0,ts_AsteroidFields,200,120);
 				}
 				var wx = mouseX / 24;
 				var wy = mouseY / 24;
@@ -218,8 +535,8 @@ if (canBeInteracted)
 				case "asteroidFieldsBlueFront":
 				if (tileAsteroidFieldsFront == -1)
 				{
-					layer_create(299,spawnedItemString);
-					tileAsteroidFieldsFront = layer_tilemap_create(spawnedItemString,0,0,ts_AsteroidFields,24,24);
+					layer_create(299,"tileAsteroidFieldsFront");
+					tileAsteroidFieldsFront = layer_tilemap_create("tileAsteroidFieldsFront",0,0,ts_AsteroidFields,200,120);
 				}
 				var wx = mouseX / 24;
 				var wy = mouseY / 24;
@@ -293,9 +610,9 @@ else
 				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 				audio_play_sound(snd_ButtonYes,0,false);
 				windowIndex = -1;
+				spawnTimer = 15;
 				
-				with (obj_Maykr_Spawner) if (spawnedItemIndex != obj_Player) instance_destroy();
-				if (tileAsteroidFieldsFront != -1) tilemap_clear(tileAsteroidFieldsFront,0);
+				scr_MaykrClear();
 			}
 			
 			if (point_in_rectangle(mouseXGui,mouseYGui,180,149,300,174))

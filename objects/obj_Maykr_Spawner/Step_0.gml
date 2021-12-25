@@ -1,9 +1,5 @@
 ///@description Main
 
-//Move Snap
-
-scr_MaykrGrid(snap,snap);
-
 //Spawn Item
 
 if (active)

@@ -23,9 +23,7 @@ draw_sprite(spr_Maykr_TopHud_Blocks,0,96 - (topHudOffset * 330),-24 + (topHudBlo
 draw_sprite(spr_Maykr_TopHud_Enemies,0,172 - (topHudOffset * 330),-24 + (topHudEnemiesOffset * 27));
 draw_sprite(spr_Maykr_TopHud_Items,0,248 - (topHudOffset * 330),-24 + (topHudItemsOffset * 27));
 
-draw_sprite(spr_Maykr_TopHud_Back,0,324,49 - (topHudOffset * 80));
-draw_sprite(spr_Maykr_TopHud_Front,0,347,49 - (topHudOffset * 80));
-draw_sprite(spr_Maykr_TopHud_Map,0,370,49 - (topHudOffset * 80));
+draw_sprite(spr_Maykr_TopHud_Map,0,324,49 - (topHudOffset * 80));
 
 draw_sprite(spr_Maykr_TopHud_Save,0,460 - (topHudSaveOffset * 40) + (topHudOffset * 25),49);
 draw_sprite(spr_Maykr_TopHud_Load,0,460 - (topHudLoadOffset * 40) + (topHudOffset * 25),72);
