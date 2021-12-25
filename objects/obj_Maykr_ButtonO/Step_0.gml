@@ -144,7 +144,7 @@ switch (state)
 	//Collision
 	
 	case "item_collision_wall":
-	sprite_index = spr_Maykr_Debug_Wall;
+	sprite_index = spr_Maykr_Spawner_DebugWall;
 	break;
 	
 	case "item_collision_slope":
@@ -406,7 +406,7 @@ if ((instance_exists(obj_Maykr_ControlO)) and (instance_exists(obj_Maykr_HudO)))
 					obj_Maykr_HudO.setButtons = true;
 					obj_Maykr_ControlO.spawnedLayer = "collision";
 					obj_Maykr_ControlO.spawnedItemIndex = obj_Wall;
-					obj_Maykr_ControlO.spawnedSprite = spr_Maykr_Debug_Wall;
+					obj_Maykr_ControlO.spawnedSprite = spr_Maykr_Spawner_DebugWall;
 					obj_Maykr_ControlO.snap = 24;
 					obj_Maykr_ControlO.draggedObject = false;
 					with (obj_Maykr_SpawnerO)
@@ -708,7 +708,7 @@ if ((instance_exists(obj_Maykr_ControlO)) and (instance_exists(obj_Maykr_HudO)))
 					case "item_collision_wall":
 					obj_Maykr_ControlO.spawnedLayer = "collision";
 					obj_Maykr_ControlO.spawnedItemIndex = obj_Wall;
-					obj_Maykr_ControlO.spawnedSprite = spr_Maykr_Debug_Wall;
+					obj_Maykr_ControlO.spawnedSprite = spr_Maykr_Spawner_DebugWall;
 					obj_Maykr_ControlO.spawnedSlopeType = 0;
 					obj_Maykr_ControlO.snap = 24;
 					break;

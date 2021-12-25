@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Debug Skins",
-    "path": "folders/Sprites/Subgames/Maykr/Debug Skins.yy",
+    "name": "Spawners",
+    "path": "folders/Sprites/Subgames/Maykr/Spawners.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Maykr_Debug_BigStarBlock",

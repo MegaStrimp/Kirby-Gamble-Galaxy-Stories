@@ -4,6 +4,7 @@
 
 mask_index = spr_24Square_Mask;
 spawnedItem = -1;
+spawnedItemString = "";
 spawnedItemIndex = obj_WaddleDee;
 spawnedLayer = "enemies";
 spawnedSprite = spr_WaddleDee_Normal_Idle;

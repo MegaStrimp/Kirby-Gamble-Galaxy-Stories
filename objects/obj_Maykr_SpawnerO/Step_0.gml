@@ -27,7 +27,7 @@ if (active)
 		switch (spawnedSlopeType)
 		{
 			case 0:
-			spawnedItem.sprite_index = spr_Maykr_Debug_Wall;
+			spawnedItem.sprite_index = spr_Maykr_Spawner_DebugWall;
 			spawnedItem.topWallSprite = spr_Maykr_Debug_TopWall;
 			break;
 			

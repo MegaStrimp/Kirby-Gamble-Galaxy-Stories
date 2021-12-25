@@ -4,8 +4,7 @@
 
 randomize();
 
-//Subtitiles
-
+#region Subtitiles
 var i = 0;
 
 subtitles[i] = "Null!";
@@ -114,11 +113,12 @@ subtitles[i] = "Borb!";
 i += 1;
 
 selectedSubtitle = irandom_range(0,array_length(subtitles) - 1);
+#endregion
 
 //Window Caption
 
 global.versionNumber = "Beta XIV";
-global.versionNumber = "Gamble Maykr Beta II";
+global.versionNumber = "Gamble Maykr Beta III";
 window_set_caption("Kirby Gamble Galaxy Stories - " + global.versionNumber + " - " + subtitles[selectedSubtitle]);
 
 //Set Macros

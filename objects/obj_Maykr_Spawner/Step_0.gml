@@ -27,7 +27,7 @@ if (active)
 		switch (spawnedSlopeType)
 		{
 			case 0:
-			spawnedItem.sprite_index = spr_Maykr_Debug_Wall;
+			spawnedItem.sprite_index = spr_Maykr_Spawner_DebugWall;
 			spawnedItem.topWallSprite = spr_Maykr_Debug_TopWall;
 			break;
 			
@@ -370,18 +370,5 @@ else
 		spawnedName = "Burning Leo";
 		spawnedStateMax = 1;
 		break;
-	}
-}
-
-//Delete
-
-if (visible)
-{
-	var mx, my;
-	mx = floor(mouse_x / snap) * snap;
-	my = floor(mouse_y / snap) * snap;
-	if ((spawnedItemIndex != obj_Player) and (spawnedLayer == global.gambleMaykrMenu) and (position_meeting(mx,my,id)) and (mouse_check_button(mb_right)))
-	{
-		instance_destroy();
 	}
 }
