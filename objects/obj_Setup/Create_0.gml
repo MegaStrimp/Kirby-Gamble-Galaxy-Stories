@@ -119,7 +119,26 @@ selectedSubtitle = irandom_range(0,array_length(subtitles) - 1);
 
 global.versionNumber = "Beta XIV";
 global.versionNumber = "Gamble Maykr Beta III";
-window_set_caption("Kirby Gamble Galaxy Stories - " + global.versionNumber + " - " + subtitles[selectedSubtitle]);
+
+var windowCaption = -1;
+windowCaption[0] = "Kirby";
+windowCaption[1] = "Gamble";
+windowCaption[2] = "Galaxy";
+windowCaption[3] = "Stories";
+
+var windowGen = -1;
+windowGen[0] = irandom_range(0,99);
+windowGen[1] = irandom_range(0,99);
+windowGen[2] = irandom_range(0,99);
+windowGen[3] = irandom_range(0,99);
+
+switch (windowGen[0])
+{
+	
+}
+if (windowGen[2] == 0) windowCaption[2] = "Gamernt";
+if (windowGen[2] == 0) windowCaption[2] = "Gamernt";
+window_set_caption(windowCaption[0] + " " + windowCaption[1] + " " + windowCaption[2] + " " + windowCaption[3] + " - " + global.versionNumber + " - " + subtitles[selectedSubtitle]);
 
 //Set Macros
 

@@ -16,7 +16,7 @@ gravLimitParasol = .5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 48;
+spawnerRange = 24;
 character = 0;
 paletteIndex = spr_Tookey_Normal_Palette_FlyingWhite;
 state = 0;

@@ -8,7 +8,7 @@ gravLimitNormal = 6;
 //Other Variables
 
 spawn = false;
-spawnerRange = 48;
+spawnerRange = 24;
 character = 0;
 paletteIndex = spr_Coconut_Normal_Palette_TropicalBrown;
 state = 0;

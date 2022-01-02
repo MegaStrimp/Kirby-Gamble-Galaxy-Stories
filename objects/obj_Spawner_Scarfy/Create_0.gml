@@ -11,7 +11,7 @@ gravLimitNormal = 1.25;
 //Other Variables
 
 spawn = false;
-spawnerRange = 48;
+spawnerRange = 24;
 horLoop = 1;
 verLoop = 1;
 horOffset = 0;

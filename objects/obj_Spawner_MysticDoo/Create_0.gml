@@ -16,7 +16,7 @@ gravLimitParasol = .5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 48;
+spawnerRange = 24;
 character = 0;
 paletteIndex = spr_MysticDoo_Normal_Palette_CorruptedTwilight;
 state = 0;

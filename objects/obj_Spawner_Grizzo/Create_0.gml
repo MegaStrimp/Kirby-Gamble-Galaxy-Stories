@@ -11,7 +11,7 @@ gravLimitNormal = 5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 48;
+spawnerRange = 24;
 character = 0;
 paletteIndex = spr_Grizzo_Normal_Palette_TanBear;
 state = 0;

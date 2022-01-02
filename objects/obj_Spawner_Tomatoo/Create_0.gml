@@ -10,7 +10,7 @@ gravLimitNormal = 6;
 //Other Variables
 
 spawn = false;
-spawnerRange = 48;
+spawnerRange = 24;
 character = 0;
 paletteIndex = spr_Tomatoo_Normal_Palette_RedTomato;
 state = 0;

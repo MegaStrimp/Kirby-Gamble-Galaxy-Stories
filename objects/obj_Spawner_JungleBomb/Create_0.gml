@@ -11,7 +11,7 @@ gravLimitNormal = 6;
 //Other Variables
 
 spawn = false;
-spawnerRange = 48;
+spawnerRange = 24;
 character = 0;
 paletteIndex = spr_JungleBomb_Normal_Palette_Pineapple;
 state = 0;

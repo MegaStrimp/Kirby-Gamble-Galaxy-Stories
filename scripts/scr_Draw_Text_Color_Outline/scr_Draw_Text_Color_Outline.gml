@@ -1,4 +1,4 @@
-///@description Player - Ability Hat Background
+///@description Draw Text Color Outline
 ///@param {real} x
 ///@param {real} y
 ///@param {real} string

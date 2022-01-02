@@ -11,7 +11,7 @@ gravLimitNormal = 7;
 //Other Variables
 
 spawn = false;
-spawnerRange = 48;
+spawnerRange = 24;
 character = 0;
 paletteIndex = spr_Rocky_Normal_Palette_BrownRock;
 state = 0;

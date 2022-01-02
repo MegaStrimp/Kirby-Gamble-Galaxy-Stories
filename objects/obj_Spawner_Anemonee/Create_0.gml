@@ -8,7 +8,7 @@ gravLimitNormal = 5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 48;
+spawnerRange = 24;
 character = 0;
 paletteIndex = spr_Anemonee_Normal_Palette_VioletYarn;
 state = 0;

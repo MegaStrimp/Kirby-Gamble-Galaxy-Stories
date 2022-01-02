@@ -8,7 +8,7 @@ gravLimitNormal = 5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 48;
+spawnerRange = 24;
 character = 0;
 paletteIndex = spr_Glunk_Normal_Palette_Melon;
 state = 0;
