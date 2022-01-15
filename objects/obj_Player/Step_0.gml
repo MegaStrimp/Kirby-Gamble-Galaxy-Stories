@@ -14,7 +14,7 @@ if (player == 1) playerIsHelper = global.isHelperP2;
 var playerFamiliar = global.familiarP1;
 if (player == 1) playerFamiliar = global.familiarP2;
 
-scr_Player_Inputs();
+scr_Player_Inputs(player);
 
 //Clamp To View
 
@@ -95,7 +95,7 @@ if (!global.pause)
 			sparkChargeDecel = sparkChargeDecelMax;
 		}
 		
-		if ((keyboard_check_pressed(keyLeft)) or (keyboard_check_pressed(keyRight)) or (gamepad_button_check_pressed(0,gp_padl)) or (gamepad_button_check_pressed(0,gp_padr)))
+		if ((keyLeftPressed) or (keyRightPressed))
 		{
 			if (audio_is_playing(snd_SparkCharge)) audio_stop_sound(snd_SparkCharge);
 			audio_play_sound(snd_SparkCharge,0,false);
@@ -223,7 +223,7 @@ if (!global.pause)
 			
 			if (!global.cutscene)
 			{
-				if ((keyboard_check(keyJump)) or (gamepad_button_check(0,gp_face1)))
+				if (keyJumpPressed)
 				{
 					audio_play_sound(snd_BigJump,0,false);
 				}
@@ -245,7 +245,7 @@ if (!global.pause)
 			
 			//Vertical Knockback
 			
-			if ((!global.cutscene) and ((keyboard_check(keyJump)) or (gamepad_button_check(0,gp_face1))))
+			if ((!global.cutscene) and (keyJumpPressed))
 			{
 				vsp = -collidedSpring.force * 1.5;
 			}
@@ -435,8 +435,8 @@ switch (state)
 }
 
 //Select Button
-	
-if ((keyboard_check_pressed(keySelect)) or (gamepad_button_check_pressed(0,gp_select)))
+
+if (keySelectPressed)
 {
 	switch (playerCharacter)
 	{
@@ -597,6 +597,7 @@ if (global.helperHud)
 		blackAlphaBox = true;
 		var helperControl = instance_create_depth(x,y,depth - 1,obj_HelperControl);
 		helperControl.owner = id;
+		helperControl.player = player;
 	}
 }
 
@@ -778,7 +779,7 @@ if (!global.pause)
 			if ((place_meeting(x,y + 1,obj_Wall)) and (abs(hsp) >= (movespeedRun * .25)))
 			{
 				var collidingWall = instance_place(x,y + 1,obj_Wall);
-				if ((!collidingWall.platform) or ((collidingWall.platform) and (((!keyboard_check(keyDown)) and (!gamepad_button_check(0,gp_padd))) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal))))
+				if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal))))
 				{
 					var parCarryStart = instance_create_depth(x + (16 * -dir),y + 16,depth + 1,obj_Particle);
 					parCarryStart.sprite_index = spr_Particle_Run;
@@ -835,7 +836,7 @@ if (!global.pause)
 	}
 	else if (runCancelTimer == 0)
 	{
-		if ((!keyboard_check(keyLeft)) and (!keyboard_check(keyRight)) and (!gamepad_button_check(0,gp_padl)) and (!gamepad_button_check(0,gp_padr)))
+		if ((!keyLeftHold) and (!keyRightHold))
 	    {
 	        runCancelTimer = runCancelTimerMax;
 	        runCancelTimer = -1;
@@ -1360,11 +1361,11 @@ if (!global.pause)
 		projectile.image_xscale = projectile.dirX;
 		projectile.enemy = false;
 		projectile.hsp = 2 * dir;
-        if ((!global.cutscene) and ((keyboard_check(keyUp)) or (gamepad_button_check(0,gp_padu))))
+        if ((!global.cutscene) and (keyUpHold))
         {
             projectile.vsp = random_range(-.5,0) - .75;
         }
-        else if ((!global.cutscene) and ((keyboard_check(keyDown)) or (gamepad_button_check(0,gp_padd))))
+        else if ((!global.cutscene) and (keyDownHold))
         {
             projectile.vsp = random_range(0,.5) + .75;
         }

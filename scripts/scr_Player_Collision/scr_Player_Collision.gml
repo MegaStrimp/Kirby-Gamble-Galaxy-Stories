@@ -17,7 +17,7 @@ function scr_Player_Collision()
 	if ((place_meeting(x,y + 1,obj_Wall)) and (!place_meeting(x + hspFinal,y,obj_Wall)))
 	{
 		collidingWall = instance_place(x,y + 1,obj_Wall);
-		if (((!collidingWall.platform) or ((collidingWall.platform) and (((!keyboard_check(keyDown)) and (!gamepad_button_check(0,gp_padd))) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) and (((instance_place(x,y + 1,obj_Wall)).slope) or ((place_meeting(x + sign(hspFinal),y,obj_Wall) and (instance_place(x + sign(hspFinal),y,obj_Wall).slope)))))
+		if (((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) and (((instance_place(x,y + 1,obj_Wall)).slope) or ((place_meeting(x + sign(hspFinal),y,obj_Wall) and (instance_place(x + sign(hspFinal),y,obj_Wall).slope)))))
 		{
 			yplus = 0;
 			while (!place_meeting(x + hspFinal,y + yplus,obj_Wall) && yplus <= abs(hspFinal))
@@ -89,7 +89,7 @@ function scr_Player_Collision()
 	if (place_meeting(x,y + vspFinal,obj_Platform))
 	{
 		collidingWall = instance_place(x,y + vspFinal,obj_Platform);
-		if (((!keyboard_check(keyDown)) and (!gamepad_button_check(0,gp_padd))) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal))
+		if ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal))
 		{
 			while (!place_meeting(x,y + sign(vspFinal),obj_Platform))
 			{

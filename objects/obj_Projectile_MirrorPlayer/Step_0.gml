@@ -28,7 +28,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 {
 	//Variables
 	
-	scr_Player_Inputs();
+	scr_Player_Inputs(player);
 	
 	//Event Inherited
 	
@@ -51,13 +51,16 @@ if (((pausable) and (!global.pause)) or (!pausable))
             
 			if ((!global.cutscene) and (!enemy))
 			{
-	            if ((keyboard_check(owner.keyUp)) or (gamepad_button_check(0,gp_padu)))
-	            {
-	                angleSpd = -5;
-	            }
-	            if ((keyboard_check(owner.keyDown)) or (gamepad_button_check(0,gp_padd)))
-	            {
-	                angleSpd = 5;
+				with (owner)
+				{
+		            if (keyUpHold)
+		            {
+		                other.angleSpd = -5;
+		            }
+		            if (keyDownHold)
+		            {
+		                other.angleSpd = 5;
+		            }
 	            }
 			}
 			angle += angleSpd;

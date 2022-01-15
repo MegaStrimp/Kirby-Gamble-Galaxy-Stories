@@ -13,15 +13,7 @@ if (!global.pause)
 	
 	switch (character)
 	{
-		/*
-			0 - Gamble
-			1 - Peashooter
-			2 - Epic Jar
-			3 - Krackie
-		*/
-		
-		//Gamble
-		
+		#region Gamble
 		case "Gamble":
 		//Position
 		
@@ -78,9 +70,9 @@ if (!global.pause)
 			}
 		}
 		break;
+		#endregion
 		
-		//Peashooter
-		
+		#region Happy Pea
 		case "Happy Pea":
 		//Position
 		
@@ -174,9 +166,9 @@ if (!global.pause)
 		
 		sprite_index = spr_Familiar_Peashooter_Root;
 		break;
+		#endregion
 		
-		//Epic Jar
-		
+		#region Epic Jar
 		case "Epic Jar":
 		//Position
 		
@@ -191,9 +183,9 @@ if (!global.pause)
 		}
 		else
 		{
-			y = lerp(y,owner.y + 2,.15);
+			y = lerp(y,owner.y - 9,.15);
 		}
-		attackYOffset = lerp(attackYOffset,attack * 7,.15);
+		attackYOffset = lerp(attackYOffset,attack * 12,.15);
 		
 		//Attack Timer
 		
@@ -240,23 +232,25 @@ if (!global.pause)
 					break;
 					
 					case 1:
-					sprite_index = spr_Familiar_EpicJar_Fetus_AttackStop;
+					sprite_index = spr_Familiar_EpicJar_Fetus_Attack;
 					image_index = 0;
-					var sound = choose(snd_Peashooter1,snd_Peashooter2,snd_Peashooter3);
-					audio_play_sound(sound,0,false);
-					var projectile = instance_create_depth(x,y - 15 + attackYOffset,depth + 1,obj_Projectile_Peashooter);
+					var projectile = instance_create_depth(x,y - 10 - attackYOffset,depth + 1,obj_Projectile_Bomb);
 					projectile.owner = id;
-					projectile.dmg = 4;
-					projectile.hsp = dir * 6;
+					projectile.character = 3;
+					projectile.objectOnHitDmg = 26;
 					projectile.dirX = dir;
+					projectile.hsp = 2.5 * dir;
+					projectile.vsp = -4.5;
 					projectile.image_xscale = projectile.dirX;
 					projectile.enemy = false;
+					projectile.angleSpd = projectile.hsp * 4;
 					attackState += 1;
 					attackTimer = 15;
 					break;
 					
 					case 2:
 					sprite_index = spr_Familiar_EpicJar_Fetus_AttackStop;
+					image_index = 0;
 					attackState += 1;
 					attackTimer = 15;
 					break;
@@ -279,6 +273,7 @@ if (!global.pause)
 		
 		if (!attack) sprite_index = spr_Familiar_EpicJar_Fetus_Idle;
 		break;
+		#endregion
 		
 		#region Krackle
 		case "Krackle":

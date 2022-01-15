@@ -57,6 +57,7 @@ color = c_white;
 changeOwnerState = false;
 endTutorialNotif = false;
 pausable = true;
+maxPixels = -1;
 
 //Timers
 

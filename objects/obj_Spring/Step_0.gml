@@ -1,9 +1,5 @@
 ///@description Main
 
-//Inputs
-
-scr_Player_Inputs();
-
 //Setup Timer
 
 if (setupTimer > 0)

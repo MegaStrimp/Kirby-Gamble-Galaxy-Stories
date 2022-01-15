@@ -14,7 +14,7 @@ function scr_Player_Float()
 		if (place_meeting(x,y + 1,obj_Wall))
 		{
 			var collidingWall = instance_place(x,y + 1,obj_Wall);
-			if ((!collidingWall.platform) or ((collidingWall.platform) and (((!keyboard_check(keyDown)) and (!gamepad_button_check(0,gp_padd))) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) grounded = true;
+			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) grounded = true;
 		}
 		
 		//Movement
@@ -23,19 +23,19 @@ function scr_Player_Float()
 		{
 			if ((!global.cutscene))
 			{
-				if ((keyboard_check(keyLeft)) or (gamepad_button_check(0,gp_padl)))
+				if (keyLeftHold)
 				{
 				    hsp -= accel;
 					dir = -1;
 				}
-				else if ((keyboard_check(keyRight)) or (gamepad_button_check(0,gp_padr)))
+				else if (keyRightHold)
 				{
 				    hsp += accel;
 					dir = 1;
 				}
 			}
 			
-			if ((!global.cutscene) and (((keyboard_check(keyLeft)) and (keyboard_check(keyRight)) and (!gamepad_button_check(0,gp_padl)) and (!gamepad_button_check(0,gp_padr))) or ((gamepad_button_check(0,gp_padl)) and (gamepad_button_check(0,gp_padr)) and (!keyboard_check(keyLeft)) and (!keyboard_check(keyRight))) or ((!keyboard_check(keyLeft)) and (!keyboard_check(keyRight) and (!gamepad_button_check(0,gp_padl)) and (!gamepad_button_check(0,gp_padr))))))
+			if ((!global.cutscene) and (((keyLeftHold) and (keyRightHold)) or ((!keyLeftHold) and (!keyRightHold))))
 			{
 				var ultiDecel = decel;
 				if (hsp >= ultiDecel) hsp -= ultiDecel;
@@ -59,7 +59,7 @@ function scr_Player_Float()
 		
 		if ((!floatSpit) and (float) and (!hurt))
 		{
-			if ((!global.cutscene) and (floatingTimer == -1) and ((keyboard_check(keyJump)) or (keyboard_check(keyUp)) or (gamepad_button_check(0,gp_face1)) or (gamepad_button_check(0,gp_padu))))
+			if ((!global.cutscene) and (floatingTimer == -1) and ((keyJumpHold) or (keyUpHold)))
 			{
 				if (carriedItem == "none")
 				{
@@ -90,7 +90,7 @@ function scr_Player_Float()
 		
 		//Door
 		
-		if ((!global.cutscene) and (canEnter) and (position_meeting(x,y,obj_Door)) and ((keyboard_check_pressed(keyUp)) or (gamepad_button_check_pressed(0,gp_padu))) and (!attack))
+		if ((!global.cutscene) and (canEnter) and (position_meeting(x,y,obj_Door)) and (keyUpPressed) and (!attack))
 		{
 		    if ((!instance_exists(obj_Fade)) and (!hurt))
 		    {
@@ -101,7 +101,7 @@ function scr_Player_Float()
 		
 		//Air Puff
 		
-		if ((!global.cutscene) and ((grounded) or (enterDoor) or ((place_meeting(x,y,obj_AntiFloat))) or (keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))) and ((!floatSpit) and (sprite_index != sprFloatReady) and (sprite_index != sprItemCarryLightFloatReady)))
+		if ((!global.cutscene) and ((grounded) or (enterDoor) or ((place_meeting(x,y,obj_AntiFloat))) or (keyAttackPressed)) and ((!floatSpit) and (sprite_index != sprFloatReady) and (sprite_index != sprItemCarryLightFloatReady)))
 		{
 			if (audio_is_playing(floatSfx)) audio_stop_sound(snd_Float);
 			var projAirPuff = instance_create_depth(x + ((sprite_get_width(sprFloatSpit) / 2) * dir),y + vsp,depth - 1,obj_AirPuff);
@@ -162,7 +162,7 @@ function scr_Player_Float()
 		
 		//Door
 		/*
-		if ((!global.cutscene) and (position_meeting(x,y,obj_Door)) and ((keyboard_check_pressed(keyUp)) or (gamepad_button_check_pressed(0,gp_padu))))
+		if ((!global.cutscene) and (position_meeting(x,y,obj_Door)) and (keyUpPressed))
 		{
 		    if ((!instance_exists(obj_Fade)) and (hurt = false))
 		    {

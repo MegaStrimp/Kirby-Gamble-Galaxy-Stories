@@ -4,7 +4,7 @@ if (!global.pause)
 {
 	//Inputs
 	
-	scr_Player_Inputs();
+	scr_Player_Inputs(0);
 	
 	//Variables
 	
@@ -12,14 +12,14 @@ if (!global.pause)
 	
 	//Select
 	
-	if ((keyboard_check_pressed(keyDown)) or (gamepad_button_check_pressed(0,gp_padd)))
+	if (keyDownPressed)
 	{
 		if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 		audio_play_sound(snd_BossHealth,0,false);
 		selection += 1;
 	}
 	
-	if ((keyboard_check_pressed(keyUp)) or (gamepad_button_check_pressed(0,gp_padu)))
+	if (keyUpPressed)
 	{
 		if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 		audio_play_sound(snd_BossHealth,0,false);
@@ -40,11 +40,11 @@ if (!global.pause)
 			textY = 147 - ((selection + 2) * 36);
 		}
 		
-		sprayPaintOffset[selection] = 1;
+		stageOffset[selection] = 1;
 		
 		if (!instance_exists(obj_Fade))
 		{
-			if ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_face1)) or (gamepad_button_check_pressed(0,gp_start)))
+			if ((keyJumpPressed) or (keyStartPressed))
 			{
 				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 				audio_play_sound(snd_ButtonYes,0,false);
@@ -52,7 +52,7 @@ if (!global.pause)
 				fade.targetRoom = asset_get_index(stageTitle[selection]);
 			}
 			
-			if ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2)))
+			if (keyAttackPressed)
 			{
 				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 				audio_play_sound(snd_ButtonNo,0,false);
@@ -62,7 +62,6 @@ if (!global.pause)
 		
 		if (goBack)
 		{
-			scr_SaveGame(global.selectedSave);
 			var fade = instance_create_depth(x,y,-999,obj_Fade);
 			fade.targetRoom = rm_Starcutter;
 			goBack = false;

@@ -4,7 +4,7 @@ if (!global.pause)
 {
 	//Inputs
 	
-	scr_Player_Inputs();
+	scr_Player_Inputs(player);
 	
 	//Variables
 	
@@ -22,14 +22,14 @@ if (!global.pause)
 	
 	//Select
 	
-	if ((keyboard_check_pressed(keyDown)) or (gamepad_button_check_pressed(0,gp_padd)))
+	if (keyDownPressed)
 	{
 		if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 		audio_play_sound(snd_BossHealth,0,false);
 		selection += 1;
 	}
 	
-	if ((keyboard_check_pressed(keyUp)) or (gamepad_button_check_pressed(0,gp_padu)))
+	if (keyUpPressed)
 	{
 		if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 		audio_play_sound(snd_BossHealth,0,false);
@@ -69,7 +69,7 @@ if (!global.pause)
 			break;
 		}
 		
-		if ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_face1)) or (gamepad_button_check_pressed(0,gp_start)))
+		if ((keyJumpPressed) or (keyStartPressed))
 		{
 			if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 			audio_play_sound(snd_ButtonYes,0,false);
@@ -81,7 +81,7 @@ if (!global.pause)
 		
 		if (!instance_exists(obj_Fade))
 		{
-			if ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2)))
+			if (keyAttackPressed)
 			{
 				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 				audio_play_sound(snd_ButtonNo,0,false);
@@ -113,7 +113,7 @@ if (!global.pause)
 		
 		soundOffset[soundCategory][selection] = 1;
 		
-		if ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_face1)) or (gamepad_button_check_pressed(0,gp_start)))
+		if ((keyJumpPressed) or (keyStartPressed))
 		{
 			if (soundUnlocked[soundCategory][selection])
 			{
@@ -146,7 +146,7 @@ if (!global.pause)
 		
 		if (!instance_exists(obj_Fade))
 		{
-			if ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2)))
+			if (keyAttackPressed)
 			{
 				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 				audio_play_sound(snd_ButtonNo,0,false);

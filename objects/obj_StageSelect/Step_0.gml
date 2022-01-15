@@ -4,17 +4,17 @@ if (!global.pause)
 {
 	//Inputs
 	
-	scr_Player_Inputs();
+	scr_Player_Inputs(0);
 	
 	//Go To A Stage
 	
 	if (!instance_exists(obj_Fade))
 	{
-		if ((keyboard_check_pressed(keyRight)) or (gamepad_button_check_pressed(0,gp_padr)))
+		if (keyRightPressed)
 		{
 			selection += 1;
 		}
-		if ((keyboard_check_pressed(keyLeft)) or (gamepad_button_check_pressed(0,gp_padl)))
+		if (keyLeftPressed)
 		{
 			selection -= 1;
 		}
@@ -134,7 +134,7 @@ if (!global.pause)
 	
 	//Select Coop
 	
-	if ((!instance_exists(obj_Fade)) and ((keyboard_check_pressed(keySelect)) or (gamepad_button_check_pressed(0,gp_select))))
+	if ((!instance_exists(obj_Fade)) and (keySelectPressed))
 	{
 		if (global.hasCoop)
 		{
@@ -154,7 +154,7 @@ if (!global.pause)
 	
 	if (!instance_exists(obj_Fade))
 	{
-		if ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2)))
+		if (keyAttackPressed)
 		{
 			if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 			audio_play_sound(snd_ButtonNo,0,false);
@@ -171,7 +171,7 @@ if (!global.pause)
 	
 	//Go To Room
 	
-	if ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_face1)) or (gamepad_button_check_pressed(0,gp_start)))
+	if ((keyJumpPressed) or (keyStartPressed))
 	{
 		if (!instance_exists(obj_Fade))
 		{

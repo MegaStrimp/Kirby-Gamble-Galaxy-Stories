@@ -4,19 +4,19 @@ if (!global.pause)
 {
 	//Inputs
 	
-	scr_Player_Inputs();
+	scr_Player_Inputs(0);
 	
-	if ((keyboard_check_pressed(keyUp)) or (keyboard_check_pressed(keyDown)) or (keyboard_check_pressed(keyLeft)) or (keyboard_check_pressed(keyRight)) or (gamepad_button_check_pressed(0,gp_padu)) or (gamepad_button_check_pressed(0,gp_padd)) or (gamepad_button_check_pressed(0,gp_padl)) or (gamepad_button_check_pressed(0,gp_padr))) audio_play_sound(snd_BossHealth,0,false);
+	if ((keyUpPressed) or (keyDownPressed) or (keyLeftPressed) or (keyRightPressed)) audio_play_sound(snd_BossHealth,0,false);
 	
-	if ((keyboard_check_pressed(keyUp)) or (gamepad_button_check_pressed(0,gp_padu))) selection -= maxPerLine;
-	if ((keyboard_check_pressed(keyDown)) or (gamepad_button_check_pressed(0,gp_padd))) selection += maxPerLine;
-	if ((keyboard_check_pressed(keyLeft)) or (gamepad_button_check_pressed(0,gp_padl))) selection -= 1;
-	if ((keyboard_check_pressed(keyRight)) or (gamepad_button_check_pressed(0,gp_padr))) selection += 1;
+	if (keyUpPressed) selection -= maxPerLine;
+	if (keyDownPressed) selection += maxPerLine;
+	if (keyLeftPressed) selection -= 1;
+	if (keyRightPressed) selection += 1;
 	
 	if (selection > maxButtons - 1) selection -= maxButtons;
 	if (selection < 0) selection += maxButtons;
 	
-	if ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_face1)) or (gamepad_button_check_pressed(0,gp_start)))
+	if ((keyJumpPressed) or (keyStartPressed))
 	{
 		if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 		audio_play_sound(snd_ButtonYes,0,false);
@@ -175,7 +175,7 @@ if (!global.pause)
 	
 	if (!instance_exists(obj_Fade))
 	{
-		if ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2)))
+		if (keyAttackPressed)
 		{
 			if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 			audio_play_sound(snd_ButtonNo,0,false);

@@ -2,13 +2,13 @@
 
 //Inputs
 
-scr_Player_Inputs();
+scr_Player_Inputs(0);
 
 //Go To Menu
 
 if (!instance_exists(obj_Fade))
 {
-	if ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_face1)) or (gamepad_button_check_pressed(0,gp_start)))
+	if ((keyJumpPressed) or (keyStartPressed))
 	{
 		global.playerLives = 3;
 		global.pause = false;

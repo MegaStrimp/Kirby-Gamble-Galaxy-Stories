@@ -20,6 +20,7 @@ function scr_LoadGame(argument0)
 	
 	global.kirbyUnlocked = ini_read_real("unlocks","kirbyUnlocked",true);
 	global.gambleUnlocked = ini_read_real("unlocks","gambleUnlocked",false);
+	global.gooeyUnlocked = ini_read_real("unlocks","gooeyUnlocked",false);
 	global.metaKnightUnlocked = ini_read_real("unlocks","metaKnightUnlocked",false);
 	global.keebyUnlocked = ini_read_real("unlocks","keebyUnlocked",false);
 	global.princeFluffUnlocked = ini_read_real("unlocks","princeFluffUnlocked",false);
@@ -79,6 +80,14 @@ function scr_LoadGame(argument0)
 	global.sprayPaintKirbyP1 = asset_get_index(sprayPaintKirbyP1);
 	var sprayPaintKirbyP2 = ini_read_string("playerCustomization","sprayPaintKirbyP2","spr_Kirby_Normal_Palette_Yellow");
 	global.sprayPaintKirbyP2 = asset_get_index(sprayPaintKirbyP2);
+	var sprayPaintGambleP1 = ini_read_string("playerCustomization","sprayPaintGambleP1","spr_Kirby_Normal_Palette_FriendlyPink");
+	global.sprayPaintGambleP1 = asset_get_index(sprayPaintGambleP1);
+	var sprayPaintGambleP2 = ini_read_string("playerCustomization","sprayPaintGambleP2","spr_Kirby_Normal_Palette_Yellow");
+	global.sprayPaintGambleP2 = asset_get_index(sprayPaintGambleP2);
+	var sprayPaintGooeyP1 = ini_read_string("playerCustomization","sprayPaintGooeyP1","spr_Kirby_Normal_Palette_FriendlyPink");
+	global.sprayPaintGooeyP1 = asset_get_index(sprayPaintGooeyP1);
+	var sprayPaintGooeyP2 = ini_read_string("playerCustomization","sprayPaintGooeyP2","spr_Kirby_Normal_Palette_Yellow");
+	global.sprayPaintGooeyP2 = asset_get_index(sprayPaintGooeyP2);
 	
 	global.characterP1 = ini_read_string("playerCustomization","characterP1","kirby");
 	global.characterP2 = ini_read_string("playerCustomization","characterP2","kirby");

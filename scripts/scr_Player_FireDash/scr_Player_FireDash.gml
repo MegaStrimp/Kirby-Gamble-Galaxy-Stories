@@ -25,7 +25,7 @@ function scr_Player_FireDash()
 		
 		//Cancel
 		
-		if ((fireMagicCharcoalUpgrade) and ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2)))) attackTimer = 0;
+		if ((fireMagicCharcoalUpgrade) and (keyAttackPressed)) attackTimer = 0;
 		
 		//Animation
 		

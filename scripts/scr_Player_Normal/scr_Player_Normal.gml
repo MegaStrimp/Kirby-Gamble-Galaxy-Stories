@@ -16,14 +16,14 @@ function scr_Player_Normal()
 		if (place_meeting(x,y + 1,obj_Wall))
 		{
 			var collidingWall = instance_place(x,y + 1,obj_Wall);
-			if ((!collidingWall.platform) or ((collidingWall.platform) and (((!keyboard_check(keyDown)) and (!gamepad_button_check(0,gp_padd))) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) grounded = true;
+			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) grounded = true;
 		}
 		
 		var wallAbove = false;
 		if (place_meeting(x,y - 1,obj_Wall))
 		{
 			var collidingWall = instance_place(x,y - 1,obj_Wall);
-			if ((!collidingWall.platform) or ((collidingWall.platform) and (((!keyboard_check(keyDown)) and (!gamepad_button_check(0,gp_padd))) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) wallAbove = true;
+			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) wallAbove = true;
 		}
 		
 		//Run
@@ -31,7 +31,7 @@ function scr_Player_Normal()
 		if ((canRun) and (playerAbility != "ufo"))
 		{
 			if (runDoubleTap > -1) runDoubleTap -= 1;
-			if ((!global.cutscene) and (!runTurn) and (((keyboard_check_pressed(keyLeft)) or (keyboard_check_pressed(keyRight))) or ((gamepad_button_check_pressed(0,gp_padl)) or (gamepad_button_check_pressed(0,gp_padr)))))
+			if ((!global.cutscene) and (!runTurn) and ((keyLeftPressed) or (keyRightPressed)))
 			{
 			    if (runDoubleTap > 0)
 			    {
@@ -67,7 +67,7 @@ function scr_Player_Normal()
 		if (run)
 		{
 		    movespeed = movespeedRun;
-		    if (((runCancelTimer == -1) and (grounded) and ((keyboard_check_released(keyLeft)) or (keyboard_check_released(keyRight)) or (gamepad_button_check_released(0,gp_padl)) or (gamepad_button_check_released(0,gp_padr)))) or (global.cutscene))
+		    if (((runCancelTimer == -1) and (grounded) and ((keyLeftReleased) or (keyRightReleased)) or (global.cutscene)))
 		    {
 		        runCancelTimer = 15;
 		    }
@@ -107,7 +107,7 @@ function scr_Player_Normal()
 		{
 			if ((!global.cutscene) and (canWalk) and (!runTurn))
 			{
-				if ((keyboard_check(keyRight)) or (gamepad_button_check(0,gp_padr)))
+				if (keyRightHold)
 				{
 					if (!attack)
 					{
@@ -124,7 +124,7 @@ function scr_Player_Normal()
 						}
 					}
 				}
-				if ((keyboard_check(keyLeft)) or (gamepad_button_check(0,gp_padl)))
+				if (keyLeftHold)
 				{
 					if (!attack)
 					{
@@ -147,17 +147,17 @@ function scr_Player_Normal()
 			{
 				if (!global.cutscene)
 				{
-					if ((keyboard_check(keyUp)) or (gamepad_button_check(0,gp_padu)))
+					if (keyUpHold)
 					{
 						if (!attack) vsp -= accel;
 					}
-					if ((keyboard_check(keyDown)) or (gamepad_button_check(0,gp_padd)))
+					if (keyDownHold)
 					{
 						if (!attack) vsp += accel;
 					}
 				}
 				
-				if ((((keyboard_check(keyDown)) and (keyboard_check(keyUp)) and (!gamepad_button_check(0,gp_padu)) and (!gamepad_button_check(0,gp_padd))) or ((gamepad_button_check(0,gp_padu)) and (gamepad_button_check(0,gp_padd)) and (!keyboard_check(keyDown)) and (!keyboard_check(keyUp))) or ((!keyboard_check(keyDown)) and (!keyboard_check(keyUp) and (!gamepad_button_check(0,gp_padu)) and (!gamepad_button_check(0,gp_padd))))) or (attack) or (global.cutscene))
+				if ((((keyDownHold) and (keyUpHold)) or ((!keyDownHold) and (!keyUpHold))) or (attack) or (global.cutscene))
 				{
 					vsp = scr_Friction(vsp,decel);
 				}
@@ -170,7 +170,7 @@ function scr_Player_Normal()
 				if (hspLimit) hsp = clamp(hsp, -movespeed, movespeed);
 			}
 			
-			if ((((keyboard_check(keyLeft)) and (keyboard_check(keyRight)) and (!gamepad_button_check(0,gp_padl)) and (!gamepad_button_check(0,gp_padr))) or ((gamepad_button_check(0,gp_padl)) and (gamepad_button_check(0,gp_padr)) and (!keyboard_check(keyLeft)) and (!keyboard_check(keyRight))) or ((!keyboard_check(keyLeft)) and (!keyboard_check(keyRight) and (!gamepad_button_check(0,gp_padl)) and (!gamepad_button_check(0,gp_padr))))) or (attack) or (runTurn) or (global.cutscene))
+			if ((((keyLeftHold) and (keyRightHold)) or ((!keyLeftHold) and (!keyRightHold))) or (attack) or (runTurn) or (global.cutscene))
 			{
 				var ultiDecel = decel;
 				if (runTurn) ultiDecel = decel * 2;
@@ -198,7 +198,7 @@ function scr_Player_Normal()
 			}
 		}
 		
-		if ((!global.cutscene) and (!canUfoFloat) and (playerAbility != "ufo") and (vsp < 0) and (!keyboard_check(keyJump)) and (!gamepad_button_check(0,gp_face1)))
+		if ((!global.cutscene) and (!canUfoFloat) and (playerAbility != "ufo") and (vsp < 0) and (!keyJumpHold))
 		{
 			var jumpLimitValue = -jumpspeed / 4;
 			switch (playerCharacter)
@@ -257,7 +257,7 @@ function scr_Player_Normal()
 			case "bomb":
 			if (!global.cutscene)
 			{
-				if ((!hurt) and (!attack) and ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))))
+				if ((!hurt) and (!attack) and (keyAttackPressed))
 				{
 					var grabEnemy = -1;
 					if (place_meeting(x + (16 * dir),y,obj_Enemy)) grabEnemy = instance_place(x + (16 * dir),y,obj_Enemy);
@@ -321,7 +321,7 @@ function scr_Player_Normal()
 				
 				if (attackNumber == "bombNormal")
 				{
-					if (((!keyboard_check(keyAttack)) and (!gamepad_button_check(0,gp_face2))) or (hurt))
+					if ((!keyAttackHold) or (hurt))
 					{
 						if (audio_is_playing(snd_BombThrow)) audio_stop_sound(snd_BombThrow);
 						audio_play_sound(snd_BombThrow,0,false);
@@ -341,6 +341,7 @@ function scr_Player_Normal()
 							{
 								var bomb = instance_create_depth(carriedItemIndex.x,carriedItemIndex.y,depth - 1,obj_Projectile_Bomb);
 								bomb.owner = id;
+								bomb.player = player;
 								bomb.hasRemoteDetonation = bombSmartBombUpgrade;
 								bomb.hasHoming = bombEyeBombUpgrade;
 								bomb.hasMagma = bombMagmaBombUpgrade;
@@ -416,7 +417,7 @@ function scr_Player_Normal()
 					switch (playerAbility)
 					{
 						case "none":
-					    if ((!global.cutscene) and ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))) and (!hurt))
+					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt))
 					    {
 							if (!hurt)
 							{
@@ -434,7 +435,7 @@ function scr_Player_Normal()
 						break;
 					
 						case "cutter":
-					    if ((!global.cutscene) and ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))) and (!hurt) and (!attack))
+					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
 							if ((run) and (vsp == 0) and (hsp != 0))
 							{
@@ -444,7 +445,7 @@ function scr_Player_Normal()
 						        image_index = 0;
 				                cutterCatch = false;
 							}
-							else if ((keyboard_check(keyDown)) or (gamepad_button_check(0,gp_padd)))
+							else if (keyDownHold)
 							{
 								var cutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_CutterDropMask);
 								cutterMaskProj.owner = id;
@@ -510,18 +511,18 @@ function scr_Player_Normal()
 								}
 							}
 						
-							if ((keyboard_check(keyRight)) or (gamepad_button_check(0,gp_padr)))
+							if (keyRightHold)
 							{
 								dir = 1;
 							}
-							if ((keyboard_check(keyLeft)) or (gamepad_button_check(0,gp_padl)))
+							if (keyLeftHold)
 							{
 								dir = -1;
 							}
 						
 							if (cutterCharge < cutterChargeMax)
 							{
-								if ((!global.cutscene) and ((!keyboard_check(keyAttack)) and (!gamepad_button_check(0,gp_face2))))
+								if ((!global.cutscene) and (!keyAttackHold))
 								{
 									cutterCharge = 0;
 									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
@@ -537,7 +538,7 @@ function scr_Player_Normal()
 							else
 							{
 								if (invincibleFlashTimer == -1) invincibleFlashTimer = invincibleFlashTimerMax;
-								if ((!global.cutscene) and ((!keyboard_check(keyAttack)) and (!gamepad_button_check(0,gp_face2))))
+								if ((!global.cutscene) and (!keyAttackHold))
 								{
 									cutterCharge = 0;
 									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
@@ -621,7 +622,7 @@ function scr_Player_Normal()
 					
 						if (attackNumber == "cutterAir")
 						{
-							if ((!keyboard_check(keyAttack)) and (!gamepad_button_check(0,gp_face2)))
+							if (!keyAttackHold)
 							{
 								attackTimer = 0;
 							}
@@ -629,9 +630,9 @@ function scr_Player_Normal()
 						break;
 						
 						case "beam":
-					    if ((!global.cutscene) and ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))) and (!hurt) and (!attack))
+					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
-							if ((keyboard_check(keyUp)) or (gamepad_button_check(0,gp_padu)) or ((dir = 1) and (((keyboard_check(keyRight))) or ((gamepad_button_check(0,gp_padr))))) or ((dir = -1) and (((keyboard_check(keyLeft))) or ((gamepad_button_check(0,gp_padl))))))
+							if ((keyUpHold) or ((dir = 1) and (keyRightHold)) or ((dir = -1) and (keyLeftHold)))
 							{
 								var grabEnemy = -1;
 								if (place_meeting(x + (16 * dir),y,obj_Enemy)) grabEnemy = instance_place(x + (16 * dir),y,obj_Enemy);
@@ -665,7 +666,7 @@ function scr_Player_Normal()
 						
 							if (!attack)
 							{
-								if ((keyboard_check(keyUp)) or (gamepad_button_check(0,gp_padu)))
+								if (keyUpHold)
 								{
 									if (audio_is_playing(snd_Beam)) audio_stop_sound(snd_Beam);
 									sndBeam = audio_play_sound(snd_Beam,0,false);
@@ -740,18 +741,18 @@ function scr_Player_Normal()
 								}
 							}
 						
-							if ((keyboard_check(keyRight)) or (gamepad_button_check(0,gp_padr)))
+							if (keyRightHold)
 							{
 								dir = 1;
 							}
-							if ((keyboard_check(keyLeft)) or (gamepad_button_check(0,gp_padl)))
+							if (keyLeftHold)
 							{
 								dir = -1;
 							}
 						
 							if (beamCharge < beamChargeMax)
 							{
-								if ((!global.cutscene) and ((!keyboard_check(keyAttack)) and (!gamepad_button_check(0,gp_face2))))
+								if ((!global.cutscene) and (!keyAttackHold))
 								{
 									beamCharge = 0;
 									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
@@ -767,7 +768,7 @@ function scr_Player_Normal()
 							else
 							{
 								if (invincibleFlashTimer == -1) invincibleFlashTimer = invincibleFlashTimerMax;
-								if ((!global.cutscene) and ((!keyboard_check(keyAttack)) and (!gamepad_button_check(0,gp_face2))))
+								if ((!global.cutscene) and (!keyAttackHold))
 								{
 									beamCharge = 0;
 									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
@@ -1023,9 +1024,9 @@ function scr_Player_Normal()
 						break;
 					
 						case "mysticBeam":
-					    if ((!global.cutscene) and ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))) and (!hurt) and (!attack))
+					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
-							if ((keyboard_check(keyUp)) or (gamepad_button_check(0,gp_padu)) or ((dir = 1) and (((keyboard_check(keyRight))) or ((gamepad_button_check(0,gp_padr))))) or ((dir = -1) and (((keyboard_check(keyLeft))) or ((gamepad_button_check(0,gp_padl))))))
+							if ((keyUpHold) or ((dir = 1) and (keyRightHold)) or ((dir = -1) and (keyLeftHold)))
 							{
 								var grabEnemy = -1;
 								if (place_meeting(x + (16 * dir),y,obj_Enemy)) grabEnemy = instance_place(x + (16 * dir),y,obj_Enemy);
@@ -1122,18 +1123,18 @@ function scr_Player_Normal()
 								}
 							}
 							
-							if ((keyboard_check(keyRight)) or (gamepad_button_check(0,gp_padr)))
+							if (keyRightHold)
 							{
 								dir = 1;
 							}
-							if ((keyboard_check(keyLeft)) or (gamepad_button_check(0,gp_padl)))
+							if (keyLeftHold)
 							{
 								dir = -1;
 							}
 							
 							if (beamCharge < beamChargeMax)
 							{
-								if ((!global.cutscene) and ((!keyboard_check(keyAttack)) and (!gamepad_button_check(0,gp_face2))))
+								if ((!global.cutscene) and (!keyAttackHold))
 								{
 									canMysticBeamShield = true;
 									if (instance_exists(obj_Projectile_Beam))
@@ -1184,7 +1185,7 @@ function scr_Player_Normal()
 							else
 							{
 								if (invincibleFlashTimer == -1) invincibleFlashTimer = invincibleFlashTimerMax;
-								if ((!global.cutscene) and ((!keyboard_check(keyAttack)) and (!gamepad_button_check(0,gp_face2))))
+								if ((!global.cutscene) and (!keyAttackHold))
 								{
 									beamCharge = 0;
 									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
@@ -1373,9 +1374,9 @@ function scr_Player_Normal()
 						break;
 					
 						case "stone":
-					    if ((!global.cutscene) and ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))) and (!hurt) and (attackable))
+					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (attackable))
 					    {
-							if ((!keyboard_check(keyUp)) and (!gamepad_button_check(0,gp_padu)))
+							if (!keyUpHold)
 							{
 								if (audio_is_playing(snd_StoneReady)) audio_stop_sound(snd_StoneReady);
 								audio_play_sound(snd_StoneReady,0,false);
@@ -1453,7 +1454,7 @@ function scr_Player_Normal()
 							{
 								shakeX = 2;
 							}
-							else if ((!global.cutscene) and ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))))
+							else if ((!global.cutscene) and (keyAttackPressed))
 							{
 								if (audio_is_playing(snd_StoneRelease)) audio_stop_sound(snd_StoneRelease);
 								audio_play_sound(snd_StoneRelease,0,false);
@@ -1475,14 +1476,14 @@ function scr_Player_Normal()
 							}
 						}
 					
-						if ((!global.cutscene) and (attackNumber == "stoneUp") and (!keyboard_check(keyAttack)) and (!gamepad_button_check(0,gp_face2)) and (stoneFistReady))
+						if ((!global.cutscene) and (attackNumber == "stoneUp") and (!keyAttackHold) and (stoneFistReady))
 						{
 							stoneFistReadyTimer = 0;
 						}
 						break;
 					
 						case "ufo":
-					    if ((!global.cutscene) and ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))) and (!hurt) and (!attack))
+					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
 							attackNumber = "ufoCharge";
 							sprite_index = sprBeamCharge;
@@ -1512,18 +1513,18 @@ function scr_Player_Normal()
 								}
 							}
 						
-							if ((keyboard_check(keyRight)) or (gamepad_button_check(0,gp_padr)))
+							if (keyRightHold)
 							{
 								dir = 1;
 							}
-							if ((keyboard_check(keyLeft)) or (gamepad_button_check(0,gp_padl)))
+							if (keyLeftHold)
 							{
 								dir = -1;
 							}
 						
 							if (ufoCharge < ufoChargeMax)
 							{
-								if ((!global.cutscene) and ((!keyboard_check(keyAttack)) and (!gamepad_button_check(0,gp_face2))))
+								if ((!global.cutscene) and (!keyAttackHold))
 								{
 									ufoCharge = 0;
 									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
@@ -1539,7 +1540,7 @@ function scr_Player_Normal()
 							else
 							{
 								if (invincibleFlashTimer == -1) invincibleFlashTimer = invincibleFlashTimerMax;
-								if ((!global.cutscene) and ((!keyboard_check(keyAttack)) and (!gamepad_button_check(0,gp_face2))))
+								if ((!global.cutscene) and (!keyAttackHold))
 								{
 									ufoCharge = 0;
 									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
@@ -1584,13 +1585,13 @@ function scr_Player_Normal()
 						case "mirror":
 						if ((!global.cutscene) and (!hurt) and (!attack))
 						{
-							if ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2)))
+							if (keyAttackPressed)
 							{
-								if (((!keyboard_check(keyUp)) and (!keyboard_check(keyDown)) and (!gamepad_button_check(0,gp_padu)) and (!gamepad_button_check(0,gp_padd))))
+								if ((!keyUpHold) and (!keyDownHold))
 						        {
 									if (!run)
 									{
-										if ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2)))
+										if (keyAttackPressed)
 										{
 									        attack = true;
 											attackable = false;
@@ -1661,7 +1662,7 @@ function scr_Player_Normal()
 									}
 						        }
 						
-						        if ((keyboard_check(keyDown)) or (gamepad_button_check(0,gp_padd)))
+						        if (keyDownHold)
 						        {
 						            if (audio_is_playing(snd_Mirror4)) audio_stop_sound(snd_Mirror4);
 									audio_play_sound(snd_Mirror4,0,false);
@@ -1688,7 +1689,7 @@ function scr_Player_Normal()
 						            state = playerStates.mirrorDash;
 						        }
 						
-								if ((keyboard_check(keyUp)) or (gamepad_button_check(0,gp_padu)))
+								if (keyUpHold)
 						        {
 						            if (audio_is_playing(snd_Mirror5)) audio_stop_sound(snd_Mirror5);
 									audio_play_sound(snd_Mirror5,0,false);
@@ -1717,7 +1718,7 @@ function scr_Player_Normal()
 						            state = playerStates.mirrorDash;
 						        }
 							}
-							else if ((keyboard_check(keyAttack)) or (gamepad_button_check(0,gp_face2)))
+							else if (keyAttackHold)
 							{
 								mirrorHold = true;
 								attack = true;
@@ -1733,7 +1734,7 @@ function scr_Player_Normal()
 							attack = true;
 							attackable = false;
 							if ((mirrorHold) and (mirrorNormalAttackTimer == -1)) mirrorNormalAttackTimer = mirrorNormalAttackTimerMax;
-					        if ((mirrorHold) and (!global.cutscene) and (!keyboard_check(keyAttack)) and (!gamepad_button_check(0,gp_face2)))
+					        if ((mirrorHold) and (!global.cutscene) and (!keyAttackHold))
 					        {
 								mirrorHold = false;
 								mirrorFirstAttack = true;
@@ -1747,7 +1748,7 @@ function scr_Player_Normal()
 					    break;
 					
 						case "ninja":
-					    if ((!global.cutscene) and ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))) and (!hurt) and (!attack))
+					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
 							attack = true;
 							attackNumber = "ninjaCharge";
@@ -1761,7 +1762,7 @@ function scr_Player_Normal()
 						
 							if (ninjaCharge < ninjaChargeMax)
 							{
-								if ((!global.cutscene) and ((!keyboard_check(keyAttack)) and (!gamepad_button_check(0,gp_face2))))
+								if ((!global.cutscene) and (!keyAttackHold))
 								{
 									ninjaCharge = 0;
 									attack = true;
@@ -1822,7 +1823,7 @@ function scr_Player_Normal()
 						break;
 					
 						case "bomb":
-					    if ((!global.cutscene) and ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))) and (!hurt) and (!attack))
+					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
 							if (audio_is_playing(snd_BombReady)) audio_stop_sound(snd_BombReady);
 							audio_play_sound(snd_BombReady,0,false);
@@ -1837,6 +1838,7 @@ function scr_Player_Normal()
 							carriedItemState = "heavy";
 							carriedItemIndex = instance_create_depth(x,y - 8,depth - 1,obj_Projectile_Bomb);
 							carriedItemIndex.owner = id;
+							carriedItemIndex.player = player;
 							carriedItemIndex.hasRemoteDetonation = bombSmartBombUpgrade;
 							carriedItemIndex.hasHoming = bombEyeBombUpgrade;
 							carriedItemIndex.hasMagma = bombMagmaBombUpgrade;
@@ -1868,7 +1870,7 @@ function scr_Player_Normal()
 						case "fire":
 					    if ((!global.cutscene) and (!hurt))
 					    {
-							if (((keyboard_check(keyAttack)) or (gamepad_button_check(0,gp_face2))) and ((!attack) or (attackNumber == "fireAerial")))
+							if ((keyAttackHold) and ((!attack) or (attackNumber == "fireAerial")))
 							{
 								if ((!grounded) and (place_meeting(x,y + 16,obj_Wall)))
 								{
@@ -1924,7 +1926,7 @@ function scr_Player_Normal()
 									hspLimitTimer = 45;
 								}
 							}
-							if (((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))) and (!attack))
+							if ((keyAttackPressed) and (!attack))
 							{
 								if ((run) and (hsp != 0))
 								{
@@ -1935,7 +1937,7 @@ function scr_Player_Normal()
 					                attack = true;
 									attackNumber = "fireDash";
 									fireDashDir = 1;
-									if ((keyboard_check(keyUp)) or (gamepad_button_check_pressed(0,gp_padu))) fireDashDir = -1;
+									if (keyUpHold) fireDashDir = -1;
 									attackable = false;
 					                fireReleaseTimer = 35;
 					                attackTimer = 45;
@@ -2022,14 +2024,14 @@ function scr_Player_Normal()
 						{
 							shakeX = 1;
 							if (fireNormalAttackTimer == -1) fireNormalAttackTimer = fireNormalAttackTimerMax;
-					        if ((!global.cutscene) and (!keyboard_check(keyAttack)) and (!gamepad_button_check(0,gp_face2)))
+					        if ((!global.cutscene) and (!keyAttackHold))
 					        {
 					            attackTimer = 0;
 					        }
 						
 							if (fireBackCharge < fireBackChargeMax)
 							{
-								if (((dir == 1) and ((keyboard_check(keyLeft)) or (gamepad_button_check(0,gp_padl)))) or ((dir == -1) and ((keyboard_check(keyRight)) or (gamepad_button_check(0,gp_padr))))) fireBackCharge += 1;
+								if (((dir == 1) and (keyLeftHold)) or ((dir == -1) and (keyRightHold))) fireBackCharge += 1;
 							}
 							else
 							{
@@ -2052,7 +2054,7 @@ function scr_Player_Normal()
 					
 						if (attackNumber == "fireBack")
 						{
-					        if ((!global.cutscene) and (!keyboard_check(keyAttack)) and (!gamepad_button_check_pressed(0,gp_face2)))
+					        if ((!global.cutscene) and (!keyAttackHold))
 					        {
 					            attackTimer = 0;
 					        }
@@ -2060,9 +2062,9 @@ function scr_Player_Normal()
 						break;
 					
 						case "ice":
-					    if ((!global.cutscene) and ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))) and (!hurt) and (!attack))
+					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
-							if ((keyboard_check(keyUp)) or (gamepad_button_check(0,gp_padu)) or ((dir = 1) and (((keyboard_check(keyRight))) or ((gamepad_button_check(0,gp_padr))))) or ((dir = -1) and (((keyboard_check(keyLeft))) or ((gamepad_button_check(0,gp_padl))))))
+							if ((keyUpHold) or ((dir = 1) and (keyRightHold)) or ((dir = -1) and (keyLeftHold)))
 							{
 								var grabEnemy = -1;
 								if (place_meeting(x + (16 * dir),y,obj_Enemy)) grabEnemy = instance_place(x + (16 * dir),y,obj_Enemy);
@@ -2095,7 +2097,7 @@ function scr_Player_Normal()
 							if ((!iceReady) and (!iceRelease))
 							{
 								if (iceNormalAttackTimer == -1) iceNormalAttackTimer = iceNormalAttackTimerMax;
-						        if ((!global.cutscene) and (!keyboard_check(keyAttack)) and (!gamepad_button_check_pressed(0,gp_face2)))
+						        if ((!global.cutscene) and (!keyAttackHold))
 						        {
 									iceRelease = true;
 									sprite_index = sprIceAttack1Release;
@@ -2106,9 +2108,9 @@ function scr_Player_Normal()
 						break;
 					
 						case "spark":
-					    if ((!global.cutscene) and ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))) and (!hurt) and (!attack))
+					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
-							if ((keyboard_check(keyUp)) or (gamepad_button_check(0,gp_padu)))
+							if (keyUpHold)
 							{
 								if (audio_is_playing(snd_Spark6)) audio_stop_sound(snd_Spark6);
 								audio_play_sound(snd_Spark6,0,false);
@@ -2120,7 +2122,7 @@ function scr_Player_Normal()
 								image_index = 0;
 								attackTimer = 30;
 							}
-							else if ((!place_meeting(x,y + 1,obj_Wall)) and ((keyboard_check(keyDown)) or (gamepad_button_check(0,gp_padu))))
+							else if ((!place_meeting(x,y + 1,obj_Wall)) and (keyDownHold))
 							{
 								if (audio_is_playing(snd_Spark6)) audio_stop_sound(snd_Spark6);
 								audio_play_sound(snd_Spark6,0,false);
@@ -2187,7 +2189,7 @@ function scr_Player_Normal()
 						break;
 					
 						case "wing":
-					    if ((!global.cutscene) and ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))) and (!hurt) and (!attack))
+					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
 							if (run = true) and (hsp != 0)
 							{
@@ -2326,7 +2328,7 @@ function scr_Player_Normal()
 						break;
 					
 						case "scan":
-					    if ((!global.cutscene) and ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))) and (!hurt) and (attackable))
+					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (attackable))
 					    {
 					        attack = true;
 					        attackNumber = "scanNormal";
@@ -2337,7 +2339,7 @@ function scr_Player_Normal()
 						break;
 					
 						case "freeze":
-					    if (((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))) and (!hurt) and (attackable))
+					    if ((keyAttackPressed) and (!hurt) and (attackable))
 					    {
 							audio_play_sound(snd_Freeze,0,false);
 							invincible = true;
@@ -2354,7 +2356,7 @@ function scr_Player_Normal()
 							freezeMaskProj.image_yscale = image_yscale;
 					    }
 					
-						if ((attackNumber == 7) and (!keyboard_check(keyAttack)) and (!gamepad_button_check(0,gp_face2)) and (!freezeReady))
+						if ((attackNumber == 7) and (!keyAttackHold) and (!freezeReady))
 					    {
 							invincible = false;
 							attackTimer = 15;
@@ -2368,9 +2370,9 @@ function scr_Player_Normal()
 					break;
 				
 					case "gooey":
-					if ((!global.cutscene) and ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))) and (!hurt) and (attackable))
+					if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (attackable))
 					{
-						if ((keyboard_check(keyDown)) or (gamepad_button_check(0,gp_padd)))
+						if (keyDownHold)
 						{
 							if (audio_is_playing(snd_StoneReady)) audio_stop_sound(snd_StoneReady);
 							audio_play_sound(snd_StoneReady,0,false);
@@ -2401,7 +2403,7 @@ function scr_Player_Normal()
 					        attack = true;
 							attackNumber = "gooeyFireDash";
 							fireDashDir = 1;
-							if ((keyboard_check(keyUp)) or (gamepad_button_check_pressed(0,gp_padu))) fireDashDir = -1;
+							if (keyUpHold) fireDashDir = -1;
 							attackable = false;
 					        fireReleaseTimer = 35;
 					        attackTimer = 45;
@@ -2467,7 +2469,7 @@ function scr_Player_Normal()
 						{
 							shakeX = 2;
 						}
-						else if ((!global.cutscene) and ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))))
+						else if ((!global.cutscene) and (keyAttackPressed))
 						{
 							if (audio_is_playing(snd_StoneRelease)) audio_stop_sound(snd_StoneRelease);
 							audio_play_sound(snd_StoneRelease,0,false);
@@ -2491,7 +2493,7 @@ function scr_Player_Normal()
 					break;
 				
 					case "waddleDoo":
-					if ((!global.cutscene) and ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))) and (!hurt) and (!attack))
+					if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					{
 						if (audio_is_playing(snd_Beam)) audio_stop_sound(snd_Beam);
 						sndBeam = audio_play_sound(snd_Beam,0,false);
@@ -2532,7 +2534,7 @@ function scr_Player_Normal()
 					break;
 				
 					case "sirKibble":
-					if ((!global.cutscene) and ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))) and (!hurt) and (attackable) and (!attack))
+					if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (attackable) and (!attack))
 					{
 						attack = true;
 						attackNumber = "sirKibbleCutterCharge";
@@ -2563,18 +2565,18 @@ function scr_Player_Normal()
 							}
 						}
 					
-						if ((keyboard_check(keyRight)) or (gamepad_button_check(0,gp_padr)))
+						if (keyRightHold)
 						{
 							dir = 1;
 						}
-						if ((keyboard_check(keyLeft)) or (gamepad_button_check(0,gp_padl)))
+						if (keyLeftHold)
 						{
 							dir = -1;
 						}
 					
 						if (cutterCharge < cutterChargeMax)
 						{
-							if ((!global.cutscene) and ((!keyboard_check(keyAttack)) and (!gamepad_button_check(0,gp_face2))))
+							if ((!global.cutscene) and (!keyAttackHold))
 							{
 								cutterCharge = 0;
 								if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
@@ -2590,7 +2592,7 @@ function scr_Player_Normal()
 						else
 						{
 							if (invincibleFlashTimer == -1) invincibleFlashTimer = invincibleFlashTimerMax;
-							if ((!global.cutscene) and ((!keyboard_check(keyAttack)) and (!gamepad_button_check(0,gp_face2))))
+							if ((!global.cutscene) and (!keyAttackHold))
 							{
 								cutterCharge = 0;
 								if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
@@ -2666,7 +2668,7 @@ function scr_Player_Normal()
 		
 		//Jump
 		
-		if ((!global.cutscene) and (canJump) and (playerAbility != "ufo") and (((!canMultiJump) and (grounded)) or ((canMultiJump) and (multiJumpCounter < multiJumpLimit))) and (!wallAbove) and ((keyboard_check_pressed(keyJump)) or (gamepad_button_check_pressed(0,gp_face1))) and (!attack))
+		if ((!global.cutscene) and (canJump) and (playerAbility != "ufo") and (((!canMultiJump) and (grounded)) or ((canMultiJump) and (multiJumpCounter < multiJumpLimit))) and (!wallAbove) and (keyJumpPressed) and (!attack))
 		{
 			if ((canMultiJump) and (multiJumpLimit != -1)) multiJumpCounter += 1;
 			
@@ -2806,7 +2808,7 @@ function scr_Player_Normal()
 			switch (playerCharacter)
 			{
 				case "bouncy":
-				if ((!keyboard_check(keyDown)) and (!gamepad_button_check(0,gp_padd)))
+				if (!keyDownHold)
 				{
 					if (audio_is_playing(snd_Jump)) audio_stop_sound(snd_Jump);
 					audio_play_sound(snd_Jump,0,false);
@@ -2823,7 +2825,7 @@ function scr_Player_Normal()
 				break;
 				
 				case "gordo":
-				if ((!keyboard_check(keyDown)) and (!gamepad_button_check(0,gp_padd)))
+				if (!keyDownHold)
 				{
 					if (audio_is_playing(snd_Jump)) audio_stop_sound(snd_Jump);
 					audio_play_sound(snd_Jump,0,false);
@@ -2840,7 +2842,7 @@ function scr_Player_Normal()
 				break;
 				
 				case "bloodGordo":
-				if ((!keyboard_check(keyDown)) and (!gamepad_button_check(0,gp_padd)))
+				if (!keyDownHold)
 				{
 					if (audio_is_playing(snd_Jump)) audio_stop_sound(snd_Jump);
 					audio_play_sound(snd_Jump,0,false);
@@ -2875,7 +2877,7 @@ function scr_Player_Normal()
 		
 		//Duck
 		
-		if ((!global.cutscene) and (canDuck) and (playerAbility != "ufo") and (grounded) and ((keyboard_check(keyDown)) or (gamepad_button_check(0,gp_padd))) and (!attack))
+		if ((!global.cutscene) and (canDuck) and (playerAbility != "ufo") and (grounded) and (keyDownHold) and (!attack))
 		{
 			if (vsp == 0)
 			{
@@ -2899,7 +2901,7 @@ function scr_Player_Normal()
 		
 		if ((!global.cutscene) and (playerAbility != "ufo") and (canClimb) and (place_meeting(x,y,obj_Ladder)))
 		{
-		    if ((((!place_meeting(x,y - 1,obj_Wall)) and ((keyboard_check_pressed(keyUp)) or (gamepad_button_check_pressed(0,gp_padu)))) or ((!place_meeting(x,y + 1,obj_Wall)) and ((keyboard_check_pressed(keyDown)) or (gamepad_button_check_pressed(0,gp_padd))))) and (!attack))
+		    if ((((!place_meeting(x,y - 1,obj_Wall)) and (keyUpPressed)) or ((!place_meeting(x,y + 1,obj_Wall)) and (keyDownPressed))) and (!attack))
 		    {
 				fallRoll = false;
 				if (fallHopCounter != 0) fallHopCounter = 0;
@@ -2914,7 +2916,7 @@ function scr_Player_Normal()
 		
 		//Float
 		
-		if ((!global.cutscene) and (canFloat) and ((carriedItem == "none") and (carriedItemState != "heavy")) and (playerAbility != "ufo") and (((keyboard_check_pressed(keyJump)) or (gamepad_button_check_pressed(0,gp_face1))) and (!place_meeting(x,y,obj_AntiFloat)) and (!place_meeting(x,y + 1,obj_Wall))) and (!attack))
+		if ((!global.cutscene) and (canFloat) and ((carriedItem == "none") and (carriedItemState != "heavy")) and (playerAbility != "ufo") and ((keyJumpPressed) and (!place_meeting(x,y,obj_AntiFloat)) and (!place_meeting(x,y + 1,obj_Wall))) and (!attack))
 		{
 			attackTimer = 0;
 		    hurt = false;
@@ -2927,7 +2929,7 @@ function scr_Player_Normal()
 		
 		//Door
 		
-		if ((!global.cutscene) and (canEnter) and (position_meeting(x,y,obj_Door)) and ((keyboard_check_pressed(keyUp)) or (gamepad_button_check_pressed(0,gp_padu))) and (!attack))
+		if ((!global.cutscene) and (canEnter) and (position_meeting(x,y,obj_Door)) and (keyUpPressed) and (!attack))
 		{
 		    if ((!instance_exists(obj_Fade)) and (!hurt))
 		    {
@@ -3435,7 +3437,7 @@ function scr_Player_Normal()
 		if ((!walkDuck) and (carriedItem == "none") and (playerAbility != "ufo") and (place_meeting(x,y + (1 + vsp),obj_Wall)) and (vsp > 1) and (!attack))
 		{
 			var collidingWall = instance_place(x,y + (1 + vsp),obj_Wall);
-			if ((!collidingWall.platform) or ((collidingWall.platform) and (((!keyboard_check(keyDown)) and (!gamepad_button_check(0,gp_padd))) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal))))
+			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal))))
 			{
 				switch (playerCharacter)
 				{

@@ -6,51 +6,71 @@ hudOffset = lerp(hudOffset,0,.1);
 draw_sprite(spr_Menu_MainMenu_Hud_Options,0,0 + hudOffset,0);
 draw_sprite(spr_Menu_Saves_Medals_Empty,0,4 + hudOffset,5);
 
-//Draw Options
+//Draw Pages
 
-draw_set_alpha(.5);
-draw_set_color(c_black);
-
-draw_rectangle(105,40,349,223,false);
-//draw_rectangle(10,235,161,262,false);
-
-draw_set_alpha(1);
-draw_set_font(fnt_Options);
 draw_set_color(c_white);
-
-draw_text(110,45,"Music - ");
-draw_text(110,85,"Sound - ");
-draw_text(110,125,"Fullscreen - ");
-draw_text(110,165,"Extra Tutorials - ");
-var windowScale = 0;
-if (instance_exists(obj_Camera)) windowScale = global.windowSize;
-draw_text(110,205,"Window Size - " + string(windowScale) + "X");
-//draw_text(15,240,"Key Bindings");
-
-if (global.fullscreen) draw_rectangle(266,125,280,139,true);
-if (global.extraTutorials) draw_rectangle(326,165,340,179,true);
-
-//Draw Cursor
-
-switch (selection)
+if (global.language == 0)
 {
-	case 0:
-	draw_sprite(spr_Menu_Options_CursorArrow,0,93,38);
+	draw_set_font(fnt_DialogueDefault);
+}
+else if (global.language == 6)
+{
+	draw_set_font(fnt_DialogueDefaultKanji);
+}
+else
+{
+	draw_set_font(fnt_DialogueDefaultSpecial);
+}
+
+for (var i = 0; i < array_length(menuTitle); i++) menuOffsetLerp[i] = lerp(menuOffsetLerp[i],menuOffset[i] * 8,.25);
+
+textY = lerp(textY,147 - (selection * 36),.25);
+
+draw_set_color(c_black);
+draw_set_alpha(.75);
+draw_roundrect(2,37,122,268,false);
+draw_set_alpha(1);
+
+draw_sprite(spr_Menu_Options_CursorArrow,0,0,141);
+
+for (var i = 0; i < array_length(menuTitle); i++)
+{
+	if (i == selection) textAlpha = 1;
+	if ((i == selection - 1) or (i == selection + 1)) textAlpha = .66;
+	if ((i == selection - 2) or (i == selection + 2)) textAlpha = .33;
+	if ((i < selection - 2) or (i > selection + 2)) textAlpha = 0;
+	var col1 = c_white;
+	var col2 = c_white;
+	if (textAlpha != 0) scr_Draw_Text_Color_Outline(14 + menuOffsetLerp[i],textY + (36 * i),menuTitle[i],-1,-1,col1,col2,textAlpha,c_black,c_black,textAlpha,2,5,image_xscale,image_yscale,image_angle);
+}
+
+switch (page)
+{
+	case "Audio":
+	draw_set_color(c_black);
+	draw_set_alpha(.75);
+	draw_roundrect(126,37,476,268,false);
+	draw_set_alpha(1);
 	break;
 	
-	case 1:
-	draw_sprite(spr_Menu_Options_CursorArrow,0,93,78);
+	case "Controls":
+	draw_set_color(c_black);
+	draw_set_alpha(.75);
+	draw_roundrect(126,37,476,268,false);
+	draw_set_alpha(1);
 	break;
 	
-	case 2:
-	draw_sprite(spr_Menu_Options_CursorArrow,0,93,118);
+	case "Language":
+	draw_set_color(c_black);
+	draw_set_alpha(.75);
+	draw_roundrect(126,37,476,268,false);
+	draw_set_alpha(1);
 	break;
 	
-	case 3:
-	draw_sprite(spr_Menu_Options_CursorArrow,0,93,158);
-	break;
-	
-	case 4:
-	draw_sprite(spr_Menu_Options_CursorArrow,0,93,198);
+	case "Other":
+	draw_set_color(c_black);
+	draw_set_alpha(.75);
+	draw_roundrect(126,37,476,268,false);
+	draw_set_alpha(1);
 	break;
 }

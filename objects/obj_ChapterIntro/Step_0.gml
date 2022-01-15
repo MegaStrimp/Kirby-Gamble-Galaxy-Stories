@@ -2,11 +2,11 @@
 
 //Inputs
 
-scr_Player_Inputs();
+scr_Player_Inputs(0);
 
 //Press Enter
 
-if ((!instance_exists(obj_Fade)) and ((keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_start)))) destroyTimer = 0;
+if ((!instance_exists(obj_Fade)) and (keyStartPressed)) destroyTimer = 0;
 
 //Destroy Timer
 

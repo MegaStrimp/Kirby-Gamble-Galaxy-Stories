@@ -59,14 +59,14 @@ if ((activeText) and ((!instance_exists(obj_Dialogue))))
 {
 	//Control
 	
-	if ((keyboard_check_pressed(keyDown)) or (gamepad_button_check_pressed(0,gp_padd)))
+	if (keyDownPressed)
 	{
 		if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 		audio_play_sound(snd_BossHealth,0,false);
 		selection += 1;
 	}
 	
-	if ((keyboard_check_pressed(keyUp)) or (gamepad_button_check_pressed(0,gp_padu)))
+	if (keyUpPressed)
 	{
 		if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 		audio_play_sound(snd_BossHealth,0,false);
@@ -105,7 +105,7 @@ if ((activeText) and ((!instance_exists(obj_Dialogue))))
 		switch (selection)
 		{
 			case 0:
-			if ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_face1)) or (gamepad_button_check_pressed(0,gp_start)))
+			if ((keyJumpPressed) or (keyStartPressed))
 			{
 				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 				audio_play_sound(snd_ButtonYes,0,false);
@@ -115,7 +115,7 @@ if ((activeText) and ((!instance_exists(obj_Dialogue))))
 			break;
 			
 			case 1:
-			if ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_face1)) or (gamepad_button_check_pressed(0,gp_start)))
+			if ((keyJumpPressed) or (keyStartPressed))
 			{
 				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 				audio_play_sound(snd_ButtonYes,0,false);
@@ -125,7 +125,7 @@ if ((activeText) and ((!instance_exists(obj_Dialogue))))
 			break;
 			
 			case lastArray:
-			if ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyAttack)) or (keyboard_check_pressed(keyStart)) or (keyboard_check_pressed(keySelect)) or (gamepad_button_check_pressed(0,gp_face1)) or (gamepad_button_check_pressed(0,gp_face2)) or (gamepad_button_check_pressed(0,gp_start)) or (gamepad_button_check_pressed(0,gp_select)))
+			if ((keyJumpPressed) or (keyAttackPressed) or (keyStartPressed) or (keySelectPressed))
 			{
 				scr_SaveGame(global.selectedSave);
 				global.pause = false;
@@ -137,14 +137,14 @@ if ((activeText) and ((!instance_exists(obj_Dialogue))))
 			break;
 		}
 		
-		if ((keyboard_check_pressed(keyAttack)) or (keyboard_check_pressed(keySelect)) or (gamepad_button_check_pressed(0,gp_face2)) or (gamepad_button_check_pressed(0,gp_start)))
+		if ((keyAttackPressed) or (keySelectPressed))
 		{
 			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 			audio_play_sound(snd_BossHealth,0,false);
 			selection = lastArray;
 		}
 		
-		scr_Draw_Text_Color_Outline(textStartX,textStartY,welcomeText,-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+		scr_Draw_Text_Color_Outline(textStartX,textStartY,welcomeText,-1,350,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 		
 		for (var i = 0; i < arrayMax; i++)
 		{
@@ -160,7 +160,7 @@ if ((activeText) and ((!instance_exists(obj_Dialogue))))
 			var textCol = c_white;
 			if (i == selection) textCol = c_yellow;
 			var text = chooseOptionString[0][i];
-			scr_Draw_Text_Color_Outline(smallSquareX + chooseOptionOffsetLerp[0][i],textStartY + (i * 36),text,-1,-1,textCol,textCol,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+			scr_Draw_Text_Color_Outline(smallSquareX + chooseOptionOffsetLerp[0][i],textStartY + (i * 36),text,-1,350,textCol,textCol,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 		}
 		break;
 		#endregion
@@ -181,7 +181,7 @@ if ((activeText) and ((!instance_exists(obj_Dialogue))))
 		switch (selection)
 		{
 			case 0:
-			if ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_face1)) or (gamepad_button_check_pressed(0,gp_start)))
+			if ((keyJumpPressed) or (keyStartPressed))
 			{
 				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 				audio_play_sound(snd_ButtonYes,0,false);
@@ -191,7 +191,7 @@ if ((activeText) and ((!instance_exists(obj_Dialogue))))
 			break;
 			
 			case 1:
-			if ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_face1)) or (gamepad_button_check_pressed(0,gp_start)))
+			if ((keyJumpPressed) or (keyStartPressed))
 			{
 				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 				audio_play_sound(snd_ButtonYes,0,false);
@@ -201,7 +201,7 @@ if ((activeText) and ((!instance_exists(obj_Dialogue))))
 			break;
 			
 			case lastArray:
-			if ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyAttack)) or (keyboard_check_pressed(keyStart)) or (keyboard_check_pressed(keySelect)) or (gamepad_button_check_pressed(0,gp_face1)) or (gamepad_button_check_pressed(0,gp_face2)) or (gamepad_button_check_pressed(0,gp_start)) or (gamepad_button_check_pressed(0,gp_select)))
+			if ((keyJumpPressed) or (keyAttackPressed) or (keyStartPressed) or (keySelectPressed))
 			{
 				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 				audio_play_sound(snd_ButtonNo,0,false);
@@ -211,7 +211,7 @@ if ((activeText) and ((!instance_exists(obj_Dialogue))))
 			break;
 		}
 		
-		if ((keyboard_check_pressed(keyAttack)) or (keyboard_check_pressed(keySelect)) or (gamepad_button_check_pressed(0,gp_face2)) or (gamepad_button_check_pressed(0,gp_start)))
+		if ((keyAttackPressed) or (keySelectPressed))
 		{
 			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 			audio_play_sound(snd_BossHealth,0,false);
@@ -232,7 +232,7 @@ if ((activeText) and ((!instance_exists(obj_Dialogue))))
 			var textCol = c_white;
 			if (i == selection) textCol = c_yellow;
 			var text = chooseOptionString[2][i];
-			scr_Draw_Text_Color_Outline(textStartX + (250 * floor(i / 5)) + chooseOptionOffsetLerp[2][i],textStartY + ((i % 5) * 18),text,-1,-1,textCol,textCol,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+			scr_Draw_Text_Color_Outline(textStartX + (250 * floor(i / 5)) + chooseOptionOffsetLerp[2][i],textStartY + ((i % 5) * 18),text,-1,466,textCol,textCol,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 		}
 		break;
 		#endregion

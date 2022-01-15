@@ -18,7 +18,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 {
 	//Variables
 	
-	scr_Player_Inputs();
+	scr_Player_Inputs(player);
 	
 	//Slopes
 	

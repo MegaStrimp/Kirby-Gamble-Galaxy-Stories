@@ -20,6 +20,14 @@ function scr_Customize_Characters()
 	characterOffsetLerp[i] = 0;
 	i += 1;
 	
+	characterTitle[i] = "Gooey";
+	characterSecretTitle[i] = "?????";
+	characterUnlocked[i] = global.gooeyUnlocked;
+	characterUnlockMethod[i] = "Default";
+	characterOffset[i] = 0;
+	characterOffsetLerp[i] = 0;
+	i += 1;
+	
 	characterTitle[i] = "Meta Knight";
 	characterSecretTitle[i] = "???? ??????";
 	characterUnlocked[i] = global.metaKnightUnlocked;
@@ -28,7 +36,7 @@ function scr_Customize_Characters()
 	characterOffsetLerp[i] = 0;
 	i += 1;
 	
-	characterTitle[i] = "Keeby";
+	/*characterTitle[i] = "Keeby";
 	characterSecretTitle[i] = "?????";
 	characterUnlocked[i] = global.keebyUnlocked;
 	characterUnlockMethod[i] = "Default";
@@ -42,5 +50,5 @@ function scr_Customize_Characters()
 	characterUnlockMethod[i] = "Default";
 	characterOffset[i] = 0;
 	characterOffsetLerp[i] = 0;
-	i += 1;
+	i += 1;*/
 }

@@ -42,6 +42,7 @@ hitInvincibilityMax = 30;
 hitInvincibility = hitInvincibilityMin;
 imageAngle = image_angle;
 syncImageAngle = true;
+player = 0;
 
 //Timers
 

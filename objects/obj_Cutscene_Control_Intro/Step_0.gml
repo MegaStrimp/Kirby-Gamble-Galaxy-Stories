@@ -4,11 +4,11 @@ if (!global.pause)
 {
 	//Inputs
 	
-	scr_Player_Inputs();
+	scr_Player_Inputs(0);
 	
 	//Skip Cutscene
 	
-	if ((!instance_exists(obj_Fade)) and ((keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_start))))
+	if ((!instance_exists(obj_Fade)) and (keyStartPressed))
 	{
 		var fade = instance_create_depth(0,0,-999,obj_Fade);
 		fade.alphaSpd = .01;

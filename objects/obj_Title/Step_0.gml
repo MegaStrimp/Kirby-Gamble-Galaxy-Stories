@@ -4,7 +4,7 @@ if (!global.pause)
 {
 	//Inputs
 	
-	scr_Player_Inputs();
+	scr_Player_Inputs(0);
 	
 	switch (page)
 	{
@@ -19,77 +19,77 @@ if (!global.pause)
 		switch (codeState)
 		{
 			case 0:
-			if ((keyboard_check_pressed(vk_up)) or (gamepad_button_check_pressed(0,gp_padu)))
+			if ((keyUpPressed) or (keyboard_check_pressed(vk_up)))
 			{
 				codeState += 1;
 			}
 			break;
 			
 			case 1:
-			if ((keyboard_check_pressed(vk_up)) or (gamepad_button_check_pressed(0,gp_padu)))
+			if ((keyUpPressed) or (keyboard_check_pressed(vk_up)))
 			{
 				codeState += 1;
 			}
 			break;
 			
 			case 2:
-			if ((keyboard_check_pressed(vk_down)) or (gamepad_button_check_pressed(0,gp_padd)))
+			if ((keyDownPressed) or (keyboard_check_pressed(vk_down)))
 			{
 				codeState += 1;
 			}
 			break;
 			
 			case 3:
-			if ((keyboard_check_pressed(vk_down)) or (gamepad_button_check_pressed(0,gp_padd)))
+			if ((keyDownPressed) or (keyboard_check_pressed(vk_down)))
 			{
 				codeState += 1;
 			}
 			break;
 			
 			case 4:
-			if ((keyboard_check_pressed(vk_left)) or (gamepad_button_check_pressed(0,gp_padl)))
+			if ((keyLeftPressed) or (keyboard_check_pressed(vk_left)))
 			{
 				codeState += 1;
 			}
 			break;
 			
 			case 5:
-			if ((keyboard_check_pressed(vk_right)) or (gamepad_button_check_pressed(0,gp_padr)))
+			if ((keyRightPressed) or (keyboard_check_pressed(vk_right)))
 			{
 				codeState += 1;
 			}
 			break;
 			
 			case 6:
-			if ((keyboard_check_pressed(vk_left)) or (gamepad_button_check_pressed(0,gp_padl)))
+			if ((keyLeftPressed) or (keyboard_check_pressed(vk_left)))
 			{
 				codeState += 1;
 			}
 			break;
 			
 			case 7:
-			if ((keyboard_check_pressed(vk_right)) or (gamepad_button_check_pressed(0,gp_padr)))
+			if ((keyRightPressed) or (keyboard_check_pressed(vk_right)))
 			{
 				codeState += 1;
 			}
 			break;
 			
 			case 8:
-			if ((keyboard_check_pressed(ord("B"))) or (gamepad_button_check_pressed(0,gp_face2)))
+			if ((keyAttackPressed) or (keyboard_check_pressed(ord("B"))))
 			{
 				codeState += 1;
 			}
 			break;
 			
 			case 9:
-			if ((keyboard_check_pressed(ord("A"))) or (gamepad_button_check_pressed(0,gp_face1)))
+			if ((keyJumpPressed) or (keyboard_check_pressed(ord("A"))))
 			{
 				codeState += 1;
 			}
 			break;
 			
 			case 10:
-			if ((keyboard_check_pressed(vk_enter)) or (gamepad_button_check_pressed(0,gp_start)))
+			if (keyStartPressed)
 			{
 				if (audio_is_playing(snd_Konami)) audio_stop_sound(snd_Konami);
 				audio_play_sound(snd_Konami,0,false);
@@ -100,7 +100,7 @@ if (!global.pause)
 		
 		//Go To Save Page
 		
-		if ((keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_start)))
+		if (keyStartPressed)
 		{
 			codeState = 0;
 			page = 1;
@@ -123,18 +123,18 @@ if (!global.pause)
 		
 		//End The Game
 		
-		if ((keyboard_check_pressed(vk_escape)) or (keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))) game_end();
+		if ((keyAttackPressed) or (keyboard_check_pressed(vk_escape))) game_end();
 		break;
 		
 		case 1:
 		//Page
 		
-		if ((keyboard_check_pressed(keyLeft)) or (gamepad_button_check_pressed(0,gp_padl)))
+		if (keyLeftPressed)
 		{
 			audio_play_sound(snd_Select,0,false);
 			selectedFile -= 1;
 		}
-		if ((keyboard_check_pressed(keyRight)) or (gamepad_button_check_pressed(0,gp_padr)))
+		if (keyRightPressed)
 		{
 			audio_play_sound(snd_Select,0,false);
 			selectedFile += 1;
@@ -151,7 +151,7 @@ if (!global.pause)
 		
 		//Go To Main Menu
 		
-		if ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_start)) or (gamepad_button_check_pressed(0,gp_face1)))
+		if ((keyJumpPressed) or (keyStartPressed))
 		{
 			if (!instance_exists(obj_Fade))
 			{
@@ -187,7 +187,7 @@ if (!global.pause)
 		
 		//Go To Title Page
 		
-		if ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2)))
+		if (keyAttackPressed)
 		{
 			with (obj_Menu_Button) if (state == "saveSlot") instance_destroy();
 			page = 0;

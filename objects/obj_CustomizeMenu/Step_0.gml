@@ -4,7 +4,7 @@ if (!global.pause)
 {
 	//Inputs
 	
-	scr_Player_Inputs();
+	scr_Player_Inputs(0);
 	
 	//Star Animation
 	
@@ -13,14 +13,14 @@ if (!global.pause)
 	
 	//Select
 	
-	if ((keyboard_check_pressed(keyDown)) or (gamepad_button_check_pressed(0,gp_padd)))
+	if (keyDownPressed)
 	{
 		if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 		audio_play_sound(snd_BossHealth,0,false);
 		selection += 1;
 	}
 	
-	if ((keyboard_check_pressed(keyUp)) or (gamepad_button_check_pressed(0,gp_padu)))
+	if (keyUpPressed)
 	{
 		if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 		audio_play_sound(snd_BossHealth,0,false);
@@ -42,7 +42,7 @@ if (!global.pause)
 			case 0:
 			player1Offset = 1;
 			selectedPlayer = 0;
-			if ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_face1)) or (gamepad_button_check_pressed(0,gp_start)))
+			if ((keyJumpPressed) or (keyStartPressed))
 			{
 				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 				audio_play_sound(snd_ButtonYes,0,false);
@@ -56,7 +56,7 @@ if (!global.pause)
 			case 1:
 			player2Offset = 1;
 			selectedPlayer = 1;
-			if ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_face1)) or (gamepad_button_check_pressed(0,gp_start)))
+			if ((keyJumpPressed) or (keyStartPressed))
 			{
 				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 				audio_play_sound(snd_ButtonYes,0,false);
@@ -70,7 +70,7 @@ if (!global.pause)
 		
 		if (!instance_exists(obj_Fade))
 		{
-			if ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2)))
+			if (keyAttackPressed)
 			{
 				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 				audio_play_sound(snd_ButtonNo,0,false);
@@ -105,7 +105,7 @@ if (!global.pause)
 		{
 			case 0:
 			skinsOffset = 1;
-			if ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_face1)) or (gamepad_button_check_pressed(0,gp_start)))
+			if ((keyJumpPressed) or (keyStartPressed))
 			{
 				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 				audio_play_sound(snd_ButtonNo,0,false);
@@ -114,7 +114,7 @@ if (!global.pause)
 			
 			case 1:
 			sprayPaintsOffset = 1;
-			if ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_face1)) or (gamepad_button_check_pressed(0,gp_start)))
+			if ((keyJumpPressed) or (keyStartPressed))
 			{
 				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 				audio_play_sound(snd_ButtonYes,0,false);
@@ -131,7 +131,7 @@ if (!global.pause)
 			
 			case 2:
 			hatSkinsOffset = 1;
-			if ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_face1)) or (gamepad_button_check_pressed(0,gp_start)))
+			if ((keyJumpPressed) or (keyStartPressed))
 			{
 				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 				audio_play_sound(snd_ButtonYes,0,false);
@@ -149,12 +149,12 @@ if (!global.pause)
 			
 			case 3:
 			hatPaintsOffset = 1;
-			if ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_face1)) or (gamepad_button_check_pressed(0,gp_start)))
+			if ((keyJumpPressed) or (keyStartPressed))
 			{
 				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 				audio_play_sound(snd_ButtonNo,0,false);
 			}
-			if ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_face1)) or (gamepad_button_check_pressed(0,gp_start)))
+			if ((keyJumpPressed) or (keyStartPressed))
 			{
 				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 				audio_play_sound(snd_ButtonYes,0,false);
@@ -172,7 +172,7 @@ if (!global.pause)
 			
 			case 4:
 			familiarsOffset = 1;
-			if ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_face1)) or (gamepad_button_check_pressed(0,gp_start)))
+			if ((keyJumpPressed) or (keyStartPressed))
 			{
 				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 				audio_play_sound(snd_ButtonYes,0,false);
@@ -190,7 +190,7 @@ if (!global.pause)
 		
 		if (!instance_exists(obj_Fade))
 		{
-			if ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2)))
+			if (keyAttackPressed)
 			{
 				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 				audio_play_sound(snd_ButtonNo,0,false);
@@ -237,7 +237,7 @@ if (!global.pause)
 		
 		characterOffset[selection] = 1;
 		
-		if ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_face1)) or (gamepad_button_check_pressed(0,gp_start)))
+		if ((keyJumpPressed) or (keyStartPressed))
 		{
 			if (characterUnlocked[selection])
 			{
@@ -254,6 +254,16 @@ if (!global.pause)
 					playerPaint = global.sprayPaintKirbyP1;
 					if (selectedPlayer == 1) playerPaint = global.sprayPaintKirbyP2;
 					break;
+					
+					case "Gamble":
+					playerPaint = global.sprayPaintGambleP1;
+					if (selectedPlayer == 1) playerPaint = global.sprayPaintGambleP2;
+					break;
+					
+					case "Gooey":
+					playerPaint = global.sprayPaintGooeyP1;
+					if (selectedPlayer == 1) playerPaint = global.sprayPaintGooeyP2;
+					break;
 				}
 				
 				for (var i = 0; i < array_length(sprayPaintKirbyNormal); i++) if (sprayPaintKirbyNormal[i] == playerPaint) selection = i;
@@ -269,7 +279,7 @@ if (!global.pause)
 		
 		if (!instance_exists(obj_Fade))
 		{
-			if ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2)))
+			if (keyAttackPressed)
 			{
 				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 				audio_play_sound(snd_ButtonNo,0,false);
@@ -304,7 +314,7 @@ if (!global.pause)
 		
 		sprayPaintOffset[selection] = 1;
 		
-		if ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_face1)) or (gamepad_button_check_pressed(0,gp_start)))
+		if ((keyJumpPressed) or (keyStartPressed))
 		{
 			if (sprayPaintUnlocked[selection])
 			{
@@ -328,7 +338,7 @@ if (!global.pause)
 		
 		if (!instance_exists(obj_Fade))
 		{
-			if ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2)))
+			if (keyAttackPressed)
 			{
 				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 				audio_play_sound(snd_ButtonNo,0,false);
@@ -364,7 +374,7 @@ if (!global.pause)
 		
 		abilityHatOffset[selection] = 1;
 		
-		if ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_face1)) or (gamepad_button_check_pressed(0,gp_start)))
+		if ((keyJumpPressed) or (keyStartPressed))
 		{
 			if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 			audio_play_sound(snd_ButtonYes,0,false);
@@ -1029,7 +1039,7 @@ if (!global.pause)
 		
 		if (!instance_exists(obj_Fade))
 		{
-			if ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2)))
+			if (keyAttackPressed)
 			{
 				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 				audio_play_sound(snd_ButtonNo,0,false);
@@ -1072,7 +1082,7 @@ if (!global.pause)
 		
 		abilityHatSkinOffset[subSelection][selection] = 1;
 		
-		if ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_face1)) or (gamepad_button_check_pressed(0,gp_start)))
+		if ((keyJumpPressed) or (keyStartPressed))
 		{
 			if (abilityHatSkinUnlocked[subSelection][selection])
 			{
@@ -1333,7 +1343,7 @@ if (!global.pause)
 		
 		if (!instance_exists(obj_Fade))
 		{
-			if ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2)))
+			if (keyAttackPressed)
 			{
 				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 				audio_play_sound(snd_ButtonNo,0,false);
@@ -1369,7 +1379,7 @@ if (!global.pause)
 		
 		abilityHatPaintOffset[subSelection][selectedSkin][selection] = 1;
 		
-		if ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_face1)) or (gamepad_button_check_pressed(0,gp_start)))
+		if ((keyJumpPressed) or (keyStartPressed))
 		{
 			if (abilityHatPaintUnlocked[subSelection][selectedSkin][selection])
 			{
@@ -1806,7 +1816,7 @@ if (!global.pause)
 		
 		if (!instance_exists(obj_Fade))
 		{
-			if ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2)))
+			if (keyAttackPressed)
 			{
 				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 				audio_play_sound(snd_ButtonNo,0,false);
@@ -1842,7 +1852,7 @@ if (!global.pause)
 		
 		familiarOffset[selection] = 1;
 		
-		if ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_face1)) or (gamepad_button_check_pressed(0,gp_start)))
+		if ((keyJumpPressed) or (keyStartPressed))
 		{
 			if (familiarUnlocked[selection])
 			{
@@ -1880,7 +1890,7 @@ if (!global.pause)
 		
 		if (!instance_exists(obj_Fade))
 		{
-			if ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2)))
+			if (keyAttackPressed)
 			{
 				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 				audio_play_sound(snd_ButtonNo,0,false);

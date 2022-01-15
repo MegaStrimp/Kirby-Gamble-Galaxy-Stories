@@ -4,7 +4,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 {
 	//Inputs
 	
-	scr_Player_Inputs();
+	scr_Player_Inputs(0);
 	
 	//Variables
 	
@@ -14,7 +14,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	   text_length = string_length(text[array]);
 	}
 	
-	if ((!hasResetTimer) and ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_face1)) or (gamepad_button_check_pressed(0,gp_start))))
+	if ((!hasResetTimer) and ((keyAttackPressed) or (keyStartPressed)))
 	{
 		if (index >= text_length)
 		{

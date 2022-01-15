@@ -2,7 +2,7 @@
 
 //Inputs
 
-scr_Player_Inputs();
+scr_Player_Inputs(0);
 
 //Variables
 
@@ -66,6 +66,7 @@ else if (activeTimer == 0)
 			var dialogue = instance_create_depth(0,0,-998,obj_Dialogue);
 			dialogue.owner = id;
 			dialogue.pausable = false;
+			dialogue.maxPixels = 350;
 			var array = 0;
 			var text = scr_Localization(7,0,0,global.language);
 			scr_Dialogue(dialogue,array,text,-1,-1,-1,snd_ButtonYes);
@@ -85,6 +86,7 @@ else if (activeTimer == 0)
 			var dialogue = instance_create_depth(0,0,-998,obj_Dialogue);
 			dialogue.owner = id;
 			dialogue.pausable = false;
+			dialogue.maxPixels = 350;
 			var array = 0;
 			var text = scr_Localization(7,2,irandom_range(0,1),global.language);
 			scr_Dialogue(dialogue,array,text,-1,-1,-1,snd_ButtonYes);

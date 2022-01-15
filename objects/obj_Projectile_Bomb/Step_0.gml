@@ -26,6 +26,13 @@ if (setupTimer == 0)
 		sprIdle = spr_Projectile_Bomb_Egg;
 		sprBig = spr_Projectile_Bomb_Egg_Big;
 		break;
+		
+		//Fetus
+		
+		case 3:
+		sprIdle = spr_Projectile_Bomb_Fetus;
+		sprBig = spr_Projectile_Bomb_Fetus;
+		break;
 	}
 	
 	if (hasHoming)
@@ -133,7 +140,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	//Inputs
 	
-	scr_Player_Inputs();
+	scr_Player_Inputs(player);
 	
 	if (active)
 	{
@@ -161,7 +168,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		{
 			//Explode
 			
-			if (keyboard_check_pressed(keyAttack))
+			if (keyAttackPressed)
 			{
 				var particle = instance_create_depth(x,y,depth,obj_DeathParticles);
 				particle.state = "explosion1";
@@ -290,18 +297,9 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		if (objectOnHitDmg != "none") obj.dmg = objectOnHitDmg;
 		if (objectOnHitObj == obj_Projectile_ExplosionMask)
 		{
-			if (enemy)
-			{
-				obj.enemy = true;
-				obj.hurtsEnemy = false;
-				obj.hurtsPlayer = true;
-			}
-			else
-			{
-				obj.enemy = false;
-				obj.hurtsEnemy = true;
-				obj.hurtsPlayer = false;
-			}
+			obj.enemy = enemy;
+			obj.hurtsEnemy = !enemy;
+			obj.hurtsPlayer = enemy;
 		}
 		instance_destroy();
 		explodeTimer = -1;

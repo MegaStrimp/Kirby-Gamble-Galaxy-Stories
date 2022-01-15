@@ -21,7 +21,7 @@ function scr_Player_IceGrab()
 		
 		//Attack
 		
-		if ((!iceGrab) and ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))))
+		if ((!iceGrab) and (keyAttackPressed))
 		{
 			sprite_index = sprIceGrabRelease;
 			image_index = 0;

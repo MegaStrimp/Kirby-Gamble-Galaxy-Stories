@@ -11,12 +11,12 @@ if ((!global.pause) and (!scr_OutsideView()))
 		
 		if (!completed)
 		{
-			if (instance_exists(obj_Player))
+			with (obj_Player)
 			{
-				if (((keyboard_check_pressed(obj_Player.keyLeft)) or (keyboard_check_pressed(obj_Player.keyRight))) or ((gamepad_button_check_pressed(0,gp_padl)) or (gamepad_button_check_pressed(0,gp_padr))))
+				if ((keyLeftPressed) or (keyRightPressed))
 				{
-					starTimer = 0;
-					completed = true;
+					other.starTimer = 0;
+					other.completed = true;
 				}
 			}
 		}
@@ -65,9 +65,9 @@ if ((!global.pause) and (!scr_OutsideView()))
 		
 		if (!completed)
 		{
-			if (instance_exists(obj_Player))
+			with (obj_Player)
 			{
-				if ((place_meeting(obj_Player.x,obj_Player.y + 1,obj_Wall)) and ((keyboard_check(obj_Player.keyJump)) or (gamepad_button_check(0,gp_face1))) and (!keyboard_check(obj_Player.keyDown)) and (!gamepad_button_check(0,gp_padd)) and (!obj_Player.attack) and (obj_Player.canJump))
+				if ((place_meeting(x,y + 1,obj_Wall)) and (keyJumpHold) and (!keyDownHold) and (!attack) and (canJump))
 				{
 					starTimer = 0;
 					completed = true;
@@ -83,7 +83,7 @@ if ((!global.pause) and (!scr_OutsideView()))
 		{
 			with (obj_Player)
 			{
-				if ((keyboard_check(keyDown)) or (gamepad_button_check(0,gp_padd)))
+				if (keyDownHold)
 				{
 					other.starTimer = 0;
 					other.completed = true;

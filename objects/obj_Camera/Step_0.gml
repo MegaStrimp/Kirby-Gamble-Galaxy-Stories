@@ -2,7 +2,7 @@
 
 //Inputs
 
-scr_Player_Inputs();
+scr_Player_Inputs(0);
 
 if (!global.pause)
 {

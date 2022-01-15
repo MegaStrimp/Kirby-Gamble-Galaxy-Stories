@@ -106,19 +106,19 @@ if (!debugCamera)
 }
 else if (keyboard_check(vk_control))
 {
-	if ((keyboard_check(keyRight)) or (gamepad_button_check(0,gp_padr)))
+	if (keyRightHold)
 	{
 		cameraX += 2;
 	}
-	if ((keyboard_check(keyLeft)) or (gamepad_button_check(0,gp_padl)))
+	if (keyLeftHold)
 	{
 		cameraX -= 2;
 	}
-	if ((keyboard_check(keyUp)) or (gamepad_button_check(0,gp_padu)))
+	if (keyUpHold)
 	{
 		cameraY -= 2;
 	}
-	if ((keyboard_check(keyDown)) or (gamepad_button_check(0,gp_padd)))
+	if (keyDownHold)
 	{
 		cameraY += 2;
 	}
@@ -155,19 +155,19 @@ if ((global.gambleMaykr))
 	}
 	else
 	{
-		if ((keyboard_check(keyRight)) or (gamepad_button_check(0,gp_padr)))
+		if (keyRightHold)
 		{
 			cameraX += 2;
 		}
-		if ((keyboard_check(keyLeft)) or (gamepad_button_check(0,gp_padl)))
+		if (keyLeftHold)
 		{
 			cameraX -= 2;
 		}
-		if ((keyboard_check(keyUp)) or (gamepad_button_check(0,gp_padu)))
+		if (keyUpHold)
 		{
 			cameraY -= 2;
 		}
-		if ((keyboard_check(keyDown)) or (gamepad_button_check(0,gp_padd)))
+		if (keyDownHold)
 		{
 			cameraY += 2;
 		}

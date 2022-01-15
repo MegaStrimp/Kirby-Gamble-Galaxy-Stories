@@ -58,8 +58,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Subgames",
-    "path": "folders/Rooms/Subgames.yy",
+    "name": "Gamble Maykr",
+    "path": "folders/Rooms/Subgames/Gamble Maykr.yy",
   },
   "resourceVersion": "1.0",
   "name": "rm_Maykr",

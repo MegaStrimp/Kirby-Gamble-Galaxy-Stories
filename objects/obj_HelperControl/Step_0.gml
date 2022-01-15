@@ -2,7 +2,7 @@
 
 //Inputs
 
-scr_Player_Inputs();
+scr_Player_Inputs(player);
 
 //Setup Timer
 
@@ -74,13 +74,13 @@ else
 
 //Control
 
-if (keyboard_check_pressed(keyLeft) or gamepad_button_check_pressed(0,gp_padl))
+if (keyLeftPressed)
 {
 	if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 	audio_play_sound(snd_BossHealth,0,false);
     selection -= 1;
 }
-if (keyboard_check_pressed(keyRight) or gamepad_button_check_pressed(0,gp_padr))
+if (keyRightPressed)
 {
 	if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 	audio_play_sound(snd_BossHealth,0,false);
@@ -90,7 +90,7 @@ if (keyboard_check_pressed(keyRight) or gamepad_button_check_pressed(0,gp_padr))
 if (selection < 0) selection += arrayLength;
 if (selection >= arrayLength) selection -= arrayLength;
 
-if (keyboard_check_pressed(keySelect) or gamepad_button_check_pressed(0,gp_select))
+if (keySelectPressed)
 {
 	if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 	audio_play_sound(snd_ButtonNo,0,false);
@@ -110,7 +110,7 @@ if (keyboard_check_pressed(keySelect) or gamepad_button_check_pressed(0,gp_selec
 	instance_destroy();
 }
 
-if (keyboard_check_pressed(keyStart) or gamepad_button_check_pressed(0,gp_start))
+if (keyStartPressed)
 {
 	if (audio_is_playing(snd_AbilitySwitch)) audio_stop_sound(snd_AbilitySwitch);
 	audio_play_sound(snd_AbilitySwitch,0,false);

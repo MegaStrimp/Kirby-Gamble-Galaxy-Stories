@@ -33,8 +33,8 @@ function scr_Player_Slide()
 		{
 			if (!global.cutscene)
 			{
-			    if ((keyboard_check(keyLeft)) or (gamepad_button_check(0,gp_padl))) dir = -1;
-			    if ((keyboard_check(keyRight)) or (gamepad_button_check(0,gp_padr))) dir = 1;
+			    if (keyLeftHold) dir = -1;
+			    if (keyRightHold) dir = 1;
 			}
 		    hsp = 0;
 			
@@ -45,7 +45,7 @@ function scr_Player_Slide()
 				case "bomb":
 				if (!global.cutscene)
 				{
-					if ((!hurt) and (!attack) and ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))))
+					if ((!hurt) and (!attack) and (keyAttackPressed))
 					{
 						var grabEnemy = -1;
 						if (place_meeting(x + (16 * dir),y,obj_Enemy)) grabEnemy = instance_place(x + (16 * dir),y,obj_Enemy);
@@ -118,7 +118,7 @@ function scr_Player_Slide()
 						switch (playerAbility)
 						{
 							case "beam":
-						    if ((!global.cutscene) and ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))) and (!hurt) and (!attack))
+						    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 						    {
 								var grabEnemy = -1;
 								if (place_meeting(x + (16 * dir),y,obj_Enemy)) grabEnemy = instance_place(x + (16 * dir),y,obj_Enemy);
@@ -152,7 +152,7 @@ function scr_Player_Slide()
 							break;
 							
 							case "mysticBeam":
-						    if ((!global.cutscene) and ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))) and (!hurt) and (!attack))
+						    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 						    {
 								var grabEnemy = -1;
 								if (place_meeting(x + (16 * dir),y,obj_Enemy)) grabEnemy = instance_place(x + (16 * dir),y,obj_Enemy);
@@ -186,7 +186,7 @@ function scr_Player_Slide()
 							break;
 							
 							case "bomb":
-						    if ((!global.cutscene) and ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))) and (!hurt) and (!attack))
+						    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 						    {
 								if (audio_is_playing(snd_BombReady)) audio_stop_sound(snd_BombReady);
 								audio_play_sound(snd_BombReady,0,false);
@@ -201,6 +201,7 @@ function scr_Player_Slide()
 								carriedItemState = "heavy";
 								carriedItemIndex = instance_create_depth(x,y - 8,depth - 1,obj_Projectile_Bomb);
 								carriedItemIndex.owner = id;
+								carriedItemIndex.player = player;
 								carriedItemIndex.hasRemoteDetonation = bombSmartBombUpgrade;
 								carriedItemIndex.hasHoming = bombEyeBombUpgrade;
 								carriedItemIndex.hasMagma = bombMagmaBombUpgrade;
@@ -230,7 +231,7 @@ function scr_Player_Slide()
 							break;
 							
 							case "ice":
-							if ((!global.cutscene) and ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))) and (!hurt) and (!attack))
+							if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 							{
 								var grabEnemy = -1;
 								if (place_meeting(x + (16 * dir),y,obj_Enemy)) grabEnemy = instance_place(x + (16 * dir),y,obj_Enemy);
@@ -436,7 +437,7 @@ function scr_Player_Slide()
 				scaleExY = (-.15 / duckJumpChargeMax) * duckJumpCharge;
 			}
 			
-		    if ((!global.cutscene) and (carriedItemState != "heavy") and (canSlide) and (!duckSlide) and (!attack) and (place_meeting(x,y + 1,obj_Wall)) and ((keyboard_check_pressed(keyJump)) or (gamepad_button_check_pressed(0,gp_face1))))
+		    if ((!global.cutscene) and (carriedItemState != "heavy") and (canSlide) and (!duckSlide) and (!attack) and (place_meeting(x,y + 1,obj_Wall)) and (keyJumpPressed))
 		    {
 				if (audio_is_playing(snd_Slide)) audio_stop_sound(snd_Slide);
 				slideSfx = audio_play_sound(snd_Slide,0,false);
@@ -452,7 +453,7 @@ function scr_Player_Slide()
 			
 			//Cancel Ducking
 			
-			if ((!global.cutscene) and ((!keyboard_check(keyDown)) and (!gamepad_button_check(0,gp_padd))) or ((canDuckHighJump) and (duckJumpCharge == duckJumpChargeMax) and ((keyboard_check_pressed(keyJump)) or (gamepad_button_check_pressed(0,gp_face1)))))
+			if ((!global.cutscene) and (!keyDownHold) or ((canDuckHighJump) and (duckJumpCharge == duckJumpChargeMax) and (keyJumpPressed)))
 			{
 				if (duckJumpCharge == duckJumpChargeMax)
 				{

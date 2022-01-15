@@ -387,6 +387,7 @@ if (!active)
 			if (mouseOnTopPlay)
 			{
 				active = true;
+				mouseOnTopPlay = false;
 				topHudOffset = 0;
 				topHudSaveOffset = 0;
 				topHudLoadOffset = 0;
@@ -663,7 +664,7 @@ if (!active)
 					windowIndex = -1;
 					global.pause = false;
 					var fade = instance_create_depth(x,y,-999,obj_Fade);
-					fade.targetRoom = rm_MainMenu;
+					fade.targetRoom = rm_MaykrTitle;
 				}
 				
 				if (point_in_rectangle(mouseXGui,mouseYGui,180,149,300,174))

@@ -306,12 +306,12 @@ if ((gamePaused) and (visible))
 		
 		if (!cellphoneActive)
 		{
-			if ((keyboard_check_pressed(keyLeft)) or (gamepad_button_check_pressed(0,gp_padl)))
+			if (keyLeftPressed)
 			{
 				audio_play_sound(snd_Select,0,false);
 				page -= 1;
 			}
-			if ((keyboard_check_pressed(keyRight)) or (gamepad_button_check_pressed(0,gp_padr)))
+			if (keyRightPressed)
 			{
 				audio_play_sound(snd_Select,0,false);
 				page += 1;
@@ -521,12 +521,12 @@ if ((gamePaused) and (visible))
 		
 		if ((abilityPage[page] == spr_PauseMenu_Exit) and (transitionXOffset == -25) and (!instance_exists(obj_Pause_Fade)))
 		{
-			if ((keyboard_check_pressed(keyUp)) or (gamepad_button_check_pressed(0,gp_padu)))
+			if (keyUpPressed)
 			{
 				audio_play_sound(snd_Select,0,false);
 				cursorSelection -= 1;
 			}
-			if ((keyboard_check_pressed(keyDown)) or (gamepad_button_check_pressed(0,gp_padd)))
+			if (keyDownPressed)
 			{
 				audio_play_sound(snd_Select,0,false);
 				cursorSelection += 1;
@@ -590,7 +590,7 @@ if ((gamePaused) and (visible))
 		draw_sprite(spr_PauseMenu_CursorArrow,0,camera_get_view_x(gameView) + arrowX,camera_get_view_y(gameView) + arrowY + cursorPos);
 	}
 	
-	if ((!cellphoneActive) and ((keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_start))) or ((abilityPage[page] == spr_PauseMenu_Exit) and ((keyboard_check_pressed(keyJump)) or (gamepad_button_check_pressed(0,gp_face1)))))
+	if ((!cellphoneActive) and (keyStartPressed) or ((abilityPage[page] == spr_PauseMenu_Exit) and (keyJumpPressed)))
     {
 		if (abilityPage[page] != spr_PauseMenu_Exit) cursorSelection = 0;
 		if (cursorSelection == 0)
@@ -643,7 +643,7 @@ if (cellphoneActive)
 	if (transitionXOffset >= 480)
 	{
 		cellphoneTitleActive = true;
-		if (keyboard_check_pressed(keyAttack))
+		if (keyAttackPressed)
 		{
 			if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 			audio_play_sound(snd_ButtonNo,0,false);

@@ -134,7 +134,9 @@ windowGen[3] = irandom_range(0,99);
 
 switch (windowGen[0])
 {
-	
+	default:
+		
+	break;
 }
 if (windowGen[2] == 0) windowCaption[2] = "Gamernt";
 if (windowGen[2] == 0) windowCaption[2] = "Gamernt";
@@ -254,3 +256,6 @@ enum playerStates
 	wingDash,
     death
 }
+
+global.gambleUnlocked = true;
+global.gooeyUnlocked = true;

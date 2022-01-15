@@ -34,7 +34,7 @@ if (!global.pause)
 	{
 		with (obj_Player)
 		{
-			if ((position_meeting(x,y,other)) and (keyboard_check_pressed(keyUp)))
+			if ((position_meeting(x,y,other)) and (keyUpPressed))
 			{
 				if (audio_is_playing(snd_NidooSpawn)) audio_stop_sound(snd_NidooSpawn);
 				audio_play_sound(snd_NidooSpawn,0,false);

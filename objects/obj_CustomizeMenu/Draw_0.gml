@@ -173,6 +173,34 @@ switch (page)
 			break;
 		}
 		break;
+		
+		case "Gamble":
+		playerPaint = global.sprayPaintGambleP1;
+		if (selectedPlayer == 1) playerPaint = global.sprayPaintGambleP2;
+		
+		switch (sprayPaintTitle[selection])
+		{
+			default:
+			characterSprite = spr_Menu_Collection_Customize_Gamble_Normal;
+			characterPaint = sprayPaintGambleNormal[selection];
+			break;e = spr_Menu_Collection_Customize_Kirby_SmileyWhite;
+			break;
+		}
+		break;
+		
+		case "Gooey":
+		playerPaint = global.sprayPaintGooeyP1;
+		if (selectedPlayer == 1) playerPaint = global.sprayPaintGooeyP2;
+		
+		switch (sprayPaintTitle[selection])
+		{
+			default:
+			characterSprite = spr_Menu_Collection_Customize_Gooey_Normal;
+			characterPaint = sprayPaintGooeyNormal[selection];
+			break;e = spr_Menu_Collection_Customize_Kirby_SmileyWhite;
+			break;
+		}
+		break;
 	}
 	
 	if ((global.shaders) and (characterPaint != -1)) pal_swap_set(characterPaint,1,false);

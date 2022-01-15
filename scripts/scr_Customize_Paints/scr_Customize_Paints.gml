@@ -9,6 +9,8 @@ function scr_Customize_Paints()
 	sprayPaintUnlocked[i] = global.friendlyPinkSprayPaintUnlocked;
 	sprayPaintUnlockMethod[i] = "Default";
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_FriendlyPink;
+	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_FriendlyPink;
+	sprayPaintGooeyNormal[i] = spr_Kirby_Normal_Palette_FriendlyPink;
 	sprayPaintColor[i] = make_color_rgb(248,160,216);
 	sprayPaintOffset[i] = 0;
 	sprayPaintOffsetLerp[i] = 0;
@@ -19,6 +21,8 @@ function scr_Customize_Paints()
 	sprayPaintUnlocked[i] = global.yellowSprayPaintUnlocked;
 	sprayPaintUnlockMethod[i] = "Default";
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Yellow;
+	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Yellow;
+	sprayPaintGooeyNormal[i] = spr_Kirby_Normal_Palette_Yellow;
 	sprayPaintColor[i] = make_color_rgb(248,208,0);
 	sprayPaintOffset[i] = 0;
 	sprayPaintOffsetLerp[i] = 0;
@@ -29,6 +33,8 @@ function scr_Customize_Paints()
 	sprayPaintUnlocked[i] = global.redSprayPaintUnlocked;
 	sprayPaintUnlockMethod[i] = "Default";
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Red;
+	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Red;
+	sprayPaintGooeyNormal[i] = spr_Kirby_Normal_Palette_Red;
 	sprayPaintColor[i] = make_color_rgb(248,0,56);
 	sprayPaintOffset[i] = 0;
 	sprayPaintOffsetLerp[i] = 0;
@@ -39,6 +45,8 @@ function scr_Customize_Paints()
 	sprayPaintUnlocked[i] = global.greenSprayPaintUnlocked;
 	sprayPaintUnlockMethod[i] = "Default";
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Green;
+	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Green;
+	sprayPaintGooeyNormal[i] = spr_Kirby_Normal_Palette_Green;
 	sprayPaintColor[i] = make_color_rgb(120,248,40);
 	sprayPaintOffset[i] = 0;
 	sprayPaintOffsetLerp[i] = 0;
@@ -49,6 +57,8 @@ function scr_Customize_Paints()
 	sprayPaintUnlocked[i] = global.dreamyBlueberrySprayPaintUnlocked;
 	sprayPaintUnlockMethod[i] = "Default";
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_DreamyBlueberry;
+	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_DreamyBlueberry;
+	sprayPaintGooeyNormal[i] = spr_Kirby_Normal_Palette_DreamyBlueberry;
 	sprayPaintColor[i] = make_color_rgb(160,229,248);
 	sprayPaintOffset[i] = 0;
 	sprayPaintOffsetLerp[i] = 0;
@@ -59,6 +69,8 @@ function scr_Customize_Paints()
 	sprayPaintUnlocked[i] = global.waddleWaddleSprayPaintUnlocked;
 	sprayPaintUnlockMethod[i] = "Fill xxx entries in the Bestiary";
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_WaddleWaddle;
+	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_WaddleWaddle;
+	sprayPaintGooeyNormal[i] = spr_Kirby_Normal_Palette_WaddleWaddle;
 	sprayPaintColor[i] = make_color_rgb(248,120,0);
 	sprayPaintOffset[i] = 0;
 	sprayPaintOffsetLerp[i] = 0;
@@ -69,6 +81,8 @@ function scr_Customize_Paints()
 	sprayPaintUnlocked[i] = global.mysticSprayPaintUnlocked;
 	sprayPaintUnlockMethod[i] = "Fill xxx entries in the Bestiary";
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Mystic;
+	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Mystic;
+	sprayPaintGooeyNormal[i] = spr_Kirby_Normal_Palette_Mystic;
 	sprayPaintColor[i] = make_color_rgb(144,92,196);
 	sprayPaintOffset[i] = 0;
 	sprayPaintOffsetLerp[i] = 0;
@@ -79,6 +93,8 @@ function scr_Customize_Paints()
 	sprayPaintUnlocked[i] = global.shadowOfTheMirrorSprayPaintUnlocked;
 	sprayPaintUnlockMethod[i] = "Fill xxx entries in the Bestiary";
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_ShadowOfTheMirror;
+	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_ShadowOfTheMirror;
+	sprayPaintGooeyNormal[i] = spr_Kirby_Normal_Palette_ShadowOfTheMirror;
 	sprayPaintColor[i] = make_color_rgb(39,10,47);
 	sprayPaintOffset[i] = 0;
 	sprayPaintOffsetLerp[i] = 0;
@@ -89,6 +105,8 @@ function scr_Customize_Paints()
 	sprayPaintUnlocked[i] = global.greenjoltSprayPaintUnlocked;
 	sprayPaintUnlockMethod[i] = "Log Into Gamejolt";
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_GreenJolt;
+	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_GreenJolt;
+	sprayPaintGooeyNormal[i] = spr_Kirby_Normal_Palette_GreenJolt;
 	sprayPaintColor[i] = make_color_rgb(176,255,81);
 	sprayPaintOffset[i] = 0;
 	sprayPaintOffsetLerp[i] = 0;
@@ -99,6 +117,8 @@ function scr_Customize_Paints()
 	sprayPaintUnlocked[i] = global.butterKnifeSprayPaintUnlocked;
 	sprayPaintUnlockMethod[i] = "Log Into Gamejolt";
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_ButterKnife;
+	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_ButterKnife;
+	sprayPaintGooeyNormal[i] = spr_Kirby_Normal_Palette_ButterKnife;
 	sprayPaintColor[i] = make_color_rgb(239,237,122);
 	sprayPaintOffset[i] = 0;
 	sprayPaintOffsetLerp[i] = 0;
@@ -109,6 +129,8 @@ function scr_Customize_Paints()
 	sprayPaintUnlocked[i] = global.blurpleSprayPaintUnlocked;
 	sprayPaintUnlockMethod[i] = "Log Into Discord";
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Blurple;
+	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Blurple;
+	sprayPaintGooeyNormal[i] = spr_Kirby_Normal_Palette_Blurple;
 	sprayPaintColor[i] = make_color_rgb(182,153,239);
 	sprayPaintOffset[i] = 0;
 	sprayPaintOffsetLerp[i] = 0;
@@ -119,6 +141,8 @@ function scr_Customize_Paints()
 	sprayPaintUnlocked[i] = global.beamSprayPaintUnlocked;
 	sprayPaintUnlockMethod[i] = "Get a Gold Medal on Beam Ability Challenge";
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Beam;
+	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Beam;
+	sprayPaintGooeyNormal[i] = spr_Kirby_Normal_Palette_Beam;
 	sprayPaintColor[i] = make_color_rgb(248,216,96);
 	sprayPaintOffset[i] = 0;
 	sprayPaintOffsetLerp[i] = 0;
@@ -129,6 +153,8 @@ function scr_Customize_Paints()
 	sprayPaintUnlocked[i] = global.stoneSprayPaintUnlocked;
 	sprayPaintUnlockMethod[i] = "Get a Gold Medal on Stone Ability Challenge";
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Stone;
+	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Stone;
+	sprayPaintGooeyNormal[i] = spr_Kirby_Normal_Palette_Stone;
 	sprayPaintColor[i] = make_color_rgb(216,136,104);
 	sprayPaintOffset[i] = 0;
 	sprayPaintOffsetLerp[i] = 0;
@@ -139,6 +165,8 @@ function scr_Customize_Paints()
 	sprayPaintUnlocked[i] = global.mirrorSprayPaintUnlocked;
 	sprayPaintUnlockMethod[i] = "Get a Gold Medal on Mirror Ability Challenge";
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Mirror;
+	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Mirror;
+	sprayPaintGooeyNormal[i] = spr_Kirby_Normal_Palette_Mirror;
 	sprayPaintColor[i] = make_color_rgb(248,224,248);
 	sprayPaintOffset[i] = 0;
 	sprayPaintOffsetLerp[i] = 0;
@@ -149,6 +177,8 @@ function scr_Customize_Paints()
 	sprayPaintUnlocked[i] = global.fireSprayPaintUnlocked;
 	sprayPaintUnlockMethod[i] = "Get a Gold Medal on Fire Ability Challenge";
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Fire;
+	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Fire;
+	sprayPaintGooeyNormal[i] = spr_Kirby_Normal_Palette_Fire;
 	sprayPaintColor[i] = make_color_rgb(248,104,120);
 	sprayPaintOffset[i] = 0;
 	sprayPaintOffsetLerp[i] = 0;
@@ -159,6 +189,8 @@ function scr_Customize_Paints()
 	sprayPaintUnlocked[i] = global.iceSprayPaintUnlocked;
 	sprayPaintUnlockMethod[i] = "Get a Gold Medal on Ice Ability Challenge";
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Ice;
+	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Ice;
+	sprayPaintGooeyNormal[i] = spr_Kirby_Normal_Palette_Ice;
 	sprayPaintColor[i] = make_color_rgb(144,248,248);
 	sprayPaintOffset[i] = 0;
 	sprayPaintOffsetLerp[i] = 0;
@@ -169,6 +201,8 @@ function scr_Customize_Paints()
 	sprayPaintUnlocked[i] = global.plasmaSprayPaintUnlocked;
 	sprayPaintUnlockMethod[i] = "Get a Gold Medal on Plasma Ability Challenge";
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Plasma;
+	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Plasma;
+	sprayPaintGooeyNormal[i] = spr_Kirby_Normal_Palette_Plasma;
 	sprayPaintColor[i] = make_color_rgb(176,248,104);
 	sprayPaintOffset[i] = 0;
 	sprayPaintOffsetLerp[i] = 0;
@@ -179,6 +213,8 @@ function scr_Customize_Paints()
 	sprayPaintUnlocked[i] = global.unearthlyHandSprayPaintUnlocked;
 	sprayPaintUnlockMethod[i] = "Unlock ??????";
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_UnearthlyHand;
+	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_UnearthlyHand;
+	sprayPaintGooeyNormal[i] = spr_Kirby_Normal_Palette_UnearthlyHand;
 	sprayPaintColor[i] = make_color_rgb(255,217,0);
 	sprayPaintOffset[i] = 0;
 	sprayPaintOffsetLerp[i] = 0;
@@ -189,6 +225,8 @@ function scr_Customize_Paints()
 	sprayPaintUnlocked[i] = global.soMetaSprayPaintUnlocked;
 	sprayPaintUnlockMethod[i] = "Unlock ???? ??????";
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_SoMeta;
+	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_SoMeta;
+	sprayPaintGooeyNormal[i] = spr_Kirby_Normal_Palette_SoMeta;
 	sprayPaintColor[i] = make_color_rgb(0,0,248);
 	sprayPaintOffset[i] = 0;
 	sprayPaintOffsetLerp[i] = 0;
@@ -199,6 +237,8 @@ function scr_Customize_Paints()
 	sprayPaintUnlocked[i] = global.telltaleKeebySprayPaintUnlocked;
 	sprayPaintUnlockMethod[i] = "Unlock ?????";
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_TelltaleKeeby;
+	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_TelltaleKeeby;
+	sprayPaintGooeyNormal[i] = spr_Kirby_Normal_Palette_TelltaleKeeby;
 	sprayPaintColor[i] = make_color_rgb(255,246,122);
 	sprayPaintOffset[i] = 0;
 	sprayPaintOffsetLerp[i] = 0;
@@ -209,6 +249,8 @@ function scr_Customize_Paints()
 	sprayPaintUnlocked[i] = global.royalYarnSprayPaintUnlocked;
 	sprayPaintUnlockMethod[i] = "Unlock ?????? ?????";
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_RoyalYarn;
+	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_RoyalYarn;
+	sprayPaintGooeyNormal[i] = spr_Kirby_Normal_Palette_RoyalYarn;
 	sprayPaintColor[i] = make_color_rgb(96,212,255);
 	sprayPaintOffset[i] = 0;
 	sprayPaintOffsetLerp[i] = 0;
@@ -219,6 +261,8 @@ function scr_Customize_Paints()
 	sprayPaintUnlocked[i] = global.smileyWhiteSprayPaintUnlocked;
 	sprayPaintUnlockMethod[i] = "...";
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_SmileyWhite;
+	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_SmileyWhite;
+	sprayPaintGooeyNormal[i] = spr_Kirby_Normal_Palette_SmileyWhite;
 	sprayPaintColor[i] = make_color_rgb(30,30,30);
 	sprayPaintOffset[i] = 0;
 	sprayPaintOffsetLerp[i] = 0;
@@ -229,6 +273,8 @@ function scr_Customize_Paints()
 	sprayPaintUnlocked[i] = global.eddSprayPaintUnlocked;
 	sprayPaintUnlockMethod[i] = "...";
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Edd;
+	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Edd;
+	sprayPaintGooeyNormal[i] = spr_Kirby_Normal_Palette_Edd;
 	sprayPaintColor[i] = make_color_rgb(115,102,98);
 	sprayPaintOffset[i] = 0;
 	sprayPaintOffsetLerp[i] = 0;

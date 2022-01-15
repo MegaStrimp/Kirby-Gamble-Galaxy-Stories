@@ -32,7 +32,7 @@ if (setupTimer == 0)
 
 //Variables
 
-scr_Player_Inputs();
+scr_Player_Inputs(player);
 
 if (((pausable) and (!global.pause)) or (!pausable))
 {
@@ -58,28 +58,28 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	//Destroy
 	
-	if (((instance_exists(owner)) and (owner.hurt)) or ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2)))) destroy = true;
+	if (((instance_exists(owner)) and (owner.hurt)) or (keyAttackPressed)) destroy = true;
 	
 	//Movement
 	
 	var spdLimit = 2 + (supercharged);
 	
-	if (keyboard_check(keyUp))
+	if (keyUpHold)
 	{
 		vsp -= .25;
 	}
 	
-	if (keyboard_check(keyDown))
+	if (keyDownHold)
 	{
 		vsp += .25;
 	}
 	
-	if (keyboard_check(keyLeft))
+	if (keyLeftHold)
 	{
 		hsp -= .25;
 	}
 	
-	if (keyboard_check(keyRight))
+	if (keyRightHold)
 	{
 		hsp += .25;
 	}

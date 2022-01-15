@@ -26,5 +26,6 @@ attackYOffset = 0;
 
 shineTimerMax = 7;
 shineTimer = shineTimerMax;
-attackTimerMax = 45;
+attackTimerMax = 45; //Peashooter
+attackTimerMax = 120; //Dr Fetus
 attackTimer = attackTimerMax;

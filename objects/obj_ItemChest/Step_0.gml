@@ -41,7 +41,8 @@ if (!global.pause)
 	if ((!open) and (place_meeting(x,y,obj_Player)))
 	{
 		var touchedPlayer = instance_place(x,y,obj_Player);
-		if ((!global.cutscene) and ((keyboard_check_pressed(touchedPlayer.keyUp)) or (gamepad_button_check(0,gp_padu))))
+		scr_Player_Inputs(touchedPlayer.player);
+		if ((!global.cutscene) and (keyUpPressed))
 		{
 			if (audio_is_playing(snd_ChestOpen)) audio_stop_sound(snd_ChestOpen);
 			audio_play_sound(snd_ChestOpen,0,false);

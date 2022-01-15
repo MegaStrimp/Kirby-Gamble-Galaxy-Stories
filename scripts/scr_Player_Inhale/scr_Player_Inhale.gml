@@ -43,7 +43,7 @@ function scr_Player_Inhale()
 		
 		//Change to Normal
 		
-		if ((inhaleSoundCont) and (!keyboard_check(keyAttack)) and (!gamepad_button_check(0,gp_face2)) and (inhaling) and (!instance_exists(obj_EatMe)))
+		if ((inhaleSoundCont) and (!keyAttackHold) and (inhaling) and (!instance_exists(obj_EatMe)))
 		{
 			inhaleSoundCont = false;
 			if (audio_is_playing(snd_Inhale_Intro)) audio_stop_sound(snd_Inhale_Intro);

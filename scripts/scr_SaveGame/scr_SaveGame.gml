@@ -21,6 +21,7 @@ function scr_SaveGame(argument0)
 	
 	ini_write_real("unlocks","kirbyUnlocked",global.kirbyUnlocked);
 	ini_write_real("unlocks","gambleUnlocked",global.gambleUnlocked);
+	ini_write_real("unlocks","gooeyUnlocked",global.gooeyUnlocked);
 	ini_write_real("unlocks","metaKnightUnlocked",global.metaKnightUnlocked);
 	ini_write_real("unlocks","keebyUnlocked",global.keebyUnlocked);
 	ini_write_real("unlocks","princeFluffUnlocked",global.princeFluffUnlocked);
@@ -78,6 +79,10 @@ function scr_SaveGame(argument0)
 	
 	ini_write_string("playerCustomization","sprayPaintKirbyP1",sprite_get_name(global.sprayPaintKirbyP1));
 	ini_write_string("playerCustomization","sprayPaintKirbyP2",sprite_get_name(global.sprayPaintKirbyP2));
+	ini_write_string("playerCustomization","sprayPaintGambleP1",sprite_get_name(global.sprayPaintGambleP1));
+	ini_write_string("playerCustomization","sprayPaintGambleP2",sprite_get_name(global.sprayPaintGambleP2));
+	ini_write_string("playerCustomization","sprayPaintGooeyP1",sprite_get_name(global.sprayPaintGooeyP1));
+	ini_write_string("playerCustomization","sprayPaintGooeyP2",sprite_get_name(global.sprayPaintGooeyP2));
 	
 	ini_write_string("playerCustomization","characterP1",global.characterP1);
 	ini_write_string("playerCustomization","characterP2",global.characterP2);

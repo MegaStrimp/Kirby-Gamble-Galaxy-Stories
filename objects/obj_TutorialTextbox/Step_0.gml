@@ -2,11 +2,11 @@
 
 //Inputs
 
-scr_Player_Inputs();
+scr_Player_Inputs(player);
 
 //Destroy
 
-if ((!global.cutscene) and ((keyboard_check_pressed(keyJump)) or (keyboard_check_pressed(keyAttack))))
+if ((!global.cutscene) and ((keyJumpPressed) or (keyAttackPressed)))
 {
 	global.pause = false;
 	instance_destroy();

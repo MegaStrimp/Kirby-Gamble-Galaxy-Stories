@@ -144,9 +144,12 @@ if (!global.pause)
 				}
 				if (objectOnDeath)
 				{
-					instance_create_depth(x,y,depth,objectOnDeathObj);
+					proj = instance_create_depth(x,y,depth,objectOnDeathObj);
 					if (objectOnDeathObj == obj_Projectile_ExplosionMask)
 					{
+						proj.enemy = enemy;
+						proj.hurtsEnemy = !enemy;
+						proj.hurtsPlayer = enemy;
 						if (object_index == obj_Projectile_Bomb)
 						{
 							if (audio_is_playing(snd_BombExplode)) audio_stop_sound(snd_BombExplode);
@@ -461,18 +464,9 @@ if (!global.pause)
 						if (objectOnHitDmg != "none") proj.dmg = objectOnHitDmg;
 						if (objectOnHitObj == obj_Projectile_ExplosionMask)
 						{
-							if (enemy)
-							{
-								proj.enemy = true;
-								proj.hurtsEnemy = false;
-								proj.hurtsPlayer = true;
-							}
-							else
-							{
-								proj.enemy = false;
-								proj.hurtsEnemy = true;
-								proj.hurtsPlayer = false;
-							}
+							proj.enemy = enemy;
+							proj.hurtsEnemy = !enemy;
+							proj.hurtsPlayer = enemy;
 							if (object_index == obj_Projectile_Bomb)
 							{
 								if (audio_is_playing(snd_BombExplode)) audio_stop_sound(snd_BombExplode);
@@ -512,7 +506,7 @@ if (!global.pause)
 			if (place_meeting(x,y,other))
 			{
 				var canBeHurt = false;
-				if ((owner != other) and (enemy != other.enemy) and (((damageType == "explosion") and (!other.explosionResistance)) or (damageType != "explosion")) and (((!other.isBoss) and (hurtsEnemy)) or ((other.isBoss) and (hurtsEnemy) and (hurtsBoss)))) canBeHurt = true;
+				if ((owner != other) and (enemy != other.enemy) and (((damageType == "explosion")/* and (!other.explosionResistance)*/) or (damageType != "explosion")) and (((!other.isBoss) and (hurtsEnemy)) or ((other.isBoss) and (hurtsEnemy) and (hurtsBoss)))) canBeHurt = true;
 				if (canBeHurt)
 				{
 					if (audio_is_playing(snd_EnemyHurt)) audio_stop_sound(snd_EnemyHurt);

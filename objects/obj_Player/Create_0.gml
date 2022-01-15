@@ -392,7 +392,7 @@ gooeyScaleOffset = 0;
 
 //Inputs
 
-scr_Player_Inputs();
+scr_Player_Inputs(player);
 
 //Timers
 

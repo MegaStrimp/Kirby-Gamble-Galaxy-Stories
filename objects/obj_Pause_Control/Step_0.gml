@@ -2,7 +2,7 @@
 
 //Inputs
 
-scr_Player_Inputs();
+scr_Player_Inputs(0);
 
 //Pause
 
@@ -12,7 +12,7 @@ if ((!instance_exists(obj_Fade)) and (!cellphoneActive))
 	{
 		if (!global.pause)
 		{
-		    if ((keyboard_check_pressed(keyStart)) or (gamepad_button_check_pressed(0,gp_start)))
+		    if (keyStartPressed)
 		    {
 				if ((gamePaused) and (visible))
 				{

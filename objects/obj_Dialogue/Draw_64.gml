@@ -73,6 +73,6 @@ if (sprPortrait[array] != -1)
 {
 	drawTextX = dialogueX + 65;
 }
-scr_Draw_Text_Color_Outline(drawTextX,drawTextY,text_displayed,-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+scr_Draw_Text_Color_Outline(drawTextX,drawTextY,text_displayed,-1,maxPixels,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 draw_set_halign(fa_left);
 draw_set_alpha(1);

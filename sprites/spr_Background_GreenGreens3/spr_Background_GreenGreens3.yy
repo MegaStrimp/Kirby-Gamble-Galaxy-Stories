@@ -17,8 +17,8 @@
   "width": 17,
   "height": 29,
   "textureGroupId": {
-    "name": "texturegroup1",
-    "path": "texturegroups/texturegroup1",
+    "name": "GreenGreens",
+    "path": "texturegroups/GreenGreens",
   },
   "swatchColours": null,
   "gridX": 0,

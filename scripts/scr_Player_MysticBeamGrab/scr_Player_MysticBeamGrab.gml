@@ -21,7 +21,7 @@ function scr_Player_MysticBeamGrab()
 		
 		//Attack
 		
-		if ((mysticBeamGrabTimer == -1) and ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))))
+		if ((mysticBeamGrabTimer == -1) and (keyAttackPressed))
 		{
 			if (audio_is_playing(snd_BeamDash)) audio_stop_sound(snd_BeamDash);
 			audio_play_sound(snd_BeamDash,0,false);

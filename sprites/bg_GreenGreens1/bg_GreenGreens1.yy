@@ -17,8 +17,8 @@
   "width": 2048,
   "height": 768,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "texturegroup1",
+    "path": "texturegroups/texturegroup1",
   },
   "swatchColours": null,
   "gridX": 0,

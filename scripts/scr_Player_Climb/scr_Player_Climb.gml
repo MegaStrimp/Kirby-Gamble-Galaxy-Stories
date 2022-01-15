@@ -8,7 +8,7 @@ function scr_Player_Climb()
 		
 		if (!global.cutscene)
 		{
-			if ((keyboard_check(keyUp)) or (gamepad_button_check(0,gp_padu)))
+			if (keyUpHold)
 			{
 				/*if (place_meeting(x,y - (sprite_get_height(spr_Ladder) / 1.5),obj_Ladder))
 				{
@@ -31,7 +31,7 @@ function scr_Player_Climb()
 					state = playerStates.normal;
 				}
 			}
-			else if ((keyboard_check(keyDown)) or (gamepad_button_check(0,gp_padd)))
+			else if (keyDownHold)
 			{
 				if (place_meeting(x,y + (sprite_get_height(spr_Ladder) / 2),obj_Ladder))
 				{
@@ -47,7 +47,7 @@ function scr_Player_Climb()
 			}
 		}
 		
-		if ((global.cutscene) or (((keyboard_check(keyUp)) and (keyboard_check(keyDown)) and (!gamepad_button_check(0,gp_padu)) and (!gamepad_button_check(0,gp_padd))) or ((gamepad_button_check(0,gp_padu)) and (gamepad_button_check(0,gp_padd)) and (!keyboard_check(keyUp)) and (!keyboard_check(keyDown))) or ((!keyboard_check(keyUp)) and (!keyboard_check(keyDown) and (!gamepad_button_check(0,gp_padu)) and (!gamepad_button_check(0,gp_padd))))))
+		if ((global.cutscene) or ((keyUpHold) and (keyDownHold)) or ((!keyUpHold) and (!keyDownHold)))
 		{
 			vsp = 0;
 			image_speed = 0;
@@ -55,7 +55,7 @@ function scr_Player_Climb()
 		
 		//Jump
 		
-		if ((!global.cutscene) and ((keyboard_check_pressed(keyJump)) or (gamepad_button_check_pressed(0,gp_face1))) and (!place_meeting(x,y,obj_Wall)))
+		if ((!global.cutscene) and (keyJumpPressed) and (!place_meeting(x,y,obj_Wall)))
 		{
 			if (carriedItem == "none") fallRoll = true;
 		    vsp = -jumpspeed;
@@ -65,7 +65,7 @@ function scr_Player_Climb()
 		
 		//Go Under The Ladder
 		
-		if ((place_meeting(x,y + 1,obj_Wall)) and (!instance_place(x,y + 1,obj_Wall).platform) and ((keyboard_check(keyDown)) or (gamepad_button_check(0,gp_padd)))) state = playerStates.normal;
+		if ((place_meeting(x,y + 1,obj_Wall)) and (!instance_place(x,y + 1,obj_Wall).platform) and (keyDownHold)) state = playerStates.normal;
 		
 		//Collision
 		

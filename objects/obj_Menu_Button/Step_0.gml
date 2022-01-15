@@ -180,6 +180,40 @@ if (!global.pause)
 		}
 		break;
 		
+		case "maykrTitle":
+		mask_index = sprite_index;
+		if (instance_exists(obj_Maykr_Title))
+		{
+			if ((!instance_exists(obj_Fade)) and (mouse_check_button_pressed(mb_left)) and (position_meeting(mouse_x,mouse_y,self)))
+			{
+				if (obj_Maykr_Title.selection == index)
+				{
+					if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+					audio_play_sound(snd_ButtonYes,0,false);
+					obj_Maykr_Title.select = true;
+				}
+				else
+				{
+					if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+					audio_play_sound(snd_BossHealth,0,false);
+					obj_Maykr_Title.selection = index;
+				}
+			}
+			
+			switch (index)
+			{
+				case 0:
+				case 2:
+				x = 147 - ((1 - obj_Maykr_Title.buttonLerp) * 305);
+				break;
+				
+				case 1:
+				x = 333 + ((1 - obj_Maykr_Title.buttonLerp) * 305)
+				break;
+			}
+		}
+		break;
+		
 		case "back":
 		if ((!instance_exists(obj_Fade)) and (mouse_check_button_pressed(mb_left)) and (position_meeting(mouse_x,mouse_y,self)))
 		{

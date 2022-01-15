@@ -66,7 +66,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 {
 	//Inputs
 	
-	scr_Player_Inputs();
+	scr_Player_Inputs(player);
 	
 	//Destroy
 	
@@ -146,7 +146,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	else if (state == 2)
 	{
 		var spdFinal = spd;
-		if ((instance_exists(owner)) and (isMystic) and ((keyboard_check(keyAttack)) or (gamepad_button_check(0,gp_face2))))
+		if ((instance_exists(owner)) and (isMystic) and (keyAttackHold))
 		{
 			orbitMaxFinal -= .25;
 			spdFinal = spd * 2;

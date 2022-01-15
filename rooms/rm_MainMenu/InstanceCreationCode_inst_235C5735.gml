@@ -10,7 +10,7 @@ switch (global.roomPrevious)
 	selection = "storyMode";
 	break;
 	
-	case rm_Maykr:
+	case rm_MaykrTitle:
 	selection = "maykr";
 	break;
 	

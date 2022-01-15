@@ -24,7 +24,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 {
 	//Variables
 	
-	scr_Player_Inputs();
+	scr_Player_Inputs(player);
 	
 	//Event Inherited
 	
@@ -37,15 +37,15 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	if ((!global.cutscene) and (!enemy))
 	{
-		if ((keyboard_check(keyUp)) or (gamepad_button_check(0,gp_padu)))
+		if (keyUpHold)
 		{
 			vsp = -jumpspeed;
 		}
-		if ((keyboard_check(keyDown)) or (gamepad_button_check(0,gp_padd)))
+		if (keyDownHold)
 		{
 			vsp = jumpspeed;
 		}
-		if (((keyboard_check(keyUp)) and (keyboard_check(keyDown)) and (!gamepad_button_check(0,gp_padu)) and (!gamepad_button_check(0,gp_padd))) or ((gamepad_button_check(0,gp_padu)) and (gamepad_button_check(0,gp_padd)) and (!keyboard_check(keyUp)) and (!keyboard_check(keyDown))) or ((!keyboard_check(keyUp)) and (!keyboard_check(keyDown) and (!gamepad_button_check(0,gp_padu)) and (!gamepad_button_check(0,gp_padd)))))
+		if (((keyUpHold) and (keyDownHold)) or ((!keyUpHold) and (!keyDownHold)))
 		{
 			vsp = 0;
 		}

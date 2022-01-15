@@ -15,7 +15,7 @@ function scr_Player_Carry()
 		//Run
 		
 		runDoubleTap -= 1;
-		if ((!global.cutscene) and ((keyboard_check_pressed(keyLeft)) or (keyboard_check_pressed(keyRight)) or (gamepad_button_check_pressed(0,gp_padl)) or (gamepad_button_check_pressed(0,gp_padr)) and (!inhaleEnd) and (!spit)))
+		if ((!global.cutscene) and ((keyLeftPressed) or (keyRightPressed)) and (!inhaleEnd) and (!spit))
 		{
 		    if (runDoubleTap > 0)
 		    {
@@ -43,7 +43,7 @@ function scr_Player_Carry()
 		if (run)
 		{
 		    movespeed = movespeedRun;
-			if ((runCancelTimer == -1) and (!inhaleEnd) and (!spit) and ((keyboard_check_released(keyLeft)) or (keyboard_check_released(keyRight))) or (gamepad_button_check_released(0,gp_padl)) or (gamepad_button_check_released(0,gp_padr)) or (global.cutscene))
+			if (((runCancelTimer == -1) and (!inhaleEnd) and (!spit) and ((keyLeftReleased) or (keyRightReleased))) or (global.cutscene))
 		    {
 		        runCancelTimer = 15;
 		    }
@@ -59,19 +59,19 @@ function scr_Player_Carry()
 		{
 			if ((!global.cutscene) and (!inhaleEnd) and (!spit))
 			{
-				if ((keyboard_check(keyLeft)) or (gamepad_button_check(0,gp_padl)))
+				if (keyLeftHold)
 				{
 					hsp -= accel;
 					dir = -1;
 				}
-				else if ((keyboard_check(keyRight)) or (gamepad_button_check(0,gp_padr)))
+				else if (keyRightHold)
 				{
 					hsp += accel;
 					dir = 1;
 				}
 			}
 			
-			if ((((keyboard_check(keyLeft)) and (keyboard_check(keyRight)) and (!gamepad_button_check(0,gp_padl)) and (!gamepad_button_check(0,gp_padr))) or ((gamepad_button_check(0,gp_padl)) and (gamepad_button_check(0,gp_padr)) and (!keyboard_check(keyLeft)) and (!keyboard_check(keyRight))) or ((!keyboard_check(keyLeft)) and (!keyboard_check(keyRight) and (!gamepad_button_check(0,gp_padl)) and (!gamepad_button_check(0,gp_padr))))) or (attack) or (runTurn) or (global.cutscene))
+			if ((((keyLeftHold) and (keyRightHold)) or ((!keyLeftHold) and (!keyRightHold))) or (attack) or (runTurn) or (global.cutscene))
 			{
 				hsp = scr_Friction(hsp,decel);
 			}
@@ -88,7 +88,7 @@ function scr_Player_Carry()
 			vsp = gravLimitNormal;
 		}
 	
-		if ((!global.cutscene) and (vsp < 0) and ((!keyboard_check(keyJump)) and (!gamepad_button_check(0,gp_face1))))
+		if ((!global.cutscene) and (vsp < 0) and (!keyJumpHold))
 		{
 		    if (jumpLimit) vsp = max(vsp,-jumpspeed / 4);
 		}
@@ -98,7 +98,7 @@ function scr_Player_Carry()
 		if (place_meeting(x,y + 1,obj_Wall))
 		{
 			vsp = 0;
-			if ((!global.cutscene) and ((keyboard_check_pressed(keyJump)) or (gamepad_button_check_pressed(0,gp_face1)) and (!inhaleEnd) and (!spit)))
+			if ((!global.cutscene) and (keyJumpPressed) and (!inhaleEnd) and (!spit))
 			{
 				vsp = -jumpspeed;
 				audio_play_sound(snd_Jump,0,false);
@@ -109,7 +109,7 @@ function scr_Player_Carry()
 		
 		if (!hurt)
 		{
-		    if ((!global.cutscene) and ((keyboard_check_pressed(keyAttack)) or (gamepad_button_check_pressed(0,gp_face2))) and (!inhaleEnd) and (!spit))
+		    if ((!global.cutscene) and (keyAttackPressed) and (!inhaleEnd) and (!spit))
 		    {
 				audio_play_sound(snd_Spit,0,false);
 				for (var i = 0; i < 2; i++)
@@ -152,7 +152,7 @@ function scr_Player_Carry()
 				if (ateCappyShroom) ateCappyShroom = false;
 		    }
 			
-		    if ((!global.cutscene) and (place_meeting(x,y + 1,obj_Wall)) and (!inhaleEnd) and (!spit) and ((keyboard_check_pressed(keyDown)) or (gamepad_button_check_pressed(0,gp_padd))))
+		    if ((!global.cutscene) and (place_meeting(x,y + 1,obj_Wall)) and (!inhaleEnd) and (!spit) and (keyDownPressed))
 		    {
 				if (player == 0)
 				{

@@ -4,27 +4,27 @@ if (!global.pause)
 {
 	//Inputs
 	
-	scr_Player_Inputs();
+	scr_Player_Inputs(player);
 	
     //Movement
     
 	if (!global.cutscene)
 	{
-		if ((keyboard_check(keyRight)) or (gamepad_button_check(0,gp_padr)))
+		if (keyRightHold)
 		{
 			hsp += accel;
 			dir = 1;
 		}
-		if ((keyboard_check(keyLeft)) or (gamepad_button_check(0,gp_padl)))
+		if (keyLeftHold)
 		{
 			hsp -= accel;
 			dir = -1;
 		}
-		if ((keyboard_check(keyUp)) or (gamepad_button_check(0,gp_padu)))
+		if (keyUpHold)
 		{
 			vsp -= accel;
 		}
-		if ((keyboard_check(keyDown)) or (gamepad_button_check(0,gp_padd)))
+		if (keyDownHold)
 		{
 			vsp += accel;
 		}
@@ -40,7 +40,7 @@ if (!global.pause)
 	hsp = clamp(hsp, -maxSpeed, maxSpeed);
 	vsp = clamp(vsp, -maxSpeed, maxSpeed);
 	
-	if ((((keyboard_check(keyLeft)) and (keyboard_check(keyRight)) and (!gamepad_button_check(0,gp_padl)) and (!gamepad_button_check(0,gp_padr))) or ((gamepad_button_check(0,gp_padl)) and (gamepad_button_check(0,gp_padr)) and (!keyboard_check(keyLeft)) and (!keyboard_check(keyRight))) or ((!keyboard_check(keyLeft)) and (!keyboard_check(keyRight) and (!gamepad_button_check(0,gp_padl)) and (!gamepad_button_check(0,gp_padr))))))
+	if ((((keyLeftHold) and (keyRightHold)) or ((!keyLeftHold) and (!keyRightHold))))
 	{
 		var ultiDecel = decel;
 		if (hsp >= ultiDecel) hsp -= ultiDecel;
@@ -55,7 +55,7 @@ if (!global.pause)
         firingDelay -= 1;
     }
 	
-    if ((keyboard_check(keyAttack)) or (gamepad_button_check(0,gp_face2)))
+    if (keyAttackHold)
     {
         if (firingDelay == 0)
         {
