@@ -1,3 +1,3 @@
 ///@description Creation Code
 
-ability = "beam";
+ability = playerAbilities.beam;

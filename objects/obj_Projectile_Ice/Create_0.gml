@@ -21,5 +21,5 @@ destroyableByPlayer = false;
 destroyableByEnemy = false;
 destroyableByObject = false;
 destroyableByProjectile = false;
-damageType = "ice";
+damageType = damageTypes.ice;
 enemy = false;

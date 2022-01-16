@@ -14,7 +14,7 @@ sprHurt = spr_Particle_BigStar_Yellow;
 //Other Variables
 
 character = 0;
-ability = "none";
+ability = playerAbilities.none;
 object = true;
 enemy = false;
 heavy = true;

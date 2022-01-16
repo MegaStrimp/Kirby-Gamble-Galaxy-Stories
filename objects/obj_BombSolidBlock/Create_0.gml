@@ -6,7 +6,7 @@ event_inherited();
 
 //Other Variables
 
-ability = "none";
+ability = playerAbilities.none;
 //object = true;
 canExplode = true;
 enemy = false;

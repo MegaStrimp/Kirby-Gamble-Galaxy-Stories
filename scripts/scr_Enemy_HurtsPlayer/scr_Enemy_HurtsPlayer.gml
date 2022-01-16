@@ -73,7 +73,7 @@ function scr_Enemy_HurtsPlayer()
 					obj_Hud.flashStopP2Timer = obj_Hud.flashStopTimerMax;
 				}
 			}
-			if ((dmg > 0) and (((collidedPlayer.player == 0) and (global.abilityP1 != "none") and (global.hpP1 > 0) and ((object_index == obj_Spike) or (global.hpP1 % 2 != 0))) or ((collidedPlayer.player == 1) and (global.abilityP2 != "none") and (global.hpP2 > 0) and ((object_index == obj_Spike) or (global.hpP2 % 2 != 0)))))
+			if ((dmg > 0) and (((collidedPlayer.player == 0) and (global.abilityP1 != playerAbilities.none) and (global.hpP1 > 0) and ((object_index == obj_Spike) or (global.hpP1 % 2 != 0))) or ((collidedPlayer.player == 1) and (global.abilityP2 != playerAbilities.none) and (global.hpP2 > 0) and ((object_index == obj_Spike) or (global.hpP2 % 2 != 0)))))
 			{
 			    if (instance_exists(obj_AbilityDropStar))
 				{
@@ -92,99 +92,99 @@ function scr_Enemy_HurtsPlayer()
 				
 				switch (abilityDropStar.ability)
 				{
-					case "cutter":
+					case playerAbilities.cutter:
 					abilityDropStar.sprite_index = spr_AbilityDropStar_Cutter;
 					break;
 					
-					case "beam":
+					case playerAbilities.beam:
 					abilityDropStar.sprite_index = spr_AbilityDropStar_Beam;
 					break;
 					
-					case "mysticBeam":
+					case playerAbilities.mysticBeam:
 					abilityDropStar.sprite_index = spr_AbilityDropStar_MysticBeam;
 					break;
 					
-					case "stone":
+					case playerAbilities.stone:
 					abilityDropStar.sprite_index = spr_AbilityDropStar_Stone;
 					break;
 					
-					case "ufo":
+					case playerAbilities.ufo:
 					abilityDropStar.sprite_index = spr_AbilityDropStar_Ufo;
 					break;
 					
-					case "mirror":
+					case playerAbilities.mirror:
 					abilityDropStar.sprite_index = spr_AbilityDropStar_Mirror;
 					break;
 					
-					case "ninja":
+					case playerAbilities.ninja:
 					abilityDropStar.sprite_index = spr_AbilityDropStar_Ninja;
 					break;
 					
-					case "bomb":
+					case playerAbilities.bomb:
 					abilityDropStar.sprite_index = spr_AbilityDropStar_Bomb;
 					break;
 					
-					case "fire":
+					case playerAbilities.fire:
 					abilityDropStar.sprite_index = spr_AbilityDropStar_Fire;
 					break;
 					
-					case "mysticFire":
+					case playerAbilities.mysticFire:
 					abilityDropStar.sprite_index = spr_AbilityDropStar_MysticFire;
 					break;
 					
-					case "ice":
+					case playerAbilities.ice:
 					abilityDropStar.sprite_index = spr_AbilityDropStar_Ice;
 					break;
 					
-					case "spark":
+					case playerAbilities.spark:
 					abilityDropStar.sprite_index = spr_AbilityDropStar_Spark;
 					break;
 					
-					case "yoyo":
+					case playerAbilities.yoyo:
 					abilityDropStar.sprite_index = spr_AbilityDropStar_Yoyo;
 					break;
 					
-					case "wheel":
+					case playerAbilities.wheel:
 					abilityDropStar.sprite_index = spr_AbilityDropStar_Wheel;
 					break;
 					
-					case "artist":
+					case playerAbilities.artist:
 					abilityDropStar.sprite_index = spr_AbilityDropStar_Artist;
 					break;
 					
-					case "fighter":
+					case playerAbilities.fighter:
 					abilityDropStar.sprite_index = spr_AbilityDropStar_Fighter;
 					break;
 					
-					case "suplex":
+					case playerAbilities.suplex:
 					abilityDropStar.sprite_index = spr_AbilityDropStar_Suplex;
 					break;
 					
-					case "wing":
+					case playerAbilities.wing:
 					abilityDropStar.sprite_index = spr_AbilityDropStar_Wing;
 					break;
 					
-					case "jet":
+					case playerAbilities.jet:
 					abilityDropStar.sprite_index = spr_AbilityDropStar_Jet;
 					break;
 					
-					case "sword":
+					case playerAbilities.sword:
 					abilityDropStar.sprite_index = spr_AbilityDropStar_Sword;
 					break;
 					
-					case "parasol":
+					case playerAbilities.parasol:
 					abilityDropStar.sprite_index = spr_AbilityDropStar_Parasol;
 					break;
 					
-					case "hammer":
+					case playerAbilities.hammer:
 					abilityDropStar.sprite_index = spr_AbilityDropStar_Hammer;
 					break;
 					
-					case "bell":
+					case playerAbilities.bell:
 					abilityDropStar.sprite_index = spr_AbilityDropStar_Bell;
 					break;
 					
-					case "water":
+					case playerAbilities.water:
 					abilityDropStar.sprite_index = spr_AbilityDropStar_Water;
 					break;
 					
@@ -194,11 +194,11 @@ function scr_Enemy_HurtsPlayer()
 				}
 				if (collidedPlayer.player == 0)
 				{
-					global.abilityP1 = "none";
+					global.abilityP1 = playerAbilities.none;
 				}
 				else
 				{
-					global.abilityP2 = "none";
+					global.abilityP2 = playerAbilities.none;
 				}
 			}
 			
@@ -266,11 +266,11 @@ function scr_Enemy_HurtsPlayer()
 		{
 			if (audio_is_playing(snd_EnemyHurt)) audio_stop_sound(snd_EnemyHurt);
 			audio_play_sound(snd_EnemyHurt,0,false);
-			takenDamageType = "none";
+			takendamageType = damageTypes.none;
 			if (collidedPlayer.dmg >= hp)
 			{
 				hurtTimer = hurtStopTimerMax + 5;
-				if ((hasDeathKnockback) and (takenDamageType != "freeze")) hurtStopTimer = hurtStopTimerMax;
+				if ((hasDeathKnockback) and (takenDamageType != damageTypes.ice)) hurtStopTimer = hurtStopTimerMax;
 			    shake = 1;
 			    if (instance_exists(obj_Camera)) obj_Camera.shake = 3;
 			}

@@ -6,7 +6,7 @@ event_inherited();
 
 //Other Variables
 
-damageType = "wing";
+damageType = damageTypes.wing;
 destroyableByWall = false;
 destroyableByEnemy = false;
 destroyableByObject = false;

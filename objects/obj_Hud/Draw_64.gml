@@ -139,9 +139,9 @@ var pal = paletteP1;
 if (paletteP1 == spr_Kirby_Normal_Palette_FriendlyPink) pal = spr_Hud_Palette_Icon_Kirby;
 
 var iconIndex = scr_Hud_AbilityIcon(global.abilityP1,global.characterP1);
-if ((global.shaders) and (global.abilityP1 == "none")) pal_swap_set(pal,1 + (flashP1 * 2),false);
+if ((global.shaders) and (global.abilityP1 == playerAbilities.none)) pal_swap_set(pal,1 + (flashP1 * 2),false);
 draw_sprite_ext(iconIndex,0,hudX,hudY,1,1,image_angle,image_blend,drawAlpha);
-if ((global.shaders) and (global.abilityP1 == "none")) pal_swap_reset();
+if ((global.shaders) and (global.abilityP1 == playerAbilities.none)) pal_swap_reset();
 
 //draw_sprite_ext(spr_Hud_IconGlow,0,hudX,hudY,1,1,image_angle,image_blend,drawAlpha);
 //draw_sprite_ext(spr_Hud_IconBorder,0,hudX,hudY,1,1,image_angle,image_blend,drawAlpha);
@@ -269,9 +269,9 @@ var pal = paletteP1;
 if (paletteP1 == spr_Kirby_Normal_Palette_FriendlyPink) pal = spr_Hud_Palette_Healthbar_Kirby;
 
 var textIndex = scr_Hud_AbilityText(global.abilityP1,global.characterP1);
-if ((global.shaders) and (global.abilityP1 == "none")) pal_swap_set(pal,1 + (flashP1 * 2),false);
+if ((global.shaders) and (global.abilityP1 == playerAbilities.none)) pal_swap_set(pal,1 + (flashP1 * 2),false);
 draw_sprite_ext(textIndex,0,hudX + 26,hudY - 20,1,1,image_angle,image_blend,drawAlpha);
-if ((global.shaders) and (global.abilityP1 == "none")) pal_swap_reset();
+if ((global.shaders) and (global.abilityP1 == playerAbilities.none)) pal_swap_reset();
 
 //P1 Big Shot
 
@@ -286,9 +286,9 @@ if (instance_number(obj_Player) > 1)
 	if (paletteP2 == spr_Kirby_Normal_Palette_FriendlyPink) pal = spr_Hud_Palette_Icon_Kirby;
 	
 	var iconIndex = scr_Hud_AbilityIcon(global.abilityP2,global.characterP2);
-	if ((global.shaders) and (global.abilityP2 == "none")) pal_swap_set(pal,1 + (flashP2 * 2),false);
+	if ((global.shaders) and (global.abilityP2 == playerAbilities.none)) pal_swap_set(pal,1 + (flashP2 * 2),false);
 	draw_sprite_ext(iconIndex,0,hudX + 480 - (sprite_get_width(spr_Hud_Icon_Kirby) / 2) - 38,hudY,1,1,image_angle,image_blend,drawAlpha);
-	if ((global.shaders) and (global.abilityP2 == "none")) pal_swap_reset();
+	if ((global.shaders) and (global.abilityP2 == playerAbilities.none)) pal_swap_reset();
 	
 	//draw_sprite_ext(spr_Hud_IconGlow,0,hudX + 480 - (sprite_get_width(spr_Hud_Icon_Kirby) / 2) - 33,hudY,1,1,image_angle,image_blend,drawAlpha);
 	//draw_sprite_ext(spr_Hud_IconBorder,0,hudX + 480 - (sprite_get_width(spr_Hud_Icon_Kirby) / 2) - 33,hudY,1,1,image_angle,image_blend,drawAlpha);
@@ -416,9 +416,9 @@ if (instance_number(obj_Player) > 1)
 	if (paletteP2 == spr_Kirby_Normal_Palette_FriendlyPink) pal = spr_Hud_Palette_Healthbar_Kirby;
 	
 	var textIndex = scr_Hud_AbilityText(global.abilityP2,global.characterP2);
-	if ((global.shaders) and (global.abilityP2 == "none")) pal_swap_set(pal,1 + (flashP2 * 2),false);
+	if ((global.shaders) and (global.abilityP2 == playerAbilities.none)) pal_swap_set(pal,1 + (flashP2 * 2),false);
 	draw_sprite_ext(textIndex,0,hudX + 480 - sprite_get_width(textIndex) - (sprite_get_width(spr_Hud_Icon_Kirby) / 2) - 64,hudY - 20,1,1,image_angle,image_blend,drawAlpha);
-	if ((global.shaders) and (global.abilityP2 == "none")) pal_swap_reset();
+	if ((global.shaders) and (global.abilityP2 == playerAbilities.none)) pal_swap_reset();
 	
 	//P2 Big Shot
 	
@@ -450,17 +450,17 @@ if (!global.gambleMaykr)
 	
 	switch (characterP1)
 	{
-		case "kirby":
+		case playerCharacters.kirby:
 		var icon = spr_Hud_Lives_Icon_Kirby;
 		var iconShadow = spr_Hud_Lives_Icon_Kirby_Shadow;
 		break;
 		
-		case "gamble":
+		case playerCharacters.gamble:
 		var icon = spr_Hud_Lives_Icon_Gamble;
 		var iconShadow = spr_Hud_Lives_Icon_Gamble_Shadow;
 		break;
 		
-		case "gooey":
+		case playerCharacters.gooey:
 		var icon = spr_Hud_Lives_Icon_Gooey;
 		var iconShadow = spr_Hud_Lives_Icon_Gooey_Shadow;
 		break;
@@ -481,17 +481,17 @@ if (!global.gambleMaykr)
 		
 		switch (characterP2)
 		{
-			case "kirby":
+			case playerCharacters.kirby:
 			var icon = spr_Hud_Lives_Icon_Kirby;
 			var iconShadow = spr_Hud_Lives_Icon_Kirby_Shadow;
 			break;
 			
-			case "gamble":
+			case playerCharacters.gamble:
 			var icon = spr_Hud_Lives_Icon_Gamble;
 			var iconShadow = spr_Hud_Lives_Icon_Gamble_Shadow;
 			break;
 			
-			case "gooey":
+			case playerCharacters.gooey:
 			var icon = spr_Hud_Lives_Icon_Gooey;
 			var iconShadow = spr_Hud_Lives_Icon_Gooey_Shadow;
 			break;

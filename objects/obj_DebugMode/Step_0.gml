@@ -35,207 +35,207 @@ if (instance_exists(obj_Player))
 		{
 			if (keyboard_check_pressed(ord("1")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "hammer";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.hammer;
 			}
 			if (keyboard_check_pressed(ord("2")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "bell";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.bell;
 			}
 			if (keyboard_check_pressed(ord("3")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "water";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.water;
 			}
 			if (keyboard_check_pressed(ord("4")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "sleep";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.sleep;
 			}
 			if (keyboard_check_pressed(ord("5")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "scan";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.scan;
 			}
 			if (keyboard_check_pressed(ord("6")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "crash";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.crash;
 			}
 			if (keyboard_check_pressed(ord("7")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "mic";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.mic;
 			}
 			if (keyboard_check_pressed(ord("8")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "chef";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.chef;
 			}
 			if (keyboard_check_pressed(ord("9")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "ultraSword";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.ultraSword;
 			}
 		}
 		else if (keyboard_check(vk_shift))
 		{
 			if (keyboard_check_pressed(ord("1")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "spark";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.spark;
 				if (keyboard_check(vk_control))
 				{
-					global.characterP1 = "gamble";
-					global.abilityP1 = "none";
+					global.characterP1 = playerCharacters.gamble;
+					global.abilityP1 = playerAbilities.none;
 					global.isHelperP1 = false;
 					obj_Player.characterSetupTimer = 0;
 				}
 			}
 			if (keyboard_check_pressed(ord("2")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "yoyo";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.yoyo;
 			}
 			if (keyboard_check_pressed(ord("3")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "wheel";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.wheel;
 			}
 			if (keyboard_check_pressed(ord("4")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "artist";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.artist;
 			}
 			if (keyboard_check_pressed(ord("5")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "fighter";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.fighter;
 			}
 			if (keyboard_check_pressed(ord("6")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "suplex";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.suplex;
 			}
 			if (keyboard_check_pressed(ord("7")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "wing";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.wing;
 			}
 			if (keyboard_check_pressed(ord("8")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "jet";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.jet;
 			}
 			if (keyboard_check_pressed(ord("9")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "sword";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.sword;
 			}
 			if (keyboard_check_pressed(ord("0")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "parasol";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.parasol;
 			}
 		}
 		else
 		{
 			if (keyboard_check_pressed(ord("0")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "none";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.none;
 				if (keyboard_check(vk_control))
 				{
-					global.characterP1 = "kirby";
-					global.abilityP1 = "none";
+					global.characterP1 = playerCharacters.kirby;
+					global.abilityP1 = playerAbilities.none;
 					global.isHelperP1 = false;
 					obj_Player.characterSetupTimer = 0;
 				}
 			}
 			if (keyboard_check_pressed(ord("1")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "cutter";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.cutter;
 				if (keyboard_check(vk_control))
 				{
 					global.characterP1 = "waddleDee";
-					global.abilityP1 = "none";
+					global.abilityP1 = playerAbilities.none;
 					global.isHelperP1 = true;
 					obj_Player.characterSetupTimer = 0;
 				}
 			}
 			if (keyboard_check_pressed(ord("2")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "beam";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.beam;
 				if (keyboard_check(vk_control))
 				{
 					global.characterP1 = "waddleDoo";
-					global.abilityP1 = "none";
+					global.abilityP1 = playerAbilities.none;
 					global.isHelperP1 = true;
 					obj_Player.characterSetupTimer = 0;
 				}
 				if (keyboard_check(vk_tab))
 				{
-					global.abilityP1 = "mysticBeam";
+					global.abilityP1 = playerAbilities.mysticBeam;
 				}
 			}
 			if (keyboard_check_pressed(ord("3")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "stone";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.stone;
 				if (keyboard_check(vk_control))
 				{
 					global.characterP1 = "brontoBurt";
-					global.abilityP1 = "none";
+					global.abilityP1 = playerAbilities.none;
 					global.isHelperP1 = true;
 					obj_Player.characterSetupTimer = 0;
 				}
 			}
 			if (keyboard_check_pressed(ord("4")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "ufo";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.ufo;
 				if (keyboard_check(vk_control))
 				{
 					global.characterP1 = "twizzy";
-					global.abilityP1 = "none";
+					global.abilityP1 = playerAbilities.none;
 					global.isHelperP1 = true;
 					obj_Player.characterSetupTimer = 0;
 				}
 			}
 			if (keyboard_check_pressed(ord("5")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "mirror";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.mirror;
 				if (keyboard_check(vk_control))
 				{
 					global.characterP1 = "tookey";
-					global.abilityP1 = "none";
+					global.abilityP1 = playerAbilities.none;
 					global.isHelperP1 = true;
 					obj_Player.characterSetupTimer = 0;
 				}
 			}
 			if (keyboard_check_pressed(ord("6")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "ninja";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.ninja;
 				if (keyboard_check(vk_control))
 				{
 					global.characterP1 = "sirKibble";
-					global.abilityP1 = "none";
+					global.abilityP1 = playerAbilities.none;
 					global.isHelperP1 = true;
 					obj_Player.characterSetupTimer = 0;
 				}
 			}
 			if (keyboard_check_pressed(ord("7")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "bomb";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.bomb;
 				if (keyboard_check(vk_control))
 				{
 					global.characterP1 = "bouncy";
-					global.abilityP1 = "none";
+					global.abilityP1 = playerAbilities.none;
 					global.isHelperP1 = true;
 					obj_Player.characterSetupTimer = 0;
 				}
 			}
 			if (keyboard_check_pressed(ord("8")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "fire";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.fire;
 				if (keyboard_check(vk_control))
 				{
 					global.characterP1 = "gordo";
-					global.abilityP1 = "none";
+					global.abilityP1 = playerAbilities.none;
 					global.isHelperP1 = true;
 					obj_Player.characterSetupTimer = 0;
 				}
 				if (keyboard_check(vk_tab))
 				{
-					global.abilityP1 = "mysticFire";
+					global.abilityP1 = playerAbilities.mysticFire;
 				}
 			}
 			if (keyboard_check_pressed(ord("9")))
 			{
-				if (global.characterP1 == "kirby") global.abilityP1 = "ice";
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.ice;
 				if (keyboard_check(vk_control))
 				{
 					global.characterP1 = "bloodGordo";
-					global.abilityP1 = "none";
+					global.abilityP1 = playerAbilities.none;
 					global.isHelperP1 = true;
 					obj_Player.characterSetupTimer = 0;
 				}
@@ -820,161 +820,161 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		
 			case 1:
 			debugSprite = spr_AbilityStar_Cutter;
-			var ability = "cutter";
+			var ability = playerAbilities.cutter;
 			break;
 		
 			//Beam
 		
 			case 2:
 			debugSprite = spr_AbilityStar_Beam;
-			var ability = "beam";
+			var ability = playerAbilities.beam;
 			break;
 		
 			//Stone
 		
 			case 3:
 			debugSprite = spr_AbilityStar_Stone;
-			var ability = "stone";
+			var ability = playerAbilities.stone;
 			break;
 		
 			//Ufo
 		
 			case 4:
 			debugSprite = spr_AbilityStar_Ufo;
-			var ability = "ufo";
+			var ability = playerAbilities.ufo;
 			break;
 		
 			//Mirror
 		
 			case 5:
 			debugSprite = spr_AbilityStar_Mirror;
-			var ability = "mirror";
+			var ability = playerAbilities.mirror;
 			break;
 		
 			//Ninja
 		
 			case 6:
 			debugSprite = spr_AbilityStar_Ninja;
-			var ability = "ninja";
+			var ability = playerAbilities.ninja;
 			break;
 		
 			//Bomb
 		
 			case 7:
 			debugSprite = spr_AbilityStar_Bomb;
-			var ability = "bomb";
+			var ability = playerAbilities.bomb;
 			break;
 		
 			//Fire
 		
 			case 8:
 			debugSprite = spr_AbilityStar_Fire;
-			var ability = "fire";
+			var ability = playerAbilities.fire;
 			break;
 		
 			//Ice
 		
 			case 9:
 			debugSprite = spr_AbilityStar_Ice;
-			var ability = "ice";
+			var ability = playerAbilities.ice;
 			break;
 		
 			//Spark
 		
 			case 10:
 			debugSprite = spr_AbilityStar_Spark;
-			var ability = "spark";
+			var ability = playerAbilities.spark;
 			break;
 		
 			//Yoyo
 		
 			case 11:
 			debugSprite = spr_AbilityStar_Yoyo;
-			var ability = "yoyo";
+			var ability = playerAbilities.yoyo;
 			break;
 		
 			//Wheel
 		
 			case 12:
 			debugSprite = spr_AbilityStar_Wheel;
-			var ability = "wheel";
+			var ability = playerAbilities.wheel;
 			break;
 		
 			//Artist
 		
 			case 13:
 			debugSprite = spr_AbilityStar_Artist;
-			var ability = "artist";
+			var ability = playerAbilities.artist;
 			break;
 		
 			//Fighter
 		
 			case 14:
 			debugSprite = spr_AbilityStar_Fighter;
-			var ability = "fighter";
+			var ability = playerAbilities.fighter;
 			break;
 		
 			//Suplex
 		
 			case 15:
 			debugSprite = spr_AbilityStar_Suplex;
-			var ability = "suplex";
+			var ability = playerAbilities.suplex;
 			break;
 		
 			//Wing
 		
 			case 16:
 			debugSprite = spr_AbilityStar_Wing;
-			var ability = "wing";
+			var ability = playerAbilities.wing;
 			break;
 		
 			//Jet
 		
 			case 17:
 			debugSprite = spr_AbilityStar_Jet;
-			var ability = "jet";
+			var ability = playerAbilities.jet;
 			break;
 		
 			//Sword
 		
 			case 18:
 			debugSprite = spr_AbilityStar_Sword;
-			var ability = "sword";
+			var ability = playerAbilities.sword;
 			break;
 		
 			//Parasol
 		
 			case 19:
 			debugSprite = spr_AbilityStar_Parasol;
-			var ability = "parasol";
+			var ability = playerAbilities.parasol;
 			break;
 		
 			//Hammer
 		
 			case 20:
 			debugSprite = spr_AbilityStar_Hammer;
-			var ability = "hammer";
+			var ability = playerAbilities.hammer;
 			break;
 		
 			//Bell
 		
 			case 21:
 			debugSprite = spr_AbilityStar_Bell;
-			var ability = "bell";
+			var ability = playerAbilities.bell;
 			break;
 		
 			//Water
 		
 			case 22:
 			debugSprite = spr_AbilityStar_Water;
-			var ability = "water";
+			var ability = playerAbilities.water;
 			break;
 		
 			//Normal
 		
 			default:
 			debugSprite = spr_AbilityStar_Normal;
-			var ability = "none";
+			var ability = playerAbilities.none;
 			break;
 		}
 		debugSpriteSelectedMax = 0;
@@ -1152,7 +1152,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		switch (debugSpriteSelected)
 		{
 			case 0:
-			var ability = "none";
+			var ability = playerAbilities.none;
 			sprIdle = spr_AbilityBlock_Normal_Idle;
 			topWallSprite = spr_AbilityBlock_Normal_Top;
 			break;
@@ -1160,7 +1160,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Cutter
 		
 			case 1:
-			var ability = "cutter";
+			var ability = playerAbilities.cutter;
 			sprIdle = spr_AbilityBlock_Cutter_Idle;
 			topWallSprite = spr_AbilityBlock_Cutter_Top;
 			break;
@@ -1168,7 +1168,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Beam
 		
 			case 2:
-			var ability = "beam";
+			var ability = playerAbilities.beam;
 			sprIdle = spr_AbilityBlock_Beam_Idle;
 			topWallSprite = spr_AbilityBlock_Beam_Top;
 			break;
@@ -1176,7 +1176,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Stone
 		
 			case 3:
-			var ability = "stone";
+			var ability = playerAbilities.stone;
 			sprIdle = spr_AbilityBlock_Stone_Idle;
 			topWallSprite = spr_AbilityBlock_Stone_Top;
 			break;
@@ -1184,7 +1184,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Ufo
 		
 			case 4:
-			var ability = "ufo";
+			var ability = playerAbilities.ufo;
 			sprIdle = spr_AbilityBlock_Ufo_Idle;
 			topWallSprite = spr_AbilityBlock_Ufo_Top;
 			break;
@@ -1192,7 +1192,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Mirror
 		
 			case 5:
-			var ability = "mirror";
+			var ability = playerAbilities.mirror;
 			sprIdle = spr_AbilityBlock_Mirror_Idle;
 			topWallSprite = spr_AbilityBlock_Mirror_Top;
 			break;
@@ -1200,7 +1200,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Ninja
 		
 			case 6:
-			var ability = "ninja";
+			var ability = playerAbilities.ninja;
 			sprIdle = spr_AbilityBlock_Ninja_Idle;
 			topWallSprite = spr_AbilityBlock_Ninja_Top;
 			break;
@@ -1208,7 +1208,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Bomb
 		
 			case 7:
-			var ability = "bomb";
+			var ability = playerAbilities.bomb;
 			sprIdle = spr_AbilityBlock_Bomb_Idle;
 			topWallSprite = spr_AbilityBlock_Bomb_Top;
 			break;
@@ -1216,7 +1216,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Fire
 		
 			case 8:
-			var ability = "fire";
+			var ability = playerAbilities.fire;
 			sprIdle = spr_AbilityBlock_Fire_Idle;
 			topWallSprite = spr_AbilityBlock_Fire_Top;
 			break;
@@ -1224,7 +1224,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Ice
 		
 			case 9:
-			var ability = "ice";
+			var ability = playerAbilities.ice;
 			sprIdle = spr_AbilityBlock_Ice_Idle;
 			topWallSprite = spr_AbilityBlock_Ice_Top;
 			break;
@@ -1232,7 +1232,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Spark
 		
 			case 10:
-			var ability = "spark";
+			var ability = playerAbilities.spark;
 			sprIdle = spr_AbilityBlock_Spark_Idle;
 			topWallSprite = spr_AbilityBlock_Spark_Top;
 			break;
@@ -1240,7 +1240,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Yoyo
 		
 			case 11:
-			var ability = "yoyo";
+			var ability = playerAbilities.yoyo;
 			sprIdle = spr_AbilityBlock_Yoyo_Idle;
 			topWallSprite = spr_AbilityBlock_Yoyo_Top;
 			break;
@@ -1248,7 +1248,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Wheel
 		
 			case 12:
-			var ability = "wheel";
+			var ability = playerAbilities.wheel;
 			sprIdle = spr_AbilityBlock_Wheel_Idle;
 			topWallSprite = spr_AbilityBlock_Wheel_Top;
 			break;
@@ -1256,7 +1256,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Artist
 		
 			case 13:
-			var ability = "artist";
+			var ability = playerAbilities.artist;
 			sprIdle = spr_AbilityBlock_Artist_Idle;
 			topWallSprite = spr_AbilityBlock_Artist_Top;
 			break;
@@ -1264,7 +1264,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Fighter
 		
 			case 14:
-			var ability = "fighter";
+			var ability = playerAbilities.fighter;
 			sprIdle = spr_AbilityBlock_Fighter_Idle;
 			topWallSprite = spr_AbilityBlock_Fighter_Top;
 			break;
@@ -1272,7 +1272,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Suplex
 		
 			case 15:
-			var ability = "suplex";
+			var ability = playerAbilities.suplex;
 			sprIdle = spr_AbilityBlock_Suplex_Idle;
 			topWallSprite = spr_AbilityBlock_Suplex_Top;
 			break;
@@ -1280,7 +1280,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Wing
 		
 			case 16:
-			var ability = "wing";
+			var ability = playerAbilities.wing;
 			sprIdle = spr_AbilityBlock_Wing_Idle;
 			topWallSprite = spr_AbilityBlock_Wing_Top;
 			break;
@@ -1288,7 +1288,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Jet
 		
 			case 17:
-			var ability = "jet";
+			var ability = playerAbilities.jet;
 			sprIdle = spr_AbilityBlock_Jet_Idle;
 			topWallSprite = spr_AbilityBlock_Jet_Top;
 			break;
@@ -1296,7 +1296,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Sword
 		
 			case 18:
-			var ability = "sword";
+			var ability = playerAbilities.sword;
 			sprIdle = spr_AbilityBlock_Sword_Idle;
 			topWallSprite = spr_AbilityBlock_Sword_Top;
 			break;
@@ -1304,7 +1304,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Parasol
 		
 			case 19:
-			var ability = "parasol";
+			var ability = playerAbilities.parasol;
 			sprIdle = spr_AbilityBlock_Parasol_Idle;
 			topWallSprite = spr_AbilityBlock_Parasol_Top;
 			break;
@@ -1312,7 +1312,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Hammer
 		
 			case 20:
-			var ability = "hammer";
+			var ability = playerAbilities.hammer;
 			sprIdle = spr_AbilityBlock_Hammer_Idle;
 			topWallSprite = spr_AbilityBlock_Hammer_Top;
 			break;
@@ -1320,7 +1320,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Bell
 		
 			case 21:
-			var ability = "bell";
+			var ability = playerAbilities.bell;
 			sprIdle = spr_AbilityBlock_Bell_Idle;
 			topWallSprite = spr_AbilityBlock_Bell_Top;
 			break;
@@ -1328,7 +1328,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Water
 		
 			case 22:
-			var ability = "water";
+			var ability = playerAbilities.water;
 			sprIdle = spr_AbilityBlock_Water_Idle;
 			topWallSprite = spr_AbilityBlock_Water_Top;
 			break;

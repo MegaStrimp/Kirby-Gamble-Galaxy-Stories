@@ -16,6 +16,6 @@ sprIdle = spr_Projectile_Fire_Normal_Idle;
 //Other Variables
 
 character = 0;
-damageType = "fire";
+damageType = damageTypes.fire;
 enemy = false;
 imageSpeed = 1;

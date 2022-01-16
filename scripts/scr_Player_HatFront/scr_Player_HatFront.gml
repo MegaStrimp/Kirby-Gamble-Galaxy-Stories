@@ -10,10 +10,10 @@ function scr_Player_HatFront(argument0,argument1)
 	
 	switch (selectedCharacter)
 	{
-		case "kirby":
+		case playerCharacters.kirby:
 		switch (abilityToCheck)
 		{
-			case "fire":
+			case playerAbilities.fire:
 			if (player == 0)
 			{
 				var altHatToCheck = global.hatTypeFireP1;
@@ -52,7 +52,7 @@ function scr_Player_HatFront(argument0,argument1)
 			}
 			break;
 			
-			case "mysticFire":
+			case playerAbilities.mysticFire:
 			if (player == 0)
 			{
 				var altHatToCheck = global.hatTypeFireP1;
@@ -91,7 +91,7 @@ function scr_Player_HatFront(argument0,argument1)
 			}
 			break;
 			
-			case "spark":
+			case playerAbilities.spark:
 			if (player == 0)
 			{
 				var altHatToCheck = global.hatTypeSparkP1;
@@ -126,7 +126,7 @@ function scr_Player_HatFront(argument0,argument1)
 			}
 			break;
 			
-			case "wing":
+			case playerAbilities.wing:
 			if (player == 0)
 			{
 				var altHatToCheck = global.hatTypeWingP1;

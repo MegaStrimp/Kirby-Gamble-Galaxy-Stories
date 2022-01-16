@@ -101,7 +101,7 @@ if (!global.pause)
 	{
 		if (place_meeting(x,y,other))
 		{
-			if ((damageType == "scan") and (other.ability != "none"))
+			if ((damageType == damageTypes.scan) and (other.ability != playerAbilities.none))
 			{
 				if (canScan)
 				{

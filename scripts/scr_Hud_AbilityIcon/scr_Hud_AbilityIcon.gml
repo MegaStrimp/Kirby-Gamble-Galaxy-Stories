@@ -10,30 +10,30 @@ function scr_Hud_AbilityIcon(argument0,argument1)
 	
 	switch (abilityToCheck)
 	{
-		case "none":
+		case playerAbilities.none:
 		switch (selectedCharacter)
 		{
-			case "kirby":
+			case playerCharacters.kirby:
 			iconIndex = spr_Hud_Icon_Kirby;
 			break;
 			
-			case "gamble":
+			case playerCharacters.gamble:
 			iconIndex = spr_Hud_Icon_Gamble;
 			break;
 			
-			case "metaKnight":
+			case playerCharacters.metaKnight:
 			iconIndex = spr_Hud_Icon_MetaKnight;
 			break;
 			
-			case "keeby":
+			case playerCharacters.keeby:
 			iconIndex = spr_Hud_Icon_Keeby;
 			break;
 			
-			case "gooey":
+			case playerCharacters.gooey:
 			iconIndex = spr_Hud_Icon_Gooey;
 			break;
 			
-			case "magolor":
+			case playerCharacters.magolor:
 			iconIndex = spr_Hud_Icon_Magolor;
 			break;
 			
@@ -83,131 +83,131 @@ function scr_Hud_AbilityIcon(argument0,argument1)
 		}
 		break;
 		
-		case "cutter":
+		case playerAbilities.cutter:
 		iconIndex = spr_Hud_Icon_Cutter;
 		break;
 		
-		case "mysticCutter":
+		case playerAbilities.mysticCutter:
 		iconIndex = spr_Hud_Icon_MysticCutter;
 		break;
 		
-		case "beam":
+		case playerAbilities.beam:
 		iconIndex = spr_Hud_Icon_Beam;
 		break;
 		
-		case "mysticBeam":
+		case playerAbilities.mysticBeam:
 		iconIndex = spr_Hud_Icon_MysticBeam;
 		break;
 		
-		case "stone":
+		case playerAbilities.stone:
 		iconIndex = spr_Hud_Icon_Stone;
 		break;
 		
-		case "ufo":
+		case playerAbilities.ufo:
 		iconIndex = spr_Hud_Icon_Ufo;
 		break;
 		
-		case "mirror":
+		case playerAbilities.mirror:
 		iconIndex = spr_Hud_Icon_Mirror;
 		break;
 		
-		case "ninja":
+		case playerAbilities.ninja:
 		iconIndex = spr_Hud_Icon_Ninja;
 		break;
 		
-		case "bomb":
+		case playerAbilities.bomb:
 		iconIndex = spr_Hud_Icon_Bomb;
 		break;
 		
-		case "fire":
+		case playerAbilities.fire:
 		iconIndex = spr_Hud_Icon_Fire;
 		break;
 		
-		case "mysticFire":
+		case playerAbilities.mysticFire:
 		iconIndex = spr_Hud_Icon_MysticFire;
 		break;
 		
-		case "ice":
+		case playerAbilities.ice:
 		iconIndex = spr_Hud_Icon_Ice;
 		break;
 		
-		case "mysticIce":
+		case playerAbilities.mysticIce:
 		iconIndex = spr_Hud_Icon_MysticIce;
 		break;
 		
-		case "spark":
+		case playerAbilities.spark:
 		iconIndex = spr_Hud_Icon_Spark;
 		break;
 		
-		case "yoyo":
+		case playerAbilities.yoyo:
 		iconIndex = spr_Hud_Icon_Yoyo;
 		break;
 		
-		case "wheel":
+		case playerAbilities.wheel:
 		iconIndex = spr_Hud_Icon_Wheel;
 		break;
 		
-		case "artist":
+		case playerAbilities.artist:
 		iconIndex = spr_Hud_Icon_Artist;
 		break;
 		
-		case "fighter":
+		case playerAbilities.fighter:
 		iconIndex = spr_Hud_Icon_Fighter;
 		break;
 		
-		case "suplex":
+		case playerAbilities.suplex:
 		iconIndex = spr_Hud_Icon_Suplex;
 		break;
 		
-		case "wing":
+		case playerAbilities.wing:
 		iconIndex = spr_Hud_Icon_Wing;
 		break;
 		
-		case "jet":
+		case playerAbilities.jet:
 		iconIndex = spr_Hud_Icon_Jet;
 		break;
 		
-		case "sword":
+		case playerAbilities.sword:
 		iconIndex = spr_Hud_Icon_Sword;
 		break;
 		
-		case "parasol":
+		case playerAbilities.parasol:
 		iconIndex = spr_Hud_Icon_Parasol;
 		break;
 		
-		case "hammer":
+		case playerAbilities.hammer:
 		iconIndex = spr_Hud_Icon_Hammer;
 		break;
 		
-		case "bell":
+		case playerAbilities.bell:
 		iconIndex = spr_Hud_Icon_Bell;
 		break;
 		
-		case "ultraSword":
+		case playerAbilities.ultraSword:
 		iconIndex = spr_Hud_Icon_UltraSword;
 		break;
 		
-		case "water":
+		case playerAbilities.water:
 		iconIndex = spr_Hud_Icon_Water;
 		break;
 		
-		case "sleep":
+		case playerAbilities.sleep:
 		iconIndex = spr_Hud_Icon_Sleep;
 		break;
 		
-		case "scan":
+		case playerAbilities.scan:
 		iconIndex = spr_Hud_Icon_Scan;
 		break;
 		
-		case "crash":
+		case playerAbilities.crash:
 		iconIndex = spr_Hud_Icon_Crash;
 		break;
 		
-		case "mic":
+		case playerAbilities.mic:
 		iconIndex = spr_Hud_Icon_Mic;
 		break;
 		
-		case "chef":
+		case playerAbilities.chef:
 		iconIndex = spr_Hud_Icon_Chef;
 		break;
 		

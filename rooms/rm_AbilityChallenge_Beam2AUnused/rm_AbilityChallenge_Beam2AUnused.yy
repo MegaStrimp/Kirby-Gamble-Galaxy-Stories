@@ -107,7 +107,7 @@
     {"spriteId":{"name":"bg_AbilityChallenge_Beam","path":"sprites/bg_AbilityChallenge_Beam/bg_AbilityChallenge_Beam.yy",},"colour":4294967295,"x":0,"y":0,"htiled":true,"vtiled":true,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":0.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"visible":true,"depth":700,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":24,"gridY":24,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"AbilityChallenge_Background","tags":[],"resourceType":"GMRBackgroundLayer",},
   ],
   "inheritLayers": false,
-  "creationCodeFile": "${project_dir}/rooms/rm_AbilityChallenge_Beam1/RoomCreationCode.gml",
+  "creationCodeFile": "${project_dir}/rooms/rm_AbilityChallenge_Beam2AUnused/RoomCreationCode.gml",
   "inheritCode": false,
   "instanceCreationOrder": [
     {"name":"inst_37723227","path":"rooms/rm_AbilityChallenge_Beam2AUnused/rm_AbilityChallenge_Beam2AUnused.yy",},

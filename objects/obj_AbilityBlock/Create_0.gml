@@ -7,9 +7,9 @@ event_inherited();
 //Other Variables
 
 sprHurt = spr_Particle_BigStar_Yellow;
-ability = "none";
+ability = playerAbilities.none;
 object = true;
-damageType = "none";
+damageType = damageTypes.none;
 enemy = false;
 heavy = true;
 inhaleXOffset = (sprite_get_width(sprite_index) / 2);

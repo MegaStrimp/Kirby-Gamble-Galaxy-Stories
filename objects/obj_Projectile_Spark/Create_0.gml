@@ -13,7 +13,7 @@ decel = 0;
 
 //Other Variables
 
-damageType = "spark";
+damageType = damageTypes.spark;
 enemy = false;
 imageSpeed = 0;
 

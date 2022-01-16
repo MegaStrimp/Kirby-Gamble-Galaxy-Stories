@@ -75,7 +75,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 			{
 				with (collidedPlayer)
 				{
-					if (((player == 0) and (global.abilityP1 == "ice")) or ((player == 1) and (global.abilityP2 == "ice")))
+					if (((player == 0) and (global.abilityP1 == playerAbilities.ice)) or ((player == 1) and (global.abilityP2 == playerAbilities.ice)))
 					{
 						iceKick = true;
 						iceKickTimer = iceKickTimerMax;

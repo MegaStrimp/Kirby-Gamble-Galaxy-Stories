@@ -22,7 +22,7 @@ destroyableByEnemy = false;
 destroyableByObject = false;
 canReflect = true;
 canBeReflected = false;
-damageType = "mirror";
+damageType = damageTypes.mirror;
 enemy = false;
 shine = false;
 

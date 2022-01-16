@@ -22,7 +22,7 @@ destroyableByEnemy = false;
 destroyableByObject = false;
 canBeReflected = false;
 destroyOutsideView = false;
-damageType = "spark";
+damageType = damageTypes.spark;
 enemy = false;
 
 //Timers

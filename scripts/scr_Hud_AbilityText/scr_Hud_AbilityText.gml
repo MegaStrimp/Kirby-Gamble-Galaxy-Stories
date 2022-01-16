@@ -10,30 +10,30 @@ function scr_Hud_AbilityText(argument0,argument1)
 	
 	switch (abilityToCheck)
 	{
-		case "none":
+		case playerAbilities.none:
 		switch (selectedCharacter)
 		{
-			case "kirby":
+			case playerCharacters.kirby:
 			textIndex = spr_Hud_AbilityText_Kirby;
 			break;
 			
-			case "gamble":
+			case playerCharacters.gamble:
 			textIndex = spr_Hud_AbilityText_Gamble;
 			break;
 			
-			case "metaKnight":
+			case playerCharacters.metaKnight:
 			textIndex = spr_Hud_AbilityText_MetaKnight;
 			break;
 			
-			case "keeby":
+			case playerCharacters.keeby:
 			textIndex = spr_Hud_AbilityText_Keeby;
 			break;
 			
-			case "gooey":
+			case playerCharacters.gooey:
 			textIndex = spr_Hud_AbilityText_Gooey;
 			break;
 			
-			case "magolor":
+			case playerCharacters.magolor:
 			textIndex = spr_Hud_AbilityText_Magolor;
 			break;
 			
@@ -79,115 +79,115 @@ function scr_Hud_AbilityText(argument0,argument1)
 		}
 		break;
 		
-		case "cutter":
+		case playerAbilities.cutter:
 		textIndex = spr_Hud_AbilityText_Cutter;
 		break;
 		
-		case "beam":
+		case playerAbilities.beam:
 		textIndex = spr_Hud_AbilityText_Beam;
 		break;
 		
-		case "mysticBeam":
+		case playerAbilities.mysticBeam:
 		textIndex = spr_Hud_AbilityText_MysticBeam;
 		break;
 		
-		case "stone":
+		case playerAbilities.stone:
 		textIndex = spr_Hud_AbilityText_Stone;
 		break;
 		
-		case "ufo":
+		case playerAbilities.ufo:
 		textIndex = spr_Hud_AbilityText_Ufo;
 		break;
 		
-		case "mirror":
+		case playerAbilities.mirror:
 		textIndex = spr_Hud_AbilityText_Mirror;
 		break;
 		
-		case "ninja":
+		case playerAbilities.ninja:
 		textIndex = spr_Hud_AbilityText_Ninja;
 		break;
 		
-		case "bomb":
+		case playerAbilities.bomb:
 		textIndex = spr_Hud_AbilityText_Bomb;
 		break;
 		
-		case "fire":
+		case playerAbilities.fire:
 		textIndex = spr_Hud_AbilityText_Fire;
 		break;
 		
-		case "ice":
+		case playerAbilities.ice:
 		textIndex = spr_Hud_AbilityText_Ice;
 		break;
 		
-		case "spark":
+		case playerAbilities.spark:
 		textIndex = spr_Hud_AbilityText_Spark;
 		break;
 		
-		case "yoyo":
+		case playerAbilities.yoyo:
 		textIndex = spr_Hud_AbilityText_Yoyo;
 		break;
 		
-		case "wheel":
+		case playerAbilities.wheel:
 		textIndex = spr_Hud_AbilityText_Wheel;
 		break;
 		
-		case "artist":
+		case playerAbilities.artist:
 		textIndex = spr_Hud_AbilityText_Artist;
 		break;
 		
-		case "fighter":
+		case playerAbilities.fighter:
 		textIndex = spr_Hud_AbilityText_Fighter;
 		break;
 		
-		case "suplex":
+		case playerAbilities.suplex:
 		textIndex = spr_Hud_AbilityText_Suplex;
 		break;
 		
-		case "wing":
+		case playerAbilities.wing:
 		textIndex = spr_Hud_AbilityText_Wing;
 		break;
 		
-		case "jet":
+		case playerAbilities.jet:
 		textIndex = spr_Hud_AbilityText_Jet;
 		break;
 		
-		case "sword":
+		case playerAbilities.sword:
 		textIndex = spr_Hud_AbilityText_Sword;
 		break;
 		
-		case "parasol":
+		case playerAbilities.parasol:
 		textIndex = spr_Hud_AbilityText_Parasol;
 		break;
 		
-		case "hammer":
+		case playerAbilities.hammer:
 		textIndex = spr_Hud_AbilityText_Hammer;
 		break;
 		
-		case "mysticFire":
+		case playerAbilities.mysticFire:
 		textIndex = spr_Hud_AbilityText_MysticFire;
 		break;
 		
-		case "bell":
+		case playerAbilities.bell:
 		textIndex = spr_Hud_AbilityText_Bell;
 		break;
 		
-		case "ultraSword":
+		case playerAbilities.ultraSword:
 		textIndex = spr_Hud_AbilityText_UltraSword;
 		break;
 		
-		case "water":
+		case playerAbilities.water:
 		textIndex = spr_Hud_AbilityText_Water;
 		break;
 		
-		case "sleep":
+		case playerAbilities.sleep:
 		textIndex = spr_Hud_AbilityText_Sleep;
 		break;
 		
-		case "scan":
+		case playerAbilities.scan:
 		textIndex = spr_Hud_AbilityText_Scan;
 		break;
 		
-		case "crash":
+		case playerAbilities.crash:
 		textIndex = spr_Hud_AbilityText_Crash;
 		break;
 		
@@ -195,7 +195,7 @@ function scr_Hud_AbilityText(argument0,argument1)
 		textIndex = spr_Hud_AbilityText_Mike;
 		break;
 		
-		case "chef":
+		case playerAbilities.chef:
 		textIndex = spr_Hud_AbilityText_Chef;
 		break;
 		

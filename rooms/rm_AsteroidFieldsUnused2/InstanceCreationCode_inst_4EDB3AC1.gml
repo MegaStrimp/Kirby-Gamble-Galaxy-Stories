@@ -1,3 +1,3 @@
 ///@description Creation Code
 
-damageType = "beam";
+damageType = damageTypes.beam;

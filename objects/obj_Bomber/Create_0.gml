@@ -20,7 +20,7 @@ sprExp = spr_Bomber_Normal_Explode;
 sprHurt = spr_Bomber_Normal_Hurt;
 
 hp = 14;
-ability = "crash"
+ability = playerAbilities.crash
 stop = false;
 actionState = 0;
 startExplode = false;

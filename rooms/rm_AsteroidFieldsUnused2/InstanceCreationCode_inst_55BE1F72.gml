@@ -1,4 +1,4 @@
 ///@description Creation Code
 
-damageType = "beam";
+damageType = damageTypes.beam;
 hasTop = false;

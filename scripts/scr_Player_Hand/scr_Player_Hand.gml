@@ -9,7 +9,7 @@ function scr_Player_Hand(argument0)
 	
 	switch(selectedCharacter)
 	{
-		case "kirby":
+		case playerCharacters.kirby:
 		switch(sprite_index)
 		{
 			case sprItemCarryLightIdle:

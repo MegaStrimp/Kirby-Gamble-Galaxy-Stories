@@ -151,7 +151,7 @@ if (explosion)
 			projectilePointer.destroyableByObject = false;
 			projectilePointer.movespeed = 0;
 			projectilePointer.hsp = 0;
-			projectilePointer.damageType = "fire";
+			projectilePointer.damageType = damageTypes.fire;
 			projectilePointer.setupExplode = true;
 			projectilePointer.setupTimer = 1;
 		}

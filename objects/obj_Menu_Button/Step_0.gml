@@ -194,6 +194,7 @@ if (!global.pause)
 				}
 				else
 				{
+					imageIndex = 0;
 					if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 					audio_play_sound(snd_BossHealth,0,false);
 					obj_Maykr_Title.selection = index;

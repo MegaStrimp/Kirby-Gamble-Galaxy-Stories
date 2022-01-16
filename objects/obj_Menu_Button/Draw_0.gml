@@ -156,6 +156,27 @@ switch (state)
 	draw_sprite(active,0,x + 20,y + 20);
 	break;
 	
+	case "maykrTitle":
+	draw_self();
+	if (obj_Maykr_Title.selection == index)
+	{
+		switch (index)
+		{
+			case 0:
+			imageIndex += sprite_get_speed(spr_Maykr_Title_PlaySelected) / 60;
+			if (imageIndex >= 9) imageIndex -= 9;
+			draw_sprite(spr_Maykr_Title_PlaySelected,imageIndex,x + 8,y + 7);
+			break;
+			
+			case 2:
+			imageIndex += sprite_get_speed(spr_Maykr_Title_ExitSelected) / 60;
+			if (imageIndex >= 9) imageIndex -= 9;
+			draw_sprite(spr_Maykr_Title_ExitSelected,imageIndex,x + 8,y + 7);
+			break;
+		}
+	}
+	break;
+	
 	default:
 	draw_self();
 	break;

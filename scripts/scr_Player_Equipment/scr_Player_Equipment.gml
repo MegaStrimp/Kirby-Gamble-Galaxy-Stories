@@ -10,10 +10,10 @@ function scr_Player_Equipment(argument0,argument1)
 	
 	switch (selectedCharacter)
 	{
-		case "kirby":
+		case playerCharacters.kirby:
 		switch (abilityToCheck)
 		{
-			case "beam":
+			case playerAbilities.beam:
 			if (player == 0)
 			{
 				var altHatToCheck = global.hatTypeBeamP1;
@@ -97,7 +97,7 @@ function scr_Player_Equipment(argument0,argument1)
 			}
 			break;
 			
-			case "mysticBeam":
+			case playerAbilities.mysticBeam:
 			if (player == 0)
 			{
 				var altHatToCheck = global.hatTypeBeamP1;
@@ -152,7 +152,7 @@ function scr_Player_Equipment(argument0,argument1)
 			}
 			break;
 			
-			case "stone":
+			case playerAbilities.stone:
 			if (player == 0)
 			{
 				var altHatToCheck = global.hatTypeStoneP1;
@@ -212,7 +212,7 @@ function scr_Player_Equipment(argument0,argument1)
 			}
 			break;
 			
-			case "ufo":
+			case playerAbilities.ufo:
 			if (player == 0)
 			{
 				var altHatToCheck = global.hatTypeUfoP1;
@@ -243,7 +243,7 @@ function scr_Player_Equipment(argument0,argument1)
 			}
 			break;
 			
-			case "mirror":
+			case playerAbilities.mirror:
 			if (player == 0)
 			{
 				var altHatToCheck = global.hatTypeMirrorP1;
@@ -303,7 +303,7 @@ function scr_Player_Equipment(argument0,argument1)
 			}
 			break;
 			
-			case "ninja":
+			case playerAbilities.ninja:
 			if (player == 0)
 			{
 				var altHatToCheck = global.hatTypeNinjaP1;
@@ -355,7 +355,7 @@ function scr_Player_Equipment(argument0,argument1)
 			}
 			break;
 			
-			case "bell":
+			case playerAbilities.bell:
 			if (player == 0)
 			{
 				var altHatToCheck = global.hatTypeBellP1;

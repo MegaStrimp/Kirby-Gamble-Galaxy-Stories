@@ -96,11 +96,11 @@ function scr_Player_CancelAttack(argument0)
 			sleepEnd = false;
 			if (player == 0)
 			{
-				global.abilityP1 = "none";
+				global.abilityP1 = playerAbilities.none;
 			}
 			else
 			{
-				global.abilityP2 = "none";
+				global.abilityP2 = playerAbilities.none;
 			}
 		}
 		attack = false;

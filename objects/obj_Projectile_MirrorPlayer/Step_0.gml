@@ -111,7 +111,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
                 orbit = clamp(orbit,-orbitMax,orbitMax);
             }
             
-            if ((!enemy) and (owner.attack = false) and ((owner.player == 0) and (global.abilityP1 != "mirror")) or ((owner.player == 1) and (global.abilityP2 != "mirror")))
+            if ((!enemy) and (owner.attack = false) and ((owner.player == 0) and (global.abilityP1 != playerAbilities.mirror)) or ((owner.player == 1) and (global.abilityP2 != playerAbilities.mirror)))
             {
                 instance_destroy();
             }

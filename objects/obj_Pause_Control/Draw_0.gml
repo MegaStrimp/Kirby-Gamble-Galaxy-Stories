@@ -37,7 +37,7 @@ if ((gamePaused) and (visible))
 	
 	switch (pauseAbility)
 	{
-		case "cutter":
+		case playerAbilities.cutter:
 		abilityPage[i] = spr_PauseMenu_Ability_CutterDescription;
 		i++;
 		abilityPage[i] = spr_PauseMenu_Ability_CutterMoveset1;
@@ -46,7 +46,7 @@ if ((gamePaused) and (visible))
 		i++;
 		break;
 		
-		case "beam":
+		case playerAbilities.beam:
 		abilityPage[i] = spr_PauseMenu_Ability_BeamDescription;
 		i++;
 		abilityPage[i] = spr_PauseMenu_Ability_BeamMoveset1;
@@ -55,7 +55,7 @@ if ((gamePaused) and (visible))
 		i++;
 		break;
 		
-		case "mysticBeam":
+		case playerAbilities.mysticBeam:
 		abilityPage[i] = spr_PauseMenu_Ability_MysticBeamDescription;
 		i++;
 		abilityPage[i] = spr_PauseMenu_Ability_MysticBeamMoveset1;
@@ -64,19 +64,19 @@ if ((gamePaused) and (visible))
 		i++;
 		break;
 		
-		case "stone":
+		case playerAbilities.stone:
 		abilityPage[i] = spr_PauseMenu_Ability_StoneDescription;
 		i++;
 		abilityPage[i] = spr_PauseMenu_Ability_StoneMoveset1;
 		i++;
 		break;
 		
-		case "ufo":
+		case playerAbilities.ufo:
 		abilityPage[i] = spr_PauseMenu_Ability_UfoDescription;
 		i++;
 		break;
 		
-		case "mirror":
+		case playerAbilities.mirror:
 		abilityPage[i] = spr_PauseMenu_Ability_MirrorDescription;
 		i++;
 		abilityPage[i] = spr_PauseMenu_Ability_MirrorMoveset1;
@@ -85,12 +85,12 @@ if ((gamePaused) and (visible))
 		i++;
 		break;
 		
-		case "ninja":
+		case playerAbilities.ninja:
 		abilityPage[i] = spr_PauseMenu_Ability_NinjaDescription;
 		i++;
 		break;
 		
-		case "bomb":
+		case playerAbilities.bomb:
 		abilityPage[i] = spr_PauseMenu_Ability_BombDescription;
 		i++;
 		abilityPage[i] = spr_PauseMenu_Ability_BombMoveset1;
@@ -99,7 +99,7 @@ if ((gamePaused) and (visible))
 		i++;
 		break;
 		
-		case "fire":
+		case playerAbilities.fire:
 		abilityPage[i] = spr_PauseMenu_Ability_FireDescription;
 		i++;
 		abilityPage[i] = spr_PauseMenu_Ability_FireMoveset1;
@@ -108,12 +108,12 @@ if ((gamePaused) and (visible))
 		i++;
 		break;
 		
-		case "mysticFire":
+		case playerAbilities.mysticFire:
 		abilityPage[i] = spr_PauseMenu_Ability_MysticFireDescription;
 		i++;
 		break;
 		
-		case "ice":
+		case playerAbilities.ice:
 		abilityPage[i] = spr_PauseMenu_Ability_IceDescription;
 		i++;
 		abilityPage[i] = spr_PauseMenu_Ability_IceMoveset1;
@@ -122,7 +122,7 @@ if ((gamePaused) and (visible))
 		i++;
 		break;
 		
-		case "spark":
+		case playerAbilities.spark:
 		abilityPage[i] = spr_PauseMenu_Ability_SparkDescription;
 		i++;
 		abilityPage[i] = spr_PauseMenu_Ability_SparkMoveset1;
@@ -133,7 +133,7 @@ if ((gamePaused) and (visible))
 		i++;
 		break;
 		
-		case "yoyo":
+		case playerAbilities.yoyo:
 		abilityPage[i] = spr_PauseMenu_Ability_YoyoDescription;
 		i++;
 		abilityPage[i] = spr_PauseMenu_Ability_YoyoMoveset1;
@@ -142,7 +142,7 @@ if ((gamePaused) and (visible))
 		i++;
 		break;
 		
-		case "wheel":
+		case playerAbilities.wheel:
 		abilityPage[i] = spr_PauseMenu_Ability_WheelDescription;
 		i++;
 		abilityPage[i] = spr_PauseMenu_Ability_WheelMoveset1;
@@ -151,37 +151,37 @@ if ((gamePaused) and (visible))
 		i++;
 		break;
 		
-		case "artist":
+		case playerAbilities.artist:
 		abilityPage[i] = spr_PauseMenu_Ability_ArtistDescription;
 		i++;
 		break;
 		
-		case "fighter":
+		case playerAbilities.fighter:
 		abilityPage[i] = spr_PauseMenu_Ability_FighterDescription;
 		i++;
 		break;
 		
-		case "suplex":
+		case playerAbilities.suplex:
 		abilityPage[i] = spr_PauseMenu_Ability_SuplexDescription;
 		i++;
 		break;
 		
-		case "wing":
+		case playerAbilities.wing:
 		abilityPage[i] = spr_PauseMenu_Ability_WingDescription;
 		i++;
 		break;
 		
-		case "jet":
+		case playerAbilities.jet:
 		abilityPage[i] = spr_PauseMenu_Ability_JetDescription;
 		i++;
 		break;
 		
-		case "sword":
+		case playerAbilities.sword:
 		abilityPage[i] = spr_PauseMenu_Ability_SwordDescription;
 		i++;
 		break;
 		
-		case "parasol":
+		case playerAbilities.parasol:
 		abilityPage[i] = spr_PauseMenu_Ability_ParasolDescription;
 		i++;
 		abilityPage[i] = spr_PauseMenu_Ability_ParasolMoveset1;
@@ -192,22 +192,22 @@ if ((gamePaused) and (visible))
 		i++;
 		break;
 		
-		case "hammer":
+		case playerAbilities.hammer:
 		abilityPage[i] = spr_PauseMenu_Ability_HammerDescription;
 		i++;
 		break;
 		
-		case "bell":
+		case playerAbilities.bell:
 		abilityPage[i] = spr_PauseMenu_Ability_BellDescription;
 		i++;
 		break;
 		
-		case "water":
+		case playerAbilities.water:
 		abilityPage[i] = spr_PauseMenu_Ability_WaterDescription;
 		i++;
 		break;
 		
-		case "sleep":
+		case playerAbilities.sleep:
 		abilityPage[i] = spr_PauseMenu_Ability_SleepDescription;
 		i++;
 		abilityPage[i] = spr_PauseMenu_Ability_SleepMoveset1;
@@ -221,22 +221,22 @@ if ((gamePaused) and (visible))
 		i++;
 		break;
 		
-		case "crash":
+		case playerAbilities.crash:
 		abilityPage[i] = spr_PauseMenu_Ability_CrashDescription;
 		i++;
 		break;
 		
-		case "mic":
+		case playerAbilities.mic:
 		abilityPage[i] = spr_PauseMenu_Ability_MicDescription;
 		i++;
 		break;
 		
-		case "chef":
+		case playerAbilities.chef:
 		abilityPage[i] = spr_PauseMenu_Ability_ChefDescription;
 		i++;
 		break;
 		
-		case "ultraSword":
+		case playerAbilities.ultraSword:
 		abilityPage[i] = spr_PauseMenu_Ability_UltraSwordDescription;
 		i++;
 		break;
@@ -251,7 +251,7 @@ if ((gamePaused) and (visible))
 	{
 	    switch (pauseCharacter)
 		{
-			case "kirby":
+			case playerCharacters.kirby:
 			abilityPage[i] = spr_PauseMenu_Ability_KirbyDescription;
 			i++;
 			abilityPage[i] = spr_PauseMenu_Ability_KirbyMoveset1;
@@ -260,17 +260,17 @@ if ((gamePaused) and (visible))
 			i++;
 			break;
 			
-			case "gamble":
+			case playerCharacters.gamble:
 			abilityPage[i] = spr_PauseMenu_Ability_GambleDescription;
 			i++;
 			break;
 			
-			case "metaKnight":
+			case playerCharacters.metaKnight:
 			abilityPage[i] = spr_PauseMenu_Ability_MetaKnightDescription;
 			i++;
 			break;
 			
-			case "keeby":
+			case playerCharacters.keeby:
 			abilityPage[i] = spr_PauseMenu_Ability_KeebyDescription;
 			i++;
 			break;
@@ -280,7 +280,7 @@ if ((gamePaused) and (visible))
 			i++;
 			break;
 			
-			case "magolor":
+			case playerCharacters.magolor:
 			abilityPage[i] = spr_PauseMenu_Ability_MagolorDescription;
 			i++;
 			break;

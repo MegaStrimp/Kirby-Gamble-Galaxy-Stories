@@ -18,11 +18,13 @@ if (!global.pause)
 		{
 			audio_play_sound(snd_BossHealth,0,false);
 			selection -= 1;
+			with (obj_Menu_Button) imageIndex = 0;
 		}
 		if (keyDownPressed)
 		{
 			audio_play_sound(snd_BossHealth,0,false);
 			selection += 1;
+			with (obj_Menu_Button) imageIndex = 0;
 		}
 	}
 	

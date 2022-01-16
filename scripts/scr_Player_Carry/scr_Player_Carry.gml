@@ -147,7 +147,7 @@ function scr_Player_Carry()
 				image_index = 0;
 				spit = true;
 				sucked = 0;
-		        cAbility = "none";
+		        cAbility = playerAbilities.none;
 				if (ateHeavy) ateHeavy = false;
 				if (ateCappyShroom) ateCappyShroom = false;
 		    }
@@ -162,7 +162,7 @@ function scr_Player_Carry()
 				{
 					global.abilityP2 = cAbility;
 				}
-				if (cAbility != "none")
+				if (cAbility != playerAbilities.none)
 				{
 					for (var i = 0; i < 2; i++)
 					{
@@ -188,7 +188,7 @@ function scr_Player_Carry()
 				vsp = 0;
 				run = false;
 				swallow = true;
-			    cAbility = "none";
+			    cAbility = playerAbilities.none;
 				ateHeavy = false;
 				ateCappyShroom = false;
 				image_index = 0;
@@ -240,7 +240,7 @@ function scr_Player_Carry()
 							var carryidleblinksprite = sprCarryIdleBlink;
 							
 							var collidedWall = instance_place(x,y + 1,obj_Wall);
-							if ((playerCharacter == "kirby") and (collidedWall.slope))
+							if ((playerCharacter == playerCharacters.kirby) and (collidedWall.slope))
 							{
 								switch (collidedWall.slopeType)
 								{
@@ -337,7 +337,7 @@ function scr_Player_Carry()
 							{
 								switch (playerCharacter)
 								{
-									case "kirby":
+									case playerCharacters.kirby:
 									sprite_index = carryidleblinksprite;
 									break;
 									

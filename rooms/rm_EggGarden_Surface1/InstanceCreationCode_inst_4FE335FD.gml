@@ -1,3 +1,3 @@
 ///@description Creation Code
 
-damageType = "bomb";
+damageType = damageTypes.bomb;

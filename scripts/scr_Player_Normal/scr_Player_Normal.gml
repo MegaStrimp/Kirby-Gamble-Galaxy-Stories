@@ -28,7 +28,7 @@ function scr_Player_Normal()
 		
 		//Run
 		
-		if ((canRun) and (playerAbility != "ufo"))
+		if ((canRun) and (playerAbility != playerAbilities.ufo))
 		{
 			if (runDoubleTap > -1) runDoubleTap -= 1;
 			if ((!global.cutscene) and (!runTurn) and ((keyLeftPressed) or (keyRightPressed)))
@@ -49,7 +49,7 @@ function scr_Player_Normal()
 						}
 						if (audio_is_playing(snd_DashBegin)) audio_stop_sound(snd_DashBegin);
 						audio_play_sound(snd_DashBegin,0,false);
-						if (playerAbility == "mirror")
+						if (playerAbility == playerAbilities.mirror)
 						{
 							mirrorDashParticleTimer = 0;
 						}
@@ -113,7 +113,7 @@ function scr_Player_Normal()
 					{
 						hsp += accel;
 						if (!runTurn) dir = 1;
-						if ((canRunTurn) and (carriedItem == "none") and (grounded) and (run) and (playerAbility != "mirror") and (sign(hsp) != 0) and (sign(hsp) != sign(dir)))
+						if ((canRunTurn) and (carriedItem == "none") and (grounded) and (run) and (playerAbility != playerAbilities.mirror) and (sign(hsp) != 0) and (sign(hsp) != sign(dir)))
 						{
 							if (audio_is_playing(snd_DashBegin)) audio_stop_sound(snd_DashBegin);
 							audio_play_sound(snd_DashBegin,0,false);
@@ -130,7 +130,7 @@ function scr_Player_Normal()
 					{
 						hsp -= accel;
 						if (!runTurn) dir = -1;
-						if ((canRunTurn) and (carriedItem == "none") and (grounded) and (run) and (playerAbility != "mirror") and (sign(hsp) != 0) and (sign(hsp) != sign(dir)))
+						if ((canRunTurn) and (carriedItem == "none") and (grounded) and (run) and (playerAbility != playerAbilities.mirror) and (sign(hsp) != 0) and (sign(hsp) != sign(dir)))
 						{
 							if (audio_is_playing(snd_DashBegin)) audio_stop_sound(snd_DashBegin);
 							audio_play_sound(snd_DashBegin,0,false);
@@ -143,7 +143,7 @@ function scr_Player_Normal()
 				}
 			}
 			
-			if ((canUfoFloat) or (playerAbility == "ufo"))
+			if ((canUfoFloat) or (playerAbility == playerAbilities.ufo))
 			{
 				if (!global.cutscene)
 				{
@@ -183,7 +183,7 @@ function scr_Player_Normal()
 			
 		}
 		
-		if ((hasGravity) and (playerAbility != "ufo"))
+		if ((hasGravity) and (playerAbility != playerAbilities.ufo))
 		{
 			var gravOffset = 0;
 			if (attackNumber == "beamAir") gravOffset = .05;
@@ -194,11 +194,11 @@ function scr_Player_Normal()
 			else
 			{
 				vsp = gravLimit - (gravOffset * 5);
-				if (((playerCharacter == "kirby") or (playerCharacter == "gooey")) and (fallHopCounter < fallHopCounterMax)) fallHopCounter += 1;
+				if (((playerCharacter == playerCharacters.kirby) or (playerCharacter == playerCharacters.gooey)) and (fallHopCounter < fallHopCounterMax)) fallHopCounter += 1;
 			}
 		}
 		
-		if ((!global.cutscene) and (!canUfoFloat) and (playerAbility != "ufo") and (vsp < 0) and (!keyJumpHold))
+		if ((!global.cutscene) and (!canUfoFloat) and (playerAbility != playerAbilities.ufo) and (vsp < 0) and (!keyJumpHold))
 		{
 			var jumpLimitValue = -jumpspeed / 4;
 			switch (playerCharacter)
@@ -218,7 +218,7 @@ function scr_Player_Normal()
 		
 		if (grounded)
 		{
-			if (((!canUfoFloat) and (playerAbility != "ufo")))
+			if (((!canUfoFloat) and (playerAbility != playerAbilities.ufo)))
 			{
 				if ((canMultiJump) and (multiJumpLimit != -1))
 				{
@@ -235,7 +235,7 @@ function scr_Player_Normal()
 				if (fallHopCounter != 0) fallHopCounter = 0;
 				if ((attackNumber == "cutterAir") or (attackNumber == "fireAerial")) attackTimer = 0;
 			}
-			if (playerCharacter == "gamble")
+			if (playerCharacter == playerCharacters.gamble)
 			{
 				canUfoFloat = false;
 				canJump = true;
@@ -243,7 +243,7 @@ function scr_Player_Normal()
 		}
 		else
 		{
-			if (playerCharacter == "gamble")
+			if (playerCharacter == playerCharacters.gamble)
 			{
 				canUfoFloat = true; 
 				canJump = false;
@@ -413,10 +413,10 @@ function scr_Player_Normal()
 			{
 				switch (playerCharacter)
 				{
-					case "kirby":
+					case playerCharacters.kirby:
 					switch (playerAbility)
 					{
-						case "none":
+						case playerAbilities.none:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt))
 					    {
 							if (!hurt)
@@ -434,7 +434,7 @@ function scr_Player_Normal()
 					    }
 						break;
 					
-						case "cutter":
+						case playerAbilities.cutter:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
 							if ((run) and (vsp == 0) and (hsp != 0))
@@ -629,7 +629,7 @@ function scr_Player_Normal()
 						}
 						break;
 						
-						case "beam":
+						case playerAbilities.beam:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
 							if ((keyUpHold) or ((dir = 1) and (keyRightHold)) or ((dir = -1) and (keyLeftHold)))
@@ -1023,7 +1023,7 @@ function scr_Player_Normal()
 						}*/
 						break;
 					
-						case "mysticBeam":
+						case playerAbilities.mysticBeam:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
 							if ((keyUpHold) or ((dir = 1) and (keyRightHold)) or ((dir = -1) and (keyLeftHold)))
@@ -1373,7 +1373,7 @@ function scr_Player_Normal()
 						}*/
 						break;
 					
-						case "stone":
+						case playerAbilities.stone:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (attackable))
 					    {
 							if (!keyUpHold)
@@ -1482,7 +1482,7 @@ function scr_Player_Normal()
 						}
 						break;
 					
-						case "ufo":
+						case playerAbilities.ufo:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
 							attackNumber = "ufoCharge";
@@ -1582,7 +1582,7 @@ function scr_Player_Normal()
 						}
 						break;
 					
-						case "mirror":
+						case playerAbilities.mirror:
 						if ((!global.cutscene) and (!hurt) and (!attack))
 						{
 							if (keyAttackPressed)
@@ -1747,7 +1747,7 @@ function scr_Player_Normal()
 						}
 					    break;
 					
-						case "ninja":
+						case playerAbilities.ninja:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
 							attack = true;
@@ -1822,7 +1822,7 @@ function scr_Player_Normal()
 						}
 						break;
 					
-						case "bomb":
+						case playerAbilities.bomb:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
 							if (audio_is_playing(snd_BombReady)) audio_stop_sound(snd_BombReady);
@@ -1867,7 +1867,7 @@ function scr_Player_Normal()
 					    }
 						break;
 					
-						case "fire":
+						case playerAbilities.fire:
 					    if ((!global.cutscene) and (!hurt))
 					    {
 							if ((keyAttackHold) and ((!attack) or (attackNumber == "fireAerial")))
@@ -2061,7 +2061,7 @@ function scr_Player_Normal()
 						}
 						break;
 					
-						case "ice":
+						case playerAbilities.ice:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
 							if ((keyUpHold) or ((dir = 1) and (keyRightHold)) or ((dir = -1) and (keyLeftHold)))
@@ -2107,7 +2107,7 @@ function scr_Player_Normal()
 						}
 						break;
 					
-						case "spark":
+						case playerAbilities.spark:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
 							if (keyUpHold)
@@ -2188,7 +2188,7 @@ function scr_Player_Normal()
 						}
 						break;
 					
-						case "wing":
+						case playerAbilities.wing:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
 							if (run = true) and (hsp != 0)
@@ -2291,7 +2291,7 @@ function scr_Player_Normal()
 						}
 						break;
 					
-						case "sleep":
+						case playerAbilities.sleep:
 						if (!isSleeping)
 						{
 							attack = true;
@@ -2327,7 +2327,7 @@ function scr_Player_Normal()
 						}
 						break;
 					
-						case "scan":
+						case playerAbilities.scan:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (attackable))
 					    {
 					        attack = true;
@@ -2369,7 +2369,7 @@ function scr_Player_Normal()
 					}
 					break;
 				
-					case "gooey":
+					case playerCharacters.gooey:
 					if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (attackable))
 					{
 						if (keyDownHold)
@@ -2668,13 +2668,13 @@ function scr_Player_Normal()
 		
 		//Jump
 		
-		if ((!global.cutscene) and (canJump) and (playerAbility != "ufo") and (((!canMultiJump) and (grounded)) or ((canMultiJump) and (multiJumpCounter < multiJumpLimit))) and (!wallAbove) and (keyJumpPressed) and (!attack))
+		if ((!global.cutscene) and (canJump) and (playerAbility != playerAbilities.ufo) and (((!canMultiJump) and (grounded)) or ((canMultiJump) and (multiJumpCounter < multiJumpLimit))) and (!wallAbove) and (keyJumpPressed) and (!attack))
 		{
 			if ((canMultiJump) and (multiJumpLimit != -1)) multiJumpCounter += 1;
 			
 			switch (playerCharacter)
 			{
-				case "gamble":
+				case playerCharacters.gamble:
 				if (audio_is_playing(snd_Jump)) audio_stop_sound(snd_Jump);
 				audio_play_sound(snd_Jump,0,false);
 				var parJump = instance_create_depth(x - (7 * dir),y + 5,depth + 1,obj_Particle);
@@ -2877,11 +2877,11 @@ function scr_Player_Normal()
 		
 		//Duck
 		
-		if ((!global.cutscene) and (canDuck) and (playerAbility != "ufo") and (grounded) and (keyDownHold) and (!attack))
+		if ((!global.cutscene) and (canDuck) and (playerAbility != playerAbilities.ufo) and (grounded) and (keyDownHold) and (!attack))
 		{
 			if (vsp == 0)
 			{
-				if ((mirrorShieldHp > 0) and (playerAbility == "mirror"))
+				if ((mirrorShieldHp > 0) and (playerAbility == playerAbilities.mirror))
 				{
 					if (audio_is_playing(snd_Guard)) audio_stop_sound(snd_Guard);
 					audio_play_sound(snd_Guard,0,false);
@@ -2899,7 +2899,7 @@ function scr_Player_Normal()
 		
 		//Climb
 		
-		if ((!global.cutscene) and (playerAbility != "ufo") and (canClimb) and (place_meeting(x,y,obj_Ladder)))
+		if ((!global.cutscene) and (playerAbility != playerAbilities.ufo) and (canClimb) and (place_meeting(x,y,obj_Ladder)))
 		{
 		    if ((((!place_meeting(x,y - 1,obj_Wall)) and (keyUpPressed)) or ((!place_meeting(x,y + 1,obj_Wall)) and (keyDownPressed))) and (!attack))
 		    {
@@ -2916,7 +2916,7 @@ function scr_Player_Normal()
 		
 		//Float
 		
-		if ((!global.cutscene) and (canFloat) and ((carriedItem == "none") and (carriedItemState != "heavy")) and (playerAbility != "ufo") and ((keyJumpPressed) and (!place_meeting(x,y,obj_AntiFloat)) and (!place_meeting(x,y + 1,obj_Wall))) and (!attack))
+		if ((!global.cutscene) and (canFloat) and ((carriedItem == "none") and (carriedItemState != "heavy")) and (playerAbility != playerAbilities.ufo) and ((keyJumpPressed) and (!place_meeting(x,y,obj_AntiFloat)) and (!place_meeting(x,y + 1,obj_Wall))) and (!attack))
 		{
 			attackTimer = 0;
 		    hurt = false;
@@ -2981,7 +2981,7 @@ function scr_Player_Normal()
 			image_speed = 1 + (runImageSpeedIncrease * run) + heavyItemCarrySpd;
 		}
 		
-		if ((!canUfoFloat) and (playerAbility != "ufo") and (!attack) and (!hurt) and (!iceKick))
+		if ((!canUfoFloat) and (playerAbility != playerAbilities.ufo) and (!attack) and (!hurt) and (!iceKick))
 		{
 			if ((grounded) and (vsp == 0))
 			{
@@ -3019,7 +3019,7 @@ function scr_Player_Normal()
 					if (sparkMaxCharge) idlesprite = sprSparkMaxCharge;
 					
 					var collidedWall = instance_place(x,y + 1,obj_Wall);
-					if ((playerCharacter == "kirby") and (collidedWall.slope))
+					if ((playerCharacter == playerCharacters.kirby) and (collidedWall.slope))
 					{
 						switch (collidedWall.slopeType)
 						{
@@ -3284,7 +3284,7 @@ function scr_Player_Normal()
 					{
 						switch (playerCharacter)
 						{
-							case "kirby":
+							case playerCharacters.kirby:
 							sprite_index = idleblinksprite;
 							break;
 							
@@ -3310,7 +3310,7 @@ function scr_Player_Normal()
 					idleAnimationTimerMax = 30;
 					if (run)
 					{
-						if (playerAbility == "mirror")
+						if (playerAbility == playerAbilities.mirror)
 						{
 							sprite_index = sprMirrorDash;
 						}
@@ -3351,7 +3351,7 @@ function scr_Player_Normal()
 					}
 				}
 				
-				if (playerCharacter == "gooey")
+				if (playerCharacter == playerCharacters.gooey)
 				{
 					gooeyScaleOffset += (.002 * gooeyScaleDir);
 					if ((abs(gooeyScaleOffset) >= .1)) gooeyScaleDir *= -1;
@@ -3411,9 +3411,9 @@ function scr_Player_Normal()
 			}
 		}
 		
-		if ((canUfoFloat) or (playerAbility == "ufo"))
+		if ((canUfoFloat) or (playerAbility == playerAbilities.ufo))
 		{
-			if (playerAbility == "ufo")
+			if (playerAbility == playerAbilities.ufo)
 			{
 				sprite_index = sprUfoIdle;
 			}
@@ -3434,7 +3434,7 @@ function scr_Player_Normal()
 		
 		//Walk Duck
 		
-		if ((!walkDuck) and (carriedItem == "none") and (playerAbility != "ufo") and (place_meeting(x,y + (1 + vsp),obj_Wall)) and (vsp > 1) and (!attack))
+		if ((!walkDuck) and (carriedItem == "none") and (playerAbility != playerAbilities.ufo) and (place_meeting(x,y + (1 + vsp),obj_Wall)) and (vsp > 1) and (!attack))
 		{
 			var collidingWall = instance_place(x,y + (1 + vsp),obj_Wall);
 			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal))))
@@ -3544,7 +3544,7 @@ function scr_Player_Normal()
 		
 		//Walk Squish
 		
-		if ((!walkSquish) and (playerAbility != "ufo") and (place_meeting(x + hspFinal,y,obj_Wall)) and (place_meeting(x,y + 1,obj_Wall)) and (abs(hspFinal) >= (movespeed / 2)) and (!attack))
+		if ((!walkSquish) and (playerAbility != playerAbilities.ufo) and (place_meeting(x + hspFinal,y,obj_Wall)) and (place_meeting(x,y + 1,obj_Wall)) and (abs(hspFinal) >= (movespeed / 2)) and (!attack))
 		{
 			var walkSquishWall = instance_place(x + hspFinal,y,obj_Wall);
 			var bottomWall = instance_place(x,y + 1,obj_Wall);

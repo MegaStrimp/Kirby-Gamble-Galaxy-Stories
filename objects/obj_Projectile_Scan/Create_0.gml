@@ -15,7 +15,7 @@ sprIdle = spr_Projectile_Scan_Normal_Idle;
 //Other Variables
 
 character = 0;
-damageType = "scan";
+damageType = damageTypes.scan;
 destroyableByWall = false;
 destroyableByEnemy = false;
 destroyableByObject = false;

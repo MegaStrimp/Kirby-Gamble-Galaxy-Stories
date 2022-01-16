@@ -26,7 +26,7 @@ sprIdle = sprForm1;
 
 destroyableByEnemy = false;
 destroyableByObject = false;
-damageType = "beam";
+damageType = damageTypes.beam;
 enemy = false;
 character = 0;
 deathParticlesOnHit = true;

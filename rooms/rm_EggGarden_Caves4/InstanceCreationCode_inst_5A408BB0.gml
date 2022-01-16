@@ -1,3 +1,3 @@
 ///@description Creation Code
 
-ability = "mirror";
+ability = playerAbilities.mirror;

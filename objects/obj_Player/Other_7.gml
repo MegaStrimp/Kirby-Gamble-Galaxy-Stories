@@ -93,7 +93,7 @@ if (sprite_index == sprSpit)
 
 if (((sprite_index == sprSwallow) or (sprite_index == sprHardSwallow)) and (state == playerStates.swallow))
 {
-	if (((player == 0) and (global.abilityP1 == "none")) or ((player == 1) and (global.abilityP2 == "none")))
+	if (((player == 0) and (global.abilityP1 == playerAbilities.none)) or ((player == 1) and (global.abilityP2 == playerAbilities.none)))
 	{
 		global.pause = false;
 		image_index = image_number - 1;
@@ -109,7 +109,7 @@ if (((sprite_index == sprSwallow) or (sprite_index == sprHardSwallow)) and (stat
 
 if ((sprite_index == sprAbilityChange) and (state == playerStates.swallow))
 {
-	if (((player == 0) and (global.abilityP1 != "none")) or ((player == 1) and (global.abilityP2 != "none")))
+	if (((player == 0) and (global.abilityP1 != playerAbilities.none)) or ((player == 1) and (global.abilityP2 != playerAbilities.none)))
 	{
 		image_index = image_number - 1;
 		image_speed = 0;

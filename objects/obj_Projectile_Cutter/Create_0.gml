@@ -19,7 +19,7 @@ sprIdle = spr_Projectile_Cutter_Player;
 //Other Variables
 
 destroyableByProjectile = true;
-damageType = "cutter";
+damageType = damageTypes.cutter;
 enemy = false;
 character = 0;
 //deathParticlesOnHit = true;

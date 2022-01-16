@@ -4,8 +4,8 @@
 
 mask_index = spr_8Square_Mask;
 active = false;
-global.abilityP1 = "none";
-global.abilityP2 = "none";
+global.abilityP1 = playerAbilities.none;
+global.abilityP2 = playerAbilities.none;
 global.gambleMaykrMenu = "collision";
 spawnedLayer = "collision";
 spawnedItemIndex = obj_Wall;

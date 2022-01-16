@@ -14,7 +14,7 @@ spdMax = 2;
 
 sprHurt = "self";
 points = 10;
-ability = "none";
+ability = playerAbilities.none;
 enemy = false;
 heavy = false;
 inhaleXOffset = 0;

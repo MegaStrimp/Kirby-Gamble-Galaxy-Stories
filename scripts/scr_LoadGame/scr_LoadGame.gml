@@ -89,8 +89,8 @@ function scr_LoadGame(argument0)
 	var sprayPaintGooeyP2 = ini_read_string("playerCustomization","sprayPaintGooeyP2","spr_Kirby_Normal_Palette_Yellow");
 	global.sprayPaintGooeyP2 = asset_get_index(sprayPaintGooeyP2);
 	
-	global.characterP1 = ini_read_string("playerCustomization","characterP1","kirby");
-	global.characterP2 = ini_read_string("playerCustomization","characterP2","kirby");
+	global.characterP1 = ini_read_string("playerCustomization","characterP1",playerCharacters.kirby);
+	global.characterP2 = ini_read_string("playerCustomization","characterP2",playerCharacters.kirby);
 	global.isHelperP1 = ini_read_real("playerCustomization","isHelperP1",false);
 	global.isHelperP2 = ini_read_real("playerCustomization","isHelperP2",false);
 	global.familiarP1 = ini_read_string("playerCustomization","familiarP1",false);

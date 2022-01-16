@@ -17,7 +17,7 @@ destroyOutsideView = false;
 state = 0;
 owner = id;
 enemy = false;
-damageType = "explosion";
+damageType = damageTypes.explosion;
 
 //Timers
 

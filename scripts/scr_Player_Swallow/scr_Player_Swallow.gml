@@ -7,7 +7,7 @@ function scr_Player_Swallow()
 	var playerAbility = global.abilityP1;
 	if (player == 1) playerAbility = global.abilityP2;
 
-	if (playerAbility == "none") //Normal
+	if (playerAbility == playerAbilities.none) //Normal
 	{
 		if (sucked > 2)
 		{
@@ -124,7 +124,7 @@ function scr_Player_Swallow()
 	else if (swallowTimer == 0)
 	{
 		sucked = 0;
-		if (((player == 0) and (global.abilityP1 == "wing")) or ((player == 1) and (global.abilityP2 == "wing"))) wingFeatherPos = 0;
+		if (((player == 0) and (global.abilityP1 == playerAbilities.wing)) or ((player == 1) and (global.abilityP2 == playerAbilities.wing))) wingFeatherPos = 0;
 		swallowAction = 0;
 		swallowActionTimer = -1;
 		global.pause = false;

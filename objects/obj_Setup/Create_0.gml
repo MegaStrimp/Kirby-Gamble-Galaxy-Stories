@@ -142,9 +142,123 @@ if (windowGen[2] == 0) windowCaption[2] = "Gamernt";
 if (windowGen[2] == 0) windowCaption[2] = "Gamernt";
 window_set_caption(windowCaption[0] + " " + windowCaption[1] + " " + windowCaption[2] + " " + windowCaption[3] + " - " + global.versionNumber + " - " + subtitles[selectedSubtitle]);
 
-//Set Macros
+//Set Macros and Enums
 
 #macro gameView view_camera[0]
+
+enum playerStates
+{
+    normal,
+    slide,
+    float,
+    climb,
+    enter,
+    inhale,
+    carry,
+	swallow,
+	cutterDash,
+	cutterDrop,
+	beamGrab,
+	mysticBeamGrab,
+	mirrorDash,
+	fireDash,
+	iceGrab,
+	wingDash,
+    death
+}
+
+enum playerCharacters
+{
+	kirby,
+	gamble,
+	keeby,
+	gooey,
+	magolor,
+	metaKnight
+}
+
+enum playerAbilities
+{
+    none,
+    cutter,
+	mysticCutter,
+    beam,
+	mysticBeam,
+	stone,
+	ufo,
+	mirror,
+	ninja,
+	bomb,
+	fire,
+	mysticFire,
+	ice,
+	mysticIce,
+	spark,
+	yoyo,
+	wheel,
+	artist,
+	fighter,
+	suplex,
+	wing,
+	jet,
+	sword,
+	parasol,
+	hammer,
+	bell,
+	water,
+	sleep,
+	scan,
+	crash,
+	mic,
+	chef,
+	ultraSword
+}
+
+enum playerAttacks
+{
+    normal,
+    cutter,
+    beam
+}
+
+enum damageTypes
+{
+	none,
+	every,
+	explosion,
+    cutter,
+	mysticCutter,
+    beam,
+	mysticBeam,
+	stone,
+	ufo,
+	mirror,
+	ninja,
+	bomb,
+	fire,
+	mysticFire,
+	ice,
+	mysticIce,
+	spark,
+	yoyo,
+	wheel,
+	artist,
+	fighter,
+	suplex,
+	wing,
+	jet,
+	sword,
+	parasol,
+	hammer,
+	bell,
+	water,
+	sleep,
+	scan,
+	crash,
+	mic,
+	chef,
+	ultraSword
+}
 
 //Global Variables
 
@@ -158,8 +272,8 @@ global.skylandsHpP2 = global.skylandsHpMax;
 global.skylandsLives = 2;
 global.sprayPaintP1 = spr_Kirby_Normal_Palette_FriendlyPink;
 global.sprayPaintP2 = spr_Kirby_Normal_Palette_Yellow;
-global.abilityP1 = "none";
-global.abilityP2 = "none";
+global.abilityP1 = playerAbilities.none;
+global.abilityP2 = playerAbilities.none;
 global.familiarP1 = "Gamble";
 global.familiarP2 = "Gamble";
 global.roomPrevious = rm_Setup;
@@ -233,29 +347,6 @@ rousr_dissonance_handler_on_join_request(example_on_join_request, id);
 //Palette Swap Setup
 
 if (global.shaders) pal_swap_init_system(shd_pal_swapper,shd_pal_html_sprite,shd_pal_html_surface);
-
-//player States
-
-enum playerStates
-{
-    normal,
-    slide,
-    float,
-    climb,
-    enter,
-    inhale,
-    carry,
-	swallow,
-	cutterDash,
-	cutterDrop,
-	beamGrab,
-	mysticBeamGrab,
-	mirrorDash,
-	fireDash,
-	iceGrab,
-	wingDash,
-    death
-}
 
 global.gambleUnlocked = true;
 global.gooeyUnlocked = true;

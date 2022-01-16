@@ -19,7 +19,7 @@ sprIdle = spr_Projectile_WingFeather_Normal_Idle;
 
 //Other Variables
 
-damageType = "wing";
+damageType = damageTypes.wing;
 enemy = false;
 character = 0;
 

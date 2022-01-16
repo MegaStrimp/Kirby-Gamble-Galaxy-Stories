@@ -31,7 +31,7 @@ if (!global.pause)
 		{
 			if ((hurtsObject) and (owner != id))
 			{
-				if ((damageType == "cutter") or (damageType == "sword") or (damageType == "all"))
+				if ((damageType == damageTypes.cutter) or (damageType == damageTypes.sword) or (damageType == damagetypes.every))
 				{
 					var parDir = 1;
 					if (x > other.x) parDir = -1;
@@ -45,7 +45,7 @@ if (!global.pause)
 					other.cut = true;
 					other.spawn = true;
 				}
-				else if ((other.destroyTimer == -1) and (damageType == "fire"))
+				else if ((other.destroyTimer == -1) and (damageType == damageTypes.fire))
 				{
 					for (var i = 0; i < 3; i++)
 					{

@@ -1,3 +1,3 @@
 ///@description Creation Code
 
-ability = "cutter";
+ability = playerAbilities.cutter;

@@ -1,3 +1,3 @@
 ///@description Creation Code
 
-ability = "fire";
+ability = playerAbilities.fire;

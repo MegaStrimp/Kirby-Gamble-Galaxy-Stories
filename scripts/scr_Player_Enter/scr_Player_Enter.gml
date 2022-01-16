@@ -18,7 +18,7 @@ function scr_Player_Enter()
 		
 		image_speed = 1;
 		
-		if (playerAbility != "ufo")
+		if (playerAbility != playerAbilities.ufo)
 		{
 			sprite_index = sprEnter;
 		}

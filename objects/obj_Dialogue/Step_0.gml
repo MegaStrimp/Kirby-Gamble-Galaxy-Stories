@@ -14,7 +14,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	   text_length = string_length(text[array]);
 	}
 	
-	if ((!hasResetTimer) and ((keyAttackPressed) or (keyStartPressed)))
+	if ((!hasResetTimer) and ((keyJumpPressed) or (keyStartPressed)))
 	{
 		if (index >= text_length)
 		{
@@ -49,6 +49,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	if (resetArray)
 	{
+		io_clear();
 		array += 1;
 		text_displayed = "";
 		text_length = -1;
@@ -80,7 +81,6 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	}
 	else if (destroyTimer == 0)
 	{
-		io_clear();
 		if (stopsCutscene) global.cutscene = false;
 		if (targetRoom != -1)
 		{

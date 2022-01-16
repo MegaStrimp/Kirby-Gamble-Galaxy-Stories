@@ -18,7 +18,7 @@ sprItem = spr_AbilityStar_Normal;
 
 //Other Variables
 
-ability = "none";
+ability = playerAbilities.none;
 enemy = false;
 heavy = false;
 inhaleXOffset = 0;

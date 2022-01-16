@@ -12,10 +12,10 @@ function scr_Hud_Healthbar_Palette(argument0,argument1,argument2)
 	
 	switch (abilityToCheck)
 	{
-		case "none":
+		case playerAbilities.none:
 		switch (selectedCharacter)
 		{
-			case "kirby":
+			case playerCharacters.kirby:
 			if (selectedPalette == spr_Kirby_Normal_Palette_FriendlyPink)
 			{
 				paletteIndex = spr_Hud_Palette_Healthbar_Kirby;
@@ -28,123 +28,123 @@ function scr_Hud_Healthbar_Palette(argument0,argument1,argument2)
 		}
 		break;
 		
-		case "cutter":
+		case playerAbilities.cutter:
 		paletteIndex = spr_Hud_Palette_Healthbar_Cutter;
 		break;
 		
-		case "beam":
+		case playerAbilities.beam:
 		paletteIndex = spr_Hud_Palette_Healthbar_Beam;
 		break;
 		
-		case "mysticBeam":
+		case playerAbilities.mysticBeam:
 		paletteIndex = spr_Hud_Palette_Healthbar_MysticBeam;
 		break;
 		
-		case "stone":
+		case playerAbilities.stone:
 		paletteIndex = spr_Hud_Palette_Healthbar_Stone;
 		break;
 		
-		case "ufo":
+		case playerAbilities.ufo:
 		paletteIndex = spr_Hud_Palette_Healthbar_Ufo;
 		break;
 		
-		case "mirror":
+		case playerAbilities.mirror:
 		paletteIndex = spr_Hud_Palette_Healthbar_Mirror;
 		break;
 		
-		case "ninja":
+		case playerAbilities.ninja:
 		paletteIndex = spr_Hud_Palette_Healthbar_Ninja;
 		break;
 		
-		case "bomb":
+		case playerAbilities.bomb:
 		paletteIndex = spr_Hud_Palette_Healthbar_Bomb;
 		break;
 		
-		case "fire":
+		case playerAbilities.fire:
 		paletteIndex = spr_Hud_Palette_Healthbar_Fire;
 		break;
 		
-		case "mysticFire":
+		case playerAbilities.mysticFire:
 		paletteIndex = spr_Hud_Palette_Healthbar_MysticFire;
 		break;
 		
-		case "ice":
+		case playerAbilities.ice:
 		paletteIndex = spr_Hud_Palette_Healthbar_Ice;
 		break;
 		
-		case "spark":
+		case playerAbilities.spark:
 		paletteIndex = spr_Hud_Palette_Healthbar_Spark;
 		break;
 		
-		case "yoyo":
+		case playerAbilities.yoyo:
 		paletteIndex = spr_Hud_Palette_Healthbar_Yoyo;
 		break;
 		
-		case "wheel":
+		case playerAbilities.wheel:
 		paletteIndex = spr_Hud_Palette_Healthbar_Wheel;
 		break;
 		
-		case "artist":
+		case playerAbilities.artist:
 		paletteIndex = spr_Hud_Palette_Healthbar_Artist;
 		break;
 		
-		case "fighter":
+		case playerAbilities.fighter:
 		paletteIndex = spr_Hud_Palette_Healthbar_Fighter;
 		break;
 		
-		case "suplex":
+		case playerAbilities.suplex:
 		paletteIndex = spr_Hud_Palette_Healthbar_Suplex;
 		break;
 		
-		case "wing":
+		case playerAbilities.wing:
 		paletteIndex = spr_Hud_Palette_Healthbar_Wing;
 		break;
 		
-		case "jet":
+		case playerAbilities.jet:
 		paletteIndex = spr_Hud_Palette_Healthbar_Jet;
 		break;
 		
-		case "sword":
+		case playerAbilities.sword:
 		paletteIndex = spr_Hud_Palette_Healthbar_Sword;
 		break;
 		
-		case "parasol":
+		case playerAbilities.parasol:
 		paletteIndex = spr_Hud_Palette_Healthbar_Parasol;
 		break;
 		
-		case "hammer":
+		case playerAbilities.hammer:
 		paletteIndex = spr_Hud_Palette_Healthbar_Hammer;
 		break;
 		
-		case "bell":
+		case playerAbilities.bell:
 		paletteIndex = spr_Hud_Palette_Healthbar_Bell;
 		break;
 		
-		case "water":
+		case playerAbilities.water:
 		paletteIndex = spr_Hud_Palette_Healthbar_Water;
 		break;
 		
-		case "sleep":
+		case playerAbilities.sleep:
 		paletteIndex = spr_Hud_Palette_Healthbar_Sleep;
 		break;
 		
-		case "scan":
+		case playerAbilities.scan:
 		paletteIndex = spr_Hud_Palette_Healthbar_Scan;
 		break;
 		
-		case "crash":
+		case playerAbilities.crash:
 		paletteIndex = spr_Hud_Palette_Healthbar_Crash;
 		break;
 		
-		case "mic":
+		case playerAbilities.mic:
 		paletteIndex = spr_Hud_Palette_Healthbar_Mic;
 		break;
 		
-		case "chef":
+		case playerAbilities.chef:
 		paletteIndex = spr_Hud_Palette_Healthbar_Chef;
 		break;
 		
-		case "ultraSword":
+		case playerAbilities.ultraSword:
 		paletteIndex = spr_Hud_Palette_Healthbar_UltraSword;
 		break;
 	}

@@ -4,7 +4,7 @@
 
 global.discordDetailText = "Ability Challenge - Beam";
 global.discordLargeImage = "beam_icon";
-global.abilityP1 = "beam";
+global.abilityP1 = playerAbilities.beam;
 
 //Stage Number
 

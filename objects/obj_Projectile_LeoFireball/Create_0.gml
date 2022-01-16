@@ -18,7 +18,7 @@ sprIdle = spr_Projectile_LeoFireball_Normal_Idle;
 //Other Variables
 
 character = 0;
-damageType = "fire";
+damageType = damageTypes.fire;
 canBeReflected = true;
 //Timers
 

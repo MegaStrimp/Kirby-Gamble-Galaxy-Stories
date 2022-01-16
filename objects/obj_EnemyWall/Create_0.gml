@@ -5,5 +5,5 @@
 slope = false;
 platform = false;
 object = false;
-damageType = "none";
+damageType = damageTypes.none;
 owner = id;

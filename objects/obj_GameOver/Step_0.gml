@@ -28,7 +28,7 @@ else if (setupTimer == 0)
 {
 	switch (global.characterP1)
 	{
-		case "kirby":
+		case playerCharacters.kirby:
 		sprIdle = spr_GameOver_Character_Kirby_Normal;
 		break;
 			

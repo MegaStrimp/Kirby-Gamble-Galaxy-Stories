@@ -41,7 +41,7 @@ if (death)
 }
 
 var hatAnim = image_index;
-if ((playerAbility == "fire") or (playerAbility == "mysticFire") or (playerAbility == "spark")) hatAnim = hatBackgroundImageIndex;
+if ((playerAbility == playerAbilities.fire) or (playerAbility == playerAbilities.mysticFire) or (playerAbility == playerAbilities.spark)) hatAnim = hatBackgroundImageIndex;
 
 var hatBackgroundIndex = scr_Player_HatBackground(playerAbility,playerCharacter);
 var abilityHatPalette = scr_Player_HatPalette(playerAbility,playerCharacter);
@@ -85,7 +85,7 @@ if ((global.shaders) and (abilityHatPalette != -1)) pal_swap_reset();
 
 var equipmentIndex = scr_Player_Equipment(playerAbility,playerCharacter);
 var equipmentDir = image_xscale;
-if (playerAbility == "ufo") equipmentDir = abs(image_xscale);
+if (playerAbility == playerAbilities.ufo) equipmentDir = abs(image_xscale);
 if (equipmentIndex != -1) draw_sprite_ext(equipmentIndex,image_index,x + drawShakeX,y + drawShakeY,equipmentDir * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle,image_blend,image_alpha);
 
 if (carriedItem != "none")
@@ -125,7 +125,7 @@ else
 
 //Mirror Charge Bar
 
-if ((playerAbility == "mirror") and (mirrorShieldHp <= 0))
+if ((playerAbility == playerAbilities.mirror) and (mirrorShieldHp <= 0))
 {
 	draw_sprite(spr_Healthbar_Shield_Border,0,x - 7,y - 32);
 	draw_sprite_ext(spr_Healthbar_Shield_Inner,0,x - 15,y - 34,1 - (mirrorShieldTimer / mirrorShieldTimerMax),image_yscale,image_angle,image_blend,image_alpha);

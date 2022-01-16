@@ -72,7 +72,7 @@ if (!global.pause)
 	
 	if ((death) or ((!hasDeathAnimation) and (hp <= 0)))
 	{
-		if (takenDamageType == "ice")
+		if (takenDamageType == damageTypes.ice)
 		{
 			var iceCube = instance_create_depth(x,y,depth,obj_Projectile_IceCube);
 			iceCube.dmg = 36;
@@ -506,7 +506,7 @@ if (!global.pause)
 			if (place_meeting(x,y,other))
 			{
 				var canBeHurt = false;
-				if ((owner != other) and (enemy != other.enemy) and (((damageType == "explosion")/* and (!other.explosionResistance)*/) or (damageType != "explosion")) and (((!other.isBoss) and (hurtsEnemy)) or ((other.isBoss) and (hurtsEnemy) and (hurtsBoss)))) canBeHurt = true;
+				if ((owner != other) and (enemy != other.enemy) and (((damageType == damageTypes.explosion)/* and (!other.explosionResistance)*/) or (damageType != damageTypes.explosion)) and (((!other.isBoss) and (hurtsEnemy)) or ((other.isBoss) and (hurtsEnemy) and (hurtsBoss)))) canBeHurt = true;
 				if (canBeHurt)
 				{
 					if (audio_is_playing(snd_EnemyHurt)) audio_stop_sound(snd_EnemyHurt);
@@ -515,7 +515,7 @@ if (!global.pause)
 					if (dmg >= other.hp)
 					{
 						other.hurtTimer = other.hurtStopTimerMax + 5;
-						if ((other.hasDeathKnockback) and (other.takenDamageType != "freeze")) other.hurtStopTimer = other.hurtStopTimerMax;
+						if ((other.hasDeathKnockback) and (other.takenDamageType != damageTypes.ice)) other.hurtStopTimer = other.hurtStopTimerMax;
 			            other.shake = 1;
 			            if (instance_exists(obj_Camera)) obj_Camera.shake = 3;
 					}
@@ -566,19 +566,19 @@ if (!global.pause)
 				{
 					switch (damageType)
 					{
-						case "cutter":
+						case playerAbilities.cutter:
 						var particle = instance_create_depth(other.x,other.y,other.depth - 1,obj_Particle);
 						particle.sprite_index = spr_Particle_CutterHit;
 						particle.destroyAfterAnimation = true;
 						break;
 				
-						case "ninja":
+						case playerAbilities.ninja:
 						var particle = instance_create_depth(other.x,other.y,other.depth - 1,obj_Particle);
 						particle.sprite_index = spr_Particle_CutterHit;
 						particle.destroyAfterAnimation = true;
 						break;
 				
-						case "wing":
+						case playerAbilities.wing:
 						var particle = instance_create_depth(other.x,other.y,other.depth - 1,obj_Particle);
 						particle.sprite_index = spr_Particle_CutterHit;
 						particle.destroyAfterAnimation = true;
@@ -677,7 +677,7 @@ if (!global.pause)
 	{
 		if (place_meeting(x,y,other))
 		{
-			if ((damageType == "scan") and (other.ability != "none"))
+			if ((damageType == damageTypes.scan) and (other.ability != playerAbilities.none))
 			{
 				if (canScan)
 				{

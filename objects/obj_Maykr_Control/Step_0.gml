@@ -687,8 +687,8 @@ else
 		active = false;
 		
 		global.pause = true;
-		global.abilityP1 = "none";
-		global.abilityP2 = "none";
+		global.abilityP1 = playerAbilities.none;
+		global.abilityP2 = playerAbilities.none;
 		
 		if (instance_exists(obj_Hud)) instance_destroy(obj_Hud);
 		with (obj_Particle) instance_destroy();

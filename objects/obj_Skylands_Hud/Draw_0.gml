@@ -9,12 +9,12 @@ var paletteP2 = scr_SprayPaint_Setup(global.sprayPaintP2,global.characterP2);
 
 //P1 Ability
 
-var textIndex = scr_Hud_AbilityText("none",global.characterP1);
+var textIndex = scr_Hud_AbilityText(playerAbilities.none,global.characterP1);
 if (global.shaders) pal_swap_set(paletteP1,1 + (flashP1 * 2),false);
 draw_sprite(textIndex,0,hudX + 24,hudY - 21);
 if (global.shaders) pal_swap_reset();
 
-var iconIndex = scr_Hud_AbilityIcon("none",global.characterP1);
+var iconIndex = scr_Hud_AbilityIcon(playerAbilities.none,global.characterP1);
 if (global.shaders) pal_swap_set(paletteP1,1 + (flashP1 * 2),false);
 draw_sprite(iconIndex,0,hudX,hudY);
 if (global.shaders) pal_swap_reset();
@@ -26,12 +26,12 @@ if (instance_number(obj_Player) > 1)
 {
 	//P2 Ability
 	
-	var textIndex = scr_Hud_AbilityText("none",global.characterP2);
+	var textIndex = scr_Hud_AbilityText(playerAbilities.none,global.characterP2);
 	if (global.shaders) pal_swap_set(paletteP2,1 + (flashP2 * 2),false);
 	draw_sprite(textIndex,0,hudX + camera_get_view_width(gameView) - sprite_get_width(textIndex) - (sprite_get_width(spr_Hud_Icon_Kirby) / 2) - 52,hudY - 21);
 	if (global.shaders) pal_swap_reset();
 	
-	var iconIndex = scr_Hud_AbilityIcon("none",global.characterP2);
+	var iconIndex = scr_Hud_AbilityIcon(playerAbilities.none,global.characterP2);
 	if (global.shaders) pal_swap_set(paletteP2,1 + (flashP2 * 2),false);
 	draw_sprite(iconIndex,0,hudX + camera_get_view_width(gameView) - (sprite_get_width(spr_Hud_Icon_Kirby) / 2) - 28,hudY);
 	if (global.shaders) pal_swap_reset();
@@ -93,7 +93,7 @@ if (!global.pause)
 	}
 }
 
-var barIndex = scr_Hud_Healthbar("back","none",global.characterP1);
+var barIndex = scr_Hud_Healthbar("back",playerAbilities.none,global.characterP1);
 
 for (var i = 0; i < global.skylandsHpMax; i++)
 {
@@ -104,7 +104,7 @@ for (var i = 0; i < global.skylandsHpMax; i++)
 
 hudHpP1 = clamp(hudHpP1,0,global.skylandsHpMax);
 
-var barIndex = scr_Hud_Healthbar("normal","none",global.characterP1);
+var barIndex = scr_Hud_Healthbar("normal",playerAbilities.none,global.characterP1);
 
 if (global.shaders) pal_swap_set(paletteP1,1 + (flashP1 * 2),false);
 for (var i = 0; i < hudHpP1; i++)

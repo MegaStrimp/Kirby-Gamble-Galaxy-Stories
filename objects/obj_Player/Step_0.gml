@@ -56,7 +56,7 @@ if ((((player == 0) and (global.hpP1 == 0)) or ((player == 1) and (global.hpP2 =
 		if (instance_exists(obj_Camera)) obj_Camera.freezeFrameTimer = -1;
 		sprite_index = sprHurt;
 		visible = true;
-	    ability = "none";
+	    ability = playerAbilities.none;
 		hsp = 0;
 		vsp = 0;
 		deathTimer = deathTimerMax;
@@ -69,17 +69,17 @@ if (!global.pause)
 	
 	switch (playerAbility)
 	{
-		case "bomb":
+		case playerAbilities.bomb:
 		if (state != playerStates.slide) bombDownReady = false;
 		break;
 		
-		case "fire":
+		case playerAbilities.fire:
 		var maxTimer = fireParticleTimerMax;
 		if ((attackNumber == "fireAerial") or (attackNumber == "fireWheel") or (attackNumber == "fireBack")) maxTimer = floor(fireParticleTimerMax / 2);
 		if (fireParticleTimer == -1) fireParticleTimer = fireParticleTimerMax;
 		break;
 		
-		case "spark":
+		case playerAbilities.spark:
 		var maxTimer = sparkParticleTimerMax - floor(sparkCharge);
 		if (sparkParticleTimer == -1) sparkParticleTimer = maxTimer;
 		
@@ -440,8 +440,8 @@ if (keySelectPressed)
 {
 	switch (playerCharacter)
 	{
-		case "kirby":
-		if ((!global.pause) and (!global.cutscene) and (((player == 0) and (global.abilityP1 != "none")) or ((player == 1) and (global.abilityP2 != "none"))) and (!attack))
+		case playerCharacters.kirby:
+		if ((!global.pause) and (!global.cutscene) and (((player == 0) and (global.abilityP1 != playerAbilities.none)) or ((player == 1) and (global.abilityP2 != playerAbilities.none))) and (!attack))
 		{
 			audio_play_sound(snd_AbilityDrop,0,false);
 			if (instance_exists(obj_AbilityDropStar))
@@ -459,108 +459,108 @@ if (keySelectPressed)
 			if (player == 0)
 			{
 				abilityDropStar.ability = global.abilityP1;
-				global.abilityP1 = "none";
+				global.abilityP1 = playerAbilities.none;
 			}
 			else
 			{
 				abilityDropStar.ability = global.abilityP2;
-				global.abilityP2 = "none";
+				global.abilityP2 = playerAbilities.none;
 			}
 			switch (abilityDropStar.ability)
 			{
-				case "cutter":
+				case playerAbilities.cutter:
 				abilityDropStar.sprite_index = spr_AbilityDropStar_Cutter;
 				break;
 			
-				case "beam":
+				case playerAbilities.beam:
 				abilityDropStar.sprite_index = spr_AbilityDropStar_Beam;
 				break;
 			
-				case "mysticBeam":
+				case playerAbilities.mysticBeam:
 				abilityDropStar.sprite_index = spr_AbilityDropStar_MysticBeam;
 				break;
 			
-				case "stone":
+				case playerAbilities.stone:
 				abilityDropStar.sprite_index = spr_AbilityDropStar_Stone;
 				break;
 			
-				case "ufo":
+				case playerAbilities.ufo:
 				abilityDropStar.sprite_index = spr_AbilityDropStar_Ufo;
 				break;
 			
-				case "mirror":
+				case playerAbilities.mirror:
 				abilityDropStar.sprite_index = spr_AbilityDropStar_Mirror;
 				break;
 			
-				case "ninja":
+				case playerAbilities.ninja:
 				abilityDropStar.sprite_index = spr_AbilityDropStar_Ninja;
 				break;
 			
-				case "bomb":
+				case playerAbilities.bomb:
 				abilityDropStar.sprite_index = spr_AbilityDropStar_Bomb;
 				break;
 			
-				case "fire":
+				case playerAbilities.fire:
 				abilityDropStar.sprite_index = spr_AbilityDropStar_Fire;
 				break;
 			
-				case "mysticFire":
+				case playerAbilities.mysticFire:
 				abilityDropStar.sprite_index = spr_AbilityDropStar_MysticFire;
 				break;
 			
-				case "ice":
+				case playerAbilities.ice:
 				abilityDropStar.sprite_index = spr_AbilityDropStar_Ice;
 				break;
 			
-				case "spark":
+				case playerAbilities.spark:
 				abilityDropStar.sprite_index = spr_AbilityDropStar_Spark;
 				break;
 			
-				case "yoyo":
+				case playerAbilities.yoyo:
 				abilityDropStar.sprite_index = spr_AbilityDropStar_Yoyo;
 				break;
 			
-				case "wheel":
+				case playerAbilities.wheel:
 				abilityDropStar.sprite_index = spr_AbilityDropStar_Wheel;
 				break;
 			
-				case "artist":
+				case playerAbilities.artist:
 				abilityDropStar.sprite_index = spr_AbilityDropStar_Artist;
 				break;
 			
-				case "fighter":
+				case playerAbilities.fighter:
 				abilityDropStar.sprite_index = spr_AbilityDropStar_Fighter;
 				break;
 			
-				case "suplex":
+				case playerAbilities.suplex:
 				abilityDropStar.sprite_index = spr_AbilityDropStar_Suplex;
 				break;
 			
-				case "wing":
+				case playerAbilities.wing:
 				abilityDropStar.sprite_index = spr_AbilityDropStar_Wing;
 				break;
 			
-				case "jet":
+				case playerAbilities.jet:
 				abilityDropStar.sprite_index = spr_AbilityDropStar_Jet;
 				break;
 			
-				case "sword":
+				case playerAbilities.sword:
 				abilityDropStar.sprite_index = spr_AbilityDropStar_Sword;
 				break;
 			
-				case "parasol":
+				case playerAbilities.parasol:
 				abilityDropStar.sprite_index = spr_AbilityDropStar_Parasol;
 				break;
 			
-				case "hammer":
+				case playerAbilities.hammer:
 				abilityDropStar.sprite_index = spr_AbilityDropStar_Hammer;
 				break;
 			
-				case "bell":
+				case playerAbilities.bell:
 				abilityDropStar.sprite_index = spr_AbilityDropStar_Bell;
 				break;
 			
-				case "water":
+				case playerAbilities.water:
 				abilityDropStar.sprite_index = spr_AbilityDropStar_Water;
 				break;
 			
@@ -1198,7 +1198,7 @@ if (!global.pause)
 				stonePar.sprite_index = spr_Particle_Stone1;
 				break;
 				
-				case "gooey":
+				case playerCharacters.gooey:
 				stonePar.sprite_index = spr_Particle_Stone2;
 				break;
 			}
@@ -1306,7 +1306,7 @@ if (!global.pause)
 	
 	//Fire Particle Timer
 	
-	if (playerAbility == "fire")
+	if (playerAbility == playerAbilities.fire)
 	{
 		if (fireParticleTimer > 0)
 		{
@@ -1451,7 +1451,7 @@ if (!global.pause)
 	
 	//Spark Particle Timer
 	
-	if (playerAbility == "spark")
+	if (playerAbility == playerAbilities.spark)
 	{
 		if (sparkParticleTimer > 0)
 		{
@@ -1572,7 +1572,7 @@ else if (setupTimer == 0)
 {
 	if (!global.gambleMaykr)
 	{
-		if ((playerFamiliar != "none") and ((playerFamiliar == "Gamble") + (playerCharacter = "gamble") != 2))
+		if ((playerFamiliar != "none") and ((playerFamiliar == "Gamble") + (playerCharacter = playerCharacters.gamble) != 2))
 		{
 			var followerObject = instance_create_depth(x + (30 * -dir),y - 15,depth,obj_Familiar);
 			followerObject.owner = id;
@@ -1625,7 +1625,7 @@ else if (characterSetupTimer == 0)
 	
 	switch (selectedCharacter)
 	{
-		case "kirby":
+		case playerCharacters.kirby:
 		if (player == 0)
 		{
 			global.sprayPaintP1 = global.sprayPaintKirbyP1;
@@ -1866,7 +1866,7 @@ else if (characterSetupTimer == 0)
 		sprDeath = spr_Kirby_Normal_Death;
 		break;
 		
-		case "gamble":
+		case playerCharacters.gamble:
 		if (player == 0)
 		{
 			global.sprayPaintP1 = global.sprayPaintKirbyP1;
@@ -1935,7 +1935,7 @@ else if (characterSetupTimer == 0)
 		sprDeath = spr_Gamble_Normal_Side_Death;
 		break;
 		
-		case "gooey":
+		case playerCharacters.gooey:
 		sprIdle = spr_Gooey_Normal_Idle;
 		sprDuck = spr_Gooey_Normal_Duck;
 		sprJump = spr_Gooey_Normal_Jump;
@@ -2990,7 +2990,7 @@ else if (deathTimer == 0)
 	par.fricSpd = .4;
 	par.direction = 90;
 	par.pausable = false;
-	global.abilityP1 = "none";
+	global.abilityP1 = playerAbilities.none;
 	var musDeath = mus_Death1;
 	if ((global.playerLives <= 0) and (!global.gambleMaykr)) musDeath = mus_Death2;
 	audio_play_sound(musDeath,0,false);
@@ -3096,7 +3096,7 @@ else if (scanTimer == 0)
 	{
 		global.abilityP2 = cAbility;
 	}
-	if (cAbility != "none")
+	if (cAbility != playerAbilities.none)
 	{
 		blackAlphaBox = true;
 		swallowActionTimer = 0;
@@ -3108,7 +3108,7 @@ else if (scanTimer == 0)
 	hsp = 0;
 	vsp = 0;
 	run = false;
-	cAbility = "none";
+	cAbility = playerAbilities.none;
 	image_index = 0;
 	state = playerStates.swallow;
 	attackTimer = 0;

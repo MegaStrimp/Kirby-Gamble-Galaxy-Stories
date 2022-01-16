@@ -114,10 +114,10 @@ function scr_Player_Slide()
 				{
 					switch (playerCharacter)
 					{
-						case "kirby":
+						case playerCharacters.kirby:
 						switch (playerAbility)
 						{
-							case "beam":
+							case playerAbilities.beam:
 						    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 						    {
 								var grabEnemy = -1;
@@ -151,7 +151,7 @@ function scr_Player_Slide()
 							}
 							break;
 							
-							case "mysticBeam":
+							case playerAbilities.mysticBeam:
 						    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 						    {
 								var grabEnemy = -1;
@@ -185,7 +185,7 @@ function scr_Player_Slide()
 							}
 							break;
 							
-							case "bomb":
+							case playerAbilities.bomb:
 						    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 						    {
 								if (audio_is_playing(snd_BombReady)) audio_stop_sound(snd_BombReady);
@@ -230,7 +230,7 @@ function scr_Player_Slide()
 							}
 							break;
 							
-							case "ice":
+							case playerAbilities.ice:
 							if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 							{
 								var grabEnemy = -1;
@@ -280,7 +280,7 @@ function scr_Player_Slide()
 					var duckblinksprite = sprDuckBlink;
 				
 					var collidedWall = instance_place(x,y + 1,obj_Wall);
-					if ((playerCharacter == "kirby") and (collidedWall.slope))
+					if ((playerCharacter == playerCharacters.kirby) and (collidedWall.slope))
 					{
 						switch (collidedWall.slopeType)
 						{
@@ -391,7 +391,7 @@ function scr_Player_Slide()
 					{
 						switch (playerCharacter)
 						{
-							case "kirby":
+							case playerCharacters.kirby:
 							sprite_index = duckblinksprite;
 							break;
 						

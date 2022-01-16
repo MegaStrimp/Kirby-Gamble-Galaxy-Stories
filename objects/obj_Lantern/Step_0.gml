@@ -29,7 +29,7 @@ if (!global.pause)
 		if (place_meeting(x,y,obj_Projectile))
 		{
 			var proj = instance_place(x,y,obj_Projectile);
-			if (proj.damageType == "fire") fire = true;
+			if (proj.damageType == damageTypes.fire) fire = true;
 		}
 	}
 	else

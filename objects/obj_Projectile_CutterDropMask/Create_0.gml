@@ -6,7 +6,7 @@ event_inherited();
 
 //Other Variables
 
-damageType = "cutter";
+damageType = damageTypes.cutter;
 destroyableByWall = false;
 destroyableByEnemy = false;
 destroyableByObject = false;

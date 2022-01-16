@@ -965,7 +965,7 @@ switch (page)
 	draw_roundrect(2,37,122,268,false);
 	draw_roundrect(126,188,476,268,false);
 	draw_roundrect(234,0,329,25,false);
-	draw_roundrect(239,28,427,60,false);
+	draw_roundrect(293,28,427,60,false);
 	draw_roundrect(336,64,476,184,false);
 	draw_set_alpha(1);
 	

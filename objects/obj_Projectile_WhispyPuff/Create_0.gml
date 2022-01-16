@@ -11,7 +11,7 @@ dirSpd = .02;
 
 //Other Variables
 
-ability = "none";
+ability = playerAbilities.none;
 points = 10;
 heavy = true;
 inhaleXOffset = 0;

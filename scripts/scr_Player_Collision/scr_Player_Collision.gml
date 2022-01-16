@@ -54,7 +54,7 @@ function scr_Player_Collision()
 				{
 					if (collidingWall.object)
 					{
-						if ((collidingWall.damageType == "none") or (collidingWall.damageType = damageType))
+						if ((collidingWall.damageType == damageTypes.none) or (collidingWall.damageType = damageType))
 						{
 							collidingWall.hp -= dmg;
 						}
@@ -100,7 +100,7 @@ function scr_Player_Collision()
 				var collidedWall = instance_place(x,y - 1,obj_Wall);
 				if (collidedWall.object)
 				{
-					if (((state == playerStates.normal) or (state == playerStates.carry) or (state == playerStates.inhale)) and (!place_meeting(x,y + 1,obj_Wall)) and (collidedWall.damageType == "none") and (sign(vsp) == -1))
+					if (((state == playerStates.normal) or (state == playerStates.carry) or (state == playerStates.inhale)) and (!place_meeting(x,y + 1,obj_Wall)) and (collidedWall.damageType == damageTypes.none) and (sign(vsp) == -1))
 					{
 						collidedWall.hp -= dmg;
 					}
@@ -125,7 +125,7 @@ function scr_Player_Collision()
 				var collidedWall = instance_place(x,y - 1,obj_Wall);
 				if (collidedWall.object)
 				{
-					if (((state == playerStates.normal) or (state == playerStates.carry) or (state == playerStates.inhale)) and (!place_meeting(x,y + 1,obj_Wall)) and (collidedWall.damageType == "none") and (sign(vsp) == -1))
+					if (((state == playerStates.normal) or (state == playerStates.carry) or (state == playerStates.inhale)) and (!place_meeting(x,y + 1,obj_Wall)) and (collidedWall.damageType == damageTypes.none) and (sign(vsp) == -1))
 					{
 						collidedWall.hp -= dmg;
 					}

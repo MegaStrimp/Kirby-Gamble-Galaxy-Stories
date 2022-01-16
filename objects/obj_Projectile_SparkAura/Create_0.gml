@@ -6,7 +6,7 @@ event_inherited();
 
 //Other Variables
 
-damageType = "spark";
+damageType = damageTypes.spark;
 destroyableByWall = false;
 destroyableByEnemy = false;
 destroyableByObject = false;

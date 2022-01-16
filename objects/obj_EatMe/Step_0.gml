@@ -100,7 +100,7 @@ if (!global.pause)
 			{
 				obj_SquadControl.waveEnemyCount[obj_SquadControl.currentWave][squadType] += 1;
 			}
-			if (ability != "none") owner.cAbility = ability;
+			if (ability != playerAbilities.none) owner.cAbility = ability;
 			if (inhaleType == 0)
 			{
 				owner.sucked += 1;

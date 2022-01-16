@@ -43,10 +43,10 @@ if (!global.pause)
 			var playerAbility = global.abilityP2;
 			var playerCharacter = global.characterP2;
 		}
-		if ((collidedPlayer.abilityTrophyTimer == -1) and (playerCharacter == "kirby") and (ability != playerAbility))
+		if ((collidedPlayer.abilityTrophyTimer == -1) and (playerCharacter == playerCharacters.kirby) and (ability != playerAbility))
 		{
 			collidedPlayer.abilityTrophyTimer = collidedPlayer.abilityTrophyTimerMax;
-			if (ability != "none") collidedPlayer.blackAlphaBox = true;
+			if (ability != playerAbilities.none) collidedPlayer.blackAlphaBox = true;
 			collidedPlayer.swallowActionTimer = 0;
 			global.pause = true;
 			if (instance_exists(obj_Camera)) obj_Camera.freezeFrameTimer = -1;
@@ -60,7 +60,7 @@ if (!global.pause)
 			if (collidedPlayer.state = playerStates.carry)
 			{
 				collidedPlayer.sucked = 0;
-				collidedPlayer.cAbility = "none";
+				collidedPlayer.cAbility = playerAbilities.none;
 				collidedPlayer.ateHeavy = false;
 				collidedPlayer.ateCappyShroom = false;
 			}
@@ -151,100 +151,100 @@ if (!global.pause)
 	{
 		switch (ability)
 		{
-			case "cutter":
+			case playerAbilities.cutter:
 			sprItem = spr_AbilityStar_Cutter;
 			break;
 			
-			case "beam":
+			case playerAbilities.beam:
 			sprItem = spr_AbilityStar_Beam;
 			break;
 			
-			case "mysticBeam":
+			case playerAbilities.mysticBeam:
 			sprItem = spr_AbilityStar_MysticBeam;
 			break;
 			
-			case "stone":
+			case playerAbilities.stone:
 			sprItem = spr_AbilityStar_Stone;
 			break;
 			
-			case "ufo":
+			case playerAbilities.ufo:
 			sprItem = spr_AbilityStar_Ufo;
 			break;
 			
-			case "mirror":
+			case playerAbilities.mirror:
 			sprItem = spr_AbilityStar_Mirror;
 			break;
 			
-			case "ninja":
+			case playerAbilities.ninja:
 			sprItem = spr_AbilityStar_Ninja;
 			break;
 			
-			case "bomb":
+			case playerAbilities.bomb:
 			sprItem = spr_AbilityStar_Bomb;
 			break;
 			
-			case "fire":
+			case playerAbilities.fire:
 			sprItem = spr_AbilityStar_Fire;
 			break;
 			break;
 			
-			case "mysticFire":
+			case playerAbilities.mysticFire:
 			sprItem = spr_AbilityStar_MysticFire;
 			break;
 			
-			case "ice":
+			case playerAbilities.ice:
 			sprItem = spr_AbilityStar_Ice;
 			break;
 			
-			case "spark":
+			case playerAbilities.spark:
 			sprItem = spr_AbilityStar_Spark;
 			break;
 			
-			case "yoyo":
+			case playerAbilities.yoyo:
 			sprItem = spr_AbilityStar_Yoyo;
 			break;
 			
-			case "wheel":
+			case playerAbilities.wheel:
 			sprItem = spr_AbilityStar_Wheel;
 			break;
 			
-			case "artist":
+			case playerAbilities.artist:
 			sprItem = spr_AbilityStar_Artist;
 			break;
 			
-			case "fighter":
+			case playerAbilities.fighter:
 			sprItem = spr_AbilityStar_Fighter;
 			break;
 			
-			case "suplex":
+			case playerAbilities.suplex:
 			sprItem = spr_AbilityStar_Suplex;
 			break;
 			
-			case "wing":
+			case playerAbilities.wing:
 			sprItem = spr_AbilityStar_Wing;
 			break;
 			
-			case "jet":
+			case playerAbilities.jet:
 			sprItem = spr_AbilityStar_Jet;
 			break;
 			
-			case "sword":
+			case playerAbilities.sword:
 			sprItem = spr_AbilityStar_Sword;
 			break;
 			
-			case "parasol":
+			case playerAbilities.parasol:
 			sprItem = spr_AbilityStar_Parasol;
 			break;
 			
-			case "hammer":
+			case playerAbilities.hammer:
 			sprItem = spr_AbilityStar_Hammer;
 			break;
 			
-			case "bell":
+			case playerAbilities.bell:
 			sprItem = spr_AbilityStar_Bell;
 			break;
 			
-			case "water":
+			case playerAbilities.water:
 			sprItem = spr_AbilityStar_Water;
 			break;
 			

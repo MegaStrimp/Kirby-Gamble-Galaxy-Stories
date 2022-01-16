@@ -13,7 +13,7 @@ topWallSprite = spr_BigStarBlock_Normal_Top;
 
 character = 0;
 sprHurt = spr_Particle_BigStar_Yellow;
-ability = "none";
+ability = playerAbilities.none;
 object = true;
 enemy = false;
 heavy = true;

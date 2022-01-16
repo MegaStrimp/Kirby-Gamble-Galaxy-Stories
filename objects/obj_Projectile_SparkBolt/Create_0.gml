@@ -11,7 +11,7 @@ sprIdleGreen = spr_Projectile_SparkBolt_Normal_Green;
 
 //Other Variables
 
-damageType = "spark";
+damageType = damageTypes.spark;
 destroyableByWall = false;
 destroyableByEnemy = false;
 destroyableByObject = false;

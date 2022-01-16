@@ -1,3 +1,3 @@
 ///@description Other Variables
 
-ability = "yoyo";
+ability = playerAbilities.yoyo;
