@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 79,
+  "bbox_right": 206,
   "bbox_top": 0,
-  "bbox_bottom": 79,
+  "bbox_bottom": 90,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 80,
-  "height": 80,
+  "width": 207,
+  "height": 91,
   "textureGroupId": {
     "name": "Menu",
     "path": "texturegroups/Menu",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"49a4dc35-785a-4196-8ace-32039c62f96c","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"49a4dc35-785a-4196-8ace-32039c62f96c","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"LayerId":{"name":"132bb9fa-695b-4858-90fa-dba9381b6905","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Menu_Collection_Button_Trophies","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"resourceVersion":"1.0","name":"49a4dc35-785a-4196-8ace-32039c62f96c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4aa5b622-1642-4c4e-aa55-2a83a4ef75e6","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4aa5b622-1642-4c4e-aa55-2a83a4ef75e6","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"LayerId":{"name":"132bb9fa-695b-4858-90fa-dba9381b6905","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Menu_Collection_Button_Trophies","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"resourceVersion":"1.0","name":"4aa5b622-1642-4c4e-aa55-2a83a4ef75e6","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"8a09be56-6e82-44ba-9d7a-bd05f5bdc117","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"8a09be56-6e82-44ba-9d7a-bd05f5bdc117","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"LayerId":{"name":"132bb9fa-695b-4858-90fa-dba9381b6905","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Menu_Collection_Button_Trophies","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"resourceVersion":"1.0","name":"8a09be56-6e82-44ba-9d7a-bd05f5bdc117","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"f29c655b-a998-4573-8e9e-0396b90019a0","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"f29c655b-a998-4573-8e9e-0396b90019a0","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"LayerId":{"name":"132bb9fa-695b-4858-90fa-dba9381b6905","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Menu_Collection_Button_Trophies","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"resourceVersion":"1.0","name":"f29c655b-a998-4573-8e9e-0396b90019a0","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_Menu_Collection_Button_Trophies","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},
@@ -44,8 +44,8 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"5cbb39b2-8aa9-41f4-80b2-30303f937f2f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"49a4dc35-785a-4196-8ace-32039c62f96c","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"cf1e1aed-4ab7-442b-a705-2375c50eea82","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4aa5b622-1642-4c4e-aa55-2a83a4ef75e6","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"75137ee9-6660-4570-b5ea-4f4f2a7bba37","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8a09be56-6e82-44ba-9d7a-bd05f5bdc117","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"597450e1-398b-4790-8934-400a2e3896d9","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f29c655b-a998-4573-8e9e-0396b90019a0","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,

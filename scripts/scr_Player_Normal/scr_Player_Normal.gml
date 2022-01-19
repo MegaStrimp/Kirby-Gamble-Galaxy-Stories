@@ -113,7 +113,7 @@ function scr_Player_Normal()
 					{
 						hsp += accel;
 						if (!runTurn) dir = 1;
-						if ((canRunTurn) and (carriedItem == "none") and (grounded) and (run) and (playerAbility != playerAbilities.mirror) and (sign(hsp) != 0) and (sign(hsp) != sign(dir)))
+						if ((canRunTurn) and (carriedItem == carriedItems.none) and (grounded) and (run) and (playerAbility != playerAbilities.mirror) and (sign(hsp) != 0) and (sign(hsp) != sign(dir)))
 						{
 							if (audio_is_playing(snd_DashBegin)) audio_stop_sound(snd_DashBegin);
 							audio_play_sound(snd_DashBegin,0,false);
@@ -130,7 +130,7 @@ function scr_Player_Normal()
 					{
 						hsp -= accel;
 						if (!runTurn) dir = -1;
-						if ((canRunTurn) and (carriedItem == "none") and (grounded) and (run) and (playerAbility != playerAbilities.mirror) and (sign(hsp) != 0) and (sign(hsp) != sign(dir)))
+						if ((canRunTurn) and (carriedItem == carriedItems.none) and (grounded) and (run) and (playerAbility != playerAbilities.mirror) and (sign(hsp) != 0) and (sign(hsp) != sign(dir)))
 						{
 							if (audio_is_playing(snd_DashBegin)) audio_stop_sound(snd_DashBegin);
 							audio_play_sound(snd_DashBegin,0,false);
@@ -254,7 +254,7 @@ function scr_Player_Normal()
 		
 		switch (carriedItem)
 		{
-			case "bomb":
+			case carriedItems.bomb:
 			if (!global.cutscene)
 			{
 				if ((!hurt) and (!attack) and (keyAttackPressed))
@@ -294,7 +294,7 @@ function scr_Player_Normal()
 						carriedItemIndex.x = grabObj.x;
 						carriedItemIndex.y = grabObj.y - sprite_get_height(grabObj.sprite_index) + 6;
 						carriedItemIndex.explodeTimer = 30;
-						carriedItem = "none";
+						carriedItem = carriedItems.none;
 						carriedItemIndex = -1;
 						carriedItemState = "none";
 						attackTimer = 10;
@@ -368,7 +368,7 @@ function scr_Player_Normal()
 								bomb.angleSpd = bomb.hsp * 4;
 							}
 						}
-						carriedItem = "none";
+						carriedItem = carriedItems.none;
 						carriedItemIndex = -1;
 						carriedItemState = "none";
 						bombDir = 0;
@@ -399,7 +399,7 @@ function scr_Player_Normal()
 					carriedItemIndex.vsp = 0;
 					carriedItemIndex.objectOnHitDmg = 12;
 					carriedItemIndex.angleSpd = carriedItemIndex.hsp * 4;
-					carriedItem = "none";
+					carriedItem = carriedItems.none;
 					carriedItemIndex = -1;
 					carriedItemState = "none";
 					bombDir = 0;
@@ -579,11 +579,11 @@ function scr_Player_Normal()
 							{
 								if (audio_is_playing(snd_Cutter)) audio_stop_sound(snd_Cutter);
 								audio_play_sound(snd_Cutter,0,false);
-						        var projectile = instance_create_depth(x,y - 5,depth,obj_Projectile_Cutter);
+						        var projectile = instance_create_depth(x,y - 8,depth,obj_Projectile_Cutter);
 								projectile.owner = id;
 								projectile.paletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
 								projectile.dmg = 20;
-								projectile.sprite_index = projectile.sprIdle;
+								projectile.sprite_index = projectile.sprCharge;
 								projectile.decelMax = projectile.decelMax * 1.2;
 								projectile.hsp = dir * projectile.decelMax;
 								projectile.dirX = dir;
@@ -593,7 +593,8 @@ function scr_Player_Normal()
 								projectile.destroyableByObject = false;
 								projectile.destroyableByProjectile = false;
 								projectile.player = player;
-								projectile.image_blend = c_red;
+								projectile.angleSpd = -10;
+								projectile.charge = true;
 								attackable = false;
 							}
 						}
@@ -1834,8 +1835,8 @@ function scr_Player_Normal()
 							attackable = false;
 				            attackTimer = 45;
 							fallRoll = false;
-							carriedItem = "bomb";
-							carriedItemState = "heavy";
+							carriedItem = carriedItems.bomb;
+							carriedItemState = carriedItemStates.heavy;
 							carriedItemIndex = instance_create_depth(x,y - 8,depth - 1,obj_Projectile_Bomb);
 							carriedItemIndex.owner = id;
 							carriedItemIndex.player = player;
@@ -2287,6 +2288,201 @@ function scr_Player_Normal()
 								wingMaskProj.dmgMin = 16;
 								wingMaskProj.image_xscale = image_xscale;
 								wingMaskProj.image_yscale = image_yscale;
+							}
+						}
+						break;
+					
+						case playerAbilities.sword:
+					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
+					    {
+							if ((run) and (vsp == 0) and (hsp != 0))
+							{
+								attack = true;
+								attackNumber = "swordDash";
+								sprite_index = sprSwordAttack2;
+						        image_index = 0;
+				                cutterCatch = false;
+							}
+							else if (keyDownHold)
+							{
+								var cutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_CutterDropMask);
+								cutterMaskProj.owner = id;
+								cutterMaskProj.dmg = 22;
+								cutterMaskProj.image_xscale = image_xscale;
+								cutterMaskProj.image_yscale = image_yscale;
+								invincible = true;
+								attack = true;
+								attackNumber = "cutterDrop";
+								sprite_index = sprCutterAttack3;
+								image_index = 0;
+				                state = playerStates.cutterDrop;
+							}
+							else if (cutterAirThrown)
+							{
+								var cutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_CutterDropMask);
+								cutterMaskProj.owner = id;
+								cutterMaskProj.dmg = 22;
+								cutterMaskProj.image_xscale = image_xscale;
+								cutterMaskProj.image_yscale = image_yscale;
+								invincible = true;
+								attack = true;
+								attackNumber = "cutterAir";
+								sprite_index = sprCutterAttack3;
+								image_index = 0;
+							}
+							else
+							{
+								if ((!cutterAirThrown) or (vsp == 0))
+								{
+									if (vsp != 0) cutterAirThrown = true;
+									attack = true;
+									attackNumber = "cutterCharge";
+									sprite_index = sprCutterAttack1;
+									image_index = 0;
+								}
+							}
+					    }
+					
+						if (attackNumber == "cutterCharge")
+						{
+							image_index = 0;
+							if (cutterCharge == cutterChargeMax - 1)
+							{
+								if (audio_is_playing(snd_Charge_Ready)) audio_stop_sound(snd_Charge_Ready);
+								audio_play_sound(snd_Charge_Ready,0,false);
+								var particle = instance_create_depth(x,y - 15,depth - 1,obj_Particle);
+								particle.sprite_index = spr_Particle_Flash1;
+								particle.scale = 1.5;
+								particle.destroyAfterAnimation = true;
+							}
+							cutterCharge += 1;
+							if ((!audio_is_playing(snd_Charge_Intro)) and (!audio_is_playing(snd_Charge_Loop)))
+							{
+								if (chargeSfxState == "intro")
+								{
+								    chargeSfx = audio_play_sound(snd_Charge_Intro,0,false);
+								    chargeSfxState = "loop";
+								}
+								else
+								{
+								    chargeSfx = audio_play_sound(snd_Charge_Loop,0,false);
+								}
+							}
+						
+							if (keyRightHold)
+							{
+								dir = 1;
+							}
+							if (keyLeftHold)
+							{
+								dir = -1;
+							}
+						
+							if (cutterCharge < cutterChargeMax)
+							{
+								if ((!global.cutscene) and (!keyAttackHold))
+								{
+									cutterCharge = 0;
+									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
+									chargeSfxState = "intro";
+									invincibleFlash = false;
+									invincibleFlashTimer = -1;
+									attack = true;
+									attackNumber = "swordNormal";
+									attackTimer = 45;
+									sprite_index = sprSwordAttack1;
+								    image_index = 0;
+								}
+							}
+							else
+							{
+								if (invincibleFlashTimer == -1) invincibleFlashTimer = invincibleFlashTimerMax;
+								if ((!global.cutscene) and (!keyAttackHold))
+								{
+									cutterCharge = 0;
+									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
+									chargeSfxState = "intro";
+									invincibleFlash = false;
+									invincibleFlashTimer = -1;
+									attack = true;
+									attackNumber = "cutterChargeAttack";
+									sprite_index = sprCutterAttack1;
+								    image_index = 0;
+								}
+							}
+						}
+					
+						if (attackNumber == "swordNormal")
+						{
+							if ((round(image_index) == (image_number - 1)) and (attackable))
+							{
+								//if (audio_is_playing(snd_Cutter)) audio_stop_sound(snd_Cutter);
+								//audio_play_sound(snd_Cutter,0,false);
+						        var projectile = instance_create_depth(x,y - 5,depth,obj_Projectile_SwordMask);
+								projectile.owner = id;
+								projectile.dmg = 12;
+								projectile.sprite_index = projectile.sprIdle;
+								projectile.dirX = dir;
+								projectile.image_xscale = projectile.dirX;
+								projectile.enemy = false;
+								projectile.player = player;
+								attackable = false;
+							}
+						}
+					
+						if (attackNumber == "cutterChargeAttack")
+						{
+							if ((round(image_index) == (image_number - 1)) and (attackable))
+							{
+								if (audio_is_playing(snd_Cutter)) audio_stop_sound(snd_Cutter);
+								audio_play_sound(snd_Cutter,0,false);
+						        var projectile = instance_create_depth(x,y - 8,depth,obj_Projectile_Cutter);
+								projectile.owner = id;
+								projectile.paletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
+								projectile.dmg = 20;
+								projectile.sprite_index = projectile.sprCharge;
+								projectile.decelMax = projectile.decelMax * 1.2;
+								projectile.hsp = dir * projectile.decelMax;
+								projectile.dirX = dir;
+								projectile.image_xscale = projectile.dirX;
+								projectile.enemy = false;
+								projectile.destroyableByEnemy = false;
+								projectile.destroyableByObject = false;
+								projectile.destroyableByProjectile = false;
+								projectile.player = player;
+								projectile.angleSpd = -10;
+								projectile.charge = true;
+								attackable = false;
+							}
+						}
+					
+						if (attackNumber == "swordDash")
+						{
+							if (attackable)
+							{
+				                hsp = (movespeedSlide * 1.25) * dir;
+								run = false;
+				                attack = true;
+								attackable = false;
+				                attackTimer = 45;
+				                state = playerStates.swordDash;
+								if (audio_is_playing(snd_CutterDash)) audio_stop_sound(snd_CutterDash);
+								slideSfx = audio_play_sound(snd_CutterDash,0,false);
+								swordDashMaskProj = instance_create_depth(x,y,depth,obj_Projectile_SwordDashMask);
+								swordDashMaskProj.owner = id;
+								swordDashMaskProj.dmg = 18;
+								swordDashMaskProj.dmgMax = 18;
+								swordDashMaskProj.dmgMin = 16;
+								swordDashMaskProj.image_xscale = image_xscale;
+								swordDashMaskProj.image_yscale = image_yscale;
+							}
+						}
+					
+						if (attackNumber == "cutterAir")
+						{
+							if (!keyAttackHold)
+							{
+								attackTimer = 0;
 							}
 						}
 						break;
@@ -2789,7 +2985,7 @@ function scr_Player_Normal()
 				parJump.spdBuiltIn = 6;
 				parJump.fricSpd = .6;
 				parJump.direction = 90 + (20 * dir);
-				if (carriedItem == "none") fallRoll = true;
+				if (carriedItem == carriedItems.none) fallRoll = true;
 				sprite_index = sprJump;
 				image_index = 0;
 				vsp = -jumpspeed;
@@ -2867,7 +3063,7 @@ function scr_Player_Normal()
 				parJump.spdBuiltIn = 6;
 				parJump.fricSpd = .6;
 				parJump.direction = 90 + (20 * dir);
-				if (carriedItem == "none") fallRoll = true;
+				if (carriedItem == carriedItems.none) fallRoll = true;
 				sprite_index = sprJump;
 				image_index = 0;
 				vsp = -jumpspeed;
@@ -2916,7 +3112,7 @@ function scr_Player_Normal()
 		
 		//Float
 		
-		if ((!global.cutscene) and (canFloat) and ((carriedItem == "none") and (carriedItemState != "heavy")) and (playerAbility != playerAbilities.ufo) and ((keyJumpPressed) and (!place_meeting(x,y,obj_AntiFloat)) and (!place_meeting(x,y + 1,obj_Wall))) and (!attack))
+		if ((!global.cutscene) and (canFloat) and ((carriedItem == carriedItems.none) and (carriedItemState != carriedItemStates.heavy)) and (playerAbility != playerAbilities.ufo) and ((keyJumpPressed) and (!place_meeting(x,y,obj_AntiFloat)) and (!place_meeting(x,y + 1,obj_Wall))) and (!attack))
 		{
 			attackTimer = 0;
 		    hurt = false;
@@ -2968,7 +3164,7 @@ function scr_Player_Normal()
 		//Animation
 		
 		var heavyItemCarry = false;
-		if (carriedItemState == "heavy") heavyItemCarry = true;
+		if (carriedItemState == carriedItemStates.heavy) heavyItemCarry = true;
 		var heavyItemCarrySpd = heavyItemCarry / 2;
 		if ((run) or ((carriedItemIndex != -1) and (carriedItemIndex.object_index == obj_Projectile_Bomb) and (carriedItemIndex.selfExplodeTimer != -1) and (carriedItemIndex.selfExplodeTimer <= 90))) heavyItemCarrySpd = heavyItemCarry / 1.5;
 		
@@ -3003,14 +3199,14 @@ function scr_Player_Normal()
 					
 					var idlesprite = sprIdle;
 					var idleblinksprite = sprIdleBlink;
-					if (carriedItem != "none")
+					if (carriedItem != carriedItems.none)
 					{
-						if (carriedItemState == "light")
+						if (carriedItemState == carriedItemStates.light)
 						{
 							idlesprite = sprItemCarryLightIdle;
 							idleblinksprite = sprItemCarryLightIdle;
 						}
-						else if (carriedItemState == "heavy")
+						else if (carriedItemState == carriedItemStates.heavy)
 						{
 							idlesprite = sprItemCarryHeavyIdle;
 							idleblinksprite = sprItemCarryHeavyIdle;
@@ -3030,14 +3226,14 @@ function scr_Player_Normal()
 								{
 									idlesprite = sprIdleNormalSlopeL;
 									idleblinksprite = sprIdleNormalSlopeLBlink;
-									if (carriedItem != "none")
+									if (carriedItem != carriedItems.none)
 									{
-										if (carriedItemState == "light")
+										if (carriedItemState == carriedItemStates.light)
 										{
 											idlesprite = sprItemCarryLightIdleNormalSlopeL;
 											idleblinksprite = sprItemCarryLightIdleNormalSlopeLBlink;
 										}
-										else if (carriedItemState == "heavy")
+										else if (carriedItemState == carriedItemStates.heavy)
 										{
 											idlesprite = sprItemCarryHeavyIdleSlopeL;
 											idleblinksprite = sprItemCarryHeavyIdleSlopeL;
@@ -3049,14 +3245,14 @@ function scr_Player_Normal()
 								{
 									idlesprite = sprIdleNormalSlopeR;
 									idleblinksprite = sprIdleNormalSlopeRBlink;
-									if (carriedItem != "none")
+									if (carriedItem != carriedItems.none)
 									{
-										if (carriedItemState == "light")
+										if (carriedItemState == carriedItemStates.light)
 										{
 											idlesprite = sprItemCarryLightIdleNormalSlopeR;
 											idleblinksprite = sprItemCarryLightIdleNormalSlopeRBlink;
 										}
-										else if (carriedItemState == "heavy")
+										else if (carriedItemState == carriedItemStates.heavy)
 										{
 											idlesprite = sprItemCarryHeavyIdleSlopeR;
 											idleblinksprite = sprItemCarryHeavyIdleSlopeR;
@@ -3071,14 +3267,14 @@ function scr_Player_Normal()
 								{
 									idlesprite = sprIdleNormalSlopeR;
 									idleblinksprite = sprIdleNormalSlopeRBlink;
-									if (carriedItem != "none")
+									if (carriedItem != carriedItems.none)
 									{
-										if (carriedItemState == "light")
+										if (carriedItemState == carriedItemStates.light)
 										{
 											idlesprite = sprItemCarryLightIdleNormalSlopeR;
 											idleblinksprite = sprItemCarryLightIdleNormalSlopeRBlink;
 										}
-										else if (carriedItemState == "heavy")
+										else if (carriedItemState == carriedItemStates.heavy)
 										{
 											idlesprite = sprItemCarryHeavyIdleSlopeR;
 											idleblinksprite = sprItemCarryHeavyIdleSlopeR;
@@ -3090,14 +3286,14 @@ function scr_Player_Normal()
 								{
 									idlesprite = sprIdleNormalSlopeL;
 									idleblinksprite = sprIdleNormalSlopeLBlink;
-									if (carriedItem != "none")
+									if (carriedItem != carriedItems.none)
 									{
-										if (carriedItemState == "light")
+										if (carriedItemState == carriedItemStates.light)
 										{
 											idlesprite = sprItemCarryLightIdleNormalSlopeL;
 											idleblinksprite = sprItemCarryLightIdleNormalSlopeLBlink;
 										}
-										else if (carriedItemState == "heavy")
+										else if (carriedItemState == carriedItemStates.heavy)
 										{
 											idlesprite = sprItemCarryHeavyIdleSlopeL;
 											idleblinksprite = sprItemCarryHeavyIdleSlopeL;
@@ -3115,14 +3311,14 @@ function scr_Player_Normal()
 								{
 									idlesprite = sprIdleNormalSlopeR;
 									idleblinksprite = sprIdleNormalSlopeRBlink;
-									if (carriedItem != "none")
+									if (carriedItem != carriedItems.none)
 									{
-										if (carriedItemState == "light")
+										if (carriedItemState == carriedItemStates.light)
 										{
 											idlesprite = sprItemCarryLightIdleNormalSlopeR;
 											idleblinksprite = sprItemCarryLightIdleNormalSlopeRBlink;
 										}
-										else if (carriedItemState == "heavy")
+										else if (carriedItemState == carriedItemStates.heavy)
 										{
 											idlesprite = sprItemCarryHeavyIdleSlopeR;
 											idleblinksprite = sprItemCarryHeavyIdleSlopeR;
@@ -3134,14 +3330,14 @@ function scr_Player_Normal()
 								{
 									idlesprite = sprIdleNormalSlopeL;
 									idleblinksprite = sprIdleNormalSlopeLBlink;
-									if (carriedItem != "none")
+									if (carriedItem != carriedItems.none)
 									{
-										if (carriedItemState == "light")
+										if (carriedItemState == carriedItemStates.light)
 										{
 											idlesprite = sprItemCarryLightIdleNormalSlopeL;
 											idleblinksprite = sprItemCarryLightIdleNormalSlopeLBlink;
 										}
-										else if (carriedItemState == "heavy")
+										else if (carriedItemState == carriedItemStates.heavy)
 										{
 											idlesprite = sprItemCarryHeavyIdleSlopeL;
 											idleblinksprite = sprItemCarryHeavyIdleSlopeL;
@@ -3156,14 +3352,14 @@ function scr_Player_Normal()
 								{
 									idlesprite = sprIdleNormalSlopeL;
 									idleblinksprite = sprIdleNormalSlopeLBlink;
-									if (carriedItem != "none")
+									if (carriedItem != carriedItems.none)
 									{
-										if (carriedItemState == "light")
+										if (carriedItemState == carriedItemStates.light)
 										{
 											idlesprite = sprItemCarryLightIdleNormalSlopeL;
 											idleblinksprite = sprItemCarryLightIdleNormalSlopeLBlink;
 										}
-										else if (carriedItemState == "heavy")
+										else if (carriedItemState == carriedItemStates.heavy)
 										{
 											idlesprite = sprItemCarryHeavyIdleSlopeL;
 											idleblinksprite = sprItemCarryHeavyIdleSlopeL;
@@ -3175,14 +3371,14 @@ function scr_Player_Normal()
 								{
 									idlesprite = sprIdleNormalSlopeR;
 									idleblinksprite = sprIdleNormalSlopeRBlink;
-									if (carriedItem != "none")
+									if (carriedItem != carriedItems.none)
 									{
-										if (carriedItemState == "light")
+										if (carriedItemState == carriedItemStates.light)
 										{
 											idlesprite = sprItemCarryLightIdleNormalSlopeR;
 											idleblinksprite = sprItemCarryLightIdleNormalSlopeRBlink;
 										}
-										else if (carriedItemState == "heavy")
+										else if (carriedItemState == carriedItemStates.heavy)
 										{
 											idlesprite = sprItemCarryHeavyIdleSlopeR;
 											idleblinksprite = sprItemCarryHeavyIdleSlopeR;
@@ -3200,14 +3396,14 @@ function scr_Player_Normal()
 								{
 									idlesprite = sprIdleSteepSlopeR;
 									idleblinksprite = sprIdleSteepSlopeRBlink;
-									if (carriedItem != "none")
+									if (carriedItem != carriedItems.none)
 									{
-										if (carriedItemState == "light")
+										if (carriedItemState == carriedItemStates.light)
 										{
 											idlesprite = sprItemCarryLightIdleSteepSlopeR;
 											idleblinksprite = sprItemCarryLightIdleSteepSlopeRBlink;
 										}
-										else if (carriedItemState == "heavy")
+										else if (carriedItemState == carriedItemStates.heavy)
 										{
 											idlesprite = sprItemCarryHeavyIdleSlopeR;
 											idleblinksprite = sprItemCarryHeavyIdleSlopeR;
@@ -3219,14 +3415,14 @@ function scr_Player_Normal()
 								{
 									idlesprite = sprIdleSteepSlopeL;
 									idleblinksprite = sprIdleSteepSlopeLBlink;
-									if (carriedItem != "none")
+									if (carriedItem != carriedItems.none)
 									{
-										if (carriedItemState == "light")
+										if (carriedItemState == carriedItemStates.light)
 										{
 											idlesprite = sprItemCarryLightIdleSteepSlopeL;
 											idleblinksprite = sprItemCarryLightIdleSteepSlopeLBlink;
 										}
-										else if (carriedItemState == "heavy")
+										else if (carriedItemState == carriedItemStates.heavy)
 										{
 											idlesprite = sprItemCarryHeavyIdleSlopeL;
 											idleblinksprite = sprItemCarryHeavyIdleSlopeL;
@@ -3241,14 +3437,14 @@ function scr_Player_Normal()
 								{
 									idlesprite = sprIdleSteepSlopeL;
 									idleblinksprite = sprIdleSteepSlopeLBlink;
-									if (carriedItem != "none")
+									if (carriedItem != carriedItems.none)
 									{
-										if (carriedItemState == "light")
+										if (carriedItemState == carriedItemStates.light)
 										{
 											idlesprite = sprItemCarryLightIdleSteepSlopeL;
 											idleblinksprite = sprItemCarryLightIdleSteepSlopeLBlink;
 										}
-										else if (carriedItemState == "heavy")
+										else if (carriedItemState == carriedItemStates.heavy)
 										{
 											idlesprite = sprItemCarryHeavyIdleSlopeL;
 											idleblinksprite = sprItemCarryHeavyIdleSlopeL;
@@ -3260,14 +3456,14 @@ function scr_Player_Normal()
 								{
 									idlesprite = sprIdleSteepSlopeR;
 									idleblinksprite = sprIdleSteepSlopeRBlink;
-									if (carriedItem != "none")
+									if (carriedItem != carriedItems.none)
 									{
-										if (carriedItemState == "light")
+										if (carriedItemState == carriedItemStates.light)
 										{
 											idlesprite = sprItemCarryLightIdleSteepSlopeR;
 											idleblinksprite = sprItemCarryLightIdleSteepSlopeRBlink;
 										}
-										else if (carriedItemState == "heavy")
+										else if (carriedItemState == carriedItemStates.heavy)
 										{
 											idlesprite = sprItemCarryHeavyIdleSlopeR;
 											idleblinksprite = sprItemCarryHeavyIdleSlopeR;
@@ -3321,7 +3517,7 @@ function scr_Player_Normal()
 						else
 						{
 							
-							if ((carriedItem != "none") and (carriedItemState == "heavy"))
+							if ((carriedItem != carriedItems.none) and (carriedItemState == carriedItemStates.heavy))
 							{
 								sprite_index = sprItemCarryHeavyWalk;
 							}
@@ -3333,17 +3529,17 @@ function scr_Player_Normal()
 					}
 					else
 					{
-						if (carriedItem == "none")
+						if (carriedItem == carriedItems.none)
 						{
 							sprite_index = sprWalk;
 						}
 						else
 						{
-							if (carriedItemState == "light")
+							if (carriedItemState == carriedItemStates.light)
 							{
 								sprite_index = sprItemCarryLightWalk;
 							}
-							else if (carriedItemState == "heavy")
+							else if (carriedItemState == carriedItemStates.heavy)
 							{
 								sprite_index = sprItemCarryHeavyWalk;
 							}
@@ -3434,7 +3630,7 @@ function scr_Player_Normal()
 		
 		//Walk Duck
 		
-		if ((!walkDuck) and (carriedItem == "none") and (playerAbility != playerAbilities.ufo) and (place_meeting(x,y + (1 + vsp),obj_Wall)) and (vsp > 1) and (!attack))
+		if ((!walkDuck) and (carriedItem == carriedItems.none) and (playerAbility != playerAbilities.ufo) and (place_meeting(x,y + (1 + vsp),obj_Wall)) and (vsp > 1) and (!attack))
 		{
 			var collidingWall = instance_place(x,y + (1 + vsp),obj_Wall);
 			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal))))
@@ -3548,7 +3744,7 @@ function scr_Player_Normal()
 		{
 			var walkSquishWall = instance_place(x + hspFinal,y,obj_Wall);
 			var bottomWall = instance_place(x,y + 1,obj_Wall);
-			if ((carriedItem == "none") and (!walkSquishWall.slope) and (!walkSquishWall.platform) and (!bottomWall.slope))
+			if ((carriedItem == carriedItems.none) and (!walkSquishWall.slope) and (!walkSquishWall.platform) and (!bottomWall.slope))
 			{
 				sprite_index = sprSquish;
 				image_index = 0;

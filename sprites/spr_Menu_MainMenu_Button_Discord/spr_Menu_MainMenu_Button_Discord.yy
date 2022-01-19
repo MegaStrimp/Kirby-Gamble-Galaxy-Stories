@@ -2,20 +2,20 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
-  "origin": 0,
+  "origin": 9,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 19,
+  "bbox_right": 21,
   "bbox_top": 0,
-  "bbox_bottom": 19,
+  "bbox_bottom": 21,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 20,
-  "height": 20,
+  "width": 22,
+  "height": 22,
   "textureGroupId": {
     "name": "Menu",
     "path": "texturegroups/Menu",
@@ -27,9 +27,9 @@
     {"compositeImage":{"FrameId":{"name":"6e085376-ee53-4e0c-b042-7ce40bbb6e0d","path":"sprites/spr_Menu_MainMenu_Button_Discord/spr_Menu_MainMenu_Button_Discord.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"6e085376-ee53-4e0c-b042-7ce40bbb6e0d","path":"sprites/spr_Menu_MainMenu_Button_Discord/spr_Menu_MainMenu_Button_Discord.yy",},"LayerId":{"name":"d066df74-8c8d-4509-ad83-48cf716c44eb","path":"sprites/spr_Menu_MainMenu_Button_Discord/spr_Menu_MainMenu_Button_Discord.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_Menu_MainMenu_Button_Discord","path":"sprites/spr_Menu_MainMenu_Button_Discord/spr_Menu_MainMenu_Button_Discord.yy",},"resourceVersion":"1.0","name":"6e085376-ee53-4e0c-b042-7ce40bbb6e0d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"bbf5d6ba-b5f2-4aff-8498-382a2d8c20e1","path":"sprites/spr_Menu_MainMenu_Button_Discord/spr_Menu_MainMenu_Button_Discord.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bbf5d6ba-b5f2-4aff-8498-382a2d8c20e1","path":"sprites/spr_Menu_MainMenu_Button_Discord/spr_Menu_MainMenu_Button_Discord.yy",},"LayerId":{"name":"d066df74-8c8d-4509-ad83-48cf716c44eb","path":"sprites/spr_Menu_MainMenu_Button_Discord/spr_Menu_MainMenu_Button_Discord.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Menu_MainMenu_Button_Discord","path":"sprites/spr_Menu_MainMenu_Button_Discord/spr_Menu_MainMenu_Button_Discord.yy",},"resourceVersion":"1.0","name":"bbf5d6ba-b5f2-4aff-8498-382a2d8c20e1","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"9dc725da-755f-434b-97b8-fd153930aa2c","path":"sprites/spr_Menu_MainMenu_Button_Discord/spr_Menu_MainMenu_Button_Discord.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"9dc725da-755f-434b-97b8-fd153930aa2c","path":"sprites/spr_Menu_MainMenu_Button_Discord/spr_Menu_MainMenu_Button_Discord.yy",},"LayerId":{"name":"d066df74-8c8d-4509-ad83-48cf716c44eb","path":"sprites/spr_Menu_MainMenu_Button_Discord/spr_Menu_MainMenu_Button_Discord.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Menu_MainMenu_Button_Discord","path":"sprites/spr_Menu_MainMenu_Button_Discord/spr_Menu_MainMenu_Button_Discord.yy",},"resourceVersion":"1.0","name":"9dc725da-755f-434b-97b8-fd153930aa2c","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_Menu_MainMenu_Button_Discord","path":"sprites/spr_Menu_MainMenu_Button_Discord/spr_Menu_MainMenu_Button_Discord.yy",},
@@ -45,7 +45,7 @@
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"8000955b-9f93-4d41-a6cd-fe866a6aa4cd","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6e085376-ee53-4e0c-b042-7ce40bbb6e0d","path":"sprites/spr_Menu_MainMenu_Button_Discord/spr_Menu_MainMenu_Button_Discord.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"dab3a380-9368-4bd7-81b6-cebe82e1df96","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bbf5d6ba-b5f2-4aff-8498-382a2d8c20e1","path":"sprites/spr_Menu_MainMenu_Button_Discord/spr_Menu_MainMenu_Button_Discord.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"5163ca7e-ce06-40b0-8ee7-78ecf70c7a93","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9dc725da-755f-434b-97b8-fd153930aa2c","path":"sprites/spr_Menu_MainMenu_Button_Discord/spr_Menu_MainMenu_Button_Discord.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,8 +58,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 0,
-    "yorigin": 0,
+    "xorigin": 1,
+    "yorigin": 1,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_MainMenu_Button_Discord","path":"sprites/spr_Menu_MainMenu_Button_Discord/spr_Menu_MainMenu_Button_Discord.yy",},

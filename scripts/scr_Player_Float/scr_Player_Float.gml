@@ -61,7 +61,7 @@ function scr_Player_Float()
 		{
 			if ((!global.cutscene) and (floatingTimer == -1) and ((keyJumpHold) or (keyUpHold)))
 			{
-				if (carriedItem == "none")
+				if (carriedItem == carriedItems.none)
 				{
 					sprite_index = sprFlap;
 				}
@@ -126,7 +126,7 @@ function scr_Player_Float()
 		
 		if (!float)
 		{
-			if (carriedItem == "none")
+			if (carriedItem == carriedItems.none)
 			{
 				if (floatSpit)
 				{

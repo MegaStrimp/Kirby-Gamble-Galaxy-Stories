@@ -18,8 +18,14 @@ gravLimitNormal = 4;
 
 //Sprites
 
-sprIdle = spr_Bouncy_Normal_Idle;
+sprIdle = spr_PoppyBrosSr_Normal_Idle;
+sprIdleHat = spr_PoppyBrosSr_Normal_IdleHat;
+sprAttack = spr_PoppyBrosSr_Normal_Attack;
+sprAttackHat = spr_PoppyBrosSr_Normal_AttackHat;
+sprDash = spr_PoppyBrosSr_Normal_Dash;
+sprHand = spr_PoppyBrosSr_Normal_Hand;
 sprHurt = "self";
+sprDeath = spr_PoppyBrosSr_Normal_Death;
 
 //Other Variables
 
@@ -33,6 +39,7 @@ isAttacking = false;
 jumpCount = 0;
 dashDir = 1;
 walkDirX = -1;
+hatIndex = 0;
 
 //Timers
 

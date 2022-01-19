@@ -13,4 +13,4 @@ rousr_dissonance_set_small_image(global.discordSmallImage,global.discordSmallIma
 
 //Virtual Keys
 
-scr_VirtualKeysSet();
+if (global.isMobile) scr_VirtualKeysSet();

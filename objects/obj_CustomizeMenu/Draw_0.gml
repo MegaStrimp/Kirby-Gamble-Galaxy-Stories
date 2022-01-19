@@ -248,17 +248,9 @@ switch (page)
 	draw_set_alpha(1);
 	
 	draw_set_halign(fa_center);
-	var col1 = c_dkgray;
-	var col2 = c_dkgray
-	/*var text = sprayPaintUnlockMethod[selection];
-	if (sprayPaintUnlocked[selection])
-	{
-		col1 = sprayPaintColor[selection];
-		col2 = c_white;
-		text = sprayPaintDescription[selection];
-	}*/
+	var col1 = c_white;
+	var col2 = c_white;
 	scr_Draw_Text_Color_Outline(301,192,abilityHatTitle[selection],-1,-1,col1,col2,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
-	//scr_Draw_Text_Color_Outline(301,222,text,-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 	draw_set_halign(fa_left);
 	
 	var textColor = c_white;
@@ -393,17 +385,9 @@ switch (page)
 	draw_set_alpha(1);
 	
 	draw_set_halign(fa_center);
-	var col1 = c_dkgray;
-	var col2 = c_dkgray
-	/*var text = sprayPaintUnlockMethod[selection];
-	if (sprayPaintUnlocked[selection])
-	{
-		col1 = sprayPaintColor[selection];
-		col2 = c_white;
-		text = sprayPaintDescription[selection];
-	}*/
+	var col1 = c_white;
+	var col2 = c_white;
 	scr_Draw_Text_Color_Outline(301,192,abilityHatSkinTitle[subSelection][selection],-1,350,col1,col2,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
-	//scr_Draw_Text_Color_Outline(301,222,text,-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 	draw_set_halign(fa_left);
 	
 	var textColor = c_white;
@@ -679,17 +663,9 @@ switch (page)
 	draw_set_alpha(1);
 	
 	draw_set_halign(fa_center);
-	var col1 = c_dkgray;
-	var col2 = c_dkgray
-	/*var text = sprayPaintUnlockMethod[selection];
-	if (sprayPaintUnlocked[selection])
-	{
-		col1 = sprayPaintColor[selection];
-		col2 = c_white;
-		text = sprayPaintDescription[selection];
-	}*/
+	var col1 = c_white;
+	var col2 = c_white;
 	scr_Draw_Text_Color_Outline(301,192,abilityHatPaintTitle[subSelection][selectedSkin][selection],-1,350,col1,col2,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
-	//scr_Draw_Text_Color_Outline(301,222,text,-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 	draw_set_halign(fa_left);
 	
 	var textColor = c_white;

@@ -1,36 +1,41 @@
 ///@description Main
-
-//Characters
-
+show_debug_message(image_index);
+#region Characters
 if (setupTimer == 0)
 {
 	switch (character)
 	{
-		//Normal
-		
+		#region Normal
 		case 0:
-		sprIdle = spr_Bouncy_Normal_Idle;
+		sprIdle = spr_PoppyBrosSr_Normal_Idle;
+		sprIdleHat = spr_PoppyBrosSr_Normal_IdleHat;
+		sprAttack = spr_PoppyBrosSr_Normal_Attack;
+		sprAttackHat = spr_PoppyBrosSr_Normal_AttackHat;
+		sprDash = spr_PoppyBrosSr_Normal_Dash;
+		sprHand = spr_PoppyBrosSr_Normal_Hand;
 		sprHurt = "self";
+		sprDeath = spr_PoppyBrosSr_Normal_Death;
 		break;
+		#endregion
 	}
 }
+#endregion
 
-//Event Inherited
-
+#region Event Inherited
 event_inherited();
+#endregion
 
 if (!global.pause)
 {
-	//Hurt Player
-	
+	#region Hurt Player
 	scr_Enemy_HurtsPlayer();
+	#endregion
 	
-	//Friction
-	
+	#region Friction
 	hsp = scr_Friction(hsp,decel);
+	#endregion
 	
-	//Movement
-	
+	#region Movement
 	if (attack)
 	{
 		switch (attackNumber)
@@ -81,12 +86,12 @@ if (!global.pause)
 			break;
 			
 			case 8:
-			movespeed = 4;
+			movespeed = 3;
 			jumpspeed = 4.5;
 			break;
 			
 			case 9:
-			movespeed = 4;
+			movespeed = 3;
 			jumpspeed = 4.5;
 			break;
 			
@@ -98,6 +103,7 @@ if (!global.pause)
 	}
 	
 	hsp = movespeed * walkDirX;
+	#endregion
 	
 	#region Jump
 	if (place_meeting(x,y + 1,collisionY))
@@ -111,6 +117,14 @@ if (!global.pause)
 			else
 			{
 				walkDirX *= -1;
+				if (walkDirX == 1)
+				{
+					image_index = 0;
+				}
+				else if (walkDirX == -1)
+				{
+					image_index = image_number - 1;
+				}
 				jumpCount += 1;
 				vsp = -jumpspeed;
 			}
@@ -135,8 +149,7 @@ if (!global.pause)
 	}
 	#endregion
 	
-	//Attack Ready Timer
-	
+	#region Attack Ready Timer
 	if (attackReadyTimer > 0)
 	{
 		attackReadyTimer -= 1;
@@ -162,9 +175,9 @@ if (!global.pause)
 		}
 		attackReadyTimer = -1;
 	}
+	#endregion
 	
-	//Attack Stop Timer
-	
+	#region Attack Stop Timer
 	if (attackStopTimer > 0)
 	{
 		attackStopTimer -= 1;
@@ -177,9 +190,9 @@ if (!global.pause)
 		isAttacking = false;
 		attackStopTimer = -1;
 	}
+	#endregion
 	
-	//Dash Stop Timer
-	
+	#region Dash Stop Timer
 	if (dashStopTimer > 0)
 	{
 		dashStopTimer -= 1;
@@ -190,9 +203,9 @@ if (!global.pause)
 		attackStopTimer = 30;
 		dashStopTimer = -1;
 	}
+	#endregion
 	
-	//Bomb Throw Timer
-	
+	#region Bomb Throw Timer
 	if (bombThrowTimer > 0)
 	{
 		bombThrowTimer -= 1;
@@ -202,11 +215,21 @@ if (!global.pause)
 		isAttacking = false;
 		bombThrowTimer = -1;
 	}
+	#endregion
 	
-	//Animation
-	
-	image_speed = 1;
+	#region Animation
+	image_speed = 1 * walkDirX;
 	sprite_index = sprIdle;
+	
+	if ((walkDirX == 1) and (image_index >= image_number - 1))
+	{
+		image_index = image_number - 1;
+	}
+	else if ((walkDirX == -1) and (image_index < 1))
+	{
+		image_index = .9;
+	}
+	#endregion
 }
 else
 {

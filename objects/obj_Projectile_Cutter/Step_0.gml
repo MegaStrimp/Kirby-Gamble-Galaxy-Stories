@@ -26,9 +26,17 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	scr_Player_Inputs(player);
 	
+	//Touch Wall
+	
+	if ((charge) and (place_meeting(x + hsp,y,obj_Wall))) dirX *= -1;
+	
 	//Event Inherited
 	
 	event_inherited();
+	
+	//Angle
+	
+	imageAngle += angleSpd;
 	
 	//Movement
 	
@@ -78,7 +86,34 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	image_speed = 1;
 	
-	sprite_index = sprIdle;
+	if (charge)
+	{
+		sprite_index = sprCharge;
+	}
+	else
+	{
+		sprite_index = sprIdle;
+	}
+	
+	//Trail Timer
+	
+	if (trailTimer > 0)
+	{
+		trailTimer -= 1;
+	}
+	else if (trailTimer == 0)
+	{
+		var afterimage = instance_create_depth(x,y,depth,obj_Afterimage);
+		afterimage.sprite_index = sprite_index;
+		afterimage.hsp = hsp / 4;
+		afterimage.vsp = vsp / 4;
+		afterimage.image_xscale = image_xscale;
+		afterimage.image_alpha = .75;
+		afterimage.paletteIndex = paletteIndex;
+		afterimage.lowerAlphaToDestroy = true;
+		afterimage.destroyTimer = 10;
+		trailTimer = trailTimerMax;
+	}
 }
 else
 {

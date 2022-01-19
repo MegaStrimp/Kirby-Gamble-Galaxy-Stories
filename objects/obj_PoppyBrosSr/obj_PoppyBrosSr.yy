@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_Bouncy_Normal_Duck",
-    "path": "sprites/spr_Bouncy_Normal_Duck/spr_Bouncy_Normal_Duck.yy",
+    "name": "spr_PoppyBrosSr_Normal_Idle",
+    "path": "sprites/spr_PoppyBrosSr_Normal_Idle/spr_PoppyBrosSr_Normal_Idle.yy",
   },
   "solid": false,
   "visible": true,
@@ -26,6 +26,7 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

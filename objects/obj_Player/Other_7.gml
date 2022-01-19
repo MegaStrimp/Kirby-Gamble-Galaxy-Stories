@@ -29,7 +29,7 @@ if ((fallHop) and (sprite_index == sprRoll)) fallHop = false;
 
 if ((!float) and ((sprite_index == sprFloatReady) or (sprite_index == sprItemCarryLightFloatReady)))
 {
-	if (carriedItem == "none")
+	if (carriedItem == carriedItems.none)
 	{
 		sprite_index = sprFloat;
 	}
@@ -45,7 +45,7 @@ if ((!float) and ((sprite_index == sprFloatReady) or (sprite_index == sprItemCar
 
 if ((sprite_index == sprFlap) or (sprite_index == sprItemCarryLightFlap))
 {
-	if (carriedItem == "none")
+	if (carriedItem == carriedItems.none)
 	{
 		sprite_index = sprFloat;
 	}
@@ -446,6 +446,18 @@ if ((attack) and (sprite_index == sprWingAttack2Ready))
 	image_index = 0;
 	attackNumber = "wingDash";
 }
+
+//Sword Attack 1
+
+if (sprite_index == sprSwordAttack1)
+{
+	image_index = image_number - 1;
+	attackTimer = 0;
+}
+
+//Sword Attack 2
+
+if (sprite_index == sprSwordAttack2) image_index = image_number - 1;
 
 //Sleep Ready
 

@@ -2,20 +2,20 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
-  "origin": 0,
+  "origin": 9,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 34,
+  "bbox_right": 36,
   "bbox_top": 0,
-  "bbox_bottom": 34,
+  "bbox_bottom": 36,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 35,
-  "height": 35,
+  "width": 37,
+  "height": 37,
   "textureGroupId": {
     "name": "Menu",
     "path": "texturegroups/Menu",
@@ -27,9 +27,9 @@
     {"compositeImage":{"FrameId":{"name":"b9536f7c-df62-4d1e-819b-f5e7ae0b01c0","path":"sprites/spr_Menu_MainMenu_Button_SamuraiKirby/spr_Menu_MainMenu_Button_SamuraiKirby.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"b9536f7c-df62-4d1e-819b-f5e7ae0b01c0","path":"sprites/spr_Menu_MainMenu_Button_SamuraiKirby/spr_Menu_MainMenu_Button_SamuraiKirby.yy",},"LayerId":{"name":"80f25699-eb80-44c7-812a-f5f3cc42a53a","path":"sprites/spr_Menu_MainMenu_Button_SamuraiKirby/spr_Menu_MainMenu_Button_SamuraiKirby.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_Menu_MainMenu_Button_SamuraiKirby","path":"sprites/spr_Menu_MainMenu_Button_SamuraiKirby/spr_Menu_MainMenu_Button_SamuraiKirby.yy",},"resourceVersion":"1.0","name":"b9536f7c-df62-4d1e-819b-f5e7ae0b01c0","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"00961c00-6668-46de-8482-2a026fe65e73","path":"sprites/spr_Menu_MainMenu_Button_SamuraiKirby/spr_Menu_MainMenu_Button_SamuraiKirby.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"00961c00-6668-46de-8482-2a026fe65e73","path":"sprites/spr_Menu_MainMenu_Button_SamuraiKirby/spr_Menu_MainMenu_Button_SamuraiKirby.yy",},"LayerId":{"name":"80f25699-eb80-44c7-812a-f5f3cc42a53a","path":"sprites/spr_Menu_MainMenu_Button_SamuraiKirby/spr_Menu_MainMenu_Button_SamuraiKirby.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Menu_MainMenu_Button_SamuraiKirby","path":"sprites/spr_Menu_MainMenu_Button_SamuraiKirby/spr_Menu_MainMenu_Button_SamuraiKirby.yy",},"resourceVersion":"1.0","name":"00961c00-6668-46de-8482-2a026fe65e73","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"be3f8d31-6297-4903-8689-03b439e7dcd4","path":"sprites/spr_Menu_MainMenu_Button_SamuraiKirby/spr_Menu_MainMenu_Button_SamuraiKirby.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"be3f8d31-6297-4903-8689-03b439e7dcd4","path":"sprites/spr_Menu_MainMenu_Button_SamuraiKirby/spr_Menu_MainMenu_Button_SamuraiKirby.yy",},"LayerId":{"name":"80f25699-eb80-44c7-812a-f5f3cc42a53a","path":"sprites/spr_Menu_MainMenu_Button_SamuraiKirby/spr_Menu_MainMenu_Button_SamuraiKirby.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Menu_MainMenu_Button_SamuraiKirby","path":"sprites/spr_Menu_MainMenu_Button_SamuraiKirby/spr_Menu_MainMenu_Button_SamuraiKirby.yy",},"resourceVersion":"1.0","name":"be3f8d31-6297-4903-8689-03b439e7dcd4","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_Menu_MainMenu_Button_SamuraiKirby","path":"sprites/spr_Menu_MainMenu_Button_SamuraiKirby/spr_Menu_MainMenu_Button_SamuraiKirby.yy",},
@@ -45,7 +45,7 @@
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"49f88d84-8e52-4e0f-8026-7fe3f583b56b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b9536f7c-df62-4d1e-819b-f5e7ae0b01c0","path":"sprites/spr_Menu_MainMenu_Button_SamuraiKirby/spr_Menu_MainMenu_Button_SamuraiKirby.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"2e281b15-a2b5-4eef-a62e-d50e7a06347a","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"00961c00-6668-46de-8482-2a026fe65e73","path":"sprites/spr_Menu_MainMenu_Button_SamuraiKirby/spr_Menu_MainMenu_Button_SamuraiKirby.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"da97f4a0-89ae-47d6-ae17-cf66074501fa","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"be3f8d31-6297-4903-8689-03b439e7dcd4","path":"sprites/spr_Menu_MainMenu_Button_SamuraiKirby/spr_Menu_MainMenu_Button_SamuraiKirby.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,8 +58,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 0,
-    "yorigin": 0,
+    "xorigin": 1,
+    "yorigin": 1,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_MainMenu_Button_SamuraiKirby","path":"sprites/spr_Menu_MainMenu_Button_SamuraiKirby/spr_Menu_MainMenu_Button_SamuraiKirby.yy",},

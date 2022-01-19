@@ -52,6 +52,17 @@ else if (spawnTimer == 0)
 		spawnedEnemy.sprHurtGround = spr_BrontoBurt_Normal_HurtGround;
 		spawnedEnemy.sprHurtFly = spr_BrontoBurt_Normal_HurtFly;
 		break;
+		
+		//Alien
+		
+		case 1:
+		spawnedEnemy.sprIdle = spr_BrontoBurt_Alien_Idle;
+		spawnedEnemy.sprReady = spr_BrontoBurt_Alien_Ready;
+		spawnedEnemy.sprWalk = spr_BrontoBurt_Alien_Walk;
+		spawnedEnemy.sprFly = spr_BrontoBurt_Alien_Fly;
+		spawnedEnemy.sprHurtGround = spr_BrontoBurt_Alien_HurtGround;
+		spawnedEnemy.sprHurtFly = spr_BrontoBurt_Alien_HurtFly;
+		break;
 	}
 	spawnedEnemy.sprHurt = spawnedEnemy.sprHurtGround;
 	spawnedEnemy.state = state;

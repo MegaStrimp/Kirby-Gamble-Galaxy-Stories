@@ -1352,7 +1352,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		//Waddle Dee
 	
 		case 27:
-		debugSpriteSelectedMax = 2;
+		debugSpriteSelectedMax = 3;
 		switch (debugSpriteSelected)
 		{
 			//Normal
@@ -1553,6 +1553,31 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 				break;
 			}
 			break;
+		
+			//Alien
+		
+			case 3:
+			var sprIdle = spr_WaddleDee_Alien_Idle;
+			var sprWalk = spr_WaddleDee_Alien_Walk;
+			var sprDuck = spr_WaddleDee_Alien_Duck;
+			var sprJump = spr_WaddleDee_Alien_Jump;
+			var sprFall = spr_WaddleDee_Alien_Fall;
+			var sprSwing = spr_WaddleDee_Alien_Swing;
+			var sprClimbUp = spr_WaddleDee_Alien_ClimbUp;
+			var sprClimbDown = spr_WaddleDee_Alien_ClimbDown;
+			var sprHurt = spr_WaddleDee_Alien_Hurt;
+			debugPaletteNumberMax = 0;
+			switch (debugPaletteNumber)
+			{
+				case 0:
+				debugPaletteIndex = spr_WaddleDee_Alien_Palette_Graylien;
+				break;
+			
+				default:
+				debugPaletteIndex = spr_WaddleDee_Alien_Palette_Graylien;
+				break;
+			}
+			break;
 		}
 		debugSprite = sprIdle;
 		debugIndex = 0;
@@ -1742,7 +1767,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		//Bronto Burt
 	
 		case 29:
-		debugSpriteSelectedMax = 0;
+		debugSpriteSelectedMax = 1;
 		switch (debugSpriteSelected)
 		{
 			//Normal
@@ -1799,6 +1824,28 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			
 				default:
 				debugPaletteIndex = spr_BrontoBurt_Normal_Palette_ClassicalFlight;
+				break;
+			}
+			break;
+			
+			//Alien
+		
+			case 1:
+			var sprIdle = spr_BrontoBurt_Alien_Idle;
+			var sprReady = spr_BrontoBurt_Alien_Ready;
+			var sprWalk = spr_BrontoBurt_Alien_Walk;
+			var sprFly = spr_BrontoBurt_Alien_Fly;
+			var sprHurtGround = spr_BrontoBurt_Alien_HurtGround;
+			var sprHurtFly = spr_BrontoBurt_Alien_HurtFly;
+			debugPaletteNumberMax = 0;
+			switch (debugPaletteNumber)
+			{
+				case 0:
+				debugPaletteIndex = spr_BrontoBurt_Alien_Palette_Graylien;
+				break;
+			
+				default:
+				debugPaletteIndex = spr_BrontoBurt_Alien_Palette_Graylien;
 				break;
 			}
 			break;

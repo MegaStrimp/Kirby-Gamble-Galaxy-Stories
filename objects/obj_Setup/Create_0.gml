@@ -164,6 +164,7 @@ enum playerStates
 	fireDash,
 	iceGrab,
 	wingDash,
+	swordDash,
     death
 }
 
@@ -260,6 +261,18 @@ enum damageTypes
 	ultraSword
 }
 
+enum carriedItems
+{
+	none,
+	bomb
+}
+
+enum carriedItemStates
+{
+	light,
+	heavy
+}
+
 //Global Variables
 
 global.selectedSave = "Save1.ini";
@@ -301,6 +314,7 @@ global.helperHud = false;
 global.isHub = false;
 global.halberdEscape = false;
 global.treasureGot = false;
+global.isMobile = false;
 
 global.discordDetailText = "Startup";
 global.discordStateText = "";

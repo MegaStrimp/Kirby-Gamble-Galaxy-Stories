@@ -15,6 +15,7 @@ decelMax = 8.25;
 //Sprites
 
 sprIdle = spr_Projectile_Cutter_Player;
+sprCharge = spr_Projectile_CutterCharge_Normal;
 
 //Other Variables
 
@@ -25,3 +26,10 @@ character = 0;
 //deathParticlesOnHit = true;
 deathParticlesOnHitNumber = 2;
 player = 0;
+angleSpd = 0;
+charge = false;
+
+//Timers
+
+trailTimer = 0;
+trailTimerMax = 10;

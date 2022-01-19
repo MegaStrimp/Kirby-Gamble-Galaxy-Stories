@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_CutterDrop_Mask",
-    "path": "sprites/spr_CutterDrop_Mask/spr_CutterDrop_Mask.yy",
+    "name": "spr_CutterDash_Mask",
+    "path": "sprites/spr_CutterDash_Mask/spr_CutterDash_Mask.yy",
   },
   "solid": false,
   "visible": false,

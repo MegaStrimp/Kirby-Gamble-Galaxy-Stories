@@ -90,6 +90,12 @@ function scr_Player_CancelAttack(argument0)
 			invincible = false;
 			state = playerStates.normal;
 		}
+		if (attackNumber == "swordDash")
+		{
+			if (audio_is_playing(slideSfx)) audio_stop_sound(slideSfx);
+	        if (instance_exists(swordDashMaskProj)) instance_destroy(swordDashMaskProj);
+			state = playerStates.normal;
+		}
 		if (attackNumber == "sleepNormal")
 		{
 			isSleeping = false;

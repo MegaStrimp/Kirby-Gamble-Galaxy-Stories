@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 79,
+  "bbox_right": 154,
   "bbox_top": 0,
-  "bbox_bottom": 79,
+  "bbox_bottom": 95,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 80,
-  "height": 80,
+  "width": 155,
+  "height": 96,
   "textureGroupId": {
     "name": "Menu",
     "path": "texturegroups/Menu",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"49a4dc35-785a-4196-8ace-32039c62f96c","path":"sprites/spr_Menu_Collection_Button_Bestiary/spr_Menu_Collection_Button_Bestiary.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"49a4dc35-785a-4196-8ace-32039c62f96c","path":"sprites/spr_Menu_Collection_Button_Bestiary/spr_Menu_Collection_Button_Bestiary.yy",},"LayerId":{"name":"132bb9fa-695b-4858-90fa-dba9381b6905","path":"sprites/spr_Menu_Collection_Button_Bestiary/spr_Menu_Collection_Button_Bestiary.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Menu_Collection_Button_Bestiary","path":"sprites/spr_Menu_Collection_Button_Bestiary/spr_Menu_Collection_Button_Bestiary.yy",},"resourceVersion":"1.0","name":"49a4dc35-785a-4196-8ace-32039c62f96c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4aa5b622-1642-4c4e-aa55-2a83a4ef75e6","path":"sprites/spr_Menu_Collection_Button_Bestiary/spr_Menu_Collection_Button_Bestiary.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4aa5b622-1642-4c4e-aa55-2a83a4ef75e6","path":"sprites/spr_Menu_Collection_Button_Bestiary/spr_Menu_Collection_Button_Bestiary.yy",},"LayerId":{"name":"132bb9fa-695b-4858-90fa-dba9381b6905","path":"sprites/spr_Menu_Collection_Button_Bestiary/spr_Menu_Collection_Button_Bestiary.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Menu_Collection_Button_Bestiary","path":"sprites/spr_Menu_Collection_Button_Bestiary/spr_Menu_Collection_Button_Bestiary.yy",},"resourceVersion":"1.0","name":"4aa5b622-1642-4c4e-aa55-2a83a4ef75e6","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"50a400c7-11a2-45f8-940a-acb21115d04d","path":"sprites/spr_Menu_Collection_Button_Bestiary/spr_Menu_Collection_Button_Bestiary.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"50a400c7-11a2-45f8-940a-acb21115d04d","path":"sprites/spr_Menu_Collection_Button_Bestiary/spr_Menu_Collection_Button_Bestiary.yy",},"LayerId":{"name":"e572ecc1-1032-4db1-ab7a-6f4fd22c29bf","path":"sprites/spr_Menu_Collection_Button_Bestiary/spr_Menu_Collection_Button_Bestiary.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Menu_Collection_Button_Bestiary","path":"sprites/spr_Menu_Collection_Button_Bestiary/spr_Menu_Collection_Button_Bestiary.yy",},"resourceVersion":"1.0","name":"50a400c7-11a2-45f8-940a-acb21115d04d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"09b354eb-ef59-4aaf-b72a-7933c6d3c3e2","path":"sprites/spr_Menu_Collection_Button_Bestiary/spr_Menu_Collection_Button_Bestiary.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"09b354eb-ef59-4aaf-b72a-7933c6d3c3e2","path":"sprites/spr_Menu_Collection_Button_Bestiary/spr_Menu_Collection_Button_Bestiary.yy",},"LayerId":{"name":"e572ecc1-1032-4db1-ab7a-6f4fd22c29bf","path":"sprites/spr_Menu_Collection_Button_Bestiary/spr_Menu_Collection_Button_Bestiary.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Menu_Collection_Button_Bestiary","path":"sprites/spr_Menu_Collection_Button_Bestiary/spr_Menu_Collection_Button_Bestiary.yy",},"resourceVersion":"1.0","name":"09b354eb-ef59-4aaf-b72a-7933c6d3c3e2","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_Menu_Collection_Button_Bestiary","path":"sprites/spr_Menu_Collection_Button_Bestiary/spr_Menu_Collection_Button_Bestiary.yy",},
@@ -44,12 +44,12 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"3a097775-24b2-4182-ac2f-29b77ab76a77","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"49a4dc35-785a-4196-8ace-32039c62f96c","path":"sprites/spr_Menu_Collection_Button_Bestiary/spr_Menu_Collection_Button_Bestiary.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"c7a46538-ed6a-408f-985b-77ec9df00527","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4aa5b622-1642-4c4e-aa55-2a83a4ef75e6","path":"sprites/spr_Menu_Collection_Button_Bestiary/spr_Menu_Collection_Button_Bestiary.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"198614f8-43a7-49a6-991a-62e63ed86aef","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"50a400c7-11a2-45f8-940a-acb21115d04d","path":"sprites/spr_Menu_Collection_Button_Bestiary/spr_Menu_Collection_Button_Bestiary.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"81b7fabb-ddd9-4d15-af64-dbb2aa60c493","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"09b354eb-ef59-4aaf-b72a-7933c6d3c3e2","path":"sprites/spr_Menu_Collection_Button_Bestiary/spr_Menu_Collection_Button_Bestiary.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
-    "lockOrigin": true,
+    "lockOrigin": false,
     "showBackdrop": true,
     "showBackdropImage": false,
     "backdropImagePath": "",
@@ -69,7 +69,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"132bb9fa-695b-4858-90fa-dba9381b6905","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e572ecc1-1032-4db1-ab7a-6f4fd22c29bf","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

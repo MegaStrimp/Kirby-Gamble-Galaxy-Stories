@@ -48,6 +48,20 @@ if (setupTimer == 0)
 		sprHurt = spr_WaddleDee_Gold_Hurt;
 		shineEffectTimer = shineEffectTimerMax;
 		break;
+		
+		//Alien
+		
+		case 3:
+		sprIdle = spr_WaddleDee_Alien_Idle;
+		sprWalk = spr_WaddleDee_Alien_Walk;
+		sprDuck = spr_WaddleDee_Alien_Duck;
+		sprJump = spr_WaddleDee_Alien_Jump;
+		sprFall = spr_WaddleDee_Alien_Fall;
+		sprSwing = spr_WaddleDee_Alien_Swing;
+		sprClimbUp = spr_WaddleDee_Alien_ClimbUp;
+		sprClimbDown = spr_WaddleDee_Alien_ClimbDown;
+		sprHurt = spr_WaddleDee_Alien_Hurt;
+		break;
 	}
 }
 

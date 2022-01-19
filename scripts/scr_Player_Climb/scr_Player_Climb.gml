@@ -57,7 +57,7 @@ function scr_Player_Climb()
 		
 		if ((!global.cutscene) and (keyJumpPressed) and (!place_meeting(x,y,obj_Wall)))
 		{
-			if (carriedItem == "none") fallRoll = true;
+			if (carriedItem == carriedItems.none) fallRoll = true;
 		    vsp = -jumpspeed;
 		    audio_play_sound(snd_Jump,0,false);
 		    state = playerStates.normal;

@@ -88,7 +88,7 @@ var equipmentDir = image_xscale;
 if (playerAbility == playerAbilities.ufo) equipmentDir = abs(image_xscale);
 if (equipmentIndex != -1) draw_sprite_ext(equipmentIndex,image_index,x + drawShakeX,y + drawShakeY,equipmentDir * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle,image_blend,image_alpha);
 
-if (carriedItem != "none")
+if (carriedItem != carriedItems.none)
 {
 	var handIndex = scr_Player_Hand(playerCharacter);
 	if ((global.shaders) and (((sprite_index != sprStoneAttack1Common) and (sprite_index != sprStoneAttack1Uncommon) and (sprite_index != sprStoneAttack1Rare)) or (sprite_index = (sprStoneAttack1Common) and (image_index = 0)))) pal_swap_set(paletteIndex,paletteFlash,false);
@@ -133,7 +133,7 @@ if ((playerAbility == playerAbilities.mirror) and (mirrorShieldHp <= 0))
 
 //Bomb Crosshair
 
-if ((attackNumber == "bombNormal") and (carriedItem != "none"))
+if ((attackNumber == "bombNormal") and (carriedItem != carriedItems.none))
 {
 	var bdir = (270 + (90 * dir)) + (bombDir * dir);
 	if (bdir >= 360) bdir -= 360;

@@ -261,7 +261,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 			{
 				if (!enemy)
 				{
-					owner.carriedItem = "none";
+					owner.carriedItem = carriedItems.none;
 					owner.carriedItemIndex = -1;
 					owner.carriedItemState = "none";
 					obj.enemy = true;

@@ -82,7 +82,7 @@ function scr_Enemy_HurtsPlayer()
 						if ((!isBubble) and (owner.player == other.player)) destroy = true;
 					}
 				}
-				if ((collidedPlayer.state == playerStates.cutterDash) or (collidedPlayer.state == playerStates.mirrorDash) or (collidedPlayer.state == playerStates.fireDash) or (collidedPlayer.state == playerStates.wingDash)) collidedPlayer.state = playerStates.normal;
+				if ((collidedPlayer.state == playerStates.cutterDash) or (collidedPlayer.state == playerStates.mirrorDash) or (collidedPlayer.state == playerStates.fireDash) or (collidedPlayer.state == playerStates.wingDash) or (collidedPlayer.state == playerStates.swordDash)) collidedPlayer.state = playerStates.normal;
 				var abilityDropStar = instance_create_depth(round(x),round(y - 6),depth + 1,obj_AbilityDropStar);
 				abilityDropStar.owner = collidedPlayer;
 				abilityDropStar.vsp = -abilityDropStar.jumpspeed;

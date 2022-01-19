@@ -42,7 +42,7 @@ function scr_Player_Slide()
 		
 			switch (carriedItem)
 			{
-				case "bomb":
+				case carriedItems.bomb:
 				if (!global.cutscene)
 				{
 					if ((!hurt) and (!attack) and (keyAttackPressed))
@@ -82,7 +82,7 @@ function scr_Player_Slide()
 							carriedItemIndex.x = grabObj.x;
 							carriedItemIndex.y = grabObj.y - sprite_get_height(grabObj.sprite_index) + 6;
 							carriedItemIndex.explodeTimer = 30;
-							carriedItem = "none";
+							carriedItem = carriedItems.none;
 							carriedItemIndex = -1;
 							carriedItemState = "none";
 							attackTimer = 10;
@@ -100,7 +100,7 @@ function scr_Player_Slide()
 					{
 						carriedItemIndex.active = true;
 						carriedItemIndex.explodeTimer = 25;
-						carriedItem = "none";
+						carriedItem = carriedItems.none;
 						carriedItemIndex = -1;
 						carriedItemState = "none";
 						bombDownReady = false;
@@ -197,8 +197,8 @@ function scr_Player_Slide()
 								attackable = false;
 					            attackTimer = 45;
 								bombDownReady = true;
-								carriedItem = "bomb";
-								carriedItemState = "heavy";
+								carriedItem = carriedItems.bomb;
+								carriedItemState = carriedItemStates.heavy;
 								carriedItemIndex = instance_create_depth(x,y - 8,depth - 1,obj_Projectile_Bomb);
 								carriedItemIndex.owner = id;
 								carriedItemIndex.player = player;
@@ -373,14 +373,14 @@ function scr_Player_Slide()
 						}
 					}
 					
-					if (carriedItem != "none")
+					if (carriedItem != carriedItems.none)
 					{
-						if (carriedItemState == "light")
+						if (carriedItemState == carriedItemStates.light)
 						{
 							ducksprite = sprItemCarryLightDuck;
 							duckblinksprite = sprItemCarryLightDuck;
 						}
-						else if (carriedItemState == "heavy")
+						else if (carriedItemState == carriedItemStates.heavy)
 						{
 							ducksprite = sprItemCarryHeavyDuck;
 							duckblinksprite = sprItemCarryHeavyDuck;
@@ -437,7 +437,7 @@ function scr_Player_Slide()
 				scaleExY = (-.15 / duckJumpChargeMax) * duckJumpCharge;
 			}
 			
-		    if ((!global.cutscene) and (carriedItemState != "heavy") and (canSlide) and (!duckSlide) and (!attack) and (place_meeting(x,y + 1,obj_Wall)) and (keyJumpPressed))
+		    if ((!global.cutscene) and (carriedItemState != carriedItemStates.heavy) and (canSlide) and (!duckSlide) and (!attack) and (place_meeting(x,y + 1,obj_Wall)) and (keyJumpPressed))
 		    {
 				if (audio_is_playing(snd_Slide)) audio_stop_sound(snd_Slide);
 				slideSfx = audio_play_sound(snd_Slide,0,false);

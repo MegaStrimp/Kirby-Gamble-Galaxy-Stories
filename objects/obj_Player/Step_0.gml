@@ -427,6 +427,12 @@ switch (state)
 	scr_Player_WingDash();
 	break;
 	
+	//Sword Dash
+	
+    case (playerStates.swordDash):
+	scr_Player_SwordDash();
+	break;
+	
 	//Death
 	
     case (playerStates.death):
@@ -1664,6 +1670,7 @@ else if (characterSetupTimer == 0)
 		accelFloat = .1;
 		decel = .075;
 		decelSlide = .125;
+		decelSwordDash = .1;
 		decelFloat = .025;
 		climbSpeed = 2.5;
 		
@@ -1854,6 +1861,8 @@ else if (characterSetupTimer == 0)
 		sprWingAttack1 = spr_Kirby_Normal_Wing_Attack1;
 		sprWingAttack2Ready = spr_Kirby_Normal_Wing_Attack2Ready;
 		sprWingAttack2 = spr_Kirby_Normal_Wing_Attack2;
+		sprSwordAttack1 = spr_Kirby_Normal_Sword_Attack1;
+		sprSwordAttack2 = spr_Kirby_Normal_Sword_Attack2;
 		sprSleepReady = spr_Kirby_Normal_SleepReady;
 		sprSleep = spr_Kirby_Normal_Sleep;
 		sprSleepEnd = spr_Kirby_Normal_SleepEnd;
@@ -1899,6 +1908,7 @@ else if (characterSetupTimer == 0)
 		accelFloat = .1;
 		decel = .075;
 		decelSlide = .125;
+		decelSwordDash = .1;
 		decelFloat = .025;
 		climbSpeed = 2;
 		
@@ -2137,6 +2147,30 @@ else if (characterSetupTimer == 0)
 			sprDeath = spr_WaddleDee_Gold_Hurt;
 			#endregion
 			break;
+			
+			case "alien":
+			#region Palettes
+			var pal;
+			var i = 0;
+			pal[i] = spr_WaddleDee_Alien_Palette_Graylien;
+			#endregion
+			
+			#region Sprites
+			maskIndex = spr_16Square_Mask;
+			sprIdle = spr_WaddleDee_Alien_Idle;
+			sprWalk = spr_WaddleDee_Alien_Walk;
+			sprRun = spr_WaddleDee_Alien_Walk;
+			sprJump = spr_WaddleDee_Alien_Jump;
+			sprFall = spr_WaddleDee_Alien_Fall;
+			sprSquish = spr_WaddleDee_Alien_Idle;
+			sprDuck = spr_WaddleDee_Alien_Duck;
+			sprEnter = spr_WaddleDee_Alien_Walk;
+			sprClimbUp = spr_WaddleDee_Alien_ClimbUp;
+			sprClimbDown = spr_WaddleDee_Alien_ClimbDown;
+			sprHurt = spr_WaddleDee_Alien_Hurt;
+			sprDeath = spr_WaddleDee_Alien_Hurt;
+			#endregion
+			break;
 		}
 		
 		if (player == 0)
@@ -2359,6 +2393,28 @@ else if (characterSetupTimer == 0)
 			sprEnter = spr_BrontoBurt_Normal_Ready;
 			sprHurt = spr_BrontoBurt_Normal_HurtGround;
 			sprDeath = spr_BrontoBurt_Normal_HurtFly;
+			#endregion
+			break;
+			
+			case "alien":
+			#region Palettes
+			var pal;
+			var i = 0;
+			pal[i] = spr_BrontoBurt_Alien_Palette_Graylien;
+			#endregion
+			
+			#region Sprites
+			maskIndex = spr_16Square_Mask;
+			sprIdle = spr_BrontoBurt_Alien_Idle;
+			sprWalk = spr_BrontoBurt_Alien_Walk;
+			sprRun = spr_BrontoBurt_Alien_Walk;
+			sprJump = spr_BrontoBurt_Alien_Fly;
+			sprFall = spr_BrontoBurt_Alien_Fly;
+			sprSquish = spr_BrontoBurt_Alien_Ready;
+			sprDuck = spr_BrontoBurt_Alien_Ready;
+			sprEnter = spr_BrontoBurt_Alien_Ready;
+			sprHurt = spr_BrontoBurt_Alien_HurtGround;
+			sprDeath = spr_BrontoBurt_Alien_HurtFly;
 			#endregion
 			break;
 		}
