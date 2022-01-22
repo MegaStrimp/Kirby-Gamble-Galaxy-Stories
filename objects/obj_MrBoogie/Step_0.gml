@@ -272,7 +272,7 @@ if (!global.pause)
 		walkDuckTimer = walkDuckTimerMax;
 		scaleExX = .25;
 		scaleExY = -.25;
-		audio_play_sound(snd_Squish,0,false);
+		audio_play_sound(snd_SquishLow,0,false);
 		var parDirection = irandom_range(0,359);
 		var parScaleDir = 1;
 		if ((parDirection > 90) and (parDirection <= 270))

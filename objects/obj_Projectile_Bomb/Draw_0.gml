@@ -13,7 +13,7 @@ if (hasParticle)
 	{
 		parSpr = spr_Particle_Bomb2;
 	}
-	else if (sprite_index == spr_Projectile_Bomb_Fetus)
+	if (sprite_index == spr_Projectile_Bomb_Fetus)
 	{
 		parSpr = spr_Particle_Bomb3;
 	}

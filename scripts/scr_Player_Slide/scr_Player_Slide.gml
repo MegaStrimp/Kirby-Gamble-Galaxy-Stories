@@ -104,6 +104,7 @@ function scr_Player_Slide()
 						carriedItemIndex = -1;
 						carriedItemState = "none";
 						bombDownReady = false;
+						canGrabTimer = 15;
 						attackTimer = 20;
 					}
 				}

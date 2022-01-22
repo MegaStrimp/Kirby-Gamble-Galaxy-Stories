@@ -6,6 +6,29 @@ if ((!instance_exists(owner)) or (((owner.player == 0) and (global.characterP1 =
 
 if (!global.pause)
 {
+	//Setup Timer
+	
+	if (setupTimer > 0)
+	{
+		setupTimer -= 1;
+	}
+	else if (setupTimer == 0)
+	{
+		switch (character)
+		{
+			case "Happy Pea":
+			attackTimerMax = 45;
+			attackTimer = attackTimerMax;
+			break;
+			
+			case "Epic Jar":
+			attackTimerMax = 120;
+			attackTimer = attackTimerMax;
+			break;
+		}
+		setupTimer = -1;
+	}
+	
 	//Movement
 
 	vsp += (accel * walkDirY);
@@ -203,9 +226,11 @@ if (!global.pause)
 					attackTarget = -1;
 					with (obj_Enemy)
 					{
-						if (distance_to_object(other.owner) <= 240)
+						var root = power(other.throwSpeed,4) - (.2 * (.2 * ((-(other.x - x)) * (-(other.x - x))) + 2 * (other.y - y) * (other.throwSpeed * other.throwSpeed)));
+						if (root > 0)
 						{
 							other.attackTarget = id;
+							other.angle = darctan2(((other.throwSpeed * other.throwSpeed) + sqrt(root)),.2 * (-(other.x - x)));
 							if (other.x < x)
 							{
 								other.dir = 1;
@@ -235,12 +260,12 @@ if (!global.pause)
 					sprite_index = spr_Familiar_EpicJar_Fetus_Attack;
 					image_index = 0;
 					var projectile = instance_create_depth(x,y - 10 - attackYOffset,depth + 1,obj_Projectile_Bomb);
-					projectile.owner = id;
+					projectile.owner = id;	
 					projectile.character = 3;
 					projectile.objectOnHitDmg = 26;
 					projectile.dirX = dir;
-					projectile.hsp = 2.5 * dir;
-					projectile.vsp = -4.5;
+					projectile.hsp = lengthdir_x(throwSpeed,angle);
+					projectile.vsp = lengthdir_y(throwSpeed,angle);
 					projectile.image_xscale = projectile.dirX;
 					projectile.enemy = false;
 					projectile.angleSpd = projectile.hsp * 4;

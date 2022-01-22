@@ -401,7 +401,7 @@ function scr_Player_Carry()
 			image_index = 0;
 			walkDuck = true;
 			walkDuckTimer = walkDuckTimerMax;
-			audio_play_sound(snd_Squish,0,false);
+			audio_play_sound(snd_SquishLow,0,false);
 			var parDirection = irandom_range(0,359);
 			var parScaleDir = 1;
 			if ((parDirection > 90) and (parDirection <= 270))

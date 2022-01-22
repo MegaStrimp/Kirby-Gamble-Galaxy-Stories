@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_Squish.mp3",
-  "duration": 0.168,
+  "soundFile": "snd_SquishLow.wav",
+  "duration": 0.516646,
   "parent": {
     "name": "Player",
     "path": "folders/Sounds/Sound Effects/Player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "snd_Squish",
+  "name": "snd_SquishLow",
   "tags": [],
   "resourceType": "GMSound",
 }

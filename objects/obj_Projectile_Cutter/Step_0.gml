@@ -104,7 +104,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	else if (trailTimer == 0)
 	{
 		var afterimage = instance_create_depth(x,y,depth,obj_Afterimage);
-		afterimage.sprite_index = sprite_index;
+		afterimage.sprite_index = spr_Particle_Cutter;
 		afterimage.hsp = hsp / 4;
 		afterimage.vsp = vsp / 4;
 		afterimage.image_xscale = image_xscale;

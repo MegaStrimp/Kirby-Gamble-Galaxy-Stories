@@ -1553,6 +1553,18 @@ if (!global.pause)
 	{
 		helperTimer = -1;
 	}
+	
+	//Can Grab Timer
+	
+	if (canGrabTimer > 0)
+	{
+		canGrabTimer -= 1;
+	}
+	else if (canGrabTimer == 0)
+	{
+		canGrab = true;
+		canGrabTimer = -1;
+	}
 }
 else
 {

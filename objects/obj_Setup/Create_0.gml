@@ -264,7 +264,8 @@ enum damageTypes
 enum carriedItems
 {
 	none,
-	bomb
+	bomb,
+	key
 }
 
 enum carriedItemStates

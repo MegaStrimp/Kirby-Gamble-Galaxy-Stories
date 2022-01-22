@@ -71,48 +71,8 @@ if ((!active) and (((pausable) and (!global.pause)) or (!pausable)))
 			dirX = owner.dir;
 		}
 		
-		switch (owner.sprite_index)
-		{
-			case spr_Kirby_Normal_ItemCarry_Heavy_Idle:
-			xOffset = -4 * dirX;
-			yOffset = -22;
-			break;
-			
-			case spr_Kirby_Normal_ItemCarry_Heavy_Walk:
-			xOffset = -4 * dirX;
-			yOffset = -22;
-			break;
-			
-			case spr_Kirby_Normal_ItemCarry_Heavy_Duck:
-			xOffset = 1 * dirX;
-			yOffset = -13;
-			break;
-			
-			case spr_Kirby_Normal_Bomb_Ready:
-			switch (floor(owner.image_index))
-			{
-				case 0:
-				xOffset = 16 * dirX;
-				yOffset = -4;
-				break;
-				
-				case 1:
-				xOffset = 10 * dirX;
-				yOffset = -17;
-				break;
-				
-				case 2:
-				xOffset = 4 * dirX;
-				yOffset = -20;
-				break;
-			}
-			break;
-			
-			case spr_Kirby_Normal_Bomb_Attack1:
-			xOffset = -4 * dirX;
-			yOffset = -22;
-			break;
-		}
+		scr_Player_ItemCarryOffset(owner.sprite_index,owner.image_index);
+		
 		x = owner.x + xOffset;
 		y = owner.y + yOffset;
 	}

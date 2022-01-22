@@ -372,6 +372,7 @@ function scr_Player_Normal()
 						carriedItemIndex = -1;
 						carriedItemState = "none";
 						bombDir = 0;
+						canGrabTimer = 15;
 						attackTimer = 20;
 					}
 					else
@@ -403,7 +404,63 @@ function scr_Player_Normal()
 					carriedItemIndex = -1;
 					carriedItemState = "none";
 					bombDir = 0;
+					canGrabTimer = 15;
 					attackTimer = 60;
+				}
+			}
+			break;
+			
+			case carriedItems.key:
+			if (!global.cutscene)
+			{
+				if ((!hurt) and (!attack) and (keyAttackPressed))
+				{
+					if (!attack)
+					{
+						attack = true;
+						attackNumber = "keyNormal";
+						sprite_index = sprItemCarryHeavyIdle;
+					}
+				}
+				else if (hurt)
+				{
+					carriedItemIndex.active = true;
+					carriedItem = carriedItems.none;
+					carriedItemIndex = -1;
+					carriedItemState = "none";
+				}
+				
+				if (attackNumber == "keyNormal")
+				{
+					if ((!keyAttackHold) or (hurt))
+					{
+						if (audio_is_playing(snd_BombThrow)) audio_stop_sound(snd_BombThrow);
+						audio_play_sound(snd_BombThrow,0,false);
+						var bdir = (270 + (90 * dir)) + (bombDir * dir);
+						if (bdir >= 360) bdir -= 360;
+						if (bdir < 0) bdir += 360;
+						carriedItemIndex.active = true;
+						carriedItemIndex.hsp = lengthdir_x(4,bdir);
+						carriedItemIndex.vsp = lengthdir_y(4,bdir);
+						carriedItem = carriedItems.none;
+						carriedItemIndex = -1;
+						carriedItemState = "none";
+						bombDir = 0;
+						canGrabTimer = 15;
+						attackTimer = 20;
+					}
+					else
+					{
+						if (bombDir < bombDirMax) bombDir += 2;
+						if (bombDir >= (bombDirMax / 2))
+						{
+							image_index = 1;
+						}
+						else
+						{
+							image_index = 0;
+						}
+					}
 				}
 			}
 			break;
@@ -577,8 +634,8 @@ function scr_Player_Normal()
 						{
 							if ((round(image_index) == (image_number - 1)) and (attackable))
 							{
-								if (audio_is_playing(snd_Cutter)) audio_stop_sound(snd_Cutter);
-								audio_play_sound(snd_Cutter,0,false);
+								if (audio_is_playing(snd_CutterCharge)) audio_stop_sound(snd_CutterCharge);
+								audio_play_sound(snd_CutterCharge,0,false);
 						        var projectile = instance_create_depth(x,y - 8,depth,obj_Projectile_Cutter);
 								projectile.owner = id;
 								projectile.paletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
@@ -3161,6 +3218,21 @@ function scr_Player_Normal()
 			enterDoor = false;
 		}
 		
+		//Grab Item
+		
+		if (canGrab)
+		{
+			if (place_meeting(x,y,obj_Key))
+			{
+				carriedItem = carriedItems.key;
+				carriedItemState = carriedItemStates.heavy;
+				carriedItemIndex = instance_place(x,y,obj_Key);
+				carriedItemIndex.active = false;
+				carriedItemIndex.owner = id;
+				canGrab = false;
+			}
+		}
+		
 		//Animation
 		
 		var heavyItemCarry = false;
@@ -3706,12 +3778,11 @@ function scr_Player_Normal()
 					break;
 				
 					default:
+					var squishSound = snd_SquishLow;
 					sprite_index = sprDuck;
 					image_index = 0;
 					walkDuck = true;
 					walkDuckTimer = walkDuckTimerMax;
-					if (audio_is_playing(snd_Squish)) audio_stop_sound(snd_Squish);
-					audio_play_sound(snd_Squish,0,false);
 					var parDirection = irandom_range(0,359);
 					var parScaleDir = 1;
 					if ((parDirection > 90) and (parDirection <= 270))
@@ -3727,12 +3798,15 @@ function scr_Player_Normal()
 					parSquish.dir = parScaleDir;
 					if (fallHopCounter >= fallHopCounterMax)
 					{
+						squishSound = snd_SquishLow;
 						scaleExX = .25;
 						scaleExY = -.25;
 						sprite_index = sprRollDuck;
 						walkDuckTimer = walkDuckTimerMax - 1;
 						fallHop = true;
 					}
+					if (audio_is_playing(squishSound)) audio_stop_sound(squishSound);
+					audio_play_sound(squishSound,0,false);
 					break;
 				}
 			}
@@ -3751,8 +3825,8 @@ function scr_Player_Normal()
 				walkSquish = true;
 				walkSquishTimer = walkSquishTimerMax;
 				dir = sign(hspFinal);
-				if (audio_is_playing(snd_Squish)) audio_stop_sound(snd_Squish);
-				audio_play_sound(snd_Squish,0,false);
+				if (audio_is_playing(snd_SquishLow)) audio_stop_sound(snd_SquishLow);
+				audio_play_sound(snd_SquishLow,0,false);
 				var parDirection = irandom_range(0,359);
 				var parScaleDir = 1;
 				if ((parDirection > 90) and (parDirection <= 270))

@@ -21,11 +21,12 @@ attack = false;
 attackState = 0;
 attackTarget = -1;
 attackYOffset = 0;
+throwSpeed = 4.5;
 
 //Timers
 
 shineTimerMax = 7;
 shineTimer = shineTimerMax;
-attackTimerMax = 45; //Peashooter
-attackTimerMax = 120; //Dr Fetus
+attackTimerMax = 45;
 attackTimer = attackTimerMax;
+setupTimer = 0;

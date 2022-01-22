@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_BossHealth",
-  "duration": 0.083367,
+  "soundFile": "snd_BossHealth.wav",
+  "duration": 0.09288,
   "parent": {
     "name": "Misc",
     "path": "folders/Sounds/Sound Effects/Misc.yy",

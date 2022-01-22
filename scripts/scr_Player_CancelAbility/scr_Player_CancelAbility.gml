@@ -26,6 +26,7 @@ function scr_Player_CancelAbility(argument0)
 		bombDir = 0;
 		bombDirMax = 60;
 		bombDownReady = false;
+		canGrabTimer = 15;
 		fireBackCharge = 0;
 		iceReady = true;
 		iceRelease = false;

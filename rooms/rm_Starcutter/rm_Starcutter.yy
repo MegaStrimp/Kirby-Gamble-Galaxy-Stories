@@ -15,6 +15,7 @@
   "layers": [
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_Player","path":"objects/obj_Player/obj_Player.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":396.0,"y":372.0,"resourceVersion":"1.0","name":"inst_3C2D1402","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"obj_Key","path":"objects/obj_Key/obj_Key.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":486.0,"y":360.0,"resourceVersion":"1.0","name":"inst_5DC4CADF","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":6,"gridY":6,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Player","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_PoppyBrosSr","path":"objects/obj_PoppyBrosSr/obj_PoppyBrosSr.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":288.0,"y":366.0,"resourceVersion":"1.0","name":"inst_DC4B6D8","tags":[],"resourceType":"GMRInstance",},
@@ -155,6 +156,7 @@
     {"name":"inst_15B1CB08","path":"rooms/rm_Starcutter/rm_Starcutter.yy",},
     {"name":"inst_F219596","path":"rooms/rm_Starcutter/rm_Starcutter.yy",},
     {"name":"inst_DC4B6D8","path":"rooms/rm_Starcutter/rm_Starcutter.yy",},
+    {"name":"inst_5DC4CADF","path":"rooms/rm_Starcutter/rm_Starcutter.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

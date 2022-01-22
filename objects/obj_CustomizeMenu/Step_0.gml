@@ -107,8 +107,16 @@ if (!global.pause)
 			skinsOffset = 1;
 			if ((keyJumpPressed) or (keyStartPressed))
 			{
-				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
-				audio_play_sound(snd_ButtonNo,0,false);
+				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+				audio_play_sound(snd_ButtonYes,0,false);
+				skinsOffsetLerp = 0;
+				sprayPaintsOffsetLerp = 0;
+				hatSkinsOffsetLerp = 0;
+				hatPaintsOffsetLerp = 0;
+				familiarsOffsetLerp = 0;
+				selection = 0;
+				textY = 147 - (selection * 36);
+				page = "sprayPaintOwner";
 			}
 			break;
 			
@@ -220,6 +228,87 @@ if (!global.pause)
 		break;
 		#endregion
 		
+		#region Skin Owner
+		case "skinOwner":
+		for (var i = 0; i < array_length(characterTitle); i++) characterOffset[i] = 0;
+		
+		if (selection < 0)
+		{
+			selection += array_length(characterTitle);
+			textY = 147 - ((selection - 2) * 36);
+		}
+		if (selection > array_length(characterTitle) - 1)
+		{
+			selection -= array_length(characterTitle);
+			textY = 147 - ((selection + 2) * 36);
+		}
+		
+		characterOffset[selection] = 1;
+		
+		if ((keyJumpPressed) or (keyStartPressed))
+		{
+			if (characterUnlocked[selection])
+			{
+				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+				audio_play_sound(snd_ButtonYes,0,false);
+				selectedOwner = characterTitle[selection];
+				
+				var playerPaint = global.skinKirbyP1;
+				if (selectedPlayer == 1) playerPaint = global.skinKirbyP2;
+				var characterSkinArray = skinKirby;
+				
+				switch (selectedOwner)
+				{
+					case "Kirby":
+					playerSkin = global.skinKirbyP1;
+					if (selectedPlayer == 1) playerSkin = global.skinKirbyP2;
+					var characterSkinArray = skinKirby;
+					break;
+					
+					case "Gamble":
+					playerSkin = global.skinGambleP1;
+					if (selectedPlayer == 1) playerSkin = global.skinGambleP2;
+					var characterSkinArray = skinGamble;
+					break;
+					
+					case "Gooey":
+					playerSkin = global.skinGooeyP1;
+					if (selectedPlayer == 1) playerSkin = global.skinGooeyP2;
+					var characterSkinArray = skinGooey;
+					break;
+				}
+				
+				for (var i = 0; i < array_length(characterSkinArray); i++) if (characterSkinArray[i] == playerSkin) selection = i;
+				textY = 147 - (selection * 36);
+				page = "skins";
+			}
+			else
+			{
+				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+				audio_play_sound(snd_ButtonNo,0,false);
+			}
+		}
+		
+		if (!instance_exists(obj_Fade))
+		{
+			if (keyAttackPressed)
+			{
+				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+				audio_play_sound(snd_ButtonNo,0,false);
+				goBack = true;
+			}
+		}
+		
+		if (goBack)
+		{
+			kirbyPaintOffsetLerp = 0;
+			selection = 1;
+			page = "main";
+			goBack = false;
+		}
+		break;
+		#endregion
+		
 		#region Spray Paint Owner
 		case "sprayPaintOwner":
 		for (var i = 0; i < array_length(characterTitle); i++) characterOffset[i] = 0;
@@ -247,26 +336,30 @@ if (!global.pause)
 				
 				var playerPaint = global.sprayPaintKirbyP1;
 				if (selectedPlayer == 1) playerPaint = global.sprayPaintKirbyP2;
+				var characterPaintArray = sprayPaintKirbyNormal;
 				
 				switch (selectedOwner)
 				{
 					case "Kirby":
 					playerPaint = global.sprayPaintKirbyP1;
 					if (selectedPlayer == 1) playerPaint = global.sprayPaintKirbyP2;
+					var characterPaintArray = sprayPaintKirbyNormal;
 					break;
 					
 					case "Gamble":
 					playerPaint = global.sprayPaintGambleP1;
 					if (selectedPlayer == 1) playerPaint = global.sprayPaintGambleP2;
+					var characterPaintArray = sprayPaintGambleNormal;
 					break;
 					
 					case "Gooey":
 					playerPaint = global.sprayPaintGooeyP1;
 					if (selectedPlayer == 1) playerPaint = global.sprayPaintGooeyP2;
+					var characterPaintArray = sprayPaintGooeyNormal;
 					break;
 				}
 				
-				for (var i = 0; i < array_length(sprayPaintKirbyNormal); i++) if (sprayPaintKirbyNormal[i] == playerPaint) selection = i;
+				for (var i = 0; i < array_length(characterPaintArray); i++) if (characterPaintArray[i] == playerPaint) selection = i;
 				textY = 147 - (selection * 36);
 				page = "sprayPaint";
 			}

@@ -76,6 +76,13 @@ function scr_LoadGame(argument0)
 	global.sparkBrightPluggUpgradeUnlocked = ini_read_real("unlocks","sparkBrightPluggUpgradeUnlocked",true);
 	global.waterEggSoilUpgradeUnlocked = ini_read_real("unlocks","waterEggSoilUpgradeUnlocked",true);
 	
+	global.skinKirbyP1 = ini_read_string("playerCustomization","skinKirbyP1","normal");
+	global.skinKirbyP2 = ini_read_string("playerCustomization","skinKirbyP2","normal");
+	global.skinGambleP1 = ini_read_string("playerCustomization","skinGambleP1","normal");
+	global.skinGambleP2 = ini_read_string("playerCustomization","skinGambleP2","normal");
+	global.skinGooeyP1 = ini_read_string("playerCustomization","skinGooeyP1","normal");
+	global.skinGooeyP2 = ini_read_string("playerCustomization","skinGooeyP2","normal");
+	
 	var sprayPaintKirbyP1 = ini_read_string("playerCustomization","sprayPaintKirbyP1","spr_Kirby_Normal_Palette_FriendlyPink");
 	global.sprayPaintKirbyP1 = asset_get_index(sprayPaintKirbyP1);
 	var sprayPaintKirbyP2 = ini_read_string("playerCustomization","sprayPaintKirbyP2","spr_Kirby_Normal_Palette_Yellow");

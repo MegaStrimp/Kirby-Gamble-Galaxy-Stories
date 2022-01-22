@@ -77,6 +77,13 @@ function scr_SaveGame(argument0)
 	ini_write_real("unlocks","sparkBrightPluggUpgradeUnlocked",global.sparkBrightPluggUpgradeUnlocked);
 	ini_write_real("unlocks","waterEggSoilUpgradeUnlocked",global.waterEggSoilUpgradeUnlocked);
 	
+	ini_write_string("playerCustomization","skinKirbyP1",global.skinKirbyP1);
+	ini_write_string("playerCustomization","skinKirbyP2",global.skinKirbyP2);
+	ini_write_string("playerCustomization","skinGambleP1",global.skinGambleP1);
+	ini_write_string("playerCustomization","skinGambleP2",global.skinGambleP2);
+	ini_write_string("playerCustomization","skinGooeyP1",global.skinGooeyP1);
+	ini_write_string("playerCustomization","skinGooeyP2",global.skinGooeyP2);
+	
 	ini_write_string("playerCustomization","sprayPaintKirbyP1",sprite_get_name(global.sprayPaintKirbyP1));
 	ini_write_string("playerCustomization","sprayPaintKirbyP2",sprite_get_name(global.sprayPaintKirbyP2));
 	ini_write_string("playerCustomization","sprayPaintGambleP1",sprite_get_name(global.sprayPaintGambleP1));

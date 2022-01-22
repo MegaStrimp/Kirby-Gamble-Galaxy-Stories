@@ -141,6 +141,16 @@ if ((attackNumber == "bombNormal") and (carriedItem != carriedItems.none))
 	draw_sprite(spr_Particle_Crosshair1,0, x + lengthdir_x(18,bdir),y + lengthdir_y(18,bdir));
 }
 
+//Key Crosshair
+
+if ((attackNumber == "keyNormal") and (carriedItem != carriedItems.none))
+{
+	var bdir = (270 + (90 * dir)) + (bombDir * dir);
+	if (bdir >= 360) bdir -= 360;
+	if (bdir < 0) bdir += 360;
+	draw_sprite_ext(spr_Particle_Crosshair2,0,x + (2 * dir),y,image_xscale,image_yscale,bombDir * dir,image_blend,image_alpha);
+}
+
 //Helper Bar
 
 if ((playerIsHelper) and (helperTimer != -1))

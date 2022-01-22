@@ -392,6 +392,7 @@ carriedItemState = "none";
 enterDoor = false;
 gooeyScaleDir = 1;
 gooeyScaleOffset = 0;
+canGrab = true;
 
 //Inputs
 
@@ -479,6 +480,7 @@ scanTimer = -1;
 scanTimerMax = 60;
 helperTimer = -1;
 helperTimerMax = 300;
+canGrabTimer = -1;
 deathTimer = -1;
 deathTimerMax = 60;
 deathParticleTimer = -1;
