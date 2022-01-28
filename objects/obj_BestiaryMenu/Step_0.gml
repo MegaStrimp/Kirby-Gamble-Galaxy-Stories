@@ -2,9 +2,16 @@
 
 if (!global.pause)
 {
+	//Variables
+	
 	//Inputs
 	
 	scr_Player_Inputs(0);
+	
+	//Star Animation
+	
+	starIndex += .2;
+	if (starIndex >= 4) starIndex -= 4;
 	
 	//Select
 	
@@ -22,8 +29,8 @@ if (!global.pause)
 		enemySelection -= 1;
 	}
 	
-	if (enemySelection < 0) enemySelection += 3;
-	if (enemySelection > 2) enemySelection -= 3;
+	if (enemySelection < 0) enemySelection += arrayLength + 1;
+	if (enemySelection > arrayLength) enemySelection -= arrayLength + 1;
 	
 	if (!instance_exists(obj_Fade))
 	{

@@ -124,16 +124,24 @@ if (!global.pause)
 			sprayPaintsOffset = 1;
 			if ((keyJumpPressed) or (keyStartPressed))
 			{
-				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
-				audio_play_sound(snd_ButtonYes,0,false);
-				skinsOffsetLerp = 0;
-				sprayPaintsOffsetLerp = 0;
-				hatSkinsOffsetLerp = 0;
-				hatPaintsOffsetLerp = 0;
-				familiarsOffsetLerp = 0;
-				selection = 0;
-				textY = 147 - (selection * 36);
-				page = "sprayPaintOwner";
+				if (global.shaders)
+				{
+					if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+					audio_play_sound(snd_ButtonYes,0,false);
+					skinsOffsetLerp = 0;
+					sprayPaintsOffsetLerp = 0;
+					hatSkinsOffsetLerp = 0;
+					hatPaintsOffsetLerp = 0;
+					familiarsOffsetLerp = 0;
+					selection = 0;
+					textY = 147 - (selection * 36);
+					page = "sprayPaintOwner";
+				}
+				else
+				{
+					if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+					audio_play_sound(snd_ButtonNo,0,false);
+				}
 			}
 			break;
 			
@@ -159,22 +167,25 @@ if (!global.pause)
 			hatPaintsOffset = 1;
 			if ((keyJumpPressed) or (keyStartPressed))
 			{
-				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
-				audio_play_sound(snd_ButtonNo,0,false);
-			}
-			if ((keyJumpPressed) or (keyStartPressed))
-			{
-				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
-				audio_play_sound(snd_ButtonYes,0,false);
-				skinsOffsetLerp = 0;
-				sprayPaintsOffsetLerp = 0;
-				hatSkinsOffsetLerp = 0;
-				hatPaintsOffsetLerp = 0;
-				familiarsOffsetLerp = 0;
-				selection = 0;
-				textY = 147 - (selection * 36);
-				page = "abilityHat";
-				subPage = "hatPaint";
+				if (global.shaders)
+				{
+					if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+					audio_play_sound(snd_ButtonYes,0,false);
+					skinsOffsetLerp = 0;
+					sprayPaintsOffsetLerp = 0;
+					hatSkinsOffsetLerp = 0;
+					hatPaintsOffsetLerp = 0;
+					familiarsOffsetLerp = 0;
+					selection = 0;
+					textY = 147 - (selection * 36);
+					page = "abilityHat";
+					subPage = "hatPaint";
+				}
+				else
+				{
+					if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+					audio_play_sound(snd_ButtonNo,0,false);
+				}
 			}
 			break;
 			

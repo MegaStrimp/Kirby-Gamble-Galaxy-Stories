@@ -86,10 +86,12 @@ switch (page)
 		break;
 	}
 	
-	scr_Draw_Text_Color_Outline(26 + skinsOffsetLerp,75,"Skins",-1,-1,c_dkgray,c_dkgray,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
-	scr_Draw_Text_Color_Outline(26 + sprayPaintsOffsetLerp,111,"Spray Paints",-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	var sprayPaintCol = c_white;
+	if (!global.shaders) sprayPaintCol = c_dkgray;
+	scr_Draw_Text_Color_Outline(26 + skinsOffsetLerp,75,"Skins",-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	scr_Draw_Text_Color_Outline(26 + sprayPaintsOffsetLerp,111,"Spray Paints",-1,-1,sprayPaintCol,sprayPaintCol,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 	scr_Draw_Text_Color_Outline(26 + hatSkinsOffsetLerp,147,"Hat Skins",-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
-	scr_Draw_Text_Color_Outline(26 + hatPaintsOffsetLerp,183,"Hat Paints",-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	scr_Draw_Text_Color_Outline(26 + hatPaintsOffsetLerp,183,"Hat Paints",-1,-1,sprayPaintCol,sprayPaintCol,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 	scr_Draw_Text_Color_Outline(26 + familiarsOffsetLerp,219,"Familiars",-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 	break;
 	#endregion

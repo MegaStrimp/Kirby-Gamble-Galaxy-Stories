@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 26,
+  "bbox_right": 28,
   "bbox_top": 0,
-  "bbox_bottom": 25,
+  "bbox_bottom": 24,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 27,
-  "height": 26,
+  "width": 29,
+  "height": 25,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -27,9 +27,9 @@
     {"compositeImage":{"FrameId":{"name":"32ca403f-72d6-4f01-adf2-9c8cf7853a8c","path":"sprites/spr_Cappy_Robo_IdleL/spr_Cappy_Robo_IdleL.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"32ca403f-72d6-4f01-adf2-9c8cf7853a8c","path":"sprites/spr_Cappy_Robo_IdleL/spr_Cappy_Robo_IdleL.yy",},"LayerId":{"name":"5fe9e570-2fbf-4920-a731-7b37362d36ab","path":"sprites/spr_Cappy_Robo_IdleL/spr_Cappy_Robo_IdleL.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_Cappy_Robo_IdleL","path":"sprites/spr_Cappy_Robo_IdleL/spr_Cappy_Robo_IdleL.yy",},"resourceVersion":"1.0","name":"32ca403f-72d6-4f01-adf2-9c8cf7853a8c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4daf08b1-cbe6-4024-a927-3226c6f20fac","path":"sprites/spr_Cappy_Robo_IdleL/spr_Cappy_Robo_IdleL.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4daf08b1-cbe6-4024-a927-3226c6f20fac","path":"sprites/spr_Cappy_Robo_IdleL/spr_Cappy_Robo_IdleL.yy",},"LayerId":{"name":"5fe9e570-2fbf-4920-a731-7b37362d36ab","path":"sprites/spr_Cappy_Robo_IdleL/spr_Cappy_Robo_IdleL.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Cappy_Robo_IdleL","path":"sprites/spr_Cappy_Robo_IdleL/spr_Cappy_Robo_IdleL.yy",},"resourceVersion":"1.0","name":"4daf08b1-cbe6-4024-a927-3226c6f20fac","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"dad9b27a-2917-4e31-b444-0661bd3a518b","path":"sprites/spr_Cappy_Robo_IdleL/spr_Cappy_Robo_IdleL.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"dad9b27a-2917-4e31-b444-0661bd3a518b","path":"sprites/spr_Cappy_Robo_IdleL/spr_Cappy_Robo_IdleL.yy",},"LayerId":{"name":"5fe9e570-2fbf-4920-a731-7b37362d36ab","path":"sprites/spr_Cappy_Robo_IdleL/spr_Cappy_Robo_IdleL.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Cappy_Robo_IdleL","path":"sprites/spr_Cappy_Robo_IdleL/spr_Cappy_Robo_IdleL.yy",},"resourceVersion":"1.0","name":"dad9b27a-2917-4e31-b444-0661bd3a518b","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_Cappy_Robo_IdleL","path":"sprites/spr_Cappy_Robo_IdleL/spr_Cappy_Robo_IdleL.yy",},
@@ -44,8 +44,8 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"f3366af3-3ff2-447c-8a84-3e0c2757f07f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"32ca403f-72d6-4f01-adf2-9c8cf7853a8c","path":"sprites/spr_Cappy_Robo_IdleL/spr_Cappy_Robo_IdleL.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"2dab5255-b5c5-43a7-a399-a50b01fd1f06","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4daf08b1-cbe6-4024-a927-3226c6f20fac","path":"sprites/spr_Cappy_Robo_IdleL/spr_Cappy_Robo_IdleL.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ca7ec7c3-fd4e-4857-8f99-c90ffdcba980","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"32ca403f-72d6-4f01-adf2-9c8cf7853a8c","path":"sprites/spr_Cappy_Robo_IdleL/spr_Cappy_Robo_IdleL.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"52b2742d-622b-4298-b983-b0eef734bbc3","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dad9b27a-2917-4e31-b444-0661bd3a518b","path":"sprites/spr_Cappy_Robo_IdleL/spr_Cappy_Robo_IdleL.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,7 +58,7 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 13,
+    "xorigin": 14,
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,

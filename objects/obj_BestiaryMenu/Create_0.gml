@@ -2,9 +2,11 @@
 
 //Other Variables
 
-hudOffset = -250;
 enemySelection = 0;
 goBack = false;
+arrayLength = 0;
+starIndex = 0;
+loopStart = 0;
 
 /*
 	0 - Type
@@ -14,74 +16,19 @@ goBack = false;
 	4 - Portrait Scale
 	5 - Ability
 	6 - Unlocked
+	7 - Offset
+	8 - Offset Lerp
 */
 
 //Enemies
 
-var i = 0;
-var h = 0;
-entries[i][h] = "Enemy"; //Type
-h += 1;
-entries[i][h] = "Waddle Dee"; //Name
-h += 1;
-entries[i][h] = @"The most common of Popstar
-residents. Many have chosen to
-work for King Dedede, some
-even choosing to wield spears
-or parasols."; //Description
-h += 1;
-entries[i][h] = spr_WaddleDee_Normal_Idle; //Portrait Sprite
-h += 1;
-entries[i][h] = 4; //Portrait Scale
-h += 1;
-entries[i][h] = playerAbilities.none; //Ability
-h += 1;
-entries[i][h] = true; //Unlocked
-i += 1;
-h = 0;
+scr_Bestiary_Enemies();
 
-entries[i][h] = "Enemy"; //Type
-h += 1;
-entries[i][h] = "Waddle Doo"; //Name
-h += 1;
-entries[i][h] = @"These creatures are known to
-shoot a beam out of their
-singular large eye. Grants
-the beam ability upon
-swallowing."; //Description
-h += 1;
-entries[i][h] = spr_WaddleDoo_Normal_Idle; //Portrait Sprite
-h += 1;
-entries[i][h] = 4; //Portrait Scale
-h += 1;
-entries[i][h] = playerAbilities.beam; //Ability
-h += 1;
-entries[i][h] = true; //Unlocked
-i += 1;
-h = 0;
-
-entries[i][h] = "Enemy"; //Type
-h += 1;
-entries[i][h] = "Bronto Burt"; //Name
-h += 1;
-entries[i][h] = @"A flying foe who takes to
-the skies whenever someone
-gets near, and will try and
-ram into you when provoked."; //Description
-h += 1;
-entries[i][h] = spr_BrontoBurt_Normal_Idle; //Portrait Sprite
-h += 1;
-entries[i][h] = 4; //Portrait Scale
-h += 1;
-entries[i][h] = playerAbilities.none; //Ability
-h += 1;
-entries[i][h] = true; //Unlocked
-i += 1;
-h = 0;
+selectedEntries = entries;
 
 //Spawn Buttons
 
-var button = instance_create_depth(480,0,depth,obj_Menu_Button);
+var button = instance_create_depth(0,270,depth - 1,obj_Menu_Button);
 button.owner = id;
-button.sprite_index = spr_Menu_StageSelect_Hud_Back2;
+button.sprite_index = spr_Menu_StageSelect_Hud_Back3;
 button.state = "back";

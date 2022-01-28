@@ -29,185 +29,67 @@ function scr_Player_HatBackground(argument0,argument1)
 				switch (sprite_index)
 				{
 					case sprIdle:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprIdleBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprIdleNormalSlopeL:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprIdleNormalSlopeLBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprIdleNormalSlopeR:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprIdleNormalSlopeRBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprIdleSteepSlopeL:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprIdleSteepSlopeLBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprIdleSteepSlopeR:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprIdleSteepSlopeRBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdle:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdleBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdleNormalSlopeL:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdleNormalSlopeLBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdleNormalSlopeR:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdleNormalSlopeRBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdleSteepSlopeL:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdleSteepSlopeLBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdleSteepSlopeR:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdleSteepSlopeRBlink:
+					case sprItemCarryHeavyIdle:
+					case sprItemCarryHeavyIdleSlopeL:
+					case sprItemCarryHeavyIdleSlopeR:
+					case sprItemCarryThrow:
 					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
 					break;
 					
 					case sprWalk:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Walk;
-					break;
-					
 					case sprItemCarryLightWalk:
+					case sprItemCarryHeavyWalk:
 					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Walk;
 					break;
 					
 					case sprDuck:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprDuckBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprDuckNormalSlopeL:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprDuckNormalSlopeLBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprDuckNormalSlopeR:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprDuckNormalSlopeRBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprDuckSteepSlopeL:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprDuckSteepSlopeLBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprDuckSteepSlopeR:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprDuckSteepSlopeRBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuck:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuckBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuckNormalSlopeL:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuckNormalSlopeLBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuckNormalSlopeR:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuckNormalSlopeRBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuckSteepSlopeL:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuckSteepSlopeLBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuckSteepSlopeR:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuckSteepSlopeRBlink:
 					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
 					break;
 					
 					case sprFloat:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Float;
-					break;
-					
-					case sprFlap:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Flap;
-					break;
-					
 					case sprItemCarryLightFloat:
 					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Float;
 					break;
 					
+					case sprFlap:
 					case sprItemCarryLightFlap:
 					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Flap;
 					break;
@@ -267,185 +149,67 @@ function scr_Player_HatBackground(argument0,argument1)
 				switch (sprite_index)
 				{
 					case sprIdle:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprIdleBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprIdleNormalSlopeL:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprIdleNormalSlopeLBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprIdleNormalSlopeR:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprIdleNormalSlopeRBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprIdleSteepSlopeL:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprIdleSteepSlopeLBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprIdleSteepSlopeR:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprIdleSteepSlopeRBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdle:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdleBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdleNormalSlopeL:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdleNormalSlopeLBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdleNormalSlopeR:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdleNormalSlopeRBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdleSteepSlopeL:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdleSteepSlopeLBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdleSteepSlopeR:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdleSteepSlopeRBlink:
+					case sprItemCarryHeavyIdle:
+					case sprItemCarryHeavyIdleSlopeL:
+					case sprItemCarryHeavyIdleSlopeR:
+					case sprItemCarryThrow:
 					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Idle;
 					break;
 					
 					case sprWalk:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Walk;
-					break;
-					
 					case sprItemCarryLightWalk:
+					case sprItemCarryHeavyWalk:
 					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Walk;
 					break;
 					
 					case sprDuck:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprDuckBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprDuckNormalSlopeL:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprDuckNormalSlopeLBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprDuckNormalSlopeR:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprDuckNormalSlopeRBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprDuckSteepSlopeL:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprDuckSteepSlopeLBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprDuckSteepSlopeR:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprDuckSteepSlopeRBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuck:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuckBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuckNormalSlopeL:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuckNormalSlopeLBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuckNormalSlopeR:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuckNormalSlopeRBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuckSteepSlopeL:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuckSteepSlopeLBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuckSteepSlopeR:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuckSteepSlopeRBlink:
 					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Duck;
 					break;
 					
 					case sprFloat:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Float;
-					break;
-					
-					case sprFlap:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Flap;
-					break;
-					
 					case sprItemCarryLightFloat:
 					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Float;
 					break;
 					
+					case sprFlap:
 					case sprItemCarryLightFlap:
 					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Flap;
 					break;
@@ -505,170 +269,59 @@ function scr_Player_HatBackground(argument0,argument1)
 				switch (sprite_index)
 				{
 					case sprIdle:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Idle;
-					break;
-					
 					case sprIdleBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Idle;
-					break;
-					
 					case sprIdleNormalSlopeL:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Idle;
-					break;
-					
 					case sprIdleNormalSlopeLBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Idle;
-					break;
-					
 					case sprIdleNormalSlopeR:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Idle;
-					break;
-					
 					case sprIdleNormalSlopeRBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Idle;
-					break;
-					
 					case sprIdleSteepSlopeL:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Idle;
-					break;
-					
 					case sprIdleSteepSlopeLBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Idle;
-					break;
-					
 					case sprIdleSteepSlopeR:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Idle;
-					break;
-					
 					case sprIdleSteepSlopeRBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdle:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdleBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdleNormalSlopeL:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdleNormalSlopeLBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdleNormalSlopeR:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdleNormalSlopeRBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdleSteepSlopeL:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdleSteepSlopeLBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdleSteepSlopeR:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Idle;
-					break;
-					
 					case sprItemCarryLightIdleSteepSlopeRBlink:
+					case sprItemCarryHeavyIdle:
+					case sprItemCarryHeavyIdleSlopeL:
+					case sprItemCarryHeavyIdleSlopeR:
+					case sprItemCarryThrow:
 					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Idle;
 					break;
 					
 					case sprWalk:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Walk;
-					break;
-					
 					case sprItemCarryLightWalk:
+					case sprItemCarryHeavyWalk:
 					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Walk;
 					break;
 					
 					case sprDuck:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Duck;
-					break;
-					
 					case sprDuckBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Duck;
-					break;
-					
 					case sprDuckNormalSlopeL:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Duck;
-					break;
-					
 					case sprDuckNormalSlopeLBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Duck;
-					break;
-					
 					case sprDuckNormalSlopeR:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Duck;
-					break;
-					
 					case sprDuckNormalSlopeRBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Duck;
-					break;
-					
 					case sprDuckSteepSlopeL:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Duck;
-					break;
-					
 					case sprDuckSteepSlopeLBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Duck;
-					break;
-					
 					case sprDuckSteepSlopeR:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Duck;
-					break;
-					
 					case sprDuckSteepSlopeRBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuck:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuckBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuckNormalSlopeL:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuckNormalSlopeLBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuckNormalSlopeR:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuckNormalSlopeRBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuckSteepSlopeL:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuckSteepSlopeLBlink:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuckSteepSlopeR:
-					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Duck;
-					break;
-					
 					case sprItemCarryLightDuckSteepSlopeRBlink:
+					case sprItemCarryHeavyDuck:
 					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Duck;
 					break;
 					

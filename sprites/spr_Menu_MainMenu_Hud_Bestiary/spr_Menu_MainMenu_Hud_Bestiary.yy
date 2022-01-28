@@ -2,20 +2,20 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
-  "origin": 0,
+  "origin": 1,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 219,
+  "bbox_right": 132,
   "bbox_top": 0,
-  "bbox_bottom": 34,
+  "bbox_bottom": 22,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 220,
-  "height": 35,
+  "width": 133,
+  "height": 23,
   "textureGroupId": {
     "name": "Menu",
     "path": "texturegroups/Menu",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"8bedd8eb-fc08-4985-bc37-4683f0d164c0","path":"sprites/spr_Menu_MainMenu_Hud_Bestiary/spr_Menu_MainMenu_Hud_Bestiary.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8bedd8eb-fc08-4985-bc37-4683f0d164c0","path":"sprites/spr_Menu_MainMenu_Hud_Bestiary/spr_Menu_MainMenu_Hud_Bestiary.yy",},"LayerId":{"name":"a1c23f0f-8753-4207-8a6c-af6f91499805","path":"sprites/spr_Menu_MainMenu_Hud_Bestiary/spr_Menu_MainMenu_Hud_Bestiary.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Menu_MainMenu_Hud_Bestiary","path":"sprites/spr_Menu_MainMenu_Hud_Bestiary/spr_Menu_MainMenu_Hud_Bestiary.yy",},"resourceVersion":"1.0","name":"8bedd8eb-fc08-4985-bc37-4683f0d164c0","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c84cbc7a-33a9-41dc-8b49-59b1c4f5702b","path":"sprites/spr_Menu_MainMenu_Hud_Bestiary/spr_Menu_MainMenu_Hud_Bestiary.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c84cbc7a-33a9-41dc-8b49-59b1c4f5702b","path":"sprites/spr_Menu_MainMenu_Hud_Bestiary/spr_Menu_MainMenu_Hud_Bestiary.yy",},"LayerId":{"name":"a1c23f0f-8753-4207-8a6c-af6f91499805","path":"sprites/spr_Menu_MainMenu_Hud_Bestiary/spr_Menu_MainMenu_Hud_Bestiary.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Menu_MainMenu_Hud_Bestiary","path":"sprites/spr_Menu_MainMenu_Hud_Bestiary/spr_Menu_MainMenu_Hud_Bestiary.yy",},"resourceVersion":"1.0","name":"c84cbc7a-33a9-41dc-8b49-59b1c4f5702b","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_Menu_MainMenu_Hud_Bestiary","path":"sprites/spr_Menu_MainMenu_Hud_Bestiary/spr_Menu_MainMenu_Hud_Bestiary.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"d6183ab0-bcd3-49b5-8996-bc8e34b8989f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8bedd8eb-fc08-4985-bc37-4683f0d164c0","path":"sprites/spr_Menu_MainMenu_Hud_Bestiary/spr_Menu_MainMenu_Hud_Bestiary.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ab2f37b3-52c0-419a-a1e0-8b9d60e68313","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c84cbc7a-33a9-41dc-8b49-59b1c4f5702b","path":"sprites/spr_Menu_MainMenu_Hud_Bestiary/spr_Menu_MainMenu_Hud_Bestiary.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -54,7 +54,7 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 0,
+    "xorigin": 66,
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,

@@ -1375,127 +1375,127 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 				break;
 			
 				case 1:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_AzureSky;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_BlueberryPie;
 				break;
 			
 				case 2:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_FineChina;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_SeenAGhost;
 				break;
 			
 				case 3:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_ParkRobot;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_Hypothermic;
 				break;
 			
 				case 4:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_BarkNBite;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_MidnightForest;
 				break;
 			
 				case 5:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_TreadingLightly;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_CelestialGlow;
 				break;
 			
 				case 6:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_EtherealHoney;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_InvertedGold;
 				break;
 			
 				case 7:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_JollyRed;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_CherryBomb;
 				break;
 			
 				case 8:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_DimBerry;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_Corruption;
 				break;
 			
 				case 9:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_RetroScreen;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_NightVision;
 				break;
 			
 				case 10:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_RottenCore;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_UpsetStomach;
 				break;
 			
 				case 11:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_FadedGlory;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_FadedWaddle;
 				break;
 			
 				case 12:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_NowYouSeeMe;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_InvisibleSpray;
 				break;
 			
 				case 13:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_Snowtops;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_Snowball;
 				break;
 			
 				case 14:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_AngelicGold;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_KeyDee;
 				break;
 			
 				case 15:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_UnderlingGlow;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_BurntToACrisp;
 				break;
 			
 				case 16:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_AbominableSnowdee;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_ImpendingDoom;
 				break;
 			
 				case 17:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_SparklingGold;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_Ultra;
 				break;
 			
 				case 18:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_GroveGamble;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_SherbetSurprise;
 				break;
 			
 				case 19:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_DeepPoison;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_CottonCandy;
 				break;
 			
 				case 20:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_ArrogantMercenary;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_GamerDee;
 				break;
 			
 				case 21:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_BurntSienna;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_Crimson;
 				break;
 			
 				case 22:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_CoralReef;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_TropicalOcean;
 				break;
 			
 				case 23:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_MoonlitLake;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_Mulberry;
 				break;
 			
 				case 24:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_DirtyPast;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_GrandDee;
 				break;
 			
 				case 25:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_CranberryDelight;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_SunKissed;
 				break;
 			
 				case 26:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_Whiteboard;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_VitaminDeeMilk;
 				break;
 			
 				case 27:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_Deepsink;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_SunkenSea;
 				break;
 			
 				case 28:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_GlowOfTheGrey;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_GhostlyGhoul;
 				break;
 			
 				case 29:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_ChillingBane;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_Throwback50s;
 				break;
 			
 				case 30:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_OneBitWonder;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_Roaring20s;
 				break;
 			
 				case 31:
-				debugPaletteIndex = spr_WaddleDee_Normal_Palette_CandyWrappers;
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_ExtremeContrast;
 				break;
 			
 				default:

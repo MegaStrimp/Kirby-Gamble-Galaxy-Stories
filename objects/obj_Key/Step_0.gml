@@ -16,6 +16,17 @@ if (setupTimer == 0)
 
 if (!global.pause)
 {
+	//Shake
+	
+	if (place_meeting(x,y,obj_InhaleMask))
+	{
+		shake = 1;
+	}
+	else
+	{
+		shake = 0;
+	}
+	
 	if (active)
 	{
 		//Gravity

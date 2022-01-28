@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"cfdd5ad2-db60-4ffe-bd92-52c0af589a8b","path":"sprites/spr_Cappy_Robo_Shroom/spr_Cappy_Robo_Shroom.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cfdd5ad2-db60-4ffe-bd92-52c0af589a8b","path":"sprites/spr_Cappy_Robo_Shroom/spr_Cappy_Robo_Shroom.yy",},"LayerId":{"name":"630d2033-280d-4b9c-85ec-b1b7f818cf2a","path":"sprites/spr_Cappy_Robo_Shroom/spr_Cappy_Robo_Shroom.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Cappy_Robo_Shroom","path":"sprites/spr_Cappy_Robo_Shroom/spr_Cappy_Robo_Shroom.yy",},"resourceVersion":"1.0","name":"cfdd5ad2-db60-4ffe-bd92-52c0af589a8b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"5326b79b-6fca-4f9d-9249-4009f5ed39a2","path":"sprites/spr_Cappy_Robo_Shroom/spr_Cappy_Robo_Shroom.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"5326b79b-6fca-4f9d-9249-4009f5ed39a2","path":"sprites/spr_Cappy_Robo_Shroom/spr_Cappy_Robo_Shroom.yy",},"LayerId":{"name":"630d2033-280d-4b9c-85ec-b1b7f818cf2a","path":"sprites/spr_Cappy_Robo_Shroom/spr_Cappy_Robo_Shroom.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Cappy_Robo_Shroom","path":"sprites/spr_Cappy_Robo_Shroom/spr_Cappy_Robo_Shroom.yy",},"resourceVersion":"1.0","name":"5326b79b-6fca-4f9d-9249-4009f5ed39a2","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_Cappy_Robo_Shroom","path":"sprites/spr_Cappy_Robo_Shroom/spr_Cappy_Robo_Shroom.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"ced08909-806a-4fc5-b6e0-3caab93f2354","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cfdd5ad2-db60-4ffe-bd92-52c0af589a8b","path":"sprites/spr_Cappy_Robo_Shroom/spr_Cappy_Robo_Shroom.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ce1f521b-3fed-4410-bac9-1933f3df6131","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5326b79b-6fca-4f9d-9249-4009f5ed39a2","path":"sprites/spr_Cappy_Robo_Shroom/spr_Cappy_Robo_Shroom.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,

@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 22,
+  "bbox_right": 21,
   "bbox_top": 0,
-  "bbox_bottom": 24,
+  "bbox_bottom": 22,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 23,
-  "height": 25,
+  "width": 22,
+  "height": 23,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"60da4c72-cd3d-49ad-806a-8fe7df9128b1","path":"sprites/spr_Cappy_Robo_Hurt/spr_Cappy_Robo_Hurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"60da4c72-cd3d-49ad-806a-8fe7df9128b1","path":"sprites/spr_Cappy_Robo_Hurt/spr_Cappy_Robo_Hurt.yy",},"LayerId":{"name":"8199847c-163d-4147-b1c5-525844de6980","path":"sprites/spr_Cappy_Robo_Hurt/spr_Cappy_Robo_Hurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Cappy_Robo_Hurt","path":"sprites/spr_Cappy_Robo_Hurt/spr_Cappy_Robo_Hurt.yy",},"resourceVersion":"1.0","name":"60da4c72-cd3d-49ad-806a-8fe7df9128b1","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"98600457-a158-4345-a863-1de314d8867d","path":"sprites/spr_Cappy_Robo_Hurt/spr_Cappy_Robo_Hurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"98600457-a158-4345-a863-1de314d8867d","path":"sprites/spr_Cappy_Robo_Hurt/spr_Cappy_Robo_Hurt.yy",},"LayerId":{"name":"8199847c-163d-4147-b1c5-525844de6980","path":"sprites/spr_Cappy_Robo_Hurt/spr_Cappy_Robo_Hurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Cappy_Robo_Hurt","path":"sprites/spr_Cappy_Robo_Hurt/spr_Cappy_Robo_Hurt.yy",},"resourceVersion":"1.0","name":"98600457-a158-4345-a863-1de314d8867d","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_Cappy_Robo_Hurt","path":"sprites/spr_Cappy_Robo_Hurt/spr_Cappy_Robo_Hurt.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"3bf13def-4f51-4e31-b5aa-6e5160a0de2e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"60da4c72-cd3d-49ad-806a-8fe7df9128b1","path":"sprites/spr_Cappy_Robo_Hurt/spr_Cappy_Robo_Hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d2374efd-673e-43a6-b908-a333019a8aeb","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"98600457-a158-4345-a863-1de314d8867d","path":"sprites/spr_Cappy_Robo_Hurt/spr_Cappy_Robo_Hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -54,7 +54,7 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 10,
+    "xorigin": 11,
     "yorigin": 15,
     "eventToFunction": {},
     "eventStubScript": null,

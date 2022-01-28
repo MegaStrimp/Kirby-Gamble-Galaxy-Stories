@@ -10,12 +10,12 @@
   "bbox_left": 0,
   "bbox_right": 3,
   "bbox_top": 0,
-  "bbox_bottom": 25,
+  "bbox_bottom": 24,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "width": 4,
-  "height": 26,
+  "height": 25,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"f8dfd843-f570-4811-9f95-57320d45fb3d","path":"sprites/spr_Cappy_Robo_Palette_MechanicalHop/spr_Cappy_Robo_Palette_MechanicalHop.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f8dfd843-f570-4811-9f95-57320d45fb3d","path":"sprites/spr_Cappy_Robo_Palette_MechanicalHop/spr_Cappy_Robo_Palette_MechanicalHop.yy",},"LayerId":{"name":"75117384-3109-41e0-a496-9eeb4544f973","path":"sprites/spr_Cappy_Robo_Palette_MechanicalHop/spr_Cappy_Robo_Palette_MechanicalHop.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Cappy_Robo_Palette_MechanicalHop","path":"sprites/spr_Cappy_Robo_Palette_MechanicalHop/spr_Cappy_Robo_Palette_MechanicalHop.yy",},"resourceVersion":"1.0","name":"f8dfd843-f570-4811-9f95-57320d45fb3d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"414608fb-93b7-48eb-9be0-fcae33d156da","path":"sprites/spr_Cappy_Robo_Palette_MechanicalHop/spr_Cappy_Robo_Palette_MechanicalHop.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"414608fb-93b7-48eb-9be0-fcae33d156da","path":"sprites/spr_Cappy_Robo_Palette_MechanicalHop/spr_Cappy_Robo_Palette_MechanicalHop.yy",},"LayerId":{"name":"75117384-3109-41e0-a496-9eeb4544f973","path":"sprites/spr_Cappy_Robo_Palette_MechanicalHop/spr_Cappy_Robo_Palette_MechanicalHop.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Cappy_Robo_Palette_MechanicalHop","path":"sprites/spr_Cappy_Robo_Palette_MechanicalHop/spr_Cappy_Robo_Palette_MechanicalHop.yy",},"resourceVersion":"1.0","name":"414608fb-93b7-48eb-9be0-fcae33d156da","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_Cappy_Robo_Palette_MechanicalHop","path":"sprites/spr_Cappy_Robo_Palette_MechanicalHop/spr_Cappy_Robo_Palette_MechanicalHop.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"c66665fc-6486-4449-9fae-e74d29456a17","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f8dfd843-f570-4811-9f95-57320d45fb3d","path":"sprites/spr_Cappy_Robo_Palette_MechanicalHop/spr_Cappy_Robo_Palette_MechanicalHop.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"164d8586-3623-4d50-8b46-161aa224e354","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"414608fb-93b7-48eb-9be0-fcae33d156da","path":"sprites/spr_Cappy_Robo_Palette_MechanicalHop/spr_Cappy_Robo_Palette_MechanicalHop.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,

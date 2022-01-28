@@ -28,6 +28,9 @@ hasYCollision = true;
 collisionX = obj_Wall;
 collisionY = obj_Wall;
 dirX = 1;
+xOffset = 0;
+yOffset = 0;
+shake = 0;
 
 //Timer
 

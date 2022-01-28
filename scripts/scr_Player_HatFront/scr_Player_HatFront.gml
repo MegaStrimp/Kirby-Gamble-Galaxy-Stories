@@ -142,6 +142,18 @@ function scr_Player_HatFront(argument0,argument1)
 				switch (sprite_index)
 				{
 					case sprIdle:
+					case sprItemCarryLightIdleNormalSlopeL:
+					case sprItemCarryLightIdleNormalSlopeLBlink:
+					case sprItemCarryLightIdleNormalSlopeR:
+					case sprItemCarryLightIdleNormalSlopeRBlink:
+					case sprItemCarryLightIdleSteepSlopeL:
+					case sprItemCarryLightIdleSteepSlopeLBlink:
+					case sprItemCarryLightIdleSteepSlopeR:
+					case sprItemCarryLightIdleSteepSlopeRBlink:
+					case sprItemCarryHeavyIdle:
+					case sprItemCarryHeavyIdleSlopeL:
+					case sprItemCarryHeavyIdleSlopeR:
+					case sprItemCarryThrow:
 					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Idle;
 					break;
 					
@@ -222,6 +234,8 @@ function scr_Player_HatFront(argument0,argument1)
 					break;
 					
 					case sprWalk:
+					case sprItemCarryLightWalk:
+					case sprItemCarryHeavyWalk:
 					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Walk;
 					break;
 					
@@ -258,6 +272,17 @@ function scr_Player_HatFront(argument0,argument1)
 					break;
 					
 					case sprDuck:
+					case sprItemCarryLightDuck:
+					case sprItemCarryLightDuckBlink:
+					case sprItemCarryLightDuckNormalSlopeL:
+					case sprItemCarryLightDuckNormalSlopeLBlink:
+					case sprItemCarryLightDuckNormalSlopeR:
+					case sprItemCarryLightDuckNormalSlopeRBlink:
+					case sprItemCarryLightDuckSteepSlopeL:
+					case sprItemCarryLightDuckSteepSlopeLBlink:
+					case sprItemCarryLightDuckSteepSlopeR:
+					case sprItemCarryLightDuckSteepSlopeRBlink:
+					case sprItemCarryHeavyDuck:
 					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Duck;
 					break;
 					
