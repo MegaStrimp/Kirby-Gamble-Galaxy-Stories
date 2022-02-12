@@ -22,7 +22,7 @@ damageType = damageTypes.explosion;
 //Timers
 
 setupTimer = 0;
-destroyTimerMax = 30;
+destroyTimerMax = 15;
 destroyTimer = destroyTimerMax;
 
 //Sound

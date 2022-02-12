@@ -76,12 +76,12 @@ if ((hurt) and (invincibleFlash))
 	if ((global.shaders) and (((sprite_index != sprStoneAttack1Common) and (sprite_index != sprStoneAttack1Uncommon) and (sprite_index != sprStoneAttack1Rare)) or (sprite_index = (sprStoneAttack1Common) and (image_index = 0)))) pal_swap_reset();
 }
 
-var abilityHatIndex = scr_Player_AbilityHat(playerAbility,playerCharacter);
+/*var abilityHatIndex = scr_Player_AbilityHat(playerAbility,playerCharacter);
 var hatFrontIndex = scr_Player_HatFront(playerAbility,playerCharacter);
 if ((global.shaders) and (abilityHatPalette != -1)) pal_swap_set(abilityHatPalette,paletteFlash,false);
 if (abilityHatIndex != -1) draw_sprite_ext(abilityHatIndex,image_index,x + drawShakeX,y + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle,image_blend,image_alpha);
 if (hatFrontIndex != -1) draw_sprite_ext(hatFrontIndex,hatAnim,x + drawShakeX,y + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle,image_blend,image_alpha);
-if ((global.shaders) and (abilityHatPalette != -1)) pal_swap_reset();
+if ((global.shaders) and (abilityHatPalette != -1)) pal_swap_reset();*/
 
 var equipmentIndex = scr_Player_Equipment(playerAbility,playerCharacter);
 var equipmentDir = image_xscale;
@@ -164,4 +164,5 @@ if ((playerIsHelper) and (helperTimer != -1))
 draw_set_font(fnt_DebugConsole);
 draw_set_color(c_black);
 /*
-draw_text(x,y - 12,string(runCancelTimer));
+draw_text(x,y - 12,string(run));
+draw_text(x,y - 24,string(runCancelTimer));

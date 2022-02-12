@@ -12,6 +12,7 @@ function scr_Player_CutterDrop()
 		//Afterimage
 		
 		var afterimage = instance_create_depth(x,y,depth,obj_Afterimage);
+		afterimage.owner = id;
 		afterimage.sprite_index = sprCutterAttack3;
 		afterimage.image_xscale = image_xscale;
 		afterimage.image_alpha = .5;

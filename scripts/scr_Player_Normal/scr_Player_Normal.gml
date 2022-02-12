@@ -67,10 +67,7 @@ function scr_Player_Normal()
 		if (run)
 		{
 		    movespeed = movespeedRun;
-		    if (((runCancelTimer == -1) and (grounded) and ((keyLeftReleased) or (keyRightReleased)) or (global.cutscene)))
-		    {
-		        runCancelTimer = 15;
-		    }
+		    if ((runCancelTimer == -1) and (grounded) and (((!keyLeftHold) and (!keyRightHold)) or ((keyLeftHold) and (keyRightHold))) or (global.cutscene)) runCancelTimer = 15;
 			if (sprite_index == sprMirrorDash)
 			{
 				if (!audio_is_playing(mirrorDashSfx)) mirrorDashSfx = audio_play_sound(snd_Mirror3,0,false);
@@ -183,7 +180,9 @@ function scr_Player_Normal()
 			
 		}
 		
-		if ((hasGravity) and (playerAbility != playerAbilities.ufo))
+		var blockGap = false;
+		if ((run) and (hsp != 0) and (!place_meeting(x + hsp,y,obj_Wall) and (place_meeting(x + hsp,y + 1,obj_Wall)))) blockGap = true;
+		if ((hasGravity) and (!blockGap) and (playerAbility != playerAbilities.ufo))
 		{
 			var gravOffset = 0;
 			if (attackNumber == "beamAir") gravOffset = .05;
@@ -261,7 +260,7 @@ function scr_Player_Normal()
 				{
 					var grabEnemy = -1;
 					if (place_meeting(x + (16 * dir),y,obj_Enemy)) grabEnemy = instance_place(x + (16 * dir),y,obj_Enemy);
-					if ((grabEnemy != -1) and (grabEnemy.hurtable) and (!grabEnemy.hurt) and (!grabEnemy.isBoss))
+					if ((grabEnemy != -1) and (grabEnemy.hurtable) and (!grabEnemy.hurt) and (!grabEnemy.isMiniBoss) and (!grabEnemy.isBoss))
 					{
 						if (audio_is_playing(snd_Guard)) audio_stop_sound(snd_Guard);
 						audio_play_sound(snd_Guard,0,false);
@@ -694,7 +693,7 @@ function scr_Player_Normal()
 							{
 								var grabEnemy = -1;
 								if (place_meeting(x + (16 * dir),y,obj_Enemy)) grabEnemy = instance_place(x + (16 * dir),y,obj_Enemy);
-								if ((grabEnemy != -1) and (grabEnemy.hurtable) and (!grabEnemy.hurt) and (!grabEnemy.isBoss))
+								if ((grabEnemy != -1) and (grabEnemy.hurtable) and (!grabEnemy.hurt) and (!grabEnemy.isMiniBoss) and (!grabEnemy.isBoss))
 								{
 									if (audio_is_playing(snd_Guard)) audio_stop_sound(snd_Guard);
 									audio_play_sound(snd_Guard,0,false);
@@ -861,6 +860,7 @@ function scr_Player_Normal()
 								{
 									var projBeam = instance_create_depth(-100,-100,depth + 1,obj_Projectile_Beam);
 									projBeam.owner = id;
+									projBeam.player = player;
 									projBeam.dmg = 12;
 									switch (i)
 									{
@@ -935,6 +935,7 @@ function scr_Player_Normal()
 								proj.enemy = false;
 								proj.dirX = dir;
 								proj.owner = id;
+								proj.player = player;
 								proj.image_xscale = proj.dirX;
 								proj.hitInvincibility = 15;
 							}
@@ -965,6 +966,7 @@ function scr_Player_Normal()
 								{
 									var projBeam = instance_create_depth(-100,-100,depth + 1,obj_Projectile_Beam);
 									projBeam.owner = id;
+									projBeam.player = player;
 									projBeam.dmg = 12;
 									switch (i)
 									{
@@ -1032,6 +1034,7 @@ function scr_Player_Normal()
 								if (((player == 0) and (global.hatTypeBeamP1 == "marxSoul")) or ((player == 1) and (global.hatTypeBeamP2 == "marxSoul"))) audio_play_sound(snd_BeamChargeMarxAlt,0,false);
 							    var projectile = instance_create_depth(x + (6 * dir),y - 2,depth,obj_Projectile_BeamCharge);
 								projectile.owner = id;
+								projectile.player = player;
 								projectile.dmg = 30;
 								projectile.hsp = dir * 6.5;
 								projectile.dirX = dir;
@@ -1056,6 +1059,7 @@ function scr_Player_Normal()
 								{
 									var projBeam = instance_create_depth(-100,-100,depth + 1,obj_Projectile_Beam);
 									projBeam.owner = id;
+									projBeam.player = player;
 									projBeam.invisTimer = -1 + (2 * i);
 									if (i > 0) projBeam.visible = false;
 									projBeam.imageIndex = i - 1;
@@ -1088,7 +1092,7 @@ function scr_Player_Normal()
 							{
 								var grabEnemy = -1;
 								if (place_meeting(x + (16 * dir),y,obj_Enemy)) grabEnemy = instance_place(x + (16 * dir),y,obj_Enemy);
-								if ((grabEnemy != -1) and (grabEnemy.hurtable) and (!grabEnemy.hurt) and (!grabEnemy.isBoss))
+								if ((grabEnemy != -1) and (grabEnemy.hurtable) and (!grabEnemy.hurt) and (!grabEnemy.isMiniBoss) and (!grabEnemy.isBoss))
 								{
 									if (audio_is_playing(snd_Guard)) audio_stop_sound(snd_Guard);
 									audio_play_sound(snd_Guard,0,false);
@@ -1279,6 +1283,7 @@ function scr_Player_Normal()
 								{
 									var projBeam = instance_create_depth(x,y,depth,obj_Projectile_Beam);
 									projBeam.owner = id;
+									projBeam.player = player;
 									if (i % 2 == 0) projBeam.image_index = 1;
 									projBeam.movespeed = 4;
 									projBeam.jumpspeed = 0;
@@ -1362,6 +1367,7 @@ function scr_Player_Normal()
 								audio_play_sound(snd_MysticBeamCharge,0,false);
 							    mysticBeamCharge = instance_create_depth(x + (6 * dir),y - 2,depth,obj_Projectile_MysticBeamCharge);
 								mysticBeamCharge.owner = id;
+								mysticBeamCharge.player = player;
 								if (mysticBeamVortexInAJarUpgrade)
 								{
 									mysticBeamCharge.character = 1;
@@ -1406,6 +1412,7 @@ function scr_Player_Normal()
 								{
 									var projBeam = instance_create_depth(-100,-100,depth + 1,obj_Projectile_Beam);
 									projBeam.owner = id;
+									projBeam.player = player;
 									projBeam.invisTimer = -1 + (2 * i);
 									if (i > 0) projBeam.visible = false;
 									projBeam.imageIndex = i - 1;
@@ -1619,6 +1626,7 @@ function scr_Player_Normal()
 									var projBeam = instance_create_depth(-100,-100,depth,obj_Projectile_Beam);
 									projBeam.visible = false;
 									projBeam.owner = id;
+									projBeam.player = player;
 									projBeam.angle = 90 + ((40 - (i * 10)) * -dir);
 									projBeam.spd = (1.8 + (i * .4)) * -dir;
 									projBeam.orbit = 25 + (i * 18);
@@ -1680,6 +1688,7 @@ function scr_Player_Normal()
 										{
 								            var projMirror = instance_create_depth(x,y,depth,obj_Projectile_MirrorPlayer);
 											projMirror.owner = id;
+											projMirror.player = player;
 											projMirror.dmg = 16;
 								            projMirror.dirX = 1;
 											projMirror.image_xscale = scale * dir;
@@ -2126,7 +2135,7 @@ function scr_Player_Normal()
 							{
 								var grabEnemy = -1;
 								if (place_meeting(x + (16 * dir),y,obj_Enemy)) grabEnemy = instance_place(x + (16 * dir),y,obj_Enemy);
-								if ((grabEnemy != -1) and (grabEnemy.hurtable) and (!grabEnemy.hurt) and (!grabEnemy.isBoss))
+								if ((grabEnemy != -1) and (grabEnemy.hurtable) and (!grabEnemy.hurt) and (!grabEnemy.isMiniBoss) and (!grabEnemy.isBoss))
 								{
 									if (audio_is_playing(snd_Guard)) audio_stop_sound(snd_Guard);
 									audio_play_sound(snd_Guard,0,false);
@@ -2766,6 +2775,7 @@ function scr_Player_Normal()
 							{
 								var projBeam = instance_create_depth(-100,-100,depth,obj_Projectile_Beam);
 								projBeam.owner = id;
+								projBeam.player = player;
 								projBeam.dmg = 12;
 								projBeam.angle = 90 + ((40 - (i * 10)) * -dir);
 								projBeam.spd = (1.2 + (i * .2)) * -dir;

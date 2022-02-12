@@ -153,6 +153,7 @@ sprWarpStar1 = spr_Kirby_Normal_WarpStar1;
 sprWarpStar2 = spr_Kirby_Normal_WarpStar2;
 sprGuard = spr_Kirby_Normal_Guard;
 sprGuardSlope = spr_Kirby_Normal_Guard_Slope;
+sprItemCarryThrow = spr_Kirby_Normal_ItemCarry_Throw;
 sprCutterCharge = spr_SirKibble_Normal_Catch;
 sprCutterAttack1 = spr_Kirby_Normal_Cutter_Attack1;
 sprCutterAttack2 = spr_Kirby_Normal_Cutter_Attack2;

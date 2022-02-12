@@ -20,9 +20,9 @@ if (page != 3)
 	{
 		draw_set_font(fnt_DialogueDefault);
 	}
-	else if (global.language == 6)
+	else if ((global.language == 6) or (global.language == 8))
 	{
-		draw_set_font(fnt_DialogueDefaultKanji);
+		draw_set_font(global.fontDialogueDefaultKanji);
 	}
 	else
 	{

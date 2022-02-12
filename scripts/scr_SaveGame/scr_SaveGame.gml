@@ -1,4 +1,5 @@
 ///@description Save Game
+///@param {real} file Which file to write.
 
 function scr_SaveGame(argument0)
 {
@@ -116,6 +117,7 @@ function scr_SaveGame(argument0)
 	ini_write_real("unlocks","bestiaryEnemiesComoUnlocked",global.bestiaryEnemiesComoUnlocked);
 	ini_write_real("unlocks","bestiaryEnemiesCairnUnlocked",global.bestiaryEnemiesCairnUnlocked);
 	ini_write_real("unlocks","bestiaryEnemiesBomberUnlocked",global.bestiaryEnemiesBomberUnlocked);
+	ini_write_real("unlocks","bestiaryEnemiesSimirrorUnlocked",global.bestiaryEnemiesSimirrorUnlocked);
 	
 	ini_write_string("playerCustomization","skinKirbyP1",global.skinKirbyP1);
 	ini_write_string("playerCustomization","skinKirbyP2",global.skinKirbyP2);

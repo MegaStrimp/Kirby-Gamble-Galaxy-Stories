@@ -49,11 +49,11 @@ if (!global.pause)
 		
 		#region Ready
 		case "ready":
-		if (!audio_is_playing(snd_BossHealth)) audio_play_sound(snd_BossHealth,0,false);
+		if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+		audio_play_sound(snd_BossHealth,0,false);
 		bossHbHp += hp / 60;
 		if (bossHbHp >= hp)
 		{
-			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 			bossHbHp = hp;
 			phase = "1";
 			readyCounter = 0;

@@ -1,5 +1,5 @@
 ///@description Main
-show_debug_message(image_index);
+
 #region Characters
 if (setupTimer == 0)
 {
@@ -13,11 +13,13 @@ if (setupTimer == 0)
 		sprAttackHat = spr_PoppyBrosSr_Normal_AttackHat;
 		sprDash = spr_PoppyBrosSr_Normal_Dash;
 		sprHand = spr_PoppyBrosSr_Normal_Hand;
-		sprHurt = "self";
+		sprHurt = spr_PoppyBrosSr_Normal_Hurt;
 		sprDeath = spr_PoppyBrosSr_Normal_Death;
 		break;
 		#endregion
 	}
+	walkDirX = 1;
+	if ((instance_exists(obj_Player)) and (obj_Player.x < x)) walkDirX = -1;
 }
 #endregion
 
@@ -33,6 +35,20 @@ if (!global.pause)
 	
 	#region Friction
 	hsp = scr_Friction(hsp,decel);
+	#endregion
+	
+	#region Healthbar
+	if (hbSetup)
+	{
+		if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+		audio_play_sound(snd_BossHealth,0,false);
+		bossHbHp += hp / 60;
+		if (bossHbHp >= hp) hbSetup = false;
+	}
+	else
+	{
+		bossHbHp = hp;
+	}
 	#endregion
 	
 	#region Movement
@@ -53,6 +69,7 @@ if (!global.pause)
 			
 			default:
 			movespeed = 0;
+			hsp = 0;
 			break;
 		}
 	}
@@ -86,12 +103,12 @@ if (!global.pause)
 			break;
 			
 			case 8:
-			movespeed = 3;
-			jumpspeed = 4.5;
+			movespeed = 4;
+			jumpspeed = 4.75;
 			break;
 			
 			case 9:
-			movespeed = 3;
+			movespeed = 4;
 			jumpspeed = 4.5;
 			break;
 			
@@ -133,7 +150,7 @@ if (!global.pause)
 		{
 			switch (attackNumber)
 			{
-				case "bombThrow":
+				case "bombThrowTripleJump":
 				if (jumpCount == 3)
 				{
 					attackStopTimer = 0;
@@ -141,7 +158,7 @@ if (!global.pause)
 				else
 				{
 					jumpCount += 1;
-					vsp = -jumpspeed;
+					vsp = -7;
 				}
 				break;
 			}
@@ -158,11 +175,34 @@ if (!global.pause)
 	{
 		jumpCount = 0;
 		attackNumber = choose("bombThrow","dash");
+		attackNumber = choose("bombThrow");
 		switch (attackNumber)
 		{
 			case "bombThrow":
 			jumpCount += 1;
-			vsp = -5;
+			gravLimitNormal = 3.5;
+			hsp = 0;
+			vsp = -7;
+			attack = true;
+			bomb = instance_create_depth(x,y,depth + 1,obj_Projectile_Bomb);
+			bomb.owner = id;
+			bomb.active = false;
+			bomb.enemy = true;
+			bomb.destroyableByWall = false;
+			bomb.destroyableByPlayer = false;
+			bomb.destroyableByEnemy = false;
+			bomb.destroyableByObject = false;
+			bomb.destroyableByProjectile = false;
+			bomb.hurtsObject = false;
+			bomb.hurtsEnemy = false;
+			bomb.hurtsBoss = false;
+			bomb.hurtsPlayer = false;
+			bomb.hurtsProjectile = false;
+			bomb.hurtsObject = false;
+			bomb.hurtsEnemy = false;
+			bomb.hurtsPlayer = true;
+			bomb.destroyAfterHurt = false;
+			bomb.canBeInhaled = true;
 			bombThrowTimer = bombThrowTimerMax;
 			break;
 			
@@ -177,21 +217,6 @@ if (!global.pause)
 	}
 	#endregion
 	
-	#region Attack Stop Timer
-	if (attackStopTimer > 0)
-	{
-		attackStopTimer -= 1;
-	}
-	else if (attackStopTimer == 0)
-	{
-		jumpCount = 0;
-		attack = false;
-		attackNumber = -1;
-		isAttacking = false;
-		attackStopTimer = -1;
-	}
-	#endregion
-	
 	#region Dash Stop Timer
 	if (dashStopTimer > 0)
 	{
@@ -200,7 +225,7 @@ if (!global.pause)
 	else if (dashStopTimer == 0)
 	{
 		isAttacking = false;
-		attackStopTimer = 30;
+		attackStopTimer = 0;
 		dashStopTimer = -1;
 	}
 	#endregion
@@ -212,8 +237,33 @@ if (!global.pause)
 	}
 	else if (bombThrowTimer == 0)
 	{
+		bomb.active = true;
+		bomb.destroyableByPlayer = true;
+		bomb.destroyableByEnemy = false;
+		bomb.hsp = 2.5 * dirX;
+		bomb.vsp = -4.5;
+		bomb.angleSpd = bomb.hsp * 4;
 		isAttacking = false;
+		attackStopTimer = 60;
 		bombThrowTimer = -1;
+	}
+	#endregion
+	
+	#region Attack Stop Timer
+	if (attackStopTimer > 0)
+	{
+		attackStopTimer -= 1;
+	}
+	else if (attackStopTimer == 0)
+	{
+		walkDirX = 1;
+		if ((instance_exists(obj_Player)) and (obj_Player.x < x)) walkDirX = -1;
+		jumpCount = 0;
+		gravLimitNormal = 4;
+		attack = false;
+		attackNumber = -1;
+		isAttacking = false;
+		attackStopTimer = -1;
 	}
 	#endregion
 	

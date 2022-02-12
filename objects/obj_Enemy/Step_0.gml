@@ -95,7 +95,16 @@ if (!global.pause)
 				audio_play_sound(snd_DeathParticles,0,false);
 			}
 			
-			if (isBoss)
+			if (isMiniBoss)
+			{
+				var deathObj = instance_create_depth(x,y - 12,depth,obj_Miniboss_Death);
+				deathObj.ownerIndex = object_get_name(id);
+				deathObj.points = points;
+				deathObj.ability = ability;
+				deathObj.hsp = 2 * projectileHitKnockbackDir;
+				deathObj.vsp = -3;
+			}
+			else if (isBoss)
 			{
 				for (var i = 0; i < 3; i++)
 				{
@@ -441,6 +450,14 @@ if (!global.pause)
 		{
 			if (place_meeting(x,y,other))
 			{
+				if (hsp == 0)
+				{
+					if (x < other.x) other.projectileHitKnockbackDir = -1;
+				}
+				else
+				{
+					other.projectileHitKnockbackDir = -sign(hsp);
+				}
 				if ((destroyableByEnemy) and (owner != other) and (!enemy))
 				{
 					if (particleOnHit)
@@ -506,7 +523,7 @@ if (!global.pause)
 			if (place_meeting(x,y,other))
 			{
 				var canBeHurt = false;
-				if ((owner != other) and (enemy != other.enemy) and (((damageType == damageTypes.explosion)/* and (!other.explosionResistance)*/) or (damageType != damageTypes.explosion)) and (((!other.isBoss) and (hurtsEnemy)) or ((other.isBoss) and (hurtsEnemy) and (hurtsBoss)))) canBeHurt = true;
+				if ((owner != other) and (enemy != other.enemy) and (((damageType == damageTypes.explosion)/* and (!other.explosionResistance)*/) or (damageType != damageTypes.explosion)) and ((((!other.isMiniBoss) and (!other.isBoss)) and (hurtsEnemy)) or (((other.isMiniBoss) or (other.isBoss)) and (hurtsEnemy) and (hurtsBoss)))) canBeHurt = true;
 				if (canBeHurt)
 				{
 					if (audio_is_playing(snd_EnemyHurt)) audio_stop_sound(snd_EnemyHurt);
@@ -521,7 +538,7 @@ if (!global.pause)
 					}
 					else
 					{
-						if (!other.isBoss) global.healthbarMarkedEnemy = other.id;
+						if ((!other.isMiniBoss) or (!other.isBoss)) global.healthbarMarkedEnemy = other.id;
 						other.hurtTimer = other.hurtTimerMax;
 					}
 					other.hp -= dmg;
@@ -529,6 +546,14 @@ if (!global.pause)
 					other.shakeY = 2;
 					other.direction = point_direction(other.x,other.y,x,y) + irandom_range(150,210);
 					scr_HurtKnockback(other,id);
+					if (hsp == 0)
+					{
+						if (x < other.x) other.projectileHitKnockbackDir = -1;
+					}
+					else
+					{
+						other.projectileHitKnockbackDir = -sign(hsp);
+					}
 					other.hurt = true;
 					if (!destroyableByEnemy)
 					{
@@ -744,7 +769,7 @@ else if (setupTimer == 0)
 	hp += floor((hp * (instance_number(obj_Player) - 1)) / 2);
 	hpMax = hp;
 	healthbarBackHp = hp;
-	if (isBoss) healthbarBackHp = bossHbHp;
+	if ((isMiniBoss) or (isBoss)) healthbarBackHp = bossHbHp;
 	setupTimer = -1;
 }
 

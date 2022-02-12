@@ -24,13 +24,13 @@ sprAttack = spr_PoppyBrosSr_Normal_Attack;
 sprAttackHat = spr_PoppyBrosSr_Normal_AttackHat;
 sprDash = spr_PoppyBrosSr_Normal_Dash;
 sprHand = spr_PoppyBrosSr_Normal_Hand;
-sprHurt = "self";
+sprHurt = spr_PoppyBrosSr_Normal_Hurt;
 sprDeath = spr_PoppyBrosSr_Normal_Death;
 
 //Other Variables
 
-paletteIndex = spr_Nidoo_Normal_Palette_ShadowGate;
-hp = 1;
+paletteIndex = spr_PoppyBrosSr_Normal_Palette_BlueBomber;
+hp = 100;
 dmg = 1;
 points = 100;
 attack = false;
@@ -40,6 +40,11 @@ jumpCount = 0;
 dashDir = 1;
 walkDirX = -1;
 hatIndex = 0;
+isMiniBoss = true;
+hbSetup = true;
+hasXKnockback = false;
+hasYKnockback = false;
+hasDeathKnockback = false;
 
 //Timers
 

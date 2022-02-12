@@ -1,4 +1,5 @@
 ///@description Load Game
+///@param {real} file Which file to read.
 
 function scr_LoadConfig(argument0)
 {

@@ -1,4 +1,5 @@
 ///@description Save Game
+///@param {real} file Which file to write.
 
 function scr_SaveConfig(argument0)
 {

@@ -24,7 +24,7 @@ targetClampToView = false;
 
 //Camera Position
 
-if (!debugCamera)
+if ((!debugCamera) and (objectFollowing == -1))
 {
 	if (!global.cutscene)
 	{
@@ -104,7 +104,8 @@ if (!debugCamera)
 		}
 	}
 }
-else if (keyboard_check(vk_control))
+
+if ((debugCamera) and (keyboard_check(vk_control)))
 {
 	if (keyRightHold)
 	{
@@ -172,6 +173,15 @@ if ((global.gambleMaykr))
 			cameraY += 2;
 		}
 	}
+}
+
+//Follow Object
+
+if ((objectFollowing != -1) and (!instance_exists(objectFollowing))) objectFollowing = -1;
+if (objectFollowing != -1)
+{
+	cameraX = lerp(cameraX,objectFollowing.x - ((viewWidth / zoomFinal) / 2),spd);
+	cameraY = lerp(cameraY,objectFollowing.y - ((viewHeight / zoomFinal) / 2),spd);
 }
 
 //Clamp

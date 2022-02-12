@@ -2,20 +2,20 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
-  "origin": 7,
+  "origin": 9,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 39,
+  "bbox_right": 63,
   "bbox_top": 0,
-  "bbox_bottom": 38,
+  "bbox_bottom": 50,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 40,
-  "height": 39,
+  "width": 64,
+  "height": 51,
   "textureGroupId": {
     "name": "Menu",
     "path": "texturegroups/Menu",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"fbb1237d-49e2-4be5-905a-b0928654d07c","path":"sprites/spr_Menu_Collection_Customize_Familiar_HappyPea/spr_Menu_Collection_Customize_Familiar_HappyPea.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fbb1237d-49e2-4be5-905a-b0928654d07c","path":"sprites/spr_Menu_Collection_Customize_Familiar_HappyPea/spr_Menu_Collection_Customize_Familiar_HappyPea.yy",},"LayerId":{"name":"a7663e87-e6eb-4172-8be9-d1e389d7cfe4","path":"sprites/spr_Menu_Collection_Customize_Familiar_HappyPea/spr_Menu_Collection_Customize_Familiar_HappyPea.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Menu_Collection_Customize_Familiar_HappyPea","path":"sprites/spr_Menu_Collection_Customize_Familiar_HappyPea/spr_Menu_Collection_Customize_Familiar_HappyPea.yy",},"resourceVersion":"1.0","name":"fbb1237d-49e2-4be5-905a-b0928654d07c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"132c43a3-abba-434e-b3ae-6f1c411ceb5e","path":"sprites/spr_Menu_Collection_Customize_Familiar_HappyPea/spr_Menu_Collection_Customize_Familiar_HappyPea.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"132c43a3-abba-434e-b3ae-6f1c411ceb5e","path":"sprites/spr_Menu_Collection_Customize_Familiar_HappyPea/spr_Menu_Collection_Customize_Familiar_HappyPea.yy",},"LayerId":{"name":"a7663e87-e6eb-4172-8be9-d1e389d7cfe4","path":"sprites/spr_Menu_Collection_Customize_Familiar_HappyPea/spr_Menu_Collection_Customize_Familiar_HappyPea.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Menu_Collection_Customize_Familiar_HappyPea","path":"sprites/spr_Menu_Collection_Customize_Familiar_HappyPea/spr_Menu_Collection_Customize_Familiar_HappyPea.yy",},"resourceVersion":"1.0","name":"132c43a3-abba-434e-b3ae-6f1c411ceb5e","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_Menu_Collection_Customize_Familiar_HappyPea","path":"sprites/spr_Menu_Collection_Customize_Familiar_HappyPea/spr_Menu_Collection_Customize_Familiar_HappyPea.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"e70f503b-790b-4e7e-8845-29dc0ecb792e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fbb1237d-49e2-4be5-905a-b0928654d07c","path":"sprites/spr_Menu_Collection_Customize_Familiar_HappyPea/spr_Menu_Collection_Customize_Familiar_HappyPea.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"acd969dd-dcc3-46ab-a431-28c468bf19e0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"132c43a3-abba-434e-b3ae-6f1c411ceb5e","path":"sprites/spr_Menu_Collection_Customize_Familiar_HappyPea/spr_Menu_Collection_Customize_Familiar_HappyPea.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 20,
-    "yorigin": 39,
+    "xorigin": 18,
+    "yorigin": 43,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Collection_Customize_Familiar_HappyPea","path":"sprites/spr_Menu_Collection_Customize_Familiar_HappyPea/spr_Menu_Collection_Customize_Familiar_HappyPea.yy",},

@@ -276,7 +276,7 @@ function scr_Enemy_HurtsPlayer()
 			}
 			else
 			{
-				if (!isBoss) global.healthbarMarkedEnemy = id;
+				if (!isMiniBoss) global.healthbarMarkedEnemy = id;
 				hurtTimer = hurtTimerMax;
 			}
 			hp -= collidedPlayer.dmg;

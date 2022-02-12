@@ -184,8 +184,8 @@ function scr_Player_Collision()
 	
 	//Clamp
 	
-	x = clamp(x,0 + (sprite_get_width(mask_index) / 2),room_width - (sprite_get_width(mask_index) / 2));
-	y = clamp(y,0 + (sprite_get_height(mask_index) / 2),room_height + 32 + (sprite_get_height(mask_index) / 2));
+	x = clamp(x,(obj_Camera.cameraX) + (sprite_get_width(mask_index) / 2),(obj_Camera.cameraX + obj_Camera.viewWidth) - (sprite_get_width(mask_index) / 2));
+	y = clamp(y,(obj_Camera.cameraY) + (sprite_get_height(mask_index) / 2),(obj_Camera.cameraY + obj_Camera.viewHeight) + 32 + (sprite_get_height(mask_index) / 2));
 	
 	//Death On Bottom
 	

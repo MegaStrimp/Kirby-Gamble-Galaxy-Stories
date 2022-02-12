@@ -37,6 +37,8 @@ hasHoming = false;
 homingEnemy = -1;
 hasRemoteDetonation = false;
 hasMagma = false;
+destroyAfterHurt = true;
+canBeInhaled = false;
 
 //Timers
 

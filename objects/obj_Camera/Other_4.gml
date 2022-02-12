@@ -37,11 +37,6 @@ switch (room)
 		cameraX = obj_Player.x - ((viewWidth / zoom) / 2);
 		cameraY = obj_Player.y - ((viewHeight / zoom) / 2);
 	}
-	else if ((objectFollowing != -1) and (instance_exists(objectFollowing)))
-	{
-		cameraX = objectFollowing.x - ((viewWidth / zoom) / 2);
-		cameraY = objectFollowing.y - ((viewHeight / zoom) / 2);
-	}
 	else
 	{
 		cameraX = room_width / 2;
@@ -49,3 +44,4 @@ switch (room)
 	}
 	break;
 }
+objectFollowing = -1;

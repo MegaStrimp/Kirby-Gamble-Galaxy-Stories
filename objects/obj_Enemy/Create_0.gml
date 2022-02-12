@@ -44,6 +44,7 @@ bossHbHp = 0;
 dmg = 0;
 ability = playerAbilities.none;
 points = 0;
+isMiniBoss = false;
 isBoss = false;
 hurtable = true;
 hasGravity = true;
@@ -94,6 +95,7 @@ drawShakeX = 0;
 drawShakeY = 0;
 squadType = -1;
 explosionResistance = false;
+projectileHitKnockbackDir = 1;
 
 //Timers
 

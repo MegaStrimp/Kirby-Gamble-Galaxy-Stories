@@ -10,26 +10,26 @@ if (!global.pause)
 	
 	for (var i = 0; i < array_length(menuTitle); i++) menuOffset[i] = 0;
 	
-	//Select
-	
-	if (keyDownPressed)
-	{
-		if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
-		audio_play_sound(snd_BossHealth,0,false);
-		selection += 1;
-	}
-	
-	if (keyUpPressed)
-	{
-		if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
-		audio_play_sound(snd_BossHealth,0,false);
-		selection -= 1;
-	}
+	//Pages
 	
 	switch (page)
 	{
 		#region Main
 		case "main":
+		if (keyDownPressed)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			selection += 1;
+		}
+		
+		if (keyUpPressed)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			selection -= 1;
+		}
+		
 		if (selection < 0)
 		{
 			selection += array_length(menuTitle);
@@ -45,10 +45,11 @@ if (!global.pause)
 		
 		if (!instance_exists(obj_Fade))
 		{
-			if ((keyJumpPressed) or (keyStartPressed))
+			if (((keyJumpPressed) or (keyStartPressed)) and (((menuTitle[selection] == "Controls") and (!global.isMobile)) or (menuTitle[selection] != "Controls")))
 			{
 				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 				audio_play_sound(snd_ButtonYes,0,false);
+				subSelection = 0;
 				page = menuTitle[selection];
 			}
 			
@@ -62,7 +63,7 @@ if (!global.pause)
 		
 		if (goBack)
 		{
-			scr_SaveGame(global.selectedSave);
+			scr_SaveConfig("config.ini");
 			var fade = instance_create_depth(x,y,-999,obj_Fade);
 			fade.targetRoom = rm_MainMenu;
 			goBack = false;
@@ -70,38 +71,408 @@ if (!global.pause)
 		break;
 		#endregion
 		
-		#region Audio
-		case "Audio":
-		if (selection < 0)
+		#region Display
+		case "Display":
+		if (keyDownPressed)
 		{
-			selection += array_length(audioMenuIndex);
-			textY = 147 - ((selection - 2) * 36);
-		}
-		if (selection > array_length(audioMenuIndex) - 1)
-		{
-			selection -= array_length(audioMenuIndex);
-			textY = 147 - ((selection + 2) * 36);
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			subSelection += 1;
 		}
 		
-		if (!instance_exists(obj_Fade))
+		if (keyUpPressed)
 		{
-			if ((keyJumpPressed) or (keyStartPressed))
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			subSelection -= 1;
+		}
+		
+		if (subSelection < 0)
+		{
+			subSelection += 2;
+		}
+		if (subSelection > 1)
+		{
+			subSelection -= 2;
+		}
+		
+		switch (subSelection)
+		{
+			case 0:
+			if ((keyJumpPressed) or (keyLeftPressed) or (keyRightPressed))
 			{
-				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
-				audio_play_sound(snd_ButtonYes,0,false);
-				//page = audioMenuIndex[selection];
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				window_set_fullscreen(!global.fullscreen);
+				global.fullscreen = window_get_fullscreen();
+				if ((!global.fullscreen) and (instance_exists(obj_Camera))) obj_Camera.windowSet = false;
 			}
+			break;
 			
-			if (keyAttackPressed)
+			case 1:
+			if (!global.fullscreen)
 			{
-				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
-				audio_play_sound(snd_ButtonNo,0,false);
-				goBack = true;
+				if ((keyJumpPressed) or (keyLeftPressed))
+				{
+					if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+					audio_play_sound(snd_BossHealth,0,false);
+					with (obj_Camera)
+					{
+						global.windowSize -= 1;
+						if (global.windowSize <= 0) global.windowSize = scaleMax;
+						scale = global.windowSize;
+						windowSet = false;
+					}
+				}
+				
+				if (keyRightPressed)
+				{
+					if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+					audio_play_sound(snd_BossHealth,0,false);
+					with (obj_Camera)
+					{
+						global.windowSize += 1;
+						if (global.windowSize > scaleMax) global.windowSize = 1;
+						scale = global.windowSize;
+						windowSet = false;
+					}
+				}
 			}
+			else
+			{
+				if ((keyJumpPressed) or (keyLeftPressed) or (keyRightPressed))
+				{
+					if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+					audio_play_sound(snd_ButtonNo,0,false);
+				}
+			}
+		}
+		
+		if (keyAttackPressed)
+		{
+			if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+			audio_play_sound(snd_ButtonNo,0,false);
+			goBack = true;
 		}
 		
 		if (goBack)
 		{
+			selection = 0;
+			page = "main";
+			goBack = false;
+		}
+		break;
+		#endregion
+		
+		#region Audio
+		case "Audio":
+		if (keyDownPressed)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			subSelection += 1;
+		}
+		
+		if (keyUpPressed)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			subSelection -= 1;
+		}
+		
+		if (subSelection < 0)
+		{
+			subSelection += 2;
+		}
+		if (subSelection > 1)
+		{
+			subSelection -= 2;
+		}
+		
+		switch (subSelection)
+		{
+			case 0:
+			if ((keyRightPressed) and (global.musicVolume < 1)) global.musicVolume += .1;
+			if ((keyLeftPressed) and (global.musicVolume > 0)) global.musicVolume -= .1;
+			global.musicVolume = clamp(global.musicVolume,0,1);
+			break;
+			
+			case 1:
+			if ((keyRightPressed) and (global.soundVolume < 1))
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				global.soundVolume += .1;
+			}
+			if ((keyLeftPressed) and (global.soundVolume > 0))
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				global.soundVolume -= .1;
+			}
+			global.soundVolume = clamp(global.soundVolume,0,1);
+			break;
+		}
+		
+		if (keyAttackPressed)
+		{
+			if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+			audio_play_sound(snd_ButtonNo,0,false);
+			goBack = true;
+		}
+		
+		if (goBack)
+		{
+			selection = 1;
+			page = "main";
+			goBack = false;
+		}
+		break;
+		#endregion
+		
+		#region Controls
+		case "Controls":
+		if (!paused)
+		{
+			if (keyDownPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				subSelection += 1;
+			}
+			
+			if (keyUpPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				subSelection -= 1;
+			}
+			
+			if (keyLeftPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				subSelection -= 8;
+			}
+			
+			if (keyRightPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				subSelection += 8;
+			}
+		}
+		
+		if (subSelection < 0)
+		{
+			subSelection += 16;
+		}
+		if (subSelection > 15)
+		{
+			subSelection -= 16;
+		}
+		
+		if ((keyAttackPressed) and (!paused))
+		{
+			if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+			audio_play_sound(snd_ButtonNo,0,false);
+			goBack = true;
+		}
+		
+		if (goBack)
+		{
+			selection = 2;
+			page = "main";
+			goBack = false;
+		}
+		
+		if ((paused) and (keyboard_check_pressed(vk_anykey)))
+		{
+			var pressedKey = keyboard_key;
+			paused = false;
+			switch (subSelection)
+			{
+				case 0:
+				global.finalKeyLeft[0] = pressedKey;
+				break;
+				
+				case 1:
+				global.finalKeyRight[0] = pressedKey;
+				break;
+				
+				case 2:
+				global.finalKeyUp[0] = pressedKey;
+				break;
+				
+				case 3:
+				global.finalKeyDown[0] = pressedKey;
+				break;
+				
+				case 4:
+				global.finalKeyJump[0] = pressedKey;
+				break;
+				
+				case 5:
+				global.finalKeyAttack[0] = pressedKey;
+				break;
+				
+				case 6:
+				global.finalKeyStart[0] = pressedKey;
+				break;
+				
+				case 7:
+				global.finalKeySelect[0] = pressedKey;
+				break;
+				
+				case 8:
+				global.finalKeyLeft[1] = pressedKey;
+				break;
+				
+				case 9:
+				global.finalKeyRight[1] = pressedKey;
+				break;
+				
+				case 10:
+				global.finalKeyUp[1] = pressedKey;
+				break;
+				
+				case 11:
+				global.finalKeyDown[1] = pressedKey;
+				break;
+				
+				case 12:
+				global.finalKeyJump[1] = pressedKey;
+				break;
+				
+				case 13:
+				global.finalKeyAttack[1] = pressedKey;
+				break;
+				
+				case 14:
+				global.finalKeyStart[1] = pressedKey;
+				break;
+				
+				case 15:
+				global.finalKeySelect[1] = pressedKey;
+				break;
+			}
+		}
+		else
+		{
+			if (keyJumpPressed) paused = true;
+		}
+		break;
+		#endregion
+		
+		#region Language
+		case "Language":
+		if (keyDownPressed)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			subSelection += 1;
+		}
+		
+		if (keyUpPressed)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			subSelection -= 1;
+		}
+		
+		if (keyLeftPressed)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			subSelection -= 8;
+		}
+		
+		if (keyRightPressed)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			subSelection += 8;
+		}
+		
+		if (subSelection < 0)
+		{
+			subSelection += languageArrayLength;
+		}
+		if (subSelection > languageArrayLength - 1)
+		{
+			subSelection -= languageArrayLength;
+		}
+		
+		if (keyJumpPressed)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			global.language = languageVal[subSelection];
+		}
+		
+		if (keyAttackPressed)
+		{
+			if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+			audio_play_sound(snd_ButtonNo,0,false);
+			goBack = true;
+		}
+		
+		if (goBack)
+		{
+			selection = 3;
+			page = "main";
+			goBack = false;
+		}
+		break;
+		#endregion
+		
+		#region Other
+		case "Other":
+		if (keyDownPressed)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			subSelection += 1;
+		}
+		
+		if (keyUpPressed)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			subSelection -= 1;
+		}
+		
+		if (subSelection < 0)
+		{
+			subSelection += 1;
+		}
+		if (subSelection > 0)
+		{
+			subSelection -= 1;
+		}
+		
+		switch (subSelection)
+		{
+			case 0:
+			if ((keyJumpPressed) or (keyLeftPressed) or (keyRightPressed))
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				global.extraTutorials = !global.extraTutorials;
+			}
+			break;
+		}
+		
+		if (keyAttackPressed)
+		{
+			if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+			audio_play_sound(snd_ButtonNo,0,false);
+			goBack = true;
+		}
+		
+		if (goBack)
+		{
+			selection = 4;
 			page = "main";
 			goBack = false;
 		}

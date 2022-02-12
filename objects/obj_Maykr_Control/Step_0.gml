@@ -662,6 +662,7 @@ if (!active)
 					if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 					audio_play_sound(snd_ButtonYes,0,false);
 					windowIndex = -1;
+					global.gambleMaykr = false;
 					global.pause = false;
 					var fade = instance_create_depth(x,y,-999,obj_Fade);
 					fade.targetRoom = rm_MaykrTitle;

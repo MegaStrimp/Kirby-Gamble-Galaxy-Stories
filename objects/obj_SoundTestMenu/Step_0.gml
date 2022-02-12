@@ -4,7 +4,7 @@ if (!global.pause)
 {
 	//Inputs
 	
-	scr_Player_Inputs(player);
+	scr_Player_Inputs(0);
 	
 	//Variables
 	

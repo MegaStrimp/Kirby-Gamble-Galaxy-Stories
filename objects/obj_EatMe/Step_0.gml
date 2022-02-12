@@ -6,6 +6,13 @@ if (!global.pause)
 
 	if (instance_exists(owner))
 	{
+		var sprHeight = sprite_get_height(sprite_index);
+		if (sprHeight > 18)
+		{
+			var targetScale = 18 / sprHeight;
+			image_xscale = lerp(image_xscale,targetScale,.05);
+			image_yscale = lerp(image_yscale,targetScale,.05);
+		}
 		if (state == 0)
 		{
 			if (spd < spdMax)

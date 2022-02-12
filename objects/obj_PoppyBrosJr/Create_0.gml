@@ -45,4 +45,3 @@ handYOffset = 0;
 
 attackTimerMax = 360;
 attackTimer = attackTimerMax;
-attackTimer = 0;

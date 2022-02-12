@@ -14,6 +14,7 @@ if (!global.pause)
         {
             var mirrorKirby = instance_create_depth(x,y,depth,obj_Projectile_MirrorPlayer);
             mirrorKirby.owner = owner;
+            mirrorKirby.player = owner.player;
 			mirrorKirby.dmg = 16;
 			mirrorKirby.destroyableByWall = false;
 			mirrorKirby.destroyableByEnemy = false;
@@ -44,6 +45,7 @@ if (!global.pause)
         {
             var mirrorKirby = instance_create_depth(x,y - (24 * amount),depth,obj_Projectile_MirrorPlayer);
             mirrorKirby.owner = owner;
+            mirrorKirby.player = owner.player;
 			mirrorKirby.dmg = 18;
             mirrorKirby.state = 2;
 			mirrorKirby.destroyableByWall = false;

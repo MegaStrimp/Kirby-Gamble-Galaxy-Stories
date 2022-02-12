@@ -67,10 +67,10 @@ if ((!global.pause) and (!scr_OutsideView()))
 		{
 			with (obj_Player)
 			{
-				if ((place_meeting(x,y + 1,obj_Wall)) and (keyJumpHold) and (!keyDownHold) and (!attack) and (canJump))
+				if ((place_meeting(x,y + 1,obj_Wall)) and (keyJumpPressed) and (!keyDownHold) and (!attack) and (canJump))
 				{
-					starTimer = 0;
-					completed = true;
+					other.starTimer = 0;
+					other.completed = true;
 				}
 			}
 		}
@@ -83,7 +83,7 @@ if ((!global.pause) and (!scr_OutsideView()))
 		{
 			with (obj_Player)
 			{
-				if (keyDownHold)
+				if (duck)
 				{
 					other.starTimer = 0;
 					other.completed = true;

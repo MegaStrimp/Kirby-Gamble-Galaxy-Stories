@@ -603,6 +603,44 @@ function scr_Localization(argument0,argument1,argument2,argument3)
 	dialogue[0][2][i][10] = "";
 	#endregion
 	
+	#region World Names
+	var i = 0;
+	dialogue[0][3][i][0] = "";
+	#endregion
+	
+	#region Other Names
+	var i = 0;
+	dialogue[0][4][i][0] = "";
+	#endregion
+	
+	#region Languages
+	var i = 0;
+	dialogue[0][5][i][0] = "English";
+	i += 1;
+	dialogue[0][5][i][0] = "Türkçe";
+	i += 1;
+	dialogue[0][5][i][0] = "Deutsch";
+	i += 1;
+	dialogue[0][5][i][0] = "Italiano";
+	i += 1;
+	dialogue[0][5][i][0] = "Français";
+	i += 1;
+	dialogue[0][5][i][0] = "Polski";
+	i += 1;
+	dialogue[0][5][i][0] = "Chinese *";
+	i += 1;
+	dialogue[0][5][i][0] = "Español";
+	i += 1;
+	dialogue[0][5][i][0] = "日本語";
+	i += 1;
+	dialogue[0][5][i][0] = "Português";
+	i += 1;
+	dialogue[0][5][i][0] = "Norwegian *";
+	i += 1;
+	dialogue[0][5][i][0] = "عربي";
+	i += 1;
+	#endregion
+	
 	#region Ability Pause Descriptions
 	#region Kirby
 	i = 0;

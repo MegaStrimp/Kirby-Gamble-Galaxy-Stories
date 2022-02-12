@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Boss",
-    "path": "folders/Sprites/Hud/Healthbars/Boss.yy",
+    "name": "Icons",
+    "path": "folders/Sprites/Hud/Healthbars/Boss/Icons.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Healthbar_Boss_Icon_WhispyWoods",

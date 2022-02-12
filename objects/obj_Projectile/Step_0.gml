@@ -138,5 +138,6 @@ if (setupTimer > 0)
 }
 else if (setupTimer == 0)
 {
+	if (setupExplode) instance_destroy();
 	setupTimer = -1;
 }

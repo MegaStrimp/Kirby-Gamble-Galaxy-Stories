@@ -89,7 +89,7 @@ if (!global.pause)
 			case "food":
 			var itemX = x;
 			var itemY = y;
-			if (!place_meeting(x,touchedPlayer.y - 8,obj_Wall)) itemY = touchedPlayer.y - 8;
+			if ((instance_exists(touchedPlayer)) and (!place_meeting(x,touchedPlayer.y - 8,obj_Wall))) itemY = touchedPlayer.y - 8;
 			var spawnedItem = instance_create_depth(itemX,itemY,depth - 1,obj_Food);
 			spawnedItem.hasGravity = true;
 			spawnedItem.vsp = -2;
@@ -98,7 +98,7 @@ if (!global.pause)
 			case "pepBrew":
 			var itemX = x;
 			var itemY = y;
-			if (!place_meeting(x,touchedPlayer.y - 8,obj_Wall)) itemY = touchedPlayer.y - 8;
+			if ((instance_exists(touchedPlayer)) and (!place_meeting(x,touchedPlayer.y - 8,obj_Wall))) itemY = touchedPlayer.y - 8;
 			var spawnedItem = instance_create_depth(itemX,itemY,depth - 1,obj_PepBrew);
 			spawnedItem.hasGravity = true;
 			spawnedItem.vsp = -2;

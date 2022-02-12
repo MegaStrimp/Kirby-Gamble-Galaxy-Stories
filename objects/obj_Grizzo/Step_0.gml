@@ -41,6 +41,7 @@ if (!global.pause)
 		else
 		{
 			shakeX = 0;
+			inhalePower = 0;
 			gettingInhaled = false;
 		}
 		if (inhalePower >= inhalePowerMax) scr_Object_Inhale();
@@ -156,7 +157,7 @@ if (!global.pause)
 				
 				case 1:
 				attackState = 2;
-				attackTimer = 45;
+				attackTimer = 30;
 				break;
 				
 				case 2:

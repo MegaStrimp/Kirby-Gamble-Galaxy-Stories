@@ -842,7 +842,7 @@ if (!global.pause)
 	}
 	else if (runCancelTimer == 0)
 	{
-		if ((!keyLeftHold) and (!keyRightHold))
+		if (((!keyLeftHold) and (!keyRightHold)) or ((keyLeftHold) and (keyRightHold)))
 	    {
 	        runCancelTimer = runCancelTimerMax;
 	        runCancelTimer = -1;
@@ -903,6 +903,7 @@ if (!global.pause)
 			var projBeam = instance_create_depth(x + (15 * dir),y + 10,depth,obj_Projectile_Beam);
 			projBeam.imageSpeed = 1;
 			projBeam.owner = id;
+			projBeam.player = player;
 			projBeam.dmg = 8 + (10 * beamAttack2FirstHit);
 		    projBeam.dirX = -dir;
 		    projBeam.dir = dir;
@@ -963,6 +964,7 @@ if (!global.pause)
 			var projBeam = instance_create_depth(x + (23 * dir),y - 8,depth,obj_Projectile_Beam);
 			projBeam.imageSpeed = 1;
 			projBeam.owner = id;
+			projBeam.player = player;
 			projBeam.dmg = 21;
 		    projBeam.dirX = dir;
 		    projBeam.dir = dir;
@@ -999,6 +1001,7 @@ if (!global.pause)
 			var projBeam = instance_create_depth(x + (23 * dir),y - 8,depth,obj_Projectile_Beam);
 			projBeam.imageSpeed = 1;
 			projBeam.owner = id;
+			projBeam.player = player;
 			projBeam.dmg = 21;
 		    projBeam.dirX = dir;
 		    projBeam.dir = dir;
@@ -1036,6 +1039,7 @@ if (!global.pause)
 			projBeam.character = 7;
 			projBeam.sprite_index = spr_Projectile_MysticBeam_Air;
 			projBeam.owner = id;
+			projBeam.player = player;
 			projBeam.dmg = 18;
 		    projBeam.dirX = -dir;
 		    projBeam.dir = dir;
@@ -1796,6 +1800,7 @@ else if (characterSetupTimer == 0)
 		sprWarpStar2 = spr_Kirby_Normal_WarpStar2;
 		sprGuard = spr_Kirby_Normal_Guard;
 		sprGuardSlope = spr_Kirby_Normal_Guard_Slope;
+		sprItemCarryThrow = spr_Kirby_Normal_ItemCarry_Throw;
 		sprCutterCharge = spr_SirKibble_Normal_Catch;
 		sprCutterAttack1 = spr_Kirby_Normal_Cutter_Attack1;
 		sprCutterAttack2 = spr_Kirby_Normal_Cutter_Attack2;
@@ -2105,7 +2110,7 @@ else if (characterSetupTimer == 0)
 			maskIndex = spr_16Square_Mask;
 			sprIdle = spr_WaddleDee_Normal_Idle;
 			sprWalk = spr_WaddleDee_Normal_Walk;
-			sprRun = spr_WaddleDee_Normal_Walk;
+			sprRun = spr_WaddleDee_Normal_Run;
 			sprJump = spr_WaddleDee_Normal_Jump;
 			sprFall = spr_WaddleDee_Normal_Fall;
 			sprSquish = spr_WaddleDee_Normal_Idle;
@@ -2129,7 +2134,7 @@ else if (characterSetupTimer == 0)
 			maskIndex = spr_16Square_Mask;
 			sprIdle = spr_WaddleDee_Egg_Idle;
 			sprWalk = spr_WaddleDee_Egg_Walk;
-			sprRun = spr_WaddleDee_Egg_Walk;
+			sprRun = spr_WaddleDee_Normal_Run;
 			sprJump = spr_WaddleDee_Egg_Jump;
 			sprFall = spr_WaddleDee_Egg_Fall;
 			sprSquish = spr_WaddleDee_Egg_Idle;
@@ -2153,7 +2158,7 @@ else if (characterSetupTimer == 0)
 			maskIndex = spr_16Square_Mask;
 			sprIdle = spr_WaddleDee_Gold_Idle;
 			sprWalk = spr_WaddleDee_Gold_Walk;
-			sprRun = spr_WaddleDee_Gold_Walk;
+			sprRun = spr_WaddleDee_Normal_Run;
 			sprJump = spr_WaddleDee_Gold_Jump;
 			sprFall = spr_WaddleDee_Gold_Fall;
 			sprSquish = spr_WaddleDee_Gold_Idle;
@@ -2177,7 +2182,7 @@ else if (characterSetupTimer == 0)
 			maskIndex = spr_16Square_Mask;
 			sprIdle = spr_WaddleDee_Alien_Idle;
 			sprWalk = spr_WaddleDee_Alien_Walk;
-			sprRun = spr_WaddleDee_Alien_Walk;
+			sprRun = spr_WaddleDee_Normal_Run;
 			sprJump = spr_WaddleDee_Alien_Jump;
 			sprFall = spr_WaddleDee_Alien_Fall;
 			sprSquish = spr_WaddleDee_Alien_Idle;

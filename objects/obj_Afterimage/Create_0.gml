@@ -9,6 +9,7 @@ vsp = 0;
 
 paletteIndex = -1;
 lowerAlphaToDestroy = false;
+owner = -1;
 
 //Timers
 

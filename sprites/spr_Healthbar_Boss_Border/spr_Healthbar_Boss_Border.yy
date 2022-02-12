@@ -8,13 +8,13 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 213,
+  "bbox_right": 339,
   "bbox_top": 0,
   "bbox_bottom": 46,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 214,
+  "width": 340,
   "height": 47,
   "textureGroupId": {
     "name": "Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"fa98f37f-ad08-41f0-9fd3-393718a563a1","path":"sprites/spr_Healthbar_Boss_Border/spr_Healthbar_Boss_Border.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fa98f37f-ad08-41f0-9fd3-393718a563a1","path":"sprites/spr_Healthbar_Boss_Border/spr_Healthbar_Boss_Border.yy",},"LayerId":{"name":"74e63e2a-8a9f-4913-b8dd-b1c950039e03","path":"sprites/spr_Healthbar_Boss_Border/spr_Healthbar_Boss_Border.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Healthbar_Boss_Border","path":"sprites/spr_Healthbar_Boss_Border/spr_Healthbar_Boss_Border.yy",},"resourceVersion":"1.0","name":"fa98f37f-ad08-41f0-9fd3-393718a563a1","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"4228b12f-0b75-47e3-8aa6-268e7a1d2bcc","path":"sprites/spr_Healthbar_Boss_Border/spr_Healthbar_Boss_Border.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"4228b12f-0b75-47e3-8aa6-268e7a1d2bcc","path":"sprites/spr_Healthbar_Boss_Border/spr_Healthbar_Boss_Border.yy",},"LayerId":{"name":"74e63e2a-8a9f-4913-b8dd-b1c950039e03","path":"sprites/spr_Healthbar_Boss_Border/spr_Healthbar_Boss_Border.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Healthbar_Boss_Border","path":"sprites/spr_Healthbar_Boss_Border/spr_Healthbar_Boss_Border.yy",},"resourceVersion":"1.0","name":"4228b12f-0b75-47e3-8aa6-268e7a1d2bcc","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_Healthbar_Boss_Border","path":"sprites/spr_Healthbar_Boss_Border/spr_Healthbar_Boss_Border.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"143459a6-16fb-4650-86db-4fbe22544dd2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fa98f37f-ad08-41f0-9fd3-393718a563a1","path":"sprites/spr_Healthbar_Boss_Border/spr_Healthbar_Boss_Border.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ea6c7074-020b-41f3-b6c7-80142a5fb2fc","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4228b12f-0b75-47e3-8aa6-268e7a1d2bcc","path":"sprites/spr_Healthbar_Boss_Border/spr_Healthbar_Boss_Border.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,

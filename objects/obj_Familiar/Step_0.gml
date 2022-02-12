@@ -262,7 +262,7 @@ if (!global.pause)
 					var projectile = instance_create_depth(x,y - 10 - attackYOffset,depth + 1,obj_Projectile_Bomb);
 					projectile.owner = id;	
 					projectile.character = 3;
-					projectile.objectOnHitDmg = 26;
+					projectile.objectOnHitDmg = 12;
 					projectile.dirX = dir;
 					projectile.hsp = lengthdir_x(throwSpeed,angle);
 					projectile.vsp = lengthdir_y(throwSpeed,angle);

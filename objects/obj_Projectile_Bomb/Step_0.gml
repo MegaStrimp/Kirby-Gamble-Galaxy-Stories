@@ -138,6 +138,10 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	event_inherited();
 	
+	//Get Inhaled
+	
+	if (canBeInhaled) scr_Object_Inhale();
+	
 	//Inputs
 	
 	scr_Player_Inputs(player);
@@ -243,7 +247,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	}
 	else
 	{
-		if ((instance_exists(owner)) and (enemy) and (owner.hurt)) instance_destroy();
+		if ((!instance_exists(owner)) or ((destroyAfterHurt) and (instance_exists(owner)) and (enemy) and (owner.hurt))) instance_destroy();
 		
 		//Self Explode Timer
 		

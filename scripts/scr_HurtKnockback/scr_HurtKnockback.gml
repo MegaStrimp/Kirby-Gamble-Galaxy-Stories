@@ -1,8 +1,9 @@
 ///@function scr_HurtKnockback(target,source)
 ///@description Hurt Knockback
 ///@param {real} target Set it to the target of knockback.
+///@param {real} source Set it to the source of knockback.
 
-function scr_HurtKnockback(argument0, argument1)
+function scr_HurtKnockback(argument0,argument1)
 {
 	//Variables
 	
@@ -21,13 +22,20 @@ function scr_HurtKnockback(argument0, argument1)
 	
 	if (knockbackTarget.hasXKnockback)
 	{
-		if (knockbackTarget.x >= knockbackSource.x)
+		if (knockbackSource.hsp == 0)
 		{
-			knockbackTarget.hsp = 3;
+			if (knockbackTarget.x >= knockbackSource.x)
+			{
+				knockbackTarget.hsp = 3;
+			}
+			else
+			{
+				knockbackTarget.hsp = -3;
+			}
 		}
 		else
 		{
-			knockbackTarget.hsp = -3;
+			knockbackTarget.projectileHitKnockbackDir = -sign(knockbackSource.hsp);
 		}
 	}
 }

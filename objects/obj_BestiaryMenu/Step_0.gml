@@ -32,6 +32,9 @@ if (!global.pause)
 	if (enemySelection < 0) enemySelection += arrayLength + 1;
 	if (enemySelection > arrayLength) enemySelection -= arrayLength + 1;
 	
+	if (enemySelection > loopStart + 8) loopStart = enemySelection - 8;
+	if (enemySelection < loopStart) loopStart = enemySelection;
+	
 	if (!instance_exists(obj_Fade))
 	{
 		if (keyAttackPressed)

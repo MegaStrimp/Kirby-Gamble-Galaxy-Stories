@@ -1,4 +1,5 @@
 ///@description Load Game
+///@param {real} file Which file to read.
 
 function scr_LoadGame(argument0)
 {
@@ -115,6 +116,7 @@ function scr_LoadGame(argument0)
 	global.bestiaryEnemiesComoUnlocked = ini_read_real("unlocks","bestiaryEnemiesComoUnlocked",false);
 	global.bestiaryEnemiesCairnUnlocked = ini_read_real("unlocks","bestiaryEnemiesCairnUnlocked",false);
 	global.bestiaryEnemiesBomberUnlocked = ini_read_real("unlocks","bestiaryEnemiesBomberUnlocked",false);
+	global.bestiaryEnemiesSimirrorUnlocked = ini_read_real("unlocks","bestiaryEnemiesSimirrorUnlocked",false);
 	
 	global.skinKirbyP1 = ini_read_string("playerCustomization","skinKirbyP1","normal");
 	global.skinKirbyP2 = ini_read_string("playerCustomization","skinKirbyP2","normal");

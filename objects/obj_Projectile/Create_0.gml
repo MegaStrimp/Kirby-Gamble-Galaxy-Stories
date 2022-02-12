@@ -1,5 +1,10 @@
 ///@description Initialize Variables
 
+//Physics
+
+hsp = 0;
+vsp = 0;
+
 //Other Variables
 
 owner = id;
@@ -43,6 +48,7 @@ hitInvincibility = hitInvincibilityMin;
 imageAngle = image_angle;
 syncImageAngle = true;
 player = 0;
+setupExplode = false;
 
 //Timers
 

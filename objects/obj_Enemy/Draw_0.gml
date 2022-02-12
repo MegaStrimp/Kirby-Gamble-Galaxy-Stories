@@ -8,16 +8,12 @@ if (invincibleFlash) paletteFlash = 2;
 drawShakeX = irandom_range(-shakeX,shakeX);
 drawShakeY = irandom_range(-shakeY,shakeY);
 
-if (global.shaders) pal_swap_set(paletteIndex,paletteFlash,false);
+drawPaletteFlash = paletteFlash;
+if ((hurt) and (invincibleFlash)) drawPaletteFlash = 3;
+
+if (global.shaders) pal_swap_set(paletteIndex,drawPaletteFlash,false);
 draw_sprite_ext(sprite_index,image_index,x + drawShakeX,y + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle,image_blend,image_alpha);
 if (global.shaders) pal_swap_reset();
-
-if ((hurt) and (invincibleFlash))
-{
-	if (global.shaders) pal_swap_set(paletteIndex,3,false);
-	draw_sprite_ext(sprite_index,image_index,x + drawShakeX,y + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle,image_blend,.7);
-	if (global.shaders) pal_swap_reset();
-}
 
 //Flux Overlay
 
@@ -68,7 +64,7 @@ else
 
 //Healthbar
 
-if (!isBoss)
+if ((!isMiniBoss) and (!isBoss))
 {
 	var hbHp = hp;
 	hbHp = max(hbHp,0);

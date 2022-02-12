@@ -216,7 +216,9 @@ if (!global.pause)
 		break;
 		
 		case "back":
-		if ((!instance_exists(obj_Fade)) and (mouse_check_button_pressed(mb_left)) and (position_meeting(mouse_x,mouse_y,self)))
+		var canGoBack = true;
+		if ((owner.object_index = obj_OptionsMenu) and (owner.paused)) canGoBack = false;
+		if ((canGoBack) and (!instance_exists(obj_Fade)) and (mouse_check_button_pressed(mb_left)) and (position_meeting(mouse_x,mouse_y,self)))
 		{
 			if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 			audio_play_sound(snd_ButtonNo,0,false);
