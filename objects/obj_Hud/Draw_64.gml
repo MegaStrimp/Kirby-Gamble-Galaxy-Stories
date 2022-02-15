@@ -9,8 +9,8 @@ var characterP2 = global.characterP2;
 var paletteP1 = global.sprayPaintP1;
 var paletteP2 = global.sprayPaintP2;
 
-if (global.isHelperP1) paletteP1 = spr_Hud_Palette_Helper;
-if (global.isHelperP2) paletteP2 = spr_Hud_Palette_Helper;
+//if (global.isHelperP1) paletteP1 = spr_Hud_Palette_Helper;
+//if (global.isHelperP2) paletteP2 = spr_Hud_Palette_Helper;
 
 var hbackground = spr_Hud_Healthbar_Background_Kirby;
 

@@ -26,6 +26,8 @@ function scr_Player_Normal()
 			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) wallAbove = true;
 		}
 		
+		didJump = false;
+		
 		//Run
 		
 		if ((canRun) and (playerAbility != playerAbilities.ufo))
@@ -181,7 +183,7 @@ function scr_Player_Normal()
 		}
 		
 		var blockGap = false;
-		if ((run) and (hsp != 0) and (!place_meeting(x + hsp,y,obj_Wall) and (place_meeting(x + hsp,y + 1,obj_Wall)))) blockGap = true;
+		if ((run) and (hsp != 0) and (!place_meeting(x,y + 1,obj_Wall)) and (!place_meeting(x + hsp,y,obj_Wall)) and (place_meeting(x + hsp + 24,y + 1,obj_Wall))) blockGap = true;
 		if ((hasGravity) and (!blockGap) and (playerAbility != playerAbilities.ufo))
 		{
 			var gravOffset = 0;
@@ -202,7 +204,7 @@ function scr_Player_Normal()
 			var jumpLimitValue = -jumpspeed / 4;
 			switch (playerCharacter)
 			{
-				case "bouncy":
+				case playerCharacters.bouncy:
 				jumpLimitValue = -jumpspeed / 2;
 				break;
 				
@@ -530,13 +532,23 @@ function scr_Player_Normal()
 							}
 							else
 							{
-								if ((!cutterAirThrown) or (vsp == 0))
+								if (vsp == 0)
 								{
-									if (vsp != 0) cutterAirThrown = true;
 									attack = true;
 									attackNumber = "cutterCharge";
 									sprite_index = sprCutterAttack1;
 									image_index = 0;
+								}
+								else
+								{
+									if (!cutterAirThrown)
+									{
+										cutterAirThrown = true;
+										attack = true;
+										attackNumber = "cutterNormal";
+										sprite_index = sprCutterAttack1;
+									    image_index = 0;
+									}
 								}
 							}
 					    }
@@ -765,10 +777,22 @@ function scr_Player_Normal()
 									}
 									else
 									{
-										attack = true;
-										attackNumber = "beamCharge";
-										sprite_index = sprBeamCharge;
-									    image_index = 0;
+										if (vsp == 0)
+										{
+											attack = true;
+											attackNumber = "beamCharge";
+											sprite_index = sprBeamCharge;
+										    image_index = 0;
+										}
+										else
+										{
+											if (audio_is_playing(snd_Beam)) audio_stop_sound(snd_Beam);
+											sndBeam = audio_play_sound(snd_Beam,0,false);
+											attack = true;
+											attackNumber = "beamNormal";
+											sprite_index = sprBeamAttack1;
+										    image_index = 0;
+										}
 									}
 								}
 							}
@@ -1151,10 +1175,60 @@ function scr_Player_Normal()
 								}
 								else
 								{
-									attack = true;
-									attackNumber = "mysticBeamCharge";
-									sprite_index = sprBeamCharge;
-								    image_index = 0;
+									if (vsp == 0)
+									{
+										attack = true;
+										attackNumber = "mysticBeamCharge";
+										sprite_index = sprBeamCharge;
+										image_index = 0;
+									}
+									else
+									{
+										canMysticBeamShield = true;
+										if (instance_exists(obj_Projectile_Beam))
+										{
+											with (obj_Projectile_Beam)
+											{
+												if ((isMystic) and (state == 2) and (owner == other.id))
+												{
+													if (audio_is_playing(snd_MysticBeamLaunch)) audio_stop_sound(snd_MysticBeamLaunch);
+													audio_play_sound(snd_MysticBeamLaunch,0,false);
+													other.canMysticBeamShield = false;
+													var par = instance_create_depth(x,y,depth,obj_Particle);
+													par.sprite_index = choose(spr_Particle_BeamFlareWhite,spr_Particle_BeamFlareFlux,spr_Particle_BeamFlareYellow);
+													par.image_index = choose(1,2);
+													par.hsp = random_range(-1,1);
+													par.vsp = random_range(-1,1);
+													par.dir = dirX;
+													par.imageSpeed = 0;
+													par.destroyTimer = irandom_range(5,15);
+													if (place_meeting(x,y,obj_Wall)) instance_destroy();
+													dmg = 15;
+													spd = 5;
+													direction = angle;
+													state = 3;
+													destroyableByWall = false;
+													alphaTimer = alphaTimerMax;
+												}
+											}
+										}
+										beamCharge = 0;
+										if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
+										chargeSfxState = "intro";
+										if (canMysticBeamShield)
+										{
+											if (audio_is_playing(snd_MysticBeam)) audio_stop_sound(snd_MysticBeam);
+											sndMysticBeam = audio_play_sound(snd_MysticBeam,0,false);
+											attack = true;
+											attackNumber = "mysticBeamNormal";
+											sprite_index = sprBeamAttack1;
+											image_index = 0;
+										}
+										else
+										{
+											attackTimer = 0;
+										}
+									}
 								}
 							}
 						}
@@ -1231,7 +1305,7 @@ function scr_Player_Normal()
 									chargeSfxState = "intro";
 									if (canMysticBeamShield)
 									{
-										if (audio_is_playing(snd_Beam)) audio_stop_sound(snd_Beam);
+										if (audio_is_playing(snd_MysticBeam)) audio_stop_sound(snd_MysticBeam);
 										sndMysticBeam = audio_play_sound(snd_MysticBeam,0,false);
 										attack = true;
 										attackNumber = "mysticBeamNormal";
@@ -2754,7 +2828,7 @@ function scr_Player_Normal()
 					}
 					break;
 				
-					case "waddleDoo":
+					case playerCharacters.waddleDoo:
 					if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					{
 						if (audio_is_playing(snd_Beam)) audio_stop_sound(snd_Beam);
@@ -2796,13 +2870,27 @@ function scr_Player_Normal()
 					}
 					break;
 				
-					case "sirKibble":
+					case playerCharacters.sirKibble:
 					if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (attackable) and (!attack))
 					{
-						attack = true;
-						attackNumber = "sirKibbleCutterCharge";
-						sprite_index = sprCutterCharge;
-						image_index = 0;
+						if (vsp == 0)
+						{
+							attack = true;
+							attackNumber = "sirKibbleCutterCharge";
+							sprite_index = sprCutterAttack1;
+							image_index = 0;
+						}
+						else
+						{
+							if (!cutterAirThrown)
+							{
+								cutterAirThrown = true;
+								attack = true;
+								attackNumber = "sirKibbleCutterNormal";
+								sprite_index = sprCutterAttack1;
+								image_index = 0;
+							}
+						}
 					}
 				
 					if (attackNumber == "sirKibbleCutterCharge")
@@ -2814,6 +2902,7 @@ function scr_Player_Normal()
 							particle.sprite_index = spr_Particle_Flash1;
 							particle.destroyAfterAnimation = true;
 						}
+						image_index = 0;
 						cutterCharge += 1;
 						if ((!audio_is_playing(snd_Charge_Intro)) and (!audio_is_playing(snd_Charge_Loop)))
 						{
@@ -2827,7 +2916,7 @@ function scr_Player_Normal()
 								chargeSfx = audio_play_sound(snd_Charge_Loop,0,false);
 							}
 						}
-					
+						
 						if (keyRightHold)
 						{
 							dir = 1;
@@ -2836,7 +2925,7 @@ function scr_Player_Normal()
 						{
 							dir = -1;
 						}
-					
+						
 						if (cutterCharge < cutterChargeMax)
 						{
 							if ((!global.cutscene) and (!keyAttackHold))
@@ -2949,7 +3038,7 @@ function scr_Player_Normal()
 				vsp = -jumpspeed;
 				break;
 				
-				case "waddleDee":
+				case playerCharacters.waddleDee:
 				var jumpSound = choose(snd_WaddleDee1,snd_WaddleDee6,snd_WaddleDee7,snd_WaddleDee8,snd_WaddleDee9,snd_WaddleDee10,snd_WaddleDee11);
 				audio_play_sound(jumpSound,0,false);
 				if (audio_is_playing(snd_Jump)) audio_stop_sound(snd_Jump);
@@ -2965,7 +3054,7 @@ function scr_Player_Normal()
 				vsp = -jumpspeed;
 				break;
 				
-				case "waddleDoo":
+				case playerCharacters.waddleDoo:
 				if (audio_is_playing(snd_Jump)) audio_stop_sound(snd_Jump);
 				audio_play_sound(snd_Jump,0,false);
 				var parJump = instance_create_depth(x - (7 * dir),y + 5,depth + 1,obj_Particle);
@@ -2979,7 +3068,7 @@ function scr_Player_Normal()
 				vsp = -jumpspeed;
 				break;
 				
-				case "brontoBurt":
+				case playerCharacters.brontoBurt:
 				if (audio_is_playing(snd_WingFlap)) audio_stop_sound(snd_WingFlap);
 				audio_play_sound(snd_WingFlap,0,false);
 				var parJump = instance_create_depth(x - (7 * dir),y + 5,depth + 1,obj_Particle);
@@ -2993,7 +3082,7 @@ function scr_Player_Normal()
 				vsp = -jumpspeed;
 				break;
 				
-				case "twizzy":
+				case playerCharacters.twizzy:
 				if (audio_is_playing(snd_WingFlap)) audio_stop_sound(snd_WingFlap);
 				audio_play_sound(snd_WingFlap,0,false);
 				var parJump = instance_create_depth(x - (7 * dir),y + 5,depth + 1,obj_Particle);
@@ -3007,7 +3096,7 @@ function scr_Player_Normal()
 				vsp = -jumpspeed;
 				break;
 				
-				case "tookey":
+				case playerCharacters.tookey:
 				if (audio_is_playing(snd_WingFlap)) audio_stop_sound(snd_WingFlap);
 				audio_play_sound(snd_WingFlap,0,false);
 				var parJump = instance_create_depth(x - (7 * dir),y + 5,depth + 1,obj_Particle);
@@ -3021,7 +3110,7 @@ function scr_Player_Normal()
 				vsp = -jumpspeed;
 				break;
 				
-				case "sirKibble":
+				case playerCharacters.sirKibble:
 				if (audio_is_playing(snd_Jump)) audio_stop_sound(snd_Jump);
 				audio_play_sound(snd_Jump,0,false);
 				var parJump = instance_create_depth(x - (7 * dir),y + 5,depth + 1,obj_Particle);
@@ -3035,7 +3124,7 @@ function scr_Player_Normal()
 				vsp = -jumpspeed;
 				break;
 				
-				case "bouncy":
+				case playerCharacters.bouncy:
 				if (audio_is_playing(snd_Jump)) audio_stop_sound(snd_Jump);
 				audio_play_sound(snd_Jump,0,false);
 				sprite_index = sprJump;
@@ -3056,6 +3145,7 @@ function scr_Player_Normal()
 				sprite_index = sprJump;
 				image_index = 0;
 				vsp = -jumpspeed;
+				didJump = true;
 				break;
 			}
 		}
@@ -3070,7 +3160,7 @@ function scr_Player_Normal()
 		{
 			switch (playerCharacter)
 			{
-				case "bouncy":
+				case playerCharacters.bouncy:
 				if (!keyDownHold)
 				{
 					if (audio_is_playing(snd_Jump)) audio_stop_sound(snd_Jump);
@@ -3087,38 +3177,32 @@ function scr_Player_Normal()
 				}
 				break;
 				
-				case "gordo":
-				if (!keyDownHold)
-				{
-					if (audio_is_playing(snd_Jump)) audio_stop_sound(snd_Jump);
-					audio_play_sound(snd_Jump,0,false);
-					var parJump = instance_create_depth(x - (7 * dir),y + 5,depth + 1,obj_Particle);
-					parJump.sprite_index = spr_Particle_Jump;
-					parJump.destroyAfterAnimation = true;
-					parJump.spdBuiltIn = 6;
-					parJump.fricSpd = .6;
-					parJump.direction = 90 + (20 * dir);
-					sprite_index = sprJump;
-					image_index = 0;
-					vsp = -jumpspeed;
-				}
+				case playerCharacters.gordo:
+				if (audio_is_playing(snd_Jump)) audio_stop_sound(snd_Jump);
+				audio_play_sound(snd_Jump,0,false);
+				var parJump = instance_create_depth(x - (7 * dir),y + 5,depth + 1,obj_Particle);
+				parJump.sprite_index = spr_Particle_Jump;
+				parJump.destroyAfterAnimation = true;
+				parJump.spdBuiltIn = 6;
+				parJump.fricSpd = .6;
+				parJump.direction = 90 + (20 * dir);
+				sprite_index = sprJump;
+				image_index = 0;
+				vsp = -jumpspeed;
 				break;
 				
-				case "bloodGordo":
-				if (!keyDownHold)
-				{
-					if (audio_is_playing(snd_Jump)) audio_stop_sound(snd_Jump);
-					audio_play_sound(snd_Jump,0,false);
-					var parJump = instance_create_depth(x - (7 * dir),y + 5,depth + 1,obj_Particle);
-					parJump.sprite_index = spr_Particle_Jump;
-					parJump.destroyAfterAnimation = true;
-					parJump.spdBuiltIn = 6;
-					parJump.fricSpd = .6;
-					parJump.direction = 90 + (20 * dir);
-					sprite_index = sprJump;
-					image_index = 0;
-					vsp = -jumpspeed;
-				}
+				case playerCharacters.bloodGordo:
+				if (audio_is_playing(snd_Jump)) audio_stop_sound(snd_Jump);
+				audio_play_sound(snd_Jump,0,false);
+				var parJump = instance_create_depth(x - (7 * dir),y + 5,depth + 1,obj_Particle);
+				parJump.sprite_index = spr_Particle_Jump;
+				parJump.destroyAfterAnimation = true;
+				parJump.spdBuiltIn = 6;
+				parJump.fricSpd = .6;
+				parJump.direction = 90 + (20 * dir);
+				sprite_index = sprJump;
+				image_index = 0;
+				vsp = -jumpspeed;
 				break;
 				
 				default:
@@ -3181,13 +3265,28 @@ function scr_Player_Normal()
 		
 		if ((!global.cutscene) and (canFloat) and ((carriedItem == carriedItems.none) and (carriedItemState != carriedItemStates.heavy)) and (playerAbility != playerAbilities.ufo) and ((keyJumpPressed) and (!place_meeting(x,y,obj_AntiFloat)) and (!place_meeting(x,y + 1,obj_Wall))) and (!attack))
 		{
-			attackTimer = 0;
-		    hurt = false;
-			jumpspeed = jumpspeedFloat;
-		    vsp = -jumpspeed;
-		    float = false;
-		    image_index = 0;
-		    state = playerStates.float;
+			switch (playerCharacter)
+			{
+				default:
+				attackTimer = 0;
+			    hurt = false;
+				jumpspeed = jumpspeedFloat;
+			    vsp = -jumpspeed;
+			    float = false;
+			    image_index = 0;
+			    state = playerStates.float;
+				break;
+				
+				case playerCharacters.gooey:
+				attackTimer = 0;
+			    hurt = false;
+				jumpspeed = jumpspeedFloat;
+			    vsp = -jumpspeed;
+			    float = true;
+			    image_index = 0;
+			    state = playerStates.float;
+				break;
+			}
 		}
 		
 		//Door
@@ -3719,7 +3818,7 @@ function scr_Player_Normal()
 			{
 				switch (playerCharacter)
 				{
-					case "bouncy":
+					case playerCharacters.bouncy:
 					image_index = 0;
 					walkDuck = true;
 					walkDuckTimer = walkDuckTimerMax;
@@ -3741,7 +3840,7 @@ function scr_Player_Normal()
 					}
 					break;
 				
-					case "gordo":
+					case playerCharacters.gordo:
 					image_index = 0;
 					walkDuck = true;
 					walkDuckTimer = walkDuckTimerMax;
@@ -3764,7 +3863,7 @@ function scr_Player_Normal()
 					}
 					break;
 				
-					case "bloodGordo":
+					case playerCharacters.bloodGordo:
 					image_index = 0;
 					walkDuck = true;
 					walkDuckTimer = walkDuckTimerMax;
@@ -3871,7 +3970,7 @@ function scr_Player_Normal()
 				}
 			}
 			
-			if ((walkSquishTimer > 0) and (vsp = 0) and (!attack))
+			if ((walkSquishTimer > 0) and (vsp == 0) and (!attack))
 			{
 				sprite_index = sprSquish;
 			}

@@ -37,39 +37,16 @@ function scr_Hud_AbilityText(argument0,argument1)
 			textIndex = spr_Hud_AbilityText_Magolor;
 			break;
 			
-			case "waddleDee":
-			textIndex = spr_Hud_AbilityText_Helper;
-			break;
-			
-			case "waddleDoo":
-			textIndex = spr_Hud_AbilityText_Helper;
-			break;
-			
-			case "brontoBurt":
-			textIndex = spr_Hud_AbilityText_Helper;
-			break;
-			
-			case "twizzy":
-			textIndex = spr_Hud_AbilityText_Helper;
-			break;
-			
-			case "tookey":
-			textIndex = spr_Hud_AbilityText_Helper;
-			break;
-			
-			case "sirKibble":
-			textIndex = spr_Hud_AbilityText_Helper;
-			break;
-			
-			case "bouncy":
-			textIndex = spr_Hud_AbilityText_Helper;
-			break;
-			
-			case "gordo":
-			textIndex = spr_Hud_AbilityText_Helper;
-			break;
-			
-			case "bloodGordo":
+			case playerCharacters.waddleDee:
+			case playerCharacters.waddleDoo:
+			case playerCharacters.brontoBurt:
+			case playerCharacters.twizzy:
+			case playerCharacters.tookey:
+			case playerCharacters.sirKibble:
+			case playerCharacters.bouncy:
+			case playerCharacters.gordo:
+			case playerCharacters.bloodGordo:
+			case playerCharacters.mysticDoo:
 			textIndex = spr_Hud_AbilityText_Helper;
 			break;
 			

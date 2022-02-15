@@ -161,6 +161,7 @@ function scr_SaveGame(argument0)
 	ini_write_string("playerCustomization","hatTypeParasolP1",global.hatTypeParasolP1);
 	ini_write_string("playerCustomization","hatTypeHammerP1",global.hatTypeHammerP1);
 	ini_write_string("playerCustomization","hatTypeBellP1",global.hatTypeBellP1);
+	ini_write_string("playerCustomization","hatTypeWaterP1",global.hatTypeWaterP1);
 	ini_write_string("playerCustomization","hatTypeSleepP1",global.hatTypeSleepP1);
 	ini_write_string("playerCustomization","hatTypeScanP1",global.hatTypeScanP1);
 
@@ -185,6 +186,7 @@ function scr_SaveGame(argument0)
 	ini_write_string("playerCustomization","hatTypeParasolP2",global.hatTypeParasolP2);
 	ini_write_string("playerCustomization","hatTypeHammerP2",global.hatTypeHammerP2);
 	ini_write_string("playerCustomization","hatTypeBellP2",global.hatTypeBellP2);
+	ini_write_string("playerCustomization","hatTypeWaterP2",global.hatTypeWaterP2);
 	ini_write_string("playerCustomization","hatTypeSleepP2",global.hatTypeSleepP2);
 	ini_write_string("playerCustomization","hatTypeScanP2",global.hatTypeScanP2);
 

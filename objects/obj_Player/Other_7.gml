@@ -17,6 +17,15 @@ if (idleAnimation)
 	idleAnimationTimerMax = choose(10,30,45);
 }
 
+//Falling Animation
+
+switch (playerCharacter)
+{
+	case playerCharacters.waddleDee:
+	if (sprite_index == sprFall) image_index = image_number - 1;
+	break;
+}
+
 //Fall Roll
 
 if ((fallRoll) and (sprite_index == sprRoll)) fallRoll = false;
@@ -522,4 +531,4 @@ if ((attackNumber == 7) and (sprite_index == sprFreezeAttack1Ready))
 
 //Bouncy
 
-if ((playerCharacter == "bouncy") and ((sprite_index == sprJump) or (sprite_index == sprDuck))) image_index = image_number - 1;
+if ((playerCharacter == playerCharacters.bouncy) and ((sprite_index == sprJump) or (sprite_index == sprDuck))) image_index = image_number - 1;

@@ -166,6 +166,7 @@ function scr_LoadGame(argument0)
 	global.hatTypeParasolP1 = ini_read_string("playerCustomization","hatTypeParasolP1","kssu");
 	global.hatTypeHammerP1 = ini_read_string("playerCustomization","hatTypeHammerP1","kssu");
 	global.hatTypeBellP1 = ini_read_string("playerCustomization","hatTypeBellP1","modern");
+	global.hatTypeWaterP1 = ini_read_string("playerCustomization","hatTypeWaterP1","modern");
 	global.hatTypeSleepP1 = ini_read_string("playerCustomization","hatTypeSleepP1","kssu");
 	global.hatTypeScanP1 = ini_read_string("playerCustomization","hatTypeScanP1","kssu");
 	
@@ -190,6 +191,7 @@ function scr_LoadGame(argument0)
 	global.hatTypeParasolP2 = ini_read_string("playerCustomization","hatTypeParasolP2","kssu");
 	global.hatTypeHammerP2 = ini_read_string("playerCustomization","hatTypeHammerP2","kssu");
 	global.hatTypeBellP2 = ini_read_string("playerCustomization","hatTypeBellP2","modern");
+	global.hatTypeWaterP2 = ini_read_string("playerCustomization","hatTypeWaterP2","modern");
 	global.hatTypeSleepP2 = ini_read_string("playerCustomization","hatTypeSleepP2","kssu");
 	global.hatTypeScanP2 = ini_read_string("playerCustomization","hatTypeScanP2","kssu");
 	

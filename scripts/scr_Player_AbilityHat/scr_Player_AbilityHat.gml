@@ -4892,6 +4892,41 @@ function scr_Player_AbilityHat(argument0,argument1)
 			}
 			break;
 			
+			case playerAbilities.water:
+			if (player == 0)
+			{
+				var altHatToCheck = global.hatTypeWaterP1;
+			}
+			else
+			{
+				var altHatToCheck = global.hatTypeWaterP2;
+			}
+			
+			switch (altHatToCheck)
+			{
+				case "modern":
+				switch (sprite_index)
+				{
+					case sprIdle:
+					abilityHatIndex = spr_Kirby_AbilityHat_Water_Modern_Idle;
+					break;
+					
+					case sprWalk:
+					abilityHatIndex = spr_Kirby_AbilityHat_Water_Modern_Walk;
+					break;
+					
+					default:
+					abilityHatIndex = -1;
+					break;
+				}
+				break;
+				
+				default:
+				abilityHatIndex = -1;
+				break;
+			}
+			break;
+			
 			case playerAbilities.sleep:
 			if (player == 0)
 			{

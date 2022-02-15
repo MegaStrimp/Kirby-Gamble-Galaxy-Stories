@@ -184,8 +184,16 @@ function scr_Player_Collision()
 	
 	//Clamp
 	
-	x = clamp(x,(obj_Camera.cameraX) + (sprite_get_width(mask_index) / 2),(obj_Camera.cameraX + obj_Camera.viewWidth) - (sprite_get_width(mask_index) / 2));
-	y = clamp(y,(obj_Camera.cameraY) + (sprite_get_height(mask_index) / 2),(obj_Camera.cameraY + obj_Camera.viewHeight) + 32 + (sprite_get_height(mask_index) / 2));
+	x = clamp(x,0,room_width);
+	y = clamp(y,0,room_height);
+	
+	hasMiniboss = false;
+	with (obj_Miniboss_Control) if (active) other.hasMiniboss = true;
+	if (hasMiniboss)
+	{
+		x = clamp(x,(obj_Camera.cameraX) + (sprite_get_width(mask_index) / 2),(obj_Camera.cameraX + obj_Camera.viewWidth) - (sprite_get_width(mask_index) / 2));
+		y = clamp(y,(obj_Camera.cameraY) + (sprite_get_height(mask_index) / 2),(obj_Camera.cameraY + obj_Camera.viewHeight) + 32 + (sprite_get_height(mask_index) / 2));
+	}
 	
 	//Death On Bottom
 	

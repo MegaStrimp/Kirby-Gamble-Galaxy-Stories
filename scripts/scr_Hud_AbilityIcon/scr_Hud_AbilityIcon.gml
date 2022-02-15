@@ -37,43 +37,19 @@ function scr_Hud_AbilityIcon(argument0,argument1)
 			iconIndex = spr_Hud_Icon_Magolor;
 			break;
 			
-			case "waddleDee":
+			case playerCharacters.waddleDee:
+			case playerCharacters.waddleDoo:
+			case playerCharacters.brontoBurt:
+			case playerCharacters.twizzy:
+			case playerCharacters.tookey:
+			case playerCharacters.sirKibble:
+			case playerCharacters.bouncy:
+			case playerCharacters.gordo:
+			case playerCharacters.bloodGordo:
 			iconIndex = spr_Hud_Icon_Helper;
 			break;
 			
-			case "waddleDoo":
-			iconIndex = spr_Hud_Icon_Helper;
-			break;
-			
-			case "brontoBurt":
-			iconIndex = spr_Hud_Icon_Helper;
-			break;
-			
-			case "twizzy":
-			iconIndex = spr_Hud_Icon_Helper;
-			break;
-			
-			case "tookey":
-			iconIndex = spr_Hud_Icon_Helper;
-			break;
-			
-			case "sirKibble":
-			iconIndex = spr_Hud_Icon_Helper;
-			break;
-			
-			case "bouncy":
-			iconIndex = spr_Hud_Icon_Helper;
-			break;
-			
-			case "gordo":
-			iconIndex = spr_Hud_Icon_Helper;
-			break;
-			
-			case "bloodGordo":
-			iconIndex = spr_Hud_Icon_Helper;
-			break;
-			
-			case "mysticDoo":
+			case playerCharacters.mysticDoo:
 			iconIndex = spr_Hud_Icon_MysticHelper;
 			break;
 			

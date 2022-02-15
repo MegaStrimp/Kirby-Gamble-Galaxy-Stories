@@ -17,3 +17,7 @@ buttonAnim = 0;
 
 buttonAnimTimer = -1;
 starTimer = -1;
+
+//Destroy
+
+if ((global.characterP1 != playerCharacters.kirby) and ((!global.hasCoop) or ((global.hasCoop) and (global.characterP2 != playerCharacters.kirby)))) instance_destroy();

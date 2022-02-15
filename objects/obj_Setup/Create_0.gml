@@ -175,7 +175,17 @@ enum playerCharacters
 	keeby,
 	gooey,
 	magolor,
-	metaKnight
+	metaKnight,
+	waddleDee,
+	waddleDoo,
+	brontoBurt,
+	twizzy,
+	tookey,
+	sirKibble,
+	bouncy,
+	gordo,
+	bloodGordo,
+	mysticDoo
 }
 
 enum playerAbilities
@@ -226,7 +236,6 @@ enum damageTypes
 {
 	none,
 	every,
-	explosion,
     cutter,
 	mysticCutter,
     beam,
@@ -291,6 +300,7 @@ global.abilityP2 = playerAbilities.none;
 global.familiarP1 = "Gamble";
 global.familiarP2 = "Gamble";
 global.roomPrevious = rm_Setup;
+global.roomNext = rm_Starcutter;
 global.roomCheckpoint = rm_Setup;
 global.pause = false;
 global.pointStars = 0;

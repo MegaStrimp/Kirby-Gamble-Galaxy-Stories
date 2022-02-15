@@ -12,161 +12,161 @@ else if (setupTimer == 0)
 	{
 		//Normal
 		
-		case playerAbilities.none:
+		case damageTypes.none:
 		sprIdle = spr_AbilityBlock_Normal_Idle;
 		topWallSprite = spr_AbilityBlock_Normal_Top;
 		break;
 		
 		//Cutter
 		
-		case playerAbilities.cutter:
+		case damageTypes.cutter:
 		sprIdle = spr_AbilityBlock_Cutter_Idle;
 		topWallSprite = spr_AbilityBlock_Cutter_Top;
 		break;
 		
 		//Beam
 		
-		case playerAbilities.beam:
+		case damageTypes.beam:
 		sprIdle = spr_AbilityBlock_Beam_Idle;
 		topWallSprite = spr_AbilityBlock_Beam_Top;
 		break;
 		
 		//Stone
 		
-		case playerAbilities.stone:
+		case damageTypes.stone:
 		sprIdle = spr_AbilityBlock_Stone_Idle;
 		topWallSprite = spr_AbilityBlock_Stone_Top;
 		break;
 		
 		//Ufo
 		
-		case playerAbilities.ufo:
+		case damageTypes.ufo:
 		sprIdle = spr_AbilityBlock_Ufo_Idle;
 		topWallSprite = spr_AbilityBlock_Ufo_Top;
 		break;
 		
 		//Mirror
 		
-		case playerAbilities.mirror:
+		case damageTypes.mirror:
 		sprIdle = spr_AbilityBlock_Mirror_Idle;
 		topWallSprite = spr_AbilityBlock_Mirror_Top;
 		break;
 		
 		//Ninja
 		
-		case playerAbilities.ninja:
+		case damageTypes.ninja:
 		sprIdle = spr_AbilityBlock_Ninja_Idle;
 		topWallSprite = spr_AbilityBlock_Ninja_Top;
 		break;
 		
 		//Bomb
 		
-		case playerAbilities.bomb:
+		case damageTypes.bomb:
 		sprIdle = spr_AbilityBlock_Bomb_Idle;
 		topWallSprite = spr_AbilityBlock_Bomb_Top;
 		break;
 		
 		//Fire
 		
-		case playerAbilities.fire:
+		case damageTypes.fire:
 		sprIdle = spr_AbilityBlock_Fire_Idle;
 		topWallSprite = spr_AbilityBlock_Fire_Top;
 		break;
 		
 		//Ice
 		
-		case playerAbilities.ice:
+		case damageTypes.ice:
 		sprIdle = spr_AbilityBlock_Ice_Idle;
 		topWallSprite = spr_AbilityBlock_Ice_Top;
 		break;
 		
 		//Spark
 		
-		case playerAbilities.spark:
+		case damageTypes.spark:
 		sprIdle = spr_AbilityBlock_Spark_Idle;
 		topWallSprite = spr_AbilityBlock_Spark_Top;
 		break;
 		
 		//Yoyo
 		
-		case playerAbilities.yoyo:
+		case damageTypes.yoyo:
 		sprIdle = spr_AbilityBlock_Yoyo_Idle;
 		topWallSprite = spr_AbilityBlock_Yoyo_Top;
 		break;
 		
 		//Wheel
 		
-		case playerAbilities.wheel:
+		case damageTypes.wheel:
 		sprIdle = spr_AbilityBlock_Wheel_Idle;
 		topWallSprite = spr_AbilityBlock_Wheel_Top;
 		break;
 		
 		//Artist
 		
-		case playerAbilities.artist:
+		case damageTypes.artist:
 		sprIdle = spr_AbilityBlock_Artist_Idle;
 		topWallSprite = spr_AbilityBlock_Artist_Top;
 		break;
 		
 		//Fighter
 		
-		case playerAbilities.fighter:
+		case damageTypes.fighter:
 		sprIdle = spr_AbilityBlock_Fighter_Idle;
 		topWallSprite = spr_AbilityBlock_Fighter_Top;
 		break;
 		
 		//Suplex
 		
-		case playerAbilities.suplex:
+		case damageTypes.suplex:
 		sprIdle = spr_AbilityBlock_Suplex_Idle;
 		topWallSprite = spr_AbilityBlock_Suplex_Top;
 		break;
 		
 		//Wing
 		
-		case playerAbilities.wing:
+		case damageTypes.wing:
 		sprIdle = spr_AbilityBlock_Wing_Idle;
 		topWallSprite = spr_AbilityBlock_Wing_Top;
 		break;
 		
 		//Jet
 		
-		case playerAbilities.jet:
+		case damageTypes.jet:
 		sprIdle = spr_AbilityBlock_Jet_Idle;
 		topWallSprite = spr_AbilityBlock_Jet_Top;
 		break;
 		
 		//Sword
 		
-		case playerAbilities.sword:
+		case damageTypes.sword:
 		sprIdle = spr_AbilityBlock_Sword_Idle;
 		topWallSprite = spr_AbilityBlock_Sword_Top;
 		break;
 		
 		//Parasol
 		
-		case playerAbilities.parasol:
+		case damageTypes.parasol:
 		sprIdle = spr_AbilityBlock_Parasol_Idle;
 		topWallSprite = spr_AbilityBlock_Parasol_Top;
 		break;
 		
 		//Hammer
 		
-		case playerAbilities.hammer:
+		case damageTypes.hammer:
 		sprIdle = spr_AbilityBlock_Hammer_Idle;
 		topWallSprite = spr_AbilityBlock_Hammer_Top;
 		break;
 		
 		//Bell
 		
-		case playerAbilities.bell:
+		case damageTypes.bell:
 		sprIdle = spr_AbilityBlock_Bell_Idle;
 		topWallSprite = spr_AbilityBlock_Bell_Top;
 		break;
 		
 		//Water
 		
-		case playerAbilities.water:
+		case damageTypes.water:
 		sprIdle = spr_AbilityBlock_Water_Idle;
 		topWallSprite = spr_AbilityBlock_Water_Top;
 		break;

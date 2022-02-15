@@ -406,6 +406,37 @@ function scr_Player_HatFront(argument0,argument1)
 			}
 			break;
 			
+			case playerAbilities.water:
+			if (player == 0)
+			{
+				var altHatToCheck = global.hatTypeWaterP1;
+			}
+			else
+			{
+				var altHatToCheck = global.hatTypeWaterP2;
+			}
+			
+			switch (altHatToCheck)
+			{
+				case "modern":
+				switch (sprite_index)
+				{
+					case sprIdle:
+					hatFrontIndex = spr_Kirby_HatFront_Water_Modern_Idle;
+					break;
+					
+					default:
+					hatFrontIndex = -1;
+					break;
+				}
+				break;
+				
+				default:
+				hatFrontIndex = -1;
+				break;
+			}
+			break;
+			
 			default:
 			hatFrontIndex = -1;
 			break;

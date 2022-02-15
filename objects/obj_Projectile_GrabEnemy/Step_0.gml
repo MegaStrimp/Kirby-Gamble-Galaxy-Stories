@@ -2,10 +2,6 @@
 
 if (((pausable) and (!global.pause)) or (!pausable))
 {
-	//Event Inherited
-	
-	event_inherited();
-	
 	//Active
 	
 	hurtsObject = active;
@@ -13,6 +9,10 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	hurtsBoss = active;
 	hurtsProjectile = active;
 	destroyableByWall = active;
+	
+	//Event Inherited
+	
+	event_inherited();
 	
 	//Movement
 	

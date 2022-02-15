@@ -31,7 +31,7 @@ if (!global.pause)
 		{
 			if ((hurtsObject) and (owner != id))
 			{
-				if ((damageType == damageTypes.cutter) or (damageType == damageTypes.sword) or (damageType == damagetypes.every))
+				if ((damageType == damageTypes.cutter) or (damageType == damageTypes.sword) or (damageType == damageTypes.every))
 				{
 					var parDir = 1;
 					if (x > other.x) parDir = -1;

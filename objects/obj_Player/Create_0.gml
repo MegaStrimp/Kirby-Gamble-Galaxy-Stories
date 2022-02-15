@@ -262,6 +262,8 @@ if ((global.hpP1 == 0) or (global.hpP2 == 0))
 player = 0;
 hatBackgroundImageIndex = 0;
 hatBackgroundImageIndexSpd = .25;
+hatFrontImageIndex = 0;
+hatFrontImageIndexSpd = .25;
 state = playerStates.normal;
 hasGravity = true;
 hasJumpLimit = true;
@@ -394,6 +396,7 @@ enterDoor = false;
 gooeyScaleDir = 1;
 gooeyScaleOffset = 0;
 canGrab = true;
+didJump = false;
 
 //Inputs
 

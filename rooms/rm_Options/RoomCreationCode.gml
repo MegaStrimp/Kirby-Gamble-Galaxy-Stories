@@ -2,7 +2,7 @@
 
 //Variables
 
-global.discordDetailText = "Main Menu";
+global.discordDetailText = "Character Select";
 global.discordLargeImage = "ggs_icon";
 
 //Music

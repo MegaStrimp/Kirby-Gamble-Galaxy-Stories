@@ -118,7 +118,7 @@ if (!global.pause)
 		break;
 	}
 	
-	if ((playerCharacter != "gordo") and (playerCharacter != "bloodGordo")) imageAngle = 0;
+	if ((playerCharacter != playerCharacters.gordo) and (playerCharacter != playerCharacters.bloodGordo)) imageAngle = 0;
 	
 	//State Based Variables
 	
@@ -632,13 +632,13 @@ if (!global.pause)
 	}
 	else if (hatFrontIndex != -1)
 	{
-		if (hatBackgroundImageIndex <= sprite_get_number(hatFrontIndex) - 1)
+		if (hatFrontImageIndex <= sprite_get_number(hatFrontIndex) - 1)
 		{
-			hatBackgroundImageIndex += hatBackgroundImageIndexSpd;
+			hatFrontImageIndex += hatFrontImageIndexSpd;
 		}
 		else
 		{
-			hatBackgroundImageIndex -= sprite_get_number(hatFrontIndex) - 1;
+			hatFrontImageIndex -= sprite_get_number(hatFrontIndex) - 1;
 		}
 	}
 }
@@ -1963,14 +1963,55 @@ else if (characterSetupTimer == 0)
 		break;
 		
 		case playerCharacters.gooey:
+		gravNormal = .23;
+		gravStone = .7;
+		grav = gravNormal;
+		gravFloat = .05;
+		gravFireDash = .05;
+		gravLimitNormal = 5;
+		gravLimitFloat = 1.5;
+		gravLimitStone = 7;
+		gravLimitFireDash = 1.25;
+		gravLimit = gravLimitNormal;
+		hsp = 0;
+		fireDashHsp = 0;
+		hspFinal = 0;
+		vsp = 0;
+		vspFinal = 0;
+		jumpspeedNormal = 6;
+		jumpspeedFloat = 1.8;
+		jumpspeed = jumpspeedNormal;
+		movespeedNormal = 1.7;
+		movespeedRun = 2.6;
+		movespeedSlide = 5;
+		movespeedFloat = 1.9;
+		movespeedCarry = 2;
+		movespeedBurst = 7;
+		movespeed = movespeedNormal;
+		ufoFloatSpd = 2;
+		accel = .2;
+		accelFloat = .1;
+		decel = .075;
+		decelSlide = .125;
+		decelSwordDash = .1;
+		decelFloat = .025;
+		climbSpeed = 2.5;
+		
 		sprIdle = spr_Gooey_Normal_Idle;
-		sprDuck = spr_Gooey_Normal_Duck;
+		sprWalk = spr_Gooey_Normal_Walk;
+		sprRun = spr_Gooey_Normal_Run;
+		sprRunTurn = spr_Gooey_Normal_RunTurn;
 		sprJump = spr_Gooey_Normal_Jump;
 		sprRoll = spr_Gooey_Normal_Roll;
 		sprRollDuckReady = spr_Gooey_Normal_RollDuckReady;
 		sprRollDuck = spr_Gooey_Normal_RollDuck;
 		sprBackflip = spr_Gooey_Normal_Backflip;
 		sprFall = spr_Gooey_Normal_Fall;
+		sprSquish = spr_Gooey_Normal_Squish;
+		sprDuck = spr_Gooey_Normal_Duck;
+		sprSlide = spr_Gooey_Normal_Slide;
+		sprSlideEnd = spr_Gooey_Normal_SlideEnd;
+		sprFloat = spr_Gooey_Normal_Float;
 		sprStoneAttack1Ready = spr_Gooey_Normal_Stone_AttackReady;
 		if (player == 0)
 		{
@@ -1989,7 +2030,7 @@ else if (characterSetupTimer == 0)
 		sprFireAttackRelease2 = spr_Gooey_Normal_Fire_AttackRelease2;
 		break;
 		
-		case "waddleDee":
+		case playerCharacters.waddleDee:
 		var skin = choose("normal","normal","normal","normal","normal","normal","egg","egg","egg","gold");
 		
 		#region Physics
@@ -2000,7 +2041,7 @@ else if (characterSetupTimer == 0)
 		jumpspeedNormal = 5;
 		jumpspeed = jumpspeedNormal;
 		movespeedNormal = 1.3;
-		movespeedRun = 2;
+		movespeedRun = 2.3;
 		movespeed = movespeedNormal;
 		accel = .15;
 		decel = .05;
@@ -2020,13 +2061,13 @@ else if (characterSetupTimer == 0)
 		canAttack = false;
 		canDuck = true;
 		canDuckHighJump = true;
-		canSlide = false;
+		canSlide = true;
 		canClimb = true;
 		canFloat = false;
 		canEnter = true;
 		canUfoFloat = false;
 		canGetHurt = true;
-		runImageSpeedIncrease = .5;
+		runImageSpeedIncrease = 0;
 		#endregion
 		
 		switch (skin)
@@ -2115,6 +2156,8 @@ else if (characterSetupTimer == 0)
 			sprFall = spr_WaddleDee_Normal_Fall;
 			sprSquish = spr_WaddleDee_Normal_Idle;
 			sprDuck = spr_WaddleDee_Normal_Duck;
+			sprSlide = spr_WaddleDee_Normal_Slide;
+			sprSlideEnd = spr_WaddleDee_Normal_Slide;
 			sprEnter = spr_WaddleDee_Normal_Walk;
 			sprClimbUp = spr_WaddleDee_Normal_ClimbUp;
 			sprClimbDown = spr_WaddleDee_Normal_ClimbDown;
@@ -2139,6 +2182,8 @@ else if (characterSetupTimer == 0)
 			sprFall = spr_WaddleDee_Egg_Fall;
 			sprSquish = spr_WaddleDee_Egg_Idle;
 			sprDuck = spr_WaddleDee_Egg_Duck;
+			sprSlide = spr_WaddleDee_Normal_Slide;
+			sprSlideEnd = spr_WaddleDee_Normal_Slide;
 			sprEnter = spr_WaddleDee_Egg_Walk;
 			sprClimbUp = spr_WaddleDee_Egg_ClimbUp;
 			sprClimbDown = spr_WaddleDee_Egg_ClimbDown;
@@ -2163,6 +2208,8 @@ else if (characterSetupTimer == 0)
 			sprFall = spr_WaddleDee_Gold_Fall;
 			sprSquish = spr_WaddleDee_Gold_Idle;
 			sprDuck = spr_WaddleDee_Gold_Duck;
+			sprSlide = spr_WaddleDee_Normal_Slide;
+			sprSlideEnd = spr_WaddleDee_Normal_Slide;
 			sprEnter = spr_WaddleDee_Gold_Walk;
 			sprClimbUp = spr_WaddleDee_Gold_ClimbUp;
 			sprClimbDown = spr_WaddleDee_Gold_ClimbDown;
@@ -2187,6 +2234,8 @@ else if (characterSetupTimer == 0)
 			sprFall = spr_WaddleDee_Alien_Fall;
 			sprSquish = spr_WaddleDee_Alien_Idle;
 			sprDuck = spr_WaddleDee_Alien_Duck;
+			sprSlide = spr_WaddleDee_Normal_Slide;
+			sprSlideEnd = spr_WaddleDee_Normal_Slide;
 			sprEnter = spr_WaddleDee_Alien_Walk;
 			sprClimbUp = spr_WaddleDee_Alien_ClimbUp;
 			sprClimbDown = spr_WaddleDee_Alien_ClimbDown;
@@ -2208,7 +2257,7 @@ else if (characterSetupTimer == 0)
 		}
 		break;
 		
-		case "waddleDoo":
+		case playerCharacters.waddleDoo:
 		var skin = choose("normal");
 		
 		#region Physics
@@ -2219,7 +2268,7 @@ else if (characterSetupTimer == 0)
 		jumpspeedNormal = 5;
 		jumpspeed = jumpspeedNormal;
 		movespeedNormal = 1.3;
-		movespeedRun = 2;
+		movespeedRun = 2.3;
 		movespeed = movespeedNormal;
 		accel = .15;
 		decel = .05;
@@ -2239,13 +2288,13 @@ else if (characterSetupTimer == 0)
 		canAttack = true;
 		canDuck = true;
 		canDuckHighJump = true;
-		canSlide = false;
+		canSlide = true;
 		canClimb = true;
 		canFloat = false;
 		canEnter = true;
 		canUfoFloat = false;
 		canGetHurt = true;
-		runImageSpeedIncrease = .5;
+		runImageSpeedIncrease = 0;
 		#endregion
 		
 		switch (skin)
@@ -2335,7 +2384,7 @@ else if (characterSetupTimer == 0)
 		}
 		break;
 		
-		case "brontoBurt":
+		case playerCharacters.brontoBurt:
 		var skin = choose("normal");
 		
 		#region Physics
@@ -2453,7 +2502,7 @@ else if (characterSetupTimer == 0)
 		}
 		break;
 		
-		case "twizzy":
+		case playerCharacters.twizzy:
 		var skin = choose("normal");
 		
 		#region Physics
@@ -2543,7 +2592,7 @@ else if (characterSetupTimer == 0)
 		}
 		break;
 		
-		case "tookey":
+		case playerCharacters.tookey:
 		var skin = choose("normal");
 		
 		#region Physics
@@ -2623,7 +2672,7 @@ else if (characterSetupTimer == 0)
 		}
 		break;
 		
-		case "sirKibble":
+		case playerCharacters.sirKibble:
 		var skin = choose("normal");
 		
 		#region Physics
@@ -2719,7 +2768,7 @@ else if (characterSetupTimer == 0)
 		}
 		break;
 		
-		case "bouncy":
+		case playerCharacters.bouncy:
 		var skin = choose("normal","normal","normal","robo","robo");
 		
 		#region Physics
@@ -2843,7 +2892,7 @@ else if (characterSetupTimer == 0)
 		}
 		break;
 		
-		case "gordo":
+		case playerCharacters.gordo:
 		var skin = choose("normal");
 		
 		#region Physics
@@ -2871,8 +2920,6 @@ else if (characterSetupTimer == 0)
 		canMultiJump = false;
 		multiJumpLimit = -1;
 		canAttack = false;
-		canDuck = true;
-		canDuckHighJump = true;
 		canSlide = false;
 		canClimb = false;
 		canFloat = false;
@@ -2918,7 +2965,7 @@ else if (characterSetupTimer == 0)
 		}
 		break;
 		
-		case "bloodGordo":
+		case playerCharacters.bloodGordo:
 		var skin = choose("normal");
 		
 		#region Physics
@@ -2946,8 +2993,6 @@ else if (characterSetupTimer == 0)
 		canMultiJump = false;
 		multiJumpLimit = -1;
 		canAttack = false;
-		canDuck = true;
-		canDuckHighJump = true;
 		canSlide = false;
 		canClimb = false;
 		canFloat = false;

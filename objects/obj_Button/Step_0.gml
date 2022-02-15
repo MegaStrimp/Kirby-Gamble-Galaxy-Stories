@@ -51,7 +51,7 @@ if (!global.pause)
 		{
 			if ((hurtsObject) and (owner != id))
 			{
-				if ((other.damageType == damageTypes.none) or (damageType == damagetypes.every) or (other.damageType = damageType))
+				if ((other.damageType == damageTypes.none) or (damageType == damageTypes.every) or (other.damageType = damageType))
 				{
 					other.activate = true;
 				}

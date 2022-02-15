@@ -39,6 +39,7 @@ hasRemoteDetonation = false;
 hasMagma = false;
 destroyAfterHurt = true;
 canBeInhaled = false;
+damageType = damageTypes.bomb;
 
 //Timers
 

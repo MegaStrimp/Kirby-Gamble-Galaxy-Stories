@@ -523,7 +523,7 @@ if (!global.pause)
 			if (place_meeting(x,y,other))
 			{
 				var canBeHurt = false;
-				if ((owner != other) and (enemy != other.enemy) and (((damageType == damageTypes.explosion)/* and (!other.explosionResistance)*/) or (damageType != damageTypes.explosion)) and ((((!other.isMiniBoss) and (!other.isBoss)) and (hurtsEnemy)) or (((other.isMiniBoss) or (other.isBoss)) and (hurtsEnemy) and (hurtsBoss)))) canBeHurt = true;
+				if ((owner != other) and (enemy != other.enemy) and (((object_index == obj_Projectile_ExplosionMask)/* and (!other.explosionResistance)*/) or (object_index != obj_Projectile_ExplosionMask)) and ((((!other.isMiniBoss) and (!other.isBoss)) and (hurtsEnemy)) or (((other.isMiniBoss) or (other.isBoss)) and (hurtsEnemy) and (hurtsBoss)))) canBeHurt = true;
 				if (canBeHurt)
 				{
 					if (audio_is_playing(snd_EnemyHurt)) audio_stop_sound(snd_EnemyHurt);

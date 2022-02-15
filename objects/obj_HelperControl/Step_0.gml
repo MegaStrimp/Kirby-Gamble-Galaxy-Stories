@@ -14,12 +14,12 @@ else if (setupTimer == 0)
 {
 	var helperList = ds_list_create();
 	
-	ds_list_add(helperList,"waddleDee");
-	ds_list_add(helperList,"waddleDoo");
-	ds_list_add(helperList,"brontoBurt");
-	ds_list_add(helperList,"bouncy");
-	ds_list_add(helperList,"gordo");
-	ds_list_add(helperList,"bloodGordo");
+	ds_list_add(helperList,playerCharacters.waddleDee);
+	ds_list_add(helperList,playerCharacters.waddleDoo);
+	ds_list_add(helperList,playerCharacters.brontoBurt);
+	ds_list_add(helperList,playerCharacters.bouncy);
+	ds_list_add(helperList,playerCharacters.gordo);
+	ds_list_add(helperList,playerCharacters.bloodGordo);
 	ds_list_shuffle(helperList);
 	
 	for (var i = 0; i < 3; i++)
@@ -28,27 +28,27 @@ else if (setupTimer == 0)
 		helperName[i] = helperCharacter;
 		switch (helperCharacter)
 		{
-			case "waddleDee":
+			case playerCharacters.waddleDee:
 			helperSprite[i] = spr_Hud_Helper_WaddleDee;
 			break;
 			
-			case "waddleDoo":
+			case playerCharacters.waddleDoo:
 			helperSprite[i] = spr_Hud_Helper_WaddleDoo;
 			break;
 			
-			case "brontoBurt":
+			case playerCharacters.brontoBurt:
 			helperSprite[i] = spr_Hud_Helper_BrontoBurt;
 			break;
 			
-			case "bouncy":
+			case playerCharacters.bouncy:
 			helperSprite[i] = spr_Hud_Helper_Bouncy;
 			break;
 			
-			case "gordo":
+			case playerCharacters.gordo:
 			helperSprite[i] = spr_Hud_Helper_Gordo;
 			break;
 			
-			case "bloodGordo":
+			case playerCharacters.bloodGordo:
 			helperSprite[i] = spr_Hud_Helper_BloodGordo;
 			break;
 		}

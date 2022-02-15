@@ -41,9 +41,10 @@ if (death)
 }
 
 var hatAnim = image_index;
-if ((playerAbility == playerAbilities.fire) or (playerAbility == playerAbilities.mysticFire) or (playerAbility == playerAbilities.spark)) hatAnim = hatBackgroundImageIndex;
+if ((playerAbility == playerAbilities.fire) or (playerAbility == playerAbilities.mysticFire) or (playerAbility == playerAbilities.spark) or (playerAbility == playerAbilities.water)) hatAnim = hatBackgroundImageIndex;
 
 var hatBackgroundIndex = scr_Player_HatBackground(playerAbility,playerCharacter);
+if (hatBackgroundIndex != -1) hatBackgroundImageIndexSpd = sprite_get_speed(hatBackgroundIndex) / 60;
 var abilityHatPalette = scr_Player_HatPalette(playerAbility,playerCharacter);
 if ((global.shaders) and (abilityHatPalette != -1)) pal_swap_set(abilityHatPalette,paletteFlash,false);
 if (hatBackgroundIndex != -1) draw_sprite_ext(hatBackgroundIndex,hatAnim,x + drawShakeX,y + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle,image_blend,image_alpha);
@@ -56,8 +57,11 @@ if (waddleDooEyeFlash) draw_sprite_ext(sprWaddleDooFlashingEye,0,x - (1 * dir),y
 if (hatShadowIndex != -1) draw_sprite_ext(hatShadowIndex,image_index,x + drawShakeX,y + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle,image_blend,image_alpha);
 if ((global.shaders) and (((sprite_index != sprStoneAttack1Common) and (sprite_index != sprStoneAttack1Uncommon) and (sprite_index != sprStoneAttack1Rare)) or (sprite_index = (sprStoneAttack1Common) and (image_index = 0)))) pal_swap_reset();
 
+var hatAnim = image_index;
+if (playerAbility == playerAbilities.water) hatAnim = hatFrontImageIndex;
 var abilityHatIndex = scr_Player_AbilityHat(playerAbility,playerCharacter);
 var hatFrontIndex = scr_Player_HatFront(playerAbility,playerCharacter);
+if (hatFrontIndex != -1) hatFrontImageIndexSpd = sprite_get_speed(hatFrontIndex) / 60;
 if ((global.shaders) and (abilityHatPalette != -1)) pal_swap_set(abilityHatPalette,paletteFlash,false);
 if (abilityHatIndex != -1) draw_sprite_ext(abilityHatIndex,image_index,x + drawShakeX,y + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle,image_blend,image_alpha);
 if (hatFrontIndex != -1) draw_sprite_ext(hatFrontIndex,hatAnim,x + drawShakeX,y + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle,image_blend,image_alpha);

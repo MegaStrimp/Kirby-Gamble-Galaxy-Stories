@@ -9,7 +9,7 @@ move_snap(6,6);
 x = mouse_x;
 y = mouse_y;
 debugSelected = 0;
-debugSelectedMax = 60;
+debugSelectedMax = 65;
 debugStateSelected = 0;
 debugStateSelectedMax = 0;
 debugSpriteSelected = 0;

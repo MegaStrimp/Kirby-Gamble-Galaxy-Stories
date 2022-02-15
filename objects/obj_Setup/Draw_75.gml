@@ -4,16 +4,53 @@
 
 if (global.isMobile)
 {
-	draw_set_color(c_red);
+	var dpadButtonSpr = spr_VirtualKey_DPadButton;
+	var dpadLetterSpr = spr_VirtualKey_DPadLetter;
+	if ((keyboard_check(global.finalKeyLeft[0])) or (keyboard_check(global.finalKeyRight[0])) or (keyboard_check(global.finalKeyUp[0])) or (keyboard_check(global.finalKeyDown[0])))
+	{
+		dpadButtonSpr = spr_VirtualKey_DPadButtonPressed;
+		dpadLetterSpr = spr_VirtualKey_DPadLetterPressed;
+	}
+	draw_sprite_ext(dpadButtonSpr,0,16,162,.2,.2,image_angle,image_blend,.4);
+	draw_sprite_ext(dpadLetterSpr,0,16,162,.2,.2,image_angle,image_blend,.4);
 	
-	draw_rectangle(41,204,41 + 24,204 + 24,false);
-	draw_rectangle(18,227,18 + 24,227 + 24,false);
-	draw_rectangle(41,227,41 + 24,227 + 24,false);
-	draw_rectangle(64,227,64 + 24,227 + 24,false);
-
-	draw_rectangle(165,201,165 + 24,201 + 24,false);
-	draw_rectangle(282,201,282 + 24,201 + 24,false);
-
-	draw_rectangle(364,227,364 + 24,227 + 24,false);
-	draw_rectangle(397,227,397 + 24,227 + 24,false);
+	var smallButtonSpr = spr_VirtualKey_SmallButton;
+	var selectLetterSpr = spr_VirtualKey_SelectLetter;
+	if (keyboard_check(global.finalKeySelect[0]))
+	{
+		smallButtonSpr = spr_VirtualKey_SmallButtonPressed;
+		selectLetterSpr = spr_VirtualKey_SelectLetterPressed;
+	}
+	draw_sprite_ext(smallButtonSpr,0,186,236,.25,.25,image_angle,image_blend,.4);
+	draw_sprite_ext(selectLetterSpr,0,186,236,.25,.25,image_angle,image_blend,.4);
+	
+	var smallButtonSpr = spr_VirtualKey_SmallButton;
+	var startLetterSpr = spr_VirtualKey_StartLetter;
+	if (keyboard_check(global.finalKeyStart[0]))
+	{
+		smallButtonSpr = spr_VirtualKey_SmallButtonPressed;
+		startLetterSpr = spr_VirtualKey_StartLetterPressed;
+	}
+	draw_sprite_ext(smallButtonSpr,0,230,236,.25,.25,image_angle,image_blend,.4);
+	draw_sprite_ext(startLetterSpr,0,230,236,.25,.25,image_angle,image_blend,.4);
+	
+	var bigButtonSpr = spr_VirtualKey_BigButton;
+	var aLetterSpr = spr_VirtualKey_ALetter;
+	if (keyboard_check(global.finalKeyJump[0]))
+	{
+		bigButtonSpr = spr_VirtualKey_BigButtonPressed;
+		aLetterSpr = spr_VirtualKey_ALetterPressed;
+	}
+	draw_sprite_ext(bigButtonSpr,0,326,195,.25,.25,image_angle,image_blend,.4);
+	draw_sprite_ext(aLetterSpr,0,326,195,.25,.25,image_angle,image_blend,.4);
+	
+	var bigButtonSpr = spr_VirtualKey_BigButton;
+	var bLetterSpr = spr_VirtualKey_BLetter;
+	if (keyboard_check(global.finalKeyAttack[0]))
+	{
+		bigButtonSpr = spr_VirtualKey_BigButtonPressed;
+		bLetterSpr = spr_VirtualKey_BLetterPressed;
+	}
+	draw_sprite_ext(bigButtonSpr,0,399,195,.25,.25,image_angle,image_blend,.4);
+	draw_sprite_ext(bLetterSpr,0,399,195,.25,.25,image_angle,image_blend,.4);
 }

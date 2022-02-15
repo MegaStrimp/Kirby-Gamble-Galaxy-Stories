@@ -138,7 +138,7 @@ if (instance_exists(obj_Player))
 				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.cutter;
 				if (keyboard_check(vk_control))
 				{
-					global.characterP1 = "waddleDee";
+					global.characterP1 = playerCharacters.waddleDee;
 					global.abilityP1 = playerAbilities.none;
 					global.isHelperP1 = true;
 					obj_Player.characterSetupTimer = 0;
@@ -149,7 +149,7 @@ if (instance_exists(obj_Player))
 				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.beam;
 				if (keyboard_check(vk_control))
 				{
-					global.characterP1 = "waddleDoo";
+					global.characterP1 = playerCharacters.waddleDoo;
 					global.abilityP1 = playerAbilities.none;
 					global.isHelperP1 = true;
 					obj_Player.characterSetupTimer = 0;
@@ -164,7 +164,7 @@ if (instance_exists(obj_Player))
 				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.stone;
 				if (keyboard_check(vk_control))
 				{
-					global.characterP1 = "brontoBurt";
+					global.characterP1 = playerCharacters.brontoBurt;
 					global.abilityP1 = playerAbilities.none;
 					global.isHelperP1 = true;
 					obj_Player.characterSetupTimer = 0;
@@ -175,7 +175,7 @@ if (instance_exists(obj_Player))
 				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.ufo;
 				if (keyboard_check(vk_control))
 				{
-					global.characterP1 = "twizzy";
+					global.characterP1 = playerCharacters.twizzy;
 					global.abilityP1 = playerAbilities.none;
 					global.isHelperP1 = true;
 					obj_Player.characterSetupTimer = 0;
@@ -186,7 +186,7 @@ if (instance_exists(obj_Player))
 				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.mirror;
 				if (keyboard_check(vk_control))
 				{
-					global.characterP1 = "tookey";
+					global.characterP1 = playerCharacters.tookey;
 					global.abilityP1 = playerAbilities.none;
 					global.isHelperP1 = true;
 					obj_Player.characterSetupTimer = 0;
@@ -197,7 +197,7 @@ if (instance_exists(obj_Player))
 				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.ninja;
 				if (keyboard_check(vk_control))
 				{
-					global.characterP1 = "sirKibble";
+					global.characterP1 = playerCharacters.sirKibble;
 					global.abilityP1 = playerAbilities.none;
 					global.isHelperP1 = true;
 					obj_Player.characterSetupTimer = 0;
@@ -208,7 +208,7 @@ if (instance_exists(obj_Player))
 				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.bomb;
 				if (keyboard_check(vk_control))
 				{
-					global.characterP1 = "bouncy";
+					global.characterP1 = playerCharacters.bouncy;
 					global.abilityP1 = playerAbilities.none;
 					global.isHelperP1 = true;
 					obj_Player.characterSetupTimer = 0;
@@ -219,7 +219,7 @@ if (instance_exists(obj_Player))
 				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.fire;
 				if (keyboard_check(vk_control))
 				{
-					global.characterP1 = "gordo";
+					global.characterP1 = playerCharacters.gordo;
 					global.abilityP1 = playerAbilities.none;
 					global.isHelperP1 = true;
 					obj_Player.characterSetupTimer = 0;
@@ -234,7 +234,7 @@ if (instance_exists(obj_Player))
 				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.ice;
 				if (keyboard_check(vk_control))
 				{
-					global.characterP1 = "bloodGordo";
+					global.characterP1 = playerCharacters.bloodGordo;
 					global.abilityP1 = playerAbilities.none;
 					global.isHelperP1 = true;
 					obj_Player.characterSetupTimer = 0;
@@ -1152,7 +1152,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		switch (debugSpriteSelected)
 		{
 			case 0:
-			var ability = playerAbilities.none;
+			var ability = damageTypes.none;
 			sprIdle = spr_AbilityBlock_Normal_Idle;
 			topWallSprite = spr_AbilityBlock_Normal_Top;
 			break;
@@ -1160,7 +1160,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Cutter
 		
 			case 1:
-			var ability = playerAbilities.cutter;
+			var ability = damageTypes.cutter;
 			sprIdle = spr_AbilityBlock_Cutter_Idle;
 			topWallSprite = spr_AbilityBlock_Cutter_Top;
 			break;
@@ -1168,7 +1168,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Beam
 		
 			case 2:
-			var ability = playerAbilities.beam;
+			var ability = damageTypes.beam;
 			sprIdle = spr_AbilityBlock_Beam_Idle;
 			topWallSprite = spr_AbilityBlock_Beam_Top;
 			break;
@@ -1176,7 +1176,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Stone
 		
 			case 3:
-			var ability = playerAbilities.stone;
+			var ability = damageTypes.stone;
 			sprIdle = spr_AbilityBlock_Stone_Idle;
 			topWallSprite = spr_AbilityBlock_Stone_Top;
 			break;
@@ -1184,7 +1184,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Ufo
 		
 			case 4:
-			var ability = playerAbilities.ufo;
+			var ability = damageTypes.ufo;
 			sprIdle = spr_AbilityBlock_Ufo_Idle;
 			topWallSprite = spr_AbilityBlock_Ufo_Top;
 			break;
@@ -1192,7 +1192,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Mirror
 		
 			case 5:
-			var ability = playerAbilities.mirror;
+			var ability = damageTypes.mirror;
 			sprIdle = spr_AbilityBlock_Mirror_Idle;
 			topWallSprite = spr_AbilityBlock_Mirror_Top;
 			break;
@@ -1200,7 +1200,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Ninja
 		
 			case 6:
-			var ability = playerAbilities.ninja;
+			var ability = damageTypes.ninja;
 			sprIdle = spr_AbilityBlock_Ninja_Idle;
 			topWallSprite = spr_AbilityBlock_Ninja_Top;
 			break;
@@ -1208,7 +1208,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Bomb
 		
 			case 7:
-			var ability = playerAbilities.bomb;
+			var ability = damageTypes.bomb;
 			sprIdle = spr_AbilityBlock_Bomb_Idle;
 			topWallSprite = spr_AbilityBlock_Bomb_Top;
 			break;
@@ -1216,7 +1216,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Fire
 		
 			case 8:
-			var ability = playerAbilities.fire;
+			var ability = damageTypes.fire;
 			sprIdle = spr_AbilityBlock_Fire_Idle;
 			topWallSprite = spr_AbilityBlock_Fire_Top;
 			break;
@@ -1224,7 +1224,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Ice
 		
 			case 9:
-			var ability = playerAbilities.ice;
+			var ability = damageTypes.ice;
 			sprIdle = spr_AbilityBlock_Ice_Idle;
 			topWallSprite = spr_AbilityBlock_Ice_Top;
 			break;
@@ -1232,7 +1232,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Spark
 		
 			case 10:
-			var ability = playerAbilities.spark;
+			var ability = damageTypes.spark;
 			sprIdle = spr_AbilityBlock_Spark_Idle;
 			topWallSprite = spr_AbilityBlock_Spark_Top;
 			break;
@@ -1240,7 +1240,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Yoyo
 		
 			case 11:
-			var ability = playerAbilities.yoyo;
+			var ability = damageTypes.yoyo;
 			sprIdle = spr_AbilityBlock_Yoyo_Idle;
 			topWallSprite = spr_AbilityBlock_Yoyo_Top;
 			break;
@@ -1248,7 +1248,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Wheel
 		
 			case 12:
-			var ability = playerAbilities.wheel;
+			var ability = damageTypes.wheel;
 			sprIdle = spr_AbilityBlock_Wheel_Idle;
 			topWallSprite = spr_AbilityBlock_Wheel_Top;
 			break;
@@ -1256,7 +1256,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Artist
 		
 			case 13:
-			var ability = playerAbilities.artist;
+			var ability = damageTypes.artist;
 			sprIdle = spr_AbilityBlock_Artist_Idle;
 			topWallSprite = spr_AbilityBlock_Artist_Top;
 			break;
@@ -1264,7 +1264,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Fighter
 		
 			case 14:
-			var ability = playerAbilities.fighter;
+			var ability = damageTypes.fighter;
 			sprIdle = spr_AbilityBlock_Fighter_Idle;
 			topWallSprite = spr_AbilityBlock_Fighter_Top;
 			break;
@@ -1272,7 +1272,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Suplex
 		
 			case 15:
-			var ability = playerAbilities.suplex;
+			var ability = damageTypes.suplex;
 			sprIdle = spr_AbilityBlock_Suplex_Idle;
 			topWallSprite = spr_AbilityBlock_Suplex_Top;
 			break;
@@ -1280,7 +1280,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Wing
 		
 			case 16:
-			var ability = playerAbilities.wing;
+			var ability = damageTypes.wing;
 			sprIdle = spr_AbilityBlock_Wing_Idle;
 			topWallSprite = spr_AbilityBlock_Wing_Top;
 			break;
@@ -1288,7 +1288,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Jet
 		
 			case 17:
-			var ability = playerAbilities.jet;
+			var ability = damageTypes.jet;
 			sprIdle = spr_AbilityBlock_Jet_Idle;
 			topWallSprite = spr_AbilityBlock_Jet_Top;
 			break;
@@ -1296,7 +1296,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Sword
 		
 			case 18:
-			var ability = playerAbilities.sword;
+			var ability = damageTypes.sword;
 			sprIdle = spr_AbilityBlock_Sword_Idle;
 			topWallSprite = spr_AbilityBlock_Sword_Top;
 			break;
@@ -1304,7 +1304,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Parasol
 		
 			case 19:
-			var ability = playerAbilities.parasol;
+			var ability = damageTypes.parasol;
 			sprIdle = spr_AbilityBlock_Parasol_Idle;
 			topWallSprite = spr_AbilityBlock_Parasol_Top;
 			break;
@@ -1312,7 +1312,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Hammer
 		
 			case 20:
-			var ability = playerAbilities.hammer;
+			var ability = damageTypes.hammer;
 			sprIdle = spr_AbilityBlock_Hammer_Idle;
 			topWallSprite = spr_AbilityBlock_Hammer_Top;
 			break;
@@ -1320,7 +1320,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Bell
 		
 			case 21:
-			var ability = playerAbilities.bell;
+			var ability = damageTypes.bell;
 			sprIdle = spr_AbilityBlock_Bell_Idle;
 			topWallSprite = spr_AbilityBlock_Bell_Top;
 			break;
@@ -1328,7 +1328,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//Water
 		
 			case 22:
-			var ability = playerAbilities.water;
+			var ability = damageTypes.water;
 			sprIdle = spr_AbilityBlock_Water_Idle;
 			topWallSprite = spr_AbilityBlock_Water_Top;
 			break;
@@ -3689,6 +3689,235 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			debugObj.sprHurt = sprHurtIdle;
 			debugObj.sprLeaf = sprLeaf;
 			debugObj.sprite_index = sprIdleNormal;
+			debugObj.paletteIndex = debugPaletteIndex;
+			debugObj.image_xscale = debugXScale;
+			debugObj.dirX = debugXScale;
+			debugObj.walkDirX = debugXScale;
+			debugObj.image_yscale = debugYScale;
+			debugObj.dirY = debugYScale;
+			debugObj.walkDirY = debugYScale;
+			debugObj.state = debugStateSelected;
+		}
+		break;
+	
+		//Nidoo
+	
+		case 61:
+		debugSpriteSelectedMax = 0;
+		switch (debugSpriteSelected)
+		{
+			//Normal
+		
+			case 0:
+			var sprIdle = spr_Blado_Normal_Idle;
+			var sprHurt = "self";
+			debugPaletteNumberMax = 0;
+			switch (debugPaletteNumber)
+			{
+				case 0:
+				debugPaletteIndex = spr_Blado_Normal_Palette_BrownBlades;
+				break;
+			
+				default:
+				debugPaletteIndex = spr_Blado_Normal_Palette_BrownBlades;
+				break;
+			}
+			break;
+		}
+		debugSprite = sprIdle;
+		debugIndex = 0;
+		debugStateSelectedMax = 2;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var debugObj = instance_create_layer(x,y,"Enemies",obj_Blado);
+			debugObj.character = debugSpriteSelected;
+			debugObj.sprIdle = sprIdle;
+			debugObj.sprHurt = sprHurt;
+			debugObj.sprite_index = sprIdle;
+			debugObj.paletteIndex = debugPaletteIndex;
+			debugObj.image_xscale = debugXScale;
+			debugObj.dirX = debugXScale;
+			debugObj.walkDirX = debugXScale;
+			debugObj.image_yscale = debugYScale;
+			debugObj.dirY = debugYScale;
+			debugObj.walkDirY = debugYScale;
+			debugObj.state = debugStateSelected;
+		}
+		break;
+	
+		//Como
+	
+		case 62:
+		debugSpriteSelectedMax = 0;
+		switch (debugSpriteSelected)
+		{
+			//Normal
+		
+			case 0:
+			var sprIdle = spr_Blado_Normal_Idle;
+			var sprHurt = "self";
+			debugPaletteNumberMax = 0;
+			switch (debugPaletteNumber)
+			{
+				case 0:
+				debugPaletteIndex = spr_Blado_Normal_Palette_BrownBlades;
+				break;
+			
+				default:
+				debugPaletteIndex = spr_Blado_Normal_Palette_BrownBlades;
+				break;
+			}
+			break;
+		}
+		debugSprite = sprIdle;
+		debugIndex = 0;
+		debugStateSelectedMax = 2;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var debugObj = instance_create_layer(x,y,"Enemies",obj_Blado);
+			debugObj.character = debugSpriteSelected;
+			debugObj.sprIdle = sprIdle;
+			debugObj.sprHurt = sprHurt;
+			debugObj.sprite_index = sprIdle;
+			debugObj.paletteIndex = debugPaletteIndex;
+			debugObj.image_xscale = debugXScale;
+			debugObj.dirX = debugXScale;
+			debugObj.walkDirX = debugXScale;
+			debugObj.image_yscale = debugYScale;
+			debugObj.dirY = debugYScale;
+			debugObj.walkDirY = debugYScale;
+			debugObj.state = debugStateSelected;
+		}
+		break;
+	
+		//Cairn
+	
+		case 63:
+		debugSpriteSelectedMax = 0;
+		switch (debugSpriteSelected)
+		{
+			//Normal
+		
+			case 0:
+			var sprIdle = spr_Blado_Normal_Idle;
+			var sprHurt = "self";
+			debugPaletteNumberMax = 0;
+			switch (debugPaletteNumber)
+			{
+				case 0:
+				debugPaletteIndex = spr_Blado_Normal_Palette_BrownBlades;
+				break;
+			
+				default:
+				debugPaletteIndex = spr_Blado_Normal_Palette_BrownBlades;
+				break;
+			}
+			break;
+		}
+		debugSprite = sprIdle;
+		debugIndex = 0;
+		debugStateSelectedMax = 2;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var debugObj = instance_create_layer(x,y,"Enemies",obj_Blado);
+			debugObj.character = debugSpriteSelected;
+			debugObj.sprIdle = sprIdle;
+			debugObj.sprHurt = sprHurt;
+			debugObj.sprite_index = sprIdle;
+			debugObj.paletteIndex = debugPaletteIndex;
+			debugObj.image_xscale = debugXScale;
+			debugObj.dirX = debugXScale;
+			debugObj.walkDirX = debugXScale;
+			debugObj.image_yscale = debugYScale;
+			debugObj.dirY = debugYScale;
+			debugObj.walkDirY = debugYScale;
+			debugObj.state = debugStateSelected;
+		}
+		break;
+	
+		//Bomber
+	
+		case 64:
+		debugSpriteSelectedMax = 0;
+		switch (debugSpriteSelected)
+		{
+			//Normal
+		
+			case 0:
+			var sprIdle = spr_Blado_Normal_Idle;
+			var sprHurt = "self";
+			debugPaletteNumberMax = 0;
+			switch (debugPaletteNumber)
+			{
+				case 0:
+				debugPaletteIndex = spr_Blado_Normal_Palette_BrownBlades;
+				break;
+			
+				default:
+				debugPaletteIndex = spr_Blado_Normal_Palette_BrownBlades;
+				break;
+			}
+			break;
+		}
+		debugSprite = sprIdle;
+		debugIndex = 0;
+		debugStateSelectedMax = 2;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var debugObj = instance_create_layer(x,y,"Enemies",obj_Blado);
+			debugObj.character = debugSpriteSelected;
+			debugObj.sprIdle = sprIdle;
+			debugObj.sprHurt = sprHurt;
+			debugObj.sprite_index = sprIdle;
+			debugObj.paletteIndex = debugPaletteIndex;
+			debugObj.image_xscale = debugXScale;
+			debugObj.dirX = debugXScale;
+			debugObj.walkDirX = debugXScale;
+			debugObj.image_yscale = debugYScale;
+			debugObj.dirY = debugYScale;
+			debugObj.walkDirY = debugYScale;
+			debugObj.state = debugStateSelected;
+		}
+		break;
+	
+		//Simirror
+	
+		case 65:
+		debugSpriteSelectedMax = 0;
+		switch (debugSpriteSelected)
+		{
+			//Normal
+		
+			case 0:
+			var sprIdle = spr_Simirror_Normal_Walk;
+			var sprWalk = spr_Simirror_Normal_Walk;
+			var sprAttack = spr_Simirror_Normal_Attack;
+			var sprHurt = spr_Simirror_Normal_Hurt;
+			debugPaletteNumberMax = 0;
+			switch (debugPaletteNumber)
+			{
+				case 0:
+				debugPaletteIndex = spr_Blado_Normal_Palette_BrownBlades;
+				break;
+			
+				default:
+				debugPaletteIndex = spr_Blado_Normal_Palette_BrownBlades;
+				break;
+			}
+			break;
+		}
+		debugSprite = sprIdle;
+		debugIndex = 0;
+		debugStateSelectedMax = 2;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var debugObj = instance_create_layer(x,y,"Enemies",obj_Simirror);
+			debugObj.character = debugSpriteSelected;
+			debugObj.sprIdle = sprIdle;
+			debugObj.sprWalk = sprWalk;
+			debugObj.sprAttack = sprAttack;
+			debugObj.sprHurt = sprHurt;
+			debugObj.sprite_index = sprIdle;
 			debugObj.paletteIndex = debugPaletteIndex;
 			debugObj.image_xscale = debugXScale;
 			debugObj.dirX = debugXScale;

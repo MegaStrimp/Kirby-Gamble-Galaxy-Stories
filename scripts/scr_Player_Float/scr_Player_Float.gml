@@ -10,6 +10,9 @@ function scr_Player_Float()
 		fallRoll = false;
 		run = false;
 		
+		var playerCharacter = global.characterP1;
+		if (player == 1) playerCharacter = global.characterP2;
+		
 		var grounded = false;
 		if (place_meeting(x,y + 1,obj_Wall))
 		{
@@ -55,26 +58,58 @@ function scr_Player_Float()
 			vsp = gravLimitFloat;
 		}
 		
+		//Attack
+		
+		switch (playerCharacter)
+		{
+			case playerCharacters.gooey:
+			if ((!hurt) and (!attack) and (keyAttackPressed))
+			{
+				attack = true;
+				attackTimer = 20;
+				shakeX = 1.5;
+				shakeY = 1.5;
+				var projectile = instance_create_depth(x + (14 * dir) + hsp,y + vsp,depth + 1,obj_Projectile_MockMatterLaser);
+				projectile.image_xscale = dir;
+				projectile.image_angle += irandom_range(-10,10);
+				projectile.dirX = dir;
+				projectile.hsp = lengthdir_x(6 * dir,projectile.image_angle) + hsp;
+				projectile.vsp = lengthdir_y(6 * dir,projectile.image_angle) + vsp;
+			}
+			break;
+		}
+		
 		//Flap
 		
 		if ((!floatSpit) and (float) and (!hurt))
 		{
 			if ((!global.cutscene) and (floatingTimer == -1) and ((keyJumpHold) or (keyUpHold)))
 			{
-				if (carriedItem == carriedItems.none)
+				switch (playerCharacter)
 				{
-					sprite_index = sprFlap;
+					default:
+					if (carriedItem == carriedItems.none)
+					{
+						sprite_index = sprFlap;
+					}
+					else
+					{
+						sprite_index = sprItemCarryLightFlap;
+					}
+					image_index = 0;
+					if (audio_is_playing(snd_Float)) audio_stop_sound(snd_Float);
+					if (!audio_is_playing(floatSfx)) floatSfx = audio_play_sound(snd_Float,0,false);
+					floating = true;
+					if (jumpLimit) vsp = -jumpspeedFloat;
+					floatingTimer = 10;
+					break;
+					
+					case playerCharacters.gooey:
+					floating = true;
+					if ((!(keyDownHold)) and (jumpLimit)) vsp = -jumpspeedFloat;
+					floatingTimer = 10;
+					break;
 				}
-				else
-				{
-					sprite_index = sprItemCarryLightFlap;
-				}
-				image_index = 0;
-				if (audio_is_playing(snd_Float)) audio_stop_sound(snd_Float);
-				if (!audio_is_playing(floatSfx)) floatSfx = audio_play_sound(snd_Float,0,false);
-				floating = true;
-				if (jumpLimit) vsp = -jumpspeedFloat;
-				floatingTimer = 10;
 			}
 			
 			if (floatingTimer > 0)
@@ -101,57 +136,80 @@ function scr_Player_Float()
 		
 		//Air Puff
 		
-		if ((!global.cutscene) and ((grounded) or (enterDoor) or ((place_meeting(x,y,obj_AntiFloat))) or (keyAttackPressed)) and ((!floatSpit) and (sprite_index != sprFloatReady) and (sprite_index != sprItemCarryLightFloatReady)))
+		switch (playerCharacter)
 		{
-			if (audio_is_playing(floatSfx)) audio_stop_sound(snd_Float);
-			var projAirPuff = instance_create_depth(x + ((sprite_get_width(sprFloatSpit) / 2) * dir),y + vsp,depth - 1,obj_AirPuff);
-			projAirPuff.owner = id;
-			projAirPuff.dmg = 10;
-			projAirPuff.dirX = dir;
-			projAirPuff.image_xscale = projAirPuff.dirX;
-			projAirPuff.hsp = ((airPuffSpd * dir) + hsp);
-			projAirPuff.sprIdle = spr_AirPuff_Normal_Idle;
-			projAirPuff.sprDestroy = spr_AirPuff_Normal_Destroy;
-			projAirPuff.sprite_index = projAirPuff.sprIdle;
-			projAirPuff.character = 0;
-			audio_play_sound(snd_AirPuff,0,false);
-			image_index = 0;
-			floatingTimer = -1;
-			floating = false;
-			float = false;
-			floatSpit = true;
+			default:
+			if ((!global.cutscene) and ((grounded) or (enterDoor) or ((place_meeting(x,y,obj_AntiFloat))) or (keyAttackPressed)) and ((!floatSpit) and (sprite_index != sprFloatReady) and (sprite_index != sprItemCarryLightFloatReady)))
+			{
+				if (audio_is_playing(floatSfx)) audio_stop_sound(snd_Float);
+				var projAirPuff = instance_create_depth(x + ((sprite_get_width(sprFloatSpit) / 2) * dir),y + vsp,depth - 1,obj_AirPuff);
+				projAirPuff.owner = id;
+				projAirPuff.dmg = 10;
+				projAirPuff.dirX = dir;
+				projAirPuff.image_xscale = projAirPuff.dirX;
+				projAirPuff.hsp = ((airPuffSpd * dir) + hsp);
+				projAirPuff.sprIdle = spr_AirPuff_Normal_Idle;
+				projAirPuff.sprDestroy = spr_AirPuff_Normal_Destroy;
+				projAirPuff.sprite_index = projAirPuff.sprIdle;
+				projAirPuff.character = 0;
+				audio_play_sound(snd_AirPuff,0,false);
+				image_index = 0;
+				floatingTimer = -1;
+				floating = false;
+				float = false;
+				floatSpit = true;
+			}
+			break;
+			
+			case playerCharacters.gooey:
+			if ((grounded) or (place_meeting(x,y,obj_AntiFloat)))
+			{
+				jumpspeed = jumpspeedNormal;
+				state = playerStates.normal;
+			}
+			if ((keyDownHold) and (sign(vsp) == -1)) vsp = 0;
+			break;
 		}
 		
 		//Animation
 		
-		if (!float)
+		switch (playerCharacter)
 		{
-			if (carriedItem == carriedItems.none)
+			default:
+			if (!float)
 			{
-				if (floatSpit)
+				if (carriedItem == carriedItems.none)
 				{
-					sprite_index = sprFloatSpit;
+					if (floatSpit)
+					{
+						sprite_index = sprFloatSpit;
+					}
+					else
+					{
+						sprite_index = sprFloatReady;
+					}
 				}
 				else
 				{
-					sprite_index = sprFloatReady;
+					if (floatSpit)
+					{
+						sprite_index = sprItemCarryLightFloatSpit;
+					}
+					else
+					{
+						sprite_index = sprItemCarryLightFloatReady;
+					}
 				}
 			}
-			else
+			else if (hurt)
 			{
-				if (floatSpit)
-				{
-					sprite_index = sprItemCarryLightFloatSpit;
-				}
-				else
-				{
-					sprite_index = sprItemCarryLightFloatReady;
-				}
+				sprite_index = sprFloatHurt;
 			}
-		}
-		else if (hurt)
-		{
-			sprite_index = sprFloatHurt;
+			break;
+			
+			case playerCharacters.gooey:
+			sprite_index = sprFloat;
+			break;
 		}
 		
 		if ((!hurt) and (sprite_index == sprFloatHurt))

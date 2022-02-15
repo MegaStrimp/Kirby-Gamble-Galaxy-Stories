@@ -15,7 +15,8 @@ sprHurt = spr_Simirror_Normal_Hurt;
 
 sndMirror = snd_EnemyIce;
 
-ability = "mirror";
+paletteIndex = spr_Simirror_Normal_Palette_SimilarGreen;
+ability = playerAbilities.mirror;
 hp = 30;
 dmg = 1;
 first_hit = true;

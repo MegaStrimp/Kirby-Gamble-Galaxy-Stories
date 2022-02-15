@@ -177,7 +177,8 @@ if (!global.pause)
 		{
 			audio_play_sound(snd_Enter,0,false);
 			var fade = instance_create_depth(x,y,-999,obj_Fade);
-			fade.targetRoom = targetRoom;
+			fade.targetRoom = rm_CharacterSelect;
+			global.roomNext = targetRoom;
 		}
 	}
 }

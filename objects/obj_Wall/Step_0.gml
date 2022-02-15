@@ -183,7 +183,7 @@ if (object)
 			{
 				if ((hurtsObject) and (owner != other))
 				{
-					if ((other.damageType == damageTypes.none) or (damageType == damagetypes.every) or (other.damageType = damageType))
+					if ((other.damageType == damageTypes.none) or (damageType == damageTypes.every) or (other.damageType = damageType))
 					{
 						other.hp -= dmg;
 						if (!destroyableByObject)

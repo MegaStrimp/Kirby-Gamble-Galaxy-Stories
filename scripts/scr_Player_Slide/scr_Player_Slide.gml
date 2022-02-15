@@ -450,6 +450,7 @@ function scr_Player_Slide()
 		        hsp = movespeedSlide * dir;
 		        duckSlide = true;
 		        duck = false;
+				duckJumpCharge = 0;
 		    }
 			
 			//Cancel Ducking
@@ -463,7 +464,7 @@ function scr_Player_Slide()
 					
 					switch (playerCharacter)
 					{
-						case "waddleDee":
+						case playerCharacters.waddleDee:
 						var jumpSound = choose(snd_WaddleDee1,snd_WaddleDee6,snd_WaddleDee7,snd_WaddleDee8,snd_WaddleDee9,snd_WaddleDee10,snd_WaddleDee11);
 						audio_play_sound(jumpSound,0,false);
 						if (audio_is_playing(snd_BigJump)) audio_stop_sound(snd_BigJump);
@@ -481,7 +482,7 @@ function scr_Player_Slide()
 						vsp = -(jumpspeed * 1.25);
 						break;
 						
-						case "waddleDoo":
+						case playerCharacters.waddleDoo:
 						if (audio_is_playing(snd_BigJump)) audio_stop_sound(snd_BigJump);
 						audio_play_sound(snd_BigJump,0,false);
 						var parJump = instance_create_depth(x - (7 * dir),y + 5,depth + 1,obj_Particle);
