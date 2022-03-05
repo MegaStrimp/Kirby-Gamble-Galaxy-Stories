@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Button_Space_Pressed","path":"sprites/spr_Button_Space_Pressed/spr_Button_Space_Pressed.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Button_Space_Pressed",
     "tags": [],
     "resourceType": "GMSequence",

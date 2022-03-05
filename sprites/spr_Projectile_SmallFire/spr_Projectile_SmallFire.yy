@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_SmallFire","path":"sprites/spr_Projectile_SmallFire/spr_Projectile_SmallFire.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_SmallFire",
     "tags": [],
     "resourceType": "GMSequence",

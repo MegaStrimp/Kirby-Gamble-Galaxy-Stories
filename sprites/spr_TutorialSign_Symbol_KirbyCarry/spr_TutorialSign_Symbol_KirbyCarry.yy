@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_TutorialSign_Symbol_KirbyCarry","path":"sprites/spr_TutorialSign_Symbol_KirbyCarry/spr_TutorialSign_Symbol_KirbyCarry.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_TutorialSign_Symbol_KirbyCarry",
     "tags": [],
     "resourceType": "GMSequence",

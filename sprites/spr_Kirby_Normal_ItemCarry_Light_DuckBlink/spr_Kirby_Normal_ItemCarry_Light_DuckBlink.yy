@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_ItemCarry_Light_DuckBlink","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_DuckBlink/spr_Kirby_Normal_ItemCarry_Light_DuckBlink.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_ItemCarry_Light_DuckBlink",
     "tags": [],
     "resourceType": "GMSequence",

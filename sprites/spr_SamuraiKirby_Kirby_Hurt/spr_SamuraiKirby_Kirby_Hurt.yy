@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_SamuraiKirby_Kirby_Hurt","path":"sprites/spr_SamuraiKirby_Kirby_Hurt/spr_SamuraiKirby_Kirby_Hurt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_SamuraiKirby_Kirby_Hurt",
     "tags": [],
     "resourceType": "GMSequence",

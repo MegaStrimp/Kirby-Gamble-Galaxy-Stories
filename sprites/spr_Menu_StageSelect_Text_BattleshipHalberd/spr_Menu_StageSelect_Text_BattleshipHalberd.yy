@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_StageSelect_Text_BattleshipHalberd","path":"sprites/spr_Menu_StageSelect_Text_BattleshipHalberd/spr_Menu_StageSelect_Text_BattleshipHalberd.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_StageSelect_Text_BattleshipHalberd",
     "tags": [],
     "resourceType": "GMSequence",

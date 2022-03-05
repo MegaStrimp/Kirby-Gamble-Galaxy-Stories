@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Yoyo_KSSU_SlideEnd","path":"sprites/spr_Kirby_AbilityHat_Yoyo_KSSU_SlideEnd/spr_Kirby_AbilityHat_Yoyo_KSSU_SlideEnd.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Yoyo_KSSU_SlideEnd",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_CutterDrop_Mask","path":"sprites/spr_CutterDrop_Mask/spr_CutterDrop_Mask.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_CutterDrop_Mask",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_SamuraiKirby_Hud_LineMetaKnight","path":"sprites/spr_SamuraiKirby_Hud_LineMetaKnight/spr_SamuraiKirby_Hud_LineMetaKnight.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_SamuraiKirby_Hud_LineMetaKnight",
     "tags": [],
     "resourceType": "GMSequence",

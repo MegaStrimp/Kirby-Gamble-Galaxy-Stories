@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Stone_Modern_Attack1Ready","path":"sprites/spr_Kirby_AbilityHat_Stone_Modern_Attack1Ready/spr_Kirby_AbilityHat_Stone_Modern_Attack1Ready.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Stone_Modern_Attack1Ready",
     "tags": [],
     "resourceType": "GMSequence",

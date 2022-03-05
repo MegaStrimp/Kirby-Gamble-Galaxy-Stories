@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Button_Settings","path":"sprites/spr_Maykr_Button_Settings/spr_Maykr_Button_Settings.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Button_Settings",
     "tags": [],
     "resourceType": "GMSequence",

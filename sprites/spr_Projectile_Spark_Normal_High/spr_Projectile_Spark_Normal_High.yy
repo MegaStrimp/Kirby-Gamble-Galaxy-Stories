@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_Spark_Normal_High","path":"sprites/spr_Projectile_Spark_Normal_High/spr_Projectile_Spark_Normal_High.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_Spark_Normal_High",
     "tags": [],
     "resourceType": "GMSequence",

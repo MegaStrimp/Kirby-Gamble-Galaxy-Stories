@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Collection_Bestiary_Hud_Normal","path":"sprites/spr_Menu_Collection_Bestiary_Hud_Normal/spr_Menu_Collection_Bestiary_Hud_Normal.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Collection_Bestiary_Hud_Normal",
     "tags": [],
     "resourceType": "GMSequence",

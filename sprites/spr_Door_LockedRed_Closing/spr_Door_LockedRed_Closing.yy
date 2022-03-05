@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Door_LockedRed_Closing","path":"sprites/spr_Door_LockedRed_Closing/spr_Door_LockedRed_Closing.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Door_LockedRed_Closing",
     "tags": [],
     "resourceType": "GMSequence",

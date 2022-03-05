@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Button_Space_Idle","path":"sprites/spr_Button_Space_Idle/spr_Button_Space_Idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Button_Space_Idle",
     "tags": [],
     "resourceType": "GMSequence",

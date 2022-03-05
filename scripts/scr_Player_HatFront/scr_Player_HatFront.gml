@@ -422,7 +422,41 @@ function scr_Player_HatFront(argument0,argument1)
 				switch (sprite_index)
 				{
 					case sprIdle:
+					case sprIdleBlink:
+					case sprIdleNormalSlopeL:
+					case sprIdleNormalSlopeLBlink:
+					case sprIdleNormalSlopeR:
+					case sprIdleNormalSlopeRBlink:
+					case sprIdleSteepSlopeL:
+					case sprIdleSteepSlopeLBlink:
+					case sprIdleSteepSlopeR:
+					case sprIdleSteepSlopeRBlink:
+					case sprItemCarryLightIdleNormalSlopeL:
+					case sprItemCarryLightIdleNormalSlopeLBlink:
+					case sprItemCarryLightIdleNormalSlopeR:
+					case sprItemCarryLightIdleNormalSlopeRBlink:
+					case sprItemCarryLightIdleSteepSlopeL:
+					case sprItemCarryLightIdleSteepSlopeLBlink:
+					case sprItemCarryLightIdleSteepSlopeR:
+					case sprItemCarryLightIdleSteepSlopeRBlink:
+					case sprItemCarryHeavyIdle:
+					case sprItemCarryHeavyIdleSlopeL:
+					case sprItemCarryHeavyIdleSlopeR:
+					case sprItemCarryThrow:
 					hatFrontIndex = spr_Kirby_HatFront_Water_Modern_Idle;
+					break;
+					
+					case sprWalk:
+					case sprItemCarryLightWalk:
+					case sprItemCarryHeavyWalk:
+					if (waterWalkHatAnim == 0)
+					{
+						hatFrontIndex = spr_Kirby_HatFront_Water_Modern_WalkAnim1;
+					}
+					else
+					{
+						hatFrontIndex = spr_Kirby_HatFront_Water_Modern_WalkAnim2;
+					}
 					break;
 					
 					default:

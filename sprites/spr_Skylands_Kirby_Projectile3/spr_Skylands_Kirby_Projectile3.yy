@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Skylands_Kirby_Projectile3","path":"sprites/spr_Skylands_Kirby_Projectile3/spr_Skylands_Kirby_Projectile3.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Skylands_Kirby_Projectile3",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Key_Normal","path":"sprites/spr_Key_Normal/spr_Key_Normal.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Key_Normal",
     "tags": [],
     "resourceType": "GMSequence",

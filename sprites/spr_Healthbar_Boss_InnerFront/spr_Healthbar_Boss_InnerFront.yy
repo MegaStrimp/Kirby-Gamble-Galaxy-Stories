@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Healthbar_Boss_InnerFront","path":"sprites/spr_Healthbar_Boss_InnerFront/spr_Healthbar_Boss_InnerFront.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Healthbar_Boss_InnerFront",
     "tags": [],
     "resourceType": "GMSequence",

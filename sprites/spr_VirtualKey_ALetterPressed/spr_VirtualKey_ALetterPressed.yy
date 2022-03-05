@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_VirtualKey_ALetterPressed","path":"sprites/spr_VirtualKey_ALetterPressed/spr_VirtualKey_ALetterPressed.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_VirtualKey_ALetterPressed",
     "tags": [],
     "resourceType": "GMSequence",

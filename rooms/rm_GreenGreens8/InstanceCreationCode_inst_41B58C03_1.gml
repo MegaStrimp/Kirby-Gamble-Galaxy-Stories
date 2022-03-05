@@ -1,4 +1,4 @@
 ///@description Creation Code
 
-targetRoom = rm_GreenGreensBoss;
+targetRoom = rm_GreenGreens_Boss;
 tutorial = true;

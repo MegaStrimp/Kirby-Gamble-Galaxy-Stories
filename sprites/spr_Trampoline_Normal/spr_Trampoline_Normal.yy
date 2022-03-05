@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Trampoline_Normal","path":"sprites/spr_Trampoline_Normal/spr_Trampoline_Normal.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Trampoline_Normal",
     "tags": [],
     "resourceType": "GMSequence",

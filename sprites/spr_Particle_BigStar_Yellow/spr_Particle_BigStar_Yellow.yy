@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_BigStar_Yellow","path":"sprites/spr_Particle_BigStar_Yellow/spr_Particle_BigStar_Yellow.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_BigStar_Yellow",
     "tags": [],
     "resourceType": "GMSequence",

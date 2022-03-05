@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_HatShadow_Bomb_Modern_ClimbUp","path":"sprites/spr_Kirby_HatShadow_Bomb_Modern_ClimbUp/spr_Kirby_HatShadow_Bomb_Modern_ClimbUp.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_HatShadow_Bomb_Modern_ClimbUp",
     "tags": [],
     "resourceType": "GMSequence",

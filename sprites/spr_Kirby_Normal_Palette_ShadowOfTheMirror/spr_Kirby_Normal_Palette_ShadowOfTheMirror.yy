@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Palette_ShadowOfTheMirror","path":"sprites/spr_Kirby_Normal_Palette_ShadowOfTheMirror/spr_Kirby_Normal_Palette_ShadowOfTheMirror.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Palette_ShadowOfTheMirror",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Debug_CuttableGrass","path":"sprites/spr_Maykr_Debug_CuttableGrass/spr_Maykr_Debug_CuttableGrass.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Debug_CuttableGrass",
     "tags": [],
     "resourceType": "GMSequence",

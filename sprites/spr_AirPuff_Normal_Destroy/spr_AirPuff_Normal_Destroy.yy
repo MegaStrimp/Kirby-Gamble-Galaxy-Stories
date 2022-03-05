@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AirPuff_Normal_Destroy","path":"sprites/spr_AirPuff_Normal_Destroy/spr_AirPuff_Normal_Destroy.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AirPuff_Normal_Destroy",
     "tags": [],
     "resourceType": "GMSequence",

@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Fire_KSSU_Slide","path":"sprites/spr_Kirby_AbilityHat_Fire_KSSU_Slide/spr_Kirby_AbilityHat_Fire_KSSU_Slide.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Fire_KSSU_Slide",
     "tags": [],
     "resourceType": "GMSequence",

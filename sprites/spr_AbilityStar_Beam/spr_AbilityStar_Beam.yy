@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityStar_Beam","path":"sprites/spr_AbilityStar_Beam/spr_AbilityStar_Beam.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityStar_Beam",
     "tags": [],
     "resourceType": "GMSequence",

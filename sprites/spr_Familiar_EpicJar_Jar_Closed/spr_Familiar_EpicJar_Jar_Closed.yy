@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Familiar_EpicJar_Jar_Closed","path":"sprites/spr_Familiar_EpicJar_Jar_Closed/spr_Familiar_EpicJar_Jar_Closed.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Familiar_EpicJar_Jar_Closed",
     "tags": [],
     "resourceType": "GMSequence",

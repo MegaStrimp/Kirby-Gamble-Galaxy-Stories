@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Title_BuildSelected","path":"sprites/spr_Maykr_Title_BuildSelected/spr_Maykr_Title_BuildSelected.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Title_BuildSelected",
     "tags": [],
     "resourceType": "GMSequence",

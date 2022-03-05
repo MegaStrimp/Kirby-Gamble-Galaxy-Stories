@@ -22,6 +22,7 @@ textY = 147;
 goBack = false;
 starIndex = 0;
 hatSprite = -1;
+arrayLength = 1;
 
 player1Offset = 0;
 player2Offset = 0;

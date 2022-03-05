@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Treasure_Spray","path":"sprites/spr_Treasure_Spray/spr_Treasure_Spray.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Treasure_Spray",
     "tags": [],
     "resourceType": "GMSequence",

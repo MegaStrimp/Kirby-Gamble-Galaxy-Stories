@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_CuttableGrass_Normal_Bottom","path":"sprites/spr_CuttableGrass_Normal_Bottom/spr_CuttableGrass_Normal_Bottom.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_CuttableGrass_Normal_Bottom",
     "tags": [],
     "resourceType": "GMSequence",

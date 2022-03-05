@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Debug_GentleSlope","path":"sprites/spr_Maykr_Debug_GentleSlope/spr_Maykr_Debug_GentleSlope.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Debug_GentleSlope",
     "tags": [],
     "resourceType": "GMSequence",

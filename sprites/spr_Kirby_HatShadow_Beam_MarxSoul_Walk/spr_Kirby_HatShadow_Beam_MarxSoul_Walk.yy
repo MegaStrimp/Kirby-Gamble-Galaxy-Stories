@@ -103,7 +103,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_HatShadow_Beam_MarxSoul_Walk","path":"sprites/spr_Kirby_HatShadow_Beam_MarxSoul_Walk/spr_Kirby_HatShadow_Beam_MarxSoul_Walk.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_HatShadow_Beam_MarxSoul_Walk",
     "tags": [],
     "resourceType": "GMSequence",

@@ -74,7 +74,7 @@ function scr_Player_Slide()
 							grabEnemy.hasDeathParticles = false;
 							grabEnemy.death = true;
 							attack = true;
-							attackNumber = "bombGrab";
+							attackNumber = playerAttacks.bombGrab;
 							carriedItemIndex.owner = carriedItemIndex;
 							carriedItemIndex.xOffset = 0;
 							carriedItemIndex.yOffset = 0;
@@ -145,7 +145,7 @@ function scr_Player_Slide()
 									grabEnemy.hasDeathParticles = false;
 									grabEnemy.death = true;
 									attack = true;
-									attackNumber = "beamGrab";
+									attackNumber = playerAttacks.beamGrab;
 									hsp = 0;
 									state = playerStates.beamGrab;
 								}
@@ -179,7 +179,7 @@ function scr_Player_Slide()
 									grabEnemy.hasDeathParticles = false;
 									grabEnemy.death = true;
 									attack = true;
-									attackNumber = "mysticBeamGrab";
+									attackNumber = playerAttacks.mysticBeamGrab;
 									hsp = 0;
 									state = playerStates.mysticBeamGrab;
 								}
@@ -194,7 +194,7 @@ function scr_Player_Slide()
 								sprite_index = sprBombReady;
 								image_index = 0;
 					            attack = true;
-								attackNumber = "bombReady";
+								attackNumber = playerAttacks.bombReady;
 								attackable = false;
 					            attackTimer = 45;
 								bombDownReady = true;
@@ -247,7 +247,7 @@ function scr_Player_Slide()
 									iceGrab = false;
 									invincible = true;
 									attack = true;
-									attackNumber = "iceGrab";
+									attackNumber = playerAttacks.iceGrab;
 									hsp = 0;
 									state = playerStates.iceGrab;
 								}

@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_AirPuff","path":"sprites/spr_Particle_AirPuff/spr_Particle_AirPuff.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_AirPuff",
     "tags": [],
     "resourceType": "GMSequence",

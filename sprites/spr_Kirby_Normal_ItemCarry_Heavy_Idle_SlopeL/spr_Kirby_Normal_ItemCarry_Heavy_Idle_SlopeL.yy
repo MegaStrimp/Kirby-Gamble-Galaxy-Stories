@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_ItemCarry_Heavy_Idle_SlopeL","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Idle_SlopeL/spr_Kirby_Normal_ItemCarry_Heavy_Idle_SlopeL.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_ItemCarry_Heavy_Idle_SlopeL",
     "tags": [],
     "resourceType": "GMSequence",

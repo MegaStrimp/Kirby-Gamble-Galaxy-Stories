@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityDropStar_Mirror","path":"sprites/spr_AbilityDropStar_Mirror/spr_AbilityDropStar_Mirror.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityDropStar_Mirror",
     "tags": [],
     "resourceType": "GMSequence",

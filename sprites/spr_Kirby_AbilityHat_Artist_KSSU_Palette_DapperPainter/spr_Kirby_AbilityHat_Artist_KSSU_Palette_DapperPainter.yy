@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Artist_KSSU_Palette_DapperPainter","path":"sprites/spr_Kirby_AbilityHat_Artist_KSSU_Palette_DapperPainter/spr_Kirby_AbilityHat_Artist_KSSU_Palette_DapperPainter.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Artist_KSSU_Palette_DapperPainter",
     "tags": [],
     "resourceType": "GMSequence",

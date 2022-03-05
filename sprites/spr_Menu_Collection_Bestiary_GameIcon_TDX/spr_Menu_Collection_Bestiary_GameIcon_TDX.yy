@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Collection_Bestiary_GameIcon_TDX","path":"sprites/spr_Menu_Collection_Bestiary_GameIcon_TDX/spr_Menu_Collection_Bestiary_GameIcon_TDX.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Collection_Bestiary_GameIcon_TDX",
     "tags": [],
     "resourceType": "GMSequence",

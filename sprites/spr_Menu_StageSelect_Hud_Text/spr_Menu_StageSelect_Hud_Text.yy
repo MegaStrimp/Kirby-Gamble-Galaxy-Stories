@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_StageSelect_Hud_Text","path":"sprites/spr_Menu_StageSelect_Hud_Text/spr_Menu_StageSelect_Hud_Text.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_StageSelect_Hud_Text",
     "tags": [],
     "resourceType": "GMSequence",

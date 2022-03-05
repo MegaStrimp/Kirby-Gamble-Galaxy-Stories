@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Healthbar_Helper_Inner","path":"sprites/spr_Healthbar_Helper_Inner/spr_Healthbar_Helper_Inner.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Healthbar_Helper_Inner",
     "tags": [],
     "resourceType": "GMSequence",

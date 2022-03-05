@@ -58,9 +58,9 @@ if (hatShadowIndex != -1) draw_sprite_ext(hatShadowIndex,image_index,x + drawSha
 if ((global.shaders) and (((sprite_index != sprStoneAttack1Common) and (sprite_index != sprStoneAttack1Uncommon) and (sprite_index != sprStoneAttack1Rare)) or (sprite_index = (sprStoneAttack1Common) and (image_index = 0)))) pal_swap_reset();
 
 var hatAnim = image_index;
-if (playerAbility == playerAbilities.water) hatAnim = hatFrontImageIndex;
 var abilityHatIndex = scr_Player_AbilityHat(playerAbility,playerCharacter);
 var hatFrontIndex = scr_Player_HatFront(playerAbility,playerCharacter);
+if ((playerAbility == playerAbilities.water) and (hatFrontIndex == spr_Kirby_HatFront_Water_Modern_Idle)) hatAnim = hatFrontImageIndex;
 if (hatFrontIndex != -1) hatFrontImageIndexSpd = sprite_get_speed(hatFrontIndex) / 60;
 if ((global.shaders) and (abilityHatPalette != -1)) pal_swap_set(abilityHatPalette,paletteFlash,false);
 if (abilityHatIndex != -1) draw_sprite_ext(abilityHatIndex,image_index,x + drawShakeX,y + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle,image_blend,image_alpha);
@@ -137,7 +137,7 @@ if ((playerAbility == playerAbilities.mirror) and (mirrorShieldHp <= 0))
 
 //Bomb Crosshair
 
-if ((attackNumber == "bombNormal") and (carriedItem != carriedItems.none))
+if ((attackNumber == playerAttacks.bombNormal) and (carriedItem != carriedItems.none))
 {
 	var bdir = (270 + (90 * dir)) + (bombDir * dir);
 	if (bdir >= 360) bdir -= 360;
@@ -147,7 +147,7 @@ if ((attackNumber == "bombNormal") and (carriedItem != carriedItems.none))
 
 //Key Crosshair
 
-if ((attackNumber == "keyNormal") and (carriedItem != carriedItems.none))
+if ((attackNumber == playerAttacks.keyNormal) and (carriedItem != carriedItems.none))
 {
 	var bdir = (270 + (90 * dir)) + (bombDir * dir);
 	if (bdir >= 360) bdir -= 360;
@@ -168,5 +168,4 @@ if ((playerIsHelper) and (helperTimer != -1))
 draw_set_font(fnt_DebugConsole);
 draw_set_color(c_black);
 /*
-draw_text(x,y - 12,string(run));
-draw_text(x,y - 24,string(runCancelTimer));
+draw_text(x,y - 12,string(instance_number(obj_Enemy)));

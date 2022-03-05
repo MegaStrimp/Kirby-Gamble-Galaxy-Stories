@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityStar_Metal","path":"sprites/spr_AbilityStar_Metal/spr_AbilityStar_Metal.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityStar_Metal",
     "tags": [],
     "resourceType": "GMSequence",

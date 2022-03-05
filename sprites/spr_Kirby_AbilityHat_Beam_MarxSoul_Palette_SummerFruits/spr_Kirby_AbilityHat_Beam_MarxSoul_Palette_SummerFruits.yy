@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Beam_MarxSoul_Palette_SummerFruits","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_Palette_SummerFruits/spr_Kirby_AbilityHat_Beam_MarxSoul_Palette_SummerFruits.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Beam_MarxSoul_Palette_SummerFruits",
     "tags": [],
     "resourceType": "GMSequence",

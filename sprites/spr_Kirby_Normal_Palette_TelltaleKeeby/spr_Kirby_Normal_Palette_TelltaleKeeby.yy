@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Palette_TelltaleKeeby","path":"sprites/spr_Kirby_Normal_Palette_TelltaleKeeby/spr_Kirby_Normal_Palette_TelltaleKeeby.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Palette_TelltaleKeeby",
     "tags": [],
     "resourceType": "GMSequence",

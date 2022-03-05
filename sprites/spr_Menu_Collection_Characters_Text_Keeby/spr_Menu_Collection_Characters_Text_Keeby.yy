@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Collection_Characters_Text_Keeby","path":"sprites/spr_Menu_Collection_Characters_Text_Keeby/spr_Menu_Collection_Characters_Text_Keeby.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Collection_Characters_Text_Keeby",
     "tags": [],
     "resourceType": "GMSequence",

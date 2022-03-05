@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Gamble_Normal_Back_Cry","path":"sprites/spr_Gamble_Normal_Back_Cry/spr_Gamble_Normal_Back_Cry.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Gamble_Normal_Back_Cry",
     "tags": [],
     "resourceType": "GMSequence",

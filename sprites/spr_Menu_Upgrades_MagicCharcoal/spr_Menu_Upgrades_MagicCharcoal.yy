@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Upgrades_MagicCharcoal","path":"sprites/spr_Menu_Upgrades_MagicCharcoal/spr_Menu_Upgrades_MagicCharcoal.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Upgrades_MagicCharcoal",
     "tags": [],
     "resourceType": "GMSequence",

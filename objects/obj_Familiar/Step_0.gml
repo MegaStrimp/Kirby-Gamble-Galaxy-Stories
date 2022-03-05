@@ -167,6 +167,7 @@ if (!global.pause)
 					projectile.dirX = dir;
 					projectile.image_xscale = projectile.dirX;
 					projectile.enemy = false;
+					projectile.isFamiliar = true;
 					attackState += 1;
 					attackTimer = 5;
 					break;
@@ -269,6 +270,7 @@ if (!global.pause)
 					projectile.image_xscale = projectile.dirX;
 					projectile.enemy = false;
 					projectile.angleSpd = projectile.hsp * 4;
+					projectile.isFamiliar = true;
 					attackState += 1;
 					attackTimer = 15;
 					break;
@@ -366,6 +368,7 @@ if (!global.pause)
 					projectile.dmg = 6;
 					projectile.vsp = 6;
 					projectile.enemy = false;
+					projectile.isFamiliar = true;
 					attackState += 1;
 					attackTimer = 5;
 					break;

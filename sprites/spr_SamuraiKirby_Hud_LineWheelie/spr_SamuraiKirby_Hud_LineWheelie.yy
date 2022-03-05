@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_SamuraiKirby_Hud_LineWheelie","path":"sprites/spr_SamuraiKirby_Hud_LineWheelie/spr_SamuraiKirby_Hud_LineWheelie.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_SamuraiKirby_Hud_LineWheelie",
     "tags": [],
     "resourceType": "GMSequence",

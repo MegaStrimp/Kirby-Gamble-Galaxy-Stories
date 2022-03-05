@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Gamble_Normal_Back_Mad","path":"sprites/spr_Gamble_Normal_Back_Mad/spr_Gamble_Normal_Back_Mad.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Gamble_Normal_Back_Mad",
     "tags": [],
     "resourceType": "GMSequence",

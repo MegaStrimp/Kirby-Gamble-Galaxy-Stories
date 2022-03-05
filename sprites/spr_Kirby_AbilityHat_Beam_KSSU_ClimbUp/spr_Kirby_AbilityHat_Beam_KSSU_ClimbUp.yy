@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Beam_KSSU_ClimbUp","path":"sprites/spr_Kirby_AbilityHat_Beam_KSSU_ClimbUp/spr_Kirby_AbilityHat_Beam_KSSU_ClimbUp.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Beam_KSSU_ClimbUp",
     "tags": [],
     "resourceType": "GMSequence",

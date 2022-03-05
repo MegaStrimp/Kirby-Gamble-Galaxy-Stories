@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityStar_Normal","path":"sprites/spr_AbilityStar_Normal/spr_AbilityStar_Normal.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityStar_Normal",
     "tags": [],
     "resourceType": "GMSequence",

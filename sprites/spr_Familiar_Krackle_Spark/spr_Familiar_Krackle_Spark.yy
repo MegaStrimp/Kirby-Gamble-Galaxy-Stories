@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Familiar_Krackle_Spark","path":"sprites/spr_Familiar_Krackle_Spark/spr_Familiar_Krackle_Spark.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Familiar_Krackle_Spark",
     "tags": [],
     "resourceType": "GMSequence",

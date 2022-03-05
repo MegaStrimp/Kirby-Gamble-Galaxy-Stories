@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Cutter_KSSU_Catch","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Catch/spr_Kirby_AbilityHat_Cutter_KSSU_Catch.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Cutter_KSSU_Catch",
     "tags": [],
     "resourceType": "GMSequence",

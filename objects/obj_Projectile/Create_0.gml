@@ -49,6 +49,8 @@ imageAngle = image_angle;
 syncImageAngle = true;
 player = 0;
 setupExplode = false;
+isFamiliar = false;
+trail = -1;
 
 //Timers
 

@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_ShotzoShoot","path":"sprites/spr_Particle_ShotzoShoot/spr_Particle_ShotzoShoot.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_ShotzoShoot",
     "tags": [],
     "resourceType": "GMSequence",

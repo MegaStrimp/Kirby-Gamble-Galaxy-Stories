@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_MysticBeam_GGS_Roll","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Roll/spr_Kirby_AbilityHat_MysticBeam_GGS_Roll.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_MysticBeam_GGS_Roll",
     "tags": [],
     "resourceType": "GMSequence",

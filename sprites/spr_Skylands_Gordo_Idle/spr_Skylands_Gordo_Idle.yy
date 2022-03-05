@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Skylands_Gordo_Idle","path":"sprites/spr_Skylands_Gordo_Idle/spr_Skylands_Gordo_Idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Skylands_Gordo_Idle",
     "tags": [],
     "resourceType": "GMSequence",

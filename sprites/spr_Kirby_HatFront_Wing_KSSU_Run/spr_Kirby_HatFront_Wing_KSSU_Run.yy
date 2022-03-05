@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_HatFront_Wing_KSSU_Run","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Run/spr_Kirby_HatFront_Wing_KSSU_Run.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_HatFront_Wing_KSSU_Run",
     "tags": [],
     "resourceType": "GMSequence",

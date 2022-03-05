@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Equipment_Beam_KSSU_Charge","path":"sprites/spr_Kirby_Equipment_Beam_KSSU_Charge/spr_Kirby_Equipment_Beam_KSSU_Charge.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Equipment_Beam_KSSU_Charge",
     "tags": [],
     "resourceType": "GMSequence",

@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Options_Boolean","path":"sprites/spr_Maykr_Options_Boolean/spr_Maykr_Options_Boolean.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Options_Boolean",
     "tags": [],
     "resourceType": "GMSequence",

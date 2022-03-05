@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Bomb_Modern_Attack3Release","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Attack3Release/spr_Kirby_AbilityHat_Bomb_Modern_Attack3Release.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Bomb_Modern_Attack3Release",
     "tags": [],
     "resourceType": "GMSequence",

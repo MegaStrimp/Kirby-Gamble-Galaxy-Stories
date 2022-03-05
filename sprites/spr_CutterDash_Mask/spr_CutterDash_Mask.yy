@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_CutterDash_Mask","path":"sprites/spr_CutterDash_Mask/spr_CutterDash_Mask.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_CutterDash_Mask",
     "tags": [],
     "resourceType": "GMSequence",

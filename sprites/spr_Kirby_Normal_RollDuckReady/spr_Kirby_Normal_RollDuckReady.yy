@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_RollDuckReady","path":"sprites/spr_Kirby_Normal_RollDuckReady/spr_Kirby_Normal_RollDuckReady.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_RollDuckReady",
     "tags": [],
     "resourceType": "GMSequence",

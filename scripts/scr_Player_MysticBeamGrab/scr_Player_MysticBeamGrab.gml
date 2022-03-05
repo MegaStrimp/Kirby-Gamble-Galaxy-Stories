@@ -38,7 +38,7 @@ function scr_Player_MysticBeamGrab()
 		
 		//Revert Back
 		
-		if ((attackNumber != "mysticBeamGrab") or (!instance_exists(grabObj))) attackTimer = 0;
+		if ((attackNumber != playerAttacks.mysticBeamGrab) or (!instance_exists(grabObj))) attackTimer = 0;
 		
 		//Animation
 		

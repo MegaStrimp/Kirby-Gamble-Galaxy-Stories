@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Fire_KSSU_Palette_ScarletRose","path":"sprites/spr_Kirby_AbilityHat_Fire_KSSU_Palette_ScarletRose/spr_Kirby_AbilityHat_Fire_KSSU_Palette_ScarletRose.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Fire_KSSU_Palette_ScarletRose",
     "tags": [],
     "resourceType": "GMSequence",

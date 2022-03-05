@@ -18,6 +18,7 @@ if (setupTimer == 0)
 		sprIdle = spr_Projectile_Cutter_Enemy;
 		break;
 	}
+	if (charge) trail = scr_create_trail_full(spr_Trail_Yellow, 0, 20, 0, 0.5, 1, 2, 4, 0.5, 0, 1, c_white,20,depth + 1);
 }
 
 if (((pausable) and (!global.pause)) or (!pausable))
@@ -28,7 +29,13 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	//Touch Wall
 	
-	if ((charge) and (place_meeting(x + hsp,y,obj_Wall))) dirX *= -1;
+	if ((charge) and (place_meeting(x + hsp,y,obj_Wall)))
+	{
+		if (collided >= 4) instance_destroy();
+		collided += 1;
+		dirX *= -1;
+		hsp = decelMax * dirX;
+	}
 	
 	//Event Inherited
 	
@@ -36,11 +43,11 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	//Angle
 	
-	imageAngle += angleSpd;
+	imageAngle += angleSpd * dirX;
 	
 	//Movement
 	
-	hsp -= (decel * dirX);
+	if (collided == 0) hsp -= (decel * dirX);
 	hsp = clamp(hsp,-decelMax,decelMax);
 	
 	if ((!global.cutscene) and (!enemy))

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Bell_Modern_Palette_TempoTeal","path":"sprites/spr_Kirby_AbilityHat_Bell_Modern_Palette_TempoTeal/spr_Kirby_AbilityHat_Bell_Modern_Palette_TempoTeal.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Bell_Modern_Palette_TempoTeal",
     "tags": [],
     "resourceType": "GMSequence",

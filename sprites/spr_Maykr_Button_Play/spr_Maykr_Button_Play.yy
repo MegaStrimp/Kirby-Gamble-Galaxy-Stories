@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Button_Play","path":"sprites/spr_Maykr_Button_Play/spr_Maykr_Button_Play.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Button_Play",
     "tags": [],
     "resourceType": "GMSequence",

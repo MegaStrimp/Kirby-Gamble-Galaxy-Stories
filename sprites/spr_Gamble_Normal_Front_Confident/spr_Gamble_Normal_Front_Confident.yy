@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Gamble_Normal_Front_Confident","path":"sprites/spr_Gamble_Normal_Front_Confident/spr_Gamble_Normal_Front_Confident.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Gamble_Normal_Front_Confident",
     "tags": [],
     "resourceType": "GMSequence",

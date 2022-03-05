@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_DebugSlopeMask","path":"sprites/spr_DebugSlopeMask/spr_DebugSlopeMask.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_DebugSlopeMask",
     "tags": [],
     "resourceType": "GMSequence",

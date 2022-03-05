@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_CarryIdleBlink","path":"sprites/spr_Kirby_Normal_CarryIdleBlink/spr_Kirby_Normal_CarryIdleBlink.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_CarryIdleBlink",
     "tags": [],
     "resourceType": "GMSequence",

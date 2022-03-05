@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Healthbar_Boss_Border","path":"sprites/spr_Healthbar_Boss_Border/spr_Healthbar_Boss_Border.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Healthbar_Boss_Border",
     "tags": [],
     "resourceType": "GMSequence",

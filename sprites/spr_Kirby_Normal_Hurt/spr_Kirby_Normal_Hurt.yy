@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Hurt","path":"sprites/spr_Kirby_Normal_Hurt/spr_Kirby_Normal_Hurt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Hurt",
     "tags": [],
     "resourceType": "GMSequence",

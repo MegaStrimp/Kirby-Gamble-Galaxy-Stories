@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_HatShadow_Beam_MarxSoul_SlideEnd","path":"sprites/spr_Kirby_HatShadow_Beam_MarxSoul_SlideEnd/spr_Kirby_HatShadow_Beam_MarxSoul_SlideEnd.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_HatShadow_Beam_MarxSoul_SlideEnd",
     "tags": [],
     "resourceType": "GMSequence",

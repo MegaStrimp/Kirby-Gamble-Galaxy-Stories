@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_PauseMenu_Ability_SwordDescription","path":"sprites/spr_PauseMenu_Ability_SwordDescription/spr_PauseMenu_Ability_SwordDescription.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_PauseMenu_Ability_SwordDescription",
     "tags": [],
     "resourceType": "GMSequence",

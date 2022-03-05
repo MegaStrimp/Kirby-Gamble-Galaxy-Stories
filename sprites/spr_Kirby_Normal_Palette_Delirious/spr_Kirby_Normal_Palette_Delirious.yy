@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Palette_Delirious","path":"sprites/spr_Kirby_Normal_Palette_Delirious/spr_Kirby_Normal_Palette_Delirious.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Palette_Delirious",
     "tags": [],
     "resourceType": "GMSequence",

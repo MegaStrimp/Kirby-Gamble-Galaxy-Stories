@@ -2,11 +2,15 @@
 
 //Aura
 
-if (hasAura) draw_sprite(spr_Particle_Aura1,0,x,y);
+if ((!isBubble) and (hasAura)) draw_sprite(spr_Particle_Aura1,0,x,y);
 
 //Draw Self
 
 draw_self();
+
+//Bubble
+
+if (isBubble) draw_sprite_ext(spr_AbilityBubble,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
 
 //Debug
 

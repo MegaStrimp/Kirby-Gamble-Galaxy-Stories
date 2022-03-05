@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_PauseMenu_Ability_MetaKnightDescription","path":"sprites/spr_PauseMenu_Ability_MetaKnightDescription/spr_PauseMenu_Ability_MetaKnightDescription.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_PauseMenu_Ability_MetaKnightDescription",
     "tags": [],
     "resourceType": "GMSequence",

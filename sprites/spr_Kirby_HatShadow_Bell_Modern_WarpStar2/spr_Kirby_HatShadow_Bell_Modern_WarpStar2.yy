@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_HatShadow_Bell_Modern_WarpStar2","path":"sprites/spr_Kirby_HatShadow_Bell_Modern_WarpStar2/spr_Kirby_HatShadow_Bell_Modern_WarpStar2.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_HatShadow_Bell_Modern_WarpStar2",
     "tags": [],
     "resourceType": "GMSequence",

@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Background_BattleshipHalberd_OrangeLight","path":"sprites/spr_Background_BattleshipHalberd_OrangeLight/spr_Background_BattleshipHalberd_OrangeLight.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Background_BattleshipHalberd_OrangeLight",
     "tags": [],
     "resourceType": "GMSequence",

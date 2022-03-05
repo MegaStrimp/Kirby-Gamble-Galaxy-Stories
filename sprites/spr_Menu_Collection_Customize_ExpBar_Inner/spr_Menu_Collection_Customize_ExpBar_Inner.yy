@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Collection_Customize_ExpBar_Inner","path":"sprites/spr_Menu_Collection_Customize_ExpBar_Inner/spr_Menu_Collection_Customize_ExpBar_Inner.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Collection_Customize_ExpBar_Inner",
     "tags": [],
     "resourceType": "GMSequence",

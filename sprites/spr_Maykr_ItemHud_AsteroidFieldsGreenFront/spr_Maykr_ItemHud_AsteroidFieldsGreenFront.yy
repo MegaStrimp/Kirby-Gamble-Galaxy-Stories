@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_ItemHud_AsteroidFieldsGreenFront","path":"sprites/spr_Maykr_ItemHud_AsteroidFieldsGreenFront/spr_Maykr_ItemHud_AsteroidFieldsGreenFront.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_ItemHud_AsteroidFieldsGreenFront",
     "tags": [],
     "resourceType": "GMSequence",

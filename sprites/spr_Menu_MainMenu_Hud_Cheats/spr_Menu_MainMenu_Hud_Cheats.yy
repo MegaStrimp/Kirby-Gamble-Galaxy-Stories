@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_MainMenu_Hud_Cheats","path":"sprites/spr_Menu_MainMenu_Hud_Cheats/spr_Menu_MainMenu_Hud_Cheats.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_MainMenu_Hud_Cheats",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Options_CursorArrow","path":"sprites/spr_Menu_Options_CursorArrow/spr_Menu_Options_CursorArrow.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Options_CursorArrow",
     "tags": [],
     "resourceType": "GMSequence",

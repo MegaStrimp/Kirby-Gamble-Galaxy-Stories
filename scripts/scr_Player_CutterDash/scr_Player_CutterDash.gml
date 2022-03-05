@@ -23,7 +23,7 @@ function scr_Player_CutterDash()
 		
 		//Revert Back
 		
-		if ((attackNumber != "cutterDash") or (hurt)) attackTimer = 0;
+		if ((attackNumber != playerAttacks.cutterDash) or (hurt)) attackTimer = 0;
 		
 		//Animation
 		

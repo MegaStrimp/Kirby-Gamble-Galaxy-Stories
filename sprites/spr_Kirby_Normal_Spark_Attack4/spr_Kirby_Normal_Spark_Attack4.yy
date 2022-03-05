@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Spark_Attack4","path":"sprites/spr_Kirby_Normal_Spark_Attack4/spr_Kirby_Normal_Spark_Attack4.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Spark_Attack4",
     "tags": [],
     "resourceType": "GMSequence",

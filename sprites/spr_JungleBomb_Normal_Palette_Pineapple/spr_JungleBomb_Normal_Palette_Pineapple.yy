@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_JungleBomb_Normal_Palette_Pineapple","path":"sprites/spr_JungleBomb_Normal_Palette_Pineapple/spr_JungleBomb_Normal_Palette_Pineapple.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_JungleBomb_Normal_Palette_Pineapple",
     "tags": [],
     "resourceType": "GMSequence",

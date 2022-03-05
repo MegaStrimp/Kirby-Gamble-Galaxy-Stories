@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"fg_ColdOdyssey","path":"sprites/fg_ColdOdyssey/fg_ColdOdyssey.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "fg_ColdOdyssey",
     "tags": [],
     "resourceType": "GMSequence",

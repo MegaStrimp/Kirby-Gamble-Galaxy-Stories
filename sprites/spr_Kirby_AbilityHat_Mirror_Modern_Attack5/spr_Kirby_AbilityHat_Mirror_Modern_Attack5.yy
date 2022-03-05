@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Mirror_Modern_Attack5","path":"sprites/spr_Kirby_AbilityHat_Mirror_Modern_Attack5/spr_Kirby_AbilityHat_Mirror_Modern_Attack5.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Mirror_Modern_Attack5",
     "tags": [],
     "resourceType": "GMSequence",

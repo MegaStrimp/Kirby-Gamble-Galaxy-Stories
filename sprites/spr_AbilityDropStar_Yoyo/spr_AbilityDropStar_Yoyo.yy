@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityDropStar_Yoyo","path":"sprites/spr_AbilityDropStar_Yoyo/spr_AbilityDropStar_Yoyo.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityDropStar_Yoyo",
     "tags": [],
     "resourceType": "GMSequence",

@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_Beam_Gold","path":"sprites/spr_Projectile_Beam_Gold/spr_Projectile_Beam_Gold.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_Beam_Gold",
     "tags": [],
     "resourceType": "GMSequence",

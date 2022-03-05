@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_GameOver_Character_Kirby_Normal","path":"sprites/spr_GameOver_Character_Kirby_Normal/spr_GameOver_Character_Kirby_Normal.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_GameOver_Character_Kirby_Normal",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_PauseMenu_Ability_HammerDescription","path":"sprites/spr_PauseMenu_Ability_HammerDescription/spr_PauseMenu_Ability_HammerDescription.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_PauseMenu_Ability_HammerDescription",
     "tags": [],
     "resourceType": "GMSequence",

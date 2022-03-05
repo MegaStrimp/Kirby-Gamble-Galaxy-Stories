@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_HatBackground_Fire_KSSU_Guard_Slope","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Guard_Slope/spr_Kirby_HatBackground_Fire_KSSU_Guard_Slope.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_HatBackground_Fire_KSSU_Guard_Slope",
     "tags": [],
     "resourceType": "GMSequence",

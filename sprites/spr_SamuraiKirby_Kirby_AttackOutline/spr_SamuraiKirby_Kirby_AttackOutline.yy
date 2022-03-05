@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_SamuraiKirby_Kirby_AttackOutline","path":"sprites/spr_SamuraiKirby_Kirby_AttackOutline/spr_SamuraiKirby_Kirby_AttackOutline.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_SamuraiKirby_Kirby_AttackOutline",
     "tags": [],
     "resourceType": "GMSequence",

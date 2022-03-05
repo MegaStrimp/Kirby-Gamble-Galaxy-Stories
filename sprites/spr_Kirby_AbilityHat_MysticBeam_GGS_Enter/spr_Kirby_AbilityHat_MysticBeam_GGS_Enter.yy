@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_MysticBeam_GGS_Enter","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_MysticBeam_GGS_Enter",
     "tags": [],
     "resourceType": "GMSequence",

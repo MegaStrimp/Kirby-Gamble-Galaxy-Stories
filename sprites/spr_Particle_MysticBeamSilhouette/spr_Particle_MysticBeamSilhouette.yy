@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_MysticBeamSilhouette","path":"sprites/spr_Particle_MysticBeamSilhouette/spr_Particle_MysticBeamSilhouette.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_MysticBeamSilhouette",
     "tags": [],
     "resourceType": "GMSequence",

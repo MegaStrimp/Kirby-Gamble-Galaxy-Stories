@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Bomb_Ready","path":"sprites/spr_Kirby_Normal_Bomb_Ready/spr_Kirby_Normal_Bomb_Ready.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Bomb_Ready",
     "tags": [],
     "resourceType": "GMSequence",

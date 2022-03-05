@@ -96,6 +96,11 @@ drawShakeY = 0;
 squadType = -1;
 explosionResistance = false;
 projectileHitKnockbackDir = 1;
+takenIsFamiliar = false;
+bubbleX = 0;
+bubbleY = 0;
+instaDeath = false;
+fellDown = false;
 
 //Timers
 

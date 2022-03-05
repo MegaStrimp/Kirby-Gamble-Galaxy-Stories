@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Options_NumberBar_Big","path":"sprites/spr_Maykr_Options_NumberBar_Big/spr_Maykr_Options_NumberBar_Big.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Options_NumberBar_Big",
     "tags": [],
     "resourceType": "GMSequence",

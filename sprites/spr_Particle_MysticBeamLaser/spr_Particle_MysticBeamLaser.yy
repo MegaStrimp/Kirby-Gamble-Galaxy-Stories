@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_MysticBeamLaser","path":"sprites/spr_Particle_MysticBeamLaser/spr_Particle_MysticBeamLaser.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_MysticBeamLaser",
     "tags": [],
     "resourceType": "GMSequence",

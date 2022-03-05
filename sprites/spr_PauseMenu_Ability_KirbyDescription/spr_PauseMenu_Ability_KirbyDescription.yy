@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_PauseMenu_Ability_KirbyDescription","path":"sprites/spr_PauseMenu_Ability_KirbyDescription/spr_PauseMenu_Ability_KirbyDescription.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_PauseMenu_Ability_KirbyDescription",
     "tags": [],
     "resourceType": "GMSequence",

@@ -11,8 +11,8 @@
   "tilevsep": 0,
   "spriteNoExport": true,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "GearCube",
+    "path": "texturegroups/GearCube",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,

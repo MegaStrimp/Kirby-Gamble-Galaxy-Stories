@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_GambleShield_Normal_Idle","path":"sprites/spr_Projectile_GambleShield_Normal_Idle/spr_Projectile_GambleShield_Normal_Idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_GambleShield_Normal_Idle",
     "tags": [],
     "resourceType": "GMSequence",

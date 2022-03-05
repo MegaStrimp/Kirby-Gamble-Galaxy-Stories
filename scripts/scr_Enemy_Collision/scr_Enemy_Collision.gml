@@ -118,7 +118,11 @@ function scr_Enemy_Collision()
 	
 	if (deathOnBottom)
 	{
-		if ((hp != 0) and (y >= room_height + 48)) hp = 0;
+		if ((hp != 0) and (y >= room_height + 24))
+		{
+			fellDown = true;
+			death = true;
+		}
 	}
 	
 	//Off Screen Turning

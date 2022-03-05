@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_FallingWaddle_Doo_Idle","path":"sprites/spr_FallingWaddle_Doo_Idle/spr_FallingWaddle_Doo_Idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_FallingWaddle_Doo_Idle",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Collection_Customize_Familiar_Gamble","path":"sprites/spr_Menu_Collection_Customize_Familiar_Gamble/spr_Menu_Collection_Customize_Familiar_Gamble.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Collection_Customize_Familiar_Gamble",
     "tags": [],
     "resourceType": "GMSequence",

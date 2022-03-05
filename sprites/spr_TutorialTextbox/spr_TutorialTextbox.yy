@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_TutorialTextbox","path":"sprites/spr_TutorialTextbox/spr_TutorialTextbox.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_TutorialTextbox",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_PauseMenu_Ability_NinjaDescription","path":"sprites/spr_PauseMenu_Ability_NinjaDescription/spr_PauseMenu_Ability_NinjaDescription.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_PauseMenu_Ability_NinjaDescription",
     "tags": [],
     "resourceType": "GMSequence",

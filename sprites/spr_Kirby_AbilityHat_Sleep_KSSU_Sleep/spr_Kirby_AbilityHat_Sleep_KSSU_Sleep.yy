@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Sleep_KSSU_Sleep","path":"sprites/spr_Kirby_AbilityHat_Sleep_KSSU_Sleep/spr_Kirby_AbilityHat_Sleep_KSSU_Sleep.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Sleep_KSSU_Sleep",
     "tags": [],
     "resourceType": "GMSequence",

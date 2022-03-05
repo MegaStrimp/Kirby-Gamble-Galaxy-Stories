@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Collection_Characters_Text_PrinceFluff","path":"sprites/spr_Menu_Collection_Characters_Text_PrinceFluff/spr_Menu_Collection_Characters_Text_PrinceFluff.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Collection_Characters_Text_PrinceFluff",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_VirtualKey_DPadLetter","path":"sprites/spr_VirtualKey_DPadLetter/spr_VirtualKey_DPadLetter.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_VirtualKey_DPadLetter",
     "tags": [],
     "resourceType": "GMSequence",

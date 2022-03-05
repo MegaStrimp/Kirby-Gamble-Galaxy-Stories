@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bg_AsteroidFields_Debris_Cream_Back","path":"sprites/bg_AsteroidFields_Debris_Cream_Back/bg_AsteroidFields_Debris_Cream_Back.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bg_AsteroidFields_Debris_Cream_Back",
     "tags": [],
     "resourceType": "GMSequence",

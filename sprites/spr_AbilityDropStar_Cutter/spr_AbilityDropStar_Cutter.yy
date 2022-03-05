@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityDropStar_Cutter","path":"sprites/spr_AbilityDropStar_Cutter/spr_AbilityDropStar_Cutter.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityDropStar_Cutter",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_GoalFlag_Normal","path":"sprites/spr_GoalFlag_Normal/spr_GoalFlag_Normal.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_GoalFlag_Normal",
     "tags": [],
     "resourceType": "GMSequence",

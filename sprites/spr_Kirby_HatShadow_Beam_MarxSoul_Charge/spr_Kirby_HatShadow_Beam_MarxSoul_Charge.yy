@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_HatShadow_Beam_MarxSoul_Charge","path":"sprites/spr_Kirby_HatShadow_Beam_MarxSoul_Charge/spr_Kirby_HatShadow_Beam_MarxSoul_Charge.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_HatShadow_Beam_MarxSoul_Charge",
     "tags": [],
     "resourceType": "GMSequence",

@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Laser","path":"sprites/spr_Laser/spr_Laser.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Laser",
     "tags": [],
     "resourceType": "GMSequence",

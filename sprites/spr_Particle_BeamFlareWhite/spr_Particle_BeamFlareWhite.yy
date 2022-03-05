@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_BeamFlareWhite","path":"sprites/spr_Particle_BeamFlareWhite/spr_Particle_BeamFlareWhite.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_BeamFlareWhite",
     "tags": [],
     "resourceType": "GMSequence",

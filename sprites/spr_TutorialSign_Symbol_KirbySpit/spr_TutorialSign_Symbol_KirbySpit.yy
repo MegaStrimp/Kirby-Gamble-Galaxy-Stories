@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_TutorialSign_Symbol_KirbySpit","path":"sprites/spr_TutorialSign_Symbol_KirbySpit/spr_TutorialSign_Symbol_KirbySpit.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_TutorialSign_Symbol_KirbySpit",
     "tags": [],
     "resourceType": "GMSequence",

@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Gooey_Pipis_Fire_Attack","path":"sprites/spr_Gooey_Pipis_Fire_Attack/spr_Gooey_Pipis_Fire_Attack.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Gooey_Pipis_Fire_Attack",
     "tags": [],
     "resourceType": "GMSequence",

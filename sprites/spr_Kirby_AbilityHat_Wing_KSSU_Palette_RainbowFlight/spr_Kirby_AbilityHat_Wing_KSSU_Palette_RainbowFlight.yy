@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Wing_KSSU_Palette_RainbowFlight","path":"sprites/spr_Kirby_AbilityHat_Wing_KSSU_Palette_RainbowFlight/spr_Kirby_AbilityHat_Wing_KSSU_Palette_RainbowFlight.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Wing_KSSU_Palette_RainbowFlight",
     "tags": [],
     "resourceType": "GMSequence",

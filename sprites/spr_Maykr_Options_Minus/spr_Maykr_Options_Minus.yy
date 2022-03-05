@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Options_Minus","path":"sprites/spr_Maykr_Options_Minus/spr_Maykr_Options_Minus.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Options_Minus",
     "tags": [],
     "resourceType": "GMSequence",

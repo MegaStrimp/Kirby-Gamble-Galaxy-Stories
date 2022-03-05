@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"tile_AbilityChallenge","path":"sprites/tile_AbilityChallenge/tile_AbilityChallenge.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "tile_AbilityChallenge",
     "tags": [],
     "resourceType": "GMSequence",

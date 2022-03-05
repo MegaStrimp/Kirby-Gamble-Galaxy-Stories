@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_HatBackground_Fire_KSSU_Walk","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Walk/spr_Kirby_HatBackground_Fire_KSSU_Walk.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_HatBackground_Fire_KSSU_Walk",
     "tags": [],
     "resourceType": "GMSequence",

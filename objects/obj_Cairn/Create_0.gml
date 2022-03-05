@@ -15,11 +15,14 @@ jumpspeed = 6;
 gravNormal = .2;
 gravLimitNormal = 5;
 
-//Sprite
+//Sprites
+
 mask_index = spr_16Square_Mask;
 
 sprIdle = spr_Cairn_Normal_Bottom;
 sprHurt = spr_Cairn_Normal_Hurt;
+
+paletteIndex = spr_Cairn_Normal_Palette_HeavyRock;
 
 //Other Variables
 

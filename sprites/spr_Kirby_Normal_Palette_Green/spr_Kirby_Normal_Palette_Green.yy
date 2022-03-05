@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Palette_Green","path":"sprites/spr_Kirby_Normal_Palette_Green/spr_Kirby_Normal_Palette_Green.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Palette_Green",
     "tags": [],
     "resourceType": "GMSequence",

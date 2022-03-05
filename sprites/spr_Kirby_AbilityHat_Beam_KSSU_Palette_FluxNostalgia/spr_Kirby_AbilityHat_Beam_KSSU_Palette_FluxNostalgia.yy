@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Beam_KSSU_Palette_FluxNostalgia","path":"sprites/spr_Kirby_AbilityHat_Beam_KSSU_Palette_FluxNostalgia/spr_Kirby_AbilityHat_Beam_KSSU_Palette_FluxNostalgia.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Beam_KSSU_Palette_FluxNostalgia",
     "tags": [],
     "resourceType": "GMSequence",

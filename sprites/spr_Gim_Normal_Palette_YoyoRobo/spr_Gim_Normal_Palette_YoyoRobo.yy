@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Gim_Normal_Palette_YoyoRobo","path":"sprites/spr_Gim_Normal_Palette_YoyoRobo/spr_Gim_Normal_Palette_YoyoRobo.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Gim_Normal_Palette_YoyoRobo",
     "tags": [],
     "resourceType": "GMSequence",

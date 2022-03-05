@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_JungleBomb_Normal_Fall","path":"sprites/spr_JungleBomb_Normal_Fall/spr_JungleBomb_Normal_Fall.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_JungleBomb_Normal_Fall",
     "tags": [],
     "resourceType": "GMSequence",

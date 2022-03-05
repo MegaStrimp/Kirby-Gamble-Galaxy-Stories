@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bg_Customize_Blue","path":"sprites/bg_Customize_Blue/bg_Customize_Blue.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bg_Customize_Blue",
     "tags": [],
     "resourceType": "GMSequence",

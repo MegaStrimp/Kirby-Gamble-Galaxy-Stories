@@ -23,7 +23,7 @@ function scr_Player_SwordDash()
 		
 		//Revert Back
 		
-		if ((attackNumber != "swordDash") or (hurt)) attackTimer = 0;
+		if ((attackNumber != playerAttacks.swordDash) or (hurt)) attackTimer = 0;
 		
 		//Animation
 		

@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Phil_Normal_Front","path":"sprites/spr_Phil_Normal_Front/spr_Phil_Normal_Front.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Phil_Normal_Front",
     "tags": [],
     "resourceType": "GMSequence",

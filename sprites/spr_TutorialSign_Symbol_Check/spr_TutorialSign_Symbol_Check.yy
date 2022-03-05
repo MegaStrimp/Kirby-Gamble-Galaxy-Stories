@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_TutorialSign_Symbol_Check","path":"sprites/spr_TutorialSign_Symbol_Check/spr_TutorialSign_Symbol_Check.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_TutorialSign_Symbol_Check",
     "tags": [],
     "resourceType": "GMSequence",

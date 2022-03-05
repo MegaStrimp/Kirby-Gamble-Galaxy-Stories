@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_Mirror_Normal_Shine","path":"sprites/spr_Projectile_Mirror_Normal_Shine/spr_Projectile_Mirror_Normal_Shine.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_Mirror_Normal_Shine",
     "tags": [],
     "resourceType": "GMSequence",

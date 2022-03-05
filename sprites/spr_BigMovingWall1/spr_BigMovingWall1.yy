@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_BigMovingWall1","path":"sprites/spr_BigMovingWall1/spr_BigMovingWall1.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_BigMovingWall1",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Stone_Modern_Palette_RockyRoad","path":"sprites/spr_Kirby_AbilityHat_Stone_Modern_Palette_RockyRoad/spr_Kirby_AbilityHat_Stone_Modern_Palette_RockyRoad.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Stone_Modern_Palette_RockyRoad",
     "tags": [],
     "resourceType": "GMSequence",

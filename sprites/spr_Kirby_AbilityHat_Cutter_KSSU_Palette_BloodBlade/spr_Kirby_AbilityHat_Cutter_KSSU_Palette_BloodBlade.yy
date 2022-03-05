@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Cutter_KSSU_Palette_BloodBlade","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Palette_BloodBlade/spr_Kirby_AbilityHat_Cutter_KSSU_Palette_BloodBlade.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Cutter_KSSU_Palette_BloodBlade",
     "tags": [],
     "resourceType": "GMSequence",

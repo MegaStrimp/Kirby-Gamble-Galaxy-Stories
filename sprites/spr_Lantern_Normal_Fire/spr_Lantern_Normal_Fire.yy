@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Lantern_Normal_Fire","path":"sprites/spr_Lantern_Normal_Fire/spr_Lantern_Normal_Fire.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Lantern_Normal_Fire",
     "tags": [],
     "resourceType": "GMSequence",

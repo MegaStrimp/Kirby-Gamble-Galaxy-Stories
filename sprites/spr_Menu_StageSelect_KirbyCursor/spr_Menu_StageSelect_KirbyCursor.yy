@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_StageSelect_KirbyCursor","path":"sprites/spr_Menu_StageSelect_KirbyCursor/spr_Menu_StageSelect_KirbyCursor.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_StageSelect_KirbyCursor",
     "tags": [],
     "resourceType": "GMSequence",

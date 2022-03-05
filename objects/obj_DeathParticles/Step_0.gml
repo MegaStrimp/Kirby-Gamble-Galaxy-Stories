@@ -244,7 +244,7 @@ if (!global.pause)
 			}
 			break;
 			
-			case "beamCharge":
+			case playerAttacks.beamCharge:
 			if (parNumber == 0)
 			{
 				for (var i = 0; i < 7; i++)

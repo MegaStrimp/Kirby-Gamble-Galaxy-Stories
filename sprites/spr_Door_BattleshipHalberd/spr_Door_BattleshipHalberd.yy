@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Door_BattleshipHalberd","path":"sprites/spr_Door_BattleshipHalberd/spr_Door_BattleshipHalberd.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Door_BattleshipHalberd",
     "tags": [],
     "resourceType": "GMSequence",

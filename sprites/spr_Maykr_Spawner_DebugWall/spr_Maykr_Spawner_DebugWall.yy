@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Spawner_DebugWall","path":"sprites/spr_Maykr_Spawner_DebugWall/spr_Maykr_Spawner_DebugWall.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Spawner_DebugWall",
     "tags": [],
     "resourceType": "GMSequence",

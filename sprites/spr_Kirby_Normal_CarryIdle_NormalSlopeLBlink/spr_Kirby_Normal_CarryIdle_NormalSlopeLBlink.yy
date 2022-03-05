@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_CarryIdle_NormalSlopeLBlink","path":"sprites/spr_Kirby_Normal_CarryIdle_NormalSlopeLBlink/spr_Kirby_Normal_CarryIdle_NormalSlopeLBlink.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_CarryIdle_NormalSlopeLBlink",
     "tags": [],
     "resourceType": "GMSequence",

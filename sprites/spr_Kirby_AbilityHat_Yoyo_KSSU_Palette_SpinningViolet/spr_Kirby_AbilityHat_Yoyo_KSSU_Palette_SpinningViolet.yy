@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Yoyo_KSSU_Palette_SpinningViolet","path":"sprites/spr_Kirby_AbilityHat_Yoyo_KSSU_Palette_SpinningViolet/spr_Kirby_AbilityHat_Yoyo_KSSU_Palette_SpinningViolet.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Yoyo_KSSU_Palette_SpinningViolet",
     "tags": [],
     "resourceType": "GMSequence",

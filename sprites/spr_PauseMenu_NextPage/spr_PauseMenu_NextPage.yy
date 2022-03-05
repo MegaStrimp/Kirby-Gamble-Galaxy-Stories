@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_PauseMenu_NextPage","path":"sprites/spr_PauseMenu_NextPage/spr_PauseMenu_NextPage.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_PauseMenu_NextPage",
     "tags": [],
     "resourceType": "GMSequence",

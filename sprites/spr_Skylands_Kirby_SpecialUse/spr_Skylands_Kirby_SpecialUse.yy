@@ -99,7 +99,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Skylands_Kirby_SpecialUse","path":"sprites/spr_Skylands_Kirby_SpecialUse/spr_Skylands_Kirby_SpecialUse.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Skylands_Kirby_SpecialUse",
     "tags": [],
     "resourceType": "GMSequence",

@@ -7,6 +7,6 @@ vsp = 0;
 
 //Other Variables
 
-dmg = 1;
+dmg = 30;
 hurt = false;
 hurtable = false;

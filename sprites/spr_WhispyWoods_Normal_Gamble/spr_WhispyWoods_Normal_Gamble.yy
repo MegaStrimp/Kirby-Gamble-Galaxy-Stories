@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_WhispyWoods_Normal_Gamble","path":"sprites/spr_WhispyWoods_Normal_Gamble/spr_WhispyWoods_Normal_Gamble.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_WhispyWoods_Normal_Gamble",
     "tags": [],
     "resourceType": "GMSequence",

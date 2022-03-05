@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Saves_Medals_Silver","path":"sprites/spr_Menu_Saves_Medals_Silver/spr_Menu_Saves_Medals_Silver.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Saves_Medals_Silver",
     "tags": [],
     "resourceType": "GMSequence",

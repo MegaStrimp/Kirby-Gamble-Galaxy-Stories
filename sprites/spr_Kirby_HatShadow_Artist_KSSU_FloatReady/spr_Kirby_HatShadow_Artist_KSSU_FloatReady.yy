@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_HatShadow_Artist_KSSU_FloatReady","path":"sprites/spr_Kirby_HatShadow_Artist_KSSU_FloatReady/spr_Kirby_HatShadow_Artist_KSSU_FloatReady.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_HatShadow_Artist_KSSU_FloatReady",
     "tags": [],
     "resourceType": "GMSequence",

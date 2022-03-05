@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Collection_Bestiary_GameIcon_PR","path":"sprites/spr_Menu_Collection_Bestiary_GameIcon_PR/spr_Menu_Collection_Bestiary_GameIcon_PR.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Collection_Bestiary_GameIcon_PR",
     "tags": [],
     "resourceType": "GMSequence",

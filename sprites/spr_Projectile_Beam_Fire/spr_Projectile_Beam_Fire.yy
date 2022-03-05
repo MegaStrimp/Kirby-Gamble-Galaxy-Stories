@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_Beam_Fire","path":"sprites/spr_Projectile_Beam_Fire/spr_Projectile_Beam_Fire.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_Beam_Fire",
     "tags": [],
     "resourceType": "GMSequence",

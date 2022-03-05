@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_MysticBeam_GGS_Flap","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Flap/spr_Kirby_AbilityHat_MysticBeam_GGS_Flap.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_MysticBeam_GGS_Flap",
     "tags": [],
     "resourceType": "GMSequence",

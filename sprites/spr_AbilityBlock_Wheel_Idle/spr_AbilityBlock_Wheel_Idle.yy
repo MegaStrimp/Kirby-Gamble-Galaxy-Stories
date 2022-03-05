@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityBlock_Wheel_Idle","path":"sprites/spr_AbilityBlock_Wheel_Idle/spr_AbilityBlock_Wheel_Idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityBlock_Wheel_Idle",
     "tags": [],
     "resourceType": "GMSequence",

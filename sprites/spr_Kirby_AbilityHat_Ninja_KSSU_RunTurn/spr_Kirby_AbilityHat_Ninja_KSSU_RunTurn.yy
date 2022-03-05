@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Ninja_KSSU_RunTurn","path":"sprites/spr_Kirby_AbilityHat_Ninja_KSSU_RunTurn/spr_Kirby_AbilityHat_Ninja_KSSU_RunTurn.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Ninja_KSSU_RunTurn",
     "tags": [],
     "resourceType": "GMSequence",

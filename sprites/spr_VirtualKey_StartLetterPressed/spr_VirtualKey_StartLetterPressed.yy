@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_VirtualKey_StartLetterPressed","path":"sprites/spr_VirtualKey_StartLetterPressed/spr_VirtualKey_StartLetterPressed.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_VirtualKey_StartLetterPressed",
     "tags": [],
     "resourceType": "GMSequence",

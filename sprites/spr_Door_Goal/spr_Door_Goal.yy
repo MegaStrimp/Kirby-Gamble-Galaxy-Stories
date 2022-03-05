@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Door_Goal","path":"sprites/spr_Door_Goal/spr_Door_Goal.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Door_Goal",
     "tags": [],
     "resourceType": "GMSequence",

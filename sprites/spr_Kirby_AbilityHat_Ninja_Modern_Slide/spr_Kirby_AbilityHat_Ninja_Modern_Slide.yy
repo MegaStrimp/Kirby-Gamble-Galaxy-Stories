@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Ninja_Modern_Slide","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Slide/spr_Kirby_AbilityHat_Ninja_Modern_Slide.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Ninja_Modern_Slide",
     "tags": [],
     "resourceType": "GMSequence",

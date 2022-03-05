@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_TutorialSign_Symbol_AButtonPressed","path":"sprites/spr_TutorialSign_Symbol_AButtonPressed/spr_TutorialSign_Symbol_AButtonPressed.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_TutorialSign_Symbol_AButtonPressed",
     "tags": [],
     "resourceType": "GMSequence",

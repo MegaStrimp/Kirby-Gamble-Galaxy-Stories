@@ -8,13 +8,16 @@ if (!global.pause)
 {
 	//Gravity
 	
-	if (vsp < gravLimit)
+	if (!isBubble)
 	{
-		vsp += grav;
-	}
-	else
-	{
-		vsp = gravLimit;
+		if (vsp < gravLimit)
+		{
+			vsp += grav;
+		}
+		else
+		{
+			vsp = gravLimit;
+		}
 	}
 	
 	//Destroy
@@ -34,9 +37,20 @@ if (!global.pause)
 	
 	if (place_meeting(x,y,obj_Spike)) destroy = true;
 	
+	//Scale
+	
+	if (isBubble) scale = lerp(scale,1,.1);
+	
 	//Movement
 	
-	hsp = movespeed * dir;
+	if (!isBubble)
+	{
+		hsp = movespeed * dir;
+	}
+	else
+	{
+		scr_AI_VerticalWaveMovement(false);
+	}
 	
 	if (!insideWall)
 	{
@@ -63,7 +77,7 @@ if (!global.pause)
 			{
 				if (audio_is_playing(snd_AbilityStarBounce)) audio_stop_sound(snd_AbilityStarBounce);
 				audio_play_sound(snd_AbilityStarBounce,0,false);
-				other.vsp = -other.jumpspeed;
+				if (!other.isBubble) other.vsp = -other.jumpspeed;
 			}
 		}
 		
@@ -193,6 +207,12 @@ if (!global.pause)
 			}
 			par.dir = parScaleDir;
 		}
+		if (isBubble)
+		{
+			var particle = instance_create_depth(x,y,depth,obj_Particle);
+			particle.sprite_index = spr_Particle_Bubble3;
+			particle.destroyAfterAnimation = true;
+		}
 		instance_destroy();
 	}
 	
@@ -220,4 +240,14 @@ if (!global.pause)
 else
 {
 	image_speed = 0;
+}
+
+//Debug Delete
+
+if (global.debug)
+{
+	if ((position_meeting(mouse_x,mouse_y,id)) and (mouse_check_button(mb_right)))
+	{
+		instance_destroy();
+	}
 }

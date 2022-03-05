@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Collection_Characters_Text_MetaKnight","path":"sprites/spr_Menu_Collection_Characters_Text_MetaKnight/spr_Menu_Collection_Characters_Text_MetaKnight.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Collection_Characters_Text_MetaKnight",
     "tags": [],
     "resourceType": "GMSequence",

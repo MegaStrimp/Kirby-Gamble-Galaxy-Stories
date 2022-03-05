@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Background_EggGardenSurface4","path":"sprites/spr_Background_EggGardenSurface4/spr_Background_EggGardenSurface4.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Background_EggGardenSurface4",
     "tags": [],
     "resourceType": "GMSequence",

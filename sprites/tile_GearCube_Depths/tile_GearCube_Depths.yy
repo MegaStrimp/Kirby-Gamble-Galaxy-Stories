@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"tile_GearCube_Depths","path":"sprites/tile_GearCube_Depths/tile_GearCube_Depths.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "tile_GearCube_Depths",
     "tags": [],
     "resourceType": "GMSequence",

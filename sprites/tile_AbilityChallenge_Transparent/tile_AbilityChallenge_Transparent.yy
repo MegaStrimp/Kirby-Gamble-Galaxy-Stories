@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"tile_AbilityChallenge_Transparent","path":"sprites/tile_AbilityChallenge_Transparent/tile_AbilityChallenge_Transparent.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "tile_AbilityChallenge_Transparent",
     "tags": [],
     "resourceType": "GMSequence",

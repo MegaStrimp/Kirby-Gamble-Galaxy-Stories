@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_DurableBlock_Normal_Top","path":"sprites/spr_DurableBlock_Normal_Top/spr_DurableBlock_Normal_Top.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_DurableBlock_Normal_Top",
     "tags": [],
     "resourceType": "GMSequence",

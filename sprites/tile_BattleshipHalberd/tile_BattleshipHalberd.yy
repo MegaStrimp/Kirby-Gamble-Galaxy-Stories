@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"tile_BattleshipHalberd","path":"sprites/tile_BattleshipHalberd/tile_BattleshipHalberd.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "tile_BattleshipHalberd",
     "tags": [],
     "resourceType": "GMSequence",

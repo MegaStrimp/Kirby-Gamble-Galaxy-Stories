@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_Stone1","path":"sprites/spr_Particle_Stone1/spr_Particle_Stone1.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_Stone1",
     "tags": [],
     "resourceType": "GMSequence",

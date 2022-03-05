@@ -103,7 +103,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Saves_Numbers","path":"sprites/spr_Menu_Saves_Numbers/spr_Menu_Saves_Numbers.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Saves_Numbers",
     "tags": [],
     "resourceType": "GMSequence",

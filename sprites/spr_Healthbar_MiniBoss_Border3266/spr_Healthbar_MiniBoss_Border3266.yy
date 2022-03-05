@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Healthbar_MiniBoss_Border3266","path":"sprites/spr_Healthbar_MiniBoss_Border3266/spr_Healthbar_MiniBoss_Border3266.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Healthbar_MiniBoss_Border",
     "tags": [],
     "resourceType": "GMSequence",

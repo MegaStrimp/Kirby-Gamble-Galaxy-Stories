@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_PauseMenu_Ability_UfoDescription","path":"sprites/spr_PauseMenu_Ability_UfoDescription/spr_PauseMenu_Ability_UfoDescription.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_PauseMenu_Ability_UfoDescription",
     "tags": [],
     "resourceType": "GMSequence",

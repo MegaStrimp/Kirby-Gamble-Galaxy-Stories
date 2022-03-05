@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Bomb_KSSU_Palette_ExplosiveB","path":"sprites/spr_Kirby_AbilityHat_Bomb_KSSU_Palette_ExplosiveB/spr_Kirby_AbilityHat_Bomb_KSSU_Palette_ExplosiveB.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Bomb_KSSU_Palette_ExplosiveB",
     "tags": [],
     "resourceType": "GMSequence",

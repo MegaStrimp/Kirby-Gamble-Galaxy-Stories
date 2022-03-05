@@ -11,7 +11,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	}
 	else
 	{
-		if ((owner.attackNumber != "sparkUp") and (owner.attackNumber != "sparkDown"))
+		if ((owner.attackNumber != playerAttacks.sparkUp) and (owner.attackNumber != playerAttacks.sparkDown))
 		{
 			if (instance_exists(obj)) instance_destroy(obj);
 			instance_destroy();
@@ -22,7 +22,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		if (createObject)
 		{
 			var yDir = 1;
-			if (owner.attackNumber == "sparkUp") yDir = -1;
+			if (owner.attackNumber == playerAttacks.sparkUp) yDir = -1;
 			obj = instance_create_depth(x,owner.y - 4 + (14 * yDir),depth,obj_Projectile_SparkPillar);
 			obj.owner = id;
 			obj.image_yscale = yDir;

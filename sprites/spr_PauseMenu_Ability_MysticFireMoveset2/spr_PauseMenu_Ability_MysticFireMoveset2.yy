@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_PauseMenu_Ability_MysticFireMoveset2","path":"sprites/spr_PauseMenu_Ability_MysticFireMoveset2/spr_PauseMenu_Ability_MysticFireMoveset2.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_PauseMenu_Ability_MysticFireMoveset2",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Palette_Mirror","path":"sprites/spr_Kirby_Normal_Palette_Mirror/spr_Kirby_Normal_Palette_Mirror.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Palette_Mirror",
     "tags": [],
     "resourceType": "GMSequence",

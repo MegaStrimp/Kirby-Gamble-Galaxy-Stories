@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_Tomatoo","path":"sprites/spr_Projectile_Tomatoo/spr_Projectile_Tomatoo.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_Tomatoo",
     "tags": [],
     "resourceType": "GMSequence",

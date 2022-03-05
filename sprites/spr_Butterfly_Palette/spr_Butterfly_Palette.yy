@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Butterfly_Palette","path":"sprites/spr_Butterfly_Palette/spr_Butterfly_Palette.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Butterfly_Palette",
     "tags": [],
     "resourceType": "GMSequence",

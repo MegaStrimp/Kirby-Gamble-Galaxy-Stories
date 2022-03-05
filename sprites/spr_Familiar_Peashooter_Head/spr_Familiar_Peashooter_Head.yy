@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Familiar_Peashooter_Head","path":"sprites/spr_Familiar_Peashooter_Head/spr_Familiar_Peashooter_Head.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Familiar_Peashooter_Head",
     "tags": [],
     "resourceType": "GMSequence",

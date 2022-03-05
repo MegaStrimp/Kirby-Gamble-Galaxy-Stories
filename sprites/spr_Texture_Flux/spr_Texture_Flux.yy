@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Texture_Flux","path":"sprites/spr_Texture_Flux/spr_Texture_Flux.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Texture_Flux",
     "tags": [],
     "resourceType": "GMSequence",

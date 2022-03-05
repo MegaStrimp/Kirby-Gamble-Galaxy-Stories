@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Hud_Helper_BloodGordo","path":"sprites/spr_Hud_Helper_BloodGordo/spr_Hud_Helper_BloodGordo.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Hud_Helper_BloodGordo",
     "tags": [],
     "resourceType": "GMSequence",

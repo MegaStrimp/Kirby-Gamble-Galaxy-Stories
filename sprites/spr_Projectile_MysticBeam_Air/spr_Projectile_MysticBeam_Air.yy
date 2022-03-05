@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_MysticBeam_Air","path":"sprites/spr_Projectile_MysticBeam_Air/spr_Projectile_MysticBeam_Air.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_MysticBeam_Air",
     "tags": [],
     "resourceType": "GMSequence",

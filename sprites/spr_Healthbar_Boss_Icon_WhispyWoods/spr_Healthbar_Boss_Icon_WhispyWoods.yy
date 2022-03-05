@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Healthbar_Boss_Icon_WhispyWoods","path":"sprites/spr_Healthbar_Boss_Icon_WhispyWoods/spr_Healthbar_Boss_Icon_WhispyWoods.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Healthbar_Boss_Icon_WhispyWoods",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_GoldenTomato","path":"sprites/spr_GoldenTomato/spr_GoldenTomato.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_GoldenTomato",
     "tags": [],
     "resourceType": "GMSequence",

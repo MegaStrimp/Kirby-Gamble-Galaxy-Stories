@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_BigStar_Blue","path":"sprites/spr_Particle_BigStar_Blue/spr_Particle_BigStar_Blue.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_BigStar_Blue",
     "tags": [],
     "resourceType": "GMSequence",

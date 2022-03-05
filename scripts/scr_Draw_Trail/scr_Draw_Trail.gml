@@ -1,60 +1,150 @@
-///@description Draw Trail
-///@param {real} length Trail's length
-///@param {real} width Trail's width
-///@param {real} color Trail's color
-///@param {real} sprite Trail's sprite
-///@param {real} slim Trail's thickness
-///@param {real} alpha Trail's alpha
+/// @description scr_draw_trail()
+function scr_draw_trail() {
 
-//FIND THE CREATOR OF THIS SCRIPT AND CREDIT THEM
+	//by Steven Richardson 
 
-function scr_Draw_Trail(argument0,argument1,argument2,argument3,argument4,argument5)
-{
-var Length,Width,Color,Sprite,Slim,Alpha,AlphaT,Texture,Dir,Dim,Min,Height;
-//Preparing variables
-Length = argument0; //How many previous coordinates will use the trail
-Width = argument1; //How wide will the trail be
-Color = argument2; //Which color will be used to tint the trail
-Sprite = argument3; //Which sprite's texture must be used for the trail. Must have "Used for 3D" marked. -1 for no sprite 
-Slim = argument4; //Whether the trail will slim down at the end
-Alpha = argument5; //The alpha to draw the trail with (0-1), optional
-ArrayTrail[0,0] = x;
-ArrayTrail[0,1] = y;
-Height = array_height_2d(ArrayTrail);
-//Getting distance between current and past coordinates
-if (Height > 1) ArrayTrail[0,2] = point_distance(ArrayTrail[0,0],ArrayTrail[0,1],ArrayTrail[1,0],ArrayTrail[1,1]) + ArrayTrail[1,2];
-else ArrayTrail[0,2] = 0;
-//Setting the texture
-if (Sprite >= 0) {
-Texture = sprite_get_texture(Sprite,0);
-Dim = sprite_get_width(Sprite)/sprite_get_width(Sprite)
-}
-else {
-Texture = -1;
-Dim = 1
-}
-texture_set_repeat(1);
-//Drawing the primitive
-draw_primitive_begin_texture(pr_trianglestrip,Texture);
-AlphaT = 1;
-Dir = 0;
-Min = min(Height - 1,Length);
-for(var i = 0; i < Min; i++){
-  if (ArrayTrail[i,0] != ArrayTrail[i+1,0] || ArrayTrail[i,1] != ArrayTrail[i+1,1])
-    Dir = point_direction(ArrayTrail[i,0],ArrayTrail[i,1],ArrayTrail[i+1,0],ArrayTrail[i+1,1]);
-  var Len = Width / 2 - ((i + 1) / Min * Width / 2) * Slim;
-  var XX = lengthdir_x(Len,Dir + 90); 
-  var YY = lengthdir_y(Len,Dir + 90);
-  AlphaT = (Min - i) / (Min / 2) * Alpha;
-  draw_vertex_texture_color(ArrayTrail[i,0] + XX,ArrayTrail[i,1] + YY,ArrayTrail[i,2] / Width/Dim,0,Color,AlphaT);
-  draw_vertex_texture_color(ArrayTrail[i,0] - XX,ArrayTrail[i,1] - YY,ArrayTrail[i,2] / Width/Dim,1,Color,AlphaT);
-}
-draw_primitive_end();
-//Replacing the coordinates positions within the array
-Min = min(Height,Length);
-for (var i = Min; i > 0; i--){
-  ArrayTrail[i,0] = ArrayTrail[i - 1,0];
-  ArrayTrail[i,1] = ArrayTrail[i - 1,1];
-  ArrayTrail[i,2] = ArrayTrail[i - 1,2];
-}
+	if !path_exists(path)  exit;
+
+	pinch= path_get_number(path) / num_steps;
+
+	var length = path_get_length(path);
+
+	if length = 0   exit;
+
+	var colour_init = draw_get_colour();
+	draw_set_colour(trail_colour);
+
+	var alpha_init = draw_get_alpha();
+	draw_set_alpha(alpha);
+
+	var x_sc = x_scale;
+
+	if x_sc = 0
+	    {
+	    x_sc = length / sprite_get_width(sprite);  // if x_scale is set at '0',  then the x_scale will be set so that the sprite will equal length of the path 
+	    }
+ 
+    
+	var sp_w = sprite_get_width(sprite);
+	var sp_h = sprite_get_height(sprite);
+	var step = 1/max(1,floor(length/precision));
+
+	var tex = sprite_get_texture(sprite,index);
+
+
+	var i, a0, a1, a12, p12, x0, y0, x1, y1, x2, y2, l, tx1, ty1, bx1, by1, count;
+
+	l = 0;
+	lb = 0;
+	count = 0;
+
+	x1 = path_get_x(path,0);
+	y1 = path_get_y(path,0);
+
+	x0 = x1;
+	y0 = y1;
+
+	x2 = path_get_x(path,step);
+	y2 = path_get_y(path,step);
+
+	a1 = point_direction (x1,y1,x2,y2);
+	var a_start = a1;
+
+
+
+	p12 = a1 - 90;
+
+    
+
+	tx1 = x1 + lengthdir_x(-sp_h*image_y_offset*y_scale,p12);
+	ty1 = y1 + lengthdir_y(-sp_h*image_y_offset*y_scale,p12);
+
+	bx1 = x1 + lengthdir_x(-sp_h*(image_y_offset-1)*y_scale,p12);
+	by1 = y1 + lengthdir_y(-sp_h*(image_y_offset-1)*y_scale,p12);
+
+	draw_primitive_begin_texture(pr_trianglestrip, tex);
+
+	if no_show_distance = 0
+	    {
+	    draw_vertex_texture( tx1,  ty1, x_offset, 0);
+	    draw_vertex_texture( bx1,  by1, x_offset, 1);
+	    }
+
+	for (i = step; i <= 1; i += step)
+	    {
+	    a0 = a1
+    
+	    x0 = x1;
+	    y0 = y1;
+
+	    x1 = x2;
+	    y1 = y2;
+
+	    x2 = path_get_x(path,min(1,i+step));
+	    y2 = path_get_y(path,min(1,i+step));
+	    a1 = point_direction (x1,y1,x2,y2);
+    
+	    a12 = angle_difference(a0,a1);
+
+	    if i = 1
+	        {
+	        p12 = a0 - 90;        
+	        }
+	        else
+	        {
+	        p12 = a1  - 90  + a12 / 2;
+	        }
+      
+    
+	    bx0 = bx1;
+	    by0 = by1;
+    
+
+	    tx1 = lengthdir_x(-sp_h*image_y_offset*y_scale,p12);
+	    ty1 = lengthdir_y(-sp_h*image_y_offset*y_scale,p12);
+    
+	    bx1 = lengthdir_x(-sp_h*(image_y_offset-1)*y_scale,p12);
+	    by1 = lengthdir_y(-sp_h*(image_y_offset-1)*y_scale,p12);    
+
+	   if pinch_end != 0
+	       {
+	       tx1 *= (1-i*pinch)
+	       ty1 *= (1-i*pinch)
+	       bx1 *= (1-i*pinch)
+	       by1 *= (1-i*pinch)  
+	       }
+    
+	    tx1 += x1
+	    ty1 += y1
+	    bx1 += x1
+	    by1 += y1   
+           
+	    if fade = 1   draw_set_alpha((1-i) * alpha);
+
+	    if length * i >= no_show_distance
+	        {    
+	        draw_vertex_texture( tx1,  ty1, i/x_sc*length/sp_w+x_offset, 0);
+	        draw_vertex_texture( bx1,  by1, i/x_sc*length/sp_w+x_offset, 1);
+    
+	        count += 2;
+        
+	        if count >= 4 
+	            {
+	            count = 2;
+	            texture_set_repeat(true);
+	            draw_primitive_end();
+	            draw_primitive_begin_texture(pr_trianglestrip, tex);
+	            draw_vertex_texture( tx1,  ty1, i/x_sc*length/sp_w+x_offset, 0);
+	            draw_vertex_texture( bx1,  by1, i/x_sc*length/sp_w+x_offset, 1);
+	            }
+	        }
+	    }
+
+	texture_set_repeat(false);   
+	draw_set_alpha(alpha_init);    
+	draw_set_colour(colour_init);
+   
+
+
+
 }

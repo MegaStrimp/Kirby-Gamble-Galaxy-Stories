@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_MockMatterLaser_Normal","path":"sprites/spr_MockMatterLaser_Normal/spr_MockMatterLaser_Normal.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_MockMatterLaser_Normal",
     "tags": [],
     "resourceType": "GMSequence",

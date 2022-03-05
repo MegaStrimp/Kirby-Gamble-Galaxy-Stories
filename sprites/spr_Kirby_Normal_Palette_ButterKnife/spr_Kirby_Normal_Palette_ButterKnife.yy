@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Palette_ButterKnife","path":"sprites/spr_Kirby_Normal_Palette_ButterKnife/spr_Kirby_Normal_Palette_ButterKnife.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Palette_ButterKnife",
     "tags": [],
     "resourceType": "GMSequence",

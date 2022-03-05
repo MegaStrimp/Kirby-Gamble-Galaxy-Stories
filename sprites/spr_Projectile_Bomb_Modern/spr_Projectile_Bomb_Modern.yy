@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_Bomb_Modern","path":"sprites/spr_Projectile_Bomb_Modern/spr_Projectile_Bomb_Modern.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_Bomb_Modern",
     "tags": [],
     "resourceType": "GMSequence",

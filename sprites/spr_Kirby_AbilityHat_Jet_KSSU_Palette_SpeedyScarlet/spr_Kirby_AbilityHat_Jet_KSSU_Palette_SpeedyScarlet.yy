@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Jet_KSSU_Palette_SpeedyScarlet","path":"sprites/spr_Kirby_AbilityHat_Jet_KSSU_Palette_SpeedyScarlet/spr_Kirby_AbilityHat_Jet_KSSU_Palette_SpeedyScarlet.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Jet_KSSU_Palette_SpeedyScarlet",
     "tags": [],
     "resourceType": "GMSequence",

@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_FreezeNormal","path":"sprites/spr_Particle_FreezeNormal/spr_Particle_FreezeNormal.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_FreezeNormal",
     "tags": [],
     "resourceType": "GMSequence",

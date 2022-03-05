@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Gamble_Normal_Front_HandsUp","path":"sprites/spr_Gamble_Normal_Front_HandsUp/spr_Gamble_Normal_Front_HandsUp.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Gamble_Normal_Front_HandsUp",
     "tags": [],
     "resourceType": "GMSequence",

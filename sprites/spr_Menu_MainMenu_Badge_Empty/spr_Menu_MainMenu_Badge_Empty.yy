@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_MainMenu_Badge_Empty","path":"sprites/spr_Menu_MainMenu_Badge_Empty/spr_Menu_MainMenu_Badge_Empty.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_MainMenu_Badge_Empty",
     "tags": [],
     "resourceType": "GMSequence",

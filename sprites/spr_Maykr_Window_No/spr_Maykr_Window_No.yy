@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Window_No","path":"sprites/spr_Maykr_Window_No/spr_Maykr_Window_No.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Window_No",
     "tags": [],
     "resourceType": "GMSequence",

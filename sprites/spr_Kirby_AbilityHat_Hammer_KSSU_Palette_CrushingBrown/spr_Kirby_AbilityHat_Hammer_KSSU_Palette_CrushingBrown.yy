@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Hammer_KSSU_Palette_CrushingBrown","path":"sprites/spr_Kirby_AbilityHat_Hammer_KSSU_Palette_CrushingBrown/spr_Kirby_AbilityHat_Hammer_KSSU_Palette_CrushingBrown.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Hammer_KSSU_Palette_CrushingBrown",
     "tags": [],
     "resourceType": "GMSequence",

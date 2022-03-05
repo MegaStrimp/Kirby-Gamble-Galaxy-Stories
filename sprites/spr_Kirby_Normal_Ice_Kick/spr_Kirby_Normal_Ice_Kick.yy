@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Ice_Kick","path":"sprites/spr_Kirby_Normal_Ice_Kick/spr_Kirby_Normal_Ice_Kick.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Ice_Kick",
     "tags": [],
     "resourceType": "GMSequence",

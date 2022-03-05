@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_ShrinkingStar4","path":"sprites/spr_Particle_ShrinkingStar4/spr_Particle_ShrinkingStar4.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_ShrinkingStar4",
     "tags": [],
     "resourceType": "GMSequence",

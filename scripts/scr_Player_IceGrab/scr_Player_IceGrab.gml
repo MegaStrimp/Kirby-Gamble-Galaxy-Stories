@@ -41,7 +41,7 @@ function scr_Player_IceGrab()
 		
 		//Revert Back
 		
-		if ((attackNumber != "iceGrab") or (!instance_exists(grabObj))) attackTimer = 0;
+		if ((attackNumber != playerAttacks.iceGrab) or (!instance_exists(grabObj))) attackTimer = 0;
 		
 		//Animation
 		

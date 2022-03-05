@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Background_SquadBanner","path":"sprites/spr_Background_SquadBanner/spr_Background_SquadBanner.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Background_SquadBanner",
     "tags": [],
     "resourceType": "GMSequence",

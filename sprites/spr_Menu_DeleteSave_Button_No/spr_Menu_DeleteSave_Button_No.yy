@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_DeleteSave_Button_No","path":"sprites/spr_Menu_DeleteSave_Button_No/spr_Menu_DeleteSave_Button_No.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_DeleteSave_Button_No",
     "tags": [],
     "resourceType": "GMSequence",

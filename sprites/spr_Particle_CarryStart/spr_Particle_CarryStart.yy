@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_CarryStart","path":"sprites/spr_Particle_CarryStart/spr_Particle_CarryStart.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_CarryStart",
     "tags": [],
     "resourceType": "GMSequence",

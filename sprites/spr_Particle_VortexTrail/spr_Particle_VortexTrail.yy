@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_VortexTrail","path":"sprites/spr_Particle_VortexTrail/spr_Particle_VortexTrail.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_VortexTrail",
     "tags": [],
     "resourceType": "GMSequence",

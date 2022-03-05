@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bg_SamuraiKirby_Sunset","path":"sprites/bg_SamuraiKirby_Sunset/bg_SamuraiKirby_Sunset.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bg_SamuraiKirby_Sunset",
     "tags": [],
     "resourceType": "GMSequence",

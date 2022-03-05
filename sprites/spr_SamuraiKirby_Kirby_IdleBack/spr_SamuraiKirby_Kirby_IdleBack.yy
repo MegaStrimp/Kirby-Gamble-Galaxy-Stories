@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_SamuraiKirby_Kirby_IdleBack","path":"sprites/spr_SamuraiKirby_Kirby_IdleBack/spr_SamuraiKirby_Kirby_IdleBack.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_SamuraiKirby_Kirby_IdleBack",
     "tags": [],
     "resourceType": "GMSequence",

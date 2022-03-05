@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_GameOver_Text","path":"sprites/spr_GameOver_Text/spr_GameOver_Text.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_GameOver_Text",
     "tags": [],
     "resourceType": "GMSequence",

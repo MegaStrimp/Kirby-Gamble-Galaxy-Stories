@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_VirtualKey_DPadLetterPressed","path":"sprites/spr_VirtualKey_DPadLetterPressed/spr_VirtualKey_DPadLetterPressed.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_VirtualKey_DPadLetterPressed",
     "tags": [],
     "resourceType": "GMSequence",

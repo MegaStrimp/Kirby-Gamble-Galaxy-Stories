@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Door_LockedWhite_Opening","path":"sprites/spr_Door_LockedWhite_Opening/spr_Door_LockedWhite_Opening.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Door_LockedWhite_Opening",
     "tags": [],
     "resourceType": "GMSequence",

@@ -28,6 +28,8 @@ deathParticlesOnHitNumber = 2;
 player = 0;
 angleSpd = 0;
 charge = false;
+syncImageAngle = false;
+collided = 0;
 
 //Timers
 

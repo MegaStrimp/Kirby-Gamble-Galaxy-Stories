@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Window_Leave","path":"sprites/spr_Maykr_Window_Leave/spr_Maykr_Window_Leave.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Window_Leave",
     "tags": [],
     "resourceType": "GMSequence",

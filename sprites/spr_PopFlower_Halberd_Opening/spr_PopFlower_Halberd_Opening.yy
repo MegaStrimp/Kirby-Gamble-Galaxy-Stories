@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_PopFlower_Halberd_Opening","path":"sprites/spr_PopFlower_Halberd_Opening/spr_PopFlower_Halberd_Opening.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_PopFlower_Halberd_Opening",
     "tags": [],
     "resourceType": "GMSequence",

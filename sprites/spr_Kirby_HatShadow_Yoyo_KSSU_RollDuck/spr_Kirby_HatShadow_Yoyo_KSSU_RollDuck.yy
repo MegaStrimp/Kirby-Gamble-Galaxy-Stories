@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_HatShadow_Yoyo_KSSU_RollDuck","path":"sprites/spr_Kirby_HatShadow_Yoyo_KSSU_RollDuck/spr_Kirby_HatShadow_Yoyo_KSSU_RollDuck.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_HatShadow_Yoyo_KSSU_RollDuck",
     "tags": [],
     "resourceType": "GMSequence",

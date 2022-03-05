@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Upgrades_ComboCobalt","path":"sprites/spr_Menu_Upgrades_ComboCobalt/spr_Menu_Upgrades_ComboCobalt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Upgrades_ComboCobalt",
     "tags": [],
     "resourceType": "GMSequence",

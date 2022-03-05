@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Scan_KSSU_Palette_MetallicRed","path":"sprites/spr_Kirby_AbilityHat_Scan_KSSU_Palette_MetallicRed/spr_Kirby_AbilityHat_Scan_KSSU_Palette_MetallicRed.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Scan_KSSU_Palette_MetallicRed",
     "tags": [],
     "resourceType": "GMSequence",

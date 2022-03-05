@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"tile_Aquatia_Harbor","path":"sprites/tile_Aquatia_Harbor/tile_Aquatia_Harbor.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "tile_Aquatia_Harbor",
     "tags": [],
     "resourceType": "GMSequence",

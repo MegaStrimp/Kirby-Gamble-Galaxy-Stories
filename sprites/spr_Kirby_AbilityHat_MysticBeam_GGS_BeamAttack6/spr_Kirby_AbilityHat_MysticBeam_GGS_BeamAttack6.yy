@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_MysticBeam_GGS_BeamAttack6","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_BeamAttack6/spr_Kirby_AbilityHat_MysticBeam_GGS_BeamAttack6.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_MysticBeam_GGS_BeamAttack6",
     "tags": [],
     "resourceType": "GMSequence",

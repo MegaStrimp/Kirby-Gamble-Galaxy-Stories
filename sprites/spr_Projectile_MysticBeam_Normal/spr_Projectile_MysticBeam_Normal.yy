@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_MysticBeam_Normal","path":"sprites/spr_Projectile_MysticBeam_Normal/spr_Projectile_MysticBeam_Normal.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_MysticBeam_Normal",
     "tags": [],
     "resourceType": "GMSequence",

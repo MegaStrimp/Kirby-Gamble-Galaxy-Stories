@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_WhispyWoods_Normal_Spit","path":"sprites/spr_WhispyWoods_Normal_Spit/spr_WhispyWoods_Normal_Spit.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_WhispyWoods_Normal_Spit",
     "tags": [],
     "resourceType": "GMSequence",

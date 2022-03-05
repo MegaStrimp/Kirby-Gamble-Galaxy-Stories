@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_HatShadow_Bell_Modern_FloatSpit","path":"sprites/spr_Kirby_HatShadow_Bell_Modern_FloatSpit/spr_Kirby_HatShadow_Bell_Modern_FloatSpit.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_HatShadow_Bell_Modern_FloatSpit",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Grid","path":"sprites/spr_Maykr_Grid/spr_Maykr_Grid.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Grid",
     "tags": [],
     "resourceType": "GMSequence",

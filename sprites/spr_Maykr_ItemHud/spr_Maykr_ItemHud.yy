@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_ItemHud","path":"sprites/spr_Maykr_ItemHud/spr_Maykr_ItemHud.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_ItemHud",
     "tags": [],
     "resourceType": "GMSequence",

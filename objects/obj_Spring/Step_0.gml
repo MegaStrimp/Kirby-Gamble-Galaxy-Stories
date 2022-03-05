@@ -16,6 +16,8 @@ else if (setupTimer == 0)
 		sprIdle = spr_Spring_Normal;
 		break;
 	}
+	xOffset = (8 * image_xscale);
+	yOffset = (4 * image_yscale);
 	setupTimer = -1;
 }
 

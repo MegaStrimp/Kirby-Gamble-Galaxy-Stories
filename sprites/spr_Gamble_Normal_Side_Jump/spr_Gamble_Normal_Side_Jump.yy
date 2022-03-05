@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Gamble_Normal_Side_Jump","path":"sprites/spr_Gamble_Normal_Side_Jump/spr_Gamble_Normal_Side_Jump.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Gamble_Normal_Side_Jump",
     "tags": [],
     "resourceType": "GMSequence",

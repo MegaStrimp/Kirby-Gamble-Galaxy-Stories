@@ -13,29 +13,32 @@ if (!global.pause)
 	
 	//Select
 	
-	if (keyDownPressed)
+	if (arrayLength != 1)
 	{
-		if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
-		audio_play_sound(snd_BossHealth,0,false);
-		selection += 1;
-	}
-	
-	if (keyUpPressed)
-	{
-		if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
-		audio_play_sound(snd_BossHealth,0,false);
-		selection -= 1;
+		if (keyDownPressed)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			selection += 1;
+		}
+		if (keyUpPressed)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			selection -= 1;
+		}
 	}
 	
 	switch (page)
 	{
 		#region Player Select
 		case "playerSelect":
+		arrayLength = 2;
 		player1Offset = 0;
 		player2Offset = 0;
 		
-		if (selection < 0) selection += 2;
-		if (selection > 1) selection -= 2;
+		if (selection < 0) selection += arrayLength;
+		if (selection > arrayLength - 1) selection -= arrayLength;
 		
 		switch (selection)
 		{
@@ -90,6 +93,7 @@ if (!global.pause)
 		
 		#region Main
 		case "main":
+		arrayLength = 5;
 		player1Offset = 0;
 		player2Offset = 0;
 		skinsOffset = 0;
@@ -98,8 +102,8 @@ if (!global.pause)
 		hatPaintsOffset = 0;
 		familiarsOffset = 0;
 		
-		if (selection < 0) selection += 5;
-		if (selection > 4) selection -= 5;
+		if (selection < 0) selection += arrayLength;
+		if (selection > arrayLength - 1) selection -= arrayLength;
 		
 		switch (selection)
 		{
@@ -116,7 +120,7 @@ if (!global.pause)
 				familiarsOffsetLerp = 0;
 				selection = 0;
 				textY = 147 - (selection * 36);
-				page = "sprayPaintOwner";
+				page = "skinOwner";
 			}
 			break;
 			
@@ -241,16 +245,17 @@ if (!global.pause)
 		
 		#region Skin Owner
 		case "skinOwner":
-		for (var i = 0; i < array_length(characterTitle); i++) characterOffset[i] = 0;
+		arrayLength = array_length(characterTitle);
+		for (var i = 0; i < arrayLength; i++) characterOffset[i] = 0;
 		
 		if (selection < 0)
 		{
-			selection += array_length(characterTitle);
+			selection += arrayLength;
 			textY = 147 - ((selection - 2) * 36);
 		}
-		if (selection > array_length(characterTitle) - 1)
+		if (selection > arrayLength - 1)
 		{
-			selection -= array_length(characterTitle);
+			selection -= arrayLength;
 			textY = 147 - ((selection + 2) * 36);
 		}
 		
@@ -262,34 +267,31 @@ if (!global.pause)
 			{
 				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 				audio_play_sound(snd_ButtonYes,0,false);
+				for (var i = 0; i < arrayLength; i++) characterOffsetLerp[i] = 0;
 				selectedOwner = characterTitle[selection];
 				
-				var playerPaint = global.skinKirbyP1;
-				if (selectedPlayer == 1) playerPaint = global.skinKirbyP2;
-				var characterSkinArray = skinKirby;
+				playerSkin = global.skinKirbyP1;
 				
 				switch (selectedOwner)
 				{
 					case "Kirby":
 					playerSkin = global.skinKirbyP1;
 					if (selectedPlayer == 1) playerSkin = global.skinKirbyP2;
-					var characterSkinArray = skinKirby;
 					break;
 					
 					case "Gamble":
 					playerSkin = global.skinGambleP1;
 					if (selectedPlayer == 1) playerSkin = global.skinGambleP2;
-					var characterSkinArray = skinGamble;
 					break;
 					
 					case "Gooey":
 					playerSkin = global.skinGooeyP1;
 					if (selectedPlayer == 1) playerSkin = global.skinGooeyP2;
-					var characterSkinArray = skinGooey;
 					break;
 				}
 				
-				for (var i = 0; i < array_length(characterSkinArray); i++) if (characterSkinArray[i] == playerSkin) selection = i;
+				subSelection = selection;
+				for (var i = 0; i < array_length(characterSkinValue[selection]); i++) if (characterSkinValue[selection][i] == playerSkin) selection = i;
 				textY = 147 - (selection * 36);
 				page = "skins";
 			}
@@ -312,9 +314,131 @@ if (!global.pause)
 		
 		if (goBack)
 		{
-			kirbyPaintOffsetLerp = 0;
-			selection = 1;
+			for (var i = 0; i < arrayLength; i++) characterOffsetLerp[i] = 0;
+			selection = 0;
 			page = "main";
+			goBack = false;
+		}
+		break;
+		#endregion
+		
+		#region Skins
+		case "skins":
+		arrayLength = array_length(characterSkinTitle[subSelection]);
+		for (var i = 0; i < arrayLength; i++) characterSkinOffset[subSelection][i] = 0;
+		
+		if (selection < 0)
+		{
+			selection += arrayLength;
+			textY = 147 - ((selection - 2) * 36);
+		}
+		if (selection > arrayLength - 1)
+		{
+			selection -= arrayLength;
+			textY = 147 - ((selection + 2) * 36);
+		}
+		
+		characterSkinOffset[subSelection][selection] = 1;
+		
+		if ((keyJumpPressed) or (keyStartPressed))
+		{
+			if (characterSkinUnlocked[subSelection][selection])
+			{
+				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+				audio_play_sound(snd_ButtonYes,0,false);
+				playerSkin = characterSkinValue[subSelection][selection];
+				switch (characterTitle[subSelection])
+				{
+					case "Kirby":
+					if (selectedPlayer == 0)
+					{
+						global.skinKirbyP1 = playerSkin;
+					}
+					else
+					{
+						global.skinKirbyP2 = playerSkin;
+					}
+					break;
+					
+					case "Gamble":
+					if (selectedPlayer == 0)
+					{
+						global.skinGambleP1 = playerSkin;
+					}
+					else
+					{
+						global.skinGambleP2 = playerSkin;
+					}
+					break;
+					
+					case "Gooey":
+					if (selectedPlayer == 0)
+					{
+						global.skinGooeyP1 = playerSkin;
+					}
+					else
+					{
+						global.skinGooeyP2 = playerSkin;
+					}
+					break;
+					
+					case "Meta Knight":
+					if (selectedPlayer == 0)
+					{
+						global.skinMetaKnightP1 = playerSkin;
+					}
+					else
+					{
+						global.skinMetaKnightP2 = playerSkin;
+					}
+					break;
+					
+					case "Keeby":
+					if (selectedPlayer == 0)
+					{
+						global.skinKeebyP1 = playerSkin;
+					}
+					else
+					{
+						global.skinKeebyP2 = playerSkin;
+					}
+					break;
+					
+					case "Prince Fluff":
+					if (selectedPlayer == 0)
+					{
+						global.skinPrinceFluffP1 = playerSkin;
+					}
+					else
+					{
+						global.skinPrinceFluffP2 = playerSkin;
+					}
+					break;
+				}
+			}
+			else
+			{
+				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+				audio_play_sound(snd_ButtonNo,0,false);
+			}
+		}
+		
+		if (!instance_exists(obj_Fade))
+		{
+			if (keyAttackPressed)
+			{
+				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+				audio_play_sound(snd_ButtonNo,0,false);
+				goBack = true;
+			}
+		}
+		
+		if (goBack)
+		{
+			for (var i = 0; i < arrayLength; i++) characterSkinOffsetLerp[subSelection][i] = 0;
+			selection = subSelection;
+			textY = 147 - (selection * 36);
+			page = "skinOwner";
 			goBack = false;
 		}
 		break;
@@ -322,16 +446,17 @@ if (!global.pause)
 		
 		#region Spray Paint Owner
 		case "sprayPaintOwner":
-		for (var i = 0; i < array_length(characterTitle); i++) characterOffset[i] = 0;
+		arrayLength = array_length(characterTitle);
+		for (var i = 0; i < arrayLength; i++) characterOffset[i] = 0;
 		
 		if (selection < 0)
 		{
-			selection += array_length(characterTitle);
+			selection += arrayLength;
 			textY = 147 - ((selection - 2) * 36);
 		}
-		if (selection > array_length(characterTitle) - 1)
+		if (selection > arrayLength - 1)
 		{
-			selection -= array_length(characterTitle);
+			selection -= arrayLength;
 			textY = 147 - ((selection + 2) * 36);
 		}
 		
@@ -403,16 +528,17 @@ if (!global.pause)
 		
 		#region Spray Paint
 		case "sprayPaint":
-		for (var i = 0; i < array_length(sprayPaintTitle); i++) sprayPaintOffset[i] = 0;
+		arrayLength = array_length(sprayPaintTitle);
+		for (var i = 0; i < arrayLength; i++) sprayPaintOffset[i] = 0;
 		
 		if (selection < 0)
 		{
-			selection += array_length(sprayPaintTitle);
+			selection += arrayLength;
 			textY = 147 - ((selection - 2) * 36);
 		}
-		if (selection > array_length(sprayPaintTitle) - 1)
+		if (selection > arrayLength - 1)
 		{
-			selection -= array_length(sprayPaintTitle);
+			selection -= arrayLength;
 			textY = 147 - ((selection + 2) * 36);
 		}
 		
@@ -452,7 +578,7 @@ if (!global.pause)
 		
 		if (goBack)
 		{
-			for (var i = 0; i < array_length(sprayPaintTitle); i++) sprayPaintOffsetLerp[i] = 0;
+			for (var i = 0; i < arrayLength; i++) sprayPaintOffsetLerp[i] = 0;
 			for (var i = 0; i < array_length(characterTitle); i++) if (characterTitle[i] == selectedOwner) selection = i;
 			textY = 147 - (selection * 36);
 			page = "sprayPaintOwner";
@@ -463,16 +589,17 @@ if (!global.pause)
 		
 		#region Ability Hat
 		case "abilityHat":
-		for (var i = 0; i < array_length(abilityHatTitle); i++) abilityHatOffset[i] = 0;
+		arrayLength = array_length(abilityHatTitle);
+		for (var i = 0; i < arrayLength; i++) abilityHatOffset[i] = 0;
 		
 		if (selection < 0)
 		{
-			selection += array_length(abilityHatTitle);
+			selection += arrayLength;
 			textY = 147 - ((selection - 2) * 36);
 		}
-		if (selection > array_length(abilityHatTitle) - 1)
+		if (selection > arrayLength - 1)
 		{
-			selection -= array_length(abilityHatTitle);
+			selection -= arrayLength;
 			textY = 147 - ((selection + 2) * 36);
 		}
 		
@@ -482,7 +609,7 @@ if (!global.pause)
 		{
 			if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 			audio_play_sound(snd_ButtonYes,0,false);
-			for (var i = 0; i < array_length(abilityHatTitle); i++) abilityHatOffsetLerp[i] = 0;
+			for (var i = 0; i < arrayLength; i++) abilityHatOffsetLerp[i] = 0;
 			#region Selected Hat Values
 			var selectedHat = abilityHatTitle[selection];
 			var selectedHatSkin = 0;
@@ -1153,7 +1280,7 @@ if (!global.pause)
 		
 		if (goBack)
 		{
-			for (var i = 0; i < array_length(abilityHatTitle); i++) abilityHatOffsetLerp[i] = 0;
+			for (var i = 0; i < arrayLength; i++) abilityHatOffsetLerp[i] = 0;
 			textY = 147 - (selection * 36);
 			page = "main";
 			if (subPage == "hatSkin")
@@ -1171,16 +1298,17 @@ if (!global.pause)
 		
 		#region Hat Skin
 		case "hatSkin":
-		for (var i = 0; i < array_length(abilityHatSkinTitle[subSelection]); i++) abilityHatSkinOffset[subSelection][i] = 0;
+		arrayLength = array_length(abilityHatSkinTitle[subSelection]);
+		for (var i = 0; i < arrayLength; i++) abilityHatSkinOffset[subSelection][i] = 0;
 		
 		if (selection < 0)
 		{
-			selection += array_length(abilityHatSkinTitle[subSelection]);
+			selection += arrayLength;
 			textY = 147 - ((selection - 2) * 36);
 		}
-		if (selection > array_length(abilityHatSkinTitle[subSelection]) - 1)
+		if (selection > arrayLength - 1)
 		{
-			selection -= array_length(abilityHatSkinTitle[subSelection]);
+			selection -= arrayLength;
 			textY = 147 - ((selection + 2) * 36);
 		}
 		
@@ -1457,7 +1585,7 @@ if (!global.pause)
 		
 		if (goBack)
 		{
-			for (var i = 0; i < array_length(abilityHatSkinTitle[subSelection]); i++) if (abilityHatSkinTitle[subSelection][i] == selectedOwner) selection = i;
+			for (var i = 0; i < arrayLength; i++) if (abilityHatSkinTitle[subSelection][i] == selectedOwner) selection = i;
 			selection = subSelection;
 			textY = 147 - (selection * 36);
 			page = "abilityHat";
@@ -1468,16 +1596,17 @@ if (!global.pause)
 		
 		#region Hat Paint
 		case "hatPaint":
-		for (var i = 0; i < array_length(abilityHatPaintTitle[subSelection][selectedSkin]); i++) abilityHatPaintOffset[subSelection][selectedSkin][i] = 0;
+		arrayLength = array_length(abilityHatPaintTitle[subSelection][selectedSkin]);
+		for (var i = 0; i < arrayLength; i++) abilityHatPaintOffset[subSelection][selectedSkin][i] = 0;
 		
 		if (selection < 0)
 		{
-			selection += array_length(abilityHatPaintTitle[subSelection][selectedSkin]);
+			selection += arrayLength;
 			textY = 147 - ((selection - 2) * 36);
 		}
-		if (selection > array_length(abilityHatPaintTitle[subSelection][selectedSkin]) - 1)
+		if (selection > arrayLength - 1)
 		{
-			selection -= array_length(abilityHatPaintTitle[subSelection][selectedSkin]);
+			selection -= arrayLength;
 			textY = 147 - ((selection + 2) * 36);
 		}
 		
@@ -1930,7 +2059,7 @@ if (!global.pause)
 		
 		if (goBack)
 		{
-			for (var i = 0; i < array_length(abilityHatPaintTitle[subSelection][selectedSkin]); i++) if (abilityHatPaintTitle[subSelection][selectedSkin][i] == selectedOwner) selection = i;
+			for (var i = 0; i < arrayLength; i++) if (abilityHatPaintTitle[subSelection][selectedSkin][i] == selectedOwner) selection = i;
 			selection = subSelection;
 			textY = 147 - (selection * 36);
 			page = "abilityHat";
@@ -1941,16 +2070,17 @@ if (!global.pause)
 		
 		#region Familiars
 		case "familiars":
-		for (var i = 0; i < array_length(familiarTitle); i++) familiarOffset[i] = 0;
+		arrayLength = array_length(familiarTitle);
+		for (var i = 0; i < arrayLength; i++) familiarOffset[i] = 0;
 		
 		if (selection < 0)
 		{
-			selection += array_length(familiarTitle);
+			selection += arrayLength;
 			textY = 147 - ((selection - 2) * 36);
 		}
-		if (selection > array_length(familiarTitle) - 1)
+		if (selection > arrayLength - 1)
 		{
-			selection -= array_length(familiarTitle);
+			selection -= arrayLength;
 			textY = 147 - ((selection + 2) * 36);
 		}
 		
@@ -2004,7 +2134,7 @@ if (!global.pause)
 		
 		if (goBack)
 		{
-			for (var i = 0; i < array_length(familiarTitle); i++) familiarOffsetLerp[i] = 0;
+			for (var i = 0; i < arrayLength; i++) familiarOffsetLerp[i] = 0;
 			selection = 4;
 			textY = 147 - (selection * 36);
 			page = "main";

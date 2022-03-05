@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_Jump","path":"sprites/spr_Particle_Jump/spr_Particle_Jump.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_Jump",
     "tags": [],
     "resourceType": "GMSequence",

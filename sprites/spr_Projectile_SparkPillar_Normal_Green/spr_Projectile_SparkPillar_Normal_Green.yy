@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_SparkPillar_Normal_Green","path":"sprites/spr_Projectile_SparkPillar_Normal_Green/spr_Projectile_SparkPillar_Normal_Green.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_SparkPillar_Normal_Green",
     "tags": [],
     "resourceType": "GMSequence",

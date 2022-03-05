@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bg_MaykrTitle","path":"sprites/bg_MaykrTitle/bg_MaykrTitle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bg_MaykrTitle",
     "tags": [],
     "resourceType": "GMSequence",

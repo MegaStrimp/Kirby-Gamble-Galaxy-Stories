@@ -10,7 +10,7 @@ if (!global.pause)
 	
 	//Hurt Player
 	
-	scr_Enemy_HurtsPlayer();
+	scr_Enemy_HurtsPlayer(dmg);
 	
 	if (hurt) hspDummy = 0;
 	if ((hurt) and (sprHurt != "self"))

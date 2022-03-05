@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_16x10_Mask","path":"sprites/spr_16x10_Mask/spr_16x10_Mask.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_16x10_Mask",
     "tags": [],
     "resourceType": "GMSequence",

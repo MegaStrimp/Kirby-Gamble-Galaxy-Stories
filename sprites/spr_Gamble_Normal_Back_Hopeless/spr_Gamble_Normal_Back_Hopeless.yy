@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Gamble_Normal_Back_Hopeless","path":"sprites/spr_Gamble_Normal_Back_Hopeless/spr_Gamble_Normal_Back_Hopeless.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Gamble_Normal_Back_Hopeless",
     "tags": [],
     "resourceType": "GMSequence",

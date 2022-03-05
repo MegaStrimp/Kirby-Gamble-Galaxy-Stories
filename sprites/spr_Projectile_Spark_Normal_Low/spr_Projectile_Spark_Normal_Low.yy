@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_Spark_Normal_Low","path":"sprites/spr_Projectile_Spark_Normal_Low/spr_Projectile_Spark_Normal_Low.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_Spark_Normal_Low",
     "tags": [],
     "resourceType": "GMSequence",

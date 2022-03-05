@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Wing_Attack2Ready","path":"sprites/spr_Kirby_Normal_Wing_Attack2Ready/spr_Kirby_Normal_Wing_Attack2Ready.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Wing_Attack2Ready",
     "tags": [],
     "resourceType": "GMSequence",

@@ -119,7 +119,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_FallingLeaf_Normal_Idle","path":"sprites/spr_FallingLeaf_Normal_Idle/spr_FallingLeaf_Normal_Idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_FallingLeaf_Normal_Idle",
     "tags": [],
     "resourceType": "GMSequence",

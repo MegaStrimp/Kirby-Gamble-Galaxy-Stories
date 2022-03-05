@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Butterfly_Idle","path":"sprites/spr_Butterfly_Idle/spr_Butterfly_Idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Butterfly_Idle",
     "tags": [],
     "resourceType": "GMSequence",

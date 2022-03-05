@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Collection_Customize_Kirby_ShadowOfTheMirror","path":"sprites/spr_Menu_Collection_Customize_Kirby_ShadowOfTheMirror/spr_Menu_Collection_Customize_Kirby_ShadowOfTheMirror.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Collection_Customize_Kirby_ShadowOfTheMirror",
     "tags": [],
     "resourceType": "GMSequence",

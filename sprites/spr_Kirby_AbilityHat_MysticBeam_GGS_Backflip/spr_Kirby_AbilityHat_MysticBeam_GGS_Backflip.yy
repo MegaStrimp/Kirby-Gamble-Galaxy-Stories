@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_MysticBeam_GGS_Backflip","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Backflip/spr_Kirby_AbilityHat_MysticBeam_GGS_Backflip.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_MysticBeam_GGS_Backflip",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"tile_GearCube_Hangar","path":"sprites/tile_GearCube_Hangar/tile_GearCube_Hangar.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "tile_GearCube_Hangar",
     "tags": [],
     "resourceType": "GMSequence",

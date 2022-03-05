@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Upgrades_MultiBomb","path":"sprites/spr_Menu_Upgrades_MultiBomb/spr_Menu_Upgrades_MultiBomb.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Upgrades_MultiBomb",
     "tags": [],
     "resourceType": "GMSequence",

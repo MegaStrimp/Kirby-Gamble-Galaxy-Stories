@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Lantern_Normal_Empty","path":"sprites/spr_Lantern_Normal_Empty/spr_Lantern_Normal_Empty.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Lantern_Normal_Empty",
     "tags": [],
     "resourceType": "GMSequence",

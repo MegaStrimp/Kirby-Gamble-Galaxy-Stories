@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Saves_Text","path":"sprites/spr_Menu_Saves_Text/spr_Menu_Saves_Text.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Saves_Text",
     "tags": [],
     "resourceType": "GMSequence",

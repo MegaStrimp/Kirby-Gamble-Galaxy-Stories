@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_StageSelect_Hud_Back3","path":"sprites/spr_Menu_StageSelect_Hud_Back3/spr_Menu_StageSelect_Hud_Back3.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_StageSelect_Hud_Back3",
     "tags": [],
     "resourceType": "GMSequence",

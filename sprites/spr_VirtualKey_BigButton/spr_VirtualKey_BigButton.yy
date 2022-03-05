@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_VirtualKey_BigButton","path":"sprites/spr_VirtualKey_BigButton/spr_VirtualKey_BigButton.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_VirtualKey_BigButton",
     "tags": [],
     "resourceType": "GMSequence",

@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_MainMenu_Button_Bitcrushed","path":"sprites/spr_Menu_MainMenu_Button_Bitcrushed/spr_Menu_MainMenu_Button_Bitcrushed.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_MainMenu_Button_Bitcrushed",
     "tags": [],
     "resourceType": "GMSequence",

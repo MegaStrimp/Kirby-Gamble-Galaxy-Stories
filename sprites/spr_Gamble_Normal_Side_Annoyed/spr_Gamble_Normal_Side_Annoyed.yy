@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Gamble_Normal_Side_Annoyed","path":"sprites/spr_Gamble_Normal_Side_Annoyed/spr_Gamble_Normal_Side_Annoyed.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Gamble_Normal_Side_Annoyed",
     "tags": [],
     "resourceType": "GMSequence",

@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_PointStar_Red_Idle","path":"sprites/spr_PointStar_Red_Idle/spr_PointStar_Red_Idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_PointStar_Red_Idle",
     "tags": [],
     "resourceType": "GMSequence",

@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_SimirrorAppear","path":"sprites/spr_Particle_SimirrorAppear/spr_Particle_SimirrorAppear.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_SimirrorAppear",
     "tags": [],
     "resourceType": "GMSequence",

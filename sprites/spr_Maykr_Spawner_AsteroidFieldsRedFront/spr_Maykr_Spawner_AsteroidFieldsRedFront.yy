@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Spawner_AsteroidFieldsRedFront","path":"sprites/spr_Maykr_Spawner_AsteroidFieldsRedFront/spr_Maykr_Spawner_AsteroidFieldsRedFront.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Spawner_AsteroidFieldsRedFront",
     "tags": [],
     "resourceType": "GMSequence",

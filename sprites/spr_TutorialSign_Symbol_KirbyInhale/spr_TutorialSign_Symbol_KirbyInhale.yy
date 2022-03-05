@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_TutorialSign_Symbol_KirbyInhale","path":"sprites/spr_TutorialSign_Symbol_KirbyInhale/spr_TutorialSign_Symbol_KirbyInhale.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_TutorialSign_Symbol_KirbyInhale",
     "tags": [],
     "resourceType": "GMSequence",

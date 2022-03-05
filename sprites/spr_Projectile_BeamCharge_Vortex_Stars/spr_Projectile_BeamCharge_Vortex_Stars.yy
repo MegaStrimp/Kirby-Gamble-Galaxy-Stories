@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_BeamCharge_Vortex_Stars","path":"sprites/spr_Projectile_BeamCharge_Vortex_Stars/spr_Projectile_BeamCharge_Vortex_Stars.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_BeamCharge_Vortex_Stars",
     "tags": [],
     "resourceType": "GMSequence",

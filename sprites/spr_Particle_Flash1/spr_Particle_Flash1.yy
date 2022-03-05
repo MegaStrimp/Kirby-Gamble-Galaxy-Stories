@@ -83,7 +83,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_Flash1","path":"sprites/spr_Particle_Flash1/spr_Particle_Flash1.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_Flash1",
     "tags": [],
     "resourceType": "GMSequence",

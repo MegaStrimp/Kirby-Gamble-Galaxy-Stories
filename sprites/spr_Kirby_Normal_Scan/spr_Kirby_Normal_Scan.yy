@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Scan","path":"sprites/spr_Kirby_Normal_Scan/spr_Kirby_Normal_Scan.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Scan",
     "tags": [],
     "resourceType": "GMSequence",

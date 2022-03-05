@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Spit","path":"sprites/spr_Kirby_Normal_Spit/spr_Kirby_Normal_Spit.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Spit",
     "tags": [],
     "resourceType": "GMSequence",

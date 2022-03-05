@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityDropStar_Metal","path":"sprites/spr_AbilityDropStar_Metal/spr_AbilityDropStar_Metal.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityDropStar_Metal",
     "tags": [],
     "resourceType": "GMSequence",

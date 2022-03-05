@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_MainMenu_Button_Maykr","path":"sprites/spr_Menu_MainMenu_Button_Maykr/spr_Menu_MainMenu_Button_Maykr.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_MainMenu_Button_Maykr",
     "tags": [],
     "resourceType": "GMSequence",

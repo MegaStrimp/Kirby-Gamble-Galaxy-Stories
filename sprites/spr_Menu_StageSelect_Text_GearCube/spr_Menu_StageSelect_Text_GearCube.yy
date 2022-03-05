@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_StageSelect_Text_GearCube","path":"sprites/spr_Menu_StageSelect_Text_GearCube/spr_Menu_StageSelect_Text_GearCube.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_StageSelect_Text_GearCube",
     "tags": [],
     "resourceType": "GMSequence",

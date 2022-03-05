@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Familiar_Peashooter_Shot","path":"sprites/spr_Familiar_Peashooter_Shot/spr_Familiar_Peashooter_Shot.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Familiar_Peashooter_Shot",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Background_GearCubeHangar6","path":"sprites/spr_Background_GearCubeHangar6/spr_Background_GearCubeHangar6.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Background_GearCubeHangar6",
     "tags": [],
     "resourceType": "GMSequence",

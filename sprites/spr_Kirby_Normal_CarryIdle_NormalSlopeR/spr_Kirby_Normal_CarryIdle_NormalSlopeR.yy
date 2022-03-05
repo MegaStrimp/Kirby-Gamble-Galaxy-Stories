@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_CarryIdle_NormalSlopeR","path":"sprites/spr_Kirby_Normal_CarryIdle_NormalSlopeR/spr_Kirby_Normal_CarryIdle_NormalSlopeR.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_CarryIdle_NormalSlopeR",
     "tags": [],
     "resourceType": "GMSequence",

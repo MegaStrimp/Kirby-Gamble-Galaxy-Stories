@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bg_Skylands_Sky_Clouds","path":"sprites/bg_Skylands_Sky_Clouds/bg_Skylands_Sky_Clouds.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bg_Skylands_Sky_Clouds",
     "tags": [],
     "resourceType": "GMSequence",

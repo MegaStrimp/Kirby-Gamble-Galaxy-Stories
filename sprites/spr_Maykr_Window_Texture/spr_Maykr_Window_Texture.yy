@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Window_Texture","path":"sprites/spr_Maykr_Window_Texture/spr_Maykr_Window_Texture.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Window_Texture",
     "tags": [],
     "resourceType": "GMSequence",

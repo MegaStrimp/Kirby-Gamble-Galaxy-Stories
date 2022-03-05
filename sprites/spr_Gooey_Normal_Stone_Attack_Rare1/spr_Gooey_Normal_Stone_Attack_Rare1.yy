@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Gooey_Normal_Stone_Attack_Rare1","path":"sprites/spr_Gooey_Normal_Stone_Attack_Rare1/spr_Gooey_Normal_Stone_Attack_Rare1.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Gooey_Normal_Stone_Attack_Rare1",
     "tags": [],
     "resourceType": "GMSequence",

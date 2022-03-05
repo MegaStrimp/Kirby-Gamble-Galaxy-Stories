@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityTrophy_Mask","path":"sprites/spr_AbilityTrophy_Mask/spr_AbilityTrophy_Mask.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityTrophy_Mask",
     "tags": [],
     "resourceType": "GMSequence",

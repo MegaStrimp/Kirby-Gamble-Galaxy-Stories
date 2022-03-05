@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Bumper_Normal","path":"sprites/spr_Bumper_Normal/spr_Bumper_Normal.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Bumper_Normal",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_VirtualKey_SmallButton","path":"sprites/spr_VirtualKey_SmallButton/spr_VirtualKey_SmallButton.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_VirtualKey_SmallButton",
     "tags": [],
     "resourceType": "GMSequence",

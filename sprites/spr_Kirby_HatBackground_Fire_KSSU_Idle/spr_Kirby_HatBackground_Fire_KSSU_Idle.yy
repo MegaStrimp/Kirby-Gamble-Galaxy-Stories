@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_HatBackground_Fire_KSSU_Idle","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Idle/spr_Kirby_HatBackground_Fire_KSSU_Idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_HatBackground_Fire_KSSU_Idle",
     "tags": [],
     "resourceType": "GMSequence",

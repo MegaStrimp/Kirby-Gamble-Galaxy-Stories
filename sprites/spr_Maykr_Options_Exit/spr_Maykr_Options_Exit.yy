@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Options_Exit","path":"sprites/spr_Maykr_Options_Exit/spr_Maykr_Options_Exit.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Options_Exit",
     "tags": [],
     "resourceType": "GMSequence",

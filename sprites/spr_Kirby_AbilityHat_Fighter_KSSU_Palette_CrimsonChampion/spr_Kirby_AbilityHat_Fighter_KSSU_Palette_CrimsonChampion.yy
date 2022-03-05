@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Fighter_KSSU_Palette_CrimsonChampion","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Palette_CrimsonChampion/spr_Kirby_AbilityHat_Fighter_KSSU_Palette_CrimsonChampion.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Fighter_KSSU_Palette_CrimsonChampion",
     "tags": [],
     "resourceType": "GMSequence",

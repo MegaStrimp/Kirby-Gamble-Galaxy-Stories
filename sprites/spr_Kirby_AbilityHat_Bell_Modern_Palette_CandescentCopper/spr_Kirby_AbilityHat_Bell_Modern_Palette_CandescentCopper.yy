@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Bell_Modern_Palette_CandescentCopper","path":"sprites/spr_Kirby_AbilityHat_Bell_Modern_Palette_CandescentCopper/spr_Kirby_AbilityHat_Bell_Modern_Palette_CandescentCopper.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Bell_Modern_Palette_CandescentCopper",
     "tags": [],
     "resourceType": "GMSequence",

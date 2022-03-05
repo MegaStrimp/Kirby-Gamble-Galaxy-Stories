@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Gamble_Normal_Front_Sad","path":"sprites/spr_Gamble_Normal_Front_Sad/spr_Gamble_Normal_Front_Sad.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Gamble_Normal_Front_Sad",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Gamble_Normal_Side_Rage","path":"sprites/spr_Gamble_Normal_Side_Rage/spr_Gamble_Normal_Side_Rage.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Gamble_Normal_Side_Rage",
     "tags": [],
     "resourceType": "GMSequence",

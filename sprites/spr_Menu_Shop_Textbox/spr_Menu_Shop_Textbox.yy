@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Shop_Textbox","path":"sprites/spr_Menu_Shop_Textbox/spr_Menu_Shop_Textbox.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Shop_Textbox",
     "tags": [],
     "resourceType": "GMSequence",

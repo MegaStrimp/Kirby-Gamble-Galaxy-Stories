@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Spring_Normal","path":"sprites/spr_Spring_Normal/spr_Spring_Normal.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Spring_Normal",
     "tags": [],
     "resourceType": "GMSequence",

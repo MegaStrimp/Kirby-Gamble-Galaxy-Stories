@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityBlock_Beam_Idle","path":"sprites/spr_AbilityBlock_Beam_Idle/spr_AbilityBlock_Beam_Idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityBlock_Beam_Idle",
     "tags": [],
     "resourceType": "GMSequence",

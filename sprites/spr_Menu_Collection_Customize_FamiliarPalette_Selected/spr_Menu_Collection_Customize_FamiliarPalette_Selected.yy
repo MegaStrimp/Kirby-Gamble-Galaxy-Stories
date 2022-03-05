@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Collection_Customize_FamiliarPalette_Selected","path":"sprites/spr_Menu_Collection_Customize_FamiliarPalette_Selected/spr_Menu_Collection_Customize_FamiliarPalette_Selected.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Collection_Customize_FamiliarPalette_Selected",
     "tags": [],
     "resourceType": "GMSequence",

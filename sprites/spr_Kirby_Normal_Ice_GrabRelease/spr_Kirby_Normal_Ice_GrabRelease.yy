@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Ice_GrabRelease","path":"sprites/spr_Kirby_Normal_Ice_GrabRelease/spr_Kirby_Normal_Ice_GrabRelease.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Ice_GrabRelease",
     "tags": [],
     "resourceType": "GMSequence",

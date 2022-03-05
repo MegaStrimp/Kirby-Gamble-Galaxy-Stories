@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_ItemCarry_Light_Idle_NormalSlopeL","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_Idle_NormalSlopeL/spr_Kirby_Normal_ItemCarry_Light_Idle_NormalSlopeL.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_ItemCarry_Light_Idle_NormalSlopeL",
     "tags": [],
     "resourceType": "GMSequence",

@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_SparkAura","path":"sprites/spr_Particle_SparkAura/spr_Particle_SparkAura.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_SparkAura",
     "tags": [],
     "resourceType": "GMSequence",

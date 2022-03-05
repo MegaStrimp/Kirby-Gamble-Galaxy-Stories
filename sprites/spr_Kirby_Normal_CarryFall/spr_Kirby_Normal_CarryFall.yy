@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_CarryFall","path":"sprites/spr_Kirby_Normal_CarryFall/spr_Kirby_Normal_CarryFall.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_CarryFall",
     "tags": [],
     "resourceType": "GMSequence",

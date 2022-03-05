@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bg_PopstarMoon_Space","path":"sprites/bg_PopstarMoon_Space/bg_PopstarMoon_Space.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bg_PopstarMoon_Space",
     "tags": [],
     "resourceType": "GMSequence",

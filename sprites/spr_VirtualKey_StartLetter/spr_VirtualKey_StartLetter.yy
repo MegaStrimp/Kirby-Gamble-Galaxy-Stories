@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_VirtualKey_StartLetter","path":"sprites/spr_VirtualKey_StartLetter/spr_VirtualKey_StartLetter.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_VirtualKey_StartLetter",
     "tags": [],
     "resourceType": "GMSequence",

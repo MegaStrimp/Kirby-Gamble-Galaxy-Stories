@@ -24,7 +24,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	if (instance_exists(owner))
 	{
-		if ((owner.hurt) or ((!enemy) and (owner.attackNumber != "swordNormal")))
+		if ((owner.hurt) or ((!enemy) and (owner.attackNumber != playerAttacks.swordNormal)))
 		{
 			instance_destroy();
 		}

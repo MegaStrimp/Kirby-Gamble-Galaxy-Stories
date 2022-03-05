@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Ice_Snowman_Flap","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Flap/spr_Kirby_AbilityHat_Ice_Snowman_Flap.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Ice_Snowman_Flap",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Fire_KSSU_Palette_BlazingBlue","path":"sprites/spr_Kirby_AbilityHat_Fire_KSSU_Palette_BlazingBlue/spr_Kirby_AbilityHat_Fire_KSSU_Palette_BlazingBlue.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Fire_KSSU_Palette_BlazingBlue",
     "tags": [],
     "resourceType": "GMSequence",

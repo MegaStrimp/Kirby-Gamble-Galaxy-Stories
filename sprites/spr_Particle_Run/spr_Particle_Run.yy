@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_Run","path":"sprites/spr_Particle_Run/spr_Particle_Run.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_Run",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_JungleBomb_Normal_Palette_Strawberry","path":"sprites/spr_JungleBomb_Normal_Palette_Strawberry/spr_JungleBomb_Normal_Palette_Strawberry.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_JungleBomb_Normal_Palette_Strawberry",
     "tags": [],
     "resourceType": "GMSequence",

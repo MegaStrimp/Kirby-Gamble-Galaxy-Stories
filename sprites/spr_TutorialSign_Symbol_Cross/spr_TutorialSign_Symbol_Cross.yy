@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_TutorialSign_Symbol_Cross","path":"sprites/spr_TutorialSign_Symbol_Cross/spr_TutorialSign_Symbol_Cross.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_TutorialSign_Symbol_Cross",
     "tags": [],
     "resourceType": "GMSequence",

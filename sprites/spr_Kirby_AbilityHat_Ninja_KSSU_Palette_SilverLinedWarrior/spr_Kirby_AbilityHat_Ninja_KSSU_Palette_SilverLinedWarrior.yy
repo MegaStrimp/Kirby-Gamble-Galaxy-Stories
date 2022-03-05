@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Ninja_KSSU_Palette_SilverLinedWarrior","path":"sprites/spr_Kirby_AbilityHat_Ninja_KSSU_Palette_SilverLinedWarrior/spr_Kirby_AbilityHat_Ninja_KSSU_Palette_SilverLinedWarrior.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Ninja_KSSU_Palette_SilverLinedWarrior",
     "tags": [],
     "resourceType": "GMSequence",

@@ -26,7 +26,7 @@ if (!global.pause)
 {
 	//Hurt Player
 	
-	if ((sprite_index == sprRelease) and (image_index >= 5)) scr_Enemy_HurtsPlayer();
+	if ((sprite_index == sprRelease) and (image_index >= 5)) scr_Enemy_HurtsPlayer(dmg);
 	
 	//Activate
 	

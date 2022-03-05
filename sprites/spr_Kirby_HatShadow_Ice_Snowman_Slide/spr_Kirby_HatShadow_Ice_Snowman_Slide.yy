@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_HatShadow_Ice_Snowman_Slide","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Slide/spr_Kirby_HatShadow_Ice_Snowman_Slide.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_HatShadow_Ice_Snowman_Slide",
     "tags": [],
     "resourceType": "GMSequence",

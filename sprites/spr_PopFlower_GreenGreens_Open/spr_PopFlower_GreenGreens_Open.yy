@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_PopFlower_GreenGreens_Open","path":"sprites/spr_PopFlower_GreenGreens_Open/spr_PopFlower_GreenGreens_Open.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_PopFlower_GreenGreens_Open",
     "tags": [],
     "resourceType": "GMSequence",

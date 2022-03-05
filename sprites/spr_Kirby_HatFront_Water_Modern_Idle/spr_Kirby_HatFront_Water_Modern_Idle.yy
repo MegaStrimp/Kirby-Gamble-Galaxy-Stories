@@ -127,7 +127,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_HatFront_Water_Modern_Idle","path":"sprites/spr_Kirby_HatFront_Water_Modern_Idle/spr_Kirby_HatFront_Water_Modern_Idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_HatFront_Water_Modern_Idle",
     "tags": [],
     "resourceType": "GMSequence",

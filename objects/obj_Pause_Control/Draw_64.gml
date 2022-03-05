@@ -622,6 +622,7 @@ if ((gamePaused) and (visible))
 		{
 			if ((!instance_exists(obj_Pause_Fade)) and (!instance_exists(obj_Fade)))
 			{
+				scr_SaveGame(global.selectedSave);
 				var pauseFade = instance_create_depth(x,y,depth - 1,obj_Pause_Fade);
 				pauseFade.alphaSpd = .02;
 		        pauseFade.fade = 1;

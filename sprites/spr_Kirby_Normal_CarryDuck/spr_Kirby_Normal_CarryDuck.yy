@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_CarryDuck","path":"sprites/spr_Kirby_Normal_CarryDuck/spr_Kirby_Normal_CarryDuck.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_CarryDuck",
     "tags": [],
     "resourceType": "GMSequence",

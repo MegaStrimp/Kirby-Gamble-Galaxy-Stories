@@ -18,6 +18,11 @@ function scr_Player_Normal()
 			var collidingWall = instance_place(x,y + 1,obj_Wall);
 			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) grounded = true;
 		}
+		else if (place_meeting(x,y + 1,obj_Spring))
+		{
+			var collidingWall = instance_place(x,y + 1,obj_Spring);
+			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) grounded = true;
+		}
 		
 		var wallAbove = false;
 		if (place_meeting(x,y - 1,obj_Wall))
@@ -173,8 +178,8 @@ function scr_Player_Normal()
 			{
 				var ultiDecel = decel;
 				if (runTurn) ultiDecel = decel * 2;
-				if (attackNumber == "fireWheel") ultiDecel = decelSlide;
-				if (attackNumber == "beamAir") ultiDecel = decel - .025;
+				if (attackNumber == playerAttacks.fireWheel) ultiDecel = decelSlide;
+				if (attackNumber == playerAttacks.beamAir) ultiDecel = decel - .025;
 				if (hsp >= ultiDecel) hsp -= ultiDecel;
 				if (hsp <= -ultiDecel) hsp += ultiDecel;
 				if ((hsp > -ultiDecel) and (hsp < ultiDecel)) hsp = 0;
@@ -183,11 +188,11 @@ function scr_Player_Normal()
 		}
 		
 		var blockGap = false;
-		if ((run) and (hsp != 0) and (!place_meeting(x,y + 1,obj_Wall)) and (!place_meeting(x + hsp,y,obj_Wall)) and (place_meeting(x + hsp + 24,y + 1,obj_Wall))) blockGap = true;
+		if ((run) and (hsp != 0) and (vsp == 0) and (!place_meeting(x,y + 1,obj_Wall)) and (!place_meeting(x + hsp,y,obj_Wall)) and (place_meeting(x + hsp - 24,y + 1,obj_Wall)) and (place_meeting(x + hsp + 24,y + 1,obj_Wall))) blockGap = true;
 		if ((hasGravity) and (!blockGap) and (playerAbility != playerAbilities.ufo))
 		{
 			var gravOffset = 0;
-			if (attackNumber == "beamAir") gravOffset = .05;
+			if (attackNumber == playerAttacks.beamAir) gravOffset = .05;
 			if (vsp < gravLimit)
 			{
 				vsp += grav - gravOffset;
@@ -234,7 +239,7 @@ function scr_Player_Normal()
 				cutterAirThrown = false;
 				if (jumpLimit) vsp = 0;
 				if (fallHopCounter != 0) fallHopCounter = 0;
-				if ((attackNumber == "cutterAir") or (attackNumber == "fireAerial")) attackTimer = 0;
+				if ((attackNumber == playerAttacks.cutterAir) or (attackNumber == playerAttacks.fireAerial)) attackTimer = 0;
 			}
 			if (playerCharacter == playerCharacters.gamble)
 			{
@@ -287,7 +292,7 @@ function scr_Player_Normal()
 						grabEnemy.hasDeathParticles = false;
 						grabEnemy.death = true;
 						attack = true;
-						attackNumber = "bombGrab";
+						attackNumber = playerAttacks.bombGrab;
 						carriedItemIndex.owner = carriedItemIndex;
 						carriedItemIndex.xOffset = 0;
 						carriedItemIndex.yOffset = 0;
@@ -306,21 +311,21 @@ function scr_Player_Normal()
 						if (run)
 						{
 							attack = true;
-							attackNumber = "bombDash";
+							attackNumber = playerAttacks.bombDash;
 							sprite_index = sprBombAttack3Ready;
 							image_index = 0;
 						}
 						else
 						{
 							attack = true;
-							attackNumber = "bombNormal";
+							attackNumber = playerAttacks.bombNormal;
 							sprite_index = sprBombAttack1;
 							image_index = 0;
 						}
 					}
 				}
 				
-				if (attackNumber == "bombNormal")
+				if (attackNumber == playerAttacks.bombNormal)
 				{
 					if ((!keyAttackHold) or (hurt))
 					{
@@ -390,7 +395,7 @@ function scr_Player_Normal()
 					}
 				}
 				
-				if (attackNumber == "bombDash")
+				if (attackNumber == playerAttacks.bombDash)
 				{
 					if (audio_is_playing(snd_BombDash)) audio_stop_sound(snd_BombDash);
 					audio_play_sound(snd_BombDash,0,false);
@@ -419,7 +424,7 @@ function scr_Player_Normal()
 					if (!attack)
 					{
 						attack = true;
-						attackNumber = "keyNormal";
+						attackNumber = playerAttacks.keyNormal;
 						sprite_index = sprItemCarryHeavyIdle;
 					}
 				}
@@ -431,7 +436,7 @@ function scr_Player_Normal()
 					carriedItemState = "none";
 				}
 				
-				if (attackNumber == "keyNormal")
+				if (attackNumber == playerAttacks.keyNormal)
 				{
 					if ((!keyAttackHold) or (hurt))
 					{
@@ -498,7 +503,7 @@ function scr_Player_Normal()
 							if ((run) and (vsp == 0) and (hsp != 0))
 							{
 								attack = true;
-								attackNumber = "cutterDash";
+								attackNumber = playerAttacks.cutterDash;
 								sprite_index = sprCutterAttack2;
 						        image_index = 0;
 				                cutterCatch = false;
@@ -512,7 +517,7 @@ function scr_Player_Normal()
 								cutterMaskProj.image_yscale = image_yscale;
 								invincible = true;
 								attack = true;
-								attackNumber = "cutterDrop";
+								attackNumber = playerAttacks.cutterDrop;
 								sprite_index = sprCutterAttack3;
 								image_index = 0;
 				                state = playerStates.cutterDrop;
@@ -526,7 +531,7 @@ function scr_Player_Normal()
 								cutterMaskProj.image_yscale = image_yscale;
 								invincible = true;
 								attack = true;
-								attackNumber = "cutterAir";
+								attackNumber = playerAttacks.cutterAir;
 								sprite_index = sprCutterAttack3;
 								image_index = 0;
 							}
@@ -535,8 +540,8 @@ function scr_Player_Normal()
 								if (vsp == 0)
 								{
 									attack = true;
-									attackNumber = "cutterCharge";
-									sprite_index = sprCutterAttack1;
+									attackNumber = playerAttacks.cutterCharge;
+									sprite_index = sprCutterCharge;
 									image_index = 0;
 								}
 								else
@@ -545,7 +550,7 @@ function scr_Player_Normal()
 									{
 										cutterAirThrown = true;
 										attack = true;
-										attackNumber = "cutterNormal";
+										attackNumber = playerAttacks.cutterNormal;
 										sprite_index = sprCutterAttack1;
 									    image_index = 0;
 									}
@@ -553,7 +558,7 @@ function scr_Player_Normal()
 							}
 					    }
 					
-						if (attackNumber == "cutterCharge")
+						if (attackNumber == playerAttacks.cutterCharge)
 						{
 							image_index = 0;
 							if (cutterCharge == cutterChargeMax - 1)
@@ -598,7 +603,7 @@ function scr_Player_Normal()
 									invincibleFlash = false;
 									invincibleFlashTimer = -1;
 									attack = true;
-									attackNumber = "cutterNormal";
+									attackNumber = playerAttacks.cutterNormal;
 									sprite_index = sprCutterAttack1;
 								    image_index = 0;
 								}
@@ -621,7 +626,7 @@ function scr_Player_Normal()
 							}
 						}
 					
-						if (attackNumber == "cutterNormal")
+						if (attackNumber == playerAttacks.cutterNormal)
 						{
 							if ((round(image_index) == (image_number - 1)) and (attackable))
 							{
@@ -661,13 +666,13 @@ function scr_Player_Normal()
 								projectile.destroyableByObject = false;
 								projectile.destroyableByProjectile = false;
 								projectile.player = player;
-								projectile.angleSpd = -10;
+								projectile.angleSpd = -30;
 								projectile.charge = true;
 								attackable = false;
 							}
 						}
 					
-						if (attackNumber == "cutterDash")
+						if (attackNumber == playerAttacks.cutterDash)
 						{
 							if (attackable)
 							{
@@ -689,7 +694,7 @@ function scr_Player_Normal()
 							}
 						}
 					
-						if (attackNumber == "cutterAir")
+						if (attackNumber == playerAttacks.cutterAir)
 						{
 							if (!keyAttackHold)
 							{
@@ -727,7 +732,7 @@ function scr_Player_Normal()
 									grabEnemy.hasDeathParticles = false;
 									grabEnemy.death = true;
 									attack = true;
-									attackNumber = "beamGrab";
+									attackNumber = playerAttacks.beamGrab;
 									hsp = 0;
 									state = playerStates.beamGrab;
 								}
@@ -740,7 +745,7 @@ function scr_Player_Normal()
 									if (audio_is_playing(snd_Beam)) audio_stop_sound(snd_Beam);
 									sndBeam = audio_play_sound(snd_Beam,0,false);
 									attack = true;
-									attackNumber = "beamUp";
+									attackNumber = playerAttacks.beamUp;
 									sprite_index = sprBeamAttack4;
 								    image_index = 0;
 								}
@@ -754,7 +759,7 @@ function scr_Player_Normal()
 											if (audio_is_playing(snd_BeamDash)) audio_stop_sound(snd_BeamDash);
 											sndBeam = audio_play_sound(snd_BeamDash,0,false);
 											attack = true;
-											attackNumber = "beamDash";
+											attackNumber = playerAttacks.beamDash;
 											beamDashAttackTimer = 0;
 											sprite_index = sprBeamAttack3;
 											image_index = 0;
@@ -765,7 +770,7 @@ function scr_Player_Normal()
 											if (audio_is_playing(snd_BeamAir)) audio_stop_sound(snd_BeamAir);
 											sndBeam = audio_play_sound(snd_BeamAir,0,false);
 											attack = true;
-											attackNumber = "beamAir";
+											attackNumber = playerAttacks.beamAir;
 											beamAttack2FirstHit = true;
 											jumpLimit = false;
 											jumpLimitTimer = jumpLimitTimerMax;
@@ -780,7 +785,7 @@ function scr_Player_Normal()
 										if (vsp == 0)
 										{
 											attack = true;
-											attackNumber = "beamCharge";
+											attackNumber = playerAttacks.beamCharge;
 											sprite_index = sprBeamCharge;
 										    image_index = 0;
 										}
@@ -789,7 +794,7 @@ function scr_Player_Normal()
 											if (audio_is_playing(snd_Beam)) audio_stop_sound(snd_Beam);
 											sndBeam = audio_play_sound(snd_Beam,0,false);
 											attack = true;
-											attackNumber = "beamNormal";
+											attackNumber = playerAttacks.beamNormal;
 											sprite_index = sprBeamAttack1;
 										    image_index = 0;
 										}
@@ -798,7 +803,7 @@ function scr_Player_Normal()
 							}
 					    }
 					
-						if (attackNumber == "beamCharge")
+						if (attackNumber == playerAttacks.beamCharge)
 						{
 							if (beamCharge == beamChargeMax - 1)
 							{
@@ -841,7 +846,7 @@ function scr_Player_Normal()
 									if (audio_is_playing(snd_Beam)) audio_stop_sound(snd_Beam);
 									sndBeam = audio_play_sound(snd_Beam,0,false);
 									attack = true;
-									attackNumber = "beamNormal";
+									attackNumber = playerAttacks.beamNormal;
 									sprite_index = sprBeamAttack1;
 								    image_index = 0;
 								}
@@ -857,14 +862,14 @@ function scr_Player_Normal()
 									invincibleFlash = false;
 									invincibleFlashTimer = -1;
 									attack = true;
-									attackNumber = "beamChargeAttack";
+									attackNumber = playerAttacks.beamChargeAttack;
 									sprite_index = sprBeamAttack5;
 								    image_index = 0;
 								}
 							}
 						}
 					
-						if (attackNumber == "beamNormal")
+						if (attackNumber == playerAttacks.beamNormal)
 						{
 							if (attackable)
 							{
@@ -950,7 +955,7 @@ function scr_Player_Normal()
 							}
 						}
 					
-						if (attackNumber == "beamDash")
+						if (attackNumber == playerAttacks.beamDash)
 						{
 							if (attackable)
 							{
@@ -967,7 +972,7 @@ function scr_Player_Normal()
 							if (beamDashAttackTimer == -1) beamDashAttackTimer = beamDashAttackTimerMax;
 						}
 					
-						if (attackNumber == "beamAir")
+						if (attackNumber == playerAttacks.beamAir)
 						{
 							attackable = false;
 							if (beamAttack2Timer == -1) beamAttack2Timer = (beamAttack2TimerMax + irandom_range(-1,1) - beamGoldenFlareUpgrade);
@@ -982,7 +987,7 @@ function scr_Player_Normal()
 								}
 						}
 					
-						if (attackNumber == "beamUp")
+						if (attackNumber == playerAttacks.beamUp)
 						{
 							if (attackable)
 							{
@@ -1045,7 +1050,7 @@ function scr_Player_Normal()
 							}
 						}
 						
-						if (attackNumber == "beamChargeAttack")
+						if (attackNumber == playerAttacks.beamChargeAttack)
 						{
 							if (attackable)
 							{
@@ -1074,7 +1079,7 @@ function scr_Player_Normal()
 							}
 						}
 					
-						/*if (attackNumber == "beamUp")
+						/*if (attackNumber == playerAttacks.beamUp)
 						{
 							if (attackable)
 							{
@@ -1138,7 +1143,7 @@ function scr_Player_Normal()
 									grabEnemy.hasDeathParticles = false;
 									grabEnemy.death = true;
 									attack = true;
-									attackNumber = "mysticBeamGrab";
+									attackNumber = playerAttacks.mysticBeamGrab;
 									hsp = 0;
 									state = playerStates.mysticBeamGrab;
 								}
@@ -1154,7 +1159,7 @@ function scr_Player_Normal()
 										if (audio_is_playing(snd_MysticBeamLaser)) audio_stop_sound(snd_MysticBeamLaser);
 										audio_play_sound(snd_MysticBeamLaser,0,false);
 										attack = true;
-										attackNumber = "mysticBeamDash";
+										attackNumber = playerAttacks.mysticBeamDash;
 										sprite_index = sprMysticBeamAttack1;
 									    image_index = 0;
 									}
@@ -1164,7 +1169,7 @@ function scr_Player_Normal()
 										if (audio_is_playing(snd_BeamAir)) audio_stop_sound(snd_BeamAir);
 										sndMysticBeam = audio_play_sound(snd_BeamAir,0,false);
 										attack = true;
-										attackNumber = "mysticBeamAir";
+										attackNumber = playerAttacks.mysticBeamAir;
 										jumpLimit = false;
 										jumpLimitTimer = jumpLimitTimerMax;
 										vsp = -(jumpspeed / 2);
@@ -1178,7 +1183,7 @@ function scr_Player_Normal()
 									if (vsp == 0)
 									{
 										attack = true;
-										attackNumber = "mysticBeamCharge";
+										attackNumber = playerAttacks.mysticBeamCharge;
 										sprite_index = sprBeamCharge;
 										image_index = 0;
 									}
@@ -1220,7 +1225,7 @@ function scr_Player_Normal()
 											if (audio_is_playing(snd_MysticBeam)) audio_stop_sound(snd_MysticBeam);
 											sndMysticBeam = audio_play_sound(snd_MysticBeam,0,false);
 											attack = true;
-											attackNumber = "mysticBeamNormal";
+											attackNumber = playerAttacks.mysticBeamNormal;
 											sprite_index = sprBeamAttack1;
 											image_index = 0;
 										}
@@ -1233,7 +1238,7 @@ function scr_Player_Normal()
 							}
 						}
 					
-						if (attackNumber == "mysticBeamCharge")
+						if (attackNumber == playerAttacks.mysticBeamCharge)
 						{
 							if (beamCharge == beamChargeMax - 1)
 							{
@@ -1308,7 +1313,7 @@ function scr_Player_Normal()
 										if (audio_is_playing(snd_MysticBeam)) audio_stop_sound(snd_MysticBeam);
 										sndMysticBeam = audio_play_sound(snd_MysticBeam,0,false);
 										attack = true;
-										attackNumber = "mysticBeamNormal";
+										attackNumber = playerAttacks.mysticBeamNormal;
 										sprite_index = sprBeamAttack1;
 										image_index = 0;
 									}
@@ -1329,14 +1334,14 @@ function scr_Player_Normal()
 									invincibleFlash = false;
 									invincibleFlashTimer = -1;
 									attack = true;
-									attackNumber = "mysticBeamChargeAttack";
+									attackNumber = playerAttacks.mysticBeamChargeAttack;
 									sprite_index = sprBeamAttack5;
 								    image_index = 0;
 								}
 							}
 						}
 					
-						if (attackNumber == "mysticBeamNormal")
+						if (attackNumber == playerAttacks.mysticBeamNormal)
 						{
 							if (attackable)
 							{
@@ -1395,7 +1400,7 @@ function scr_Player_Normal()
 							}
 						}
 					
-						if (attackNumber == "mysticBeamDash")
+						if (attackNumber == playerAttacks.mysticBeamDash)
 						{
 							if (attackable)
 							{
@@ -1414,7 +1419,7 @@ function scr_Player_Normal()
 							}
 						}
 					
-						if (attackNumber == "mysticBeamAir")
+						if (attackNumber == playerAttacks.mysticBeamAir)
 						{
 							attackable = false;
 							if (mysticBeamAttack2Timer == -1) mysticBeamAttack2Timer = (mysticBeamAttack2TimerMax + irandom_range(-1,1));
@@ -1429,7 +1434,7 @@ function scr_Player_Normal()
 							}
 						}
 					
-						if (attackNumber == "mysticBeamChargeAttack")
+						if (attackNumber == playerAttacks.mysticBeamChargeAttack)
 						{
 							if (attackable)
 							{
@@ -1531,7 +1536,7 @@ function scr_Player_Normal()
 								}
 								invincible = true;
 					            attack = true;
-					            attackNumber = "stoneNormal";
+					            attackNumber = playerAttacks.stoneNormal;
 					            attackable = false;
 								stoneParticleTimer = 0;
 								sprite_index = sprStoneAttack1Ready;
@@ -1543,14 +1548,14 @@ function scr_Player_Normal()
 								audio_play_sound(snd_StoneReady,0,false);
 								stoneFistReadyTimer = stoneFistReadyTimerMax;
 					            attack = true;
-					            attackNumber = "stoneUp";
+					            attackNumber = playerAttacks.stoneUp;
 					            attackable = false;
 								sprite_index = sprStoneAttack2Ready;
 					            image_index = 0;
 							}
 					    }
 					
-						if (attackNumber == "stoneNormal")
+						if (attackNumber == playerAttacks.stoneNormal)
 						{
 							if ((!stoneFallen) and (!stoneReady) and (place_meeting(x,y + vsp + 1,obj_Wall)) and (sign(vsp) == 1))
 							{
@@ -1615,7 +1620,7 @@ function scr_Player_Normal()
 							}
 						}
 					
-						if ((!global.cutscene) and (attackNumber == "stoneUp") and (!keyAttackHold) and (stoneFistReady))
+						if ((!global.cutscene) and (attackNumber == playerAttacks.stoneUp) and (!keyAttackHold) and (stoneFistReady))
 						{
 							stoneFistReadyTimer = 0;
 						}
@@ -1624,12 +1629,12 @@ function scr_Player_Normal()
 						case playerAbilities.ufo:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
-							attackNumber = "ufoCharge";
+							attackNumber = playerAttacks.ufoCharge;
 							sprite_index = sprBeamCharge;
 							image_index = 0;
 					    }
 					
-						if (attackNumber == "ufoCharge")
+						if (attackNumber == playerAttacks.ufoCharge)
 						{
 							if (ufoCharge == ufoChargeMax - 1)
 							{
@@ -1671,7 +1676,7 @@ function scr_Player_Normal()
 									if (audio_is_playing(snd_Beam)) audio_stop_sound(snd_Beam);
 									sndBeam = audio_play_sound(snd_Beam,0,false);
 									attack = true;
-									attackNumber = "ufoBeam";
+									attackNumber = playerAttacks.ufoBeam;
 									//sprite_index = sprBeamAttack1;
 								    //image_index = 0;
 								}
@@ -1688,7 +1693,7 @@ function scr_Player_Normal()
 							}
 						}
 					
-						if (attackNumber == "ufoBeam")
+						if (attackNumber == playerAttacks.ufoBeam)
 						{
 							shakeX = 2;
 							shakeY = 2;
@@ -1736,7 +1741,7 @@ function scr_Player_Normal()
 									        attack = true;
 											attackable = false;
 											attackTimer = 20;
-								            attackNumber = "mirrorSlash";
+								            attackNumber = playerAttacks.mirrorSlash;
 											sprite_index = sprMirrorAttack1;
 											image_index = 0;
 											if (audio_is_playing(snd_Slash)) audio_stop_sound(snd_Slash);
@@ -1753,7 +1758,7 @@ function scr_Player_Normal()
 									{
 								        attack = true;
 										attackable = false;
-							            attackNumber = "mirrorDash";
+							            attackNumber = playerAttacks.mirrorDash;
 							            invincible = true;
 										sprite_index = sprMirrorAttack3;
 							            if (audio_is_playing(snd_Mirror2)) audio_stop_sound(snd_Mirror2);
@@ -1808,7 +1813,7 @@ function scr_Player_Normal()
 						            if (audio_is_playing(snd_Mirror4)) audio_stop_sound(snd_Mirror4);
 									audio_play_sound(snd_Mirror4,0,false);
 						            attack = true;
-						            attackNumber = "mirrorDown";
+						            attackNumber = playerAttacks.mirrorDown;
 						            invincible = true;
 									sprite_index = sprMirrorAttack4;
 						            var mirrorSpawner = instance_create_depth(x,y,depth,obj_MirrorAttackSpawner);
@@ -1836,7 +1841,7 @@ function scr_Player_Normal()
 									audio_play_sound(snd_Mirror5,0,false);
 									attack = true;
 									attackable = false;
-						            attackNumber = "mirrorUp";
+						            attackNumber = playerAttacks.mirrorUp;
 						            invincible = true;
 									sprite_index = sprMirrorAttack5;
 						            var mirrorSpawner = instance_create_depth(x,y,depth,obj_MirrorAttackSpawner);
@@ -1864,13 +1869,13 @@ function scr_Player_Normal()
 								mirrorHold = true;
 								attack = true;
 								attackable = false;
-								attackNumber = "mirrorNormal";
+								attackNumber = playerAttacks.mirrorNormal;
 								sprite_index = sprMirrorAttack2;
 								image_index = 0;
 							}
 						}
 					
-						if (attackNumber == "mirrorNormal")
+						if (attackNumber == playerAttacks.mirrorNormal)
 						{
 							attack = true;
 							attackable = false;
@@ -1892,12 +1897,12 @@ function scr_Player_Normal()
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
 							attack = true;
-							attackNumber = "ninjaCharge";
+							attackNumber = playerAttacks.ninjaCharge;
 							sprite_index = sprNinjaCharge;
 							image_index = 0;
 					    }
 					
-						if (attackNumber == "ninjaCharge")
+						if (attackNumber == playerAttacks.ninjaCharge)
 						{
 							ninjaCharge += 1;
 						
@@ -1907,7 +1912,7 @@ function scr_Player_Normal()
 								{
 									ninjaCharge = 0;
 									attack = true;
-									attackNumber = "ninjaNormal";
+									attackNumber = playerAttacks.ninjaNormal;
 									sprite_index = sprNinjaAttack1;
 								    image_index = 0;
 								}
@@ -1918,14 +1923,14 @@ function scr_Player_Normal()
 								{
 									ninjaCharge = 0;
 									attack = true;
-									attackNumber = "ninjaSlash";
+									attackNumber = playerAttacks.ninjaSlash;
 									sprite_index = sprNinjaAttack2;
 								    image_index = 0;
 								}
 							}
 						}
 					
-						if (attackNumber == "ninjaNormal")
+						if (attackNumber == playerAttacks.ninjaNormal)
 						{
 							if (attackable)
 							{
@@ -1943,7 +1948,7 @@ function scr_Player_Normal()
 							}
 						}
 					
-						if (attackNumber == "ninjaSlash")
+						if (attackNumber == playerAttacks.ninjaSlash)
 						{
 							if (attackable)
 							{
@@ -1971,7 +1976,7 @@ function scr_Player_Normal()
 							sprite_index = sprBombReady;
 							image_index = 0;
 				            attack = true;
-							attackNumber = "bombReady";
+							attackNumber = playerAttacks.bombReady;
 							attackable = false;
 				            attackTimer = 45;
 							fallRoll = false;
@@ -2011,7 +2016,7 @@ function scr_Player_Normal()
 						case playerAbilities.fire:
 					    if ((!global.cutscene) and (!hurt))
 					    {
-							if ((keyAttackHold) and ((!attack) or (attackNumber == "fireAerial")))
+							if ((keyAttackHold) and ((!attack) or (attackNumber == playerAttacks.fireAerial)))
 							{
 								if ((!grounded) and (place_meeting(x,y + 16,obj_Wall)))
 								{
@@ -2019,7 +2024,7 @@ function scr_Player_Normal()
 									hsp = (movespeedBurst * (1 + (fireMagicCharcoalUpgrade / 4))) * dir;
 									invincible = true;
 									attack = true;
-									attackNumber = "fireWheel";
+									attackNumber = playerAttacks.fireWheel;
 									if (audio_is_playing(snd_Fire2)) audio_stop_sound(snd_Fire2);
 						            audio_play_sound(snd_Fire2,0,false);
 									sprite_index = sprFireAttack3;
@@ -2076,7 +2081,7 @@ function scr_Player_Normal()
 									fireDashHsp = (movespeedBurst * ((fireMagicCharcoalUpgrade / 2) + 1)) * dir;
 									run = false;
 					                attack = true;
-									attackNumber = "fireDash";
+									attackNumber = playerAttacks.fireDash;
 									fireDashDir = 1;
 									if (keyUpHold) fireDashDir = -1;
 									attackable = false;
@@ -2104,7 +2109,7 @@ function scr_Player_Normal()
 									if (grounded)
 									{
 										attack = true;
-										attackNumber = "fireNormal";
+										attackNumber = playerAttacks.fireNormal;
 										sprite_index = sprFireAttack1;
 								        image_index = 0;
 									}
@@ -2113,7 +2118,7 @@ function scr_Player_Normal()
 										invincible = true;
 										attack = true;
 										attackTimer = 300;
-										attackNumber = "fireAerial";
+										attackNumber = playerAttacks.fireAerial;
 										if (audio_is_playing(snd_Fire2)) audio_stop_sound(snd_Fire2);
 					                    audio_play_sound(snd_Fire2,0,false);
 										sprite_index = sprFireAttack3;
@@ -2161,7 +2166,7 @@ function scr_Player_Normal()
 						    }
 						}
 					
-						if (attackNumber == "fireNormal")
+						if (attackNumber == playerAttacks.fireNormal)
 						{
 							shakeX = 1;
 							if (fireNormalAttackTimer == -1) fireNormalAttackTimer = fireNormalAttackTimerMax;
@@ -2183,7 +2188,7 @@ function scr_Player_Normal()
 								fireMaskProj.image_xscale = image_xscale;
 								fireMaskProj.image_yscale = image_yscale;
 								invincible = true;
-								attackNumber = "fireBack";
+								attackNumber = playerAttacks.fireBack;
 								if (audio_is_playing(snd_Fire2)) audio_stop_sound(snd_Fire2);
 								if (audio_is_playing(snd_Fire3)) audio_stop_sound(snd_Fire3);
 				                audio_play_sound(snd_Fire3,0,false);
@@ -2193,7 +2198,7 @@ function scr_Player_Normal()
 							}
 						}
 					
-						if (attackNumber == "fireBack")
+						if (attackNumber == playerAttacks.fireBack)
 						{
 					        if ((!global.cutscene) and (!keyAttackHold))
 					        {
@@ -2220,7 +2225,7 @@ function scr_Player_Normal()
 									iceGrab = false;
 									invincible = true;
 									attack = true;
-									attackNumber = "iceGrab";
+									attackNumber = playerAttacks.iceGrab;
 									hsp = 0;
 									state = playerStates.iceGrab;
 								}
@@ -2233,7 +2238,7 @@ function scr_Player_Normal()
 							}
 					    }
 					
-						if (attackNumber == "iceNormal")
+						if (attackNumber == playerAttacks.iceNormal)
 						{
 							if ((!iceReady) and (!iceRelease))
 							{
@@ -2258,7 +2263,7 @@ function scr_Player_Normal()
 								var bolt = instance_create_depth(x,y - 4,depth + 1,obj_Projectile_SparkBolt);
 								bolt.owner = id;
 								attack = true;
-								attackNumber = "sparkUp";
+								attackNumber = playerAttacks.sparkUp;
 								sprite_index = sprSparkAttack3;
 								image_index = 0;
 								attackTimer = 30;
@@ -2270,7 +2275,7 @@ function scr_Player_Normal()
 								var bolt = instance_create_depth(x,y - 4,depth + 1,obj_Projectile_SparkBolt);
 								bolt.owner = id;
 								attack = true;
-								attackNumber = "sparkDown";
+								attackNumber = playerAttacks.sparkDown;
 								sprite_index = sprSparkAttack4;
 								image_index = 0;
 								attackTimer = 30;
@@ -2280,7 +2285,7 @@ function scr_Player_Normal()
 								if (sparkMaxCharge)
 								{
 									attack = true;
-									attackNumber = "sparkMax";
+									attackNumber = playerAttacks.sparkMax;
 									sprite_index = sprSparkAttack2Ready;
 									image_index = 0;
 									attackTimer = 60;
@@ -2288,7 +2293,7 @@ function scr_Player_Normal()
 								else if (sparkCharge > 15)
 								{
 									attack = true;
-									attackNumber = "sparkHigh";
+									attackNumber = playerAttacks.sparkHigh;
 									sprite_index = sprSparkAttack2Ready;
 									image_index = 0;
 									attackTimer = 45;
@@ -2296,7 +2301,7 @@ function scr_Player_Normal()
 								else if (sparkCharge > 9)
 								{
 									attack = true;
-									attackNumber = "sparkMid";
+									attackNumber = playerAttacks.sparkMid;
 									sprite_index = sprSparkAttack1Ready;
 									image_index = 0;
 									attackTimer = 30;
@@ -2304,7 +2309,7 @@ function scr_Player_Normal()
 								else if (sparkCharge > 4)
 								{
 									attack = true;
-									attackNumber = "sparkLow";
+									attackNumber = playerAttacks.sparkLow;
 									sprite_index = sprSparkAttack1Ready;
 									image_index = 0;
 									attackTimer = 20;
@@ -2312,7 +2317,7 @@ function scr_Player_Normal()
 								else
 								{
 									attack = true;
-									attackNumber = "sparkNone";
+									attackNumber = playerAttacks.sparkNone;
 									sprite_index = sprSparkAttack1Ready;
 									image_index = 0;
 									attackTimer = 7;
@@ -2322,11 +2327,23 @@ function scr_Player_Normal()
 							}
 					    }
 					
-						if ((attackNumber == "sparkUp") or (attackNumber == "sparkDown"))
+						if ((attackNumber == playerAttacks.sparkUp) or (attackNumber == playerAttacks.sparkDown))
 						{
 							hsp = 0;
 							vsp = 0;
 						}
+						break;
+					
+						case playerAbilities.wheel:
+					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
+					    {
+							attack = true;
+							attackNumber = playerAttacks.wheelNormal;
+							sprite_index = sprWingAttack1;
+							image_index = 0;
+							wheelDir = dir;
+							state = playerStates.wheelNormal;
+					    }
 						break;
 					
 						case playerAbilities.wing:
@@ -2341,13 +2358,13 @@ function scr_Player_Normal()
 							else
 							{
 								attack = true;
-								attackNumber = "wingNormal";
+								attackNumber = playerAttacks.wingNormal;
 								sprite_index = sprWingAttack1;
 								image_index = 0;
 							}
 					    }
 					
-						if (attackNumber == "wingNormal")
+						if (attackNumber == playerAttacks.wingNormal)
 						{
 							if (attackable)
 							{
@@ -2409,7 +2426,7 @@ function scr_Player_Normal()
 							}
 						}
 					
-						if (attackNumber == "wingDash")
+						if (attackNumber == playerAttacks.wingDash)
 						{
 							if (attackable)
 							{
@@ -2438,7 +2455,7 @@ function scr_Player_Normal()
 							if ((run) and (vsp == 0) and (hsp != 0))
 							{
 								attack = true;
-								attackNumber = "swordDash";
+								attackNumber = playerAttacks.swordDash;
 								sprite_index = sprSwordAttack2;
 						        image_index = 0;
 				                cutterCatch = false;
@@ -2452,7 +2469,7 @@ function scr_Player_Normal()
 								cutterMaskProj.image_yscale = image_yscale;
 								invincible = true;
 								attack = true;
-								attackNumber = "cutterDrop";
+								attackNumber = playerAttacks.cutterDrop;
 								sprite_index = sprCutterAttack3;
 								image_index = 0;
 				                state = playerStates.cutterDrop;
@@ -2466,7 +2483,7 @@ function scr_Player_Normal()
 								cutterMaskProj.image_yscale = image_yscale;
 								invincible = true;
 								attack = true;
-								attackNumber = "cutterAir";
+								attackNumber = playerAttacks.cutterAir;
 								sprite_index = sprCutterAttack3;
 								image_index = 0;
 							}
@@ -2476,14 +2493,14 @@ function scr_Player_Normal()
 								{
 									if (vsp != 0) cutterAirThrown = true;
 									attack = true;
-									attackNumber = "cutterCharge";
+									attackNumber = playerAttacks.cutterCharge;
 									sprite_index = sprCutterAttack1;
 									image_index = 0;
 								}
 							}
 					    }
 					
-						if (attackNumber == "cutterCharge")
+						if (attackNumber == playerAttacks.cutterCharge)
 						{
 							image_index = 0;
 							if (cutterCharge == cutterChargeMax - 1)
@@ -2528,7 +2545,7 @@ function scr_Player_Normal()
 									invincibleFlash = false;
 									invincibleFlashTimer = -1;
 									attack = true;
-									attackNumber = "swordNormal";
+									attackNumber = playerAttacks.swordNormal;
 									attackTimer = 45;
 									sprite_index = sprSwordAttack1;
 								    image_index = 0;
@@ -2552,7 +2569,7 @@ function scr_Player_Normal()
 							}
 						}
 					
-						if (attackNumber == "swordNormal")
+						if (attackNumber == playerAttacks.swordNormal)
 						{
 							if ((round(image_index) == (image_number - 1)) and (attackable))
 							{
@@ -2586,17 +2603,18 @@ function scr_Player_Normal()
 								projectile.dirX = dir;
 								projectile.image_xscale = projectile.dirX;
 								projectile.enemy = false;
+								projectile.destroyableByWall = false;
 								projectile.destroyableByEnemy = false;
 								projectile.destroyableByObject = false;
 								projectile.destroyableByProjectile = false;
 								projectile.player = player;
-								projectile.angleSpd = -10;
+								projectile.angleSpd = -15;
 								projectile.charge = true;
 								attackable = false;
 							}
 						}
 					
-						if (attackNumber == "swordDash")
+						if (attackNumber == playerAttacks.swordDash)
 						{
 							if (attackable)
 							{
@@ -2618,7 +2636,7 @@ function scr_Player_Normal()
 							}
 						}
 					
-						if (attackNumber == "cutterAir")
+						if (attackNumber == playerAttacks.cutterAir)
 						{
 							if (!keyAttackHold)
 							{
@@ -2632,7 +2650,7 @@ function scr_Player_Normal()
 						{
 							attack = true;
 							attackable = false;
-							attackNumber = "sleepNormal";
+							attackNumber = playerAttacks.sleepNormal;
 							isSleeping = true;
 							sleepEndTimer = sleepEndTimerMax;
 							sprite_index = sprSleepReady;
@@ -2667,7 +2685,7 @@ function scr_Player_Normal()
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (attackable))
 					    {
 					        attack = true;
-					        attackNumber = "scanNormal";
+					        attackNumber = playerAttacks.scanNormal;
 					        attackable = false;
 							sprite_index = sprScanReady;
 							image_index = 0;

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Bell_Modern_Palette_PrestoPurple","path":"sprites/spr_Kirby_AbilityHat_Bell_Modern_Palette_PrestoPurple/spr_Kirby_AbilityHat_Bell_Modern_Palette_PrestoPurple.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Bell_Modern_Palette_PrestoPurple",
     "tags": [],
     "resourceType": "GMSequence",

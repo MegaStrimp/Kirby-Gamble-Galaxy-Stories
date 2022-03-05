@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_PauseMenu_Cursor","path":"sprites/spr_PauseMenu_Cursor/spr_PauseMenu_Cursor.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_PauseMenu_Cursor",
     "tags": [],
     "resourceType": "GMSequence",

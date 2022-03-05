@@ -9,7 +9,7 @@ function scr_Player_MirrorDash()
 	
 	//Revert Back
 	
-	if (attackNumber != "mirrorDash") attackTimer = 0;
+	if (attackNumber != playerAttacks.mirrorDash) attackTimer = 0;
 	
 	//Animation
 	

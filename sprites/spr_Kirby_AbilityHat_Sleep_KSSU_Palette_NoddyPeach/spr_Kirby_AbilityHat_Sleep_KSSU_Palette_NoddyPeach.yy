@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Sleep_KSSU_Palette_NoddyPeach","path":"sprites/spr_Kirby_AbilityHat_Sleep_KSSU_Palette_NoddyPeach/spr_Kirby_AbilityHat_Sleep_KSSU_Palette_NoddyPeach.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Sleep_KSSU_Palette_NoddyPeach",
     "tags": [],
     "resourceType": "GMSequence",

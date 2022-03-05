@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Debug_TopWall","path":"sprites/spr_Maykr_Debug_TopWall/spr_Maykr_Debug_TopWall.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Debug_TopWall",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_Cannonball_Normal","path":"sprites/spr_Projectile_Cannonball_Normal/spr_Projectile_Cannonball_Normal.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_Cannonball_Normal",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_SamuraiKirby_Hud_LineKirby","path":"sprites/spr_SamuraiKirby_Hud_LineKirby/spr_SamuraiKirby_Hud_LineKirby.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_SamuraiKirby_Hud_LineKirby",
     "tags": [],
     "resourceType": "GMSequence",

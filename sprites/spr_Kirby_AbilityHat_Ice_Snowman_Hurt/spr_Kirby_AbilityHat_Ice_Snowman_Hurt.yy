@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Ice_Snowman_Hurt","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Hurt/spr_Kirby_AbilityHat_Ice_Snowman_Hurt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Ice_Snowman_Hurt",
     "tags": [],
     "resourceType": "GMSequence",

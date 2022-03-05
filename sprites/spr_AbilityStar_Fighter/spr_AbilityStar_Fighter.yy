@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityStar_Fighter","path":"sprites/spr_AbilityStar_Fighter/spr_AbilityStar_Fighter.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityStar_Fighter",
     "tags": [],
     "resourceType": "GMSequence",

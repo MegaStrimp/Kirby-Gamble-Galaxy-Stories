@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityDropStar_Normal","path":"sprites/spr_AbilityDropStar_Normal/spr_AbilityDropStar_Normal.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityDropStar_Normal",
     "tags": [],
     "resourceType": "GMSequence",

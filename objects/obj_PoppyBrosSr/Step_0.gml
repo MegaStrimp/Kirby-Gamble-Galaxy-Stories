@@ -30,7 +30,7 @@ event_inherited();
 if (!global.pause)
 {
 	#region Hurt Player
-	scr_Enemy_HurtsPlayer();
+	scr_Enemy_HurtsPlayer(dmg);
 	#endregion
 	
 	#region Friction

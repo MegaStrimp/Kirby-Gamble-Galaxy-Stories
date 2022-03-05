@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Beam_MarxSoul_Flap","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_Flap/spr_Kirby_AbilityHat_Beam_MarxSoul_Flap.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Beam_MarxSoul_Flap",
     "tags": [],
     "resourceType": "GMSequence",

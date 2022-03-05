@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Gamble_Normal_Side_Neutral","path":"sprites/spr_Gamble_Normal_Side_Neutral/spr_Gamble_Normal_Side_Neutral.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Gamble_Normal_Side_Neutral",
     "tags": [],
     "resourceType": "GMSequence",

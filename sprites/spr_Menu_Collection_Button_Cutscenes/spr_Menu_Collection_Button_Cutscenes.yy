@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Collection_Button_Cutscenes","path":"sprites/spr_Menu_Collection_Button_Cutscenes/spr_Menu_Collection_Button_Cutscenes.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Collection_Button_Cutscenes",
     "tags": [],
     "resourceType": "GMSequence",

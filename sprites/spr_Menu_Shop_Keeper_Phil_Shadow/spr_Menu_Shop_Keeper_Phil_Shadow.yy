@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Shop_Keeper_Phil_Shadow","path":"sprites/spr_Menu_Shop_Keeper_Phil_Shadow/spr_Menu_Shop_Keeper_Phil_Shadow.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Shop_Keeper_Phil_Shadow",
     "tags": [],
     "resourceType": "GMSequence",

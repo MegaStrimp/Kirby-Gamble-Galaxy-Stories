@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Debug_GentleSlopeSpawner","path":"sprites/spr_Maykr_Debug_GentleSlopeSpawner/spr_Maykr_Debug_GentleSlopeSpawner.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Debug_GentleSlopeSpawner",
     "tags": [],
     "resourceType": "GMSequence",

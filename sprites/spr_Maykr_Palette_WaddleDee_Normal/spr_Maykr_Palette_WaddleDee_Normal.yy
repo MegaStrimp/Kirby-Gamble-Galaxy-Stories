@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Palette_WaddleDee_Normal","path":"sprites/spr_Maykr_Palette_WaddleDee_Normal/spr_Maykr_Palette_WaddleDee_Normal.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Palette_WaddleDee_Normal",
     "tags": [],
     "resourceType": "GMSequence",

@@ -1,7 +1,11 @@
 ///@description Hurts Player
 
-function scr_Enemy_HurtsPlayer()
+function scr_Enemy_HurtsPlayer(argument0)
 {
+	//Variables
+	
+	var dmg = argument0;
+	
 	//Hurt Player
 	
 	if ((place_meeting(x,y,obj_Player)) and (!hurt))

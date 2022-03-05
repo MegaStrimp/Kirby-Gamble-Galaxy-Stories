@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_Ice1","path":"sprites/spr_Particle_Ice1/spr_Particle_Ice1.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_Ice1",
     "tags": [],
     "resourceType": "GMSequence",

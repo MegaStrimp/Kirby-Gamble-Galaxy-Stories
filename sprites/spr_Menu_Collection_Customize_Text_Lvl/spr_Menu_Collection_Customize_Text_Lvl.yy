@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Collection_Customize_Text_Lvl","path":"sprites/spr_Menu_Collection_Customize_Text_Lvl/spr_Menu_Collection_Customize_Text_Lvl.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Collection_Customize_Text_Lvl",
     "tags": [],
     "resourceType": "GMSequence",

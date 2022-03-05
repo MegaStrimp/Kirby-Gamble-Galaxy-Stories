@@ -10,7 +10,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	}
 	else
 	{
-		if ((owner.attackNumber != "cutterAir") and (owner.attackNumber != "cutterDrop"))
+		if ((owner.attackNumber != playerAttacks.cutterAir) and (owner.attackNumber != playerAttacks.cutterDrop))
 		{
 			instance_destroy();
 		}

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Beam_KSSU_Attack6","path":"sprites/spr_Kirby_AbilityHat_Beam_KSSU_Attack6/spr_Kirby_AbilityHat_Beam_KSSU_Attack6.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Beam_KSSU_Attack6",
     "tags": [],
     "resourceType": "GMSequence",

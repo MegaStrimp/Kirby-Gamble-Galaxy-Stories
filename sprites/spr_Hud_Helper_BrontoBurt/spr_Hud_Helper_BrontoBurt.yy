@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Hud_Helper_BrontoBurt","path":"sprites/spr_Hud_Helper_BrontoBurt/spr_Hud_Helper_BrontoBurt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Hud_Helper_BrontoBurt",
     "tags": [],
     "resourceType": "GMSequence",

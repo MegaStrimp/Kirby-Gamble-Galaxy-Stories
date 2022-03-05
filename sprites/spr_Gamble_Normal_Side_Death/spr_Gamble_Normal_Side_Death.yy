@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Gamble_Normal_Side_Death","path":"sprites/spr_Gamble_Normal_Side_Death/spr_Gamble_Normal_Side_Death.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Gamble_Normal_Side_Death",
     "tags": [],
     "resourceType": "GMSequence",

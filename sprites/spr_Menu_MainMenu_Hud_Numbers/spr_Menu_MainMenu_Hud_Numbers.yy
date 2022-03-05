@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_MainMenu_Hud_Numbers","path":"sprites/spr_Menu_MainMenu_Hud_Numbers/spr_Menu_MainMenu_Hud_Numbers.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_MainMenu_Hud_Numbers",
     "tags": [],
     "resourceType": "GMSequence",

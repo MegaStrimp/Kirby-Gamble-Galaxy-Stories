@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Familiar_EpicJar_Jar_Open","path":"sprites/spr_Familiar_EpicJar_Jar_Open/spr_Familiar_EpicJar_Jar_Open.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Familiar_EpicJar_Jar_Open",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_ItemHud_WaddleDoo","path":"sprites/spr_Maykr_ItemHud_WaddleDoo/spr_Maykr_ItemHud_WaddleDoo.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_ItemHud_WaddleDoo",
     "tags": [],
     "resourceType": "GMSequence",

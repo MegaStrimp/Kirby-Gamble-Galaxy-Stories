@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Mirror_Modern_Duck","path":"sprites/spr_Kirby_AbilityHat_Mirror_Modern_Duck/spr_Kirby_AbilityHat_Mirror_Modern_Duck.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Mirror_Modern_Duck",
     "tags": [],
     "resourceType": "GMSequence",

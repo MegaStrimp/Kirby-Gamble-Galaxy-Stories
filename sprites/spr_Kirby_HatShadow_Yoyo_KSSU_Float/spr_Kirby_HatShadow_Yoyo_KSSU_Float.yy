@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_HatShadow_Yoyo_KSSU_Float","path":"sprites/spr_Kirby_HatShadow_Yoyo_KSSU_Float/spr_Kirby_HatShadow_Yoyo_KSSU_Float.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_HatShadow_Yoyo_KSSU_Float",
     "tags": [],
     "resourceType": "GMSequence",

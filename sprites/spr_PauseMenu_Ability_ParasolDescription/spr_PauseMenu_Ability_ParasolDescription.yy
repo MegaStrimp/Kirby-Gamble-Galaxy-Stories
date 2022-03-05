@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_PauseMenu_Ability_ParasolDescription","path":"sprites/spr_PauseMenu_Ability_ParasolDescription/spr_PauseMenu_Ability_ParasolDescription.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_PauseMenu_Ability_ParasolDescription",
     "tags": [],
     "resourceType": "GMSequence",

@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Ice_Attack1Release","path":"sprites/spr_Kirby_Normal_Ice_Attack1Release/spr_Kirby_Normal_Ice_Attack1Release.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Ice_Attack1Release",
     "tags": [],
     "resourceType": "GMSequence",

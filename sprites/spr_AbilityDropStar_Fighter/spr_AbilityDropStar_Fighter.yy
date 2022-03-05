@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityDropStar_Fighter","path":"sprites/spr_AbilityDropStar_Fighter/spr_AbilityDropStar_Fighter.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityDropStar_Fighter",
     "tags": [],
     "resourceType": "GMSequence",

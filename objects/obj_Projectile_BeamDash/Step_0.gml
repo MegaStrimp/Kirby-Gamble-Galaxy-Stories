@@ -24,7 +24,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	if (instance_exists(owner))
 	{
-		if ((owner.hurt) or (owner.attackNumber != "beamDash"))
+		if ((owner.hurt) or (owner.attackNumber != playerAttacks.beamDash))
 		{
 			instance_destroy();
 		}

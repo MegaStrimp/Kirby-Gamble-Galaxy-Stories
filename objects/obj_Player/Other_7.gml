@@ -17,6 +17,23 @@ if (idleAnimation)
 	idleAnimationTimerMax = choose(10,30,45);
 }
 
+//Walking Animation
+
+if (sprite_index == sprWalk)
+{
+	if (playerAbility == playerAbilities.water)
+	{
+		if (waterWalkHatAnim == 0)
+		{
+			waterWalkHatAnim = 1;
+		}
+		else
+		{
+			waterWalkHatAnim = 0
+		}
+	}
+}
+
 //Falling Animation
 
 switch (playerCharacter)
@@ -127,7 +144,7 @@ if ((sprite_index == sprAbilityChange) and (state == playerStates.swallow))
 
 //Cutter Attack 1
 
-if (((attackNumber == "cutterNormal") or (attackNumber == "cutterChargeAttack")) and (sprite_index == sprCutterAttack1))
+if (((attackNumber == playerAttacks.cutterNormal) or (attackNumber == "cutterChargeAttack")) and (sprite_index == sprCutterAttack1))
 {
 	attack = false;
 	attackable = true;
@@ -149,11 +166,11 @@ if (((attackNumber == "sirKibbleCutterNormal") or (attackNumber == "sirKibbleCut
 
 //Beam Normal Attack
 
-if ((attackNumber == "beamNormal") and (sprite_index == sprBeamAttack1)) image_index = image_number - 1;
+if ((attackNumber == playerAttacks.beamNormal) and (sprite_index == sprBeamAttack1)) image_index = image_number - 1;
 
 //Beam Up Attack
 
-if ((attackNumber == "beamUp") and (sprite_index == sprBeamAttack4))
+if ((attackNumber == playerAttacks.beamUp) and (sprite_index == sprBeamAttack4))
 {
 	image_index = image_number - 1;
 	if (attackTimer == -1) attackTimer = 0;
@@ -161,19 +178,19 @@ if ((attackNumber == "beamUp") and (sprite_index == sprBeamAttack4))
 
 //Beam Charge Attack
 
-if ((attackNumber == "beamChargeAttack") and (sprite_index == sprBeamAttack5)) image_index = image_number - 1;
+if ((attackNumber == playerAttacks.beamChargeAttack) and (sprite_index == sprBeamAttack5)) image_index = image_number - 1;
 
 //Mystic Beam Normal Attack
 
-if ((attackNumber == "mysticBeamNormal") and (sprite_index == sprBeamAttack1)) image_index = image_number - 1;
+if ((attackNumber == playerAttacks.mysticBeamNormal) and (sprite_index == sprBeamAttack1)) image_index = image_number - 1;
 
 //Mystic Beam Charge Attack
 
-if ((attackNumber == "mysticBeamChargeAttack") and (sprite_index == sprBeamAttack5)) image_index = image_number - 1;
+if ((attackNumber == playerAttacks.mysticBeamChargeAttack) and (sprite_index == sprBeamAttack5)) image_index = image_number - 1;
 
 //Stone Normal Attack Ready
 
-if (((attackNumber == "stoneNormal") or (attackNumber == "gooeyStoneNormal")) and (sprite_index == sprStoneAttack1Ready))
+if (((attackNumber == playerAttacks.stoneNormal) or (attackNumber == "gooeyStoneNormal")) and (sprite_index == sprStoneAttack1Ready))
 {
 	image_index = image_number - 1;
 	var par = instance_create_depth(x,y - 3,depth - 1,obj_Particle);
@@ -184,15 +201,15 @@ if (((attackNumber == "stoneNormal") or (attackNumber == "gooeyStoneNormal")) an
 
 //Stone Up Attack
 
-if ((attackNumber == "stoneUp") and ((sprite_index == sprStoneAttack2) or (sprite_index == sprStoneAttack2Release))) image_index = image_number - 1;
+if ((attackNumber == playerAttacks.stoneUp) and ((sprite_index == sprStoneAttack2) or (sprite_index == sprStoneAttack2Release))) image_index = image_number - 1;
 
 //Mirror Slash Attack
 
-if ((attackNumber == "mirrorSlash") and (sprite_index == sprMirrorAttack1)) image_index = image_number - 1;
+if ((attackNumber == playerAttacks.mirrorSlash) and (sprite_index == sprMirrorAttack1)) image_index = image_number - 1;
 
 //Bomb Ready
 
-if ((attackNumber == "bombReady") and (sprite_index == sprBombReady))
+if ((attackNumber == playerAttacks.bombReady) and (sprite_index == sprBombReady))
 {
 	if (bombDownReady)
 	{
@@ -210,11 +227,11 @@ if ((attackNumber == "bombReady") and (sprite_index == sprBombReady))
 
 //Bomb Normal Attack
 
-if ((attackNumber == "bombNormal") and (sprite_index == sprBombAttack2)) image_index = image_number - 1;
+if ((attackNumber == playerAttacks.bombNormal) and (sprite_index == sprBombAttack2)) image_index = image_number - 1;
 
 //Bomb Dash Attack Release
 
-if ((attackNumber == "bombDash") and (sprite_index == sprBombAttack3Release))
+if ((attackNumber == playerAttacks.bombDash) and (sprite_index == sprBombAttack3Release))
 {
 	attackTimer = 0;
 	image_index = image_number - 1;
@@ -222,7 +239,7 @@ if ((attackNumber == "bombDash") and (sprite_index == sprBombAttack3Release))
 
 //Bomb Dash Attack Ready
 
-if ((attackNumber == "bombDash") and (sprite_index == sprBombAttack3Ready))
+if ((attackNumber == playerAttacks.bombDash) and (sprite_index == sprBombAttack3Ready))
 {
 	sprite_index = sprBombAttack3Release;
 	image_index = 0;
@@ -242,13 +259,13 @@ if (sprite_index == sprFireAttackRelease1)
 if (sprite_index == sprIceAttack1Ready)
 {
 	iceReady = false;
-	attackNumber = "iceNormal";
+	attackNumber = playerAttacks.iceNormal;
 	sprite_index = sprIceAttack1;
 }
 
 //Ice Normal Attack Release
 
-if ((attackNumber == "iceNormal") and (sprite_index == sprIceAttack1Release))
+if ((attackNumber == playerAttacks.iceNormal) and (sprite_index == sprIceAttack1Release))
 {
 	iceReady = true;
 	iceRelease = false;
@@ -274,7 +291,7 @@ if ((attack) and (sprite_index == sprSparkAttack1Ready))
 {
 	switch (attackNumber)
 	{
-		case "sparkNone":
+		case playerAttacks.sparkNone:
 		if (audio_is_playing(snd_Spark1)) audio_stop_sound(snd_Spark1);
 		audio_play_sound(snd_Spark1,0,false);
 		var par = instance_create_depth(x + (8 * dir),y - 7,depth - 1,obj_DepthParticle);
@@ -296,7 +313,7 @@ if ((attack) and (sprite_index == sprSparkAttack1Ready))
 		projectile.destroyTimer = 8;
 		break;
 		
-		case "sparkLow":
+		case playerAttacks.sparkLow:
 		if (audio_is_playing(snd_Spark2)) audio_stop_sound(snd_Spark2);
 		audio_play_sound(snd_Spark2,0,false);
 		var projectile = instance_create_depth(x + (6 * dir),y - 5,depth - 1,obj_Projectile_Spark);
@@ -314,7 +331,7 @@ if ((attack) and (sprite_index == sprSparkAttack1Ready))
 		projectile.destroyTimer = 60;
 		break;
 		
-		case "sparkMid":
+		case playerAttacks.sparkMid:
 		if (audio_is_playing(snd_Spark3)) audio_stop_sound(snd_Spark3);
 		audio_play_sound(snd_Spark3,0,false);
 		var projectile = instance_create_depth(x + (6 * dir),y - 7,depth - 1,obj_Projectile_Spark);
@@ -376,7 +393,7 @@ if ((attack) and (sprite_index == sprSparkAttack2Ready))
 {
 	switch (attackNumber)
 	{
-		case "sparkHigh":
+		case playerAttacks.sparkHigh:
 		if (audio_is_playing(snd_Spark4)) audio_stop_sound(snd_Spark4);
 		audio_play_sound(snd_Spark4,0,false);
 		var projectile = instance_create_depth(x + (6 * dir),y - 8,depth - 1,obj_Projectile_Spark);
@@ -395,7 +412,7 @@ if ((attack) and (sprite_index == sprSparkAttack2Ready))
 		projectile.paletteIndex = 1;
 		break;
 		
-		case "sparkMax":
+		case playerAttacks.sparkMax:
 		if (audio_is_playing(snd_Spark5)) audio_stop_sound(snd_Spark5);
 		audio_play_sound(snd_Spark5,0,false);
 		var projectile = instance_create_depth(x + (6 * dir),y - 7,depth - 1,obj_Projectile_Spark);
@@ -453,7 +470,7 @@ if ((attack) and (sprite_index == sprWingAttack2Ready))
 {
 	sprite_index = sprWingAttack2;
 	image_index = 0;
-	attackNumber = "wingDash";
+	attackNumber = playerAttacks.wingDash;
 }
 
 //Sword Attack 1

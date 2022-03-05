@@ -9,7 +9,7 @@ if (!global.pause)
 {
 	scr_Object_Inhale();
 	
-	scr_Enemy_HurtsPlayer();
+	scr_Enemy_HurtsPlayer(dmg);
 	
 	hsp = scr_Friction(hsp,decel);
 	

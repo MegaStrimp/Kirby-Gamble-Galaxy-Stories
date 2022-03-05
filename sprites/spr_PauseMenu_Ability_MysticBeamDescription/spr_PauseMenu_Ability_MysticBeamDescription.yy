@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_PauseMenu_Ability_MysticBeamDescription","path":"sprites/spr_PauseMenu_Ability_MysticBeamDescription/spr_PauseMenu_Ability_MysticBeamDescription.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_PauseMenu_Ability_MysticBeamDescription",
     "tags": [],
     "resourceType": "GMSequence",

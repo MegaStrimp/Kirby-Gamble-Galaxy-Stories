@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Familiar_EpicJar_Fetus_AttackStop","path":"sprites/spr_Familiar_EpicJar_Fetus_AttackStop/spr_Familiar_EpicJar_Fetus_AttackStop.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Familiar_EpicJar_Fetus_AttackStop",
     "tags": [],
     "resourceType": "GMSequence",

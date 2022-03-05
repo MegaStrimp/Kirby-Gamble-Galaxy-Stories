@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_PauseMenu_Ability_FighterDescription","path":"sprites/spr_PauseMenu_Ability_FighterDescription/spr_PauseMenu_Ability_FighterDescription.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_PauseMenu_Ability_FighterDescription",
     "tags": [],
     "resourceType": "GMSequence",

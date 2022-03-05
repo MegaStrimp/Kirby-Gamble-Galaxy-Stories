@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_TopHud_Blocks","path":"sprites/spr_Maykr_TopHud_Blocks/spr_Maykr_TopHud_Blocks.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_TopHud_Blocks",
     "tags": [],
     "resourceType": "GMSequence",

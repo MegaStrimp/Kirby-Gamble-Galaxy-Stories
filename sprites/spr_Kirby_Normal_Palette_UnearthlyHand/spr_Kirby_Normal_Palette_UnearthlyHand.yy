@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Palette_UnearthlyHand","path":"sprites/spr_Kirby_Normal_Palette_UnearthlyHand/spr_Kirby_Normal_Palette_UnearthlyHand.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Palette_UnearthlyHand",
     "tags": [],
     "resourceType": "GMSequence",

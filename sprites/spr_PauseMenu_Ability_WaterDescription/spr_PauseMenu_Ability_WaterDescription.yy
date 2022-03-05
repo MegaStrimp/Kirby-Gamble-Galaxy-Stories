@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_PauseMenu_Ability_WaterDescription","path":"sprites/spr_PauseMenu_Ability_WaterDescription/spr_PauseMenu_Ability_WaterDescription.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_PauseMenu_Ability_WaterDescription",
     "tags": [],
     "resourceType": "GMSequence",

@@ -115,7 +115,7 @@ i += 1;
 selectedSubtitle = irandom_range(0,array_length(subtitles) - 1);
 #endregion
 
-//Window Caption
+#region Window Caption
 
 global.versionNumber = "Beta XIV";
 global.versionNumber = "Gamble Maykr Beta III";
@@ -141,11 +141,26 @@ switch (windowGen[0])
 if (windowGen[2] == 0) windowCaption[2] = "Gamernt";
 if (windowGen[2] == 0) windowCaption[2] = "Gamernt";
 window_set_caption(windowCaption[0] + " " + windowCaption[1] + " " + windowCaption[2] + " " + windowCaption[3] + " - " + global.versionNumber + " - " + subtitles[selectedSubtitle]);
+#endregion
 
-//Set Macros and Enums
-
+#region Set Macros and Enums
 #macro gameView view_camera[0]
 
+enum languages
+{
+	english,
+	turkish,
+	german,
+	italian,
+	french,
+	polish,
+	chinese,
+	spanish,
+	japanese,
+	portuguese,
+	norwegian,
+	arabic
+}
 enum playerStates
 {
     normal,
@@ -163,6 +178,7 @@ enum playerStates
 	mirrorDash,
 	fireDash,
 	iceGrab,
+	wheelNormal,
 	wingDash,
 	swordDash,
     death
@@ -227,9 +243,78 @@ enum playerAbilities
 
 enum playerAttacks
 {
-    normal,
-    cutter,
-    beam
+    keyNormal,
+
+	cutterNormal,
+	cutterCharge,
+	cutterDash,
+	cutterAir,
+	cutterDrop,
+
+	beamNormal,
+	beamCharge,
+	beamChargeAttack,
+	beamDash,
+	beamUp,
+	beamAir,
+	beamGrab,
+
+	mysticBeamNormal,
+	mysticBeamCharge,
+	mysticBeamChargeAttack,
+	mysticBeamDash,
+	mysticBeamAir,
+	mysticBeamGrab,
+
+	stoneNormal,
+	stoneUp,
+
+	ufoCharge,
+	ufoBeam,
+
+	mirrorSlash,
+	mirrorNormal,
+	mirrorDash,
+	mirrorUp,
+	mirrorDown,
+
+	ninjaNormal,
+	ninjaCharge,
+	ninjaSlash,
+
+	bombReady,
+	bombNormal,
+	bombDash,
+	bombGrab,
+
+	fireNormal,
+	fireDash,
+	fireAerial,
+	fireWheel,
+	fireBack,
+
+	iceNormal,
+	iceGrab,
+
+	sparkNone,
+	sparkLow,
+	sparkMid,
+	sparkHigh,
+	sparkMax,
+	sparkUp,
+	sparkDown,
+
+	wheelNormal,
+
+	wingNormal,
+	wingDash,
+
+	swordNormal,
+	swordDash,
+
+	sleepNormal,
+
+	scanNormal
 }
 
 enum damageTypes
@@ -282,9 +367,9 @@ enum carriedItemStates
 	light,
 	heavy
 }
+#endregion
 
-//Global Variables
-
+#region Global Variables
 global.selectedSave = "Save1.ini";
 global.hpMax = 5;
 global.hpP1 = global.hpMax;
@@ -333,9 +418,9 @@ global.discordLargeImage = "ggs_icon";
 global.discordLargeImageText = "Kirby Gamble Galaxy Stories - " + global.versionNumber;
 global.discordSmallImage = "teamgamble_icon";
 global.discordSmallImageText = "Team Gamble";
+#endregion
 
-//Load Game
-
+#region Load Game
 scr_LoadGame(global.selectedSave);
 scr_SaveGame(global.selectedSave);
 
@@ -350,15 +435,15 @@ global.storyModeUnlocked = false;
 //global.gamblionUnlocked = true;
 //global.bitcrushedUnlocked = true;
 //global.samuraiKirbyUnlocked = true;
+#endregion
 
-//Fonts
-
+#region Fonts
 mapStringKssu = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz .!";
 global.bitmapKssu = font_add_sprite_ext(spr_Hud_Dialogue_Font_Kssu,mapStringKssu,false,0);
 global.fontDialogueDefaultKanji = font_add(working_directory + "ARIALUNI.TTF",12,false,false,32,127);
+#endregion
 
-//Discord Rich Presence Setup
-
+#region Discord Rich Presence Setup
 var appId = "754628961522286702";
 
 if (!rousr_dissonance_create(appId)) Error_msg = "Discord RPC unable to initialize";
@@ -369,10 +454,11 @@ rousr_dissonance_handler_on_error(example_on_error, id);
 rousr_dissonance_handler_on_join(example_on_join, id);
 rousr_dissonance_handler_on_spectate(example_on_spectate, id);
 rousr_dissonance_handler_on_join_request(example_on_join_request, id);
+#endregion
 
-//Palette Swap Setup
-
+#region Palette Swap Setup
 if (global.shaders) pal_swap_init_system(shd_pal_swapper,shd_pal_html_sprite,shd_pal_html_surface);
+#endregion
 
 global.gambleUnlocked = true;
 global.gooeyUnlocked = true;

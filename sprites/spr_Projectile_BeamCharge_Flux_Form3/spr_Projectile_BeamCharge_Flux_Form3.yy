@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_BeamCharge_Flux_Form3","path":"sprites/spr_Projectile_BeamCharge_Flux_Form3/spr_Projectile_BeamCharge_Flux_Form3.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_BeamCharge_Flux_Form3",
     "tags": [],
     "resourceType": "GMSequence",

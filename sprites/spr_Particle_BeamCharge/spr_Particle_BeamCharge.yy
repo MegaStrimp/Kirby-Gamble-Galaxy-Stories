@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_BeamCharge","path":"sprites/spr_Particle_BeamCharge/spr_Particle_BeamCharge.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_BeamCharge",
     "tags": [],
     "resourceType": "GMSequence",

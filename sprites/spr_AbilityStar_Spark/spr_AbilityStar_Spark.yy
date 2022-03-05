@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityStar_Spark","path":"sprites/spr_AbilityStar_Spark/spr_AbilityStar_Spark.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityStar_Spark",
     "tags": [],
     "resourceType": "GMSequence",

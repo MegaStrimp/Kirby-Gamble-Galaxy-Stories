@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Jet_KSSU_Palette_SpeedMachine","path":"sprites/spr_Kirby_AbilityHat_Jet_KSSU_Palette_SpeedMachine/spr_Kirby_AbilityHat_Jet_KSSU_Palette_SpeedMachine.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Jet_KSSU_Palette_SpeedMachine",
     "tags": [],
     "resourceType": "GMSequence",

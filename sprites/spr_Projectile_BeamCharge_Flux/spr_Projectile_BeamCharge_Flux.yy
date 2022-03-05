@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_BeamCharge_Flux","path":"sprites/spr_Projectile_BeamCharge_Flux/spr_Projectile_BeamCharge_Flux.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_BeamCharge_Flux",
     "tags": [],
     "resourceType": "GMSequence",

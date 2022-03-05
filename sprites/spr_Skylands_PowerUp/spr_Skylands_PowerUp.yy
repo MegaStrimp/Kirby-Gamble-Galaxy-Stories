@@ -83,7 +83,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Skylands_PowerUp","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Skylands_PowerUp",
     "tags": [],
     "resourceType": "GMSequence",

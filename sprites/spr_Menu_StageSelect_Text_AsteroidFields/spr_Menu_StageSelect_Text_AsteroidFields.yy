@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_StageSelect_Text_AsteroidFields","path":"sprites/spr_Menu_StageSelect_Text_AsteroidFields/spr_Menu_StageSelect_Text_AsteroidFields.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_StageSelect_Text_AsteroidFields",
     "tags": [],
     "resourceType": "GMSequence",

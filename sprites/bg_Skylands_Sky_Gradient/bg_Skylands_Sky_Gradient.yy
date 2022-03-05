@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bg_Skylands_Sky_Gradient","path":"sprites/bg_Skylands_Sky_Gradient/bg_Skylands_Sky_Gradient.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bg_Skylands_Sky_Gradient",
     "tags": [],
     "resourceType": "GMSequence",

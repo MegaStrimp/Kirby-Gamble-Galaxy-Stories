@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_InhaleMask","path":"sprites/spr_Kirby_InhaleMask/spr_Kirby_InhaleMask.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_InhaleMask",
     "tags": [],
     "resourceType": "GMSequence",

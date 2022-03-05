@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bg_ColdOdyssey_Clouds3","path":"sprites/bg_ColdOdyssey_Clouds3/bg_ColdOdyssey_Clouds3.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bg_ColdOdyssey_Clouds3",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Mirror_KSSU_Palette_JesterReflection","path":"sprites/spr_Kirby_AbilityHat_Mirror_KSSU_Palette_JesterReflection/spr_Kirby_AbilityHat_Mirror_KSSU_Palette_JesterReflection.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Mirror_KSSU_Palette_JesterReflection",
     "tags": [],
     "resourceType": "GMSequence",

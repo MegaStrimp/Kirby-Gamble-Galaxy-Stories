@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"fg_GearCube_DepthsTest","path":"sprites/fg_GearCube_DepthsTest/fg_GearCube_DepthsTest.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "fg_GearCube_DepthsTest",
     "tags": [],
     "resourceType": "GMSequence",

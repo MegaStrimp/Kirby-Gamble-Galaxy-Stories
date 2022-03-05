@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Button_Environment","path":"sprites/spr_Maykr_Button_Environment/spr_Maykr_Button_Environment.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Button_Environment",
     "tags": [],
     "resourceType": "GMSequence",

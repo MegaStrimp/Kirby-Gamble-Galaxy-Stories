@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_TutorialSign_Symbol_KirbyFloat","path":"sprites/spr_TutorialSign_Symbol_KirbyFloat/spr_TutorialSign_Symbol_KirbyFloat.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_TutorialSign_Symbol_KirbyFloat",
     "tags": [],
     "resourceType": "GMSequence",

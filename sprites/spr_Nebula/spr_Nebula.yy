@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Nebula","path":"sprites/spr_Nebula/spr_Nebula.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Nebula",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_UltraXatch_Normal_Crown","path":"sprites/spr_UltraXatch_Normal_Crown/spr_UltraXatch_Normal_Crown.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_UltraXatch_Normal_Crown",
     "tags": [],
     "resourceType": "GMSequence",

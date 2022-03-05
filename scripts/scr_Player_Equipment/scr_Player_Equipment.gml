@@ -13,6 +13,37 @@ function scr_Player_Equipment(argument0,argument1)
 		case playerCharacters.kirby:
 		switch (abilityToCheck)
 		{
+			case playerAbilities.cutter:
+			if (player == 0)
+			{
+				var altHatToCheck = global.hatTypeCutterP1;
+			}
+			else
+			{
+				var altHatToCheck = global.hatTypeCutterP2;
+			}
+			
+			switch (altHatToCheck)
+			{
+				case "kssu":
+				switch(sprite_index)
+				{
+					case sprCutterCharge:
+					equipmentIndex = spr_Kirby_Equipment_Cutter_KSSU_Charge;
+					break;
+					
+					default:
+					equipmentIndex = -1;
+					break;
+				}
+				break;
+				
+				default:
+				equipmentIndex = -1;
+				break;
+			}
+			break;
+			
 			case playerAbilities.beam:
 			if (player == 0)
 			{

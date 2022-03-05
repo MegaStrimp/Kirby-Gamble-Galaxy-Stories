@@ -24,7 +24,7 @@ if (!global.pause)
 {
 	//Hurt Player
 	
-	scr_Enemy_HurtsPlayer();
+	scr_Enemy_HurtsPlayer(dmg);
 	
 	//Activate
 	

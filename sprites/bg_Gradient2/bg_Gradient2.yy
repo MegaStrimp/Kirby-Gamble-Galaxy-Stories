@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bg_Gradient2","path":"sprites/bg_Gradient2/bg_Gradient2.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bg_Gradient2",
     "tags": [],
     "resourceType": "GMSequence",

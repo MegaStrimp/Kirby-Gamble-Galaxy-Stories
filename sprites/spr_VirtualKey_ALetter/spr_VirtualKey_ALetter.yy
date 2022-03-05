@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_VirtualKey_ALetter","path":"sprites/spr_VirtualKey_ALetter/spr_VirtualKey_ALetter.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_VirtualKey_ALetter",
     "tags": [],
     "resourceType": "GMSequence",

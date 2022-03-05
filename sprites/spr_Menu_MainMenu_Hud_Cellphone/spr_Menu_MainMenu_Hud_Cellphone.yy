@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_MainMenu_Hud_Cellphone","path":"sprites/spr_Menu_MainMenu_Hud_Cellphone/spr_Menu_MainMenu_Hud_Cellphone.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_MainMenu_Hud_Cellphone",
     "tags": [],
     "resourceType": "GMSequence",

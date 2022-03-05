@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_PepBrew","path":"sprites/spr_PepBrew/spr_PepBrew.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_PepBrew",
     "tags": [],
     "resourceType": "GMSequence",

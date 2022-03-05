@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bg_VelvetDiamond","path":"sprites/bg_VelvetDiamond/bg_VelvetDiamond.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bg_VelvetDiamond",
     "tags": [],
     "resourceType": "GMSequence",

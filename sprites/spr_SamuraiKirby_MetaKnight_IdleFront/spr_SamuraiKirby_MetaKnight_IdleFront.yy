@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_SamuraiKirby_MetaKnight_IdleFront","path":"sprites/spr_SamuraiKirby_MetaKnight_IdleFront/spr_SamuraiKirby_MetaKnight_IdleFront.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_SamuraiKirby_MetaKnight_IdleFront",
     "tags": [],
     "resourceType": "GMSequence",

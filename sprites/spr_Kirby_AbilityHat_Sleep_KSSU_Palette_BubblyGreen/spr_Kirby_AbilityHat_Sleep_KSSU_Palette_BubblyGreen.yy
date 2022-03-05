@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Sleep_KSSU_Palette_BubblyGreen","path":"sprites/spr_Kirby_AbilityHat_Sleep_KSSU_Palette_BubblyGreen/spr_Kirby_AbilityHat_Sleep_KSSU_Palette_BubblyGreen.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Sleep_KSSU_Palette_BubblyGreen",
     "tags": [],
     "resourceType": "GMSequence",

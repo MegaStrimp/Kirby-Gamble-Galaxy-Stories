@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityDropStar_Wheel","path":"sprites/spr_AbilityDropStar_Wheel/spr_AbilityDropStar_Wheel.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityDropStar_Wheel",
     "tags": [],
     "resourceType": "GMSequence",

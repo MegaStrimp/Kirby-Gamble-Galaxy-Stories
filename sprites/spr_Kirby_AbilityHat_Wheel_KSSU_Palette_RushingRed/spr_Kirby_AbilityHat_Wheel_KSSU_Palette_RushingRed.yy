@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Wheel_KSSU_Palette_RushingRed","path":"sprites/spr_Kirby_AbilityHat_Wheel_KSSU_Palette_RushingRed/spr_Kirby_AbilityHat_Wheel_KSSU_Palette_RushingRed.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Wheel_KSSU_Palette_RushingRed",
     "tags": [],
     "resourceType": "GMSequence",

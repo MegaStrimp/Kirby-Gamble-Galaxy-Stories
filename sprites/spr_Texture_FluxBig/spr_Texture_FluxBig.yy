@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Texture_FluxBig","path":"sprites/spr_Texture_FluxBig/spr_Texture_FluxBig.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Texture_FluxBig",
     "tags": [],
     "resourceType": "GMSequence",

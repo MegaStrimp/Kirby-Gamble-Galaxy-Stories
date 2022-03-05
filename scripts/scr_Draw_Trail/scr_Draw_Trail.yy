@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Misc",
-    "path": "folders/Scripts/Misc.yy",
+    "name": "Create Trail",
+    "path": "folders/Scripts/Extensions/Create Trail.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_Draw_Trail",
+  "name": "scr_draw_trail",
   "tags": [],
   "resourceType": "GMScript",
 }

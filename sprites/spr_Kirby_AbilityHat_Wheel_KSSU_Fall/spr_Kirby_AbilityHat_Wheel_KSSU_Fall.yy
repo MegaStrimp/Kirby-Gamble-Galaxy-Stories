@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Wheel_KSSU_Fall","path":"sprites/spr_Kirby_AbilityHat_Wheel_KSSU_Fall/spr_Kirby_AbilityHat_Wheel_KSSU_Fall.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Wheel_KSSU_Fall",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Beam_MarxSoul_Idle","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_Idle/spr_Kirby_AbilityHat_Beam_MarxSoul_Idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Beam_MarxSoul_Idle",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_WaddleDee_Alien_Palette_Graylien","path":"sprites/spr_WaddleDee_Alien_Palette_Graylien/spr_WaddleDee_Alien_Palette_Graylien.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_WaddleDee_Alien_Palette_Graylien",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Parasol_KSSU_Palette_LazyRed","path":"sprites/spr_Kirby_AbilityHat_Parasol_KSSU_Palette_LazyRed/spr_Kirby_AbilityHat_Parasol_KSSU_Palette_LazyRed.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Parasol_KSSU_Palette_LazyRed",
     "tags": [],
     "resourceType": "GMSequence",

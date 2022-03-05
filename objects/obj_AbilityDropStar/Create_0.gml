@@ -8,6 +8,9 @@ movespeed = 1;
 jumpspeed = 6;
 grav = .2;
 gravLimit = 5;
+accel = .025;
+walkDirY = -1;
+vspDummy = 0;
 
 //Other Variables
 
@@ -26,6 +29,7 @@ insideWall = false;
 hasAura = false;
 player = id;
 isBubble = false;
+invincible = false;
 
 //Timers
 

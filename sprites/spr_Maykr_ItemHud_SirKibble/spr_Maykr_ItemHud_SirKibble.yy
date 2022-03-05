@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_ItemHud_SirKibble","path":"sprites/spr_Maykr_ItemHud_SirKibble/spr_Maykr_ItemHud_SirKibble.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_ItemHud_SirKibble",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_BeamDash","path":"sprites/spr_Kirby_BeamDash/spr_Kirby_BeamDash.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_BeamDash",
     "tags": [],
     "resourceType": "GMSequence",

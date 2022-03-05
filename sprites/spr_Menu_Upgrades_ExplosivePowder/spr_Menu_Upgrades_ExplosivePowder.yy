@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Upgrades_ExplosivePowder","path":"sprites/spr_Menu_Upgrades_ExplosivePowder/spr_Menu_Upgrades_ExplosivePowder.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Upgrades_ExplosivePowder",
     "tags": [],
     "resourceType": "GMSequence",

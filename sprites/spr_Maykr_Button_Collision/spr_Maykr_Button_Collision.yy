@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Button_Collision","path":"sprites/spr_Maykr_Button_Collision/spr_Maykr_Button_Collision.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Button_Collision",
     "tags": [],
     "resourceType": "GMSequence",

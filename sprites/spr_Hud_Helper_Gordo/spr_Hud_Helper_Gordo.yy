@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Hud_Helper_Gordo","path":"sprites/spr_Hud_Helper_Gordo/spr_Hud_Helper_Gordo.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Hud_Helper_Gordo",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_SamuraiKirby_Hud_LineKingDedede","path":"sprites/spr_SamuraiKirby_Hud_LineKingDedede/spr_SamuraiKirby_Hud_LineKingDedede.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_SamuraiKirby_Hud_LineKingDedede",
     "tags": [],
     "resourceType": "GMSequence",

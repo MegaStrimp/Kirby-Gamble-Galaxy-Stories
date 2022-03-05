@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Palette_WaddleWaddle","path":"sprites/spr_Kirby_Normal_Palette_WaddleWaddle/spr_Kirby_Normal_Palette_WaddleWaddle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Palette_WaddleWaddle",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Treasure_Cheat","path":"sprites/spr_Treasure_Cheat/spr_Treasure_Cheat.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Treasure_Cheat",
     "tags": [],
     "resourceType": "GMSequence",

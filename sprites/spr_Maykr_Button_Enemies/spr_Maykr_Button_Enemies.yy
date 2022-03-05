@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Button_Enemies","path":"sprites/spr_Maykr_Button_Enemies/spr_Maykr_Button_Enemies.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Button_Enemies",
     "tags": [],
     "resourceType": "GMSequence",

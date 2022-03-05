@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityStar_Ice","path":"sprites/spr_AbilityStar_Ice/spr_AbilityStar_Ice.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityStar_Ice",
     "tags": [],
     "resourceType": "GMSequence",

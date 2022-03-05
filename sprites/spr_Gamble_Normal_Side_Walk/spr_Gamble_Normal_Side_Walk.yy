@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Gamble_Normal_Side_Walk","path":"sprites/spr_Gamble_Normal_Side_Walk/spr_Gamble_Normal_Side_Walk.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Gamble_Normal_Side_Walk",
     "tags": [],
     "resourceType": "GMSequence",

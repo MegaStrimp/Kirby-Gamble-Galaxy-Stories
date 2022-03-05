@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_SwordMask2","path":"sprites/spr_Projectile_SwordMask2/spr_Projectile_SwordMask2.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_SwordMask2",
     "tags": [],
     "resourceType": "GMSequence",

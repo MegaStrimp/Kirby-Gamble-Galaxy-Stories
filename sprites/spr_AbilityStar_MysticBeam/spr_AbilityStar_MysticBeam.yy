@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityStar_MysticBeam","path":"sprites/spr_AbilityStar_MysticBeam/spr_AbilityStar_MysticBeam.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityStar_MysticBeam",
     "tags": [],
     "resourceType": "GMSequence",

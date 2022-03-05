@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_SimirrorMid","path":"sprites/spr_Projectile_SimirrorMid/spr_Projectile_SimirrorMid.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_SimirrorMid",
     "tags": [],
     "resourceType": "GMSequence",

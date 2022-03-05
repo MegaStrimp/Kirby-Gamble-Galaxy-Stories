@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Palette_Blurple","path":"sprites/spr_Kirby_Normal_Palette_Blurple/spr_Kirby_Normal_Palette_Blurple.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Palette_Blurple",
     "tags": [],
     "resourceType": "GMSequence",

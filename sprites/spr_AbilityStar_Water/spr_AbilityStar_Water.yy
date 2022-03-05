@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityStar_Water","path":"sprites/spr_AbilityStar_Water/spr_AbilityStar_Water.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityStar_Water",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Gamble_Normal_Side_Pleased","path":"sprites/spr_Gamble_Normal_Side_Pleased/spr_Gamble_Normal_Side_Pleased.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Gamble_Normal_Side_Pleased",
     "tags": [],
     "resourceType": "GMSequence",

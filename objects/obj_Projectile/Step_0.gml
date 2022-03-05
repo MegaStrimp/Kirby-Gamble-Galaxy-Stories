@@ -12,7 +12,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	if (hurtsPlayer)
 	{
-		scr_Enemy_HurtsPlayer();
+		scr_Enemy_HurtsPlayer(dmg);
 		
 		if ((destroyableByPlayer) and (place_meeting(x,y,obj_Player)))
 		{

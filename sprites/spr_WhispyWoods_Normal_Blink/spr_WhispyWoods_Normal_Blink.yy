@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_WhispyWoods_Normal_Blink","path":"sprites/spr_WhispyWoods_Normal_Blink/spr_WhispyWoods_Normal_Blink.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_WhispyWoods_Normal_Blink",
     "tags": [],
     "resourceType": "GMSequence",

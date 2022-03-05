@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_Cutter_Enemy","path":"sprites/spr_Projectile_Cutter_Enemy/spr_Projectile_Cutter_Enemy.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_Cutter_Enemy",
     "tags": [],
     "resourceType": "GMSequence",

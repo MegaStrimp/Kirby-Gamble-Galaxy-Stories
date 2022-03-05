@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Bomb_KSSU_Attack3Ready","path":"sprites/spr_Kirby_AbilityHat_Bomb_KSSU_Attack3Ready/spr_Kirby_AbilityHat_Bomb_KSSU_Attack3Ready.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Bomb_KSSU_Attack3Ready",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bg_ShiverStar_Mountains3","path":"sprites/bg_ShiverStar_Mountains3/bg_ShiverStar_Mountains3.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bg_ShiverStar_Mountains3",
     "tags": [],
     "resourceType": "GMSequence",

@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_CappyDust","path":"sprites/spr_Particle_CappyDust/spr_Particle_CappyDust.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_CappyDust",
     "tags": [],
     "resourceType": "GMSequence",

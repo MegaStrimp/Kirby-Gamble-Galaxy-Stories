@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bg_ShiverStar_Sky","path":"sprites/bg_ShiverStar_Sky/bg_ShiverStar_Sky.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bg_ShiverStar_Sky",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_InvincibilityCandy","path":"sprites/spr_InvincibilityCandy/spr_InvincibilityCandy.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_InvincibilityCandy",
     "tags": [],
     "resourceType": "GMSequence",

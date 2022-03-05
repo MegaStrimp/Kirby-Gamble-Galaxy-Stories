@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_SimirrorShine","path":"sprites/spr_Particle_SimirrorShine/spr_Particle_SimirrorShine.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_SimirrorShine",
     "tags": [],
     "resourceType": "GMSequence",

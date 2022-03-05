@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityDropStar_Hammer","path":"sprites/spr_AbilityDropStar_Hammer/spr_AbilityDropStar_Hammer.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityDropStar_Hammer",
     "tags": [],
     "resourceType": "GMSequence",

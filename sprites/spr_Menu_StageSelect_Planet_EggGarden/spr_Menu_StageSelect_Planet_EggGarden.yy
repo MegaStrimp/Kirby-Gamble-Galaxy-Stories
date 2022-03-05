@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_StageSelect_Planet_EggGarden","path":"sprites/spr_Menu_StageSelect_Planet_EggGarden/spr_Menu_StageSelect_Planet_EggGarden.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_StageSelect_Planet_EggGarden",
     "tags": [],
     "resourceType": "GMSequence",

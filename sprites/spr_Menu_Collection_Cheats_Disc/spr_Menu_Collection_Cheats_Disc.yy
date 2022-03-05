@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Collection_Cheats_Disc","path":"sprites/spr_Menu_Collection_Cheats_Disc/spr_Menu_Collection_Cheats_Disc.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Collection_Cheats_Disc",
     "tags": [],
     "resourceType": "GMSequence",

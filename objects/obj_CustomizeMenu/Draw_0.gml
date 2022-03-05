@@ -96,6 +96,84 @@ switch (page)
 	break;
 	#endregion
 	
+	#region Skin Owner
+	case "skinOwner":
+	for (var i = 0; i < array_length(characterTitle); i++) characterOffsetLerp[i] = lerp(characterOffsetLerp[i],characterOffset[i] * 8,.25);
+	
+	textY = lerp(textY,147 - (selection * 36),.25);
+	
+	draw_set_color(c_black);
+	draw_set_alpha(.75);
+	draw_roundrect(10,45,160,265,false);
+	draw_set_alpha(1);
+	
+	if (characterIcon[selection] != -1) draw_sprite_ext(characterIcon[selection],0,242,110,1,1,image_angle,image_blend,image_alpha);
+	
+	draw_sprite(spr_Menu_Options_CursorArrow,0,8,141);
+	
+	for (var i = 0; i < array_length(characterTitle); i++)
+	{
+	    if (i == selection) textAlpha = 1;
+	    if ((i == selection - 1) or (i == selection + 1)) textAlpha = .66;
+	    if ((i == selection - 2) or (i == selection + 2)) textAlpha = .33;
+	    if ((i < selection - 2) or (i > selection + 2)) textAlpha = 0;
+		var col = c_dkgray;
+		if (characterUnlocked[i]) col = c_white;
+		if (textAlpha != 0) scr_Draw_Text_Color_Outline(26 + characterOffsetLerp[i],textY + (36 * i),characterTitle[i],-1,-1,col,col,textAlpha,c_black,c_black,textAlpha,2,5,image_xscale,image_yscale,image_angle);
+	}
+	break;
+	#endregion
+	
+	#region Skins
+	case "skins":
+	for (var i = 0; i < array_length(characterSkinTitle[subSelection]); i++) characterSkinOffsetLerp[subSelection][i] = lerp(characterSkinOffsetLerp[subSelection][i],characterSkinOffset[subSelection][i] * 8,.25);
+	
+	textY = lerp(textY,147 - (selection * 36),.25);
+	
+	draw_set_color(c_black);
+	draw_set_alpha(.75);
+	draw_roundrect(2,37,122,268,false);
+	draw_roundrect(126,188,476,268,false);
+	draw_set_alpha(1);
+	
+	draw_set_halign(fa_center);
+	var col1 = c_white;
+	var col2 = c_white;
+	scr_Draw_Text_Color_Outline(301,192,characterSkinTitleDraw[subSelection][selection],-1,350,col1,col2,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	draw_set_halign(fa_left);
+	
+	var textColor = c_white;
+	
+	if (characterSkinSprite[subSelection][selection] != -1) draw_sprite_ext(characterSkinSprite[subSelection][selection],0,242,140,1,1,image_angle,image_blend,image_alpha);
+	
+	draw_sprite(spr_Menu_Options_CursorArrow,0,0,141);
+	
+	for (var i = 0; i < array_length(characterSkinTitle[subSelection]); i++)
+	{
+	    if (i == selection) textAlpha = 1;
+	    if ((i == selection - 1) or (i == selection + 1)) textAlpha = .66;
+	    if ((i == selection - 2) or (i == selection + 2)) textAlpha = .33;
+	    if ((i < selection - 2) or (i > selection + 2)) textAlpha = 0;
+		var col1 = c_dkgray;
+		var col2 = c_dkgray;
+		var selectedOffset = 0;
+		if (characterSkinUnlocked[subSelection][i])
+		{
+			col1 = textColor;
+			col2 = c_white;
+		}
+		if (characterSkinValue[subSelection][i] == playerSkin)
+		{
+			col1 = c_yellow;
+			col2 = c_yellow;
+			selectedOffset = 36;
+		}
+		if (selectedOffset != 0) draw_sprite_ext(spr_AbilityDropStar_Normal,starIndex,28 + characterSkinOffsetLerp[subSelection][i],textY + 7 + (36 * i),1,1,image_angle,image_blend,textAlpha);
+		if (textAlpha != 0) scr_Draw_Text_Color_Outline(14 + selectedOffset + characterSkinOffsetLerp[subSelection][i],textY + (36 * i),characterSkinTitle[subSelection][i],-1,-1,col1,col2,textAlpha,c_black,c_black,textAlpha,2,5,image_xscale,image_yscale,image_angle);
+	}
+	break;
+	#endregion
+	
 	#region Spray Paint Owner
 	case "sprayPaintOwner":
 	for (var i = 0; i < array_length(characterTitle); i++) characterOffsetLerp[i] = lerp(characterOffsetLerp[i],characterOffset[i] * 8,.25);

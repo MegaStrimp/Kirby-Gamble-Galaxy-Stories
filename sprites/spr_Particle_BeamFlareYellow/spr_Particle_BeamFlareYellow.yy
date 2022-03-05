@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_BeamFlareYellow","path":"sprites/spr_Particle_BeamFlareYellow/spr_Particle_BeamFlareYellow.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_BeamFlareYellow",
     "tags": [],
     "resourceType": "GMSequence",

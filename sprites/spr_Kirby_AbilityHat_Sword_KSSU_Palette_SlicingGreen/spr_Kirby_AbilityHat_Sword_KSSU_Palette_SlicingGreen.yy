@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Sword_KSSU_Palette_SlicingGreen","path":"sprites/spr_Kirby_AbilityHat_Sword_KSSU_Palette_SlicingGreen/spr_Kirby_AbilityHat_Sword_KSSU_Palette_SlicingGreen.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Sword_KSSU_Palette_SlicingGreen",
     "tags": [],
     "resourceType": "GMSequence",

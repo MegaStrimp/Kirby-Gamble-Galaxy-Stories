@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Bomb_Modern_Ready","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Ready/spr_Kirby_AbilityHat_Bomb_Modern_Ready.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Bomb_Modern_Ready",
     "tags": [],
     "resourceType": "GMSequence",

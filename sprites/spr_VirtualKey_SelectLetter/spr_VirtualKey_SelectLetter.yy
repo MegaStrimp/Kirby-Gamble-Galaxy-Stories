@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_VirtualKey_SelectLetter","path":"sprites/spr_VirtualKey_SelectLetter/spr_VirtualKey_SelectLetter.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_VirtualKey_SelectLetter",
     "tags": [],
     "resourceType": "GMSequence",

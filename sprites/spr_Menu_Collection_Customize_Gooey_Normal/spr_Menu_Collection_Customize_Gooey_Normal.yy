@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Collection_Customize_Gooey_Normal","path":"sprites/spr_Menu_Collection_Customize_Gooey_Normal/spr_Menu_Collection_Customize_Gooey_Normal.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Collection_Customize_Gooey_Normal",
     "tags": [],
     "resourceType": "GMSequence",

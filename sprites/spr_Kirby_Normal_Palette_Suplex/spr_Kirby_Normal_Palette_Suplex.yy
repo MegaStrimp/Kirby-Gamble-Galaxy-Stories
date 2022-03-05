@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Palette_Suplex","path":"sprites/spr_Kirby_Normal_Palette_Suplex/spr_Kirby_Normal_Palette_Suplex.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Palette_Suplex",
     "tags": [],
     "resourceType": "GMSequence",

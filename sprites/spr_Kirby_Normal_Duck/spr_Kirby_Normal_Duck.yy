@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Duck","path":"sprites/spr_Kirby_Normal_Duck/spr_Kirby_Normal_Duck.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Duck",
     "tags": [],
     "resourceType": "GMSequence",

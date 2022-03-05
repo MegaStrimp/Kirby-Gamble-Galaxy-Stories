@@ -10,7 +10,7 @@ if (sprite_index == sprIdle)
 {
 	if (!global.pause) hatIndex += sprite_get_speed(sprIdleHat) / 60;
 	if (hatIndex >= 3) hatIndex -= 3;
-	draw_sprite_ext(sprIdleHat,hatIndex,x + drawShakeX,y - 29 + drawShakeY,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+	draw_sprite_ext(sprIdleHat,image_index,x + drawShakeX,y - 29 + drawShakeY,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
 }
 else if (sprite_index == sprAttack)
 {

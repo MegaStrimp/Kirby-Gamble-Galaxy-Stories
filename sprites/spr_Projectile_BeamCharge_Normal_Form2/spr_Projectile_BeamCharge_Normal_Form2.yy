@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_BeamCharge_Normal_Form2","path":"sprites/spr_Projectile_BeamCharge_Normal_Form2/spr_Projectile_BeamCharge_Normal_Form2.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_BeamCharge_Normal_Form2",
     "tags": [],
     "resourceType": "GMSequence",

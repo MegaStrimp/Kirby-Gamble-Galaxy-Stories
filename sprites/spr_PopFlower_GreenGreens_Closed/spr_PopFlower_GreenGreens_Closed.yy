@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_PopFlower_GreenGreens_Closed","path":"sprites/spr_PopFlower_GreenGreens_Closed/spr_PopFlower_GreenGreens_Closed.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_PopFlower_GreenGreens_Closed",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"tile_AsteroidFields_Transparent","path":"sprites/tile_AsteroidFields_Transparent/tile_AsteroidFields_Transparent.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "tile_AsteroidFields_Transparent",
     "tags": [],
     "resourceType": "GMSequence",

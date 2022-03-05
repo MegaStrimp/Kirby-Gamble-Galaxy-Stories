@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_SamuraiKirby_Hud_LineChefKawasaki","path":"sprites/spr_SamuraiKirby_Hud_LineChefKawasaki/spr_SamuraiKirby_Hud_LineChefKawasaki.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_SamuraiKirby_Hud_LineChefKawasaki",
     "tags": [],
     "resourceType": "GMSequence",

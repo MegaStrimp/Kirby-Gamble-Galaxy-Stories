@@ -103,7 +103,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_HatShadow_Bomb_Modern_Walk","path":"sprites/spr_Kirby_HatShadow_Bomb_Modern_Walk/spr_Kirby_HatShadow_Bomb_Modern_Walk.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_HatShadow_Bomb_Modern_Walk",
     "tags": [],
     "resourceType": "GMSequence",

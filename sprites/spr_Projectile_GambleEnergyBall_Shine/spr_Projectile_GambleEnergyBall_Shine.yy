@@ -83,7 +83,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_GambleEnergyBall_Shine","path":"sprites/spr_Projectile_GambleEnergyBall_Shine/spr_Projectile_GambleEnergyBall_Shine.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_GambleEnergyBall_Shine",
     "tags": [],
     "resourceType": "GMSequence",

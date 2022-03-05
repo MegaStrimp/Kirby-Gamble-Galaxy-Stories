@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_ItemChest_Normal_Open","path":"sprites/spr_ItemChest_Normal_Open/spr_ItemChest_Normal_Open.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_ItemChest_Normal_Open",
     "tags": [],
     "resourceType": "GMSequence",

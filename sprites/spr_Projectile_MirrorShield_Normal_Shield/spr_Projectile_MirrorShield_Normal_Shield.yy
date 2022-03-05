@@ -115,7 +115,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_MirrorShield_Normal_Shield","path":"sprites/spr_Projectile_MirrorShield_Normal_Shield/spr_Projectile_MirrorShield_Normal_Shield.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_MirrorShield_Normal_Shield",
     "tags": [],
     "resourceType": "GMSequence",

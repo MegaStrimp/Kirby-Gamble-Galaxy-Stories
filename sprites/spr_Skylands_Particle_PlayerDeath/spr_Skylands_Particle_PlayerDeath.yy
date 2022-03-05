@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Skylands_Particle_PlayerDeath","path":"sprites/spr_Skylands_Particle_PlayerDeath/spr_Skylands_Particle_PlayerDeath.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Skylands_Particle_PlayerDeath",
     "tags": [],
     "resourceType": "GMSequence",

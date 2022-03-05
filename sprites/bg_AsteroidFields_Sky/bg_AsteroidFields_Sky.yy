@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bg_AsteroidFields_Sky","path":"sprites/bg_AsteroidFields_Sky/bg_AsteroidFields_Sky.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bg_AsteroidFields_Sky",
     "tags": [],
     "resourceType": "GMSequence",

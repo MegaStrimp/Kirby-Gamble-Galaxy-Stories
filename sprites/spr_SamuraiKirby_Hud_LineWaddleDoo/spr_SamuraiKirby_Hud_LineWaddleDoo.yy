@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_SamuraiKirby_Hud_LineWaddleDoo","path":"sprites/spr_SamuraiKirby_Hud_LineWaddleDoo/spr_SamuraiKirby_Hud_LineWaddleDoo.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_SamuraiKirby_Hud_LineWaddleDoo",
     "tags": [],
     "resourceType": "GMSequence",

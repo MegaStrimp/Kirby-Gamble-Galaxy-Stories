@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Skip","path":"sprites/spr_Menu_Skip/spr_Menu_Skip.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Skip",
     "tags": [],
     "resourceType": "GMSequence",

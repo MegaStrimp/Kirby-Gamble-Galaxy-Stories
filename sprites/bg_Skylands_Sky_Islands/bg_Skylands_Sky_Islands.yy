@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bg_Skylands_Sky_Islands","path":"sprites/bg_Skylands_Sky_Islands/bg_Skylands_Sky_Islands.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bg_Skylands_Sky_Islands",
     "tags": [],
     "resourceType": "GMSequence",

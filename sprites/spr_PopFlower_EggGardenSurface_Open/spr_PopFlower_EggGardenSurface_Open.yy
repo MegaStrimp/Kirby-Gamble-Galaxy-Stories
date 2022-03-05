@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_PopFlower_EggGardenSurface_Open","path":"sprites/spr_PopFlower_EggGardenSurface_Open/spr_PopFlower_EggGardenSurface_Open.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_PopFlower_EggGardenSurface_Open",
     "tags": [],
     "resourceType": "GMSequence",

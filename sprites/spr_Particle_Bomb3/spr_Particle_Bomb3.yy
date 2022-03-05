@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_Bomb3","path":"sprites/spr_Particle_Bomb3/spr_Particle_Bomb3.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_Bomb3",
     "tags": [],
     "resourceType": "GMSequence",

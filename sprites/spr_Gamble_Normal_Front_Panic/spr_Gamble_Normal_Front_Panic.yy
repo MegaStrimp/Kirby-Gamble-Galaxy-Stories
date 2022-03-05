@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Gamble_Normal_Front_Panic","path":"sprites/spr_Gamble_Normal_Front_Panic/spr_Gamble_Normal_Front_Panic.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Gamble_Normal_Front_Panic",
     "tags": [],
     "resourceType": "GMSequence",

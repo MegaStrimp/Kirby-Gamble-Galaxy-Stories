@@ -19,6 +19,8 @@ sprTeeter = spr_Bomber_Normal_Teeter;
 sprExp = spr_Bomber_Normal_Explode;
 sprHurt = spr_Bomber_Normal_Hurt;
 
+paletteIndex = spr_Bomber_Normal_Palette_ExplodingSkull;
+
 hp = 14;
 ability = playerAbilities.crash
 stop = false;

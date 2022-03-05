@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Suplex_KSSU_Palette_BlueBanner","path":"sprites/spr_Kirby_AbilityHat_Suplex_KSSU_Palette_BlueBanner/spr_Kirby_AbilityHat_Suplex_KSSU_Palette_BlueBanner.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Suplex_KSSU_Palette_BlueBanner",
     "tags": [],
     "resourceType": "GMSequence",

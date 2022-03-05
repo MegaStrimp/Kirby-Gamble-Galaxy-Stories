@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_MysticBeam_GGS_RunTurn","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_RunTurn/spr_Kirby_AbilityHat_MysticBeam_GGS_RunTurn.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_MysticBeam_GGS_RunTurn",
     "tags": [],
     "resourceType": "GMSequence",

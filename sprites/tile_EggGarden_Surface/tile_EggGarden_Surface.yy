@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"tile_EggGarden_Surface","path":"sprites/tile_EggGarden_Surface/tile_EggGarden_Surface.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "tile_EggGarden_Surface",
     "tags": [],
     "resourceType": "GMSequence",

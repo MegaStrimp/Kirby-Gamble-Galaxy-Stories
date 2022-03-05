@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Ice_KSSU_IceGrabRelease","path":"sprites/spr_Kirby_AbilityHat_Ice_KSSU_IceGrabRelease/spr_Kirby_AbilityHat_Ice_KSSU_IceGrabRelease.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Ice_KSSU_IceGrabRelease",
     "tags": [],
     "resourceType": "GMSequence",

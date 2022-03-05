@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Gamble_Normal_Front_Joy","path":"sprites/spr_Gamble_Normal_Front_Joy/spr_Gamble_Normal_Front_Joy.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Gamble_Normal_Front_Joy",
     "tags": [],
     "resourceType": "GMSequence",

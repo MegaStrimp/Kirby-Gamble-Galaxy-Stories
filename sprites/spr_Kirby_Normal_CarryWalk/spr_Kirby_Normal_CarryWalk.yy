@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_CarryWalk","path":"sprites/spr_Kirby_Normal_CarryWalk/spr_Kirby_Normal_CarryWalk.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_CarryWalk",
     "tags": [],
     "resourceType": "GMSequence",

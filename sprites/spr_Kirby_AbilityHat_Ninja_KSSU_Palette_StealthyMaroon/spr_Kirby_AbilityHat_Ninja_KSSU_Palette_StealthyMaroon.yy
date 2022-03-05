@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Ninja_KSSU_Palette_StealthyMaroon","path":"sprites/spr_Kirby_AbilityHat_Ninja_KSSU_Palette_StealthyMaroon/spr_Kirby_AbilityHat_Ninja_KSSU_Palette_StealthyMaroon.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Ninja_KSSU_Palette_StealthyMaroon",
     "tags": [],
     "resourceType": "GMSequence",

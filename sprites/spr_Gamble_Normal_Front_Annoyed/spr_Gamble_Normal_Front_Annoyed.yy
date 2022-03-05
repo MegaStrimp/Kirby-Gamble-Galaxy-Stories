@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Gamble_Normal_Front_Annoyed","path":"sprites/spr_Gamble_Normal_Front_Annoyed/spr_Gamble_Normal_Front_Annoyed.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Gamble_Normal_Front_Annoyed",
     "tags": [],
     "resourceType": "GMSequence",

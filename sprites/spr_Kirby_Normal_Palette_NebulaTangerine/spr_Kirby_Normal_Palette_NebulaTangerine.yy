@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Palette_NebulaTangerine","path":"sprites/spr_Kirby_Normal_Palette_NebulaTangerine/spr_Kirby_Normal_Palette_NebulaTangerine.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Palette_NebulaTangerine",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_BeamCycle","path":"sprites/spr_Particle_BeamCycle/spr_Particle_BeamCycle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_BeamCycle",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_Bomb_Normal_EyStMa","path":"sprites/spr_Projectile_Bomb_Normal_EyStMa/spr_Projectile_Bomb_Normal_EyStMa.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_Bomb_Normal_EyStMa",
     "tags": [],
     "resourceType": "GMSequence",

@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge",
     "tags": [],
     "resourceType": "GMSequence",

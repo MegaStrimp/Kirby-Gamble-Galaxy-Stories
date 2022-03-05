@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_StageSelect_Planet_CosmicPalace","path":"sprites/spr_Menu_StageSelect_Planet_CosmicPalace/spr_Menu_StageSelect_Planet_CosmicPalace.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_StageSelect_Planet_CosmicPalace",
     "tags": [],
     "resourceType": "GMSequence",

@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_ChallengeCoin_Normal_Silver","path":"sprites/spr_ChallengeCoin_Normal_Silver/spr_ChallengeCoin_Normal_Silver.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_ChallengeCoin_Normal_Silver",
     "tags": [],
     "resourceType": "GMSequence",

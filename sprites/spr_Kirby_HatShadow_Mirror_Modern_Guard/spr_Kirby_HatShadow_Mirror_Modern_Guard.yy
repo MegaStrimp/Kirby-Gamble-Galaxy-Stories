@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_HatShadow_Mirror_Modern_Guard","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Guard/spr_Kirby_HatShadow_Mirror_Modern_Guard.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_HatShadow_Mirror_Modern_Guard",
     "tags": [],
     "resourceType": "GMSequence",

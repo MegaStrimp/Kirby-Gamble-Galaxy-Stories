@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityStar_Hammer","path":"sprites/spr_AbilityStar_Hammer/spr_AbilityStar_Hammer.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityStar_Hammer",
     "tags": [],
     "resourceType": "GMSequence",

@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityStar_Ufo","path":"sprites/spr_AbilityStar_Ufo/spr_AbilityStar_Ufo.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityStar_Ufo",
     "tags": [],
     "resourceType": "GMSequence",

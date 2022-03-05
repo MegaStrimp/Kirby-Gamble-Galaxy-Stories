@@ -187,6 +187,10 @@ function scr_Player_AbilityHat(argument0,argument1)
 					abilityHatIndex = spr_Kirby_AbilityHat_Cutter_KSSU_Hurt;
 					break;
 					
+					case sprCutterCharge:
+					abilityHatIndex = spr_Kirby_AbilityHat_Cutter_KSSU_Charge;
+					break;
+					
 					case sprCutterAttack1:
 					abilityHatIndex = spr_Kirby_AbilityHat_Cutter_KSSU_Attack1;
 					break;

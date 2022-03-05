@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_VirtualKey_SelectLetterPressed","path":"sprites/spr_VirtualKey_SelectLetterPressed/spr_VirtualKey_SelectLetterPressed.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_VirtualKey_SelectLetterPressed",
     "tags": [],
     "resourceType": "GMSequence",

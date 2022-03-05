@@ -31,9 +31,8 @@ for (var i = 0; i < arrayLength; i++)
 
 //Text P1
 
-draw_set_halign(fa_center);
-scr_Draw_Text_Color_Outline(100,220,characterTitle[selectionP1],-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
-draw_set_halign(fa_left);
+var spr = scr_Hud_AbilityText(playerAbilities.none,characterIndex[selectionP1]);
+draw_sprite(spr,0,100 - (sprite_get_width(spr) / 2),220);
 
 //Draw Hud P1
 
@@ -60,9 +59,8 @@ if (global.hasCoop)
 {
 	//Text P2
 	
-	draw_set_halign(fa_center);
-	scr_Draw_Text_Color_Outline(360,220,characterTitle[selectionP2],-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
-	draw_set_halign(fa_left);
+	var spr = scr_Hud_AbilityText(playerAbilities.none,characterIndex[selectionP2]);
+	draw_sprite(spr,0,380 - (sprite_get_width(spr) / 2),220);
 	
 	//Variables P2
 	

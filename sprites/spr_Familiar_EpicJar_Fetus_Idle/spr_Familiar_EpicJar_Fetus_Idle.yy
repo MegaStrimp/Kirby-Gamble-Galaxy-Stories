@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Familiar_EpicJar_Fetus_Idle","path":"sprites/spr_Familiar_EpicJar_Fetus_Idle/spr_Familiar_EpicJar_Fetus_Idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Familiar_EpicJar_Fetus_Idle",
     "tags": [],
     "resourceType": "GMSequence",

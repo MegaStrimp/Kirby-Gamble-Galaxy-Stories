@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Gamble_Normal_Front_Rage","path":"sprites/spr_Gamble_Normal_Front_Rage/spr_Gamble_Normal_Front_Rage.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Gamble_Normal_Front_Rage",
     "tags": [],
     "resourceType": "GMSequence",

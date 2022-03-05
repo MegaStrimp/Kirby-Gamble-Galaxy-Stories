@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Sleep","path":"sprites/spr_Kirby_Normal_Sleep/spr_Kirby_Normal_Sleep.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Sleep",
     "tags": [],
     "resourceType": "GMSequence",

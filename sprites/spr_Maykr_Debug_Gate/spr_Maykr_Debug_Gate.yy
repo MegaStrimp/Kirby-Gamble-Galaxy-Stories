@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Debug_Gate","path":"sprites/spr_Maykr_Debug_Gate/spr_Maykr_Debug_Gate.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Debug_Gate",
     "tags": [],
     "resourceType": "GMSequence",

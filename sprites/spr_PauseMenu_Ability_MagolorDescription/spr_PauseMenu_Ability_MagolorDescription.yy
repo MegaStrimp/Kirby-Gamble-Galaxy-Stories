@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_PauseMenu_Ability_MagolorDescription","path":"sprites/spr_PauseMenu_Ability_MagolorDescription/spr_PauseMenu_Ability_MagolorDescription.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_PauseMenu_Ability_MagolorDescription",
     "tags": [],
     "resourceType": "GMSequence",

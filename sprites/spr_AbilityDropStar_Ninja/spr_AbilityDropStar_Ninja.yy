@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityDropStar_Ninja","path":"sprites/spr_AbilityDropStar_Ninja/spr_AbilityDropStar_Ninja.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityDropStar_Ninja",
     "tags": [],
     "resourceType": "GMSequence",

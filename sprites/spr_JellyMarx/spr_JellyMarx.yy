@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_JellyMarx","path":"sprites/spr_JellyMarx/spr_JellyMarx.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_JellyMarx",
     "tags": [],
     "resourceType": "GMSequence",

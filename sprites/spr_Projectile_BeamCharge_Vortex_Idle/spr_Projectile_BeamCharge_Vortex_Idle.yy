@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_BeamCharge_Vortex_Idle","path":"sprites/spr_Projectile_BeamCharge_Vortex_Idle/spr_Projectile_BeamCharge_Vortex_Idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_BeamCharge_Vortex_Idle",
     "tags": [],
     "resourceType": "GMSequence",

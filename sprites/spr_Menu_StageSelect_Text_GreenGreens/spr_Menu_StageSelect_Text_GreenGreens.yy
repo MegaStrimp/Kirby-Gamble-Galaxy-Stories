@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_StageSelect_Text_GreenGreens","path":"sprites/spr_Menu_StageSelect_Text_GreenGreens/spr_Menu_StageSelect_Text_GreenGreens.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_StageSelect_Text_GreenGreens",
     "tags": [],
     "resourceType": "GMSequence",

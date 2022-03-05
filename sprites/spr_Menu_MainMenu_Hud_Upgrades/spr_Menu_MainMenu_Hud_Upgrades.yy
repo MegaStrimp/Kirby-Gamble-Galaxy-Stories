@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_MainMenu_Hud_Upgrades","path":"sprites/spr_Menu_MainMenu_Hud_Upgrades/spr_Menu_MainMenu_Hud_Upgrades.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_MainMenu_Hud_Upgrades",
     "tags": [],
     "resourceType": "GMSequence",

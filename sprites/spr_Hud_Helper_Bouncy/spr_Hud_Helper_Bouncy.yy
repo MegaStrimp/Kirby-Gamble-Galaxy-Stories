@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Hud_Helper_Bouncy","path":"sprites/spr_Hud_Helper_Bouncy/spr_Hud_Helper_Bouncy.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Hud_Helper_Bouncy",
     "tags": [],
     "resourceType": "GMSequence",

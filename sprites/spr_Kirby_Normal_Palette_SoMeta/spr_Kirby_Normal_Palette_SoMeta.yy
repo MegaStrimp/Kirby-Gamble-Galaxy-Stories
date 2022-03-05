@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Palette_SoMeta","path":"sprites/spr_Kirby_Normal_Palette_SoMeta/spr_Kirby_Normal_Palette_SoMeta.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Palette_SoMeta",
     "tags": [],
     "resourceType": "GMSequence",

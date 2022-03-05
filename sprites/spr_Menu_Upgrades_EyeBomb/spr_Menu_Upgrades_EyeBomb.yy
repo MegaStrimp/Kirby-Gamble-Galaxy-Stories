@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Upgrades_EyeBomb","path":"sprites/spr_Menu_Upgrades_EyeBomb/spr_Menu_Upgrades_EyeBomb.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Upgrades_EyeBomb",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Door_Normal","path":"sprites/spr_Door_Normal/spr_Door_Normal.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Door_Normal",
     "tags": [],
     "resourceType": "GMSequence",

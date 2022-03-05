@@ -7,6 +7,12 @@ function scr_Object_Inhale()
 	if ((place_meeting(x,y,obj_InhaleMask)) and (instance_number(obj_EatMe) < 5))
 	{
 		var inhaleMask = instance_place(x,y,obj_InhaleMask);
+		if ((object_index == obj_AbilityDropStar) and (isBubble))
+		{
+			var particle = instance_create_depth(x,y,depth,obj_Particle);
+			particle.sprite_index = spr_Particle_Bubble3;
+			particle.destroyAfterAnimation = true;
+		}
 		if (object_index == obj_Cappy)
 		{
 			if ((inhaleMask.owner.ateCappyShroom == false) and (state == 1) and (!thrown))

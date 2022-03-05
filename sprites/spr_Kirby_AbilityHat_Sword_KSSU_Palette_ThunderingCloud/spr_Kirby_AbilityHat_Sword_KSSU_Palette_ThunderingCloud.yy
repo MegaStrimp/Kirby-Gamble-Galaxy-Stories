@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Sword_KSSU_Palette_ThunderingCloud","path":"sprites/spr_Kirby_AbilityHat_Sword_KSSU_Palette_ThunderingCloud/spr_Kirby_AbilityHat_Sword_KSSU_Palette_ThunderingCloud.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Sword_KSSU_Palette_ThunderingCloud",
     "tags": [],
     "resourceType": "GMSequence",

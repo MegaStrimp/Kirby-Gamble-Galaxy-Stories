@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_TutorialSign_Symbol_Dpad","path":"sprites/spr_TutorialSign_Symbol_Dpad/spr_TutorialSign_Symbol_Dpad.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_TutorialSign_Symbol_Dpad",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_PauseMenu_Ability_CrashDescription","path":"sprites/spr_PauseMenu_Ability_CrashDescription/spr_PauseMenu_Ability_CrashDescription.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_PauseMenu_Ability_CrashDescription",
     "tags": [],
     "resourceType": "GMSequence",

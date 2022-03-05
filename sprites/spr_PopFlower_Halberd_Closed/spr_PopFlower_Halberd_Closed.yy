@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_PopFlower_Halberd_Closed","path":"sprites/spr_PopFlower_Halberd_Closed/spr_PopFlower_Halberd_Closed.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_PopFlower_Halberd_Closed",
     "tags": [],
     "resourceType": "GMSequence",

@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Background_BattleshipHalberd_GrayLight","path":"sprites/spr_Background_BattleshipHalberd_GrayLight/spr_Background_BattleshipHalberd_GrayLight.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Background_BattleshipHalberd_GrayLight",
     "tags": [],
     "resourceType": "GMSequence",

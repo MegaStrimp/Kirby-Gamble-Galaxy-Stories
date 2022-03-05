@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_MainMenu_Hud_Language","path":"sprites/spr_Menu_MainMenu_Hud_Language/spr_Menu_MainMenu_Hud_Language.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_MainMenu_Hud_Language",
     "tags": [],
     "resourceType": "GMSequence",

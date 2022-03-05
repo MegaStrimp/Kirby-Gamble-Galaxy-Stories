@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_HatShadow_Wing_KSSU_Duck","path":"sprites/spr_Kirby_HatShadow_Wing_KSSU_Duck/spr_Kirby_HatShadow_Wing_KSSU_Duck.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_HatShadow_Wing_KSSU_Duck",
     "tags": [],
     "resourceType": "GMSequence",

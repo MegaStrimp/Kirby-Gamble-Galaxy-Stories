@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Triangle","path":"sprites/spr_Maykr_Triangle/spr_Maykr_Triangle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Triangle",
     "tags": [],
     "resourceType": "GMSequence",

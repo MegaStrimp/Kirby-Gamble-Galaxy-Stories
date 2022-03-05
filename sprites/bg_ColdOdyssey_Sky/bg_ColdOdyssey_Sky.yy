@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bg_ColdOdyssey_Sky","path":"sprites/bg_ColdOdyssey_Sky/bg_ColdOdyssey_Sky.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bg_ColdOdyssey_Sky",
     "tags": [],
     "resourceType": "GMSequence",

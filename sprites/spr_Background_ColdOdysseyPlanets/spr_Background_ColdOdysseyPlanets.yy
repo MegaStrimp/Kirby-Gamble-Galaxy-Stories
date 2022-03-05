@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Background_ColdOdysseyPlanets","path":"sprites/spr_Background_ColdOdysseyPlanets/spr_Background_ColdOdysseyPlanets.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Background_ColdOdysseyPlanets",
     "tags": [],
     "resourceType": "GMSequence",

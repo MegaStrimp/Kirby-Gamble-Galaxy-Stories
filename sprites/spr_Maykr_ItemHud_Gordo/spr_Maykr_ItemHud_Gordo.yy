@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_ItemHud_Gordo","path":"sprites/spr_Maykr_ItemHud_Gordo/spr_Maykr_ItemHud_Gordo.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_ItemHud_Gordo",
     "tags": [],
     "resourceType": "GMSequence",

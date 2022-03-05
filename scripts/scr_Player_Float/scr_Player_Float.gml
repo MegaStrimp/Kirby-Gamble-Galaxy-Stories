@@ -19,6 +19,11 @@ function scr_Player_Float()
 			var collidingWall = instance_place(x,y + 1,obj_Wall);
 			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) grounded = true;
 		}
+		else if (place_meeting(x,y + 1,obj_Spring))
+		{
+			var collidingWall = instance_place(x,y + 1,obj_Spring);
+			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) grounded = true;
+		}
 		
 		//Movement
 		

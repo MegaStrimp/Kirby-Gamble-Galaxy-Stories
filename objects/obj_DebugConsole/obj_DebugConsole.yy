@@ -31,7 +31,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Debug Console",
-    "path": "folders/Objects/Debug Console.yy",
+    "path": "folders/Objects/Extensions/Debug Console.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_DebugConsole",

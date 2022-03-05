@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Ladder","path":"sprites/spr_Ladder/spr_Ladder.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Ladder",
     "tags": [],
     "resourceType": "GMSequence",

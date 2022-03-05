@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_Bulb_Shadow_Ready","path":"sprites/spr_Projectile_Bulb_Shadow_Ready/spr_Projectile_Bulb_Shadow_Ready.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_Bulb_Shadow_Ready",
     "tags": [],
     "resourceType": "GMSequence",

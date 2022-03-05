@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Healthbar_MiniBoss_InnerBack3264","path":"sprites/spr_Healthbar_MiniBoss_InnerBack3264/spr_Healthbar_MiniBoss_InnerBack3264.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Healthbar_MiniBoss_InnerBack",
     "tags": [],
     "resourceType": "GMSequence",

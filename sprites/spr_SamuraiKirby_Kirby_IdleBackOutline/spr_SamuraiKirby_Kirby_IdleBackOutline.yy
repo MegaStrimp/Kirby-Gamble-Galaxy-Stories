@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_SamuraiKirby_Kirby_IdleBackOutline","path":"sprites/spr_SamuraiKirby_Kirby_IdleBackOutline/spr_SamuraiKirby_Kirby_IdleBackOutline.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_SamuraiKirby_Kirby_IdleBackOutline",
     "tags": [],
     "resourceType": "GMSequence",

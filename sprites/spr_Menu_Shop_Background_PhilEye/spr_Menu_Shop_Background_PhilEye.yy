@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Shop_Background_PhilEye","path":"sprites/spr_Menu_Shop_Background_PhilEye/spr_Menu_Shop_Background_PhilEye.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Shop_Background_PhilEye",
     "tags": [],
     "resourceType": "GMSequence",

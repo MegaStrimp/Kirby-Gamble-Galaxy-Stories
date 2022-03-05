@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Collection_Characters_Text_Gamble","path":"sprites/spr_Menu_Collection_Characters_Text_Gamble/spr_Menu_Collection_Characters_Text_Gamble.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Collection_Characters_Text_Gamble",
     "tags": [],
     "resourceType": "GMSequence",

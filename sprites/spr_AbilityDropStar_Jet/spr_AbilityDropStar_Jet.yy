@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityDropStar_Jet","path":"sprites/spr_AbilityDropStar_Jet/spr_AbilityDropStar_Jet.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityDropStar_Jet",
     "tags": [],
     "resourceType": "GMSequence",

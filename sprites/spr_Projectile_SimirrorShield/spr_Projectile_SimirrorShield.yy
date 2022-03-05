@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_SimirrorShield","path":"sprites/spr_Projectile_SimirrorShield/spr_Projectile_SimirrorShield.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_SimirrorShield",
     "tags": [],
     "resourceType": "GMSequence",

@@ -99,7 +99,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_HatShadow_Sleep_KSSU_SleepEnd","path":"sprites/spr_Kirby_HatShadow_Sleep_KSSU_SleepEnd/spr_Kirby_HatShadow_Sleep_KSSU_SleepEnd.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_HatShadow_Sleep_KSSU_SleepEnd",
     "tags": [],
     "resourceType": "GMSequence",

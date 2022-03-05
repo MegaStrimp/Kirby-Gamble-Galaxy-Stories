@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Fall","path":"sprites/spr_Kirby_Normal_Fall/spr_Kirby_Normal_Fall.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Fall",
     "tags": [],
     "resourceType": "GMSequence",

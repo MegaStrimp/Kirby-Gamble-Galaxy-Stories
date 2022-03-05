@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Background_BattleshipHalberd_Missile","path":"sprites/spr_Background_BattleshipHalberd_Missile/spr_Background_BattleshipHalberd_Missile.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Background_BattleshipHalberd_Missile",
     "tags": [],
     "resourceType": "GMSequence",

@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_MysticBeam_GGS_ClimbDown","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_ClimbDown/spr_Kirby_AbilityHat_MysticBeam_GGS_ClimbDown.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_MysticBeam_GGS_ClimbDown",
     "tags": [],
     "resourceType": "GMSequence",

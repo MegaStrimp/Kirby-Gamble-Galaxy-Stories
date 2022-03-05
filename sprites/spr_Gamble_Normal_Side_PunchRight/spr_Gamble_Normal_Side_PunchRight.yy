@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Gamble_Normal_Side_PunchRight","path":"sprites/spr_Gamble_Normal_Side_PunchRight/spr_Gamble_Normal_Side_PunchRight.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Gamble_Normal_Side_PunchRight",
     "tags": [],
     "resourceType": "GMSequence",

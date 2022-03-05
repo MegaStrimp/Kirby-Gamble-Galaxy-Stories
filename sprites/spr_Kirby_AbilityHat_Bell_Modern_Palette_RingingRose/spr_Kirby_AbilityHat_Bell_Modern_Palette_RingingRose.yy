@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Bell_Modern_Palette_RingingRose","path":"sprites/spr_Kirby_AbilityHat_Bell_Modern_Palette_RingingRose/spr_Kirby_AbilityHat_Bell_Modern_Palette_RingingRose.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Bell_Modern_Palette_RingingRose",
     "tags": [],
     "resourceType": "GMSequence",

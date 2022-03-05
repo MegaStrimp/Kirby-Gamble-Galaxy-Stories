@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_ItemCarry_Heavy_Walk","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk/spr_Kirby_Normal_ItemCarry_Heavy_Walk.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_ItemCarry_Heavy_Walk",
     "tags": [],
     "resourceType": "GMSequence",

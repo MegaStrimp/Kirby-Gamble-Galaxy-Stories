@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Konami","path":"sprites/spr_Konami/spr_Konami.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Konami",
     "tags": [],
     "resourceType": "GMSequence",

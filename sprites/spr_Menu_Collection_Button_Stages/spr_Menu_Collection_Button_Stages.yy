@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Collection_Button_Stages","path":"sprites/spr_Menu_Collection_Button_Stages/spr_Menu_Collection_Button_Stages.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Collection_Button_Stages",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_ItemCarry_Light_Duck_NormalSlopeR","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_Duck_NormalSlopeR/spr_Kirby_Normal_ItemCarry_Light_Duck_NormalSlopeR.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_ItemCarry_Light_Duck_NormalSlopeR",
     "tags": [],
     "resourceType": "GMSequence",

@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityDropStar_Spark","path":"sprites/spr_AbilityDropStar_Spark/spr_AbilityDropStar_Spark.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityDropStar_Spark",
     "tags": [],
     "resourceType": "GMSequence",

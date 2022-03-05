@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_WingFeather_Normal_Hurt","path":"sprites/spr_Projectile_WingFeather_Normal_Hurt/spr_Projectile_WingFeather_Normal_Hurt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_WingFeather_Normal_Hurt",
     "tags": [],
     "resourceType": "GMSequence",

@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_HatShadow_Beam_KSSU_Roll","path":"sprites/spr_Kirby_HatShadow_Beam_KSSU_Roll/spr_Kirby_HatShadow_Beam_KSSU_Roll.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_HatShadow_Beam_KSSU_Roll",
     "tags": [],
     "resourceType": "GMSequence",

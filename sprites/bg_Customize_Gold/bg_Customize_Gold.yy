@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bg_Customize_Gold","path":"sprites/bg_Customize_Gold/bg_Customize_Gold.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bg_Customize_Gold",
     "tags": [],
     "resourceType": "GMSequence",

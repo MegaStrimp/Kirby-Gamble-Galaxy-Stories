@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_FreezeShadow","path":"sprites/spr_Particle_FreezeShadow/spr_Particle_FreezeShadow.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_FreezeShadow",
     "tags": [],
     "resourceType": "GMSequence",

@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_Fire5","path":"sprites/spr_Particle_Fire5/spr_Particle_Fire5.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_Fire5",
     "tags": [],
     "resourceType": "GMSequence",

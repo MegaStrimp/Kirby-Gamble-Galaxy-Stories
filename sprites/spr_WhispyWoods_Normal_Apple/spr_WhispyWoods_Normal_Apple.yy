@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_WhispyWoods_Normal_Apple","path":"sprites/spr_WhispyWoods_Normal_Apple/spr_WhispyWoods_Normal_Apple.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_WhispyWoods_Normal_Apple",
     "tags": [],
     "resourceType": "GMSequence",

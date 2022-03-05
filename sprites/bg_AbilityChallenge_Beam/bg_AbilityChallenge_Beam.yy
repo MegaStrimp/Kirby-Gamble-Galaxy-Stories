@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bg_AbilityChallenge_Beam","path":"sprites/bg_AbilityChallenge_Beam/bg_AbilityChallenge_Beam.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bg_AbilityChallenge_Beam",
     "tags": [],
     "resourceType": "GMSequence",

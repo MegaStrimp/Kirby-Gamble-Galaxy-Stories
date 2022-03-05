@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Collection_Customize_Kirby_SmileyWhite","path":"sprites/spr_Menu_Collection_Customize_Kirby_SmileyWhite/spr_Menu_Collection_Customize_Kirby_SmileyWhite.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Collection_Customize_Kirby_SmileyWhite",
     "tags": [],
     "resourceType": "GMSequence",

@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityStar_Cutter","path":"sprites/spr_AbilityStar_Cutter/spr_AbilityStar_Cutter.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityStar_Cutter",
     "tags": [],
     "resourceType": "GMSequence",

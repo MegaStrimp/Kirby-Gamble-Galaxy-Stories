@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Debug_DurableBlock","path":"sprites/spr_Maykr_Debug_DurableBlock/spr_Maykr_Debug_DurableBlock.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Debug_DurableBlock",
     "tags": [],
     "resourceType": "GMSequence",

@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_InhaleSmall","path":"sprites/spr_Particle_InhaleSmall/spr_Particle_InhaleSmall.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_InhaleSmall",
     "tags": [],
     "resourceType": "GMSequence",

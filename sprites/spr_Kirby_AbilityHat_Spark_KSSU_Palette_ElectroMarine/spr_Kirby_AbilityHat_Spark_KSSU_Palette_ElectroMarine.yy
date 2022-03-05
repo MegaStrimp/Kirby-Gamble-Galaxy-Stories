@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Spark_KSSU_Palette_ElectroMarine","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_Palette_ElectroMarine/spr_Kirby_AbilityHat_Spark_KSSU_Palette_ElectroMarine.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Spark_KSSU_Palette_ElectroMarine",
     "tags": [],
     "resourceType": "GMSequence",

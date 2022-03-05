@@ -4,7 +4,7 @@ if (!global.pause)
 {
 	//Hurt Player
 
-	scr_Enemy_HurtsPlayer();
+	scr_Enemy_HurtsPlayer(1);
 	
 	with (obj_Projectile)
 	{

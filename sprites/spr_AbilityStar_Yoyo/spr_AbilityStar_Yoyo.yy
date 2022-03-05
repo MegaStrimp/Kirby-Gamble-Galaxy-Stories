@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityStar_Yoyo","path":"sprites/spr_AbilityStar_Yoyo/spr_AbilityStar_Yoyo.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityStar_Yoyo",
     "tags": [],
     "resourceType": "GMSequence",

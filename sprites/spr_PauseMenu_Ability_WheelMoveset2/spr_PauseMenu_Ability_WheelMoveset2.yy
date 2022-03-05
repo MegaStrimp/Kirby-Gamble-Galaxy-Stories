@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_PauseMenu_Ability_WheelMoveset2","path":"sprites/spr_PauseMenu_Ability_WheelMoveset2/spr_PauseMenu_Ability_WheelMoveset2.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_PauseMenu_Ability_WheelMoveset2",
     "tags": [],
     "resourceType": "GMSequence",

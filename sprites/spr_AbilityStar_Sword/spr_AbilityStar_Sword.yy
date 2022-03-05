@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityStar_Sword","path":"sprites/spr_AbilityStar_Sword/spr_AbilityStar_Sword.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityStar_Sword",
     "tags": [],
     "resourceType": "GMSequence",

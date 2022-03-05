@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Collection_Button_SoundTest","path":"sprites/spr_Menu_Collection_Button_SoundTest/spr_Menu_Collection_Button_SoundTest.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Collection_Button_SoundTest",
     "tags": [],
     "resourceType": "GMSequence",

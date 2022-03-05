@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Collection_Customize_Text_Exp","path":"sprites/spr_Menu_Collection_Customize_Text_Exp/spr_Menu_Collection_Customize_Text_Exp.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Collection_Customize_Text_Exp",
     "tags": [],
     "resourceType": "GMSequence",

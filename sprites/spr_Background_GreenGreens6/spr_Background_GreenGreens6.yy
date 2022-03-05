@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Background_GreenGreens6","path":"sprites/spr_Background_GreenGreens6/spr_Background_GreenGreens6.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Background_GreenGreens6",
     "tags": [],
     "resourceType": "GMSequence",

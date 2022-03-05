@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_MadeByMegaStrimp","path":"sprites/spr_MadeByMegaStrimp/spr_MadeByMegaStrimp.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_MadeByMegaStrimp",
     "tags": [],
     "resourceType": "GMSequence",

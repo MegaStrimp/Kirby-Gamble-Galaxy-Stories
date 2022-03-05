@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Spawner_WaddleDoo_Normal","path":"sprites/spr_Maykr_Spawner_WaddleDoo_Normal/spr_Maykr_Spawner_WaddleDoo_Normal.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Spawner_WaddleDoo_Normal",
     "tags": [],
     "resourceType": "GMSequence",

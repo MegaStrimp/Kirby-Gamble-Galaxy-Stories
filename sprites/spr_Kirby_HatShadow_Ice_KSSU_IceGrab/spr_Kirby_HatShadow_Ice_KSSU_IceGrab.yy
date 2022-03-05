@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_HatShadow_Ice_KSSU_IceGrab","path":"sprites/spr_Kirby_HatShadow_Ice_KSSU_IceGrab/spr_Kirby_HatShadow_Ice_KSSU_IceGrab.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_HatShadow_Ice_KSSU_IceGrab",
     "tags": [],
     "resourceType": "GMSequence",

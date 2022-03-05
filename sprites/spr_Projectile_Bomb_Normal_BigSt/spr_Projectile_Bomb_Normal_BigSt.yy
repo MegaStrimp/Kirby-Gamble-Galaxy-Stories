@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_Bomb_Normal_BigSt","path":"sprites/spr_Projectile_Bomb_Normal_BigSt/spr_Projectile_Bomb_Normal_BigSt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_Bomb_Normal_BigSt",
     "tags": [],
     "resourceType": "GMSequence",

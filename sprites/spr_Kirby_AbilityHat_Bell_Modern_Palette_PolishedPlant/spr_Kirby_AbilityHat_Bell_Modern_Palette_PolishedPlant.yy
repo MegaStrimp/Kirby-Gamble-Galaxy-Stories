@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Bell_Modern_Palette_PolishedPlant","path":"sprites/spr_Kirby_AbilityHat_Bell_Modern_Palette_PolishedPlant/spr_Kirby_AbilityHat_Bell_Modern_Palette_PolishedPlant.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Bell_Modern_Palette_PolishedPlant",
     "tags": [],
     "resourceType": "GMSequence",

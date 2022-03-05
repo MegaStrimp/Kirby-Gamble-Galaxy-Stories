@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Gamble_Normal_Front_Worrysome","path":"sprites/spr_Gamble_Normal_Front_Worrysome/spr_Gamble_Normal_Front_Worrysome.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Gamble_Normal_Front_Worrysome",
     "tags": [],
     "resourceType": "GMSequence",

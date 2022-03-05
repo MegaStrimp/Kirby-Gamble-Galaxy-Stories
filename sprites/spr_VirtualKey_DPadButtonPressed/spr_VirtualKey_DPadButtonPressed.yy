@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_VirtualKey_DPadButtonPressed","path":"sprites/spr_VirtualKey_DPadButtonPressed/spr_VirtualKey_DPadButtonPressed.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_VirtualKey_DPadButtonPressed",
     "tags": [],
     "resourceType": "GMSequence",

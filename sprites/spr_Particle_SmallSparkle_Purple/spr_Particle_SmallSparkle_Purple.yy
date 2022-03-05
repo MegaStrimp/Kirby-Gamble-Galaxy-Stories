@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_SmallSparkle_Purple","path":"sprites/spr_Particle_SmallSparkle_Purple/spr_Particle_SmallSparkle_Purple.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_SmallSparkle_Purple",
     "tags": [],
     "resourceType": "GMSequence",

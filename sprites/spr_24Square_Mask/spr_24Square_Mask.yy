@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_24Square_Mask","path":"sprites/spr_24Square_Mask/spr_24Square_Mask.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_24Square_Mask",
     "tags": [],
     "resourceType": "GMSequence",

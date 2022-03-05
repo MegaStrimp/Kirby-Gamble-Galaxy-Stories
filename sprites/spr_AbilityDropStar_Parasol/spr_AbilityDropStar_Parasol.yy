@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityDropStar_Parasol","path":"sprites/spr_AbilityDropStar_Parasol/spr_AbilityDropStar_Parasol.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityDropStar_Parasol",
     "tags": [],
     "resourceType": "GMSequence",

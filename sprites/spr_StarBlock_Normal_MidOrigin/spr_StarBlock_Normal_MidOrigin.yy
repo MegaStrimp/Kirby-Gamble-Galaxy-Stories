@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_StarBlock_Normal_MidOrigin","path":"sprites/spr_StarBlock_Normal_MidOrigin/spr_StarBlock_Normal_MidOrigin.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_StarBlock_Normal_MidOrigin",
     "tags": [],
     "resourceType": "GMSequence",

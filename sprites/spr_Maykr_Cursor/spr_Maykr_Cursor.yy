@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Cursor","path":"sprites/spr_Maykr_Cursor/spr_Maykr_Cursor.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Cursor",
     "tags": [],
     "resourceType": "GMSequence",

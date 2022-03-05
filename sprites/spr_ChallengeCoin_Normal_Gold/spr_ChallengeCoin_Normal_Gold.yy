@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_ChallengeCoin_Normal_Gold","path":"sprites/spr_ChallengeCoin_Normal_Gold/spr_ChallengeCoin_Normal_Gold.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_ChallengeCoin_Normal_Gold",
     "tags": [],
     "resourceType": "GMSequence",

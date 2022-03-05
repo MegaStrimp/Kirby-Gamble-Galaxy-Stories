@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_PauseMenu_Ability_ScanDescription","path":"sprites/spr_PauseMenu_Ability_ScanDescription/spr_PauseMenu_Ability_ScanDescription.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_PauseMenu_Ability_ScanDescription",
     "tags": [],
     "resourceType": "GMSequence",

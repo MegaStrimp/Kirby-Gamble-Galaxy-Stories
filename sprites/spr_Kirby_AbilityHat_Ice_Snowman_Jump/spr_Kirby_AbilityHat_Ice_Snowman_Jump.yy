@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Ice_Snowman_Jump","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Jump/spr_Kirby_AbilityHat_Ice_Snowman_Jump.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Ice_Snowman_Jump",
     "tags": [],
     "resourceType": "GMSequence",

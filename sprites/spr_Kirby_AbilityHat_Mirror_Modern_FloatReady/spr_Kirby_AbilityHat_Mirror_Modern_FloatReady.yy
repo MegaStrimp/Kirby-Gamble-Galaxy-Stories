@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Mirror_Modern_FloatReady","path":"sprites/spr_Kirby_AbilityHat_Mirror_Modern_FloatReady/spr_Kirby_AbilityHat_Mirror_Modern_FloatReady.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Mirror_Modern_FloatReady",
     "tags": [],
     "resourceType": "GMSequence",

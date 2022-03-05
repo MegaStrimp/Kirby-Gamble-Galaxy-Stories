@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Ice_Snowman_Warpstar2","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Warpstar2/spr_Kirby_AbilityHat_Ice_Snowman_Warpstar2.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Ice_Snowman_Warpstar2",
     "tags": [],
     "resourceType": "GMSequence",

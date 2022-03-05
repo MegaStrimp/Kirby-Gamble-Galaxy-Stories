@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Collection_Button_Trophies","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Collection_Button_Trophies",
     "tags": [],
     "resourceType": "GMSequence",

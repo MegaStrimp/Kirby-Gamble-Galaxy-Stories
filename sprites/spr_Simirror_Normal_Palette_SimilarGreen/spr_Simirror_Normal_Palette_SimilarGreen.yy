@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Simirror_Normal_Palette_SimilarGreen","path":"sprites/spr_Simirror_Normal_Palette_SimilarGreen/spr_Simirror_Normal_Palette_SimilarGreen.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Simirror_Normal_Palette_SimilarGreen",
     "tags": [],
     "resourceType": "GMSequence",

@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Phil_Normal_Left","path":"sprites/spr_Phil_Normal_Left/spr_Phil_Normal_Left.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Phil_Normal_Left",
     "tags": [],
     "resourceType": "GMSequence",

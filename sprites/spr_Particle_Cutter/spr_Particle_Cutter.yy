@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_Cutter","path":"sprites/spr_Particle_Cutter/spr_Particle_Cutter.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_Cutter",
     "tags": [],
     "resourceType": "GMSequence",

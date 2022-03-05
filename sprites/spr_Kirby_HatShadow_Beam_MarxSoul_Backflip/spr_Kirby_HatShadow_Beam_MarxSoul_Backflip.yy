@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_HatShadow_Beam_MarxSoul_Backflip","path":"sprites/spr_Kirby_HatShadow_Beam_MarxSoul_Backflip/spr_Kirby_HatShadow_Beam_MarxSoul_Backflip.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_HatShadow_Beam_MarxSoul_Backflip",
     "tags": [],
     "resourceType": "GMSequence",

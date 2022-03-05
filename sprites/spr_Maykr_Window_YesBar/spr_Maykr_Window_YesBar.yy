@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Window_YesBar","path":"sprites/spr_Maykr_Window_YesBar/spr_Maykr_Window_YesBar.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Window_YesBar",
     "tags": [],
     "resourceType": "GMSequence",

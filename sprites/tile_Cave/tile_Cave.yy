@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"tile_Cave","path":"sprites/tile_Cave/tile_Cave.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "tile_Cave",
     "tags": [],
     "resourceType": "GMSequence",

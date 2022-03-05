@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_HexTransition","path":"sprites/spr_HexTransition/spr_HexTransition.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_HexTransition",
     "tags": [],
     "resourceType": "GMSequence",

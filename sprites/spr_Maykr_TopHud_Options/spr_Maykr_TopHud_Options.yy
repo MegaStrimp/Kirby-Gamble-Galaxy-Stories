@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_TopHud_Options","path":"sprites/spr_Maykr_TopHud_Options/spr_Maykr_TopHud_Options.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_TopHud_Options",
     "tags": [],
     "resourceType": "GMSequence",

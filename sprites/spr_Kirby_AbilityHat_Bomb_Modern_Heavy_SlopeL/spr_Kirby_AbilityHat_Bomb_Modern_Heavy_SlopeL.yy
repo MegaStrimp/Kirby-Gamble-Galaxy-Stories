@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Bomb_Modern_Heavy_SlopeL","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_SlopeL/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_SlopeL.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Bomb_Modern_Heavy_SlopeL",
     "tags": [],
     "resourceType": "GMSequence",

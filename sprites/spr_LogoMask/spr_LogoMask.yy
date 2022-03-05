@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_LogoMask","path":"sprites/spr_LogoMask/spr_LogoMask.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_LogoMask",
     "tags": [],
     "resourceType": "GMSequence",

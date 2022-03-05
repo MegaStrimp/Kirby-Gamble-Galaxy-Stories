@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Palette_GreenJolt","path":"sprites/spr_Kirby_Normal_Palette_GreenJolt/spr_Kirby_Normal_Palette_GreenJolt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Palette_GreenJolt",
     "tags": [],
     "resourceType": "GMSequence",

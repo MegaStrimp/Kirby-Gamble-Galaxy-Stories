@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bg_Space1","path":"sprites/bg_Space1/bg_Space1.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bg_Space1",
     "tags": [],
     "resourceType": "GMSequence",

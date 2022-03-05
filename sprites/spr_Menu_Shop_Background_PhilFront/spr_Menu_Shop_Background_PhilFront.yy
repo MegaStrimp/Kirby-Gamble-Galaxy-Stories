@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Shop_Background_PhilFront","path":"sprites/spr_Menu_Shop_Background_PhilFront/spr_Menu_Shop_Background_PhilFront.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Shop_Background_PhilFront",
     "tags": [],
     "resourceType": "GMSequence",

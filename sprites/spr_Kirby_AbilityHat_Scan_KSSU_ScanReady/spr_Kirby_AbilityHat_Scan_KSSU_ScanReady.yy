@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Scan_KSSU_ScanReady","path":"sprites/spr_Kirby_AbilityHat_Scan_KSSU_ScanReady/spr_Kirby_AbilityHat_Scan_KSSU_ScanReady.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Scan_KSSU_ScanReady",
     "tags": [],
     "resourceType": "GMSequence",

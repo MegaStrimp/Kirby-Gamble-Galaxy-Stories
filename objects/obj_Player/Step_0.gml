@@ -75,7 +75,7 @@ if (!global.pause)
 		
 		case playerAbilities.fire:
 		var maxTimer = fireParticleTimerMax;
-		if ((attackNumber == "fireAerial") or (attackNumber == "fireWheel") or (attackNumber == "fireBack")) maxTimer = floor(fireParticleTimerMax / 2);
+		if ((attackNumber == playerAttacks.fireAerial) or (attackNumber == playerAttacks.fireWheel) or (attackNumber == playerAttacks.fireBack)) maxTimer = floor(fireParticleTimerMax / 2);
 		if (fireParticleTimer == -1) fireParticleTimer = fireParticleTimerMax;
 		break;
 		
@@ -116,6 +116,10 @@ if (!global.pause)
 			sparkMaxCharge = true;
 		}
 		break;
+		
+		case playerAbilities.water:
+		if (sprite_index != sprWalk) waterWalkHatAnim = 0;
+		break;
 	}
 	
 	if ((playerCharacter != playerCharacters.gordo) and (playerCharacter != playerCharacters.bloodGordo)) imageAngle = 0;
@@ -139,7 +143,7 @@ if (!global.pause)
 		collidedBumper.hit = true;
 		collidedBumper.hitTimer = collidedBumper.hitTimerMax;
 		jumpLimit = false;
-		jumpLimitTimer = jumpLimitTimerMax;
+		jumpLimitTimer = jumpLimitTimerMax + (collidedBumper.force - 6);
 		
 		//Sound
 		
@@ -194,13 +198,14 @@ if (!global.pause)
 			collidedSpring.hit = true;
 			collidedSpring.hitTimer = collidedSpring.hitTimerMax;
 			jumpLimit = false;
-			jumpLimitTimer = jumpLimitTimerMax;
+			jumpLimitTimer = jumpLimitTimerMax + floor((collidedSpring.force - 6) * 3);
+			
 			
 			//Particles
 			
 			for (var i = 0; i < 2; i++)
 			{
-				var par = instance_create_depth(collidedSpring.x + (8 * collidedSpring.image_xscale),collidedSpring.y + (4 * collidedSpring.image_yscale),collidedSpring.depth + 1,obj_Particle);
+				var par = instance_create_depth(collidedSpring.x + collidedSpring.xOffset,collidedSpring.y + collidedSpring.yOffset,collidedSpring.depth + 1,obj_Particle);
 				par.sprite_index = spr_Particle_SmallStar;
 				par.hsp = 6;
 				if (i == 0)
@@ -419,6 +424,12 @@ switch (state)
 	
     case (playerStates.iceGrab):
 	scr_Player_IceGrab();
+	break;
+	
+	//Wheel Normal
+	
+    case (playerStates.wheelNormal):
+	scr_Player_WheelNormal();
 	break;
 	
 	//Wing Dash
@@ -650,7 +661,7 @@ global.hpP2 = clamp(global.hpP2,0,global.hpMax);
 
 //Scale
 
-if ((attackNumber == "stoneNormal") or (attackNumber == "gooeyStoneNormal"))
+if ((attackNumber == playerAttacks.stoneNormal) or (attackNumber == "gooeyStoneNormal"))
 {
 	image_xscale = scale;
 }
@@ -892,7 +903,7 @@ if (!global.pause)
 	
 	//Beam Attack 2 Timer
 	
-	if ((attack) and (attackNumber = "beamAir"))
+	if ((attack) and (attackNumber = playerAttacks.beamAir))
 	{
 		if (beamAttack2Timer > 0)
 		{
@@ -926,7 +937,7 @@ if (!global.pause)
 	
 	//Beam Dash Attack Timer
 	
-	if ((attack) and (attackNumber = "beamDash"))
+	if ((attack) and (attackNumber = playerAttacks.beamDash))
 	{
 		if (beamDashAttackTimer > 0)
 		{
@@ -953,7 +964,7 @@ if (!global.pause)
 	
 	//Beam Grab Timer
 	
-	if ((attack) and (attackNumber = "beamGrab"))
+	if ((attack) and (attackNumber = playerAttacks.beamGrab))
 	{
 		if (beamGrabTimer > 0)
 		{
@@ -990,7 +1001,7 @@ if (!global.pause)
 	
 	//Mystic Beam Grab Timer
 	
-	if ((attack) and (attackNumber = "mysticBeamGrab"))
+	if ((attack) and (attackNumber = playerAttacks.mysticBeamGrab))
 	{
 		if (mysticBeamGrabTimer > 0)
 		{
@@ -1026,7 +1037,7 @@ if (!global.pause)
 	
 	//Mystic Beam Attack 2 Timer
 	
-	if ((attack) and (attackNumber = "mysticBeamAir"))
+	if ((attack) and (attackNumber = playerAttacks.mysticBeamAir))
 	{
 		if (mysticBeamAttack2Timer > 0)
 		{
@@ -1327,7 +1338,7 @@ if (!global.pause)
 			var yy = y - 8;
 			var dep = depth + 1;
 			var spr = spr_Particle_Fire1;
-			if (attackNumber == "fireBack")
+			if (attackNumber == playerAttacks.fireBack)
 			{
 				yy = y + 12;
 				dep = depth - 1;
@@ -1485,7 +1496,7 @@ if (!global.pause)
 	
 	//Wing Dash Particle Timer
 	
-	if (attackNumber == "wingDash")
+	if (attackNumber == playerAttacks.wingDash)
 	{
 		if (wingDashParticleTimer > 0)
 		{
@@ -1801,7 +1812,7 @@ else if (characterSetupTimer == 0)
 		sprGuard = spr_Kirby_Normal_Guard;
 		sprGuardSlope = spr_Kirby_Normal_Guard_Slope;
 		sprItemCarryThrow = spr_Kirby_Normal_ItemCarry_Throw;
-		sprCutterCharge = spr_SirKibble_Normal_Catch;
+		sprCutterCharge = spr_Kirby_Normal_Cutter_Charge;
 		sprCutterAttack1 = spr_Kirby_Normal_Cutter_Attack1;
 		sprCutterAttack2 = spr_Kirby_Normal_Cutter_Attack2;
 		sprCutterAttack3 = spr_Kirby_Normal_Cutter_Attack3;
@@ -1963,6 +1974,10 @@ else if (characterSetupTimer == 0)
 		break;
 		
 		case playerCharacters.gooey:
+		var skin = global.skinGooeyP1;
+		if (player == 1) skin = global.skinGooeyP2;
+		
+		#region Physics
 		gravNormal = .23;
 		gravStone = .7;
 		grav = gravNormal;
@@ -1996,38 +2011,82 @@ else if (characterSetupTimer == 0)
 		decelSwordDash = .1;
 		decelFloat = .025;
 		climbSpeed = 2.5;
+		#endregion
 		
-		sprIdle = spr_Gooey_Normal_Idle;
-		sprWalk = spr_Gooey_Normal_Walk;
-		sprRun = spr_Gooey_Normal_Run;
-		sprRunTurn = spr_Gooey_Normal_RunTurn;
-		sprJump = spr_Gooey_Normal_Jump;
-		sprRoll = spr_Gooey_Normal_Roll;
-		sprRollDuckReady = spr_Gooey_Normal_RollDuckReady;
-		sprRollDuck = spr_Gooey_Normal_RollDuck;
-		sprBackflip = spr_Gooey_Normal_Backflip;
-		sprFall = spr_Gooey_Normal_Fall;
-		sprSquish = spr_Gooey_Normal_Squish;
-		sprDuck = spr_Gooey_Normal_Duck;
-		sprSlide = spr_Gooey_Normal_Slide;
-		sprSlideEnd = spr_Gooey_Normal_SlideEnd;
-		sprFloat = spr_Gooey_Normal_Float;
-		sprStoneAttack1Ready = spr_Gooey_Normal_Stone_AttackReady;
-		if (player == 0)
+		switch (skin)
 		{
-			sprStoneAttack1Common = spr_Gooey_Normal_Stone_Attack_Common1;
-			sprStoneAttack1Uncommon = spr_Gooey_Normal_Stone_Attack_Uncommon1;
-			sprStoneAttack1Rare = spr_Gooey_Normal_Stone_Attack_Rare1;
+			case "normal":
+			#region Sprites
+			sprIdle = spr_Gooey_Normal_Idle;
+			sprWalk = spr_Gooey_Normal_Walk;
+			sprRun = spr_Gooey_Normal_Run;
+			sprRunTurn = spr_Gooey_Normal_RunTurn;
+			sprJump = spr_Gooey_Normal_Jump;
+			sprRoll = spr_Gooey_Normal_Roll;
+			sprRollDuckReady = spr_Gooey_Normal_RollDuckReady;
+			sprRollDuck = spr_Gooey_Normal_RollDuck;
+			sprBackflip = spr_Gooey_Normal_Backflip;
+			sprFall = spr_Gooey_Normal_Fall;
+			sprSquish = spr_Gooey_Normal_Squish;
+			sprDuck = spr_Gooey_Normal_Duck;
+			sprSlide = spr_Gooey_Normal_Slide;
+			sprSlideEnd = spr_Gooey_Normal_SlideEnd;
+			sprFloat = spr_Gooey_Normal_Float;
+			sprStoneAttack1Ready = spr_Gooey_Normal_Stone_AttackReady;
+			if (player == 0)
+			{
+				sprStoneAttack1Common = spr_Gooey_Normal_Stone_Attack_Common1;
+				sprStoneAttack1Uncommon = spr_Gooey_Normal_Stone_Attack_Uncommon1;
+				sprStoneAttack1Rare = spr_Gooey_Normal_Stone_Attack_Rare1;
+			}
+			else
+			{
+				sprStoneAttack1Common = spr_Gooey_Normal_Stone_Attack_Common2;
+				sprStoneAttack1Uncommon = spr_Gooey_Normal_Stone_Attack_Uncommon2;
+				sprStoneAttack1Rare = spr_Gooey_Normal_Stone_Attack_Rare2;
+			}
+			sprFireAttack2 = spr_Gooey_Normal_Fire_Attack;
+			sprFireAttackRelease1 = spr_Gooey_Normal_Fire_AttackRelease1;
+			sprFireAttackRelease2 = spr_Gooey_Normal_Fire_AttackRelease2;
+			#endregion
+			break;
+			
+			case "pipis":
+			#region Sprites
+			sprIdle = spr_Gooey_Pipis_Idle;
+			sprWalk = spr_Gooey_Normal_Walk;
+			sprRun = spr_Gooey_Normal_Run;
+			sprRunTurn = spr_Gooey_Normal_RunTurn;
+			sprJump = spr_Gooey_Normal_Jump;
+			sprRoll = spr_Gooey_Normal_Roll;
+			sprRollDuckReady = spr_Gooey_Normal_RollDuckReady;
+			sprRollDuck = spr_Gooey_Normal_RollDuck;
+			sprBackflip = spr_Gooey_Normal_Backflip;
+			sprFall = spr_Gooey_Normal_Fall;
+			sprSquish = spr_Gooey_Normal_Squish;
+			sprDuck = spr_Gooey_Normal_Duck;
+			sprSlide = spr_Gooey_Normal_Slide;
+			sprSlideEnd = spr_Gooey_Normal_SlideEnd;
+			sprFloat = spr_Gooey_Normal_Float;
+			sprStoneAttack1Ready = spr_Gooey_Normal_Stone_AttackReady;
+			if (player == 0)
+			{
+				sprStoneAttack1Common = spr_Gooey_Normal_Stone_Attack_Common1;
+				sprStoneAttack1Uncommon = spr_Gooey_Normal_Stone_Attack_Uncommon1;
+				sprStoneAttack1Rare = spr_Gooey_Normal_Stone_Attack_Rare1;
+			}
+			else
+			{
+				sprStoneAttack1Common = spr_Gooey_Normal_Stone_Attack_Common2;
+				sprStoneAttack1Uncommon = spr_Gooey_Normal_Stone_Attack_Uncommon2;
+				sprStoneAttack1Rare = spr_Gooey_Normal_Stone_Attack_Rare2;
+			}
+			sprFireAttack2 = spr_Gooey_Normal_Fire_Attack;
+			sprFireAttackRelease1 = spr_Gooey_Normal_Fire_AttackRelease1;
+			sprFireAttackRelease2 = spr_Gooey_Normal_Fire_AttackRelease2;
+			#endregion
+			break;
 		}
-		else
-		{
-			sprStoneAttack1Common = spr_Gooey_Normal_Stone_Attack_Common2;
-			sprStoneAttack1Uncommon = spr_Gooey_Normal_Stone_Attack_Uncommon2;
-			sprStoneAttack1Rare = spr_Gooey_Normal_Stone_Attack_Rare2;
-		}
-		sprFireAttack2 = spr_Gooey_Normal_Fire_Attack;
-		sprFireAttackRelease1 = spr_Gooey_Normal_Fire_AttackRelease1;
-		sprFireAttackRelease2 = spr_Gooey_Normal_Fire_AttackRelease2;
 		break;
 		
 		case playerCharacters.waddleDee:

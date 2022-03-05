@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_PauseMenu_Ability_MirrorDescription","path":"sprites/spr_PauseMenu_Ability_MirrorDescription/spr_PauseMenu_Ability_MirrorDescription.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_PauseMenu_Ability_MirrorDescription",
     "tags": [],
     "resourceType": "GMSequence",

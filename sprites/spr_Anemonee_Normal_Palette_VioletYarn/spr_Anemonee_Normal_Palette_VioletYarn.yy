@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Anemonee_Normal_Palette_VioletYarn","path":"sprites/spr_Anemonee_Normal_Palette_VioletYarn/spr_Anemonee_Normal_Palette_VioletYarn.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Anemonee_Normal_Palette_VioletYarn",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Gamble_Normal_Aura_Idle","path":"sprites/spr_Gamble_Normal_Aura_Idle/spr_Gamble_Normal_Aura_Idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Gamble_Normal_Aura_Idle",
     "tags": [],
     "resourceType": "GMSequence",

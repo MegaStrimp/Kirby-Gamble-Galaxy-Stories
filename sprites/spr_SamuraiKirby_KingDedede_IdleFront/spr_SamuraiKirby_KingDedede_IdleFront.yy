@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_SamuraiKirby_KingDedede_IdleFront","path":"sprites/spr_SamuraiKirby_KingDedede_IdleFront/spr_SamuraiKirby_KingDedede_IdleFront.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_SamuraiKirby_KingDedede_IdleFront",
     "tags": [],
     "resourceType": "GMSequence",

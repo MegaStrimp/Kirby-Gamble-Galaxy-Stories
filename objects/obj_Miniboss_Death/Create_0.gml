@@ -6,8 +6,8 @@ event_inherited();
 
 //Physics
 
-grav = .2;
-gravLimit = 5;
+gravNormal = .2;
+gravLimitNormal = 5;
 
 //Other Variables
 

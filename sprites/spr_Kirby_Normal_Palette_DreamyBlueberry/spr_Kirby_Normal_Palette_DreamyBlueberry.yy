@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Palette_DreamyBlueberry","path":"sprites/spr_Kirby_Normal_Palette_DreamyBlueberry/spr_Kirby_Normal_Palette_DreamyBlueberry.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Palette_DreamyBlueberry",
     "tags": [],
     "resourceType": "GMSequence",

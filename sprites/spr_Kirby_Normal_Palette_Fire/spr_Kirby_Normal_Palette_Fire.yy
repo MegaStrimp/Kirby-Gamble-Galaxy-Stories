@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Palette_Fire","path":"sprites/spr_Kirby_Normal_Palette_Fire/spr_Kirby_Normal_Palette_Fire.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Palette_Fire",
     "tags": [],
     "resourceType": "GMSequence",

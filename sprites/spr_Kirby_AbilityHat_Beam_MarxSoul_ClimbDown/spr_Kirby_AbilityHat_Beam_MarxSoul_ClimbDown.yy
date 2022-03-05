@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown",
     "tags": [],
     "resourceType": "GMSequence",

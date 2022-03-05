@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Mirror_KSSU_Dash","path":"sprites/spr_Kirby_AbilityHat_Mirror_KSSU_Dash/spr_Kirby_AbilityHat_Mirror_KSSU_Dash.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Mirror_KSSU_Dash",
     "tags": [],
     "resourceType": "GMSequence",

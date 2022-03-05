@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Wall","path":"sprites/spr_Wall/spr_Wall.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Wall",
     "tags": [],
     "resourceType": "GMSequence",

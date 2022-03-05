@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Ice_KSSU_Palette_FrostedShard","path":"sprites/spr_Kirby_AbilityHat_Ice_KSSU_Palette_FrostedShard/spr_Kirby_AbilityHat_Ice_KSSU_Palette_FrostedShard.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Ice_KSSU_Palette_FrostedShard",
     "tags": [],
     "resourceType": "GMSequence",

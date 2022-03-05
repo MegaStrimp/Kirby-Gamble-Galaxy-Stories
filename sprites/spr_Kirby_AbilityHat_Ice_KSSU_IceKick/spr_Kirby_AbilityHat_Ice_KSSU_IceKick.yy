@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Ice_KSSU_IceKick","path":"sprites/spr_Kirby_AbilityHat_Ice_KSSU_IceKick/spr_Kirby_AbilityHat_Ice_KSSU_IceKick.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Ice_KSSU_IceKick",
     "tags": [],
     "resourceType": "GMSequence",

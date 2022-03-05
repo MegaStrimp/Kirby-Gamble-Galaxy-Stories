@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Projectile_Beam_Ufo","path":"sprites/spr_Projectile_Beam_Ufo/spr_Projectile_Beam_Ufo.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Projectile_Beam_Ufo",
     "tags": [],
     "resourceType": "GMSequence",

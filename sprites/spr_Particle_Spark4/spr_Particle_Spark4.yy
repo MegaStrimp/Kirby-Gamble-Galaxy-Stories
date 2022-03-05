@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_Spark4","path":"sprites/spr_Particle_Spark4/spr_Particle_Spark4.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_Spark4",
     "tags": [],
     "resourceType": "GMSequence",

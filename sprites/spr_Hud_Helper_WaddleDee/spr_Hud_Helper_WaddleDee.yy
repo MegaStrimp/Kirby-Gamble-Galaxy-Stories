@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Hud_Helper_WaddleDee","path":"sprites/spr_Hud_Helper_WaddleDee/spr_Hud_Helper_WaddleDee.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Hud_Helper_WaddleDee",
     "tags": [],
     "resourceType": "GMSequence",

@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityDropStar_MysticFire","path":"sprites/spr_AbilityDropStar_MysticFire/spr_AbilityDropStar_MysticFire.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityDropStar_MysticFire",
     "tags": [],
     "resourceType": "GMSequence",

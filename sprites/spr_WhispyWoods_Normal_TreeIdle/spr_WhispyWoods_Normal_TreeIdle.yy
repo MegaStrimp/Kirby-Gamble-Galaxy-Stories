@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_WhispyWoods_Normal_TreeIdle","path":"sprites/spr_WhispyWoods_Normal_TreeIdle/spr_WhispyWoods_Normal_TreeIdle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_WhispyWoods_Normal_TreeIdle",
     "tags": [],
     "resourceType": "GMSequence",

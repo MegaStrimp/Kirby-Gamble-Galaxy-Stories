@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityBlock_Artist_Top","path":"sprites/spr_AbilityBlock_Artist_Top/spr_AbilityBlock_Artist_Top.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityBlock_Artist_Top",
     "tags": [],
     "resourceType": "GMSequence",

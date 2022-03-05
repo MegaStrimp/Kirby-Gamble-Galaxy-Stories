@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_Mirror3","path":"sprites/spr_Particle_Mirror3/spr_Particle_Mirror3.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_Mirror3",
     "tags": [],
     "resourceType": "GMSequence",

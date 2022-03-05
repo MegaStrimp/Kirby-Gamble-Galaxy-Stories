@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_SpitStar_Small","path":"sprites/spr_SpitStar_Small/spr_SpitStar_Small.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_SpitStar_Small",
     "tags": [],
     "resourceType": "GMSequence",

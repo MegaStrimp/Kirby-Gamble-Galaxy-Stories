@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Healthbar_MiniBoss_Bg3263","path":"sprites/spr_Healthbar_MiniBoss_Bg3263/spr_Healthbar_MiniBoss_Bg3263.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Healthbar_MiniBoss_Bg",
     "tags": [],
     "resourceType": "GMSequence",

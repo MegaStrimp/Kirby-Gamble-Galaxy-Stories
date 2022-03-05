@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_Logo","path":"sprites/spr_Maykr_Logo/spr_Maykr_Logo.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_Logo",
     "tags": [],
     "resourceType": "GMSequence",

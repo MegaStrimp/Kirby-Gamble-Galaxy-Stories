@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Door_GearCube_Storage","path":"sprites/spr_Door_GearCube_Storage/spr_Door_GearCube_Storage.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Door_GearCube_Storage",
     "tags": [],
     "resourceType": "GMSequence",

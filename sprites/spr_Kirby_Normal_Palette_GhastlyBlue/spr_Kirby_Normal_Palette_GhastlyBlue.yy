@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Palette_GhastlyBlue","path":"sprites/spr_Kirby_Normal_Palette_GhastlyBlue/spr_Kirby_Normal_Palette_GhastlyBlue.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Palette_GhastlyBlue",
     "tags": [],
     "resourceType": "GMSequence",

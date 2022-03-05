@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_SamuraiKirby_Kirby_HurtOutline","path":"sprites/spr_SamuraiKirby_Kirby_HurtOutline/spr_SamuraiKirby_Kirby_HurtOutline.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_SamuraiKirby_Kirby_HurtOutline",
     "tags": [],
     "resourceType": "GMSequence",

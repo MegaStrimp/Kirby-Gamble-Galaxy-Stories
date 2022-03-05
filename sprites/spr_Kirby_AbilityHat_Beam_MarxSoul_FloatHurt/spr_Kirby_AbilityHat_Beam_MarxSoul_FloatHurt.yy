@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Beam_MarxSoul_FloatHurt","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_FloatHurt/spr_Kirby_AbilityHat_Beam_MarxSoul_FloatHurt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Beam_MarxSoul_FloatHurt",
     "tags": [],
     "resourceType": "GMSequence",

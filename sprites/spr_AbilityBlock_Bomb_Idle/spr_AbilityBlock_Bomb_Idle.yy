@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_AbilityBlock_Bomb_Idle","path":"sprites/spr_AbilityBlock_Bomb_Idle/spr_AbilityBlock_Bomb_Idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_AbilityBlock_Bomb_Idle",
     "tags": [],
     "resourceType": "GMSequence",

@@ -111,7 +111,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_AbilityChange","path":"sprites/spr_Kirby_Normal_AbilityChange/spr_Kirby_Normal_AbilityChange.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_AbilityChange",
     "tags": [],
     "resourceType": "GMSequence",

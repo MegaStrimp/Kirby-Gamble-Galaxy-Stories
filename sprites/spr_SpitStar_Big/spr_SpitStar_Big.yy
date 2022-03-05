@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_SpitStar_Big","path":"sprites/spr_SpitStar_Big/spr_SpitStar_Big.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_SpitStar_Big",
     "tags": [],
     "resourceType": "GMSequence",

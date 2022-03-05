@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_BreakingWall_Normal_Top","path":"sprites/spr_BreakingWall_Normal_Top/spr_BreakingWall_Normal_Top.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_BreakingWall_Normal_Top",
     "tags": [],
     "resourceType": "GMSequence",

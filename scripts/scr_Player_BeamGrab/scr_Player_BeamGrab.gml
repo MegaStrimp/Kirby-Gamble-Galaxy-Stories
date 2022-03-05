@@ -38,7 +38,7 @@ function scr_Player_BeamGrab()
 		
 		//Revert Back
 		
-		if ((attackNumber != "beamGrab") or (!instance_exists(grabObj))) attackTimer = 0;
+		if ((attackNumber != playerAttacks.beamGrab) or (!instance_exists(grabObj))) attackTimer = 0;
 		
 		//Animation
 		

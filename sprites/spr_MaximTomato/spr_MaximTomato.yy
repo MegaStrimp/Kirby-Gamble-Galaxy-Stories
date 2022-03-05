@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_MaximTomato","path":"sprites/spr_MaximTomato/spr_MaximTomato.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_MaximTomato",
     "tags": [],
     "resourceType": "GMSequence",

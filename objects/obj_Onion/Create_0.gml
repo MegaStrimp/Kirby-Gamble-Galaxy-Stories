@@ -35,3 +35,4 @@ objectOnDeath = true;
 objectOnDeathObj = obj_Projectile_ExplosionMask;
 hasDeathParticles = false;
 explosionResistance = true;
+instaDeath = false;

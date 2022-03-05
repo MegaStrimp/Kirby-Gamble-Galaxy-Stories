@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_HatShadow_Bomb_Modern_SlopeL","path":"sprites/spr_Kirby_HatShadow_Bomb_Modern_SlopeL/spr_Kirby_HatShadow_Bomb_Modern_SlopeL.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_HatShadow_Bomb_Modern_SlopeL",
     "tags": [],
     "resourceType": "GMSequence",

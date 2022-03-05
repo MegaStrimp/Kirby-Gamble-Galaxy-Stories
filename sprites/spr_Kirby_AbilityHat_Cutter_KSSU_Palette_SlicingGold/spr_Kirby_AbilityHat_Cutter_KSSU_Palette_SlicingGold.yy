@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Cutter_KSSU_Palette_SlicingGold","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Palette_SlicingGold/spr_Kirby_AbilityHat_Cutter_KSSU_Palette_SlicingGold.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Cutter_KSSU_Palette_SlicingGold",
     "tags": [],
     "resourceType": "GMSequence",

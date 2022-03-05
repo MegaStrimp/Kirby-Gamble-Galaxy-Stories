@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Bosses",
-    "path": "folders/Objects/Gameplay/Enemies/Bosses.yy",
+    "name": "Misc",
+    "path": "folders/Objects/Gameplay/Enemies/Misc.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_Miniboss_Control",

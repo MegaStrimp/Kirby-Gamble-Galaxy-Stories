@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bg_ShiverStar_Stars","path":"sprites/bg_ShiverStar_Stars/bg_ShiverStar_Stars.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bg_ShiverStar_Stars",
     "tags": [],
     "resourceType": "GMSequence",

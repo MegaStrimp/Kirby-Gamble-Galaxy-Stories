@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_PauseMenu_Exit","path":"sprites/spr_PauseMenu_Exit/spr_PauseMenu_Exit.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_PauseMenu_Exit",
     "tags": [],
     "resourceType": "GMSequence",

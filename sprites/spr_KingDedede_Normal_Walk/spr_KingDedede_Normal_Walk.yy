@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_KingDedede_Normal_Walk","path":"sprites/spr_KingDedede_Normal_Walk/spr_KingDedede_Normal_Walk.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_KingDedede_Normal_Walk",
     "tags": [],
     "resourceType": "GMSequence",

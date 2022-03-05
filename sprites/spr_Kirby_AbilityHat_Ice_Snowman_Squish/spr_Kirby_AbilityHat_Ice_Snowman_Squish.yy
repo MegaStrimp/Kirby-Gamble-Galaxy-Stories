@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Ice_Snowman_Squish","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Squish/spr_Kirby_AbilityHat_Ice_Snowman_Squish.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_AbilityHat_Ice_Snowman_Squish",
     "tags": [],
     "resourceType": "GMSequence",

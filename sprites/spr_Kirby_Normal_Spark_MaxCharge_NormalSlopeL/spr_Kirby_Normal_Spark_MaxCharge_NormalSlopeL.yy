@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeL","path":"sprites/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeL/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeL.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeL",
     "tags": [],
     "resourceType": "GMSequence",

@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Gamble_Normal_Meteor","path":"sprites/spr_Gamble_Normal_Meteor/spr_Gamble_Normal_Meteor.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Gamble_Normal_Meteor",
     "tags": [],
     "resourceType": "GMSequence",

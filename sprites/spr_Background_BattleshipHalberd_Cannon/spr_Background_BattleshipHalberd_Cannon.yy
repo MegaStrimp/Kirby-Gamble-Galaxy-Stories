@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Background_BattleshipHalberd_Cannon","path":"sprites/spr_Background_BattleshipHalberd_Cannon/spr_Background_BattleshipHalberd_Cannon.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Background_BattleshipHalberd_Cannon",
     "tags": [],
     "resourceType": "GMSequence",

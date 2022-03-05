@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_72x24Slope","path":"sprites/spr_72x24Slope/spr_72x24Slope.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_72x24Slope",
     "tags": [],
     "resourceType": "GMSequence",

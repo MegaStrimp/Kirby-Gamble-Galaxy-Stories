@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Gim_Normal_Palette_BotBlur","path":"sprites/spr_Gim_Normal_Palette_BotBlur/spr_Gim_Normal_Palette_BotBlur.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Gim_Normal_Palette_BotBlur",
     "tags": [],
     "resourceType": "GMSequence",

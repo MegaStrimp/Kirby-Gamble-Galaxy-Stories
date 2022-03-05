@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Cutter_Catch","path":"sprites/spr_Kirby_Normal_Cutter_Catch/spr_Kirby_Normal_Cutter_Catch.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Cutter_Catch",
     "tags": [],
     "resourceType": "GMSequence",

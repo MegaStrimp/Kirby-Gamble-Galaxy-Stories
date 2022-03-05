@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Inhale","path":"sprites/spr_Kirby_Normal_Inhale/spr_Kirby_Normal_Inhale.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Inhale",
     "tags": [],
     "resourceType": "GMSequence",

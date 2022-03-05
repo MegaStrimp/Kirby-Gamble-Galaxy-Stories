@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_ItemCarry_Light_FloatSpit_Hands","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_FloatSpit_Hands/spr_Kirby_Normal_ItemCarry_Light_FloatSpit_Hands.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_ItemCarry_Light_FloatSpit_Hands",
     "tags": [],
     "resourceType": "GMSequence",

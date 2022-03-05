@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Upgrades_EggSoil","path":"sprites/spr_Menu_Upgrades_EggSoil/spr_Menu_Upgrades_EggSoil.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Upgrades_EggSoil",
     "tags": [],
     "resourceType": "GMSequence",

@@ -185,7 +185,7 @@ function scr_Player_Collision()
 	//Clamp
 	
 	x = clamp(x,0,room_width);
-	y = clamp(y,0,room_height);
+	y = clamp(y,0,room_height + 24);
 	
 	hasMiniboss = false;
 	with (obj_Miniboss_Control) if (active) other.hasMiniboss = true;

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_VirtualKey_BLetter","path":"sprites/spr_VirtualKey_BLetter/spr_VirtualKey_BLetter.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_VirtualKey_BLetter",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Palette_Misc_MirrorCyan","path":"sprites/spr_Kirby_Normal_Palette_Misc_MirrorCyan/spr_Kirby_Normal_Palette_Misc_MirrorCyan.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_Palette_Misc_MirrorCyan",
     "tags": [],
     "resourceType": "GMSequence",

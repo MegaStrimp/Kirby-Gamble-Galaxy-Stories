@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Maykr_ItemHud_BrontoBurt","path":"sprites/spr_Maykr_ItemHud_BrontoBurt/spr_Maykr_ItemHud_BrontoBurt.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Maykr_ItemHud_BrontoBurt",
     "tags": [],
     "resourceType": "GMSequence",

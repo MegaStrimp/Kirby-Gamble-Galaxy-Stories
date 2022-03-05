@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Particle_SmallSparkle_White","path":"sprites/spr_Particle_SmallSparkle_White/spr_Particle_SmallSparkle_White.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Particle_SmallSparkle_White",
     "tags": [],
     "resourceType": "GMSequence",

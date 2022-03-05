@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"bg_AsteroidFields_Debris_Purple_Mid","path":"sprites/bg_AsteroidFields_Debris_Purple_Mid/bg_AsteroidFields_Debris_Purple_Mid.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "bg_AsteroidFields_Debris_Purple_Mid",
     "tags": [],
     "resourceType": "GMSequence",

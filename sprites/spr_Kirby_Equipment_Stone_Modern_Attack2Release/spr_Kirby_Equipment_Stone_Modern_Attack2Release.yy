@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Equipment_Stone_Modern_Attack2Release","path":"sprites/spr_Kirby_Equipment_Stone_Modern_Attack2Release/spr_Kirby_Equipment_Stone_Modern_Attack2Release.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Equipment_Stone_Modern_Attack2Release",
     "tags": [],
     "resourceType": "GMSequence",

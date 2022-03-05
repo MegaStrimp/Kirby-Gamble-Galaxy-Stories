@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_ItemCarry_Throw","path":"sprites/spr_Kirby_Normal_ItemCarry_Throw/spr_Kirby_Normal_ItemCarry_Throw.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Kirby_Normal_ItemCarry_Throw",
     "tags": [],
     "resourceType": "GMSequence",

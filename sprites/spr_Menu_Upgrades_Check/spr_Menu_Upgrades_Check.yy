@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Upgrades_Check","path":"sprites/spr_Menu_Upgrades_Check/spr_Menu_Upgrades_Check.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Menu_Upgrades_Check",
     "tags": [],
     "resourceType": "GMSequence",

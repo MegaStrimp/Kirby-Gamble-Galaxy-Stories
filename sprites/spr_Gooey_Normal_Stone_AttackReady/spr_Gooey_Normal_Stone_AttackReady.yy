@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Gooey_Normal_Stone_AttackReady","path":"sprites/spr_Gooey_Normal_Stone_AttackReady/spr_Gooey_Normal_Stone_AttackReady.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Gooey_Normal_Stone_AttackReady",
     "tags": [],
     "resourceType": "GMSequence",

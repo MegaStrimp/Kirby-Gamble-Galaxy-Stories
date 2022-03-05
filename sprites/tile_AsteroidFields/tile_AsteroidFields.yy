@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"tile_AsteroidFields","path":"sprites/tile_AsteroidFields/tile_AsteroidFields.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "tile_AsteroidFields",
     "tags": [],
     "resourceType": "GMSequence",
