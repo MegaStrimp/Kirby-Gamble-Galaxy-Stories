@@ -29,7 +29,7 @@ if (!global.pause)
 	{
 		//Get Inhaled
 		
-		scr_Object_Inhale();
+		scr_Object_Inhale(enemy);
 		
 		//Destroy
 		

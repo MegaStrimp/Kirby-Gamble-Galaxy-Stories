@@ -7,7 +7,7 @@ var projectilePointer;
 
 if (!global.pause)
 {
-	scr_Object_Inhale();
+	scr_Object_Inhale(enemy);
 	
 	scr_Enemy_HurtsPlayer(dmg);
 	

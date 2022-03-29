@@ -13,6 +13,11 @@ hitTimer = -1;
 hitTimerMax = 10;
 xOffset = 0;
 yOffset = 0;
+yDrawOffset = 0;
+scaleExX = 0;
+scaleExY = 0;
+shakeX = 0;
+shakeY = 0;
 
 //Sprites
 

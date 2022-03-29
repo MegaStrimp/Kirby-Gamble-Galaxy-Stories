@@ -14,6 +14,25 @@ if (player == 1) playerIsHelper = global.isHelperP2;
 var playerFamiliar = global.familiarP1;
 if (player == 1) playerFamiliar = global.familiarP2;
 
+grounded = false;
+if (place_meeting(x,y + 1,obj_Wall))
+{
+	var collidingWall = instance_place(x,y + 1,obj_Wall);
+	if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) grounded = true;
+}
+else if (place_meeting(x,y + 1,obj_Spring))
+{
+	//var collidingSpring = instance_place(x,y + 1,obj_Spring);
+	grounded = true;
+}
+
+wallAbove = false;
+if (place_meeting(x,y - 1,obj_Wall))
+{
+	var collidingWall = instance_place(x,y - 1,obj_Wall);
+	if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) wallAbove = true;
+}
+
 scr_Player_Inputs(player);
 
 //Clamp To View
@@ -65,6 +84,25 @@ if ((((player == 0) and (global.hpP1 == 0)) or ((player == 1) and (global.hpP2 =
 
 if (!global.pause)
 {
+	//Moving Walls
+	/*
+	if (place_meeting(x,y + 1,obj_Wall))
+	{
+		var movingWall = instance_place(x,y + 1,obj_Wall);
+		if (movingWall.hsp != 0) x += movingWall.hsp;
+		if (movingWall.vsp != 0) y += movingWall.vsp;
+	}
+	if (place_meeting(x,y - 1,obj_Wall))
+	{
+		var movingWall = instance_place(x,y - 1,obj_Wall);
+		if (movingWall.vsp != 0) y += movingWall.vsp;
+	}
+	if (place_meeting(x + sign(hspFinal),y,obj_Wall))
+	{
+		var movingWall = instance_place(x + sign(hspFinal),y,obj_Wall);
+		if (movingWall.hsp != 0) x += movingWall.hsp;
+	}
+	*/
 	//Abilities
 	
 	switch (playerAbility)
@@ -190,22 +228,42 @@ if (!global.pause)
 	
 	if (place_meeting(x,y + 1,obj_Spring))
 	{
-		if (sign(vsp) == 1)
+		if (sign(vsp) != -1)
 		{
 			//Variables
 			
 			var collidedSpring = instance_place(x,y + 1,obj_Spring);
 			collidedSpring.hit = true;
 			collidedSpring.hitTimer = collidedSpring.hitTimerMax;
-			jumpLimit = false;
-			jumpLimitTimer = jumpLimitTimerMax + floor((collidedSpring.force - 6) * 3);
+			var finalForce = collidedSpring.force;
+			var drawOffsetForce = 8;
 			
+			if ((keyJumpHold) or (keyUpHold))
+			{
+				finalForce *= 1.25;
+				drawOffsetForce = 16;
+				audio_play_sound(snd_BigJump,0,false);
+			}
+			else
+			{
+				audio_play_sound(snd_Jump,0,false);
+			}
+			
+			if (collidedSpring.object_index == obj_BouncyCloud)
+			{
+				collidedSpring.scaleExY = -.2;
+				collidedSpring.yDrawOffset = drawOffsetForce;
+			}
+			
+			if (carriedItem == carriedItems.none) fallRoll = true;
+			jumpLimit = false;
+			jumpLimitTimer = jumpLimitTimerMax + floor((finalForce - 6) * 3);
 			
 			//Particles
 			
 			for (var i = 0; i < 2; i++)
 			{
-				var par = instance_create_depth(collidedSpring.x + collidedSpring.xOffset,collidedSpring.y + collidedSpring.yOffset,collidedSpring.depth + 1,obj_Particle);
+				var par = instance_create_depth(x,y + 4,depth,obj_Particle);
 				par.sprite_index = spr_Particle_SmallStar;
 				par.hsp = 6;
 				if (i == 0)
@@ -224,20 +282,6 @@ if (!global.pause)
 				par.hasGravity = true;
 			}
 			
-			//Sound
-			
-			if (!global.cutscene)
-			{
-				if (keyJumpPressed)
-				{
-					audio_play_sound(snd_BigJump,0,false);
-				}
-				else
-				{
-					audio_play_sound(snd_Jump,0,false);
-				}
-			}
-			
 			//Change State To Normal
 			
 			if ((state == playerStates.inhale) or (state == playerStates.climb) or (state == playerStates.slide))
@@ -250,14 +294,7 @@ if (!global.pause)
 			
 			//Vertical Knockback
 			
-			if ((!global.cutscene) and (keyJumpPressed))
-			{
-				vsp = -collidedSpring.force * 1.5;
-			}
-			else
-			{
-				vsp = -collidedSpring.force;
-			}
+			vsp = -finalForce;
 		}
 	}
 	
@@ -661,7 +698,7 @@ global.hpP2 = clamp(global.hpP2,0,global.hpMax);
 
 //Scale
 
-if ((attackNumber == playerAttacks.stoneNormal) or (attackNumber == "gooeyStoneNormal"))
+if ((attackNumber == playerAttacks.stoneNormal) or (attackNumber == playerAttacks.gooeyStoneNormal))
 {
 	image_xscale = scale;
 }
@@ -1470,6 +1507,19 @@ if (!global.pause)
 		iceKickTimer = -1;
 	}
 	
+	//Wheel Ready Timer
+	
+	if (wheelReadyTimer > 0)
+	{
+		wheelReadyTimer -= 1;
+	}
+	else if (wheelReadyTimer == 0)
+	{
+		wheelReady = true;
+		hsp = movespeedWheel * dir;
+		wheelReadyTimer = -1;
+	}
+	
 	//Spark Particle Timer
 	
 	if (playerAbility == playerAbilities.spark)
@@ -1677,13 +1727,9 @@ else if (characterSetupTimer == 0)
 		gravLimitStone = 7;
 		gravLimitFireDash = 1.25;
 		gravLimit = gravLimitNormal;
-		hsp = 0;
-		fireDashHsp = 0;
-		hspFinal = 0;
-		vsp = 0;
-		vspFinal = 0;
 		jumpspeedNormal = 6;
 		jumpspeedFloat = 1.8;
+		jumpspeedWheel = 8;
 		jumpspeed = jumpspeedNormal;
 		movespeedNormal = 1.7;
 		movespeedRun = 2.6;
@@ -1897,8 +1943,6 @@ else if (characterSetupTimer == 0)
 		sprScanReady = spr_Kirby_Normal_ScanReady;
 		sprScan = spr_Kirby_Normal_Scan;
 		sprScanEnd = spr_Kirby_Normal_ScanEnd;
-		sprFreezeAttack1Ready = spr_Kirby_Normal_Freeze_Attack1Ready;
-		sprFreezeAttack1 = spr_Kirby_Normal_Freeze_Attack1;
 		sprHurt = spr_Kirby_Normal_Hurt;
 		sprDeath = spr_Kirby_Normal_Death;
 		break;
@@ -1917,19 +1961,22 @@ else if (characterSetupTimer == 0)
 		gravStone = .7;
 		grav = gravNormal;
 		gravFloat = .075;
+		gravFireDash = .05;
 		gravLimitNormal = 5;
 		gravLimitFloat = 2.3;
 		gravLimitStone = 7;
+		gravLimitFireDash = 1.25;
 		gravLimit = gravLimitNormal;
 		jumpspeedNormal = 6;
 		jumpspeedFloat = 1.8;
+		jumpspeedWheel = 8;
 		jumpspeed = jumpspeedNormal;
 		movespeedNormal = 1.7;
 		movespeedRun = 2.6;
 		movespeedSlide = 5;
 		movespeedFloat = 1.9;
 		movespeedCarry = 2;
-		movespeedBurst = 6;
+		movespeedBurst = 7;
 		movespeed = movespeedNormal;
 		ufoFloatSpd = 2;
 		accel = .2;
@@ -1988,13 +2035,9 @@ else if (characterSetupTimer == 0)
 		gravLimitStone = 7;
 		gravLimitFireDash = 1.25;
 		gravLimit = gravLimitNormal;
-		hsp = 0;
-		fireDashHsp = 0;
-		hspFinal = 0;
-		vsp = 0;
-		vspFinal = 0;
 		jumpspeedNormal = 6;
 		jumpspeedFloat = 1.8;
+		jumpspeedWheel = 8;
 		jumpspeed = jumpspeedNormal;
 		movespeedNormal = 1.7;
 		movespeedRun = 2.6;

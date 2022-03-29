@@ -20,8 +20,8 @@ function scr_Player_Normal()
 		}
 		else if (place_meeting(x,y + 1,obj_Spring))
 		{
-			var collidingWall = instance_place(x,y + 1,obj_Spring);
-			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) grounded = true;
+			//var collidingSpring = instance_place(x,y + 1,obj_Spring);
+			grounded = true;
 		}
 		
 		var wallAbove = false;
@@ -188,7 +188,7 @@ function scr_Player_Normal()
 		}
 		
 		var blockGap = false;
-		if ((run) and (hsp != 0) and (vsp == 0) and (!place_meeting(x,y + 1,obj_Wall)) and (!place_meeting(x + hsp,y,obj_Wall)) and (place_meeting(x + hsp - 24,y + 1,obj_Wall)) and (place_meeting(x + hsp + 24,y + 1,obj_Wall))) blockGap = true;
+		if ((run) and (hsp != 0) and (vsp == 0) and (!place_meeting(x,y + 1,obj_Wall)) and (!place_meeting(x + hsp,y,obj_Wall)) and (place_meeting(x + hsp,y + 1,obj_Wall))) blockGap = true;
 		if ((hasGravity) and (!blockGap) and (playerAbility != playerAbilities.ufo))
 		{
 			var gravOffset = 0;
@@ -211,10 +211,6 @@ function scr_Player_Normal()
 			{
 				case playerCharacters.bouncy:
 				jumpLimitValue = -jumpspeed / 2;
-				break;
-				
-				default:
-				jumpLimitValue = -jumpspeed / 4;
 				break;
 			}
 		    if ((hasJumpLimit) and (jumpLimit)) vsp = max(vsp,jumpLimitValue);
@@ -260,6 +256,7 @@ function scr_Player_Normal()
 		
 		switch (carriedItem)
 		{
+			#region Bomb
 			case carriedItems.bomb:
 			if (!global.cutscene)
 			{
@@ -415,7 +412,9 @@ function scr_Player_Normal()
 				}
 			}
 			break;
+			#endregion
 			
+			#region Key
 			case carriedItems.key:
 			if (!global.cutscene)
 			{
@@ -470,15 +469,19 @@ function scr_Player_Normal()
 				}
 			}
 			break;
+			#endregion
 			
+			#region Default
 			default:
 			if (canAttack)
 			{
 				switch (playerCharacter)
 				{
+					#region Kirby
 					case playerCharacters.kirby:
 					switch (playerAbility)
 					{
+						#region None
 						case playerAbilities.none:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt))
 					    {
@@ -496,7 +499,9 @@ function scr_Player_Normal()
 					        state = playerStates.inhale;
 					    }
 						break;
-					
+						#endregion
+						
+						#region Cutter
 						case playerAbilities.cutter:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
@@ -702,7 +707,9 @@ function scr_Player_Normal()
 							}
 						}
 						break;
+						#endregion
 						
+						#region Beam
 						case playerAbilities.beam:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
@@ -983,7 +990,7 @@ function scr_Player_Normal()
 									beamAttack2Timer = -1;
 									attack = false;
 									attackable = true;
-									attackNumber = "none";
+									attackNumber = playerAttacks.none;
 								}
 						}
 					
@@ -1113,7 +1120,9 @@ function scr_Player_Normal()
 							}
 						}*/
 						break;
-					
+						#endregion
+						
+						#region Mystic Beam
 						case playerAbilities.mysticBeam:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
@@ -1430,7 +1439,7 @@ function scr_Player_Normal()
 								mysticBeamAttack2Timer = -1;
 								attack = false;
 								attackable = true;
-								attackNumber = "none";
+								attackNumber = playerAttacks.none;
 							}
 						}
 					
@@ -1516,7 +1525,9 @@ function scr_Player_Normal()
 							}
 						}*/
 						break;
-					
+						#endregion
+						
+						#region Stone
 						case playerAbilities.stone:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (attackable))
 					    {
@@ -1525,14 +1536,15 @@ function scr_Player_Normal()
 								if (audio_is_playing(snd_StoneReady)) audio_stop_sound(snd_StoneReady);
 								audio_play_sound(snd_StoneReady,0,false);
 								hsp = 0;
-								
 								if (grounded)
 								{
 									if (run) hsp = (movespeedRun * 3) * dir;
 								}
 								else
 								{
-									vsp = -jumpspeed;
+									vsp = -jumpspeed / 2;
+									jumpLimit = false;
+									jumpLimitTimer = 15;
 								}
 								invincible = true;
 					            attack = true;
@@ -1574,8 +1586,7 @@ function scr_Player_Normal()
 								{
 									var parXDir = 4;
 									if (i == 1) var parXDir = -4;
-									var par = instance_create_depth(x + parXDir,y + 3,depth - 1,obj_Particle);
-									par.sprite_index = spr_Particle_ShrinkingStar4;
+									var par = instance_create_depth(x + parXDir,y + 3,depth - 1,obj_RecoilStar);
 									if (i == 0)
 									{
 										par.hsp = 3;
@@ -1585,7 +1596,10 @@ function scr_Player_Normal()
 										par.hsp = -3;
 									}
 									par.dir = sign(par.hsp);
-									par.destroyAfterAnimation = true;
+									par.hurtsObject = true;
+									par.hurtsEnemy = true;
+									par.canBeInhaled = false;
+									par.destroyTimer = 15;
 								}
 								if (instance_exists(obj_Camera))
 								{
@@ -1615,7 +1629,7 @@ function scr_Player_Normal()
 								stoneFallen = false;
 								if (instance_exists(stoneMaskProj)) instance_destroy(stoneMaskProj);
 					            attack = false;
-								attackNumber = "none";
+								attackNumber = playerAttacks.none;
 								if (stoneReleaseParticleTimer == -1) stoneReleaseParticleTimer = stoneReleaseParticleTimerMax;
 							}
 						}
@@ -1625,7 +1639,9 @@ function scr_Player_Normal()
 							stoneFistReadyTimer = 0;
 						}
 						break;
-					
+						#endregion
+						
+						#region Ufo
 						case playerAbilities.ufo:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
@@ -1726,7 +1742,9 @@ function scr_Player_Normal()
 							}
 						}
 						break;
-					
+						#endregion
+						
+						#region Mirror
 						case playerAbilities.mirror:
 						if ((!global.cutscene) and (!hurt) and (!attack))
 						{
@@ -1892,7 +1910,9 @@ function scr_Player_Normal()
 					        }
 						}
 					    break;
-					
+						#endregion
+						
+						#region Ninja
 						case playerAbilities.ninja:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
@@ -1967,7 +1987,9 @@ function scr_Player_Normal()
 							}
 						}
 						break;
-					
+						#endregion
+						
+						#region Bomb
 						case playerAbilities.bomb:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
@@ -2012,7 +2034,9 @@ function scr_Player_Normal()
 							}
 					    }
 						break;
-					
+						#endregion
+						
+						#region Fire
 						case playerAbilities.fire:
 					    if ((!global.cutscene) and (!hurt))
 					    {
@@ -2206,7 +2230,9 @@ function scr_Player_Normal()
 					        }
 						}
 						break;
-					
+						#endregion
+						
+						#region Ice
 						case playerAbilities.ice:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
@@ -2252,7 +2278,9 @@ function scr_Player_Normal()
 							}
 						}
 						break;
-					
+						#endregion
+						
+						#region Spark
 						case playerAbilities.spark:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
@@ -2326,14 +2354,26 @@ function scr_Player_Normal()
 								sparkMaxCharge = false;
 							}
 					    }
-					
+						
+						if (attackNumber == playerAttacks.sparkNormal)
+						{
+							if (sparkCooldown > 0) sparkCooldown -= 1;
+							if (sparkCooldown <= 0)
+							{
+								if (!keyAttackHold) attackTimer = 0;
+							}
+						}
+						break;
+						
 						if ((attackNumber == playerAttacks.sparkUp) or (attackNumber == playerAttacks.sparkDown))
 						{
 							hsp = 0;
 							vsp = 0;
 						}
 						break;
-					
+						#endregion
+						
+						#region Wheel
 						case playerAbilities.wheel:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
@@ -2342,10 +2382,14 @@ function scr_Player_Normal()
 							sprite_index = sprWingAttack1;
 							image_index = 0;
 							wheelDir = dir;
+							hsp = 0;
+							wheelReadyTimer = 15;
 							state = playerStates.wheelNormal;
 					    }
 						break;
-					
+						#endregion
+						
+						#region Wing
 						case playerAbilities.wing:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
@@ -2448,7 +2492,9 @@ function scr_Player_Normal()
 							}
 						}
 						break;
-					
+						#endregion
+						
+						#region Sword
 						case playerAbilities.sword:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
@@ -2644,7 +2690,9 @@ function scr_Player_Normal()
 							}
 						}
 						break;
-					
+						#endregion
+						
+						#region Sleep
 						case playerAbilities.sleep:
 						if (!isSleeping)
 						{
@@ -2680,7 +2728,9 @@ function scr_Player_Normal()
 							sleepHatParticle = false;
 						}
 						break;
-					
+						#endregion
+						
+						#region Scan
 						case playerAbilities.scan:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (attackable))
 					    {
@@ -2691,8 +2741,9 @@ function scr_Player_Normal()
 							image_index = 0;
 					    }
 						break;
+						#endregion
 					
-						case "freeze":
+						/*case "freeze":
 					    if ((keyAttackPressed) and (!hurt) and (attackable))
 					    {
 							audio_play_sound(snd_Freeze,0,false);
@@ -2717,12 +2768,14 @@ function scr_Player_Normal()
 							freezeReady = true;
 							if (instance_exists(freezeMaskProj)) instance_destroy(freezeMaskProj);
 				            attack = false;
-							attackNumber = "none";
+							attackNumber = playerAttacks.none;
 					    }
-						break;
+						break;*/
 					}
 					break;
-				
+					#endregion
+					
+					#region Gooey
 					case playerCharacters.gooey:
 					if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (attackable))
 					{
@@ -2742,7 +2795,7 @@ function scr_Player_Normal()
 							}
 							invincible = true;
 					        attack = true;
-					        attackNumber = "gooeyStoneNormal";
+					        attackNumber = playerAttacks.gooeyStoneNormal;
 					        attackable = false;
 							stoneParticleTimer = 0;
 							sprite_index = sprStoneAttack1Ready;
@@ -2755,7 +2808,7 @@ function scr_Player_Normal()
 							fireDashHsp = (movespeedBurst * ((fireMagicCharcoalUpgrade / 2) + 1)) * dir;
 							run = false;
 					        attack = true;
-							attackNumber = "gooeyFireDash";
+							attackNumber = playerAttacks.gooeyFireDash;
 							fireDashDir = 1;
 							if (keyUpHold) fireDashDir = -1;
 							attackable = false;
@@ -2780,7 +2833,7 @@ function scr_Player_Normal()
 						}
 					}
 					
-					if (attackNumber == "gooeyStoneNormal")
+					if (attackNumber == playerAttacks.gooeyStoneNormal)
 					{
 						if ((!stoneFallen) and (!stoneReady) and (place_meeting(x,y + vsp + 1,obj_Wall)) and (sign(vsp) == 1))
 						{
@@ -2840,12 +2893,14 @@ function scr_Player_Normal()
 							stoneFallen = false;
 							if (instance_exists(stoneMaskProj)) instance_destroy(stoneMaskProj);
 					        attack = false;
-							attackNumber = "none";
+							attackNumber = playerAttacks.none;
 							if (stoneReleaseParticleTimer == -1) stoneReleaseParticleTimer = stoneReleaseParticleTimerMax;
 						}
 					}
 					break;
-				
+					#endregion
+					
+					#region Waddle Doo
 					case playerCharacters.waddleDoo:
 					if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					{
@@ -2887,7 +2942,9 @@ function scr_Player_Normal()
 						}
 					}
 					break;
-				
+					#endregion
+					
+					#region Sir Kibble
 					case playerCharacters.sirKibble:
 					if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (attackable) and (!attack))
 					{
@@ -3026,9 +3083,11 @@ function scr_Player_Normal()
 						}
 					}
 					break;
+					#endregion
 				}
 			}
 			break;
+			#endregion
 		}
 		
 		if (attack)

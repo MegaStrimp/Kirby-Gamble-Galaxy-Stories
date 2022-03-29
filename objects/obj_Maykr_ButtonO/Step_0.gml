@@ -234,7 +234,7 @@ switch (state)
 	break;
 	
 	case "item_environment_spike":
-	sprite_index = spr_Spike;
+	sprite_index = spr_Spike_Normal;
 	break;
 	
 	case "item_environment_pointStar":
@@ -937,7 +937,7 @@ if ((instance_exists(obj_Maykr_ControlO)) and (instance_exists(obj_Maykr_HudO)))
 					case "item_environment_spike":
 					obj_Maykr_ControlO.spawnedLayer = "environment";
 					obj_Maykr_ControlO.spawnedItemIndex = obj_Spike;
-					obj_Maykr_ControlO.spawnedSprite = spr_Spike;
+					obj_Maykr_ControlO.spawnedSprite = spr_Spike_Normal;
 					obj_Maykr_ControlO.snap = 6;
 					break;
 					

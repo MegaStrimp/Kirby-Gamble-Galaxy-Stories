@@ -59,7 +59,7 @@ if (!global.pause)
 {
 	//Get Inhaled
 	
-	if (!parasol) scr_Object_Inhale();
+	if (!parasol) scr_Object_Inhale(enemy);
 	
 	//Hurt Player
 	
@@ -92,45 +92,52 @@ if (!global.pause)
 		
 		if (parasol)
 		{
-			image_speed = 0;
-				
-			if (sign(dirX) == 1)
+			if (movespeed != 0)
 			{
-				if (abs(hsp) < (movespeed / 1.25))
+				image_speed = 0;
+				
+				if (sign(dirX) == 1)
 				{
-					if (sign(walkDirX) == 1)
+					if (abs(hsp) < (movespeed / 1.25))
 					{
-						image_index = 0;
+						if (sign(walkDirX) == 1)
+						{
+							image_index = 0;
+						}
+						else
+						{
+							image_index = 2;
+						}
 					}
 					else
 					{
-						image_index = 2;
+						image_index = 1;
 					}
 				}
 				else
 				{
-					image_index = 1;
+					if (abs(hsp) < (movespeed / 1.25))
+					{
+						if (sign(walkDirX) == 1)
+						{
+							image_index = 2;
+						}
+						else
+						{
+							image_index = 0;
+						}
+					}
+					else
+					{
+						image_index = 1;
+					}
 				}
 			}
 			else
 			{
-				if (abs(hsp) < (movespeed / 1.25))
-				{
-					if (sign(walkDirX) == 1)
-					{
-						image_index = 2;
-					}
-					else
-					{
-						image_index = 0;
-					}
-				}
-				else
-				{
-					image_index = 1;
-				}
+				image_speed = 1;
 			}
-				
+			
 			sprite_index = sprSwing;
 		}
 		else
@@ -210,43 +217,50 @@ if (!global.pause)
 		
 		if (parasol)
 		{
-			image_speed = 0;
-				
-			if (sign(dirX) == 1)
+			if (movespeed != 0)
 			{
-				if (abs(hsp) < (movespeed / 1.25))
+				image_speed = 0;
+				
+				if (sign(dirX) == 1)
 				{
-					if (sign(walkDirX) == 1)
+					if (abs(hsp) < (movespeed / 1.25))
 					{
-						image_index = 0;
+						if (sign(walkDirX) == 1)
+						{
+							image_index = 0;
+						}
+						else
+						{
+							image_index = 2;
+						}
 					}
 					else
 					{
-						image_index = 2;
+						image_index = 1;
 					}
 				}
 				else
 				{
-					image_index = 1;
+					if (abs(hsp) < (movespeed / 1.25))
+					{
+						if (sign(walkDirX) == 1)
+						{
+							image_index = 2;
+						}
+						else
+						{
+							image_index = 0;
+						}
+					}
+					else
+					{
+						image_index = 1;
+					}
 				}
 			}
 			else
 			{
-				if (abs(hsp) < (movespeed / 1.25))
-				{
-					if (sign(walkDirX) == 1)
-					{
-						image_index = 2;
-					}
-					else
-					{
-						image_index = 0;
-					}
-				}
-				else
-				{
-					image_index = 1;
-				}
+				image_speed = 1;
 			}
 				
 			sprite_index = sprSwing;

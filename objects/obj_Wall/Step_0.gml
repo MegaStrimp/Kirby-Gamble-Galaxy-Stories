@@ -1,59 +1,7 @@
 ///@description Main
 
-//Setup Timer
-
-if (setupTimer > 0)
-{
-	setupTimer -= 1;
-}
-else if (setupTimer == 0)
-{
-	if (hasTop)
-	{
-		topWall = instance_create_depth(x,y,depth,object_index);
-		if (topWallSprite != "none")
-		{
-			topWall.visible = true;
-			topWall.sprite_index = topWallSprite;
-		}
-		topWall.mask_index = topWallMask;
-		topWall.hsp = hsp;
-		topWall.vsp = vsp;
-		topWall.damageType = damageType;
-		topWall.hasTop = false;
-		topWall.isTop = true;
-		topWall.enemyCollisionMask = enemyCollisionMask;
-		topWall.topWallOwner = id;
-	}
-	if (hasEnemyWall)
-	{
-		var enemyWall = instance_create_depth(x,y,depth,obj_EnemyWall);
-		enemyWall.owner = id;
-	}
-	setupTimer = -1;
-}
-
 if (!global.pause)
 {
-	//Movement
-	
-	x += hsp;
-	y += vsp;
-	
-	with (obj_Player)
-	{
-		if ((other.hsp != 0) and ((place_meeting(x,y + 1,other)) or (place_meeting(x + sign(hsp),y,other)))) x += other.hsp;//other.hspCollision = hsp;
-		if ((other.vsp != 0) and ((place_meeting(x,y + abs(other.vsp) + 1,other)) or (place_meeting(x,y - 1,other)))) y += other.vsp;//other.vspCollision = vsp;
-	}
-	
-	if ((isTop) and (instance_exists(topWallOwner)))
-	{
-		hsp = topWallOwner.hsp;
-		vsp = topWallOwner.vsp;
-		x = topWallOwner.x;
-		y = topWallOwner.y;
-	}
-	
 	//Explode Timer
 	
 	if (explodeTimer > 0)

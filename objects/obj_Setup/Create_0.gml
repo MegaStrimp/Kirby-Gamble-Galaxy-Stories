@@ -117,8 +117,8 @@ selectedSubtitle = irandom_range(0,array_length(subtitles) - 1);
 
 #region Window Caption
 
-global.versionNumber = "Beta XIV";
-global.versionNumber = "Gamble Maykr Beta III";
+global.versionNumber = "Beta XV";
+//global.versionNumber = "Gamble Maykr Beta III";
 
 var windowCaption = -1;
 windowCaption[0] = "Kirby";
@@ -145,6 +145,12 @@ window_set_caption(windowCaption[0] + " " + windowCaption[1] + " " + windowCapti
 
 #region Set Macros and Enums
 #macro gameView view_camera[0]
+
+enum buildTypes
+{
+	windows,
+	android
+}
 
 enum languages
 {
@@ -243,14 +249,16 @@ enum playerAbilities
 
 enum playerAttacks
 {
+	none,
+	
     keyNormal,
-
+	
 	cutterNormal,
 	cutterCharge,
 	cutterDash,
 	cutterAir,
 	cutterDrop,
-
+	
 	beamNormal,
 	beamCharge,
 	beamChargeAttack,
@@ -258,44 +266,46 @@ enum playerAttacks
 	beamUp,
 	beamAir,
 	beamGrab,
-
+	
 	mysticBeamNormal,
 	mysticBeamCharge,
 	mysticBeamChargeAttack,
 	mysticBeamDash,
 	mysticBeamAir,
 	mysticBeamGrab,
-
+	
 	stoneNormal,
 	stoneUp,
-
+	
 	ufoCharge,
 	ufoBeam,
-
+	
 	mirrorSlash,
 	mirrorNormal,
 	mirrorDash,
 	mirrorUp,
 	mirrorDown,
-
+	
 	ninjaNormal,
 	ninjaCharge,
 	ninjaSlash,
-
+	
 	bombReady,
 	bombNormal,
 	bombDash,
 	bombGrab,
-
+	bombDown,
+	
 	fireNormal,
 	fireDash,
 	fireAerial,
 	fireWheel,
 	fireBack,
-
+	
 	iceNormal,
 	iceGrab,
-
+	
+	sparkNormal,
 	sparkNone,
 	sparkLow,
 	sparkMid,
@@ -303,18 +313,21 @@ enum playerAttacks
 	sparkMax,
 	sparkUp,
 	sparkDown,
-
+	
 	wheelNormal,
-
+	
 	wingNormal,
 	wingDash,
-
+	
 	swordNormal,
 	swordDash,
-
+	
 	sleepNormal,
-
-	scanNormal
+	
+	scanNormal,
+	
+	gooeyStoneNormal,
+	gooeyFireDash
 }
 
 enum damageTypes
@@ -410,7 +423,11 @@ global.helperHud = false;
 global.isHub = false;
 global.halberdEscape = false;
 global.treasureGot = false;
-global.isMobile = false;
+global.buildType = buildTypes.windows;
+global.stageMusicIsPlaying = true;
+global.musicFade = 1;
+
+global.saveLoaded = false;
 
 global.discordDetailText = "Startup";
 global.discordStateText = "";
@@ -438,8 +455,8 @@ global.storyModeUnlocked = false;
 #endregion
 
 #region Fonts
-mapStringKssu = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz .!";
-global.bitmapKssu = font_add_sprite_ext(spr_Hud_Dialogue_Font_Kssu,mapStringKssu,false,0);
+mapStringKSSU = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz .!";
+global.bitmapKSSU = font_add_sprite_ext(spr_Hud_Dialogue_Font_KSSU,mapStringKSSU,false,0);
 global.fontDialogueDefaultKanji = font_add(working_directory + "ARIALUNI.TTF",12,false,false,32,127);
 #endregion
 

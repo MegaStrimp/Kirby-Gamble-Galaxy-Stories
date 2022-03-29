@@ -40,6 +40,7 @@ hasMagma = false;
 destroyAfterHurt = true;
 canBeInhaled = false;
 damageType = damageTypes.bomb;
+ability = playerAbilities.bomb;
 
 //Timers
 

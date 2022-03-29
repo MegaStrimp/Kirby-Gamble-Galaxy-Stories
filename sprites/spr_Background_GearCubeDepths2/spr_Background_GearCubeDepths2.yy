@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Background Elements",
-    "path": "folders/Sprites/Stage Elements/Background Elements.yy",
+    "name": "Gear Cube Depths",
+    "path": "folders/Sprites/Stage Elements/Background Elements/Gear Cube Depths.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Background_GearCubeDepths2",

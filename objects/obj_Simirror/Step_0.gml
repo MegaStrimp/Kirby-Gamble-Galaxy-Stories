@@ -8,7 +8,7 @@ if (!global.pause)
 {
 	if (appear)
 	{
-		scr_Object_Inhale();
+		scr_Object_Inhale(enemy);
 		scr_Enemy_HurtsPlayer(dmg);
 	}
 	hsp = scr_Friction(hsp,decel);

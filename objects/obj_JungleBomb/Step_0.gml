@@ -28,7 +28,7 @@ if (!global.pause)
 {
 	//Get Inhaled
 	
-	if (!parasol) scr_Object_Inhale();
+	if (!parasol) scr_Object_Inhale(enemy);
 	
 	//Hurt Player
 	

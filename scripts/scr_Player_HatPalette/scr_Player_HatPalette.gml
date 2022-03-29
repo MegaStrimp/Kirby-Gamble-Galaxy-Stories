@@ -28,11 +28,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				case "kssu":
 				if (player == 0)
 				{
-					var paletteIndexToCheck = global.hatPaletteCutterKssuP1;
+					var paletteIndexToCheck = global.hatPaletteCutterKSSUP1;
 				}
 				else
 				{
-					var paletteIndexToCheck = global.hatPaletteCutterKssuP2;
+					var paletteIndexToCheck = global.hatPaletteCutterKSSUP2;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -68,11 +68,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				case "kssu":
 				if (player == 0)
 				{
-					var paletteIndexToCheck = global.hatPaletteBeamKssuP1;
+					var paletteIndexToCheck = global.hatPaletteBeamKSSUP1;
 				}
 				else
 				{
-					var paletteIndexToCheck = global.hatPaletteBeamKssuP2;
+					var paletteIndexToCheck = global.hatPaletteBeamKSSUP2;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -134,11 +134,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				default:
 				if (player == 0)
 				{
-					var paletteIndexToCheck = global.hatPaletteBeamKssuP1;
+					var paletteIndexToCheck = global.hatPaletteBeamKSSUP1;
 				}
 				else
 				{
-					var paletteIndexToCheck = global.hatPaletteBeamKssuP2;
+					var paletteIndexToCheck = global.hatPaletteBeamKSSUP2;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -166,11 +166,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				case "kssu":
 				if (player == 0)
 				{
-					var paletteIndexToCheck = global.hatPaletteStoneKssuP1;
+					var paletteIndexToCheck = global.hatPaletteStoneKSSUP1;
 				}
 				else
 				{
-					var paletteIndexToCheck = global.hatPaletteStoneKssuP2;
+					var paletteIndexToCheck = global.hatPaletteStoneKSSUP2;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -228,11 +228,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				case "kssu":
 				if (player == 0)
 				{
-					var paletteIndexToCheck = global.hatPaletteBeamKssuP1;
+					var paletteIndexToCheck = global.hatPaletteBeamKSSUP1;
 				}
 				else
 				{
-					var paletteIndexToCheck = global.hatPaletteBeamKssuP2;
+					var paletteIndexToCheck = global.hatPaletteBeamKSSUP2;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -260,11 +260,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				case "kssu":
 				if (player == 0)
 				{
-					var paletteIndexToCheck = global.hatPaletteMirrorKssuP1;
+					var paletteIndexToCheck = global.hatPaletteMirrorKSSUP1;
 				}
 				else
 				{
-					var paletteIndexToCheck = global.hatPaletteMirrorKssuP2;
+					var paletteIndexToCheck = global.hatPaletteMirrorKSSUP2;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -326,11 +326,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				case "kssu":
 				if (player == 0)
 				{
-					var paletteIndexToCheck = global.hatPaletteNinjaKssuP1;
+					var paletteIndexToCheck = global.hatPaletteNinjaKSSUP1;
 				}
 				else
 				{
-					var paletteIndexToCheck = global.hatPaletteNinjaKssuP2;
+					var paletteIndexToCheck = global.hatPaletteNinjaKSSUP2;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -388,11 +388,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				case "kssu":
 				if (player == 0)
 				{
-					var paletteIndexToCheck = global.hatPaletteBombKssuP1;
+					var paletteIndexToCheck = global.hatPaletteBombKSSUP1;
 				}
 				else
 				{
-					var paletteIndexToCheck = global.hatPaletteBombKssuP2;
+					var paletteIndexToCheck = global.hatPaletteBombKSSUP2;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -446,11 +446,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				case "kssu":
 				if (player == 0)
 				{
-					var paletteIndexToCheck = global.hatPaletteFireKssuP1;
+					var paletteIndexToCheck = global.hatPaletteFireKSSUP1;
 				}
 				else
 				{
-					var paletteIndexToCheck = global.hatPaletteFireKssuP2;
+					var paletteIndexToCheck = global.hatPaletteFireKSSUP2;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -494,11 +494,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				case "kssu":
 				if (player == 0)
 				{
-					var paletteIndexToCheck = global.hatPaletteFireKssuP1;
+					var paletteIndexToCheck = global.hatPaletteFireKSSUP1;
 				}
 				else
 				{
-					var paletteIndexToCheck = global.hatPaletteFireKssuP2;
+					var paletteIndexToCheck = global.hatPaletteFireKSSUP2;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -526,11 +526,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				case "kssu":
 				if (player == 0)
 				{
-					var paletteIndexToCheck = global.hatPaletteIceKssuP1;
+					var paletteIndexToCheck = global.hatPaletteIceKSSUP1;
 				}
 				else
 				{
-					var paletteIndexToCheck = global.hatPaletteIceKssuP2;
+					var paletteIndexToCheck = global.hatPaletteIceKSSUP2;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -548,11 +548,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				case "snowman":
 				if (player == 0)
 				{
-					var paletteIndexToCheck = global.hatPaletteIceKssuP1;
+					var paletteIndexToCheck = global.hatPaletteIceKSSUP1;
 				}
 				else
 				{
-					var paletteIndexToCheck = global.hatPaletteIceKssuP2;
+					var paletteIndexToCheck = global.hatPaletteIceKSSUP2;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -584,11 +584,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				case "kssu":
 				if (player == 0)
 				{
-					var paletteIndexToCheck = global.hatPaletteSparkKssuP1;
+					var paletteIndexToCheck = global.hatPaletteSparkKSSUP1;
 				}
 				else
 				{
-					var paletteIndexToCheck = global.hatPaletteSparkKssuP2;
+					var paletteIndexToCheck = global.hatPaletteSparkKSSUP2;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -620,11 +620,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				case "kssu":
 				if (player == 0)
 				{
-					var paletteIndexToCheck = global.hatPaletteYoyoKssuP1;
+					var paletteIndexToCheck = global.hatPaletteYoyoKSSUP1;
 				}
 				else
 				{
-					var paletteIndexToCheck = global.hatPaletteYoyoKssuP2;
+					var paletteIndexToCheck = global.hatPaletteYoyoKSSUP2;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -656,11 +656,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				case "kssu":
 				if (player == 0)
 				{
-					var paletteIndexToCheck = global.hatPaletteWheelKssuP1;
+					var paletteIndexToCheck = global.hatPaletteWheelKSSUP1;
 				}
 				else
 				{
-					var paletteIndexToCheck = global.hatPaletteWheelKssuP2;
+					var paletteIndexToCheck = global.hatPaletteWheelKSSUP2;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -692,11 +692,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				case "kssu":
 				if (player == 0)
 				{
-					var paletteIndexToCheck = global.hatPaletteArtistKssuP1;
+					var paletteIndexToCheck = global.hatPaletteArtistKSSUP1;
 				}
 				else
 				{
-					var paletteIndexToCheck = global.hatPaletteArtistKssuP2;
+					var paletteIndexToCheck = global.hatPaletteArtistKSSUP2;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -746,11 +746,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				case "kssu":
 				if (player == 0)
 				{
-					var paletteIndexToCheck = global.hatPaletteFighterKssuP1;
+					var paletteIndexToCheck = global.hatPaletteFighterKSSUP1;
 				}
 				else
 				{
-					var paletteIndexToCheck = global.hatPaletteFighterKssuP2;
+					var paletteIndexToCheck = global.hatPaletteFighterKSSUP2;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -782,11 +782,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				case "kssu":
 				if (player == 0)
 				{
-					var paletteIndexToCheck = global.hatPaletteSuplexKssuP1;
+					var paletteIndexToCheck = global.hatPaletteSuplexKSSUP1;
 				}
 				else
 				{
-					var paletteIndexToCheck = global.hatPaletteSuplexKssuP2;
+					var paletteIndexToCheck = global.hatPaletteSuplexKSSUP2;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -818,11 +818,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				case "kssu":
 				if (player == 0)
 				{
-					var paletteIndexToCheck = global.hatPaletteWingKssuP1;
+					var paletteIndexToCheck = global.hatPaletteWingKSSUP1;
 				}
 				else
 				{
-					var paletteIndexToCheck = global.hatPaletteWingKssuP2;
+					var paletteIndexToCheck = global.hatPaletteWingKSSUP2;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -854,11 +854,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				case "kssu":
 				if (player == 0)
 				{
-					var paletteIndexToCheck = global.hatPaletteJetKssuP1;
+					var paletteIndexToCheck = global.hatPaletteJetKSSUP1;
 				}
 				else
 				{
-					var paletteIndexToCheck = global.hatPaletteJetKssuP2;
+					var paletteIndexToCheck = global.hatPaletteJetKSSUP2;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -894,11 +894,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				case "kssu":
 				if (player == 0)
 				{
-					var paletteIndexToCheck = global.hatPaletteSwordKssuP1;
+					var paletteIndexToCheck = global.hatPaletteSwordKSSUP1;
 				}
 				else
 				{
-					var paletteIndexToCheck = global.hatPaletteSwordKssuP2;
+					var paletteIndexToCheck = global.hatPaletteSwordKSSUP2;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -934,11 +934,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				case "kssu":
 				if (player == 0)
 				{
-					var paletteIndexToCheck = global.hatPaletteParasolKssuP1;
+					var paletteIndexToCheck = global.hatPaletteParasolKSSUP1;
 				}
 				else
 				{
-					var paletteIndexToCheck = global.hatPaletteParasolKssuP2;
+					var paletteIndexToCheck = global.hatPaletteParasolKSSUP2;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -970,11 +970,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				case "kssu":
 				if (player == 0)
 				{
-					var paletteIndexToCheck = global.hatPaletteHammerKssuP1;
+					var paletteIndexToCheck = global.hatPaletteHammerKSSUP1;
 				}
 				else
 				{
-					var paletteIndexToCheck = global.hatPaletteHammerKssuP2;
+					var paletteIndexToCheck = global.hatPaletteHammerKSSUP2;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -1074,11 +1074,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				case "kssu":
 				if (player == 0)
 				{
-					var paletteIndexToCheck = global.hatPaletteSleepKssuP1;
+					var paletteIndexToCheck = global.hatPaletteSleepKSSUP1;
 				}
 				else
 				{
-					var paletteIndexToCheck = global.hatPaletteSleepKssuP2;
+					var paletteIndexToCheck = global.hatPaletteSleepKSSUP2;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -1118,11 +1118,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				case "kssu":
 				if (player == 0)
 				{
-					var paletteIndexToCheck = global.hatPaletteScanKssuP1;
+					var paletteIndexToCheck = global.hatPaletteScanKSSUP1;
 				}
 				else
 				{
-					var paletteIndexToCheck = global.hatPaletteScanKssuP2;
+					var paletteIndexToCheck = global.hatPaletteScanKSSUP2;
 				}
 				
 				switch (paletteIndexToCheck)

@@ -1,5 +1,29 @@
 ///@description Main
 
+//Setup Timer
+
+if (setupTimer > 0)
+{
+	setupTimer -= 1;
+}
+else if (setupTimer == 0)
+{
+	switch (character)
+	{
+		//Normal
+		
+		case 0:
+		sprIdle = spr_Spike_Normal;
+		break;
+		
+		//Thorn
+		
+		case 1:
+		sprIdle = spr_Spike_Thorn;
+		break;
+	}
+}
+
 if (!global.pause)
 {
 	//Hurt Player
@@ -76,6 +100,10 @@ if (!global.pause)
 			}
 		}
 	}
+	
+	//Animation
+	
+	sprite_index = sprIdle;
 }
 
 //Debug Delete

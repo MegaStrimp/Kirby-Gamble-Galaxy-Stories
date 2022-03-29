@@ -41,7 +41,7 @@ for (var i = 0; i < array_length(menuTitle); i++)
 	if ((i < selection - 2) or (i > selection + 2)) textAlpha = 0;
 	var col1 = c_white;
 	var col2 = c_white;
-	if ((menuTitle[i] == "Controls") and (global.isMobile))
+	if ((menuTitle[i] == "Controls") and (global.buildType == buildTypes.android))
 	{
 		var col1 = c_dkgray;
 		var col2 = c_dkgray;

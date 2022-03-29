@@ -38,14 +38,14 @@ function scr_Customize_AbilityHats()
 	abilityHatPaintOffset[i][k][h] = 0;
 	abilityHatPaintOffsetLerp[i][k][h] = 0;
 	#endregion
-
+	
 	#region Beam
 	i += 1;
 	abilityHatTitle[i] = "Beam";
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;
 	abilityHatOffsetLerp[i] = 0;
-
+	
 	var k = 0;
 	abilityHatSkinTitle[i][k] = "KSSU";
 	abilityHatSkinTitleDraw[i][k] = "KSSU";
@@ -74,7 +74,7 @@ function scr_Customize_AbilityHats()
 	abilityHatPaintUnlocked[i][k][h] = true;
 	abilityHatPaintOffset[i][k][h] = 0;
 	abilityHatPaintOffsetLerp[i][k][h] = 0;
-
+	
 	k += 1;
 	abilityHatSkinTitle[i][k] = "Marx Soul";
 	abilityHatSkinTitleDraw[i][k] = "Marx Soul";
@@ -104,14 +104,37 @@ function scr_Customize_AbilityHats()
 	abilityHatPaintOffset[i][k][h] = 0;
 	abilityHatPaintOffsetLerp[i][k][h] = 0;
 	#endregion
-
+	
+	#region Mystic Beam
+	i += 1;
+	abilityHatTitle[i] = "Mystic Beam";
+	abilityHatUnlocked[i] = true;
+	abilityHatOffset[i] = 0;
+	abilityHatOffsetLerp[i] = 0;
+	
+	var k = 0;
+	abilityHatSkinTitle[i][k] = "GGS";
+	abilityHatSkinTitleDraw[i][k] = "GGS";
+	abilityHatSkinValue[i][k] = "ggs";
+	abilityHatSkinUnlocked[i][k] = true;
+	abilityHatSkinOffset[i][k] = 0;
+	abilityHatSkinOffsetLerp[i][k] = 0;
+	var h = 0;
+	abilityHatPaintTitle[i][k][h] = "Nasty Flux";
+	abilityHatPaintTitleDraw[i][k][h] = "Nasty Flux";
+	abilityHatPaint[i][k][h] = spr_Kirby_AbilityHat_MysticBeam_GGS_Palette_NastyFlux;
+	abilityHatPaintUnlocked[i][k][h] = true;
+	abilityHatPaintOffset[i][k][h] = 0;
+	abilityHatPaintOffsetLerp[i][k][h] = 0;
+	#endregion
+	
 	#region Stone
 	i += 1;
 	abilityHatTitle[i] = "Stone";
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;
 	abilityHatOffsetLerp[i] = 0;
-
+	
 	var k = 0;
 	abilityHatSkinTitle[i][k] = "KSSU";
 	abilityHatSkinTitleDraw[i][k] = "KSSU";
@@ -133,7 +156,7 @@ function scr_Customize_AbilityHats()
 	abilityHatPaintUnlocked[i][k][h] = true;
 	abilityHatPaintOffset[i][k][h] = 0;
 	abilityHatPaintOffsetLerp[i][k][h] = 0;
-
+	
 	k += 1;
 	abilityHatSkinTitle[i][k] = "Modern";
 	abilityHatSkinTitleDraw[i][k] = "Modern";
@@ -163,14 +186,14 @@ function scr_Customize_AbilityHats()
 	abilityHatPaintOffset[i][k][h] = 0;
 	abilityHatPaintOffsetLerp[i][k][h] = 0;
 	#endregion
-
+	
 	#region Mirror
 	i += 1;
 	abilityHatTitle[i] = "Mirror";
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;
 	abilityHatOffsetLerp[i] = 0;
-
+	
 	var k = 0;
 	abilityHatSkinTitle[i][k] = "KSSU";
 	abilityHatSkinTitleDraw[i][k] = "KSSU";
@@ -199,7 +222,7 @@ function scr_Customize_AbilityHats()
 	abilityHatPaintUnlocked[i][k][h] = true;
 	abilityHatPaintOffset[i][k][h] = 0;
 	abilityHatPaintOffsetLerp[i][k][h] = 0;
-
+	
 	k += 1;
 	abilityHatSkinTitle[i][k] = "Modern";
 	abilityHatSkinTitleDraw[i][k] = "Modern";
@@ -229,14 +252,14 @@ function scr_Customize_AbilityHats()
 	abilityHatPaintOffset[i][k][h] = 0;
 	abilityHatPaintOffsetLerp[i][k][h] = 0;
 	#endregion
-
+	
 	#region Ninja
 	i += 1;
 	abilityHatTitle[i] = "Ninja";
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;
 	abilityHatOffsetLerp[i] = 0;
-
+	
 	var k = 0;
 	abilityHatSkinTitle[i][k] = "KSSU";
 	abilityHatSkinTitleDraw[i][k] = "KSSU";
@@ -265,7 +288,7 @@ function scr_Customize_AbilityHats()
 	abilityHatPaintUnlocked[i][k][h] = true;
 	abilityHatPaintOffset[i][k][h] = 0;
 	abilityHatPaintOffsetLerp[i][k][h] = 0;
-
+	
 	k += 1;
 	abilityHatSkinTitle[i][k] = "Modern";
 	abilityHatSkinTitleDraw[i][k] = "Modern";
@@ -288,14 +311,14 @@ function scr_Customize_AbilityHats()
 	abilityHatPaintOffset[i][k][h] = 0;
 	abilityHatPaintOffsetLerp[i][k][h] = 0;
 	#endregion
-
+	
 	#region Bomb
 	i += 1;
 	abilityHatTitle[i] = "Bomb";
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;
 	abilityHatOffsetLerp[i] = 0;
-
+	
 	var k = 0;
 	abilityHatSkinTitle[i][k] = "KSSU";
 	abilityHatSkinTitleDraw[i][k] = "KSSU";
@@ -317,7 +340,7 @@ function scr_Customize_AbilityHats()
 	abilityHatPaintUnlocked[i][k][h] = true;
 	abilityHatPaintOffset[i][k][h] = 0;
 	abilityHatPaintOffsetLerp[i][k][h] = 0;
-
+	
 	k += 1;
 	abilityHatSkinTitle[i][k] = "Modern";
 	abilityHatSkinTitleDraw[i][k] = "Modern";

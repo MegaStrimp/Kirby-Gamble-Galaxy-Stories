@@ -631,11 +631,11 @@ if (!global.pause)
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
-						playerHatPaint = global.hatPaletteCutterKssuP1;
+						playerHatPaint = global.hatPaletteCutterKSSUP1;
 					}
 					else if (selectedPlayer == 1)
 					{
-						playerHatPaint = global.hatPaletteCutterKssuP2;
+						playerHatPaint = global.hatPaletteCutterKSSUP2;
 					}
 					break;
 				}
@@ -657,11 +657,49 @@ if (!global.pause)
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
-						playerHatPaint = global.hatPaletteBeamKssuP1;
+						playerHatPaint = global.hatPaletteBeamKSSUP1;
 					}
 					else if (selectedPlayer == 1)
 					{
-						playerHatPaint = global.hatPaletteBeamKssuP2;
+						playerHatPaint = global.hatPaletteBeamKSSUP2;
+					}
+					break;
+					
+					case "marxSoul":
+					selectedHatSkin = 1;
+					if (selectedPlayer == 0)
+					{
+						playerHatPaint = global.hatPaletteBeamMarxSoulP1;
+					}
+					else if (selectedPlayer == 1)
+					{
+						playerHatPaint = global.hatPaletteBeamMarxSoulP2;
+					}
+					break;
+				}
+				break;
+				
+				case "Mystic Beam":
+				if (selectedPlayer == 0)
+				{
+					playerHatSkin = global.hatTypeMysticBeamP1;
+				}
+				else if (selectedPlayer == 1)
+				{
+					playerHatSkin = global.hatTypeMysticBeamP2;
+				}
+				
+				switch (playerHatSkin)
+				{
+					case "kssu":
+					selectedHatSkin = 0;
+					if (selectedPlayer == 0)
+					{
+						playerHatPaint = global.hatPaletteMysticBeamGGSP1;
+					}
+					else if (selectedPlayer == 1)
+					{
+						playerHatPaint = global.hatPaletteMysticBeamGGSP2;
 					}
 					break;
 					
@@ -695,11 +733,11 @@ if (!global.pause)
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
-						playerHatPaint = global.hatPaletteStoneKssuP1;
+						playerHatPaint = global.hatPaletteStoneKSSUP1;
 					}
 					else if (selectedPlayer == 1)
 					{
-						playerHatPaint = global.hatPaletteStoneKssuP2;
+						playerHatPaint = global.hatPaletteStoneKSSUP2;
 					}
 					break;
 					
@@ -733,11 +771,11 @@ if (!global.pause)
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
-						playerHatPaint = global.hatPaletteMirrorKssuP1;
+						playerHatPaint = global.hatPaletteMirrorKSSUP1;
 					}
 					else if (selectedPlayer == 1)
 					{
-						playerHatPaint = global.hatPaletteMirrorKssuP2;
+						playerHatPaint = global.hatPaletteMirrorKSSUP2;
 					}
 					break;
 					
@@ -771,11 +809,11 @@ if (!global.pause)
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
-						playerHatPaint = global.hatPaletteNinjaKssuP1;
+						playerHatPaint = global.hatPaletteNinjaKSSUP1;
 					}
 					else if (selectedPlayer == 1)
 					{
-						playerHatPaint = global.hatPaletteNinjaKssuP2;
+						playerHatPaint = global.hatPaletteNinjaKSSUP2;
 					}
 					break;
 					
@@ -809,11 +847,11 @@ if (!global.pause)
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
-						playerHatPaint = global.hatPaletteBombKssuP1;
+						playerHatPaint = global.hatPaletteBombKSSUP1;
 					}
 					else if (selectedPlayer == 1)
 					{
-						playerHatPaint = global.hatPaletteBombKssuP2;
+						playerHatPaint = global.hatPaletteBombKSSUP2;
 					}
 					break;
 					
@@ -847,11 +885,11 @@ if (!global.pause)
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
-						global.hatPaletteFireKssuP1 = playerHatPaint;
+						global.hatPaletteFireKSSUP1 = playerHatPaint;
 					}
 					else
 					{
-						global.hatPaletteFireKssuP2 = playerHatPaint;
+						global.hatPaletteFireKSSUP2 = playerHatPaint;
 					}
 					break;
 				}
@@ -873,11 +911,11 @@ if (!global.pause)
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
-						global.hatPaletteIceKssuP1 = playerHatPaint;
+						global.hatPaletteIceKSSUP1 = playerHatPaint;
 					}
 					else
 					{
-						global.hatPaletteIceKssuP2 = playerHatPaint;
+						global.hatPaletteIceKSSUP2 = playerHatPaint;
 					}
 					break;
 						
@@ -911,11 +949,11 @@ if (!global.pause)
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
-						global.hatPaletteSparkKssuP1 = playerHatPaint;
+						global.hatPaletteSparkKSSUP1 = playerHatPaint;
 					}
 					else
 					{
-						global.hatPaletteSparkKssuP2 = playerHatPaint;
+						global.hatPaletteSparkKSSUP2 = playerHatPaint;
 					}
 					break;
 				}
@@ -937,11 +975,11 @@ if (!global.pause)
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
-						global.hatPaletteYoyoKssuP1 = playerHatPaint;
+						global.hatPaletteYoyoKSSUP1 = playerHatPaint;
 					}
 					else
 					{
-						global.hatPaletteYoyoKssuP2 = playerHatPaint;
+						global.hatPaletteYoyoKSSUP2 = playerHatPaint;
 					}
 					break;
 				}
@@ -963,11 +1001,11 @@ if (!global.pause)
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
-						global.hatPaletteWheelKssuP1 = playerHatPaint;
+						global.hatPaletteWheelKSSUP1 = playerHatPaint;
 					}
 					else
 					{
-						global.hatPaletteWheelKssuP2 = playerHatPaint;
+						global.hatPaletteWheelKSSUP2 = playerHatPaint;
 					}
 					break;
 				}
@@ -989,11 +1027,11 @@ if (!global.pause)
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
-						global.hatPaletteArtistKssuP1 = playerHatPaint;
+						global.hatPaletteArtistKSSUP1 = playerHatPaint;
 					}
 					else
 					{
-						global.hatPaletteArtistKssuP2 = playerHatPaint;
+						global.hatPaletteArtistKSSUP2 = playerHatPaint;
 					}
 					break;
 				}
@@ -1015,11 +1053,11 @@ if (!global.pause)
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
-						global.hatPaletteFighterKssuP1 = playerHatPaint;
+						global.hatPaletteFighterKSSUP1 = playerHatPaint;
 					}
 					else
 					{
-						global.hatPaletteFighterKssuP2 = playerHatPaint;
+						global.hatPaletteFighterKSSUP2 = playerHatPaint;
 					}
 					break;
 				}
@@ -1041,11 +1079,11 @@ if (!global.pause)
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
-						global.hatPaletteSuplexKssuP1 = playerHatPaint;
+						global.hatPaletteSuplexKSSUP1 = playerHatPaint;
 					}
 					else
 					{
-						global.hatPaletteSuplexKssuP2 = playerHatPaint;
+						global.hatPaletteSuplexKSSUP2 = playerHatPaint;
 					}
 					break;
 				}
@@ -1067,11 +1105,11 @@ if (!global.pause)
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
-						global.hatPaletteWingKssuP1 = playerHatPaint;
+						global.hatPaletteWingKSSUP1 = playerHatPaint;
 					}
 					else
 					{
-						global.hatPaletteWingKssuP2 = playerHatPaint;
+						global.hatPaletteWingKSSUP2 = playerHatPaint;
 					}
 					break;
 				}
@@ -1093,11 +1131,11 @@ if (!global.pause)
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
-						global.hatPaletteJetKssuP1 = playerHatPaint;
+						global.hatPaletteJetKSSUP1 = playerHatPaint;
 					}
 					else
 					{
-						global.hatPaletteJetKssuP2 = playerHatPaint;
+						global.hatPaletteJetKSSUP2 = playerHatPaint;
 					}
 					break;
 				}
@@ -1119,11 +1157,11 @@ if (!global.pause)
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
-						global.hatPaletteSwordKssuP1 = playerHatPaint;
+						global.hatPaletteSwordKSSUP1 = playerHatPaint;
 					}
 					else
 					{
-						global.hatPaletteSwordKssuP2 = playerHatPaint;
+						global.hatPaletteSwordKSSUP2 = playerHatPaint;
 					}
 					break;
 				}
@@ -1145,11 +1183,11 @@ if (!global.pause)
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
-						global.hatPaletteParasolKssuP1 = playerHatPaint;
+						global.hatPaletteParasolKSSUP1 = playerHatPaint;
 					}
 					else
 					{
-						global.hatPaletteParasolKssuP2 = playerHatPaint;
+						global.hatPaletteParasolKSSUP2 = playerHatPaint;
 					}
 					break;
 				}
@@ -1171,11 +1209,11 @@ if (!global.pause)
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
-						global.hatPaletteHammerKssuP1 = playerHatPaint;
+						global.hatPaletteHammerKSSUP1 = playerHatPaint;
 					}
 					else
 					{
-						global.hatPaletteHammerKssuP2 = playerHatPaint;
+						global.hatPaletteHammerKSSUP2 = playerHatPaint;
 					}
 					break;
 				}
@@ -1223,11 +1261,11 @@ if (!global.pause)
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
-						global.hatPaletteSleepKssuP1 = playerHatPaint;
+						global.hatPaletteSleepKSSUP1 = playerHatPaint;
 					}
 					else
 					{
-						global.hatPaletteSleepKssuP2 = playerHatPaint;
+						global.hatPaletteSleepKSSUP2 = playerHatPaint;
 					}
 					break;
 				}
@@ -1249,11 +1287,11 @@ if (!global.pause)
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
-						global.hatPaletteScanKssuP1 = playerHatPaint;
+						global.hatPaletteScanKSSUP1 = playerHatPaint;
 					}
 					else
 					{
-						global.hatPaletteScanKssuP2 = playerHatPaint;
+						global.hatPaletteScanKSSUP2 = playerHatPaint;
 					}
 					break;
 				}
@@ -1342,6 +1380,17 @@ if (!global.pause)
 					else
 					{
 						global.hatTypeBeamP2 = playerHatSkin;
+					}
+					break;
+					
+					case "Mystic Beam":
+					if (selectedPlayer == 0)
+					{
+						global.hatTypeMysticBeamP1 = playerHatSkin;
+					}
+					else
+					{
+						global.hatTypeMysticBeamP2 = playerHatSkin;
 					}
 					break;
 					
@@ -1627,11 +1676,11 @@ if (!global.pause)
 						case "kssu":
 						if (selectedPlayer == 0)
 						{
-							global.hatPaletteCutterKssuP1 = playerHatPaint;
+							global.hatPaletteCutterKSSUP1 = playerHatPaint;
 						}
 						else
 						{
-							global.hatPaletteCutterKssuP2 = playerHatPaint;
+							global.hatPaletteCutterKSSUP2 = playerHatPaint;
 						}
 						break;
 					}
@@ -1643,11 +1692,11 @@ if (!global.pause)
 						case "kssu":
 						if (selectedPlayer == 0)
 						{
-							global.hatPaletteBeamKssuP1 = playerHatPaint;
+							global.hatPaletteBeamKSSUP1 = playerHatPaint;
 						}
 						else
 						{
-							global.hatPaletteBeamKssuP2 = playerHatPaint;
+							global.hatPaletteBeamKSSUP2 = playerHatPaint;
 						}
 						break;
 						
@@ -1670,11 +1719,11 @@ if (!global.pause)
 						case "kssu":
 						if (selectedPlayer == 0)
 						{
-							global.hatPaletteStoneKssuP1 = playerHatPaint;
+							global.hatPaletteStoneKSSUP1 = playerHatPaint;
 						}
 						else
 						{
-							global.hatPaletteStoneKssuP2 = playerHatPaint;
+							global.hatPaletteStoneKSSUP2 = playerHatPaint;
 						}
 						break;
 						
@@ -1697,11 +1746,11 @@ if (!global.pause)
 						case "kssu":
 						if (selectedPlayer == 0)
 						{
-							global.hatPaletteMirrorKssuP1 = playerHatPaint;
+							global.hatPaletteMirrorKSSUP1 = playerHatPaint;
 						}
 						else
 						{
-							global.hatPaletteMirrorKssuP2 = playerHatPaint;
+							global.hatPaletteMirrorKSSUP2 = playerHatPaint;
 						}
 						break;
 						
@@ -1724,11 +1773,11 @@ if (!global.pause)
 						case "kssu":
 						if (selectedPlayer == 0)
 						{
-							global.hatPaletteNinjaKssuP1 = playerHatPaint;
+							global.hatPaletteNinjaKSSUP1 = playerHatPaint;
 						}
 						else
 						{
-							global.hatPaletteNinjaKssuP2 = playerHatPaint;
+							global.hatPaletteNinjaKSSUP2 = playerHatPaint;
 						}
 						break;
 						
@@ -1751,11 +1800,11 @@ if (!global.pause)
 						case "kssu":
 						if (selectedPlayer == 0)
 						{
-							global.hatPaletteBombKssuP1 = playerHatPaint;
+							global.hatPaletteBombKSSUP1 = playerHatPaint;
 						}
 						else
 						{
-							global.hatPaletteBombKssuP2 = playerHatPaint;
+							global.hatPaletteBombKSSUP2 = playerHatPaint;
 						}
 						break;
 						
@@ -1778,11 +1827,11 @@ if (!global.pause)
 						case "kssu":
 						if (selectedPlayer == 0)
 						{
-							global.hatPaletteFireKssuP1 = playerHatPaint;
+							global.hatPaletteFireKSSUP1 = playerHatPaint;
 						}
 						else
 						{
-							global.hatPaletteFireKssuP2 = playerHatPaint;
+							global.hatPaletteFireKSSUP2 = playerHatPaint;
 						}
 						break;
 					}
@@ -1794,11 +1843,11 @@ if (!global.pause)
 						case "kssu":
 						if (selectedPlayer == 0)
 						{
-							global.hatPaletteIceKssuP1 = playerHatPaint;
+							global.hatPaletteIceKSSUP1 = playerHatPaint;
 						}
 						else
 						{
-							global.hatPaletteIceKssuP2 = playerHatPaint;
+							global.hatPaletteIceKSSUP2 = playerHatPaint;
 						}
 						break;
 						
@@ -1821,11 +1870,11 @@ if (!global.pause)
 						case "kssu":
 						if (selectedPlayer == 0)
 						{
-							global.hatPaletteSparkKssuP1 = playerHatPaint;
+							global.hatPaletteSparkKSSUP1 = playerHatPaint;
 						}
 						else
 						{
-							global.hatPaletteSparkKssuP2 = playerHatPaint;
+							global.hatPaletteSparkKSSUP2 = playerHatPaint;
 						}
 						break;
 					}
@@ -1837,11 +1886,11 @@ if (!global.pause)
 						case "kssu":
 						if (selectedPlayer == 0)
 						{
-							global.hatPaletteYoyoKssuP1 = playerHatPaint;
+							global.hatPaletteYoyoKSSUP1 = playerHatPaint;
 						}
 						else
 						{
-							global.hatPaletteYoyoKssuP2 = playerHatPaint;
+							global.hatPaletteYoyoKSSUP2 = playerHatPaint;
 						}
 						break;
 					}
@@ -1853,11 +1902,11 @@ if (!global.pause)
 						case "kssu":
 						if (selectedPlayer == 0)
 						{
-							global.hatPaletteWheelKssuP1 = playerHatPaint;
+							global.hatPaletteWheelKSSUP1 = playerHatPaint;
 						}
 						else
 						{
-							global.hatPaletteWheelKssuP2 = playerHatPaint;
+							global.hatPaletteWheelKSSUP2 = playerHatPaint;
 						}
 						break;
 					}
@@ -1869,11 +1918,11 @@ if (!global.pause)
 						case "kssu":
 						if (selectedPlayer == 0)
 						{
-							global.hatPaletteArtistKssuP1 = playerHatPaint;
+							global.hatPaletteArtistKSSUP1 = playerHatPaint;
 						}
 						else
 						{
-							global.hatPaletteArtistKssuP2 = playerHatPaint;
+							global.hatPaletteArtistKSSUP2 = playerHatPaint;
 						}
 						break;
 					}
@@ -1885,11 +1934,11 @@ if (!global.pause)
 						case "kssu":
 						if (selectedPlayer == 0)
 						{
-							global.hatPaletteFighterKssuP1 = playerHatPaint;
+							global.hatPaletteFighterKSSUP1 = playerHatPaint;
 						}
 						else
 						{
-							global.hatPaletteFighterKssuP2 = playerHatPaint;
+							global.hatPaletteFighterKSSUP2 = playerHatPaint;
 						}
 						break;
 					}
@@ -1901,11 +1950,11 @@ if (!global.pause)
 						case "kssu":
 						if (selectedPlayer == 0)
 						{
-							global.hatPaletteSuplexKssuP1 = playerHatPaint;
+							global.hatPaletteSuplexKSSUP1 = playerHatPaint;
 						}
 						else
 						{
-							global.hatPaletteSuplexKssuP2 = playerHatPaint;
+							global.hatPaletteSuplexKSSUP2 = playerHatPaint;
 						}
 						break;
 					}
@@ -1917,11 +1966,11 @@ if (!global.pause)
 						case "kssu":
 						if (selectedPlayer == 0)
 						{
-							global.hatPaletteWingKssuP1 = playerHatPaint;
+							global.hatPaletteWingKSSUP1 = playerHatPaint;
 						}
 						else
 						{
-							global.hatPaletteWingKssuP2 = playerHatPaint;
+							global.hatPaletteWingKSSUP2 = playerHatPaint;
 						}
 						break;
 					}
@@ -1933,11 +1982,11 @@ if (!global.pause)
 						case "kssu":
 						if (selectedPlayer == 0)
 						{
-							global.hatPaletteJetKssuP1 = playerHatPaint;
+							global.hatPaletteJetKSSUP1 = playerHatPaint;
 						}
 						else
 						{
-							global.hatPaletteJetKssuP2 = playerHatPaint;
+							global.hatPaletteJetKSSUP2 = playerHatPaint;
 						}
 						break;
 					}
@@ -1949,11 +1998,11 @@ if (!global.pause)
 						case "kssu":
 						if (selectedPlayer == 0)
 						{
-							global.hatPaletteSwordKssuP1 = playerHatPaint;
+							global.hatPaletteSwordKSSUP1 = playerHatPaint;
 						}
 						else
 						{
-							global.hatPaletteSwordKssuP2 = playerHatPaint;
+							global.hatPaletteSwordKSSUP2 = playerHatPaint;
 						}
 						break;
 					}
@@ -1965,11 +2014,11 @@ if (!global.pause)
 						case "kssu":
 						if (selectedPlayer == 0)
 						{
-							global.hatPaletteParasolKssuP1 = playerHatPaint;
+							global.hatPaletteParasolKSSUP1 = playerHatPaint;
 						}
 						else
 						{
-							global.hatPaletteParasolKssuP2 = playerHatPaint;
+							global.hatPaletteParasolKSSUP2 = playerHatPaint;
 						}
 						break;
 					}
@@ -1981,11 +2030,11 @@ if (!global.pause)
 						case "kssu":
 						if (selectedPlayer == 0)
 						{
-							global.hatPaletteHammerKssuP1 = playerHatPaint;
+							global.hatPaletteHammerKSSUP1 = playerHatPaint;
 						}
 						else
 						{
-							global.hatPaletteHammerKssuP2 = playerHatPaint;
+							global.hatPaletteHammerKSSUP2 = playerHatPaint;
 						}
 						break;
 					}
@@ -2013,11 +2062,11 @@ if (!global.pause)
 						case "kssu":
 						if (selectedPlayer == 0)
 						{
-							global.hatPaletteSleepKssuP1 = playerHatPaint;
+							global.hatPaletteSleepKSSUP1 = playerHatPaint;
 						}
 						else
 						{
-							global.hatPaletteSleepKssuP2 = playerHatPaint;
+							global.hatPaletteSleepKSSUP2 = playerHatPaint;
 						}
 						break;
 					}
@@ -2029,11 +2078,11 @@ if (!global.pause)
 						case "kssu":
 						if (selectedPlayer == 0)
 						{
-							global.hatPaletteScanKssuP1 = playerHatPaint;
+							global.hatPaletteScanKSSUP1 = playerHatPaint;
 						}
 						else
 						{
-							global.hatPaletteScanKssuP2 = playerHatPaint;
+							global.hatPaletteScanKSSUP2 = playerHatPaint;
 						}
 						break;
 					}

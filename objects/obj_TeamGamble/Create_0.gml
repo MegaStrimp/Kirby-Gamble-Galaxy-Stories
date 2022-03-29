@@ -1,5 +1,9 @@
 ///@description Initialize Variables
 
+//Randomize
+
+randomize();
+
 //Other Variables
 
 x = room_width / 2;

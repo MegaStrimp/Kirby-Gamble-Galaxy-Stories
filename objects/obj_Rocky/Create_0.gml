@@ -39,6 +39,8 @@ particleReleased = false;
 turnCounter = 0;
 turnCounterMax = 2;
 animDir = -1;
+hasXKnockback = false;
+hasYKnockback = false;
 
 //Timers
 

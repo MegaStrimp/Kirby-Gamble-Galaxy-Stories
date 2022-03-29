@@ -148,7 +148,7 @@ if (((attackNumber == playerAttacks.cutterNormal) or (attackNumber == "cutterCha
 {
 	attack = false;
 	attackable = true;
-	attackNumber = "none";
+	attackNumber = playerAttacks.none;
 }
 
 //Cutter Attack 2
@@ -160,7 +160,7 @@ if (sprite_index == sprCutterAttack2) image_index = image_number - 1;
 if (((attackNumber == "sirKibbleCutterNormal") or (attackNumber == "sirKibbleCutterChargeAttack")) and (sprite_index == sprCutterAttack1))
 {
 	attack = false;
-	attackNumber = "none";
+	attackNumber = playerAttacks.none;
 	attackTimer = 45;
 }
 
@@ -190,7 +190,7 @@ if ((attackNumber == playerAttacks.mysticBeamChargeAttack) and (sprite_index == 
 
 //Stone Normal Attack Ready
 
-if (((attackNumber == playerAttacks.stoneNormal) or (attackNumber == "gooeyStoneNormal")) and (sprite_index == sprStoneAttack1Ready))
+if (((attackNumber == playerAttacks.stoneNormal) or (attackNumber == playerAttacks.gooeyStoneNormal)) and (sprite_index == sprStoneAttack1Ready))
 {
 	image_index = image_number - 1;
 	var par = instance_create_depth(x,y - 3,depth - 1,obj_Particle);
@@ -214,7 +214,7 @@ if ((attackNumber == playerAttacks.bombReady) and (sprite_index == sprBombReady)
 	if (bombDownReady)
 	{
 		attack = true;
-		attackNumber = "bombDown";
+		attackNumber = playerAttacks.bombDown;
 		sprite_index = sprItemCarryHeavyDuck;
 		image_index = 0;
 	}

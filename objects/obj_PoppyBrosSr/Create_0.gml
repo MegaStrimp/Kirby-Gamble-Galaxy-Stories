@@ -30,9 +30,10 @@ sprDeath = spr_PoppyBrosSr_Normal_Death;
 //Other Variables
 
 paletteIndex = spr_PoppyBrosSr_Normal_Palette_BlueBomber;
-hp = 100;
+hp = 120;
 dmg = 1;
-points = 100;
+ability = playerAbilities.bomb;
+points = 2000;
 attack = false;
 attackNumber = -1;
 isAttacking = false;

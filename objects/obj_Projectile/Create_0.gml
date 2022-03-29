@@ -42,6 +42,8 @@ hurtable = false;
 pausable = true;
 shakeX = 0;
 shakeY = 0;
+drawShakeX = 0;
+drawShakeY = 0;
 hitInvincibilityMin = 10;
 hitInvincibilityMax = 30;
 hitInvincibility = hitInvincibilityMin;
@@ -51,6 +53,12 @@ player = 0;
 setupExplode = false;
 isFamiliar = false;
 trail = -1;
+heavy = false;
+inhaleXOffset = 0;
+inhaleYOffset = 0;
+sprHurt = "self";
+points = 0;
+ability = playerAbilities.none;
 
 //Timers
 

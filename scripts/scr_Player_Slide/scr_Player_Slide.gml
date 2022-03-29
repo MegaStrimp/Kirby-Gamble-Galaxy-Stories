@@ -27,6 +27,10 @@ function scr_Player_Slide()
 			vsp = gravLimitNormal;
 		}
 		
+		//Grounded
+		
+		if ((grounded) and (jumpLimit)) vsp = 0;
+		
 		//Duck
 		
 		if (duck)
@@ -42,6 +46,7 @@ function scr_Player_Slide()
 		
 			switch (carriedItem)
 			{
+				#region Bomb
 				case carriedItems.bomb:
 				if (!global.cutscene)
 				{
@@ -90,16 +95,16 @@ function scr_Player_Slide()
 						else
 						{
 							attack = true;
-							attackNumber = "bombDown";
+							attackNumber = playerAttacks.bombDown;
 							sprite_index = sprItemCarryHeavyDuck;
 							image_index = 0;
 						}
 					}
 					
-					if (attackNumber == "bombDown")
+					if (attackNumber == playerAttacks.bombDown)
 					{
 						carriedItemIndex.active = true;
-						carriedItemIndex.explodeTimer = 25;
+						carriedItemIndex.explodeTimer = 40;
 						carriedItem = carriedItems.none;
 						carriedItemIndex = -1;
 						carriedItemState = "none";
@@ -109,15 +114,19 @@ function scr_Player_Slide()
 					}
 				}
 				break;
-			
+				#endregion
+				
+				#region Default
 				default:
 				if (canAttack)
 				{
 					switch (playerCharacter)
 					{
+						#region Kirby
 						case playerCharacters.kirby:
 						switch (playerAbility)
 						{
+							#region Beam
 							case playerAbilities.beam:
 						    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 						    {
@@ -151,7 +160,9 @@ function scr_Player_Slide()
 								}
 							}
 							break;
+							#endregion
 							
+							#region Mystic Beam
 							case playerAbilities.mysticBeam:
 						    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 						    {
@@ -185,7 +196,98 @@ function scr_Player_Slide()
 								}
 							}
 							break;
+							#endregion
 							
+							#region Stone
+							case playerAbilities.stone:
+						    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (attackable))
+						    {
+								if (audio_is_playing(snd_StoneReady)) audio_stop_sound(snd_StoneReady);
+								audio_play_sound(snd_StoneReady,0,false);
+								state = playerStates.normal;
+								hsp = 0;
+								vsp = -jumpspeed / 2;
+								jumpLimit = false;
+								jumpLimitTimer = 15;
+								invincible = true;
+						        attack = true;
+						        attackNumber = playerAttacks.stoneNormal;
+						        attackable = false;
+								stoneParticleTimer = 0;
+								sprite_index = sprStoneAttack1Ready;
+								image_index = 0;
+						    }
+							
+							if (attackNumber == playerAttacks.stoneNormal)
+							{
+								if ((!stoneFallen) and (!stoneReady) and (place_meeting(x,y + vsp + 1,obj_Wall)) and (sign(vsp) == 1))
+								{
+									if (audio_is_playing(snd_StoneFallen)) audio_stop_sound(snd_StoneFallen);
+									audio_play_sound(snd_StoneFallen,0,false);
+									if ((sprite_index == sprStoneAttack1Rare) and (floor(image_index) == 6))
+									{
+										if (audio_is_playing(snd_JellyStone)) audio_stop_sound(snd_JellyStone);
+										audio_play_sound(snd_JellyStone,0,false);
+									}
+									stoneFallen = true;
+									scaleExX = .2;
+									scaleExY = -.2;
+									shakeY = 3;
+									for (var i = 0; i < 2; i++)
+									{
+										var parXDir = 4;
+										if (i == 1) var parXDir = -4;
+										var par = instance_create_depth(x + parXDir,y + 3,depth - 1,obj_RecoilStar);
+										if (i == 0)
+										{
+											par.hsp = 3;
+										}
+										else if (i == 1)
+										{
+											par.hsp = -3;
+										}
+										par.dir = sign(par.hsp);
+										par.hurtsObject = true;
+										par.hurtsEnemy = true;
+										par.canBeInhaled = false;
+										par.destroyTimer = 15;
+									}
+									if (instance_exists(obj_Camera))
+									{
+										obj_Camera.shakeX = 2;
+										obj_Camera.shakeY = 2;
+									}
+								}
+								
+								if (stoneReady)
+								{
+									shakeX = 2;
+								}
+								else if ((!global.cutscene) and (keyAttackPressed))
+								{
+									if (audio_is_playing(snd_StoneRelease)) audio_stop_sound(snd_StoneRelease);
+									audio_play_sound(snd_StoneRelease,0,false);
+									var stoneEnd = instance_create_depth(x,y,depth - 1,obj_Projectile_StoneStop);
+									stoneEnd.dmg = 205
+									stoneEnd.enemy = false;
+									stoneEnd.owner = id;
+									vsp = -(jumpspeed / 3);
+									grav = gravNormal;
+									gravLimit = gravLimitNormal;
+									invincible = false;
+									attackTimer = 15;
+									stoneReady = true;
+									stoneFallen = false;
+									if (instance_exists(stoneMaskProj)) instance_destroy(stoneMaskProj);
+						            attack = false;
+									attackNumber = playerAttacks.none;
+									if (stoneReleaseParticleTimer == -1) stoneReleaseParticleTimer = stoneReleaseParticleTimerMax;
+								}
+							}
+							break;
+							#endregion
+							
+							#region Bomb
 							case playerAbilities.bomb:
 						    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 						    {
@@ -230,7 +332,9 @@ function scr_Player_Slide()
 								}
 							}
 							break;
+							#endregion
 							
+							#region Ice
 							case playerAbilities.ice:
 							if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 							{
@@ -253,10 +357,35 @@ function scr_Player_Slide()
 								}
 							}
 							break;
+							#endregion
+							
+							#region Spark
+							case playerAbilities.spark:
+							if ((!global.cutscene) and (!hurt) and (!attack))
+							{
+								if (keyAttackPressed)
+								{
+									attack = true;
+									attackable = false;
+									sparkCooldown = 30;
+									attackNumber = playerAttacks.sparkNormal;
+									state = playerStates.normal;
+									sprite_index = sprSparkAttack4;
+									image_index = 0;
+									sparkProj = instance_create_depth(x,y,depth + 1,obj_Projectile_SparkNormal);
+									sparkProj.dmg = 22;
+									sparkProj.enemy = false;
+									sparkProj.dirX = dir;
+									sparkProj.owner = id;
+								}
+							}
+							#endregion
 						}
+						#endregion
 					}
 				}
 				break;
+				#endregion
 			}
 			
 			if (!attack)

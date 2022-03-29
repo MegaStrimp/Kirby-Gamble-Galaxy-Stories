@@ -4,6 +4,9 @@
 function scr_LoadGame(argument0)
 {
 	ini_open(argument0);
+	global.gameTimeSeconds = ini_read_real("stats","gameTimeSeconds",0);
+	global.gameTimeMinutes = ini_read_real("stats","gameTimeMinutes",0);
+	global.gameTimeHours = ini_read_real("stats","gameTimeHours",0);
 	global.pointStars = ini_read_real("stats","pointStars",0);
 	global.points = ini_read_real("stats","points",0);
 	global.playerLives = ini_read_real("stats","lives",3);
@@ -147,6 +150,7 @@ function scr_LoadGame(argument0)
 	
 	global.hatTypeCutterP1 = ini_read_string("playerCustomization","hatTypeCutterP1","kssu");
 	global.hatTypeBeamP1 = ini_read_string("playerCustomization","hatTypeBeamP1","kssu");
+	global.hatTypeMysticBeamP1 = ini_read_string("playerCustomization","hatTypeMysticBeamP1","ggs");
 	global.hatTypeStoneP1 = ini_read_string("playerCustomization","hatTypeStoneP1","kssu");
 	global.hatTypeUfoP1 = ini_read_string("playerCustomization","hatTypeUfoP1","modern");
 	global.hatTypeMirrorP1 = ini_read_string("playerCustomization","hatTypeMirrorP1","kssu");
@@ -172,6 +176,7 @@ function scr_LoadGame(argument0)
 	
 	global.hatTypeCutterP2 = ini_read_string("playerCustomization","hatTypeCutterP2","kssu");
 	global.hatTypeBeamP2 = ini_read_string("playerCustomization","hatTypeBeamP2","kssu");
+	global.hatTypeMysticBeamP2 = ini_read_string("playerCustomization","hatTypeMysticBeamP2","ggs");
 	global.hatTypeStoneP2 = ini_read_string("playerCustomization","hatTypeStoneP2","kssu");
 	global.hatTypeUfoP2 = ini_read_string("playerCustomization","hatTypeUfoP2","modern");
 	global.hatTypeMirrorP2 = ini_read_string("playerCustomization","hatTypeMirrorP2","modern");
@@ -195,67 +200,67 @@ function scr_LoadGame(argument0)
 	global.hatTypeSleepP2 = ini_read_string("playerCustomization","hatTypeSleepP2","kssu");
 	global.hatTypeScanP2 = ini_read_string("playerCustomization","hatTypeScanP2","kssu");
 	
-	global.hatPaletteCutterKssuP1 = ini_read_real("playerCustomization","hatPaletteCutterKssuP1",0);
-	global.hatPaletteBeamKssuP1 = ini_read_real("playerCustomization","hatPaletteBeamKssuP1",0);
+	global.hatPaletteCutterKSSUP1 = ini_read_real("playerCustomization","hatPaletteCutterKSSUP1",0);
+	global.hatPaletteBeamKSSUP1 = ini_read_real("playerCustomization","hatPaletteBeamKSSUP1",0);
 	global.hatPaletteBeamMarxSoulP1 = ini_read_real("playerCustomization","hatPaletteBeamMarxSoulP1",0);
-	global.hatPaletteStoneKssuP1 = ini_read_real("playerCustomization","hatPaletteStoneKssuP1",0);
+	global.hatPaletteStoneKSSUP1 = ini_read_real("playerCustomization","hatPaletteStoneKSSUP1",0);
 	global.hatPaletteStoneModernP1 = ini_read_real("playerCustomization","hatPaletteStoneModernP1",0);
-	global.hatPaletteUfoKssuP1 = ini_read_real("playerCustomization","hatPaletteUfoKssuP1",0);
-	global.hatPaletteMirrorKssuP1 = ini_read_real("playerCustomization","hatPaletteMirrorKssuP1",0);
+	global.hatPaletteUfoKSSUP1 = ini_read_real("playerCustomization","hatPaletteUfoKSSUP1",0);
+	global.hatPaletteMirrorKSSUP1 = ini_read_real("playerCustomization","hatPaletteMirrorKSSUP1",0);
 	global.hatPaletteMirrorModernP1 = ini_read_real("playerCustomization","hatPaletteMirrorModernP1",0);
-	global.hatPaletteNinjaKssuP1 = ini_read_real("playerCustomization","hatPaletteNinjaKssuP1",0);
+	global.hatPaletteNinjaKSSUP1 = ini_read_real("playerCustomization","hatPaletteNinjaKSSUP1",0);
 	global.hatPaletteNinjaModernP1 = ini_read_real("playerCustomization","hatPaletteNinjaModernP1",0);
-	global.hatPaletteBombKssuP1 = ini_read_real("playerCustomization","hatPaletteBombKssuP1",0);
+	global.hatPaletteBombKSSUP1 = ini_read_real("playerCustomization","hatPaletteBombKSSUP1",0);
 	global.hatPaletteBombModernP1 = ini_read_real("playerCustomization","hatPaletteBombModernP1",0);
-	global.hatPaletteFireKssuP1 = ini_read_real("playerCustomization","hatPaletteFireKssuP1",0);
-	global.hatPaletteIceKssuP1 = ini_read_real("playerCustomization","hatPaletteIceKssuP1",0);
+	global.hatPaletteFireKSSUP1 = ini_read_real("playerCustomization","hatPaletteFireKSSUP1",0);
+	global.hatPaletteIceKSSUP1 = ini_read_real("playerCustomization","hatPaletteIceKSSUP1",0);
 	global.hatPaletteIceSnowmanP1 = ini_read_real("playerCustomization","hatPaletteIceSnowmanP1",0);
-	global.hatPaletteSparkKssuP1 = ini_read_real("playerCustomization","hatPaletteSparkKssuP1",0);
-	global.hatPaletteYoyoKssuP1 = ini_read_real("playerCustomization","hatPaletteYoyoKssuP1",0);
-	global.hatPaletteWheelKssuP1 = ini_read_real("playerCustomization","hatPaletteWheelKssuP1",0);
-	global.hatPaletteArtistKssuP1 = ini_read_real("playerCustomization","hatPaletteArtistKssuP1",0);
+	global.hatPaletteSparkKSSUP1 = ini_read_real("playerCustomization","hatPaletteSparkKSSUP1",0);
+	global.hatPaletteYoyoKSSUP1 = ini_read_real("playerCustomization","hatPaletteYoyoKSSUP1",0);
+	global.hatPaletteWheelKSSUP1 = ini_read_real("playerCustomization","hatPaletteWheelKSSUP1",0);
+	global.hatPaletteArtistKSSUP1 = ini_read_real("playerCustomization","hatPaletteArtistKSSUP1",0);
 	global.hatPaletteArtistModernP1 = ini_read_real("playerCustomization","hatPaletteArtistModernP1",0);
-	global.hatPaletteFighterKssuP1 = ini_read_real("playerCustomization","hatPaletteFighterKssuP1",0);
-	global.hatPaletteSuplexKssuP1 = ini_read_real("playerCustomization","hatPaletteSuplexKssuP1",0);
-	global.hatPaletteWingKssuP1 = ini_read_real("playerCustomization","hatPaletteWingKssuP1",0);
-	global.hatPaletteJetKssuP1 = ini_read_real("playerCustomization","hatPaletteJetKssuP1",0);
-	global.hatPaletteSwordKssuP1 = ini_read_real("playerCustomization","hatPaletteSwordKssuP1",0);
-	global.hatPaletteParasolKssuP1 = ini_read_real("playerCustomization","hatPaletteParasolKssuP1",0);
-	global.hatPaletteHammerKssuP1 = ini_read_real("playerCustomization","hatPaletteHammerKssuP1",0);
+	global.hatPaletteFighterKSSUP1 = ini_read_real("playerCustomization","hatPaletteFighterKSSUP1",0);
+	global.hatPaletteSuplexKSSUP1 = ini_read_real("playerCustomization","hatPaletteSuplexKSSUP1",0);
+	global.hatPaletteWingKSSUP1 = ini_read_real("playerCustomization","hatPaletteWingKSSUP1",0);
+	global.hatPaletteJetKSSUP1 = ini_read_real("playerCustomization","hatPaletteJetKSSUP1",0);
+	global.hatPaletteSwordKSSUP1 = ini_read_real("playerCustomization","hatPaletteSwordKSSUP1",0);
+	global.hatPaletteParasolKSSUP1 = ini_read_real("playerCustomization","hatPaletteParasolKSSUP1",0);
+	global.hatPaletteHammerKSSUP1 = ini_read_real("playerCustomization","hatPaletteHammerKSSUP1",0);
 	global.hatPaletteBellModernP1 = ini_read_real("playerCustomization","hatPaletteBellModernP1",0);
-	global.hatPaletteSleepKssuP1 = ini_read_real("playerCustomization","hatPaletteSleepKssuP1",0);
-	global.hatPaletteScanKssuP1 = ini_read_real("playerCustomization","hatPaletteScanKssuP1",0);
+	global.hatPaletteSleepKSSUP1 = ini_read_real("playerCustomization","hatPaletteSleepKSSUP1",0);
+	global.hatPaletteScanKSSUP1 = ini_read_real("playerCustomization","hatPaletteScanKSSUP1",0);
 	
-	global.hatPaletteCutterKssuP2 = ini_read_real("playerCustomization","hatPaletteCutterKssuP2",0);
-	global.hatPaletteBeamKssuP2 = ini_read_real("playerCustomization","hatPaletteBeamKssuP2",0);
+	global.hatPaletteCutterKSSUP2 = ini_read_real("playerCustomization","hatPaletteCutterKSSUP2",0);
+	global.hatPaletteBeamKSSUP2 = ini_read_real("playerCustomization","hatPaletteBeamKSSUP2",0);
 	global.hatPaletteBeamMarxSoulP2 = ini_read_real("playerCustomization","hatPaletteBeamMarxSoulP2",0);
-	global.hatPaletteStoneKssuP2 = ini_read_real("playerCustomization","hatPaletteStoneKssuP2",0);
+	global.hatPaletteStoneKSSUP2 = ini_read_real("playerCustomization","hatPaletteStoneKSSUP2",0);
 	global.hatPaletteStoneModernP2 = ini_read_real("playerCustomization","hatPaletteStoneModernP2",0);
-	global.hatPaletteUfoKssuP2 = ini_read_real("playerCustomization","hatPaletteUfoKssuP2",0);
-	global.hatPaletteMirrorKssuP2 = ini_read_real("playerCustomization","hatPaletteMirrorKssuP2",0);
+	global.hatPaletteUfoKSSUP2 = ini_read_real("playerCustomization","hatPaletteUfoKSSUP2",0);
+	global.hatPaletteMirrorKSSUP2 = ini_read_real("playerCustomization","hatPaletteMirrorKSSUP2",0);
 	global.hatPaletteMirrorModernP2 = ini_read_real("playerCustomization","hatPaletteMirrorModernP2",0);
-	global.hatPaletteNinjaKssuP2 = ini_read_real("playerCustomization","hatPaletteNinjaKssuP2",0);
+	global.hatPaletteNinjaKSSUP2 = ini_read_real("playerCustomization","hatPaletteNinjaKSSUP2",0);
 	global.hatPaletteNinjaModernP2 = ini_read_real("playerCustomization","hatPaletteNinjaModernP2",0);
-	global.hatPaletteBombKssuP2 = ini_read_real("playerCustomization","hatPaletteBombKssuP2",0);
+	global.hatPaletteBombKSSUP2 = ini_read_real("playerCustomization","hatPaletteBombKSSUP2",0);
 	global.hatPaletteBombModernP2 = ini_read_real("playerCustomization","hatPaletteBombModernP2",0);
-	global.hatPaletteFireKssuP2 = ini_read_real("playerCustomization","hatPaletteFireKssuP2",0);
-	global.hatPaletteIceKssuP2 = ini_read_real("playerCustomization","hatPaletteIceKssuP2",0);
+	global.hatPaletteFireKSSUP2 = ini_read_real("playerCustomization","hatPaletteFireKSSUP2",0);
+	global.hatPaletteIceKSSUP2 = ini_read_real("playerCustomization","hatPaletteIceKSSUP2",0);
 	global.hatPaletteIceSnowmanP2 = ini_read_real("playerCustomization","hatPaletteIceSnowmanP2",0);
-	global.hatPaletteSparkKssuP2 = ini_read_real("playerCustomization","hatPaletteSparkKssuP2",0);
-	global.hatPaletteYoyoKssuP2 = ini_read_real("playerCustomization","hatPaletteYoyoKssuP2",0);
-	global.hatPaletteWheelKssuP2 = ini_read_real("playerCustomization","hatPaletteWheelKssuP2",0);
-	global.hatPaletteArtistKssuP2 = ini_read_real("playerCustomization","hatPaletteArtistKssuP2",0);
+	global.hatPaletteSparkKSSUP2 = ini_read_real("playerCustomization","hatPaletteSparkKSSUP2",0);
+	global.hatPaletteYoyoKSSUP2 = ini_read_real("playerCustomization","hatPaletteYoyoKSSUP2",0);
+	global.hatPaletteWheelKSSUP2 = ini_read_real("playerCustomization","hatPaletteWheelKSSUP2",0);
+	global.hatPaletteArtistKSSUP2 = ini_read_real("playerCustomization","hatPaletteArtistKSSUP2",0);
 	global.hatPaletteArtistModernP2 = ini_read_real("playerCustomization","hatPaletteArtistModernP2",0);
-	global.hatPaletteFighterKssuP2 = ini_read_real("playerCustomization","hatPaletteFighterKssuP2",0);
-	global.hatPaletteSuplexKssuP2 = ini_read_real("playerCustomization","hatPaletteSuplexKssuP2",0);
-	global.hatPaletteWingKssuP2 = ini_read_real("playerCustomization","hatPaletteWingKssuP2",0);
-	global.hatPaletteJetKssuP2 = ini_read_real("playerCustomization","hatPaletteJetKssuP2",0);
-	global.hatPaletteSwordKssuP2 = ini_read_real("playerCustomization","hatPaletteSwordKssuP2",0);
-	global.hatPaletteParasolKssuP2 = ini_read_real("playerCustomization","hatPaletteParasolKssuP2",0);
-	global.hatPaletteHammerKssuP2 = ini_read_real("playerCustomization","hatPaletteHammerKssuP2",0);
+	global.hatPaletteFighterKSSUP2 = ini_read_real("playerCustomization","hatPaletteFighterKSSUP2",0);
+	global.hatPaletteSuplexKSSUP2 = ini_read_real("playerCustomization","hatPaletteSuplexKSSUP2",0);
+	global.hatPaletteWingKSSUP2 = ini_read_real("playerCustomization","hatPaletteWingKSSUP2",0);
+	global.hatPaletteJetKSSUP2 = ini_read_real("playerCustomization","hatPaletteJetKSSUP2",0);
+	global.hatPaletteSwordKSSUP2 = ini_read_real("playerCustomization","hatPaletteSwordKSSUP2",0);
+	global.hatPaletteParasolKSSUP2 = ini_read_real("playerCustomization","hatPaletteParasolKSSUP2",0);
+	global.hatPaletteHammerKSSUP2 = ini_read_real("playerCustomization","hatPaletteHammerKSSUP2",0);
 	global.hatPaletteBellModernP2 = ini_read_real("playerCustomization","hatPaletteBellModernP2",0);
-	global.hatPaletteSleepKssuP2 = ini_read_real("playerCustomization","hatPaletteSleepKssuP2",0);
-	global.hatPaletteScanKssuP2 = ini_read_real("playerCustomization","hatPaletteScanKssuP2",0);
+	global.hatPaletteSleepKSSUP2 = ini_read_real("playerCustomization","hatPaletteSleepKSSUP2",0);
+	global.hatPaletteScanKSSUP2 = ini_read_real("playerCustomization","hatPaletteScanKSSUP2",0);
 	
 	global.beamGoldenFlareUpgradeEquipped = ini_read_real("playerCustomization","beamGoldenFlareUpgradeEquipped",false);
 	global.mysticBeamVortexInAJarUpgradeEquipped = ini_read_real("playerCustomization","mysticBeamVortexInAJarUpgradeEquipped",false);
@@ -270,6 +275,7 @@ function scr_LoadGame(argument0)
 	global.iceEmptyConeUpgradeEquipped = ini_read_real("playerCustomization","iceEmptyConeUpgradeEquipped",false);
 	global.sparkBrightPluggUpgradeEquipped = ini_read_real("playerCustomization","sparkBrightPluggUpgradeEquipped",false);
 	global.waterEggSoilUpgradeEquipped = ini_read_real("playerCustomization","waterEggSoilUpgradeEquipped",false);
-	
 	ini_close();
+	
+	global.saveLoaded = true;
 }

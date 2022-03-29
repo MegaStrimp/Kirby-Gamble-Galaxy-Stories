@@ -30,7 +30,7 @@ event_inherited();
 
 if (!global.pause)
 {
-	if (!parasol) scr_Object_Inhale();
+	if (!parasol) scr_Object_Inhale(enemy);
 	
 	//Hurt Player
 	

@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Background Elements",
-    "path": "folders/Sprites/Stage Elements/Background Elements.yy",
+    "name": "Cold Odyssey",
+    "path": "folders/Sprites/Stage Elements/Background Elements/Cold Odyssey.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Background_ColdOdysseyPlanets",

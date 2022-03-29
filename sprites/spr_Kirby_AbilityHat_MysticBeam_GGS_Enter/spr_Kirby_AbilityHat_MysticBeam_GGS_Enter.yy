@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 23,
+  "bbox_right": 25,
   "bbox_top": 0,
-  "bbox_bottom": 24,
+  "bbox_bottom": 15,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 24,
-  "height": 25,
+  "width": 26,
+  "height": 16,
   "textureGroupId": {
     "name": "Characters",
     "path": "texturegroups/Characters",
@@ -24,21 +24,21 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c137fd40-782f-4935-bee7-94cf9bec73b3","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c137fd40-782f-4935-bee7-94cf9bec73b3","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"LayerId":{"name":"9cf0c4dc-7565-436d-a117-bfab05e1732f","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_MysticBeam_GGS_Enter","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","name":"c137fd40-782f-4935-bee7-94cf9bec73b3","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"98ae702a-af3b-4fcf-97a4-0c9a3fbcd8c0","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"98ae702a-af3b-4fcf-97a4-0c9a3fbcd8c0","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"LayerId":{"name":"9cf0c4dc-7565-436d-a117-bfab05e1732f","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_MysticBeam_GGS_Enter","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","name":"98ae702a-af3b-4fcf-97a4-0c9a3fbcd8c0","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2e56adc9-9118-4e4a-b628-39c46bdd62d7","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2e56adc9-9118-4e4a-b628-39c46bdd62d7","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"LayerId":{"name":"9cf0c4dc-7565-436d-a117-bfab05e1732f","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_MysticBeam_GGS_Enter","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","name":"2e56adc9-9118-4e4a-b628-39c46bdd62d7","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"038ec91c-5195-42c6-8623-a06816934160","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"038ec91c-5195-42c6-8623-a06816934160","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"LayerId":{"name":"9cf0c4dc-7565-436d-a117-bfab05e1732f","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_MysticBeam_GGS_Enter","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","name":"038ec91c-5195-42c6-8623-a06816934160","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"20b00c3d-d875-42e1-b0ec-f6a07b10dd37","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"20b00c3d-d875-42e1-b0ec-f6a07b10dd37","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"LayerId":{"name":"9cf0c4dc-7565-436d-a117-bfab05e1732f","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_MysticBeam_GGS_Enter","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","name":"20b00c3d-d875-42e1-b0ec-f6a07b10dd37","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"6cbd1af4-5bfd-454f-a70f-ca57dd08b46d","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"6cbd1af4-5bfd-454f-a70f-ca57dd08b46d","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"LayerId":{"name":"9cf0c4dc-7565-436d-a117-bfab05e1732f","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Kirby_AbilityHat_MysticBeam_GGS_Enter","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","name":"6cbd1af4-5bfd-454f-a70f-ca57dd08b46d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"e358f2e9-6a8d-49c5-a325-8268073f0c60","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"e358f2e9-6a8d-49c5-a325-8268073f0c60","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"LayerId":{"name":"9cf0c4dc-7565-436d-a117-bfab05e1732f","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Kirby_AbilityHat_MysticBeam_GGS_Enter","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","name":"e358f2e9-6a8d-49c5-a325-8268073f0c60","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"4441ecc2-fde1-45fd-817a-87e1ea8bac48","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"4441ecc2-fde1-45fd-817a-87e1ea8bac48","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"LayerId":{"name":"9cf0c4dc-7565-436d-a117-bfab05e1732f","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Kirby_AbilityHat_MysticBeam_GGS_Enter","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","name":"4441ecc2-fde1-45fd-817a-87e1ea8bac48","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"0c3368e3-08b7-4d0c-93f9-b32a580ddada","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"0c3368e3-08b7-4d0c-93f9-b32a580ddada","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"LayerId":{"name":"9cf0c4dc-7565-436d-a117-bfab05e1732f","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Kirby_AbilityHat_MysticBeam_GGS_Enter","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","name":"0c3368e3-08b7-4d0c-93f9-b32a580ddada","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c5a89b98-b34c-44f4-93c6-3791acf49589","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c5a89b98-b34c-44f4-93c6-3791acf49589","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"LayerId":{"name":"9cf0c4dc-7565-436d-a117-bfab05e1732f","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Kirby_AbilityHat_MysticBeam_GGS_Enter","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","name":"c5a89b98-b34c-44f4-93c6-3791acf49589","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_Kirby_AbilityHat_MysticBeam_GGS_Enter","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},
@@ -53,11 +53,11 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"ee2e8ed2-a0d4-41d6-9cd4-34201a1f47db","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c137fd40-782f-4935-bee7-94cf9bec73b3","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"a6ef05af-292a-48c7-aabd-dec6fd10e305","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"98ae702a-af3b-4fcf-97a4-0c9a3fbcd8c0","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"ea22f6c6-5746-49e9-aa6a-c60554a2467c","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2e56adc9-9118-4e4a-b628-39c46bdd62d7","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"1a723ef6-04a2-4ece-9980-00c7df151247","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"038ec91c-5195-42c6-8623-a06816934160","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"0e39beef-9902-4523-8732-0a5873145061","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"20b00c3d-d875-42e1-b0ec-f6a07b10dd37","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"122a834f-ba52-409f-b9b5-fb37cc6614a5","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6cbd1af4-5bfd-454f-a70f-ca57dd08b46d","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"3c8501ef-0fc8-44b0-82b5-483d3b07504e","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e358f2e9-6a8d-49c5-a325-8268073f0c60","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9aad6ab7-16d3-4fa8-908b-38a5bb75ef59","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4441ecc2-fde1-45fd-817a-87e1ea8bac48","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c2a4c050-fac0-4a16-9ead-5cc8f3d54a56","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0c3368e3-08b7-4d0c-93f9-b32a580ddada","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1b4b9fcf-a7e3-4c43-a0d3-c2d57c65bb83","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c5a89b98-b34c-44f4-93c6-3791acf49589","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -70,8 +70,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 12,
-    "yorigin": 17,
+    "xorigin": 13,
+    "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_MysticBeam_GGS_Enter","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter/spr_Kirby_AbilityHat_MysticBeam_GGS_Enter.yy",},
@@ -85,8 +85,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "GGS",
-    "path": "folders/Sprites/Characters/Kirby/Ability Hats/Mystic Beam/GGS.yy",
+    "name": "Hat",
+    "path": "folders/Sprites/Characters/Kirby/Ability Hats/Mystic Beam/GGS/Hat.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Kirby_AbilityHat_MysticBeam_GGS_Enter",

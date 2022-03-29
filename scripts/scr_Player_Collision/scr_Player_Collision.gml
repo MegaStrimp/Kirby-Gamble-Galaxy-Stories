@@ -4,13 +4,11 @@ function scr_Player_Collision()
 {
 	//Variables
 	
-	hspCollision = 0;
-	vspCollision = 0;
+	hspFinal = hsp + hspCarry;
+	vspFinal = vsp + vspCarry;
 	
-	//if ((sign(hspCollision != 0)) and (sign(hsp) != sign(hspCollision))) hsp = 0;
-	//if ((sign(vspCollision != 0)) and (sign(vsp) != sign(vspCollision))) vsp = 0;
-	hspFinal = hsp + hspCollision;
-	vspFinal = vsp + vspCollision;
+	hspCarry = 0;
+	vspCarry = 0;
 	
 	//Slopes
 	
@@ -25,6 +23,19 @@ function scr_Player_Collision()
 				yplus += 1;
 			}
 			y += yplus;
+		}
+		
+		stoneAngle = 0;
+		if ((collidingWall.slope) and (attackNumber == playerAttacks.stoneNormal))
+		{
+			var wallDir = collidingWall.image_xscale;
+			var wallAngle = 45;
+			if (collidingWall.sprite_index = spr_48x24Slope) wallAngle = 26;
+			if (collidingWall.sprite_index = spr_72x24Slope) wallAngle = 18;
+			if (collidingWall.slopeType == "normal") wallDir *= -1;
+			hsp += accel * wallDir;
+			stoneAngle = wallAngle * -wallDir;
+			if (stoneAngle < 0) stoneAngle += 360;
 		}
 	}
 	
@@ -164,7 +175,7 @@ function scr_Player_Collision()
 		collidingWall = instance_position(x,y,obj_Wall);
 		if (collidingWall.isTop)
 		{
-			while (place_meeting(x,y,collidingWall)) y -= 1;
+			//while (place_meeting(x,y + collidingWall,collidingWall)) y -= 1;
 		}
 		else if (!collidingWall.platform)
 		{

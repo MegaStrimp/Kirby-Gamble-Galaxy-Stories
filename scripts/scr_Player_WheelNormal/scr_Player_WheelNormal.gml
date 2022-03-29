@@ -8,18 +8,6 @@ function scr_Player_WheelNormal()
 		
 		invincible = !wheelTurn;
 		
-		var grounded = false;
-		if (place_meeting(x,y + 1,obj_Wall))
-		{
-			var collidingWall = instance_place(x,y + 1,obj_Wall);
-			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) grounded = true;
-		}
-		else if (place_meeting(x,y + 1,obj_Spring))
-		{
-			var collidingWall = instance_place(x,y + 1,obj_Spring);
-			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) grounded = true;
-		}
-		
 		//Gravity
 		
 		if (sign(vsp) < gravLimitWheel)
@@ -31,9 +19,17 @@ function scr_Player_WheelNormal()
 			vsp = gravLimitWheel;
 		}
 		
+		if ((!global.cutscene) and (!canUfoFloat) and (vsp < 0) and (!keyJumpHold))
+		{
+			var jumpLimitValue = -jumpspeedWheel / 4;
+			if ((hasJumpLimit) and (jumpLimit)) vsp = max(vsp,jumpLimitValue);
+		}
+		
 		//Movement
 		
-		if ((!global.cutscene) and (!wheelTurn) and (!wheelCrash))
+		if ((wheelTurn) and (grounded)) wheelTurn = false;
+		
+		if ((!global.cutscene) and (wheelReady) and (!wheelTurn) and (!wheelCrash))
 		{
 			if (keyRightPressed)
 			{
@@ -42,7 +38,9 @@ function scr_Player_WheelNormal()
 				{
 					if (audio_is_playing(snd_DashBegin)) audio_stop_sound(snd_DashBegin);
 					audio_play_sound(snd_DashBegin,0,false);
-					if (grounded) vsp = -5;
+					jumpLimit = false;
+					jumpLimitTimer = 30;
+					if (grounded) vsp = -6;
 					hsp = 0;
 					wheelDir = 1;
 					runParticleNum = 0;
@@ -57,7 +55,9 @@ function scr_Player_WheelNormal()
 				{
 					if (audio_is_playing(snd_DashBegin)) audio_stop_sound(snd_DashBegin);
 					audio_play_sound(snd_DashBegin,0,false);
-					if (grounded) vsp = -5;
+					jumpLimit = false;
+					jumpLimitTimer = 30;
+					if (grounded) vsp = -6;
 					hsp = 0;
 					wheelDir = -1;
 					runParticleNum = 0;
@@ -67,14 +67,21 @@ function scr_Player_WheelNormal()
 			}
 		}
 		
-		if ((!wheelTurn) and (!wheelCrash)) hsp += accelWheel * wheelDir;
+		if ((wheelReady) and (!wheelCrash)) hsp += accelWheel * wheelDir;
 		hsp = clamp(hsp,-movespeedWheel,movespeedWheel);
 		
 		if (hsp >= decelWheel) hsp -= decelWheel;
 		if (hsp <= -decelWheel) hsp += decelWheel;
 		if ((hsp > -decelWheel) and (hsp < decelWheel)) hsp = 0;
 		
-		if ((wheelTurn) and (grounded)) wheelTurn = false;
+		//Jump
+		
+		if ((!global.cutscene) and (canJump) and (((!canMultiJump) and (grounded)) or ((canMultiJump) and (multiJumpCounter < multiJumpLimit))) and (!wallAbove) and (keyJumpPressed))
+		{
+			sprite_index = sprJump;
+			image_index = 0;
+			vsp = -jumpspeedWheel;
+		}
 		
 		//Crash
 		
@@ -82,8 +89,10 @@ function scr_Player_WheelNormal()
 		{
 			if (!instance_place(x + hsp,y,obj_Wall).platform)
 			{
-				hsp *= -dir;
-				vsp = -5;
+				jumpLimit = false;
+				jumpLimitTimer = 15;
+				hsp = (movespeedWheel / 2) * -dir;
+				vsp = -4;
 				wheelCrash = true;
 			}
 		}

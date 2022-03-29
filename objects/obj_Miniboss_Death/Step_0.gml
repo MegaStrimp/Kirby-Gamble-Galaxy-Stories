@@ -18,7 +18,7 @@ if (!global.pause)
 	{
 		inhalePower = 0;
 	}
-	if (inhalePower >= inhalePowerMax) scr_Object_Inhale();
+	if (inhalePower >= inhalePowerMax) scr_Object_Inhale(enemy);
 	
 	//Hurt Player
 	
@@ -42,7 +42,7 @@ if (!global.pause)
 	
 	//Animation
 	
-	invincibleFlash = 1 + (destroyTimer % 3);
+	invincibleFlash = (destroyTimer % 3);
 	
 	switch (ownerIndex)
 	{

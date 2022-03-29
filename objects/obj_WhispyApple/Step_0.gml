@@ -8,7 +8,7 @@ if (!global.pause)
 {
 	//Get Inhaled
 	
-	if (state != 1) scr_Object_Inhale();
+	if (state != 1) scr_Object_Inhale(enemy);
 	
 	//Hurt Player
 	

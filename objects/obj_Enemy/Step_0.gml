@@ -44,6 +44,25 @@ if (!global.pause)
 		}
 	}
 	
+	//Moving Walls
+	/*
+	if (place_meeting(x,y + 1,obj_Wall))
+	{
+		var movingWall = instance_place(x,y + 1,obj_Wall);
+		if (movingWall.hsp != 0) x += movingWall.hsp;
+		if (movingWall.vsp != 0) y += movingWall.vsp;
+	}
+	if (place_meeting(x,y - 1,obj_Wall))
+	{
+		var movingWall = instance_place(x,y - 1,obj_Wall);
+		if (movingWall.vsp != 0) y += movingWall.vsp;
+	}
+	if (place_meeting(x + sign(hspFinal),y,obj_Wall))
+	{
+		var movingWall = instance_place(x + sign(hspFinal),y,obj_Wall);
+		if (movingWall.hsp != 0) x += movingWall.hsp;
+	}
+	*/
 	//Gravity
 	
 	if (hasGravity)
@@ -102,7 +121,7 @@ if (!global.pause)
 				deathObj.points = points;
 				deathObj.ability = ability;
 				deathObj.hsp = 2 * projectileHitKnockbackDir;
-				deathObj.vsp = -3;
+				deathObj.vsp = -4;
 			}
 			else if (isBoss)
 			{
@@ -555,21 +574,31 @@ if (!global.pause)
 	
 	//Springs
 	
-	if ((place_meeting(x,y + 1,obj_Spring)) and (hasYKnockback))
+	if (place_meeting(x,y + 1,obj_Spring))
 	{
-		if (sign(vsp + knockbackY) == 1)
+		if (sign(vsp + knockbackY) != -1)
 		{
 			//Variables
 			
 			var collidedSpring = instance_place(x,y + 1,obj_Spring);
 			collidedSpring.hit = true;
 			collidedSpring.hitTimer = collidedSpring.hitTimerMax;
+			var finalForce = collidedSpring.force;
+			var drawOffsetForce = 8;
+			
+			audio_play_sound(snd_BigJump,0,false);
+			
+			if (collidedSpring.object_index == obj_BouncyCloud)
+			{
+				collidedSpring.scaleExY = -.2;
+				collidedSpring.yDrawOffset = drawOffsetForce;
+			}
 			
 			//Particles
 			
 			for (var i = 0; i < 2; i++)
 			{
-				var par = instance_create_depth(collidedSpring.x + (8 * collidedSpring.image_xscale),collidedSpring.y + (4 * collidedSpring.image_yscale),collidedSpring.depth + 1,obj_Particle);
+				var par = instance_create_depth(x,y + 4,depth,obj_Particle);
 				par.sprite_index = spr_Particle_SmallStar;
 				par.hsp = 6;
 				if (i == 0)
@@ -588,14 +617,9 @@ if (!global.pause)
 				par.hasGravity = true;
 			}
 			
-			//Sound
-			
-			if (audio_is_playing(snd_BigJump)) audio_stop_sound(snd_BigJump);
-			audio_play_sound(snd_BigJump,0,false);
-			
 			//Vertical Knockback
 			
-			knockbackY = -collidedSpring.force;
+			vsp = -finalForce;
 		}
 	}
 	
@@ -992,7 +1016,7 @@ if (!global.pause)
 	{
 		if (place_meeting(x,y,other))
 		{
-			if ((damageType == damageTypes.scan) and (other.ability != playerAbilities.none))
+			if ((damageType == damageTypes.scan) and (other.ability != playerAbilities.none) and (!other.isMiniBoss) and (!other.isBoss))
 			{
 				if (canScan)
 				{

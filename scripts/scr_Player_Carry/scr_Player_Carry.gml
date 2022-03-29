@@ -93,6 +93,10 @@ function scr_Player_Carry()
 		    if (jumpLimit) vsp = max(vsp,-jumpspeed / 4);
 		}
 		
+		//Grounded
+		
+		if ((grounded) and (jumpLimit)) vsp = 0;
+		
 		//Jump
 		
 		if (place_meeting(x,y + 1,obj_Wall))

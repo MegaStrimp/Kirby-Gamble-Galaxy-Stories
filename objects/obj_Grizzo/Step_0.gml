@@ -44,7 +44,7 @@ if (!global.pause)
 			inhalePower = 0;
 			gettingInhaled = false;
 		}
-		if (inhalePower >= inhalePowerMax) scr_Object_Inhale();
+		if (inhalePower >= inhalePowerMax) scr_Object_Inhale(enemy);
 	}
 	
 	//Hurt Player

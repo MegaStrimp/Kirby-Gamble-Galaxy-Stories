@@ -1,7 +1,11 @@
 ///@description Object Inhale
 
-function scr_Object_Inhale()
+function scr_Object_Inhale(argument0)
 {
+	//Variables
+	
+	var enemy = argument0;
+	
 	//Inhale
 	
 	if ((place_meeting(x,y,obj_InhaleMask)) and (instance_number(obj_EatMe) < 5))

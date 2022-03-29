@@ -41,6 +41,10 @@ function scr_Player_Inhale()
 		
 		if (jumpLimit) vsp = max(vsp,-jumpspeed / 4);
 		
+		//Grounded
+		
+		if ((grounded) and (jumpLimit)) vsp = 0;
+		
 		//Change to Normal
 		
 		if ((inhaleSoundCont) and (!keyAttackHold) and (inhaling) and (!instance_exists(obj_EatMe)))

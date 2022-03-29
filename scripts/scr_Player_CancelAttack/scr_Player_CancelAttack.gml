@@ -13,97 +13,116 @@ function scr_Player_CancelAttack(argument0)
 		var playerCharacter = global.characterP1;
 		if (player == 1) playerCharacter = global.characterP2;
 		
-		if (attackNumber == playerAttacks.cutterDash)
+		switch (attackNumber)
 		{
+			case playerAttacks.cutterDash:
 			if (audio_is_playing(slideSfx)) audio_stop_sound(slideSfx);
 	        if (instance_exists(cutterDashMaskProj)) instance_destroy(cutterDashMaskProj);
 			state = playerStates.normal;
-		}
-		if ((attackNumber == playerAttacks.cutterAir) or (attackNumber == playerAttacks.cutterDrop))
-		{
+			break;
+			
+			case playerAttacks.cutterAir:
+			case playerAttacks.cutterDrop:
 	        invincible = false;
 	        state = playerStates.normal;
-		}
-		if ((attackNumber == playerAttacks.beamNormal) or (attackNumber == playerAttacks.beamAir) or (attackNumber == playerAttacks.beamUp))
-		{
+			break;
+			
+			case playerAttacks.beamNormal:
+			case playerAttacks.beamAir:
+			case playerAttacks.beamUp:
 			audio_stop_sound(sndBeam);
 			beamAttack2Timer = -1;
-		}
-		if (attackNumber == playerAttacks.beamDash)
-		{
+			break;
+			
+			case playerAttacks.beamDash:
 			beamDashAttackTimer = -1;
-		}
-		if ((attackNumber == playerAttacks.beamGrab) or (attackNumber == playerAttacks.mysticBeamGrab) or (attackNumber == playerAttacks.iceGrab))
-		{
+			break;
+			
+			case playerAttacks.beamGrab:
+			case playerAttacks.mysticBeamGrab:
+			case playerAttacks.iceGrab:
 			if (instance_exists(grabObj)) grabObj.destroyTimer = 0;
 			state = playerStates.normal;
-		}
-		if ((attackNumber == playerAttacks.mysticBeamNormal) or (attackNumber == playerAttacks.mysticBeamAir))
-		{
+			break;
+			
+			case playerAttacks.mysticBeamNormal:
+			case playerAttacks.mysticBeamAir:
 			audio_stop_sound(sndMysticBeam);
 			beamAttack2Timer = -1;
-		}
-		if ((attackNumber == playerAttacks.stoneNormal) or (attackNumber == "gooeyStoneNormal"))
-		{
+			break;
+			
+			case playerAttacks.stoneNormal:
+			case playerAttacks.gooeyStoneNormal:
 			grav = gravNormal;
 			gravLimit = gravLimitNormal;
-		}
-		if (attackNumber == playerAttacks.stoneUp)
-		{
+			break;
+			
+			case playerAttacks.stoneUp:
 			if (instance_exists(stoneFistMaskProj)) instance_destroy(stoneFistMaskProj);
 			stoneFistReady = true;
-		}/*
-		if ((attackNumber == playerAttacks.mirrorDash) or (attackNumber == playerAttacks.mirrorUp) or (attackNumber == playerAttacks.mirrorDown))
-		{
+			break;
+			
+			/*
+			case playerAttacks.mirrorDash:
+			case playerAttacks.mirrorUp:
+			case attackNumber == playerAttacks.mirrorDown:
 	        state = playerStates.normal;
-		}*/
-		if ((attackNumber == playerAttacks.fireDash) or (attackNumber == "gooeyFireDash"))
-		{
+			break;*/
+			
+			case playerAttacks.fireDash:
+			case playerAttacks.gooeyFireDash:
 			if (instance_exists(fireDashMaskProj)) instance_destroy(fireDashMaskProj);
 			invincible = false;
 			state = playerStates.normal;
-		}
-		if (attackNumber == playerAttacks.fireAerial)
-		{
+			break;
+			
+			case playerAttacks.fireAerial:
 			if (instance_exists(fireMaskProj)) instance_destroy(fireMaskProj);
 			invincible = false;
-		}
-		if (attackNumber == playerAttacks.fireWheel)
-		{
+			break;
+			
+			case playerAttacks.fireWheel:
 			if (instance_exists(fireMaskProj)) instance_destroy(fireMaskProj);
 			invincible = false;
-		}
-		if (attackNumber == playerAttacks.fireBack)
-		{
+			break;
+			
+			case playerAttacks.fireBack:
 			if (instance_exists(fireMaskProj)) instance_destroy(fireMaskProj);
 			fireBackCharge = 0;
 			invincible = false;
-		}
-		if ((attackNumber == playerAttacks.sparkUp) or (attackNumber == playerAttacks.sparkDown))
-		{
+			break;
+			
+			case playerAttacks.sparkNormal:
+			if (instance_exists(sparkProj)) instance_destroy(sparkProj);
+			break;
+			
+			case playerAttacks.sparkUp:
+			case playerAttacks.sparkDown:
 			if (audio_is_playing(snd_Spark6)) audio_stop_sound(snd_Spark6);
-		}
-		if (attackNumber == playerAttacks.wheelNormal)
-		{
+			break;
+			
+			case playerAttacks.wheelNormal:
 			//if (instance_exists(wheelProj)) instance_destroy(wheelProj);
+			wheelReady = false;
+			wheelCrash = false;
 			invincible = false;
 			state = playerStates.normal;
-		}
-		if (attackNumber == playerAttacks.wingDash)
-		{
+			break;
+			
+			case playerAttacks.wingDash:
 			if (audio_is_playing(wingDashSfx)) audio_stop_sound(wingDashSfx);
 	        if (instance_exists(wingMaskProj)) instance_destroy(wingMaskProj);
 			invincible = false;
 			state = playerStates.normal;
-		}
-		if (attackNumber == playerAttacks.swordDash)
-		{
+			break;
+			
+			case playerAttacks.swordDash:
 			if (audio_is_playing(slideSfx)) audio_stop_sound(slideSfx);
 	        if (instance_exists(swordDashMaskProj)) instance_destroy(swordDashMaskProj);
 			state = playerStates.normal;
-		}
-		if (attackNumber == playerAttacks.sleepNormal)
-		{
+			break;
+			
+			case playerAttacks.sleepNormal:
 			isSleeping = false;
 			sleepEnd = false;
 			if (player == 0)
@@ -114,9 +133,10 @@ function scr_Player_CancelAttack(argument0)
 			{
 				global.abilityP2 = playerAbilities.none;
 			}
+			break;
 		}
 		attack = false;
 		attackable = true;
-		attackNumber = "none";
+		attackNumber = playerAttacks.none;
 	}
 }

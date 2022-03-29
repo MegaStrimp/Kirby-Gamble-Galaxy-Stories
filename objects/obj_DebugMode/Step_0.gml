@@ -782,13 +782,30 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		
 		#region Spike
 		case debugObject.spike:
-		debugSprite = spr_Spike;
+		debugSpriteSelectedMax = 1;
+		switch (debugSpriteSelected)
+		{
+			#region Normal
+			case 0:
+			var sprIdle = spr_Spike_Normal;
+			break;
+			#endregion
+			
+			#region Thorn
+			case 1:
+			var sprIdle = spr_Spike_Thorn;
+			break;
+			#endregion
+		}
+		debugSprite = sprIdle;
 		debugSpriteSelectedMax = 0;
 		debugIndex = 0;
 		debugStateSelectedMax = 0;
 		if (mouse_check_button_pressed(mb_left))
 		{
 			var debugObj = instance_create_layer(x,y,"Environment",obj_Spike);
+			debugObj.character = debugSpriteSelected;
+			debugObj.sprIdle = sprIdle;
 			debugObj.visible = true;
 			debugObj.image_xscale = debugXScale;
 			debugObj.image_yscale = debugYScale;

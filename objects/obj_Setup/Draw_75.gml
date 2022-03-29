@@ -2,7 +2,7 @@
 
 //Virtual Keys
 
-if (global.isMobile)
+if (global.buildType == buildTypes.android)
 {
 	var dpadButtonSpr = spr_VirtualKey_DPadButton;
 	var dpadLetterSpr = spr_VirtualKey_DPadLetter;

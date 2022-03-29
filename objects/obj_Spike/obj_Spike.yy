@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_Spike",
-    "path": "sprites/spr_Spike/spr_Spike.yy",
+    "name": "spr_Spike_Normal",
+    "path": "sprites/spr_Spike_Normal/spr_Spike_Normal.yy",
   },
   "solid": false,
   "visible": true,

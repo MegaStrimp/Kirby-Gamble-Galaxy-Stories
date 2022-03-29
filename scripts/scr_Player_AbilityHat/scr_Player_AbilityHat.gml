@@ -644,11 +644,11 @@ function scr_Player_AbilityHat(argument0,argument1)
 			case playerAbilities.mysticBeam:
 			if (player == 0)
 			{
-				var altHatToCheck = global.hatTypeBeamP1;
+				var altHatToCheck = global.hatTypeMysticBeamP1;
 			}
 			else
 			{
-				var altHatToCheck = global.hatTypeBeamP2;
+				var altHatToCheck = global.hatTypeMysticBeamP2;
 			}
 			
 			switch (altHatToCheck)
@@ -678,49 +678,49 @@ function scr_Player_AbilityHat(argument0,argument1)
 					case sprItemCarryHeavyIdleSlopeL:
 					case sprItemCarryHeavyIdleSlopeR:
 					case sprItemCarryThrow:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_Idle;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Idle;
 					break;
 					
 					case sprWalk:
 					case sprItemCarryLightWalk:
 					case sprItemCarryHeavyWalk:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_Walk;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Walk;
 					break;
 					
 					case sprRun:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_Run;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Run;
 					break;
 					
 					case sprRunTurn:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_RunTurn;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_RunTurn;
 					break;
 					
 					case sprJump:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_Jump;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Jump;
 					break;
 					
 					case sprRoll:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_Roll;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Roll;
 					break;
 					
 					case sprRollDuckReady:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_Roll;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Roll;
 					break;
 					
 					case sprRollDuck:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_RollDuck;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_RollDuck;
 					break;
 					
 					case sprBackflip:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_Backflip;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Backflip;
 					break;
 					
 					case sprFall:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_Fall;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Fall;
 					break;
 					
 					case sprSquish:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_Squish;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Squish;
 					break;
 					
 					case sprDuck:
@@ -744,107 +744,75 @@ function scr_Player_AbilityHat(argument0,argument1)
 					case sprItemCarryLightDuckSteepSlopeR:
 					case sprItemCarryLightDuckSteepSlopeRBlink:
 					case sprItemCarryHeavyDuck:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_Duck;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Duck;
 					break;
 					
 					case sprSlide:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_Slide;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Slide;
 					break;
 					
 					case sprSlideEnd:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_SlideEnd;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_SlideEnd;
 					break;
 					
 					case sprFloatReady:
 					case sprItemCarryLightFloatReady:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_FloatReady;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_FloatReady;
 					break;
 					
 					case sprFloat:
 					case sprItemCarryLightFloat:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_Float;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Float;
 					break;
 					
 					case sprFlap:
 					case sprItemCarryLightFlap:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_Flap;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Flap;
 					break;
 					
 					case sprFloatSpit:
 					case sprItemCarryLightFloatSpit:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_FloatSpit;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_FloatSpit;
 					break;
 					
 					case sprFloatHurt:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_FloatHurt;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_FloatHurt;
 					break;
 					
 					case sprEnter:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_Enter;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Enter;
 					break;
 					
 					case sprClimbUp:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_ClimbUp;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_ClimbUp;
 					break;
 					
 					case sprClimbDown:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_ClimbDown;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_ClimbDown;
 					break;
 					
 					case sprAbilityChange:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_AbilityChange;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_AbilityChange;
 					break;
 					
 					case sprWarpStar1:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_WarpStar1;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar1;
 					break;
 					
 					case sprWarpStar2:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_WarpStar2;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2;
 					break;
 					
 					case sprGuard:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_Guard;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Guard;
 					break;
 					
 					case sprGuardSlope:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_Guard_Slope;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Guard_Slope;
 					break;
 					
 					case sprHurt:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_Hurt;
-					break;
-					
-					case sprBeamCharge:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_Charge;
-					break;
-					
-					case sprBeamAttack1:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_Attack1;
-					break;
-					
-					case sprBeamAttack2:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_Attack2;
-					break;
-					
-					case sprBeamAttack3:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_Attack3;
-					break;
-					
-					case sprBeamAttack4:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_Attack4;
-					break;
-					
-					case sprBeamAttack5:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_Attack5;
-					break;
-					
-					case sprBeamAttack6:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_Attack6;
-					break;
-					
-					case sprMysticBeamAttack1:
-					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_Attack3;
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Hurt;
 					break;
 					
 					default:

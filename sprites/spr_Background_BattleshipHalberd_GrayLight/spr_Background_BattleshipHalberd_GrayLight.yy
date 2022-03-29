@@ -77,8 +77,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Background Elements",
-    "path": "folders/Sprites/Stage Elements/Background Elements.yy",
+    "name": "Battleship Halberd",
+    "path": "folders/Sprites/Stage Elements/Background Elements/Battleship Halberd.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Background_BattleshipHalberd_GrayLight",

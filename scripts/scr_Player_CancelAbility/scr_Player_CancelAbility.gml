@@ -38,7 +38,7 @@ function scr_Player_CancelAbility(argument0)
 		chargeSfxState = "intro";
 		attack = false;
 		attackable = true;
-		attackNumber = "none";
+		attackNumber = playerAttacks.none;
 	}
 	
 	with (obj_Projectile_Beam)

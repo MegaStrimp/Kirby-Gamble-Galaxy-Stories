@@ -4,35 +4,8 @@ function scr_Enemy_Collision()
 {
 	//Variables
 	
-	var hspCollision = 0;
-	if (place_meeting(x,y + 1,obj_Wall))
-	{
-		var hspCollisionTemp = instance_place(x,y + 1,obj_Wall).hsp;
-		if (hspCollisionTemp != 0) hspCollision = hspCollisionTemp;
-	}
-	if (place_meeting(x + sign(hsp),y,obj_Wall))
-	{
-		var hspCollisionTemp = instance_place(x + sign(hsp),y,obj_Wall).hsp;
-		if (hspCollisionTemp != 0) hspCollision = hspCollisionTemp;
-	}
-	
-	if ((sign(hspCollision != 0)) and (sign(hsp) != sign(hspCollision))) hsp = 0;
-	hspFinal = hsp + knockbackX + hspCollision;
-	
-	var vspCollision = 0;
-	if (place_meeting(x,y + 1,obj_Wall))
-	{
-		var vspCollisionTemp = instance_place(x,y + 1,obj_Wall).vsp;
-		if (vspCollisionTemp != 0) vspCollision = vspCollisionTemp;
-	}
-	if (place_meeting(x,y - 1,obj_Wall))
-	{
-		var vspCollisionTemp = instance_place(x,y - 1,obj_Wall).vsp;
-		if (vspCollisionTemp != 0) vspCollision = vspCollisionTemp;
-	}
-	
-	if ((sign(vspCollision != 0)) and (sign(vsp) != sign(vspCollision))) vsp = 0;
-	vspFinal = vsp + knockbackY + vspCollision;
+	hspFinal = hsp + knockbackX;
+	vspFinal = vsp + knockbackY;
 	
 	//Slopes
 	

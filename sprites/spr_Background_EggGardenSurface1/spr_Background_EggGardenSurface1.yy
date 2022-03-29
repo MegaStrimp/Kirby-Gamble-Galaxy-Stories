@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Background Elements",
-    "path": "folders/Sprites/Stage Elements/Background Elements.yy",
+    "name": "Egg Garden Surface",
+    "path": "folders/Sprites/Stage Elements/Background Elements/Egg Garden Surface.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Background_EggGardenSurface1",

@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 19,
+  "bbox_right": 28,
   "bbox_top": 0,
-  "bbox_bottom": 19,
+  "bbox_bottom": 14,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 20,
-  "height": 20,
+  "width": 29,
+  "height": 15,
   "textureGroupId": {
     "name": "Characters",
     "path": "texturegroups/Characters",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c18e341a-33a5-441e-b0e5-6d3ad15ed363","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2/spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c18e341a-33a5-441e-b0e5-6d3ad15ed363","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2/spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2.yy",},"LayerId":{"name":"713a2cf1-99b9-42ac-a245-3b4a4f21b89e","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2/spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2/spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2.yy",},"resourceVersion":"1.0","name":"c18e341a-33a5-441e-b0e5-6d3ad15ed363","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"e1871a02-1b1a-4fd0-b127-aa7f2859cb4f","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2/spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"e1871a02-1b1a-4fd0-b127-aa7f2859cb4f","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2/spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2.yy",},"LayerId":{"name":"713a2cf1-99b9-42ac-a245-3b4a4f21b89e","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2/spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2/spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2.yy",},"resourceVersion":"1.0","name":"e1871a02-1b1a-4fd0-b127-aa7f2859cb4f","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2/spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"629aea6d-2151-403b-a103-2be754ebc9cd","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c18e341a-33a5-441e-b0e5-6d3ad15ed363","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2/spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"508ad8bf-1071-4220-8775-f3e4d633da43","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e1871a02-1b1a-4fd0-b127-aa7f2859cb4f","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2/spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": -3,
-    "yorigin": 20,
+    "xorigin": 1,
+    "yorigin": 15,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2/spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2.yy",},
@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "GGS",
-    "path": "folders/Sprites/Characters/Kirby/Ability Hats/Mystic Beam/GGS.yy",
+    "name": "Hat",
+    "path": "folders/Sprites/Characters/Kirby/Ability Hats/Mystic Beam/GGS/Hat.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2",

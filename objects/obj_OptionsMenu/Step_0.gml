@@ -45,7 +45,7 @@ if (!global.pause)
 		
 		if (!instance_exists(obj_Fade))
 		{
-			if (((keyJumpPressed) or (keyStartPressed)) and (((menuTitle[selection] == "Controls") and (!global.isMobile)) or (menuTitle[selection] != "Controls")))
+			if (((keyJumpPressed) or (keyStartPressed)) and (((menuTitle[selection] == "Controls") and (global.buildType != buildTypes.android)) or (menuTitle[selection] != "Controls")))
 			{
 				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 				audio_play_sound(snd_ButtonYes,0,false);

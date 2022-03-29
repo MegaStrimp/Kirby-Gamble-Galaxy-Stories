@@ -27,11 +27,11 @@ if (!global.pause)
 	
 	with (obj_Projectile)
 	{
-		if ((!other.cut) and (place_meeting(x,y,other)))
+		if (place_meeting(x,y,other))
 		{
 			if ((hurtsObject) and (owner != id))
 			{
-				if ((damageType == damageTypes.cutter) or (damageType == damageTypes.sword) or (damageType == damageTypes.every))
+				if ((!other.cut) and ((damageType == damageTypes.cutter) or (damageType == damageTypes.sword) or (damageType == damageTypes.every)))
 				{
 					var parDir = 1;
 					if (x > other.x) parDir = -1;
@@ -44,6 +44,7 @@ if (!global.pause)
 					par.destroyTimer = 30;
 					other.cut = true;
 					other.spawn = true;
+					if (destroyableByObject) instance_destroy();
 				}
 				else if ((other.destroyTimer == -1) and (damageType == damageTypes.fire))
 				{
@@ -57,11 +58,13 @@ if (!global.pause)
 						par.paletteIndex = 1;
 						par.destroyAfterAnimation = true;
 					}
+					if (audio_is_playing(snd_Fire3)) audio_stop_sound(snd_Fire3);
+					audio_play_sound(snd_Fire3,0,false);
 					other.colorLerp = 0;
 					other.spawn = true;
 					other.destroyTimer = 30;
+					if (destroyableByObject) instance_destroy();
 				}
-				if (destroyableByObject) instance_destroy();
 			}
 		}
 	}

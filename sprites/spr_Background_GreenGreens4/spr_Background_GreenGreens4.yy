@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Background Elements",
-    "path": "folders/Sprites/Stage Elements/Background Elements.yy",
+    "name": "Green Greens",
+    "path": "folders/Sprites/Stage Elements/Background Elements/Green Greens.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Background_GreenGreens4",

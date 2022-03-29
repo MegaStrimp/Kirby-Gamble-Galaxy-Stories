@@ -185,6 +185,8 @@ switch (page)
 	draw_roundrect(10,45,160,265,false);
 	draw_set_alpha(1);
 	
+	if (characterIcon[selection] != -1) draw_sprite_ext(characterIcon[selection],0,242,110,1,1,image_angle,image_blend,image_alpha);
+	
 	draw_sprite(spr_Menu_Options_CursorArrow,0,8,141);
 	
 	for (var i = 0; i < array_length(characterTitle); i++)

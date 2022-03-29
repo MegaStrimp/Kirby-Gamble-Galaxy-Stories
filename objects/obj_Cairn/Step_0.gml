@@ -6,7 +6,7 @@ event_inherited();
 
 if (!global.pause)
 {
-	scr_Object_Inhale();
+	scr_Object_Inhale(enemy);
 	
 	//Hurt Player
 	

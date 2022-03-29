@@ -24,7 +24,11 @@ if (!global.pause)
 		{
 			case 1:
 			alphaTarget = 1;
-			global.musicPlaying = audio_play_sound(mus_TeamGamble,0,false);
+			var rng = irandom_range(0,99);
+			var mus = mus_TeamGamble;
+			rng = 0;
+			if (rng == 0) mus = mus_Slidecrushed;
+			global.musicPlaying = audio_play_sound(mus,0,false);
 			stateTimer = 150;
 			break;
 			

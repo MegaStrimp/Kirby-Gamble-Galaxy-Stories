@@ -140,7 +140,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	//Get Inhaled
 	
-	if (canBeInhaled) scr_Object_Inhale();
+	if (canBeInhaled) scr_Object_Inhale(false);
 	
 	//Inputs
 	

@@ -13,18 +13,6 @@ function scr_Player_Float()
 		var playerCharacter = global.characterP1;
 		if (player == 1) playerCharacter = global.characterP2;
 		
-		var grounded = false;
-		if (place_meeting(x,y + 1,obj_Wall))
-		{
-			var collidingWall = instance_place(x,y + 1,obj_Wall);
-			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) grounded = true;
-		}
-		else if (place_meeting(x,y + 1,obj_Spring))
-		{
-			var collidingWall = instance_place(x,y + 1,obj_Spring);
-			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) grounded = true;
-		}
-		
 		//Movement
 		
 		if (!hurt)
@@ -62,6 +50,10 @@ function scr_Player_Float()
 		{
 			vsp = gravLimitFloat;
 		}
+		
+		//Grounded
+		
+		if ((grounded) and (jumpLimit)) vsp = 0;
 		
 		//Attack
 		

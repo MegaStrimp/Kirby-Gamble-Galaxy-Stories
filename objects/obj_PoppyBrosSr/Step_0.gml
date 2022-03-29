@@ -92,6 +92,12 @@ if (!global.pause)
 		
 		switch (jumpCount)
 		{
+			case 5:
+			var tempWalkDirX = 1;
+			if ((instance_exists(obj_Player)) and (obj_Player.x < x)) tempWalkDirX = -1;
+			if (tempWalkDirX == walkDirX) jumpCount -= 1;
+			break;
+			
 			case 6:
 			movespeed = 2;
 			jumpspeed = 3.5;
@@ -108,7 +114,7 @@ if (!global.pause)
 			break;
 			
 			case 9:
-			movespeed = 4;
+			movespeed = 3;
 			jumpspeed = 4.5;
 			break;
 			
@@ -256,8 +262,8 @@ if (!global.pause)
 	}
 	else if (attackStopTimer == 0)
 	{
-		walkDirX = 1;
-		if ((instance_exists(obj_Player)) and (obj_Player.x < x)) walkDirX = -1;
+		//walkDirX = 1;
+		//if ((instance_exists(obj_Player)) and (obj_Player.x < x)) walkDirX *= -1;
 		jumpCount = 0;
 		gravLimitNormal = 4;
 		attack = false;

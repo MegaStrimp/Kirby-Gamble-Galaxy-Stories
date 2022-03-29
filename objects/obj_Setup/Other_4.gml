@@ -13,4 +13,4 @@ rousr_dissonance_set_small_image(global.discordSmallImage,global.discordSmallIma
 
 //Virtual Keys
 
-if (global.isMobile) scr_VirtualKeysSet();
+if (global.buildType == buildTypes.android) scr_VirtualKeysSet();
