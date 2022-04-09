@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 119,
-  "bbox_top": 17,
-  "bbox_bottom": 359,
+  "bbox_right": 239,
+  "bbox_top": 0,
+  "bbox_bottom": 191,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 120,
-  "height": 360,
+  "width": 240,
+  "height": 192,
   "textureGroupId": {
     "name": "GreenGreens",
     "path": "texturegroups/GreenGreens",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"3df482f1-6c92-4ed7-b9ae-839654471e34","path":"sprites/tile_GreenGreens_Caves/tile_GreenGreens_Caves.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3df482f1-6c92-4ed7-b9ae-839654471e34","path":"sprites/tile_GreenGreens_Caves/tile_GreenGreens_Caves.yy",},"LayerId":{"name":"7e85e55b-b71a-41e5-9ec5-868a853589f3","path":"sprites/tile_GreenGreens_Caves/tile_GreenGreens_Caves.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"tile_GreenGreens_Caves","path":"sprites/tile_GreenGreens_Caves/tile_GreenGreens_Caves.yy",},"resourceVersion":"1.0","name":"3df482f1-6c92-4ed7-b9ae-839654471e34","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"0e8b0da9-5d51-46b0-9385-d916dd564a0a","path":"sprites/tile_GreenGreens_Caves/tile_GreenGreens_Caves.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"0e8b0da9-5d51-46b0-9385-d916dd564a0a","path":"sprites/tile_GreenGreens_Caves/tile_GreenGreens_Caves.yy",},"LayerId":{"name":"1a97a64d-547a-4b5b-94ff-04150b2cc477","path":"sprites/tile_GreenGreens_Caves/tile_GreenGreens_Caves.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"tile_GreenGreens_Caves","path":"sprites/tile_GreenGreens_Caves/tile_GreenGreens_Caves.yy",},"resourceVersion":"1.0","name":"0e8b0da9-5d51-46b0-9385-d916dd564a0a","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"tile_GreenGreens_Caves","path":"sprites/tile_GreenGreens_Caves/tile_GreenGreens_Caves.yy",},
@@ -41,11 +41,11 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"9aa4307c-a77a-4d9d-91da-eb16d9dcc599","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3df482f1-6c92-4ed7-b9ae-839654471e34","path":"sprites/tile_GreenGreens_Caves/tile_GreenGreens_Caves.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1f93a293-1bbb-499c-bd56-9595d1a69cd4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0e8b0da9-5d51-46b0-9385-d916dd564a0a","path":"sprites/tile_GreenGreens_Caves/tile_GreenGreens_Caves.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
-    "lockOrigin": false,
+    "lockOrigin": true,
     "showBackdrop": true,
     "showBackdropImage": false,
     "backdropImagePath": "",
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7e85e55b-b71a-41e5-9ec5-868a853589f3","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1a97a64d-547a-4b5b-94ff-04150b2cc477","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

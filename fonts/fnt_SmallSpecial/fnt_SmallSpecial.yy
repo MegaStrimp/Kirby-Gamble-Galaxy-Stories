@@ -21,6 +21,7 @@
     "path": "texturegroups/Default",
   },
   "ascenderOffset": 1,
+  "ascender": 0,
   "glyphs": {
     "32": {"x":2,"y":2,"w":3,"h":15,"character":32,"shift":3,"offset":0,},
     "33": {"x":203,"y":87,"w":2,"h":15,"character":33,"shift":3,"offset":1,},

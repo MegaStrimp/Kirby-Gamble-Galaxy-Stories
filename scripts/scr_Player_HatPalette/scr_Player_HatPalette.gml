@@ -122,11 +122,11 @@ function scr_Player_HatPalette(argument0,argument1)
 			case playerAbilities.mysticBeam:
 			if (player == 0)
 			{
-				var altHatToCheck = global.hatTypeBeamP1;
+				var altHatToCheck = global.hatTypeMysticBeamP1;
 			}
 			else
 			{
-				var altHatToCheck = global.hatTypeBeamP2;
+				var altHatToCheck = global.hatTypeMysticBeamP2;
 			}
 			
 			switch (altHatToCheck)
@@ -134,17 +134,17 @@ function scr_Player_HatPalette(argument0,argument1)
 				default:
 				if (player == 0)
 				{
-					var paletteIndexToCheck = global.hatPaletteBeamKSSUP1;
+					var paletteIndexToCheck = global.hatPaletteMysticBeamGGSP1;
 				}
 				else
 				{
-					var paletteIndexToCheck = global.hatPaletteBeamKSSUP2;
+					var paletteIndexToCheck = global.hatPaletteMysticBeamGGSP2;
 				}
 				
 				switch (paletteIndexToCheck)
 				{
 					default:
-					hatPaletteIndex = spr_Kirby_AbilityHat_Beam_KSSU_Palette_FluxNostalgia;
+					hatPaletteIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Palette_NastyFlux;
 					break;
 				}
 				break;

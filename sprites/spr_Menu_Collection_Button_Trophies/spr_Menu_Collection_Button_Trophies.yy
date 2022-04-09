@@ -2,20 +2,20 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
-  "origin": 0,
+  "origin": 9,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 206,
+  "bbox_right": 208,
   "bbox_top": 0,
-  "bbox_bottom": 90,
+  "bbox_bottom": 92,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 207,
-  "height": 91,
+  "width": 209,
+  "height": 93,
   "textureGroupId": {
     "name": "Menu",
     "path": "texturegroups/Menu",
@@ -27,9 +27,9 @@
     {"compositeImage":{"FrameId":{"name":"8a09be56-6e82-44ba-9d7a-bd05f5bdc117","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"8a09be56-6e82-44ba-9d7a-bd05f5bdc117","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"LayerId":{"name":"132bb9fa-695b-4858-90fa-dba9381b6905","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_Menu_Collection_Button_Trophies","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"resourceVersion":"1.0","name":"8a09be56-6e82-44ba-9d7a-bd05f5bdc117","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f29c655b-a998-4573-8e9e-0396b90019a0","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f29c655b-a998-4573-8e9e-0396b90019a0","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"LayerId":{"name":"132bb9fa-695b-4858-90fa-dba9381b6905","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Menu_Collection_Button_Trophies","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"resourceVersion":"1.0","name":"f29c655b-a998-4573-8e9e-0396b90019a0","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"dccc680e-5dd1-4880-ad00-bfe9bd7eb01a","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"dccc680e-5dd1-4880-ad00-bfe9bd7eb01a","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"LayerId":{"name":"132bb9fa-695b-4858-90fa-dba9381b6905","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Menu_Collection_Button_Trophies","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"resourceVersion":"1.0","name":"dccc680e-5dd1-4880-ad00-bfe9bd7eb01a","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_Menu_Collection_Button_Trophies","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},
@@ -45,7 +45,7 @@
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"75137ee9-6660-4570-b5ea-4f4f2a7bba37","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8a09be56-6e82-44ba-9d7a-bd05f5bdc117","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"597450e1-398b-4790-8934-400a2e3896d9","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f29c655b-a998-4573-8e9e-0396b90019a0","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"725ebaf6-1a73-4ae5-ae30-137fa88adb25","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dccc680e-5dd1-4880-ad00-bfe9bd7eb01a","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,8 +58,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 0,
-    "yorigin": 0,
+    "xorigin": 1,
+    "yorigin": 1,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Menu_Collection_Button_Trophies","path":"sprites/spr_Menu_Collection_Button_Trophies/spr_Menu_Collection_Button_Trophies.yy",},

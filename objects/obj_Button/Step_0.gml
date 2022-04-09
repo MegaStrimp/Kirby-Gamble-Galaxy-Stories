@@ -128,18 +128,120 @@ if (!global.pause)
 	
 	if (activate)
 	{
-		with (obj_Gate)
+		switch (state)
 		{
-			if (number == other.number)
+			#region Open Gate
+			case 0:
+			with (obj_Gate)
 			{
-				active = true;
-				stopped = false;
-				stopTimer = stopTimerMax;
-				if (other.revertTimer != -1) revertTimer = other.revertTimer;
+				if (number == other.number)
+				{
+					active = true;
+					stopped = false;
+					stopTimer = stopTimerMax;
+					if (other.revertTimer != -1) revertTimer = other.revertTimer;
+				}
 			}
+			break;
+			#endregion
+			
+			#region Bomb Block
+			case 1:
+			with (obj_Wall)
+			{
+			    if ((!isTop) and (canExplode))
+				{
+					if (place_meeting(x,y,other))
+					{
+						explodeTimer = explodeTimerMax;
+					}
+					if (place_meeting(x + 24,y,other))
+					{
+						explodeTimer = explodeTimerMax;
+					}
+					if (place_meeting(x - 24,y,other))
+					{
+						explodeTimer = explodeTimerMax;
+					}
+					if (place_meeting(x,y + 24,other))
+					{
+						explodeTimer = explodeTimerMax;
+					}
+					if (place_meeting(x,y - 24,other))
+					{
+						explodeTimer = explodeTimerMax;
+					}
+				}
+			}
+			
+			with (obj_BombSolidBlock_Invis)
+			{
+			    if (place_meeting(x,y,other))
+				{
+				    explodeTimer = explodeTimerMax;
+				}
+				if (place_meeting(x + 24,y,other))
+				{
+				    explodeTimer = explodeTimerMax;
+				}
+				if (place_meeting(x - 24,y,other))
+				{
+				    explodeTimer = explodeTimerMax;
+				}
+				if (place_meeting(x,y + 24,other))
+				{
+				    explodeTimer = explodeTimerMax;
+				}
+				if (place_meeting(x,y - 24,other))
+				{
+				    explodeTimer = explodeTimerMax;
+				}
+			}
+			break;
+			#endregion
 		}
 		activate = false;
 		active = true;
+		if (destroyAfterPressed)
+		{
+			for (var i = 0; i < 2; i++)
+			{
+				var particle = instance_create_depth(x + (sprite_get_width(sprite_index) / 2),y + (sprite_get_height(sprite_index) / 2),depth,obj_Particle);
+				particle.sprite_index = spr_Particle_Aura2;
+				if (i == 0) particle.sprite_index = spr_Particle_Explosion1;
+				particle.imageSpeed = 1;
+				particle.destroyAfterAnimation = true;
+			}
+			for (var i = 0; i < 3; i++)
+			{
+				var particle = instance_create_depth(x + (sprite_get_width(sprite_index) / 2),y + (sprite_get_height(sprite_index) / 2),depth,obj_Particle);
+				particle.sprite_index = spr_Particle_ShrinkingStar1;
+				particle.imageSpeed = 1;
+				particle.destroyAfterAnimation = true;
+				particle.spdBuiltIn = 6;
+				particle.fricSpd = .6;
+				switch (i)
+				{
+					case 0:
+					particle.direction = 90;
+					break;
+					
+					case 1:
+					particle.direction = 215;
+					break;
+					
+					case 2:
+					particle.direction = 325;
+					break;
+				}
+			}
+			
+			if (hasEnemyWall)
+			{
+				if (instance_exists(enemyWall)) instance_destroy(enemyWall);
+			}
+			instance_destroy();
+		}
 	}
 	
 	//Slopes

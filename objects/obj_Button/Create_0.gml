@@ -15,6 +15,7 @@ sprPressed = spr_Button_Normal_Pressed;
 //Other Variables
 
 character = 0;
+state = 1;
 number = 0;
 activate = false;
 active = false;
@@ -24,6 +25,7 @@ hasXCollision = true;
 hasYCollision = true;
 collisionX = obj_Wall;
 collisionY = obj_Wall;
+destroyAfterPressed = true;
 
 //Timers
 

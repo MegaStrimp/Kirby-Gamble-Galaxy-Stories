@@ -456,7 +456,7 @@ global.storyModeUnlocked = false;
 
 #region Fonts
 mapStringKSSU = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz .!";
-global.bitmapKSSU = font_add_sprite_ext(spr_Hud_Dialogue_Font_KSSU,mapStringKSSU,false,0);
+global.bitmapKSSU = font_add_sprite_ext(spr_Hud_Dialogue_Font_Kssu,mapStringKSSU,false,0);
 global.fontDialogueDefaultKanji = font_add(working_directory + "ARIALUNI.TTF",12,false,false,32,127);
 #endregion
 
