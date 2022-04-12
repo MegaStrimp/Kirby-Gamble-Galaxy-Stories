@@ -63,6 +63,30 @@ if (!global.pause)
 				}
 			}
 			
+			with (obj_BombSolidBlock_Create)
+			{
+			    if (place_meeting(x,y,other))
+				{
+				    explodeTimer = explodeTimerMax;
+				}
+				if (place_meeting(x + 24,y,other))
+				{
+				    explodeTimer = explodeTimerMax;
+				}
+				if (place_meeting(x - 24,y,other))
+				{
+				    explodeTimer = explodeTimerMax;
+				}
+				if (place_meeting(x,y + 24,other))
+				{
+				    explodeTimer = explodeTimerMax;
+				}
+				if (place_meeting(x,y - 24,other))
+				{
+				    explodeTimer = explodeTimerMax;
+				}
+			}
+			
 			if (audio_is_playing(snd_BreakingWall)) audio_stop_sound(snd_BreakingWall);
 			audio_play_sound(snd_BreakingWall,0,false);
 			for (var i = 0; i < 2; i++)

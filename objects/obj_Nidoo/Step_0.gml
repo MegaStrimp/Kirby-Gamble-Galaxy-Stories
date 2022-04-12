@@ -45,6 +45,33 @@ if (!global.pause)
 		}
 	}
 	
+	if (!active)
+	{
+		//Particle Index
+		
+		parIndex += parIndexSpd;
+		
+		if (parIndex >= (sprite_get_number(sprStar))) parIndex -= (sprite_get_number(sprStar));
+		
+		//Particle Timer
+		
+		if (!place_meeting(x,y,obj_Wall))
+		{
+			if (particleTimer > 0)
+			{
+				particleTimer -= 1;
+			}
+			else if (particleTimer == 0)
+			{
+				var par = instance_create_depth(x + (8 * particleDir),y - sprite_get_height(sprite_index),depth - 1,obj_DoorStar);
+				par.movespeed = par.movespeedMax * particleDir;
+				par.dir = particleDir;
+				particleDir *= -1;
+				particleTimer = particleTimerMax;
+			}
+		}
+	}
+	
 	//Animation
 	
 	image_speed = 1;

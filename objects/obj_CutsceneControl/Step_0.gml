@@ -2,13 +2,131 @@
 
 if (!global.pause)
 {
+	#region Name Tags
+	switch (global.characterP1)
+	{
+		case playerCharacters.kirby:
+		playerName[talkingCharacter.kirby] = "Kirby";
+		playerName[talkingCharacter.gamble] = "Puffball";
+		playerName[talkingCharacter.metaKnight] = "Kirby";
+		playerName[talkingCharacter.match] = "Kirby";
+		break;
+		
+		case playerCharacters.gamble:
+		playerName[talkingCharacter.kirby] = "Gamble";
+		playerName[talkingCharacter.gamble] = "Gamble";
+		playerName[talkingCharacter.metaKnight] = "Gamble";
+		playerName[talkingCharacter.match] = "Gamble";
+		break;
+		
+		case playerCharacters.metaKnight:
+		playerName[talkingCharacter.kirby] = "Meta Knight";
+		playerName[talkingCharacter.gamble] = "Meta Knight";
+		playerName[talkingCharacter.metaKnight] = "Meta Knight";
+		playerName[talkingCharacter.match] = "Meta Knight";
+		break;
+		
+		case playerCharacters.keeby:
+		playerName[talkingCharacter.kirby] = "";
+		playerName[talkingCharacter.gamble] = "";
+		playerName[talkingCharacter.metaKnight] = "";
+		playerName[talkingCharacter.match] = "";
+		break;
+		
+		case playerCharacters.gooey:
+		playerName[talkingCharacter.kirby] = "";
+		playerName[talkingCharacter.gamble] = "";
+		playerName[talkingCharacter.metaKnight] = "";
+		playerName[talkingCharacter.match] = "";
+		break;
+		
+		case playerCharacters.magolor:
+		playerName[talkingCharacter.kirby] = "";
+		playerName[talkingCharacter.gamble] = "";
+		playerName[talkingCharacter.metaKnight] = "";
+		playerName[talkingCharacter.match] = "";
+		break;
+		
+		case playerCharacters.waddleDee:
+		playerName[talkingCharacter.kirby] = "";
+		playerName[talkingCharacter.gamble] = "";
+		playerName[talkingCharacter.metaKnight] = "";
+		playerName[talkingCharacter.match] = "";
+		break;
+		
+		case playerCharacters.waddleDoo:
+		playerName[talkingCharacter.kirby] = "";
+		playerName[talkingCharacter.gamble] = "";
+		playerName[talkingCharacter.metaKnight] = "";
+		playerName[talkingCharacter.match] = "";
+		break;
+		
+		case playerCharacters.brontoBurt:
+		playerName[talkingCharacter.kirby] = "";
+		playerName[talkingCharacter.gamble] = "";
+		playerName[talkingCharacter.metaKnight] = "";
+		playerName[talkingCharacter.match] = "";
+		break;
+		
+		case playerCharacters.twizzy:
+		playerName[talkingCharacter.kirby] = "";
+		playerName[talkingCharacter.gamble] = "";
+		playerName[talkingCharacter.metaKnight] = "";
+		playerName[talkingCharacter.match] = "";
+		break;
+		
+		case playerCharacters.tookey:
+		playerName[talkingCharacter.kirby] = "";
+		playerName[talkingCharacter.gamble] = "";
+		playerName[talkingCharacter.metaKnight] = "";
+		playerName[talkingCharacter.match] = "";
+		break;
+		
+		case playerCharacters.sirKibble:
+		playerName[talkingCharacter.kirby] = "";
+		playerName[talkingCharacter.gamble] = "";
+		playerName[talkingCharacter.metaKnight] = "";
+		playerName[talkingCharacter.match] = "";
+		break;
+		
+		case playerCharacters.bouncy:
+		playerName[talkingCharacter.kirby] = "";
+		playerName[talkingCharacter.gamble] = "";
+		playerName[talkingCharacter.metaKnight] = "";
+		playerName[talkingCharacter.match] = "";
+		break;
+		
+		case playerCharacters.gordo:
+		playerName[talkingCharacter.kirby] = "";
+		playerName[talkingCharacter.gamble] = "";
+		playerName[talkingCharacter.metaKnight] = "";
+		playerName[talkingCharacter.match] = "";
+		break;
+		
+		case playerCharacters.bloodGordo:
+		playerName[talkingCharacter.kirby] = "";
+		playerName[talkingCharacter.gamble] = "";
+		playerName[talkingCharacter.metaKnight] = "";
+		playerName[talkingCharacter.match] = "";
+		break;
+		
+		case playerCharacters.mysticDoo:
+		playerName[talkingCharacter.kirby] = "";
+		playerName[talkingCharacter.gamble] = "";
+		playerName[talkingCharacter.metaKnight] = "";
+		playerName[talkingCharacter.match] = "";
+		break;
+	}
+	#endregion
+	
 	//States
 	
 	if (active)
 	{
 		switch (state)
 		{
-			case "intro":
+			#region Intro
+			case cutscenes.story_Intro:
 			switch (stateEx)
 			{
 				case 0:
@@ -56,62 +174,10 @@ if (!global.pause)
 				break;
 			}
 			break;
+			#endregion
 			
-			case "introNew":
-			switch (stateEx)
-			{
-				case 0:
-				if (stateExTimer == -1) stateExTimer = 30;
-				break;
-				
-				case 1:
-				var array = 0;
-				var dialogue = instance_create_depth(room_width / 2,room_height - 75,-998,obj_Dialogue);
-				dialogue.owner = id;
-				dialogue.color = c_black;
-				dialogue.text[array] = "[Some time after Haltmann Works Company incident...]";
-				dialogue.textSpeed = 30;
-				dialogue.sprTextbox[array] = -1;
-				dialogue.sprBackground[array] = -1;
-				dialogue.sprPortrait[array] = -1;
-				dialogue.textSound[array] = snd_ButtonYes;
-				dialogue.text_halign = fa_center;
-				array += 1;
-				dialogue.text[array] = "Citizens of Planet Popstar are enjoying their lively days";
-				dialogue.sprTextbox[array] = -1;
-				dialogue.sprBackground[array] = -1;
-				dialogue.sprPortrait[array] = -1;
-				dialogue.textSound[array] = snd_ButtonYes;
-				dialogue.text_halign = fa_center;
-				array += 1;
-				dialogue.text[array] = @"Ever since the planet has been restored,
-peace surrounded the land";
-				dialogue.sprTextbox[array] = -1;
-				dialogue.sprBackground[array] = -1;
-				dialogue.sprPortrait[array] = -1;
-				dialogue.textSound[array] = snd_ButtonYes;
-				dialogue.text_halign = fa_center;
-				array += 1;
-				dialogue.text[array] = "Meanwhile, at the edge of Gamble Galaxy...";
-				dialogue.sprTextbox[array] = -1;
-				dialogue.sprBackground[array] = -1;
-				dialogue.sprPortrait[array] = -1;
-				dialogue.textSound[array] = snd_ButtonYes;
-				dialogue.text_halign = fa_center;
-				array += 1;
-				dialogue.text[array] = @"An unearthly, battle-scarred being is approaching
-Planet Popstar!";
-				dialogue.sprTextbox[array] = -1;
-				dialogue.sprBackground[array] = -1;
-				dialogue.sprPortrait[array] = -1;
-				dialogue.textSound[array] = snd_ButtonYes;
-				dialogue.text_halign = fa_center;
-				destroy = true;
-				break;
-			}
-			break;
-			
-			case "meetingGamble":
+			#region Meeting Gamble
+			case cutscenes.story_MeetingGamble:
 			switch (stateEx)
 			{
 				case 0:
@@ -261,8 +327,10 @@ long distances quickly?";
 				break;
 			}
 			break;
+			#endregion
 			
-			case "shadowMatchTest":
+			#region Extra Tutorial - Anti Float
+			case cutscenes.exTut_AntiFloat:
 			switch (stateEx)
 			{
 				case 0:
@@ -270,29 +338,34 @@ long distances quickly?";
 				break;
 				
 				case 1:
-				audio_stop_all();
-				if (!audio_is_playing(mus_Cutscene_Fluxbender)) global.musicPlaying = audio_play_sound(mus_Cutscene_Fluxbender,0,true);
 				var array = 0;
 				var dialogue = instance_create_depth(0,0,-998,obj_Dialogue);
 				dialogue.owner = id;
-				dialogue.text[array] = @"Can we pretend that airplanes in the night sky are
-like shootin' stars";
-				dialogue.sprTextbox[array] = spr_Hud_Dialogue_Textbox_Normal;
-				dialogue.sprBackground[array] = spr_Hud_Dialogue_Background_YellowCard;
-				dialogue.sprPortrait[array] = spr_Hud_Dialogue_Portrait_Gamble_Scared;
-				dialogue.textSound[array] = snd_TextGamble;
-				array += 1;
-				dialogue.text[array] = @"I could really use a wish right now, wish right now,
-wish right now";
-				dialogue.sprTextbox[array] = spr_Hud_Dialogue_Textbox_Normal;
-				dialogue.sprBackground[array] = spr_Hud_Dialogue_Background_TealDiamond;
-				dialogue.sprPortrait[array] = spr_Hud_Dialogue_Portrait_ShadowMatch_Normal;
-				dialogue.textSound[array] = snd_TextMatch;
 				dialogue.changeOwnerState = true;
+				var text = "Be careful " + "Kirby" + "!";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_YellowCard,spr_Hud_Dialogue_Portrait_Gamble_Normal,snd_TextGamble);
+				array += 1;
+				text = "I sense an airless space here.";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_YellowCard,spr_Hud_Dialogue_Portrait_Gamble_Normal,snd_TextGamble);
+				array += 1;
+				if ((instance_exists(p1)) and (p1.canFloat))
+				{
+					text = "You may be unable to float if you enter that area. Have to rely on your jumping skills.";
+					scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_YellowCard,spr_Hud_Dialogue_Portrait_Gamble_Smart,snd_TextGamble);
+				}
+				else
+				{
+					text = "I don't know if that would effect you or not, but just to be safe.";
+					scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_YellowCard,spr_Hud_Dialogue_Portrait_Gamble_Annoyed,snd_TextGamble);
+				}
+				break;
+				
+				case 2:
 				destroy = true;
 				break;
 			}
 			break;
+			#endregion
 		}
 		active = false;
 	}

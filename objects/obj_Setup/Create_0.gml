@@ -194,10 +194,10 @@ enum playerCharacters
 {
 	kirby,
 	gamble,
+	metaKnight,
 	keeby,
 	gooey,
 	magolor,
-	metaKnight,
 	waddleDee,
 	waddleDoo,
 	brontoBurt,
@@ -379,6 +379,41 @@ enum carriedItemStates
 {
 	light,
 	heavy
+}
+
+enum progression
+{
+	greenGreens,
+	battleshipHalberd,
+	asteroidFields,
+	eggGardenSurface,
+	eggGardenTemple,
+	eggGardenCaves,
+	gearCubeHangar,
+	gearCubeLabs,
+	gearCubeDepths,
+	aquatiaHarbor,
+	aquatiaUnderwater,
+	aquatiaParadise,
+	cosmicPalace,
+	popstarMoon,
+	chapter1End
+}
+
+enum cutscenes
+{
+	story_Intro,
+	story_MeetingGamble,
+	
+	exTut_AntiFloat
+}
+
+enum talkingCharacter
+{
+	kirby,
+	gamble,
+	metaKnight,
+	match
 }
 #endregion
 

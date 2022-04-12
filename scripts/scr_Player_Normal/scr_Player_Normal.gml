@@ -546,8 +546,6 @@ function scr_Player_Normal()
 								{
 									attack = true;
 									attackNumber = playerAttacks.cutterCharge;
-									sprite_index = sprCutterCharge;
-									image_index = 0;
 								}
 								else
 								{
@@ -576,16 +574,24 @@ function scr_Player_Normal()
 								particle.destroyAfterAnimation = true;
 							}
 							cutterCharge += 1;
-							if ((!audio_is_playing(snd_Charge_Intro)) and (!audio_is_playing(snd_Charge_Loop)))
+							if (cutterCharge >= 6)
 							{
-								if (chargeSfxState == "intro")
+								if (cutterCharge == 6)
 								{
-								    chargeSfx = audio_play_sound(snd_Charge_Intro,0,false);
-								    chargeSfxState = "loop";
+									sprite_index = sprCutterCharge;
+									image_index = 0;
 								}
-								else
+								if ((!audio_is_playing(snd_Charge_Intro)) and (!audio_is_playing(snd_Charge_Loop)))
 								{
-								    chargeSfx = audio_play_sound(snd_Charge_Loop,0,false);
+									if (chargeSfxState == "intro")
+									{
+									    chargeSfx = audio_play_sound(snd_Charge_Intro,0,false);
+									    chargeSfxState = "loop";
+									}
+									else
+									{
+									    chargeSfx = audio_play_sound(snd_Charge_Loop,0,false);
+									}
 								}
 							}
 						
@@ -793,8 +799,6 @@ function scr_Player_Normal()
 										{
 											attack = true;
 											attackNumber = playerAttacks.beamCharge;
-											sprite_index = sprBeamCharge;
-										    image_index = 0;
 										}
 										else
 										{
@@ -821,16 +825,24 @@ function scr_Player_Normal()
 								particle.destroyAfterAnimation = true;
 							}
 							beamCharge += 1;
-							if ((!audio_is_playing(snd_Charge_Intro)) and (!audio_is_playing(snd_Charge_Loop)))
+							if (beamCharge >= 6)
 							{
-								if (chargeSfxState == "intro")
+								if (beamCharge == 6)
 								{
-								    chargeSfx = audio_play_sound(snd_Charge_Intro,0,false);
-								    chargeSfxState = "loop";
+									sprite_index = sprBeamCharge;
+									image_index = 0;
 								}
-								else
+								if ((!audio_is_playing(snd_Charge_Intro)) and (!audio_is_playing(snd_Charge_Loop)))
 								{
-								    chargeSfx = audio_play_sound(snd_Charge_Loop,0,false);
+									if (chargeSfxState == "intro")
+									{
+									    chargeSfx = audio_play_sound(snd_Charge_Intro,0,false);
+									    chargeSfxState = "loop";
+									}
+									else
+									{
+									    chargeSfx = audio_play_sound(snd_Charge_Loop,0,false);
+									}
 								}
 							}
 						
@@ -1573,7 +1585,7 @@ function scr_Player_Normal()
 							{
 								if (audio_is_playing(snd_StoneFallen)) audio_stop_sound(snd_StoneFallen);
 								audio_play_sound(snd_StoneFallen,0,false);
-								if ((sprite_index == sprStoneAttack1Rare) and (floor(image_index) == 6))
+								if (((sprite_index == sprStoneAttack1Rare) or (sprite_index == sprStoneAttack2Rare)) and (floor(image_index) == 6))
 								{
 									if (audio_is_playing(snd_JellyStone)) audio_stop_sound(snd_JellyStone);
 									audio_play_sound(snd_JellyStone,0,false);
@@ -1646,8 +1658,6 @@ function scr_Player_Normal()
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
 							attackNumber = playerAttacks.ufoCharge;
-							sprite_index = sprBeamCharge;
-							image_index = 0;
 					    }
 					
 						if (attackNumber == playerAttacks.ufoCharge)
@@ -1660,16 +1670,24 @@ function scr_Player_Normal()
 								particle.destroyAfterAnimation = true;
 							}
 							ufoCharge += 1;
-							if ((!audio_is_playing(snd_Charge_Intro)) and (!audio_is_playing(snd_Charge_Loop)))
+							if (ufoCharge >= 6)
 							{
-								if (chargeSfxState == "intro")
+								if (ufoCharge == 6)
 								{
-								    chargeSfx = audio_play_sound(snd_Charge_Intro,0,false);
-								    chargeSfxState = "loop";
+									sprite_index = sprBeamCharge;
+									image_index = 0;
 								}
-								else
+								if ((!audio_is_playing(snd_Charge_Intro)) and (!audio_is_playing(snd_Charge_Loop)))
 								{
-								    chargeSfx = audio_play_sound(snd_Charge_Loop,0,false);
+									if (chargeSfxState == "intro")
+									{
+									    chargeSfx = audio_play_sound(snd_Charge_Intro,0,false);
+									    chargeSfxState = "loop";
+									}
+									else
+									{
+									    chargeSfx = audio_play_sound(snd_Charge_Loop,0,false);
+									}
 								}
 							}
 						
@@ -2559,16 +2577,24 @@ function scr_Player_Normal()
 								particle.destroyAfterAnimation = true;
 							}
 							cutterCharge += 1;
-							if ((!audio_is_playing(snd_Charge_Intro)) and (!audio_is_playing(snd_Charge_Loop)))
+							if (cutterCharge >= 6)
 							{
-								if (chargeSfxState == "intro")
+								if (cutterCharge == 6)
 								{
-								    chargeSfx = audio_play_sound(snd_Charge_Intro,0,false);
-								    chargeSfxState = "loop";
+									sprite_index = sprCutterCharge;
+									image_index = 0;
 								}
-								else
+								if ((!audio_is_playing(snd_Charge_Intro)) and (!audio_is_playing(snd_Charge_Loop)))
 								{
-								    chargeSfx = audio_play_sound(snd_Charge_Loop,0,false);
+									if (chargeSfxState == "intro")
+									{
+									    chargeSfx = audio_play_sound(snd_Charge_Intro,0,false);
+									    chargeSfxState = "loop";
+									}
+									else
+									{
+									    chargeSfx = audio_play_sound(snd_Charge_Loop,0,false);
+									}
 								}
 							}
 						
@@ -2839,7 +2865,7 @@ function scr_Player_Normal()
 						{
 							if (audio_is_playing(snd_StoneFallen)) audio_stop_sound(snd_StoneFallen);
 							audio_play_sound(snd_StoneFallen,0,false);
-							if ((sprite_index == sprStoneAttack1Rare) and (floor(image_index) == 6))
+							if (((sprite_index == sprStoneAttack1Rare) or (sprite_index == sprStoneAttack2Rare)) and (floor(image_index) == 2))
 							{
 								if (audio_is_playing(snd_JellyStone)) audio_stop_sound(snd_JellyStone);
 								audio_play_sound(snd_JellyStone,0,false);
@@ -2852,8 +2878,7 @@ function scr_Player_Normal()
 							{
 								var parXDir = 4;
 								if (i == 1) var parXDir = -4;
-								var par = instance_create_depth(x + parXDir,y + 3,depth - 1,obj_Particle);
-								par.sprite_index = spr_Particle_ShrinkingStar4;
+								var par = instance_create_depth(x + parXDir,y + 3,depth - 1,obj_RecoilStar);
 								if (i == 0)
 								{
 									par.hsp = 3;
@@ -2863,7 +2888,10 @@ function scr_Player_Normal()
 									par.hsp = -3;
 								}
 								par.dir = sign(par.hsp);
-								par.destroyAfterAnimation = true;
+								par.hurtsObject = true;
+								par.hurtsEnemy = true;
+								par.canBeInhaled = false;
+								par.destroyTimer = 15;
 							}
 							if (instance_exists(obj_Camera))
 							{
@@ -2952,8 +2980,6 @@ function scr_Player_Normal()
 						{
 							attack = true;
 							attackNumber = "sirKibbleCutterCharge";
-							sprite_index = sprCutterAttack1;
-							image_index = 0;
 						}
 						else
 						{
@@ -2979,16 +3005,24 @@ function scr_Player_Normal()
 						}
 						image_index = 0;
 						cutterCharge += 1;
-						if ((!audio_is_playing(snd_Charge_Intro)) and (!audio_is_playing(snd_Charge_Loop)))
+						if (cutterCharge >= 6)
 						{
-							if (chargeSfxState == "intro")
+							if (cutterCharge == 6)
 							{
-								chargeSfx = audio_play_sound(snd_Charge_Intro,0,false);
-								chargeSfxState = "loop";
+								sprite_index = sprCutterAttack1;
+								image_index = 0;
 							}
-							else
+							if ((!audio_is_playing(snd_Charge_Intro)) and (!audio_is_playing(snd_Charge_Loop)))
 							{
-								chargeSfx = audio_play_sound(snd_Charge_Loop,0,false);
+								if (chargeSfxState == "intro")
+								{
+									chargeSfx = audio_play_sound(snd_Charge_Intro,0,false);
+									chargeSfxState = "loop";
+								}
+								else
+								{
+									chargeSfx = audio_play_sound(snd_Charge_Loop,0,false);
+								}
 							}
 						}
 						
@@ -3305,13 +3339,7 @@ function scr_Player_Normal()
 		{
 			if (vsp == 0)
 			{
-				if ((mirrorShieldHp > 0) and (playerAbility == playerAbilities.mirror))
-				{
-					if (audio_is_playing(snd_Guard)) audio_stop_sound(snd_Guard);
-					audio_play_sound(snd_Guard,0,false);
-					var mirrorShield = instance_create_depth(x,y,depth - 1,obj_Projectile_MirrorShield);
-					mirrorShield.owner = id;
-				}
+				scr_Player_SpawnMirrorShield(playerAbility);
 				movespeed = movespeedNormal;
 				run = false;
 			    duck = true;

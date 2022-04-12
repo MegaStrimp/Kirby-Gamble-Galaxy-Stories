@@ -18,7 +18,7 @@ grounded = false;
 if (place_meeting(x,y + 1,obj_Wall))
 {
 	var collidingWall = instance_place(x,y + 1,obj_Wall);
-	if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) grounded = true;
+	if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + (bbox_bottom - bbox_top) + vspFinal)))) grounded = true;
 }
 else if (place_meeting(x,y + 1,obj_Spring))
 {
@@ -237,6 +237,12 @@ if (!global.pause)
 			collidedSpring.hitTimer = collidedSpring.hitTimerMax;
 			var finalForce = collidedSpring.force;
 			var drawOffsetForce = 8;
+			
+			//Cancel Attack
+			
+			scr_Player_CancelAttack(id);
+			
+			//Jump
 			
 			if ((keyJumpHold) or (keyUpHold))
 			{

@@ -14,6 +14,7 @@ destroyableByPlayer = false;
 destroyableByEnemy = false;
 destroyableByObject = false;
 destroyableByProjectile = false;
+destroyableByWall = false;
 deathParticlesOnHit = false;
 deathParticlesOnHitNumber = choose("roundabout","doubleCross","cross","doubleHex");
 active = false;

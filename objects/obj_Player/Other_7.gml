@@ -537,15 +537,6 @@ if ((attack) and (sprite_index == sprScanReady))
 	image_index = 0;
 }
 
-//Freeze Attack 1 Ready
-
-if ((attackNumber == 7) and (sprite_index == sprFreezeAttack1Ready))
-{
-	sprite_index = sprFreezeAttack1;
-	image_index = 0;
-	freezeReady = false;
-}
-
 //Bouncy
 
 if ((playerCharacter == playerCharacters.bouncy) and ((sprite_index == sprJump) or (sprite_index == sprDuck))) image_index = image_number - 1;

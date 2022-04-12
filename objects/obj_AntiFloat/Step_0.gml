@@ -1,5 +1,13 @@
 ///@description Main
 
+//Tutorial
+
+if ((global.extraTutorials) and (!global.exTut_AntiFloat) and (!global.cutscene) and (global.progression >= progression.greenGreens))
+{
+	scr_PlayCutscene(cutscenes.exTut_AntiFloat);
+	global.exTut_AntiFloat = true;
+}
+
 //Debug Delete
 
 if (global.debug)

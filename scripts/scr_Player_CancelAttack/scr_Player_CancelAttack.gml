@@ -28,6 +28,8 @@ function scr_Player_CancelAttack(argument0)
 			break;
 			
 			case playerAttacks.beamNormal:
+			if (instance_exists(parBeamCycle1)) instance_destroy(parBeamCycle1);
+			with (obj_Projectile_Beam) if ((state == 0) and (owner == other.id)) instance_destroy();
 			case playerAttacks.beamAir:
 			case playerAttacks.beamUp:
 			audio_stop_sound(sndBeam);
@@ -35,6 +37,7 @@ function scr_Player_CancelAttack(argument0)
 			break;
 			
 			case playerAttacks.beamDash:
+			with (obj_Projectile_BeamDash) if (owner == other.id) instance_destroy();
 			beamDashAttackTimer = -1;
 			break;
 			
@@ -58,7 +61,7 @@ function scr_Player_CancelAttack(argument0)
 			break;
 			
 			case playerAttacks.stoneUp:
-			if (instance_exists(stoneFistMaskProj)) instance_destroy(stoneFistMaskProj);
+			if ((!stoneFistReady) and (instance_exists(stoneFistMaskProj))) instance_destroy(stoneFistMaskProj);
 			stoneFistReady = true;
 			break;
 			

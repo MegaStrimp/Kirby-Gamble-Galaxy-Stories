@@ -340,6 +340,8 @@ if (!global.pause)
 				{
 					if ((instance_nearest(x,y,obj_Player)).y < y)
 					{
+						if (audio_is_playing(snd_LeoFireball)) audio_stop_sound(snd_LeoFireball);
+						audio_play_sound(snd_LeoFireball,0,false);
 						var fire = instance_create_depth(x,y - 2,depth,obj_Projectile_LeoFireball);
 						fire.owner = id;
 						fire.enemy = true;
@@ -364,6 +366,8 @@ if (!global.pause)
 							//Fireball
 							
 							case 0:
+							if (audio_is_playing(snd_LeoFireball)) audio_stop_sound(snd_LeoFireball);
+							audio_play_sound(snd_LeoFireball,0,false);
 							var fire = instance_create_depth(x,y - 2,depth,obj_Projectile_LeoFireball);
 							fire.owner = id;
 							fire.enemy = true;
@@ -411,8 +415,8 @@ if (!global.pause)
 		}
 		else if (fireTimer == 0)
 		{
-			//if (audio_is_playing(snd_WingShot)) audio_stop_sound(snd_WingShot);
-			//audio_play_sound(snd_WingShot,0,false);
+			if (audio_is_playing(snd_LeoFire)) audio_stop_sound(snd_LeoFire);
+			audio_play_sound(snd_LeoFire,0,false);
 			var fire = instance_create_depth(x,y - 2,depth,obj_Projectile_LeoFire);
 			fire.owner = id;
 			fire.enemy = true;

@@ -31,7 +31,7 @@ function scr_Player_Float()
 				}
 			}
 			
-			if ((!global.cutscene) and (((keyLeftHold) and (keyRightHold)) or ((!keyLeftHold) and (!keyRightHold))))
+			if ((!global.cutscene) or (((keyLeftHold) and (keyRightHold)) or ((!keyLeftHold) and (!keyRightHold))))
 			{
 				var ultiDecel = decel;
 				if (hsp >= ultiDecel) hsp -= ultiDecel;

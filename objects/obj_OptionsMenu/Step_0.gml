@@ -444,11 +444,11 @@ if (!global.pause)
 		
 		if (subSelection < 0)
 		{
-			subSelection += 1;
+			subSelection += 2;
 		}
-		if (subSelection > 0)
+		if (subSelection > 1)
 		{
-			subSelection -= 1;
+			subSelection -= 2;
 		}
 		
 		switch (subSelection)
@@ -459,6 +459,15 @@ if (!global.pause)
 				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 				audio_play_sound(snd_BossHealth,0,false);
 				global.extraTutorials = !global.extraTutorials;
+			}
+			break;
+			
+			case 1:
+			if ((keyJumpPressed) or (keyLeftPressed) or (keyRightPressed))
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				global.autoSwallow = !global.autoSwallow;
 			}
 			break;
 		}

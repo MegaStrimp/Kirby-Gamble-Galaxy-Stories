@@ -1,4 +1,4 @@
 ///@description Creation Code
 
-state = "introNew";
-state = "meetingGamble";
+state = cutscenes.story_Intro;
+state = cutscenes.story_MeetingGamble;

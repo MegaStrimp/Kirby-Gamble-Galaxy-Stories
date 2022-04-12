@@ -18,6 +18,7 @@ notifState = 0;
 notifOffset = -25;
 stageTitleOffset = 250;
 hasTreasure = false;
+cutsceneStarAngle = 0;
 
 //Timers
 

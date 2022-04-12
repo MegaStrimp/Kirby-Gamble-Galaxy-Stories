@@ -12,6 +12,20 @@ function scr_Player_Carry()
 		var playerAbility = global.abilityP1;
 		if (player == 1) playerAbility = global.abilityP2;
 		
+		var grounded = false;
+		if (place_meeting(x,y + 1,obj_Wall))
+		{
+			var collidingWall = instance_place(x,y + 1,obj_Wall);
+			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) grounded = true;
+		}
+		else if (place_meeting(x,y + 1,obj_Spring))
+		{
+			//var collidingSpring = instance_place(x,y + 1,obj_Spring);
+			grounded = true;
+		}
+		
+		if ((hurt) or (!place_meeting(x,y,obj_Door))) enterDoor = false;
+		
 		//Run
 		
 		runDoubleTap -= 1;
@@ -113,7 +127,7 @@ function scr_Player_Carry()
 		
 		if (!hurt)
 		{
-		    if ((!global.cutscene) and (keyAttackPressed) and (!inhaleEnd) and (!spit))
+		    if ((!global.cutscene) and ((enterDoor) or (keyAttackPressed)) and (!inhaleEnd) and (!spit))
 		    {
 				audio_play_sound(snd_Spit,0,false);
 				for (var i = 0; i < 2; i++)
@@ -156,7 +170,7 @@ function scr_Player_Carry()
 				if (ateCappyShroom) ateCappyShroom = false;
 		    }
 			
-		    if ((!global.cutscene) and (place_meeting(x,y + 1,obj_Wall)) and (!inhaleEnd) and (!spit) and (keyDownPressed))
+		    if ((!global.cutscene) and (((global.autoSwallow) and (cAbility != playerAbilities.none)) or ((place_meeting(x,y + 1,obj_Wall)) and (!inhaleEnd) and (!spit) and (keyDownPressed))))
 		    {
 				if (player == 0)
 				{
@@ -197,6 +211,17 @@ function scr_Player_Carry()
 				ateCappyShroom = false;
 				image_index = 0;
 			    state = playerStates.swallow;
+		    }
+		}
+		
+		//Enter Door
+		
+		if ((!global.cutscene) and (canEnter) and (position_meeting(x,y,obj_Door)) and (keyUpPressed) and (!inhaleEnd) and (!spit))
+		{
+		    if ((!instance_exists(obj_Fade)) and (!hurt))
+		    {
+				hsp = 0;
+				enterDoor = true;
 		    }
 		}
 		
@@ -400,26 +425,30 @@ function scr_Player_Carry()
 		
 		//Walk Duck
 		
-		if ((!walkDuck) and (place_meeting(x,y + (1 + vspFinal),obj_Wall)) and (vsp > 1) and (!inhaleEnd) and (!spit) and (!attack))
+		if ((!walkDuck) and (place_meeting(x,y + (1 + vsp),obj_Wall)) and (vsp > 1) and (!inhaleEnd) and (!spit) and (!attack))
 		{
-			image_index = 0;
-			walkDuck = true;
-			walkDuckTimer = walkDuckTimerMax;
-			audio_play_sound(snd_SquishLow,0,false);
-			var parDirection = irandom_range(0,359);
-			var parScaleDir = 1;
-			if ((parDirection > 90) and (parDirection <= 270))
+			var collidingWall = instance_place(x,y + (1 + vsp),obj_Wall);
+			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal))))
 			{
-				parScaleDir = -1;
+				image_index = 0;
+				walkDuck = true;
+				walkDuckTimer = walkDuckTimerMax;
+				audio_play_sound(snd_SquishLow,0,false);
+				var parDirection = irandom_range(0,359);
+				var parScaleDir = 1;
+				if ((parDirection > 90) and (parDirection <= 270))
+				{
+					parScaleDir = -1;
+				}
+				var parSquish = instance_create_depth(x,y,depth + 1,obj_Particle);
+				parSquish.sprite_index = spr_Particle_SmallStar;
+				parSquish.imageSpeed = 0;
+				parSquish.destroyTimer = 30;
+				parSquish.spdBuiltIn = 6;
+				parSquish.fricSpd = .6;
+				parSquish.direction = parDirection;
+				parSquish.dir = parScaleDir;
 			}
-			var parSquish = instance_create_depth(x,y,depth + 1,obj_Particle);
-			parSquish.sprite_index = spr_Particle_SmallStar;
-			parSquish.imageSpeed = 0;
-			parSquish.destroyTimer = 30;
-			parSquish.spdBuiltIn = 6;
-			parSquish.fricSpd = .6;
-			parSquish.direction = parDirection;
-			parSquish.dir = parScaleDir;
 		}
 		
 		if ((walkDuck) and (vsp == 0) and (!attack))

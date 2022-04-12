@@ -11,6 +11,7 @@ sprReady = spr_Nidoo_Normal_Ready;
 sprShake = spr_Nidoo_Normal_Shake;
 sprRelease = spr_Nidoo_Normal_Release;
 sprHurt = "self";
+sprStar = spr_Particle_BigStar_Yellow;
 
 //Other Variables
 
@@ -22,3 +23,12 @@ hurtable = false;
 active = false;
 shakeCount = 0;
 shakeCountMax = 3;
+drawText = "";
+particleDir = 1;
+parIndex = 0;
+parIndexSpd = .25;
+
+//Timers
+
+particleTimerMax = 15;
+particleTimer = particleTimerMax;

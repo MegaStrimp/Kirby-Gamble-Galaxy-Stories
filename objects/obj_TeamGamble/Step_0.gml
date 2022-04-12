@@ -26,7 +26,6 @@ if (!global.pause)
 			alphaTarget = 1;
 			var rng = irandom_range(0,99);
 			var mus = mus_TeamGamble;
-			rng = 0;
 			if (rng == 0) mus = mus_Slidecrushed;
 			global.musicPlaying = audio_play_sound(mus,0,false);
 			stateTimer = 150;

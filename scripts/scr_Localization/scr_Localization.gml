@@ -25,7 +25,7 @@ function scr_Localization(argument0,argument1,argument2,argument3)
 		2 - Meta Knight
 		3 - Keeby
 		4 - Helper
-		5 - Prince Fluff
+		5 - Gooey
 		6 - Magolor
 		7 - Cutter
 		8 - Beam
@@ -685,30 +685,113 @@ function scr_Localization(argument0,argument1,argument2,argument3)
 	#region Kirby
 	i = 0;
 	dialogue[1][0][i][languages.english] = "Riding in on the spring breeze, it's Kirby! Inhale enemies and copy their powers. A galaxy stretches beyond your wildest dreams, so it's time to get going!";
+	dialogue[1][0][i][languages.turkish] = "";
+	dialogue[1][0][i][languages.german] = "";
+	dialogue[1][0][i][languages.italian] = "";
+	dialogue[1][0][i][languages.french] = "";
+	dialogue[1][0][i][languages.polish] = "";
+	dialogue[1][0][i][languages.chinese] = "";
+	dialogue[1][0][i][languages.spanish] = "";
+	dialogue[1][0][i][languages.japanese] = "";
+	dialogue[1][0][i][languages.portuguese] = "";
+	dialogue[1][0][i][languages.norwegian] = "";
+	dialogue[1][0][i][languages.arabic] = "";
 	#endregion
 	
 	#region Gamble
 	i = 0;
 	dialogue[1][1][i][languages.english] = "This new friend from outer space came to Popstar to ask Kirby for a hand in defeating the Cosmic Fluxbender! Gamble wields dice, cards, roulettes, and magical energy to take down the enemy. Make them fold!";
+	dialogue[1][1][i][languages.turkish] = "";
+	dialogue[1][1][i][languages.german] = "";
+	dialogue[1][1][i][languages.italian] = "";
+	dialogue[1][1][i][languages.french] = "";
+	dialogue[1][1][i][languages.polish] = "";
+	dialogue[1][1][i][languages.chinese] = "";
+	dialogue[1][1][i][languages.spanish] = "";
+	dialogue[1][1][i][languages.japanese] = "";
+	dialogue[1][1][i][languages.portuguese] = "";
+	dialogue[1][1][i][languages.norwegian] = "";
+	dialogue[1][1][i][languages.arabic] = "";
 	#endregion
 	
 	#region Meta Knight
 	i = 0;
 	dialogue[1][2][i][languages.english] = "The mysterious masked knight from Kirby's Adventure is here! He is chivalrous and always willing to fight any source of evil. All of Dream Land fears his sword!";
+	dialogue[1][2][i][languages.turkish] = "";
+	dialogue[1][2][i][languages.german] = "";
+	dialogue[1][2][i][languages.italian] = "";
+	dialogue[1][2][i][languages.french] = "";
+	dialogue[1][2][i][languages.polish] = "";
+	dialogue[1][2][i][languages.chinese] = "";
+	dialogue[1][2][i][languages.spanish] = "";
+	dialogue[1][2][i][languages.japanese] = "";
+	dialogue[1][2][i][languages.portuguese] = "";
+	dialogue[1][2][i][languages.norwegian] = "";
+	dialogue[1][2][i][languages.arabic] = "";
 	#endregion
 	
+	#region Keeby
 	i = 0;
 	dialogue[1][3][i][languages.english] = "";
+	dialogue[1][3][i][languages.turkish] = "";
+	dialogue[1][3][i][languages.german] = "";
+	dialogue[1][3][i][languages.italian] = "";
+	dialogue[1][3][i][languages.french] = "";
+	dialogue[1][3][i][languages.polish] = "";
+	dialogue[1][3][i][languages.chinese] = "";
+	dialogue[1][3][i][languages.spanish] = "";
+	dialogue[1][3][i][languages.japanese] = "";
+	dialogue[1][3][i][languages.portuguese] = "";
+	dialogue[1][3][i][languages.norwegian] = "";
+	dialogue[1][3][i][languages.arabic] = "";
+	#endregion
 	
+	#region Helper
 	i = 0;
 	dialogue[1][4][i][languages.english] = "";
+	dialogue[1][4][i][languages.turkish] = "";
+	dialogue[1][4][i][languages.german] = "";
+	dialogue[1][4][i][languages.italian] = "";
+	dialogue[1][4][i][languages.french] = "";
+	dialogue[1][4][i][languages.polish] = "";
+	dialogue[1][4][i][languages.chinese] = "";
+	dialogue[1][4][i][languages.spanish] = "";
+	dialogue[1][4][i][languages.japanese] = "";
+	dialogue[1][4][i][languages.portuguese] = "";
+	dialogue[1][4][i][languages.norwegian] = "";
+	dialogue[1][4][i][languages.arabic] = "";
+	#endregion
 	
+	#region Gooey
 	i = 0;
 	dialogue[1][5][i][languages.english] = "";
+	dialogue[1][5][i][languages.turkish] = "";
+	dialogue[1][5][i][languages.german] = "";
+	dialogue[1][5][i][languages.italian] = "";
+	dialogue[1][5][i][languages.french] = "";
+	dialogue[1][5][i][languages.polish] = "";
+	dialogue[1][5][i][languages.chinese] = "";
+	dialogue[1][5][i][languages.spanish] = "";
+	dialogue[1][5][i][languages.japanese] = "";
+	dialogue[1][5][i][languages.portuguese] = "";
+	dialogue[1][5][i][languages.norwegian] = "";
+	dialogue[1][5][i][languages.arabic] = "";
+	#endregion
 	
 	#region Magolor
 	i = 0;
 	dialogue[1][6][i][languages.english] = "'Flux? I'll show you real power!' This tricky wizard hails from Kirby's Return to Dream Land. He used to be a lying cheat, but he's reformed... right? His otherworldly magic will make short work of your enemies!";
+	dialogue[1][6][i][languages.turkish] = "";
+	dialogue[1][6][i][languages.german] = "";
+	dialogue[1][6][i][languages.italian] = "";
+	dialogue[1][6][i][languages.french] = "";
+	dialogue[1][6][i][languages.polish] = "";
+	dialogue[1][6][i][languages.chinese] = "";
+	dialogue[1][6][i][languages.spanish] = "";
+	dialogue[1][6][i][languages.japanese] = "";
+	dialogue[1][6][i][languages.portuguese] = "";
+	dialogue[1][6][i][languages.norwegian] = "";
+	dialogue[1][6][i][languages.arabic] = "";
 	#endregion
 	
 	#region Cutter

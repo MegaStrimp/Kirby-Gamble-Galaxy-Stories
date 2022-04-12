@@ -9,6 +9,7 @@ function scr_SaveConfig(argument0)
 	ini_write_real("options","soundVolume",global.soundVolume);
 	ini_write_real("options","fullscreen",global.fullscreen);
 	ini_write_real("options","extraTutorials",global.extraTutorials);
+	ini_write_real("options","autoSwallow",global.autoSwallow);
 	ini_write_real("options","windowSize",global.windowSize);
 	ini_write_real("options","language",global.language);
 	

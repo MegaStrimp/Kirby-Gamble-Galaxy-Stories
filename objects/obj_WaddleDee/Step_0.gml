@@ -1,7 +1,6 @@
 ///@description Main
 
-//Characters
-
+#region Characters
 if (setupTimer == 0)
 {
 	switch (character)
@@ -72,10 +71,11 @@ if (setupTimer == 0)
 		break;
 	}
 }
+#endregion
 
-//Event Inherited
-
+#region Event Inherited
 event_inherited();
+#endregion
 
 if (!global.pause)
 {

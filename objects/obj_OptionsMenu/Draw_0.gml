@@ -274,13 +274,18 @@ switch (page)
 	var col1 = c_white;
 	var col2 = c_white;
 	var alpha = .5;
-	if (subSelection == i)
-	{
-		alpha = 1;
-		draw_sprite(spr_Menu_Options_CursorArrow,0,126,54);
-	}
+	if (subSelection == i) alpha = 1;
 	var isActive = "FALSE";
 	if (global.extraTutorials) isActive = "TRUE";
 	scr_Draw_Text_Color_Outline(140,60 + (24 * i),"Extra Tutorials - " + isActive,-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
+	
+	i += 1;
+	var col1 = c_white;
+	var col2 = c_white;
+	var alpha = .5;
+	if (subSelection == i) alpha = 1;
+	var isActive = "FALSE";
+	if (global.autoSwallow) isActive = "TRUE";
+	scr_Draw_Text_Color_Outline(140,60 + (24 * i),"Auto Swallow - " + isActive,-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
 	break;
 }

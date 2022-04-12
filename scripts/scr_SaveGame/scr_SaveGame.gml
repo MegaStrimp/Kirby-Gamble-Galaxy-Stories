@@ -8,10 +8,13 @@ function scr_SaveGame(argument0)
 	ini_write_real("stats","gameTimeSeconds",global.gameTimeSeconds);
 	ini_write_real("stats","gameTimeMinutes",global.gameTimeMinutes);
 	ini_write_real("stats","gameTimeHours",global.gameTimeHours);
+	ini_write_real("stats","progression",global.progression);
 	ini_write_real("stats","pointStars",global.pointStars);
 	ini_write_real("stats","points",global.points);
 	ini_write_real("stats","lives",global.playerLives);
 	ini_write_real("stats","goldenTomato",global.goldenTomato);
+	ini_write_real("stats","abilityP1",global.abilityP1);
+	ini_write_real("stats","abilityP2",global.abilityP2);
 	
 	ini_write_real("shop","shopGearCubeFirstTime",global.shopGearCubeFirstTime);
 	ini_write_real("shop","shopGearCubeNewItem",global.shopGearCubeNewItem);

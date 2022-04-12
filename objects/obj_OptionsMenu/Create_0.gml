@@ -76,7 +76,6 @@ i += 1;
 languageIndex[i] = scr_Localization(0,5,i,0);
 languageVal[i] = 11;
 
-
 languageArrayLength = i + 1;
 #endregion
 

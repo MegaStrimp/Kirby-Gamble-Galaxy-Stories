@@ -7,10 +7,13 @@ function scr_LoadGame(argument0)
 	global.gameTimeSeconds = ini_read_real("stats","gameTimeSeconds",0);
 	global.gameTimeMinutes = ini_read_real("stats","gameTimeMinutes",0);
 	global.gameTimeHours = ini_read_real("stats","gameTimeHours",0);
+	global.progression = ini_read_real("stats","gameTimeHours",progression.greenGreens);
 	global.pointStars = ini_read_real("stats","pointStars",0);
 	global.points = ini_read_real("stats","points",0);
 	global.playerLives = ini_read_real("stats","lives",3);
 	global.goldenTomato = ini_read_real("stats","goldenTomato",false);
+	global.abilityP1 = ini_read_real("stats","abilityP1",playerAbilities.none);
+	global.abilityP2 = ini_read_real("stats","abilityP2",playerAbilities.none);
 	
 	global.shopGearCubeFirstTime = ini_read_real("shop","shopGearCubeFirstTime",true);
 	global.shopGearCubeNewItem = ini_read_real("shop","shopGearCubeNewItem",false);
@@ -275,6 +278,8 @@ function scr_LoadGame(argument0)
 	global.iceEmptyConeUpgradeEquipped = ini_read_real("playerCustomization","iceEmptyConeUpgradeEquipped",false);
 	global.sparkBrightPluggUpgradeEquipped = ini_read_real("playerCustomization","sparkBrightPluggUpgradeEquipped",false);
 	global.waterEggSoilUpgradeEquipped = ini_read_real("playerCustomization","waterEggSoilUpgradeEquipped",false);
+	
+	global.exTut_AntiFloat = ini_read_real("extraTutorials","exTut_AntiFloat",false);
 	ini_close();
 	
 	global.saveLoaded = true;

@@ -111,8 +111,8 @@ if (!global.pause)
 		
 		if ((sleep) and (!yawned) and (floor(image_index) == 2))
 		{
-			if (audio_is_playing(snd_Sleep)) audio_stop_sound(snd_Sleep);
-			audio_play_sound(snd_Sleep,0,false);
+			if (audio_is_playing(snd_EnemySleep)) audio_stop_sound(snd_EnemySleep);
+			audio_play_sound(snd_EnemySleep,0,false);
 			yawned = true;
 			var par = instance_create_depth(x - (14 * dirX), y + 2,depth - 1,obj_Particle);
 			par.sprite_index = spr_Particle_Bubble1;

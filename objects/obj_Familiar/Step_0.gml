@@ -130,7 +130,7 @@ if (!global.pause)
 					attackTarget = -1;
 					with (obj_Enemy)
 					{
-						if ((distance_to_object(other.owner) <= 144) and ((y <= other.owner.y + 12) and (y >= other.owner.y - 12)))
+						if ((hurtable) and (!invincible) and (distance_to_object(other.owner) <= 144) and ((y <= other.owner.y + 12) and (y >= other.owner.y - 12)))
 						{
 							other.attackTarget = id;
 							if (other.x < x)
@@ -228,7 +228,7 @@ if (!global.pause)
 					with (obj_Enemy)
 					{
 						var root = power(other.throwSpeed,4) - (.2 * (.2 * ((-(other.x - x)) * (-(other.x - x))) + 2 * (other.y - y) * (other.throwSpeed * other.throwSpeed)));
-						if (root > 0)
+						if ((hurtable) and (!invincible) and (root > 0))
 						{
 							other.attackTarget = id;
 							other.angle = darctan2(((other.throwSpeed * other.throwSpeed) + sqrt(root)),.2 * (-(other.x - x)));
@@ -311,7 +311,7 @@ if (!global.pause)
 			attackTarget = -1;
 			with (obj_Enemy)
 			{
-				if ((distance_to_object(other.owner) <= 320) and (!place_meeting(x,y - 36,obj_Wall)))
+				if ((hurtable) and (!invincible) and (distance_to_object(other.owner) <= 320) and (!place_meeting(x,y - 36,obj_Wall)))
 				{
 					other.attackTarget = id;
 					break;

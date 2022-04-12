@@ -168,4 +168,4 @@ if ((playerIsHelper) and (helperTimer != -1))
 draw_set_font(fnt_DebugConsole);
 draw_set_color(c_black);
 /*
-draw_text(x,y - 12,string(instance_number(obj_Miniboss_Control)));
+draw_text(x,y - 12,string(bbox_bottom - bbox_top));

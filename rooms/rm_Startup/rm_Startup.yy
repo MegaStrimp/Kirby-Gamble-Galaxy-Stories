@@ -49,8 +49,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Startup",
-    "path": "folders/Rooms/Startup.yy",
+    "name": "Menus",
+    "path": "folders/Rooms/Menus.yy",
   },
   "resourceVersion": "1.0",
   "name": "rm_Startup",

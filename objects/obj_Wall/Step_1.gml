@@ -11,7 +11,7 @@ else if (setupTimer == 0)
 	if (hasTop)
 	{
 		topWall = instance_create_depth(x,y,depth,object_index);
-		if (topWallSprite != "none")
+		if (topWallSprite != -1)
 		{
 			topWall.visible = true;
 			topWall.sprite_index = topWallSprite;
@@ -19,7 +19,7 @@ else if (setupTimer == 0)
 		topWall.hsp = hsp;
 		topWall.vsp = vsp;
 		topWall.mask_index = topWallMask;
-		topWall.sprite_index = topWallMask;
+		//topWall.sprite_index = topWallMask;
 		topWall.damageType = damageType;
 		topWall.hasTop = false;
 		topWall.isTop = true;

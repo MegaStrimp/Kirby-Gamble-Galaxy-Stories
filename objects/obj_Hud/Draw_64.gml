@@ -16,11 +16,18 @@ var hbackground = spr_Hud_Healthbar_Background_Kirby;
 
 //Cutscene
 
-cutsceneLineOffset = lerp(cutsceneLineOffset,-580 + (580 * global.cutscene),.1);
+cutsceneStarAngle += 2;
+if (cutsceneStarAngle >= 360) cutsceneStarAngle -= 360;
+
+cutsceneLineOffset = lerp(cutsceneLineOffset,-660 + (660 * global.cutscene),.1);
 
 draw_set_color(c_black);
-draw_rectangle(-50 + cutsceneLineOffset,0,530 + cutsceneLineOffset,24,false);
-draw_rectangle(-50 - cutsceneLineOffset,270,530 - cutsceneLineOffset,270 - 24,false);
+var cutsceneLineX = 530 + cutsceneLineOffset;
+draw_rectangle(-80 + cutsceneLineOffset,0,cutsceneLineX,23,false);
+draw_sprite_ext(spr_Hud_CutsceneStar,0,cutsceneLineX + 12,0,1,1,cutsceneStarAngle,image_blend,1);
+cutsceneLineX = -80 - cutsceneLineOffset;
+draw_rectangle(cutsceneLineX,270 - 23,530 - cutsceneLineOffset,270,false);
+draw_sprite_ext(spr_Hud_CutsceneStar,0,cutsceneLineX - 12,270,1,1,360 - cutsceneStarAngle,image_blend,1);
 
 //Halberd Escape
 

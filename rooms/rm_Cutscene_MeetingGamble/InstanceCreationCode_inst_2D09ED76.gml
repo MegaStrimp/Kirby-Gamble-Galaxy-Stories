@@ -1,3 +1,3 @@
 ///@description Creation Code
 
-state = "meetingGamble";
+state = cutscenes.story_MeetingGamble;

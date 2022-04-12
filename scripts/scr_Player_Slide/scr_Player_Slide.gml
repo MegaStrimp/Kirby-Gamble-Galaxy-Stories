@@ -686,6 +686,7 @@ function scr_Player_Slide()
 		    {
 				if (audio_is_playing(slideSfx)) audio_stop_sound(slideSfx);
 				if (instance_exists(slideMaskProj)) instance_destroy(slideMaskProj);
+				scr_Player_SpawnMirrorShield(playerAbility);
 		        duck = true;
 		        duckSlide = false;
 		    }
