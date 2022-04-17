@@ -477,8 +477,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Egg Garden",
-    "path": "folders/Rooms/Stages/Chapter 1/Egg Garden.yy",
+    "name": "Hub",
+    "path": "folders/Rooms/Stages/Chapter 1/Egg Garden/Hub.yy",
   },
   "resourceVersion": "1.0",
   "name": "rm_EggGarden_Hub",

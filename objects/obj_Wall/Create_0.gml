@@ -36,3 +36,10 @@ explodeTimerMax = 5;
 invincibleTimer = -1;
 invincibleTimerMax = 15;
 movementTimer = -1;
+
+//Temporary Fix
+
+if (object_index = obj_Wall)
+{
+	instance_change(obj_ChildWall, true);
+}

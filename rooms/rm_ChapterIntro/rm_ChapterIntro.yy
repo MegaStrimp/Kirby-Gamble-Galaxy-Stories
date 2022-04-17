@@ -49,8 +49,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Misc",
-    "path": "folders/Rooms/Stages/Misc.yy",
+    "name": "Menus",
+    "path": "folders/Rooms/Menus.yy",
   },
   "resourceVersion": "1.0",
   "name": "rm_ChapterIntro",

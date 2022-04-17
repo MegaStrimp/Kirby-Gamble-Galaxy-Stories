@@ -8,8 +8,8 @@ event_inherited();
 
 accel = .02;
 movespeed = 1;
-jumpspeed = 4;
-gravNormal = .2;
+jumpspeed = 5;
+gravNormal = .25;
 gravLimitNormal = 5;
 
 //Sprites
@@ -17,26 +17,34 @@ gravLimitNormal = 5;
 mask_index = spr_16Square_Mask;
 
 sprIdle = spr_Gim_Normal_Idle;
-sprHurt = "self";
+sprWalk = spr_Gim_Normal_Walk;
+sprHurt = spr_Gim_Normal_Hurt;
+sprJump = spr_Gim_Normal_Jump;
+sprFall = spr_Gim_Normal_Fall;
+sprPrep = spr_Gim_Normal_Prep;
+handFlingDown = spr_GimHand_Normal_FlingDown;
+handFlingMiddle = spr_GimHand_Normal_FlingMiddle;
+handFlingUp = spr_GimHand_Normal_FlingUp;
+handHoldClose = spr_GimHand_Normal_HoldClose;
+handHoldAway = spr_GimHand_Normal_HoldAway;
 
 //Other Variables
 
 paletteIndex = spr_Gim_Normal_Palette_YoyoRobo;
-hp = 1;
+hp = 11;
 dmg = 1;
 ability = playerAbilities.yoyo;
 points = 100;
-hurtable = false;
-hasGravity = false;
-offScreenTurning = true;
-hasXKnockback = false;
-hasYKnockback = false;
-turnableX = true;
-turnableY = true;
+jump = 3;
+walk = 4; //Took a little artistic liberty and made his walk variable go up to 4, since it meshed better with his walk cycle
+state = 1;
+walkDirX = dirX;
+throwyo = 0;
 
 //Timers
 
-turnableXTimer = -1;
-turnableXTimerMax = 4;
-turnableYTimer = -1;
-turnableYTimerMax = 4;
+walkFrame = 12;
+yoTimer = 0;
+timer = walkFrame;
+timerEnable = false;
+timerState = 0;

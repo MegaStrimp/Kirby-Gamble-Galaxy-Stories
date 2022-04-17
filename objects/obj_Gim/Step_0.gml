@@ -10,7 +10,7 @@ if (setupTimer == 0)
 		
 		case 0:
 		sprIdle = spr_Gim_Normal_Idle;
-		sprHurt = "self";
+		sprHurt = spr_Gim_Normal_Hurt;
 		break;
 	}
 }
@@ -23,7 +23,11 @@ if (!global.pause)
 {
 	//Hurt Player
 	
+	scr_Object_Inhale(enemy);
+	
 	scr_Enemy_HurtsPlayer(dmg);
+	
+	hsp = scr_Friction(hsp, decel);
 	
 	//States
 	
@@ -32,102 +36,149 @@ if (!global.pause)
 		//Stay Still
 		
 		case 0:
+		sprite_index = sprIdle;
 		break;
 		
 		//Horizontal Straight Movement
 		
 		case 1:
-		scr_AI_HorizontalStraightMovement(false,true);
+		var stopWalk = (floor(image_index) == 3) or (floor(image_index) == 0);
+		
+		sprite_index = sprWalk;
+		walkDirX = dirX;
+
+		if (stopWalk)
+		{
+			image_speed = 0;
+			hsp = 0;
+			
+			if (walk)
+			{
+				timerState = 3;
+			}
+			else
+			{
+				image_speed = 1;
+				walk = 4;
+				state = 0;
+				timerState = 0;
+				timer = 45;
+			}
+			timerEnable = true;
+		}
+		else
+		{
+			scr_AI_HorizontalStraightMovement(true,true);
+			image_speed = 1;
+		}
 		break;
 		
-		//Vertical Straight Movement
+		//throw-yo
 		
 		case 2:
-		scr_AI_VerticalStraightMovement(false,true);
+		//i forgor :skull:
+		sprite_index = sprPrep;
+		
+		if (yoTimer > 45)
+		{
+			sprite_index = sprIdle;
+		}
+		
+		if (yoTimer > 75)
+		{
+			if (!throwyo)
+			{
+				throwyo = instance_create_depth(x, y, depth, obj_Projectile_GimYoyo);
+				throwyo.dirX = dirX;
+			}
+			else if (throwyo and !instance_exists(throwyo))
+			{
+				yoTimer = 0;
+				throwyo = 0;
+				state = 1;
+				break;
+			}
+		}
+		yoTimer++;
 		break;
 		
 		//Horizontal Straight Movement with Hops
 		
 		case 3:
+		if (vsp > 0)
+		{
+			sprite_index = sprFall;
+		}
+		else
+		{
+			sprite_index = sprJump;
+		}
+
 		if (place_meeting(x,y + 1,collisionY))
 		{
-			imageAngle += (45 * dirX);
-			
-			for (var i = 0; i < 2; i++)
+			if (!jump)
 			{
-				var parDirection = 180 * i;
-				var parScaleDir = 1;
-				if ((parDirection > 90) and (parDirection <= 270))
-				{
-					parScaleDir = -1;
-				}
-				var parSquish = instance_create_depth(x,y,depth + 1,obj_Particle);
-				parSquish.sprite_index = spr_Particle_SmallStar;
-				parSquish.destroyTimer = 30;
-				parSquish.spdBuiltIn = 6;
-				parSquish.fricSpd = .6;
-				parSquish.direction = parDirection;
-				parSquish.dir = parScaleDir;
+				jump = 3;
+				state = 1;
+				break;
 			}
-		}
-		if ((place_meeting(x,y + 1,obj_Gordo)) or (place_meeting(x,y + 1,obj_BloodGordo)) or (place_meeting(x,y + 1,obj_Blado)))
-		{
+			
 			vsp = -jumpspeed;
+			jump--;
 		}
-		if ((place_meeting(x,y - 1,obj_Gordo)) or (place_meeting(x,y - 1,obj_BloodGordo)) or (place_meeting(x,y - 1,obj_Blado)))
-		{
-			vsp = 0;
-		}
-		hasGravity = true;
-		scr_AI_HorizontalStraightMovement(true,true);
-		scr_AI_BunnyHop();
 		break;
 	}
 	
-	//Gordo Collision
-	
-	if ((turnableX) and ((place_meeting(x + sign(hspFinal),y,obj_Gordo)) or (place_meeting(x + sign(hspFinal),y,obj_BloodGordo)) or (place_meeting(x + sign(hspFinal),y,obj_Blado))))
-	{
-		walkDirX *= -1;
-		turnableX = false;
-		turnableXTimer = turnableXTimerMax;
-	}
-	if ((turnableY) and ((place_meeting(x,y + sign(vspFinal),obj_Gordo)) or (place_meeting(x,y + sign(vspFinal),obj_BloodGordo)) or (place_meeting(x,y + sign(vspFinal),obj_Blado))))
-	{
-		walkDirY *= -1;
-		turnableY = false;
-		turnableYTimer = turnableYTimerMax;
-	}
-	
-	//Turnable X Timer
-	
-	if (turnableXTimer > 0)
-	{
-		turnableXTimer -= 1;
-	}
-	else if (turnableXTimer == 0)
-	{
-		turnableX = true;
-		turnableXTimer = -1;
-	}
-	
-	//Turnable Y Timer
-	
-	if (turnableYTimer > 0)
-	{
-		turnableYTimer -= 1;
-	}
-	else if (turnableYTimer == 0)
-	{
-		turnableY = true;
-		turnableYTimer = -1;
-	}
-	
 	//Animation
+	if !(state == 1) image_speed = 1;
+	if (hurt)
+	{
+		sprite_index = sprHurt;
+		
+		state = 0;
+		timerState = 0;
+		timer = 100;
+	}
 	
-	image_speed = 1;
-	
-	sprite_index = sprIdle;
+	if (!hurt and timerEnable)
+	{
+		if (timer)
+		{
+			timer--;
+		}
+		else
+		{
+			var timer_val = 100;
+			switch (timerState)
+			{
+				case 0:
+				var rand = irandom_range(0, 99); //i should refine this.... OORRRR I could leave it alone
+				if (rand > 40) state = 2 else state = 3;
+				
+				timerEnable = false;
+				break;
+				
+				case 3:
+				timer_val = walkFrame;
+				
+				if (!walk)
+				{
+					timer_val = 0;
+					timerState = 0;
+					walk = 4;
+				}
+				else
+				{
+					walk--;
+				}
+				
+				image_index = floor(image_index) + 1;
+				timerEnable = false;
+				break;
+			}
+			timer = timer_val;
+		}
+	}
 }
 else
 {

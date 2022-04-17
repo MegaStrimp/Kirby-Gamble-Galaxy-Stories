@@ -94,6 +94,8 @@ enum debugObject
 	cairn,
 	bomber,
 	simirror,
+	gim,
+	hothead,
 	length
 }
 debugSelectedMax = debugObject.length - 1;
