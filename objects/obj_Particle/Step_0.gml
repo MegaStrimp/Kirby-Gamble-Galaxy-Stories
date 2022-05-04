@@ -111,6 +111,10 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		}
 	}
 	
+	//Angle
+	
+	image_angle += angleSpd;
+	
 	//Movement
 	
 	if (abs(fric) < abs(spdBuiltIn))
@@ -131,6 +135,50 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		angle += pi/8;
 		++time;
 	}
+	
+	//Collision
+	
+	if (collisionX != -1)
+	{
+		if place_meeting(x + hsp,y,collisionX)
+		{
+		    yplus = 0;
+		    while ((place_meeting(x + hsp,y - yplus,collisionX)) and (yplus <= abs(1 * hsp)))
+			{
+				yplus += 1;
+			}
+		    if place_meeting(x + hsp,y - yplus,collisionX)
+		    {
+		        while (!place_meeting(x + (sign(hsp) / 10),y,collisionX))
+				{
+					x += (sign(hsp) / 10);
+				}
+				if (stopRotationAfterCollision) angleSpd = 0;
+		        hsp = 0;
+		    }
+		    else
+		    {
+		        y -= yplus
+		    }
+		}
+		x += hsp;
+	}
+	
+	
+	if (collisionY != -1)
+	{
+		if (place_meeting(x,y + vsp,collisionY))
+		{
+			while (!place_meeting(x,y + (sign(vsp) / 10),collisionY))
+			{ 
+			    y += (sign(vsp) / 10);
+			}
+			if (stopRotationAfterCollision) angleSpd = 0;
+			vsp = 0;
+		}
+		y += vsp;
+	}
+	
 	//Invis Timer
 	
 	if (invisTimer > 0)
@@ -175,11 +223,6 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		par.destroyAfterAnimation = true;
 		trailTimer = trailTimerMax;
 	}
-	
-	//Position
-	
-	x += hsp;
-	y += vsp;
 	
 	//Animation
 	

@@ -7,15 +7,15 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 1,
-  "bbox_right": 71,
+  "bbox_left": 0,
+  "bbox_right": 63,
   "bbox_top": 0,
-  "bbox_bottom": 11,
+  "bbox_bottom": 4,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 72,
-  "height": 12,
+  "width": 64,
+  "height": 5,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"54a59ca2-7562-41b6-bc08-b1d93ec41d7e","path":"sprites/spr_CuttableGrass_Normal_Bottom/spr_CuttableGrass_Normal_Bottom.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"54a59ca2-7562-41b6-bc08-b1d93ec41d7e","path":"sprites/spr_CuttableGrass_Normal_Bottom/spr_CuttableGrass_Normal_Bottom.yy",},"LayerId":{"name":"7c74e33f-47a0-4b64-ac34-b75ea120bbcb","path":"sprites/spr_CuttableGrass_Normal_Bottom/spr_CuttableGrass_Normal_Bottom.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_CuttableGrass_Normal_Bottom","path":"sprites/spr_CuttableGrass_Normal_Bottom/spr_CuttableGrass_Normal_Bottom.yy",},"resourceVersion":"1.0","name":"54a59ca2-7562-41b6-bc08-b1d93ec41d7e","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"3a2f7c2a-bf8e-47ea-b6ca-43e5743229c7","path":"sprites/spr_CuttableGrass_Normal_Bottom/spr_CuttableGrass_Normal_Bottom.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"3a2f7c2a-bf8e-47ea-b6ca-43e5743229c7","path":"sprites/spr_CuttableGrass_Normal_Bottom/spr_CuttableGrass_Normal_Bottom.yy",},"LayerId":{"name":"7c74e33f-47a0-4b64-ac34-b75ea120bbcb","path":"sprites/spr_CuttableGrass_Normal_Bottom/spr_CuttableGrass_Normal_Bottom.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_CuttableGrass_Normal_Bottom","path":"sprites/spr_CuttableGrass_Normal_Bottom/spr_CuttableGrass_Normal_Bottom.yy",},"resourceVersion":"1.0","name":"3a2f7c2a-bf8e-47ea-b6ca-43e5743229c7","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_CuttableGrass_Normal_Bottom","path":"sprites/spr_CuttableGrass_Normal_Bottom/spr_CuttableGrass_Normal_Bottom.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"4de9e348-6ccb-44c4-8266-ae47432b5624","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"54a59ca2-7562-41b6-bc08-b1d93ec41d7e","path":"sprites/spr_CuttableGrass_Normal_Bottom/spr_CuttableGrass_Normal_Bottom.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"3f9a23b4-b283-47d7-909f-5723167c0610","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3a2f7c2a-bf8e-47ea-b6ca-43e5743229c7","path":"sprites/spr_CuttableGrass_Normal_Bottom/spr_CuttableGrass_Normal_Bottom.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 36,
-    "yorigin": 4,
+    "xorigin": 31,
+    "yorigin": -3,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_CuttableGrass_Normal_Bottom","path":"sprites/spr_CuttableGrass_Normal_Bottom/spr_CuttableGrass_Normal_Bottom.yy",},

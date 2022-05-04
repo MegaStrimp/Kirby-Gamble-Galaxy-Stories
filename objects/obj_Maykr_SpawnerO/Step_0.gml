@@ -8,7 +8,7 @@ scr_MaykrGrid(snap,snap);
 
 if (active)
 {
-	if ((spawnedItemIndex == obj_Wall) and (spawnedSlopeType != 0)) yOffset = y - 4;
+	if ((spawnedItemIndex == obj_ParentWall) and (spawnedSlopeType != 0)) yOffset = y - 4;
 	spawnedItem = instance_create_layer(xOffset,yOffset,spawnedLayer,spawnedItemIndex);
 	spawnedItem.state = spawnedState;
 	spawnedItem.dirX = spawnedDirX;
@@ -21,7 +21,7 @@ if (active)
 		spawnedItem.dir = spawnedDirX;
 		break;
 		
-		case obj_Wall:
+		case obj_ParentWall:
 		spawnedItem.visible = true;
 		spawnedItem.image_xscale = spawnedDirX;
 		switch (spawnedSlopeType)
@@ -89,7 +89,7 @@ else
 		spawnedStateMax = 0;
 		break;
 		
-		case obj_Wall:
+		case obj_ParentWall:
 		switch (spawnedSlopeType)
 		{
 			case 0:

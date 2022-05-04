@@ -22,10 +22,10 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	//Slopes
 	
-	if ((!place_meeting(x + hsp,y,obj_Wall)) and (place_meeting(x,y + 1,obj_Wall)))
+	if ((!place_meeting(x + hsp,y,obj_ParentWall)) and (place_meeting(x,y + 1,obj_ParentWall)))
 	{
 		yplus = 0;
-		while ((!place_meeting(x + hsp,y + yplus,obj_Wall) and yplus <= abs(hsp)))
+		while ((!place_meeting(x + hsp,y + yplus,obj_ParentWall) and yplus <= abs(hsp)))
 		{
 			yplus += 1;
 		}
@@ -34,14 +34,14 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	//Horizontal Collision
 	
-	if place_meeting(x + hsp,y,obj_Wall)
+	if place_meeting(x + hsp,y,obj_ParentWall)
 	{
 		yplus = 0;
-		while ((place_meeting(x + hsp,y - yplus,obj_Wall)) and (yplus <= abs(1 * hsp)))
+		while ((place_meeting(x + hsp,y - yplus,obj_ParentWall)) and (yplus <= abs(1 * hsp)))
 		{
 			yplus += 1;
 		}
-		if (!place_meeting(x + hsp,y - yplus,obj_Wall))
+		if (!place_meeting(x + hsp,y - yplus,obj_ParentWall))
 		{
 			y -= yplus
 		}
@@ -51,9 +51,9 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	//Vertical Collision
 	
-	if (place_meeting(x,y + vsp,obj_Wall))
+	if (place_meeting(x,y + vsp,obj_ParentWall))
 	{
-		while (!place_meeting(x,y + (sign(vsp) / 10),obj_Wall))
+		while (!place_meeting(x,y + (sign(vsp) / 10),obj_ParentWall))
 		{ 
 			y += (sign(vsp) / 10);
 		}

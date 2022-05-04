@@ -30,6 +30,8 @@ else if (spawnTimer == 0)
 	spawnedEnemy.spawnerRange = (spawnerRange * 2);
 	spawnedEnemy.paletteIndex = paletteIndex;
 	spawnedEnemy.spd = spd;
+	spawnedEnemy.groundSpd = groundSpd;
+	spawnedEnemy.groundSpdMax = groundSpdMax;
 	spawnedEnemy.character = character;
 	switch (character)
 	{
@@ -37,7 +39,7 @@ else if (spawnTimer == 0)
 		
 		case 0:
 		spawnedEnemy.sprIdle = spr_Onion_Normal_Idle;
-		spawnedEnemy.sprHurt = "self";
+		spawnedEnemy.sprHurt = -1;
 		break;
 	}
 	spawnedEnemy.sprite_index = spawnedEnemy.sprIdle;

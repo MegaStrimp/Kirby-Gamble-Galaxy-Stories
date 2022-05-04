@@ -13,9 +13,9 @@ function scr_Player_Normal()
 		if (player == 1) playerAbility = global.abilityP2;
 		
 		var grounded = false;
-		if (place_meeting(x,y + 1,obj_Wall))
+		if (place_meeting(x,y + 1,obj_ParentWall))
 		{
-			var collidingWall = instance_place(x,y + 1,obj_Wall);
+			var collidingWall = instance_place(x,y + 1,obj_ParentWall);
 			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) grounded = true;
 		}
 		else if (place_meeting(x,y + 1,obj_Spring))
@@ -25,9 +25,9 @@ function scr_Player_Normal()
 		}
 		
 		var wallAbove = false;
-		if (place_meeting(x,y - 1,obj_Wall))
+		if (place_meeting(x,y - 1,obj_ParentWall))
 		{
-			var collidingWall = instance_place(x,y - 1,obj_Wall);
+			var collidingWall = instance_place(x,y - 1,obj_ParentWall);
 			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) wallAbove = true;
 		}
 		
@@ -44,7 +44,7 @@ function scr_Player_Normal()
 			    {
 					if (!run)
 					{
-						if (!place_meeting(x,y + 1,obj_Wall))
+						if (!place_meeting(x,y + 1,obj_ParentWall))
 						{
 							var parJump = instance_create_depth(x,y,depth + 1,obj_Particle);
 							parJump.sprite_index = spr_Particle_Jump;
@@ -188,7 +188,7 @@ function scr_Player_Normal()
 		}
 		
 		var blockGap = false;
-		if ((run) and (hsp != 0) and (vsp == 0) and (!place_meeting(x,y + 1,obj_Wall)) and (!place_meeting(x + hsp,y,obj_Wall)) and (place_meeting(x + hsp,y + 1,obj_Wall))) blockGap = true;
+		if ((run) and (hsp != 0) and (vsp == 0) and (!place_meeting(x,y + 1,obj_ParentWall)) and (!place_meeting(x + hsp,y,obj_ParentWall)) and (place_meeting(x + hsp,y + 1,obj_ParentWall))) blockGap = true;
 		if ((hasGravity) and (!blockGap) and (playerAbility != playerAbilities.ufo))
 		{
 			var gravOffset = 0;
@@ -277,7 +277,7 @@ function scr_Player_Normal()
 						grabObj.particleTimer = grabObj.particleTimerMax;
 						grabObj.destroyTimer = 30;
 						var grabSpr = grabEnemy.sprHurt;
-						if ((grabSpr = -1) or (grabSpr = "self"))
+						if ((grabSpr = -1) or (grabSpr = -1))
 						{
 							grabObj.sprite_index = grabEnemy.sprite_index;
 						}
@@ -733,7 +733,7 @@ function scr_Player_Normal()
 									grabObj.dirX = grabEnemy.dirX;
 									grabObj.dmg = 60;
 									var grabSpr = grabEnemy.sprHurt;
-									if ((grabSpr = -1) or (grabSpr = "self"))
+									if ((grabSpr = -1) or (grabSpr = -1))
 									{
 										grabObj.sprite_index = grabEnemy.sprite_index;
 									}
@@ -1152,7 +1152,7 @@ function scr_Player_Normal()
 									grabObj.dirX = grabEnemy.dirX;
 									grabObj.dmg = 60;
 									var grabSpr = grabEnemy.sprHurt;
-									if ((grabSpr = -1) or (grabSpr = "self"))
+									if ((grabSpr = -1) or (grabSpr = -1))
 									{
 										grabObj.sprite_index = grabEnemy.sprite_index;
 									}
@@ -1228,7 +1228,7 @@ function scr_Player_Normal()
 													par.dir = dirX;
 													par.imageSpeed = 0;
 													par.destroyTimer = irandom_range(5,15);
-													if (place_meeting(x,y,obj_Wall)) instance_destroy();
+													if (place_meeting(x,y,obj_ParentWall)) instance_destroy();
 													dmg = 15;
 													spd = 5;
 													direction = angle;
@@ -1316,7 +1316,7 @@ function scr_Player_Normal()
 												par.dir = dirX;
 												par.imageSpeed = 0;
 												par.destroyTimer = irandom_range(5,15);
-												if (place_meeting(x,y,obj_Wall)) instance_destroy();
+												if (place_meeting(x,y,obj_ParentWall)) instance_destroy();
 												dmg = 15;
 												spd = 5;
 												direction = angle;
@@ -1581,11 +1581,11 @@ function scr_Player_Normal()
 					
 						if (attackNumber == playerAttacks.stoneNormal)
 						{
-							if ((!stoneFallen) and (!stoneReady) and (place_meeting(x,y + vsp + 1,obj_Wall)) and (sign(vsp) == 1))
+							if ((!stoneFallen) and (!stoneReady) and (place_meeting(x,y + vsp + 1,obj_ParentWall)) and (sign(vsp) == 1))
 							{
 								if (audio_is_playing(snd_StoneFallen)) audio_stop_sound(snd_StoneFallen);
 								audio_play_sound(snd_StoneFallen,0,false);
-								if (((sprite_index == sprStoneAttack1Rare) or (sprite_index == sprStoneAttack2Rare)) and (floor(image_index) == 6))
+								if ((sprite_index == sprStoneAttack1Rare) and (floor(image_index) == 6))
 								{
 									if (audio_is_playing(snd_JellyStone)) audio_stop_sound(snd_JellyStone);
 									audio_play_sound(snd_JellyStone,0,false);
@@ -2060,7 +2060,7 @@ function scr_Player_Normal()
 					    {
 							if ((keyAttackHold) and ((!attack) or (attackNumber == playerAttacks.fireAerial)))
 							{
-								if ((!grounded) and (place_meeting(x,y + 16,obj_Wall)))
+								if ((!grounded) and (place_meeting(x,y + 16,obj_ParentWall)))
 								{
 									hspLimit = false;
 									hsp = (movespeedBurst * (1 + (fireMagicCharcoalUpgrade / 4))) * dir;
@@ -2314,7 +2314,7 @@ function scr_Player_Normal()
 								image_index = 0;
 								attackTimer = 30;
 							}
-							else if ((!place_meeting(x,y + 1,obj_Wall)) and (keyDownHold))
+							else if ((!place_meeting(x,y + 1,obj_ParentWall)) and (keyDownHold))
 							{
 								if (audio_is_playing(snd_Spark6)) audio_stop_sound(snd_Spark6);
 								audio_play_sound(snd_Spark6,0,false);
@@ -2861,11 +2861,11 @@ function scr_Player_Normal()
 					
 					if (attackNumber == playerAttacks.gooeyStoneNormal)
 					{
-						if ((!stoneFallen) and (!stoneReady) and (place_meeting(x,y + vsp + 1,obj_Wall)) and (sign(vsp) == 1))
+						if ((!stoneFallen) and (!stoneReady) and (place_meeting(x,y + vsp + 1,obj_ParentWall)) and (sign(vsp) == 1))
 						{
 							if (audio_is_playing(snd_StoneFallen)) audio_stop_sound(snd_StoneFallen);
 							audio_play_sound(snd_StoneFallen,0,false);
-							if (((sprite_index == sprStoneAttack1Rare) or (sprite_index == sprStoneAttack2Rare)) and (floor(image_index) == 2))
+							if ((sprite_index == sprStoneAttack1Rare) and (floor(image_index) == 2))
 							{
 								if (audio_is_playing(snd_JellyStone)) audio_stop_sound(snd_JellyStone);
 								audio_play_sound(snd_JellyStone,0,false);
@@ -3267,7 +3267,7 @@ function scr_Player_Normal()
 		
 		//Auto Jump
 		
-		if ((!global.cutscene) and (canAutoJump) and (grounded) and (!place_meeting(x,y - 1,obj_Wall)) and (!attack))
+		if ((!global.cutscene) and (canAutoJump) and (grounded) and (!place_meeting(x,y - 1,obj_ParentWall)) and (!attack))
 		{
 			switch (playerCharacter)
 			{
@@ -3353,7 +3353,7 @@ function scr_Player_Normal()
 		
 		if ((!global.cutscene) and (playerAbility != playerAbilities.ufo) and (canClimb) and (place_meeting(x,y,obj_Ladder)))
 		{
-		    if ((((!place_meeting(x,y - 1,obj_Wall)) and (keyUpPressed)) or ((!place_meeting(x,y + 1,obj_Wall)) and (keyDownPressed))) and (!attack))
+		    if ((((!place_meeting(x,y - 1,obj_ParentWall)) and (keyUpPressed)) or ((!place_meeting(x,y + 1,obj_ParentWall)) and (keyDownPressed))) and (!attack))
 		    {
 				fallRoll = false;
 				if (fallHopCounter != 0) fallHopCounter = 0;
@@ -3368,7 +3368,7 @@ function scr_Player_Normal()
 		
 		//Float
 		
-		if ((!global.cutscene) and (canFloat) and ((carriedItem == carriedItems.none) and (carriedItemState != carriedItemStates.heavy)) and (playerAbility != playerAbilities.ufo) and ((keyJumpPressed) and (!place_meeting(x,y,obj_AntiFloat)) and (!place_meeting(x,y + 1,obj_Wall))) and (!attack))
+		if ((!global.cutscene) and (canFloat) and ((carriedItem == carriedItems.none) and (carriedItemState != carriedItemStates.heavy)) and (playerAbility != playerAbilities.ufo) and ((keyJumpPressed) and (!place_meeting(x,y,obj_AntiFloat)) and (!place_meeting(x,y + 1,obj_ParentWall))) and (!attack))
 		{
 			switch (playerCharacter)
 			{
@@ -3438,7 +3438,9 @@ function scr_Player_Normal()
 		{
 			if (place_meeting(x,y,obj_Key))
 			{
+				var touchedKey = instance_place(x,y,obj_Key);
 				carriedItem = carriedItems.key;
+				if (touchedKey.isKeyChestKey) carriedItem = carriedItems.keyChestKey;
 				carriedItemState = carriedItemStates.heavy;
 				carriedItemIndex = instance_place(x,y,obj_Key);
 				carriedItemIndex.active = false;
@@ -3500,7 +3502,7 @@ function scr_Player_Normal()
 					}
 					if (sparkMaxCharge) idlesprite = sprSparkMaxCharge;
 					
-					var collidedWall = instance_place(x,y + 1,obj_Wall);
+					var collidedWall = instance_place(x,y + 1,obj_ParentWall);
 					if ((playerCharacter == playerCharacters.kirby) and (collidedWall.slope))
 					{
 						switch (collidedWall.slopeType)
@@ -3916,9 +3918,9 @@ function scr_Player_Normal()
 		
 		//Walk Duck
 		
-		if ((!walkDuck) and (carriedItem == carriedItems.none) and (playerAbility != playerAbilities.ufo) and (place_meeting(x,y + (1 + vsp),obj_Wall)) and (vsp > 1) and (!attack))
+		if ((!walkDuck) and (carriedItem == carriedItems.none) and (playerAbility != playerAbilities.ufo) and (place_meeting(x,y + (1 + vsp),obj_ParentWall)) and (vsp > 1) and (!attack))
 		{
-			var collidingWall = instance_place(x,y + (1 + vsp),obj_Wall);
+			var collidingWall = instance_place(x,y + (1 + vsp),obj_ParentWall);
 			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal))))
 			{
 				switch (playerCharacter)
@@ -4028,10 +4030,10 @@ function scr_Player_Normal()
 		
 		//Walk Squish
 		
-		if ((!walkSquish) and (playerAbility != playerAbilities.ufo) and (place_meeting(x + hspFinal,y,obj_Wall)) and (place_meeting(x,y + 1,obj_Wall)) and (abs(hspFinal) >= (movespeed / 2)) and (!attack))
+		if ((!walkSquish) and (playerAbility != playerAbilities.ufo) and (place_meeting(x + hspFinal,y,obj_ParentWall)) and (place_meeting(x,y + 1,obj_ParentWall)) and (abs(hspFinal) >= (movespeed / 2)) and (!attack))
 		{
-			var walkSquishWall = instance_place(x + hspFinal,y,obj_Wall);
-			var bottomWall = instance_place(x,y + 1,obj_Wall);
+			var walkSquishWall = instance_place(x + hspFinal,y,obj_ParentWall);
+			var bottomWall = instance_place(x,y + 1,obj_ParentWall);
 			if ((carriedItem == carriedItems.none) and (!walkSquishWall.slope) and (!walkSquishWall.platform) and (!bottomWall.slope))
 			{
 				sprite_index = sprSquish;

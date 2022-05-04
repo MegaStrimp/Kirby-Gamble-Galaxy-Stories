@@ -10,7 +10,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	}
 	else
 	{
-		if (owner.attackNumber != playerAttacks.sparkNormal) instance_destroy();
+		if ((!enemy) and (owner.attackNumber != playerAttacks.sparkNormal)) instance_destroy();
 	}
 	
 	//Event Inherited

@@ -29,7 +29,7 @@ if (!global.pause)
 	}
 	else if (explodeTimer == 0)
 	{
-		with (obj_Wall)
+		with (obj_ParentWall)
 		{
 			if ((!isTop) and (canExplode))
 			{

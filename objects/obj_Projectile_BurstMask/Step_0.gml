@@ -10,7 +10,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	}
 	else
 	{
-		if (place_meeting(owner.x,owner.y + 1,obj_Wall))
+		if (place_meeting(owner.x,owner.y + 1,obj_ParentWall))
 		{
 			dmg = dmgMin;
 		}

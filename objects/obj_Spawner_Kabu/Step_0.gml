@@ -49,7 +49,7 @@ else if (spawnTimer == 0)
 		spawnedEnemy.sprWalk = spr_Kabu_Normal_Walk;
 		spawnedEnemy.sprRun = spr_Kabu_Normal_Run;
 		spawnedEnemy.sprDuck = spr_Kabu_Normal_Duck;
-		spawnedEnemy.sprHurt = "self";
+		spawnedEnemy.sprHurt = -1;
 		break;
 	}
 	spawnedEnemy.sprite_index = spawnedEnemy.sprIdle;

@@ -41,8 +41,11 @@ turnCounterMax = 2;
 animDir = -1;
 hasXKnockback = false;
 hasYKnockback = false;
+state2JumpState = 0;
 
 //Timers
 
 attackTimerMax = 45;
 attackTimer = attackTimerMax;
+phase2Timer = -1;
+phase2TimerMax = 30;

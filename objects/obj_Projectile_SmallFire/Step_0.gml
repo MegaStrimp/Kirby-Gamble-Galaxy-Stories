@@ -23,7 +23,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	//Stuck Inside Wall
 	
-	if (place_meeting(x,y,obj_Wall)) instance_destroy();
+	if (place_meeting(x,y,obj_ParentWall)) instance_destroy();
 	
 	//Destroy Timer
 	
@@ -39,9 +39,9 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	//Collision
 	
-	if (place_meeting(x,y + vsp,obj_Wall))
+	if (place_meeting(x,y + vsp,obj_ParentWall))
 	{
-		while (!place_meeting(x,y + (sign(vsp) / 10),obj_Wall))
+		while (!place_meeting(x,y + (sign(vsp) / 10),obj_ParentWall))
 		{ 
 			y += (sign(vsp) / 10);
 		}

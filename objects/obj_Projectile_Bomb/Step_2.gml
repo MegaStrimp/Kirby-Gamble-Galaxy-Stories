@@ -8,8 +8,9 @@ if ((!active) and (((pausable) and (!global.pause)) or (!pausable)))
 	{
 		if (enemy)
 		{
-			if (owner.object_index == obj_PoppyBrosJr)
+			switch (owner.object_index)
 			{
+				case obj_PoppyBrosJr:
 				with (owner)
 				{
 					switch (floor(handPos))
@@ -58,11 +59,17 @@ if ((!active) and (((pausable) and (!global.pause)) or (!pausable)))
 						break;
 					}
 				}
-			}
-			else
-			{
+				break;
+				
+				case obj_PoppyBrosSr:
+				xOffset = owner.handX;
+				yOffset = owner.handY;
+				break;
+				
+				default:
 				image_xscale = owner.dirX;
 				dirX = owner.dirX;
+				break;
 			}
 		}
 		else if (owner != id)

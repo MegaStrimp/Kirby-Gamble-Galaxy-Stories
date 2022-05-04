@@ -29,7 +29,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	//Touch Wall
 	
-	if ((charge) and (place_meeting(x + hsp,y,obj_Wall)))
+	if ((charge) and (place_meeting(x + hsp,y,obj_ParentWall)))
 	{
 		if (collided >= 4) instance_destroy();
 		collided += 1;

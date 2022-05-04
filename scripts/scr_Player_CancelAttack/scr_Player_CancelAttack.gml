@@ -58,6 +58,10 @@ function scr_Player_CancelAttack(argument0)
 			case playerAttacks.gooeyStoneNormal:
 			grav = gravNormal;
 			gravLimit = gravLimitNormal;
+			stoneParticleCount = 0;
+			stoneReleaseParticleCount = 0;
+			stoneReady = true;
+			stoneFallen = false;
 			break;
 			
 			case playerAttacks.stoneUp:

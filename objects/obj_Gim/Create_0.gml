@@ -22,11 +22,11 @@ sprHurt = spr_Gim_Normal_Hurt;
 sprJump = spr_Gim_Normal_Jump;
 sprFall = spr_Gim_Normal_Fall;
 sprPrep = spr_Gim_Normal_Prep;
-handFlingDown = spr_GimHand_Normal_FlingDown;
-handFlingMiddle = spr_GimHand_Normal_FlingMiddle;
-handFlingUp = spr_GimHand_Normal_FlingUp;
-handHoldClose = spr_GimHand_Normal_HoldClose;
-handHoldAway = spr_GimHand_Normal_HoldAway;
+sprHandFlingDown = spr_GimHand_Normal_FlingDown;
+sprHandFlingMiddle = spr_GimHand_Normal_FlingMiddle;
+sprHandFlingUp = spr_GimHand_Normal_FlingUp;
+sprHandHoldClose = spr_GimHand_Normal_HoldClose;
+sprHandHoldAway = spr_GimHand_Normal_HoldAway;
 
 //Other Variables
 

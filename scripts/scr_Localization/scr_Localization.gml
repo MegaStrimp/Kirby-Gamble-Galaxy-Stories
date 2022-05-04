@@ -748,7 +748,7 @@ function scr_Localization(argument0,argument1,argument2,argument3)
 	
 	#region Helper
 	i = 0;
-	dialogue[1][4][i][languages.english] = "";
+	dialogue[1][4][i][languages.english] = "Folks from all over have come together to help Kirby on his adventure! Play as a plethora of creatures from across Gamble Galaxy, from stubby Waddle Dees to invincible Gordos!";
 	dialogue[1][4][i][languages.turkish] = "";
 	dialogue[1][4][i][languages.german] = "";
 	dialogue[1][4][i][languages.italian] = "";

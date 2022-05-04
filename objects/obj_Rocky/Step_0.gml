@@ -28,7 +28,8 @@ if (setupTimer == 0)
 		sprHurt = sprHurtGround;
 		break;
 	}
-	if (state == 0) attackTimer = -1;
+	if ((state == 0) or (state == 2)) attackTimer = -1;
+	if (state == 2) phase2Timer = phase2TimerMax;
 }
 
 //Hurt Sprite
@@ -69,7 +70,7 @@ if (!global.pause)
 		
 		image_speed = 1;
 		
-		if ((hurt) and (sprHurt != "self"))
+		if ((hurt) and (sprHurt != -1))
 		{
 			sprite_index = sprHurt;
 		}
@@ -86,7 +87,7 @@ if (!global.pause)
 		
 		//Animation
 		
-		if ((hurt) and (sprHurt != "self"))
+		if ((hurt) and (sprHurt != -1))
 		{
 			image_speed = 1;
 			sprite_index = sprHurt;
@@ -110,6 +111,23 @@ if (!global.pause)
 				image_speed = 1;
 				sprite_index = sprIdle;
 			}
+		}
+		break;
+		
+		//Jump
+		
+		case 2:
+		//Animation
+		
+		image_speed = 1;
+		
+		if ((hurt) and (sprHurt != -1))
+		{
+			sprite_index = sprHurt;
+		}
+		else
+		{
+			sprite_index = sprIdle;
 		}
 		break;
 		
@@ -150,8 +168,7 @@ if (!global.pause)
 		}
 	}
 	
-	//Attack Timer
-	
+	#region Attack Timer
 	if ((!hurt) and (vsp == 0))
 	{
 		if (attackTimer > 0)
@@ -168,6 +185,44 @@ if (!global.pause)
 			attackTimer = attackTimerMax;
 		}
 	}
+	#endregion
+	
+	#region Phase 2 Timer
+	if (phase2Timer > 0)
+	{
+		phase2Timer -= 1;
+	}
+	else if (phase2Timer == 0)
+	{
+		switch (state2JumpState)
+		{
+			case 0:
+			state2JumpState = 1;
+			hasGravity = false;
+			hasXKnockback = false;
+			hasYKnockback = false;
+			hsp = 4;
+			vsp -= jumpspeed;
+			phase2Timer = 7;
+			break;
+			
+			case 1:
+			state2JumpState = 2;
+			hsp = 0;
+			vsp = 0;
+			phase2Timer = phase2TimerMax;
+			break;
+			
+			case 2:
+			state2JumpState = 0;
+			hasXKnockback = true;
+			hasYKnockback = true;
+			hasGravity = true;
+			phase2Timer = -1;
+			break;
+		}
+	}
+	#endregion
 }
 else
 {

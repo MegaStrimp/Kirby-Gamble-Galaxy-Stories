@@ -12,7 +12,7 @@ if (setupTimer == 0)
 		sprIdle = spr_EnemyParasol_Normal_Idle;
 		sprFloatReady = spr_EnemyParasol_Normal_FloatReady;
 		sprFloat = spr_EnemyParasol_Normal_Idle;
-		sprHurt = "self";
+		sprHurt = -1;
 		break;
 		
 		//Sci-Fi
@@ -21,7 +21,7 @@ if (setupTimer == 0)
 		sprIdle = spr_EnemyParasol_SciFi_Idle;
 		sprFloatReady = spr_EnemyParasol_SciFi_FloatReady;
 		sprFloat = spr_EnemyParasol_SciFi_Idle;
-		sprHurt = "self";
+		sprHurt = -1;
 		break;
 	}
 }
@@ -87,7 +87,7 @@ if (!global.pause)
 	
 	image_speed = 1;
 	
-	if ((hurt) and (sprHurt != "self"))
+	if ((hurt) and (sprHurt != -1))
 	{
 		sprite_index = sprHurt;
 	}

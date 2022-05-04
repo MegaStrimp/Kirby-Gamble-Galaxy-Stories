@@ -25,12 +25,14 @@ owner = id;
 hasGravity = true;
 hasXCollision = true;
 hasYCollision = true;
-collisionX = obj_Wall;
-collisionY = obj_Wall;
+collisionX = obj_ParentWall;
+collisionY = obj_ParentWall;
 dirX = 1;
 xOffset = 0;
 yOffset = 0;
 shake = 0;
+isKeyChestKey = false;
+auraAngle = 0;
 
 //Timer
 

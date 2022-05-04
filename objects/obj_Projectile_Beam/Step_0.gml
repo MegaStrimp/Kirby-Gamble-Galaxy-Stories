@@ -210,7 +210,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	if (state == 3)
 	{
-		if ((place_meeting(x,y,obj_Wall)) and (changeDirection))
+		if ((place_meeting(x,y,obj_ParentWall)) and (changeDirection))
 		{
 			changeDirection = false;
 			direction += 90 * -dirX;

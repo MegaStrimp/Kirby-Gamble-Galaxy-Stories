@@ -11,8 +11,8 @@
   "tilevsep": 0,
   "spriteNoExport": true,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "GreenGreens",
+    "path": "texturegroups/GreenGreens",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,

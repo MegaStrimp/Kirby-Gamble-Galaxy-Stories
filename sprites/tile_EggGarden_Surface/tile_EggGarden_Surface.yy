@@ -17,8 +17,8 @@
   "width": 288,
   "height": 120,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "EggGarden",
+    "path": "texturegroups/EggGarden",
   },
   "swatchColours": null,
   "gridX": 0,

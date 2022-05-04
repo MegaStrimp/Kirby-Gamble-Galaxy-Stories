@@ -46,6 +46,12 @@ hbSetup = true;
 hasXKnockback = false;
 hasYKnockback = false;
 hasDeathKnockback = false;
+handIndex = 0;
+handX = 0;
+handY = 0;
+handPath = 0;
+handXOffset = 18;
+handYOffset = -4;
 
 //Timers
 

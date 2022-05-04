@@ -1,395 +1,356 @@
 ///@description Main
 
-//Death
-
+#region Death
 if (hp <= 0)
 {
 	var fade = instance_create_depth(x,y,-999,obj_Fade);
 	fade.targetRoom = rm_StageSelect;
 }
+#endregion
 
-//Event Inherited
-
+#region Event Inherited
 event_inherited();
+#endregion
 
 if (!global.pause)
 {
-	//Hurt Player
-	
+	#region Hurt Player
 	scr_Enemy_HurtsPlayer(dmg);
+	#endregion
 	
-	//Follow Player
-	
-	if (instance_exists(obj_Player))
-	{
-		if (obj_Player.x >= x)
-		{
-			dirX = 1;
-		}
-		else
-		{
-			dirX = -1;
-		}
-	}
-	
+	#region Phases
 	switch (phase)
 	{
-		#region Inactive
-		case "inactive":
-		readyCounter += 1;
-		if (readyCounter >= readyCounterMax)
-		{
-			if (audio_is_playing(snd_DeathParticles)) audio_stop_sound(snd_DeathParticles);
-			audio_play_sound(snd_DeathParticles,0,false);
-			phase = "ready";
-			readyCounter = 0;
-		}
-		break;
-		#endregion
-		
-		#region Ready
-		case "ready":
-		if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
-		audio_play_sound(snd_BossHealth,0,false);
-		bossHbHp += hp / 60;
-		if (bossHbHp >= hp)
-		{
-			bossHbHp = hp;
-			phase = "1";
-			readyCounter = 0;
-		}
+		#region Ready Phase 1
+		case 0:
+		attackChooseTimer = attackChooseTimerMax;
+		phase = 1;
 		break;
 		#endregion
 		
 		#region Phase 1
-		case "1":
-		if (!attack)
-		{
-			if (!hurt) attackCounter += 1;
-			if (attackCounter >= attackCounterMax)
-			{
-				attackCount += 1;
-				attack = true;
-				switch (attackCount)
-				{
-					case 1:
-					attackState = "apple";
-					break;
-					
-					case 2:
-					attackState = choose("spit","apple");
-					break;
-					
-					case 3:
-					attackState = "spit";
-					attackCount = 0;
-					break;
-				}
-				switch (attackState)
-				{
-					case "spit":
-					spitVar = choose(0,1);
-					faceSprite = sprSpit;
-					break;
-					
-					case "apple":
-					appleSpawnCounter = appleSpawnCounterMax;
-					break;
-				}
-				attackCounter = 0;
-				attackCounterMax = irandom_range(60,90);
-			}
-		}
-		else
-		{
-			if (attackStop)
-			{
-				if (!hurt) attackStopCounter += 1;
-				if (attackStopCounter >= attackStopCounterMax)
-				{
-					attackStop = false;
-					attack = false;
-					attackState = "none";
-					faceSprite = sprIdle;
-					attackStopCounter = 0;
-				}
-			}
-			else
-			{
-				switch (attackState)
-				{
-					case "spit":
-					faceIndex += .1;
-					if (faceIndex >= sprite_get_number(sprSpit))
-					{
-						if (audio_is_playing(snd_Spit)) audio_stop_sound(snd_Spit);
-						audio_play_sound(snd_Spit,0,false);
-						switch (spitVar)
-						{
-							case 0:
-							var puff = instance_create_depth(x + (16 * dirX),y - 32,depth - 1,obj_Projectile_WhispyPuff);
-							puff.owner = id;
-							puff.enemy = true;
-							puff.destroyableByWall = true;
-							puff.destroyableByPlayer = true;
-							puff.destroyableByEnemy = false;
-							puff.destroyableByObject = true;
-							puff.hurtsObject = false;
-							puff.hurtsEnemy = false;
-							puff.hurtsPlayer = true;
-							var dirr = point_direction(x,y,obj_Player.x,obj_Player.y) + irandom_range(-5,5);
-							if (dirr < 0) dirr += 360;
-							if (dirr >= 360) dirr -= 360;
-							puff.direction = dirr;
-							puff.dirX = dirX;
-							spitCounter += 1;
-							faceIndex = 0;
-							if (spitCounter >= spitCounterMax)
-							{
-								spitCounter = 0;
-								attackStop = true;
-							}
-							break;
-							
-							case 1:
-							for (var i = 0; i < 3; i++)
-							{
-								var puff = instance_create_depth(x + (16 * dirX),y - 32,depth - 1,obj_Projectile_WhispyPuff);
-								puff.owner = id;
-								puff.enemy = true;
-								puff.destroyableByWall = true;
-								puff.destroyableByPlayer = true;
-								puff.destroyableByEnemy = false;
-								puff.destroyableByObject = true;
-								puff.hurtsObject = false;
-								puff.hurtsEnemy = false;
-								puff.hurtsPlayer = true;
-								var dirr = (90 - ((85 + (i * 5)) * dirX));
-								if (dirr < 0) dirr += 360;
-								if (dirr >= 360) dirr -= 360;
-								puff.direction = dirr;
-								puff.dirX = dirX;
-							}
-							faceIndex = 0;
-							attackStop = true;
-							break;
-						}
-					}
-					break;
-					
-					case "apple":
-					appleSpawnCounter += 1;
-					if (appleSpawnCounter >= appleSpawnCounterMax)
-					{
-						var attackChance = irandom_range(0,1);
-						switch (attackChance)
-						{
-							case 0:
-							var xx = x + ((irandom_range(29,99)) * dirX);
-							var yy = y - ((irandom_range(101,171)) * dirY);
-							var apple = instance_create_depth(xx,yy,depth - 1,obj_WhispyApple);
-							apple.owner = id;
-							apple.jumpspeed = random_range(2.5,7);
-							apple.movespeed = random_range(1,2.5);
-							apple.state = 1;
-							apple.dirX = dirX;
-							apple.hurtable = false;
-							apple.sprite_index = spr_Gordo_Normal_Idle;
-							break;
-							
-							default:
-							var xx = x + ((irandom_range(29,99)) * dirX);
-							var yy = y - ((irandom_range(101,171)) * dirY);
-							var apple = instance_create_depth(xx,yy,depth - 1,obj_WhispyApple);
-							apple.owner = id;
-							apple.jumpspeed = random_range(2.5,7);
-							apple.movespeed = random_range(1,2.5);
-							apple.state = 0;
-							apple.dirX = dirX;
-							break;
-						}
-						appleCounter += 1;
-						appleSpawnCounter = 0;
-						if (appleCounter >= appleCounterMax)
-						{
-							appleCounter = 0;
-							attackStop = true;
-						}
-					}
-					break;
-				}
-			}
-		}
+		case 1:
+		break;
+		#endregion
+		
+		#region Ready Phase 2
+		case 2:
 		break;
 		#endregion
 		
 		#region Phase 2
-		case "2":
-		//Movement
+		case 3:
+		break;
+		#endregion
 		
-		hsp = (movespeed / (attack + 1)) * walkDirX;
-		
-		/*if (place_meeting(x,y + 1,obj_Wall))
-		{
-			scaleExX = -.25;
-			scaleExY = .25;
-			vsp = -jumpspeed;
-		}*/
-		
-		//Attack
-		
-		if (!attack)
-		{
-			if (!hurt) attackCounter += 1;
-			if (attackCounter >= attackCounterMax)
-			{
-				attack = true;
-				attackState = choose("spit","apple");
-				switch (attackState)
-				{
-					case "spit":
-					faceSprite = sprSpit;
-					break;
-					
-					case "apple":
-					appleSpawnCounter = appleSpawnCounterMax;
-					break;
-				}
-				attackCounter = 0;
-				attackCounterMax = irandom_range(120,180);
-			}
-		}
-		else
-		{
-			if (attackStop)
-			{
-				attackStopCounter += 1;
-				if (attackStopCounter >= attackStopCounterMax)
-				{
-					attackStop = false;
-					attack = false;
-					attackState = "none";
-					faceSprite = sprIdle;
-					attackStopCounter = 0;
-				}
-			}
-			else
-			{
-				switch (attackState)
-				{
-					case "spit":
-					if (!hurt) faceIndex += .1;
-					if (faceIndex >= sprite_get_number(sprSpit))
-					{
-						if (audio_is_playing(snd_Spit)) audio_stop_sound(snd_Spit);
-						audio_play_sound(snd_Spit,0,false);
-						var puff = instance_create_depth(x + (16 * dirX),y - 32,depth - 1,obj_Projectile_WhispyPuff);
-						puff.owner = id;
-						puff.enemy = true;
-						puff.destroyableByWall = true;
-						puff.destroyableByPlayer = true;
-						puff.destroyableByEnemy = false;
-						puff.destroyableByObject = true;
-						puff.hurtsObject = false;
-						puff.hurtsEnemy = false;
-						puff.hurtsPlayer = true;
-						var dirr = point_direction(x,y,obj_Player.x,obj_Player.y) + irandom_range(-5,5);
-						if (dirr < 0) dirr += 360;
-						if (dirr >= 360) dirr -= 360;
-						puff.direction = dirr;
-						puff.dirX = dirX;
-						spitCounter += 1;
-						faceIndex = 0;
-						if (spitCounter >= spitCounterMax)
-						{
-							spitCounter = 0;
-							attackStop = true;
-						}
-					}
-					break;
-					
-					case "apple":
-					appleSpawnCounter += 1;
-					if (appleSpawnCounter >= appleSpawnCounterMax)
-					{
-						var xx = x + ((irandom_range(29,99)) * dirX);
-						var yy = y - ((irandom_range(101,171)) * dirY);
-						var apple = instance_create_depth(xx,yy,depth - 1,obj_WhispyApple);
-						apple.owner = id;
-						apple.dirX = dirX;
-						appleCounter += 1;
-						appleSpawnCounter = 0;
-						if (appleCounter >= appleCounterMax)
-						{
-							appleCounter = 0;
-							attackStop = true;
-						}
-					}
-					break;
-				}
-			}
-		}
+		#region Death
+		case 4:
 		break;
 		#endregion
 	}
+	#endregion
 	
-	if (faceSprite == sprIdle)
+	#region Timers
+	#region Phase Change Timer
+	if (phaseChangeTimer > 0)
 	{
-		idleCounter += 1;
-		if (idleCounter >= idleCounterMax)
+		phaseChangeTimer -= 1;
+	}
+	else if (phaseChangeTimer == 0)
+	{
+		phaseChangeTimer = -1;
+	}
+	#endregion
+	#region Attack Choose Timer
+	if (attackChooseTimer > 0)
+	{
+		attackChooseTimer -= 1;
+	}
+	else if (attackChooseTimer == 0)
+	{
+		var attack = -1;
+		if (phase == 1)
 		{
-			faceSprite = sprBlink;
-			idleCounter = 0;
-			idleCounterMax = irandom_range(30,120);
+			attack = choose(0,1,2,3,4);
+			attack = choose(0,1,3);
+			attack = 2;
 		}
-	}
-	
-	if (faceSprite == sprBlink)
-	{
-		faceIndex += .4;
-		if (faceIndex >= sprite_get_number(sprBlink))
+		else if (phase == 3)
 		{
-			faceSprite = sprIdle;
-			faceIndex = 0;
 		}
-	}
-	
-	gambleIndex += .2;
-	if (gambleIndex >= sprite_get_number(sprGamble))
-	{
-		gambleIndex = 0;
-	}
-	
-	gambleShakeCounter += 1;
-	if (gambleShakeCounter >= gambleShakeCounterMax)
-	{
-		if (gambleShake)
+		
+		switch (attack)
 		{
-			gambleShake = false;
+			#region Airpuff
+			case 0:
+			airpuffTimer = 0;
+			break;
+			#endregion
+			
+			#region Spike
+			case 1:
+			spikeTimer = 0;
+			break;
+			#endregion
+			
+			#region Throw Object
+			case 2:
+			throwObjectList = ds_list_create();
+			for (var i = 0; i < 4; i++)
+			{
+				while (throwObjectChance[i] > 0)
+				{
+					var maxChance = throwObjectChance[i] % 100;
+					if (maxChance == 0) maxChance = 100;
+					var rng = irandom_range(1,100);
+				
+					if (rng <= maxChance) ds_list_add(throwObjectList,i);
+					throwObjectChance[i] -= maxChance;
+				}
+			}
+
+			throwObjectTimer = 0;
+			throwObjectChance[0] = throwObjectChanceMax[0];
+			throwObjectChance[1] = throwObjectChanceMax[1];
+			throwObjectChance[2] = throwObjectChanceMax[2];
+			throwObjectChance[3] = throwObjectChanceMax[3];
+			break;
+			#endregion
+			
+			#region Big Airpuff
+			case 3:
+			bigAirpuffTimer = 0;
+			break;
+			#endregion
+			
+			#region Inhale
+			case 4:
+			inhaleTimer = 0;
+			break;
+			#endregion
+		}
+		attackChooseTimer = -1;
+	}
+	#endregion
+	
+	#region Airpuff Timer
+	if (airpuffTimer > 0)
+	{
+		airpuffTimer -= 1;
+	}
+	else if (airpuffTimer == 0)
+	{
+		if (airpuffCount < airpuffCountMax)
+		{
+			if (audio_is_playing(snd_AirPuff)) audio_stop_sound(snd_AirPuff);
+			audio_play_sound(snd_AirPuff,0,false);
+			var proj = instance_create_depth(x + ((28 + 22) * dirX),y - 52,depth + 1,obj_AirPuff);
+			proj.owner = id;
+			proj.enemy = true;
+			proj.destroyableByWall = true;
+			proj.destroyableByPlayer = true;
+			proj.destroyableByEnemy = false;
+			proj.destroyableByObject = false;
+			proj.hurtsObject = false;
+			proj.hurtsEnemy = false;
+			proj.hurtsPlayer = true;
+			proj.dirX = dirX;
+			proj.scale = 2;
+			proj.image_xscale = proj.dirX * 2;
+			proj.image_yscale = 2;
+			proj.hsp = ((6 * dirX) + hsp);
+			proj.decel = 0;
+			proj.grav = .02;
+			proj.gravLimit = 3;
+			proj.sprIdle = spr_AirPuff_Normal_Idle;
+			proj.sprDestroy = spr_AirPuff_Normal_Destroy;
+			proj.sprite_index = proj.sprIdle;
+			proj.character = 0;
+			airpuffCount += 1;
+			airpuffTimer = airpuffTimerMax;
 		}
 		else
 		{
-			gambleShake = true;
+			airpuffCount = 0;
+			attackChooseTimer = attackChooseTimerMax;
+			airpuffTimer = -1;
 		}
-		gambleShakeCounter = 0;
 	}
+	#endregion
 	
-	leafCounter += 1;
-	if (leafCounter >= leafCounterMax)
+	#region Spike Timer
+	if (spikeTimer > 0)
 	{
-		for (var i = 0; i < floor(room_height / 48); i++)
-		{
-			var par = instance_create_depth(camera_get_view_x(gameView) + camera_get_view_width(gameView) + 64,(i * 48),choose(depth + 1,depth - 1,obj_Player.depth - 1),obj_Particle);
-			par.sprite_index = spr_FallingLeaf_Normal_Idle;
-			par.direction = 180 + irandom_range(-5,5);
-			par.image_blend = c_green;
-			par.image_speed = random_range(.75,1.25);
-			par.spdBuiltIn = random_range(1,3);
-			par.destroyAfterAnimation = false;
-			par.destroyOutsideRoom = true;
-		}
-		leafCounter = 0;
+		spikeTimer -= 1;
 	}
+	else if (spikeTimer == 0)
+	{
+		if (spikeCount < spikeCountMax)
+		{
+			spikeCount += 1;
+			var proj = instance_create_depth(x + ((30 + (72 * spikeCount)) * dirX),y + 8,depth + 1,obj_Projectile_WhispyRoot);
+			proj.owner = id;
+			proj.enemy = true;
+			proj.destroyableByWall = false;
+			proj.destroyableByPlayer = false;
+			proj.destroyableByEnemy = false;
+			proj.destroyableByObject = false;
+			proj.hurtsObject = false;
+			proj.hurtsEnemy = false;
+			proj.hurtsPlayer = true;
+			proj.rootIndex = irandom_range(1,3);
+			if (spikeCount == spikeCountMax) proj.recoilTimer = 120;
+			spikeTimer = spikeTimerMax;
+		}
+		else
+		{
+			spikeCount = 0;
+			attackChooseTimer = attackChooseTimerMax;
+			spikeTimer = -1;
+		}
+	}
+	#endregion
 	
-	if ((phase != "inactive") and (phase != "ready")) bossHbHp = hp;
+	#region Throw Object Timer
+	if (throwObjectTimer > 0)
+	{
+		throwObjectTimer -= 1;
+	}
+	else if (throwObjectTimer == 0)
+	{
+		var objValue = ds_list_find_value(throwObjectList,throwObjectCount);
+		
+		var obj = instance_create_depth(x + ((30 + irandom_range(0,320)) * dirX),irandom_range(0,72),depth - 101,obj_WhispyApple);
+		obj.objValue = objValue;
+		switch (objValue)
+		{
+			#region Apple
+			case 0:
+			obj.sprite_index = sprApple;
+			break;
+			#endregion
+			
+			#region Gordo
+			case 1:
+			obj.sprite_index = spr_Gordo_Normal_Idle;
+			break;
+			#endregion
+			
+			#region Como
+			case 2:
+			obj.sprite_index = spr_Como_Normal_Idle;
+			break;
+			#endregion
+			
+			#region Waddle Dee
+			case 3:
+			obj.sprite_index = spr_WaddleDee_Normal_Fall;
+			break;
+			#endregion
+		}
+		
+		throwObjectCount += 1;
+		if (throwObjectCount < (ds_list_size(throwObjectList)))
+		{
+			show_debug_message(string(throwObjectCount));
+			show_debug_message(string(ds_list_size(throwObjectList)));
+			throwObjectTimer = throwObjectTimerMax;
+		}
+		else
+		{
+			ds_list_destroy(throwObjectList);
+			throwObjectCount = 0;
+			attackChooseTimer = attackChooseTimerMax;
+			throwObjectTimer = -1;
+		}
+	}
+	#endregion
+	
+	#region Big Airpuff Timer
+	if (bigAirpuffTimer > 0)
+	{
+		bigAirpuffTimer -= 1;
+	}
+	else if (bigAirpuffTimer == 0)
+	{
+		switch (bigAirpuffState)
+		{
+			case 0:
+			bigAirpuffState = 1;
+			bigAirpuffTimer = 30;
+			break;
+			
+			case 1:
+			bigAirpuffState = 2;
+			if (audio_is_playing(snd_AirPuff)) audio_stop_sound(snd_AirPuff);
+			audio_play_sound(snd_AirPuff,0,false);
+			var proj = instance_create_depth(x + ((28 + 22) * dirX),y - 52,depth + 1,obj_AirPuff);
+			proj.owner = id;
+			proj.enemy = true;
+			proj.destroyableByWall = true;
+			proj.destroyableByPlayer = false;
+			proj.destroyableByEnemy = false;
+			proj.destroyableByObject = false;
+			proj.hurtsObject = false;
+			proj.hurtsEnemy = false;
+			proj.hurtsPlayer = true;
+			proj.dirX = dirX;
+			proj.scale = 4;
+			proj.image_xscale = proj.dirX * 4;
+			proj.image_yscale = 4;
+			proj.hsp = ((10 * dirX) + hsp);
+			proj.sprIdle = spr_AirPuff_Normal_Idle;
+			proj.sprDestroy = spr_AirPuff_Normal_Destroy;
+			proj.sprite_index = proj.sprIdle;
+			proj.character = 0;
+			bigAirpuffTimer = 90;
+			break;
+			
+			case 2:
+			bigAirpuffState = 0;
+			attackChooseTimer = attackChooseTimerMax;
+			bigAirpuffTimer = -1;
+			break;
+		}
+	}
+	#endregion
+	
+	#region Inhale Timer
+	if (inhaleTimer > 0)
+	{
+		inhaleTimer -= 1;
+	}
+	else if (inhaleTimer == 0)
+	{
+		inhaleTimer = -1;
+	}
+	#endregion
+	#endregion
+	
+	#region Gamble Sprite
+	if (global.progression == 0)
+	{
+		gambleIndex += .2;
+		if (gambleIndex >= sprite_get_number(sprGamble))
+		{
+			gambleIndex = 0;
+		}
+		
+		#region Gamble Shake Timer
+		if (gambleShakeTimer > 0)
+		{
+			gambleShakeTimer -= 1;
+		}
+		else if (gambleShakeTimer == 0)
+		{
+			gambleShake = !gambleShake;
+			gambleShakeTimer = gambleShakeTimerMax;
+		}
+		#endregion
+	}
+	#endregion
+	
+	#region Healthbar HP
+	if (phase != 0) bossHbHp = hp;
+	#endregion
 }

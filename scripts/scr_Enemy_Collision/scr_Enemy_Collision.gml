@@ -71,9 +71,9 @@ function scr_Enemy_Collision()
 	
 	y += vspFinal;
 	
-	if ((place_meeting(x,y,obj_Wall)) and ((hasXCollision) or (hasYCollision)))
+	if ((place_meeting(x,y,obj_ParentWall)) and ((hasXCollision) or (hasYCollision)))
 	{
-		var collidingWall = instance_place(x,y,obj_Wall);
+		var collidingWall = instance_place(x,y,obj_ParentWall);
 		if ((hasYCollision) and (collidingWall.isTop))
 		{
 			while (place_meeting(x,y,collidingWall)) y -= 1;

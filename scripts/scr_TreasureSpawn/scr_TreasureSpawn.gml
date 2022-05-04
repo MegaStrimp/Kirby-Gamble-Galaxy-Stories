@@ -18,7 +18,7 @@ function scr_TreasureSpawn(argument0,argument1)
 	var treasureIndex = argument1;
 	var itemX = x;
 	var itemY = y;
-	if (!place_meeting(x,touchedPlayer.y - 24,obj_Wall)) itemY = touchedPlayer.y - 24;
+	if (!place_meeting(x,touchedPlayer.y - 24,obj_ParentWall)) itemY = touchedPlayer.y - 24;
 	var treasure = instance_create_depth(itemX,itemY,depth - 1,obj_Treasure);
 	
 	switch (treasureCategory)

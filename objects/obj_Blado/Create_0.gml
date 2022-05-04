@@ -17,7 +17,7 @@ gravLimitNormal = 5;
 mask_index = spr_16Square_Mask;
 
 sprIdle = spr_Blado_Normal_Idle;
-sprHurt = "self";
+sprHurt = -1;
 
 //Other Variables
 

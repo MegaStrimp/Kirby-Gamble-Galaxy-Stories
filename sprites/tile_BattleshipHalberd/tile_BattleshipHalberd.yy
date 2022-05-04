@@ -17,8 +17,8 @@
   "width": 552,
   "height": 408,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "Halberd",
+    "path": "texturegroups/Halberd",
   },
   "swatchColours": null,
   "gridX": 0,

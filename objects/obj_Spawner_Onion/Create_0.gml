@@ -3,6 +3,8 @@
 //Physics
 
 spd = 1;
+groundSpd = 0;
+groundSpdMax = 1.5;
 
 //Other Variables
 
@@ -34,8 +36,8 @@ hasYCollision = false;
 clampPositionX = false;
 clampPositionY = false;
 offScreenTurning = true;
-collisionX = obj_Wall;
-collisionY = obj_Wall;
+collisionX = obj_ParentWall;
+collisionY = obj_ParentWall;
 hasXKnockback = true;
 hasYKnockback = true;
 hasDeathKnockback = false;

@@ -72,7 +72,7 @@ if (!global.pause)
 			}
 		}
 		
-		if ((hurt) and (sprHurt != "self"))
+		if ((hurt) and (sprHurt != -1))
 		{
 			sprite_index = sprHurt;
 		}
@@ -96,7 +96,7 @@ if (!global.pause)
 			image_speed = 2 * animDir;
 		}
 		
-		if ((hurt) and (sprHurt != "self"))
+		if ((hurt) and (sprHurt != -1))
 		{
 			sprite_index = sprHurt;
 		}

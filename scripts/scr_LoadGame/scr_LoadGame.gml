@@ -148,8 +148,8 @@ function scr_LoadGame(argument0)
 	global.characterP2 = ini_read_string("playerCustomization","characterP2",playerCharacters.kirby);
 	global.isHelperP1 = ini_read_real("playerCustomization","isHelperP1",false);
 	global.isHelperP2 = ini_read_real("playerCustomization","isHelperP2",false);
-	global.familiarP1 = ini_read_string("playerCustomization","familiarP1",false);
-	global.familiarP2 = ini_read_string("playerCustomization","familiarP2",false);
+	global.familiarP1 = ini_read_string("playerCustomization","familiarP1",familiars.none);
+	global.familiarP2 = ini_read_string("playerCustomization","familiarP2",familiars.none);
 	
 	global.hatTypeCutterP1 = ini_read_string("playerCustomization","hatTypeCutterP1","kssu");
 	global.hatTypeBeamP1 = ini_read_string("playerCustomization","hatTypeBeamP1","kssu");
@@ -206,6 +206,7 @@ function scr_LoadGame(argument0)
 	global.hatPaletteCutterKSSUP1 = ini_read_real("playerCustomization","hatPaletteCutterKSSUP1",0);
 	global.hatPaletteBeamKSSUP1 = ini_read_real("playerCustomization","hatPaletteBeamKSSUP1",0);
 	global.hatPaletteBeamMarxSoulP1 = ini_read_real("playerCustomization","hatPaletteBeamMarxSoulP1",0);
+	global.hatPaletteMysticBeamGGSP1 = ini_read_real("playerCustomization","hatPaletteMysticBeamGGSP1",0);
 	global.hatPaletteStoneKSSUP1 = ini_read_real("playerCustomization","hatPaletteStoneKSSUP1",0);
 	global.hatPaletteStoneModernP1 = ini_read_real("playerCustomization","hatPaletteStoneModernP1",0);
 	global.hatPaletteUfoKSSUP1 = ini_read_real("playerCustomization","hatPaletteUfoKSSUP1",0);
@@ -237,6 +238,7 @@ function scr_LoadGame(argument0)
 	global.hatPaletteCutterKSSUP2 = ini_read_real("playerCustomization","hatPaletteCutterKSSUP2",0);
 	global.hatPaletteBeamKSSUP2 = ini_read_real("playerCustomization","hatPaletteBeamKSSUP2",0);
 	global.hatPaletteBeamMarxSoulP2 = ini_read_real("playerCustomization","hatPaletteBeamMarxSoulP2",0);
+	global.hatPaletteMysticBeamGGSP2 = ini_read_real("playerCustomization","hatPaletteMysticBeamGGSP2",0);
 	global.hatPaletteStoneKSSUP2 = ini_read_real("playerCustomization","hatPaletteStoneKSSUP2",0);
 	global.hatPaletteStoneModernP2 = ini_read_real("playerCustomization","hatPaletteStoneModernP2",0);
 	global.hatPaletteUfoKSSUP2 = ini_read_real("playerCustomization","hatPaletteUfoKSSUP2",0);

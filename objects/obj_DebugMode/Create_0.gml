@@ -96,6 +96,8 @@ enum debugObject
 	simirror,
 	gim,
 	hothead,
+	sparky,
+	yolky,
 	length
 }
 debugSelectedMax = debugObject.length - 1;

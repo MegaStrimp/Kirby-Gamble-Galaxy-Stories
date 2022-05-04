@@ -46,7 +46,7 @@ else if (spawnTimer == 0)
 		
 		case 0:
 		spawnedEnemy.sprPot = spr_Wapod_Normal_Pot;
-		spawnedEnemy.sprHurt = "self";
+		spawnedEnemy.sprHurt = -1;
 		spawnedEnemy.sprGhostSpawn = spr_Wapod_Normal_Spawn;
 		spawnedEnemy.sprGhostIdle = spr_Wapod_Normal_Idle;
 		spawnedEnemy.sprGhostHurt = spr_Wapod_Normal_Hurt;

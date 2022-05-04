@@ -31,7 +31,7 @@ paletteIndex = spr_BroomHatter_Normal_Palette_YellowBroom;
 hp = 16;
 dmg = 1;
 points = 200;
-particleReleased = false;
+particleReleased = true;
 turnCounter = 0;
 turnCounterMax = 2;
 

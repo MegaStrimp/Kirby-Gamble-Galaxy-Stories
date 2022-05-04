@@ -11,11 +11,24 @@ if (setupTimer == 0)
 		case 0:
 		sprIdle = spr_Key_Normal;
 		break;
+		
+		//Key Chest Key
+		
+		case 1:
+		sprIdle = spr_KeyChest_Normal_Key;
+		break;
 	}
 }
 
 if (!global.pause)
 {
+	//Rotate
+	
+	if (isKeyChestKey)
+	{
+		auraAngle += 1;
+	}
+	
 	//Shake
 	
 	if (place_meeting(x,y,obj_InhaleMask))
@@ -112,6 +125,12 @@ if (!global.pause)
 		}
 		
 		y += vsp;
+		
+		depth = layer_get_depth("Environment");
+	}
+	else
+	{
+		depth = layer_get_depth("Player");
 	}
 	
 	//Animation

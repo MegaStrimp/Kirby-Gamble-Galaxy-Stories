@@ -198,6 +198,7 @@ enum playerCharacters
 	keeby,
 	gooey,
 	magolor,
+	
 	waddleDee,
 	waddleDoo,
 	brontoBurt,
@@ -208,6 +209,16 @@ enum playerCharacters
 	gordo,
 	bloodGordo,
 	mysticDoo
+}
+
+enum familiars
+{
+	none,
+	gamble,
+	happyPea,
+	epicJar,
+	krackle,
+	omegaMatter
 }
 
 enum playerAbilities
@@ -372,7 +383,8 @@ enum carriedItems
 {
 	none,
 	bomb,
-	key
+	key,
+	keyChestKey
 }
 
 enum carriedItemStates
@@ -400,14 +412,6 @@ enum progression
 	chapter1End
 }
 
-enum cutscenes
-{
-	story_Intro,
-	story_MeetingGamble,
-	
-	exTut_AntiFloat
-}
-
 enum talkingCharacter
 {
 	kirby,
@@ -430,8 +434,8 @@ global.sprayPaintP1 = spr_Kirby_Normal_Palette_FriendlyPink;
 global.sprayPaintP2 = spr_Kirby_Normal_Palette_Yellow;
 global.abilityP1 = playerAbilities.none;
 global.abilityP2 = playerAbilities.none;
-global.familiarP1 = "Gamble";
-global.familiarP2 = "Gamble";
+global.familiarP1 = familiars.gamble;
+global.familiarP2 = familiars.gamble;
 global.roomPrevious = rm_Setup;
 global.roomNext = rm_Starcutter;
 global.roomCheckpoint = rm_Setup;

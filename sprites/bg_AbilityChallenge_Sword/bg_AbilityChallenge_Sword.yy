@@ -17,8 +17,8 @@
   "width": 120,
   "height": 120,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "AbilityChallenge",
+    "path": "texturegroups/AbilityChallenge",
   },
   "swatchColours": null,
   "gridX": 0,

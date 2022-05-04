@@ -6,7 +6,7 @@ if (parasol)
 {
 	gravLimit = gravLimitParasol;
 	grav = gravParasol;
-	if ((!instance_exists(parasolObject)) or (place_meeting(x,y + 1,obj_Wall))) parasol = false;
+	if ((!instance_exists(parasolObject)) or (place_meeting(x,y + 1,obj_ParentWall))) parasol = false;
 }
 else
 {
@@ -46,20 +46,20 @@ if (!global.pause)
 	
 	//Moving Walls
 	/*
-	if (place_meeting(x,y + 1,obj_Wall))
+	if (place_meeting(x,y + 1,obj_ParentWall))
 	{
-		var movingWall = instance_place(x,y + 1,obj_Wall);
+		var movingWall = instance_place(x,y + 1,obj_ParentWall);
 		if (movingWall.hsp != 0) x += movingWall.hsp;
 		if (movingWall.vsp != 0) y += movingWall.vsp;
 	}
-	if (place_meeting(x,y - 1,obj_Wall))
+	if (place_meeting(x,y - 1,obj_ParentWall))
 	{
-		var movingWall = instance_place(x,y - 1,obj_Wall);
+		var movingWall = instance_place(x,y - 1,obj_ParentWall);
 		if (movingWall.vsp != 0) y += movingWall.vsp;
 	}
-	if (place_meeting(x + sign(hspFinal),y,obj_Wall))
+	if (place_meeting(x + sign(hspFinal),y,obj_ParentWall))
 	{
-		var movingWall = instance_place(x + sign(hspFinal),y,obj_Wall);
+		var movingWall = instance_place(x + sign(hspFinal),y,obj_ParentWall);
 		if (movingWall.hsp != 0) x += movingWall.hsp;
 	}
 	*/
@@ -96,7 +96,7 @@ if (!global.pause)
 			var iceCube = instance_create_depth(x,y,depth,obj_Projectile_IceCube);
 			iceCube.dmg = 36;
 			iceCube.dirX = dirX;
-			if (sprHurt == "self")
+			if (sprHurt == -1)
 			{
 				iceCube.sprHurt = sprite_index;
 				iceCube.enemyImageIndex = image_index;
@@ -335,7 +335,7 @@ if (!global.pause)
 				abilityDropStar.sprite_index = spr_AbilityDropStar_Normal;
 				break;
 			}
-			while (place_meeting(abilityDropStar.x,abilityDropStar.y + 1,obj_Wall)) abilityDropStar.y -= 1;
+			while (place_meeting(abilityDropStar.x,abilityDropStar.y + 1,obj_ParentWall)) abilityDropStar.y -= 1;
 		}
 		
 		#region Bestiary Variables
@@ -520,7 +520,7 @@ if (!global.pause)
 	
 	if (hp > 0)
 	{
-		if ((setupTimer == 0) and (groundFailsafe)) while (place_meeting(x,y + 1,obj_Wall)) y -= 1;
+		if ((setupTimer == 0) and (groundFailsafe)) while (place_meeting(x,y + 1,obj_ParentWall)) y -= 1;
 		scr_Enemy_Collision();
 	}
 	
@@ -1057,7 +1057,7 @@ if (!global.pause)
 	}
 	else if (shineEffectTimer == 0)
 	{
-		var particle = instance_create_depth(x + irandom_range(-(sprite_get_width(sprite_index) / 2),(sprite_get_width(sprite_index) / 2)),y + irandom_range(-(sprite_get_height(sprite_index) / 2),(sprite_get_height(sprite_index) / 2)),depth,obj_Particle);
+		var particle = instance_create_depth(x + irandom_range(-(sprite_get_width(sprite_index) / 2),(sprite_get_width(sprite_index) / 2)),y + irandom_range(-(sprite_get_height(sprite_index) / 2),(sprite_get_height(sprite_index) / 2)),depth - 1,obj_Particle);
 		particle.sprite_index = spr_Particle_SmallSparkle_White;
 		particle.destroyAfterAnimation = true;
 		shineEffectTimer = shineEffectTimerMax;

@@ -23,5 +23,5 @@ enemy = false;
 hasGravity = true;
 hasXCollision = true;
 hasYCollision = true;
-collisionX = obj_Wall;
-collisionY = obj_Wall;
+collisionX = obj_ParentWall;
+collisionY = obj_ParentWall;

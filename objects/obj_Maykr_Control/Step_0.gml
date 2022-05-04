@@ -185,7 +185,7 @@ if (!active)
 						file_text_writeln(savedFile);
 						switch (spawnedItemIndex)
 						{
-							case obj_Wall:
+							case obj_ParentWall:
 							file_text_write_string(savedFile,spawnedSlopeType);
 							file_text_writeln(savedFile);
 							break;
@@ -332,7 +332,7 @@ if (!active)
 									
 										switch (spawner.spawnedItemIndex)
 										{
-											case obj_Wall:
+											case obj_ParentWall:
 											var spawnerSlopeTypeLoad = real(file_text_read_string(loadedFile));
 											file_text_readln(loadedFile);
 											spawner.spawnedSlopeType = spawnerSlopeTypeLoad;
@@ -415,7 +415,7 @@ if (!active)
 					scr_Maykr_Inventory(global.gambleMaykrMenu,inventoryPage);
 					spawnedLayer = "collision";
 					spawnedItemString = "debugWall";
-					spawnedItemIndex = obj_Wall;
+					spawnedItemIndex = obj_ParentWall;
 					spawnedSprite = spr_Maykr_Spawner_DebugWall;
 					spawnedSlopeType = 0;
 					snap = 24;
@@ -456,22 +456,22 @@ if (!active)
 					switch (spawnedItemString)
 					{
 						case "debugWall":
-						spawnedItemIndex = obj_Wall;
+						spawnedItemIndex = obj_ParentWall;
 						spawnedSprite = spr_Maykr_Spawner_DebugWall;
 						break;
 						
 						case "asteroidFieldsRedFront":
-						spawnedItemIndex = obj_Wall;
+						spawnedItemIndex = obj_ParentWall;
 						spawnedSprite = spr_Maykr_Spawner_AsteroidFieldsRedFront;
 						break;
 						
 						case "asteroidFieldsGreenFront":
-						spawnedItemIndex = obj_Wall;
+						spawnedItemIndex = obj_ParentWall;
 						spawnedSprite = spr_Maykr_Spawner_AsteroidFieldsGreenFront;
 						break;
 						
 						case "asteroidFieldsBlueFront":
-						spawnedItemIndex = obj_Wall;
+						spawnedItemIndex = obj_ParentWall;
 						spawnedSprite = spr_Maykr_Spawner_AsteroidFieldsBlueFront;
 						break;
 						
@@ -515,7 +515,7 @@ if (!active)
 				spawner.spawnedDirX = dirX;
 				switch (spawnedItemIndex)
 				{
-					case obj_Wall:
+					case obj_ParentWall:
 					spawner.spawnedSprite = -1;
 					spawner.spawnedSlopeType = spawnedSlopeType;
 					break;

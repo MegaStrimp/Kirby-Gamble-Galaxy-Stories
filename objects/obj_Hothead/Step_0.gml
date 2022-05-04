@@ -58,7 +58,7 @@ if (!global.pause)
 		
 		image_speed = 1;
 		
-		if ((hurt) and (sprHurt != "self"))
+		if ((hurt) and (sprHurt != -1))
 		{
 			sprite_index = sprHurt;
 		}
@@ -101,7 +101,7 @@ if (!global.pause)
 		
 		image_speed = 1;
 		
-		if ((hurt) and (sprHurt != "self"))
+		if ((hurt) and (sprHurt != -1))
 		{
 			sprite_index = sprHurt;
 		}
@@ -181,7 +181,6 @@ if (!global.pause)
 					fire.hurtsPlayer = true;
 					fire.dirX = dirX;
 					fire.movespeed = (6 * dirX);
-					fire.jumpspeed = 2;
 					fire.paletteIndex = paletteIndex;
 				}
 				else
@@ -257,7 +256,6 @@ if (!global.pause)
 			projectile.hurtsPlayer = true;
 			projectile.hsp = 2 * dirX;
 	        projectile.vsp = random_range(-.5,.5);
-			projectile.paletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
 			fireTimer = fireTimerMax;
 		}
 	}

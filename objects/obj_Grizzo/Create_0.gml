@@ -36,10 +36,13 @@ heavy = true;
 gettingInhaled = false;
 attack = false;
 attackState = 0;
+attackHop = false;
 inhalePower = 0;
 inhalePowerMax = 45;
 
 //Timers
 
-attackTimerMax = 90;
+attackTimerMax = 150;
 attackTimer = attackTimerMax;
+particleTimer = -1;
+particleTimerMax = 5;

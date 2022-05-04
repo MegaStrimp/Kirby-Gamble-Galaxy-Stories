@@ -15,7 +15,7 @@ sprPressed = spr_Button_Normal_Pressed;
 //Other Variables
 
 character = 0;
-state = 1;
+state = 0;
 number = 0;
 activate = false;
 active = false;
@@ -23,8 +23,8 @@ damageType = damageTypes.none;
 hasGravity = true;
 hasXCollision = true;
 hasYCollision = true;
-collisionX = obj_Wall;
-collisionY = obj_Wall;
+collisionX = obj_ParentWall;
+collisionY = obj_ParentWall;
 destroyAfterPressed = true;
 
 //Timers

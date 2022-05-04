@@ -55,7 +55,7 @@ function scr_Player_Climb()
 		
 		//Jump
 		
-		if ((!global.cutscene) and (keyJumpPressed) and (!place_meeting(x,y,obj_Wall)))
+		if ((!global.cutscene) and (keyJumpPressed) and (!place_meeting(x,y,obj_ParentWall)))
 		{
 			if (carriedItem == carriedItems.none) fallRoll = true;
 		    vsp = -jumpspeed;
@@ -65,7 +65,7 @@ function scr_Player_Climb()
 		
 		//Go Under The Ladder
 		
-		if ((place_meeting(x,y + 1,obj_Wall)) and (!instance_place(x,y + 1,obj_Wall).platform) and (keyDownHold)) state = playerStates.normal;
+		if ((place_meeting(x,y + 1,obj_ParentWall)) and (!instance_place(x,y + 1,obj_ParentWall).platform) and (keyDownHold)) state = playerStates.normal;
 		
 		//Collision
 		

@@ -201,6 +201,7 @@ function scr_SaveGame(argument0)
 	ini_write_real("playerCustomization","hatPaletteCutterKSSUP1",global.hatPaletteCutterKSSUP1);
 	ini_write_real("playerCustomization","hatPaletteBeamKSSUP1",global.hatPaletteBeamKSSUP1);
 	ini_write_real("playerCustomization","hatPaletteBeamMarxSoulP1",global.hatPaletteBeamMarxSoulP1);
+	ini_write_real("playerCustomization","hatPaletteMysticBeamGGSP1",global.hatPaletteMysticBeamGGSP1);
 	ini_write_real("playerCustomization","hatPaletteStoneKSSUP1",global.hatPaletteStoneKSSUP1);
 	ini_write_real("playerCustomization","hatPaletteStoneModernP1",global.hatPaletteStoneModernP1);
 	ini_write_real("playerCustomization","hatPaletteUfoKSSUP1",global.hatPaletteUfoKSSUP1);
@@ -232,6 +233,7 @@ function scr_SaveGame(argument0)
 	ini_write_real("playerCustomization","hatPaletteCutterKSSUP2",global.hatPaletteCutterKSSUP2);
 	ini_write_real("playerCustomization","hatPaletteBeamKSSUP2",global.hatPaletteBeamKSSUP2);
 	ini_write_real("playerCustomization","hatPaletteBeamMarxSoulP2",global.hatPaletteBeamMarxSoulP2);
+	ini_write_real("playerCustomization","hatPaletteMysticBeamGGSP2",global.hatPaletteMysticBeamGGSP2);
 	ini_write_real("playerCustomization","hatPaletteStoneKSSUP2",global.hatPaletteStoneKSSUP2);
 	ini_write_real("playerCustomization","hatPaletteStoneModernP2",global.hatPaletteStoneModernP2);
 	ini_write_real("playerCustomization","hatPaletteUfoKSSUP2",global.hatPaletteUfoKSSUP2);

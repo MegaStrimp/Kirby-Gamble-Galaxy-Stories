@@ -7,7 +7,7 @@ yOffset = y;
 
 switch (spawnedItemIndex)
 {
-	case obj_Wall:
+	case obj_ParentWall:
 	if (spawnedDirX == -1)
 	{
 		switch (spawnedSlopeType)

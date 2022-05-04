@@ -147,7 +147,7 @@ if (!global.pause)
 			
 			#region Bomb Block
 			case 1:
-			with (obj_Wall)
+			with (obj_ParentWall)
 			{
 			    if ((!isTop) and (canExplode))
 				{

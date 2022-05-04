@@ -405,7 +405,7 @@ if ((instance_exists(obj_Maykr_ControlO)) and (instance_exists(obj_Maykr_HudO)))
 					global.gambleMaykrMenu = "collision";
 					obj_Maykr_HudO.setButtons = true;
 					obj_Maykr_ControlO.spawnedLayer = "collision";
-					obj_Maykr_ControlO.spawnedItemIndex = obj_Wall;
+					obj_Maykr_ControlO.spawnedItemIndex = obj_ParentWall;
 					obj_Maykr_ControlO.spawnedSprite = spr_Maykr_Spawner_DebugWall;
 					obj_Maykr_ControlO.snap = 24;
 					obj_Maykr_ControlO.draggedObject = false;
@@ -516,7 +516,7 @@ if ((instance_exists(obj_Maykr_ControlO)) and (instance_exists(obj_Maykr_HudO)))
 							file_text_writeln(savedFile);
 							switch (spawnedItemIndex)
 							{
-								case obj_Wall:
+								case obj_ParentWall:
 								file_text_write_string(savedFile,spawnedSlopeType);
 								file_text_writeln(savedFile);
 								break;
@@ -596,7 +596,7 @@ if ((instance_exists(obj_Maykr_ControlO)) and (instance_exists(obj_Maykr_HudO)))
 											
 											switch (spawner.spawnedItemIndex)
 											{
-												case obj_Wall:
+												case obj_ParentWall:
 												var spawnerSlopeType = real(file_text_read_string(loadedFile));
 												file_text_readln(loadedFile);
 												spawner.spawnedSlopeType = spawnerSlopeType;
@@ -663,7 +663,7 @@ if ((instance_exists(obj_Maykr_ControlO)) and (instance_exists(obj_Maykr_HudO)))
 											
 											switch (spawner.spawnedItemIndex)
 											{
-												case obj_Wall:
+												case obj_ParentWall:
 												var spawnerSlopeType = real(file_text_read_string(loadedFile));
 												file_text_readln(loadedFile);
 												spawner.spawnedSlopeType = spawnerSlopeType;
@@ -776,7 +776,7 @@ if ((instance_exists(obj_Maykr_ControlO)) and (instance_exists(obj_Maykr_HudO)))
 					
 					case "item_collision_wall":
 					obj_Maykr_ControlO.spawnedLayer = "collision";
-					obj_Maykr_ControlO.spawnedItemIndex = obj_Wall;
+					obj_Maykr_ControlO.spawnedItemIndex = obj_ParentWall;
 					obj_Maykr_ControlO.spawnedSprite = spr_Maykr_Spawner_DebugWall;
 					obj_Maykr_ControlO.spawnedSlopeType = 0;
 					obj_Maykr_ControlO.snap = 24;
@@ -784,7 +784,7 @@ if ((instance_exists(obj_Maykr_ControlO)) and (instance_exists(obj_Maykr_HudO)))
 					
 					case "item_collision_slope":
 					obj_Maykr_ControlO.spawnedLayer = "collision";
-					obj_Maykr_ControlO.spawnedItemIndex = obj_Wall;
+					obj_Maykr_ControlO.spawnedItemIndex = obj_ParentWall;
 					obj_Maykr_ControlO.spawnedSprite = spr_Maykr_Debug_Slope;
 					obj_Maykr_ControlO.spawnedSlopeType = 1;
 					obj_Maykr_ControlO.snap = 24;
@@ -792,7 +792,7 @@ if ((instance_exists(obj_Maykr_ControlO)) and (instance_exists(obj_Maykr_HudO)))
 					
 					case "item_collision_gentleSlope":
 					obj_Maykr_ControlO.spawnedLayer = "collision";
-					obj_Maykr_ControlO.spawnedItemIndex = obj_Wall;
+					obj_Maykr_ControlO.spawnedItemIndex = obj_ParentWall;
 					obj_Maykr_ControlO.spawnedSprite = spr_Maykr_Debug_GentleSlopeSpawner;
 					obj_Maykr_ControlO.spawnedSlopeType = 2;
 					obj_Maykr_ControlO.snap = 24;
@@ -800,7 +800,7 @@ if ((instance_exists(obj_Maykr_ControlO)) and (instance_exists(obj_Maykr_HudO)))
 					
 					case "item_collision_superGentleSlope":
 					obj_Maykr_ControlO.spawnedLayer = "collision";
-					obj_Maykr_ControlO.spawnedItemIndex = obj_Wall;
+					obj_Maykr_ControlO.spawnedItemIndex = obj_ParentWall;
 					obj_Maykr_ControlO.spawnedSprite = spr_Maykr_Debug_SuperGentleSlopeSpawner;
 					obj_Maykr_ControlO.spawnedSlopeType = 3;
 					obj_Maykr_ControlO.snap = 24;

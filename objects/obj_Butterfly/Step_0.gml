@@ -20,12 +20,12 @@ if (!global.pause)
 	
 	//Horizontal Collision
 	
-    if (place_meeting(x + 24,y,obj_Wall))
+    if (place_meeting(x + 24,y,obj_ParentWall))
     {
         hsp = -spdW;
         dir = 1;
     }
-    else if (place_meeting(x - 24,y,obj_Wall))
+    else if (place_meeting(x - 24,y,obj_ParentWall))
     {
         hsp = spdW;
         dir = -1;
@@ -46,11 +46,11 @@ if (!global.pause)
 	
 	//Vertical Collision
 	
-    if (place_meeting(x,y + 24,obj_Wall))
+    if (place_meeting(x,y + 24,obj_ParentWall))
     {
         vsp = -spdW;
     }
-    else if (place_meeting(x,y - 24,obj_Wall))
+    else if (place_meeting(x,y - 24,obj_ParentWall))
     {
         vsp = spdW;
     }

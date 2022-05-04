@@ -17,8 +17,8 @@
   "width": 19,
   "height": 25,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "Familiars",
+    "path": "texturegroups/Familiars",
   },
   "swatchColours": null,
   "gridX": 0,
@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Epic Jar",
-    "path": "folders/Sprites/Familiars/Epic Jar.yy",
+    "name": "Jar",
+    "path": "folders/Sprites/Familiars/Epic Jar/Jar.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Familiar_EpicJar_Jar_Closed",

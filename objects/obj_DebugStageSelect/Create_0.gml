@@ -11,6 +11,7 @@ selection = 0;
 page = "main";
 textAlpha = 0;
 goBack = false;
+autoScroll = false;
 
 //Stages
 
@@ -20,6 +21,7 @@ for (var i = 0; room_exists(i); i++)
 	stageOffset[i] = 0;
 	stageOffsetLerp[i] = 0;
 }
+//array_sort(stageTitle,true);
 
 textY = 147 - (selection * 36);
 
@@ -29,3 +31,10 @@ var button = instance_create_depth(480,0,depth,obj_Menu_Button);
 button.owner = id;
 button.sprite_index = spr_Menu_StageSelect_Hud_Back2;
 button.state = "back";
+
+//Timers
+
+canAutoScrollTimer = -1;
+canAutoScrollTimerMax = 30;
+autoScrollTimer = -1;
+autoScrollTimerMax = 2;

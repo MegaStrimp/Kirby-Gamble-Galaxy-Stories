@@ -45,7 +45,7 @@ if (!global.pause)
 	
 	if (!isBubble)
 	{
-		hsp = movespeed * dir;
+		hsp = scr_Friction(hsp,decel);
 	}
 	else
 	{
@@ -56,14 +56,17 @@ if (!global.pause)
 	{
 		//Horizontal Collision
 		
-		with (obj_Wall)
+		if (doesJump)
 		{
-			//if (place_meeting(other.x + other.hsp,other.y,self))
-			if ((!platform) and (place_meeting(x - other.hsp,y,other)))
+			with (obj_ParentWall)
 			{
-				if (audio_is_playing(snd_AbilityStarBounce)) audio_stop_sound(snd_AbilityStarBounce);
-				audio_play_sound(snd_AbilityStarBounce,0,false);
-				other.dir *= -1;
+				//if (place_meeting(other.x + other.hsp,other.y,self))
+				if ((!platform) and (place_meeting(x - other.hsp,y,other)))
+				{
+					if (audio_is_playing(snd_AbilityStarBounce)) audio_stop_sound(snd_AbilityStarBounce);
+					audio_play_sound(snd_AbilityStarBounce,0,false);
+					other.dir *= -1;
+				}
 			}
 		}
 		
@@ -71,27 +74,41 @@ if (!global.pause)
 		
 		//Vertical Collision
 		
-		with (obj_Wall)
+		if (doesJump)
 		{
-			if ((!platform) and (place_meeting(x,y - 1,other)))
+			with (obj_ParentWall)
 			{
-				if (audio_is_playing(snd_AbilityStarBounce)) audio_stop_sound(snd_AbilityStarBounce);
-				audio_play_sound(snd_AbilityStarBounce,0,false);
-				if (!other.isBubble) other.vsp = -other.jumpspeed;
+				if ((!platform) and (place_meeting(x,y - 1,other)))
+				{
+					if (audio_is_playing(snd_AbilityStarBounce)) audio_stop_sound(snd_AbilityStarBounce);
+					audio_play_sound(snd_AbilityStarBounce,0,false);
+					if (!other.isBubble) other.vsp = -other.jumpspeed;
+				}
+			}
+			
+			with (obj_ParentWall)
+			{
+				if ((!platform) and (sign(other.vsp) == -1) and (place_meeting(x,y - other.vsp,other)))
+				{
+					while (!place_meeting(x,y - (sign(other.vsp) / 10),other))
+					{ 
+					    other.y += (sign(other.vsp) / 10);
+					}
+					if (audio_is_playing(snd_AbilityStarBounce)) audio_stop_sound(snd_AbilityStarBounce);
+					audio_play_sound(snd_AbilityStarBounce,0,false);
+					other.vsp = 0;
+				}
 			}
 		}
-		
-		with (obj_Wall)
+		else
 		{
-			if ((!platform) and (sign(other.vsp) == -1) and (place_meeting(x,y - other.vsp,other)))
+			if (place_meeting(x,y + vsp,obj_ParentWall))
 			{
-				while (!place_meeting(x,y - (sign(other.vsp) / 10),other))
-				{ 
-				    other.y += (sign(other.vsp) / 10);
-				}
-				if (audio_is_playing(snd_AbilityStarBounce)) audio_stop_sound(snd_AbilityStarBounce);
-				audio_play_sound(snd_AbilityStarBounce,0,false);
-				other.vsp = 0;
+			    while (!place_meeting(x,y + (sign(vsp) / 10),obj_ParentWall))
+			    { 
+			        y += (sign(vsp) / 10);
+			    }
+			    vsp = 0;
 			}
 		}
 		
@@ -99,9 +116,9 @@ if (!global.pause)
 		
 		//Destroy
 		
-		if (position_meeting(x,y,obj_Wall))
+		if (position_meeting(x,y,obj_ParentWall))
 		{
-			if (!((instance_place(x,y,obj_Wall)).platform))
+			if (!((instance_place(x,y,obj_ParentWall)).platform))
 			{
 				insideWall = true;
 				destroyTimer = destroyTimerMin;

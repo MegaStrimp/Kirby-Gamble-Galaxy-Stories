@@ -10,7 +10,7 @@ if (setupTimer == 0)
 		
 		case 0:
 		sprIdle = spr_BloodGordo_Normal_Idle;
-		sprHurt = "self";
+		sprHurt = -1;
 		break;
 	}
 }

@@ -41,7 +41,7 @@ else if (spawnTimer == 0)
 		
 		case 0:
 		spawnedEnemy.sprIdle = spr_Blado_Normal_Idle;
-		spawnedEnemy.sprHurt = "self";
+		spawnedEnemy.sprHurt = -1;
 		break;
 	}
 	spawnedEnemy.sprite_index = spawnedEnemy.sprIdle;

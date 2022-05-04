@@ -168,7 +168,7 @@ function scr_Hud_AbilityText(argument0,argument1)
 		textIndex = spr_Hud_AbilityText_Crash;
 		break;
 		
-		case "mike":
+		case playerAbilities.mic:
 		textIndex = spr_Hud_AbilityText_Mike;
 		break;
 		

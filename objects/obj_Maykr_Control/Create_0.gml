@@ -10,7 +10,7 @@ errorMsg = "";
 #region Spawn Values
 spawnedLayer = "collision";
 spawnedItemString = "debugWall";
-spawnedItemIndex = obj_Wall;
+spawnedItemIndex = obj_ParentWall;
 spawnedSprite = spr_Maykr_Spawner_DebugWall;
 spawnedPaletteIndex = -1;
 spawnedSlopeType = 0;

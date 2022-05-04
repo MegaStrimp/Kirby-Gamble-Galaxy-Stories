@@ -13,7 +13,7 @@ if (setupTimer == 0)
 		sprWalk = spr_Kabu_Normal_Walk;
 		sprRun = spr_Kabu_Normal_Run;
 		sprDuck = spr_Kabu_Normal_Duck;
-		sprHurt = "self";
+		sprHurt = -1;
 		break;
 	}
 }
@@ -24,6 +24,10 @@ event_inherited();
 
 if (!global.pause)
 {
+	//Get Inhaled
+	
+	if (!parasol) scr_Object_Inhale(enemy);
+	
 	//Hurt Player
 	
 	scr_Enemy_HurtsPlayer(dmg);
@@ -53,7 +57,7 @@ if (!global.pause)
 		
 		image_speed = 1;
 		
-		if ((hurt) and (sprHurt != "self"))
+		if ((hurt) and (sprHurt != -1))
 		{
 			sprite_index = sprHurt;
 		}
@@ -80,7 +84,7 @@ if (!global.pause)
 		
 		image_speed = 1;
 		
-		if ((hurt) and (sprHurt != "self"))
+		if ((hurt) and (sprHurt != -1))
 		{
 			sprite_index = sprHurt;
 		}

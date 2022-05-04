@@ -23,6 +23,17 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	event_inherited();
 	
+	//Gravity
+	
+	if (vsp < gravLimit)
+	{
+		vsp += grav;
+	}
+	else
+	{
+		vsp = gravLimit;
+	}
+	
 	//Destroy
 	
 	if (hsp >= decel) hsp -= decel;
@@ -31,6 +42,8 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	{
 		var par = instance_create_depth(x,y,depth,obj_Particle);
 		par.sprite_index = sprDestroy;
+		par.image_xscale = image_xscale;
+		par.image_yscale = image_yscale;
 		par.dir = dirX;
 		par.destroyAfterAnimation = true;
 		instance_destroy();
@@ -44,9 +57,11 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	}
 	else if (particleTimer == 0)
 	{
-		var particle = instance_create_depth(x,y,depth - 1,obj_Particle);
-		particle.sprite_index = spr_Particle_AirPuff;
-		particle.destroyAfterAnimation = true;
+		var par = instance_create_depth(x,y,depth - 1,obj_Particle);
+		par.sprite_index = spr_Particle_AirPuff;
+		par.image_xscale = image_xscale;
+		par.image_yscale = image_yscale;
+		par.destroyAfterAnimation = true;
 		particleTimer = particleTimerMax;
 	}
 	

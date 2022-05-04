@@ -20,7 +20,7 @@ function scr_Player_CutterDrop()
 		
 		//Revert Back
 		
-		if ((attackNumber != playerAttacks.cutterDrop) or (place_meeting(x,y + 1,obj_Wall))) attackTimer = 0;
+		if ((attackNumber != playerAttacks.cutterDrop) or (place_meeting(x,y + 1,obj_ParentWall))) attackTimer = 0;
 		
 		//Collision
 		

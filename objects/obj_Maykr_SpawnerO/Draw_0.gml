@@ -8,7 +8,7 @@ var alpha = .75;
 
 switch (spawnedItemIndex)
 {
-	case obj_Wall:
+	case obj_ParentWall:
 	x1 = x;
 	x2 = x + 23;
 	y1 = y;

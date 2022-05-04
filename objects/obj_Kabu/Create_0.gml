@@ -24,7 +24,7 @@ sprIdle = spr_Kabu_Normal_Idle;
 sprWalk = spr_Kabu_Normal_Walk;
 sprRun = spr_Kabu_Normal_Run;
 sprDuck = spr_Kabu_Normal_Duck;
-sprHurt = "self";
+sprHurt = -1;
 
 //Other Variables
 

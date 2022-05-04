@@ -17,8 +17,8 @@
   "width": 11,
   "height": 11,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "Familiars",
+    "path": "texturegroups/Familiars",
   },
   "swatchColours": null,
   "gridX": 0,
@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Epic Jar",
-    "path": "folders/Sprites/Familiars/Epic Jar.yy",
+    "name": "Fetus",
+    "path": "folders/Sprites/Familiars/Epic Jar/Fetus.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Familiar_EpicJar_Fetus_Idle",

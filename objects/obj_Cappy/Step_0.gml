@@ -77,7 +77,7 @@ if (!global.pause)
 		
 		image_speed = 1;
 		
-		if ((hurt) and (sprHurt != "self"))
+		if ((hurt) and (sprHurt != -1))
 		{
 			sprite_index = sprHurt;
 		}
@@ -146,7 +146,7 @@ if (!global.pause)
 		
 		image_speed = 1;
 		
-		if ((hurt) and (sprHurt != "self"))
+		if ((hurt) and (sprHurt != -1))
 		{
 			sprite_index = sprHurt;
 		}

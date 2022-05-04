@@ -10,7 +10,7 @@ sprDoor = spr_Door_Normal;
 sprReady = spr_Nidoo_Normal_Ready;
 sprShake = spr_Nidoo_Normal_Shake;
 sprRelease = spr_Nidoo_Normal_Release;
-sprHurt = "self";
+sprHurt = -1;
 sprStar = spr_Particle_BigStar_Yellow;
 
 //Other Variables

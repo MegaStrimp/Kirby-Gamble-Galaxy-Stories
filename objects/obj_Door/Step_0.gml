@@ -25,7 +25,7 @@ if (!global.pause)
 	
 	//Particle Timer
 	
-	if ((doorVisible) and (!place_meeting(x,y,obj_Wall)))
+	if ((doorVisible) and (!place_meeting(x,y,obj_ParentWall)))
 	{
 		if (particleTimer > 0)
 		{

@@ -16,12 +16,16 @@ if (!global.pause)
 	{
 		switch (character)
 		{
-			case "Happy Pea":
+			case familiars.gamble:
+			shineTimer = shineTimerMax;
+			break;
+			
+			case familiars.happyPea:
 			attackTimerMax = 45;
 			attackTimer = attackTimerMax;
 			break;
 			
-			case "Epic Jar":
+			case familiars.epicJar:
 			attackTimerMax = 120;
 			attackTimer = attackTimerMax;
 			break;
@@ -30,14 +34,14 @@ if (!global.pause)
 	}
 	
 	//Movement
-
+	
 	vsp += (accel * walkDirY);
 	if ((abs(vsp) >= jumpspeed)) walkDirY *= -1;
 	
 	switch (character)
 	{
 		#region Gamble
-		case "Gamble":
+		case familiars.gamble:
 		//Position
 		
 		posX = lerp(posX,25 * -dir,.15);
@@ -68,7 +72,7 @@ if (!global.pause)
 		
 		image_speed = 1;
 		
-		if (place_meeting(owner.x,owner.y + 1,obj_Wall))
+		if (place_meeting(owner.x,owner.y + 1,obj_ParentWall))
 		{
 			if (owner.hsp != 0)
 			{
@@ -96,7 +100,7 @@ if (!global.pause)
 		#endregion
 		
 		#region Happy Pea
-		case "Happy Pea":
+		case familiars.happyPea:
 		//Position
 		
 		if (!attack)
@@ -193,7 +197,7 @@ if (!global.pause)
 		#endregion
 		
 		#region Epic Jar
-		case "Epic Jar":
+		case familiars.epicJar:
 		//Position
 		
 		if (!attack)
@@ -303,7 +307,7 @@ if (!global.pause)
 		#endregion
 		
 		#region Krackle
-		case "Krackle":
+		case familiars.krackle:
 		//Position
 		
 		if (!attack)
@@ -311,7 +315,7 @@ if (!global.pause)
 			attackTarget = -1;
 			with (obj_Enemy)
 			{
-				if ((hurtable) and (!invincible) and (distance_to_object(other.owner) <= 320) and (!place_meeting(x,y - 36,obj_Wall)))
+				if ((hurtable) and (!invincible) and (distance_to_object(other.owner) <= 96) and (!place_meeting(x,y - 36,obj_ParentWall)))
 				{
 					other.attackTarget = id;
 					break;
@@ -384,12 +388,105 @@ if (!global.pause)
 		
 		//Animation
 		
-		image_xscale = dir * scale;
+		image_xscale = scale;
+		image_yscale = scale;
+		
+		if (attackTarget != -1)
+		{
+			if (!attack)
+			{
+				sprite_index = spr_Familiar_Krackle_Cloud_Charge;
+			}
+			else
+			{
+				sprite_index = spr_Familiar_Krackle_Cloud_Attack;
+			}
+			image_index = floor(point_direction(x,y,attackTarget.x,attackTarget.y) / 45) + 1;
+		}
+		else
+		{
+			sprite_index = spr_Familiar_Krackle_Cloud_Idle;
+			image_index = floor(point_direction(x,y,owner.x,owner.y) / 45) + 1;
+		}
+		break;
+		#endregion
+		
+		#region Omega Matter
+		case familiars.omegaMatter:
+		//Position
+		
+		posX = lerp(posX,25 * -dir,.15);
+		
+		dir = owner.dir;
+		x = lerp(x,owner.x + posX,.15);
+		y = lerp(y,owner.y - 15 + vsp,.15);
+		
+		//Shine Timer
+		
+		if (shineTimer > 0)
+		{
+			shineTimer -= 1;
+		}
+		else if (shineTimer == 0)
+		{
+			var particle = instance_create_depth(x + irandom_range(-(sprite_get_width(sprite_index) / 4),(sprite_get_width(sprite_index) / 4)),y + irandom_range(-(sprite_get_height(sprite_index) / 4),(sprite_get_height(sprite_index) / 4)),depth,obj_Particle);
+			particle.sprite_index = spr_Particle_SmallSparkle_Yellow;
+			particle.vsp = .5;
+			particle.destroyAfterAnimation = true;
+			shineTimer = shineTimerMax;
+		}
+		
+		//Animation
+		
+		image_xscale = scale;
 		image_yscale = scale;
 		
 		image_speed = 1;
 		
-		sprite_index = spr_Familiar_Krackle_Cloud;
+		if (dir == 1)
+		{
+			if (attack)
+			{
+				sprite_index = spr_Familiar_OmegaMatter_Normal_Right_Attack;
+			}
+			else
+			{
+				if (vsp > 0)
+				{
+					sprite_index = spr_Familiar_OmegaMatter_Normal_Right_Down;
+				}
+				else if (vsp < 0)
+				{
+					sprite_index = spr_Familiar_OmegaMatter_Normal_Right_Up;
+				}
+				else
+				{
+					sprite_index = spr_Familiar_OmegaMatter_Normal_Right_Idle;
+				}
+			}
+		}
+		else
+		{
+			if (attack)
+			{
+				sprite_index = spr_Familiar_OmegaMatter_Normal_Left_Attack;
+			}
+			else
+			{
+				if (vsp > 0)
+				{
+					sprite_index = spr_Familiar_OmegaMatter_Normal_Left_Down;
+				}
+				else if (vsp < 0)
+				{
+					sprite_index = spr_Familiar_OmegaMatter_Normal_Left_Up;
+				}
+				else
+				{
+					sprite_index = spr_Familiar_OmegaMatter_Normal_Left_Idle;
+				}
+			}
+		}
 		break;
 		#endregion
 	}

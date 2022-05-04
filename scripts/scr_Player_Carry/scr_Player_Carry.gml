@@ -13,9 +13,9 @@ function scr_Player_Carry()
 		if (player == 1) playerAbility = global.abilityP2;
 		
 		var grounded = false;
-		if (place_meeting(x,y + 1,obj_Wall))
+		if (place_meeting(x,y + 1,obj_ParentWall))
 		{
-			var collidingWall = instance_place(x,y + 1,obj_Wall);
+			var collidingWall = instance_place(x,y + 1,obj_ParentWall);
 			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) grounded = true;
 		}
 		else if (place_meeting(x,y + 1,obj_Spring))
@@ -35,7 +35,7 @@ function scr_Player_Carry()
 		    {
 		        if (!run)
 				{
-					if (!place_meeting(x,y + 1,obj_Wall))
+					if (!place_meeting(x,y + 1,obj_ParentWall))
 					{
 						var parJump = instance_create_depth(x,y,depth + 1,obj_Particle);
 						parJump.sprite_index = spr_Particle_Jump;
@@ -113,7 +113,7 @@ function scr_Player_Carry()
 		
 		//Jump
 		
-		if (place_meeting(x,y + 1,obj_Wall))
+		if (place_meeting(x,y + 1,obj_ParentWall))
 		{
 			vsp = 0;
 			if ((!global.cutscene) and (keyJumpPressed) and (!inhaleEnd) and (!spit))
@@ -170,7 +170,7 @@ function scr_Player_Carry()
 				if (ateCappyShroom) ateCappyShroom = false;
 		    }
 			
-		    if ((!global.cutscene) and (((global.autoSwallow) and (cAbility != playerAbilities.none)) or ((place_meeting(x,y + 1,obj_Wall)) and (!inhaleEnd) and (!spit) and (keyDownPressed))))
+		    if ((!global.cutscene) and (((global.autoSwallow) and (cAbility != playerAbilities.none)) or ((place_meeting(x,y + 1,obj_ParentWall)) and (!inhaleEnd) and (!spit) and (keyDownPressed))))
 		    {
 				if (player == 0)
 				{
@@ -247,7 +247,7 @@ function scr_Player_Carry()
 						image_speed = 1.5;
 					}
 					
-			        if ((place_meeting(x,y + 1,obj_Wall)) and (vsp == 0))
+			        if ((place_meeting(x,y + 1,obj_ParentWall)) and (vsp == 0))
 					{
 					    if (hsp == 0)
 						{
@@ -268,7 +268,7 @@ function scr_Player_Carry()
 							var carryidlesprite = sprCarryIdle;
 							var carryidleblinksprite = sprCarryIdleBlink;
 							
-							var collidedWall = instance_place(x,y + 1,obj_Wall);
+							var collidedWall = instance_place(x,y + 1,obj_ParentWall);
 							if ((playerCharacter == playerCharacters.kirby) and (collidedWall.slope))
 							{
 								switch (collidedWall.slopeType)
@@ -425,9 +425,9 @@ function scr_Player_Carry()
 		
 		//Walk Duck
 		
-		if ((!walkDuck) and (place_meeting(x,y + (1 + vsp),obj_Wall)) and (vsp > 1) and (!inhaleEnd) and (!spit) and (!attack))
+		if ((!walkDuck) and (place_meeting(x,y + (1 + vsp),obj_ParentWall)) and (vsp > 1) and (!inhaleEnd) and (!spit) and (!attack))
 		{
-			var collidingWall = instance_place(x,y + (1 + vsp),obj_Wall);
+			var collidingWall = instance_place(x,y + (1 + vsp),obj_ParentWall);
 			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal))))
 			{
 				image_index = 0;

@@ -70,11 +70,22 @@ if ((!debugCamera) and (objectFollowing == -1))
 				
 				if (global.hpP1 != 0)
 				{
-					if ((instance_exists(obj_WhispyWoods)) and ((obj_WhispyWoods.phase != "inactive") and (obj_WhispyWoods.phase != "ready")))
+					if (instance_exists(obj_WhispyWoods))
 					{
-						targetClampToView = true;
-						cameraX = lerp(cameraX,obj_WhispyWoods.x + ((obj_WhispyWoods.dirX) * (200 - (abs(obj_WhispyWoods.hsp) * 100))) - ((viewWidth / zoomFinal) / 2),.1) + ((offsetX + bossOffsetX + cinematicXOffset) / zoomFinal);
-						cameraY = lerp(cameraY,target.y - ((viewHeight / zoomFinal) / 2),.1) + ((offsetY + bossOffsetY + cinematicYOffset) / zoomFinal);
+						switch (obj_WhispyWoods.phase)
+						{
+							case 1:
+							targetClampToView = true;
+							cameraX = lerp(cameraX,obj_WhispyWoods.x + (obj_WhispyWoods.dirX * 180) - ((viewWidth / zoomFinal) / 2),.1) + ((offsetX + bossOffsetX + cinematicXOffset) / zoomFinal);
+							cameraY = lerp(cameraY,0,.1) + ((offsetY + bossOffsetY + cinematicYOffset) / zoomFinal);
+							break;
+							
+							case 3:
+							targetClampToView = true;
+							cameraX = lerp(cameraX,obj_WhispyWoods.x + ((obj_WhispyWoods.dirX) * (200 - (abs(obj_WhispyWoods.hsp) * 100))) - ((viewWidth / zoomFinal) / 2),.1) + ((offsetX + bossOffsetX + cinematicXOffset) / zoomFinal);
+							cameraY = lerp(cameraY,obj_WhispyWoods.y - ((viewHeight / zoomFinal) / 2),.1) + ((offsetY + bossOffsetY + cinematicYOffset) / zoomFinal);
+							break;
+						}
 					}
 					else
 					{

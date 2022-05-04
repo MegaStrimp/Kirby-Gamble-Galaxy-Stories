@@ -5,6 +5,9 @@
 event_inherited();
 accel = 0.015;
 movespeed = 0.5
+jumpspeed = 4;
+gravNormal = .2;
+gravLimitNormal = 5;
 actionState = 0;
 
 mask_index = spr_16Square_Mask;

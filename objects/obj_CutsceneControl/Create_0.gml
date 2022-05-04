@@ -14,3 +14,18 @@ with (obj_Player) if (player == 0) other.p1 = id;
 //Timers
 
 stateExTimer = -1;
+
+//Enum
+
+enum cutscenes
+{
+	story_Intro,
+	story_MeetingGamble,
+	story_MeetingMetaKnight,
+	story_HalberdEmergency,
+	story_ArrivingAtAsteroidFields,
+	story_ExplainingEverything,
+	story_Dethroned,
+	
+	exTut_AntiFloat
+}

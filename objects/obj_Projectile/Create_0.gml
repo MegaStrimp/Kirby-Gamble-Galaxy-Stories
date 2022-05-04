@@ -56,7 +56,7 @@ trail = -1;
 heavy = false;
 inhaleXOffset = 0;
 inhaleYOffset = 0;
-sprHurt = "self";
+sprHurt = -1;
 points = 0;
 ability = playerAbilities.none;
 

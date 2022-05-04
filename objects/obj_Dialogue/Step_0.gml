@@ -22,6 +22,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		}
 		else
 		{
+			io_clear();
 			index = text_length;
 			text_displayed = string_copy(text[array],1,index);
 		}

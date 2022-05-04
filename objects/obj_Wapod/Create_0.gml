@@ -18,7 +18,7 @@ gravLimitNormal = 4;
 mask_index = spr_16Square_Mask;
 
 sprPot = spr_Wapod_Normal_Pot;
-sprHurt = "self";
+sprHurt = -1;
 sprGhostSpawn = spr_Wapod_Normal_Spawn;
 sprGhostIdle = spr_Wapod_Normal_Idle;
 sprGhostHurt = spr_Wapod_Normal_Hurt;

@@ -2143,24 +2143,24 @@ if (!global.pause)
 				audio_play_sound(snd_ButtonYes,0,false);
 				if (selectedPlayer == 0)
 				{
-					if (global.familiarP1 == familiarTitle[selection])
+					if (global.familiarP1 == familiarValue[selection])
 					{
-						global.familiarP1 = "none";
+						global.familiarP1 = familiars.none;
 					}
 					else
 					{
-						global.familiarP1 = familiarTitle[selection];
+						global.familiarP1 = familiarValue[selection];
 					}
 				}
 				else
 				{
-					if (global.familiarP2 == familiarTitle[selection])
+					if (global.familiarP2 == familiarValue[selection])
 					{
-						global.familiarP2 = "none";
+						global.familiarP2 = familiars.none;
 					}
 					else
 					{
-						global.familiarP2 = familiarTitle[selection];
+						global.familiarP2 = familiarValue[selection];
 					}
 				}
 			}

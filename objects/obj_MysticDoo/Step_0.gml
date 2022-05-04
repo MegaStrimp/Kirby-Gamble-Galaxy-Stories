@@ -1,45 +1,51 @@
 ///@description Main
 
-//Characters
-
+#region Characters
 if (setupTimer == 0)
 {
 	switch (character)
 	{
-		//Normal
-		
+		#region Normal
 		case 0:
 		sprIdle = spr_MysticDoo_Normal_Idle;
+		sprFloatUp = spr_MysticDoo_Normal_FloatUp;
+		sprFloatTrans = spr_MysticDoo_Normal_FloatTrans;
+		sprFloatDown = spr_MysticDoo_Normal_FloatDown;
+		sprCharge = spr_MysticDoo_Normal_Charge;
 		sprAttack = spr_MysticDoo_Normal_Attack;
+		sprWave = spr_MysticDoo_Normal_Wave;
+		sprWalk = spr_MysticDoo_Normal_Walk;
+		sprWalkIdle = spr_MysticDoo_Normal_WalkIdle;
 		sprHurt = spr_MysticDoo_Normal_Hurt;
 		break;
+		#endregion
 	}
 }
+#endregion
 
-//Event Inherited
-
+#region Event Inherited
 event_inherited();
+#endregion
 
 if (!global.pause)
 {
-	//Get Inhaled
-	
+	#region Get Inhaled
 	if (!parasol) scr_Object_Inhale(enemy);
+	#endregion
 	
-	//Hurt Player
-	
+	#region Hurt Player
 	scr_Enemy_HurtsPlayer(dmg);
+	#endregion
 	
-	//Gravity
-	
+	#region Gravity
 	hasGravity = hurt;
+	#endregion
 	
-	//Friction
-	
+	#region Friction
 	hsp = scr_Friction(hsp,decel);
+	#endregion
 	
-	//Trail
-	
+	#region Trail
 	/*var afterimage = instance_create_depth(x,y,depth + 1,obj_Afterimage);
 	afterimage.image_speed = 0;
 	afterimage.sprite_index = sprite_index;
@@ -48,13 +54,18 @@ if (!global.pause)
 	afterimage.image_alpha = .3;
 	afterimage.paletteIndex = spr_MysticDoo_Normal_Palette_TrailPurple;
 	afterimage.destroyTimer = 4;*/
+	#endregion
 	
-	//States
+	#region States
+	if ((state != 1) and (hp <= 4))
+	{
+		with (obj_Projectile_Beam) if (owner == other.id) instance_destroy();
+		state = 1;
+	}
 	
 	switch (state)
 	{
-		//Floating
-		
+		#region Floating
 		case 0:
 		if (!hurt)
 		{
@@ -62,26 +73,68 @@ if (!global.pause)
 			if (!attack) scr_AI_HorizontalStraightMovement(true,true);
 		}
 		
-		if ((hurt) and (sprHurt != "self"))
+		image_speed = 1;
+		
+		if ((hurt) and (sprHurt != -1))
 		{
-			image_speed = 1;
 			sprite_index = sprHurt;
 		}
 		else
 		{
-			if ((attack) and (attackState == 2))
+			if (attack)
 			{
-				image_speed = 1;
-				sprite_index = sprAttack;
+				if (attackState == 1)
+				{
+					sprite_index = sprCharge;
+				}
+				else if (attackState == 2)
+				{
+					sprite_index = sprAttack;
+				}
 			}
 			else
 			{
-				image_speed = 1;
-				sprite_index = sprIdle;
+				if (abs(vsp) <= (jumpspeed / 4))
+				{
+					sprite_index = sprFloatTrans;
+				}
+				else if (sign(vsp) == -1)
+				{
+					sprite_index = sprFloatUp;
+				}
+				else if (sign(vsp) == 1)
+				{
+					sprite_index = sprFloatDown;
+				}
+				
 			}
 		}
 		break;
+		#endregion
+		
+		#region Walking
+		case 1:
+		attack = false;
+		attackState = 0;
+		attackTimer = -1;
+		hasGravity = true;
+		
+		if (slideTimer == -1) slideTimer = slideTimerMax;
+		
+		image_speed = 1;
+		sprHurt = -1;
+		if (hsp == 0)
+		{
+			sprite_index = sprWalkIdle;
+		}
+		else
+		{
+			sprite_index = sprWalk;
+		}
+		break;
+		#endregion
 	}
+	#endregion
 	
 	//Attack Timer
 	
@@ -132,6 +185,7 @@ if (!global.pause)
 			{
 				if (audio_is_playing(snd_MysticBeamLaunch)) audio_stop_sound(snd_MysticBeamLaunch);
 				audio_play_sound(snd_MysticBeamLaunch,0,false);
+				image_index = 0;
 				attackState = 2;
 				attackTimer = floor(attackTimerMax / 3);
 			}
@@ -141,6 +195,19 @@ if (!global.pause)
 				attackState = 0;
 				attackTimer = attackTimerMax;
 			}
+		}
+	}
+	
+	if ((!hurt) and (place_meeting(x,y + 1,collisionY)))
+	{
+		if (slideTimer > 0)
+		{
+			slideTimer -= 1;
+		}
+		else if (slideTimer == 0)
+		{
+			hsp = movespeed * dirX;
+			slideTimer = -1;
 		}
 	}
 }

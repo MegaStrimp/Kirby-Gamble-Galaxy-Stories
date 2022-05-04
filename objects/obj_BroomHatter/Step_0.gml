@@ -16,6 +16,7 @@ if (setupTimer == 0)
 		break;
 	}
 	if (state == 1) attackTimer = -1;
+	sprite_index = sprIdle;
 }
 
 //Event Inherited
@@ -45,13 +46,9 @@ if (!global.pause)
 		
 		image_speed = 1;
 		
-		if ((hurt) and (sprHurt != "self"))
+		if ((hurt) and (sprHurt != -1))
 		{
 			sprite_index = sprHurt;
-		}
-		else
-		{
-			sprite_index = sprWalk;
 		}
 		break;
 		
@@ -62,7 +59,7 @@ if (!global.pause)
 		
 		image_speed = 1;
 		
-		if ((hurt) and (sprHurt != "self"))
+		if ((hurt) and (sprHurt != -1))
 		{
 			sprite_index = sprHurtNormal;
 		}
@@ -87,7 +84,7 @@ if (!global.pause)
 	
 	//Attack Timer
 	
-	if (!hurt)
+	if ((!hurt) and (place_meeting(x,y + 1,collisionY)))
 	{
 		if (attackTimer > 0)
 		{
@@ -105,6 +102,7 @@ if (!global.pause)
 				if (turnCounter <= turnCounterMax) turnCounter += 1;
 			}
 			particleReleased = false;
+			sprite_index = sprWalk;
 			image_index = 0;
 			hsp = movespeed * dirX;
 			attackTimer = attackTimerMax;

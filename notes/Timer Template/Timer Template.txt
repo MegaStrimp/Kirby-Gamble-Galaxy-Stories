@@ -1,0 +1,10 @@
+#region Timer
+if (Timer > 0)
+{
+	Timer -= 1;
+}
+else if (Timer == 0)
+{
+	Timer = -1;
+}
+#endregion

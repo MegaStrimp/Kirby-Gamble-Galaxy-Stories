@@ -62,7 +62,7 @@ if (!global.pause)
 			if (jumpTimer == -1) jumpTimer = jumpTimerMax;
 		}
 		
-		if ((hurt) and (sprHurt != "self"))
+		if ((hurt) and (sprHurt != -1))
 		{
 			image_speed = 1;
 			sprite_index = sprHurt;

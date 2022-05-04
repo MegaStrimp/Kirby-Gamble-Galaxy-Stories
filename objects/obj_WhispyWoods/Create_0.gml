@@ -1,31 +1,27 @@
 ///@description Initialize Variables
 
-//Randomize
-
-randomize();
-
-//Event Inherited
-
+#region Event Inherited
 event_inherited();
+#endregion
 
-//Physics
-
+#region Physics
 movespeed = 1.5;
 jumpspeed = 5;
 gravNormal = .2;
 gravLimitNormal = 5;
+#endregion
 
-//Sprites
-
+#region Sprites
 sprIdle = spr_WhispyWoods_Normal_Idle;
 sprBlink = spr_WhispyWoods_Normal_Blink;
 sprSpit = spr_WhispyWoods_Normal_Spit;
 sprGamble = spr_WhispyWoods_Normal_Gamble;
 sprGambleLeaf = spr_WhispyWoods_Normal_GambleLeaf;
+sprApple = spr_WhispyWoods_Normal_Apple;
 sprBossIcon = spr_Healthbar_Boss_Icon_WhispyWoods;
+#endregion
 
-//Other Variables
-
+#region Other Variables
 hp = 500;
 dmg = 1;
 points = 200;
@@ -33,43 +29,55 @@ isBoss = true;
 hasXKnockback = false;
 hasYKnockback = false;
 
-phase = "inactive";
-//phase = "2";
+phase = 0;
 faceSprite = sprIdle;
 faceIndex = 0;
 gambleIndex = 0;
 gambleShake = false;
-attack = false;
-attackState = "none";
-attackStop = false;
 spawnHealthbar = true;
-attackCount = 0;
 
-//Counters
+airpuffCount = 0;
+airpuffCountMax = 3;
 
-readyCounter = 0;
-readyCounterMax = 30;
+spikeCount = 0;
+spikeCountMax = 5;
 
-gambleShakeCounter = 0;
-gambleShakeCounterMax = 180;
+throwObjectChanceMax[0] = 250; //Apple
+throwObjectChance[0] = throwObjectChanceMax[0];
+throwObjectChanceMax[1] = 75; //Gordo
+throwObjectChance[1] = throwObjectChanceMax[1];
+throwObjectChanceMax[2] = 50; //Como
+throwObjectChanceMax[2] = 0; //Como
+throwObjectChance[2] = throwObjectChanceMax[2];
+throwObjectChanceMax[3] = 25; //Waddle Dee
+throwObjectChance[3] = throwObjectChanceMax[3];
+throwObjectList = -1;
+throwObjectCount = 0;
 
-idleCounter = 0;
-idleCounterMax = irandom_range(30,120);
+bigAirpuffState = 0;
 
-attackCounter = 0;
-attackCounterMax = 120;
+inhaleState = 0;
+#endregion
 
-spitCounter = 0;
-spitCounterMax = 3;
+#region Timers
+gambleShakeTimerMax = 150;
+gambleShakeTimer = gambleShakeTimerMax;
 
-appleCounter = 0;
-appleCounterMax = 3;
+phaseChangeTimer = -1;
 
-appleSpawnCounter = 0;
-appleSpawnCounterMax = 60;
+attackChooseTimer = -1;
+attackChooseTimerMax = 180;
 
-attackStopCounter = 0;
-attackStopCounterMax = 120;
+spikeTimer = -1;
+spikeTimerMax = 60;
 
-leafCounterMax = 30;
-leafCounter = leafCounterMax;
+airpuffTimer = -1;
+airpuffTimerMax = 20;
+
+throwObjectTimer = -1;
+throwObjectTimerMax = 45;
+
+bigAirpuffTimer = -1;
+
+inhaleTimer = -1;
+#endregion

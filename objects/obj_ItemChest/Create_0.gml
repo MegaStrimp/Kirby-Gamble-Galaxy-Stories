@@ -16,14 +16,15 @@ mask_index = spr_16Square_Mask;
 
 sprChestClosed = spr_ItemChest_Normal_Closed;
 sprChestOpen = spr_ItemChest_Normal_Open;
+sprKeyChestAura = spr_KeyChest_Normal_Chest_Aura;
 
 //Other Variables
 
 hasGravity = true;
 hasXCollision = true;
 hasYCollision = true;
-collisionX = obj_Wall;
-collisionY = obj_Wall;
+collisionX = obj_ParentWall;
+collisionY = obj_ParentWall;
 character = 0;
 open = false;
 storedItem = obj_Food;
@@ -31,6 +32,7 @@ pointStarCharacter = 0;
 isCollectible = false;
 treasureCategory = 0;
 treasureIndex = 0;
+isKeyChest = false;
 
 //Timers
 

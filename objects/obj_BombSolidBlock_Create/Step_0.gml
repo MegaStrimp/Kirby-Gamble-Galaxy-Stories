@@ -29,7 +29,7 @@ if (!global.pause)
 	}
 	else if (explodeTimer == 0)
 	{
-		with (obj_Wall)
+		with (obj_ParentWall)
 		{
 			if ((!isTop) and (canExplode))
 			{
@@ -137,7 +137,7 @@ if (!global.pause)
 				break;
 			}
 		}
-		var item = instance_create_layer(x,y,"Collision",obj_Wall);
+		var item = instance_create_layer(x,y,"Collision",obj_ParentWall);
 		item.visible = true;
 		item.sprite_index = spr_BombSolidBlock_Normal_Idle;
 		item.topWallSprite = spr_BombSolidBlock_Normal_Top;

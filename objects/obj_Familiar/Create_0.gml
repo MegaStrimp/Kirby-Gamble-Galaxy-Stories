@@ -25,8 +25,8 @@ throwSpeed = 4.5;
 
 //Timers
 
+shineTimer = -1;
 shineTimerMax = 7;
-shineTimer = shineTimerMax;
 attackTimerMax = 45;
 attackTimer = attackTimerMax;
 setupTimer = 0;

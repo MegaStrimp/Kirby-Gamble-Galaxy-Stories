@@ -149,6 +149,7 @@ function scr_Player_Float()
 				projAirPuff.sprDestroy = spr_AirPuff_Normal_Destroy;
 				projAirPuff.sprite_index = projAirPuff.sprIdle;
 				projAirPuff.character = 0;
+				if (audio_is_playing(snd_AirPuff)) audio_stop_sound(snd_AirPuff);
 				audio_play_sound(snd_AirPuff,0,false);
 				image_index = 0;
 				floatingTimer = -1;

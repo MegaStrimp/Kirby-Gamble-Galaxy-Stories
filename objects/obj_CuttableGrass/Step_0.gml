@@ -35,13 +35,21 @@ if (!global.pause)
 				{
 					var parDir = 1;
 					if (x > other.x) parDir = -1;
-					var par = instance_create_depth(other.x,other.y,other.depth - 1,obj_Particle);
-					par.sprite_index = other.sprTop;
-					par.hsp = (random_range(.1,.75) * parDir);
-					par.vsp = -2;
-					par.hasGravity = true;
-					par.invisTimer = par.invisTimerMax;
-					par.destroyTimer = 30;
+					for (var i = 0; i < 7; i++)
+					{
+						var par = instance_create_depth(other.x + irandom_range((-sprite_get_width(other.sprIdle) / 2),(sprite_get_width(other.sprIdle) / 2)),other.y - irandom_range(0,sprite_get_height(other.sprIdle) / 1.5),depth - 1,obj_Particle);
+						par.sprite_index = other.sprTop;
+						par.image_index = i;
+						par.hsp = (random_range(.1,.75) * parDir);
+						par.vsp = -2;
+						par.angleSpd = hsp * 3;
+						par.stopRotationAfterCollision = true;
+						par.hasGravity = true;
+						par.collisionX = obj_Wall;
+						par.collisionY = obj_Wall;
+						par.invisTimer = 20;
+						par.destroyTimer = 30;
+					}
 					other.cut = true;
 					other.spawn = true;
 					if (destroyableByObject) instance_destroy();

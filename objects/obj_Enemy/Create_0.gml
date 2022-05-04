@@ -1,5 +1,9 @@
 ///@description Initialize Variables
 
+//Randomize
+
+randomize();
+
 //Physics
 
 hsp = 0;
@@ -70,8 +74,8 @@ hasYCollision = true;
 clampPositionX = true;
 clampPositionY = true;
 offScreenTurning = true;
-collisionX = obj_Wall;
-collisionY = obj_Wall;
+collisionX = obj_ParentWall;
+collisionY = obj_ParentWall;
 hasXKnockback = true;
 hasYKnockback = true;
 deathOnBottom = true;
@@ -89,7 +93,7 @@ hasDeathAnimation = true;
 hasDeathParticles = true;
 healthbarBackHp = 0;
 groundFailsafe = true;
-sprHurt = "self";
+sprHurt = -1;
 sprBossIcon = -1;
 drawShakeX = 0;
 drawShakeY = 0;

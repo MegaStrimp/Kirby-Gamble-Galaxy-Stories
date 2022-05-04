@@ -89,6 +89,7 @@ function scr_Enemy_HurtsPlayer(argument0)
 				if ((collidedPlayer.state == playerStates.cutterDash) or (collidedPlayer.state == playerStates.mirrorDash) or (collidedPlayer.state == playerStates.fireDash) or (collidedPlayer.state == playerStates.wingDash) or (collidedPlayer.state == playerStates.swordDash)) collidedPlayer.state = playerStates.normal;
 				var abilityDropStar = instance_create_depth(round(x),round(y - 6),depth + 1,obj_AbilityDropStar);
 				abilityDropStar.owner = collidedPlayer;
+				abilityDropStar.hsp = -collidedPlayer.dir;
 				abilityDropStar.vsp = -abilityDropStar.jumpspeed;
 				abilityDropStar.dir = -image_xscale;
 				abilityDropStar.ability = playerAbility;
@@ -228,7 +229,7 @@ function scr_Enemy_HurtsPlayer(argument0)
 			
 			//Vertical Knockback
 			
-			if (!place_meeting(collidedPlayer.x,collidedPlayer.y + 1,obj_Wall))
+			if (!place_meeting(collidedPlayer.x,collidedPlayer.y + 1,obj_ParentWall))
 			{
 				/*if (collidedPlayer.y > (y + 4))
 				{

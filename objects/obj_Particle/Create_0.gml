@@ -43,6 +43,10 @@ paletteIndex = -1;
 attachedObject = -1;
 attachedObjectXOffset = 0;
 attachedObjectYOffset = 0;
+angleSpd = 0;
+collisionX = -1;
+collisionY = -1;
+stopRotationAfterCollision = false;
 
 //Timers
 

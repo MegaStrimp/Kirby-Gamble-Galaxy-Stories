@@ -512,3 +512,9 @@ bubblePosTimer = bubblePosTimerMax;
 
 if (!instance_exists(obj_Pause_Control)) instance_create_depth(x,y,-1000,obj_Pause_Control);
 if (!instance_exists(obj_Hud)) instance_create_depth(x,y,-997,obj_Hud);
+
+/*
+The joke is that the Discord user Gamern't Julia Platinum Powroznik is a smelly idfk im so tired
+
+var gamerntChickenSandwich = instance_create_depth(0,0,0,obj_CutsceneControl);
+gamerntChickenSandwich.state = cutscenes.story_MeetingGamble;

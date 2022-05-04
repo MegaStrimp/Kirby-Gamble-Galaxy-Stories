@@ -67,7 +67,7 @@ function scr_Player_Slide()
 							grabObj.particleTimer = grabObj.particleTimerMax;
 							if (!bombSmartBombUpgrade) grabObj.destroyTimer = 30;
 							var grabSpr = grabEnemy.sprHurt;
-							if ((grabSpr = -1) or (grabSpr = "self"))
+							if ((grabSpr = -1) or (grabSpr = -1))
 							{
 								grabObj.sprite_index = grabEnemy.sprite_index;
 							}
@@ -142,7 +142,7 @@ function scr_Player_Slide()
 									grabObj.dirX = grabEnemy.dirX;
 									grabObj.dmg = 60;
 									var grabSpr = grabEnemy.sprHurt;
-									if ((grabSpr = -1) or (grabSpr = "self"))
+									if ((grabSpr = -1) or (grabSpr = -1))
 									{
 										grabObj.sprite_index = grabEnemy.sprite_index;
 									}
@@ -178,7 +178,7 @@ function scr_Player_Slide()
 									grabObj.dirX = grabEnemy.dirX;
 									grabObj.dmg = 60;
 									var grabSpr = grabEnemy.sprHurt;
-									if ((grabSpr = -1) or (grabSpr = "self"))
+									if ((grabSpr = -1) or (grabSpr = -1))
 									{
 										grabObj.sprite_index = grabEnemy.sprite_index;
 									}
@@ -220,7 +220,7 @@ function scr_Player_Slide()
 							
 							if (attackNumber == playerAttacks.stoneNormal)
 							{
-								if ((!stoneFallen) and (!stoneReady) and (place_meeting(x,y + vsp + 1,obj_Wall)) and (sign(vsp) == 1))
+								if ((!stoneFallen) and (!stoneReady) and (place_meeting(x,y + vsp + 1,obj_ParentWall)) and (sign(vsp) == 1))
 								{
 									if (audio_is_playing(snd_StoneFallen)) audio_stop_sound(snd_StoneFallen);
 									audio_play_sound(snd_StoneFallen,0,false);
@@ -382,6 +382,95 @@ function scr_Player_Slide()
 							#endregion
 						}
 						#endregion
+						
+						#region Gooey
+						case playerCharacters.gooey:
+						if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (attackable))
+						{
+							if (audio_is_playing(snd_StoneReady)) audio_stop_sound(snd_StoneReady);
+							audio_play_sound(snd_StoneReady,0,false);
+							state = playerStates.normal;
+							hsp = 0;
+							vsp = -jumpspeed / 2;
+							jumpLimit = false;
+							jumpLimitTimer = 15;
+							invincible = true;
+						    attack = true;
+						    attackNumber = playerAttacks.gooeyStoneNormal;
+						    attackable = false;
+							stoneParticleTimer = 0;
+							sprite_index = sprStoneAttack1Ready;
+							image_index = 0;
+						}
+						
+						if (attackNumber == playerAttacks.gooeyStoneNormal)
+						{
+							if ((!stoneFallen) and (!stoneReady) and (place_meeting(x,y + vsp + 1,obj_ParentWall)) and (sign(vsp) == 1))
+							{
+								if (audio_is_playing(snd_StoneFallen)) audio_stop_sound(snd_StoneFallen);
+								audio_play_sound(snd_StoneFallen,0,false);
+								if ((sprite_index == sprStoneAttack1Rare) and (floor(image_index) == 2))
+								{
+									if (audio_is_playing(snd_JellyStone)) audio_stop_sound(snd_JellyStone);
+									audio_play_sound(snd_JellyStone,0,false);
+								}
+								stoneFallen = true;
+								scaleExX = .2;
+								scaleExY = -.2;
+								shakeY = 3;
+								for (var i = 0; i < 2; i++)
+								{
+									var parXDir = 4;
+									if (i == 1) var parXDir = -4;
+									var par = instance_create_depth(x + parXDir,y + 3,depth - 1,obj_RecoilStar);
+									if (i == 0)
+									{
+										par.hsp = 3;
+									}
+									else if (i == 1)
+									{
+										par.hsp = -3;
+									}
+									par.dir = sign(par.hsp);
+									par.hurtsObject = true;
+									par.hurtsEnemy = true;
+									par.canBeInhaled = false;
+									par.destroyTimer = 15;
+								}
+								if (instance_exists(obj_Camera))
+								{
+									obj_Camera.shakeX = 2;
+									obj_Camera.shakeY = 2;
+								}
+							}
+							
+							if (stoneReady)
+							{
+								shakeX = 2;
+							}
+							else if ((!global.cutscene) and (keyAttackPressed))
+							{
+								if (audio_is_playing(snd_StoneRelease)) audio_stop_sound(snd_StoneRelease);
+								audio_play_sound(snd_StoneRelease,0,false);
+								var stoneEnd = instance_create_depth(x,y,depth - 1,obj_Projectile_StoneStop);
+								stoneEnd.dmg = 205
+								stoneEnd.enemy = false;
+								stoneEnd.owner = id;
+								vsp = -(jumpspeed / 3);
+								grav = gravNormal;
+								gravLimit = gravLimitNormal;
+								invincible = false;
+								attackTimer = 15;
+								stoneReady = true;
+								stoneFallen = false;
+								if (instance_exists(stoneMaskProj)) instance_destroy(stoneMaskProj);
+						        attack = false;
+								attackNumber = playerAttacks.none;
+								if (stoneReleaseParticleTimer == -1) stoneReleaseParticleTimer = stoneReleaseParticleTimerMax;
+							}
+						}
+						#endregion
+						break;
 					}
 				}
 				break;
@@ -390,7 +479,7 @@ function scr_Player_Slide()
 			
 			if (!attack)
 			{
-			    if (place_meeting(x,y + 1,obj_Wall))
+			    if (place_meeting(x,y + 1,obj_ParentWall))
 			    {
 					if (!idleAnimation)
 					{
@@ -409,7 +498,7 @@ function scr_Player_Slide()
 					var ducksprite = sprDuck;
 					var duckblinksprite = sprDuckBlink;
 				
-					var collidedWall = instance_place(x,y + 1,obj_Wall);
+					var collidedWall = instance_place(x,y + 1,obj_ParentWall);
 					if ((playerCharacter == playerCharacters.kirby) and (collidedWall.slope))
 					{
 						switch (collidedWall.slopeType)
@@ -567,7 +656,7 @@ function scr_Player_Slide()
 				scaleExY = (-.15 / duckJumpChargeMax) * duckJumpCharge;
 			}
 			
-		    if ((!global.cutscene) and (carriedItemState != carriedItemStates.heavy) and (canSlide) and (!duckSlide) and (!attack) and (place_meeting(x,y + 1,obj_Wall)) and (keyJumpPressed))
+		    if ((!global.cutscene) and (carriedItemState != carriedItemStates.heavy) and (canSlide) and (!duckSlide) and (!attack) and (place_meeting(x,y + 1,obj_ParentWall)) and (keyJumpPressed))
 		    {
 				if (audio_is_playing(snd_Slide)) audio_stop_sound(snd_Slide);
 				slideSfx = audio_play_sound(snd_Slide,0,false);
@@ -667,7 +756,7 @@ function scr_Player_Slide()
 			idleAnimation = false;
 			idleAnimationTimer = 0;
 			idleAnimationTimerMax = 30;
-		    if (place_meeting(x,y + 1,obj_Wall))
+		    if (place_meeting(x,y + 1,obj_ParentWall))
 		    {
 				if (abs(hsp) > (decelSlide * 5))
 				{

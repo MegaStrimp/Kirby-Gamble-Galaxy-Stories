@@ -15,9 +15,9 @@ var playerFamiliar = global.familiarP1;
 if (player == 1) playerFamiliar = global.familiarP2;
 
 grounded = false;
-if (place_meeting(x,y + 1,obj_Wall))
+if (place_meeting(x,y + 1,obj_ParentWall))
 {
-	var collidingWall = instance_place(x,y + 1,obj_Wall);
+	var collidingWall = instance_place(x,y + 1,obj_ParentWall);
 	if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + (bbox_bottom - bbox_top) + vspFinal)))) grounded = true;
 }
 else if (place_meeting(x,y + 1,obj_Spring))
@@ -27,9 +27,9 @@ else if (place_meeting(x,y + 1,obj_Spring))
 }
 
 wallAbove = false;
-if (place_meeting(x,y - 1,obj_Wall))
+if (place_meeting(x,y - 1,obj_ParentWall))
 {
-	var collidingWall = instance_place(x,y - 1,obj_Wall);
+	var collidingWall = instance_place(x,y - 1,obj_ParentWall);
 	if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) wallAbove = true;
 }
 
@@ -86,20 +86,20 @@ if (!global.pause)
 {
 	//Moving Walls
 	/*
-	if (place_meeting(x,y + 1,obj_Wall))
+	if (place_meeting(x,y + 1,obj_ParentWall))
 	{
-		var movingWall = instance_place(x,y + 1,obj_Wall);
+		var movingWall = instance_place(x,y + 1,obj_ParentWall);
 		if (movingWall.hsp != 0) x += movingWall.hsp;
 		if (movingWall.vsp != 0) y += movingWall.vsp;
 	}
-	if (place_meeting(x,y - 1,obj_Wall))
+	if (place_meeting(x,y - 1,obj_ParentWall))
 	{
-		var movingWall = instance_place(x,y - 1,obj_Wall);
+		var movingWall = instance_place(x,y - 1,obj_ParentWall);
 		if (movingWall.vsp != 0) y += movingWall.vsp;
 	}
-	if (place_meeting(x + sign(hspFinal),y,obj_Wall))
+	if (place_meeting(x + sign(hspFinal),y,obj_ParentWall))
 	{
-		var movingWall = instance_place(x + sign(hspFinal),y,obj_Wall);
+		var movingWall = instance_place(x + sign(hspFinal),y,obj_ParentWall);
 		if (movingWall.hsp != 0) x += movingWall.hsp;
 	}
 	*/
@@ -513,6 +513,7 @@ if (keySelectPressed)
 			}
 			var abilityDropStar = instance_create_depth(round(x),round(y - 6),depth + 1,obj_AbilityDropStar);
 			abilityDropStar.owner = id;
+			abilityDropStar.hsp = -dir;
 			abilityDropStar.vsp = -abilityDropStar.jumpspeed;
 			abilityDropStar.dir = -image_xscale;
 			abilityDropStar.player = player;
@@ -836,9 +837,9 @@ if (!global.pause)
 	{
 		if (run)
 		{
-			if ((place_meeting(x,y + 1,obj_Wall)) and (abs(hsp) >= (movespeedRun * .25)))
+			if ((place_meeting(x,y + 1,obj_ParentWall)) and (abs(hsp) >= (movespeedRun * .25)))
 			{
-				var collidingWall = instance_place(x,y + 1,obj_Wall);
+				var collidingWall = instance_place(x,y + 1,obj_ParentWall);
 				if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal))))
 				{
 					var parCarryStart = instance_create_depth(x + (16 * -dir),y + 16,depth + 1,obj_Particle);
@@ -1148,7 +1149,7 @@ if (!global.pause)
 	else if (stoneReadyTimer == 0)
 	{
 		stoneReady = false;
-		if (!place_meeting(x,y + 1,obj_Wall))
+		if (!place_meeting(x,y + 1,obj_ParentWall))
 		{
 			scaleExX = -.1;
 			scaleExY = .1;
@@ -1449,7 +1450,7 @@ if (!global.pause)
 	}
 	else if (fireReleaseTimer == 0)
 	{
-		if (place_meeting(x,y + 1,obj_Wall)) sprite_index = sprFireAttackRelease1;
+		if (place_meeting(x,y + 1,obj_ParentWall)) sprite_index = sprFireAttackRelease1;
 	    fireReleaseTimer = -1;
 	}
 	
@@ -1670,11 +1671,11 @@ else if (setupTimer == 0)
 		if ((global.hasCoop) and (instance_number(obj_Player) == 1))
 		{
 			var xx = x;
-			if (!place_meeting(x - 24,y,obj_Wall))
+			if (!place_meeting(x - 24,y,obj_ParentWall))
 			{
 				xx = x - 24;
 			}
-			else if (!place_meeting(x + 24,y,obj_Wall))
+			else if (!place_meeting(x + 24,y,obj_ParentWall))
 			{
 				xx = x + 24;
 			}
@@ -3193,7 +3194,7 @@ else if (groundFailsafeTimer == 0)
 {
 	//Ground Failsafe
 	
-	while (place_meeting(x,y + 1,obj_Wall)) y -= 1;
+	while (place_meeting(x,y + 1,obj_ParentWall)) y -= 1;
 	groundFailsafeTimer = -1;
 }
 

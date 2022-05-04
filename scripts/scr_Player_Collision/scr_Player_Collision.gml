@@ -14,13 +14,13 @@ function scr_Player_Collision()
 	
 	//Slopes
 	
-	if ((place_meeting(x,y + 1,obj_Wall)) and (!place_meeting(x + hspFinal,y,obj_Wall)))
+	if ((place_meeting(x,y + 1,obj_ParentWall)) and (!place_meeting(x + hspFinal,y,obj_ParentWall)))
 	{
-		collidingWall = instance_place(x,y + 1,obj_Wall);
-		if (((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) and (((instance_place(x,y + 1,obj_Wall)).slope) or ((place_meeting(x + sign(hspFinal),y,obj_Wall) and (instance_place(x + sign(hspFinal),y,obj_Wall).slope)))))
+		collidingWall = instance_place(x,y + 1,obj_ParentWall);
+		if (((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) and (((instance_place(x,y + 1,obj_ParentWall)).slope) or ((place_meeting(x + sign(hspFinal),y,obj_ParentWall) and (instance_place(x + sign(hspFinal),y,obj_ParentWall).slope)))))
 		{
 			yplus = 0;
-			while (!place_meeting(x + hspFinal,y + yplus,obj_Wall) && yplus <= abs(hspFinal))
+			while (!place_meeting(x + hspFinal,y + yplus,obj_ParentWall) && yplus <= abs(hspFinal))
 			{
 				yplus += 1;
 			}
@@ -30,17 +30,17 @@ function scr_Player_Collision()
 	
 	//Horizontal Collision
 	
-	if (place_meeting(x + hspFinal,y,obj_Wall))
+	if (place_meeting(x + hspFinal,y,obj_ParentWall))
 	{
 		yplus = 0;
 		collidingWall = -1;
-		with (instance_place(x + hspFinal,y,obj_Wall))
+		with (instance_place(x + hspFinal,y,obj_ParentWall))
 		{
 			if (!platform) other.collidingWall = self;
 		}
 		if (collidingWall == -1)
 		{
-			with (instance_place(x + hspFinal, y, obj_ChildWall))
+			with (instance_place(x + hspFinal, y, obj_Wall))
 			{
 				other.collidingWall = self;
 			}
@@ -48,16 +48,16 @@ function scr_Player_Collision()
 		
 		if (collidingWall != -1)
 		{
-			while ((place_meeting(x + hspFinal,y - yplus,obj_Wall)) and (yplus <= abs(1 * hspFinal)))
+			while ((place_meeting(x + hspFinal,y - yplus,obj_ParentWall)) and (yplus <= abs(1 * hspFinal)))
 			{
 				yplus += 1;
 			}
 			
 			//Slide
 			
-			if place_meeting(x + hspFinal,y - yplus,obj_Wall)
+			if place_meeting(x + hspFinal,y - yplus,obj_ParentWall)
 			{
-				collidingWall = instance_place(x + hspFinal,y - yplus,obj_Wall);
+				collidingWall = instance_place(x + hspFinal,y - yplus,obj_ParentWall);
 				if (duckSlide)
 				{
 					if (collidingWall.object)
@@ -70,12 +70,12 @@ function scr_Player_Collision()
 				}
 			}
 			
-			if place_meeting(x + hspFinal,y - yplus,obj_Wall)
+			if place_meeting(x + hspFinal,y - yplus,obj_ParentWall)
 			{
-				collidingWall = instance_place(x + hspFinal,y - yplus,obj_Wall);
+				collidingWall = instance_place(x + hspFinal,y - yplus,obj_ParentWall);
 				if (collidingWall.hp > 0)
 				{
-					while (!place_meeting(x + sign(hspFinal),y,obj_Wall))
+					while (!place_meeting(x + sign(hspFinal),y,obj_ParentWall))
 					{
 						x += sign(hspFinal);
 					}
@@ -98,18 +98,18 @@ function scr_Player_Collision()
 	if (place_meeting(x,y + vspFinal,obj_Platform))
 	{
 		collidingWall = instance_place(x,y + vspFinal,obj_Platform);
-		if ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)) or (place_meeting(x, y + 1, obj_ChildWall))
+		if ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)) or (place_meeting(x, y + 1, obj_Wall))
 		{
 			while (!place_meeting(x,y + sign(vspFinal),obj_Platform))
 			{
 				y += sign(vspFinal);
 			}
-			if (place_meeting(x,y - 1,obj_Wall))
+			if (place_meeting(x,y - 1,obj_ParentWall))
 			{
-				var collidedWall = instance_place(x,y - 1,obj_Wall);
+				var collidedWall = instance_place(x,y - 1,obj_ParentWall);
 				if (collidedWall.object)
 				{
-					if (((state == playerStates.normal) or (state == playerStates.carry) or (state == playerStates.inhale)) and (!place_meeting(x,y + 1,obj_Wall)) and (collidedWall.damageType == damageTypes.none) and (sign(vsp) == -1))
+					if (((state == playerStates.normal) or (state == playerStates.carry) or (state == playerStates.inhale)) and (!place_meeting(x,y + 1,obj_ParentWall)) and (collidedWall.damageType == damageTypes.none) and (sign(vsp) == -1))
 					{
 						collidedWall.hp -= dmg;
 					}
@@ -120,21 +120,21 @@ function scr_Player_Collision()
 		}
 	}
 	
-	if (place_meeting(x,y + vspFinal,obj_Wall))
+	if (place_meeting(x,y + vspFinal,obj_ParentWall))
 	{
-		collidingWall = instance_place(x,y + vspFinal,obj_Wall);
+		collidingWall = instance_place(x,y + vspFinal,obj_ParentWall);
 		if (!collidingWall.platform)
 		{
-			while (!place_meeting(x,y + sign(vspFinal) / 10,obj_Wall))
+			while (!place_meeting(x,y + sign(vspFinal) / 10,obj_ParentWall))
 			{
 				y += sign(vspFinal) / 10;
 			}
-			if (place_meeting(x,y - 1,obj_Wall))
+			if (place_meeting(x,y - 1,obj_ParentWall))
 			{
-				var collidedWall = instance_place(x,y - 1,obj_Wall);
+				var collidedWall = instance_place(x,y - 1,obj_ParentWall);
 				if (collidedWall.object)
 				{
-					if (((state == playerStates.normal) or (state == playerStates.carry) or (state == playerStates.inhale)) and (!place_meeting(x,y + 1,obj_Wall)) and (collidedWall.damageType == damageTypes.none) and (sign(vsp) == -1))
+					if (((state == playerStates.normal) or (state == playerStates.carry) or (state == playerStates.inhale)) and (!place_meeting(x,y + 1,obj_ParentWall)) and (collidedWall.damageType == damageTypes.none) and (sign(vsp) == -1))
 					{
 						collidedWall.hp -= dmg;
 					}
@@ -151,26 +151,26 @@ function scr_Player_Collision()
 	
 	if (place_meeting(x,y,obj_Gate))
 	{
-		if (!place_meeting(x,y + 24,obj_Wall))
+		if (!place_meeting(x,y + 24,obj_ParentWall))
 		{
 			y += 24;
 		}
-		else if (!place_meeting(x,y - 24,obj_Wall))
+		else if (!place_meeting(x,y - 24,obj_ParentWall))
 		{
 			y -= 24;
 		}
-		else if (!place_meeting(x + 24,y,obj_Wall))
+		else if (!place_meeting(x + 24,y,obj_ParentWall))
 		{
 			x += 24;
 		}
-		else if (!place_meeting(x - 24,y,obj_Wall))
+		else if (!place_meeting(x - 24,y,obj_ParentWall))
 		{
 			x -= 24;
 		}
 	}
-	else if (position_meeting(x,y,obj_Wall))
+	else if (position_meeting(x,y,obj_ParentWall))
 	{
-		collidingWall = instance_position(x,y,obj_Wall);
+		collidingWall = instance_position(x,y,obj_ParentWall);
 		if (collidingWall.isTop)
 		{
 			while (place_meeting(x,y,collidingWall)) y -= 1;
@@ -206,7 +206,7 @@ function scr_Player_Collision()
 	
 	//Death On Bottom
 	
-	if ((global.hpP1 != 0) and (y >= room_height + 24)) global.hpP1 = 0;
+	if ((global.hpP1 != 0) and (y >= (obj_Camera.cameraY + obj_Camera.viewHeight) + 24)) global.hpP1 = 0;
 }
 
 /* OLD
@@ -222,13 +222,13 @@ function scr_Player_Collision()
 	
 	//Slopes
 	
-	if ((place_meeting(x,y + 1,obj_Wall)) and (!place_meeting(x + hspFinal,y,obj_Wall)))
+	if ((place_meeting(x,y + 1,obj_ParentWall)) and (!place_meeting(x + hspFinal,y,obj_ParentWall)))
 	{
-		collidingWall = instance_place(x,y + 1,obj_Wall);
-		if (((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) and (((instance_place(x,y + 1,obj_Wall)).slope) or ((place_meeting(x + sign(hspFinal),y,obj_Wall) and (instance_place(x + sign(hspFinal),y,obj_Wall).slope)))))
+		collidingWall = instance_place(x,y + 1,obj_ParentWall);
+		if (((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) and (((instance_place(x,y + 1,obj_ParentWall)).slope) or ((place_meeting(x + sign(hspFinal),y,obj_ParentWall) and (instance_place(x + sign(hspFinal),y,obj_ParentWall).slope)))))
 		{
 			yplus = 0;
-			while (!place_meeting(x + hspFinal,y + yplus,obj_Wall) && yplus <= abs(hspFinal))
+			while (!place_meeting(x + hspFinal,y + yplus,obj_ParentWall) && yplus <= abs(hspFinal))
 			{
 				yplus += 1;
 			}
@@ -251,26 +251,26 @@ function scr_Player_Collision()
 	
 	//Horizontal Collision
 	
-	if (place_meeting(x + hspFinal,y,obj_Wall))
+	if (place_meeting(x + hspFinal,y,obj_ParentWall))
 	{
 		yplus = 0;
 		collidingWall = -1;
-		with (instance_place(x + hspFinal,y,obj_Wall))
+		with (instance_place(x + hspFinal,y,obj_ParentWall))
 		{
 			if (!platform) other.collidingWall = self;
 		}
 		if (collidingWall != -1)
 		{
-			while ((place_meeting(x + hspFinal,y - yplus,obj_Wall)) and (yplus <= abs(1 * hspFinal)))
+			while ((place_meeting(x + hspFinal,y - yplus,obj_ParentWall)) and (yplus <= abs(1 * hspFinal)))
 			{
 				yplus += 1;
 			}
 			
 			//Slide
 			
-			if place_meeting(x + hspFinal,y - yplus,obj_Wall)
+			if place_meeting(x + hspFinal,y - yplus,obj_ParentWall)
 			{
-				collidingWall = instance_place(x + hspFinal,y - yplus,obj_Wall);
+				collidingWall = instance_place(x + hspFinal,y - yplus,obj_ParentWall);
 				if (duckSlide)
 				{
 					if (collidingWall.object)
@@ -283,12 +283,12 @@ function scr_Player_Collision()
 				}
 			}
 			
-			if place_meeting(x + hspFinal,y - yplus,obj_Wall)
+			if place_meeting(x + hspFinal,y - yplus,obj_ParentWall)
 			{
-				collidingWall = instance_place(x + hspFinal,y - yplus,obj_Wall);
+				collidingWall = instance_place(x + hspFinal,y - yplus,obj_ParentWall);
 				if (collidingWall.hp > 0)
 				{
-					while (!place_meeting(x + sign(hspFinal),y,obj_Wall))
+					while (!place_meeting(x + sign(hspFinal),y,obj_ParentWall))
 					{
 						x += sign(hspFinal);
 					}
@@ -316,12 +316,12 @@ function scr_Player_Collision()
 			{
 				y += sign(vspFinal);
 			}
-			if (place_meeting(x,y - 1,obj_Wall))
+			if (place_meeting(x,y - 1,obj_ParentWall))
 			{
-				var collidedWall = instance_place(x,y - 1,obj_Wall);
+				var collidedWall = instance_place(x,y - 1,obj_ParentWall);
 				if (collidedWall.object)
 				{
-					if (((state == playerStates.normal) or (state == playerStates.carry) or (state == playerStates.inhale)) and (!place_meeting(x,y + 1,obj_Wall)) and (collidedWall.damageType == damageTypes.none) and (sign(vsp) == -1))
+					if (((state == playerStates.normal) or (state == playerStates.carry) or (state == playerStates.inhale)) and (!place_meeting(x,y + 1,obj_ParentWall)) and (collidedWall.damageType == damageTypes.none) and (sign(vsp) == -1))
 					{
 						collidedWall.hp -= dmg;
 					}
@@ -332,21 +332,21 @@ function scr_Player_Collision()
 		}
 	}
 	
-	if (place_meeting(x,y + vspFinal,obj_Wall))
+	if (place_meeting(x,y + vspFinal,obj_ParentWall))
 	{
-		collidingWall = instance_place(x,y + vspFinal,obj_Wall);
+		collidingWall = instance_place(x,y + vspFinal,obj_ParentWall);
 		if (!collidingWall.platform)
 		{
-			while (!place_meeting(x,y + sign(vspFinal) / 10,obj_Wall))
+			while (!place_meeting(x,y + sign(vspFinal) / 10,obj_ParentWall))
 			{
 				y += sign(vspFinal) / 10;
 			}
-			if (place_meeting(x,y - 1,obj_Wall))
+			if (place_meeting(x,y - 1,obj_ParentWall))
 			{
-				var collidedWall = instance_place(x,y - 1,obj_Wall);
+				var collidedWall = instance_place(x,y - 1,obj_ParentWall);
 				if (collidedWall.object)
 				{
-					if (((state == playerStates.normal) or (state == playerStates.carry) or (state == playerStates.inhale)) and (!place_meeting(x,y + 1,obj_Wall)) and (collidedWall.damageType == damageTypes.none) and (sign(vsp) == -1))
+					if (((state == playerStates.normal) or (state == playerStates.carry) or (state == playerStates.inhale)) and (!place_meeting(x,y + 1,obj_ParentWall)) and (collidedWall.damageType == damageTypes.none) and (sign(vsp) == -1))
 					{
 						collidedWall.hp -= dmg;
 					}
@@ -363,26 +363,26 @@ function scr_Player_Collision()
 	
 	if (place_meeting(x,y,obj_Gate))
 	{
-		if (!place_meeting(x,y + 24,obj_Wall))
+		if (!place_meeting(x,y + 24,obj_ParentWall))
 		{
 			y += 24;
 		}
-		else if (!place_meeting(x,y - 24,obj_Wall))
+		else if (!place_meeting(x,y - 24,obj_ParentWall))
 		{
 			y -= 24;
 		}
-		else if (!place_meeting(x + 24,y,obj_Wall))
+		else if (!place_meeting(x + 24,y,obj_ParentWall))
 		{
 			x += 24;
 		}
-		else if (!place_meeting(x - 24,y,obj_Wall))
+		else if (!place_meeting(x - 24,y,obj_ParentWall))
 		{
 			x -= 24;
 		}
 	}
-	else if (position_meeting(x,y,obj_Wall))
+	else if (position_meeting(x,y,obj_ParentWall))
 	{
-		collidingWall = instance_position(x,y,obj_Wall);
+		collidingWall = instance_position(x,y,obj_ParentWall);
 		if (collidingWall.isTop)
 		{
 			//while (place_meeting(x,y + collidingWall,collidingWall)) y -= 1;

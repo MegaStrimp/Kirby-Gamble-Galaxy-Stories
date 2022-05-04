@@ -18,7 +18,7 @@ gravLimitNormal = .5;
 sprIdle = spr_EnemyParasol_Normal_Idle;
 sprFloatReady = spr_EnemyParasol_Normal_FloatReady;
 sprFloat = spr_EnemyParasol_Normal_Idle;
-sprHurt = "self";
+sprHurt = -1;
 mask_index = sprite_index;
 
 //Other Variables

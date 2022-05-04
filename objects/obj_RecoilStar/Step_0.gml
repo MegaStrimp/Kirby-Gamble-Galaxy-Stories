@@ -20,6 +20,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 			break;
 		}
 		sprite_index = sprSpawn;
+		sprHurt = sprIdle;
 	    spawnTimer = -1;
 	}
 	
@@ -38,6 +39,10 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	x += hsp;
 	y += vsp;
 	
+	//Animation
+	
+	image_speed = 1;
+	
 	//Destroy Timer
 	
 	if (destroyTimer > 0)
@@ -48,4 +53,8 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	{
 	    destroyTimer = -1;
 	}
+}
+else
+{
+	image_speed = 0;
 }

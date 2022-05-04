@@ -9,6 +9,8 @@ event_inherited();
 hsp = 0;
 vsp = 0;
 decel = .5;
+grav = 0;
+gravLimit = 0;
 
 //Other Variables
 

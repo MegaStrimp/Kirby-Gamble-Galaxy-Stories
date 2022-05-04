@@ -11,13 +11,15 @@ randomize();
 //Physics
 
 spd = 1;
+groundSpd = 0;
+groundSpdMax = 1.5;
 
 //Sprites
 
 mask_index = spr_Onion_Mask;
 
 sprIdle = spr_Onion_Normal_Idle;
-sprHurt = "self";
+sprHurt = -1;
 
 //Other Variables
 
@@ -36,3 +38,4 @@ objectOnDeathObj = obj_Projectile_ExplosionMask;
 hasDeathParticles = false;
 explosionResistance = true;
 instaDeath = false;
+groundCooldown = 0;

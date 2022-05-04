@@ -15,7 +15,7 @@ gravLimitNormal = 4;
 
 state = 0;
 points = 10;
-sprHurt = "self";
+sprHurt = -1;
 hasSpawner = false;
 destroyOutsideView = true;
 hasGravity = false;
@@ -25,6 +25,7 @@ mask_index = -1;
 
 active = false;
 owner = -1;
+objValue = 0;
 
 //Timers
 

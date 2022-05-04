@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_BurningLeo_Normal_Idle",
-    "path": "sprites/spr_BurningLeo_Normal_Idle/spr_BurningLeo_Normal_Idle.yy",
+    "name": "spr_Hothead_Normal_Idle",
+    "path": "sprites/spr_Hothead_Normal_Idle/spr_Hothead_Normal_Idle.yy",
   },
   "solid": false,
   "visible": true,

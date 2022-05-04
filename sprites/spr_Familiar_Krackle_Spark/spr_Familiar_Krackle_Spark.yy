@@ -17,8 +17,8 @@
   "width": 6,
   "height": 11,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "Familiars",
+    "path": "texturegroups/Familiars",
   },
   "swatchColours": null,
   "gridX": 0,
@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Krackle",
-    "path": "folders/Sprites/Familiars/Krackle.yy",
+    "name": "Misc",
+    "path": "folders/Sprites/Familiars/Krackle/Misc.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Familiar_Krackle_Spark",

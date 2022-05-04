@@ -172,6 +172,43 @@ if (!global.pause)
 	}
 	#endregion
 	
+	#region Attack
+	if (attack)
+	{
+		if (attackNumber == "bombThrow")
+		{
+			handX = (path_get_x(pth_Enemy_PoppyBrosSrHand1,handPath) + handXOffset) * dirX;
+			handY = path_get_y(pth_Enemy_PoppyBrosSrHand1,handPath) + handYOffset;
+			
+			switch (bombThrowState)
+			{
+				case 0:
+				handIndex = 0;
+				handPath += .04;
+				handPath = clamp(handPath,0,1);
+				if (handPath == 1) bombThrowState = 1;
+				break;
+				
+				case 1:
+				handPath -= .07;
+				handPath = clamp(handPath,0,1);
+				if (handPath == 0)
+				{
+					bombThrowState = 2;
+					bombThrowTimer = 0;
+				}
+				break;
+				
+				case 2:
+				handIndex = 2;
+				handXOffset -= .15;
+				handYOffset += .05;
+				break;
+			}
+		}
+	}
+	#endregion
+	
 	#region Attack Ready Timer
 	if (attackReadyTimer > 0)
 	{
@@ -185,6 +222,7 @@ if (!global.pause)
 		switch (attackNumber)
 		{
 			case "bombThrow":
+			bombThrowState = 0;
 			jumpCount += 1;
 			gravLimitNormal = 3.5;
 			hsp = 0;
@@ -209,7 +247,7 @@ if (!global.pause)
 			bomb.hurtsPlayer = true;
 			bomb.destroyAfterHurt = false;
 			bomb.canBeInhaled = true;
-			bombThrowTimer = bombThrowTimerMax;
+			//bombThrowTimer = bombThrowTimerMax;
 			break;
 			
 			case "dash":
@@ -243,12 +281,16 @@ if (!global.pause)
 	}
 	else if (bombThrowTimer == 0)
 	{
-		bomb.active = true;
-		bomb.destroyableByPlayer = true;
-		bomb.destroyableByEnemy = false;
-		bomb.hsp = 2.5 * dirX;
-		bomb.vsp = -4.5;
-		bomb.angleSpd = bomb.hsp * 4;
+		bombThrowState = 2;
+		if (instance_exists(bomb))
+		{
+			bomb.active = true;
+			bomb.destroyableByPlayer = true;
+			bomb.destroyableByEnemy = false;
+			bomb.hsp = 2.5 * dirX;
+			bomb.vsp = -4.5;
+			bomb.angleSpd = bomb.hsp * 4;
+		}
 		isAttacking = false;
 		attackStopTimer = 60;
 		bombThrowTimer = -1;

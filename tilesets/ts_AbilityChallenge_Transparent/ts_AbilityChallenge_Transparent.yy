@@ -11,8 +11,8 @@
   "tilevsep": 0,
   "spriteNoExport": true,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "AbilityChallenge",
+    "path": "texturegroups/AbilityChallenge",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,

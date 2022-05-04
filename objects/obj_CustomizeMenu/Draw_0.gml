@@ -1088,7 +1088,7 @@ switch (page)
 			col1 = familiarColor[i];
 			col2 = c_white;
 		}
-		if (familiarTitle[i] == playerfamiliar)
+		if (familiarValue[i] == playerfamiliar)
 		{
 			col1 = c_yellow;
 			col2 = c_yellow;

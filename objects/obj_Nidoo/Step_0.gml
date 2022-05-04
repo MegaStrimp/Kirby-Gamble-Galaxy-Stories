@@ -13,7 +13,7 @@ if (setupTimer == 0)
 		sprReady = spr_Nidoo_Normal_Ready;
 		sprShake = spr_Nidoo_Normal_Shake;
 		sprRelease = spr_Nidoo_Normal_Release;
-		sprHurt = "self";
+		sprHurt = -1;
 		break;
 	}
 }
@@ -55,7 +55,7 @@ if (!global.pause)
 		
 		//Particle Timer
 		
-		if (!place_meeting(x,y,obj_Wall))
+		if (!place_meeting(x,y,obj_ParentWall))
 		{
 			if (particleTimer > 0)
 			{

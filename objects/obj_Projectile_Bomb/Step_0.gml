@@ -210,7 +210,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 			
 			//Collision
 			
-			if ((place_meeting(x + 1,y,obj_Wall)) or (place_meeting(x - 1,y,obj_Wall)) or (place_meeting(x,y - 1,obj_Wall)) or (place_meeting(x,y + 1,obj_Wall)))
+			if ((place_meeting(x + 1,y,obj_ParentWall)) or (place_meeting(x - 1,y,obj_ParentWall)) or (place_meeting(x,y - 1,obj_ParentWall)) or (place_meeting(x,y + 1,obj_ParentWall)))
 			{
 				hsp = 0;
 				vsp = 0;
@@ -244,9 +244,13 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		
 		if (homingEnemy == -1) x += hsp;
 		y += vsp;
+		
+		depth = layer_get_depth("Environment");
 	}
 	else
 	{
+		if (!enemy) depth = layer_get_depth("Player");
+		
 		if ((!instance_exists(owner)) or ((destroyAfterHurt) and (instance_exists(owner)) and (enemy) and (owner.hurt))) instance_destroy();
 		
 		//Self Explode Timer

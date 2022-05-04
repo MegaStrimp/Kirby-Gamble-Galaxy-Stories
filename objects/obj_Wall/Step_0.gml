@@ -12,7 +12,7 @@ if (!global.pause)
 	{
 		if (canExplode)
 		{
-			with (obj_Wall)
+			with (obj_ParentWall)
 			{
 			    if ((!isTop) and (canExplode))
 				{

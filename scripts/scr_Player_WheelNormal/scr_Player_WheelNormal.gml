@@ -85,9 +85,9 @@ function scr_Player_WheelNormal()
 		
 		//Crash
 		
-		if ((hsp > (movespeedWheel * .8)) and (place_meeting(x + hsp,y,obj_Wall)))
+		if ((hsp > (movespeedWheel * .8)) and (place_meeting(x + hsp,y,obj_ParentWall)))
 		{
-			if (!instance_place(x + hsp,y,obj_Wall).platform)
+			if (!instance_place(x + hsp,y,obj_ParentWall).platform)
 			{
 				jumpLimit = false;
 				jumpLimitTimer = 15;

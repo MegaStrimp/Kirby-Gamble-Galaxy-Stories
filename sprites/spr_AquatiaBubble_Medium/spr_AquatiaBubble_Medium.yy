@@ -17,8 +17,8 @@
   "width": 88,
   "height": 92,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "Aquatia",
+    "path": "texturegroups/Aquatia",
   },
   "swatchColours": null,
   "gridX": 0,

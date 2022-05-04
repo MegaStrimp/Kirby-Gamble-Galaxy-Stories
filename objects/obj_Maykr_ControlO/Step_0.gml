@@ -475,7 +475,7 @@ if (global.gambleMaykr)
 			spawner.spawnedDirX = dirX;
 			switch (spawnedItemIndex)
 			{
-				case obj_Wall:
+				case obj_ParentWall:
 				spawner.spawnedSlopeType = spawnedSlopeType;
 				break;
 			}

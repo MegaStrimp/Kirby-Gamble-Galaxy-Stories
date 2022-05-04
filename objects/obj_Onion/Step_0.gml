@@ -10,19 +10,27 @@ if (setupTimer == 0)
 		
 		case 0:
 		sprIdle = spr_Onion_Normal_Idle;
-		sprHurt = "self";
+		sprHurt = -1;
 		break;
-		
-		var nearestPlayer = -1;
-		nearestPlayer = instance_nearest(x,y,obj_Player);
+	}
+	
+	var nearestPlayer = -1;
+	nearestPlayer = instance_nearest(x,y,obj_Player);
+	if (state == 0)
+	{
 		if (nearestPlayer != -1)
 		{
 			direction = point_direction(x,y,nearestPlayer.x,nearestPlayer.y);
 			image_angle = direction + 90;
 		}
-		
-		spd = random_range(spd / 2,spd * 1.5);
 	}
+	else if (state == 1)
+	{
+		groundFailsafe = false;
+		depth = layer_get_depth("Collision");
+	}
+	
+	spd = random_range(spd / 2,spd * 1.5);
 }
 
 //Event Inherited
@@ -44,14 +52,18 @@ if (!global.pause)
 	
 	scr_Enemy_HurtsPlayer(dmg);
 	
+	//Ground Variables
+	
+	groundSpd = lerp(groundSpd,0,.05);
+	if (groundCooldown > 0) groundCooldown -= 1;
+	
 	//States
 	
 	switch (state)
 	{
-		//Normal
-		
+		#region Normal
 		case 0:
-		if ((place_meeting(x,y,collisionX)) or (place_meeting(x,y,collisionY))) death = true;
+		if ((groundCooldown == 0) and ((place_meeting(x,y,collisionX)) or (place_meeting(x,y,collisionY)))) death = true;
 		
 		if (nearestPlayer != -1)
 		{
@@ -59,12 +71,28 @@ if (!global.pause)
 			imageAngle = direction + 90;
 		}
 		
-		hsp = lengthdir_x(spd,direction);
-		vsp = lengthdir_y(spd,direction);
+		hsp = lengthdir_x(spd + groundSpd,direction);
+		vsp = lengthdir_y(spd + groundSpd,direction);
 		
 		image_speed = 1;
 		sprite_index = sprIdle;
 		break;
+		#endregion
+		
+		#region Ground
+		case 1:
+		if ((nearestPlayer != -1) and ((distance_to_object(nearestPlayer) <= 72)))
+		{
+			state = 0;
+			depth = layer_get_depth("Enemies");
+			groundCooldown = 10;
+			groundSpd = groundSpdMax;
+		}
+		
+		image_speed = 0;
+		sprite_index = sprIdle;
+		break;
+		#endregion
 	}
 }
 else

@@ -20,7 +20,7 @@ if (!global.pause)
 	{
 		visible = true;
 		
-		if (place_meeting(x,y + 1,obj_Wall))
+		if (place_meeting(x,y + 1,obj_ParentWall))
 		{
 			vsp = -jumpspeed;
 			if (hsp == 0) hsp = movespeed * dirX;
@@ -55,10 +55,43 @@ if (!global.pause)
 		}
 		else if (activeTimer == 0)
 		{
-			active = true;
-			hasGravity = true;
-			mask_index = sprite_index;
-			activeTimer = activeTimerMax;
+			switch (objValue)
+			{
+				#region Apple
+				case 0:
+				active = true;
+				hasGravity = true;
+				mask_index = sprite_index;
+				break;
+				#endregion
+				
+				#region Gordo
+				case 1:
+				var obj = instance_create_depth(x,y,depth,obj_Gordo);
+				obj.state = 3;
+				obj.walkDirX = owner.dirX;
+				instance_destroy();
+				break;
+				#endregion
+				
+				#region Como
+				case 2:
+				var obj = instance_create_depth(x,y,depth,obj_Como);
+				instance_destroy();
+				break;
+				#endregion
+				
+				#region Waddle Dee
+				case 3:
+				var obj = instance_create_depth(x,y,depth,obj_WaddleDee);
+				obj.state = 1;
+				obj.dirX = owner.dirX;
+				obj.walkDirX = owner.dirX;
+				instance_destroy();
+				break;
+				#endregion
+			}
+			activeTimer = -1;
 		}
 		
 		//Flash Timer

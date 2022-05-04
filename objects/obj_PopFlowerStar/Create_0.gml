@@ -16,8 +16,8 @@ character = 0;
 hasGravity = false;
 hasXCollision = true;
 hasYCollision = true;
-collisionX = obj_Wall;
-collisionY = obj_Wall;
+collisionX = obj_ParentWall;
+collisionY = obj_ParentWall;
 
 //Timers
 

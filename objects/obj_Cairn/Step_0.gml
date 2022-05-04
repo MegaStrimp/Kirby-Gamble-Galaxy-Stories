@@ -13,7 +13,7 @@ if (!global.pause)
 	scr_Enemy_HurtsPlayer(dmg);
 	
 	if (hurt) hspDummy = 0;
-	if ((hurt) and (sprHurt != "self"))
+	if ((hurt) and (sprHurt != -1))
 	{
 		image_speed = 1;
 		sprite_index = sprHurt;
@@ -47,11 +47,11 @@ if (!global.pause)
 			hspDir = 1;
 			switch (state)
 			{
-				case 1:
+				case 0:
 				if (jumpCount == 2) hspDir *= -1;
 				break;
 				
-				case 2:
+				case 1:
 				var playerX = x;
 				if (instance_exists(obj_Player)) playerX = instance_nearest(x,y,obj_Player).x;
 				if (playerX < x)

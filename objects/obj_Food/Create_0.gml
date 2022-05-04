@@ -17,7 +17,7 @@ spdMax = 2;
 //Other Variables
 
 image_index = irandom_range(0,image_number - 1);
-sprHurt = "self";
+sprHurt = -1;
 points = 10;
 ability = playerAbilities.none;
 enemy = false;
@@ -27,5 +27,5 @@ inhaleYOffset = 0;
 hasGravity = true;
 hasXCollision = true;
 hasYCollision = true;
-collisionX = obj_Wall;
-collisionY = obj_Wall;
+collisionX = obj_ParentWall;
+collisionY = obj_ParentWall;

@@ -16,6 +16,14 @@ else if (setupTimer == 0)
 		sprChestClosed = spr_ItemChest_Normal_Closed;
 		sprChestOpen = spr_ItemChest_Normal_Open;
 		break;
+		
+		//Key Chest
+		
+		case 1:
+		sprChestClosed = spr_KeyChest_Normal_Chest_Closed;
+		sprChestOpen = spr_KeyChest_Normal_Chest_Open;
+		sprKeyChestAura = spr_KeyChest_Normal_Chest_Aura;
+		break;
 	}
 	setupTimer = -1;
 }
@@ -42,16 +50,21 @@ if (!global.pause)
 	{
 		var touchedPlayer = instance_place(x,y,obj_Player);
 		scr_Player_Inputs(touchedPlayer.player);
-		if ((!global.cutscene) and (keyUpPressed))
+		if (((!global.cutscene) and (keyUpPressed)) and ((!isKeyChest) or ((isKeyChest) and (touchedPlayer.carriedItem == carriedItems.keyChestKey))))
 		{
 			if (audio_is_playing(snd_ChestOpen)) audio_stop_sound(snd_ChestOpen);
 			audio_play_sound(snd_ChestOpen,0,false);
+			if (isKeyChest)
+			{
+				if (instance_exists(touchedPlayer.carriedItemIndex)) instance_destroy(touchedPlayer.carriedItemIndex);
+				touchedPlayer.carriedItem = carriedItems.none;
+				touchedPlayer.carriedItemIndex = -1;
+				touchedPlayer.carriedItemState = "none";
+			}
 			var itemX = x;
 			var itemY = y;
-			if (!place_meeting(x,touchedPlayer.y - 24,obj_Wall)) itemY = touchedPlayer.y - 24;
+			if (!place_meeting(x,touchedPlayer.y - 24,obj_ParentWall)) itemY = touchedPlayer.y - 24;
 			open = true;
-			blinkTimer = blinkTimerMax;
-			destroyTimer = destroyTimerMax;
 			
 			if (!isCollectible)
 			{

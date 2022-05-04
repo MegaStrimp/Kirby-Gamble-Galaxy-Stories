@@ -46,7 +46,7 @@ else if (spawnTimer == 0)
 		
 		case 0:
 		spawnedEnemy.sprIdle = spr_BloodGordo_Normal_Idle;
-		spawnedEnemy.sprHurt = "self";
+		spawnedEnemy.sprHurt = -1;
 		break;
 	}
 	spawnedEnemy.state = state;

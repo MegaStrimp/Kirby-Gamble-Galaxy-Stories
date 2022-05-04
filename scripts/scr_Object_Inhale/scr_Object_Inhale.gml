@@ -42,7 +42,7 @@ function scr_Object_Inhale(argument0)
 				}
 				if (object_index == obj_StarBlock) instance_create_depth(x + (sprite_get_width(sprite_index) / 2),y + (sprite_get_height(sprite_index) / 2),depth - 1,obj_PointStar);
 				var eatMe = instance_create_depth(x + inhaleXOffset,y + inhaleYOffset,inhaleMask.owner.depth - 1,obj_EatMe);
-			    if (sprHurt == "self")
+			    if (sprHurt == -1)
 				{
 					eatMe.sprite_index = sprite_index;
 				}
