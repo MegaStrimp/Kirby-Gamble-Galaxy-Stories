@@ -1,6 +1,6 @@
 ///@description Creation Code
 
-sprite_index = spr_48x24Slope;
+image_index = 1;
 slope = true;
-slopeType = "gentle";
+slopeType = "normal";
 hasTop = false;

@@ -11,7 +11,7 @@ sprIdle = -1;
 //Other Variables
 
 image_speed = 0;
-mask_index = spr_Platform;
+//mask_index = spr_Platform;
 index = 0;
 platform = true;
 hasTop = false;

@@ -1,5 +1,5 @@
 ///@description Inputs
-///@param {real} player value.
+///@param {real} Player Value
 
 function scr_Player_Inputs(argument0)
 {

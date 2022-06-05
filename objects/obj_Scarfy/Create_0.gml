@@ -35,10 +35,14 @@ hasXCollision = false;
 hasYCollision = false;
 clampPositionX = false;
 clampPositionY = false;
+objectOnDeath = true;
+objectOnDeathObj = obj_Projectile_ExplosionMask;
 attack = false;
 attackState = 0;
 imageSpeed = 1;
 particleCount = 0;
+canTurnX = true;
+canTurnY = true;
 
 //Timers
 
@@ -46,3 +50,7 @@ particleTimer = -1;
 particleTimerMax = 4;
 attackTimerMax = 300;
 attackTimer = attackTimerMax;
+canTurnXTimer = -1;
+canTurnXTimerMax = 15;
+canTurnYTimer = -1;
+canTurnYTimerMax = 15;

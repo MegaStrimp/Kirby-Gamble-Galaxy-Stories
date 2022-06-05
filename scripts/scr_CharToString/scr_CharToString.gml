@@ -1,4 +1,4 @@
-///@description Virtual Keys Set
+///@description Char To String
 ///@param {real} key Which key to convert.
 
 function scr_CharToString(argument0)

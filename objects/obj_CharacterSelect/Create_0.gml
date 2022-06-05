@@ -74,35 +74,60 @@ characterTitle[i] = "Kirby";
 characterIcon[i] = spr_Hud_Icon_Kirby;
 characterAvailable[i] = true;
 i += 1;
-characterIndex[i] = playerCharacters.gamble;
-characterTitle[i] = "Gamble";
-characterIcon[i] = spr_Hud_Icon_Gamble;
-characterAvailable[i] = true;
-i += 1;
-characterIndex[i] = playerCharacters.metaKnight;
-characterTitle[i] = "Meta Knight";
-characterIcon[i] = spr_Hud_Icon_MetaKnight;
-characterAvailable[i] = false;
-i += 1;
-characterIndex[i] = playerCharacters.keeby;
-characterTitle[i] = "Keeby";
-characterIcon[i] = spr_Hud_Icon_Keeby;
-characterAvailable[i] = false;
-i += 1;
-characterIndex[i] = playerCharacters.waddleDee;
-characterTitle[i] = "Helper";
-characterIcon[i] = spr_Hud_Icon_Helper;
-characterAvailable[i] = true;
-i += 1;
-characterIndex[i] = playerCharacters.magolor;
-characterTitle[i] = "Magolor";
-characterIcon[i] = spr_Hud_Icon_Magolor;
-characterAvailable[i] = false;
-i += 1;
-characterIndex[i] = playerCharacters.gooey;
-characterTitle[i] = "Gooey";
-characterIcon[i] = spr_Hud_Icon_Gooey;
-characterAvailable[i] = true;
+
+if (global.gambleUnlocked)
+{
+	characterIndex[i] = playerCharacters.gamble;
+	characterTitle[i] = "Gamble";
+	characterIcon[i] = spr_Hud_Icon_Gamble;
+	characterAvailable[i] = true;
+	i += 1;
+}
+
+if (global.metaKnightUnlocked)
+{
+	characterIndex[i] = playerCharacters.metaKnight;
+	characterTitle[i] = "Meta Knight";
+	characterIcon[i] = spr_Hud_Icon_MetaKnight;
+	characterAvailable[i] = false;
+	i += 1;
+}
+
+if (global.keebyUnlocked)
+{
+	characterIndex[i] = playerCharacters.keeby;
+	characterTitle[i] = "Keeby";
+	characterIcon[i] = spr_Hud_Icon_Keeby;
+	characterAvailable[i] = false;
+	i += 1;
+}
+
+if (global.helperUnlocked)
+{
+	characterIndex[i] = playerCharacters.waddleDee;
+	characterTitle[i] = "Helper";
+	characterIcon[i] = spr_Hud_Icon_Helper;
+	characterAvailable[i] = true;
+	i += 1;
+}
+
+if (global.magolorUnlocked)
+{
+	characterIndex[i] = playerCharacters.magolor;
+	characterTitle[i] = "Magolor";
+	characterIcon[i] = spr_Hud_Icon_Magolor;
+	characterAvailable[i] = false;
+	i += 1;
+}
+
+if (global.gooeyUnlocked)
+{
+	characterIndex[i] = playerCharacters.gooey;
+	characterTitle[i] = "Gooey";
+	characterIcon[i] = spr_Hud_Icon_Gooey;
+	characterAvailable[i] = true;
+	i += 1;
+}
 
 arrayLength = array_length(characterIndex);
 

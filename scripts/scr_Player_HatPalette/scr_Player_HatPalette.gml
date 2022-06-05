@@ -6,7 +6,7 @@ function scr_Player_HatPalette(argument0,argument1)
 {
 	var abilityToCheck = argument0;
 	var selectedCharacter = argument1;
-	var hatPaletteIndex;
+	var hatPaletteIndex = -1;
 	
 	switch (selectedCharacter)
 	{
@@ -25,7 +25,7 @@ function scr_Player_HatPalette(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.cutter_kssu:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteCutterKSSUP1;
@@ -37,15 +37,15 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.cutter_kssu_slicingGold:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Cutter_KSSU_Palette_SlicingGold;
 					break;
 					
-					case 1:
+					case abilityHatPaints.cutter_kssu_bloodBlade:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Cutter_KSSU_Palette_BloodBlade;
 					break;
 					
-					case 2:
+					case abilityHatPaints.cutter_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Cutter_KSSU_Palette_Bitcrushed;
 					break;
 				}
@@ -65,7 +65,7 @@ function scr_Player_HatPalette(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.beam_kssu:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteBeamKSSUP1;
@@ -77,21 +77,21 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.beam_kssu_sparklingBeam:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Beam_KSSU_Palette_SparklingBeam;
 					break;
 					
-					case 1:
+					case abilityHatPaints.beam_kssu_fluxNostalgia:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Beam_KSSU_Palette_FluxNostalgia;
 					break;
 					
-					case 2:
+					case abilityHatPaints.beam_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Beam_KSSU_Palette_Bitcrushed;
 					break;
 				}
 				break;
 				
-				case "marxSoul":
+				case abilityHatSkins.beam_marxSoul:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteBeamMarxSoulP1;
@@ -103,15 +103,15 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.beam_marxSoul_jesterSpirit:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Beam_MarxSoul_Palette_JesterSpirit;
 					break;
 					
-					case 1:
+					case abilityHatPaints.beam_marxSoul_summerFruits:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Beam_MarxSoul_Palette_SummerFruits;
 					break;
 					
-					case 2:
+					case abilityHatPaints.beam_marxSoul_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Beam_MarxSoul_Palette_Bitcrushed;
 					break;
 				}
@@ -131,7 +131,7 @@ function scr_Player_HatPalette(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				default:
+				case abilityHatSkins.mysticBeam_ggs:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteMysticBeamGGSP1;
@@ -143,7 +143,7 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.mysticBeam_ggs_nastyFlux:
 					hatPaletteIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Palette_NastyFlux;
 					break;
 				}
@@ -163,7 +163,7 @@ function scr_Player_HatPalette(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.stone_kssu:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteStoneKSSUP1;
@@ -175,17 +175,17 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.stone_kssu_rockyRoad:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Stone_KSSU_Palette_RockyRoad;
 					break;
 					
-					case 1:
+					case abilityHatPaints.stone_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Stone_KSSU_Palette_Bitcrushed;
 					break;
 				}
 				break;
 				
-				case "modern":
+				case abilityHatSkins.stone_modern:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteStoneModernP1;
@@ -197,15 +197,15 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.stone_modern_rockyRoad:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Stone_Modern_Palette_RockyRoad;
 					break;
 					
-					case 1:
+					case abilityHatPaints.stone_modern_moltenRock:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Stone_Modern_Palette_MoltenRock;
 					break;
 					
-					case 2:
+					case abilityHatPaints.stone_modern_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Stone_Modern_Palette_Bitcrushed;
 					break;
 				}
@@ -225,7 +225,7 @@ function scr_Player_HatPalette(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.ufo_modern:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteBeamKSSUP1;
@@ -237,7 +237,7 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case 0:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Beam_KSSU_Palette_SparklingBeam;
 					break;
 				}
@@ -257,7 +257,7 @@ function scr_Player_HatPalette(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.mirror_kssu:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteMirrorKSSUP1;
@@ -269,21 +269,21 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.mirror_kssu_jesterReflection:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Mirror_KSSU_Palette_JesterReflection;
 					break;
 					
-					case 1:
+					case abilityHatPaints.mirror_kssu_betaBlock:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Mirror_KSSU_Palette_BetaBlock;
 					break;
 					
-					case 2:
+					case abilityHatPaints.mirror_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Mirror_KSSU_Palette_Bitcrushed;
 					break;
 				}
 				break;
 				
-				case "modern":
+				case abilityHatSkins.mirror_modern:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteMirrorModernP1;
@@ -295,15 +295,15 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.mirror_modern_jesterReflection:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Mirror_Modern_Palette_JesterReflection;
 					break;
 					
-					case 1:
+					case abilityHatPaints.mirror_modern_betaBlock:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Mirror_Modern_Palette_BetaBlock;
 					break;
 					
-					case 2:
+					case abilityHatPaints.mirror_modern_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Mirror_Modern_Palette_Bitcrushed;
 					break;
 				}
@@ -323,7 +323,7 @@ function scr_Player_HatPalette(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.ninja_kssu:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteNinjaKSSUP1;
@@ -335,21 +335,21 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.ninja_kssu_stealthyMaroon:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Ninja_KSSU_Palette_StealthyMaroon;
 					break;
 					
-					case 1:
+					case abilityHatPaints.ninja_kssu_silverLinedWarrior:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Ninja_KSSU_Palette_SilverLinedWarrior;
 					break;
 					
-					case 2:
+					case abilityHatPaints.ninja_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Ninja_KSSU_Palette_Bitcrushed;
 					break;
 				}
 				break;
 				
-				case "modern":
+				case abilityHatSkins.ninja_modern:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteNinjaModernP1;
@@ -361,11 +361,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.ninja_modern_stealthyMaroon:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Ninja_Modern_Palette_StealthyMaroon;
 					break;
 					
-					case 1:
+					case abilityHatPaints.ninja_modern_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Ninja_Modern_Palette_Bitcrushed;
 					break;
 				}
@@ -385,7 +385,7 @@ function scr_Player_HatPalette(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.bomb_kssu:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteBombKSSUP1;
@@ -397,17 +397,17 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.bomb_kssu_explosiveB:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Bomb_KSSU_Palette_ExplosiveB;
 					break;
 					
-					case 1:
+					case abilityHatPaints.bomb_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Bomb_KSSU_Palette_Bitcrushed;
 					break;
 				}
 				break;
 				
-				case "modern":
+				case abilityHatSkins.bomb_modern:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteBombModernP1;
@@ -419,11 +419,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.bomb_modern_explosiveB:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Bomb_Modern_Palette_ExplosiveB;
 					break;
 					
-					case 1:
+					case abilityHatPaints.bomb_modern_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Bomb_Modern_Palette_Bitcrushed;
 					break;
 				}
@@ -443,7 +443,7 @@ function scr_Player_HatPalette(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.fire_kssu:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteFireKSSUP1;
@@ -455,23 +455,23 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.fire_kssu_scorchingScarlet:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Fire_KSSU_Palette_ScorchingScarlet;
 					break;
 					
-					case 1:
+					case abilityHatPaints.fire_kssu_blazingBlue:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Fire_KSSU_Palette_BlazingBlue;
 					break;
 					
-					case 2:
+					case abilityHatPaints.fire_kssu_fluxNostalgia:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Fire_KSSU_Palette_FluxNostalgia;
 					break;
 					
-					case 3:
+					case abilityHatPaints.fire_kssu_scarletRose:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Fire_KSSU_Palette_ScarletRose;
 					break;
 					
-					case 4:
+					case abilityHatPaints.fire_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Fire_KSSU_Palette_Bitcrushed;
 					break;
 				}
@@ -491,7 +491,7 @@ function scr_Player_HatPalette(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.mysticFire_ggs:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteFireKSSUP1;
@@ -503,7 +503,7 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case 0:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Fire_KSSU_Palette_FluxNostalgia;
 					break;
 				}
@@ -523,7 +523,7 @@ function scr_Player_HatPalette(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.ice_kssu:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteIceKSSUP1;
@@ -535,17 +535,17 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.ice_kssu_frostedShard:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Ice_KSSU_Palette_FrostedShard;
 					break;
 					
-					case 1:
+					case abilityHatPaints.ice_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Ice_KSSU_Palette_Bitcrushed;
 					break;
 				}
 				break;
 				
-				case "snowman":
+				case abilityHatSkins.ice_snowman:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteIceKSSUP1;
@@ -557,11 +557,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.ice_snowman_chilly:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Ice_Snowman_Palette_Chilly;
 					break;
 					
-					case 1:
+					case abilityHatPaints.ice_snowman_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Ice_Snowman_Palette_Bitcrushed;
 					break;
 				}
@@ -581,7 +581,7 @@ function scr_Player_HatPalette(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.spark_kssu:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteSparkKSSUP1;
@@ -593,11 +593,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.spark_kssu_electroMarine:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Spark_KSSU_Palette_ElectroMarine;
 					break;
 					
-					case 1:
+					case abilityHatPaints.spark_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Spark_KSSU_Palette_Bitcrushed;
 					break;
 				}
@@ -617,7 +617,7 @@ function scr_Player_HatPalette(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.yoyo_kssu:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteYoyoKSSUP1;
@@ -629,11 +629,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.yoyo_kssu_spinningViolet:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Yoyo_KSSU_Palette_SpinningViolet;
 					break;
 					
-					case 1:
+					case abilityHatPaints.yoyo_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Yoyo_KSSU_Palette_Bitcrushed;
 					break;
 				}
@@ -653,7 +653,7 @@ function scr_Player_HatPalette(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.wheel_kssu:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteWheelKSSUP1;
@@ -665,11 +665,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.wheel_kssu_rushingRed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Wheel_KSSU_Palette_RushingRed;
 					break;
 					
-					case 1:
+					case abilityHatPaints.wheel_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Wheel_KSSU_Palette_Bitcrushed;
 					break;
 				}
@@ -689,7 +689,7 @@ function scr_Player_HatPalette(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.artist_kssu:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteArtistKSSUP1;
@@ -701,17 +701,17 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.artist_kssu_dapperPainter:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Artist_KSSU_Palette_DapperPainter;
 					break;
 					
-					case 1:
+					case abilityHatPaints.artist_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Artist_KSSU_Palette_Bitcrushed;
 					break;
 				}
 				break;
 				
-				case "modern":
+				case abilityHatSkins.artist_modern:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteArtistModernP1;
@@ -723,7 +723,7 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case 0:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Artist_KSSU_Palette_DapperPainter;
 					break;
 				}
@@ -743,7 +743,7 @@ function scr_Player_HatPalette(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.fighter_kssu:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteFighterKSSUP1;
@@ -755,11 +755,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.fighter_kssu_crimsonChampion:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Fighter_KSSU_Palette_CrimsonChampion;
 					break;
 					
-					case 1:
+					case abilityHatPaints.fighter_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Fighter_KSSU_Palette_Bitcrushed;
 					break;
 				}
@@ -779,7 +779,7 @@ function scr_Player_HatPalette(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.suplex_kssu:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteSuplexKSSUP1;
@@ -791,11 +791,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.suplex_kssu_blueBanner:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Suplex_KSSU_Palette_BlueBanner;
 					break;
 					
-					case 1:
+					case abilityHatPaints.suplex_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Suplex_KSSU_Palette_Bitcrushed;
 					break;
 				}
@@ -815,7 +815,7 @@ function scr_Player_HatPalette(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.wing_kssu:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteWingKSSUP1;
@@ -827,11 +827,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.wing_kssu_rainbowFlight:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Wing_KSSU_Palette_RainbowFlight;
 					break;
 					
-					case 1:
+					case abilityHatPaints.wing_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Wing_KSSU_Palette_Bitcrushed;
 					break;
 				}
@@ -851,7 +851,7 @@ function scr_Player_HatPalette(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.jet_kssu:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteJetKSSUP1;
@@ -863,15 +863,15 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.jet_kssu_speedMachine:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Jet_KSSU_Palette_SpeedMachine;
 					break;
 					
-					case 1:
+					case abilityHatPaints.jet_kssu_speedyScarlet:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Jet_KSSU_Palette_SpeedyScarlet;
 					break;
 					
-					case 2:
+					case abilityHatPaints.jet_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Jet_KSSU_Palette_Bitcrushed;
 					break;
 				}
@@ -891,7 +891,7 @@ function scr_Player_HatPalette(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.sword_kssu:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteSwordKSSUP1;
@@ -903,15 +903,15 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.sword_kssu_slicingGreen:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Sword_KSSU_Palette_SlicingGreen;
 					break;
 					
-					case 1:
+					case abilityHatPaints.sword_kssu_thunderingCloud:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Sword_KSSU_Palette_ThunderingCloud;
 					break;
 					
-					case 2:
+					case abilityHatPaints.sword_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Sword_KSSU_Palette_Bitcrushed;
 					break;
 				}
@@ -931,7 +931,7 @@ function scr_Player_HatPalette(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.parasol_kssu:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteParasolKSSUP1;
@@ -943,11 +943,11 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.parasol_kssu_lazyRed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Parasol_KSSU_Palette_LazyRed;
 					break;
 					
-					case 1:
+					case abilityHatPaints.parasol_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Parasol_KSSU_Palette_Bitcrushed;
 					break;
 				}
@@ -967,7 +967,7 @@ function scr_Player_HatPalette(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.hammer_kssu:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteHammerKSSUP1;
@@ -979,15 +979,15 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.hammer_kssu_crushingBrown:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Hammer_KSSU_Palette_CrushingBrown;
 					break;
 					
-					case 1:
+					case abilityHatPaints.hammer_kssu_constructionWork:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Hammer_KSSU_Palette_ConstructionWork;
 					break;
 					
-					case 2:
+					case abilityHatPaints.hammer_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Hammer_KSSU_Palette_Bitcrushed;
 					break;
 				}
@@ -1007,7 +1007,7 @@ function scr_Player_HatPalette(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "modern":
+				case abilityHatSkins.bell_modern:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteBellModernP1;
@@ -1019,39 +1019,39 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.bell_modern_dazzlingDefault:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Bell_Modern_Palette_DazzlingDefault;
 					break;
 					
-					case 1:
+					case abilityHatPaints.bell_modern_prestoPurple:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Bell_Modern_Palette_PrestoPurple;
 					break;
 					
-					case 2:
+					case abilityHatPaints.bell_modern_tempoTeal:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Bell_Modern_Palette_TempoTeal;
 					break;
 					
-					case 3:
+					case abilityHatPaints.bell_modern_ringingRose:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Bell_Modern_Palette_RingingRose;
 					break;
 					
-					case 4:
+					case abilityHatPaints.bell_modern_candescentCopper:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Bell_Modern_Palette_CandescentCopper;
 					break;
 					
-					case 5:
+					case abilityHatPaints.bell_modern_shiningSilver:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Bell_Modern_Palette_ShiningSilver;
 					break;
 					
-					case 6:
+					case abilityHatPaints.bell_modern_polishedPlant:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Bell_Modern_Palette_PolishedPlant;
 					break;
 					
-					case 7:
+					case abilityHatPaints.bell_modern_illuminatedIvory:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Bell_Modern_Palette_IlluminatedIvory;
 					break;
 					
-					case 8:
+					case abilityHatPaints.bell_modern_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Bell_Modern_Palette_Bitcrushed;
 					break;
 				}
@@ -1071,7 +1071,7 @@ function scr_Player_HatPalette(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.sleep_kssu:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteSleepKSSUP1;
@@ -1083,19 +1083,19 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.sleep_kssu_bubblyGreen:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Sleep_KSSU_Palette_BubblyGreen;
 					break;
 					
-					case 1:
+					case abilityHatPaints.sleep_kssu_noddyPeach:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Sleep_KSSU_Palette_NoddyPeach;
 					break;
 					
-					case 2:
+					case abilityHatPaints.sleep_kssu_royalPurple:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Sleep_KSSU_Palette_RoyalPurple;
 					break;
 					
-					case 3:
+					case abilityHatPaints.sleep_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Sleep_KSSU_Palette_Bitcrushed;
 					break;
 				}
@@ -1115,7 +1115,7 @@ function scr_Player_HatPalette(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.scan_kssu:
 				if (player == 0)
 				{
 					var paletteIndexToCheck = global.hatPaletteScanKSSUP1;
@@ -1127,26 +1127,18 @@ function scr_Player_HatPalette(argument0,argument1)
 				
 				switch (paletteIndexToCheck)
 				{
-					default:
+					case abilityHatPaints.scan_kssu_metallicRed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Scan_KSSU_Palette_MetallicRed;
 					break;
 					
-					case 1:
+					case abilityHatPaints.scan_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Scan_KSSU_Palette_Bitcrushed;
 					break;
 				}
 				break;
 			}
 			break;
-			
-			default:
-			hatPaletteIndex = -1;
-			break;
 		}
-		break;
-		
-		default:
-		hatPaletteIndex = -1;
 		break;
 	}
 	return hatPaletteIndex;

@@ -17,6 +17,8 @@ zoomTarget = 1;
 hitZoom = 1;
 cameraX = 0;
 cameraY = 0;
+cameraXStart = 0;
+cameraYStart = 0;
 debugCamera = false;
 shakeX = 0;
 shakeY = 0;
@@ -24,6 +26,9 @@ sShakeX = 0;
 sShakeY = 0;
 offsetX = 0;
 offsetY = 0;
+autoscroll = false;
+offsetXSpd = 0;
+offsetYSpd = 0;
 bossOffsetX = 0;
 bossOffsetY = 0;
 objectFollowing = -1;
@@ -40,6 +45,14 @@ dragY = 0;
 windowSet = false;
 targetClampToView = false;
 halberdEscapeAngle = 0;
+xLimit1 = 0;
+xLimit2 = 0;
+yLimit1 = 0;
+yLimit2 = 0;
+xLimit1Final = 0;
+xLimit2Final = 0;
+yLimit1Final = 0;
+yLimit2Final = 0;
 
 //Timers
 

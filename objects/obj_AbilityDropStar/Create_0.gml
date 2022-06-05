@@ -5,7 +5,7 @@
 hsp = 0;
 vsp = 0;
 movespeed = 0;
-jumpspeed = .4;
+jumpspeed = .75;
 grav = .01;
 gravLimit = 1;
 accel = .025;

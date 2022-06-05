@@ -25,11 +25,7 @@ function scr_Player_HatShadow(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
-				hatShadowIndex = -1;
-				break;
-				
-				default:
+				case abilityHatSkins.cutter_kssu:
 				hatShadowIndex = -1;
 				break;
 			}
@@ -47,8 +43,8 @@ function scr_Player_HatShadow(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
-				switch(sprite_index)
+				case abilityHatSkins.beam_kssu:
+				switch (sprite_index)
 				{
 					case sprIdle:
 					case sprIdleBlink:
@@ -216,15 +212,11 @@ function scr_Player_HatShadow(argument0,argument1)
 					case sprBeamAttack6:
 					hatShadowIndex = spr_Kirby_HatShadow_Beam_KSSU_Attack6;
 					break;
-					
-					default:
-					hatShadowIndex = -1;
-					break;
 				}
 				break;
 				
-				case "marxSoul":
-				switch(sprite_index)
+				case abilityHatSkins.beam_marxSoul:
+				switch (sprite_index)
 				{
 					case sprIdle:
 					case sprIdleBlink:
@@ -392,15 +384,7 @@ function scr_Player_HatShadow(argument0,argument1)
 					case sprBeamAttack6:
 					hatShadowIndex = spr_Kirby_HatShadow_Beam_MarxSoul_Attack6;
 					break;
-					
-					default:
-					hatShadowIndex = -1;
-					break;
 				}
-				break;
-				
-				default:
-				hatShadowIndex = -1;
 				break;
 			}
 			break;
@@ -417,7 +401,7 @@ function scr_Player_HatShadow(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.mysticBeam_ggs:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -574,15 +558,7 @@ function scr_Player_HatShadow(argument0,argument1)
 					case sprHurt:
 					hatShadowIndex = spr_Kirby_HatShadow_MysticBeam_GGS_Hurt;
 					break;
-					
-					default:
-					hatShadowIndex = -1;
-					break;
 				}
-				break;
-				
-				default:
-				hatShadowIndex = -1;
 				break;
 			}
 			break;
@@ -599,8 +575,8 @@ function scr_Player_HatShadow(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
-				switch(sprite_index)
+				case abilityHatSkins.stone_kssu:
+				switch (sprite_index)
 				{
 					case sprIdle:
 					case sprIdleBlink:
@@ -736,15 +712,11 @@ function scr_Player_HatShadow(argument0,argument1)
 					case sprStoneAttack2Release:
 					hatShadowIndex = spr_Kirby_HatShadow_Stone_KSSU_Attack2Release;
 					break;
-					
-					default:
-					hatShadowIndex = -1;
-					break;
 				}
 				break;
 				
-				case "modern":
-				switch(sprite_index)
+				case abilityHatSkins.stone_modern:
+				switch (sprite_index)
 				{
 					case sprIdle:
 					case sprIdleBlink:
@@ -880,15 +852,7 @@ function scr_Player_HatShadow(argument0,argument1)
 					case sprStoneAttack2Release:
 					hatShadowIndex = spr_Kirby_HatShadow_Stone_Modern_Attack2Release;
 					break;
-					
-					default:
-					hatShadowIndex = -1;
-					break;
 				}
-				break;
-				
-				default:
-				hatShadowIndex = -1;
 				break;
 			}
 			break;
@@ -905,8 +869,8 @@ function scr_Player_HatShadow(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
-				switch(sprite_index)
+				case abilityHatSkins.mirror_kssu:
+				switch (sprite_index)
 				{
 					case sprIdle:
 					case sprIdleBlink:
@@ -1066,15 +1030,11 @@ function scr_Player_HatShadow(argument0,argument1)
 					case sprMirrorAttack5:
 					hatShadowIndex = spr_Kirby_HatShadow_Mirror_KSSU_Attack5;
 					break;
-					
-					default:
-					hatShadowIndex = -1;
-					break;
 				}
 				break;
 				
-				case "modern":
-				switch(sprite_index)
+				case abilityHatSkins.mirror_modern:
+				switch (sprite_index)
 				{
 					case sprIdle:
 					case sprIdleBlink:
@@ -1242,15 +1202,7 @@ function scr_Player_HatShadow(argument0,argument1)
 					case sprMirrorAttack5:
 					hatShadowIndex = spr_Kirby_HatShadow_Mirror_Modern_Attack5;
 					break;
-					
-					default:
-					hatShadowIndex = -1;
-					break;
 				}
-				break;
-				
-				default:
-				hatShadowIndex = -1;
 				break;
 			}
 			break;
@@ -1267,8 +1219,8 @@ function scr_Player_HatShadow(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
-				switch(sprite_index)
+				case abilityHatSkins.ninja_kssu:
+				switch (sprite_index)
 				{
 					case sprIdle:
 					case sprIdleBlink:
@@ -1400,15 +1352,11 @@ function scr_Player_HatShadow(argument0,argument1)
 					case sprNinjaAttack2:
 					hatShadowIndex = spr_Kirby_HatShadow_Ninja_KSSU_Attack2;
 					break;
-					
-					default:
-					hatShadowIndex = -1;
-					break;
 				}
 				break;
 				
-				case "modern":
-				switch(sprite_index)
+				case abilityHatSkins.ninja_modern:
+				switch (sprite_index)
 				{
 					case sprIdle:
 					case sprIdleBlink:
@@ -1580,21 +1528,9 @@ function scr_Player_HatShadow(argument0,argument1)
 					case sprNinjaAttack2:
 					hatShadowIndex = spr_Kirby_HatShadow_Ninja_Modern_Attack2;
 					break;
-					
-					default:
-					hatShadowIndex = -1;
-					break;
 				}
 				break;
-				
-				default:
-				hatShadowIndex = -1;
-				break;
 			}
-			break;
-			
-			default:
-			hatShadowIndex = -1;
 			break;
 			
 			case playerAbilities.bomb:
@@ -1609,8 +1545,8 @@ function scr_Player_HatShadow(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
-				switch(sprite_index)
+				case abilityHatSkins.bomb_kssu:
+				switch (sprite_index)
 				{
 					case sprIdle:
 					case sprIdleBlink:
@@ -1758,15 +1694,11 @@ function scr_Player_HatShadow(argument0,argument1)
 					case sprBombAttack4:
 					hatShadowIndex = spr_Kirby_HatShadow_Bomb_KSSU_Attack4;
 					break;
-					
-					default:
-					hatShadowIndex = -1;
-					break;
 				}
 				break;
 				
-				case "modern":
-				switch(sprite_index)
+				case abilityHatSkins.bomb_modern:
+				switch (sprite_index)
 				{
 					case sprIdle:
 					case sprIdleBlink:
@@ -1950,15 +1882,7 @@ function scr_Player_HatShadow(argument0,argument1)
 					case sprBombAttack4:
 					hatShadowIndex = spr_Kirby_HatShadow_Bomb_Modern_Attack4;
 					break;
-					
-					default:
-					hatShadowIndex = -1;
-					break;
 				}
-				break;
-				
-				default:
-				hatShadowIndex = -1;
 				break;
 			}
 			break;
@@ -1975,8 +1899,8 @@ function scr_Player_HatShadow(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
-				switch(sprite_index)
+				case abilityHatSkins.fire_kssu:
+				switch (sprite_index)
 				{
 					case sprIdle:
 					case sprIdleBlink:
@@ -2128,15 +2052,7 @@ function scr_Player_HatShadow(argument0,argument1)
 					case sprFireAttack1:
 					hatShadowIndex = spr_Kirby_HatShadow_Fire_KSSU_Attack1;
 					break;
-					
-					default:
-					hatShadowIndex = -1;
-					break;
 				}
-				break;
-				
-				default:
-				hatShadowIndex = -1;
 				break;
 			}
 			break;
@@ -2153,8 +2069,8 @@ function scr_Player_HatShadow(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
-				switch(sprite_index)
+				case abilityHatSkins.mysticFire_ggs:
+				switch (sprite_index)
 				{
 					case sprIdle:
 					case sprIdleBlink:
@@ -2306,15 +2222,7 @@ function scr_Player_HatShadow(argument0,argument1)
 					case sprFireAttack1:
 					hatShadowIndex = spr_Kirby_HatShadow_Fire_KSSU_Attack1;
 					break;
-					
-					default:
-					hatShadowIndex = -1;
-					break;
 				}
-				break;
-				
-				default:
-				hatShadowIndex = -1;
 				break;
 			}
 			break;
@@ -2331,7 +2239,7 @@ function scr_Player_HatShadow(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.ice_kssu:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -2500,14 +2408,10 @@ function scr_Player_HatShadow(argument0,argument1)
 					case sprIceGrab:
 					hatShadowIndex = spr_Kirby_HatShadow_Ice_KSSU_IceGrab;
 					break;
-					
-					default:
-					hatShadowIndex = -1;
-					break;
 				}
 				break;
 				
-				case "snowman":
+				case abilityHatSkins.ice_snowman:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -2658,10 +2562,6 @@ function scr_Player_HatShadow(argument0,argument1)
 					break;
 				}
 				break;
-				
-				default:
-				hatShadowIndex = -1;
-				break;
 			}
 			break;
 			
@@ -2677,7 +2577,7 @@ function scr_Player_HatShadow(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.spark_kssu:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -2842,15 +2742,7 @@ function scr_Player_HatShadow(argument0,argument1)
 					case sprSparkAttack4:
 					hatShadowIndex = spr_Kirby_HatShadow_Spark_KSSU_Attack4;
 					break;
-					
-					default:
-					hatShadowIndex = -1;
-					break;
 				}
-				break;
-				
-				default:
-				hatShadowIndex = -1;
 				break;
 			}
 			break;
@@ -2867,8 +2759,8 @@ function scr_Player_HatShadow(argument0,argument1)
 				
 			switch (altHatToCheck)
 			{
-				case "kssu":
-				switch(sprite_index)
+				case abilityHatSkins.yoyo_kssu:
+				switch (sprite_index)
 				{
 					case sprIdle:
 					case sprIdleBlink:
@@ -3012,15 +2904,7 @@ function scr_Player_HatShadow(argument0,argument1)
 					case sprWarpStar2:
 					hatShadowIndex = spr_Kirby_HatShadow_Yoyo_KSSU_WarpStar2;
 					break;
-					
-					default:
-					hatShadowIndex = -1;
-					break;
 				}
-				break;
-					
-				default:
-				hatShadowIndex = -1;
 				break;
 			}
 			break;
@@ -3037,8 +2921,8 @@ function scr_Player_HatShadow(argument0,argument1)
 				
 			switch (altHatToCheck)
 			{
-				case "kssu":
-				switch(sprite_index)
+				case abilityHatSkins.wheel_kssu:
+				switch (sprite_index)
 				{
 					case sprIdle:
 					case sprIdleBlink:
@@ -3182,15 +3066,7 @@ function scr_Player_HatShadow(argument0,argument1)
 					case sprWarpStar2:
 					hatShadowIndex = spr_Kirby_HatShadow_Wheel_KSSU_WarpStar2;
 					break;
-					
-					default:
-					hatShadowIndex = -1;
-					break;
 				}
-				break;
-					
-				default:
-				hatShadowIndex = -1;
 				break;
 			}
 			break;
@@ -3207,8 +3083,8 @@ function scr_Player_HatShadow(argument0,argument1)
 				
 			switch (altHatToCheck)
 			{
-				case "kssu":
-				switch(sprite_index)
+				case abilityHatSkins.artist_kssu:
+				switch (sprite_index)
 				{
 					case sprIdle:
 					case sprIdleBlink:
@@ -3352,15 +3228,7 @@ function scr_Player_HatShadow(argument0,argument1)
 					case sprWarpStar2:
 					hatShadowIndex = spr_Kirby_HatShadow_Artist_KSSU_WarpStar2;
 					break;
-					
-					default:
-					hatShadowIndex = -1;
-					break;
 				}
-				break;
-					
-				default:
-				hatShadowIndex = -1;
 				break;
 			}
 			break;
@@ -3377,7 +3245,7 @@ function scr_Player_HatShadow(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.fighter_kssu:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -3522,15 +3390,7 @@ function scr_Player_HatShadow(argument0,argument1)
 					case sprHurt:
 					hatShadowIndex = spr_Kirby_HatShadow_Fighter_KSSU_Hurt;
 					break;
-					
-					default:
-					hatShadowIndex = -1;
-					break;
 				}
-				break;
-				
-				default:
-				hatShadowIndex = -1;
 				break;
 			}
 			break;
@@ -3547,11 +3407,7 @@ function scr_Player_HatShadow(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
-				hatShadowIndex = -1;
-				break;
-				
-				default:
+				case abilityHatSkins.suplex_kssu:
 				hatShadowIndex = -1;
 				break;
 			}
@@ -3569,7 +3425,7 @@ function scr_Player_HatShadow(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.wing_kssu:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -3706,15 +3562,7 @@ function scr_Player_HatShadow(argument0,argument1)
 					case sprWingAttack2:
 					hatShadowIndex = spr_Kirby_HatShadow_Wing_KSSU_Attack2;
 					break;
-					
-					default:
-					hatShadowIndex = -1;
-					break;
 				}
-				break;
-				
-				default:
-				hatShadowIndex = -1;
 				break;
 			}
 			break;
@@ -3731,7 +3579,7 @@ function scr_Player_HatShadow(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.jet_kssu:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -3856,10 +3704,6 @@ function scr_Player_HatShadow(argument0,argument1)
 					case sprHurt:
 					hatShadowIndex = spr_Kirby_HatShadow_Jet_KSSU_Hurt;
 					break;
-					
-					default:
-					hatShadowIndex = -1;
-					break;
 				}
 				break;
 			}
@@ -3877,7 +3721,7 @@ function scr_Player_HatShadow(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "modern":
+				case abilityHatSkins.bell_modern:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -4038,15 +3882,7 @@ function scr_Player_HatShadow(argument0,argument1)
 					case sprDeath:
 					hatShadowIndex = spr_Kirby_HatShadow_Bell_Modern_Death;
 					break;
-					
-					default:
-					hatShadowIndex = -1;
-					break;
 				}
-				break;
-				
-				default:
-				hatShadowIndex = -1;
 				break;
 			}
 			break;
@@ -4063,7 +3899,7 @@ function scr_Player_HatShadow(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "modern":
+				case abilityHatSkins.water_modern:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -4073,15 +3909,7 @@ function scr_Player_HatShadow(argument0,argument1)
 					case sprWalk:
 					hatShadowIndex = spr_Kirby_HatShadow_Water_Modern_Walk;
 					break;
-					
-					default:
-					hatShadowIndex = -1;
-					break;
 				}
-				break;
-				
-				default:
-				hatShadowIndex = -1;
 				break;
 			}
 			break;
@@ -4098,8 +3926,8 @@ function scr_Player_HatShadow(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
-				switch(sprite_index)
+				case abilityHatSkins.sleep_kssu:
+				switch (sprite_index)
 				{
 					case sprSleepReady:
 					hatShadowIndex = spr_Kirby_HatShadow_Sleep_KSSU_SleepReady;
@@ -4112,15 +3940,7 @@ function scr_Player_HatShadow(argument0,argument1)
 					case sprSleepEnd:
 					hatShadowIndex = spr_Kirby_HatShadow_Sleep_KSSU_SleepEnd;
 					break;
-					
-					default:
-					hatShadowIndex = -1;
-					break;
 				}
-				break;
-				
-				default:
-				hatShadowIndex = -1;
 				break;
 			}
 			break;
@@ -4137,8 +3957,8 @@ function scr_Player_HatShadow(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
-				switch(sprite_index)
+				case abilityHatSkins.scan_kssu:
+				switch (sprite_index)
 				{
 					case sprScan:
 					hatShadowIndex = spr_Kirby_HatShadow_Scan_KSSU_Scan;

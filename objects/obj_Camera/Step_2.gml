@@ -22,6 +22,178 @@ if (global.debug)
 
 targetClampToView = false;
 
+#region Clamp Values
+switch (room)
+{
+	#region Asteroid Fields 5
+	case rm_AsteroidFields5:
+	#region xLimit1
+	if (cameraX < 576)
+	{
+		xLimit1 = 0;
+	}
+	else if (cameraX < 1800)
+	{
+		if (cameraY < 288)
+		{
+			xLimit1 = 576;
+		}
+		else
+		{
+			xLimit1 = 0;
+		}
+	}
+	else
+	{
+		if (cameraY >= 408 - viewHeight)
+		{
+			xLimit1 = 1800;
+		}
+		else
+		{
+			xLimit1 = 0;
+		}
+	}
+	#endregion
+	
+	#region xLimit2
+	if (cameraX <= 1104 - viewWidth)
+	{
+		if (cameraY >= 528 - viewHeight)
+		{
+			xLimit2 = room_width - 1104;
+		}
+		else
+		{
+			xLimit2 = 0;
+		}
+	}
+	else if (cameraX <= 1392 - viewWidth)
+	{
+		if (cameraY > 408 - viewHeight)
+		{
+			xLimit2 = room_width - 1392;
+		}
+		else
+		{
+			xLimit2 = 0;
+		}
+	}
+	else
+	{
+		xLimit2 = 0;
+	}
+	#endregion
+	
+	#region yLimit1
+	if (cameraX < 552)
+	{
+		yLimit1 = 288;
+	}
+	else
+	{
+		if (cameraY < 288)
+		{
+			yLimit1 = 72;
+		}
+		else
+		{
+			yLimit1 = 0;
+		}
+	}
+	#endregion
+	
+	#region yLimit2
+	if (cameraX < 1104 - viewWidth)
+	{
+		yLimit2 = room_height - 960;
+	}
+	else if (cameraX < 1392 - viewWidth)
+	{
+		if (cameraY < 528 - viewHeight)
+		{
+			yLimit2 = room_height - 528;
+		}
+	}
+	else if (cameraX < 1800)
+	{
+		if (cameraY < 408 - viewHeight)
+		{
+			yLimit2 = room_height - 408;
+		}
+	}
+	else
+	{
+		yLimit2 = 0;
+	}
+	#endregion
+	break;
+	#endregion
+	
+	#region Asteroid Fields 6
+	case rm_AsteroidFields6:
+	#region xLimit1
+	if (cameraX >= 888)
+	{
+		if (cameraY < 264)
+		{
+			xLimit1 = 888;
+		}
+		else
+		{
+			xLimit1 = 0;
+		}
+	}
+	else
+	{
+		xLimit1 = 0;
+	}
+	#endregion
+	
+	#region xLimit2
+	if (cameraX <= 1104 - viewWidth)
+	{
+		if (cameraY >= 696 - viewHeight)
+		{
+			xLimit2 = room_width - 1104;
+		}
+		else
+		{
+			xLimit2 = 0;
+		}
+	}
+	else
+	{
+		xLimit2 = 0;
+	}
+	#endregion
+	
+	#region yLimit1
+	if (cameraX < 888)
+	{
+		yLimit1 = 264;
+	}
+	else
+	{
+		yLimit1 = 0;
+	}
+	#endregion
+	
+	#region yLimit2
+	if (cameraX > 1104 - viewWidth)
+	{
+		yLimit2 = room_height - 696;
+	}
+	else
+	{
+		yLimit2 = 0;
+	}
+	#endregion
+	break;
+	#endregion
+}
+#endregion
+
 //Camera Position
 
 if ((!debugCamera) and (objectFollowing == -1))
@@ -53,65 +225,75 @@ if ((!debugCamera) and (objectFollowing == -1))
 			break;
 			
 			default:
-			if (instance_exists(obj_Player))
+			if (autoscroll)
 			{
-				target = obj_Player;
-				
-				if (instance_exists(obj_Projectile_MysticBeamCharge))
-				{
-					with (obj_Projectile_MysticBeamCharge)
-					{
-					    if (owner.player == 0)
-						{
-							other.target = id;
-						}
-					}
-				}
-				
-				if (global.hpP1 != 0)
-				{
-					if (instance_exists(obj_WhispyWoods))
-					{
-						switch (obj_WhispyWoods.phase)
-						{
-							case 1:
-							targetClampToView = true;
-							cameraX = lerp(cameraX,obj_WhispyWoods.x + (obj_WhispyWoods.dirX * 180) - ((viewWidth / zoomFinal) / 2),.1) + ((offsetX + bossOffsetX + cinematicXOffset) / zoomFinal);
-							cameraY = lerp(cameraY,0,.1) + ((offsetY + bossOffsetY + cinematicYOffset) / zoomFinal);
-							break;
-							
-							case 3:
-							targetClampToView = true;
-							cameraX = lerp(cameraX,obj_WhispyWoods.x + ((obj_WhispyWoods.dirX) * (200 - (abs(obj_WhispyWoods.hsp) * 100))) - ((viewWidth / zoomFinal) / 2),.1) + ((offsetX + bossOffsetX + cinematicXOffset) / zoomFinal);
-							cameraY = lerp(cameraY,obj_WhispyWoods.y - ((viewHeight / zoomFinal) / 2),.1) + ((offsetY + bossOffsetY + cinematicYOffset) / zoomFinal);
-							break;
-						}
-					}
-					else
-					{
-						cameraX = lerp(cameraX,target.x - ((viewWidth / zoomFinal) / 2),spd) + ((offsetX + bossOffsetX + cinematicXOffset) / zoomFinal);
-						cameraY = lerp(cameraY,target.y - ((viewHeight / zoomFinal) / 2),spd) + ((offsetY + bossOffsetY + cinematicYOffset) / zoomFinal);
-					}
-				}
+				offsetX += offsetXSpd;
+				offsetY += offsetYSpd;
+				cameraX = cameraXStart + ((offsetX + cinematicXOffset) / zoomFinal);
+				cameraY = cameraYStart + ((offsetY + cinematicYOffset) / zoomFinal);
 			}
 			else
 			{
-				if (!global.gambleMaykr)
+				if (instance_exists(obj_Player))
 				{
-					cameraX = room_width / 2;
-					cameraY = room_height / 2;
+					target = obj_Player;
+				
+					if (instance_exists(obj_Projectile_MysticBeamCharge))
+					{
+						with (obj_Projectile_MysticBeamCharge)
+						{
+						    if (owner.player == 0)
+							{
+								other.target = id;
+							}
+						}
+					}
+				
+					if (global.hpP1 != 0)
+					{
+						if (instance_exists(obj_WhispyWoods))
+						{
+							switch (obj_WhispyWoods.phase)
+							{
+								case 1:
+								targetClampToView = true;
+								cameraX = lerp(cameraX,obj_WhispyWoods.x + (obj_WhispyWoods.dirX * 180) - ((viewWidth / zoomFinal) / 2),.1) + ((offsetX + bossOffsetX + cinematicXOffset) / zoomFinal);
+								cameraY = lerp(cameraY,0,.1) + ((offsetY + bossOffsetY + cinematicYOffset) / zoomFinal);
+								break;
+							
+								case 3:
+								targetClampToView = true;
+								cameraX = lerp(cameraX,obj_WhispyWoods.x + ((obj_WhispyWoods.dirX) * (200 - (abs(obj_WhispyWoods.hsp) * 100))) - ((viewWidth / zoomFinal) / 2),.1) + ((offsetX + bossOffsetX + cinematicXOffset) / zoomFinal);
+								cameraY = lerp(cameraY,obj_WhispyWoods.y - ((viewHeight / zoomFinal) / 2),.1) + ((offsetY + bossOffsetY + cinematicYOffset) / zoomFinal);
+								break;
+							}
+						}
+						else
+						{
+							cameraX = lerp(cameraX,target.x - ((viewWidth / zoomFinal) / 2),spd) + ((offsetX + bossOffsetX + cinematicXOffset) / zoomFinal);
+							cameraY = lerp(cameraY,target.y - ((viewHeight / zoomFinal) / 2),spd) + ((offsetY + bossOffsetY + cinematicYOffset) / zoomFinal);
+						}
+					}
 				}
-			}
+				else
+				{
+					if (global.gamemode != gamemodes.maykr)
+					{
+						cameraX = room_width / 2;
+						cameraY = room_height / 2;
+					}
+				}
 			
-			with (obj_Enemy)
-			{
-			    if (isBoss)
+				with (obj_Enemy)
 				{
-					if (bossOffsetX != "none") other.cameraX = bossOffsetX;
-					if (bossOffsetY != "none") other.cameraY = bossOffsetY;
+				    if (isBoss)
+					{
+						if (bossOffsetX != "none") other.cameraX = bossOffsetX;
+						if (bossOffsetY != "none") other.cameraY = bossOffsetY;
+					}
 				}
+				break;
 			}
-			break;
 		}
 	}
 }
@@ -136,8 +318,7 @@ if ((debugCamera) and (keyboard_check(vk_control)))
 	}
 }
 
-//if ((global.gambleMaykr) and (!obj_Maykr_ControlO.active))
-if ((global.gambleMaykr))
+if ((global.gamemode == gamemodes.maykr) and (instance_exists(obj_Maykr_Control)) and (!obj_Maykr_Control.active))
 {
 	if (keyboard_check(vk_control))
 	{
@@ -197,8 +378,17 @@ if (objectFollowing != -1)
 
 //Clamp
 
-cameraX = clamp(cameraX,0,room_width - (viewWidth / zoomFinal));
-cameraY = clamp(cameraY,0,room_height - (viewHeight / zoomFinal));
+/*xLimit1Final = lerp(xLimit1Final,xLimit1,.2);
+xLimit2Final = lerp(xLimit2Final,xLimit2,.2);
+yLimit1Final = lerp(yLimit1Final,yLimit1,.2);
+yLimit2Final = lerp(yLimit2Final,yLimit2,.2);*/
+xLimit1Final = xLimit1;
+xLimit2Final = xLimit2;
+yLimit1Final = yLimit1;
+yLimit2Final = yLimit2;
+
+cameraX = clamp(cameraX,0 + xLimit1Final,room_width - xLimit2Final - (viewWidth / zoomFinal));
+cameraY = clamp(cameraY,0 + yLimit1Final,room_height - yLimit2Final - (viewHeight / zoomFinal));
 
 //Shake and Angle
 

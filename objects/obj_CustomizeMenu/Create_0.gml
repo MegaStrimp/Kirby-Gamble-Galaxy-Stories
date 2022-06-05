@@ -9,7 +9,7 @@ randomize();
 hudOffset = -250;
 selection = 0;
 subSelection = -1;
-selectedPlayer = "Kirby";
+selectedPlayer = 0;
 selectedOwner = 0;
 selectedPaint = 0;
 selectedSkin = 0;
@@ -23,6 +23,7 @@ goBack = false;
 starIndex = 0;
 hatSprite = -1;
 arrayLength = 1;
+autoScroll = false;
 
 player1Offset = 0;
 player2Offset = 0;
@@ -62,3 +63,18 @@ var button = instance_create_depth(480,0,depth,obj_Menu_Button);
 button.owner = id;
 button.sprite_index = spr_Menu_StageSelect_Hud_Back2;
 button.state = "back";
+
+//Misc Strings
+
+strSkins = scr_Localization(stringAttributes.customizeSubMenus_skins,stringAttributes.title,0,global.language);
+strSprayPaints = scr_Localization(stringAttributes.customizeSubMenus_sprayPaints,stringAttributes.title,0,global.language);
+strHatSkins = scr_Localization(stringAttributes.customizeSubMenus_hatSkins,stringAttributes.title,0,global.language);
+strHatPaints = scr_Localization(stringAttributes.customizeSubMenus_hatPaints,stringAttributes.title,0,global.language);
+strFamiliars = scr_Localization(stringAttributes.customizeSubMenus_familiars,stringAttributes.title,0,global.language);
+
+//Timers
+
+canAutoScrollTimer = -1;
+canAutoScrollTimerMax = 30;
+autoScrollTimer = -1;
+autoScrollTimerMax = 2;

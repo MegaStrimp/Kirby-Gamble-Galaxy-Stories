@@ -1,5 +1,9 @@
 ///@description Initialize Variables
 
+//Randomize
+
+randomize();
+
 //Physics
 
 accel = .02;
@@ -18,7 +22,7 @@ gravLimitParasol = .5;
 spawn = false;
 spawnerRange = 24;
 character = 0;
-paletteIndex = spr_MysticDoo_Normal_Palette_CorruptedTwilight;
+paletteIndex = choose(spr_MysticDoo_Normal_Palette_CorruptedTwilight,spr_MysticDoo_Normal_Palette_PalePurple,spr_MysticDoo_Normal_Palette_DarkFlux);
 state = 0;
 hp = 27;
 dmg = 1;

@@ -6,7 +6,7 @@ function scr_Player_Equipment(argument0,argument1)
 {
 	var abilityToCheck = argument0;
 	var selectedCharacter = argument1;
-	var equipmentIndex;
+	var equipmentIndex = -1;
 	
 	switch (selectedCharacter)
 	{
@@ -25,21 +25,13 @@ function scr_Player_Equipment(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
-				switch(sprite_index)
+				case abilityHatSkins.cutter_kssu:
+				switch (sprite_index)
 				{
 					case sprCutterCharge:
 					equipmentIndex = spr_Kirby_Equipment_Cutter_KSSU_Charge;
 					break;
-					
-					default:
-					equipmentIndex = -1;
-					break;
 				}
-				break;
-				
-				default:
-				equipmentIndex = -1;
 				break;
 			}
 			break;
@@ -56,8 +48,8 @@ function scr_Player_Equipment(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
-				switch(sprite_index)
+				case abilityHatSkins.beam_kssu:
+				switch (sprite_index)
 				{
 					case sprBeamCharge:
 					equipmentIndex = spr_Kirby_Equipment_Beam_KSSU_Charge;
@@ -82,15 +74,11 @@ function scr_Player_Equipment(argument0,argument1)
 					case sprBeamAttack5:
 					equipmentIndex = spr_Kirby_Equipment_Beam_KSSU_Attack5;
 					break;
-					
-					default:
-					equipmentIndex = -1;
-					break;
 				}
 				break;
 				
-				case "marxSoul":
-				switch(sprite_index)
+				case abilityHatSkins.beam_marxSoul:
+				switch (sprite_index)
 				{
 					case sprBeamCharge:
 					equipmentIndex = spr_Kirby_Equipment_Beam_MarxSoul_Charge;
@@ -115,15 +103,7 @@ function scr_Player_Equipment(argument0,argument1)
 					case sprBeamAttack5:
 					equipmentIndex = spr_Kirby_Equipment_Beam_MarxSoul_Attack5;
 					break;
-					
-					default:
-					equipmentIndex = -1;
-					break;
 				}
-				break;
-				
-				default:
-				equipmentIndex = -1;
 				break;
 			}
 			break;
@@ -140,8 +120,8 @@ function scr_Player_Equipment(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
-				switch(sprite_index)
+				case abilityHatSkins.mysticBeam_ggs:
+				switch (sprite_index)
 				{
 					case sprBeamCharge:
 					equipmentIndex = spr_Kirby_Equipment_Beam_KSSU_Charge;
@@ -170,15 +150,7 @@ function scr_Player_Equipment(argument0,argument1)
 					case sprMysticBeamAttack1:
 					equipmentIndex = spr_Kirby_Equipment_Beam_KSSU_Attack3;
 					break;
-					
-					default:
-					equipmentIndex = -1;
-					break;
 				}
-				break;
-				
-				default:
-				equipmentIndex = -1;
 				break;
 			}
 			break;
@@ -195,8 +167,8 @@ function scr_Player_Equipment(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
-				switch(sprite_index)
+				case abilityHatSkins.stone_kssu:
+				switch (sprite_index)
 				{
 					case sprStoneAttack2Ready:
 					equipmentIndex = spr_Kirby_Equipment_Stone_KSSU_Attack2Ready;
@@ -209,15 +181,11 @@ function scr_Player_Equipment(argument0,argument1)
 					case sprStoneAttack2Release:
 					equipmentIndex = spr_Kirby_Equipment_Stone_KSSU_Attack2Release;
 					break;
-					
-					default:
-					equipmentIndex = -1;
-					break;
 				}
 				break;
 				
-				case "modern":
-				switch(sprite_index)
+				case abilityHatSkins.stone_modern:
+				switch (sprite_index)
 				{
 					case sprStoneAttack2Ready:
 					equipmentIndex = spr_Kirby_Equipment_Stone_Modern_Attack2Ready;
@@ -230,46 +198,7 @@ function scr_Player_Equipment(argument0,argument1)
 					case sprStoneAttack2Release:
 					equipmentIndex = spr_Kirby_Equipment_Stone_Modern_Attack2Release;
 					break;
-					
-					default:
-					equipmentIndex = -1;
-					break;
 				}
-				break;
-				
-				default:
-				equipmentIndex = -1;
-				break;
-			}
-			break;
-			
-			case playerAbilities.ufo:
-			if (player == 0)
-			{
-				var altHatToCheck = global.hatTypeUfoP1;
-			}
-			else
-			{
-				var altHatToCheck = global.hatTypeUfoP2;
-			}
-			
-			switch (altHatToCheck)
-			{
-				case "modern":
-				switch(sprite_index)
-				{
-					case sprUfoIdle:
-					equipmentIndex = spr_Kirby_Equipment_Ufo_Modern_Idle;
-					break;
-					
-					default:
-					equipmentIndex = -1;
-					break;
-				}
-				break;
-				
-				default:
-				equipmentIndex = -1;
 				break;
 			}
 			break;
@@ -286,8 +215,8 @@ function scr_Player_Equipment(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
-				switch(sprite_index)
+				case abilityHatSkins.mirror_kssu:
+				switch (sprite_index)
 				{
 					case sprMirrorAttack1:
 					equipmentIndex = spr_Kirby_Equipment_Mirror_KSSU_Attack1;
@@ -300,15 +229,11 @@ function scr_Player_Equipment(argument0,argument1)
 					case sprMirrorAttack2Release:
 					equipmentIndex = spr_Kirby_Equipment_Mirror_KSSU_Attack2Release;
 					break;
-					
-					default:
-					equipmentIndex = -1;
-					break;
 				}
 				break;
 				
-				case "modern":
-				switch(sprite_index)
+				case abilityHatSkins.mirror_modern:
+				switch (sprite_index)
 				{
 					case sprMirrorAttack1:
 					equipmentIndex = spr_Kirby_Equipment_Mirror_Modern_Attack1;
@@ -321,15 +246,7 @@ function scr_Player_Equipment(argument0,argument1)
 					case sprMirrorAttack2Release:
 					equipmentIndex = spr_Kirby_Equipment_Mirror_Modern_Attack2Release;
 					break;
-					
-					default:
-					equipmentIndex = -1;
-					break;
 				}
-				break;
-				
-				default:
-				equipmentIndex = -1;
 				break;
 			}
 			break;
@@ -346,8 +263,8 @@ function scr_Player_Equipment(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
-				switch(sprite_index)
+				case abilityHatSkins.ninja_kssu:
+				switch (sprite_index)
 				{
 					case sprNinjaCharge:
 					equipmentIndex = spr_Kirby_Equipment_Ninja_KSSU_Charge;
@@ -356,15 +273,11 @@ function scr_Player_Equipment(argument0,argument1)
 					case sprNinjaAttack2:
 					equipmentIndex = spr_Kirby_Equipment_Ninja_KSSU_Attack2;
 					break;
-					
-					default:
-					equipmentIndex = -1;
-					break;
 				}
 				break;
 				
-				case "modern":
-				switch(sprite_index)
+				case abilityHatSkins.ninja_modern:
+				switch (sprite_index)
 				{
 					case sprNinjaCharge:
 					equipmentIndex = spr_Kirby_Equipment_Ninja_Modern_Charge;
@@ -373,15 +286,7 @@ function scr_Player_Equipment(argument0,argument1)
 					case sprNinjaAttack2:
 					equipmentIndex = spr_Kirby_Equipment_Ninja_Modern_Attack2;
 					break;
-					
-					default:
-					equipmentIndex = -1;
-					break;
 				}
-				break;
-				
-				default:
-				equipmentIndex = -1;
 				break;
 			}
 			break;
@@ -398,33 +303,17 @@ function scr_Player_Equipment(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "modern":
-				switch(sprite_index)
+				case abilityHatSkins.bell_modern:
+				switch (sprite_index)
 				{
 					case sprAbilityChange:
 					equipmentIndex = spr_Kirby_Equipment_Bell_Modern_AbilityChange;
 					break;
-					
-					default:
-					equipmentIndex = -1;
-					break;
 				}
-				break;
-				
-				default:
-				equipmentIndex = -1;
 				break;
 			}
 			break;
-			
-			default:
-			equipmentIndex = -1;
-			break;
 		}
-		break;
-		
-		default:
-		equipmentIndex = -1;
 		break;
 	}
 	return equipmentIndex;

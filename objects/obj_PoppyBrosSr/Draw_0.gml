@@ -22,7 +22,7 @@ else if (sprite_index == sprAttack)
 
 //Draw Hand
 
-if ((attack) and (attackNumber == "bombThrow"))
+if ((attack) and (attackNumber == enemyAttacks.poppyBroSr_bombThrow))
 {
 	draw_sprite_ext(sprHand,handIndex,x + handX,y + handY,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
 }

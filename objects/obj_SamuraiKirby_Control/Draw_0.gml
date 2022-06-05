@@ -29,13 +29,21 @@ if (blackBoxState >= 2)
 var hasSprayPaint = false;
 var outline = asset_get_index(sprite_get_name(character[p1Character][3]) + "Outline");
 if (character[p1Character][0] == "Kirby") hasSprayPaint = true;
-if ((hasSprayPaint) and (global.shaders)) pal_swap_set(global.sprayPaintKirbyP1,1,false);
+if ((hasSprayPaint) and (global.shaders))
+{
+	scr_Player_SprayPaint(global.sprayPaintKirbyP1,playerCharacters.kirby,"normal");
+	pal_swap_set(global.sprayPaintKirbyP1,1,false);
+}
 draw_sprite_ext(character[p1Character][3],0,150,220,1,1,image_angle,image_blend,image_alpha);
 if ((hasSprayPaint) and (global.shaders)) pal_swap_reset();
 if (sprite_exists(outline)) draw_sprite_ext(outline,0,150,220,1,1,image_angle,image_blend,image_alpha);
 
 hasSprayPaint = false;
 if (character[p2Character][0] == "Kirby") hasSprayPaint = true;
-if ((hasSprayPaint) and (global.shaders)) pal_swap_set(global.sprayPaintKirbyP1,1,false);
+if ((hasSprayPaint) and (global.shaders))
+{
+	scr_Player_SprayPaint(global.sprayPaintKirbyP2,playerCharacters.kirby,"normal");
+	pal_swap_set(global.sprayPaintKirbyP2,1,false);
+}
 draw_sprite(character[p2Character][2],0,300,140);
 if ((hasSprayPaint) and (global.shaders)) pal_swap_reset();

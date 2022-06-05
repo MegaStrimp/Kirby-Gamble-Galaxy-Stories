@@ -41,7 +41,7 @@
     "spriteId": {"name":"spr_KeyChest_Normal_Chest_Open","path":"sprites/spr_KeyChest_Normal_Chest_Open/spr_KeyChest_Normal_Chest_Open.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 9.0,
+    "playbackSpeed": 15.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

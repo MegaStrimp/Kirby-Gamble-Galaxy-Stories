@@ -35,7 +35,7 @@ if (!global.pause)
 		{
 			global.hpP2 += 2;
 		}
-		if (!global.gambleMaykr) global.points += points;
+		if (global.gamemode != gamemodes.maykr) global.points += points;
 		instance_destroy();
 	}
 

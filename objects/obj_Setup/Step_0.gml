@@ -2,7 +2,7 @@
 
 //Variables
 
-if (global.gambleMaykr)
+if (global.gamemode == gamemodes.maykr)
 {
 	//window_set_cursor(cr_none);
 }
@@ -13,15 +13,13 @@ else
 
 //Debug Mode
 
-if ((global.debug) and (!global.gambleMaykr))
+if ((global.debug) and (global.gamemode != gamemodes.maykr))
 {
 	if (!instance_exists(obj_DebugMode)) instance_create_depth(x,y,-999,obj_DebugMode);
-	if (!instance_exists(obj_DebugConsole)) instance_create_depth(x,y,-999,obj_DebugConsole);
 }
 else
 {
 	if (instance_exists(obj_DebugMode)) instance_destroy(obj_DebugMode);
-	if (instance_exists(obj_DebugConsole)) instance_destroy(obj_DebugConsole);
 }
 
 //Audio

@@ -4,7 +4,7 @@
 
 var dialogueXOffset = 0;
 var dialogueYOffset = 0;
-if ((owner != -1) and (owner.object_index == obj_Shop_Control))
+if ((owner != -1) and (instance_exists(owner)) and (owner.object_index == obj_Shop_Control))
 {
 	dialogueXOffset = owner.textboxPos;
 	dialogueYOffset = -32;

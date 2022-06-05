@@ -102,19 +102,40 @@ if (!global.pause)
 					}
 				}
 			}
-			if (!global.gambleMaykr) global.points += points;
+			if (global.gamemode != gamemodes.maykr) global.points += points;
 			if ((instance_exists(obj_SquadControl)) and (squadType != -1))
 			{
 				obj_SquadControl.waveEnemyCount[obj_SquadControl.currentWave][squadType] += 1;
 			}
-			if (ability != playerAbilities.none) owner.cAbility = ability;
+			if (ability != playerAbilities.none)
+			{
+				if ((owner.cAbility != playerAbilities.none) and (owner.cAbility != ability))
+				{
+					owner.cAbility = playerAbilities.mix;
+				}
+				else
+				{
+					owner.cAbility = ability;
+				}
+			}
 			if (inhaleType == 0)
 			{
 				owner.sucked += 1;
 			}
 			else if (inhaleType == 1)
 			{
-				audio_play_sound(snd_Select,0,false);
+				if (audio_is_playing(snd_FoodItem)) audio_stop_sound(snd_FoodItem);
+				audio_play_sound(snd_FoodItem,0,false);
+				if (cannedFood)
+				{
+					var rng = irandom_range(0,99);
+					if (rng == 0)
+					{
+						if (audio_is_playing(snd_CannedFood)) audio_stop_sound(snd_CannedFood);
+						audio_play_sound(snd_CannedFood,0,false);
+					}
+				}
+				
 				if (owner.player == 0)
 				{
 					global.hpP1 += 1;
@@ -126,7 +147,9 @@ if (!global.pause)
 			}
 			else if (inhaleType == 2)
 			{
-				audio_play_sound(snd_Select,0,false);
+				if (audio_is_playing(snd_FoodItem)) audio_stop_sound(snd_FoodItem);
+				audio_play_sound(snd_FoodItem,0,false);
+				
 				if (owner.player == 0)
 				{
 					global.hpP1 += 2;

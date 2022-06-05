@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"dab1592a-1459-4f66-927b-77f31e71e702","path":"sprites/spr_Menu_Collection_Customize_Kirby_Normal/spr_Menu_Collection_Customize_Kirby_Normal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"dab1592a-1459-4f66-927b-77f31e71e702","path":"sprites/spr_Menu_Collection_Customize_Kirby_Normal/spr_Menu_Collection_Customize_Kirby_Normal.yy",},"LayerId":{"name":"ea8af3c0-4a7c-4426-ae94-294e3789832f","path":"sprites/spr_Menu_Collection_Customize_Kirby_Normal/spr_Menu_Collection_Customize_Kirby_Normal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Menu_Collection_Customize_Kirby_Normal","path":"sprites/spr_Menu_Collection_Customize_Kirby_Normal/spr_Menu_Collection_Customize_Kirby_Normal.yy",},"resourceVersion":"1.0","name":"dab1592a-1459-4f66-927b-77f31e71e702","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"921a1732-9f4e-4d12-91ce-01fd525792af","path":"sprites/spr_Menu_Collection_Customize_Kirby_Normal/spr_Menu_Collection_Customize_Kirby_Normal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"921a1732-9f4e-4d12-91ce-01fd525792af","path":"sprites/spr_Menu_Collection_Customize_Kirby_Normal/spr_Menu_Collection_Customize_Kirby_Normal.yy",},"LayerId":{"name":"ea8af3c0-4a7c-4426-ae94-294e3789832f","path":"sprites/spr_Menu_Collection_Customize_Kirby_Normal/spr_Menu_Collection_Customize_Kirby_Normal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Menu_Collection_Customize_Kirby_Normal","path":"sprites/spr_Menu_Collection_Customize_Kirby_Normal/spr_Menu_Collection_Customize_Kirby_Normal.yy",},"resourceVersion":"1.0","name":"921a1732-9f4e-4d12-91ce-01fd525792af","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_Menu_Collection_Customize_Kirby_Normal","path":"sprites/spr_Menu_Collection_Customize_Kirby_Normal/spr_Menu_Collection_Customize_Kirby_Normal.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"9e0e6913-2ddc-4f3c-9b37-e5491b7ee4da","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dab1592a-1459-4f66-927b-77f31e71e702","path":"sprites/spr_Menu_Collection_Customize_Kirby_Normal/spr_Menu_Collection_Customize_Kirby_Normal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"2f095b75-089f-402f-ac62-4584d10b5105","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"921a1732-9f4e-4d12-91ce-01fd525792af","path":"sprites/spr_Menu_Collection_Customize_Kirby_Normal/spr_Menu_Collection_Customize_Kirby_Normal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Customize",
-    "path": "folders/Sprites/Menu/Collection Menu/Customize.yy",
+    "name": "Kirby",
+    "path": "folders/Sprites/Menu/Collection Menu/Customize/Character Portraits/Kirby.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Menu_Collection_Customize_Kirby_Normal",

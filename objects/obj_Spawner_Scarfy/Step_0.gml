@@ -66,7 +66,7 @@ else if (spawnTimer == 0)
 			spawnedEnemy.inhaleXOffset = inhaleXOffset;
 			spawnedEnemy.inhaleYOffset = inhaleYOffset;
 			spawnedEnemy.parasol = parasol;
-			spawnedEnemy.parasolObject = spawnedEnemy;
+			spawnedEnemy.parasolObject = -1;
 			spawnedEnemy.parasolX = parasolX;
 			spawnedEnemy.parasolY = parasolY;
 			spawnedEnemy.scale = scale;
@@ -92,6 +92,8 @@ else if (spawnTimer == 0)
 			spawnedEnemy.particleTimerMax = particleTimerMax;
 			spawnedEnemy.attackTimerMax = attackTimerMax;
 			spawnedEnemy.attackTimer = attackTimer;
+			spawnedEnemy.canTurnXTimerMax = canTurnXTimerMax;
+			spawnedEnemy.canTurnYTimerMax = canTurnYTimerMax;
 		}
 	}
 	spawnTimer = -1;

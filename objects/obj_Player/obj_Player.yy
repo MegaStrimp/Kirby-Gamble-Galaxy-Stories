@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "spr_18Square_Mask",
     "path": "sprites/spr_18Square_Mask/spr_18Square_Mask.yy",

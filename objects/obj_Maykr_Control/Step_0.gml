@@ -20,7 +20,6 @@ if (!active)
 	if (canBeInteracted)
 	{
 		#region Mouse On Top
-	
 		if (hudVisible)
 		{
 			if (point_in_rectangle(mouseXGui,mouseYGui,324,49,345,70))
@@ -49,13 +48,13 @@ if (!active)
 		
 			if (point_in_rectangle(mouseXGui,mouseYGui,12,0,84,20)) mouseOnTopPlay = true;
 			if (!point_in_rectangle(mouseXGui,mouseYGui,12,0,84,47)) mouseOnTopPlay = false;
-		
+			
 			if (point_in_rectangle(mouseXGui,mouseYGui,95,0,167,20)) mouseOnTopBlocks = true;
 			if (!point_in_rectangle(mouseXGui,mouseYGui,95,0,167,47)) mouseOnTopBlocks = false;
-		
+			
 			if (point_in_rectangle(mouseXGui,mouseYGui,171,0,243,20)) mouseOnTopEnemies = true;
 			if (!point_in_rectangle(mouseXGui,mouseYGui,171,0,243,47)) mouseOnTopEnemies = false;
-		
+			
 			if (point_in_rectangle(mouseXGui,mouseYGui,247,0,319,20)) mouseOnTopItems = true;
 			if (!point_in_rectangle(mouseXGui,mouseYGui,247,0,319,47)) mouseOnTopItems = false;
 		}
@@ -97,6 +96,7 @@ if (!active)
 		{
 			if (mouseOnTopExpand) bottomHudOpen = !bottomHudOpen;
 		
+			#region Save Button
 			if (mouseOnTopSave)
 			{
 				var file;
@@ -108,7 +108,7 @@ if (!active)
 					file_text_writeln(savedFile);
 					file_text_write_string(savedFile,"Version - " + maykrFileVersion);
 					file_text_writeln(savedFile);
-				
+					
 					#region Save Tiles
 					file_text_write_string(savedFile,"tileStart");
 					file_text_writeln(savedFile);
@@ -159,6 +159,7 @@ if (!active)
 					file_text_writeln(savedFile);
 					#endregion
 				
+					#region Save Spawners
 					file_text_write_string(savedFile,"spawnerStart");
 					file_text_writeln(savedFile);
 					with (obj_Maykr_Spawner)
@@ -198,15 +199,15 @@ if (!active)
 					}
 					file_text_write_string(savedFile,"spawnerEnd");
 					file_text_writeln(savedFile);
+					#endregion
 				
 					file_text_write_string(savedFile,"stageEnd");
 					file_text_close(savedFile);
-					//var spr = sprite_duplicate(bg_Aquatia_Harbor_Day);
-					//sprite_save(spr,0,file);
-					//sprite_delete(spr);
 				}
 			}
-		
+			#endregion
+			
+			#region Load Button
 			if (mouseOnTopLoad)
 			{
 				var file;
@@ -372,18 +373,25 @@ if (!active)
 					//errorAlphaTimer = errorAlphaTimerMax;
 				}
 			}
+			#endregion
 			
+			#region Reset Button
 			if (mouseOnTopReset)
 			{
 				yesBar = 0;
 				windowIndex = "clear";
 			}
+			#endregion
+			
+			#region Leave Button
 			if (mouseOnTopLeave)
 			{
 				yesBar = 0;
 				windowIndex = "leave";
 			}
+			#endregion
 			
+			#region Play Button
 			if (mouseOnTopPlay)
 			{
 				active = true;
@@ -406,45 +414,55 @@ if (!active)
 				
 				with (obj_Maykr_Spawner) active = true;
 			}
+			#endregion
+			
+			#region Blocks Button
 			if (mouseOnTopBlocks)
 			{
 				inventoryPage = 0;
-				if (global.gambleMaykrMenu != "collision")
+				if (global.gambleMaykrMenu != "Collision")
 				{
-					global.gambleMaykrMenu = "collision";
+					global.gambleMaykrMenu = "Collision";
 					scr_Maykr_Inventory(global.gambleMaykrMenu,inventoryPage);
-					spawnedLayer = "collision";
-					spawnedItemString = "debugWall";
+					spawnedLayer = "Collision";
+					spawnedItemString = maykrObjects.debugWall;
 					spawnedItemIndex = obj_ParentWall;
 					spawnedSprite = spr_Maykr_Spawner_DebugWall;
 					spawnedSlopeType = 0;
 					snap = 24;
 				}
 			}
+			#endregion
+			
+			#region Enemies Button
 			if (mouseOnTopEnemies)
 			{
 				inventoryPage = 0;
-				if (global.gambleMaykrMenu != "enemies")
+				if (global.gambleMaykrMenu != "Enemies")
 				{
-					global.gambleMaykrMenu = "enemies";
+					global.gambleMaykrMenu = "Enemies";
 					scr_Maykr_Inventory(global.gambleMaykrMenu,inventoryPage);
-					spawnedLayer = "enemies";
-					spawnedItemString = "waddleDee";
+					spawnedLayer = "Enemies";
+					spawnedItemString = maykrObjects.waddleDee;
 					spawnedItemIndex = obj_WaddleDee;
 					spawnedSprite = spr_Maykr_Spawner_WaddleDee_Normal;
 					snap = 6;
 				}
 			}
+			#endregion
+			
+			#region Items Button
 			if (mouseOnTopItems)
 			{
 				inventoryPage = 0;
-				if (global.gambleMaykrMenu != "environment")
+				if (global.gambleMaykrMenu != "Environment")
 				{
-					global.gambleMaykrMenu = "environment";
+					global.gambleMaykrMenu = "Environment";
 					scr_Maykr_Inventory(global.gambleMaykrMenu,inventoryPage);
 					snap = 6;
 				}
 			}
+			#endregion
 			
 			for (var i = 0; i < 12 + (bottomHudVisible * 36); i++)
 			{
@@ -452,43 +470,36 @@ if (!active)
 				var yy = (366 + bottomHudOffset) - 101 + (32 * floor(i / 12));
 				if (point_in_rectangle(mouseXGui,mouseYGui,xx,yy - 26,xx + 26,yy))
 				{
-					spawnedItemString = maykrInventory[i];
-					switch (spawnedItemString)
+					if (maykrInventory[i] != -1)
 					{
-						case "debugWall":
-						spawnedItemIndex = obj_ParentWall;
-						spawnedSprite = spr_Maykr_Spawner_DebugWall;
-						break;
-						
-						case "asteroidFieldsRedFront":
-						spawnedItemIndex = obj_ParentWall;
-						spawnedSprite = spr_Maykr_Spawner_AsteroidFieldsRedFront;
-						break;
-						
-						case "asteroidFieldsGreenFront":
-						spawnedItemIndex = obj_ParentWall;
-						spawnedSprite = spr_Maykr_Spawner_AsteroidFieldsGreenFront;
-						break;
-						
-						case "asteroidFieldsBlueFront":
-						spawnedItemIndex = obj_ParentWall;
-						spawnedSprite = spr_Maykr_Spawner_AsteroidFieldsBlueFront;
-						break;
-						
-						case "waddleDee":
-						spawnedItemIndex = obj_WaddleDee;
-						spawnedSprite = spr_WaddleDee_Normal_Idle;
-						break;
-						
-						case "waddleDoo":
-						spawnedItemIndex = obj_WaddleDoo;
-						spawnedSprite = spr_Maykr_Spawner_WaddleDoo_Normal;
-						break;
-						
-						case "brontoBurt":
-						spawnedItemIndex = obj_BrontoBurt;
-						spawnedSprite = spr_Maykr_Spawner_BrontoBurt_Normal;
-						break;
+						spawnedItemString = maykrInventory[i];
+						switch (spawnedItemString)
+						{
+							case maykrObjects.debugWall:
+							spawnedItemIndex = obj_ParentWall;
+							spawnedSprite = spr_Maykr_Spawner_DebugWall;
+							break;
+							
+							case maykrObjects.asteroidFieldsFront:
+							spawnedItemIndex = obj_ParentWall;
+							spawnedSprite = spr_Maykr_Spawner_AsteroidFieldsFront;
+							break;
+							
+							case maykrObjects.waddleDee:
+							spawnedItemIndex = obj_WaddleDee;
+							spawnedSprite = spr_WaddleDee_Normal_Idle;
+							break;
+							
+							case maykrObjects.waddleDoo:
+							spawnedItemIndex = obj_WaddleDoo;
+							spawnedSprite = spr_Maykr_Spawner_WaddleDoo_Normal;
+							break;
+							
+							case maykrObjects.brontoBurt:
+							spawnedItemIndex = obj_BrontoBurt;
+							spawnedSprite = spr_Maykr_Spawner_BrontoBurt_Normal;
+							break;
+						}
 					}
 				}
 			}
@@ -502,7 +513,7 @@ if (!active)
 		if (mouse_check_button(mb_left))
 		{
 			mouseOnHud = false;
-			if (((point_in_rectangle(mouseXGui,mouseYGui,0,0,325,27))) or ((point_in_rectangle(mouseXGui,mouseYGui,324,0,480,47))) or ((point_in_rectangle(mouseXGui,mouseYGui,26,233 + bottomHudOffset,454,270))) or (mouseOnTopMap) or (mouseOnTopSave) or (mouseOnTopLoad) or (mouseOnTopOptions) or (mouseOnTopReset) or (mouseOnTopLeave) or (mouseOnTopPlay) or (mouseOnTopBlocks) or (mouseOnTopEnemies) or (mouseOnTopItems) or (mouseOnTopExpand) or (mouseOnTopHide)) mouseOnHud = true;
+			if (((point_in_rectangle(mouseXGui,mouseYGui,0,0,325,27))) or ((point_in_rectangle(mouseXGui,mouseYGui,324,0,480,47))) or ((point_in_rectangle(mouseXGui,mouseYGui,26,233 + bottomHudOffset,454,270))) or (mouseOnTopMap) or (mouseOnTopSave) or (mouseOnTopLoad) or (mouseOnTopOptions) or (mouseOnTopReset) or (mouseOnTopLeave) or (mouseOnTopPlay) or (mouseOnTopEdit) or (mouseOnTopBlocks) or (mouseOnTopEnemies) or (mouseOnTopItems) or (mouseOnTopExpand) or (mouseOnTopHide)) mouseOnHud = true;
 		
 			if ((!collidingSpawner) and (!mouseOnHud) and (!spawnTimer))
 			{
@@ -512,6 +523,7 @@ if (!active)
 				spawner.spawnedItemIndex = spawnedItemIndex;
 				spawner.spawnedLayer = spawnedLayer;
 				spawner.spawnedSprite = spawnedSprite;
+				spawner.spawnedName = spawnedName;
 				spawner.spawnedDirX = dirX;
 				switch (spawnedItemIndex)
 				{
@@ -522,7 +534,7 @@ if (!active)
 				}
 				switch (spawnedItemString)
 				{
-					case "debugWall":
+					case maykrObjects.debugWall:
 					if (tileDebug == -1)
 					{
 						layer_create(299,"tileDebug");
@@ -534,7 +546,7 @@ if (!active)
 					if (tilemap_get(tileDebug,wx,wy - 1) == 0) tilemap_set(tileDebug,99,wx,wy - 1);
 					break;
 					
-					case "asteroidFieldsRedFront":
+					case maykrObjects.asteroidFieldsFront:
 					if (tileAsteroidFieldsFront == -1)
 					{
 						layer_create(299,"tileAsteroidFieldsFront");
@@ -543,32 +555,6 @@ if (!active)
 					var wx = mouseX / 24;
 					var wy = mouseY / 24;
 					var tileIndex = 23 + ((wx + wy) % 3);
-					tilemap_set(tileAsteroidFieldsFront,tileIndex,wx,wy);
-					if (tilemap_get(tileAsteroidFieldsFront,wx,wy - 1) == 0) tilemap_set(tileAsteroidFieldsFront,tileIndex - 18,wx,wy - 1);
-					break;
-					
-					case "asteroidFieldsGreenFront":
-					if (tileAsteroidFieldsFront == -1)
-					{
-						layer_create(299,"tileAsteroidFieldsFront");
-						tileAsteroidFieldsFront = layer_tilemap_create("tileAsteroidFieldsFront",0,0,ts_AsteroidFields,200,120);
-					}
-					var wx = mouseX / 24;
-					var wy = mouseY / 24;
-					tileIndex = 26 + ((wx + wy) % 3);
-					tilemap_set(tileAsteroidFieldsFront,tileIndex,wx,wy);
-					if (tilemap_get(tileAsteroidFieldsFront,wx,wy - 1) == 0) tilemap_set(tileAsteroidFieldsFront,tileIndex - 18,wx,wy - 1);
-					break;
-					
-					case "asteroidFieldsBlueFront":
-					if (tileAsteroidFieldsFront == -1)
-					{
-						layer_create(299,"tileAsteroidFieldsFront");
-						tileAsteroidFieldsFront = layer_tilemap_create("tileAsteroidFieldsFront",0,0,ts_AsteroidFields,200,120);
-					}
-					var wx = mouseX / 24;
-					var wy = mouseY / 24;
-					tileIndex = 29 + ((wx + wy) % 3);
 					tilemap_set(tileAsteroidFieldsFront,tileIndex,wx,wy);
 					if (tilemap_get(tileAsteroidFieldsFront,wx,wy - 1) == 0) tilemap_set(tileAsteroidFieldsFront,tileIndex - 18,wx,wy - 1);
 					break;
@@ -584,7 +570,7 @@ if (!active)
 			{
 				switch (spawnedItemString)
 				{
-					case "debugWall":
+					case maykrObjects.debugWall:
 					tilemap_set(obj_Maykr_Control.tileDebug,0,floor(x / 24),floor(y / 24));
 					var topTile = tilemap_get(obj_Maykr_Control.tileDebug,floor(x / 24),floor(y / 24) - 1);
 					var bottomTile = tilemap_get(obj_Maykr_Control.tileDebug,floor(x / 24),floor(y / 24) + 1);
@@ -592,27 +578,11 @@ if (!active)
 					if (bottomTile == 80) tilemap_set(obj_Maykr_Control.tileDebug,99,floor(x / 24),floor(y / 24));
 					break;
 					
-					case "asteroidFieldsRedFront":
+					case maykrObjects.asteroidFieldsFront:
 					tilemap_set(obj_Maykr_Control.tileAsteroidFieldsFront,0,floor(x / 24),floor(y / 24));
 					var topTile = tilemap_get(obj_Maykr_Control.tileAsteroidFieldsFront,floor(x / 24),floor(y / 24) - 1);
 					var bottomTile = tilemap_get(obj_Maykr_Control.tileAsteroidFieldsFront,floor(x / 24),floor(y / 24) + 1);
 					if ((topTile == 5) or (topTile == 6) or (topTile == 7)) tilemap_set(obj_Maykr_Control.tileAsteroidFieldsFront,0,floor(x / 24),floor(y / 24) - 1);
-					if ((bottomTile != 0) and (bottomTile >= 18)) tilemap_set(obj_Maykr_Control.tileAsteroidFieldsFront,bottomTile - 18,floor(x / 24),floor(y / 24));
-					break;
-					
-					case "asteroidFieldsGreenFront":
-					tilemap_set(obj_Maykr_Control.tileAsteroidFieldsFront,0,floor(x / 24),floor(y / 24));
-					var topTile = tilemap_get(obj_Maykr_Control.tileAsteroidFieldsFront,floor(x / 24),floor(y / 24) - 1);
-					var bottomTile = tilemap_get(obj_Maykr_Control.tileAsteroidFieldsFront,floor(x / 24),floor(y / 24) + 1);
-					if ((topTile == 8) or (topTile == 9) or (topTile == 10)) tilemap_set(obj_Maykr_Control.tileAsteroidFieldsFront,0,floor(x / 24),floor(y / 24) - 1);
-					if ((bottomTile != 0) and (bottomTile >= 18)) tilemap_set(obj_Maykr_Control.tileAsteroidFieldsFront,bottomTile - 18,floor(x / 24),floor(y / 24));
-					break;
-					
-					case "asteroidFieldsBlueFront":
-					tilemap_set(obj_Maykr_Control.tileAsteroidFieldsFront,0,floor(x / 24),floor(y / 24));
-					var topTile = tilemap_get(obj_Maykr_Control.tileAsteroidFieldsFront,floor(x / 24),floor(y / 24) - 1);
-					var bottomTile = tilemap_get(obj_Maykr_Control.tileAsteroidFieldsFront,floor(x / 24),floor(y / 24) + 1);
-					if ((topTile == 11) or (topTile == 12) or (topTile == 13)) tilemap_set(obj_Maykr_Control.tileAsteroidFieldsFront,0,floor(x / 24),floor(y / 24) - 1);
 					if ((bottomTile != 0) and (bottomTile >= 18)) tilemap_set(obj_Maykr_Control.tileAsteroidFieldsFront,bottomTile - 18,floor(x / 24),floor(y / 24));
 					break;
 				}
@@ -662,7 +632,6 @@ if (!active)
 					if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 					audio_play_sound(snd_ButtonYes,0,false);
 					windowIndex = -1;
-					global.gambleMaykr = false;
 					global.pause = false;
 					var fade = instance_create_depth(x,y,-999,obj_Fade);
 					fade.targetRoom = rm_MaykrTitle;
@@ -683,9 +652,16 @@ if (!active)
 }
 else
 {
-	if (keyboard_check_pressed(vk_escape))
+	#region Mouse On Top
+	if (point_in_rectangle(mouseXGui,mouseYGui,12,0,84,20)) mouseOnTopEdit = true;
+	if (!point_in_rectangle(mouseXGui,mouseYGui,12,0,84,47)) mouseOnTopEdit = false;
+	#endregion
+	
+	#region Go Back To Edit Mode
+	if (((mouseOnTopEdit) and (mouse_check_button_pressed(mb_left))) or (keyboard_check_pressed(vk_escape)))
 	{
 		active = false;
+		mouseOnTopEdit = false;
 		
 		global.pause = true;
 		global.abilityP1 = playerAbilities.none;
@@ -708,4 +684,5 @@ else
 			if (spawnedItem != -1) instance_destroy(spawnedItem);
 		}
 	}
+	#endregion
 }

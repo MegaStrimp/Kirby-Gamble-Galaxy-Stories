@@ -41,6 +41,7 @@ player = 0;
 changeDirection = true;
 isMystic = false;
 hasGravity = false;
+isUfo = false;
 
 //Sprites
 

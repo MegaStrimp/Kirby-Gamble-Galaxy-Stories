@@ -27,5 +27,6 @@ enum cutscenes
 	story_ExplainingEverything,
 	story_Dethroned,
 	
+	exTut_Treasure,
 	exTut_AntiFloat
 }

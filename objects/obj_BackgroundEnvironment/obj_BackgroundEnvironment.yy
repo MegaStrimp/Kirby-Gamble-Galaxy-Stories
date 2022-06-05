@@ -1,10 +1,11 @@
 {
   "spriteId": {
-    "name": "spr_Background_AsteroidFields2",
-    "path": "sprites/spr_Background_AsteroidFields2/spr_Background_AsteroidFields2.yy",
+    "name": "spr_Background_BattleshipHalberd_GrayLight",
+    "path": "sprites/spr_Background_BattleshipHalberd_GrayLight/spr_Background_BattleshipHalberd_GrayLight.yy",
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,

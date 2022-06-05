@@ -25,7 +25,7 @@ hasXCollision = true;
 hasYCollision = true;
 collisionX = obj_ParentWall;
 collisionY = obj_ParentWall;
-destroyAfterPressed = true;
+destroyAfterPressed = false;
 
 //Timers
 

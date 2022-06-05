@@ -83,13 +83,13 @@ function scr_Enemy_HurtsPlayer(argument0)
 				{
 					with (obj_AbilityDropStar)
 					{
-						if ((!isBubble) and (owner.player == other.player)) destroy = true;
+						if ((!isBubble) and (owner.player == other.collidedPlayer.player)) destroy = true;
 					}
 				}
 				if ((collidedPlayer.state == playerStates.cutterDash) or (collidedPlayer.state == playerStates.mirrorDash) or (collidedPlayer.state == playerStates.fireDash) or (collidedPlayer.state == playerStates.wingDash) or (collidedPlayer.state == playerStates.swordDash)) collidedPlayer.state = playerStates.normal;
 				var abilityDropStar = instance_create_depth(round(x),round(y - 6),depth + 1,obj_AbilityDropStar);
 				abilityDropStar.owner = collidedPlayer;
-				abilityDropStar.hsp = -collidedPlayer.dir;
+				abilityDropStar.hsp = -collidedPlayer.dir * 1.5;
 				abilityDropStar.vsp = -abilityDropStar.jumpspeed;
 				abilityDropStar.dir = -image_xscale;
 				abilityDropStar.ability = playerAbility;
@@ -281,9 +281,9 @@ function scr_Enemy_HurtsPlayer(argument0)
 			}
 			else
 			{
-				if (!isMiniBoss) global.healthbarMarkedEnemy = id;
 				hurtTimer = hurtTimerMax;
 			}
+			if ((!isMiniBoss) and (!isBoss)) global.healthbarMarkedEnemy = id;
 			hp -= collidedPlayer.dmg;
 			shakeX = 2;
 			shakeY = 2;

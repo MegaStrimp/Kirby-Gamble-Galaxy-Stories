@@ -132,7 +132,18 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	if (state == 0)
 	{
 		angle += spd;
-		if ((hasLimit) and (((sign(spd) == -1) and ((angle < 335) and (angle > 135))) or ((sign(spd) == 1) and ((angle > 205) and (angle < 225))))) instance_destroy(); //angle = 270 - (sign(spd) * 65);
+		var a1 = 335;
+		var a2 = 135;
+		var a3 = 205;
+		var a4 = 225;
+		if (isUfo)
+		{
+			a1 = 315; // 45
+			a2 = 300;
+			a3 = 225;
+			a4 = 235;
+		}
+		if ((hasLimit) and (((sign(spd) == -1) and ((angle < a1) and (angle > a2))) or ((sign(spd) == 1) and ((angle > a3) and (angle < a4))))) instance_destroy();
 		if (angle >= 360) angle -= 360;
 		if (angle < 0) angle += 360;
 		if (instance_exists(owner))
@@ -291,7 +302,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		par.destroyTimer = 1;
 		if (instance_exists(owner))
 		{
-			if ((!enemy) and (!isMystic) and (((player == 0) and (global.hatTypeBeamP1 == "marxSoul")) or ((player == 1) and (global.hatTypeBeamP2 == "marxSoul"))))
+			if ((!enemy) and (!isMystic) and (((player == 0) and (global.hatTypeBeamP1 == abilityHatSkins.beam_marxSoul)) or ((player == 1) and (global.hatTypeBeamP2 == abilityHatSkins.beam_marxSoul))))
 			{
 				par.sprite_index = spr_Particle_MarxDiamonds;
 				par.image_alpha = .5;

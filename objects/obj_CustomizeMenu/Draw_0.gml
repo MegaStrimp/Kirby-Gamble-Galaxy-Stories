@@ -9,11 +9,11 @@ draw_sprite(spr_Menu_Saves_Medals_Empty,0,4 + hudOffset,5);
 //Draw Pages
 
 draw_set_color(c_white);
-if (global.language == 0)
+if (global.language == languages.english)
 {
 	draw_set_font(fnt_DialogueDefault);
 }
-else if ((global.language == 6) or (global.language == 8))
+else if ((global.language == languages.chinese) or (global.language == languages.japanese))
 {
 	draw_set_font(global.fontDialogueDefaultKanji);
 }
@@ -45,8 +45,8 @@ switch (page)
 		break;
 	}
 	
-	scr_Draw_Text_Color_Outline(26 + player1OffsetLerp,75,"Player 1",-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
-	scr_Draw_Text_Color_Outline(26 + player2OffsetLerp,111,"Player 2",-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	scr_Draw_Text_Color_Outline(26 + player1OffsetLerp,75,"P1",-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	scr_Draw_Text_Color_Outline(26 + player2OffsetLerp,111,"P2",-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 	break;
 	#endregion
 	
@@ -88,11 +88,11 @@ switch (page)
 	
 	var sprayPaintCol = c_white;
 	if (!global.shaders) sprayPaintCol = c_dkgray;
-	scr_Draw_Text_Color_Outline(26 + skinsOffsetLerp,75,"Skins",-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
-	scr_Draw_Text_Color_Outline(26 + sprayPaintsOffsetLerp,111,"Spray Paints",-1,-1,sprayPaintCol,sprayPaintCol,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
-	scr_Draw_Text_Color_Outline(26 + hatSkinsOffsetLerp,147,"Hat Skins",-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
-	scr_Draw_Text_Color_Outline(26 + hatPaintsOffsetLerp,183,"Hat Paints",-1,-1,sprayPaintCol,sprayPaintCol,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
-	scr_Draw_Text_Color_Outline(26 + familiarsOffsetLerp,219,"Familiars",-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	scr_Draw_Text_Color_Outline(26 + skinsOffsetLerp,75,strSkins,-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	scr_Draw_Text_Color_Outline(26 + sprayPaintsOffsetLerp,111,strSprayPaints,-1,-1,sprayPaintCol,sprayPaintCol,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	scr_Draw_Text_Color_Outline(26 + hatSkinsOffsetLerp,147,strHatSkins,-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	scr_Draw_Text_Color_Outline(26 + hatPaintsOffsetLerp,183,strHatPaints,-1,-1,sprayPaintCol,sprayPaintCol,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	scr_Draw_Text_Color_Outline(26 + familiarsOffsetLerp,219,strFamiliars,-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 	break;
 	#endregion
 	
@@ -107,7 +107,9 @@ switch (page)
 	draw_roundrect(10,45,160,265,false);
 	draw_set_alpha(1);
 	
+	if ((global.shaders) and (characterIcon[selection] == spr_Hud_Icon_Kirby)) pal_swap_set(spr_Hud_Palette_Healthbar_Kirby,1,false);
 	if (characterIcon[selection] != -1) draw_sprite_ext(characterIcon[selection],0,242,110,1,1,image_angle,image_blend,image_alpha);
+	if ((global.shaders) and (characterIcon[selection] == spr_Hud_Icon_Kirby)) pal_swap_reset();
 	
 	draw_sprite(spr_Menu_Options_CursorArrow,0,8,141);
 	
@@ -185,7 +187,9 @@ switch (page)
 	draw_roundrect(10,45,160,265,false);
 	draw_set_alpha(1);
 	
+	if ((global.shaders) and (characterIcon[selection] == spr_Hud_Icon_Kirby)) pal_swap_set(spr_Hud_Palette_Healthbar_Kirby,1,false);
 	if (characterIcon[selection] != -1) draw_sprite_ext(characterIcon[selection],0,242,110,1,1,image_angle,image_blend,image_alpha);
+	if ((global.shaders) and (characterIcon[selection] == spr_Hud_Icon_Kirby)) pal_swap_reset();
 	
 	draw_sprite(spr_Menu_Options_CursorArrow,0,8,141);
 	
@@ -235,28 +239,32 @@ switch (page)
 	
 	switch (selectedOwner)
 	{
-		case "Kirby":
+		case playerCharacters.kirby:
 		playerPaint = global.sprayPaintKirbyP1;
 		if (selectedPlayer == 1) playerPaint = global.sprayPaintKirbyP2;
 		
-		switch (sprayPaintTitle[selection])
+		switch (sprayPaintValue[selection])
 		{
 			default:
 			characterSprite = spr_Menu_Collection_Customize_Kirby_Normal;
 			characterPaint = sprayPaintKirbyNormal[selection];
 			break;
 			
-			case "Shadow of the Mirror":
-			characterSprite = spr_Menu_Collection_Customize_Kirby_ShadowOfTheMirror;
+			case playerSprayPaints.invisSprinkle:
+			characterSprite = spr_Menu_Collection_Customize_Kirby_Normal_InvisSprinkle;
 			break;
 			
-			case "Smiley White":
-			characterSprite = spr_Menu_Collection_Customize_Kirby_SmileyWhite;
+			case playerSprayPaints.shadowOfTheMirror:
+			characterSprite = spr_Menu_Collection_Customize_Kirby_Normal_ShadowOfTheMirror;
+			break;
+			
+			case playerSprayPaints.smileyWhite:
+			characterSprite = spr_Menu_Collection_Customize_Kirby_Normal_SmileyWhite;
 			break;
 		}
 		break;
 		
-		case "Gamble":
+		case playerCharacters.gamble:
 		playerPaint = global.sprayPaintGambleP1;
 		if (selectedPlayer == 1) playerPaint = global.sprayPaintGambleP2;
 		
@@ -265,21 +273,87 @@ switch (page)
 			default:
 			characterSprite = spr_Menu_Collection_Customize_Gamble_Normal;
 			characterPaint = sprayPaintGambleNormal[selection];
-			break;e = spr_Menu_Collection_Customize_Kirby_SmileyWhite;
 			break;
 		}
 		break;
 		
-		case "Gooey":
-		playerPaint = global.sprayPaintGooeyP1;
-		if (selectedPlayer == 1) playerPaint = global.sprayPaintGooeyP2;
+		case playerCharacters.metaKnight:
+		playerPaint = global.sprayPaintMetaKnightP1;
+		if (selectedPlayer == 1) playerPaint = global.sprayPaintMetaKnightP2;
 		
 		switch (sprayPaintTitle[selection])
 		{
 			default:
 			characterSprite = spr_Menu_Collection_Customize_Gooey_Normal;
-			characterPaint = sprayPaintGooeyNormal[selection];
-			break;e = spr_Menu_Collection_Customize_Kirby_SmileyWhite;
+			characterPaint = sprayPaintMetaKnightNormal[selection];
+			break;
+		}
+		break;
+		
+		case playerCharacters.gooey:
+		playerPaint = global.sprayPaintGooeyP1;
+		
+		switch (global.skinGooeyP1)
+		{
+			default:
+			switch (sprayPaintTitle[selection])
+			{
+				default:
+				characterSprite = spr_Menu_Collection_Customize_Gooey_Normal;
+				characterPaint = sprayPaintGooeyNormal[selection];
+				break;
+			}
+			break;
+			
+			case "pipis":
+			switch (sprayPaintTitle[selection])
+			{
+				default:
+				characterSprite = spr_Menu_Collection_Customize_Gooey_Pipis;
+				characterPaint = sprayPaintGooeyPipis[selection];
+				break;
+			}
+			break;
+		}
+		
+		if (selectedPlayer == 1)
+		{
+			playerPaint = global.sprayPaintGooeyP2;
+			
+			switch (global.skinGooeyP2)
+			{
+				default:
+				switch (sprayPaintTitle[selection])
+				{
+					default:
+					characterSprite = spr_Menu_Collection_Customize_Gooey_Normal;
+					characterPaint = sprayPaintGooeyNormal[selection];
+					break;
+				}
+				break;
+				
+				case "pipis":
+				switch (sprayPaintTitle[selection])
+				{
+					default:
+					characterSprite = spr_Menu_Collection_Customize_Gooey_Pipis;
+					characterPaint = sprayPaintGooeyPipis[selection];
+					break;
+				}
+				break;
+			}
+		}
+		break;
+		
+		case playerCharacters.magolor:
+		playerPaint = global.sprayPaintMagolorP1;
+		if (selectedPlayer == 1) playerPaint = global.sprayPaintMagolorP2;
+		
+		switch (sprayPaintTitle[selection])
+		{
+			default:
+			characterSprite = spr_Menu_Collection_Customize_Gooey_Normal;
+			characterPaint = sprayPaintMagolorNormal[selection];
 			break;
 		}
 		break;
@@ -305,7 +379,7 @@ switch (page)
 			col1 = sprayPaintColor[i];
 			col2 = c_white;
 		}
-		if (sprayPaintKirbyNormal[i] == playerPaint)
+		if (sprayPaintValue[i] == playerPaint)
 		{
 			col1 = c_yellow;
 			col2 = c_yellow;
@@ -319,7 +393,7 @@ switch (page)
 	
 	#region Ability Hat
 	case "abilityHat":
-	for (var i = 0; i < array_length(abilityHatTitle); i++) abilityHatOffsetLerp[i] = lerp(abilityHatOffsetLerp[i],abilityHatOffset[i] * 8,.25);
+	for (var i = 0; i < array_length(abilityHatValue); i++) abilityHatOffsetLerp[i] = lerp(abilityHatOffsetLerp[i],abilityHatOffset[i] * 8,.25);
 	
 	textY = lerp(textY,147 - (selection * 36),.25);
 	
@@ -337,97 +411,97 @@ switch (page)
 	
 	var textColor = c_white;
 	hatSprite = -1;
-	switch (abilityHatTitle[selection])
+	switch (abilityHatValue[selection])
 	{
-		case "Cutter":
+		case playerAbilities.cutter:
 		hatSprite = spr_AbilityStar_Cutter;
 		break;
 		
-		case "Beam":
+		case playerAbilities.beam:
 		hatSprite = spr_AbilityStar_Beam;
 		break;
 		
-		case "Stone":
+		case playerAbilities.stone:
 		hatSprite = spr_AbilityStar_Stone;
 		break;
 		
-		case "Ufo":
+		case playerAbilities.ufo:
 		hatSprite = spr_AbilityStar_Ufo;
 		break;
 		
-		case "Mirror":
+		case playerAbilities.mirror:
 		hatSprite = spr_AbilityStar_Mirror;
 		break;
 		
-		case "Ninja":
+		case playerAbilities.ninja:
 		hatSprite = spr_AbilityStar_Ninja;
 		break;
 		
-		case "Bomb":
+		case playerAbilities.bomb:
 		hatSprite = spr_AbilityStar_Bomb;
 		break;
 		
-		case "Fire":
+		case playerAbilities.fire:
 		hatSprite = spr_AbilityStar_Fire;
 		break;
 		
-		case "Ice":
+		case playerAbilities.ice:
 		hatSprite = spr_AbilityStar_Ice;
 		break;
 		
-		case "Spark":
+		case playerAbilities.spark:
 		hatSprite = spr_AbilityStar_Spark;
 		break;
 		
-		case "Yoyo":
+		case playerAbilities.yoyo:
 		hatSprite = spr_AbilityStar_Yoyo;
 		break;
 		
-		case "Wheel":
+		case playerAbilities.wheel:
 		hatSprite = spr_AbilityStar_Wheel;
 		break;
 		
-		case "Artist":
+		case playerAbilities.artist:
 		hatSprite = spr_AbilityStar_Artist;
 		break;
 		
-		case "Fighter":
+		case playerAbilities.fighter:
 		hatSprite = spr_AbilityStar_Fighter;
 		break;
 		
-		case "Suplex":
+		case playerAbilities.suplex:
 		hatSprite = spr_AbilityStar_Suplex;
 		break;
 		
-		case "Wing":
+		case playerAbilities.wing:
 		hatSprite = spr_AbilityStar_Wing;
 		break;
 		
-		case "Jet":
+		case playerAbilities.jet:
 		hatSprite = spr_AbilityStar_Jet;
 		break;
 		
-		case "Sword":
+		case playerAbilities.sword:
 		hatSprite = spr_AbilityStar_Sword;
 		break;
 		
-		case "Parasol":
+		case playerAbilities.parasol:
 		hatSprite = spr_AbilityStar_Parasol;
 		break;
 		
-		case "Hammer":
+		case playerAbilities.hammer:
 		hatSprite = spr_AbilityStar_Hammer;
 		break;
 		
-		case "Bell":
+		case playerAbilities.bell:
 		hatSprite = spr_AbilityStar_Bell;
 		break;
 		
-		case "Sleep":
+		case playerAbilities.sleep:
 		hatSprite = -1;
 		break;
 		
-		case "Scan":
+		case playerAbilities.scan:
 		hatSprite = -1;
 		break;
 	}
@@ -436,7 +510,7 @@ switch (page)
 	
 	draw_sprite(spr_Menu_Options_CursorArrow,0,0,141);
 	
-	for (var i = 0; i < array_length(abilityHatTitle); i++)
+	for (var i = 0; i < array_length(abilityHatValue); i++)
 	{
 	    if (i == selection) textAlpha = 1;
 	    if ((i == selection - 1) or (i == selection + 1)) textAlpha = .66;
@@ -474,228 +548,228 @@ switch (page)
 	
 	var textColor = c_white;
 	hatSprite = -1;
-	switch (abilityHatTitle[subSelection])
+	switch (abilityHatValue[subSelection])
 	{
-		case "Cutter":
-		switch (abilityHatSkinTitle[subSelection][selection])
+		case playerAbilities.cutter:
+		switch (abilityHatSkinValue[subSelection][selection])
 		{
-			case "KSSU":
+			case abilityHatSkins.cutter_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Cutter_KSSU_Idle;
 			break;
 		}
 		break;
 		
-		case "Beam":
-		switch (abilityHatSkinTitle[subSelection][selection])
+		case playerAbilities.beam:
+		switch (abilityHatSkinValue[subSelection][selection])
 		{
-			case "KSSU":
+			case abilityHatSkins.beam_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Beam_KSSU_Idle;
 			break;
 			
-			case "Marx Soul":
+			case abilityHatSkins.beam_marxSoul:
 			hatSprite = spr_Kirby_AbilityHat_Beam_MarxSoul_Idle;
 			break;
 		}
 		break;
 		
-		case "Stone":
-		switch (abilityHatSkinTitle[subSelection][selection])
+		case playerAbilities.stone:
+		switch (abilityHatSkinValue[subSelection][selection])
 		{
-			case "KSSU":
+			case abilityHatSkins.stone_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Stone_KSSU_Idle;
 			break;
 			
-			case "Modern":
+			case abilityHatSkins.stone_modern:
 			hatSprite = spr_Kirby_AbilityHat_Stone_Modern_Idle;
 			break;
 		}
 		break;
 		
-		case "Mirror":
-		switch (abilityHatSkinTitle[subSelection][selection])
+		case playerAbilities.mirror:
+		switch (abilityHatSkinValue[subSelection][selection])
 		{
-			case "KSSU":
+			case abilityHatSkins.mirror_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Mirror_KSSU_Idle;
 			break;
 			
-			case "Modern":
+			case abilityHatSkins.mirror_modern:
 			hatSprite = spr_Kirby_AbilityHat_Mirror_Modern_Idle;
 			break;
 		}
 		break;
 		
-		case "Ninja":
-		switch (abilityHatSkinTitle[subSelection][selection])
+		case playerAbilities.ninja:
+		switch (abilityHatSkinValue[subSelection][selection])
 		{
-			case "KSSU":
+			case abilityHatSkins.mirror_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Ninja_KSSU_Idle;
 			break;
 			
-			case "Modern":
+			case abilityHatSkins.mirror_modern:
 			hatSprite = spr_Kirby_AbilityHat_Ninja_Modern_Idle;
 			break;
 		}
 		break;
 		
-		case "Bomb":
-		switch (abilityHatSkinTitle[subSelection][selection])
+		case playerAbilities.bomb:
+		switch (abilityHatSkinValue[subSelection][selection])
 		{
-			case "KSSU":
+			case abilityHatSkins.bomb_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Bomb_KSSU_Idle;
 			break;
 			
-			case "Modern":
+			case abilityHatSkins.bomb_modern:
 			hatSprite = spr_Kirby_AbilityHat_Bomb_Modern_Idle;
 			break;
 		}
 		break;
 		
-		case "Fire":
-		switch (abilityHatSkinTitle[subSelection][selection])
+		case playerAbilities.fire:
+		switch (abilityHatSkinValue[subSelection][selection])
 		{
-			case "KSSU":
+			case abilityHatSkins.fire_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Fire_KSSU_Idle;
 			break;
 		}
 		break;
 		
-		case "Ice":
-		switch (abilityHatSkinTitle[subSelection][selection])
+		case playerAbilities.ice:
+		switch (abilityHatSkinValue[subSelection][selection])
 		{
-			case "KSSU":
+			case abilityHatSkins.ice_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Ice_KSSU_Idle;
 			break;
 			
-			case "Snowman":
+			case abilityHatSkins.ice_snowman:
 			hatSprite = spr_Kirby_AbilityHat_Ice_Snowman_Idle;
 			break;
 		}
 		break;
 		
-		case "Spark":
-		switch (abilityHatSkinTitle[subSelection][selection])
+		case playerAbilities.spark:
+		switch (abilityHatSkinValue[subSelection][selection])
 		{
-			case "KSSU":
+			case abilityHatSkins.spark_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Spark_KSSU_Idle;
 			break;
 		}
 		break;
 		
-		case "Yoyo":
-		switch (abilityHatSkinTitle[subSelection][selection])
+		case playerAbilities.yoyo:
+		switch (abilityHatSkinValue[subSelection][selection])
 		{
-			case "KSSU":
+			case abilityHatSkins.yoyo_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Yoyo_KSSU_Idle;
 			break;
 		}
 		break;
 		
-		case "Wheel":
-		switch (abilityHatSkinTitle[subSelection][selection])
+		case playerAbilities.wheel:
+		switch (abilityHatSkinValue[subSelection][selection])
 		{
-			case "KSSU":
+			case abilityHatSkins.wheel_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Wheel_KSSU_Idle;
 			break;
 		}
 		break;
 		
-		case "Artist":
-		switch (abilityHatSkinTitle[subSelection][selection])
+		case playerAbilities.artist:
+		switch (abilityHatSkinValue[subSelection][selection])
 		{
-			case "KSSU":
+			case abilityHatSkins.artist_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Artist_KSSU_Idle;
 			break;
 		}
 		break;
 		
-		case "Fighter":
-		switch (abilityHatSkinTitle[subSelection][selection])
+		case playerAbilities.fighter:
+		switch (abilityHatSkinValue[subSelection][selection])
 		{
-			case "KSSU":
+			case abilityHatSkins.fighter_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Fighter_KSSU_Idle;
 			break;
 		}
 		break;
 		
-		case "Suplex":
-		switch (abilityHatSkinTitle[subSelection][selection])
+		case playerAbilities.suplex:
+		switch (abilityHatSkinValue[subSelection][selection])
 		{
-			case "KSSU":
+			case abilityHatSkins.suplex_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Suplex_KSSU_Idle;
 			break;
 		}
 		break;
 		
-		case "Wing":
-		switch (abilityHatSkinTitle[subSelection][selection])
+		case playerAbilities.wing:
+		switch (abilityHatSkinValue[subSelection][selection])
 		{
-			case "KSSU":
+			case abilityHatSkins.wing_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Wing_KSSU_Idle;
 			break;
 		}
 		break;
 		
-		case "Jet":
-		switch (abilityHatSkinTitle[subSelection][selection])
+		case playerAbilities.jet:
+		switch (abilityHatSkinValue[subSelection][selection])
 		{
-			case "KSSU":
+			case abilityHatSkins.jet_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Jet_KSSU_Idle;
 			break;
 		}
 		break;
 		
-		case "Sword":
-		switch (abilityHatSkinTitle[subSelection][selection])
+		case playerAbilities.sword:
+		switch (abilityHatSkinValue[subSelection][selection])
 		{
-			case "KSSU":
+			case abilityHatSkins.sword_kssu:
 			//hatSprite = spr_Kirby_AbilityHat_Sword_KSSU_Idle;
 			hatSprite = -1;
 			break;
 		}
 		break;
 		
-		case "Parasol":
-		switch (abilityHatSkinTitle[subSelection][selection])
+		case playerAbilities.parasol:
+		switch (abilityHatSkinValue[subSelection][selection])
 		{
-			case "KSSU":
+			case abilityHatSkins.parasol_kssu:
 			//hatSprite = spr_Kirby_AbilityHat_Parasol_KSSU_Idle;
 			hatSprite = -1;
 			break;
 		}
 		break;
 		
-		case "Hammer":
-		switch (abilityHatSkinTitle[subSelection][selection])
+		case playerAbilities.hammer:
+		switch (abilityHatSkinValue[subSelection][selection])
 		{
-			case "KSSU":
+			case abilityHatSkins.hammer_kssu:
 			//hatSprite = spr_Kirby_AbilityHat_Hammer_KSSU_Idle;
 			hatSprite = -1;
 			break;
 		}
 		break;
 		
-		case "Bell":
-		switch (abilityHatSkinTitle[subSelection][selection])
+		case playerAbilities.bell:
+		switch (abilityHatSkinValue[subSelection][selection])
 		{
-			case "Modern":
+			case abilityHatSkins.bell_modern:
 			hatSprite = spr_Kirby_AbilityHat_Bell_Modern_Idle;
 			break;
 		}
 		break;
 		
-		case "Sleep":
-		switch (abilityHatSkinTitle[subSelection][selection])
+		case playerAbilities.sleep:
+		switch (abilityHatSkinValue[subSelection][selection])
 		{
-			case "KSSU":
+			case abilityHatSkins.sleep_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Sleep_KSSU_Sleep;
 			break;
 		}
 		break;
 		
-		case "Scan":
-		switch (abilityHatSkinTitle[subSelection][selection])
+		case playerAbilities.scan:
+		switch (abilityHatSkinValue[subSelection][selection])
 		{
-			case "KSSU":
+			case abilityHatSkins.scan_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Scan_KSSU_Scan;
 			break;
 		}
@@ -734,7 +808,7 @@ switch (page)
 	
 	#region Hat Paint
 	case "hatPaint":
-	for (var i = 0; i < array_length(abilityHatPaintTitle[subSelection][selectedSkin]); i++) abilityHatPaintOffset[subSelection][selectedSkin][i] = lerp(abilityHatPaintOffsetLerp[subSelection][selectedSkin][i],abilityHatPaintOffset[subSelection][selectedSkin][i] * 8,.25);
+	for (var i = 0; i < array_length(abilityHatPaintTitle[subSelection][selectedSkin]); i++) abilityHatPaintOffsetLerp[subSelection][selectedSkin][i] = lerp(abilityHatPaintOffsetLerp[subSelection][selectedSkin][i],abilityHatPaintOffset[subSelection][selectedSkin][i] * 8,.25);
 	
 	textY = lerp(textY,147 - (selection * 36),.25);
 	
@@ -752,228 +826,228 @@ switch (page)
 	
 	var textColor = c_white;
 	hatSprite = -1;
-	switch (abilityHatTitle[subSelection])
+	switch (abilityHatValue[subSelection])
 	{
-		case "Cutter":
-		switch (abilityHatSkinTitle[subSelection][selectedSkin])
+		case playerAbilities.cutter:
+		switch (abilityHatSkinValue[subSelection][selectedSkin])
 		{
-			case "KSSU":
+			case abilityHatSkins.cutter_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Cutter_KSSU_Idle;
 			break;
 		}
 		break;
 		
-		case "Beam":
-		switch (abilityHatSkinTitle[subSelection][selectedSkin])
+		case playerAbilities.beam:
+		switch (abilityHatSkinValue[subSelection][selectedSkin])
 		{
-			case "KSSU":
+			case abilityHatSkins.beam_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Beam_KSSU_Idle;
 			break;
 			
-			case "Marx Soul":
+			case abilityHatSkins.beam_marxSoul:
 			hatSprite = spr_Kirby_AbilityHat_Beam_MarxSoul_Idle;
 			break;
 		}
 		break;
 		
-		case "Stone":
-		switch (abilityHatSkinTitle[subSelection][selectedSkin])
+		case playerAbilities.stone:
+		switch (abilityHatSkinValue[subSelection][selectedSkin])
 		{
-			case "KSSU":
+			case abilityHatSkins.stone_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Stone_KSSU_Idle;
 			break;
 			
-			case "Modern":
+			case abilityHatSkins.stone_modern:
 			hatSprite = spr_Kirby_AbilityHat_Stone_Modern_Idle;
 			break;
 		}
 		break;
 		
-		case "Mirror":
-		switch (abilityHatSkinTitle[subSelection][selectedSkin])
+		case playerAbilities.mirror:
+		switch (abilityHatSkinValue[subSelection][selectedSkin])
 		{
-			case "KSSU":
+			case abilityHatSkins.mirror_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Mirror_KSSU_Idle;
 			break;
 			
-			case "Modern":
+			case abilityHatSkins.mirror_modern:
 			hatSprite = spr_Kirby_AbilityHat_Mirror_Modern_Idle;
 			break;
 		}
 		break;
 		
-		case "Ninja":
-		switch (abilityHatSkinTitle[subSelection][selectedSkin])
+		case playerAbilities.ninja:
+		switch (abilityHatSkinValue[subSelection][selectedSkin])
 		{
-			case "KSSU":
+			case abilityHatSkins.ninja_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Ninja_KSSU_Idle;
 			break;
 			
-			case "Modern":
+			case abilityHatSkins.ninja_modern:
 			hatSprite = spr_Kirby_AbilityHat_Ninja_Modern_Idle;
 			break;
 		}
 		break;
 		
-		case "Bomb":
-		switch (abilityHatSkinTitle[subSelection][selectedSkin])
+		case playerAbilities.bomb:
+		switch (abilityHatSkinValue[subSelection][selectedSkin])
 		{
-			case "KSSU":
+			case abilityHatSkins.bomb_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Bomb_KSSU_Idle;
 			break;
 			
-			case "Modern":
+			case abilityHatSkins.bomb_modern:
 			hatSprite = spr_Kirby_AbilityHat_Bomb_Modern_Idle;
 			break;
 		}
 		break;
 		
-		case "Fire":
-		switch (abilityHatSkinTitle[subSelection][selectedSkin])
+		case playerAbilities.fire:
+		switch (abilityHatSkinValue[subSelection][selectedSkin])
 		{
-			case "KSSU":
+			case abilityHatSkins.fire_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Fire_KSSU_Idle;
 			break;
 		}
 		break;
 		
-		case "Ice":
-		switch (abilityHatSkinTitle[subSelection][selectedSkin])
+		case playerAbilities.ice:
+		switch (abilityHatSkinValue[subSelection][selectedSkin])
 		{
-			case "KSSU":
+			case abilityHatSkins.ice_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Ice_KSSU_Idle;
 			break;
 			
-			case "Snowman":
+			case abilityHatSkins.ice_snowman:
 			hatSprite = spr_Kirby_AbilityHat_Ice_Snowman_Idle;
 			break;
 		}
 		break;
 		
-		case "Spark":
-		switch (abilityHatSkinTitle[subSelection][selectedSkin])
+		case playerAbilities.spark:
+		switch (abilityHatSkinValue[subSelection][selectedSkin])
 		{
-			case "KSSU":
+			case abilityHatSkins.spark_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Spark_KSSU_Idle;
 			break;
 		}
 		break;
 		
-		case "Yoyo":
-		switch (abilityHatSkinTitle[subSelection][selectedSkin])
+		case playerAbilities.yoyo:
+		switch (abilityHatSkinValue[subSelection][selectedSkin])
 		{
-			case "KSSU":
+			case abilityHatSkins.yoyo_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Yoyo_KSSU_Idle;
 			break;
 		}
 		break;
 		
-		case "Wheel":
-		switch (abilityHatSkinTitle[subSelection][selectedSkin])
+		case playerAbilities.wheel:
+		switch (abilityHatSkinValue[subSelection][selectedSkin])
 		{
-			case "KSSU":
+			case abilityHatSkins.wheel_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Wheel_KSSU_Idle;
 			break;
 		}
 		break;
 		
-		case "Artist":
-		switch (abilityHatSkinTitle[subSelection][selectedSkin])
+		case playerAbilities.artist:
+		switch (abilityHatSkinValue[subSelection][selectedSkin])
 		{
-			case "KSSU":
+			case abilityHatSkins.artist_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Artist_KSSU_Idle;
 			break;
 		}
 		break;
 		
-		case "Fighter":
-		switch (abilityHatSkinTitle[subSelection][selectedSkin])
+		case playerAbilities.fighter:
+		switch (abilityHatSkinValue[subSelection][selectedSkin])
 		{
-			case "KSSU":
+			case abilityHatSkins.fighter_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Fighter_KSSU_Idle;
 			break;
 		}
 		break;
 		
-		case "Suplex":
-		switch (abilityHatSkinTitle[subSelection][selectedSkin])
+		case playerAbilities.suplex:
+		switch (abilityHatSkinValue[subSelection][selectedSkin])
 		{
-			case "KSSU":
+			case abilityHatSkins.suplex_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Suplex_KSSU_Idle;
 			break;
 		}
 		break;
 		
-		case "Wing":
-		switch (abilityHatSkinTitle[subSelection][selectedSkin])
+		case playerAbilities.wing:
+		switch (abilityHatSkinValue[subSelection][selectedSkin])
 		{
-			case "KSSU":
+			case abilityHatSkins.wing_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Wing_KSSU_Idle;
 			break;
 		}
 		break;
 		
-		case "Jet":
-		switch (abilityHatSkinTitle[subSelection][selectedSkin])
+		case playerAbilities.jet:
+		switch (abilityHatSkinValue[subSelection][selectedSkin])
 		{
-			case "KSSU":
+			case abilityHatSkins.jet_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Jet_KSSU_Idle;
 			break;
 		}
 		break;
 		
-		case "Sword":
-		switch (abilityHatSkinTitle[subSelection][selectedSkin])
+		case playerAbilities.sword:
+		switch (abilityHatSkinValue[subSelection][selectedSkin])
 		{
-			case "KSSU":
+			case abilityHatSkins.sword_kssu:
 			//hatSprite = spr_Kirby_AbilityHat_Sword_KSSU_Idle;
 			hatSprite = -1;
 			break;
 		}
 		break;
 		
-		case "Parasol":
-		switch (abilityHatSkinTitle[subSelection][selectedSkin])
+		case playerAbilities.parasol:
+		switch (abilityHatSkinValue[subSelection][selectedSkin])
 		{
-			case "KSSU":
+			case abilityHatSkins.parasol_kssu:
 			//hatSprite = spr_Kirby_AbilityHat_Parasol_KSSU_Idle;
 			hatSprite = -1;
 			break;
 		}
 		break;
 		
-		case "Hammer":
-		switch (abilityHatSkinTitle[subSelection][selectedSkin])
+		case playerAbilities.hammer:
+		switch (abilityHatSkinValue[subSelection][selectedSkin])
 		{
-			case "KSSU":
+			case abilityHatSkins.hammer_kssu:
 			//hatSprite = spr_Kirby_AbilityHat_Hammer_KSSU_Idle;
 			hatSprite = -1;
 			break;
 		}
 		break;
 		
-		case "Bell":
-		switch (abilityHatSkinTitle[subSelection][selectedSkin])
+		case playerAbilities.bell:
+		switch (abilityHatSkinValue[subSelection][selectedSkin])
 		{
-			case "Modern":
+			case abilityHatSkins.bell_modern:
 			hatSprite = spr_Kirby_AbilityHat_Bell_Modern_Idle;
 			break;
 		}
 		break;
 		
-		case "Sleep":
-		switch (abilityHatSkinTitle[subSelection][selectedSkin])
+		case playerAbilities.sleep:
+		switch (abilityHatSkinValue[subSelection][selectedSkin])
 		{
-			case "KSSU":
+			case abilityHatSkins.sleep_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Sleep_KSSU_Sleep;
 			break;
 		}
 		break;
 		
-		case "Scan":
-		switch (abilityHatSkinTitle[subSelection][selectedSkin])
+		case playerAbilities.scan:
+		switch (abilityHatSkinValue[subSelection][selectedSkin])
 		{
-			case "KSSU":
+			case abilityHatSkins.scan_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Scan_KSSU_Scan;
 			break;
 		}
@@ -1000,7 +1074,7 @@ switch (page)
 			col1 = textColor;
 			col2 = c_white;
 		}
-		if (i == playerHatPaint)
+		if (abilityHatPaintValue[subSelection][selectedSkin][i] == playerHatPaint)
 		{
 			col1 = c_yellow;
 			col2 = c_yellow;

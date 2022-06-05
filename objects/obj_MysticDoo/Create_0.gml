@@ -29,7 +29,7 @@ sprHurt = spr_MysticDoo_Normal_Hurt;
 
 //Other Variables
 
-paletteIndex = spr_MysticDoo_Normal_Palette_CorruptedTwilight;
+paletteIndex = choose(spr_MysticDoo_Normal_Palette_CorruptedTwilight,spr_MysticDoo_Normal_Palette_PalePurple,spr_MysticDoo_Normal_Palette_DarkFlux);
 hp = 27;
 dmg = 1;
 ability = playerAbilities.mysticBeam;

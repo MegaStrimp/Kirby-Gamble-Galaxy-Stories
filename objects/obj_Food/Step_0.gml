@@ -26,6 +26,16 @@ if (!global.pause)
 	{
 		if (audio_is_playing(snd_FoodItem)) audio_stop_sound(snd_FoodItem);
 		audio_play_sound(snd_FoodItem,0,false);
+		if ((image_index == 41) or (image_index == 42))
+		{
+			var rng = irandom_range(0,99);
+			if (rng == 0)
+			{
+				if (audio_is_playing(snd_CannedFood)) audio_stop_sound(snd_CannedFood);
+				audio_play_sound(snd_CannedFood,0,false);
+			}
+		}
+		
 		var collidedPlayer = instance_place(x,y,obj_Player);
 		if (collidedPlayer.player == 0)
 		{
@@ -35,7 +45,7 @@ if (!global.pause)
 		{
 			global.hpP2 += 1;
 		}
-		if (!global.gambleMaykr) global.points += points;
+		if (global.gamemode != gamemodes.maykr) global.points += points;
 		instance_destroy();
 	}
 	

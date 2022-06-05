@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Customize",
-    "path": "folders/Sprites/Menu/Collection Menu/Customize.yy",
+    "name": "Gooey",
+    "path": "folders/Sprites/Menu/Collection Menu/Customize/Character Portraits/Gooey.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Menu_Collection_Customize_Gooey_Pipis",

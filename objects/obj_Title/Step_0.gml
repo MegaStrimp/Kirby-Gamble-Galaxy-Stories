@@ -177,7 +177,7 @@ if (!global.pause)
 				global.selectedSave = "Save3.ini";
 				break;
 			}
-			scr_LoadGame(global.selectedSave);
+			if ((!global.debug) and (global.canSave)) scr_LoadGame(global.selectedSave);
 			var fade = instance_create_depth(x,y,-999,obj_Fade);
 			fade.targetRoom = rm_MainMenu;
 			fade.alpha = 1;

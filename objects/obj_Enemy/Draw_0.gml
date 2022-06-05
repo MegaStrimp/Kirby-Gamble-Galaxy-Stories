@@ -21,7 +21,7 @@ if (isMystic)
 {
 	if (!global.pause) fluxOverlayAlpha -= .01;
 	
-	gpu_set_blendenable(false)
+	gpu_set_blendenable(false);
 	gpu_set_colorwriteenable(false,false,false,true);
 	draw_set_alpha(0);
 	draw_rectangle(0,0,room_width,room_height,false);
@@ -68,16 +68,16 @@ if ((!isMiniBoss) and (!isBoss))
 {
 	var hbHp = hp;
 	hbHp = max(hbHp,0);
-	if (!global.pause) healthbarBackHp = lerp(healthbarBackHp,hbHp,.025);
+	if (!global.pause) healthbarBackHp = lerp(healthbarBackHp,hbHp,.1);
 	
 	if (global.healthbarMarkedEnemy == id)
 	{
 		draw_sprite(spr_Healthbar_Enemy_Border,0,x,bbox_top - 16);
 		draw_sprite_ext(spr_Healthbar_Enemy_InnerBack,0,x - 8,bbox_top - 18,(healthbarBackHp / hpMax),image_yscale,image_angle,image_blend,image_alpha);
-		draw_sprite_ext(spr_Healthbar_Enemy_InnerFront,0,x - 8,bbox_top - 18,(hbHp / hpMax),image_yscale,image_angle,image_blend,image_alpha);
+		draw_sprite_ext(spr_Healthbar_Enemy_InnerFront,0,x - 8,bbox_top - 18,(healthbarBackHp / hpMax),image_yscale,image_angle,image_blend,image_alpha);
 	}
 }
 
 //Debug
 /*
-draw_text(x,y - 12,string(explosionResistance));
+draw_text(x,y - 12,string(abs(hsp - (movespeed * walkDirX))));

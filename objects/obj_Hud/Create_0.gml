@@ -19,6 +19,10 @@ notifOffset = -25;
 stageTitleOffset = 250;
 hasTreasure = false;
 cutsceneStarAngle = 0;
+mixIndex = 0;
+mixRosterAbility[0] = playerAbilities.none;
+mixRosterText[0] = spr_Hud_AbilityText_Kirby;
+mixRosterIcon[0] = spr_Hud_Icon_Kirby;
 
 //Timers
 
@@ -32,3 +36,6 @@ flashStopP1Timer = -1;
 flashStopP2Timer = -1;
 flashStopTimerMax = 35;
 notifTimer = -1;
+mixTimer = -1;
+mixIndexTimer = -1;
+mixIndexTimerMax = 4;

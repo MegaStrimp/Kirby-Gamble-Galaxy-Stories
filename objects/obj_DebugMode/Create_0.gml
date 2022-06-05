@@ -98,6 +98,11 @@ enum debugObject
 	hothead,
 	sparky,
 	yolky,
+	wheelie,
+	laserBall,
+	
+	IMSICKOFTHISGUY,
+	
 	length
 }
 debugSelectedMax = debugObject.length - 1;

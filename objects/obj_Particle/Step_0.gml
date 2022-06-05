@@ -161,9 +161,8 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		        y -= yplus
 		    }
 		}
-		x += hsp;
 	}
-	
+	x += hsp;
 	
 	if (collisionY != -1)
 	{
@@ -176,8 +175,8 @@ if (((pausable) and (!global.pause)) or (!pausable))
 			if (stopRotationAfterCollision) angleSpd = 0;
 			vsp = 0;
 		}
-		y += vsp;
 	}
+	y += vsp;
 	
 	//Invis Timer
 	

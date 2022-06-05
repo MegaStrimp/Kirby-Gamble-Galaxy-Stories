@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Misc",
-    "path": "folders/Scripts/Misc.yy",
+    "name": "Save",
+    "path": "folders/Scripts/Save.yy",
   },
   "resourceVersion": "1.0",
   "name": "scr_SaveConfig",

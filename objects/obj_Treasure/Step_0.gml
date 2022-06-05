@@ -20,39 +20,23 @@ if (!global.pause)
 	
 	if (place_meeting(x,y,obj_Player))
 	{
+		#region Tutorial
+		if ((global.extraTutorials) and (global.gamemode == gamemodes.normal) and (!global.exTut_Treasure) and (!global.cutscene))
+		{
+			scr_PlayCutscene(cutscenes.exTut_Treasure);
+			global.exTut_Treasure = true;
+		}
+		#endregion
+		
+		#region Notification
 		if (audio_is_playing(snd_TreasureFound)) audio_stop_sound(snd_TreasureFound);
 		audio_play_sound(snd_TreasureFound,0,false);
 		scr_Notif(treasureCategory);
-		#region Notification
-		if ((!global.treasureGot) or (global.extraTutorials))
-		{
-			global.treasureGot = true;
-			global.tutorialNotif = true;
-			global.cutscene = true;
-			global.pause = true;
-			if (instance_exists(obj_Camera)) obj_Camera.freezeFrameTimer = -1;
-			
-			var array = 0;
-			var dialogue = instance_create_depth(0,0,-998,obj_Dialogue);
-			dialogue.owner = id;
-			dialogue.text[array] = "You found a treasure!";
-			dialogue.sprTextbox[array] = spr_Hud_Dialogue_Textbox_Tutorial;
-			dialogue.sprBackground[array] = -1;
-			dialogue.sprPortrait[array] = -1;
-			dialogue.textSound[array] = snd_ButtonYes;
-			array += 1;
-			dialogue.text[array] = @"Check the [Collections Menu] to track your collectibles and
-treasures!";
-			dialogue.sprTextbox[array] = spr_Hud_Dialogue_Textbox_Tutorial;
-			dialogue.sprBackground[array] = -1;
-			dialogue.sprPortrait[array] = -1;
-			dialogue.textSound[array] = snd_ButtonYes;
-			dialogue.textSpeed = 30;
-			dialogue.endTutorialNotif = true;
-			dialogue.pausable = false;
-		}
+		global.treasureGot = true;
+		if (instance_exists(obj_Camera)) obj_Camera.freezeFrameTimer = -1;
 		#endregion
-		if (!global.gambleMaykr) global.points += points;
+		
+		if (global.gamemode != gamemodes.maykr) global.points += points;
 		instance_destroy();
 	}
 	

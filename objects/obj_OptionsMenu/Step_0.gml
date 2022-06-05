@@ -8,7 +8,42 @@ if (!global.pause)
 	
 	//Variables
 	
-	for (var i = 0; i < array_length(menuTitle); i++) menuOffset[i] = 0;
+	for (var i = 0; i < array_length(menuValue); i++) menuOffset[i] = 0;
+	
+	//Set Strings
+	
+	if (setStrings)
+	{
+		var i = 0;
+		menuTitle[i] = scr_Localization(stringAttributes.options_display,stringAttributes.title,0,global.language);
+		i += 1;
+		menuTitle[i] = scr_Localization(stringAttributes.options_audio,stringAttributes.title,0,global.language);
+		i += 1;
+		menuTitle[i] = scr_Localization(stringAttributes.options_controls,stringAttributes.title,0,global.language);
+		i += 1;
+		menuTitle[i] = scr_Localization(stringAttributes.options_language,stringAttributes.title,0,global.language);
+		i += 1;
+		menuTitle[i] = scr_Localization(stringAttributes.options_other,stringAttributes.title,0,global.language);
+		
+		strTrue = scr_Localization(stringAttributes.options_true,stringAttributes.title,0,global.language);
+		strFalse = scr_Localization(stringAttributes.options_false,stringAttributes.title,0,global.language);
+		strFullscreen = scr_Localization(stringAttributes.options_fullscreen,stringAttributes.title,0,global.language);
+		strWindowSize = scr_Localization(stringAttributes.options_windowSize,stringAttributes.title,0,global.language);
+		strMusic = scr_Localization(stringAttributes.options_music,stringAttributes.title,0,global.language);
+		strSoundEffects = scr_Localization(stringAttributes.options_soundEffects,stringAttributes.title,0,global.language);
+		strLeft = scr_Localization(stringAttributes.options_left,stringAttributes.title,0,global.language);
+		strRight = scr_Localization(stringAttributes.options_right,stringAttributes.title,0,global.language);
+		strUp = scr_Localization(stringAttributes.options_up,stringAttributes.title,0,global.language);
+		strDown = scr_Localization(stringAttributes.options_down,stringAttributes.title,0,global.language);
+		strJump = scr_Localization(stringAttributes.options_jump,stringAttributes.title,0,global.language);
+		strAttack = scr_Localization(stringAttributes.options_attack,stringAttributes.title,0,global.language);
+		strStart = scr_Localization(stringAttributes.options_start,stringAttributes.title,0,global.language);
+		strSelect = scr_Localization(stringAttributes.options_select,stringAttributes.title,0,global.language);
+		strPressAnyKey = scr_Localization(stringAttributes.options_pressAnyKey,stringAttributes.title,0,global.language);
+		strExtraTutorials = scr_Localization(stringAttributes.options_extraTutorials,stringAttributes.title,0,global.language);
+		strAutoSwallow = scr_Localization(stringAttributes.options_autoSwallow,stringAttributes.title,0,global.language);
+		setStrings = false;
+	}
 	
 	//Pages
 	
@@ -32,12 +67,12 @@ if (!global.pause)
 		
 		if (selection < 0)
 		{
-			selection += array_length(menuTitle);
+			selection += array_length(menuValue);
 			textY = 147 - ((selection - 2) * 36);
 		}
-		if (selection > array_length(menuTitle) - 1)
+		if (selection > array_length(menuValue) - 1)
 		{
-			selection -= array_length(menuTitle);
+			selection -= array_length(menuValue);
 			textY = 147 - ((selection + 2) * 36);
 		}
 		
@@ -45,12 +80,12 @@ if (!global.pause)
 		
 		if (!instance_exists(obj_Fade))
 		{
-			if (((keyJumpPressed) or (keyStartPressed)) and (((menuTitle[selection] == "Controls") and (global.buildType != buildTypes.android)) or (menuTitle[selection] != "Controls")))
+			if (((keyJumpPressed) or (keyStartPressed)) and (((menuValue[selection] == "Controls") and (global.buildType != buildTypes.android)) or (menuValue[selection] != "Controls")))
 			{
 				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 				audio_play_sound(snd_ButtonYes,0,false);
 				subSelection = 0;
-				page = menuTitle[selection];
+				page = menuValue[selection];
 			}
 			
 			if (keyAttackPressed)
@@ -408,6 +443,7 @@ if (!global.pause)
 			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 			audio_play_sound(snd_BossHealth,0,false);
 			global.language = languageVal[subSelection];
+			setStrings = true;
 		}
 		
 		if (keyAttackPressed)

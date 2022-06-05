@@ -330,7 +330,11 @@ if (!global.pause)
 		if (keyLeftPressed) selection = "storyMode";
 		if (keyRightPressed)
 		{
-			if (global.bitcrushedUnlocked)
+			if (global.samuraiKirbyUnlocked)
+			{
+				selection = "samuraiKirby";
+			}
+			else if (global.bitcrushedUnlocked)
 			{
 				selection = "bitcrushed";
 			}
@@ -465,7 +469,11 @@ if (!global.pause)
 		if (keyDownPressed) selection = "options";
 		if (keyLeftPressed)
 		{
-			if (global.maykrUnlocked)
+			if (global.skylandsUnlocked)
+			{
+				selection = "skylands";
+			}
+			else if (global.maykrUnlocked)
 			{
 				selection = "maykr";
 			}

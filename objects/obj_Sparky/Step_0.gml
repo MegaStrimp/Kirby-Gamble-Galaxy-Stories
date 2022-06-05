@@ -186,8 +186,8 @@ if (!global.pause)
 				}
 				else if (jumpTimer == 0)
 				{
-					var jumpSound = choose(snd_WaddleDee1,snd_WaddleDee6,snd_WaddleDee7,snd_WaddleDee8,snd_WaddleDee9,snd_WaddleDee10,snd_WaddleDee11);
-					audio_play_sound(jumpSound,0,false);
+					if (audio_is_playing(snd_EnemyJump2)) audio_stop_sound(snd_EnemyJump2);
+					audio_play_sound(snd_EnemyJump2,0,false);
 					var parJump = instance_create_depth(x - (7 * dirX),y + 5,depth + 1,obj_Particle);
 					parJump.sprite_index = spr_Particle_Jump;
 					parJump.destroyAfterAnimation = true;

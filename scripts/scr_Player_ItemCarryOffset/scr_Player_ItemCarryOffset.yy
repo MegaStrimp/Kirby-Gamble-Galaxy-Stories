@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Player",
-    "path": "folders/Scripts/Player.yy",
+    "name": "Draw",
+    "path": "folders/Scripts/Player/Draw.yy",
   },
   "resourceVersion": "1.0",
   "name": "scr_Player_ItemCarryOffset",

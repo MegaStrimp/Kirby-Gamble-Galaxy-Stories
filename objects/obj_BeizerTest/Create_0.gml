@@ -7,8 +7,8 @@ x1tox2factor = 1/2;
 y1tox2factor = -2;
 
 y2speed = 0;
-y2jumpSpeed = -4;
-y2grav = 0.2;
+y2jumpSpeed = -6;
+y2grav = 0.4;
 
 //	using a kinematic equation to get desired horizontal speed
 var t = (-y2jumpSpeed - y2jumpSpeed) / y2grav;

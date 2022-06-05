@@ -66,10 +66,11 @@ function scr_Object_Inhale(argument0)
 					
 					case obj_Food:
 					eatMe.inhaleType = 1;
+					if ((image_index == 41) or (image_index == 42)) eatMe.cannedFood = true;
 					break;
 					
 					case obj_PepBrew:
-					eatMe.inhaleType = 2
+					eatMe.inhaleType = 2;
 					break;
 					
 					case obj_MaximTomato:

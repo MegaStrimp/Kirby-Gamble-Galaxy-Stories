@@ -2,7 +2,7 @@
 
 //Draw Object
 
-if (canBeInteracted)
+if ((!active) and (canBeInteracted))
 {
 	var alpha = .5;
 	var blend = c_white;

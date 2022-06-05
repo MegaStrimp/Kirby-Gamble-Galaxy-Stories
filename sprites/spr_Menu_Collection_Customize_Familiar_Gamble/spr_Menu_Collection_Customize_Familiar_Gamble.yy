@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Customize",
-    "path": "folders/Sprites/Menu/Collection Menu/Customize.yy",
+    "name": "Familiar Portraits",
+    "path": "folders/Sprites/Menu/Collection Menu/Customize/Familiar Portraits.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Menu_Collection_Customize_Familiar_Gamble",

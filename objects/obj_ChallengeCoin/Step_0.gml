@@ -41,7 +41,7 @@ if (!global.pause)
 	
 	//Destroy If Maykr
 	
-	if (global.gambleMaykr) instance_destroy();
+	if (global.gamemode == gamemodes.maykr) instance_destroy();
 	
 	//Shake
 	

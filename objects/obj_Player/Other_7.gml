@@ -203,6 +203,18 @@ if (((attackNumber == playerAttacks.stoneNormal) or (attackNumber == playerAttac
 
 if ((attackNumber == playerAttacks.stoneUp) and ((sprite_index == sprStoneAttack2) or (sprite_index == sprStoneAttack2Release))) image_index = image_number - 1;
 
+//Ufo Charge
+
+if ((attackNumber == playerAttacks.ufoCharge) and (sprite_index == sprUfoCharge)) image_index = image_number - 4;
+
+//Ufo Beam Attack
+
+if ((attackNumber == playerAttacks.ufoBeam) and (sprite_index == sprUfoAttack1)) image_index = image_number - 1;
+
+//Ufo Laser Attack
+
+if ((attackNumber == playerAttacks.ufoLaser) and (sprite_index == sprUfoAttack2)) image_index = image_number - 1;
+
 //Mirror Slash Attack
 
 if ((attackNumber == playerAttacks.mirrorSlash) and (sprite_index == sprMirrorAttack1)) image_index = image_number - 1;
@@ -300,6 +312,7 @@ if ((attack) and (sprite_index == sprSparkAttack1Ready))
 		par.image_xscale = dir;
 		var projectile = instance_create_depth(x + (6 * dir),y - 5,depth - 1,obj_Projectile_Spark);
 		projectile.owner = id;
+		projectile.abilityType = playerAbilities.spark;
 		projectile.dmg = 8;
 		projectile.sprite_index = spr_Particle_Spark4;
 		projectile.mask_index = projectile.sprite_index;
@@ -318,6 +331,7 @@ if ((attack) and (sprite_index == sprSparkAttack1Ready))
 		audio_play_sound(snd_Spark2,0,false);
 		var projectile = instance_create_depth(x + (6 * dir),y - 5,depth - 1,obj_Projectile_Spark);
 		projectile.owner = id;
+		projectile.abilityType = playerAbilities.spark;
 		projectile.dmg = 10;
 		projectile.sprite_index = spr_Projectile_Spark_Normal_Low;
 		projectile.mask_index = projectile.sprite_index;
@@ -336,6 +350,7 @@ if ((attack) and (sprite_index == sprSparkAttack1Ready))
 		audio_play_sound(snd_Spark3,0,false);
 		var projectile = instance_create_depth(x + (6 * dir),y - 7,depth - 1,obj_Projectile_Spark);
 		projectile.owner = id;
+		projectile.abilityType = playerAbilities.spark;
 		projectile.dmg = 30;
 		projectile.sprite_index = spr_Particle_SparkAura;
 		projectile.mask_index = spr_30Square_Mask;
@@ -398,6 +413,7 @@ if ((attack) and (sprite_index == sprSparkAttack2Ready))
 		audio_play_sound(snd_Spark4,0,false);
 		var projectile = instance_create_depth(x + (6 * dir),y - 8,depth - 1,obj_Projectile_Spark);
 		projectile.owner = id;
+		projectile.abilityType = playerAbilities.spark;
 		projectile.dmg = 32;
 		projectile.sprite_index = spr_Projectile_Spark_Normal_High;
 		projectile.mask_index = projectile.sprite_index;
@@ -417,6 +433,7 @@ if ((attack) and (sprite_index == sprSparkAttack2Ready))
 		audio_play_sound(snd_Spark5,0,false);
 		var projectile = instance_create_depth(x + (6 * dir),y - 7,depth - 1,obj_Projectile_Spark);
 		projectile.owner = id;
+		projectile.abilityType = playerAbilities.spark;
 		projectile.dmg = 40;
 		projectile.sprite_index = spr_Particle_SparkAura;
 		projectile.mask_index = spr_30Square_Mask;
@@ -527,6 +544,7 @@ if ((attack) and (sprite_index == sprScanReady))
 	audio_play_sound(snd_Scan,0,false);
 	scanProjectile = instance_create_depth(x,y - 6,depth - 1,obj_Projectile_Scan);
 	scanProjectile.owner = id;
+	scanProjectile.abilityType = playerAbilities.scan;
 	scanProjectile.dmg = 10;
 	scanProjectile.sprite_index = scanProjectile.sprIdle;
 	scanProjectile.dirX = dir;

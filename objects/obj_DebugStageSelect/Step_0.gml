@@ -30,7 +30,25 @@ if (!global.pause)
 			canAutoScrollTimer = canAutoScrollTimerMax;
 		}
 		
-		if ((keyUpReleased) or (keyDownReleased))
+		if (keyLeftPressed)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			selection -= 5;
+			textY = 147 - (selection * 36);
+			canAutoScrollTimer = canAutoScrollTimerMax;
+		}
+		
+		if (keyRightPressed)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			selection += 5;
+			textY = 147 - (selection * 36);
+			canAutoScrollTimer = canAutoScrollTimerMax;
+		}
+		
+		if ((keyUpReleased) or (keyDownReleased) or (keyLeftReleased) or (keyRightReleased))
 		{
 			autoScroll = false;
 			canAutoScrollTimer = -1;
@@ -49,7 +67,7 @@ if (!global.pause)
 			{
 				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 				audio_play_sound(snd_BossHealth,0,false);
-				selection += (keyDownHold - keyUpHold);
+				selection += (keyDownHold - keyUpHold) + ((keyRightHold - keyLeftHold) * 5);
 				textY = 147 - (selection * 36);
 				autoScrollTimer = autoScrollTimerMax;
 			}
@@ -72,8 +90,6 @@ if (!global.pause)
 	switch (page)
 	{
 		case "main":
-		stageOffset[selection] = 1;
-		
 		if (!instance_exists(obj_Fade))
 		{
 			if (selection < 0)
@@ -102,6 +118,7 @@ if (!global.pause)
 				goBack = true;
 			}
 		}
+		stageOffset[selection] = 1;
 		
 		if (goBack)
 		{

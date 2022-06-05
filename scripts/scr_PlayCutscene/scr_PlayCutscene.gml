@@ -1,5 +1,5 @@
 ///@description Render Objects
-///param {real} cutsceneNum Which cutscene to play.
+///@param {real} cutsceneNum Which cutscene to play.
 
 function scr_PlayCutscene(argument0)
 {
@@ -10,8 +10,15 @@ function scr_PlayCutscene(argument0)
 	
 	switch (cutsceneNum)
 	{
+		case cutscenes.exTut_Treasure:
+		global.cutscene = true;
+		global.tutorial = true;
+		cutsceneControl.stopsCutscene = true;
+		break;
+		
 		case cutscenes.exTut_AntiFloat:
 		global.cutscene = true;
+		global.tutorial = true;
 		cutsceneControl.stopsCutscene = true;
 		break;
 	}

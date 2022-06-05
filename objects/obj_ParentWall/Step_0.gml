@@ -246,7 +246,7 @@ if (object)
 		invincibleTimer = -1;
 	}
 }
-else //if (!platform)
+else if (!platform)
 {
 	with (obj_Projectile)
 	{

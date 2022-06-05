@@ -8,11 +8,11 @@ draw_sprite(spr_Menu_StageSelect_Hud_WorldSelect,0,0 + hudOffset,0);
 //Draw Pages
 
 draw_set_color(c_white);
-if (global.language == 0)
+if (global.language == languages.english)
 {
 	draw_set_font(fnt_DialogueDefault);
 }
-else if ((global.language == 6) or (global.language == 8))
+else if ((global.language == languages.chinese) or (global.language == languages.japanese))
 {
 	draw_set_font(global.fontDialogueDefaultKanji);
 }

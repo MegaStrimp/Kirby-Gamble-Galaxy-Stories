@@ -51,7 +51,7 @@ if (!global.pause)
 	
 	//Destroy If Maykr
 	
-	if (global.gambleMaykr) instance_destroy();
+	if (global.gamemode == gamemodes.maykr) instance_destroy();
 	
 	//Shake
 	
@@ -116,7 +116,7 @@ if (!global.pause)
 			particle.sprite_index = spr_Particle_Sparkle1;
 			particle.destroyAfterAnimation = true;
 		}
-		if (!global.gambleMaykr)
+		if (global.gamemode != gamemodes.maykr)
 		{
 			global.points += points;
 			global.pointStars += pointStarPoints;

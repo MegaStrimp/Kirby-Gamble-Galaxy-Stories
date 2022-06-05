@@ -30,7 +30,7 @@ sprHandHoldAway = spr_GimHand_Normal_HoldAway;
 
 //Other Variables
 
-paletteIndex = spr_Gim_Normal_Palette_YoyoRobo;
+paletteIndex = spr_Gim_Normal_Palette_SpinningBrown;
 hp = 11;
 dmg = 1;
 ability = playerAbilities.yoyo;

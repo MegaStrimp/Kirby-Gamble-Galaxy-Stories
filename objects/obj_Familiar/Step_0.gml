@@ -162,9 +162,9 @@ if (!global.pause)
 					break;
 					
 					case 1:
-					var sound = choose(snd_Peashooter1,snd_Peashooter2,snd_Peashooter3);
+					var sound = choose(snd_HappyPea1,snd_HappyPea2,snd_HappyPea3);
 					audio_play_sound(sound,0,false);
-					var projectile = instance_create_depth(x,y - 15 + attackYOffset,depth + 1,obj_Projectile_Peashooter);
+					var projectile = instance_create_depth(x,y - 15 + attackYOffset,depth + 1,obj_Projectile_HappyPea);
 					projectile.owner = id;
 					projectile.dmg = 4;
 					projectile.hsp = dir * 6;
@@ -192,7 +192,7 @@ if (!global.pause)
 		
 		image_speed = 1;
 		
-		sprite_index = spr_Familiar_Peashooter_Root;
+		sprite_index = spr_Familiar_HappyPea_Root;
 		break;
 		#endregion
 		
@@ -365,7 +365,7 @@ if (!global.pause)
 					break;
 					
 					case 1:
-					var sound = choose(snd_Peashooter1,snd_Peashooter2,snd_Peashooter3);
+					var sound = choose(snd_HappyPea1,snd_HappyPea2,snd_HappyPea3);
 					audio_play_sound(sound,0,false);
 					var projectile = instance_create_depth(x,y,depth + 1,obj_Projectile_Krackle);
 					projectile.owner = id;

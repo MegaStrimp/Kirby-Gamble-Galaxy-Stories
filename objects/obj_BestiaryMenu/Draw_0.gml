@@ -18,11 +18,11 @@ draw_sprite_ext(sprite,0,240,100,selectedEntries[enemySelection][5],selectedEntr
 //Draw Selection Bar
 
 draw_set_color(c_white);
-if (global.language == 0)
+if (global.language == languages.english)
 {
 	draw_set_font(fnt_DialogueDefault);
 }
-else if ((global.language == 6) or (global.language == 8))
+else if ((global.language == languages.chinese) or (global.language == languages.japanese))
 {
 	draw_set_font(global.fontDialogueDefaultKanji);
 }
@@ -69,11 +69,11 @@ draw_set_valign(fa_top);
 
 //Draw Description
 
-if (global.language == 0)
+if (global.language == languages.english)
 {
 	draw_set_font(fnt_Small);
 }
-else if ((global.language == 6) or (global.language == 8))
+else if ((global.language == languages.chinese) or (global.language == languages.japanese))
 {
 	draw_set_font(fnt_SmallKanji);
 }

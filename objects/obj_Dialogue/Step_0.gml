@@ -91,12 +91,6 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		}
 		instance_destroy();
 		if ((changeOwnerState) and (owner != -1) and (instance_exists(owner))) owner.stateExTimer = 5;
-		if (endTutorialNotif)
-		{
-			global.tutorialNotif = false;
-			global.cutscene = false;
-			global.pause = false;
-		}
 	    destroyTimer = -1;
 	}
 }

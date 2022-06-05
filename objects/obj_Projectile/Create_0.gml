@@ -31,6 +31,7 @@ objectOnHitDmg = "none";
 destroyOutsideView = true;
 setScale = true;
 damageType = damageTypes.none;
+abilityType = playerAbilities.none;
 scale = 1;
 dirX = 1;
 dirY = 1;

@@ -153,6 +153,7 @@ if (!global.pause)
 		{
 			if (attackState == 0)
 			{
+				if (audio_is_playing(snd_MysticBeam)) audio_stop_sound(snd_MysticBeam);
 				audio_play_sound(snd_MysticBeam,0,false);
 				attackState = 1;
 				attackTimer = floor(attackTimerMax / 2);
@@ -206,6 +207,9 @@ if (!global.pause)
 		}
 		else if (slideTimer == 0)
 		{
+			var snd = choose(snd_Flesh1,snd_Flesh2,snd_Flesh3);
+			if (audio_is_playing(snd)) audio_stop_sound(snd);
+			audio_play_sound(snd,0,false);
 			hsp = movespeed * dirX;
 			slideTimer = -1;
 		}

@@ -37,15 +37,20 @@ if (!global.pause)
 		selection = 0;
 	}
 	
-	if ((keyJumpPressed) or (keyStartPressed)) select = true;
+	if ((startTrigger == 2) and (!instance_exists(obj_Fade)) and ((keyJumpPressed) or (keyStartPressed))) select = true;
 	
 	if (select)
 	{
 		switch (selection)
 		{
 			case 0:
+			var roomWidth = 4800;
+			var roomHeight = 270;
+			room_set_width(global.maykrCanvas,roomWidth);
+			room_set_height(global.maykrCanvas,roomHeight);
+			
 			var fade = instance_create_depth(x,y,-999,obj_Fade);
-			fade.targetRoom = rm_Maykr;
+			fade.targetRoom = global.maykrCanvas;
 			break;
 		
 			case 2:

@@ -67,7 +67,7 @@ if ((activeText) and ((!instance_exists(obj_Dialogue))))
 	{
 		draw_set_font(fnt_DialogueDefaultSpecial);
 	}
-	else if ((global.language == 6) or (global.language == 8))
+	else if ((global.language == languages.chinese) or (global.language == languages.japanese))
 	{
 		draw_set_font(global.fontDialogueDefaultKanji);
 	}

@@ -1,5 +1,5 @@
-///description Maykr Inventory
-///param {string} maykrLayer Which layer to check.
+///@description Maykr Inventory
+///@param {string} maykrLayer Which layer to check.
 
 function scr_Maykr_Inventory(argument0,argument1)
 {
@@ -9,32 +9,28 @@ function scr_Maykr_Inventory(argument0,argument1)
 	
 	switch (maykrLayer)
 	{
-		case "collision":
+		case "Collision":
 		switch (maykrPage)
 		{
 			case 0:
 			var i = 0;
-			maykrInventory[i] = "debugWall";
+			maykrInventory[i] = maykrObjects.debugWall;
 			i += 1;
-			maykrInventory[i] = "asteroidFieldsRedFront";
-			i += 1;
-			maykrInventory[i] = "asteroidFieldsGreenFront";
-			i += 1;
-			maykrInventory[i] = "asteroidFieldsBlueFront";
+			maykrInventory[i] = maykrObjects.asteroidFieldsFront;
 			break;
 		}
 		break;
 		
-		case "enemies":
+		case "Enemies":
 		switch (maykrPage)
 		{
 			case 0:
 			var i = 0;
-			maykrInventory[i] = "waddleDee";
+			maykrInventory[i] = maykrObjects.waddleDee;
 			i += 1;
-			maykrInventory[i] = "waddleDoo";
+			maykrInventory[i] = maykrObjects.waddleDoo;
 			i += 1;
-			maykrInventory[i] = "brontoBurt";
+			maykrInventory[i] = maykrObjects.brontoBurt;
 			break;
 		}
 		break;

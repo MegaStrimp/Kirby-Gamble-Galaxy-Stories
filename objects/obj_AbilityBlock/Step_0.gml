@@ -222,7 +222,7 @@ if (!global.pause)
 			{
 				if (instance_exists(enemyWall)) instance_destroy(enemyWall);
 			}
-			if (!global.gambleMaykr) global.points += points;
+			if (global.gamemode != gamemodes.maykr) global.points += points;
 			var star = instance_create_depth(x + (sprite_get_width(sprite_index) / 2),y + (sprite_get_height(sprite_index) / 2),depth - 1,obj_PointStar);
 			star.target = instance_nearest(x,y,obj_Player);
 			star.followTarget = true;

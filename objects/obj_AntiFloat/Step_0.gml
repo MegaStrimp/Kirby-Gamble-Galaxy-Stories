@@ -2,7 +2,7 @@
 
 //Tutorial
 
-if ((global.extraTutorials) and (!global.exTut_AntiFloat) and (!global.cutscene) and (global.progression >= progression.greenGreens))
+if ((global.extraTutorials) and (global.gamemode == gamemodes.normal) and (!global.exTut_AntiFloat) and (!global.cutscene) and (global.progression >= progression.greenGreens))
 {
 	scr_PlayCutscene(cutscenes.exTut_AntiFloat);
 	global.exTut_AntiFloat = true;

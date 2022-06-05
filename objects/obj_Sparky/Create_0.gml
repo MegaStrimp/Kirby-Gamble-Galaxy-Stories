@@ -32,6 +32,7 @@ sprHurt = spr_Sparky_Normal_Hurt;
 paletteIndex = spr_Sparky_Normal_Palette_LightningLime;
 hp = 16;
 dmg = 1;
+ability = playerAbilities.spark;
 points = 300;
 attack = false;
 attackState = 0;

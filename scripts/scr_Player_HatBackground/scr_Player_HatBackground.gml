@@ -6,7 +6,7 @@ function scr_Player_HatBackground(argument0,argument1)
 {
 	var abilityToCheck = argument0;
 	var selectedCharacter = argument1;
-	var hatBackgroundIndex;
+	var hatBackgroundIndex = -1;
 	
 	switch (selectedCharacter)
 	{
@@ -25,7 +25,7 @@ function scr_Player_HatBackground(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.fire_kssu:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -120,15 +120,7 @@ function scr_Player_HatBackground(argument0,argument1)
 					case sprGuardSlope:
 					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Guard_Slope;
 					break;
-					
-					default:
-					hatBackgroundIndex = -1;
-					break;
 				}
-				break;
-				
-				default:
-				hatBackgroundIndex = -1;
 				break;
 			}
 			break;
@@ -145,7 +137,7 @@ function scr_Player_HatBackground(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.mysticFire_ggs:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -240,15 +232,7 @@ function scr_Player_HatBackground(argument0,argument1)
 					case sprGuardSlope:
 					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Guard_Slope;
 					break;
-					
-					default:
-					hatBackgroundIndex = -1;
-					break;
 				}
-				break;
-				
-				default:
-				hatBackgroundIndex = -1;
 				break;
 			}
 			break;
@@ -265,7 +249,7 @@ function scr_Player_HatBackground(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.spark_kssu:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -375,27 +359,11 @@ function scr_Player_HatBackground(argument0,argument1)
 					case sprSparkAttack4:
 					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_Attack4;
 					break;
-					
-					default:
-					hatBackgroundIndex = -1;
-					break;
 				}
-				break;
-				
-				default:
-				hatBackgroundIndex = -1;
 				break;
 			}
 			break;
-			
-			default:
-			hatBackgroundIndex = -1;
-			break;
 		}
-		break;
-		
-		default:
-		hatBackgroundIndex = -1;
 		break;
 	}
 	return hatBackgroundIndex;

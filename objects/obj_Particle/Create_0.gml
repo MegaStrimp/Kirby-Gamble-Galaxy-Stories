@@ -17,6 +17,7 @@ xx = x;
 
 //Other Variables
 
+owner = -1;
 destroyAfterAnimation = false;
 destroyAfterCollidingFollow = false;
 destroyOutsideRoom = false;

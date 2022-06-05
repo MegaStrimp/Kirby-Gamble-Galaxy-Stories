@@ -72,8 +72,7 @@ if (!global.pause)
 		if (phase == 1)
 		{
 			attack = choose(0,1,2,3,4);
-			attack = choose(0,1,3);
-			attack = 2;
+			attack = choose(0,1,2,3);
 		}
 		else if (phase == 3)
 		{
@@ -195,6 +194,7 @@ if (!global.pause)
 			proj.destroyableByPlayer = false;
 			proj.destroyableByEnemy = false;
 			proj.destroyableByObject = false;
+			proj.destroyableByProjectile = false;
 			proj.hurtsObject = false;
 			proj.hurtsEnemy = false;
 			proj.hurtsPlayer = true;
@@ -222,6 +222,7 @@ if (!global.pause)
 		
 		var obj = instance_create_depth(x + ((30 + irandom_range(0,320)) * dirX),irandom_range(0,72),depth - 101,obj_WhispyApple);
 		obj.objValue = objValue;
+		obj.destroyOutsideView = true;
 		switch (objValue)
 		{
 			#region Apple
@@ -252,8 +253,6 @@ if (!global.pause)
 		throwObjectCount += 1;
 		if (throwObjectCount < (ds_list_size(throwObjectList)))
 		{
-			show_debug_message(string(throwObjectCount));
-			show_debug_message(string(ds_list_size(throwObjectList)));
 			throwObjectTimer = throwObjectTimerMax;
 		}
 		else
@@ -291,9 +290,11 @@ if (!global.pause)
 			proj.destroyableByPlayer = false;
 			proj.destroyableByEnemy = false;
 			proj.destroyableByObject = false;
+			proj.destroyableByProjectile = false;
 			proj.hurtsObject = false;
 			proj.hurtsEnemy = false;
 			proj.hurtsPlayer = true;
+			proj.canBeReflected = false;
 			proj.dirX = dirX;
 			proj.scale = 4;
 			proj.image_xscale = proj.dirX * 4;

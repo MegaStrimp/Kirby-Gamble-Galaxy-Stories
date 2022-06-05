@@ -1,23 +1,22 @@
 ///@description Initialize Variables
 
-//Event Inherited
-
+#region Event Inherited
 event_inherited();
+#endregion
 
-//Randomize
-
+#region Randomize
 randomize();
+#endregion
 
-//Physics
-
+#region Physics
 accel = .015;
 movespeed = .75;
 jumpspeed = 3;
 gravNormal = .2;
 gravLimitNormal = 4;
+#endregion
 
-//Sprites
-
+#region Sprites
 sprIdle = spr_PoppyBrosSr_Normal_Idle;
 sprIdleHat = spr_PoppyBrosSr_Normal_IdleHat;
 sprAttack = spr_PoppyBrosSr_Normal_Attack;
@@ -26,9 +25,9 @@ sprDash = spr_PoppyBrosSr_Normal_Dash;
 sprHand = spr_PoppyBrosSr_Normal_Hand;
 sprHurt = spr_PoppyBrosSr_Normal_Hurt;
 sprDeath = spr_PoppyBrosSr_Normal_Death;
+#endregion
 
-//Other Variables
-
+#region Other Variables
 paletteIndex = spr_PoppyBrosSr_Normal_Palette_BlueBomber;
 hp = 120;
 dmg = 1;
@@ -52,12 +51,13 @@ handY = 0;
 handPath = 0;
 handXOffset = 18;
 handYOffset = -4;
+#endregion
 
-//Timers
-
+#region Timers
 attackReadyTimer = -1;
 attackStopTimer = -1;
 dashStopTimer = -1;
 dashStopTimerMax = 90;
 bombThrowTimer = -1;
 bombThrowTimerMax = 30;
+#endregion

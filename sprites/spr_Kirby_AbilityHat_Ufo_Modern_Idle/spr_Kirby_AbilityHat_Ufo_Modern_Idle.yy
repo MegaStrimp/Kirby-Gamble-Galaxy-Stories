@@ -10,12 +10,12 @@
   "bbox_left": 0,
   "bbox_right": 25,
   "bbox_top": 0,
-  "bbox_bottom": 19,
+  "bbox_bottom": 23,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "width": 26,
-  "height": 20,
+  "height": 24,
   "textureGroupId": {
     "name": "Characters",
     "path": "texturegroups/Characters",
@@ -24,36 +24,32 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"778388e4-f575-4103-8344-6bb2279899bd","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"778388e4-f575-4103-8344-6bb2279899bd","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"LayerId":{"name":"e5d66f20-b3e7-49e3-acd9-a58ab8de32d3","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ufo_Modern_Idle","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"resourceVersion":"1.0","name":"778388e4-f575-4103-8344-6bb2279899bd","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e593cc6a-c1bd-47d4-96ba-1ee1c6da98f0","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e593cc6a-c1bd-47d4-96ba-1ee1c6da98f0","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"LayerId":{"name":"e5d66f20-b3e7-49e3-acd9-a58ab8de32d3","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ufo_Modern_Idle","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"resourceVersion":"1.0","name":"e593cc6a-c1bd-47d4-96ba-1ee1c6da98f0","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c888189d-27b3-46df-a2e9-2bd48ecde5af","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c888189d-27b3-46df-a2e9-2bd48ecde5af","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"LayerId":{"name":"e5d66f20-b3e7-49e3-acd9-a58ab8de32d3","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ufo_Modern_Idle","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"resourceVersion":"1.0","name":"c888189d-27b3-46df-a2e9-2bd48ecde5af","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"846cb6f6-4594-4e91-a6f8-bba5d9000318","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"846cb6f6-4594-4e91-a6f8-bba5d9000318","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"LayerId":{"name":"e5d66f20-b3e7-49e3-acd9-a58ab8de32d3","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ufo_Modern_Idle","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"resourceVersion":"1.0","name":"846cb6f6-4594-4e91-a6f8-bba5d9000318","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"3b340837-f4e0-4c70-a5f1-0456f6882d06","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"3b340837-f4e0-4c70-a5f1-0456f6882d06","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"LayerId":{"name":"e5d66f20-b3e7-49e3-acd9-a58ab8de32d3","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Kirby_AbilityHat_Ufo_Modern_Idle","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"resourceVersion":"1.0","name":"3b340837-f4e0-4c70-a5f1-0456f6882d06","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"76efff4e-2c90-41fe-8325-1d96e1899614","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"76efff4e-2c90-41fe-8325-1d96e1899614","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"LayerId":{"name":"e5d66f20-b3e7-49e3-acd9-a58ab8de32d3","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Kirby_AbilityHat_Ufo_Modern_Idle","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"resourceVersion":"1.0","name":"76efff4e-2c90-41fe-8325-1d96e1899614","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"1d0f2590-d9b7-454d-afe2-db80f8939e45","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"1d0f2590-d9b7-454d-afe2-db80f8939e45","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"LayerId":{"name":"e5d66f20-b3e7-49e3-acd9-a58ab8de32d3","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Kirby_AbilityHat_Ufo_Modern_Idle","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"resourceVersion":"1.0","name":"1d0f2590-d9b7-454d-afe2-db80f8939e45","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_Kirby_AbilityHat_Ufo_Modern_Idle","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 18.0,
+    "playbackSpeed": 12.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 4.0,
+    "length": 3.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"489ea92e-cd0a-4c09-82a9-df48fa50cfec","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"778388e4-f575-4103-8344-6bb2279899bd","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"51fd21ce-3347-45b7-80bc-f19e94f70fd2","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e593cc6a-c1bd-47d4-96ba-1ee1c6da98f0","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"184dd049-1bc4-4da5-97f4-6fd631fdba6f","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c888189d-27b3-46df-a2e9-2bd48ecde5af","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"bbea2bd1-eec0-4d05-8e77-4faddf8f3fe7","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"846cb6f6-4594-4e91-a6f8-bba5d9000318","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4cfa3359-b574-4fa0-b92a-a85284d61f4c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3b340837-f4e0-4c70-a5f1-0456f6882d06","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"634b5051-9ddd-49ed-b92c-5a5a608a2c02","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"76efff4e-2c90-41fe-8325-1d96e1899614","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0c03a35a-50ec-4ab0-87ae-641093ae1a0b","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1d0f2590-d9b7-454d-afe2-db80f8939e45","path":"sprites/spr_Kirby_AbilityHat_Ufo_Modern_Idle/spr_Kirby_AbilityHat_Ufo_Modern_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,

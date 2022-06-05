@@ -329,6 +329,34 @@ long distances quickly?";
 			break;
 			#endregion
 			
+			#region Extra Tutorial - Treasure
+			case cutscenes.exTut_Treasure:
+			switch (stateEx)
+			{
+				case 0:
+				if (stateExTimer == -1) stateExTimer = 30;
+				break;
+				
+				case 1:
+				var array = 0;
+				var dialogue = instance_create_depth(0,0,-998,obj_Dialogue);
+				dialogue.owner = id;
+				dialogue.changeOwnerState = true;
+				var text = "You found a treasure!";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Tutorial,-1,-1,snd_ButtonYes);
+				array += 1;
+				text = "Check the [Collections Menu] to track your collectibles and treasures!";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Tutorial,-1,-1,snd_ButtonYes);
+				break;
+				
+				case 2:
+				global.tutorial = false;
+				destroy = true;
+				break;
+			}
+			break;
+			#endregion
+			
 			#region Extra Tutorial - Anti Float
 			case cutscenes.exTut_AntiFloat:
 			switch (stateEx)
@@ -361,6 +389,7 @@ long distances quickly?";
 				break;
 				
 				case 2:
+				global.tutorial = false;
 				destroy = true;
 				break;
 			}

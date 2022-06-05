@@ -104,18 +104,43 @@ if (!global.pause)
 			else if (imageSpeed >= 2)
 			{
 				imageSpeed = 2;
+				accel = .2;
+				movespeed = 1.5;
+				jumpspeed = 1.5;
 				attackState = 1;
 			}
 		}
 		else if (attackState == 1)
 		{
-			hsp = 0;
-			scr_AI_FollowsPlayer(true,false);
+			hsp += accel * walkDirX;
+			vsp += accel * walkDirY;
+			hsp = clamp(hsp,-movespeed,movespeed);
+			vsp = clamp(vsp,-jumpspeed,jumpspeed);
+			
+			var nearestPlayer = instance_nearest(x,y,obj_Player);
+			var newDirX = 1;
+			if (nearestPlayer.x < x) newDirX = -1;
+			var newDirY = 1;
+			if (nearestPlayer.y < y) newDirY = -1;
+			
+			if ((newDirX != walkDirX) and (canTurnX))
+			{
+				walkDirX = newDirX;
+				canTurnX = false;
+				canTurnXTimer = canTurnXTimerMax + irandom_range(0,floor(canTurnXTimerMax / 2));
+			}
+			if ((newDirY != walkDirY) and (canTurnY))
+			{
+				walkDirY = newDirY;
+				canTurnY = false;
+				canTurnYTimer = canTurnYTimerMax + irandom_range(0,floor(canTurnXTimerMax / 2));;
+			}
 		}
 		else if (attackState == 2)
 		{
 			shakeX = 2;
 			shakeY = 2;
+			hsp = 0;
 			vsp = 0;
 			if (imageSpeed < 3)
 			{
@@ -162,8 +187,7 @@ if (!global.pause)
 			}
 		}
 		
-		//Attack Timer
-		
+		#region Attack Timer
 		if (attackTimer > 0)
 		{
 			attackTimer -= 1;
@@ -175,6 +199,31 @@ if (!global.pause)
 			attackState = 2;
 			attackTimer = -1;
 		}
+		#endregion
+		
+		#region Can Turn X Timer
+		if (canTurnXTimer > 0)
+		{
+			canTurnXTimer -= 1;
+		}
+		else if (canTurnXTimer == 0)
+		{
+			canTurnX = true;
+			canTurnXTimer = -1;
+		}
+		#endregion
+		
+		#region Can Turn Y Timer
+		if (canTurnYTimer > 0)
+		{
+			canTurnYTimer -= 1;
+		}
+		else if (canTurnYTimer == 0)
+		{
+			canTurnY = true;
+			canTurnYTimer = -1;
+		}
+		#endregion
 	}
 	else
 	{

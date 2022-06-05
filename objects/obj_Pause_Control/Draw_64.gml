@@ -1,4 +1,4 @@
-///@description Draw
+///@description Draw GUI
 
 //Variables
 
@@ -29,7 +29,7 @@ if ((gamePaused) and (visible))
 		var isHelper = global.isHelperP2;
 	}
 	
-	if (!global.gambleMaykr)
+	if (global.gamemode != gamemodes.maykr)
 	{
 		abilityPage[i] = spr_PauseMenu_Exit;
 		i++;
@@ -214,7 +214,7 @@ if ((gamePaused) and (visible))
 		i++;
 		break;
 		
-		case "copy":
+		case playerAbilities.scan:
 		abilityPage[i] = spr_PauseMenu_Ability_ScanDescription;
 		i++;
 		abilityPage[i] = spr_PauseMenu_Ability_ScanMoveset1;
@@ -270,18 +270,18 @@ if ((gamePaused) and (visible))
 			i++;
 			break;
 			
-			case playerCharacters.keeby:
-			abilityPage[i] = spr_PauseMenu_Ability_KeebyDescription;
-			i++;
-			break;
-			
-			case "princeFluff":
-			abilityPage[i] = spr_PauseMenu_Ability_PrinceFluffDescription;
+			case playerCharacters.helper:
+			abilityPage[i] = spr_PauseMenu_Ability_HelperDescription;
 			i++;
 			break;
 			
 			case playerCharacters.magolor:
 			abilityPage[i] = spr_PauseMenu_Ability_MagolorDescription;
+			i++;
+			break;
+			
+			case playerCharacters.keeby:
+			abilityPage[i] = spr_PauseMenu_Ability_KeebyDescription;
 			i++;
 			break;
 		}
@@ -344,158 +344,158 @@ if ((gamePaused) and (visible))
 	switch (abilityPage[page])
 	{
 		case spr_PauseMenu_Ability_KirbyDescription:
-		descriptionText = scr_Localization(1,0,0,global.language);
+		descriptionText = descriptionStrKirby;
 		break;
 
 		case spr_PauseMenu_Ability_GambleDescription:
-		descriptionText = scr_Localization(1,1,0,global.language);
+		descriptionText = descriptionStrGamble;
 		break;
 		
 		case spr_PauseMenu_Ability_MetaKnightDescription:
-		descriptionText = scr_Localization(1,2,0,global.language);
-		break;
-		
-		case spr_PauseMenu_Ability_KeebyDescription:
-		descriptionText = scr_Localization(1,3,0,global.language);
+		descriptionText = descriptionStrMetaKnight;
 		break;
 		
 		case spr_PauseMenu_Ability_HelperDescription:
-		descriptionText = scr_Localization(1,4,0,global.language);
+		descriptionText = descriptionStrHelper;
 		break;
 		
-		case spr_PauseMenu_Ability_PrinceFluffDescription:
-		descriptionText = scr_Localization(1,5,0,global.language);
+		case spr_PauseMenu_Ability_GooeyDescription:
+		descriptionText = descriptionStrGooey;
 		break;
 		
 		case spr_PauseMenu_Ability_MagolorDescription:
-		descriptionText = scr_Localization(1,6,0,global.language);
+		descriptionText = descriptionStrMagolor;
+		break;
+		
+		case spr_PauseMenu_Ability_KeebyDescription:
+		descriptionText = descriptionStrKeeby;
 		break;
 		
 		case spr_PauseMenu_Ability_CutterDescription:
-		descriptionText = scr_Localization(1,7,0,global.language);
+		descriptionText = descriptionStrCutter;
 		break;
 		
 		case spr_PauseMenu_Ability_BeamDescription:
-		descriptionText = scr_Localization(1,8,0,global.language);
+		descriptionText = descriptionStrBeam;
 		break;
 		
 		case spr_PauseMenu_Ability_MysticBeamDescription:
-		descriptionText = scr_Localization(1,9,0,global.language);
+		descriptionText = descriptionStrMysticBeam;
 		break;
 		
 		case spr_PauseMenu_Ability_StoneDescription:
-		descriptionText = scr_Localization(1,10,0,global.language);
+		descriptionText = descriptionStrStone;
 		break;
 		
 		case spr_PauseMenu_Ability_UfoDescription:
-		descriptionText = scr_Localization(1,11,0,global.language);
+		descriptionText = descriptionStrUfo;
 		break;
 		
 		case spr_PauseMenu_Ability_MirrorDescription:
-		descriptionText = scr_Localization(1,12,0,global.language);
+		descriptionText = descriptionStrMirror;
 		break;
 		
 		case spr_PauseMenu_Ability_NinjaDescription:
-		descriptionText = scr_Localization(1,13,0,global.language);
+		descriptionText = descriptionStrNinja;
 		break;
 		
 		case spr_PauseMenu_Ability_BombDescription:
-		descriptionText = scr_Localization(1,14,0,global.language);
+		descriptionText = descriptionStrBomb;
 		break;
 		
 		case spr_PauseMenu_Ability_FireDescription:
-		descriptionText = scr_Localization(1,15,0,global.language);
+		descriptionText = descriptionStrFire;
 		break;
 		
 		case spr_PauseMenu_Ability_MysticFireDescription:
-		descriptionText = scr_Localization(1,16,0,global.language);
+		descriptionText = descriptionStrMysticFire;
 		break;
 		
 		case spr_PauseMenu_Ability_IceDescription:
-		descriptionText = scr_Localization(1,17,0,global.language);
+		descriptionText = descriptionStrIce;
 		break;
 		
 		case spr_PauseMenu_Ability_SparkDescription:
-		descriptionText = scr_Localization(1,18,0,global.language);
+		descriptionText = descriptionStrSpark;
 		break;
 		
 		case spr_PauseMenu_Ability_YoyoDescription:
-		descriptionText = scr_Localization(1,19,0,global.language);
+		descriptionText = descriptionStrYoyo;
 		break;
 		
 		case spr_PauseMenu_Ability_WheelDescription:
-		descriptionText = scr_Localization(1,20,0,global.language);
+		descriptionText = descriptionStrWheel;
 		break;
 		
 		case spr_PauseMenu_Ability_ArtistDescription:
-		descriptionText = scr_Localization(1,21,0,global.language);
+		descriptionText = descriptionStrArtist;
 		break;
 		
 		case spr_PauseMenu_Ability_FighterDescription:
-		descriptionText = scr_Localization(1,22,0,global.language);
+		descriptionText = descriptionStrFighter;
 		break;
 		
 		case spr_PauseMenu_Ability_SuplexDescription:
-		descriptionText = scr_Localization(1,23,0,global.language);
+		descriptionText = descriptionStrSuplex;
 		break;
 		
 		case spr_PauseMenu_Ability_WingDescription:
-		descriptionText = scr_Localization(1,24,0,global.language);
+		descriptionText = descriptionStrWing;
 		break;
 		
 		case spr_PauseMenu_Ability_JetDescription:
-		descriptionText = scr_Localization(1,25,0,global.language);
+		descriptionText = descriptionStrJet;
 		break;
 		
 		case spr_PauseMenu_Ability_SwordDescription:
-		descriptionText = scr_Localization(1,26,0,global.language);
+		descriptionText = descriptionStrSword;
 		break;
 		
 		case spr_PauseMenu_Ability_ParasolDescription:
-		descriptionText = scr_Localization(1,27,0,global.language);
+		descriptionText = descriptionStrParasol;
 		break;
 		
 		case spr_PauseMenu_Ability_HammerDescription:
-		descriptionText = scr_Localization(1,28,0,global.language);
+		descriptionText = descriptionStrHammer;
 		break;
 		
 		case spr_PauseMenu_Ability_BellDescription:
-		descriptionText = scr_Localization(1,29,0,global.language);
+		descriptionText = descriptionStrBell;
 		break;
 		
 		case spr_PauseMenu_Ability_WaterDescription:
-		descriptionText = scr_Localization(1,30,0,global.language);
+		descriptionText = descriptionStrWater;
 		break;
 		
 		case spr_PauseMenu_Ability_SleepDescription:
-		descriptionText =scr_Localization(1,31,0,global.language);
+		descriptionText = descriptionStrSleep;
 		break;
 		
 		case spr_PauseMenu_Ability_ScanDescription:
-		descriptionText = scr_Localization(1,32,0,global.language);
+		descriptionText = descriptionStrScan;
 		break;
 		
 		case spr_PauseMenu_Ability_CrashDescription:
-		descriptionText = scr_Localization(1,33,0,global.language);
+		descriptionText = descriptionStrCrash;
 		break;
 		
 		case spr_PauseMenu_Ability_MicDescription:
-		descriptionText = scr_Localization(1,34,0,global.language);
+		descriptionText = descriptionStrMic;
 		break;
 		
 		case spr_PauseMenu_Ability_UltraSwordDescription:
-		descriptionText = scr_Localization(1,35,0,global.language);
+		descriptionText = descriptionStrUltraSword;
 		break;
 	}
 	
 	if (descriptionText != -1)
 	{
 		draw_set_color(c_white);
-		if (global.language == 0)
+		if (global.language == languages.english)
 		{
 			draw_set_font(fnt_DialogueDefault);
 		}
-		else if ((global.language == 6) or (global.language == 8))
+		else if ((global.language == languages.chinese) or (global.language == languages.japanese))
 		{
 			draw_set_font(global.fontDialogueDefaultKanji);
 		}
@@ -622,7 +622,7 @@ if ((gamePaused) and (visible))
 		{
 			if ((!instance_exists(obj_Pause_Fade)) and (!instance_exists(obj_Fade)))
 			{
-				scr_SaveGame(global.selectedSave);
+				if ((!global.debug) and (global.canSave)) scr_SaveGame(global.selectedSave);
 				var pauseFade = instance_create_depth(x,y,depth - 1,obj_Pause_Fade);
 				pauseFade.alphaSpd = .02;
 		        pauseFade.fade = 1;

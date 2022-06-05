@@ -39,11 +39,11 @@ owner = -1;
 resetArray = false;
 stopsCutscene = false;
 targetRoom = -1;
-if (global.language == 0)
+if (global.language == languages.english)
 {
 	draw_set_font(fnt_DialogueDefault);
 }
-else if ((global.language == 6) or (global.language == 8))
+else if ((global.language == languages.chinese) or (global.language == languages.japanese))
 {
 	draw_set_font(global.fontDialogueDefaultKanji);
 }
@@ -55,7 +55,6 @@ textFont = fnt_DialogueDefault;
 hasResetTimer = false;
 color = c_white;
 changeOwnerState = false;
-endTutorialNotif = false;
 pausable = true;
 maxPixels = 411;
 

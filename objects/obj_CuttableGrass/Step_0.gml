@@ -49,6 +49,7 @@ if (!global.pause)
 						par.collisionY = obj_Wall;
 						par.invisTimer = 20;
 						par.destroyTimer = 30;
+						if (position_meeting(par.x,par.y,obj_Wall)) instance_destroy(par);
 					}
 					other.cut = true;
 					other.spawn = true;

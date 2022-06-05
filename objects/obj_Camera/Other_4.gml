@@ -5,6 +5,17 @@
 view_enabled = true;
 view_visible[0] = true;
 
+//Reset Variables
+
+xLimit1 = 0;
+xLimit2 = 0;
+yLimit1 = 0;
+yLimit2 = 0;
+xLimit1Final = 0;
+xLimit2Final = 0;
+yLimit1Final = 0;
+yLimit2Final = 0;
+
 //Movement
 
 switch (room)
@@ -24,10 +35,10 @@ switch (room)
 	}
 	break;
 	
-	case rm_Maykr:
+	case global.maykrCanvas:
 	{
-		x = 0;
-		y = 0;
+		cameraX = 0;
+		cameraY = room_height - viewHeight;
 	}
 	break;
 	
@@ -45,3 +56,6 @@ switch (room)
 	break;
 }
 objectFollowing = -1;
+
+cameraXStart = cameraX;
+cameraYStart = cameraY;

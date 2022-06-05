@@ -148,12 +148,12 @@ function scr_Hud_AbilityText(argument0,argument1)
 		textIndex = spr_Hud_AbilityText_Bell;
 		break;
 		
-		case playerAbilities.ultraSword:
-		textIndex = spr_Hud_AbilityText_UltraSword;
-		break;
-		
 		case playerAbilities.water:
 		textIndex = spr_Hud_AbilityText_Water;
+		break;
+		
+		case playerAbilities.ultraSword:
+		textIndex = spr_Hud_AbilityText_UltraSword;
 		break;
 		
 		case playerAbilities.sleep:
@@ -169,7 +169,7 @@ function scr_Hud_AbilityText(argument0,argument1)
 		break;
 		
 		case playerAbilities.mic:
-		textIndex = spr_Hud_AbilityText_Mike;
+		textIndex = spr_Hud_AbilityText_Mic;
 		break;
 		
 		case playerAbilities.chef:

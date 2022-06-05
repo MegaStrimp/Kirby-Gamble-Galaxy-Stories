@@ -76,7 +76,7 @@ else if (spawnTimer == 0)
 	spawnedEnemy.inhaleXOffset = inhaleXOffset;
 	spawnedEnemy.inhaleYOffset = inhaleYOffset;
 	spawnedEnemy.parasol = parasol;
-	spawnedEnemy.parasolObject = spawnedEnemy;
+	spawnedEnemy.parasolObject = -1;
 	spawnedEnemy.parasolX = parasolX;
 	spawnedEnemy.parasolY = parasolY;
 	spawnedEnemy.scale = scale;

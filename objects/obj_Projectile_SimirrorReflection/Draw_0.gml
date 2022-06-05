@@ -10,7 +10,7 @@ var yoffset = y - (8 * (image_yscale/2)) + 4;
 for (var i = 0; i < image_yscale; i++)
 {
 	var sprite = 0;
-	switch(i)
+	switch (i)
 	{
 		case 0:
 		sprite = spr_Projectile_SimirrorStart;

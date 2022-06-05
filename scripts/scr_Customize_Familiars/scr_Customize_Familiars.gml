@@ -4,11 +4,12 @@ function scr_Customize_Familiars()
 {
 	var i = 0;
 	
-	familiarTitle[i] = "Gamble";
+	#region Gamble
+	familiarTitle[i] = scr_Localization(stringAttributes.familiars_gamble,stringAttributes.title,0,global.language);
 	familiarValue[i] = familiars.gamble;
-	familiarDescription[i] = scr_Localization(5,5,0,global.language);
-	familiarUnlocked[i] = true;
-	familiarUnlockMethod[i] = "Default";
+	familiarDescription[i] = scr_Localization(stringAttributes.familiars_gamble,stringAttributes.description,0,global.language);
+	familiarUnlocked[i] = global.gambleFamiliarUnlocked;
+	familiarUnlockMethod[i] = "TBD";
 	familiarSprite[i] = spr_Menu_Collection_Customize_Familiar_Gamble;
 	
 	familiarPaintTitle[i][0] = "Test Palette";
@@ -59,12 +60,14 @@ function scr_Customize_Familiars()
 	familiarOffset[i] = 0;
 	familiarOffsetLerp[i] = 0;
 	i += 1;
-
-	familiarTitle[i] = "Happy Pea";
+	#endregion
+	
+	#region Happy Pea
+	familiarTitle[i] = scr_Localization(stringAttributes.familiars_happyPea,stringAttributes.title,0,global.language);
 	familiarValue[i] = familiars.happyPea;
-	familiarDescription[i] = "A plant has come to help?! He can keep foes away from Kirby!";
-	familiarUnlocked[i] = true;
-	familiarUnlockMethod[i] = "Default";
+	familiarDescription[i] = scr_Localization(stringAttributes.familiars_happyPea,stringAttributes.description,0,global.language);
+	familiarUnlocked[i] = global.happyPeaFamiliarUnlocked;
+	familiarUnlockMethod[i] = "TBD";
 	familiarSprite[i] = spr_Menu_Collection_Customize_Familiar_HappyPea;
 	
 	familiarPaintTitle[i][0] = "Test Palette";
@@ -103,12 +106,14 @@ function scr_Customize_Familiars()
 	familiarOffset[i] = 0;
 	familiarOffsetLerp[i] = 0;
 	i += 1;
-
-	familiarTitle[i] = "Epic Jar";
+	#endregion
+	
+	#region Epic Jar
+	familiarTitle[i] = scr_Localization(stringAttributes.familiars_epicJar,stringAttributes.title,0,global.language);
 	familiarValue[i] = familiars.epicJar;
-	familiarDescription[i] = "Explosive!";
-	familiarUnlocked[i] = true;
-	familiarUnlockMethod[i] = "Default";
+	familiarDescription[i] = scr_Localization(stringAttributes.familiars_epicJar,stringAttributes.description,0,global.language);
+	familiarUnlocked[i] = global.epicJarFamiliarUnlocked;
+	familiarUnlockMethod[i] = "TBD";
 	familiarSprite[i] = spr_Menu_Collection_Customize_Familiar_EpicJar;
 	
 	familiarPaintTitle[i][0] = "Test Palette";
@@ -147,12 +152,14 @@ function scr_Customize_Familiars()
 	familiarOffset[i] = 0;
 	familiarOffsetLerp[i] = 0;
 	i += 1;
-
-	familiarTitle[i] = "Krackle";
+	#endregion
+	
+	#region Krackle
+	familiarTitle[i] = scr_Localization(stringAttributes.familiars_krackle,stringAttributes.title,0,global.language);
 	familiarValue[i] = familiars.krackle;
-	familiarDescription[i] = "Puff!";
-	familiarUnlocked[i] = true;
-	familiarUnlockMethod[i] = "Default";
+	familiarDescription[i] = scr_Localization(stringAttributes.familiars_krackle,stringAttributes.description,0,global.language);
+	familiarUnlocked[i] = global.krackleFamiliarUnlocked;
+	familiarUnlockMethod[i] = "TBD";
 	familiarSprite[i] = spr_Menu_Collection_Customize_Familiar_Krackle;
 	
 	familiarPaintTitle[i][0] = "Test Palette";
@@ -191,12 +198,14 @@ function scr_Customize_Familiars()
 	familiarOffset[i] = 0;
 	familiarOffsetLerp[i] = 0;
 	i += 1;
+	#endregion
 	
-	familiarTitle[i] = "Omega Matter";
+	#region Omega Matter
+	familiarTitle[i] = scr_Localization(stringAttributes.familiars_omegaMatter,stringAttributes.title,0,global.language);
 	familiarValue[i] = familiars.omegaMatter;
-	familiarDescription[i] = "Hello I am Subsandwich";
-	familiarUnlocked[i] = true;
-	familiarUnlockMethod[i] = "Default";
+	familiarDescription[i] = scr_Localization(stringAttributes.familiars_omegaMatter,stringAttributes.description,0,global.language);
+	familiarUnlocked[i] = global.omegaMatterFamiliarUnlocked;
+	familiarUnlockMethod[i] = "TBD";
 	familiarSprite[i] = spr_Menu_Collection_Customize_Familiar_Gamble;
 	
 	familiarPaintTitle[i][0] = "Test Palette";
@@ -207,8 +216,8 @@ function scr_Customize_Familiars()
 	familiarPaint[i][4] = spr_Kirby_Normal_Palette_FriendlyPink;
 	familiarPaint[i][5] = spr_Kirby_Normal_Palette_FriendlyPink;
 	
-	familiarLevel[i] = global.gambleFamiliarLevel;
-	familiarExp[i] = global.gambleFamiliarExp;
+	familiarLevel[i] = global.omegaMatterFamiliarLevel;
+	familiarExp[i] = global.omegaMatterFamiliarExp;
 	familiarMaxExp[i][1] = 100;
 	familiarMaxExp[i][2] = 100;
 	familiarMaxExp[i][3] = 100;
@@ -246,4 +255,5 @@ function scr_Customize_Familiars()
 	familiarColor[i] = make_color_rgb(248,160,216);
 	familiarOffset[i] = 0;
 	familiarOffsetLerp[i] = 0;
+	#endregion
 }

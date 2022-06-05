@@ -56,7 +56,7 @@ if (!global.pause)
 	{
 		switch (attackNumber)
 		{
-			case "dash":
+			case enemyAttacks.poppyBroSr_dash:
 			if (isAttacking)
 			{
 				movespeed = 4;
@@ -156,7 +156,7 @@ if (!global.pause)
 		{
 			switch (attackNumber)
 			{
-				case "bombThrowTripleJump":
+				case enemyAttacks.poppyBroSr_bombThrowTripleJump:
 				if (jumpCount == 3)
 				{
 					attackStopTimer = 0;
@@ -175,7 +175,7 @@ if (!global.pause)
 	#region Attack
 	if (attack)
 	{
-		if (attackNumber == "bombThrow")
+		if (attackNumber == enemyAttacks.poppyBroSr_bombThrow)
 		{
 			handX = (path_get_x(pth_Enemy_PoppyBrosSrHand1,handPath) + handXOffset) * dirX;
 			handY = path_get_y(pth_Enemy_PoppyBrosSrHand1,handPath) + handYOffset;
@@ -217,11 +217,11 @@ if (!global.pause)
 	else if (attackReadyTimer == 0)
 	{
 		jumpCount = 0;
-		attackNumber = choose("bombThrow","dash");
-		attackNumber = choose("bombThrow");
+		attackNumber = choose(enemyAttacks.poppyBroSr_bombThrow,enemyAttacks.poppyBroSr_dash);
+		attackNumber = choose(enemyAttacks.poppyBroSr_bombThrow);
 		switch (attackNumber)
 		{
-			case "bombThrow":
+			case enemyAttacks.poppyBroSr_bombThrow:
 			bombThrowState = 0;
 			jumpCount += 1;
 			gravLimitNormal = 3.5;
@@ -250,7 +250,7 @@ if (!global.pause)
 			//bombThrowTimer = bombThrowTimerMax;
 			break;
 			
-			case "dash":
+			case enemyAttacks.poppyBroSr_dash:
 			dashDir = dirX;
 			dashStopTimer = dashStopTimerMax;
 			attack = true;

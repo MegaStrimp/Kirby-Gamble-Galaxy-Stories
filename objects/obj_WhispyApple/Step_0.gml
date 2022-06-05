@@ -70,6 +70,7 @@ if (!global.pause)
 				var obj = instance_create_depth(x,y,depth,obj_Gordo);
 				obj.state = 3;
 				obj.walkDirX = owner.dirX;
+				obj.destroyOutsideView = true;
 				instance_destroy();
 				break;
 				#endregion
@@ -87,6 +88,7 @@ if (!global.pause)
 				obj.state = 1;
 				obj.dirX = owner.dirX;
 				obj.walkDirX = owner.dirX;
+				obj.destroyOutsideView = true;
 				instance_destroy();
 				break;
 				#endregion

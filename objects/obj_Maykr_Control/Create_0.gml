@@ -6,12 +6,13 @@ mouseY = mouse_y;
 mouseXGui = device_mouse_x_to_gui(0);
 mouseYGui = device_mouse_y_to_gui(0);
 #endregion
-errorMsg = "";
+
 #region Spawn Values
-spawnedLayer = "collision";
-spawnedItemString = "debugWall";
+spawnedLayer = "Collision";
+spawnedItemString = maykrObjects.debugWall;
 spawnedItemIndex = obj_ParentWall;
 spawnedSprite = spr_Maykr_Spawner_DebugWall;
+spawnedName = "Player";
 spawnedPaletteIndex = -1;
 spawnedSlopeType = 0;
 dirX = 1;
@@ -43,6 +44,7 @@ mouseOnTopOptions = false;
 mouseOnTopReset = false;
 mouseOnTopLeave = false;
 mouseOnTopPlay = false;
+mouseOnTopEdit = false;
 mouseOnTopBlocks = false;
 mouseOnTopEnemies = false;
 mouseOnTopItems = false;
@@ -59,6 +61,7 @@ topHudOptionsOffset = 0;
 topHudResetOffset = 0;
 topHudLeaveOffset = 0;
 topHudPlayOffset = 0;
+topHudEditOffset = 0;
 topHudBlocksOffset = 0;
 topHudEnemiesOffset = 0;
 topHudItemsOffset = 0;
@@ -76,4 +79,11 @@ yesBarMax = 120;
 textureX = 0;
 textureY = 0;
 spawnTimer = 0;
+#endregion
+
+#region Spawn Kirby
+var spawner = instance_create_layer(54,room_height - 88,"Player",obj_Maykr_Spawner);
+spawner.spawnedItemIndex = obj_Player;
+spawner.spawnedSprite = spr_Kirby_Normal_Idle;
+spawner.spawnedPaletteIndex = scr_Player_SprayPaint(global.sprayPaintKirbyP1,playerCharacters.kirby,global.skinKirbyP1);
 #endregion

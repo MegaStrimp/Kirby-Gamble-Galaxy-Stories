@@ -13,11 +13,11 @@ draw_set_alpha(.75);
 draw_roundrect(65,188,415,268,false);
 draw_set_alpha(1);
 
-if (global.language == 0)
+if (global.language == languages.english)
 {
 	draw_set_font(fnt_DialogueDefault);
 }
-else if ((global.language == 6) or (global.language == 8))
+else if ((global.language == languages.chinese) or (global.language == languages.japanese))
 {
 	draw_set_font(global.fontDialogueDefaultKanji);
 }

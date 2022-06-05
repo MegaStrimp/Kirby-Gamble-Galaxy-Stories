@@ -13,7 +13,7 @@ if (!global.pause)
 	}
 	hsp = scr_Friction(hsp,decel);
 
-	switch(actionState)
+	switch (actionState)
 	{
 		case 0:
 		//walking
@@ -76,7 +76,7 @@ if (!global.pause)
 		else
 		{
 			var new_value = irandom_range(90, 180); //tweak the values later if you need to, i'm a bit lazy so i won't
-			switch(timerState)
+			switch (timerState)
 			{
 				case 0:
 				if (instance_exists(obj_Player))

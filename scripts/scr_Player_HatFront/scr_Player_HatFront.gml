@@ -6,7 +6,7 @@ function scr_Player_HatFront(argument0,argument1)
 {
 	var abilityToCheck = argument0;
 	var selectedCharacter = argument1;
-	var hatFrontIndex;
+	var hatFrontIndex = -1;
 	
 	switch (selectedCharacter)
 	{
@@ -25,7 +25,7 @@ function scr_Player_HatFront(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.fire_kssu:
 				switch (sprite_index)
 				{
 					case sprRollDuck:
@@ -39,15 +39,7 @@ function scr_Player_HatFront(argument0,argument1)
 					case sprClimbDown:
 					hatFrontIndex = spr_Kirby_HatFront_Fire_KSSU_ClimbDown;
 					break;
-					
-					default:
-					hatFrontIndex = -1;
-					break;
 				}
-				break;
-				
-				default:
-				hatFrontIndex = -1;
 				break;
 			}
 			break;
@@ -64,7 +56,7 @@ function scr_Player_HatFront(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.mysticFire_ggs:
 				switch (sprite_index)
 				{
 					case sprRollDuck:
@@ -78,15 +70,7 @@ function scr_Player_HatFront(argument0,argument1)
 					case sprClimbDown:
 					hatFrontIndex = spr_Kirby_HatFront_Fire_KSSU_ClimbDown;
 					break;
-					
-					default:
-					hatFrontIndex = -1;
-					break;
 				}
-				break;
-				
-				default:
-				hatFrontIndex = -1;
 				break;
 			}
 			break;
@@ -103,7 +87,7 @@ function scr_Player_HatFront(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.spark_kssu:
 				switch (sprite_index)
 				{
 					case sprClimbUp:
@@ -113,15 +97,7 @@ function scr_Player_HatFront(argument0,argument1)
 					case sprClimbDown:
 					hatFrontIndex = spr_Kirby_HatFront_Spark_KSSU_ClimbDown;
 					break;
-					
-					default:
-					hatFrontIndex = -1;
-					break;
 				}
-				break;
-				
-				default:
-				hatFrontIndex = -1;
 				break;
 			}
 			break;
@@ -138,7 +114,7 @@ function scr_Player_HatFront(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				/*case "kssu":
+				case abilityHatSkins.wing_kssu:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -157,89 +133,9 @@ function scr_Player_HatFront(argument0,argument1)
 					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Idle;
 					break;
 					
-					case sprIdleBlink:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Idle;
-					break;
-					
-					case sprIdleNormalSlopeL:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Idle;
-					break;
-					
-					case sprIdleNormalSlopeLBlink:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Idle;
-					break;
-					
-					case sprIdleNormalSlopeR:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Idle;
-					break;
-					
-					case sprIdleNormalSlopeRBlink:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Idle;
-					break;
-					
-					case sprIdleSteepSlopeL:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Idle;
-					break;
-					
-					case sprIdleSteepSlopeLBlink:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Idle;
-					break;
-					
-					case sprIdleSteepSlopeR:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Idle;
-					break;
-					
-					case sprIdleSteepSlopeRBlink:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Idle;
-					break;
-					
-					case sprItemCarryLightIdle:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Idle;
-					break;
-					
-					case sprItemCarryLightIdleBlink:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Idle;
-					break;
-					
-					case sprItemCarryLightIdleNormalSlopeL:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Idle;
-					break;
-					
-					case sprItemCarryLightIdleNormalSlopeLBlink:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Idle;
-					break;
-					
-					case sprItemCarryLightIdleNormalSlopeR:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Idle;
-					break;
-					
-					case sprItemCarryLightIdleNormalSlopeRBlink:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Idle;
-					break;
-					
-					case sprItemCarryLightIdleSteepSlopeL:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Idle;
-					break;
-					
-					case sprItemCarryLightIdleSteepSlopeLBlink:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Idle;
-					break;
-					
-					case sprItemCarryLightIdleSteepSlopeR:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Idle;
-					break;
-					
-					case sprItemCarryLightIdleSteepSlopeRBlink:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Idle;
-					break;
-					
 					case sprWalk:
 					case sprItemCarryLightWalk:
 					case sprItemCarryHeavyWalk:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Walk;
-					break;
-					
-					case sprItemCarryLightWalk:
 					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Walk;
 					break;
 					
@@ -256,9 +152,6 @@ function scr_Player_HatFront(argument0,argument1)
 					break;
 					
 					case sprRoll:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Roll;
-					break;
-					
 					case sprRollDuckReady:
 					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Roll;
 					break;
@@ -284,82 +177,6 @@ function scr_Player_HatFront(argument0,argument1)
 					case sprItemCarryLightDuckSteepSlopeRBlink:
 					case sprItemCarryHeavyDuck:
 					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Duck;
-					break;
-					
-					case sprDuckBlink:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Duck;
-					break;
-					
-					case sprDuckNormalSlopeL:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Duck;
-					break;
-					
-					case sprDuckNormalSlopeLBlink:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Duck;
-					break;
-					
-					case sprDuckNormalSlopeR:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Duck;
-					break;
-					
-					case sprDuckNormalSlopeRBlink:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Duck;
-					break;
-					
-					case sprDuckSteepSlopeL:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Duck;
-					break;
-					
-					case sprDuckSteepSlopeLBlink:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Duck;
-					break;
-					
-					case sprDuckSteepSlopeR:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Duck;
-					break;
-					
-					case sprDuckSteepSlopeRBlink:
-					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Duck;
-					break;
-					
-					case sprItemCarryLightDuck:
-					hatFrontIndex = spr_Kirby_AbilityHat_Wing_KSSU_Duck;
-					break;
-					
-					case sprItemCarryLightDuckBlink:
-					hatFrontIndex = spr_Kirby_AbilityHat_Wing_KSSU_Duck;
-					break;
-					
-					case sprItemCarryLightDuckNormalSlopeL:
-					hatFrontIndex = spr_Kirby_AbilityHat_Wing_KSSU_Duck;
-					break;
-					
-					case sprItemCarryLightDuckNormalSlopeLBlink:
-					hatFrontIndex = spr_Kirby_AbilityHat_Wing_KSSU_Duck;
-					break;
-					
-					case sprItemCarryLightDuckNormalSlopeR:
-					hatFrontIndex = spr_Kirby_AbilityHat_Wing_KSSU_Duck;
-					break;
-					
-					case sprItemCarryLightDuckNormalSlopeRBlink:
-					hatFrontIndex = spr_Kirby_AbilityHat_Wing_KSSU_Duck;
-					break;
-					
-					case sprItemCarryLightDuckSteepSlopeL:
-					hatFrontIndex = spr_Kirby_AbilityHat_Wing_KSSU_Duck;
-					break;
-					
-					case sprItemCarryLightDuckSteepSlopeLBlink:
-					hatFrontIndex = spr_Kirby_AbilityHat_Wing_KSSU_Duck;
-					break;
-					
-					case sprItemCarryLightDuckSteepSlopeR:
-					hatFrontIndex = spr_Kirby_AbilityHat_Wing_KSSU_Duck;
-					break;
-					
-					case sprItemCarryLightDuckSteepSlopeRBlink:
-					hatFrontIndex = spr_Kirby_AbilityHat_Wing_KSSU_Duck;
 					break;
 					
 					case sprSlide:
@@ -393,15 +210,7 @@ function scr_Player_HatFront(argument0,argument1)
 					case sprWingAttack2:
 					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Attack2;
 					break;
-					
-					default:
-					hatFrontIndex = -1;
-					break;
 				}
-				break;*/
-				
-				default:
-				hatFrontIndex = -1;
 				break;
 			}
 			break;
@@ -418,7 +227,7 @@ function scr_Player_HatFront(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "modern":
+				case abilityHatSkins.water_modern:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -458,27 +267,11 @@ function scr_Player_HatFront(argument0,argument1)
 						hatFrontIndex = spr_Kirby_HatFront_Water_Modern_WalkAnim2;
 					}
 					break;
-					
-					default:
-					hatFrontIndex = -1;
-					break;
 				}
-				break;
-				
-				default:
-				hatFrontIndex = -1;
 				break;
 			}
 			break;
-			
-			default:
-			hatFrontIndex = -1;
-			break;
 		}
-		break;
-		
-		default:
-		hatFrontIndex = -1;
 		break;
 	}
 	return hatFrontIndex;

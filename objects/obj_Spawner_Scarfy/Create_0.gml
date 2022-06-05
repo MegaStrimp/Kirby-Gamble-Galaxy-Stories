@@ -58,3 +58,5 @@ particleTimer = -1;
 particleTimerMax = 4;
 attackTimerMax = 300;
 attackTimer = attackTimerMax;
+canTurnXTimerMax = 15;
+canTurnYTimerMax = 15;

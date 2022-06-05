@@ -210,7 +210,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 			
 			//Collision
 			
-			if ((place_meeting(x + 1,y,obj_ParentWall)) or (place_meeting(x - 1,y,obj_ParentWall)) or (place_meeting(x,y - 1,obj_ParentWall)) or (place_meeting(x,y + 1,obj_ParentWall)))
+			if ((place_meeting(x + 1,y,obj_Wall)) or (place_meeting(x - 1,y,obj_Wall)) or (place_meeting(x,y - 1,obj_Wall)) or (place_meeting(x,y + 1,obj_Wall)))
 			{
 				hsp = 0;
 				vsp = 0;

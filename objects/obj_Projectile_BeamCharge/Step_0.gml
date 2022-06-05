@@ -57,7 +57,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		par.destroyTimer = 1;
 		if (instance_exists(owner))
 		{
-			if (((owner.player == 0) and (global.hatTypeBeamP1 == "marxSoul")) or ((owner.player == 1) and (global.hatTypeBeamP2 == "marxSoul")))
+			if (((owner.player == 0) and (global.hatTypeBeamP1 == abilityHatSkins.beam_marxSoul)) or ((owner.player == 1) and (global.hatTypeBeamP2 == abilityHatSkins.beam_marxSoul)))
 			{
 				par.sprite_index = spr_Particle_MarxDiamonds;
 				par.image_alpha = .5;
@@ -131,6 +131,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 			var projBeam = instance_create_depth(x,y - 4,depth + 1,obj_Projectile_Beam);
 			projBeam.imageSpeed = 1;
 			projBeam.owner = owner;
+			projBeam.abilityType = playerAbilities.beam;
 			projBeam.dmg = 12;
 			projBeam.dirX = dirX;
 			projBeam.character = 6;

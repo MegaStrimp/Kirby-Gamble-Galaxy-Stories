@@ -1,5 +1,18 @@
 ///@description Draw GUI
 
+#region Button Offsets
+topHudSaveOffset = lerp(topHudSaveOffset,mouseOnTopSave,.25);
+topHudLoadOffset = lerp(topHudLoadOffset,mouseOnTopLoad,.25);
+topHudOptionsOffset = lerp(topHudOptionsOffset,mouseOnTopOptions,.25);
+topHudResetOffset = lerp(topHudResetOffset,mouseOnTopReset,.25);
+topHudPlayOffset = lerp(topHudPlayOffset,mouseOnTopPlay,.25);
+topHudEditOffset = lerp(topHudEditOffset,mouseOnTopEdit,.25);
+topHudBlocksOffset = lerp(topHudBlocksOffset,mouseOnTopBlocks,.25);
+topHudEnemiesOffset = lerp(topHudEnemiesOffset,mouseOnTopEnemies,.25);
+topHudItemsOffset = lerp(topHudItemsOffset,mouseOnTopItems,.25);
+topHudLeaveOffset = lerp(topHudLeaveOffset,mouseOnTopLeave,.25);
+#endregion
+
 if (!active)
 {
 	#region Top Hud
@@ -10,16 +23,6 @@ if (!active)
 	#endregion
 	
 	#region Top Hud Buttons
-	topHudSaveOffset = lerp(topHudSaveOffset,mouseOnTopSave,.25);
-	topHudLoadOffset = lerp(topHudLoadOffset,mouseOnTopLoad,.25);
-	topHudOptionsOffset = lerp(topHudOptionsOffset,mouseOnTopOptions,.25);
-	topHudResetOffset = lerp(topHudResetOffset,mouseOnTopReset,.25);
-	topHudPlayOffset = lerp(topHudPlayOffset,mouseOnTopPlay,.25);
-	topHudBlocksOffset = lerp(topHudBlocksOffset,mouseOnTopBlocks,.25);
-	topHudEnemiesOffset = lerp(topHudEnemiesOffset,mouseOnTopEnemies,.25);
-	topHudItemsOffset = lerp(topHudItemsOffset,mouseOnTopItems,.25);
-	topHudLeaveOffset = lerp(topHudLeaveOffset,mouseOnTopLeave,.25);
-	
 	draw_sprite(spr_Maykr_TopHud_Play,0,12 - (topHudOffset * 330),-24 + (topHudPlayOffset * 27));
 	draw_sprite(spr_Maykr_TopHud_Blocks,0,96 - (topHudOffset * 330),-24 + (topHudBlocksOffset * 27));
 	draw_sprite(spr_Maykr_TopHud_Enemies,0,172 - (topHudOffset * 330),-24 + (topHudEnemiesOffset * 27));
@@ -49,33 +52,25 @@ if (!active)
 		switch (maykrInventory[i])
 		{
 			#region Blocks
-			case "debugWall":
+			case maykrObjects.debugWall:
 			spr = spr_Maykr_ItemHud_DebugWall;
 			break;
 			
-			case "asteroidFieldsRedFront":
-			spr = spr_Maykr_ItemHud_AsteroidFieldsRedFront;
-			break;
-			
-			case "asteroidFieldsGreenFront":
-			spr = spr_Maykr_ItemHud_AsteroidFieldsGreenFront;
-			break;
-			
-			case "asteroidFieldsBlueFront":
-			spr = spr_Maykr_ItemHud_AsteroidFieldsBlueFront;
+			case maykrObjects.asteroidFieldsFront:
+			spr = spr_Maykr_ItemHud_AsteroidFieldsFront;
 			break;
 			#endregion
 			
 			#region Enemies
-			case "waddleDee":
+			case maykrObjects.waddleDee:
 			spr = spr_Maykr_ItemHud_WaddleDee;
 			break;
 			
-			case "waddleDoo":
+			case maykrObjects.waddleDoo:
 			spr = spr_Maykr_ItemHud_WaddleDoo;
 			break;
 			
-			case "brontoBurt":
+			case maykrObjects.brontoBurt:
 			spr = spr_Maykr_ItemHud_BrontoBurt;
 			break;
 			#endregion
@@ -142,4 +137,8 @@ if (!active)
 		}
 	}
 	#endregion
+}
+else
+{
+	draw_sprite(spr_Maykr_TopHud_Edit,0,12 - (topHudOffset * 330),-24 + (topHudEditOffset * 27));
 }

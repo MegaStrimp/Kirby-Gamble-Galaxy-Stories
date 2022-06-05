@@ -14,6 +14,24 @@ var paletteP2 = global.sprayPaintP2;
 
 var hbackground = spr_Hud_Healthbar_Background_Kirby;
 
+//Notification
+
+var hasNotif = false;
+if (notifState != 0) hasNotif = true;
+notifOffset = lerp(notifOffset,-25 + ((notifState == 1) * 25),.15);
+
+if (hasNotif)
+{
+	var arrayIndex = notifArray[notifArrayLength - 1];
+	
+	switch (arrayIndex)
+	{
+		default:
+		draw_sprite_ext(spr_Hud_Spray,0,200,30 + notifOffset,1,1,image_angle,image_blend,1);
+		break;
+	}
+}
+
 //Cutscene
 
 cutsceneStarAngle += 2;
@@ -103,24 +121,6 @@ else if (notifTimer == 0)
 	}
 }
 
-//Notification
-
-var hasNotif = false;
-if (notifState != 0) hasNotif = true;
-notifOffset = lerp(notifOffset,-25 + ((notifState == 1) * 25),.15);
-
-if (hasNotif)
-{
-	var arrayIndex = notifArray[notifArrayLength - 1];
-	
-	switch (arrayIndex)
-	{
-		default:
-		draw_sprite_ext(spr_Hud_Spray,0,200,30 + notifOffset,1,1,image_angle,image_blend,drawAlpha);
-		break;
-	}
-}
-
 //Stage Title
 
 if (global.isHub)
@@ -143,9 +143,11 @@ else
 //P1 Icon
 
 var pal = paletteP1;
-if (paletteP1 == spr_Kirby_Normal_Palette_FriendlyPink) pal = spr_Hud_Palette_Icon_Kirby;
 
 var iconIndex = scr_Hud_AbilityIcon(global.abilityP1,global.characterP1);
+if (global.mixActive == 0) iconIndex = mixRosterIcon[mixIndex];
+if ((iconIndex == spr_Hud_Icon_Kirby) and (paletteP1 == spr_Kirby_Normal_Palette_FriendlyPink)) pal = spr_Hud_Palette_Icon_Kirby;
+
 if ((global.shaders) and (global.abilityP1 == playerAbilities.none)) pal_swap_set(pal,1 + (flashP1 * 2),false);
 draw_sprite_ext(iconIndex,0,hudX,hudY,1,1,image_angle,image_blend,drawAlpha);
 if ((global.shaders) and (global.abilityP1 == playerAbilities.none)) pal_swap_reset();
@@ -273,9 +275,11 @@ draw_sprite_ext(hbackground,0,hudX,hudY,1,1,image_angle,image_blend,drawAlpha);
 //P1 Text
 
 var pal = paletteP1;
-if (paletteP1 == spr_Kirby_Normal_Palette_FriendlyPink) pal = spr_Hud_Palette_Healthbar_Kirby;
 
 var textIndex = scr_Hud_AbilityText(global.abilityP1,global.characterP1);
+if (global.mixActive == 1) iconIndex = mixRosterText[mixIndex];
+if ((textIndex == spr_Hud_AbilityText_Kirby) and (paletteP1 == spr_Kirby_Normal_Palette_FriendlyPink)) pal = spr_Hud_Palette_Healthbar_Kirby;
+
 if ((global.shaders) and (global.abilityP1 == playerAbilities.none)) pal_swap_set(pal,1 + (flashP1 * 2),false);
 draw_sprite_ext(textIndex,0,hudX + 26,hudY - 20,1,1,image_angle,image_blend,drawAlpha);
 if ((global.shaders) and (global.abilityP1 == playerAbilities.none)) pal_swap_reset();
@@ -290,9 +294,11 @@ if (instance_number(obj_Player) > 1)
 	//P2 Icon
 	
 	var pal = paletteP2;
-	if (paletteP2 == spr_Kirby_Normal_Palette_FriendlyPink) pal = spr_Hud_Palette_Icon_Kirby;
 	
 	var iconIndex = scr_Hud_AbilityIcon(global.abilityP2,global.characterP2);
+	if (global.mixActive == 1) iconIndex = mixRosterIcon[mixIndex];
+	if ((iconIndex == spr_Hud_Icon_Kirby) and (paletteP1 == spr_Kirby_Normal_Palette_FriendlyPink)) pal = spr_Hud_Palette_Icon_Kirby;
+	
 	if ((global.shaders) and (global.abilityP2 == playerAbilities.none)) pal_swap_set(pal,1 + (flashP2 * 2),false);
 	draw_sprite_ext(iconIndex,0,hudX + 480 - (sprite_get_width(spr_Hud_Icon_Kirby) / 2) - 38,hudY,1,1,image_angle,image_blend,drawAlpha);
 	if ((global.shaders) and (global.abilityP2 == playerAbilities.none)) pal_swap_reset();
@@ -420,9 +426,11 @@ if (instance_number(obj_Player) > 1)
 	//P2 Text
 	
 	var pal = paletteP2;
-	if (paletteP2 == spr_Kirby_Normal_Palette_FriendlyPink) pal = spr_Hud_Palette_Healthbar_Kirby;
 	
 	var textIndex = scr_Hud_AbilityText(global.abilityP2,global.characterP2);
+	if (global.mixActive == 1) iconIndex = mixRosterText[mixIndex];
+	if ((textIndex == spr_Hud_AbilityText_Kirby) and (paletteP2 == spr_Kirby_Normal_Palette_FriendlyPink)) pal = spr_Hud_Palette_Healthbar_Kirby;
+	
 	if ((global.shaders) and (global.abilityP2 == playerAbilities.none)) pal_swap_set(pal,1 + (flashP2 * 2),false);
 	draw_sprite_ext(textIndex,0,hudX + 480 - sprite_get_width(textIndex) - (sprite_get_width(spr_Hud_Icon_Kirby) / 2) - 64,hudY - 20,1,1,image_angle,image_blend,drawAlpha);
 	if ((global.shaders) and (global.abilityP2 == playerAbilities.none)) pal_swap_reset();
@@ -443,14 +451,14 @@ var livesPosY = 18 + (hasTreasure * 28);
 starsPosX = 17;
 starsPosY = 44 + (hasTreasure * 28);
 
-if (!global.gambleMaykr)
+if (global.gamemode != gamemodes.maykr)
 {
 	//Lives
 	
 	draw_sprite_ext(livesBg,0,livesPosX - 13,livesPosY - 3,1,1,image_angle,image_blend,drawAlpha);
 	
 	var pal = paletteP1;
-	if (paletteP1 == spr_Kirby_Normal_Palette_FriendlyPink) pal = spr_Hud_Palette_Lives_Kirby;
+	if ((characterP1 == playerCharacters.kirby) and (paletteP1 == spr_Kirby_Normal_Palette_FriendlyPink)) pal = spr_Hud_Palette_Lives_Kirby;
 	
 	var icon = spr_Hud_Lives_Icon_Kirby;
 	var iconShadow = spr_Hud_Lives_Icon_Kirby_Shadow;
@@ -481,7 +489,7 @@ if (!global.gambleMaykr)
 	if (global.hasCoop)
 	{
 		var pal = paletteP2;
-		if (paletteP2 == spr_Kirby_Normal_Palette_FriendlyPink) pal = spr_Hud_Palette_Lives_Kirby;
+		if ((characterP2 == playerCharacters.kirby) and (paletteP2 == spr_Kirby_Normal_Palette_FriendlyPink)) pal = spr_Hud_Palette_Lives_Kirby;
 			
 		var	icon = spr_Hud_Lives_Icon_Kirby;
 		var iconShadow = spr_Hud_Lives_Icon_Kirby_Shadow;
@@ -547,3 +555,41 @@ if (!global.gambleMaykr)
 	//draw_text(hudX + 25,hudY + 10,pointsSep + string(global.points));
 }
 draw_set_alpha(1);
+
+#region Mix Timer
+if (mixTimer > 0)
+{
+	mixTimer -= 1;
+}
+else if (mixTimer == 0)
+{
+	global.pause = false;
+	if (global.mixActive == 0)
+	{
+		global.abilityP1 = mixRosterAbility[mixIndex];
+	}
+	else
+	{
+		global.abilityP2 = mixRosterAbility[mixIndex];
+	}
+	global.mixActive = -1;
+	with (obj_Player) blackAlphaBox = false;
+	mixIndexTimer = -1;
+	mixTimer = -1;
+}
+#endregion
+
+#region Mix Index Timer
+if (mixIndexTimer > 0)
+{
+	mixIndexTimer -= 1;
+}
+else if (mixIndexTimer == 0)
+{
+	if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+	audio_play_sound(snd_BossHealth,0,false);
+	mixIndex += 1;
+	if (mixIndex > array_length(mixRosterAbility) - 1) mixIndex -= array_length(mixRosterAbility);
+	mixIndexTimer = mixIndexTimerMax;
+}
+#endregion

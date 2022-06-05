@@ -1,5 +1,5 @@
 {
-  "bboxMode": 0,
+  "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
   "origin": 4,
@@ -7,15 +7,15 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 0,
-  "bbox_right": 15,
-  "bbox_top": 0,
-  "bbox_bottom": 15,
+  "bbox_left": 4,
+  "bbox_right": 20,
+  "bbox_top": 4,
+  "bbox_bottom": 20,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 16,
-  "height": 16,
+  "width": 24,
+  "height": 24,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -33,9 +33,9 @@
     {"compositeImage":{"FrameId":{"name":"79c47786-d162-4efd-b037-b71fba4aba09","path":"sprites/spr_Food/spr_Food.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"79c47786-d162-4efd-b037-b71fba4aba09","path":"sprites/spr_Food/spr_Food.yy",},"LayerId":{"name":"20f74114-7ceb-41fe-83ed-d37c936bd2d4","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_Food","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","name":"79c47786-d162-4efd-b037-b71fba4aba09","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2a0a204a-326f-4483-a820-e8e115d81bb5","path":"sprites/spr_Food/spr_Food.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2a0a204a-326f-4483-a820-e8e115d81bb5","path":"sprites/spr_Food/spr_Food.yy",},"LayerId":{"name":"20f74114-7ceb-41fe-83ed-d37c936bd2d4","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Food","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","name":"2a0a204a-326f-4483-a820-e8e115d81bb5","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c33138c1-f2dd-4e9d-a155-73dab9c0eb72","path":"sprites/spr_Food/spr_Food.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c33138c1-f2dd-4e9d-a155-73dab9c0eb72","path":"sprites/spr_Food/spr_Food.yy",},"LayerId":{"name":"20f74114-7ceb-41fe-83ed-d37c936bd2d4","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Food","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","name":"c33138c1-f2dd-4e9d-a155-73dab9c0eb72","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"68a37ef3-b88f-44ad-81de-90e7e31e0298","path":"sprites/spr_Food/spr_Food.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"68a37ef3-b88f-44ad-81de-90e7e31e0298","path":"sprites/spr_Food/spr_Food.yy",},"LayerId":{"name":"20f74114-7ceb-41fe-83ed-d37c936bd2d4","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_Food","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","name":"68a37ef3-b88f-44ad-81de-90e7e31e0298","tags":[],"resourceType":"GMSpriteFrame",},
@@ -132,9 +132,6 @@
     {"compositeImage":{"FrameId":{"name":"173d73a8-992f-4c86-ada3-89f4ff7dbd60","path":"sprites/spr_Food/spr_Food.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"173d73a8-992f-4c86-ada3-89f4ff7dbd60","path":"sprites/spr_Food/spr_Food.yy",},"LayerId":{"name":"20f74114-7ceb-41fe-83ed-d37c936bd2d4","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_Food","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","name":"173d73a8-992f-4c86-ada3-89f4ff7dbd60","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"70dc8bf2-fb2e-49dd-9cef-0cb15c66e108","path":"sprites/spr_Food/spr_Food.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"70dc8bf2-fb2e-49dd-9cef-0cb15c66e108","path":"sprites/spr_Food/spr_Food.yy",},"LayerId":{"name":"20f74114-7ceb-41fe-83ed-d37c936bd2d4","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Food","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","name":"70dc8bf2-fb2e-49dd-9cef-0cb15c66e108","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"67c668bc-c411-4775-8adc-902fe6c4e730","path":"sprites/spr_Food/spr_Food.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"67c668bc-c411-4775-8adc-902fe6c4e730","path":"sprites/spr_Food/spr_Food.yy",},"LayerId":{"name":"20f74114-7ceb-41fe-83ed-d37c936bd2d4","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_Food","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","name":"67c668bc-c411-4775-8adc-902fe6c4e730","tags":[],"resourceType":"GMSpriteFrame",},
@@ -150,6 +147,12 @@
     {"compositeImage":{"FrameId":{"name":"29762926-3ba0-4d16-8d4a-630ea98faedd","path":"sprites/spr_Food/spr_Food.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"29762926-3ba0-4d16-8d4a-630ea98faedd","path":"sprites/spr_Food/spr_Food.yy",},"LayerId":{"name":"20f74114-7ceb-41fe-83ed-d37c936bd2d4","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_Food","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","name":"29762926-3ba0-4d16-8d4a-630ea98faedd","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"847be1f2-819f-4f84-82d4-44a41b3aaf5d","path":"sprites/spr_Food/spr_Food.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"847be1f2-819f-4f84-82d4-44a41b3aaf5d","path":"sprites/spr_Food/spr_Food.yy",},"LayerId":{"name":"20f74114-7ceb-41fe-83ed-d37c936bd2d4","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Food","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","name":"847be1f2-819f-4f84-82d4-44a41b3aaf5d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"f802e4f4-ae59-4252-b733-23ec7c628bf5","path":"sprites/spr_Food/spr_Food.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"f802e4f4-ae59-4252-b733-23ec7c628bf5","path":"sprites/spr_Food/spr_Food.yy",},"LayerId":{"name":"20f74114-7ceb-41fe-83ed-d37c936bd2d4","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Food","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","name":"f802e4f4-ae59-4252-b733-23ec7c628bf5","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_Food","path":"sprites/spr_Food/spr_Food.yy",},
@@ -159,7 +162,7 @@
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 42.0,
+    "length": 43.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
@@ -167,7 +170,7 @@
             {"id":"24790369-9720-439a-93a1-6df98e44d6c2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4dd03d1c-bda5-4e28-92b8-366c8ec51dea","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"24765f34-b0b1-4b2f-986a-ac8ad9ff6760","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"950afd4d-7e2d-4058-9a34-0eff92042788","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"b0cb484e-f3ba-484e-9a84-02635726da71","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"79c47786-d162-4efd-b037-b71fba4aba09","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"e72a13fc-2fa2-4fe4-9335-e9c55f183dd6","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2a0a204a-326f-4483-a820-e8e115d81bb5","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"933a34d5-9292-4f59-b2b3-824baab31ca8","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c33138c1-f2dd-4e9d-a155-73dab9c0eb72","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"0ce87532-84fc-4b8f-ad11-63ac9703e6dd","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"68a37ef3-b88f-44ad-81de-90e7e31e0298","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"321a3251-faa5-4dba-98ab-b2e0c933fa8a","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"96b28b74-64a4-45be-9a33-3147454b2a6c","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"65ffb07b-c91e-448b-a607-499df073be9f","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6724d936-914c-42e8-976f-0097f965b3b1","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -200,12 +203,13 @@
             {"id":"9d0c2f78-1aba-43fb-9f6c-9c215bae8587","Key":33.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"17cf96cb-a0fb-4a57-866a-8c4e08db5582","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8d7e80fb-7580-495b-8f00-e53c2199d341","Key":34.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"913ac76d-4484-4ebd-aa22-46ca109b2e98","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8e85aa5c-f093-4e4d-883b-7e74a40fdf7e","Key":35.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"173d73a8-992f-4c86-ada3-89f4ff7dbd60","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"9cb7c363-e1a3-45c1-93d4-6dce89dbb3fc","Key":36.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"70dc8bf2-fb2e-49dd-9cef-0cb15c66e108","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"8648c151-8b2d-4918-9727-d52a94b31dec","Key":37.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"67c668bc-c411-4775-8adc-902fe6c4e730","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"5aeb9e93-3c9e-45ec-82a4-52a6f1b7866c","Key":38.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d8e28d41-d929-4443-bfb0-68ee6599290f","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"657461ad-5ee1-4800-aa41-6b49240b3e50","Key":39.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f6cdd500-fdde-4086-a873-198ed2dc4926","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"b63d36e0-bbe5-4ff2-9b00-f86bc29fd4de","Key":40.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d3bf25bd-0bf4-4e36-af68-e1f4a73d186d","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"09a82e75-94f7-48fd-8b91-9adc9bbb8c01","Key":41.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"29762926-3ba0-4d16-8d4a-630ea98faedd","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"8648c151-8b2d-4918-9727-d52a94b31dec","Key":36.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"67c668bc-c411-4775-8adc-902fe6c4e730","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"5aeb9e93-3c9e-45ec-82a4-52a6f1b7866c","Key":37.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d8e28d41-d929-4443-bfb0-68ee6599290f","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"657461ad-5ee1-4800-aa41-6b49240b3e50","Key":38.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f6cdd500-fdde-4086-a873-198ed2dc4926","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b63d36e0-bbe5-4ff2-9b00-f86bc29fd4de","Key":39.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d3bf25bd-0bf4-4e36-af68-e1f4a73d186d","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"09a82e75-94f7-48fd-8b91-9adc9bbb8c01","Key":40.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"29762926-3ba0-4d16-8d4a-630ea98faedd","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"8dbcc25a-f2df-40b6-8063-f7fd7073f30e","Key":41.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"847be1f2-819f-4f84-82d4-44a41b3aaf5d","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f2b10404-6ba9-4c09-bbde-faf49f3e834c","Key":42.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f802e4f4-ae59-4252-b733-23ec7c628bf5","path":"sprites/spr_Food/spr_Food.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -218,8 +222,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 8,
-    "yorigin": 8,
+    "xorigin": 12,
+    "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Food","path":"sprites/spr_Food/spr_Food.yy",},

@@ -30,7 +30,7 @@ wallAbove = false;
 if (place_meeting(x,y - 1,obj_ParentWall))
 {
 	var collidingWall = instance_place(x,y - 1,obj_ParentWall);
-	if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal)))) wallAbove = true;
+	if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + collidingWall.vsp + 20 + vspFinal)))) wallAbove = true;
 }
 
 scr_Player_Inputs(player);
@@ -51,7 +51,7 @@ if ((clampToView) and (!death))
 
 if ((((player == 0) and (global.hpP1 == 0)) or ((player == 1) and (global.hpP2 == 0))) and (!death))
 {
-	if ((global.goldenTomato) and (!global.gambleMaykr))
+	if ((global.goldenTomato) and (global.gamemode != gamemodes.maykr))
 	{
 		if (audio_is_playing(snd_Charge_Ready)) audio_stop_sound(snd_Charge_Ready);
 		audio_play_sound(snd_Charge_Ready,0,false);
@@ -70,6 +70,7 @@ if ((((player == 0) and (global.hpP1 == 0)) or ((player == 1) and (global.hpP2 =
 		audio_stop_all();
 		if (instance_exists(obj_Music)) instance_destroy(obj_Music);
 		audio_play_sound(snd_Hurt,0,false);
+		global.healthbarMarkedEnemy = -1;
 		death = true;
 		global.pause = true;
 		if (instance_exists(obj_Camera)) obj_Camera.freezeFrameTimer = -1;
@@ -103,6 +104,22 @@ if (!global.pause)
 		if (movingWall.hsp != 0) x += movingWall.hsp;
 	}
 	*/
+	
+	//In Background
+	
+	scale = lerp(scale,1 - (inBackground / 2),.02);
+	
+	if (inBackground)
+	{
+		collisionX = obj_BackgroundWall;
+		collisionY = obj_BackgroundWall;
+	}
+	else
+	{
+		collisionX = obj_ParentWall;
+		collisionY = obj_ParentWall;
+	}
+	
 	//Abilities
 	
 	switch (playerAbility)
@@ -148,6 +165,7 @@ if (!global.pause)
 			{
 				var aura = instance_create_depth(x,y - 4,depth - 1,obj_Projectile_SparkAura);
 				aura.owner = id;
+				aura.abilityType = playerAbilities.spark;
 				aura.sprite_index = spr_Particle_SparkAura;
 				aura.dmg = 6;
 			}
@@ -382,115 +400,127 @@ switch (state)
 	//Normal
 	
     case (playerStates.normal):
-	scr_Player_Normal();
+	scr_Player_States_Normal();
 	break;
 	
 	//Slide
 	
     case (playerStates.slide):
-	scr_Player_Slide();
+	scr_Player_States_Slide();
 	break;
 	
 	//Float
 	
     case (playerStates.float):
-	scr_Player_Float();
+	scr_Player_States_Float();
 	break;
 	
 	//Climb
 	
     case (playerStates.climb):
-	scr_Player_Climb();
+	scr_Player_States_Climb();
 	break;
 	
 	//Enter
 	
     case (playerStates.enter):
-	scr_Player_Enter();
+	scr_Player_States_Enter();
 	break;
 	
 	//Inhale
 	
     case (playerStates.inhale):
-	scr_Player_Inhale();
+	scr_Player_States_Inhale();
 	break;
 	
 	//Carry
 	
     case (playerStates.carry):
-	scr_Player_Carry();
+	scr_Player_States_Carry();
 	break;
 	
 	//Swallow
 	
     case (playerStates.swallow):
-	scr_Player_Swallow();
+	scr_Player_States_Swallow();
 	break;
 	
 	//Cutter Dash
 	
     case (playerStates.cutterDash):
-	scr_Player_CutterDash();
+	scr_Player_States_CutterDash();
 	break;
 	
 	//Cutter Drop
 	
     case (playerStates.cutterDrop):
-	scr_Player_CutterDrop();
+	scr_Player_States_CutterDrop();
 	break;
 	
 	//Beam Grab
 	
     case (playerStates.beamGrab):
-	scr_Player_BeamGrab();
+	scr_Player_States_BeamGrab();
 	break;
 	
 	//Mystic Beam Grab
 	
     case (playerStates.mysticBeamGrab):
-	scr_Player_MysticBeamGrab();
+	scr_Player_States_MysticBeamGrab();
 	break;
 	
 	//Mirror Dash
 	
     case (playerStates.mirrorDash):
-	scr_Player_MirrorDash();
+	scr_Player_States_MirrorDash();
 	break;
 	
 	//Fire Dash
 	
     case (playerStates.fireDash):
-	scr_Player_FireDash();
+	scr_Player_States_FireDash();
 	break;
 	
 	//Ice Grab
 	
     case (playerStates.iceGrab):
-	scr_Player_IceGrab();
+	scr_Player_States_IceGrab();
+	break;
+	
+	//Yoyo Dash
+	
+    case (playerStates.yoyoDash):
+	scr_Player_States_YoyoDash();
 	break;
 	
 	//Wheel Normal
 	
     case (playerStates.wheelNormal):
-	scr_Player_WheelNormal();
+	scr_Player_States_WheelNormal();
 	break;
 	
 	//Wing Dash
 	
     case (playerStates.wingDash):
-	scr_Player_WingDash();
+	scr_Player_States_WingDash();
 	break;
 	
 	//Sword Dash
 	
     case (playerStates.swordDash):
-	scr_Player_SwordDash();
+	scr_Player_States_SwordDash();
+	break;
+	
+	//Parasol Dash
+	
+    case (playerStates.parasolDash):
+	scr_Player_States_ParasolDash();
 	break;
 	
 	//Death
 	
     case (playerStates.death):
-	scr_Player_Death();
+	scr_Player_States_Death();
 	break;
 }
 
@@ -513,7 +543,7 @@ if (keySelectPressed)
 			}
 			var abilityDropStar = instance_create_depth(round(x),round(y - 6),depth + 1,obj_AbilityDropStar);
 			abilityDropStar.owner = id;
-			abilityDropStar.hsp = -dir;
+			abilityDropStar.hsp = -dir * 1.5;
 			abilityDropStar.vsp = -abilityDropStar.jumpspeed;
 			abilityDropStar.dir = -image_xscale;
 			abilityDropStar.player = player;
@@ -840,7 +870,7 @@ if (!global.pause)
 			if ((place_meeting(x,y + 1,obj_ParentWall)) and (abs(hsp) >= (movespeedRun * .25)))
 			{
 				var collidingWall = instance_place(x,y + 1,obj_ParentWall);
-				if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + 20 + vspFinal))))
+				if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + collidingWall.vsp + 20 + vspFinal))))
 				{
 					var parCarryStart = instance_create_depth(x + (16 * -dir),y + 16,depth + 1,obj_Particle);
 					parCarryStart.sprite_index = spr_Particle_Run;
@@ -947,7 +977,7 @@ if (!global.pause)
 	
 	//Beam Attack 2 Timer
 	
-	if ((attack) and (attackNumber = playerAttacks.beamAir))
+	if ((attack) and (attackNumber == playerAttacks.beamAir))
 	{
 		if (beamAttack2Timer > 0)
 		{
@@ -958,6 +988,7 @@ if (!global.pause)
 			var projBeam = instance_create_depth(x + (15 * dir),y + 10,depth,obj_Projectile_Beam);
 			projBeam.imageSpeed = 1;
 			projBeam.owner = id;
+			projBeam.abilityType = playerAbilities.beam;
 			projBeam.player = player;
 			projBeam.dmg = 8 + (10 * beamAttack2FirstHit);
 		    projBeam.dirX = -dir;
@@ -1019,6 +1050,7 @@ if (!global.pause)
 			var projBeam = instance_create_depth(x + (23 * dir),y - 8,depth,obj_Projectile_Beam);
 			projBeam.imageSpeed = 1;
 			projBeam.owner = id;
+			projBeam.abilityType = playerAbilities.beam;
 			projBeam.player = player;
 			projBeam.dmg = 21;
 		    projBeam.dirX = dir;
@@ -1056,6 +1088,7 @@ if (!global.pause)
 			var projBeam = instance_create_depth(x + (23 * dir),y - 8,depth,obj_Projectile_Beam);
 			projBeam.imageSpeed = 1;
 			projBeam.owner = id;
+			projBeam.abilityType = playerAbilities.mysticBeam;
 			projBeam.player = player;
 			projBeam.dmg = 21;
 		    projBeam.dirX = dir;
@@ -1094,6 +1127,7 @@ if (!global.pause)
 			projBeam.character = 7;
 			projBeam.sprite_index = spr_Projectile_MysticBeam_Air;
 			projBeam.owner = id;
+			projBeam.abilityType = playerAbilities.mysticBeam;
 			projBeam.player = player;
 			projBeam.dmg = 18;
 		    projBeam.dirX = -dir;
@@ -1162,6 +1196,7 @@ if (!global.pause)
 		stoneMaskProj.vsp = vsp;
 		stoneMaskProj.enemy = false;
 		stoneMaskProj.owner = id;
+		stoneMaskProj.abilityType = playerAbilities.stone;
 		stoneMaskProj.hitInvincibility = stoneMaskProj.hitInvincibilityMax;
 		stoneMaskProj.image_xscale = image_xscale;
 		stoneMaskProj.image_yscale = image_yscale;
@@ -1305,6 +1340,7 @@ if (!global.pause)
 		stoneFistMaskProj.yPos = -10;
 		stoneFistMaskProj.enemy = false;
 		stoneFistMaskProj.owner = id;
+		stoneFistMaskProj.abilityType = playerAbilities.stone;
 		stoneFistMaskProj.image_xscale = image_xscale;
 		stoneFistMaskProj.image_yscale = image_yscale;
 	    stoneFistReadyTimer = -1;
@@ -1342,6 +1378,7 @@ if (!global.pause)
 		par.destroyTimer = 1;
 		var projectile = instance_create_depth(x + (24 * dir),y - 6,depth - 1,obj_Projectile_Mirror);
 		projectile.owner = id;
+		projectile.abilityType = playerAbilities.mirror;
 		projectile.dmg = 4;
 		if (mirrorFirstAttack)
 		{
@@ -1419,6 +1456,7 @@ if (!global.pause)
 		audio_play_sound(snd_Fire2,0,false);
 		var projectile = instance_create_depth(x + (10 * dir),y - 2,depth - 1,obj_Projectile_Fire);
 		projectile.owner = id;
+		projectile.abilityType = playerAbilities.fire;
 		projectile.imageSpeed = 1 - (fireMagicCharcoalUpgrade / 4);
 		projectile.dmg = 6;
 		projectile.sprite_index = projectile.sprIdle;
@@ -1466,6 +1504,7 @@ if (!global.pause)
 		audio_play_sound(snd_Ice,0,false);
 		var projectile = instance_create_depth(x + (14 * dir),y - 6,depth - 1,obj_Projectile_Ice);
 		projectile.owner = id;
+		projectile.abilityType = playerAbilities.ice;
 		projectile.dmg = 6;
 		projectile.sprite_index = projectile.sprIdle;
 		projectile.dirX = dir;
@@ -1660,7 +1699,7 @@ if (setupTimer > 0)
 }
 else if (setupTimer == 0)
 {
-	if (!global.gambleMaykr)
+	if (global.gamemode != gamemodes.maykr)
 	{
 		if ((playerFamiliar != "none") and ((playerFamiliar == "Gamble") + (playerCharacter = playerCharacters.gamble) != 2))
 		{
@@ -1716,14 +1755,18 @@ else if (characterSetupTimer == 0)
 	switch (selectedCharacter)
 	{
 		case playerCharacters.kirby:
+		var skin = global.skinKirbyP1;
+		if (player == 1) skin = global.skinKirbyP2;
+		
 		if (player == 0)
 		{
-			global.sprayPaintP1 = global.sprayPaintKirbyP1;
+			global.sprayPaintP1 = scr_Player_SprayPaint(global.sprayPaintKirbyP1,playerCharacters.kirby,skin);
 		}
 		else
 		{
-			global.sprayPaintP2 = global.sprayPaintKirbyP2;
+			global.sprayPaintP2 = scr_Player_SprayPaint(global.sprayPaintKirbyP2,playerCharacters.kirby,skin);
 		}
+		
 		gravNormal = .23;
 		gravStone = .7;
 		grav = gravNormal;
@@ -1899,6 +1942,11 @@ else if (characterSetupTimer == 0)
 		sprStoneAttack2 = spr_Kirby_Normal_Stone_Attack2;
 		sprStoneAttack2Release = spr_Kirby_Normal_Stone_Attack2Release;
 		sprUfoIdle = spr_Kirby_Normal_Ufo_Idle;
+		sprUfoUp = spr_Kirby_Normal_Ufo_Up;
+		sprUfoDown = spr_Kirby_Normal_Ufo_Down;
+		sprUfoCharge = spr_Kirby_Normal_Ufo_Charge;
+		sprUfoAttack1 = spr_Kirby_Normal_Ufo_Attack1;
+		sprUfoAttack2 = spr_Kirby_Normal_Ufo_Attack2;
 		sprMirrorDash = spr_Kirby_Normal_Mirror_Dash;
 		sprMirrorAttack1 = spr_Kirby_Normal_Mirror_Attack1;
 		sprMirrorAttack2 = spr_Kirby_Normal_Mirror_Attack2;
@@ -1932,7 +1980,7 @@ else if (characterSetupTimer == 0)
 		sprSparkMaxChargeNormalSlopeL = spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeL;
 		sprSparkMaxChargeNormalSlopeR = spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR;
 		sprSparkMaxChargeSteepSlopeL = spr_Kirby_Normal_Spark_MaxCharge_SteepSlopeL;
-		sprSparkMaxChargeSteepSlopeR = spr_Kirby_Normal_Spark_MaxCharge_SteepSlopeR
+		sprSparkMaxChargeSteepSlopeR = spr_Kirby_Normal_Spark_MaxCharge_SteepSlopeR;
 		sprSparkAttack1Ready = spr_Kirby_Normal_Spark_Attack1Ready;
 		sprSparkAttack1 = spr_Kirby_Normal_Spark_Attack1;
 		sprSparkAttack2Ready = spr_Kirby_Normal_Spark_Attack2Ready;
@@ -1955,13 +2003,16 @@ else if (characterSetupTimer == 0)
 		break;
 		
 		case playerCharacters.gamble:
+		var skin = global.skinGambleP1;
+		if (player == 1) skin = global.skinGambleP2;
+		
 		if (player == 0)
 		{
-			global.sprayPaintP1 = global.sprayPaintKirbyP1;
+			global.sprayPaintP1 = scr_Player_SprayPaint(global.sprayPaintGambleP1,playerCharacters.gamble,skin);
 		}
 		else
 		{
-			global.sprayPaintP2 = global.sprayPaintKirbyP2;
+			global.sprayPaintP2 = scr_Player_SprayPaint(global.sprayPaintGambleP2,playerCharacters.gamble,skin);
 		}
 		
 		gravNormal = .23;
@@ -2030,6 +2081,15 @@ else if (characterSetupTimer == 0)
 		case playerCharacters.gooey:
 		var skin = global.skinGooeyP1;
 		if (player == 1) skin = global.skinGooeyP2;
+		
+		if (player == 0)
+		{
+			global.sprayPaintP1 = scr_Player_SprayPaint(global.sprayPaintGooeyP1,playerCharacters.gooey,skin);
+		}
+		else
+		{
+			global.sprayPaintP2 = scr_Player_SprayPaint(global.sprayPaintGooeyP2,playerCharacters.gooey,skin);
+		}
 		
 		#region Physics
 		gravNormal = .23;
@@ -2827,11 +2887,11 @@ else if (characterSetupTimer == 0)
 			#region Palettes
 			var pal;
 			var i = 0;
-			pal[i] = spr_SirKibble_Normal_Palette_KnightlyPink;
+			pal[i] = spr_SirKibble_Normal_Palette_Yellow;
 			i += 1;
 			pal[i] = spr_SirKibble_Normal_Palette_Black;
 			i += 1;
-			pal[i] = spr_SirKibble_Normal_Palette_Gold;
+			pal[i] = spr_SirKibble_Normal_Palette_KnightlyPink;
 			i += 1;
 			pal[i] = spr_SirKibble_Normal_Palette_Green;
 			i += 1;
@@ -2841,7 +2901,7 @@ else if (characterSetupTimer == 0)
 			i += 1;
 			pal[i] = spr_SirKibble_Normal_Palette_Titanium;
 			i += 1;
-			pal[i] = spr_SirKibble_Normal_Palette_Yellow;
+			pal[i] = spr_SirKibble_Normal_Palette_Gold;
 			#endregion
 			
 			#region Sprites
@@ -3045,6 +3105,24 @@ else if (characterSetupTimer == 0)
 			var pal;
 			var i = 0;
 			pal[i] = spr_Gordo_Normal_Palette_ThornyBackside;
+			i += 1;
+			pal[i] = spr_Gordo_Normal_Palette_DarkMetal;
+			i += 1;
+			pal[i] = spr_Gordo_Normal_Palette_Silver;
+			i += 1;
+			pal[i] = spr_Gordo_Normal_Palette_Golden;
+			i += 1;
+			pal[i] = spr_Gordo_Normal_Palette_Nuclear;
+			i += 1;
+			pal[i] = spr_Gordo_Normal_Palette_Crimson;
+			i += 1;
+			pal[i] = spr_Gordo_Normal_Palette_Orange;
+			i += 1;
+			pal[i] = spr_Gordo_Normal_Palette_Crystal;
+			i += 1;
+			pal[i] = spr_Gordo_Normal_Palette_Lunar;
+			i += 1;
+			pal[i] = spr_Gordo_Normal_Palette_Vintage;
 			#endregion
 			
 			#region Sprites
@@ -3225,7 +3303,7 @@ else if (deathTimer == 0)
 	par.pausable = false;
 	global.abilityP1 = playerAbilities.none;
 	var musDeath = mus_Death1;
-	if ((global.playerLives <= 0) and (!global.gambleMaykr)) musDeath = mus_Death2;
+	if ((global.playerLives <= 0) and (global.gamemode != gamemodes.maykr)) musDeath = mus_Death2;
 	audio_play_sound(musDeath,0,false);
 	deathParticleTimer = deathParticleTimerMax;
 	deathRestartTimer = deathRestartTimerMax;
@@ -3267,7 +3345,7 @@ if (deathRestartTimer > 0)
 }
 else if (deathRestartTimer == 0)
 {
-	if (!global.gambleMaykr)
+	if (global.gamemode != gamemodes.maykr)
 	{
 		var fadeTrans = instance_create_depth(0,0,-999,obj_Fade);
 		fadeTrans.targetRoom = global.roomCheckpoint;

@@ -25,7 +25,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.cutter_kssu:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -243,7 +243,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.beam_kssu:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -439,7 +439,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 				}
 				break;
 				
-				case "marxSoul":
+				case abilityHatSkins.beam_marxSoul:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -653,7 +653,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.mysticBeam_ggs:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -839,7 +839,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.stone_kssu:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -1023,7 +1023,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 				}
 				break;
 				
-				case "modern":
+				case abilityHatSkins.stone_modern:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -1225,11 +1225,31 @@ function scr_Player_AbilityHat(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "modern":
+				case abilityHatSkins.ufo_modern:
 				switch (sprite_index)
 				{
 					case sprUfoIdle:
 					abilityHatIndex = spr_Kirby_AbilityHat_Ufo_Modern_Idle;
+					break;
+					
+					case sprUfoUp:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ufo_Modern_Up;
+					break;
+					
+					case sprUfoDown:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ufo_Modern_Down;
+					break;
+					
+					case sprUfoCharge:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ufo_Modern_Charge;
+					break;
+					
+					case sprUfoAttack1:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ufo_Modern_Attack1;
+					break;
+					
+					case sprUfoAttack2:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ufo_Modern_Attack2;
 					break;
 					
 					default:
@@ -1256,7 +1276,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.mirror_kssu:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -1444,7 +1464,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 				}
 				break;
 				
-				case "modern":
+				case abilityHatSkins.mirror_modern:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -1650,7 +1670,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.ninja_kssu:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -1830,7 +1850,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 				}
 				break;
 				
-				case "modern":
+				case abilityHatSkins.ninja_modern:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -2028,7 +2048,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.bomb_kssu:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -2234,7 +2254,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 				}
 				break;
 				
-				case "modern":
+				case abilityHatSkins.bomb_modern:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -2458,7 +2478,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.fire_kssu:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -2656,7 +2676,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.mysticFire_ggs:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -2834,7 +2854,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.ice_kssu:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -3022,7 +3042,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 				}
 				break;
 				
-				case "snowman":
+				case abilityHatSkins.ice_snowman:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -3200,7 +3220,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.spark_kssu:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -3410,7 +3430,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 				
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.yoyo_kssu:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -3596,7 +3616,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 				
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.wheel_kssu:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -3782,7 +3802,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 				
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.artist_kssu:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -3950,7 +3970,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 				}
 				break;
 				
-				case "modern":
+				case abilityHatSkins.artist_modern:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -4026,7 +4046,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.fighter_kssu:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -4200,7 +4220,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.suplex_kssu:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -4374,7 +4394,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.wing_kssu:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -4536,7 +4556,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.jet_kssu:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -4686,7 +4706,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "modern":
+				case abilityHatSkins.bell_modern:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -4876,7 +4896,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "modern":
+				case abilityHatSkins.water_modern:
 				switch (sprite_index)
 				{
 					case sprIdle:
@@ -4911,7 +4931,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.sleep_kssu:
 				switch (sprite_index)
 				{
 					case sprSleepReady:
@@ -4950,7 +4970,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 			
 			switch (altHatToCheck)
 			{
-				case "kssu":
+				case abilityHatSkins.scan_kssu:
 				switch (sprite_index)
 				{
 					case sprScanReady:

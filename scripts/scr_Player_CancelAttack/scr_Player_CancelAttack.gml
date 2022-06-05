@@ -32,7 +32,7 @@ function scr_Player_CancelAttack(argument0)
 			with (obj_Projectile_Beam) if ((state == 0) and (owner == other.id)) instance_destroy();
 			case playerAttacks.beamAir:
 			case playerAttacks.beamUp:
-			audio_stop_sound(sndBeam);
+			if (audio_is_playing(sndBeam)) audio_stop_sound(sndBeam);
 			beamAttack2Timer = -1;
 			break;
 			

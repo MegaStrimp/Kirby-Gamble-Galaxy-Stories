@@ -29,7 +29,7 @@ if (!global.pause)
 	checkEnemySpawners = true;
 	with (obj_Enemy) if ((id != other.id) and (spawner == other.spawner)) other.checkEnemySpawners = false;
 	
-	if (((destroyOutsideView) or (hasSpawner)) and (checkEnemySpawners))
+	if ((destroyOutsideView) or (hasSpawner))
 	{
 		var x1 = camera_get_view_x(gameView) - spawnerRange;
 		var y1 = camera_get_view_y(gameView) - spawnerRange;
@@ -38,7 +38,7 @@ if (!global.pause)
 		
 		if (!point_in_rectangle(x,y,x1,y1,x2,y2))
 		{
-			if (hasSpawner) spawner.spawn = true;
+			if ((checkEnemySpawners) and (hasSpawner)) spawner.spawn = true;
 			if (instance_exists(parasolObject)) instance_destroy(parasolObject);
 			instance_destroy();
 		}
@@ -210,7 +210,7 @@ if (!global.pause)
 				}
 			}
 		}
-		if (!global.gambleMaykr) global.points += points;
+		if (global.gamemode != gamemodes.maykr) global.points += points;
 		
 		checkEnemySpawners = true;
 		with (obj_Enemy) if ((id != other.id) and (spawner == other.spawner)) other.checkEnemySpawners = false;
@@ -852,10 +852,139 @@ if (!global.pause)
 					}
 					else
 					{
-						if ((!other.isMiniBoss) or (!other.isBoss)) global.healthbarMarkedEnemy = other.id;
 						other.hurtTimer = other.hurtTimerMax;
 					}
+					if ((!other.isMiniBoss) or (!other.isBoss)) global.healthbarMarkedEnemy = other.id;
 					other.hp -= dmg;
+					if (other.hp <= 0)
+					{
+						switch (abilityType)
+						{
+							case playerAbilities.cutter:
+							global.cutterAbilityKills += 1;
+							break;
+	
+							case playerAbilities.beam:
+							global.beamAbilityKills += 1;
+							break;
+	
+							case playerAbilities.mysticBeam:
+							global.mysticBeamAbilityKills += 1;
+							break;
+	
+							case playerAbilities.stone:
+							global.stoneAbilityKills += 1;
+							break;
+	
+							case playerAbilities.ufo:
+							global.ufoAbilityKills += 1;
+							break;
+	
+							case playerAbilities.mirror:
+							global.mirrorAbilityKills += 1;
+							break;
+	
+							case playerAbilities.ninja:
+							global.ninjaAbilityKills += 1;
+							break;
+	
+							case playerAbilities.bomb:
+							global.bombAbilityKills += 1;
+							break;
+	
+							case playerAbilities.fire:
+							global.fireAbilityKills += 1;
+							break;
+	
+							case playerAbilities.mysticFire:
+							global.mysticFireAbilityKills += 1;
+							break;
+	
+							case playerAbilities.ice:
+							global.iceAbilityKills += 1;
+							break;
+	
+							case playerAbilities.spark:
+							global.sparkAbilityKills += 1;
+							break;
+	
+							case playerAbilities.yoyo:
+							global.yoyoAbilityKills += 1;
+							break;
+	
+							case playerAbilities.wheel:
+							global.wheelAbilityKills += 1;
+							break;
+	
+							case playerAbilities.artist:
+							global.artistAbilityKills += 1;
+							break;
+	
+							case playerAbilities.fighter:
+							global.fighterAbilityKills += 1;
+							break;
+	
+							case playerAbilities.suplex:
+							global.suplexAbilityKills += 1;
+							break;
+	
+							case playerAbilities.wing:
+							global.wingAbilityKills += 1;
+							break;
+	
+							case playerAbilities.jet:
+							global.jetAbilityKills += 1;
+							break;
+	
+							case playerAbilities.sword:
+							global.swordAbilityKills += 1;
+							break;
+	
+							case playerAbilities.parasol:
+							global.parasolAbilityKills += 1;
+							break;
+	
+							case playerAbilities.hammer:
+							global.hammerAbilityKills += 1;
+							break;
+	
+							case playerAbilities.bell:
+							global.bellAbilityKills += 1;
+							break;
+	
+							case playerAbilities.water:
+							global.waterAbilityKills += 1;
+							break;
+	
+							case playerAbilities.sleep:
+							global.sleepAbilityKills += 1;
+							break;
+	
+							case playerAbilities.scan:
+							global.scanAbilityKills += 1;
+							break;
+	
+							case playerAbilities.crash:
+							global.crashAbilityKills += 1;
+							break;
+	
+							case playerAbilities.mic:
+							global.micAbilityKills += 1;
+							break;
+	
+							case playerAbilities.chef:
+							global.chefAbilityKills += 1;
+							break;
+	
+							case playerAbilities.ultraSword:
+							global.ultraSwordAbilityKills += 1;
+							break;
+	
+							case playerAbilities.cosmicBlade:
+							global.cosmicBladeAbilityKills += 1;
+							break;
+						}
+					}
 					other.shakeX = 2;
 					other.shakeY = 2;
 					other.direction = point_direction(other.x,other.y,x,y) + irandom_range(150,210);

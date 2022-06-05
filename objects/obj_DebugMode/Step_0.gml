@@ -273,6 +273,20 @@ if (keyboard_check_pressed(ord("J")))
 }
 #endregion
 
+#region Set The Hud
+if (keyboard_check_pressed(vk_f1))
+{
+	if (instance_exists(obj_Hud))
+	{
+		instance_destroy(obj_Hud);
+	}
+	else
+	{
+		instance_create_depth(x,y,-997,obj_Hud);
+	}
+}
+#endregion
+
 #region Zoom
 if (instance_exists(obj_Camera))
 {
@@ -300,9 +314,9 @@ if (instance_exists(obj_Camera))
 #endregion
 
 #region Room Speed
-if ((room_speed > 10) and (keyboard_check_pressed(ord("T")))) room_speed -= 10;
+if ((room_speed > 10) and (keyboard_check(ord("T")))) room_speed -= .2;
 if (keyboard_check_pressed(ord("Y"))) room_speed = 60;
-if (keyboard_check_pressed(ord("U"))) room_speed += 10;
+if (keyboard_check(ord("U"))) room_speed += .2;
 #endregion
 
 #region Selected
@@ -2068,7 +2082,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			switch (debugPaletteNumber)
 			{
 				case 0:
-				debugPaletteIndex = spr_SirKibble_Normal_Palette_KnightlyPink;
+				debugPaletteIndex = spr_SirKibble_Normal_Palette_Yellow;
 				break;
 				
 				case 1:
@@ -2076,7 +2090,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 				break;
 				
 				case 2:
-				debugPaletteIndex = spr_SirKibble_Normal_Palette_Gold;
+				debugPaletteIndex = spr_SirKibble_Normal_Palette_KnightlyPink;
 				break;
 				
 				case 3:
@@ -2096,11 +2110,11 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 				break;
 				
 				case 7:
-				debugPaletteIndex = spr_SirKibble_Normal_Palette_Yellow;
+				debugPaletteIndex = spr_SirKibble_Normal_Palette_Gold;
 				break;
 				
 				default:
-				debugPaletteIndex = spr_SirKibble_Normal_Palette_KnightlyPink;
+				debugPaletteIndex = spr_SirKibble_Normal_Palette_Yellow;
 				break;
 			}
 			break;
@@ -2142,11 +2156,47 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			case 0:
 			var sprIdle = spr_Gordo_Normal_Idle;
 			var sprHurt = -1;
-			debugPaletteNumberMax = 0;
+			debugPaletteNumberMax = 9;
 			switch (debugPaletteNumber)
 			{
 				case 0:
 				debugPaletteIndex = spr_Gordo_Normal_Palette_ThornyBackside;
+				break;
+				
+				case 1:
+				debugPaletteIndex = spr_Gordo_Normal_Palette_DarkMetal;
+				break;
+				
+				case 2:
+				debugPaletteIndex = spr_Gordo_Normal_Palette_Silver;
+				break;
+				
+				case 3:
+				debugPaletteIndex = spr_Gordo_Normal_Palette_Golden;
+				break;
+				
+				case 4:
+				debugPaletteIndex = spr_Gordo_Normal_Palette_Nuclear;
+				break;
+				
+				case 5:
+				debugPaletteIndex = spr_Gordo_Normal_Palette_Crimson;
+				break;
+				
+				case 6:
+				debugPaletteIndex = spr_Gordo_Normal_Palette_Orange;
+				break;
+				
+				case 7:
+				debugPaletteIndex = spr_Gordo_Normal_Palette_Crystal;
+				break;
+				
+				case 8:
+				debugPaletteIndex = spr_Gordo_Normal_Palette_Lunar;
+				break;
+				
+				case 9:
+				debugPaletteIndex = spr_Gordo_Normal_Palette_Vintage;
 				break;
 				
 				default:
@@ -2285,11 +2335,39 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var sprWalk = spr_MysticDoo_Normal_Walk;
 			var sprWalkIdle = spr_MysticDoo_Normal_WalkIdle;
 			var sprHurt = spr_MysticDoo_Normal_Hurt;
-			debugPaletteNumberMax = 0;
+			debugPaletteNumberMax = 7;
 			switch (debugPaletteNumber)
 			{
 				case 0:
 				debugPaletteIndex = spr_MysticDoo_Normal_Palette_CorruptedTwilight;
+				break;
+				
+				case 1:
+				debugPaletteIndex = spr_MysticDoo_Normal_Palette_PalePurple;
+				break;
+				
+				case 2:
+				debugPaletteIndex = spr_MysticDoo_Normal_Palette_DarkFlux;
+				break;
+				
+				case 3:
+				debugPaletteIndex = spr_MysticDoo_Normal_Palette_DarkSide;
+				break;
+				
+				case 4:
+				debugPaletteIndex = spr_MysticDoo_Normal_Palette_NeutralWaddle;
+				break;
+				
+				case 5:
+				debugPaletteIndex = spr_MysticDoo_Normal_Palette_Puffball;
+				break;
+				
+				case 6:
+				debugPaletteIndex = spr_MysticDoo_Normal_Palette_IcyBlue;
+				break;
+				
+				case 7:
+				debugPaletteIndex = spr_MysticDoo_Normal_Palette_SwingTrap;
 				break;
 				
 				default:
@@ -3973,15 +4051,19 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var sprWalk = spr_Simirror_Normal_Walk;
 			var sprAttack = spr_Simirror_Normal_Attack;
 			var sprHurt = spr_Simirror_Normal_Hurt;
-			debugPaletteNumberMax = 0;
+			debugPaletteNumberMax = 1;
 			switch (debugPaletteNumber)
 			{
 				case 0:
-				debugPaletteIndex = spr_Blado_Normal_Palette_BrownBlades;
+				debugPaletteIndex = spr_Simirror_Normal_Palette_MagicalOrange;
+				break;
+				
+				case 1:
+				debugPaletteIndex = spr_Simirror_Normal_Palette_SimilarGreen;
 				break;
 				
 				default:
-				debugPaletteIndex = spr_Blado_Normal_Palette_BrownBlades;
+				debugPaletteIndex = spr_Simirror_Normal_Palette_MagicalOrange;
 				break;
 			}
 			break;
@@ -4029,15 +4111,27 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var sprHandFlingUp = spr_GimHand_Normal_FlingUp;
 			var sprHandHoldClose = spr_GimHand_Normal_HoldClose;
 			var sprHandHoldAway = spr_GimHand_Normal_HoldAway;
-			debugPaletteNumberMax = 0;
+			debugPaletteNumberMax = 3;
 			switch (debugPaletteNumber)
 			{
 				case 0:
-				debugPaletteIndex = spr_Blado_Normal_Palette_BrownBlades;
+				debugPaletteIndex = spr_Gim_Normal_Palette_SpinningBrown;
+				break;
+				
+				case 1:
+				debugPaletteIndex = spr_Gim_Normal_Palette_YoyoRobo;
+				break;
+				
+				case 2:
+				debugPaletteIndex = spr_Gim_Normal_Palette_BotBlur;
+				break;
+				
+				case 3:
+				debugPaletteIndex = spr_Gim_Normal_Palette_RedCap;
 				break;
 				
 				default:
-				debugPaletteIndex = spr_Blado_Normal_Palette_BrownBlades;
+				debugPaletteIndex = spr_Gim_Normal_Palette_SpinningBrown;
 				break;
 			}
 			break;
@@ -4203,11 +4297,23 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var sprIdle = spr_Yolky_Normal_Idle;
 			var sprShoot = spr_Yolky_Normal_Shoot;
 			var sprHurt = -1;
-			debugPaletteNumberMax = 0;
+			debugPaletteNumberMax = 3;
 			switch (debugPaletteNumber)
 			{
 				case 0:
 				debugPaletteIndex = spr_Yolky_Normal_Palette_SunnySideUp;
+				break;
+				
+				case 1:
+				debugPaletteIndex = spr_Yolky_Normal_Palette_Aged;
+				break;
+				
+				case 2:
+				debugPaletteIndex = spr_Yolky_Normal_Palette_PinkSliced;
+				break;
+				
+				case 3:
+				debugPaletteIndex = spr_Yolky_Normal_Palette_CenturyEgg;
 				break;
 				
 				default:
@@ -4239,6 +4345,174 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		}
 		break;
 		#endregion
+		
+		#region Wheelie
+		case debugObject.wheelie:
+		debugSpriteSelectedMax = 1;
+		switch (debugSpriteSelected)
+		{
+			#region Normal
+			case 0:
+			var sprIdle = spr_Wheelie_Normal_Idle;
+			var sprDecel1 = spr_Wheelie_Normal_Decel1;
+			var sprDecel2 = spr_Wheelie_Normal_Decel2;
+			var sprHurt = spr_Wheelie_Normal_Hurt;
+			debugPaletteNumberMax = 2;
+			switch (debugPaletteNumber)
+			{
+				case 0:
+				debugPaletteIndex = spr_Wheelie_Normal_Palette_Turbo;
+				break;
+				
+				default:
+				debugPaletteIndex = spr_Wheelie_Normal_Palette_Turbo;
+				break;
+			}
+			break;
+			#endregion
+			
+			#region KSSU
+			case 1:
+			var sprIdle = spr_Wheelie_KSSU_Idle;
+			var sprDecel1 = spr_Wheelie_KSSU_Decel1;
+			var sprDecel2 = spr_Wheelie_KSSU_Decel2;
+			var sprHurt = spr_Wheelie_KSSU_Hurt;
+			debugPaletteNumberMax = 2;
+			switch (debugPaletteNumber)
+			{
+				case 0:
+				debugPaletteIndex = spr_Wheelie_KSSU_Palette_CarbonTire;
+				break;
+				
+				case 1:
+				debugPaletteIndex = spr_Wheelie_KSSU_Palette_RedEye;
+				break;
+				
+				case 2:
+				debugPaletteIndex = spr_Wheelie_KSSU_Palette_Nuclear;
+				break;
+				
+				default:
+				debugPaletteIndex = spr_Wheelie_KSSU_Palette_CarbonTire;
+				break;
+			}
+			break;
+			#endregion
+		}
+		debugSprite = sprIdle;
+		debugIndex = 0;
+		debugStateSelectedMax = 0;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var debugObj = instance_create_layer(x,y,"Enemies",obj_Wheelie);
+			debugObj.character = debugSpriteSelected;
+			debugObj.sprIdle = sprIdle;
+			debugObj.sprDecel1 = sprDecel1;
+			debugObj.sprDecel2 = sprDecel2;
+			debugObj.sprHurt = sprHurt;
+			debugObj.sprite_index = sprIdle;
+			debugObj.paletteIndex = debugPaletteIndex;
+			debugObj.image_xscale = debugXScale;
+			debugObj.dirX = debugXScale;
+			debugObj.walkDirX = debugXScale;
+			debugObj.image_yscale = debugYScale;
+			debugObj.dirY = debugYScale;
+			debugObj.walkDirY = debugYScale;
+			debugObj.state = debugStateSelected;
+		}
+		break;
+		#endregion
+		
+		#region Laser Ball
+		case debugObject.laserBall:
+		debugSpriteSelectedMax = 0;
+		switch (debugSpriteSelected)
+		{
+			#region Normal
+			case 0:
+			var sprIdle = spr_LaserBall_Normal_Idle;
+			var sprFace = spr_LaserBall_Normal_Face;
+			var sprAttack = spr_LaserBall_Normal_Attack;
+			var sprHurt = spr_LaserBall_Normal_Hurt;
+			
+			var sprAura1Idle = spr_LaserBall_Normal_Aura1_Idle;
+			var sprAura1Attack = spr_LaserBall_Normal_Aura1_Attack;
+			var sprAura1Hurt = spr_LaserBall_Normal_Aura1_Hurt;
+			var sprAura2Idle = spr_LaserBall_Normal_Aura2_Idle;
+			var sprAura2Attack = spr_LaserBall_Normal_Aura2_Attack;
+			var sprAura2Hurt = spr_LaserBall_Normal_Aura2_Hurt;
+			var sprAura3Idle = spr_LaserBall_Normal_Aura3_Idle;
+			var sprAura3Attack = spr_LaserBall_Normal_Aura3_Attack;
+			var sprAura3Hurt = spr_LaserBall_Normal_Aura3_Hurt;
+			var sprAura4Idle = spr_LaserBall_Normal_Aura4_Idle;
+			var sprAura4Attack = spr_LaserBall_Normal_Aura4_Attack;
+			var sprAura4Hurt = spr_LaserBall_Normal_Aura4_Hurt;
+			debugPaletteNumberMax = 0;
+			switch (debugPaletteNumber)
+			{
+				case 0:
+				debugPaletteIndex = spr_LaserBall_Normal_Palette_OrangeLaser;
+				break;
+				
+				default:
+				debugPaletteIndex = spr_LaserBall_Normal_Palette_OrangeLaser;
+				break;
+			}
+			break;
+			#endregion
+		}
+		debugSprite = sprIdle;
+		debugIndex = 0;
+		debugStateSelectedMax = 2;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var debugObj = instance_create_layer(x,y,"Enemies",obj_LaserBall);
+			debugObj.character = debugSpriteSelected;
+			debugObj.sprIdle = sprIdle;
+			debugObj.sprFace = sprFace;
+			debugObj.sprAttack = sprAttack;
+			debugObj.sprHurt = sprHurt;
+			debugObj.sprAura1Idle = sprAura1Idle;
+			debugObj.sprAura1Attack = sprAura1Attack;
+			debugObj.sprAura1Hurt = sprAura1Hurt;
+			debugObj.sprAura2Idle = sprAura2Idle;
+			debugObj.sprAura2Attack = sprAura2Attack;
+			debugObj.sprAura2Hurt = sprAura2Hurt;
+			debugObj.sprAura3Idle = sprAura3Idle;
+			debugObj.sprAura3Attack = sprAura3Attack;
+			debugObj.sprAura3Hurt = sprAura3Hurt;
+			debugObj.sprAura4Idle = sprAura4Idle;
+			debugObj.sprAura4Attack = sprAura4Attack;
+			debugObj.sprAura4Hurt = sprAura4Hurt;
+			debugObj.sprAura = sprAura1Idle;
+			debugObj.sprite_index = sprIdle;
+			debugObj.paletteIndex = debugPaletteIndex;
+			debugObj.image_xscale = debugXScale;
+			debugObj.dirX = debugXScale;
+			debugObj.walkDirX = debugXScale;
+			debugObj.image_yscale = debugYScale;
+			debugObj.dirY = debugYScale;
+			debugObj.walkDirY = debugYScale;
+			debugObj.state = debugStateSelected;
+		}
+		break;
+		#endregion
+		
+		#region IM SICK OF THIS GUY
+		case debugObject.IMSICKOFTHISGUY:
+		debugSprite = spr_IMSICKOFTHISGUY;
+		debugSpriteSelectedMax = 0;
+		debugIndex = 0;
+		debugStateSelectedMax = 0;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var debugObj = instance_create_layer(x,y,"Enemies",obj_IMSICKOFTHISGUY);
+			debugObj.image_xscale = debugXScale;
+			debugObj.image_yscale = debugYScale;
+		}
+		break;
+		#endregion
+		
 	}
 }
 #endregion

@@ -5,12 +5,12 @@
 function scr_Player_Hand(argument0)
 {
 	var selectedCharacter = argument0;
-	var handIndex;
+	var handIndex = -1;
 	
-	switch(selectedCharacter)
+	switch (selectedCharacter)
 	{
 		case playerCharacters.kirby:
-		switch(sprite_index)
+		switch (sprite_index)
 		{
 			case sprItemCarryLightIdle:
 			handIndex = spr_Kirby_Normal_ItemCarry_Light_Idle_Hands;
@@ -111,15 +111,7 @@ function scr_Player_Hand(argument0)
 			case sprItemCarryLightFloatSpit:
 			handIndex = spr_Kirby_Normal_ItemCarry_Light_FloatSpit_Hands;
 			break;
-			
-			default:
-			handIndex = -1;
-			break;
 		}
-		break;
-		
-		default:
-		handIndex = -1;
 		break;
 	}
 	return handIndex;

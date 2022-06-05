@@ -16,11 +16,22 @@ draw_set_alpha(1);
 //Draw Text
 
 draw_set_color(c_white);
-draw_set_font(fnt_DialogueDefault);
 draw_set_halign(fa_center);
 
 for (var i = 0; i < array_length(languageIndex); i++)
 {
+	if (i == languages.english)
+	{
+		draw_set_font(fnt_DialogueDefault);
+	}
+	else if ((i == languages.chinese) or (i == languages.japanese))
+	{
+		draw_set_font(global.fontDialogueDefaultKanji);
+	}
+	else
+	{
+		draw_set_font(fnt_DialogueDefaultSpecial);
+	}
 	var col1 = c_white;
 	var col2 = c_white;
 	if (i == selection)

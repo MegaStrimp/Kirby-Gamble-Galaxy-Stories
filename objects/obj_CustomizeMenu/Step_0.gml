@@ -20,12 +20,70 @@ if (!global.pause)
 			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 			audio_play_sound(snd_BossHealth,0,false);
 			selection += 1;
+			canAutoScrollTimer = canAutoScrollTimerMax;
 		}
 		if (keyUpPressed)
 		{
 			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 			audio_play_sound(snd_BossHealth,0,false);
 			selection -= 1;
+			canAutoScrollTimer = canAutoScrollTimerMax;
+		}
+		
+		if (keyLeftPressed)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			selection -= 5;
+			textY = 147 - (selection * 36);
+			canAutoScrollTimer = canAutoScrollTimerMax;
+		}
+		
+		if (keyRightPressed)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			selection += 5;
+			textY = 147 - (selection * 36);
+			canAutoScrollTimer = canAutoScrollTimerMax;
+		}
+		
+		if ((keyUpReleased) or (keyDownReleased) or (keyLeftReleased) or (keyRightReleased))
+		{
+			autoScroll = false;
+			canAutoScrollTimer = -1;
+			autoScrollTimer = -1;
+		}
+		
+		if (autoScroll)
+		{
+			//Auto Scroll Timer
+			
+			if (autoScrollTimer > 0)
+			{
+				autoScrollTimer -= 1;
+			}
+			else if (autoScrollTimer == 0)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				selection += (keyDownHold - keyUpHold) + ((keyRightHold - keyLeftHold) * 5);
+				textY = 147 - (selection * 36);
+				autoScrollTimer = autoScrollTimerMax;
+			}
+		}
+		
+		//Can Auto Scroll Timer
+		
+		if (canAutoScrollTimer > 0)
+		{
+			canAutoScrollTimer -= 1;
+		}
+		else if (canAutoScrollTimer == 0)
+		{
+			autoScroll = true;
+			autoScrollTimer = 0;
+			canAutoScrollTimer = -1;
 		}
 	}
 	
@@ -83,7 +141,7 @@ if (!global.pause)
 		
 		if (goBack)
 		{
-			scr_SaveGame(global.selectedSave);
+			if ((!global.debug) and (global.canSave)) scr_SaveGame(global.selectedSave);
 			var fade = instance_create_depth(x,y,-999,obj_Fade);
 			fade.targetRoom = rm_Collection;
 			goBack = false;
@@ -245,7 +303,7 @@ if (!global.pause)
 		
 		#region Skin Owner
 		case "skinOwner":
-		arrayLength = array_length(characterTitle);
+		arrayLength = array_length(characterValue);
 		for (var i = 0; i < arrayLength; i++) characterOffset[i] = 0;
 		
 		if (selection < 0)
@@ -268,25 +326,35 @@ if (!global.pause)
 				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 				audio_play_sound(snd_ButtonYes,0,false);
 				for (var i = 0; i < arrayLength; i++) characterOffsetLerp[i] = 0;
-				selectedOwner = characterTitle[selection];
+				selectedOwner = characterValue[selection];
 				
 				playerSkin = global.skinKirbyP1;
 				
 				switch (selectedOwner)
 				{
-					case "Kirby":
+					case playerCharacters.kirby:
 					playerSkin = global.skinKirbyP1;
 					if (selectedPlayer == 1) playerSkin = global.skinKirbyP2;
 					break;
 					
-					case "Gamble":
+					case playerCharacters.gamble:
 					playerSkin = global.skinGambleP1;
 					if (selectedPlayer == 1) playerSkin = global.skinGambleP2;
 					break;
 					
-					case "Gooey":
+					case playerCharacters.metaKnight:
+					playerSkin = global.skinMetaKnightP1;
+					if (selectedPlayer == 1) playerSkin = global.skinMetaKnightP2;
+					break;
+					
+					case playerCharacters.gooey:
 					playerSkin = global.skinGooeyP1;
 					if (selectedPlayer == 1) playerSkin = global.skinGooeyP2;
+					break;
+					
+					case playerCharacters.magolor:
+					playerSkin = global.skinMagolorP1;
+					if (selectedPlayer == 1) playerSkin = global.skinMagolorP2;
 					break;
 				}
 				
@@ -347,9 +415,9 @@ if (!global.pause)
 				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 				audio_play_sound(snd_ButtonYes,0,false);
 				playerSkin = characterSkinValue[subSelection][selection];
-				switch (characterTitle[subSelection])
+				switch (characterValue[subSelection])
 				{
-					case "Kirby":
+					case playerCharacters.kirby:
 					if (selectedPlayer == 0)
 					{
 						global.skinKirbyP1 = playerSkin;
@@ -360,7 +428,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Gamble":
+					case playerCharacters.gamble:
 					if (selectedPlayer == 0)
 					{
 						global.skinGambleP1 = playerSkin;
@@ -371,18 +439,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Gooey":
-					if (selectedPlayer == 0)
-					{
-						global.skinGooeyP1 = playerSkin;
-					}
-					else
-					{
-						global.skinGooeyP2 = playerSkin;
-					}
-					break;
-					
-					case "Meta Knight":
+					case playerCharacters.metaKnight:
 					if (selectedPlayer == 0)
 					{
 						global.skinMetaKnightP1 = playerSkin;
@@ -393,25 +450,25 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Keeby":
+					case playerCharacters.gooey:
 					if (selectedPlayer == 0)
 					{
-						global.skinKeebyP1 = playerSkin;
+						global.skinGooeyP1 = playerSkin;
 					}
 					else
 					{
-						global.skinKeebyP2 = playerSkin;
+						global.skinGooeyP2 = playerSkin;
 					}
 					break;
 					
-					case "Prince Fluff":
+					case playerCharacters.magolor:
 					if (selectedPlayer == 0)
 					{
-						global.skinPrinceFluffP1 = playerSkin;
+						global.skinMagolorP1 = playerSkin;
 					}
 					else
 					{
-						global.skinPrinceFluffP2 = playerSkin;
+						global.skinMagolorP2 = playerSkin;
 					}
 					break;
 				}
@@ -446,7 +503,7 @@ if (!global.pause)
 		
 		#region Spray Paint Owner
 		case "sprayPaintOwner":
-		arrayLength = array_length(characterTitle);
+		arrayLength = array_length(characterValue);
 		for (var i = 0; i < arrayLength; i++) characterOffset[i] = 0;
 		
 		if (selection < 0)
@@ -468,34 +525,40 @@ if (!global.pause)
 			{
 				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 				audio_play_sound(snd_ButtonYes,0,false);
-				selectedOwner = characterTitle[selection];
+				selectedOwner = characterValue[selection];
 				
 				var playerPaint = global.sprayPaintKirbyP1;
 				if (selectedPlayer == 1) playerPaint = global.sprayPaintKirbyP2;
-				var characterPaintArray = sprayPaintKirbyNormal;
 				
 				switch (selectedOwner)
 				{
-					case "Kirby":
+					case playerCharacters.kirby:
 					playerPaint = global.sprayPaintKirbyP1;
 					if (selectedPlayer == 1) playerPaint = global.sprayPaintKirbyP2;
-					var characterPaintArray = sprayPaintKirbyNormal;
 					break;
 					
-					case "Gamble":
+					case playerCharacters.gamble:
 					playerPaint = global.sprayPaintGambleP1;
 					if (selectedPlayer == 1) playerPaint = global.sprayPaintGambleP2;
-					var characterPaintArray = sprayPaintGambleNormal;
 					break;
 					
-					case "Gooey":
+					case playerCharacters.metaKnight:
+					playerPaint = global.sprayPaintMetaKnightP1;
+					if (selectedPlayer == 1) playerPaint = global.sprayPaintMetaKnightP2;
+					break;
+					
+					case playerCharacters.gooey:
 					playerPaint = global.sprayPaintGooeyP1;
 					if (selectedPlayer == 1) playerPaint = global.sprayPaintGooeyP2;
-					var characterPaintArray = sprayPaintGooeyNormal;
+					break;
+					
+					case playerCharacters.magolor:
+					playerPaint = global.sprayPaintMagolorP1;
+					if (selectedPlayer == 1) playerPaint = global.sprayPaintMagolorP2;
 					break;
 				}
 				
-				for (var i = 0; i < array_length(characterPaintArray); i++) if (characterPaintArray[i] == playerPaint) selection = i;
+				for (var i = 0; i < array_length(sprayPaintValue); i++) if (sprayPaintValue[i] == playerPaint) selection = i;
 				textY = 147 - (selection * 36);
 				page = "sprayPaint";
 			}
@@ -550,13 +613,62 @@ if (!global.pause)
 			{
 				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 				audio_play_sound(snd_ButtonYes,0,false);
-				if (selectedPlayer == 0)
+				switch (selectedOwner)
 				{
-					global.sprayPaintKirbyP1 = sprayPaintKirbyNormal[selection];
-				}
-				else
-				{
-					global.sprayPaintKirbyP2 = sprayPaintKirbyNormal[selection];
+					case playerCharacters.kirby:
+					if (selectedPlayer == 0)
+					{
+						global.sprayPaintKirbyP1 = sprayPaintValue[selection];
+					}
+					else
+					{
+						global.sprayPaintKirbyP2 = sprayPaintValue[selection];
+					}
+					break;
+					
+					case playerCharacters.gamble:
+					if (selectedPlayer == 0)
+					{
+						global.sprayPaintGambleP1 = sprayPaintValue[selection];
+					}
+					else
+					{
+						global.sprayPaintGambleP2 = sprayPaintValue[selection];
+					}
+					break;
+					
+					case playerCharacters.metaKnight:
+					if (selectedPlayer == 0)
+					{
+						global.sprayPaintMetaKnightP1 = sprayPaintValue[selection];
+					}
+					else
+					{
+						global.sprayPaintMetaKnightP2 = sprayPaintValue[selection];
+					}
+					break;
+					
+					case playerCharacters.gooey:
+					if (selectedPlayer == 0)
+					{
+						global.sprayPaintGooeyP1 = sprayPaintValue[selection];
+					}
+					else
+					{
+						global.sprayPaintGooeyP2 = sprayPaintValue[selection];
+					}
+					break;
+					
+					case playerCharacters.magolor:
+					if (selectedPlayer == 0)
+					{
+						global.sprayPaintMagolorP1 = sprayPaintValue[selection];
+					}
+					else
+					{
+						global.sprayPaintMagolorP2 = sprayPaintValue[selection];
+					}
+					break;
 				}
 			}
 			else
@@ -579,7 +691,7 @@ if (!global.pause)
 		if (goBack)
 		{
 			for (var i = 0; i < arrayLength; i++) sprayPaintOffsetLerp[i] = 0;
-			for (var i = 0; i < array_length(characterTitle); i++) if (characterTitle[i] == selectedOwner) selection = i;
+			for (var i = 0; i < array_length(characterValue); i++) if (characterValue[i] == selectedOwner) selection = i;
 			textY = 147 - (selection * 36);
 			page = "sprayPaintOwner";
 			goBack = false;
@@ -589,7 +701,7 @@ if (!global.pause)
 		
 		#region Ability Hat
 		case "abilityHat":
-		arrayLength = array_length(abilityHatTitle);
+		arrayLength = array_length(abilityHatValue);
 		for (var i = 0; i < arrayLength; i++) abilityHatOffset[i] = 0;
 		
 		if (selection < 0)
@@ -611,11 +723,11 @@ if (!global.pause)
 			audio_play_sound(snd_ButtonYes,0,false);
 			for (var i = 0; i < arrayLength; i++) abilityHatOffsetLerp[i] = 0;
 			#region Selected Hat Values
-			var selectedHat = abilityHatTitle[selection];
+			var selectedHat = abilityHatValue[selection];
 			var selectedHatSkin = 0;
 			switch (selectedHat)
 			{
-				case "Cutter":
+				case playerAbilities.cutter:
 				if (selectedPlayer == 0)
 				{
 					playerHatSkin = global.hatTypeCutterP1;
@@ -627,7 +739,7 @@ if (!global.pause)
 				
 				switch (playerHatSkin)
 				{
-					case "kssu":
+					case abilityHatSkins.cutter_kssu:
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
@@ -641,7 +753,7 @@ if (!global.pause)
 				}
 				break;
 				
-				case "Beam":
+				case playerAbilities.beam:
 				if (selectedPlayer == 0)
 				{
 					playerHatSkin = global.hatTypeBeamP1;
@@ -653,7 +765,7 @@ if (!global.pause)
 				
 				switch (playerHatSkin)
 				{
-					case "kssu":
+					case abilityHatSkins.beam_kssu:
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
@@ -665,7 +777,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "marxSoul":
+					case abilityHatSkins.beam_marxSoul:
 					selectedHatSkin = 1;
 					if (selectedPlayer == 0)
 					{
@@ -679,7 +791,7 @@ if (!global.pause)
 				}
 				break;
 				
-				case "Mystic Beam":
+				case playerAbilities.mysticBeam:
 				if (selectedPlayer == 0)
 				{
 					playerHatSkin = global.hatTypeMysticBeamP1;
@@ -691,7 +803,7 @@ if (!global.pause)
 				
 				switch (playerHatSkin)
 				{
-					case "kssu":
+					case abilityHatSkins.mysticBeam_ggs:
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
@@ -702,22 +814,10 @@ if (!global.pause)
 						playerHatPaint = global.hatPaletteMysticBeamGGSP2;
 					}
 					break;
-					
-					case "marxSoul":
-					selectedHatSkin = 1;
-					if (selectedPlayer == 0)
-					{
-						playerHatPaint = global.hatPaletteBeamMarxSoulP1;
-					}
-					else if (selectedPlayer == 1)
-					{
-						playerHatPaint = global.hatPaletteBeamMarxSoulP2;
-					}
-					break;
 				}
 				break;
 				
-				case "Stone":
+				case playerAbilities.stone:
 				if (selectedPlayer == 0)
 				{
 					playerHatSkin = global.hatTypeStoneP1;
@@ -729,7 +829,7 @@ if (!global.pause)
 				
 				switch (playerHatSkin)
 				{
-					case "kssu":
+					case abilityHatSkins.stone_kssu:
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
@@ -741,7 +841,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "modern":
+					case abilityHatSkins.stone_modern:
 					selectedHatSkin = 1;
 					if (selectedPlayer == 0)
 					{
@@ -755,7 +855,7 @@ if (!global.pause)
 				}
 				break;
 				
-				case "Mirror":
+				case playerAbilities.mirror:
 				if (selectedPlayer == 0)
 				{
 					playerHatSkin = global.hatTypeMirrorP1;
@@ -767,7 +867,7 @@ if (!global.pause)
 				
 				switch (playerHatSkin)
 				{
-					case "kssu":
+					case abilityHatSkins.mirror_kssu:
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
@@ -779,7 +879,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "modern":
+					case abilityHatSkins.mirror_modern:
 					selectedHatSkin = 1;
 					if (selectedPlayer == 0)
 					{
@@ -793,7 +893,7 @@ if (!global.pause)
 				}
 				break;
 				
-				case "Ninja":
+				case playerAbilities.ninja:
 				if (selectedPlayer == 0)
 				{
 					playerHatSkin = global.hatTypeNinjaP1;
@@ -805,7 +905,7 @@ if (!global.pause)
 				
 				switch (playerHatSkin)
 				{
-					case "kssu":
+					case abilityHatSkins.ninja_kssu:
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
@@ -817,7 +917,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "modern":
+					case abilityHatSkins.ninja_modern:
 					selectedHatSkin = 1;
 					if (selectedPlayer == 0)
 					{
@@ -831,7 +931,7 @@ if (!global.pause)
 				}
 				break;
 				
-				case "Bomb":
+				case playerAbilities.bomb:
 				if (selectedPlayer == 0)
 				{
 					playerHatSkin = global.hatTypeBombP1;
@@ -843,7 +943,7 @@ if (!global.pause)
 				
 				switch (playerHatSkin)
 				{
-					case "kssu":
+					case abilityHatSkins.bomb_kssu:
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
@@ -855,7 +955,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "modern":
+					case abilityHatSkins.bomb_modern:
 					selectedHatSkin = 1;
 					if (selectedPlayer == 0)
 					{
@@ -869,7 +969,7 @@ if (!global.pause)
 				}
 				break;
 				
-				case "Fire":
+				case playerAbilities.fire:
 				if (selectedPlayer == 0)
 				{
 					playerHatSkin = global.hatTypeFireP1;
@@ -881,7 +981,7 @@ if (!global.pause)
 				
 				switch (playerHatSkin)
 				{
-					case "kssu":
+					case abilityHatSkins.fire_kssu:
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
@@ -895,7 +995,7 @@ if (!global.pause)
 				}
 				break;
 				
-				case "Ice":
+				case playerAbilities.ice:
 				if (selectedPlayer == 0)
 				{
 					playerHatSkin = global.hatTypeIceP1;
@@ -907,7 +1007,7 @@ if (!global.pause)
 				
 				switch (playerHatSkin)
 				{
-					case "kssu":
+					case abilityHatSkins.ice_kssu:
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
@@ -919,7 +1019,7 @@ if (!global.pause)
 					}
 					break;
 						
-					case "snowman":
+					case abilityHatSkins.ice_snowman:
 					selectedHatSkin = 1;
 					if (selectedPlayer == 0)
 					{
@@ -933,7 +1033,7 @@ if (!global.pause)
 				}
 				break;
 				
-				case "Spark":
+				case playerAbilities.spark:
 				if (selectedPlayer == 0)
 				{
 					playerHatSkin = global.hatTypeSparkP1;
@@ -945,7 +1045,7 @@ if (!global.pause)
 				
 				switch (playerHatSkin)
 				{
-					case "kssu":
+					case abilityHatSkins.spark_kssu:
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
@@ -959,7 +1059,7 @@ if (!global.pause)
 				}
 				break;
 				
-				case "Yoyo":
+				case playerAbilities.yoyo:
 				if (selectedPlayer == 0)
 				{
 					playerHatSkin = global.hatTypeYoyoP1;
@@ -971,7 +1071,7 @@ if (!global.pause)
 				
 				switch (playerHatSkin)
 				{
-					case "kssu":
+					case abilityHatSkins.yoyo_kssu:
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
@@ -985,7 +1085,7 @@ if (!global.pause)
 				}
 				break;
 				
-				case "Wheel":
+				case playerAbilities.wheel:
 				if (selectedPlayer == 0)
 				{
 					playerHatSkin = global.hatTypeWheelP1;
@@ -997,7 +1097,7 @@ if (!global.pause)
 				
 				switch (playerHatSkin)
 				{
-					case "kssu":
+					case abilityHatSkins.wheel_kssu:
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
@@ -1011,7 +1111,7 @@ if (!global.pause)
 				}
 				break;
 				
-				case "Artist":
+				case playerAbilities.artist:
 				if (selectedPlayer == 0)
 				{
 					playerHatSkin = global.hatTypeArtistP1;
@@ -1023,7 +1123,7 @@ if (!global.pause)
 				
 				switch (playerHatSkin)
 				{
-					case "kssu":
+					case abilityHatSkins.artist_kssu:
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
@@ -1037,7 +1137,7 @@ if (!global.pause)
 				}
 				break;
 				
-				case "Fighter":
+				case playerAbilities.fighter:
 				if (selectedPlayer == 0)
 				{
 					playerHatSkin = global.hatTypeFighterP1;
@@ -1049,7 +1149,7 @@ if (!global.pause)
 				
 				switch (playerHatSkin)
 				{
-					case "kssu":
+					case abilityHatSkins.fighter_kssu:
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
@@ -1063,7 +1163,7 @@ if (!global.pause)
 				}
 				break;
 				
-				case "Suplex":
+				case playerAbilities.suplex:
 				if (selectedPlayer == 0)
 				{
 					playerHatSkin = global.hatTypeSuplexP1;
@@ -1075,7 +1175,7 @@ if (!global.pause)
 				
 				switch (playerHatSkin)
 				{
-					case "kssu":
+					case abilityHatSkins.suplex_kssu:
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
@@ -1089,7 +1189,7 @@ if (!global.pause)
 				}
 				break;
 				
-				case "Wing":
+				case playerAbilities.wing:
 				if (selectedPlayer == 0)
 				{
 					playerHatSkin = global.hatTypeWingP1;
@@ -1101,7 +1201,7 @@ if (!global.pause)
 				
 				switch (playerHatSkin)
 				{
-					case "kssu":
+					case abilityHatSkins.wing_kssu:
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
@@ -1115,7 +1215,7 @@ if (!global.pause)
 				}
 				break;
 				
-				case "Jet":
+				case playerAbilities.jet:
 				if (selectedPlayer == 0)
 				{
 					playerHatSkin = global.hatTypeJetP1;
@@ -1127,7 +1227,7 @@ if (!global.pause)
 				
 				switch (playerHatSkin)
 				{
-					case "kssu":
+					case abilityHatSkins.jet_kssu:
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
@@ -1141,7 +1241,7 @@ if (!global.pause)
 				}
 				break;
 				
-				case "Sword":
+				case playerAbilities.sword:
 				if (selectedPlayer == 0)
 				{
 					playerHatSkin = global.hatTypeSwordP1;
@@ -1153,7 +1253,7 @@ if (!global.pause)
 				
 				switch (playerHatSkin)
 				{
-					case "kssu":
+					case abilityHatSkins.sword_kssu:
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
@@ -1167,7 +1267,7 @@ if (!global.pause)
 				}
 				break;
 				
-				case "Parasol":
+				case playerAbilities.parasol:
 				if (selectedPlayer == 0)
 				{
 					playerHatSkin = global.hatTypeParasolP1;
@@ -1179,7 +1279,7 @@ if (!global.pause)
 				
 				switch (playerHatSkin)
 				{
-					case "kssu":
+					case abilityHatSkins.parasol_kssu:
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
@@ -1193,7 +1293,7 @@ if (!global.pause)
 				}
 				break;
 				
-				case "Hammer":
+				case playerAbilities.hammer:
 				if (selectedPlayer == 0)
 				{
 					playerHatSkin = global.hatTypeHammerP1;
@@ -1205,7 +1305,7 @@ if (!global.pause)
 				
 				switch (playerHatSkin)
 				{
-					case "kssu":
+					case abilityHatSkins.hammer_kssu:
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
@@ -1219,7 +1319,7 @@ if (!global.pause)
 				}
 				break;
 				
-				case "Bell":
+				case playerAbilities.bell:
 				if (selectedPlayer == 0)
 				{
 					playerHatSkin = global.hatTypeBellP1;
@@ -1231,7 +1331,7 @@ if (!global.pause)
 				
 				switch (playerHatSkin)
 				{
-					case "modern":
+					case abilityHatSkins.bell_modern:
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
@@ -1245,7 +1345,7 @@ if (!global.pause)
 				}
 				break;
 				
-				case "Sleep":
+				case playerAbilities.sleep:
 				if (selectedPlayer == 0)
 				{
 					playerHatSkin = global.hatTypeSleepP1;
@@ -1257,7 +1357,7 @@ if (!global.pause)
 				
 				switch (playerHatSkin)
 				{
-					case "kssu":
+					case abilityHatSkins.sleep_kssu:
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
@@ -1271,7 +1371,7 @@ if (!global.pause)
 				}
 				break;
 				
-				case "Scan":
+				case playerAbilities.scan:
 				if (selectedPlayer == 0)
 				{
 					playerHatSkin = global.hatTypeScanP1;
@@ -1283,7 +1383,7 @@ if (!global.pause)
 				
 				switch (playerHatSkin)
 				{
-					case "kssu":
+					case abilityHatSkins.scan_kssu:
 					selectedHatSkin = 0;
 					if (selectedPlayer == 0)
 					{
@@ -1359,9 +1459,9 @@ if (!global.pause)
 				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 				audio_play_sound(snd_ButtonYes,0,false);
 				playerHatSkin = abilityHatSkinValue[subSelection][selection];
-				switch (abilityHatTitle[subSelection])
+				switch (abilityHatValue[subSelection])
 				{
-					case "Cutter":
+					case playerAbilities.cutter:
 					if (selectedPlayer == 0)
 					{
 						global.hatTypeCutterP1 = playerHatSkin;
@@ -1372,7 +1472,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Beam":
+					case playerAbilities.beam:
 					if (selectedPlayer == 0)
 					{
 						global.hatTypeBeamP1 = playerHatSkin;
@@ -1383,7 +1483,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Mystic Beam":
+					case playerAbilities.mysticBeam:
 					if (selectedPlayer == 0)
 					{
 						global.hatTypeMysticBeamP1 = playerHatSkin;
@@ -1394,7 +1494,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Stone":
+					case playerAbilities.stone:
 					if (selectedPlayer == 0)
 					{
 						global.hatTypeStoneP1 = playerHatSkin;
@@ -1405,7 +1505,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Mirror":
+					case playerAbilities.mirror:
 					if (selectedPlayer == 0)
 					{
 						global.hatTypeMirrorP1 = playerHatSkin;
@@ -1416,7 +1516,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Ninja":
+					case playerAbilities.ninja:
 					if (selectedPlayer == 0)
 					{
 						global.hatTypeNinjaP1 = playerHatSkin;
@@ -1427,7 +1527,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Bomb":
+					case playerAbilities.bomb:
 					if (selectedPlayer == 0)
 					{
 						global.hatTypeBombP1 = playerHatSkin;
@@ -1438,7 +1538,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Fire":
+					case playerAbilities.fire:
 					if (selectedPlayer == 0)
 					{
 						global.hatTypeFireP1 = playerHatSkin;
@@ -1449,7 +1549,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Ice":
+					case playerAbilities.ice:
 					if (selectedPlayer == 0)
 					{
 						global.hatTypeIceP1 = playerHatSkin;
@@ -1460,7 +1560,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Spark":
+					case playerAbilities.spark:
 					if (selectedPlayer == 0)
 					{
 						global.hatTypeSparkP1 = playerHatSkin;
@@ -1471,7 +1571,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Yoyo":
+					case playerAbilities.yoyo:
 					if (selectedPlayer == 0)
 					{
 						global.hatTypeYoyoP1 = playerHatSkin;
@@ -1482,7 +1582,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Wheel":
+					case playerAbilities.wheel:
 					if (selectedPlayer == 0)
 					{
 						global.hatTypeWheelP1 = playerHatSkin;
@@ -1493,7 +1593,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Artist":
+					case playerAbilities.artist:
 					if (selectedPlayer == 0)
 					{
 						global.hatTypeArtistP1 = playerHatSkin;
@@ -1504,7 +1604,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Fighter":
+					case playerAbilities.fighter:
 					if (selectedPlayer == 0)
 					{
 						global.hatTypeFighterP1 = playerHatSkin;
@@ -1515,7 +1615,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Suplex":
+					case playerAbilities.suplex:
 					if (selectedPlayer == 0)
 					{
 						global.hatTypeSuplexP1 = playerHatSkin;
@@ -1526,7 +1626,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Wing":
+					case playerAbilities.wing:
 					if (selectedPlayer == 0)
 					{
 						global.hatTypeWingP1 = playerHatSkin;
@@ -1537,7 +1637,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Jet":
+					case playerAbilities.jet:
 					if (selectedPlayer == 0)
 					{
 						global.hatTypeJetP1 = playerHatSkin;
@@ -1548,7 +1648,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Sword":
+					case playerAbilities.sword:
 					if (selectedPlayer == 0)
 					{
 						global.hatTypeSwordP1 = playerHatSkin;
@@ -1559,7 +1659,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Parasol":
+					case playerAbilities.parasol:
 					if (selectedPlayer == 0)
 					{
 						global.hatTypeParasolP1 = playerHatSkin;
@@ -1570,7 +1670,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Hammer":
+					case playerAbilities.hammer:
 					if (selectedPlayer == 0)
 					{
 						global.hatTypeHammerP1 = playerHatSkin;
@@ -1581,7 +1681,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Bell":
+					case playerAbilities.bell:
 					if (selectedPlayer == 0)
 					{
 						global.hatTypeBellP1 = playerHatSkin;
@@ -1592,7 +1692,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Sleep":
+					case playerAbilities.sleep:
 					if (selectedPlayer == 0)
 					{
 						global.hatTypeSleepP1 = playerHatSkin;
@@ -1603,7 +1703,7 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Scan":
+					case playerAbilities.scan:
 					if (selectedPlayer == 0)
 					{
 						global.hatTypeScanP1 = playerHatSkin;
@@ -1667,13 +1767,13 @@ if (!global.pause)
 			{
 				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 				audio_play_sound(snd_ButtonYes,0,false);
-				playerHatPaint = selection;
-				switch (abilityHatTitle[subSelection])
+				playerHatPaint = abilityHatPaintValue[subSelection][selectedSkin][selection];
+				switch (abilityHatValue[subSelection])
 				{
-					case "Cutter":
+					case playerAbilities.cutter:
 					switch (playerHatSkin)
 					{
-						case "kssu":
+						case abilityHatSkins.cutter_kssu:
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteCutterKSSUP1 = playerHatPaint;
@@ -1686,10 +1786,10 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Beam":
+					case playerAbilities.beam:
 					switch (playerHatSkin)
 					{
-						case "kssu":
+						case abilityHatSkins.beam_kssu:
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteBeamKSSUP1 = playerHatPaint;
@@ -1700,7 +1800,7 @@ if (!global.pause)
 						}
 						break;
 						
-						case "marxSoul":
+						case abilityHatSkins.beam_marxSoul:
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteBeamMarxSoulP1 = playerHatPaint;
@@ -1713,10 +1813,10 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Stone":
+					case playerAbilities.stone:
 					switch (playerHatSkin)
 					{
-						case "kssu":
+						case abilityHatSkins.stone_kssu:
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteStoneKSSUP1 = playerHatPaint;
@@ -1727,7 +1827,7 @@ if (!global.pause)
 						}
 						break;
 						
-						case "modern":
+						case abilityHatSkins.stone_modern:
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteStoneModernP1 = playerHatPaint;
@@ -1740,10 +1840,10 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Mirror":
+					case playerAbilities.mirror:
 					switch (playerHatSkin)
 					{
-						case "kssu":
+						case abilityHatSkins.mirror_kssu:
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteMirrorKSSUP1 = playerHatPaint;
@@ -1754,7 +1854,7 @@ if (!global.pause)
 						}
 						break;
 						
-						case "modern":
+						case abilityHatSkins.mirror_modern:
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteStoneModernP1 = playerHatPaint;
@@ -1767,10 +1867,10 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Ninja":
+					case playerAbilities.ninja:
 					switch (playerHatSkin)
 					{
-						case "kssu":
+						case abilityHatSkins.ninja_kssu:
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteNinjaKSSUP1 = playerHatPaint;
@@ -1781,7 +1881,7 @@ if (!global.pause)
 						}
 						break;
 						
-						case "modern":
+						case abilityHatSkins.ninja_modern:
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteNinjaModernP1 = playerHatPaint;
@@ -1794,10 +1894,10 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Bomb":
+					case playerAbilities.bomb:
 					switch (playerHatSkin)
 					{
-						case "kssu":
+						case abilityHatSkins.bomb_kssu:
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteBombKSSUP1 = playerHatPaint;
@@ -1808,7 +1908,7 @@ if (!global.pause)
 						}
 						break;
 						
-						case "modern":
+						case abilityHatSkins.bomb_modern:
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteBombModernP1 = playerHatPaint;
@@ -1821,10 +1921,10 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Fire":
+					case playerAbilities.fire:
 					switch (playerHatSkin)
 					{
-						case "kssu":
+						case abilityHatSkins.fire_kssu:
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteFireKSSUP1 = playerHatPaint;
@@ -1837,10 +1937,10 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Ice":
+					case playerAbilities.ice:
 					switch (playerHatSkin)
 					{
-						case "kssu":
+						case abilityHatSkins.ice_kssu:
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteIceKSSUP1 = playerHatPaint;
@@ -1851,7 +1951,7 @@ if (!global.pause)
 						}
 						break;
 						
-						case "snowman":
+						case abilityHatSkins.ice_snowman:
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteIceSnowmanP1 = playerHatPaint;
@@ -1864,10 +1964,10 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Spark":
+					case playerAbilities.spark:
 					switch (playerHatSkin)
 					{
-						case "kssu":
+						case abilityHatSkins.spark_kssu:
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteSparkKSSUP1 = playerHatPaint;
@@ -1880,10 +1980,10 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Yoyo":
+					case playerAbilities.yoyo:
 					switch (playerHatSkin)
 					{
-						case "kssu":
+						case abilityHatSkins.yoyo_kssu:
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteYoyoKSSUP1 = playerHatPaint;
@@ -1896,10 +1996,10 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Wheel":
+					case playerAbilities.wheel:
 					switch (playerHatSkin)
 					{
-						case "kssu":
+						case abilityHatSkins.wheel_kssu:
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteWheelKSSUP1 = playerHatPaint;
@@ -1912,10 +2012,10 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Artist":
+					case playerAbilities.artist:
 					switch (playerHatSkin)
 					{
-						case "kssu":
+						case abilityHatSkins.artist_kssu :
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteArtistKSSUP1 = playerHatPaint;
@@ -1928,10 +2028,10 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Fighter":
+					case playerAbilities.fighter:
 					switch (playerHatSkin)
 					{
-						case "kssu":
+						case abilityHatSkins.fighter_kssu:
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteFighterKSSUP1 = playerHatPaint;
@@ -1944,10 +2044,10 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Suplex":
+					case playerAbilities.suplex:
 					switch (playerHatSkin)
 					{
-						case "kssu":
+						case abilityHatSkins.suplex_kssu:
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteSuplexKSSUP1 = playerHatPaint;
@@ -1960,10 +2060,10 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Wing":
+					case playerAbilities.wing:
 					switch (playerHatSkin)
 					{
-						case "kssu":
+						case abilityHatSkins.wing_kssu:
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteWingKSSUP1 = playerHatPaint;
@@ -1976,10 +2076,10 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Jet":
+					case playerAbilities.jet:
 					switch (playerHatSkin)
 					{
-						case "kssu":
+						case abilityHatSkins.jet_kssu:
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteJetKSSUP1 = playerHatPaint;
@@ -1992,10 +2092,10 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Sword":
+					case playerAbilities.sword:
 					switch (playerHatSkin)
 					{
-						case "kssu":
+						case abilityHatSkins.sword_kssu:
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteSwordKSSUP1 = playerHatPaint;
@@ -2008,10 +2108,10 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Parasol":
+					case playerAbilities.parasol:
 					switch (playerHatSkin)
 					{
-						case "kssu":
+						case abilityHatSkins.parasol_kssu:
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteParasolKSSUP1 = playerHatPaint;
@@ -2024,10 +2124,10 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Hammer":
+					case playerAbilities.hammer:
 					switch (playerHatSkin)
 					{
-						case "kssu":
+						case abilityHatSkins.hammer_kssu:
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteHammerKSSUP1 = playerHatPaint;
@@ -2040,10 +2140,10 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Bell":
+					case playerAbilities.bell:
 					switch (playerHatSkin)
 					{
-						case "modern":
+						case abilityHatSkins.bell_modern:
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteBellModernP1 = playerHatPaint;
@@ -2056,10 +2156,10 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Sleep":
+					case playerAbilities.sleep:
 					switch (playerHatSkin)
 					{
-						case "kssu":
+						case abilityHatSkins.sleep_kssu:
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteSleepKSSUP1 = playerHatPaint;
@@ -2072,10 +2172,10 @@ if (!global.pause)
 					}
 					break;
 					
-					case "Scan":
+					case playerAbilities.scan:
 					switch (playerHatSkin)
 					{
-						case "kssu":
+						case abilityHatSkins.scan_kssu:
 						if (selectedPlayer == 0)
 						{
 							global.hatPaletteScanKSSUP1 = playerHatPaint;

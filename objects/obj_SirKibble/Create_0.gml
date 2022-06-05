@@ -26,7 +26,7 @@ sprHurtAir = spr_SirKibble_Normal_HurtAir;
 
 //Other Variables
 
-paletteIndex = spr_SirKibble_Normal_Palette_KnightlyPink;
+paletteIndex = spr_SirKibble_Normal_Palette_Yellow;
 hp = 20;
 dmg = 1;
 ability = playerAbilities.cutter;
