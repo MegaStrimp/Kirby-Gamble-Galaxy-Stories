@@ -14,8 +14,8 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 29,
-  "height": 18,
+  "width": 30,
+  "height": 28,
   "textureGroupId": {
     "name": "Characters",
     "path": "texturegroups/Characters",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"85bc9b8c-7f97-4805-93d8-401430dd6aba","path":"sprites/spr_Kirby_HatShadow_MysticBeam_GGS_Guard/spr_Kirby_HatShadow_MysticBeam_GGS_Guard.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"85bc9b8c-7f97-4805-93d8-401430dd6aba","path":"sprites/spr_Kirby_HatShadow_MysticBeam_GGS_Guard/spr_Kirby_HatShadow_MysticBeam_GGS_Guard.yy",},"LayerId":{"name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","path":"sprites/spr_Kirby_HatShadow_MysticBeam_GGS_Guard/spr_Kirby_HatShadow_MysticBeam_GGS_Guard.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_MysticBeam_GGS_Guard","path":"sprites/spr_Kirby_HatShadow_MysticBeam_GGS_Guard/spr_Kirby_HatShadow_MysticBeam_GGS_Guard.yy",},"resourceVersion":"1.0","name":"85bc9b8c-7f97-4805-93d8-401430dd6aba","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"fe197c8f-9e7c-41d4-b93a-fcce73e94be7","path":"sprites/spr_Kirby_HatShadow_MysticBeam_GGS_Guard/spr_Kirby_HatShadow_MysticBeam_GGS_Guard.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"fe197c8f-9e7c-41d4-b93a-fcce73e94be7","path":"sprites/spr_Kirby_HatShadow_MysticBeam_GGS_Guard/spr_Kirby_HatShadow_MysticBeam_GGS_Guard.yy",},"LayerId":{"name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","path":"sprites/spr_Kirby_HatShadow_MysticBeam_GGS_Guard/spr_Kirby_HatShadow_MysticBeam_GGS_Guard.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Kirby_HatShadow_MysticBeam_GGS_Guard","path":"sprites/spr_Kirby_HatShadow_MysticBeam_GGS_Guard/spr_Kirby_HatShadow_MysticBeam_GGS_Guard.yy",},"resourceVersion":"1.0","name":"fe197c8f-9e7c-41d4-b93a-fcce73e94be7","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_Kirby_HatShadow_MysticBeam_GGS_Guard","path":"sprites/spr_Kirby_HatShadow_MysticBeam_GGS_Guard/spr_Kirby_HatShadow_MysticBeam_GGS_Guard.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"6f9ceaa4-5b07-4a9b-8172-3a16594386f0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"85bc9b8c-7f97-4805-93d8-401430dd6aba","path":"sprites/spr_Kirby_HatShadow_MysticBeam_GGS_Guard/spr_Kirby_HatShadow_MysticBeam_GGS_Guard.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"bc5a196e-01aa-4807-ba95-b0ccf738dab8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fe197c8f-9e7c-41d4-b93a-fcce73e94be7","path":"sprites/spr_Kirby_HatShadow_MysticBeam_GGS_Guard/spr_Kirby_HatShadow_MysticBeam_GGS_Guard.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -55,7 +55,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 18,
-    "yorigin": 18,
+    "yorigin": 20,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_HatShadow_MysticBeam_GGS_Guard","path":"sprites/spr_Kirby_HatShadow_MysticBeam_GGS_Guard/spr_Kirby_HatShadow_MysticBeam_GGS_Guard.yy",},

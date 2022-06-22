@@ -47,40 +47,15 @@ if (!active)
 	
 	for (var i = 0; i < 12 + (bottomHudVisible * 36); i++)
 	{
-		var spr = spr_Maykr_ItemHud_Empty;
+		var spr = maykrSpr[i];
+		var sprXOffset = maykrSprXOffset[i];
+		var sprYOffset = maykrSprYOffset[i];
+		sprXOffset = 0;
+		sprYOffset = 0;
 		
-		switch (maykrInventory[i])
-		{
-			#region Blocks
-			case maykrObjects.debugWall:
-			spr = spr_Maykr_ItemHud_DebugWall;
-			break;
-			
-			case maykrObjects.asteroidFieldsFront:
-			spr = spr_Maykr_ItemHud_AsteroidFieldsFront;
-			break;
-			#endregion
-			
-			#region Enemies
-			case maykrObjects.waddleDee:
-			spr = spr_Maykr_ItemHud_WaddleDee;
-			break;
-			
-			case maykrObjects.waddleDoo:
-			spr = spr_Maykr_ItemHud_WaddleDoo;
-			break;
-			
-			case maykrObjects.brontoBurt:
-			spr = spr_Maykr_ItemHud_BrontoBurt;
-			break;
-			#endregion
-			
-			#region Items
-			case "hi":
-			break;
-			#endregion
-		}
-		draw_sprite(spr,0,51 + (32 * (i % 12)),(366 + bottomHudOffset) - 101 + (32 * floor(i / 12)));
+		draw_sprite(spr_Maykr_ItemHud_Empty,0,51 + (32 * (i % 12)),(366 + bottomHudOffset) - 127 + (32 * floor(i / 12)));
+		
+		if (spr != -1) draw_sprite_part(spr,0,0,0,24,24,(51 + (32 * (i % 12))) + sprXOffset + 1,((366 + bottomHudOffset) - 127 + (32 * floor(i / 12))) + sprYOffset + 1);
 	}
 	draw_sprite(spr_Maykr_ItemHud,0,26,366 + bottomHudOffset);
 	#endregion
@@ -124,7 +99,6 @@ if (!active)
 				}
 			}
 			
-			gpu_set_alphatestenable(false);
 			gpu_set_alphatestenable(false);
 			gpu_set_blendmode(bm_normal);
 			

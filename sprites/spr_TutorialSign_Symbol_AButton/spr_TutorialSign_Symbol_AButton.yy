@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 19,
+  "bbox_right": 13,
   "bbox_top": 0,
-  "bbox_bottom": 19,
+  "bbox_bottom": 13,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 20,
-  "height": 20,
+  "width": 14,
+  "height": 14,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a71cf4bc-aaf3-4d09-bfb0-b93b67d1cb96","path":"sprites/spr_TutorialSign_Symbol_AButton/spr_TutorialSign_Symbol_AButton.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a71cf4bc-aaf3-4d09-bfb0-b93b67d1cb96","path":"sprites/spr_TutorialSign_Symbol_AButton/spr_TutorialSign_Symbol_AButton.yy",},"LayerId":{"name":"52740684-d06c-4df5-99b6-defbfe25468f","path":"sprites/spr_TutorialSign_Symbol_AButton/spr_TutorialSign_Symbol_AButton.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_TutorialSign_Symbol_AButton","path":"sprites/spr_TutorialSign_Symbol_AButton/spr_TutorialSign_Symbol_AButton.yy",},"resourceVersion":"1.0","name":"a71cf4bc-aaf3-4d09-bfb0-b93b67d1cb96","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"e70bf203-7a20-43f7-96b9-26bb01d58fb8","path":"sprites/spr_TutorialSign_Symbol_AButton/spr_TutorialSign_Symbol_AButton.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"e70bf203-7a20-43f7-96b9-26bb01d58fb8","path":"sprites/spr_TutorialSign_Symbol_AButton/spr_TutorialSign_Symbol_AButton.yy",},"LayerId":{"name":"52740684-d06c-4df5-99b6-defbfe25468f","path":"sprites/spr_TutorialSign_Symbol_AButton/spr_TutorialSign_Symbol_AButton.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_TutorialSign_Symbol_AButton","path":"sprites/spr_TutorialSign_Symbol_AButton/spr_TutorialSign_Symbol_AButton.yy",},"resourceVersion":"1.0","name":"e70bf203-7a20-43f7-96b9-26bb01d58fb8","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_TutorialSign_Symbol_AButton","path":"sprites/spr_TutorialSign_Symbol_AButton/spr_TutorialSign_Symbol_AButton.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"e4f73f06-f317-4151-99ba-f0a68a2e78a8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a71cf4bc-aaf3-4d09-bfb0-b93b67d1cb96","path":"sprites/spr_TutorialSign_Symbol_AButton/spr_TutorialSign_Symbol_AButton.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c86b4b8f-86b4-4d7b-9e08-a3b1a43af590","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e70bf203-7a20-43f7-96b9-26bb01d58fb8","path":"sprites/spr_TutorialSign_Symbol_AButton/spr_TutorialSign_Symbol_AButton.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 10,
-    "yorigin": 10,
+    "xorigin": 7,
+    "yorigin": 7,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_TutorialSign_Symbol_AButton","path":"sprites/spr_TutorialSign_Symbol_AButton/spr_TutorialSign_Symbol_AButton.yy",},

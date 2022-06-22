@@ -55,7 +55,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 1,
-    "yorigin": 23,
+    "yorigin": 31,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_HatShadow_MysticBeam_GGS_Squish","path":"sprites/spr_Kirby_HatShadow_MysticBeam_GGS_Squish/spr_Kirby_HatShadow_MysticBeam_GGS_Squish.yy",},

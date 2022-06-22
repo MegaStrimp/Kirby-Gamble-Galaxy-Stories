@@ -261,6 +261,8 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		}
 		else if (selfExplodeTimer == 0)
 		{
+			if (audio_is_playing(snd_BombExplode)) audio_stop_sound(snd_BombExplode);
+			audio_play_sound(snd_BombExplode,0,false);
 			var particle = instance_create_depth(x,y,depth,obj_DeathParticles);
 			particle.state = "explosion1";
 			var obj = instance_create_depth(x,y,depth,objectOnHitObj);
@@ -301,6 +303,8 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	}
 	else if (explodeTimer == 0)
 	{
+		if (audio_is_playing(snd_BombExplode)) audio_stop_sound(snd_BombExplode);
+		audio_play_sound(snd_BombExplode,0,false);
 		var obj = instance_create_depth(x,y,depth,objectOnHitObj);
 		if (objectOnHitDmg != "none") obj.dmg = objectOnHitDmg;
 		if (objectOnHitObj == obj_Projectile_ExplosionMask)

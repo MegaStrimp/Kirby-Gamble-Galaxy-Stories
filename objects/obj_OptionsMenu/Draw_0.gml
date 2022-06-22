@@ -43,8 +43,13 @@ for (var i = 0; i < array_length(menuValue); i++)
 	var col2 = c_white;
 	if ((menuValue[i] == "Controls") and (global.buildType == buildTypes.android))
 	{
-		var col1 = c_dkgray;
-		var col2 = c_dkgray;
+		col1 = c_dkgray;
+		col2 = c_dkgray;
+	}
+	if (menuValue[i] == "Default")
+	{
+		col1 = c_red;
+		col2 = c_red;
 	}
 	if (textAlpha != 0) scr_Draw_Text_Color_Outline(14 + menuOffsetLerp[i],textY + (36 * i),menuTitle[i],-1,-1,col1,col2,textAlpha,c_black,c_black,textAlpha,2,5,image_xscale,image_yscale,image_angle);
 }
@@ -288,4 +293,15 @@ switch (page)
 	if (global.autoSwallow) isActive = strTrue;
 	scr_Draw_Text_Color_Outline(140,60 + (24 * i),strAutoSwallow + " - " + isActive,-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
 	break;
+	
+	i += 1;
+	var col1 = c_white;
+	var col2 = c_white;
+	var alpha = .5;
+	if (subSelection == i) alpha = 1;
+	var isActive = strFalse;
+	if (global.musicIntro) isActive = strTrue;
+	scr_Draw_Text_Color_Outline(140,60 + (24 * i),strMusicIntro + " - " + isActive,-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
+	break;
 }
+draw_set_color(c_white);

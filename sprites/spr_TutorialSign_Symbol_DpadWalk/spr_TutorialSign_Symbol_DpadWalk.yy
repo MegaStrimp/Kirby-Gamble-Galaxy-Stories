@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 20,
+  "bbox_right": 16,
   "bbox_top": 0,
-  "bbox_bottom": 20,
+  "bbox_bottom": 16,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 21,
-  "height": 21,
+  "width": 17,
+  "height": 17,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"eff13600-5224-4d89-b4bb-9b678771d380","path":"sprites/spr_TutorialSign_Symbol_DpadWalk/spr_TutorialSign_Symbol_DpadWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"eff13600-5224-4d89-b4bb-9b678771d380","path":"sprites/spr_TutorialSign_Symbol_DpadWalk/spr_TutorialSign_Symbol_DpadWalk.yy",},"LayerId":{"name":"728b5b65-c2b5-43c0-b6a5-7d83febdd6eb","path":"sprites/spr_TutorialSign_Symbol_DpadWalk/spr_TutorialSign_Symbol_DpadWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_TutorialSign_Symbol_DpadWalk","path":"sprites/spr_TutorialSign_Symbol_DpadWalk/spr_TutorialSign_Symbol_DpadWalk.yy",},"resourceVersion":"1.0","name":"eff13600-5224-4d89-b4bb-9b678771d380","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"db6b5020-e8a8-48d4-8e9b-b0f5603cbea7","path":"sprites/spr_TutorialSign_Symbol_DpadWalk/spr_TutorialSign_Symbol_DpadWalk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"db6b5020-e8a8-48d4-8e9b-b0f5603cbea7","path":"sprites/spr_TutorialSign_Symbol_DpadWalk/spr_TutorialSign_Symbol_DpadWalk.yy",},"LayerId":{"name":"728b5b65-c2b5-43c0-b6a5-7d83febdd6eb","path":"sprites/spr_TutorialSign_Symbol_DpadWalk/spr_TutorialSign_Symbol_DpadWalk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_TutorialSign_Symbol_DpadWalk","path":"sprites/spr_TutorialSign_Symbol_DpadWalk/spr_TutorialSign_Symbol_DpadWalk.yy",},"resourceVersion":"1.0","name":"db6b5020-e8a8-48d4-8e9b-b0f5603cbea7","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_TutorialSign_Symbol_DpadWalk","path":"sprites/spr_TutorialSign_Symbol_DpadWalk/spr_TutorialSign_Symbol_DpadWalk.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"f4e672d8-13e9-4e33-959f-d53f1444a2e1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"eff13600-5224-4d89-b4bb-9b678771d380","path":"sprites/spr_TutorialSign_Symbol_DpadWalk/spr_TutorialSign_Symbol_DpadWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"3d1a5932-4207-4526-a9ef-b286cce8afb9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"db6b5020-e8a8-48d4-8e9b-b0f5603cbea7","path":"sprites/spr_TutorialSign_Symbol_DpadWalk/spr_TutorialSign_Symbol_DpadWalk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 10,
-    "yorigin": 10,
+    "xorigin": 8,
+    "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_TutorialSign_Symbol_DpadWalk","path":"sprites/spr_TutorialSign_Symbol_DpadWalk/spr_TutorialSign_Symbol_DpadWalk.yy",},

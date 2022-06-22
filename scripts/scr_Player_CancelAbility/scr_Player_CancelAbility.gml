@@ -11,6 +11,7 @@ function scr_Player_CancelAbility(argument0)
 		duckJumpCharge = 0;
 		cutterCharge = 0;
 		beamCharge = 0;
+		canMysticBeamShield = true;
 		stoneParticleCount = 0;
 		stoneReady = true;
 		stoneFallen = false;

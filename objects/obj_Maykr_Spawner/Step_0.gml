@@ -4,8 +4,8 @@
 
 if (active)
 {
-	if ((spawnedItemIndex == obj_ParentWall) and (spawnedSlopeType != 0)) yOffset = y - 4;
-	spawnedItem = instance_create_layer(xOffset,yOffset,spawnedLayer,spawnedItemIndex);
+	if ((spawnedItemIndex == obj_ParentWall) and (spawnedSlopeType != 0)) yOffset = -4;
+	spawnedItem = instance_create_layer(x + xOffset,y + yOffset,spawnedLayer,spawnedItemIndex);
 	spawnedItem.state = spawnedState;
 	spawnedItem.dirX = spawnedDirX;
 	spawnedItem.walkDirX = spawnedDirX;

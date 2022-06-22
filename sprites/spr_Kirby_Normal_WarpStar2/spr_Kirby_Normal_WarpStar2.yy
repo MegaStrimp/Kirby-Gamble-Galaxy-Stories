@@ -2,20 +2,20 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
-  "origin": 9,
+  "origin": 8,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 19,
+  "bbox_right": 25,
   "bbox_top": 0,
-  "bbox_bottom": 19,
+  "bbox_bottom": 23,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 20,
-  "height": 20,
+  "width": 26,
+  "height": 24,
   "textureGroupId": {
     "name": "Characters",
     "path": "texturegroups/Characters",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c18e341a-33a5-441e-b0e5-6d3ad15ed363","path":"sprites/spr_Kirby_Normal_WarpStar2/spr_Kirby_Normal_WarpStar2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c18e341a-33a5-441e-b0e5-6d3ad15ed363","path":"sprites/spr_Kirby_Normal_WarpStar2/spr_Kirby_Normal_WarpStar2.yy",},"LayerId":{"name":"713a2cf1-99b9-42ac-a245-3b4a4f21b89e","path":"sprites/spr_Kirby_Normal_WarpStar2/spr_Kirby_Normal_WarpStar2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_WarpStar2","path":"sprites/spr_Kirby_Normal_WarpStar2/spr_Kirby_Normal_WarpStar2.yy",},"resourceVersion":"1.0","name":"c18e341a-33a5-441e-b0e5-6d3ad15ed363","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"601a3782-090c-49a7-bb8e-0f0bc5640e7e","path":"sprites/spr_Kirby_Normal_WarpStar2/spr_Kirby_Normal_WarpStar2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"601a3782-090c-49a7-bb8e-0f0bc5640e7e","path":"sprites/spr_Kirby_Normal_WarpStar2/spr_Kirby_Normal_WarpStar2.yy",},"LayerId":{"name":"713a2cf1-99b9-42ac-a245-3b4a4f21b89e","path":"sprites/spr_Kirby_Normal_WarpStar2/spr_Kirby_Normal_WarpStar2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Kirby_Normal_WarpStar2","path":"sprites/spr_Kirby_Normal_WarpStar2/spr_Kirby_Normal_WarpStar2.yy",},"resourceVersion":"1.0","name":"601a3782-090c-49a7-bb8e-0f0bc5640e7e","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_Kirby_Normal_WarpStar2","path":"sprites/spr_Kirby_Normal_WarpStar2/spr_Kirby_Normal_WarpStar2.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"43d9cff3-25e1-40a1-8425-245c34026343","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c18e341a-33a5-441e-b0e5-6d3ad15ed363","path":"sprites/spr_Kirby_Normal_WarpStar2/spr_Kirby_Normal_WarpStar2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"452630fe-63c6-46b0-b699-b5b3f093585f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"601a3782-090c-49a7-bb8e-0f0bc5640e7e","path":"sprites/spr_Kirby_Normal_WarpStar2/spr_Kirby_Normal_WarpStar2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": -3,
-    "yorigin": 20,
+    "xorigin": 26,
+    "yorigin": 24,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_WarpStar2","path":"sprites/spr_Kirby_Normal_WarpStar2/spr_Kirby_Normal_WarpStar2.yy",},

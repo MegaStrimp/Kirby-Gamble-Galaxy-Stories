@@ -157,7 +157,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	else if (state == 2)
 	{
 		var spdFinal = spd;
-		if ((instance_exists(owner)) and (isMystic) and (keyAttackHold))
+		if ((instance_exists(owner)) and (owner.attackNumber == playerAttacks.mysticBeamCharge) and (isMystic) and (keyAttackHold))
 		{
 			orbitMaxFinal -= .25;
 			spdFinal = spd * 2;
@@ -195,6 +195,23 @@ if (((pausable) and (!global.pause)) or (!pausable))
 			}
 		}
 	}
+	else if (state == 4)
+	{
+		var finalHsp = hsp * dirX;
+		if (place_meeting(x,y + floor(vsp + 2),obj_Wall))
+		{
+			jumpCount += 1;
+			var finalVsp = 4;
+			if (jumpCount == 3)
+			{
+				jumpCount = 0;
+				finalVsp = 8;
+			}
+			vsp -= finalVsp;
+		}
+		x += finalHsp;
+		y += vsp;
+	}
 	
 	//Position
 	
@@ -221,11 +238,21 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	if (state == 3)
 	{
-		if ((place_meeting(x,y,obj_ParentWall)) and (changeDirection))
+		if (changeDirection)
 		{
-			changeDirection = false;
-			direction += 90 * -dirX;
-			directionTimer = directionTimerMax;
+			if (place_meeting(x,y,obj_ParentWall))
+			{
+				changeDirection = false;
+				if (straightBounce)
+				{
+					direction += 180;
+				}
+				else
+				{
+					direction += 90 * -dirX;
+				}
+				directionTimer = directionTimerMax;
+			}
 		}
 	}
 	

@@ -42,6 +42,8 @@ changeDirection = true;
 isMystic = false;
 hasGravity = false;
 isUfo = false;
+straightBounce = false;
+jumpCount = 0;
 
 //Sprites
 

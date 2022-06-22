@@ -158,10 +158,12 @@ enum playerAttacks
 	beamGrab,
 	
 	mysticBeamNormal,
+	mysticBeamBarrierBreak,
 	mysticBeamCharge,
 	mysticBeamChargeAttack,
 	mysticBeamDash,
 	mysticBeamAir,
+	mysticBeamDown,
 	mysticBeamGrab,
 	
 	stoneNormal,
@@ -220,6 +222,13 @@ enum playerAttacks
 	
 	gooeyStoneNormal,
 	gooeyFireDash
+}
+
+enum playerMechs
+{
+	none,
+	heavyLobster,
+	waterBowl
 }
 
 enum playerSprayPaints
@@ -474,6 +483,7 @@ enum stringAttributes
 	
 	language,
 	
+	playerCharactersStart,
 	playerCharacters_kirby,
 	playerCharacters_gamble,
 	playerCharacters_metaKnight,
@@ -481,13 +491,17 @@ enum stringAttributes
 	playerCharacters_helper,
 	playerCharacters_gooey,
 	playerCharacters_magolor,
+	playerCharactersEnd,
 	
+	customizeSubMenusStart,
 	customizeSubMenus_skins,
 	customizeSubMenus_sprayPaints,
 	customizeSubMenus_hatSkins,
 	customizeSubMenus_hatPaints,
 	customizeSubMenus_familiars,
+	customizeSubMenusEnd,
 	
+	playerSprayPaintsStart,
 	playerSprayPaints_friendlyPink,
 	playerSprayPaints_yellow,
 	playerSprayPaints_red,
@@ -529,13 +543,17 @@ enum stringAttributes
 	playerSprayPaints_aege,
 	playerSprayPaints_stray,
 	playerSprayPaints_glitch,
+	playerSprayPaintsEnd,
 	
+	familiarsStart,
 	familiars_gamble,
 	familiars_happyPea,
 	familiars_epicJar,
 	familiars_krackle,
 	familiars_omegaMatter,
+	familiarsEnd,
 	
+	unlockMethodsStart,
 	unlockMethods_Default,
 	unlockMethods_beatStageMissions,
 	unlockMethods_tomatooCatch3Stars,
@@ -559,7 +577,9 @@ enum stringAttributes
 	unlockMethods_unlockKeeby,
 	unlockMethods_unlockPrinceFluff,
 	unlockMethods_secret,
+	unlockMethodsEnd,
 	
+	playerAbilitiesStart,
     playerAbilities_cutter,
 	playerAbilities_mysticCutter,
     playerAbilities_beam,
@@ -592,7 +612,9 @@ enum stringAttributes
 	playerAbilities_mic,
 	playerAbilities_chef,
 	playerAbilities_ultraSword,
+	playerAbilitiesEnd,
 	
+	enemyStart,
 	enemy_waddleDee,
 	enemy_waddleDoo,
 	enemy_brontoBurt,
@@ -633,6 +655,7 @@ enum stringAttributes
 	enemy_cairn,
 	enemy_bomber,
 	enemy_simirror,
+	enemyEnd,
 	
 	shop_general,
 	shop_starcutter,
@@ -646,6 +669,7 @@ enum stringAttributes
 	shopString_back,
 	shopString_question,
 	
+	optionsStart,
 	options_true,
 	options_false,
 	options_display,
@@ -668,7 +692,9 @@ enum stringAttributes
 	options_pressAnyKey,
 	options_extraTutorials,
 	options_autoSwallow,
-	options_default
+	options_musicIntro,
+	options_default,
+	optionsEnd
 }
 
 enum talkingCharacter
@@ -686,12 +712,37 @@ enum maykrObjects
 	
 	waddleDee,
 	waddleDoo,
-	brontoBurt
+	brontoBurt,
+	twizzy,
+	tookey,
+	sirKibble,
+	gordo,
+	bloodGordo,
+	shotzo,
+	mysticDoo,
+	bouncy,
+	mrBoogie,
+	search,
+	hiveDrone,
+	wapod,
+	
+	pointStarYellow,
+	pointStarGreen,
+	pointStarRed,
+	pointStarBlue,
+	food,
+	pepBrew,
+	maximTomato
+}
+
+enum maykrWindows
+{
+	canvasSetup
 }
 #endregion
 
 #region Global Variables
-global.versionNumber = "Beta XVII";
+global.versionNumber = "Chapter 1 - Beta I";
 
 global.selectedSave = "Save1.ini";
 global.hpMax = 5;
@@ -715,7 +766,7 @@ global.pointStars = 0;
 global.goldenTomato = false;
 global.stageNumber = 0;
 global.debug = true;
-global.debug = false;
+//global.debug = false;
 //show_debug_overlay(global.debug);
 global.pause = false;
 global.cutscene = false;
@@ -802,8 +853,7 @@ global.storyModeUnlocked = false;
 #endregion
 
 #region Fonts
-mapStringKSSU = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz .!";
-global.bitmapKSSU = font_add_sprite_ext(spr_Hud_Dialogue_Font_Kssu,mapStringKSSU,false,0);
+global.bitmapKSSU = font_add_sprite_ext(spr_Hud_Dialogue_Font_Kssu,"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz .!",false,0);
 global.fontDialogueDefaultKanji = font_add(working_directory + "ARIALUNI.TTF",12,false,false,32,127);
 #endregion
 

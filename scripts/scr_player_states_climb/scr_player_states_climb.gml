@@ -69,7 +69,7 @@ function scr_Player_States_Climb()
 		
 		//Collision
 		
-		scr_Player_Collision();
+		scr_Player_Collision(playerMechs.none);
 		
 		//Animation
 		

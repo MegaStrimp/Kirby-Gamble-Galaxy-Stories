@@ -24,6 +24,6 @@ function scr_Player_States_CutterDrop()
 		
 		//Collision
 		
-		scr_Player_Collision();
+		scr_Player_Collision(playerMechs.none);
 	}
 }

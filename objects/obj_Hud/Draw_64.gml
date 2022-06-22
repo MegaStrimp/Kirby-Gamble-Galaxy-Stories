@@ -8,6 +8,8 @@ var characterP1 = global.characterP1;
 var characterP2 = global.characterP2;
 var paletteP1 = global.sprayPaintP1;
 var paletteP2 = global.sprayPaintP2;
+var musicIntroX = 326;
+var musicIntroY = 170;
 
 //if (global.isHelperP1) paletteP1 = spr_Hud_Palette_Helper;
 //if (global.isHelperP2) paletteP2 = spr_Hud_Palette_Helper;
@@ -31,6 +33,10 @@ if (hasNotif)
 		break;
 	}
 }
+
+//Music Intro
+
+draw_roundrect(musicIntroX,musicIntroY,musicIntroX + 150,musicIntroY + 40,false);
 
 //Cutscene
 

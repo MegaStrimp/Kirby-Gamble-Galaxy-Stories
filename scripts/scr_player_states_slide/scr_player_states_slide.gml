@@ -121,7 +121,6 @@ function scr_Player_States_Slide()
 				default:
 				if (canAttack)
 				{
-					if (playerCharacter == playerCharacters.gooey) show_debug_message(string(playerCharacter));
 					switch (playerCharacter)
 					{
 						#region Kirby
@@ -197,6 +196,41 @@ function scr_Player_States_Slide()
 									attackNumber = playerAttacks.mysticBeamGrab;
 									hsp = 0;
 									state = playerStates.mysticBeamGrab;
+								}
+								else if (grounded)
+								{
+									if (audio_is_playing(snd_BeamAir)) audio_stop_sound(snd_BeamAir);
+									audio_play_sound(snd_BeamAir,0,false);
+									sprite_index = sprBeamAttack1;
+									image_index = 0;
+						            attack = true;
+									attackNumber = playerAttacks.mysticBeamDown;
+									attackable = false;
+						            attackTimer = 30;
+									for (var i = 0; i < 2; i++)
+									{
+										var projSpd = random_range(3,4);
+										var projDir = dir;
+										if (i == 1) projDir = -dir;
+										var projBeam = instance_create_depth(x + (12 * projDir),y - 12,depth,obj_Projectile_Beam);
+										projBeam.imageSpeed = 1;
+										projBeam.owner = id;
+										projBeam.abilityType = playerAbilities.mysticBeam;
+										projBeam.player = player;
+										projBeam.dmg = 18;
+									    projBeam.dirX = projDir;
+									    projBeam.dir = projDir;
+										projBeam.hsp = projSpd;
+									    projBeam.state = 4;
+									    projBeam.hasGravity = true;
+									    projBeam.enemy = false;
+										projBeam.character = 2;
+										projBeam.sprIdle = spr_Projectile_MysticBeam_Normal;
+										projBeam.isMystic = true;
+										projBeam.sprite_index = projBeam.sprIdle;
+										projBeam.invisTimer = -1;
+										projBeam.alphaTimer = projBeam.alphaTimerMax;
+									}
 								}
 							}
 							break;
@@ -794,7 +828,7 @@ function scr_Player_States_Slide()
 		
 		image_speed = 1;
 		
-		scr_Player_Collision();
+		scr_Player_Collision(playerMechs.none);
 	}
 	else
 	{

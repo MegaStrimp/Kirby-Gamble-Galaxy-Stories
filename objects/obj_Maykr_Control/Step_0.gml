@@ -7,6 +7,199 @@ mouseXGui = device_mouse_x_to_gui(0);
 mouseYGui = device_mouse_y_to_gui(0);
 #endregion
 
+#region Load Level
+switch (loadState)
+{
+	case 0:
+	var file;
+	file = get_open_filename(working_directory + "maykr file|*.maykr","");
+	if (file != "")
+	{
+		var creationIndex = -1;
+		loadedFile = file_text_open_read(file);
+		var maykrStart = file_text_read_string(loadedFile);
+		if (maykrStart == maykrStartMsg)
+		{
+			scr_Maykr_ClearRoom();
+			file_text_readln(loadedFile);
+			var versionNumber = file_text_read_string(loadedFile);
+			file_text_readln(loadedFile);
+			switch (versionNumber)
+			{
+				case "Version - 1.0.0":
+				creationIndex = file_text_read_string(loadedFile);
+				file_text_readln(loadedFile);
+								
+				if (creationIndex == "stageEnd") break;
+								
+				#region Load Room Attribues
+				var roomWidthLoad = real(file_text_read_real(loadedFile));
+				show_debug_message("Room Height - " + string(roomWidthLoad));
+				file_text_readln(loadedFile);
+				var roomHeightLoad = real(file_text_read_real(loadedFile));
+				show_debug_message("Room Height - " + string(roomHeightLoad));
+				file_text_readln(loadedFile);
+				file_text_readln(loadedFile);
+								
+				scr_Maykr_CreateRoom(roomWidthLoad,roomHeightLoad);
+				room_goto(global.maykrCanvas);
+				#endregion
+				break;
+			}
+		}
+		else
+		{
+			show_debug_message("Invalid Maykr File");
+			//errorAlpha = 1;
+			//errorAlphaTimer = errorAlphaTimerMax;
+		}
+	}
+	else
+	{
+		show_debug_message("Open A Maykr File");
+		//errorAlpha = 1;
+		//errorAlphaTimer = errorAlphaTimerMax;
+	}
+	loadState = 1;
+	break;
+	
+	case 1:
+					creationIndex = file_text_read_string(loadedFile);
+					file_text_readln(loadedFile);
+								
+					if (creationIndex == "stageEnd") break;
+								
+					#region Load Tiles
+					for (;;)
+					{
+						var tileLayerIndexLoad = file_text_read_string(loadedFile);
+						show_debug_message(" - " + string(tileLayerIndexLoad));
+						file_text_readln(loadedFile);
+								
+						if (tileLayerIndexLoad == "tileEnd") break;
+								
+						switch (creationIndex)
+						{
+							case "tileStart":
+									
+							var tileIndexLoad = real(file_text_read_string(loadedFile));
+							show_debug_message(tileIndexLoad);
+							file_text_readln(loadedFile);
+							var tileXLoad = real(file_text_read_string(loadedFile));
+							show_debug_message(tileXLoad);
+							file_text_readln(loadedFile);
+							var tileYLoad = real(file_text_read_string(loadedFile));
+							show_debug_message(tileYLoad);
+							file_text_readln(loadedFile);
+									
+							var tileSetIndex = -1;
+							switch (tileLayerIndexLoad)
+							{
+								case "tileAsteroidFieldsFront":
+								if (tileAsteroidFieldsFront == -1)
+								{
+									layer_create(299,"tileAsteroidFieldsFront");
+									tileAsteroidFieldsFront = layer_tilemap_create("tileAsteroidFieldsFront",0,0,ts_AsteroidFields,floor(room_width / 24) + 1,floor(room_height / 24) + 1);
+								}
+								tileSetIndex = tileAsteroidFieldsFront;
+								break;
+										
+								case "tileDebug":
+								if (tileDebug == -1)
+								{
+									layer_create(299,"tileDebug");
+									tileDebug = layer_tilemap_create("tileDebug",0,0,ts_Debug,floor(room_width / 24) + 1,floor(room_height / 24) + 1);
+								}
+								tileSetIndex = tileDebug;
+								break;
+							}
+									
+							if (tileSetIndex != -1) tilemap_set(tileSetIndex,tileIndexLoad,tileXLoad,tileYLoad);
+							break;
+									
+							default:
+							file_text_readln(loadedFile);
+							break;
+						}
+					}
+					#endregion
+								
+					creationIndex = file_text_read_string(loadedFile);
+					show_debug_message(creationIndex);
+					file_text_readln(loadedFile);
+								
+					if (creationIndex == "stageEnd") break;
+								
+					#region Load Spawners
+					for (;;)
+					{
+						var spawnerItemIndexLoad = file_text_read_string(loadedFile);
+						file_text_readln(loadedFile);
+									
+						show_debug_message(spawnerItemIndexLoad);
+						if (spawnerItemIndexLoad == "spawnerEnd") break;
+								
+						switch (creationIndex)
+						{
+							case "spawnerStart":
+										
+							var spawnerItemXLoad = real(file_text_read_string(loadedFile));
+							file_text_readln(loadedFile);
+							var spawnerItemYLoad = real(file_text_read_string(loadedFile));
+							file_text_readln(loadedFile);
+							var spawnedItemStringLoad = file_text_read_string(loadedFile);
+							file_text_readln(loadedFile);
+							var spawnerItemLayerLoad = file_text_read_string(loadedFile);
+							file_text_readln(loadedFile);
+							var spawnerSpriteLoad = file_text_read_string(loadedFile);
+							file_text_readln(loadedFile);
+							var spawnerStateLoad = file_text_read_string(loadedFile);
+							file_text_readln(loadedFile);
+							var spawnerDirXLoad = real(file_text_read_string(loadedFile));
+							file_text_readln(loadedFile);
+							var spawnerPaletteLoad = file_text_read_string(loadedFile);
+							file_text_readln(loadedFile);
+									
+							var spawner = instance_create_layer(spawnerItemXLoad,spawnerItemYLoad,"enemies",obj_Maykr_Spawner);
+							show_debug_message("spawn");
+							spawner.spawnedItemIndex = asset_get_index(spawnerItemIndexLoad);
+							spawner.spawnedSprite = asset_get_index(spawnerSpriteLoad);
+							spawner.spawnedItemString = spawnedItemStringLoad;
+							spawner.spawnedLayer = spawnerItemLayerLoad;
+							spawner.spawnedState = spawnerStateLoad;
+							spawner.spawnedDirX = spawnerDirXLoad;
+							spawner.spawnedPaletteIndex = asset_get_index(spawnerPaletteLoad);
+									
+							switch (spawner.spawnedItemIndex)
+							{
+								case obj_ParentWall:
+								var spawnerSlopeTypeLoad = real(file_text_read_string(loadedFile));
+								file_text_readln(loadedFile);
+								spawner.spawnedSlopeType = spawnerSlopeTypeLoad;
+								spawner.spawnedSprite = -1;
+								break;
+										
+								case obj_AbilityTrophy:
+								var spawnerAbilityIndexLoad = file_text_read_string(loadedFile);
+								file_text_readln(loadedFile);
+								spawner.spawnedAbilityIndex = spawnerAbilityIndexLoad;
+								break;
+							}
+							break;
+										
+							default:
+							file_text_readln(loadedFile);
+							break;
+						}
+					}
+					#endregion
+	file_text_close(loadedFile);
+	loadedFile = -1;
+	loadState = -1;
+	break;
+}
+#endregion
+
 if (!active)
 {
 	#region Variables
@@ -71,7 +264,7 @@ if (!active)
 			mouseOnTopEnemies = false;
 			mouseOnTopItems = false;
 		}
-	
+		
 		if (point_in_rectangle(mouseXGui,mouseYGui,2,234,24,269))
 		{
 			mouseOnTopHide = true;
@@ -94,11 +287,18 @@ if (!active)
 		#region Buttons
 		if (mouse_check_button_pressed(mb_left))
 		{
-			if (mouseOnTopExpand) bottomHudOpen = !bottomHudOpen;
+			#region Bottom Hud Expand Button
+			if (mouseOnTopExpand)
+			{
+				io_clear();
+				bottomHudOpen = !bottomHudOpen;
+			}
+			#endregion
 		
 			#region Save Button
 			if (mouseOnTopSave)
 			{
+				io_clear();
 				var file;
 				file = get_save_filename("maykr file|*.maykr","");
 				if (file != "")
@@ -108,6 +308,19 @@ if (!active)
 					file_text_writeln(savedFile);
 					file_text_write_string(savedFile,"Version - " + maykrFileVersion);
 					file_text_writeln(savedFile);
+					
+					#region Save Room Attributes
+					file_text_write_string(savedFile,"roomAttributesStart");
+					file_text_writeln(savedFile);
+					
+					file_text_write_string(savedFile,room_width);
+					file_text_writeln(savedFile);
+					file_text_write_string(savedFile,room_height);
+					file_text_writeln(savedFile);
+					
+					file_text_write_string(savedFile,"roomAttributesEnd");
+					file_text_writeln(savedFile);
+					#endregion
 					
 					#region Save Tiles
 					file_text_write_string(savedFile,"tileStart");
@@ -158,7 +371,7 @@ if (!active)
 					file_text_write_string(savedFile,"tileEnd");
 					file_text_writeln(savedFile);
 					#endregion
-				
+					
 					#region Save Spawners
 					file_text_write_string(savedFile,"spawnerStart");
 					file_text_writeln(savedFile);
@@ -210,174 +423,15 @@ if (!active)
 			#region Load Button
 			if (mouseOnTopLoad)
 			{
-				var file;
-				file = get_open_filename(working_directory + "maykr file|*.maykr","");
-				if (file != "")
-				{
-					var creationIndex = -1;
-					var loadedFile = file_text_open_read(file);
-					var maykrStart = file_text_read_string(loadedFile);
-					if (maykrStart == maykrStartMsg)
-					{
-						scr_MaykrClear();
-						file_text_readln(loadedFile);
-						var versionNumber = file_text_read_string(loadedFile);
-						file_text_readln(loadedFile);
-						switch (versionNumber)
-						{
-							case "Version - 0.6.0":
-							for (;;)
-							{
-								creationIndex = file_text_read_string(loadedFile);
-								if (creationIndex == "stageEnd") break;
-								file_text_readln(loadedFile);
-								#region Load Tiles
-								for (;;)
-								{
-									var tileLayerIndexLoad = file_text_read_string(loadedFile);
-									show_debug_message(tileLayerIndexLoad);
-									file_text_readln(loadedFile);
-								
-									if (tileLayerIndexLoad == "tileEnd") break;
-								
-									switch (creationIndex)
-									{
-										case "tileStart":
-									
-										var tileIndexLoad = real(file_text_read_string(loadedFile));
-										show_debug_message(tileIndexLoad);
-										file_text_readln(loadedFile);
-										var tileXLoad = real(file_text_read_string(loadedFile));
-										show_debug_message(tileXLoad);
-										file_text_readln(loadedFile);
-										var tileYLoad = real(file_text_read_string(loadedFile));
-										show_debug_message(tileYLoad);
-										file_text_readln(loadedFile);
-									
-										var tileSetIndex = -1;
-										switch (tileLayerIndexLoad)
-										{
-											case "tileAsteroidFieldsFront":
-											if (tileAsteroidFieldsFront == -1)
-											{
-												layer_create(299,"tileAsteroidFieldsFront");
-												tileAsteroidFieldsFront = layer_tilemap_create("tileAsteroidFieldsFront",0,0,ts_AsteroidFields,200,120);
-											}
-											tileSetIndex = tileAsteroidFieldsFront;
-											break;
-										
-											case "tileDebug":
-											if (tileDebug == -1)
-											{
-												layer_create(299,"tileDebug");
-												tileDebug = layer_tilemap_create("tileDebug",0,0,ts_Debug,200,120);
-											}
-											tileSetIndex = tileDebug;
-											break;
-										}
-									
-										if (tileSetIndex != -1) tilemap_set(tileSetIndex,tileIndexLoad,tileXLoad,tileYLoad);
-										break;
-									
-										default:
-										file_text_readln(loadedFile);
-										break;
-									}
-								}
-								#endregion
-							
-								creationIndex = file_text_read_string(loadedFile);
-								if (creationIndex == "stageEnd") break;
-								file_text_readln(loadedFile);
-							
-								#region Load Spawners
-								for (;;)
-								{
-									var spawnerItemIndexLoad = file_text_read_string(loadedFile);
-									file_text_readln(loadedFile);
-								
-										show_debug_message(spawnerItemIndexLoad);
-									if (spawnerItemIndexLoad == "spawnerEnd") break;
-								
-									switch (creationIndex)
-									{
-										case "spawnerStart":
-									
-										show_debug_message("oi");
-										var spawnerItemXLoad = real(file_text_read_string(loadedFile));
-										file_text_readln(loadedFile);
-										var spawnerItemYLoad = real(file_text_read_string(loadedFile));
-										file_text_readln(loadedFile);
-										var spawnedItemStringLoad = file_text_read_string(loadedFile);
-										file_text_readln(loadedFile);
-										var spawnerItemLayerLoad = file_text_read_string(loadedFile);
-										file_text_readln(loadedFile);
-										var spawnerSpriteLoad = file_text_read_string(loadedFile);
-										file_text_readln(loadedFile);
-										var spawnerStateLoad = file_text_read_string(loadedFile);
-										file_text_readln(loadedFile);
-										var spawnerDirXLoad = real(file_text_read_string(loadedFile));
-										file_text_readln(loadedFile);
-										var spawnerPaletteLoad = file_text_read_string(loadedFile);
-										file_text_readln(loadedFile);
-									
-										var spawner = instance_create_layer(spawnerItemXLoad,spawnerItemYLoad,"enemies",obj_Maykr_Spawner);
-										show_debug_message("spawn");
-										spawner.spawnedItemIndex = asset_get_index(spawnerItemIndexLoad);
-										spawner.spawnedSprite = asset_get_index(spawnerSpriteLoad);
-										spawner.spawnedItemString = spawnedItemStringLoad;
-										spawner.spawnedLayer = spawnerItemLayerLoad;
-										spawner.spawnedState = spawnerStateLoad;
-										spawner.spawnedDirX = spawnerDirXLoad;
-										spawner.spawnedPaletteIndex = asset_get_index(spawnerPaletteLoad);
-									
-										switch (spawner.spawnedItemIndex)
-										{
-											case obj_ParentWall:
-											var spawnerSlopeTypeLoad = real(file_text_read_string(loadedFile));
-											file_text_readln(loadedFile);
-											spawner.spawnedSlopeType = spawnerSlopeTypeLoad;
-											spawner.spawnedSprite = -1;
-											break;
-										
-											case obj_AbilityTrophy:
-											var spawnerAbilityIndexLoad = file_text_read_string(loadedFile);
-											file_text_readln(loadedFile);
-											spawner.spawnedAbilityIndex = spawnerAbilityIndexLoad;
-											break;
-										}
-										break;
-										
-										default:
-										file_text_readln(loadedFile);
-										break;
-									}
-								}
-								#endregion
-							}
-							break;
-						}
-						file_text_close(loadedFile);
-					}
-					else
-					{
-						show_debug_message("Invalid Maykr File");
-						//errorAlpha = 1;
-						//errorAlphaTimer = errorAlphaTimerMax;
-					}
-				}
-				else
-				{
-					show_debug_message("Open A Maykr File");
-					//errorAlpha = 1;
-					//errorAlphaTimer = errorAlphaTimerMax;
-				}
+				io_clear();
+				loadState = 0;
 			}
 			#endregion
 			
 			#region Reset Button
 			if (mouseOnTopReset)
 			{
+				io_clear();
 				yesBar = 0;
 				windowIndex = "clear";
 			}
@@ -386,6 +440,7 @@ if (!active)
 			#region Leave Button
 			if (mouseOnTopLeave)
 			{
+				io_clear();
 				yesBar = 0;
 				windowIndex = "leave";
 			}
@@ -394,6 +449,7 @@ if (!active)
 			#region Play Button
 			if (mouseOnTopPlay)
 			{
+				io_clear();
 				active = true;
 				mouseOnTopPlay = false;
 				topHudOffset = 0;
@@ -419,6 +475,7 @@ if (!active)
 			#region Blocks Button
 			if (mouseOnTopBlocks)
 			{
+				io_clear();
 				inventoryPage = 0;
 				if (global.gambleMaykrMenu != "Collision")
 				{
@@ -426,9 +483,7 @@ if (!active)
 					scr_Maykr_Inventory(global.gambleMaykrMenu,inventoryPage);
 					spawnedLayer = "Collision";
 					spawnedItemString = maykrObjects.debugWall;
-					spawnedItemIndex = obj_ParentWall;
-					spawnedSprite = spr_Maykr_Spawner_DebugWall;
-					spawnedSlopeType = 0;
+					scr_Maykr_GetFromInventory(spawnedItemString);
 					snap = 24;
 				}
 			}
@@ -437,6 +492,7 @@ if (!active)
 			#region Enemies Button
 			if (mouseOnTopEnemies)
 			{
+				io_clear();
 				inventoryPage = 0;
 				if (global.gambleMaykrMenu != "Enemies")
 				{
@@ -444,8 +500,7 @@ if (!active)
 					scr_Maykr_Inventory(global.gambleMaykrMenu,inventoryPage);
 					spawnedLayer = "Enemies";
 					spawnedItemString = maykrObjects.waddleDee;
-					spawnedItemIndex = obj_WaddleDee;
-					spawnedSprite = spr_Maykr_Spawner_WaddleDee_Normal;
+					scr_Maykr_GetFromInventory(spawnedItemString);
 					snap = 6;
 				}
 			}
@@ -454,57 +509,44 @@ if (!active)
 			#region Items Button
 			if (mouseOnTopItems)
 			{
+				io_clear();
 				inventoryPage = 0;
 				if (global.gambleMaykrMenu != "Environment")
 				{
 					global.gambleMaykrMenu = "Environment";
 					scr_Maykr_Inventory(global.gambleMaykrMenu,inventoryPage);
+					spawnedLayer = "Environment";
+					spawnedItemString = maykrObjects.pointStarYellow;
+					scr_Maykr_GetFromInventory(spawnedItemString);
 					snap = 6;
 				}
 			}
 			#endregion
 			
+			#region Object Buttons
 			for (var i = 0; i < 12 + (bottomHudVisible * 36); i++)
 			{
 				var xx = 51 + (32 * (i % 12));
-				var yy = (366 + bottomHudOffset) - 101 + (32 * floor(i / 12));
-				if (point_in_rectangle(mouseXGui,mouseYGui,xx,yy - 26,xx + 26,yy))
+				var yy = (366 + bottomHudOffset) - 127 + (32 * floor(i / 12));
+				if (point_in_rectangle(mouseXGui,mouseYGui,xx,yy,xx + 26,yy + 26))
 				{
+					io_clear();
 					if (maykrInventory[i] != -1)
 					{
 						spawnedItemString = maykrInventory[i];
-						switch (spawnedItemString)
-						{
-							case maykrObjects.debugWall:
-							spawnedItemIndex = obj_ParentWall;
-							spawnedSprite = spr_Maykr_Spawner_DebugWall;
-							break;
-							
-							case maykrObjects.asteroidFieldsFront:
-							spawnedItemIndex = obj_ParentWall;
-							spawnedSprite = spr_Maykr_Spawner_AsteroidFieldsFront;
-							break;
-							
-							case maykrObjects.waddleDee:
-							spawnedItemIndex = obj_WaddleDee;
-							spawnedSprite = spr_WaddleDee_Normal_Idle;
-							break;
-							
-							case maykrObjects.waddleDoo:
-							spawnedItemIndex = obj_WaddleDoo;
-							spawnedSprite = spr_Maykr_Spawner_WaddleDoo_Normal;
-							break;
-							
-							case maykrObjects.brontoBurt:
-							spawnedItemIndex = obj_BrontoBurt;
-							spawnedSprite = spr_Maykr_Spawner_BrontoBurt_Normal;
-							break;
-						}
+						scr_Maykr_GetFromInventory(spawnedItemString);
 					}
 				}
 			}
+			#endregion
 			
-			if (mouseOnTopHide) hudVisible = !hudVisible;
+			#region Hide Button
+			if (mouseOnTopHide)
+			{
+				io_clear();
+				hudVisible = !hudVisible;
+			}
+			#endregion
 		}
 		#endregion
 		
@@ -525,6 +567,8 @@ if (!active)
 				spawner.spawnedSprite = spawnedSprite;
 				spawner.spawnedName = spawnedName;
 				spawner.spawnedDirX = dirX;
+				spawner.xOffset = spawnedXOffset;
+				spawner.yOffset = spawnedYOffset;
 				switch (spawnedItemIndex)
 				{
 					case obj_ParentWall:
@@ -538,7 +582,7 @@ if (!active)
 					if (tileDebug == -1)
 					{
 						layer_create(299,"tileDebug");
-						tileDebug = layer_tilemap_create("tileDebug",0,0,ts_Debug,200,120);
+						tileDebug = layer_tilemap_create("tileDebug",0,0,ts_Debug,floor(room_width / 24) + 1,floor(room_height / 24) + 1);
 					}
 					var wx = mouseX / 24;
 					var wy = mouseY / 24;
@@ -550,7 +594,7 @@ if (!active)
 					if (tileAsteroidFieldsFront == -1)
 					{
 						layer_create(299,"tileAsteroidFieldsFront");
-						tileAsteroidFieldsFront = layer_tilemap_create("tileAsteroidFieldsFront",0,0,ts_AsteroidFields,200,120);
+						tileAsteroidFieldsFront = layer_tilemap_create("tileAsteroidFieldsFront",0,0,ts_AsteroidFields,floor(room_width / 24) + 1,floor(room_height / 24) + 1);
 					}
 					var wx = mouseX / 24;
 					var wy = mouseY / 24;
@@ -602,14 +646,26 @@ if (!active)
 			
 			if (mouse_check_button_pressed(mb_left))
 			{
-				if ((yesBar == yesBarMax) and (point_in_rectangle(mouseXGui,mouseYGui,180,116,300,147)))
+				if (point_in_rectangle(mouseXGui,mouseYGui,180,116,300,147))
 				{
-					if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
-					audio_play_sound(snd_ButtonYes,0,false);
-					windowIndex = -1;
-					spawnTimer = 15;
+					if (yesBar == yesBarMax)
+					{
+						if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+						audio_play_sound(snd_ButtonYes,0,false);
+						windowIndex = -1;
+						spawnTimer = 15;
 					
-					scr_MaykrClear();
+						scr_Maykr_ClearRoom();
+						
+						var spawner = instance_create_layer(60,room_height - 91,"Player",obj_Maykr_Spawner);
+						spawner.spawnedItemIndex = obj_Player;
+						spawner.spawnedSprite = spr_Kirby_Normal_Idle;
+						spawner.spawnedPaletteIndex = scr_Player_SprayPaint(global.sprayPaintKirbyP1,playerCharacters.kirby,global.skinKirbyP1);
+					}
+					else
+					{
+						yesBar += (yesBarMax / 10);
+					}
 				}
 				
 				if (point_in_rectangle(mouseXGui,mouseYGui,180,149,300,174))
@@ -619,7 +675,9 @@ if (!active)
 					windowIndex = -1;
 					spawnTimer = 15;
 				}
+				io_clear();
 			}
+			yesBar = clamp(yesBar,0,yesBarMax);
 			break;
 			
 			case "leave":
@@ -627,14 +685,22 @@ if (!active)
 			
 			if ((mouse_check_button_pressed(mb_left)) and (!instance_exists(obj_Fade)))
 			{
-				if ((yesBar == yesBarMax) and (point_in_rectangle(mouseXGui,mouseYGui,180,116,300,147)))
+				if (point_in_rectangle(mouseXGui,mouseYGui,180,116,300,147))
 				{
-					if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
-					audio_play_sound(snd_ButtonYes,0,false);
-					windowIndex = -1;
-					global.pause = false;
-					var fade = instance_create_depth(x,y,-999,obj_Fade);
-					fade.targetRoom = rm_MaykrTitle;
+					if (yesBar == yesBarMax)
+					{
+						if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+						audio_play_sound(snd_ButtonYes,0,false);
+						windowIndex = -1;
+						global.pause = false;
+						if ((!global.debug) and (global.canSave)) scr_LoadGame(global.selectedSave);
+						var fade = instance_create_depth(x,y,-999,obj_Fade);
+						fade.targetRoom = rm_MaykrTitle;
+					}
+					else
+					{
+						yesBar += (yesBarMax / 10);
+					}
 				}
 				
 				if (point_in_rectangle(mouseXGui,mouseYGui,180,149,300,174))
@@ -644,7 +710,9 @@ if (!active)
 					windowIndex = -1;
 					spawnTimer = 15;
 				}
+				io_clear();
 			}
+			yesBar = clamp(yesBar,0,yesBarMax);
 			break;
 		}
 		#endregion

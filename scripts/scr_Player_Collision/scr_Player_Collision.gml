@@ -1,9 +1,10 @@
 ///@description Collision
 
-function scr_Player_Collision()
+function scr_Player_Collision(argument0)
 {
 	//Variables
 	
+	var playerMech = argument0;
 	hspCollision = 0;
 	vspCollision = 0;
 	
@@ -68,16 +69,19 @@ function scr_Player_Collision()
 			
 			//Slide
 			
-			if place_meeting(x + hspFinal,y - yplus,obj_ParentWall)
+			if (playerMech == playerMechs.none)
 			{
-				collidingWall = instance_place(x + hspFinal,y - yplus,obj_ParentWall);
-				if (duckSlide)
+				if place_meeting(x + hspFinal,y - yplus,obj_ParentWall)
 				{
-					if (collidingWall.object)
+					collidingWall = instance_place(x + hspFinal,y - yplus,obj_ParentWall);
+					if (duckSlide)
 					{
-						if ((collidingWall.damageType == damageTypes.none) or (collidingWall.damageType = damageType))
+						if (collidingWall.object)
 						{
-							collidingWall.hp -= dmg;
+							if ((collidingWall.damageType == damageTypes.none) or (collidingWall.damageType = damageType))
+							{
+								collidingWall.hp -= dmg;
+							}
 						}
 					}
 				}
@@ -207,9 +211,9 @@ function scr_Player_Collision()
 	//Clamp
 	
 	var clampXMin = obj_Camera.cameraX;
-	var clampXMax = (obj_Camera.cameraX + obj_Camera.viewWidth);
+	var clampXMax = (obj_Camera.cameraX + (obj_Camera.viewWidth / obj_Camera.zoomFinal));
 	var clampYMin = obj_Camera.cameraY;
-	var clampYMax = (obj_Camera.cameraY + obj_Camera.viewHeight) + 24;
+	var clampYMax = (obj_Camera.cameraY + ((obj_Camera.viewHeight + 24) / obj_Camera.zoomFinal));
 	
 	if (global.cutscene)
 	{
@@ -227,11 +231,14 @@ function scr_Player_Collision()
 	
 	//Death On Bottom
 	
-	if ((global.hpP1 != 0) and (y >= (obj_Camera.cameraY + obj_Camera.viewHeight) + 24)) global.hpP1 = 0;
+	if ((global.hpP1 != 0) and (y >= (obj_Camera.cameraY + ((obj_Camera.viewHeight + 24) / obj_Camera.zoomFinal))))
+	{
+		global.hpP1 = 0;
+	}
 }
 
 /* OLD
-function scr_Player_Collision()
+function scr_Player_Collision(playerMechs.none)
 {
 	//Variables
 	

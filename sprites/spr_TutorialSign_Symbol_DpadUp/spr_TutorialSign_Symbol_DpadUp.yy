@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 20,
+  "bbox_right": 16,
   "bbox_top": 0,
-  "bbox_bottom": 20,
+  "bbox_bottom": 16,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 21,
-  "height": 21,
+  "width": 17,
+  "height": 17,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"bd0fd8b6-9a1a-4d5f-af41-88d7849b0a3f","path":"sprites/spr_TutorialSign_Symbol_DpadUp/spr_TutorialSign_Symbol_DpadUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bd0fd8b6-9a1a-4d5f-af41-88d7849b0a3f","path":"sprites/spr_TutorialSign_Symbol_DpadUp/spr_TutorialSign_Symbol_DpadUp.yy",},"LayerId":{"name":"afb7e78c-c08f-45f1-ba90-17ea62e81e3d","path":"sprites/spr_TutorialSign_Symbol_DpadUp/spr_TutorialSign_Symbol_DpadUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_TutorialSign_Symbol_DpadUp","path":"sprites/spr_TutorialSign_Symbol_DpadUp/spr_TutorialSign_Symbol_DpadUp.yy",},"resourceVersion":"1.0","name":"bd0fd8b6-9a1a-4d5f-af41-88d7849b0a3f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"0120525c-59a2-4194-8e21-c161f94bac9b","path":"sprites/spr_TutorialSign_Symbol_DpadUp/spr_TutorialSign_Symbol_DpadUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"0120525c-59a2-4194-8e21-c161f94bac9b","path":"sprites/spr_TutorialSign_Symbol_DpadUp/spr_TutorialSign_Symbol_DpadUp.yy",},"LayerId":{"name":"afb7e78c-c08f-45f1-ba90-17ea62e81e3d","path":"sprites/spr_TutorialSign_Symbol_DpadUp/spr_TutorialSign_Symbol_DpadUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_TutorialSign_Symbol_DpadUp","path":"sprites/spr_TutorialSign_Symbol_DpadUp/spr_TutorialSign_Symbol_DpadUp.yy",},"resourceVersion":"1.0","name":"0120525c-59a2-4194-8e21-c161f94bac9b","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_TutorialSign_Symbol_DpadUp","path":"sprites/spr_TutorialSign_Symbol_DpadUp/spr_TutorialSign_Symbol_DpadUp.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"5162b2f7-fc62-45f7-b587-ba9f8c272ec9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bd0fd8b6-9a1a-4d5f-af41-88d7849b0a3f","path":"sprites/spr_TutorialSign_Symbol_DpadUp/spr_TutorialSign_Symbol_DpadUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6bacbabe-dbf9-424c-b3a1-804d294ce8b9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0120525c-59a2-4194-8e21-c161f94bac9b","path":"sprites/spr_TutorialSign_Symbol_DpadUp/spr_TutorialSign_Symbol_DpadUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 10,
-    "yorigin": 10,
+    "xorigin": 8,
+    "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_TutorialSign_Symbol_DpadUp","path":"sprites/spr_TutorialSign_Symbol_DpadUp/spr_TutorialSign_Symbol_DpadUp.yy",},

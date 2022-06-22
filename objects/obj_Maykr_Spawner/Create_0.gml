@@ -21,8 +21,8 @@ selected = 0;
 dragged = 0;
 dragX = 0;
 dragY = 0;
-xOffset = x;
-yOffset = y;
+xOffset = 0;
+yOffset = 0;
 
 //Timers
 

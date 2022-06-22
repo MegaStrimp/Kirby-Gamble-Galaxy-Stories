@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 19,
+  "bbox_right": 13,
   "bbox_top": 0,
-  "bbox_bottom": 19,
+  "bbox_bottom": 13,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 20,
-  "height": 20,
+  "width": 14,
+  "height": 14,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"ba1ee34f-51a4-404f-afdc-05035b3b63d3","path":"sprites/spr_TutorialSign_Symbol_BButtonPressed/spr_TutorialSign_Symbol_BButtonPressed.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ba1ee34f-51a4-404f-afdc-05035b3b63d3","path":"sprites/spr_TutorialSign_Symbol_BButtonPressed/spr_TutorialSign_Symbol_BButtonPressed.yy",},"LayerId":{"name":"e3989ec8-8c43-4cc9-b78e-da47f28cd636","path":"sprites/spr_TutorialSign_Symbol_BButtonPressed/spr_TutorialSign_Symbol_BButtonPressed.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_TutorialSign_Symbol_BButtonPressed","path":"sprites/spr_TutorialSign_Symbol_BButtonPressed/spr_TutorialSign_Symbol_BButtonPressed.yy",},"resourceVersion":"1.0","name":"ba1ee34f-51a4-404f-afdc-05035b3b63d3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"e97ffb16-f05f-46c0-bbbb-84e1f7750ffe","path":"sprites/spr_TutorialSign_Symbol_BButtonPressed/spr_TutorialSign_Symbol_BButtonPressed.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"e97ffb16-f05f-46c0-bbbb-84e1f7750ffe","path":"sprites/spr_TutorialSign_Symbol_BButtonPressed/spr_TutorialSign_Symbol_BButtonPressed.yy",},"LayerId":{"name":"e3989ec8-8c43-4cc9-b78e-da47f28cd636","path":"sprites/spr_TutorialSign_Symbol_BButtonPressed/spr_TutorialSign_Symbol_BButtonPressed.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_TutorialSign_Symbol_BButtonPressed","path":"sprites/spr_TutorialSign_Symbol_BButtonPressed/spr_TutorialSign_Symbol_BButtonPressed.yy",},"resourceVersion":"1.0","name":"e97ffb16-f05f-46c0-bbbb-84e1f7750ffe","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_TutorialSign_Symbol_BButtonPressed","path":"sprites/spr_TutorialSign_Symbol_BButtonPressed/spr_TutorialSign_Symbol_BButtonPressed.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"9cadbf76-5533-4531-b4b7-5d8123a65cf8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ba1ee34f-51a4-404f-afdc-05035b3b63d3","path":"sprites/spr_TutorialSign_Symbol_BButtonPressed/spr_TutorialSign_Symbol_BButtonPressed.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"75375eff-8ba5-459c-b5f5-47de7b7828dd","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e97ffb16-f05f-46c0-bbbb-84e1f7750ffe","path":"sprites/spr_TutorialSign_Symbol_BButtonPressed/spr_TutorialSign_Symbol_BButtonPressed.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 10,
-    "yorigin": 10,
+    "xorigin": 7,
+    "yorigin": 7,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_TutorialSign_Symbol_BButtonPressed","path":"sprites/spr_TutorialSign_Symbol_BButtonPressed/spr_TutorialSign_Symbol_BButtonPressed.yy",},

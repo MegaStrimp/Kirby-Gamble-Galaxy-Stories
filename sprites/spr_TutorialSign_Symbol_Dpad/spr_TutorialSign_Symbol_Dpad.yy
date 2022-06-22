@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 20,
+  "bbox_right": 16,
   "bbox_top": 0,
-  "bbox_bottom": 20,
+  "bbox_bottom": 16,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 21,
-  "height": 21,
+  "width": 17,
+  "height": 17,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"bd0fd8b6-9a1a-4d5f-af41-88d7849b0a3f","path":"sprites/spr_TutorialSign_Symbol_Dpad/spr_TutorialSign_Symbol_Dpad.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bd0fd8b6-9a1a-4d5f-af41-88d7849b0a3f","path":"sprites/spr_TutorialSign_Symbol_Dpad/spr_TutorialSign_Symbol_Dpad.yy",},"LayerId":{"name":"afb7e78c-c08f-45f1-ba90-17ea62e81e3d","path":"sprites/spr_TutorialSign_Symbol_Dpad/spr_TutorialSign_Symbol_Dpad.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_TutorialSign_Symbol_Dpad","path":"sprites/spr_TutorialSign_Symbol_Dpad/spr_TutorialSign_Symbol_Dpad.yy",},"resourceVersion":"1.0","name":"bd0fd8b6-9a1a-4d5f-af41-88d7849b0a3f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c040aaae-5315-4f0d-8fab-a821efe5297f","path":"sprites/spr_TutorialSign_Symbol_Dpad/spr_TutorialSign_Symbol_Dpad.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c040aaae-5315-4f0d-8fab-a821efe5297f","path":"sprites/spr_TutorialSign_Symbol_Dpad/spr_TutorialSign_Symbol_Dpad.yy",},"LayerId":{"name":"afb7e78c-c08f-45f1-ba90-17ea62e81e3d","path":"sprites/spr_TutorialSign_Symbol_Dpad/spr_TutorialSign_Symbol_Dpad.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_TutorialSign_Symbol_Dpad","path":"sprites/spr_TutorialSign_Symbol_Dpad/spr_TutorialSign_Symbol_Dpad.yy",},"resourceVersion":"1.0","name":"c040aaae-5315-4f0d-8fab-a821efe5297f","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_TutorialSign_Symbol_Dpad","path":"sprites/spr_TutorialSign_Symbol_Dpad/spr_TutorialSign_Symbol_Dpad.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"332ecaa3-562e-4e05-bdba-3cfc1ed2828d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bd0fd8b6-9a1a-4d5f-af41-88d7849b0a3f","path":"sprites/spr_TutorialSign_Symbol_Dpad/spr_TutorialSign_Symbol_Dpad.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d03c7d15-fe1d-458c-a08a-184617e6a7f0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c040aaae-5315-4f0d-8fab-a821efe5297f","path":"sprites/spr_TutorialSign_Symbol_Dpad/spr_TutorialSign_Symbol_Dpad.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 10,
-    "yorigin": 10,
+    "xorigin": 8,
+    "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_TutorialSign_Symbol_Dpad","path":"sprites/spr_TutorialSign_Symbol_Dpad/spr_TutorialSign_Symbol_Dpad.yy",},

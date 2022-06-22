@@ -47,6 +47,7 @@ deathOnBottom = true;
 objectOnDeath = false;
 objectOnDeathObj = obj_Projectile_ExplosionMask;
 groundFailsafe = true;
+weaponIndex = 1;
 
 //Timers
 

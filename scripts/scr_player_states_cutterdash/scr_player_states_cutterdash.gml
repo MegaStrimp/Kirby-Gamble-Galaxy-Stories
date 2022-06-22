@@ -29,7 +29,7 @@ function scr_Player_States_CutterDash()
 		
 		image_speed = 1;
 		
-		scr_Player_Collision();
+		scr_Player_Collision(playerMechs.none);
 	}
 	else
 	{

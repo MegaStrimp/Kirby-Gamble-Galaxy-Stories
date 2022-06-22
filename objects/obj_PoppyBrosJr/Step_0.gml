@@ -16,6 +16,11 @@ if (setupTimer == 0)
 		sprHurt = spr_PoppyBrosJr_Normal_Hurt;
 		break;
 	}
+	if (weaponIndex == 0)
+	{
+		ability = playerAbilities.none;
+		attackTimer = -1;
+	}
 }
 
 //Event Inherited

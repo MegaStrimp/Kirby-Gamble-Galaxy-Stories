@@ -27,9 +27,9 @@ else if (place_meeting(x,y + 1,obj_Spring))
 }
 
 wallAbove = false;
-if (place_meeting(x,y - 1,obj_ParentWall))
+if (place_meeting(x,y - 1,obj_Wall))
 {
-	var collidingWall = instance_place(x,y - 1,obj_ParentWall);
+	var collidingWall = instance_place(x,y - 1,obj_Wall);
 	if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + collidingWall.vsp + 20 + vspFinal)))) wallAbove = true;
 }
 
@@ -1133,8 +1133,8 @@ if (!global.pause)
 		    projBeam.dirX = -dir;
 		    projBeam.dir = dir;
 			projBeam.image_xscale = projBeam.dirX;
-			projBeam.spd = 5;
-			projBeam.direction = 270 + (projBeam.dir * 45);
+			projBeam.spd = 6;
+			projBeam.direction = 270 + (projBeam.dir * 45) + irandom_range(-5,5);
 		    projBeam.state = 3;
 		    projBeam.enemy = false;
 		    projBeam.destroyableByWall = false;
@@ -1924,6 +1924,7 @@ else if (characterSetupTimer == 0)
 		sprBeamAttack5 = spr_Kirby_Normal_Beam_Attack5;
 		sprBeamAttack6 = spr_Kirby_Normal_Beam_Attack6;
 		sprMysticBeamAttack1 = spr_Kirby_Normal_MysticBeam_Attack1;
+		sprMysticBeamAttack2 = spr_Kirby_Normal_MysticBeam_Attack2;
 		sprWaddleDooFlashingEye = spr_WaddleDoo_Normal_FlashingEye;
 		sprStoneAttack1Ready = spr_Kirby_Normal_Stone_Attack1Ready;
 		if (player == 0)

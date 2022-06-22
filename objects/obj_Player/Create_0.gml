@@ -178,6 +178,7 @@ sprBeamAttack4 = spr_Kirby_Normal_Beam_Attack4;
 sprBeamAttack5 = spr_Kirby_Normal_Beam_Attack5;
 sprBeamAttack6 = spr_Kirby_Normal_Beam_Attack6;
 sprMysticBeamAttack1 = spr_Kirby_Normal_MysticBeam_Attack1;
+sprMysticBeamAttack2 = spr_Kirby_Normal_MysticBeam_Attack2;
 sprWaddleDooFlashingEye = spr_WaddleDoo_Normal_FlashingEye;
 sprStoneAttack1Ready = spr_Kirby_Normal_Stone_Attack1Ready;
 sprStoneAttack1Common = spr_Kirby_Normal_Stone_Attack1_Common1;

@@ -81,6 +81,7 @@ else if (spawnTimer == 0)
 	spawnedEnemy.objectOnDeath = objectOnDeath;
 	spawnedEnemy.objectOnDeathObj = objectOnDeathObj;
 	spawnedEnemy.groundFailsafe = groundFailsafe;
+	spawnedEnemy.weaponIndex = weaponIndex;
 	spawnedEnemy.attackTimerMax = attackTimerMax;
 	spawnedEnemy.attackTimer = attackTimerMax;
 	spawnTimer = -1;

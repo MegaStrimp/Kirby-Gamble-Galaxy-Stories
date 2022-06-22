@@ -9,6 +9,7 @@ function scr_LoadConfig(argument0)
 	global.fullscreen = ini_read_real("options","fullscreen",1);
 	global.extraTutorials = ini_read_real("options","extraTutorials",true);
 	global.autoSwallow = ini_read_real("options","autoSwallow",false);
+	global.musicIntro = ini_read_real("options","musicIntro",false);
 	global.windowSize = ini_read_real("options","windowSize",2);
 	global.language = ini_read_real("options","language",0);
 	

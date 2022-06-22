@@ -3,7 +3,7 @@
 //Variables
 
 zoom = lerp(zoom,zoomTarget,.02);
-var zoomFinal = zoom * hitZoom;
+zoomFinal = zoom * hitZoom;
 
 if (!global.pause) hitZoom = lerp(hitZoom,1,.05);
 

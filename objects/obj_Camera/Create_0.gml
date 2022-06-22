@@ -13,6 +13,7 @@ scale = global.windowSize;
 scaleMax = floor(display_get_height() / viewHeight);
 scaleMax = max(scaleMax,1);
 zoom = 1;
+zoomFinal = 1;
 zoomTarget = 1;
 hitZoom = 1;
 cameraX = 0;

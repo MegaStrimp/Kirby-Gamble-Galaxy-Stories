@@ -100,6 +100,8 @@ enum debugObject
 	yolky,
 	wheelie,
 	laserBall,
+	juckle,
+	kookler,
 	
 	IMSICKOFTHISGUY,
 	

@@ -71,7 +71,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 22,
-    "yorigin": 21,
+    "yorigin": 34,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_MysticBeam_GGS_Flap","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Flap/spr_Kirby_AbilityHat_MysticBeam_GGS_Flap.yy",},

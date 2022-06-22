@@ -71,7 +71,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 21,
-    "yorigin": 20,
+    "yorigin": 30,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_MysticBeam_GGS_FloatSpit","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_FloatSpit/spr_Kirby_AbilityHat_MysticBeam_GGS_FloatSpit.yy",},

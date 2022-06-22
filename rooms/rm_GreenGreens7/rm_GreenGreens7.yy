@@ -43,6 +43,7 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_PointStar","path":"objects/obj_PointStar/obj_PointStar.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":780.0,"y":516.0,"resourceVersion":"1.0","name":"inst_19A37AD5","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_PointStar","path":"objects/obj_PointStar/obj_PointStar.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":780.0,"y":540.0,"resourceVersion":"1.0","name":"inst_3F3CE56E","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_PointStar","path":"objects/obj_PointStar/obj_PointStar.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":780.0,"y":564.0,"resourceVersion":"1.0","name":"inst_65700570","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"obj_1Up","path":"objects/obj_1Up/obj_1Up.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":684.0,"y":84.0,"resourceVersion":"1.0","name":"inst_9F79F74","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":300,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":6,"gridY":6,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Environment","tags":[],"resourceType":"GMRInstanceLayer",},
     {"tilesetId":{"name":"ts_GreenGreens_Tree","path":"tilesets/ts_GreenGreens_Tree/ts_GreenGreens_Tree.yy",},"x":0,"y":0,"tiles":{"SerialiseWidth":35,"SerialiseHeight":32,"TileSerialiseData":[
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -799,6 +800,7 @@
     {"name":"inst_218615F5","path":"rooms/rm_GreenGreens7/rm_GreenGreens7.yy",},
     {"name":"inst_4A1A24F","path":"rooms/rm_GreenGreens7/rm_GreenGreens7.yy",},
     {"name":"inst_56EA5827","path":"rooms/rm_GreenGreens7/rm_GreenGreens7.yy",},
+    {"name":"inst_9F79F74","path":"rooms/rm_GreenGreens7/rm_GreenGreens7.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

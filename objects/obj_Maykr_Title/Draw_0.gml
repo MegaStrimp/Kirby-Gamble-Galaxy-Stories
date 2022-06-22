@@ -1,7 +1,10 @@
 ///@description Draw
 
+#region Variables
 var triWidth = sprite_get_width(spr_Maykr_Triangle);
+#endregion
 
+#region Triangles
 xx += .2;
 if (xx >= triWidth) xx -= triWidth;
 for (var i = 0; i < 3; i++)
@@ -9,10 +12,70 @@ for (var i = 0; i < 3; i++)
 	draw_sprite(spr_Maykr_Triangle,0,480 - triWidth - (triWidth * i) + xx,0 - ((1 - startLerp) * 18));
 	draw_sprite_ext(spr_Maykr_Triangle,0,0 + (triWidth * i) - xx,270 + ((1 - startLerp) * 18),1,-1,image_angle,image_blend,image_alpha);
 }
+#endregion
 
+#region Logo
 draw_sprite_ext(spr_Maykr_Logo,0,92,-50 + ((startLerp) * 84),2,2,image_angle,image_blend,startLerp);
+#endregion
 
-/*
-draw_sprite(spr_Maykr_Title_Play,0,147 - ((1 - buttonLerp) * 305),111);
-draw_sprite(spr_Maykr_Title_Build,0,333 + ((1 - buttonLerp) * 305),149);
-draw_sprite(spr_Maykr_Title_Exit,0,147 - ((1 - buttonLerp) * 305),187);
+#region Windows
+switch (windowIndex)
+{
+	case maykrWindows.canvasSetup:
+	var x1 = 10;
+	var y1 = 10;
+	var x2 = room_width - 10;
+	var y2 = room_height - 10;
+	
+	var spriteWidth = sprite_get_width(spr_Maykr_Window_Border);
+	var spriteHeight = sprite_get_height(spr_Maykr_Window_Border);
+	
+	windowWidth = lerp(windowWidth,x2,.2);
+	windowHeight = lerp(windowHeight,y2,.2);
+	if ((!windowActive) and (windowWidth > (x2 * .85))) windowActive = true;
+	windowContentAlpha = lerp(windowContentAlpha,windowActive,.2);
+	
+	var windowXScale = ((windowWidth - x1) / spriteWidth);
+	var windowYScale = ((windowHeight - y1) / spriteHeight);
+	
+	textureY += .15;
+	if (textureY >= 48) textureY -= 48;
+	textureX += .15;
+	if (textureX >= 48) textureX -= 48;
+	
+	gpu_set_blendenable(false)
+	gpu_set_colorwriteenable(false,false,false,true);
+	draw_set_alpha(0);
+	draw_rectangle(0,0,room_width,room_height,false);
+	
+	draw_set_alpha(1);
+	draw_sprite_ext(spr_Maykr_Window_Border,1,x1,y1,windowXScale,windowYScale,image_angle,image_blend,image_alpha);
+	gpu_set_blendenable(true);
+	gpu_set_colorwriteenable(true,true,true,true);
+	
+	gpu_set_blendmode_ext(bm_dest_alpha,bm_inv_dest_alpha);
+	gpu_set_alphatestenable(true);
+	
+	for (var i = 0; i < floor((x2 - x1) / 48) + 2; i++)
+	{
+		for (var h = 0; h < floor((y2 - y1) / 48) + 2; h++)
+		{
+			draw_sprite(spr_Maykr_Window_Texture,0,x1 + textureX + (48 * (i - 1)),y1 + textureY + (48 * (h - 1)));
+		}
+	}
+	
+	gpu_set_alphatestenable(false);
+	gpu_set_blendmode(bm_normal);
+	
+	draw_sprite_ext(spr_Maykr_Window_Border,0,x1,y1,windowXScale,windowYScale,image_angle,image_blend,image_alpha);
+	
+	draw_set_alpha(windowContentAlpha);
+	draw_set_color(c_white);
+	draw_set_halign(fa_center);
+	draw_set_font(global.fontMaykrRed);
+	draw_text(((x2 - x1) / 2),y1 + 3,"create canvas");
+	draw_set_halign(fa_left);
+	draw_set_alpha(1);
+	break;
+}
+#endregion

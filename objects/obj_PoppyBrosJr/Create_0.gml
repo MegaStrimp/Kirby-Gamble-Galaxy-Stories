@@ -40,6 +40,7 @@ handPosSpd = 0;
 bomb = -1;
 handXOffset = 0;
 handYOffset = 0;
+weaponIndex = 1;
 
 //Timers
 

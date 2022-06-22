@@ -18,7 +18,7 @@ function scr_Player_States_Normal()
 		if (place_meeting(x,y + 1,obj_ParentWall))
 		{
 			var collidingWall = instance_place(x,y + 1,obj_ParentWall);
-			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + collidingWall.vsp + 20 + vspFinal)))) grounded = true;
+			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal)))) grounded = true;
 		}
 		else if (place_meeting(x,y + 1,obj_Spring))
 		{
@@ -27,9 +27,9 @@ function scr_Player_States_Normal()
 		}
 		
 		var wallAbove = false;
-		if (place_meeting(x,y - 1,obj_ParentWall))
+		if (place_meeting(x,y - 1,obj_Wall))
 		{
-			var collidingWall = instance_place(x,y - 1,obj_ParentWall);
+			var collidingWall = instance_place(x,y - 1,obj_Wall);
 			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + collidingWall.vsp + 20 + vspFinal)))) wallAbove = true;
 		}
 		
@@ -195,7 +195,7 @@ function scr_Player_States_Normal()
 		}
 		
 		var blockGap = false;
-		if ((run) and (hsp != 0) and (vsp == 0) and (!place_meeting(x,y + 1,obj_ParentWall)) and (!place_meeting(x + hsp,y,obj_ParentWall)) and (place_meeting(x + hsp,y + 1,obj_ParentWall))) blockGap = true;
+		if ((run) and (hsp != 0) and (vsp == 0) and (!place_meeting(x,y + 1,obj_ParentWall)) and (!place_meeting(x + hsp,y,obj_ParentWall)) and (place_meeting(x + (hsp + (2 * sign(hsp))),y + 1,obj_ParentWall))) blockGap = true;
 		if ((hasGravity) and (!blockGap) and (playerAbility != playerAbilities.ufo))
 		{
 			var gravOffset = 0;
@@ -389,7 +389,8 @@ function scr_Player_States_Normal()
 					}
 					else
 					{
-						if (bombDir < bombDirMax) bombDir += 2;
+						if (bombDir < bombDirMax) bombDir += (2 * (1 + keyUpHold));
+						bombDir = min(bombDir,bombDirMax);
 						if (bombDir >= (bombDirMax / 2))
 						{
 							image_index = 1;
@@ -1145,14 +1146,14 @@ function scr_Player_States_Normal()
 									}
 									else
 									{
-										canMysticBeamShield = true;
 										if (instance_exists(obj_Projectile_Beam))
 										{
 											with (obj_Projectile_Beam)
 											{
 												if ((isMystic) and (state == 2) and (owner == other.id))
 												{
-													if (audio_is_playing(snd_MysticBeamLaunch)) audio_stop_sound(snd_MysticBeamLaunch);
+													instance_destroy();
+													/*if (audio_is_playing(snd_MysticBeamLaunch)) audio_stop_sound(snd_MysticBeamLaunch);
 													audio_play_sound(snd_MysticBeamLaunch,0,false);
 													other.canMysticBeamShield = false;
 													var par = instance_create_depth(x,y,depth,obj_Particle);
@@ -1169,11 +1170,11 @@ function scr_Player_States_Normal()
 													direction = angle;
 													state = 3;
 													destroyableByWall = false;
-													alphaTimer = alphaTimerMax;
+													alphaTimer = alphaTimerMax;*/
 												}
 											}
 										}
-										beamCharge = 0;
+										/*beamCharge = 0;
 										if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
 										chargeSfxState = "intro";
 										if (canMysticBeamShield)
@@ -1188,6 +1189,34 @@ function scr_Player_States_Normal()
 										else
 										{
 											attackTimer = 0;
+										}*/
+										if (canMysticBeamShield)
+										{
+											if (audio_is_playing(snd_MysticBeam)) audio_stop_sound(snd_MysticBeam);
+											sndMysticBeam = audio_play_sound(snd_MysticBeam,0,false);
+											attack = true;
+											attackNumber = playerAttacks.mysticBeamNormal;
+											sprite_index = sprBeamAttack1;
+											image_index = 0;
+										}
+										else
+										{
+											attack = true;
+											attackNumber = playerAttacks.mysticBeamBarrierBreak;
+											sprite_index = sprMysticBeamAttack2;
+											image_index = 0;
+											if (audio_is_playing(snd_BombExplode)) audio_stop_sound(snd_BombExplode);
+											audio_play_sound(snd_BombExplode,0,false);
+											var particle = instance_create_depth(x,y,depth,obj_DeathParticles);
+											particle.state = "explosion1";
+											var obj = instance_create_depth(x,y,depth,obj_Projectile_ExplosionMask);
+											obj.dmg = 26;
+											obj.enemy = false;
+											obj.hurtsEnemy = true;
+											obj.hurtsPlayer = false;
+											obj.scale = 2.5;
+											attackTimer = 30;
+											canMysticBeamShield = true;
 										}
 									}
 								}
@@ -1233,14 +1262,14 @@ function scr_Player_States_Normal()
 							{
 								if ((!global.cutscene) and (!keyAttackHold))
 								{
-									canMysticBeamShield = true;
 									if (instance_exists(obj_Projectile_Beam))
 									{
 										with (obj_Projectile_Beam)
 										{
 											if ((isMystic) and (state == 2) and (owner == other.id))
 											{
-												if (audio_is_playing(snd_MysticBeamLaunch)) audio_stop_sound(snd_MysticBeamLaunch);
+												instance_destroy();
+												/*if (audio_is_playing(snd_MysticBeamLaunch)) audio_stop_sound(snd_MysticBeamLaunch);
 												audio_play_sound(snd_MysticBeamLaunch,0,false);
 												other.canMysticBeamShield = false;
 												var par = instance_create_depth(x,y,depth,obj_Particle);
@@ -1257,10 +1286,11 @@ function scr_Player_States_Normal()
 												direction = angle;
 											    state = 3;
 											    destroyableByWall = false;
-												alphaTimer = alphaTimerMax;
+												alphaTimer = alphaTimerMax;*/
 											}
 										}
 									}
+									
 									beamCharge = 0;
 									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
 									chargeSfxState = "intro";
@@ -1275,7 +1305,22 @@ function scr_Player_States_Normal()
 									}
 									else
 									{
-										attackTimer = 0;
+										attack = true;
+										attackNumber = playerAttacks.mysticBeamBarrierBreak;
+										sprite_index = sprMysticBeamAttack2;
+										image_index = 0;
+										if (audio_is_playing(snd_BombExplode)) audio_stop_sound(snd_BombExplode);
+										audio_play_sound(snd_BombExplode,0,false);
+										var particle = instance_create_depth(x,y,depth,obj_DeathParticles);
+										particle.state = "explosion1";
+										var obj = instance_create_depth(x,y,depth,obj_Projectile_ExplosionMask);
+										obj.dmg = 26;
+										obj.enemy = false;
+										obj.hurtsEnemy = true;
+										obj.hurtsPlayer = false;
+										obj.scale = 2.5;
+										attackTimer = 30;
+										canMysticBeamShield = true;
 									}
 								}
 							}
@@ -1343,6 +1388,7 @@ function scr_Player_States_Normal()
 									projBeam.sprIdle = spr_Projectile_MysticBeam_Normal;
 									projBeam.isMystic = true;
 								}
+								canMysticBeamShield = false;
 								attackable = false;
 							}
 							if (instance_exists(parBeamCycle1))
@@ -4133,7 +4179,7 @@ function scr_Player_States_Normal()
 		if ((cutterCatch) and (!attack)) sprite_index = sprCutterCatch;
 		
 		#region Collision
-		scr_Player_Collision();
+		scr_Player_Collision(playerMechs.none);
 		#endregion
 	}
 	else

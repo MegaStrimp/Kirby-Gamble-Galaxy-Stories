@@ -15,6 +15,8 @@ spawnedSprite = spr_Maykr_Spawner_DebugWall;
 spawnedName = "Player";
 spawnedPaletteIndex = -1;
 spawnedSlopeType = 0;
+spawnedXOffset = 0;
+spawnedYOffset = 0;
 dirX = 1;
 snap = 24;
 #endregion
@@ -31,8 +33,15 @@ bottomHudOpen = false;
 #endregion
 
 #region Save Values
-maykrFileVersion = "0.6.0";
+maykrFileVersion = "1.0.0";
 maykrStartMsg = "This is Gamble Maykr's custom data file made by MegaStrimp for the fangame Kirby Gamble Galaxy Stories. Modifying this file may cause major issues.";
+loadState = -1;
+loadedFile = -1;
+#endregion
+
+#region Global Variables
+global.abilityP1 = playerAbilities.none;
+global.abilityP2 = playerAbilities.none;
 #endregion
 
 #region Mouse On Top
@@ -82,7 +91,7 @@ spawnTimer = 0;
 #endregion
 
 #region Spawn Kirby
-var spawner = instance_create_layer(54,room_height - 88,"Player",obj_Maykr_Spawner);
+var spawner = instance_create_layer(60,room_height - 91,"Player",obj_Maykr_Spawner);
 spawner.spawnedItemIndex = obj_Player;
 spawner.spawnedSprite = spr_Kirby_Normal_Idle;
 spawner.spawnedPaletteIndex = scr_Player_SprayPaint(global.sprayPaintKirbyP1,playerCharacters.kirby,global.skinKirbyP1);

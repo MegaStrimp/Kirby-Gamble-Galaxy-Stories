@@ -16,7 +16,6 @@ else if (setupTimer == 0)
 		sprIdle = spr_MovingWall_Normal_Idle;
 		break;
 	}
-	mask_index = sprIdle;
 }
 
 //Event Inherited

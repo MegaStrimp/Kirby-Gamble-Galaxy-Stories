@@ -1,10 +1,11 @@
 {
   "spriteId": {
-    "name": "spr_AbilityDropStar_Normal",
-    "path": "sprites/spr_AbilityDropStar_Normal/spr_AbilityDropStar_Normal.yy",
+    "name": "spr_WarpStar_Normal_Idle",
+    "path": "sprites/spr_WarpStar_Normal_Idle/spr_WarpStar_Normal_Idle.yy",
   },
   "solid": false,
   "visible": false,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,

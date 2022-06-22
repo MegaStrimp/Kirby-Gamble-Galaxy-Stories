@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "mus_Maykr.mp3",
-  "duration": 274.782043,
+  "soundFile": "mus_maykr.wav",
+  "duration": 38.4,
   "parent": {
     "name": "Subgames",
     "path": "folders/Sounds/Music/Subgames.yy",

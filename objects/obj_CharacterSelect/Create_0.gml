@@ -4,7 +4,9 @@
 
 characterP1 = playerCharacters.kirby;
 characterP2 = playerCharacters.kirby;
-for (var i = 0; i < 2; i++)
+selectionP1 = 0;
+selectionP2 = 0;
+/*for (var i = 0; i < 2; i++)
 {
 	var char = 0;
 	var switchChar = global.characterP1;
@@ -14,34 +16,8 @@ for (var i = 0; i < 2; i++)
 		switchChar = global.characterP2;
 		helper = global.isHelperP2;
 	}
-	
-	switch (switchChar)
-	{
-		default:
-		char = 0;
-		if (helper) char = 4;
-		break;
-		
-		case playerCharacters.gamble:
-		char = 1;
-		break;
-		
-		case playerCharacters.metaKnight:
-		char = 2;
-		break;
-		
-		case playerCharacters.keeby:
-		char = 3;
-		break;
-		
-		case playerCharacters.magolor:
-		char = 5;
-		break;
-		
-		case playerCharacters.gooey:
-		char = 6;
-		break;
-	}
+	char = switchChar;
+	if (helper) char = playerCharacters.waddleDee;
 	
 	if (i == 0)
 	{
@@ -51,7 +27,7 @@ for (var i = 0; i < 2; i++)
 	{
 		selectionP2 = char;
 	}
-}
+}*/
 rotP1 = 0;
 rotP2 = 0;
 hudWidthMax = 108;
@@ -93,15 +69,6 @@ if (global.metaKnightUnlocked)
 	i += 1;
 }
 
-if (global.keebyUnlocked)
-{
-	characterIndex[i] = playerCharacters.keeby;
-	characterTitle[i] = "Keeby";
-	characterIcon[i] = spr_Hud_Icon_Keeby;
-	characterAvailable[i] = false;
-	i += 1;
-}
-
 if (global.helperUnlocked)
 {
 	characterIndex[i] = playerCharacters.waddleDee;
@@ -126,6 +93,15 @@ if (global.gooeyUnlocked)
 	characterTitle[i] = "Gooey";
 	characterIcon[i] = spr_Hud_Icon_Gooey;
 	characterAvailable[i] = true;
+	i += 1;
+}
+
+if (global.keebyUnlocked)
+{
+	characterIndex[i] = playerCharacters.keeby;
+	characterTitle[i] = "Keeby";
+	characterIcon[i] = spr_Hud_Icon_Keeby;
+	characterAvailable[i] = false;
 	i += 1;
 }
 

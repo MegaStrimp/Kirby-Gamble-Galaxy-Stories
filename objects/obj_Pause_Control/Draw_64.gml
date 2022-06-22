@@ -304,7 +304,7 @@ if ((gamePaused) and (visible))
 		
 		//Page
 		
-		if (!cellphoneActive)
+		if ((!cellphoneActive) and (!instance_exists(obj_Pause_Fade)) and (!instance_exists(obj_Fade)))
 		{
 			if (keyLeftPressed)
 			{

@@ -7,6 +7,10 @@ selection = "storyMode";
 select = false;
 goBack = false;
 
+//Exit Maykr
+
+scr_Maykr_ExitMode();
+
 //Spawn Buttons
 
 var button = instance_create_depth(480,270,depth,obj_Menu_Button);

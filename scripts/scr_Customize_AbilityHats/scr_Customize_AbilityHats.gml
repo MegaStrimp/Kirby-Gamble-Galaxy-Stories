@@ -4,7 +4,7 @@ function scr_Customize_AbilityHats()
 {
 	#region Cutter
 	var i = 0;
-	abilityHatTitle[i] = scr_Localization(stringAttributes.playerAbilities_cutter,stringAttributes.title,0,global.language);
+	abilityHatTitle[i] = scr_Localization_Main(stringAttributes.playerAbilities_cutter,stringAttributes.title,0,global.language);
 	abilityHatValue[i] = playerAbilities.cutter;
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;
@@ -41,7 +41,7 @@ function scr_Customize_AbilityHats()
 	
 	#region Beam
 	i += 1;
-	abilityHatTitle[i] = scr_Localization(stringAttributes.playerAbilities_beam,stringAttributes.title,0,global.language);
+	abilityHatTitle[i] = scr_Localization_Main(stringAttributes.playerAbilities_beam,stringAttributes.title,0,global.language);
 	abilityHatValue[i] = playerAbilities.beam;
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;
@@ -106,7 +106,7 @@ function scr_Customize_AbilityHats()
 	
 	#region Mystic Beam
 	i += 1;
-	abilityHatTitle[i] = scr_Localization(stringAttributes.playerAbilities_mysticBeam,stringAttributes.title,0,global.language);
+	abilityHatTitle[i] = scr_Localization_Main(stringAttributes.playerAbilities_mysticBeam,stringAttributes.title,0,global.language);
 	abilityHatValue[i] = playerAbilities.mysticBeam;
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;
@@ -129,7 +129,7 @@ function scr_Customize_AbilityHats()
 	
 	#region Stone
 	i += 1;
-	abilityHatTitle[i] = scr_Localization(stringAttributes.playerAbilities_stone,stringAttributes.title,0,global.language);
+	abilityHatTitle[i] = scr_Localization_Main(stringAttributes.playerAbilities_stone,stringAttributes.title,0,global.language);
 	abilityHatValue[i] = playerAbilities.stone;
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;
@@ -187,7 +187,7 @@ function scr_Customize_AbilityHats()
 	
 	#region Mirror
 	i += 1;
-	abilityHatTitle[i] = scr_Localization(stringAttributes.playerAbilities_mirror,stringAttributes.title,0,global.language);
+	abilityHatTitle[i] = scr_Localization_Main(stringAttributes.playerAbilities_mirror,stringAttributes.title,0,global.language);
 	abilityHatValue[i] = playerAbilities.mirror;
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;
@@ -252,7 +252,7 @@ function scr_Customize_AbilityHats()
 	
 	#region Ninja
 	i += 1;
-	abilityHatTitle[i] = scr_Localization(stringAttributes.playerAbilities_ninja,stringAttributes.title,0,global.language);
+	abilityHatTitle[i] = scr_Localization_Main(stringAttributes.playerAbilities_ninja,stringAttributes.title,0,global.language);
 	abilityHatValue[i] = playerAbilities.ninja;
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;
@@ -310,7 +310,7 @@ function scr_Customize_AbilityHats()
 	
 	#region Bomb
 	i += 1;
-	abilityHatTitle[i] = scr_Localization(stringAttributes.playerAbilities_bomb,stringAttributes.title,0,global.language);
+	abilityHatTitle[i] = scr_Localization_Main(stringAttributes.playerAbilities_bomb,stringAttributes.title,0,global.language);
 	abilityHatValue[i] = playerAbilities.bomb;
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;
@@ -361,7 +361,7 @@ function scr_Customize_AbilityHats()
 	
 	#region Fire
 	i += 1;
-	abilityHatTitle[i] = scr_Localization(stringAttributes.playerAbilities_fire,stringAttributes.title,0,global.language);
+	abilityHatTitle[i] = scr_Localization_Main(stringAttributes.playerAbilities_fire,stringAttributes.title,0,global.language);
 	abilityHatValue[i] = playerAbilities.fire;
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;
@@ -412,7 +412,7 @@ function scr_Customize_AbilityHats()
 	
 	#region Ice
 	i += 1;
-	abilityHatTitle[i] = scr_Localization(stringAttributes.playerAbilities_ice,stringAttributes.title,0,global.language);
+	abilityHatTitle[i] = scr_Localization_Main(stringAttributes.playerAbilities_ice,stringAttributes.title,0,global.language);
 	abilityHatValue[i] = playerAbilities.ice;
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;
@@ -463,7 +463,7 @@ function scr_Customize_AbilityHats()
 	
 	#region Spark
 	i += 1;
-	abilityHatTitle[i] = scr_Localization(stringAttributes.playerAbilities_spark,stringAttributes.title,0,global.language);
+	abilityHatTitle[i] = scr_Localization_Main(stringAttributes.playerAbilities_spark,stringAttributes.title,0,global.language);
 	abilityHatValue[i] = playerAbilities.spark;
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;
@@ -493,7 +493,7 @@ function scr_Customize_AbilityHats()
 	
 	#region Yoyo
 	i += 1;
-	abilityHatTitle[i] = scr_Localization(stringAttributes.playerAbilities_yoyo,stringAttributes.title,0,global.language);
+	abilityHatTitle[i] = scr_Localization_Main(stringAttributes.playerAbilities_yoyo,stringAttributes.title,0,global.language);
 	abilityHatValue[i] = playerAbilities.yoyo;
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;
@@ -523,7 +523,7 @@ function scr_Customize_AbilityHats()
 	
 	#region Wheel
 	i += 1;
-	abilityHatTitle[i] = scr_Localization(stringAttributes.playerAbilities_wheel,stringAttributes.title,0,global.language);
+	abilityHatTitle[i] = scr_Localization_Main(stringAttributes.playerAbilities_wheel,stringAttributes.title,0,global.language);
 	abilityHatValue[i] = playerAbilities.wheel;
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;
@@ -553,7 +553,7 @@ function scr_Customize_AbilityHats()
 	
 	#region Artist
 	i += 1;
-	abilityHatTitle[i] = scr_Localization(stringAttributes.playerAbilities_artist,stringAttributes.title,0,global.language);
+	abilityHatTitle[i] = scr_Localization_Main(stringAttributes.playerAbilities_artist,stringAttributes.title,0,global.language);
 	abilityHatValue[i] = playerAbilities.artist;
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;
@@ -583,7 +583,7 @@ function scr_Customize_AbilityHats()
 	
 	#region Fighter
 	i += 1;
-	abilityHatTitle[i] = scr_Localization(stringAttributes.playerAbilities_fighter,stringAttributes.title,0,global.language);
+	abilityHatTitle[i] = scr_Localization_Main(stringAttributes.playerAbilities_fighter,stringAttributes.title,0,global.language);
 	abilityHatValue[i] = playerAbilities.fighter;
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;
@@ -613,7 +613,7 @@ function scr_Customize_AbilityHats()
 	
 	#region Suplex
 	i += 1;
-	abilityHatTitle[i] = scr_Localization(stringAttributes.playerAbilities_suplex,stringAttributes.title,0,global.language);
+	abilityHatTitle[i] = scr_Localization_Main(stringAttributes.playerAbilities_suplex,stringAttributes.title,0,global.language);
 	abilityHatValue[i] = playerAbilities.suplex;
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;
@@ -643,7 +643,7 @@ function scr_Customize_AbilityHats()
 	
 	#region Wing
 	i += 1;
-	abilityHatTitle[i] = scr_Localization(stringAttributes.playerAbilities_wing,stringAttributes.title,0,global.language);
+	abilityHatTitle[i] = scr_Localization_Main(stringAttributes.playerAbilities_wing,stringAttributes.title,0,global.language);
 	abilityHatValue[i] = playerAbilities.wing;
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;
@@ -673,7 +673,7 @@ function scr_Customize_AbilityHats()
 	
 	#region Jet
 	i += 1;
-	abilityHatTitle[i] = scr_Localization(stringAttributes.playerAbilities_jet,stringAttributes.title,0,global.language);
+	abilityHatTitle[i] = scr_Localization_Main(stringAttributes.playerAbilities_jet,stringAttributes.title,0,global.language);
 	abilityHatValue[i] = playerAbilities.jet;
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;
@@ -710,7 +710,7 @@ function scr_Customize_AbilityHats()
 	
 	#region Sword
 	i += 1;
-	abilityHatTitle[i] = scr_Localization(stringAttributes.playerAbilities_sword,stringAttributes.title,0,global.language);
+	abilityHatTitle[i] = scr_Localization_Main(stringAttributes.playerAbilities_sword,stringAttributes.title,0,global.language);
 	abilityHatValue[i] = playerAbilities.sword;
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;
@@ -747,7 +747,7 @@ function scr_Customize_AbilityHats()
 	
 	#region Parasol
 	i += 1;
-	abilityHatTitle[i] = scr_Localization(stringAttributes.playerAbilities_parasol,stringAttributes.title,0,global.language);
+	abilityHatTitle[i] = scr_Localization_Main(stringAttributes.playerAbilities_parasol,stringAttributes.title,0,global.language);
 	abilityHatValue[i] = playerAbilities.parasol;
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;
@@ -777,7 +777,7 @@ function scr_Customize_AbilityHats()
 	
 	#region Hammer
 	i += 1;
-	abilityHatTitle[i] = scr_Localization(stringAttributes.playerAbilities_hammer,stringAttributes.title,0,global.language);
+	abilityHatTitle[i] = scr_Localization_Main(stringAttributes.playerAbilities_hammer,stringAttributes.title,0,global.language);
 	abilityHatValue[i] = playerAbilities.hammer;
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;
@@ -814,7 +814,7 @@ function scr_Customize_AbilityHats()
 	
 	#region Bell
 	i += 1;
-	abilityHatTitle[i] = scr_Localization(stringAttributes.playerAbilities_bell,stringAttributes.title,0,global.language);
+	abilityHatTitle[i] = scr_Localization_Main(stringAttributes.playerAbilities_bell,stringAttributes.title,0,global.language);
 	abilityHatValue[i] = playerAbilities.bell;
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;
@@ -893,7 +893,7 @@ function scr_Customize_AbilityHats()
 	
 	#region Sleep
 	i += 1;
-	abilityHatTitle[i] = scr_Localization(stringAttributes.playerAbilities_sleep,stringAttributes.title,0,global.language);
+	abilityHatTitle[i] = scr_Localization_Main(stringAttributes.playerAbilities_sleep,stringAttributes.title,0,global.language);
 	abilityHatValue[i] = playerAbilities.sleep;
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;
@@ -937,7 +937,7 @@ function scr_Customize_AbilityHats()
 	
 	#region Scan
 	i += 1;
-	abilityHatTitle[i] = scr_Localization(stringAttributes.playerAbilities_scan,stringAttributes.title,0,global.language);
+	abilityHatTitle[i] = scr_Localization_Main(stringAttributes.playerAbilities_scan,stringAttributes.title,0,global.language);
 	abilityHatValue[i] = playerAbilities.scan;
 	abilityHatUnlocked[i] = true;
 	abilityHatOffset[i] = 0;

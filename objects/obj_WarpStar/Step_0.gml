@@ -1,8 +1,36 @@
 ///@description Main
 
+//Setup Timer
+
+if (setupTimer > 0)
+{
+	setupTimer -= 1;
+}
+else if (setupTimer == 0)
+{
+	switch (character)
+	{
+		//Normal
+		
+		case 0:
+		sprIdle = spr_WarpStar_Normal_Idle;
+		sprAura = spr_Particle_WarpStarAura_Yellow;
+		sprTrail = spr_Particle_WarpStarTrail_Yellow;
+		break;
+		
+		//Orange
+		
+		case 1:
+		sprIdle = spr_WarpStar_Orange_Idle;
+		sprAura = spr_Particle_WarpStarAura_Orange;
+		sprTrail = spr_Particle_WarpStarTrail_Orange;
+		break;
+	}
+	setupTimer = -1;
+}
+
 if (!global.pause)
 {
-	
 	//Aura Timer
 	
 	if (auraTimer > 0)
@@ -25,6 +53,8 @@ if (!global.pause)
 	//Animation
 	
 	image_speed = 1;
+	
+	sprite_index = sprIdle;
 }
 else
 {

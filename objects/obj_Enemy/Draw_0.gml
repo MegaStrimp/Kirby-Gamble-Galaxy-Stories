@@ -73,8 +73,8 @@ if ((!isMiniBoss) and (!isBoss))
 	if (global.healthbarMarkedEnemy == id)
 	{
 		draw_sprite(spr_Healthbar_Enemy_Border,0,x,bbox_top - 16);
-		draw_sprite_ext(spr_Healthbar_Enemy_InnerBack,0,x - 8,bbox_top - 18,(healthbarBackHp / hpMax),image_yscale,image_angle,image_blend,image_alpha);
-		draw_sprite_ext(spr_Healthbar_Enemy_InnerFront,0,x - 8,bbox_top - 18,(healthbarBackHp / hpMax),image_yscale,image_angle,image_blend,image_alpha);
+		draw_sprite_ext(spr_Healthbar_Enemy_InnerBack,0,x - 8,bbox_top - 18,(healthbarBackHp / hpMax),image_yscale,0,image_blend,image_alpha);
+		draw_sprite_ext(spr_Healthbar_Enemy_InnerFront,0,x - 8,bbox_top - 18,(healthbarBackHp / hpMax),image_yscale,0,image_blend,image_alpha);
 	}
 }
 

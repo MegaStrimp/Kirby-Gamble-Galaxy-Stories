@@ -112,7 +112,7 @@ function scr_Player_States_WheelNormal()
 		
 		//Collision
 		
-		scr_Player_Collision();
+		scr_Player_Collision(playerMechs.none);
 	}
 	else
 	{

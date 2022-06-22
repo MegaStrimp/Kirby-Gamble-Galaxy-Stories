@@ -558,6 +558,10 @@ function scr_Player_HatShadow(argument0,argument1)
 					case sprHurt:
 					hatShadowIndex = spr_Kirby_HatShadow_MysticBeam_GGS_Hurt;
 					break;
+					
+					case sprMysticBeamAttack2:
+					hatShadowIndex = spr_Kirby_HatShadow_MysticBeam_GGS_Attack2;
+					break;
 				}
 				break;
 			}

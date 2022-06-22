@@ -59,7 +59,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 23,
-    "yorigin": 15,
+    "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_MysticBeam_GGS_Slide","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Slide/spr_Kirby_AbilityHat_MysticBeam_GGS_Slide.yy",},

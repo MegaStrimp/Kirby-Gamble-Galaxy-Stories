@@ -9,7 +9,7 @@ selection = global.language;
 var i = 0;
 for (var i = 0; i < languages.length; i++)
 {
-	languageIndex[i] = scr_Localization(stringAttributes.language,stringAttributes.title,i,0);
+	languageIndex[i] = scr_Localization_Main(stringAttributes.language,stringAttributes.title,i,0);
 	languageVal[i] = i;
 }
 languageArrayLength = languages.length;

@@ -197,16 +197,16 @@ else if (activeTimer == 0)
 			dialogue.pausable = false;
 			dialogue.maxPixels = 350;
 			var array = 0;
-			var text = scr_Localization(7,0,0,global.language);
+			var text = scr_Localization_Main(7,0,0,global.language);
 			scr_Dialogue(dialogue,array,text,-1,-1,-1,snd_ButtonYes);
 			array += 1;
-			text = scr_Localization(7,0,1,global.language);
+			text = scr_Localization_Main(7,0,1,global.language);
 			scr_Dialogue(dialogue,array,text,-1,-1,-1,snd_ButtonYes);
 			array += 1;
-			text = scr_Localization(7,0,2,global.language);
+			text = scr_Localization_Main(7,0,2,global.language);
 			scr_Dialogue(dialogue,array,text,-1,-1,-1,snd_ButtonYes);
 			array += 1;
-			text = scr_Localization(7,0,3,global.language);
+			text = scr_Localization_Main(7,0,3,global.language);
 			scr_Dialogue(dialogue,array,text,-1,-1,-1,snd_ButtonYes);
 			global.shopGearCubeFirstTime = false;
 		}
@@ -217,11 +217,11 @@ else if (activeTimer == 0)
 			dialogue.pausable = false;
 			dialogue.maxPixels = 350;
 			var array = 0;
-			var text = scr_Localization(7,2,irandom_range(0,1),global.language);
+			var text = scr_Localization_Main(7,2,irandom_range(0,1),global.language);
 			scr_Dialogue(dialogue,array,text,-1,-1,-1,snd_ButtonYes);
 			global.shopGearCubeNewItem = false;
 		}
-		welcomeText = scr_Localization(7,1,irandom_range(0,7),global.language);
+		welcomeText = scr_Localization_Main(7,1,irandom_range(0,7),global.language);
 		break;
 	}
 	activeTimer = -1;

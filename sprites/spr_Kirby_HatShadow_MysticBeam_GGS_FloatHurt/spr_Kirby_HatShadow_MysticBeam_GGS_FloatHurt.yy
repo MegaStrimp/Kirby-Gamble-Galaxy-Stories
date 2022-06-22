@@ -63,7 +63,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 22,
-    "yorigin": 21,
+    "yorigin": 31,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_HatShadow_MysticBeam_GGS_FloatHurt","path":"sprites/spr_Kirby_HatShadow_MysticBeam_GGS_FloatHurt/spr_Kirby_HatShadow_MysticBeam_GGS_FloatHurt.yy",},

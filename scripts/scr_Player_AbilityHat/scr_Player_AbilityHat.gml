@@ -815,6 +815,10 @@ function scr_Player_AbilityHat(argument0,argument1)
 					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Hurt;
 					break;
 					
+					case sprMysticBeamAttack2:
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Attack2;
+					break;
+					
 					default:
 					abilityHatIndex = -1;
 					break;

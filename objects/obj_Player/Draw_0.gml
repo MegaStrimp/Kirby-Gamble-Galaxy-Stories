@@ -182,8 +182,8 @@ if ((playerIsHelper) and (helperTimer != -1))
 
 //Debug Text
 
+/*
 draw_set_font(fnt_DebugConsole);
 draw_set_color(c_black);
-/*
 draw_text(x,y - 12,string(global.hatPaletteBeamKSSUP1));
 draw_text(x,y - 24,string(abilityHatPaints.beam_kssu_bitcrushed));

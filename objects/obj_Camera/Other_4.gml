@@ -35,7 +35,7 @@ switch (room)
 	}
 	break;
 	
-	case global.maykrCanvas:
+	case rm_Maykr:
 	{
 		cameraX = 0;
 		cameraY = room_height - viewHeight;
