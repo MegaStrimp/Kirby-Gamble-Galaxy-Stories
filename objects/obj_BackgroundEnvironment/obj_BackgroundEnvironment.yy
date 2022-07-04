@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_Background_BattleshipHalberd_GrayLight",
-    "path": "sprites/spr_Background_BattleshipHalberd_GrayLight/spr_Background_BattleshipHalberd_GrayLight.yy",
+    "name": "spr_Background_EggGardenSurface7",
+    "path": "sprites/spr_Background_EggGardenSurface7/spr_Background_EggGardenSurface7.yy",
   },
   "solid": false,
   "visible": true,

@@ -13,6 +13,18 @@ if (setupTimer == 0)
 		sprHurt = spr_Kookler_Normal_Hurt;
 		break;
 	}
+	
+	switch (state)
+	{
+		case 0:
+		followedPath = pth_Enemy_Kookler_Circle;
+		break;
+		
+		case 1:
+		followedPath = pth_Enemy_Kookler_Circle;
+		break;
+	}
+	path_start(followedPath,spd * walkDirX,path_action_restart,0);
 }
 
 //Event Inherited
@@ -29,7 +41,7 @@ if (!global.pause)
 	
 	//Movement
 	
-	path_start(followedPath,spd,path_action_restart,0);
+	path_speed = spd * walkDirX;
 
 	//Animation
 	
@@ -46,6 +58,7 @@ if (!global.pause)
 }
 else
 {
+	path_speed = 0;
 	image_speed = 0;
 	shakeX = 0;
 	shakeY = 0;

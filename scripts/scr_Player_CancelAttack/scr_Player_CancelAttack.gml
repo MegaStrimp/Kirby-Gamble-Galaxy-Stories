@@ -60,6 +60,7 @@ function scr_Player_CancelAttack(argument0)
 			gravLimit = gravLimitNormal;
 			stoneParticleCount = 0;
 			stoneReleaseParticleCount = 0;
+			invincible = false;
 			stoneReady = true;
 			stoneFallen = false;
 			break;

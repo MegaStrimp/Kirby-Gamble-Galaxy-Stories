@@ -1096,6 +1096,32 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		break;
 		#endregion
 		
+		#region Key
+		case debugObject.key:
+		debugSpriteSelectedMax = 1;
+		switch (debugSpriteSelected)
+		{
+			#region Normal
+			case 0:
+			var sprIdle = spr_Key_Normal;
+			break;
+			#endregion
+		}
+		debugSprite = sprIdle;
+		debugIndex = 0;
+		debugStateSelectedMax = 0;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var debugObj = instance_create_layer(x,y,"Environment",obj_Key);
+			debugObj.character = debugSpriteSelected;
+			debugObj.sprIdle = sprIdle;
+			debugObj.sprite_index = sprIdle;
+			debugObj.image_xscale = debugXScale;
+			debugObj.image_yscale = debugYScale;
+		}
+		break;
+		#endregion
+		
 		#region Cuttable Grass
 		case debugObject.cuttableGrass:
 		debugSpriteSelectedMax = 0;
@@ -3086,7 +3112,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		}
 		debugSprite = sprCalmIdle;
 		debugIndex = 0;
-		debugStateSelectedMax = 0;
+		debugStateSelectedMax = 1;
 		if (mouse_check_button_pressed(mb_left))
 		{
 			var debugObj = instance_create_layer(x,y,"Enemies",obj_Scarfy);

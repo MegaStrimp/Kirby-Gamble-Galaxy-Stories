@@ -74,7 +74,7 @@
     "spriteId": {"name":"spr_Kirby_AbilityHat_MysticBeam_GGS_Attack2","path":"sprites/spr_Kirby_AbilityHat_MysticBeam_GGS_Attack2/spr_Kirby_AbilityHat_MysticBeam_GGS_Attack2.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 27.0,
+    "playbackSpeed": 33.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

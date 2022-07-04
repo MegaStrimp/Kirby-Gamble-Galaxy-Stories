@@ -1152,7 +1152,25 @@ function scr_Player_States_Normal()
 											{
 												if ((isMystic) and (state == 2) and (owner == other.id))
 												{
+													if (audio_is_playing(snd_MysticBeamLaunch)) audio_stop_sound(snd_MysticBeamLaunch);
+													audio_play_sound(snd_MysticBeamLaunch,0,false);
+													var proj = instance_create_depth(x,y,depth,obj_Projectile_BarrierBreak);
+													proj.image_angle = angle_difference(-point_direction(x,y,other.x,other.y) - 45,image_angle);
+													proj.owner = id;
+													proj.abilityType = playerAbilities.mysticBeam;
+													proj.dmg = 24;
+													proj.destroyableByEnemy = false;
+													proj.destroyableByObject = false;
+													proj.destroyableByWall = false;
+													var particle = instance_create_depth(other.x,other.y,depth,obj_Particle);
+													particle.sprite_index = spr_Projectile_BarrierBreak_Normal_Tail;
+													particle.image_angle = angle + 22.5;
+													particle.destroyAfterAnimation = true;
 													instance_destroy();
+													/*var particle = instance_create_depth(x,y,depth,obj_Particle);
+													particle.sprite_index = spr_Particle_Flash1;
+													particle.scale = 1.5;
+													particle.destroyAfterAnimation = true;*/
 													/*if (audio_is_playing(snd_MysticBeamLaunch)) audio_stop_sound(snd_MysticBeamLaunch);
 													audio_play_sound(snd_MysticBeamLaunch,0,false);
 													other.canMysticBeamShield = false;
@@ -1205,16 +1223,6 @@ function scr_Player_States_Normal()
 											attackNumber = playerAttacks.mysticBeamBarrierBreak;
 											sprite_index = sprMysticBeamAttack2;
 											image_index = 0;
-											if (audio_is_playing(snd_BombExplode)) audio_stop_sound(snd_BombExplode);
-											audio_play_sound(snd_BombExplode,0,false);
-											var particle = instance_create_depth(x,y,depth,obj_DeathParticles);
-											particle.state = "explosion1";
-											var obj = instance_create_depth(x,y,depth,obj_Projectile_ExplosionMask);
-											obj.dmg = 26;
-											obj.enemy = false;
-											obj.hurtsEnemy = true;
-											obj.hurtsPlayer = false;
-											obj.scale = 2.5;
 											attackTimer = 30;
 											canMysticBeamShield = true;
 										}
@@ -1268,6 +1276,20 @@ function scr_Player_States_Normal()
 										{
 											if ((isMystic) and (state == 2) and (owner == other.id))
 											{
+												if (audio_is_playing(snd_MysticBeamLaunch)) audio_stop_sound(snd_MysticBeamLaunch);
+												audio_play_sound(snd_MysticBeamLaunch,0,false);
+												var proj = instance_create_depth(x,y,depth,obj_Projectile_BarrierBreak);
+												proj.image_angle = angle_difference(-point_direction(x,y,other.x,other.y) - 45,image_angle);
+												proj.owner = id;
+												proj.abilityType = playerAbilities.mysticBeam;
+												proj.dmg = 24;
+												proj.destroyableByEnemy = false;
+												proj.destroyableByObject = false;
+												proj.destroyableByWall = false;
+												var particle = instance_create_depth(other.x,other.y,depth,obj_Particle);
+												particle.sprite_index = spr_Projectile_BarrierBreak_Normal_Tail;
+												particle.image_angle = angle + 22.5;
+												particle.destroyAfterAnimation = true;
 												instance_destroy();
 												/*if (audio_is_playing(snd_MysticBeamLaunch)) audio_stop_sound(snd_MysticBeamLaunch);
 												audio_play_sound(snd_MysticBeamLaunch,0,false);
@@ -1309,16 +1331,6 @@ function scr_Player_States_Normal()
 										attackNumber = playerAttacks.mysticBeamBarrierBreak;
 										sprite_index = sprMysticBeamAttack2;
 										image_index = 0;
-										if (audio_is_playing(snd_BombExplode)) audio_stop_sound(snd_BombExplode);
-										audio_play_sound(snd_BombExplode,0,false);
-										var particle = instance_create_depth(x,y,depth,obj_DeathParticles);
-										particle.state = "explosion1";
-										var obj = instance_create_depth(x,y,depth,obj_Projectile_ExplosionMask);
-										obj.dmg = 26;
-										obj.enemy = false;
-										obj.hurtsEnemy = true;
-										obj.hurtsPlayer = false;
-										obj.scale = 2.5;
 										attackTimer = 30;
 										canMysticBeamShield = true;
 									}

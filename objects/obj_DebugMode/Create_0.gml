@@ -48,6 +48,7 @@ enum debugObject
 	abilityTrophy,
 	food,
 	itemChest,
+	key,
 	cuttableGrass,
 	pepBrew,
 	maximTomato,

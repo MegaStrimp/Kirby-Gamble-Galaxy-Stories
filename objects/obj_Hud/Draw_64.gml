@@ -10,6 +10,7 @@ var paletteP1 = global.sprayPaintP1;
 var paletteP2 = global.sprayPaintP2;
 var musicIntroX = 326;
 var musicIntroY = 170;
+hasTreasure = global.inStage;
 
 //if (global.isHelperP1) paletteP1 = spr_Hud_Palette_Helper;
 //if (global.isHelperP2) paletteP2 = spr_Hud_Palette_Helper;
@@ -144,6 +145,20 @@ if (global.isHub)
 else
 {
 	stageTitleOffset = 250;
+}
+
+//Treasures
+
+if (hasTreasure)
+{
+	draw_sprite(spr_Hud_Collectible_Background,0,2,1);
+	draw_sprite(spr_Hud_Collectible_Chest,0,1,1);
+	for (var i = 0; i < array_length(global.stageCollectibleTreasures); i++)
+	{
+		var spr = spr_Hud_Collectible_Dot;
+		if (global.stageCollectibleTreasures[i]) spr = spr_Hud_Collectible_Key;
+		draw_sprite(spr_Hud_Collectible_Dot,0,42 + (i * 17),19 - i);
+	}
 }
 
 //P1 Icon

@@ -17,6 +17,8 @@ if (setupTimer == 0)
 		break;
 		sprHurt = sprCalmHurt;
 	}
+	
+	if (state == 1) attackTimer = -1;
 }
 
 //Hurt Sprite
@@ -40,7 +42,7 @@ if (!global.pause)
 	
 	if (place_meeting(x,y,obj_InhaleMask))
 	{
-		if (!attack)
+		if ((!attack) and (state != 1))
 		{
 			particleCount = 0;
 			particleTimer = 0;
@@ -65,6 +67,52 @@ if (!global.pause)
 	
 	hsp = scr_Friction(hsp,decel);
 	
+	//Key Scarfy
+	
+	if (state == 1)
+	{
+		if (instance_exists(obj_Player))
+		{
+			playerHasKey = false;
+			with (obj_Player)
+			{
+				if ((carriedItem == carriedItems.key) or (carriedItem == carriedItems.keyChestKey))
+				{
+					other.playerHasKey = true;
+				}
+			}
+			
+			if (playerHasKey)
+			{
+				if (!attack)
+				{
+					attack = true;
+					attackState = 1;
+					imageSpeed = 2;
+					accelOld = accel;
+					movespeedOld = movespeed;
+					jumpspeedOld = jumpspeed;
+					accel = .2;
+					movespeed = 1.5;
+					jumpspeed = 1.5;
+				}
+			}
+			else
+			{
+				if (attack)
+				{
+					imageSpeed = 1;
+					accel = accelOld;
+					movespeed = movespeedOld;
+					jumpspeed = jumpspeedOld;
+					attack = false;
+					hsp = 0;
+					vsp = 0;
+				}
+			}
+		}
+	}
+	
 	//States
 	
 	switch (state)
@@ -72,6 +120,7 @@ if (!global.pause)
 		//Vertical Wave Movement with Horizontal Straight Movement
 		
 		case 0:
+		case 1:
 		//Follow Player
 		
 		if (instance_exists(obj_Player))
@@ -227,7 +276,7 @@ if (!global.pause)
 	}
 	else
 	{
-		if (hurt)
+		if ((hurt) and (state != 1))
 		{
 			particleCount = 0;
 			particleTimer = 0;

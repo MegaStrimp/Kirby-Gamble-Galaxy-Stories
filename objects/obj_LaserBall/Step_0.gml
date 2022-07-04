@@ -174,7 +174,7 @@ if (!global.pause)
 		}
 		else
 		{
-			if (attack)
+			if ((attack) and (attackstate == 1))
 			{
 				sprite_index = sprAttack;
 			}
@@ -221,7 +221,7 @@ if (!global.pause)
 		}
 		else
 		{
-			if (attack)
+			if ((attack) and (attackstate == 1))
 			{
 				sprite_index = sprAttack;
 			}
@@ -254,7 +254,7 @@ if (!global.pause)
 		}
 		else
 		{
-			if (attack)
+			if ((attack) and (attackstate == 1))
 			{
 				sprite_index = sprAttack;
 			}
@@ -278,7 +278,50 @@ if (!global.pause)
 		}
 		else if (attackTimer == 0)
 		{
-			attackTimer = -1;
+			switch (attackState)
+			{
+				case 0:
+				attack = true;
+				attackState = 1;
+				attackTimer = 60;
+				break;
+				
+				case 1:
+				attackState = 2;
+				attackTimer = 0;
+				break;
+				
+				case 2:
+				if (attackCount == attackCountMax)
+				{
+					attack = false;
+					attackCount = 0;
+					attackState = 0;
+					attackTimer = attackTimerMax;
+				}
+				else
+				{
+					attackCount += 1;
+					sprite_index = sprAttack;
+					if (audio_is_playing(snd_CutterEnemy)) audio_stop_sound(snd_CutterEnemy);
+					audio_play_sound(snd_CutterEnemy,0,false);
+					var projectile = instance_create_depth(x,y,depth - 1,obj_Projectile_JuckleBlade);
+					projectile.paletteIndex = paletteIndex;
+					projectile.character = 0;
+					projectile.owner = id;
+					projectile.hsp = lengthdir_x(projectile.spd,attackDir);
+					projectile.vsp = lengthdir_y(projectile.spd,attackDir);
+					projectile.image_angle = attackDir;
+					projectile.image_xscale = projectile.dirX;
+					projectile.enemy = true;
+					projectile.destroyableByEnemy = false;
+					projectile.hurtsObject = false;
+					projectile.hurtsEnemy = false;
+					projectile.hurtsPlayer = true;
+					attackTimer = 30;
+				}
+				break;
+			}
 		}
 	}
 	else

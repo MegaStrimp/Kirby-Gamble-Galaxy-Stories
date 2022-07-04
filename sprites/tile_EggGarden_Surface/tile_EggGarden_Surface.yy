@@ -10,12 +10,12 @@
   "bbox_left": 0,
   "bbox_right": 266,
   "bbox_top": 21,
-  "bbox_bottom": 119,
+  "bbox_bottom": 239,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "width": 288,
-  "height": 120,
+  "height": 240,
   "textureGroupId": {
     "name": "EggGarden",
     "path": "texturegroups/EggGarden",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b7372b0a-7d00-4658-b4ec-33f2c84cd8b5","path":"sprites/tile_EggGarden_Surface/tile_EggGarden_Surface.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b7372b0a-7d00-4658-b4ec-33f2c84cd8b5","path":"sprites/tile_EggGarden_Surface/tile_EggGarden_Surface.yy",},"LayerId":{"name":"475b7fda-e92d-410e-aaf6-dd98f1584ca0","path":"sprites/tile_EggGarden_Surface/tile_EggGarden_Surface.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"tile_EggGarden_Surface","path":"sprites/tile_EggGarden_Surface/tile_EggGarden_Surface.yy",},"resourceVersion":"1.0","name":"b7372b0a-7d00-4658-b4ec-33f2c84cd8b5","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"f09d849a-7c64-4146-aac9-af2c9400393a","path":"sprites/tile_EggGarden_Surface/tile_EggGarden_Surface.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"f09d849a-7c64-4146-aac9-af2c9400393a","path":"sprites/tile_EggGarden_Surface/tile_EggGarden_Surface.yy",},"LayerId":{"name":"475b7fda-e92d-410e-aaf6-dd98f1584ca0","path":"sprites/tile_EggGarden_Surface/tile_EggGarden_Surface.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"tile_EggGarden_Surface","path":"sprites/tile_EggGarden_Surface/tile_EggGarden_Surface.yy",},"resourceVersion":"1.0","name":"f09d849a-7c64-4146-aac9-af2c9400393a","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"tile_EggGarden_Surface","path":"sprites/tile_EggGarden_Surface/tile_EggGarden_Surface.yy",},
@@ -37,12 +37,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"74993459-736a-421d-99b1-93d300f7c400","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b7372b0a-7d00-4658-b4ec-33f2c84cd8b5","path":"sprites/tile_EggGarden_Surface/tile_EggGarden_Surface.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+            {"id":"bacb58b8-92d0-45de-a692-134ef20c77fd","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f09d849a-7c64-4146-aac9-af2c9400393a","path":"sprites/tile_EggGarden_Surface/tile_EggGarden_Surface.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,

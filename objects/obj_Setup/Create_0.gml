@@ -788,7 +788,9 @@ global.buildType = buildTypes.windows;
 global.stageMusicIsPlaying = true;
 global.musicFade = 1;
 global.mixActive = -1;
-global.canSave = true;
+global.canSave = false;
+global.inStage = false;
+for (var i = 0; i < 4; i++) global.stageCollectibleTreasures[i] = -1;
 
 #region Ability Kill Targets
 global.cutterAbilityKillsTarget = 10;
@@ -855,6 +857,8 @@ global.storyModeUnlocked = false;
 #region Fonts
 global.bitmapKSSU = font_add_sprite_ext(spr_Hud_Dialogue_Font_Kssu,"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz .!",false,0);
 global.fontDialogueDefaultKanji = font_add(working_directory + "ARIALUNI.TTF",12,false,false,32,127);
+global.fontMaykrBlue = font_add_sprite_ext(spr_Maykr_Font_Blue,"abcdefghijklmnopqrstuvwxyz",false,0);
+global.fontMaykrRed = font_add_sprite_ext(spr_Maykr_Font_Red,"abcdefghijklmnopqrstuvwxyz",false,0);
 #endregion
 
 #region Subtitiles

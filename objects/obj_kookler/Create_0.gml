@@ -21,4 +21,6 @@ paletteIndex = spr_Kookler_Normal_Palette_BlueSpin;
 hp = 12;
 dmg = 1;
 points = 400;
+hasXCollision = false;
+hasYCollision = false;
 followedPath = pth_Enemy_Kookler_Circle;

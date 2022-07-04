@@ -58,6 +58,7 @@ attackState = 0;
 attackCount = 0;
 attackCountMax = 4;
 active = false;
+attackDir = 0;
 
 //Timers
 

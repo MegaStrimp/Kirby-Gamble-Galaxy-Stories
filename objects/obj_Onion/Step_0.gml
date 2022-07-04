@@ -81,7 +81,29 @@ if (!global.pause)
 		
 		#region Ground
 		case 1:
-		if ((nearestPlayer != -1) and ((distance_to_object(nearestPlayer) <= 72)))
+		var canPopOut = false;
+		if (nearestPlayer != -1)
+		{
+			switch (direction)
+			{
+				case 0:
+				if (nearestPlayer.y > y) canPopOut = true;
+				break;
+				
+				case 90:
+				if (nearestPlayer.x > x) canPopOut = true;
+				break;
+				
+				case 180:
+				if (nearestPlayer.y < y) canPopOut = true;
+				break;
+				
+				case 270:
+				if (nearestPlayer.x < x) canPopOut = true;
+				break;
+			}
+		}
+		if ((canPopOut) and ((distance_to_object(nearestPlayer) <= 96)))
 		{
 			state = 0;
 			depth = layer_get_depth("Enemies");
