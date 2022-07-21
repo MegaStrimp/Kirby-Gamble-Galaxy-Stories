@@ -20,5 +20,5 @@ layer_background_yscale(layer_background_get_id("Background_Parallax1"),.5);
 if (!audio_is_playing(mus_BossTension))
 {
 	audio_stop_all();
-	global.musicPlaying = audio_play_sound(mus_BossTension,0,true);
+	scr_PlayMusic(false,mus_BossTension,0,true);
 }

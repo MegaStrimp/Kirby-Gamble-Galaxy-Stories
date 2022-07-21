@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_Bumper",
-  "duration": 0.705306,
+  "soundFile": "snd_bumper.wav",
+  "duration": 0.693333,
   "parent": {
     "name": "Objects",
     "path": "folders/Sounds/Sound Effects/Objects.yy",

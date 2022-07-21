@@ -11,7 +11,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_Fire2.mp3",
+  "soundFile": "snd_fire2.wav",
   "duration": 0.809796,
   "parent": {
     "name": "Sound Effects",

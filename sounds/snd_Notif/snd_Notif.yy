@@ -11,7 +11,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_Notif.mp3",
+  "soundFile": "snd_notif.wav",
   "duration": 0.940408,
   "parent": {
     "name": "Misc",

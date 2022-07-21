@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_EggGarden_Hub.mp3",
-  "duration": 129.253876,
+  "duration": 129.25388,
   "parent": {
     "name": "Stages",
     "path": "folders/Sounds/Music/Stages.yy",

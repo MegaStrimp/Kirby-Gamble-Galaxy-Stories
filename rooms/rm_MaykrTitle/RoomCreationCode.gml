@@ -10,5 +10,5 @@ global.discordLargeImage = "ggs_icon";
 if (!audio_is_playing(mus_Maykr))
 {
 	audio_stop_all();
-	global.musicPlaying = audio_play_sound(mus_Maykr,0,true);
+	scr_PlayMusic(false,mus_Maykr,0,true);
 }

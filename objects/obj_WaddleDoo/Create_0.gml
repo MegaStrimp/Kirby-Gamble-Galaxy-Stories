@@ -26,7 +26,6 @@ sprClimbUp = spr_WaddleDoo_Normal_ClimbUp;
 sprClimbDown = spr_WaddleDoo_Normal_ClimbDown;
 sprCharge = spr_WaddleDoo_Normal_Charge;
 sprAttack = spr_WaddleDoo_Normal_Attack;
-sprFlashingEye = spr_WaddleDoo_Normal_FlashingEye;
 sprHurt = spr_WaddleDoo_Normal_Hurt;
 
 //Other Variables
@@ -44,7 +43,6 @@ jumpState = 0;
 walkDuck = false;
 attack = false;
 attackState = 0;
-eyeFlash = false;
 climbDir = -1;
 
 //Timers

@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_CannedFood.mp3",
-  "duration": 4.675918,
+  "soundFile": "snd_cannedfood.wav",
+  "duration": 4.702041,
   "parent": {
     "name": "Objects",
     "path": "folders/Sounds/Sound Effects/Objects.yy",

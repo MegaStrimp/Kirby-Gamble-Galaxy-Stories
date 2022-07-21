@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_Slide.mp3",
-  "duration": 0.292347,
+  "soundFile": "snd_slide.wav",
+  "duration": 0.325079,
   "parent": {
     "name": "Player",
     "path": "folders/Sounds/Sound Effects/Player.yy",

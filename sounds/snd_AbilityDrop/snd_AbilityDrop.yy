@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_AbilityDrop.mp3",
-  "duration": 0.257,
+  "soundFile": "snd_abilitydrop.wav",
+  "duration": 0.251995,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",

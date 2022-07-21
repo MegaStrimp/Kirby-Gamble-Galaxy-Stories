@@ -11,7 +11,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_Spark1.mp3",
+  "soundFile": "snd_spark1.wav",
   "duration": 0.574694,
   "parent": {
     "name": "Attacks",

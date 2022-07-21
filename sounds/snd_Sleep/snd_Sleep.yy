@@ -11,7 +11,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_Sleep.mp3",
+  "soundFile": "snd_sleep.wav",
   "duration": 0.444082,
   "parent": {
     "name": "Sound Effects",

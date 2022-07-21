@@ -21,7 +21,7 @@ enemySpawnTimer = -1;
 
 audio_stop_all();
 
-music = global.musicPlaying = audio_play_sound(mus_Skylands,0,true);
+music = scr_PlayMusic(false,mus_Skylands,0,true);
 
 var musicPosition = choose(0,78,140,194);
 audio_sound_set_track_position(music,musicPosition);

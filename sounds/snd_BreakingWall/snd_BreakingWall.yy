@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_BreakingWall.mp3",
-  "duration": 0.527449,
+  "soundFile": "snd_breakingwall.wav",
+  "duration": 0.500907,
   "parent": {
     "name": "Objects",
     "path": "folders/Sounds/Sound Effects/Objects.yy",

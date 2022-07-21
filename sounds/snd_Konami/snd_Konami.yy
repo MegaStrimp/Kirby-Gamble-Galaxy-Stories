@@ -11,7 +11,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_Konami.mp3",
+  "soundFile": "snd_konami.wav",
   "duration": 3.186939,
   "parent": {
     "name": "Misc",

@@ -5,13 +5,13 @@
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
-  "type": 0,
+  "type": 1,
   "bitDepth": 1,
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_Mirror5.mp3",
+  "soundFile": "snd_mirror5.wav",
   "duration": 1.28,
   "parent": {
     "name": "Attacks",

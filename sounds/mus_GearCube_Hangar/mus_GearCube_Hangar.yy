@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_GearCube_Hangar.mp3",
-  "duration": 176.195923,
+  "duration": 176.19592,
   "parent": {
     "name": "Stages",
     "path": "folders/Sounds/Music/Stages.yy",

@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_MiniBoss.mp3",
-  "duration": 49.8677559,
+  "duration": 49.867756,
   "parent": {
     "name": "Bosses",
     "path": "folders/Sounds/Music/Bosses.yy",

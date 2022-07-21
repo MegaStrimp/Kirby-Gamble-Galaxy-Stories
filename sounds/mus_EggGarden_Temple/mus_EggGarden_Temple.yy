@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_EggGarden_Temple.mp3",
-  "duration": 254.018723,
+  "duration": 254.01872,
   "parent": {
     "name": "Stages",
     "path": "folders/Sounds/Music/Stages.yy",

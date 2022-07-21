@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_AirPuff.mp3",
-  "duration": 0.192,
+  "soundFile": "snd_airpuff.wav",
+  "duration": 0.168912,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",

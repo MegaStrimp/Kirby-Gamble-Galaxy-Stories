@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_KazooFields.mp3",
-  "duration": 167.288162,
+  "duration": 167.28816,
   "parent": {
     "name": "Stages",
     "path": "folders/Sounds/Music/Stages.yy",

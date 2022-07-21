@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_BattleshipHalberd.mp3",
-  "duration": 182.961639,
+  "duration": 182.96164,
   "parent": {
     "name": "Stages",
     "path": "folders/Sounds/Music/Stages.yy",

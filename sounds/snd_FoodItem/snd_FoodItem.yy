@@ -5,13 +5,13 @@
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
-  "type": 0,
+  "type": 1,
   "bitDepth": 1,
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_FoodItem.mp3",
+  "soundFile": "snd_fooditem.wav",
   "duration": 0.966531,
   "parent": {
     "name": "Objects",

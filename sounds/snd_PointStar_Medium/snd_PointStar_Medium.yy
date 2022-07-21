@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_PointStar_Medium.mp3",
-  "duration": 0.893,
+  "soundFile": "snd_pointstar_medium.wav",
+  "duration": 0.888005,
   "parent": {
     "name": "Objects",
     "path": "folders/Sounds/Sound Effects/Objects.yy",

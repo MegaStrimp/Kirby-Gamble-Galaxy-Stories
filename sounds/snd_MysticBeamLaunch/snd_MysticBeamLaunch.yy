@@ -11,7 +11,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_MysticBeamLaunch.mp3",
+  "soundFile": "snd_mysticbeamlaunch.wav",
   "duration": 1.697959,
   "parent": {
     "name": "Sound Effects",

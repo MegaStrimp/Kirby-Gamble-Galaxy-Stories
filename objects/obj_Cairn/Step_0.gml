@@ -33,8 +33,8 @@ if (!global.pause)
 			break;
 		
 			case 1:
-			if (audio_is_playing(snd_EnemyJump2)) audio_stop_sound(snd_EnemyJump2);
-			audio_play_sound(snd_EnemyJump2,0,false);
+			if (audio_is_playing(snd_EnemyJump5)) audio_stop_sound(snd_EnemyJump5);
+			audio_play_sound(snd_EnemyJump5,0,false);
 			var parJump = instance_create_depth(x - (7 * dirX),y + 5,depth + 1,obj_Particle);
 			parJump.sprite_index = spr_Particle_Jump;
 			parJump.destroyAfterAnimation = true;

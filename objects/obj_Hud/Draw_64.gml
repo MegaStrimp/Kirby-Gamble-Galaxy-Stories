@@ -9,7 +9,7 @@ var characterP2 = global.characterP2;
 var paletteP1 = global.sprayPaintP1;
 var paletteP2 = global.sprayPaintP2;
 var musicIntroX = 326;
-var musicIntroY = 170;
+var musicIntroY = 215 - (45 * global.hasCoop);
 hasTreasure = global.inStage;
 
 //if (global.isHelperP1) paletteP1 = spr_Hud_Palette_Helper;
@@ -37,7 +37,30 @@ if (hasNotif)
 
 //Music Intro
 
-draw_roundrect(musicIntroX,musicIntroY,musicIntroX + 150,musicIntroY + 40,false);
+if (global.musicIntro)
+{
+	musicIntroAlpha = lerp(musicIntroAlpha,musicIntroActive,.2);
+	
+	draw_set_alpha(musicIntroAlpha);
+	draw_set_font(fnt_Menu);
+	
+	draw_set_color(global.musicIntroColorBg);
+	draw_roundrect(musicIntroX,musicIntroY,musicIntroX + 150,musicIntroY + 40,false);
+	
+	draw_set_color(global.musicIntroColorComposer);
+	draw_text(musicIntroX + 8,musicIntroY + 4,string(global.musicIntroComposer));
+	var stringWidth = string_width(global.musicIntroComposer);
+	draw_sprite(spr_Hud_Note,0,musicIntroX + 12 + stringWidth,musicIntroY + 2);
+	
+	draw_set_color(global.musicIntroColorDark);
+	draw_rectangle(musicIntroX + 7,musicIntroY + 33,musicIntroX + 145,musicIntroY + 36,false);
+	draw_set_color(global.musicIntroColorLight);
+	draw_text(musicIntroX + 6,musicIntroY + 14,string(global.musicIntroTitle));
+	draw_rectangle(musicIntroX + 7,musicIntroY + 33,musicIntroX + (145 * (1 - (musicIntroTimer / musicIntroTimerMax))),musicIntroY + 36,false);
+	
+	draw_set_alpha(1);
+	draw_set_color(c_white);
+}
 
 //Cutscene
 
@@ -612,5 +635,17 @@ else if (mixIndexTimer == 0)
 	mixIndex += 1;
 	if (mixIndex > array_length(mixRosterAbility) - 1) mixIndex -= array_length(mixRosterAbility);
 	mixIndexTimer = mixIndexTimerMax;
+}
+#endregion
+
+#region Music Intro Timer
+if (musicIntroTimer > 0)
+{
+	musicIntroTimer -= 1;
+}
+else if (musicIntroTimer == 0)
+{
+	musicIntroActive = false;
+	musicIntroTimer = -1;
 }
 #endregion

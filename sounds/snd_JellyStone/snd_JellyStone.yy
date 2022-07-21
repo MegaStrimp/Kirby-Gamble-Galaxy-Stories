@@ -11,7 +11,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_JellyStone.mp3",
+  "soundFile": "snd_jellystone.wav",
   "duration": 0.417959,
   "parent": {
     "name": "Attacks",

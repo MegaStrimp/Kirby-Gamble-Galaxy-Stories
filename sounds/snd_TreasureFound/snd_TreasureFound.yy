@@ -11,7 +11,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_TreasureFound.mp3",
+  "soundFile": "snd_treasurefound.wav",
   "duration": 1.671837,
   "parent": {
     "name": "Misc",

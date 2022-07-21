@@ -55,7 +55,6 @@ else if (spawnTimer == 0)
 		spawnedEnemy.sprClimbDown = spr_WaddleDoo_Normal_ClimbDown;
 		spawnedEnemy.sprCharge = spr_WaddleDoo_Normal_Charge;
 		spawnedEnemy.sprAttack = spr_WaddleDoo_Normal_Attack;
-		spawnedEnemy.sprFlashingEye = spr_WaddleDoo_Normal_FlashingEye;
 		spawnedEnemy.sprHurt = spr_WaddleDoo_Normal_Hurt;
 		break;
 	}

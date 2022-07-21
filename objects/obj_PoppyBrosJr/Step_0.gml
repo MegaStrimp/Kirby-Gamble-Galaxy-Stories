@@ -85,8 +85,8 @@ if (!global.pause)
 		
 		if ((place_meeting(x,y + 1,collisionY)) and (!hurt) and (!attack))
 		{
-			if (audio_is_playing(snd_EnemyJump2)) audio_stop_sound(snd_EnemyJump2);
-			audio_play_sound(snd_EnemyJump2,0,false);
+			if (audio_is_playing(snd_EnemyJump4)) audio_stop_sound(snd_EnemyJump4);
+			audio_play_sound(snd_EnemyJump4,0,false);
 			image_index = 0;
 			walkDirX = choose(-1,-1,1,1,playerDir);
 			vsp = -jumpspeed;

@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_MysticBeam.mp3",
-  "duration": 0.971531,
+  "soundFile": "snd_mysticbeam.wav",
+  "duration": 0.966531,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",

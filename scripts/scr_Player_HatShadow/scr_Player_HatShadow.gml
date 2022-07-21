@@ -2908,6 +2908,18 @@ function scr_Player_HatShadow(argument0,argument1)
 					case sprWarpStar2:
 					hatShadowIndex = spr_Kirby_HatShadow_Yoyo_KSSU_WarpStar2;
 					break;
+					
+					case sprYoyoAttack2Ready:
+					hatShadowIndex = spr_Kirby_HatShadow_Yoyo_KSSU_Attack2Ready;
+					break;
+					
+					case sprYoyoAttack2:
+					hatShadowIndex = spr_Kirby_HatShadow_Yoyo_KSSU_Attack2;
+					break;
+					
+					case sprYoyoAttack2Release:
+					hatShadowIndex = spr_Kirby_HatShadow_Yoyo_KSSU_Attack2Release;
+					break;
 				}
 				break;
 			}
@@ -3709,6 +3721,338 @@ function scr_Player_HatShadow(argument0,argument1)
 					hatShadowIndex = spr_Kirby_HatShadow_Jet_KSSU_Hurt;
 					break;
 				}
+				break;
+			}
+			break;
+			
+			case playerAbilities.sword:
+			if (player == 0)
+			{
+				var altHatToCheck = global.hatTypeSwordP1;
+			}
+			else
+			{
+				var altHatToCheck = global.hatTypeSwordP2;
+			}
+			
+			switch (altHatToCheck)
+			{
+				case abilityHatSkins.sword_kssu:
+				switch (sprite_index)
+				{
+					case sprIdle:
+					case sprIdleBlink:
+					case sprIdleNormalSlopeL:
+					case sprIdleNormalSlopeLBlink:
+					case sprIdleNormalSlopeR:
+					case sprIdleNormalSlopeRBlink:
+					case sprIdleSteepSlopeL:
+					case sprIdleSteepSlopeLBlink:
+					case sprIdleSteepSlopeR:
+					case sprIdleSteepSlopeRBlink:
+					case sprItemCarryLightIdleNormalSlopeL:
+					case sprItemCarryLightIdleNormalSlopeLBlink:
+					case sprItemCarryLightIdleNormalSlopeR:
+					case sprItemCarryLightIdleNormalSlopeRBlink:
+					case sprItemCarryLightIdleSteepSlopeL:
+					case sprItemCarryLightIdleSteepSlopeLBlink:
+					case sprItemCarryLightIdleSteepSlopeR:
+					case sprItemCarryLightIdleSteepSlopeRBlink:
+					case sprItemCarryHeavyIdle:
+					case sprItemCarryHeavyIdleSlopeL:
+					case sprItemCarryHeavyIdleSlopeR:
+					case sprItemCarryThrow:
+					hatShadowIndex = spr_Kirby_HatShadow_Sword_KSSU_ItemCarry_Light_Idle;
+					break;
+					
+					case sprWalk:
+					case sprItemCarryLightWalk:
+					case sprItemCarryHeavyWalk:
+					hatShadowIndex = spr_Kirby_HatShadow_Sword_KSSU_ItemCarry_Light_Walk;
+					break;
+					
+					case sprRunTurn:
+					hatShadowIndex = spr_Kirby_HatShadow_Sword_KSSU_RunTurn;
+					break;
+					
+					case sprJump:
+					hatShadowIndex = spr_Kirby_HatShadow_Sword_KSSU_Jump;
+					break;
+					
+					case sprRoll:
+					hatShadowIndex = spr_Kirby_HatShadow_Sword_KSSU_Roll;
+					break;
+					
+					case sprRollDuckReady:
+					hatShadowIndex = spr_Kirby_HatShadow_Sword_KSSU_RollDuckReady;
+					break;
+					
+					case sprBackflip:
+					hatShadowIndex = spr_Kirby_HatShadow_Sword_KSSU_Backflip;
+					break;
+					
+					case sprFall:
+					hatShadowIndex = spr_Kirby_HatShadow_Sword_KSSU_Fall;
+					break;
+					
+					case sprDuck:
+					case sprDuckBlink:
+					case sprDuckNormalSlopeL:
+					case sprDuckNormalSlopeLBlink:
+					case sprDuckNormalSlopeR:
+					case sprDuckNormalSlopeRBlink:
+					case sprDuckSteepSlopeL:
+					case sprDuckSteepSlopeLBlink:
+					case sprDuckSteepSlopeR:
+					case sprDuckSteepSlopeRBlink:
+					case sprItemCarryLightDuck:
+					case sprItemCarryLightDuckBlink:
+					case sprItemCarryLightDuckNormalSlopeL:
+					case sprItemCarryLightDuckNormalSlopeLBlink:
+					case sprItemCarryLightDuckNormalSlopeR:
+					case sprItemCarryLightDuckNormalSlopeRBlink:
+					case sprItemCarryLightDuckSteepSlopeL:
+					case sprItemCarryLightDuckSteepSlopeLBlink:
+					case sprItemCarryLightDuckSteepSlopeR:
+					case sprItemCarryLightDuckSteepSlopeRBlink:
+					case sprItemCarryHeavyDuck:
+					hatShadowIndex = spr_Kirby_HatShadow_Sword_KSSU_ItemCarry_Light_Duck;
+					break;
+					
+					case sprSlide:
+					hatShadowIndex = spr_Kirby_HatShadow_Sword_KSSU_Slide;
+					break;
+					
+					case sprSlideEnd:
+					hatShadowIndex = spr_Kirby_HatShadow_Sword_KSSU_SlideEnd;
+					break;
+					
+					case sprFloatReady:
+					hatShadowIndex = spr_Kirby_HatShadow_Sword_KSSU_ItemCarry_Light_FloatReady;
+					break;
+					
+					case sprFloat:
+					hatShadowIndex = spr_Kirby_HatShadow_Sword_KSSU_ItemCarry_Light_Float;
+					break;
+					
+					case sprFlap:
+					hatShadowIndex = spr_Kirby_HatShadow_Sword_KSSU_ItemCarry_Light_Flap;
+					break;
+					
+					case sprFloatSpit:
+					hatShadowIndex = spr_Kirby_HatShadow_Sword_KSSU_ItemCarry_Light_FloatSpit;
+					break;
+					
+					case sprFloatHurt:
+					hatShadowIndex = spr_Kirby_HatShadow_Sword_KSSU_FloatHurt;
+					break;
+					
+					case sprEnter:
+					hatShadowIndex = spr_Kirby_HatShadow_Sword_KSSU_Enter;
+					break;
+					
+					case sprAbilityChange:
+					hatShadowIndex = spr_Kirby_HatShadow_Sword_KSSU_AbilityChange;
+					break;
+					
+					case sprGuard:
+					hatShadowIndex = spr_Kirby_HatShadow_Sword_KSSU_Guard;
+					break;
+					
+					case sprHurt:
+					hatShadowIndex = spr_Kirby_HatShadow_Sword_KSSU_Hurt;
+					break;
+					
+					case sprSwordAttack1:
+					hatShadowIndex = spr_Kirby_HatShadow_Sword_KSSU_Attack1;
+					break;
+					
+					case sprSwordAttack2:
+					hatShadowIndex = spr_Kirby_HatShadow_Sword_KSSU_Attack2;
+					break;
+					
+					default:
+					hatShadowIndex = -1;
+					break;
+				}
+				break;
+				
+				default:
+				hatShadowIndex = -1;
+				break;
+			}
+			break;
+			
+			case playerAbilities.hammer:
+			if (player == 0)
+			{
+				var altHatToCheck = global.hatTypeHammerP1;
+			}
+			else
+			{
+				var altHatToCheck = global.hatTypeHammerP2;
+			}
+			
+			switch (altHatToCheck)
+			{
+				case abilityHatSkins.hammer_kssu:
+				switch (sprite_index)
+				{
+					case sprIdle:
+					case sprIdleBlink:
+					case sprIdleNormalSlopeL:
+					case sprIdleNormalSlopeLBlink:
+					case sprIdleNormalSlopeR:
+					case sprIdleNormalSlopeRBlink:
+					case sprIdleSteepSlopeL:
+					case sprIdleSteepSlopeLBlink:
+					case sprIdleSteepSlopeR:
+					case sprIdleSteepSlopeRBlink:
+					case sprItemCarryLightIdleNormalSlopeL:
+					case sprItemCarryLightIdleNormalSlopeLBlink:
+					case sprItemCarryLightIdleNormalSlopeR:
+					case sprItemCarryLightIdleNormalSlopeRBlink:
+					case sprItemCarryLightIdleSteepSlopeL:
+					case sprItemCarryLightIdleSteepSlopeLBlink:
+					case sprItemCarryLightIdleSteepSlopeR:
+					case sprItemCarryLightIdleSteepSlopeRBlink:
+					case sprItemCarryHeavyIdle:
+					case sprItemCarryHeavyIdleSlopeL:
+					case sprItemCarryHeavyIdleSlopeR:
+					case sprItemCarryThrow:
+					hatShadowIndex = spr_Kirby_HatShadow_Hammer_KSSU_ItemCarry_Light_Idle;
+					break;
+					
+					case sprWalk:
+					case sprItemCarryLightWalk:
+					case sprItemCarryHeavyWalk:
+					hatShadowIndex = spr_Kirby_HatShadow_Hammer_KSSU_ItemCarry_Light_Walk;
+					break;
+					
+					case sprRun:
+					hatShadowIndex = spr_Kirby_HatShadow_Hammer_KSSU_Run;
+					break;
+					
+					case sprRunTurn:
+					hatShadowIndex = spr_Kirby_HatShadow_Hammer_KSSU_RunTurn;
+					break;
+					
+					case sprJump:
+					hatShadowIndex = spr_Kirby_HatShadow_Hammer_KSSU_Jump;
+					break;
+					
+					case sprRoll:
+					hatShadowIndex = spr_Kirby_HatShadow_Hammer_KSSU_Roll;
+					break;
+					
+					case sprRollDuckReady:
+					hatShadowIndex = spr_Kirby_HatShadow_Hammer_KSSU_RollDuckReady;
+					break;
+					
+					case sprRollDuck:
+					hatShadowIndex = spr_Kirby_HatShadow_Hammer_KSSU_RollDuck;
+					break;
+					
+					case sprBackflip:
+					hatShadowIndex = spr_Kirby_HatShadow_Hammer_KSSU_Backflip;
+					break;
+					
+					case sprFall:
+					hatShadowIndex = spr_Kirby_HatShadow_Hammer_KSSU_Fall;
+					break;
+					
+					case sprSquish:
+					hatShadowIndex = spr_Kirby_HatShadow_Hammer_KSSU_Squish;
+					break;
+					
+					case sprDuck:
+					case sprDuckBlink:
+					case sprDuckNormalSlopeL:
+					case sprDuckNormalSlopeLBlink:
+					case sprDuckNormalSlopeR:
+					case sprDuckNormalSlopeRBlink:
+					case sprDuckSteepSlopeL:
+					case sprDuckSteepSlopeLBlink:
+					case sprDuckSteepSlopeR:
+					case sprDuckSteepSlopeRBlink:
+					case sprItemCarryLightDuck:
+					case sprItemCarryLightDuckBlink:
+					case sprItemCarryLightDuckNormalSlopeL:
+					case sprItemCarryLightDuckNormalSlopeLBlink:
+					case sprItemCarryLightDuckNormalSlopeR:
+					case sprItemCarryLightDuckNormalSlopeRBlink:
+					case sprItemCarryLightDuckSteepSlopeL:
+					case sprItemCarryLightDuckSteepSlopeLBlink:
+					case sprItemCarryLightDuckSteepSlopeR:
+					case sprItemCarryLightDuckSteepSlopeRBlink:
+					case sprItemCarryHeavyDuck:
+					hatShadowIndex = spr_Kirby_HatShadow_Hammer_KSSU_ItemCarry_Light_Duck;
+					break;
+					
+					case sprSlide:
+					hatShadowIndex = spr_Kirby_HatShadow_Hammer_KSSU_Slide;
+					break;
+					
+					case sprSlideEnd:
+					hatShadowIndex = spr_Kirby_HatShadow_Hammer_KSSU_SlideEnd;
+					break;
+					
+					case sprFloatReady:
+					hatShadowIndex = spr_Kirby_HatShadow_Hammer_KSSU_ItemCarry_Light_FloatReady;
+					break;
+					
+					case sprFloat:
+					hatShadowIndex = spr_Kirby_HatShadow_Hammer_KSSU_ItemCarry_Light_Float;
+					break;
+					
+					case sprFlap:
+					hatShadowIndex = spr_Kirby_HatShadow_Hammer_KSSU_ItemCarry_Light_Flap;
+					break;
+					
+					case sprFloatSpit:
+					hatShadowIndex = spr_Kirby_HatShadow_Hammer_KSSU_ItemCarry_Light_FloatSpit;
+					break;
+					
+					case sprFloatHurt:
+					hatShadowIndex = spr_Kirby_HatShadow_Hammer_KSSU_FloatHurt;
+					break;
+					
+					case sprEnter:
+					hatShadowIndex = spr_Kirby_HatShadow_Hammer_KSSU_Enter;
+					break;
+					
+					case sprClimbUp:
+					hatShadowIndex = spr_Kirby_HatShadow_Hammer_KSSU_ClimbUp;
+					break;
+					
+					case sprClimbDown:
+					hatShadowIndex = spr_Kirby_HatShadow_Hammer_KSSU_ClimbDown;
+					break;
+					
+					case sprAbilityChange:
+					hatShadowIndex = spr_Kirby_HatShadow_Hammer_KSSU_AbilityChange;
+					break;
+					
+					case sprGuard:
+					hatShadowIndex = spr_Kirby_HatShadow_Hammer_KSSU_Guard;
+					break;
+					
+					case sprGuardSlope:
+					hatShadowIndex = spr_Kirby_HatShadow_Hammer_KSSU_Guard_Slope;
+					break;
+					
+					case sprHurt:
+					hatShadowIndex = spr_Kirby_HatShadow_Hammer_KSSU_Hurt;
+					break;
+					
+					default:
+					hatShadowIndex = -1;
+					break;
+				}
+				break;
+				
+				default:
+				hatShadowIndex = -1;
 				break;
 			}
 			break;

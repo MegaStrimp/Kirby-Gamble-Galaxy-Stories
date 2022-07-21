@@ -11,7 +11,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_TomatooSquish2.wav",
+  "soundFile": "snd_tomatoosquish2.wav",
   "duration": 0.163855,
   "parent": {
     "name": "Enemies",

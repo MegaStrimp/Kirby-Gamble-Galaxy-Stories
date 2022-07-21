@@ -23,6 +23,8 @@ mixIndex = 0;
 mixRosterAbility[0] = playerAbilities.none;
 mixRosterText[0] = spr_Hud_AbilityText_Kirby;
 mixRosterIcon[0] = spr_Hud_Icon_Kirby;
+musicIntroActive = false;
+musicIntroAlpha = 0;
 
 //Timers
 
@@ -39,3 +41,5 @@ notifTimer = -1;
 mixTimer = -1;
 mixIndexTimer = -1;
 mixIndexTimerMax = 4;
+musicIntroTimer = -1;
+musicIntroTimerMax = 120;

@@ -11,7 +11,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_SparkCharge.mp3",
+  "soundFile": "snd_sparkcharge.wav",
   "duration": 0.130612,
   "parent": {
     "name": "Attacks",

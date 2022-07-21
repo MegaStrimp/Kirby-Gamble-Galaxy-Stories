@@ -24,7 +24,7 @@ function scr_Player_States_Enter()
 		}
 		else
 		{
-			sprite_index = sprUfoIdle;
+			sprite_index = sprUfoEnter;
 		}
 	}
 	else

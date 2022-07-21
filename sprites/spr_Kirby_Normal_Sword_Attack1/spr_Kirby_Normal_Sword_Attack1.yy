@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 36,
+  "bbox_right": 29,
   "bbox_top": 0,
-  "bbox_bottom": 44,
+  "bbox_bottom": 27,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 37,
-  "height": 45,
+  "width": 30,
+  "height": 28,
   "textureGroupId": {
     "name": "Characters",
     "path": "texturegroups/Characters",
@@ -24,21 +24,21 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"7da56490-a5a0-4ad9-b4e0-72e0c06cf39c","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7da56490-a5a0-4ad9-b4e0-72e0c06cf39c","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"LayerId":{"name":"9d9134a8-923f-4000-84b5-40ea18816b5d","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Sword_Attack1","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","name":"7da56490-a5a0-4ad9-b4e0-72e0c06cf39c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3bddddb8-3347-4b70-bdae-ba91d88ac62e","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3bddddb8-3347-4b70-bdae-ba91d88ac62e","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"LayerId":{"name":"9d9134a8-923f-4000-84b5-40ea18816b5d","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Sword_Attack1","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","name":"3bddddb8-3347-4b70-bdae-ba91d88ac62e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f508b8cd-61e5-4654-a5c0-ec1870073b98","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f508b8cd-61e5-4654-a5c0-ec1870073b98","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"LayerId":{"name":"9d9134a8-923f-4000-84b5-40ea18816b5d","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Sword_Attack1","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","name":"f508b8cd-61e5-4654-a5c0-ec1870073b98","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b95dc1a3-14a0-4545-82fc-b08d6f0cd15e","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b95dc1a3-14a0-4545-82fc-b08d6f0cd15e","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"LayerId":{"name":"9d9134a8-923f-4000-84b5-40ea18816b5d","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Sword_Attack1","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","name":"b95dc1a3-14a0-4545-82fc-b08d6f0cd15e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a1569667-38fb-4df2-ae5c-6a935b37d069","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a1569667-38fb-4df2-ae5c-6a935b37d069","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"LayerId":{"name":"9d9134a8-923f-4000-84b5-40ea18816b5d","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Sword_Attack1","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","name":"a1569667-38fb-4df2-ae5c-6a935b37d069","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"6afc7936-2fb4-4cb0-bd3a-6e0fde472aee","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"6afc7936-2fb4-4cb0-bd3a-6e0fde472aee","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"LayerId":{"name":"9d9134a8-923f-4000-84b5-40ea18816b5d","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Kirby_Normal_Sword_Attack1","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","name":"6afc7936-2fb4-4cb0-bd3a-6e0fde472aee","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"16c1010f-6784-4db5-a771-262c77a89beb","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"16c1010f-6784-4db5-a771-262c77a89beb","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"LayerId":{"name":"9d9134a8-923f-4000-84b5-40ea18816b5d","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Kirby_Normal_Sword_Attack1","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","name":"16c1010f-6784-4db5-a771-262c77a89beb","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"88ca893f-1d5b-4d65-b46f-76b31cf81372","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"88ca893f-1d5b-4d65-b46f-76b31cf81372","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"LayerId":{"name":"9d9134a8-923f-4000-84b5-40ea18816b5d","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Kirby_Normal_Sword_Attack1","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","name":"88ca893f-1d5b-4d65-b46f-76b31cf81372","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"bacaca79-1055-4bfd-bbb5-a579c2f7ae1a","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"bacaca79-1055-4bfd-bbb5-a579c2f7ae1a","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"LayerId":{"name":"9d9134a8-923f-4000-84b5-40ea18816b5d","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Kirby_Normal_Sword_Attack1","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","name":"bacaca79-1055-4bfd-bbb5-a579c2f7ae1a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"ec898857-7a3d-4f1c-9e8e-645072b6ca5e","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"ec898857-7a3d-4f1c-9e8e-645072b6ca5e","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"LayerId":{"name":"9d9134a8-923f-4000-84b5-40ea18816b5d","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Kirby_Normal_Sword_Attack1","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","name":"ec898857-7a3d-4f1c-9e8e-645072b6ca5e","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_Kirby_Normal_Sword_Attack1","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},
@@ -53,11 +53,11 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"b7f26474-9d75-4d4c-af52-84689f2cf691","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7da56490-a5a0-4ad9-b4e0-72e0c06cf39c","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"34e091fd-e643-4eb8-b7a1-81e8de98f407","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3bddddb8-3347-4b70-bdae-ba91d88ac62e","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"e30b5700-ae87-497f-8676-da0b0d755b75","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f508b8cd-61e5-4654-a5c0-ec1870073b98","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"ee192763-73af-4267-afe7-71a4512e2f2e","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b95dc1a3-14a0-4545-82fc-b08d6f0cd15e","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"3cda35ed-dbf7-4e32-8cd5-4e26b2240399","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a1569667-38fb-4df2-ae5c-6a935b37d069","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d8498a02-4821-42a2-b66a-01437f6e35fd","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6afc7936-2fb4-4cb0-bd3a-6e0fde472aee","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1c97392f-d988-421f-a7b2-37fd596eb93b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"16c1010f-6784-4db5-a771-262c77a89beb","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"2ec3c498-6733-4862-8522-fbcd594f78f9","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"88ca893f-1d5b-4d65-b46f-76b31cf81372","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c4277989-0426-4b74-bb5c-4581ae5725a7","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bacaca79-1055-4bfd-bbb5-a579c2f7ae1a","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e42b5a5c-23cb-4226-9aa4-1e197c3fbf16","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ec898857-7a3d-4f1c-9e8e-645072b6ca5e","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -70,8 +70,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 22,
-    "yorigin": 34,
+    "xorigin": 15,
+    "yorigin": 17,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_Normal_Sword_Attack1","path":"sprites/spr_Kirby_Normal_Sword_Attack1/spr_Kirby_Normal_Sword_Attack1.yy",},

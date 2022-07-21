@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_Beam.mp3",
-  "duration": 0.679184,
+  "soundFile": "snd_beam.wav",
+  "duration": 0.634649,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",

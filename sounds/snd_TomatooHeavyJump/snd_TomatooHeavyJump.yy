@@ -11,7 +11,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_TomatooHeavyJump.wav",
+  "soundFile": "snd_tomatooheavyjump.wav",
   "duration": 0.139751,
   "parent": {
     "name": "Enemies",

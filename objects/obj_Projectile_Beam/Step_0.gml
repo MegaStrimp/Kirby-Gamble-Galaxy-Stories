@@ -179,6 +179,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 				particle.destroyAfterAnimation = true;
 			}
 			owner.mysticBeamChargeEx += 1;
+			owner.canMysticBeamShield = true;
 			instance_destroy();
 		}
 		angle += spdFinal;

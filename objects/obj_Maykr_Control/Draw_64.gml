@@ -15,6 +15,32 @@ topHudLeaveOffset = lerp(topHudLeaveOffset,mouseOnTopLeave,.25);
 
 if (!active)
 {
+	#region Delete Mode
+	if (deleteMode)
+	{
+		draw_set_alpha(.25);
+		draw_set_color(c_red);
+		draw_rectangle(0,0,480,270,false);
+		draw_set_color(c_white);
+		draw_set_alpha(1);
+		draw_set_font(global.fontMaykrRed);
+		draw_text(10,10,"erase mode");
+	}
+	#endregion
+	
+	#region Drag Mode
+	if (dragMode)
+	{
+		draw_set_alpha(.25);
+		draw_set_color(c_yellow);
+		draw_rectangle(0,0,480,270,false);
+		draw_set_color(c_white);
+		draw_set_alpha(1);
+		draw_set_font(global.fontMaykrRed);
+		draw_text(10,10,"move screen mode");
+	}
+	#endregion
+	
 	#region Top Hud
 	topHudOffset = lerp(topHudOffset,!hudVisible,.25);
 	
@@ -24,11 +50,16 @@ if (!active)
 	
 	#region Top Hud Buttons
 	draw_sprite(spr_Maykr_TopHud_Play,0,12 - (topHudOffset * 330),-24 + (topHudPlayOffset * 27));
-	draw_sprite(spr_Maykr_TopHud_Blocks,0,96 - (topHudOffset * 330),-24 + (topHudBlocksOffset * 27));
+	draw_sprite(spr_Maykr_TopHud_Tiles,0,96 - (topHudOffset * 330),-24 + (topHudBlocksOffset * 27));
 	draw_sprite(spr_Maykr_TopHud_Enemies,0,172 - (topHudOffset * 330),-24 + (topHudEnemiesOffset * 27));
 	draw_sprite(spr_Maykr_TopHud_Items,0,248 - (topHudOffset * 330),-24 + (topHudItemsOffset * 27));
 	
-	draw_sprite(spr_Maykr_TopHud_Map,0,324,49 - (topHudOffset * 80));
+	draw_sprite(spr_Maykr_TopHud_Map,0,324,49 - (topHudOffset * 100));
+	draw_sprite(spr_Maykr_TopHud_Delete,0,393,49 - ((topHudOffset * 100) * (!deleteMode)));
+	draw_sprite(spr_Maykr_TopHud_ZoomIn,0,324,72 - (topHudOffset * 100));
+	draw_sprite(spr_Maykr_TopHud_ZoomOut,0,347,72 - (topHudOffset * 100));
+	draw_sprite(spr_Maykr_TopHud_ZoomReset,0,370,72 - (topHudOffset * 100));
+	draw_sprite(spr_Maykr_TopHud_Drag,0,393,72 - ((topHudOffset * 100) * (!dragMode)));
 	
 	draw_sprite(spr_Maykr_TopHud_Save,0,460 - (topHudSaveOffset * 40) + (topHudOffset * 25),49);
 	draw_sprite(spr_Maykr_TopHud_Load,0,460 - (topHudLoadOffset * 40) + (topHudOffset * 25),72);
@@ -39,7 +70,7 @@ if (!active)
 	
 	#region Bottom Hud
 	bottomHudVisible = true;
-	if ((!hudVisible) and (!bottomHudOpen) and (mouseY < 220)) bottomHudVisible = false;
+	if ((!hudVisible) and (!bottomHudOpen) and (((mouseY < camera_get_view_y(gameView) + 220) and (!deleteMode) and (!dragMode)) or (deleteMode) or (dragMode))) bottomHudVisible = false;
 	
 	bottomHudOffset = lerp(bottomHudOffset,(50 * !bottomHudVisible) - (96 * bottomHudOpen),.25);
 	

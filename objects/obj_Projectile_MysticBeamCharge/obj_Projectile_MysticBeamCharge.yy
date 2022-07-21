@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "spr_Projectile_BeamCharge_Normal_Form1",
     "path": "sprites/spr_Projectile_BeamCharge_Normal_Form1/spr_Projectile_BeamCharge_Normal_Form1.yy",

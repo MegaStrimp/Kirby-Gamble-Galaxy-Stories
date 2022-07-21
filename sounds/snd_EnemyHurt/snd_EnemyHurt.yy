@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_EnemyHurt.mp3",
-  "duration": 0.161735,
+  "soundFile": "snd_enemyhurt.wav",
+  "duration": 0.156735,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",

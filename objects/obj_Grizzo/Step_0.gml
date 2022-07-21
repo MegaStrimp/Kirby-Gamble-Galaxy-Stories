@@ -89,8 +89,8 @@ if (!global.pause)
 			}
 			if (!attack)
 			{
-				if (audio_is_playing(snd_EnemyJump2)) audio_stop_sound(snd_EnemyJump2);
-				audio_play_sound(snd_EnemyJump2,0,false);
+				if (audio_is_playing(snd_EnemyJump5)) audio_stop_sound(snd_EnemyJump5);
+				audio_play_sound(snd_EnemyJump5,0,false);
 				vsp = -jumpspeed;
 			}
 		}
@@ -176,6 +176,8 @@ if (!global.pause)
 				case 0:
 				if ((place_meeting(x,y + 1,collisionY)) and (vsp >= 0) and (attackHop))
 				{
+					if (audio_is_playing(snd_GrizzoDash)) audio_stop_sound(snd_GrizzoDash);
+					audio_play_sound(snd_GrizzoDash,0,false);
 					attack = true;
 					attackHop = false;
 					walkDirX = dirX;

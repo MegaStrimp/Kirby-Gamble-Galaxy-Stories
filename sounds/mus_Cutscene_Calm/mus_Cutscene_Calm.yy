@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_Cutscene_Calm.mp3",
-  "duration": 130.533875,
+  "duration": 130.53387,
   "parent": {
     "name": "Cutscenes",
     "path": "folders/Sounds/Music/Cutscenes.yy",

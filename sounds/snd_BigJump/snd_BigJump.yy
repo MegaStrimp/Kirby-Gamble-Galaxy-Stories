@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_BigJump.mp3",
-  "duration": 0.344592,
+  "soundFile": "snd_bigjump.wav",
+  "duration": 0.339592,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",

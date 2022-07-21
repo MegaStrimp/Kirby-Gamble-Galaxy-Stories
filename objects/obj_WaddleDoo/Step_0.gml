@@ -19,7 +19,6 @@ if (setupTimer == 0)
 		sprClimbDown = spr_WaddleDoo_Normal_ClimbDown;
 		sprCharge = spr_WaddleDoo_Normal_Charge;
 		sprAttack = spr_WaddleDoo_Normal_Attack;
-		sprFlashingEye = spr_WaddleDoo_Normal_FlashingEye;
 		sprHurt = spr_WaddleDoo_Normal_Hurt;
 		break;
 	}
@@ -146,6 +145,7 @@ if (!global.pause)
 			{
 				image_speed = 1;
 				sprite_index = sprHurt;
+				image_index = hurtImageIndex;
 			}
 			else
 			{
@@ -271,6 +271,7 @@ if (!global.pause)
 			{
 				image_speed = 1;
 				sprite_index = sprHurt;
+				image_index = hurtImageIndex;
 			}
 			else
 			{
@@ -398,36 +399,6 @@ if (!global.pause)
 		break;
 	}
 	
-	//Eye Flash
-	
-	if ((attackState != 2) and (!attack))
-	{
-		eyeFlash = false;
-		eyeFlashTimer = -1;
-	}
-	
-	//Eye Flash Timer
-	
-	if (!parasol)
-	{
-		if (eyeFlashTimer > 0)
-		{
-			eyeFlashTimer -= 1;
-		}
-		else if (eyeFlashTimer == 0)
-		{
-			if (eyeFlash)
-			{
-				eyeFlash = false;
-			}
-			else
-			{
-				eyeFlash = true;
-			}
-			eyeFlashTimer = eyeFlashTimerMax;
-		}
-	}
-	
 	//Walk Duck
 	
 	if ((hasYCollision) and (!walkDuck) and (place_meeting(x,y + (1 + vspFinal),collisionY)) and (vsp > 1) and (!attack))
@@ -551,8 +522,6 @@ if (!global.pause)
 				
 				case 1:
 				attackState += 1;
-				eyeFlash = true;
-				eyeFlashTimer = eyeFlashTimerMax;
 				sndBeam = audio_play_sound(snd_Beam,0,false);
 				attackTimer = 75;
 				for (var i = 0; i < 4; i++)

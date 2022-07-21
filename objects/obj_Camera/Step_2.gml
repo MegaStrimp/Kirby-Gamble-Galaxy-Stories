@@ -238,17 +238,6 @@ if ((!debugCamera) and (objectFollowing == -1))
 				{
 					target = obj_Player;
 				
-					if (instance_exists(obj_Projectile_MysticBeamCharge))
-					{
-						with (obj_Projectile_MysticBeamCharge)
-						{
-						    if (owner.player == 0)
-							{
-								other.target = id;
-							}
-						}
-					}
-				
 					if (global.hpP1 != 0)
 					{
 						if (instance_exists(obj_WhispyWoods))
@@ -335,13 +324,13 @@ if ((global.gamemode == gamemodes.maykr) and (instance_exists(obj_Maykr_Control)
 		}
 	}
 	
-	if (mouse_check_button_pressed(mb_middle))
+	if ((mouse_check_button_pressed(mb_middle)) or ((obj_Maykr_Control.dragMode) and (mouse_check_button_pressed(mb_left))))
 	{
 		dragX = mouse_x;
 		dragY = mouse_y;
 	}
 	
-	if (mouse_check_button(mb_middle))
+	if ((mouse_check_button(mb_middle)) or ((obj_Maykr_Control.dragMode) and (mouse_check_button(mb_left))))
 	{
 		cameraX = dragX - (mouse_x - camera_get_view_x(gameView));
 		cameraY = dragY - (mouse_y - camera_get_view_y(gameView));

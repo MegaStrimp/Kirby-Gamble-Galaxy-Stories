@@ -54,6 +54,15 @@ function scr_Player_CancelAttack(argument0)
 			beamAttack2Timer = -1;
 			break;
 			
+			case playerAttacks.mysticBeamDash:
+			if (instance_exists(beamBombProj)) beamBombProj.explode = true;
+			break;
+			
+			case playerAttacks.mysticBeamUp:
+			mysticBeamUpAttackCount = 0;
+			mysticBeamUpAttackTimer = -1;
+			break;
+			
 			case playerAttacks.stoneNormal:
 			case playerAttacks.gooeyStoneNormal:
 			grav = gravNormal;
@@ -85,10 +94,6 @@ function scr_Player_CancelAttack(argument0)
 			break;
 			
 			case playerAttacks.fireAerial:
-			if (instance_exists(fireMaskProj)) instance_destroy(fireMaskProj);
-			invincible = false;
-			break;
-			
 			case playerAttacks.fireWheel:
 			if (instance_exists(fireMaskProj)) instance_destroy(fireMaskProj);
 			invincible = false;
@@ -109,6 +114,12 @@ function scr_Player_CancelAttack(argument0)
 			if (audio_is_playing(snd_Spark6)) audio_stop_sound(snd_Spark6);
 			break;
 			
+			case playerAttacks.yoyoDash:
+			if (audio_is_playing(yoyoDashSfx)) audio_stop_sound(yoyoDashSfx);
+	        if (instance_exists(yoyoDashMaskProj)) instance_destroy(yoyoDashMaskProj);
+			state = playerStates.normal;
+			break;
+			
 			case playerAttacks.wheelNormal:
 			//if (instance_exists(wheelProj)) instance_destroy(wheelProj);
 			wheelReady = false;
@@ -127,6 +138,12 @@ function scr_Player_CancelAttack(argument0)
 			case playerAttacks.swordDash:
 			if (audio_is_playing(slideSfx)) audio_stop_sound(slideSfx);
 	        if (instance_exists(swordDashMaskProj)) instance_destroy(swordDashMaskProj);
+			state = playerStates.normal;
+			break;
+			
+			case playerAttacks.parasolDash:
+			if (audio_is_playing(parasolDashSfx)) audio_stop_sound(parasolDashSfx);
+	        if (instance_exists(parasolDashMaskProj)) instance_destroy(parasolDashMaskProj);
 			state = playerStates.normal;
 			break;
 			

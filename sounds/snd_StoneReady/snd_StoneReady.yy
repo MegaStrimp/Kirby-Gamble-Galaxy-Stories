@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_StoneReady.mp3",
-  "duration": 0.701,
+  "soundFile": "snd_stoneready.wav",
+  "duration": 0.696009,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",

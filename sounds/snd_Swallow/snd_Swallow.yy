@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_Swallow.mp3",
-  "duration": 0.461,
+  "soundFile": "snd_swallow.wav",
+  "duration": 0.456009,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",

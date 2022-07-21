@@ -15,5 +15,5 @@ global.roomCheckpoint = room;
 if (!audio_is_playing(mus_Aquatia_Harbor))
 {
 	audio_stop_all();
-	global.musicPlaying = audio_play_sound(mus_Aquatia_Harbor,0,true);
+	scr_PlayMusic(false,mus_Aquatia_Harbor,0,true);
 }

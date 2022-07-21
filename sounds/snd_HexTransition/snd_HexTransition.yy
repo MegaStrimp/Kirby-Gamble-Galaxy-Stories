@@ -11,7 +11,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_HexTransition.mp3",
+  "soundFile": "snd_hextransition.wav",
   "duration": 0.783673,
   "parent": {
     "name": "Misc",

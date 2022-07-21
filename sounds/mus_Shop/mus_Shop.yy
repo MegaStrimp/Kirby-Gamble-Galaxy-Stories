@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_Shop.mp3",
-  "duration": 151.719177,
+  "duration": 151.71918,
   "parent": {
     "name": "Menus",
     "path": "folders/Sounds/Music/Menus.yy",

@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_Explosion1.mp3",
-  "duration": 0.783673,
+  "soundFile": "snd_explosion1.wav",
+  "duration": 0.762132,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",

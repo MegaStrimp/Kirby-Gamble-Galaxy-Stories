@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_Hurt.mp3",
-  "duration": 0.240102,
+  "soundFile": "snd_hurt.wav",
+  "duration": 0.235102,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",

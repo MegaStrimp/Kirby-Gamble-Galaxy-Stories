@@ -27,7 +27,7 @@ if (!global.pause)
 			var rng = irandom_range(0,99);
 			var mus = mus_TeamGamble;
 			if (rng == 0) mus = mus_Slidecrushed;
-			global.musicPlaying = audio_play_sound(mus,0,false);
+			scr_PlayMusic(false,mus,0,false);
 			stateTimer = 150;
 			break;
 			

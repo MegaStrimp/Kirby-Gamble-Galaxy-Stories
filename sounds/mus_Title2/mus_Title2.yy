@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_Title2.mp3",
-  "duration": 218.253067,
+  "duration": 218.25307,
   "parent": {
     "name": "Menus",
     "path": "folders/Sounds/Music/Menus.yy",

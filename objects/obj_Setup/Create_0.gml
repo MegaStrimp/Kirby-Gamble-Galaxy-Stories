@@ -165,6 +165,7 @@ enum playerAttacks
 	mysticBeamAir,
 	mysticBeamDown,
 	mysticBeamGrab,
+	mysticBeamUp,
 	
 	stoneNormal,
 	stoneUp,
@@ -208,6 +209,8 @@ enum playerAttacks
 	sparkUp,
 	sparkDown,
 	
+	yoyoDash,
+	
 	wheelNormal,
 	
 	wingNormal,
@@ -215,6 +218,8 @@ enum playerAttacks
 	
 	swordNormal,
 	swordDash,
+	
+	parasolDash,
 	
 	sleepNormal,
 	
@@ -742,7 +747,7 @@ enum maykrWindows
 #endregion
 
 #region Global Variables
-global.versionNumber = "Chapter 1 - Beta I";
+global.versionNumber = "0.4.0";
 
 global.selectedSave = "Save1.ini";
 global.hpMax = 5;
@@ -787,6 +792,12 @@ global.treasureGot = false;
 global.buildType = buildTypes.windows;
 global.stageMusicIsPlaying = true;
 global.musicFade = 1;
+global.musicIntroTitle = "";
+global.musicIntroComposer = "";
+global.musicIntroColorBg = make_color_rgb(35,35,35);
+global.musicIntroColorLight = make_color_rgb(125,125,125);
+global.musicIntroColorDark = make_color_rgb(65,65,65);
+global.musicIntroColorComposer = make_color_rgb(255,255,255);
 global.mixActive = -1;
 global.canSave = false;
 global.inStage = false;
@@ -988,7 +999,7 @@ windowGen[3] = irandom_range(0,149);
 switch (windowGen[0])
 {
 	case 0:
-	windowCaption[0] = "Gamernt";
+	windowCaption[0] = "Subsandwich";
 	break;
 	
 	case 1:
@@ -1026,19 +1037,19 @@ switch (windowGen[0])
 switch (windowGen[1])
 {
 	case 0:
-	windowCaption[1] = "Gamernt";
+	windowCaption[1] = "Subsandwich";
 	break;
 }
 switch (windowGen[2])
 {
 	case 0:
-	windowCaption[2] = "Gamernt";
+	windowCaption[2] = "Subsandwich";
 	break;
 }
 switch (windowGen[3])
 {
 	case 0:
-	windowCaption[3] = "Gamernt";
+	windowCaption[3] = "Subsandwich";
 	break;
 }
 window_set_caption(windowCaption[0] + " " + windowCaption[1] + " " + windowCaption[2] + " " + windowCaption[3] + " - " + global.versionNumber + " - " + subtitles[selectedSubtitle]);

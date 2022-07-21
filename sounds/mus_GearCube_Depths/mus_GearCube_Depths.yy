@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_GearCube_Depths.mp3",
-  "duration": 227.500412,
+  "duration": 227.50041,
   "parent": {
     "name": "Stages",
     "path": "folders/Sounds/Music/Stages.yy",

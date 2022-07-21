@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_AbilitySwitch.mp3",
-  "duration": 1.193,
+  "soundFile": "snd_abilityswitch.wav",
+  "duration": 1.188005,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",

@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_AbilityStarDestroy.mp3",
-  "duration": 0.653,
+  "soundFile": "snd_abilitystardestroy.wav",
+  "duration": 0.595669,
   "parent": {
     "name": "Objects",
     "path": "folders/Sounds/Sound Effects/Objects.yy",

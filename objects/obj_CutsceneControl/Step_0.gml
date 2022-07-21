@@ -218,7 +218,7 @@ owe you one there, buddy.";
 				break;
 				
 				case 5:
-				if (!audio_is_playing(mus_Cutscene_Calm)) global.musicPlaying = audio_play_sound(mus_Cutscene_Calm,0,true);
+				if (!audio_is_playing(mus_Cutscene_Calm)) scr_PlayMusic(false,mus_Cutscene_Calm,0,true);
 				var array = 0;
 				var dialogue = instance_create_depth(0,0,-998,obj_Dialogue);
 				dialogue.owner = id;
@@ -232,7 +232,7 @@ owe you one there, buddy.";
 				break;
 				
 				case 7:
-				if (!audio_is_playing(mus_Cutscene_Calm)) global.musicPlaying = audio_play_sound(mus_Cutscene_Calm,0,true);
+				if (!audio_is_playing(mus_Cutscene_Calm)) scr_PlayMusic(false,mus_Cutscene_Calm,0,true);
 				var array = 0;
 				var dialogue = instance_create_depth(0,0,-998,obj_Dialogue);
 				dialogue.owner = id;
@@ -259,7 +259,7 @@ thingy, I have no doubt that you can help me!";
 				break;
 				
 				case 9:
-				if (!audio_is_playing(mus_Cutscene_Calm)) global.musicPlaying = audio_play_sound(mus_Cutscene_Calm,0,true);
+				if (!audio_is_playing(mus_Cutscene_Calm)) scr_PlayMusic(false,mus_Cutscene_Calm,0,true);
 				var array = 0;
 				var dialogue = instance_create_depth(0,0,-998,obj_Dialogue);
 				dialogue.owner = id;
@@ -295,7 +295,7 @@ Fluxbender off.";
 				break;
 				
 				case 11:
-				if (!audio_is_playing(mus_Cutscene_Calm)) global.musicPlaying = audio_play_sound(mus_Cutscene_Calm,0,true);
+				if (!audio_is_playing(mus_Cutscene_Calm)) scr_PlayMusic(false,mus_Cutscene_Calm,0,true);
 				var array = 0;
 				var dialogue = instance_create_depth(0,0,-998,obj_Dialogue);
 				dialogue.owner = id;
@@ -311,7 +311,7 @@ long distances quickly?";
 				break;
 				
 				case 13:
-				if (!audio_is_playing(mus_Cutscene_Calm)) global.musicPlaying = audio_play_sound(mus_Cutscene_Calm,0,true);
+				if (!audio_is_playing(mus_Cutscene_Calm)) scr_PlayMusic(false,mus_Cutscene_Calm,0,true);
 				var array = 0;
 				var dialogue = instance_create_depth(0,0,-998,obj_Dialogue);
 				dialogue.owner = id;

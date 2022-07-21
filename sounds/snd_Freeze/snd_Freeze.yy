@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_Freeze.mp3",
-  "duration": 0.867041,
+  "soundFile": "snd_freeze.wav",
+  "duration": 0.862041,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",

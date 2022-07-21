@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_Unpause.mp3",
-  "duration": 0.396,
+  "soundFile": "snd_unpause.wav",
+  "duration": 0.396009,
   "parent": {
     "name": "Misc",
     "path": "folders/Sounds/Sound Effects/Misc.yy",

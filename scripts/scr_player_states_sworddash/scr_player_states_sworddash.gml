@@ -1,4 +1,4 @@
-///@description Cutter Dash
+///@description Sword Dash
 
 function scr_Player_States_SwordDash()
 {

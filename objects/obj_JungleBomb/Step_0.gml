@@ -81,8 +81,8 @@ if (!global.pause)
 				}
 				else
 				{
-					if (audio_is_playing(snd_EnemyJump2)) audio_stop_sound(snd_EnemyJump2);
-					audio_play_sound(snd_EnemyJump2,0,false);
+					if (audio_is_playing(snd_EnemyJump4)) audio_stop_sound(snd_EnemyJump4);
+					audio_play_sound(snd_EnemyJump4,0,false);
 					jumpCount += 1;
 					scaleExX = -.25;
 					scaleExY = .25;

@@ -497,7 +497,7 @@ function scr_Player_States_Normal()
 					    {
 							if (!hurt)
 							{
-							    var inhaleMask = instance_create_depth(x + (3 * dir),y - 2,depth + 1,obj_InhaleMask);
+							    var inhaleMask = instance_create_depth(x + (3 * dir),y - 2,depth - 1,obj_InhaleMask);
 								inhaleMask.image_xscale = image_xscale;
 								inhaleMask.owner = id;
 							}
@@ -1112,9 +1112,9 @@ function scr_Player_States_Normal()
 								{
 									if (grounded)
 									{
-										attackTimer = 30;
-										if (audio_is_playing(snd_MysticBeamLaser)) audio_stop_sound(snd_MysticBeamLaser);
-										audio_play_sound(snd_MysticBeamLaser,0,false);
+										attackTimer = 150;
+										if (audio_is_playing(snd_BeamBombRelease)) audio_stop_sound(snd_BeamBombRelease);
+										audio_play_sound(snd_BeamBombRelease,0,false);
 										attack = true;
 										attackNumber = playerAttacks.mysticBeamDash;
 										sprite_index = sprMysticBeamAttack1;
@@ -1137,94 +1137,106 @@ function scr_Player_States_Normal()
 								}
 								else
 								{
-									if (vsp == 0)
+									if (keyUpHold)
 									{
+										attackTimer = 45;
 										attack = true;
-										attackNumber = playerAttacks.mysticBeamCharge;
-										sprite_index = sprBeamCharge;
-										image_index = 0;
+										attackNumber = playerAttacks.mysticBeamUp;
+										mysticBeamUpAttackTimer = 0;
+										sprite_index = sprBeamAttack4;
+									    image_index = 0;
 									}
 									else
 									{
-										if (instance_exists(obj_Projectile_Beam))
+										if (vsp == 0)
 										{
-											with (obj_Projectile_Beam)
+											attack = true;
+											attackNumber = playerAttacks.mysticBeamCharge;
+											sprite_index = sprBeamCharge;
+											image_index = 0;
+										}
+										else
+										{
+											if (instance_exists(obj_Projectile_Beam))
 											{
-												if ((isMystic) and (state == 2) and (owner == other.id))
+												with (obj_Projectile_Beam)
 												{
-													if (audio_is_playing(snd_MysticBeamLaunch)) audio_stop_sound(snd_MysticBeamLaunch);
-													audio_play_sound(snd_MysticBeamLaunch,0,false);
-													var proj = instance_create_depth(x,y,depth,obj_Projectile_BarrierBreak);
-													proj.image_angle = angle_difference(-point_direction(x,y,other.x,other.y) - 45,image_angle);
-													proj.owner = id;
-													proj.abilityType = playerAbilities.mysticBeam;
-													proj.dmg = 24;
-													proj.destroyableByEnemy = false;
-													proj.destroyableByObject = false;
-													proj.destroyableByWall = false;
-													var particle = instance_create_depth(other.x,other.y,depth,obj_Particle);
-													particle.sprite_index = spr_Projectile_BarrierBreak_Normal_Tail;
-													particle.image_angle = angle + 22.5;
-													particle.destroyAfterAnimation = true;
-													instance_destroy();
-													/*var particle = instance_create_depth(x,y,depth,obj_Particle);
-													particle.sprite_index = spr_Particle_Flash1;
-													particle.scale = 1.5;
-													particle.destroyAfterAnimation = true;*/
-													/*if (audio_is_playing(snd_MysticBeamLaunch)) audio_stop_sound(snd_MysticBeamLaunch);
-													audio_play_sound(snd_MysticBeamLaunch,0,false);
-													other.canMysticBeamShield = false;
-													var par = instance_create_depth(x,y,depth,obj_Particle);
-													par.sprite_index = choose(spr_Particle_BeamFlareWhite,spr_Particle_BeamFlareFlux,spr_Particle_BeamFlareYellow);
-													par.image_index = choose(1,2);
-													par.hsp = random_range(-1,1);
-													par.vsp = random_range(-1,1);
-													par.dir = dirX;
-													par.imageSpeed = 0;
-													par.destroyTimer = irandom_range(5,15);
-													if (place_meeting(x,y,obj_ParentWall)) instance_destroy();
-													dmg = 15;
-													spd = 5;
-													direction = angle;
-													state = 3;
-													destroyableByWall = false;
-													alphaTimer = alphaTimerMax;*/
+													if ((isMystic) and (state == 2) and (owner == other.id))
+													{
+														if (audio_is_playing(snd_MysticBeamLaunch)) audio_stop_sound(snd_MysticBeamLaunch);
+														audio_play_sound(snd_MysticBeamLaunch,0,false);
+														var proj = instance_create_depth(x,y,depth,obj_Projectile_BarrierBreak);
+														proj.image_angle = angle_difference(angle - 45,image_angle);
+														proj.owner = id;
+														proj.abilityType = playerAbilities.mysticBeam;
+														proj.dmg = 24;
+														proj.destroyableByEnemy = false;
+														proj.destroyableByObject = false;
+														proj.destroyableByWall = false;
+														var particle = instance_create_depth(other.x,other.y,depth,obj_Particle);
+														particle.sprite_index = spr_Projectile_BarrierBreak_Normal_Tail;
+														particle.image_angle = angle + 45;
+														particle.destroyAfterAnimation = true;
+														instance_destroy();
+														/*var particle = instance_create_depth(x,y,depth,obj_Particle);
+														particle.sprite_index = spr_Particle_Flash1;
+														particle.scale = 1.5;
+														particle.destroyAfterAnimation = true;*/
+														/*if (audio_is_playing(snd_MysticBeamLaunch)) audio_stop_sound(snd_MysticBeamLaunch);
+														audio_play_sound(snd_MysticBeamLaunch,0,false);
+														other.canMysticBeamShield = false;
+														var par = instance_create_depth(x,y,depth,obj_Particle);
+														par.sprite_index = choose(spr_Particle_BeamFlareWhite,spr_Particle_BeamFlareFlux,spr_Particle_BeamFlareYellow);
+														par.image_index = choose(1,2);
+														par.hsp = random_range(-1,1);
+														par.vsp = random_range(-1,1);
+														par.dir = dirX;
+														par.imageSpeed = 0;
+														par.destroyTimer = irandom_range(5,15);
+														if (place_meeting(x,y,obj_ParentWall)) instance_destroy();
+														dmg = 15;
+														spd = 5;
+														direction = angle;
+														state = 3;
+														destroyableByWall = false;
+														alphaTimer = alphaTimerMax;*/
+													}
 												}
 											}
-										}
-										/*beamCharge = 0;
-										if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
-										chargeSfxState = "intro";
-										if (canMysticBeamShield)
-										{
-											if (audio_is_playing(snd_MysticBeam)) audio_stop_sound(snd_MysticBeam);
-											sndMysticBeam = audio_play_sound(snd_MysticBeam,0,false);
-											attack = true;
-											attackNumber = playerAttacks.mysticBeamNormal;
-											sprite_index = sprBeamAttack1;
-											image_index = 0;
-										}
-										else
-										{
-											attackTimer = 0;
-										}*/
-										if (canMysticBeamShield)
-										{
-											if (audio_is_playing(snd_MysticBeam)) audio_stop_sound(snd_MysticBeam);
-											sndMysticBeam = audio_play_sound(snd_MysticBeam,0,false);
-											attack = true;
-											attackNumber = playerAttacks.mysticBeamNormal;
-											sprite_index = sprBeamAttack1;
-											image_index = 0;
-										}
-										else
-										{
-											attack = true;
-											attackNumber = playerAttacks.mysticBeamBarrierBreak;
-											sprite_index = sprMysticBeamAttack2;
-											image_index = 0;
-											attackTimer = 30;
-											canMysticBeamShield = true;
+											/*beamCharge = 0;
+											if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
+											chargeSfxState = "intro";
+											if (canMysticBeamShield)
+											{
+												if (audio_is_playing(snd_MysticBeam)) audio_stop_sound(snd_MysticBeam);
+												sndMysticBeam = audio_play_sound(snd_MysticBeam,0,false);
+												attack = true;
+												attackNumber = playerAttacks.mysticBeamNormal;
+												sprite_index = sprBeamAttack1;
+												image_index = 0;
+											}
+											else
+											{
+												attackTimer = 0;
+											}*/
+											if (canMysticBeamShield)
+											{
+												if (audio_is_playing(snd_MysticBeam)) audio_stop_sound(snd_MysticBeam);
+												sndMysticBeam = audio_play_sound(snd_MysticBeam,0,false);
+												attack = true;
+												attackNumber = playerAttacks.mysticBeamNormal;
+												sprite_index = sprBeamAttack1;
+												image_index = 0;
+											}
+											else
+											{
+												attack = true;
+												attackNumber = playerAttacks.mysticBeamBarrierBreak;
+												sprite_index = sprMysticBeamAttack2;
+												image_index = 0;
+												attackTimer = 30;
+												canMysticBeamShield = true;
+											}
 										}
 									}
 								}
@@ -1279,7 +1291,7 @@ function scr_Player_States_Normal()
 												if (audio_is_playing(snd_MysticBeamLaunch)) audio_stop_sound(snd_MysticBeamLaunch);
 												audio_play_sound(snd_MysticBeamLaunch,0,false);
 												var proj = instance_create_depth(x,y,depth,obj_Projectile_BarrierBreak);
-												proj.image_angle = angle_difference(-point_direction(x,y,other.x,other.y) - 45,image_angle);
+												proj.image_angle = angle_difference(angle - 45,image_angle);
 												proj.owner = id;
 												proj.abilityType = playerAbilities.mysticBeam;
 												proj.dmg = 24;
@@ -1288,7 +1300,7 @@ function scr_Player_States_Normal()
 												proj.destroyableByWall = false;
 												var particle = instance_create_depth(other.x,other.y,depth,obj_Particle);
 												particle.sprite_index = spr_Projectile_BarrierBreak_Normal_Tail;
-												particle.image_angle = angle + 22.5;
+												particle.image_angle = angle + 45;
 												particle.destroyAfterAnimation = true;
 												instance_destroy();
 												/*if (audio_is_playing(snd_MysticBeamLaunch)) audio_stop_sound(snd_MysticBeamLaunch);
@@ -1426,12 +1438,24 @@ function scr_Player_States_Normal()
 								par.attachedObjectXOffset = 16 * dir;
 								par.attachedObjectYOffset = -9;
 								par.destroyAfterAnimation = true;
-								var projectile = instance_create_depth(x + (17 * dir) + hsp,y - 9,depth + 2,obj_Projectile_MysticBeamLaser);
-								projectile.owner = id;
-								projectile.abilityType = playerAbilities.mysticBeam;
-								projectile.dmg = .2;
-								projectile.dirr = 90 + (90 * -dir);
+								beamBombProj = instance_create_depth(x + (17 * dir) + hsp,y - 9,depth + 1,obj_Projectile_BeamBomb);
+								beamBombProj.owner = id;
+								beamBombProj.abilityType = playerAbilities.mysticBeam;
+								beamBombProj.dmg = 42;
+								beamBombProj.hsp = 2 * dir;
+								beamBombProj.dirX = dir;
+								beamBombProj.destroyableByWall = false;
+								beamBombProj.destroyableByEnemy = false;
+								beamBombProj.destroyableByObject = false;
 								attackable = false;
+							}
+							else
+							{
+								if ((keyAttackPressed) and (instance_exists(beamBombProj)))
+								{
+									attackTimer = 0;
+									beamBombProj.explode = true;
+								}
 							}
 						}
 					
@@ -2471,6 +2495,37 @@ function scr_Player_States_Normal()
 						break;
 						#endregion
 						
+						#region Yoyo
+						case playerAbilities.yoyo:
+					    if ((!global.cutscene) and (!hurt) and (!attack))
+					    {
+							if (keyAttackPressed)
+							{
+								if ((run) and (hsp != 0))
+								{
+									invincible = true;
+									vsp = 0;
+									run = false;
+					                attack = true;
+									attackNumber = playerAttacks.yoyoDash;
+									attackable = false;
+					                attackTimer = 45;
+					                state = playerStates.yoyoDash;
+									if (audio_is_playing(snd_Fire3)) audio_stop_sound(snd_Fire3);
+				                    yoyoDashSfx = audio_play_sound(snd_Fire3,0,false);
+									yoyoDashMaskProj = instance_create_depth(x,y,depth,obj_Projectile_YoyoDashMask);
+									yoyoDashMaskProj.owner = id;
+									yoyoDashMaskProj.abilityType = playerAbilities.yoyo;
+									yoyoDashMaskProj.dmgMin = 18;
+									yoyoDashMaskProj.dmgMax = 21;
+									yoyoDashMaskProj.image_xscale = image_xscale;
+									yoyoDashMaskProj.image_yscale = image_yscale;
+							    }
+						    }
+					    }
+						break;
+						#endregion
+						
 						#region Wheel
 						case playerAbilities.wheel:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
@@ -2806,6 +2861,37 @@ function scr_Player_States_Normal()
 						break;
 						#endregion
 						
+						#region Parasol
+						case playerAbilities.parasol:
+					    if ((!global.cutscene) and (!hurt) and (!attack))
+					    {
+							if (keyAttackPressed)
+							{
+								if ((run) and (hsp != 0))
+								{
+									invincible = true;
+									vsp = 0;
+									run = false;
+					                attack = true;
+									attackNumber = playerAttacks.parasolDash;
+									attackable = false;
+					                attackTimer = 45;
+					                state = playerStates.parasolDash;
+									if (audio_is_playing(snd_Fire3)) audio_stop_sound(snd_Fire3);
+				                    parasolDashSfx = audio_play_sound(snd_Fire3,0,false);
+									parasolDashMaskProj = instance_create_depth(x,y,depth,obj_Projectile_ParasolDashMask);
+									parasolDashMaskProj.owner = id;
+									parasolDashMaskProj.abilityType = playerAbilities.parasol;
+									parasolDashMaskProj.dmgMin = 18;
+									parasolDashMaskProj.dmgMax = 21;
+									parasolDashMaskProj.image_xscale = image_xscale;
+									parasolDashMaskProj.image_yscale = image_yscale;
+							    }
+						    }
+					    }
+						break;
+						#endregion
+						
 						#region Sleep
 						case playerAbilities.sleep:
 						if (!isSleeping)
@@ -3035,7 +3121,6 @@ function scr_Player_States_Normal()
 					{
 						if (attackable)
 						{
-							waddleDooEyeFlashTimer = waddleDooEyeFlashTimerMax;
 							attackTimer = 75;
 							for (var i = 0; i < 4; i++)
 							{

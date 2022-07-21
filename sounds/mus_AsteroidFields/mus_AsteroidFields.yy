@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_AsteroidFields.mp3",
-  "duration": 221.831833,
+  "duration": 221.83183,
   "parent": {
     "name": "Stages",
     "path": "folders/Sounds/Music/Stages.yy",

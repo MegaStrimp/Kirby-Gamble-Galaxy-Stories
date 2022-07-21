@@ -11,7 +11,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_DeathParticles.mp3",
+  "soundFile": "snd_deathparticles.wav",
   "duration": 0.287347,
   "parent": {
     "name": "Sound Effects",

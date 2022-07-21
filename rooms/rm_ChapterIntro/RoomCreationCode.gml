@@ -12,6 +12,6 @@ audio_stop_all();
 switch (global.chapterIntro)
 {
 	case "1_1":
-	global.musicPlaying = audio_play_sound(mus_ChapterIntro1_1,0,false);
+	scr_PlayMusic(false,mus_ChapterIntro1_1,0,false);
 	break;
 }

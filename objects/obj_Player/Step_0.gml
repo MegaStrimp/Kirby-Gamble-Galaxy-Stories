@@ -1147,31 +1147,56 @@ if (!global.pause)
 		}
 	}
 	
-	//Waddle Doo Eye Flash Timer
+	//Mystic Beam Up Attack Timer
 	
-	if (attackNumber == "waddleDooBeamNormal")
+	if ((attack) and (attackNumber == playerAttacks.mysticBeamUp))
 	{
-		if (waddleDooEyeFlashTimer > 0)
+		if (mysticBeamUpAttackTimer > 0)
 		{
-			waddleDooEyeFlashTimer -= 1;
+			mysticBeamUpAttackTimer -= 1;
 		}
-		else if (waddleDooEyeFlashTimer == 0)
+		else if (mysticBeamUpAttackTimer == 0)
 		{
-			if (waddleDooEyeFlash)
+			mysticBeamUpAttackCount += 1;
+			if (audio_is_playing(snd_BeamAir)) audio_stop_sound(snd_BeamAir);
+			audio_play_sound(snd_BeamAir,0,false);
+			var projBeam = instance_create_depth(x,y - 10,depth,obj_Projectile_Beam);
+			projBeam.imageSpeed = 1;
+			projBeam.character = 7;
+			projBeam.sprite_index = spr_Projectile_MysticBeam_Air;
+			projBeam.owner = id;
+			projBeam.abilityType = playerAbilities.mysticBeam;
+			projBeam.player = player;
+			projBeam.dmg = 18;
+		    projBeam.dirX = -dir;
+		    projBeam.dir = dir;
+			projBeam.image_xscale = projBeam.dirX;
+			projBeam.spd = 6;
+			projBeam.direction = 90 - (90 * dir) + (mysticBeamUpAttackCount * 45 * dir);
+			if (mysticBeamUpAttackCount == 2) projBeam.straightBounce = true;
+		    projBeam.state = 3;
+		    projBeam.enemy = false;
+		    projBeam.destroyableByWall = false;
+			projBeam.isMystic = true;
+			projBeam.invisTimer = -1;
+			projBeam.alphaTimer = projBeam.alphaTimerMax;
+			projBeam.trailTimer = 0;
+			projBeam.destroyTimer = 180;
+			if (mysticBeamUpAttackCount == 3)
 			{
-				waddleDooEyeFlash = false;
+				mysticBeamUpAttackCount = 0;
+				attackTimer = 0;
+				mysticBeamUpAttackTimer = -1;
 			}
 			else
 			{
-				waddleDooEyeFlash = true;
+				mysticBeamUpAttackTimer = mysticBeamUpAttackTimerMax;
 			}
-			waddleDooEyeFlashTimer = waddleDooEyeFlashTimerMax;
 		}
 	}
 	else
 	{
-		waddleDooEyeFlash = false;
-		waddleDooEyeFlashTimer = -1;
+		mysticBeamUpAttackTimer = -1;
 	}
 	
 	//Stone Ready Timer
@@ -1925,7 +1950,6 @@ else if (characterSetupTimer == 0)
 		sprBeamAttack6 = spr_Kirby_Normal_Beam_Attack6;
 		sprMysticBeamAttack1 = spr_Kirby_Normal_MysticBeam_Attack1;
 		sprMysticBeamAttack2 = spr_Kirby_Normal_MysticBeam_Attack2;
-		sprWaddleDooFlashingEye = spr_WaddleDoo_Normal_FlashingEye;
 		sprStoneAttack1Ready = spr_Kirby_Normal_Stone_Attack1Ready;
 		if (player == 0)
 		{
@@ -1945,6 +1969,7 @@ else if (characterSetupTimer == 0)
 		sprUfoIdle = spr_Kirby_Normal_Ufo_Idle;
 		sprUfoUp = spr_Kirby_Normal_Ufo_Up;
 		sprUfoDown = spr_Kirby_Normal_Ufo_Down;
+		sprUfoEnter = spr_Kirby_Normal_Ufo_Enter;
 		sprUfoCharge = spr_Kirby_Normal_Ufo_Charge;
 		sprUfoAttack1 = spr_Kirby_Normal_Ufo_Attack1;
 		sprUfoAttack2 = spr_Kirby_Normal_Ufo_Attack2;
@@ -1988,11 +2013,17 @@ else if (characterSetupTimer == 0)
 		sprSparkAttack2 = spr_Kirby_Normal_Spark_Attack2;
 		sprSparkAttack3 = spr_Kirby_Normal_Spark_Attack3;
 		sprSparkAttack4 = spr_Kirby_Normal_Spark_Attack4;
+		sprYoyoAttack2Ready = spr_Kirby_Normal_Yoyo_Attack2Ready;
+		sprYoyoAttack2 = spr_Kirby_Normal_Yoyo_Attack2;
+		sprYoyoAttack2Release = spr_Kirby_Normal_Yoyo_Attack2Release;
 		sprWingAttack1 = spr_Kirby_Normal_Wing_Attack1;
 		sprWingAttack2Ready = spr_Kirby_Normal_Wing_Attack2Ready;
 		sprWingAttack2 = spr_Kirby_Normal_Wing_Attack2;
 		sprSwordAttack1 = spr_Kirby_Normal_Sword_Attack1;
 		sprSwordAttack2 = spr_Kirby_Normal_Sword_Attack2;
+		sprParasolAttack2Ready = spr_Kirby_Normal_Parasol_Attack2Ready;
+		sprParasolAttack2 = spr_Kirby_Normal_Parasol_Attack2;
+		sprParasolAttack2Release = spr_Kirby_Normal_Parasol_Attack2Release;
 		sprSleepReady = spr_Kirby_Normal_SleepReady;
 		sprSleep = spr_Kirby_Normal_Sleep;
 		sprSleepEnd = spr_Kirby_Normal_SleepEnd;
@@ -2527,17 +2558,18 @@ else if (characterSetupTimer == 0)
 			sprIdle = spr_WaddleDoo_Normal_Idle;
 			sprWalk = spr_WaddleDoo_Normal_Walk;
 			sprRun = spr_WaddleDoo_Normal_Walk;
+			sprRunTurn = spr_WaddleDoo_Normal_RunTurn;
 			sprJump = spr_WaddleDoo_Normal_Jump;
 			sprFall = spr_WaddleDoo_Normal_Fall;
 			sprSquish = spr_WaddleDoo_Normal_Idle;
 			sprDuck = spr_WaddleDoo_Normal_Duck;
+			sprDuck = spr_WaddleDoo_Normal_Slide;
 			sprEnter = spr_WaddleDoo_Normal_Walk;
 			sprClimbUp = spr_WaddleDoo_Normal_ClimbUp;
 			sprClimbDown = spr_WaddleDoo_Normal_ClimbDown;
 			sprHurt = spr_WaddleDoo_Normal_Hurt;
-			sprDeath = spr_WaddleDoo_Normal_Hurt;
+			sprDeath = spr_WaddleDoo_Normal_Death;
 			sprBeamAttack1 = spr_WaddleDoo_Normal_Attack;
-			sprWaddleDooFlashingEye = spr_WaddleDoo_Normal_FlashingEye;
 			#endregion
 			break;
 		}

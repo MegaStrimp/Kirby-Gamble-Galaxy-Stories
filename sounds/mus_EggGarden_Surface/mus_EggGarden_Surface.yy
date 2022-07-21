@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_EggGarden_Surface.mp3",
-  "duration": 171.049789,
+  "duration": 171.04979,
   "parent": {
     "name": "Stages",
     "path": "folders/Sounds/Music/Stages.yy",

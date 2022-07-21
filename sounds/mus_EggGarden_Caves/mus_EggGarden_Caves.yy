@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_EggGarden_Caves.mp3",
-  "duration": 268.124847,
+  "duration": 268.12485,
   "parent": {
     "name": "Stages",
     "path": "folders/Sounds/Music/Stages.yy",

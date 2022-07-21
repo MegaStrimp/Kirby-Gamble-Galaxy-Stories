@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_AbilityStarBounce.mp3",
-  "duration": 0.257,
+  "soundFile": "snd_abilitystarbounce.wav",
+  "duration": 0.371542,
   "parent": {
     "name": "Objects",
     "path": "folders/Sounds/Sound Effects/Objects.yy",

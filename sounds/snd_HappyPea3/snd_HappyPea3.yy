@@ -11,7 +11,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_HappyPea3.mp3",
+  "soundFile": "snd_happypea3.wav",
   "duration": 0.626939,
   "parent": {
     "name": "Attacks",

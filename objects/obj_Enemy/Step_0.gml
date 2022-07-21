@@ -998,6 +998,7 @@ if (!global.pause)
 						other.projectileHitKnockbackDir = -sign(hsp);
 					}
 					other.hurt = true;
+					if (other.sprHurt != -1) other.hurtImageIndex = irandom_range(0,sprite_get_number(other.sprHurt) - 1);
 					if (!destroyableByEnemy)
 					{
 						other.invincible = true;
@@ -1130,6 +1131,7 @@ if (!global.pause)
 				other.shakeY = 2;
 				scr_HurtKnockback(self,collidingSpike);
 				hurt = true;
+				if (sprHurt != -1) hurtImageIndex = irandom_range(0,sprite_get_number(sprHurt) - 1);
 				hurtTimer = hurtTimerMax;
 				invincible = true;
 				invincibleTimer = invincibleTimerMax;

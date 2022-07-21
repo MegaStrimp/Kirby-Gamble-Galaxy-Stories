@@ -21,5 +21,5 @@ layer_background_yscale(layer_background_get_id("Background_Parallax1"),.5);
 if (!audio_is_playing(mus_EggGarden_Hub))
 {
 	audio_stop_all();
-	global.musicPlaying = audio_play_sound(mus_EggGarden_Hub,0,true);
+	scr_PlayMusic(false,mus_EggGarden_Hub,0,true);
 }

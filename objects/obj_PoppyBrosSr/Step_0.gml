@@ -139,6 +139,8 @@ if (!global.pause)
 			}
 			else
 			{
+				if (audio_is_playing(snd_EnemyJump3)) audio_stop_sound(snd_EnemyJump3);
+				audio_play_sound(snd_EnemyJump3,0,false);
 				walkDirX *= -1;
 				if (walkDirX == 1)
 				{

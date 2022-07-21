@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_1Up.mp3",
-  "duration": 0.966531,
+  "soundFile": "snd_1up.wav",
+  "duration": 0.92381,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",

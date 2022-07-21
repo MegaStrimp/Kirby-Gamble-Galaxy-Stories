@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_WaddleDee10.mp3",
-  "duration": 0.449082,
+  "soundFile": "snd_waddledee10.wav",
+  "duration": 0.444082,
   "parent": {
     "name": "Enemies",
     "path": "folders/Sounds/Sound Effects/Enemies.yy",

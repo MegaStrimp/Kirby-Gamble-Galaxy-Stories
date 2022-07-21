@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_NidooSpawn.wav",
-  "duration": 1.183312,
+  "soundFile": "snd_nidoospawn.wav",
+  "duration": 1.122313,
   "parent": {
     "name": "Enemies",
     "path": "folders/Sounds/Sound Effects/Enemies.yy",

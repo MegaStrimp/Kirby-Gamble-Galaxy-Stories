@@ -292,7 +292,6 @@ switch (page)
 	var isActive = strFalse;
 	if (global.autoSwallow) isActive = strTrue;
 	scr_Draw_Text_Color_Outline(140,60 + (24 * i),strAutoSwallow + " - " + isActive,-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
-	break;
 	
 	i += 1;
 	var col1 = c_white;

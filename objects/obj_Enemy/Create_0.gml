@@ -105,6 +105,7 @@ bubbleX = 0;
 bubbleY = 0;
 instaDeath = false;
 fellDown = false;
+hurtImageIndex = 0;
 
 //Timers
 

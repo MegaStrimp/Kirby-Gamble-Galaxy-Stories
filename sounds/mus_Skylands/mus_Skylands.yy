@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_Skylands.mp3",
-  "duration": 292.963257,
+  "duration": 292.96326,
   "parent": {
     "name": "Subgames",
     "path": "folders/Sounds/Music/Subgames.yy",

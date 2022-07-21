@@ -11,7 +11,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_Pause.mp3",
+  "soundFile": "snd_pause.wav",
   "duration": 0.261224,
   "parent": {
     "name": "Misc",

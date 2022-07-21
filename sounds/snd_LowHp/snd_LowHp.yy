@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_LowHp.mp3",
-  "duration": 0.788673,
+  "soundFile": "snd_lowhp.wav",
+  "duration": 0.783673,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",

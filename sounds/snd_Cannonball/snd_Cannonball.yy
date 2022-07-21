@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_Cannonball.mp3",
-  "duration": 0.21398,
+  "soundFile": "snd_cannonball.wav",
+  "duration": 0.18898,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",

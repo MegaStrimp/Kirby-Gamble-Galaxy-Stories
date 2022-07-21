@@ -11,7 +11,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_EnemySleep.wav",
+  "soundFile": "snd_enemysleep.wav",
   "duration": 0.534059,
   "parent": {
     "name": "Enemies",

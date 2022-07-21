@@ -11,7 +11,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_EnemyIce.wav",
+  "soundFile": "snd_enemyice.wav",
   "duration": 2.136236,
   "parent": {
     "name": "Enemies",

@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_AbilityChallenge.mp3",
-  "duration": 22.7003746,
+  "duration": 22.700375,
   "parent": {
     "name": "Stages",
     "path": "folders/Sounds/Music/Stages.yy",

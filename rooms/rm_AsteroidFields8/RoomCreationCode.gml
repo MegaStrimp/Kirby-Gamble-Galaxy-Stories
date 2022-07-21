@@ -33,11 +33,11 @@ if ((!audio_is_playing(mus_AsteroidFields)) and (!audio_is_playing(mus_KazooFiel
 	var musicIndex = irandom_range(0,97);
 	if (musicIndex == 0)
 	{
-		global.musicPlaying = audio_play_sound(mus_KazooFields,0,true);
+		scr_PlayMusic(false,mus_KazooFields,0,true);
 	}
 	else
 	{
-		global.musicPlaying = audio_play_sound(mus_AsteroidFields,0,true);
+		scr_PlayMusic(false,mus_AsteroidFields,0,true);
 	}
 }
 

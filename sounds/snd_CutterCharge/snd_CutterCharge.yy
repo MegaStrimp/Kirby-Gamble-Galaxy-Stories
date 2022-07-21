@@ -5,13 +5,13 @@
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
-  "type": 0,
+  "type": 1,
   "bitDepth": 1,
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_CutterCharge.wav",
+  "soundFile": "snd_cuttercharge.wav",
   "duration": 2.35,
   "parent": {
     "name": "Attacks",

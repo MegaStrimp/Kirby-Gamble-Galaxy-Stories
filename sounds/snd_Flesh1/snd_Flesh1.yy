@@ -11,7 +11,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_Flesh1.wav",
+  "soundFile": "snd_flesh1.wav",
   "duration": 0.156553,
   "parent": {
     "name": "Misc",

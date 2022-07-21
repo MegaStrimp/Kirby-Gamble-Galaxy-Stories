@@ -11,7 +11,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_LeoFireball.wav",
+  "soundFile": "snd_leofireball.wav",
   "duration": 1.671837,
   "parent": {
     "name": "Enemies",

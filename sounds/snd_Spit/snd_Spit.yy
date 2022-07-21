@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_Spit.mp3",
-  "duration": 0.339592,
+  "soundFile": "snd_spit.wav",
+  "duration": 0.301859,
   "parent": {
     "name": "Player",
     "path": "folders/Sounds/Sound Effects/Player.yy",

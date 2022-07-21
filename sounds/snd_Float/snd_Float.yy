@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_Float.mp3",
-  "duration": 0.240102,
+  "soundFile": "snd_float.wav",
+  "duration": 0.464399,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",

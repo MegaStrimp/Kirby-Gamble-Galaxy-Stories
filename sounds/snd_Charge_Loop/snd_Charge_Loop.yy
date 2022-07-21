@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_Charge_Loop.mp3",
-  "duration": 2.184,
+  "soundFile": "snd_charge_loop.wav",
+  "duration": 2.16,
   "parent": {
     "name": "Attacks",
     "path": "folders/Sounds/Sound Effects/Attacks.yy",

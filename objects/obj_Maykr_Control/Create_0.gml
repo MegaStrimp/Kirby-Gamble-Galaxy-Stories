@@ -3,6 +3,8 @@
 #region Mouse
 mouseX = mouse_x;
 mouseY = mouse_y;
+mouseXPrev = mouseX;
+mouseYPrev = mouseY;
 mouseXGui = device_mouse_x_to_gui(0);
 mouseYGui = device_mouse_y_to_gui(0);
 #endregion
@@ -24,6 +26,8 @@ snap = 24;
 #region Tiles
 tileDebug = -1;
 tileAsteroidFieldsFront = -1;
+tileAsteroidFieldsFront3D1 = -1;
+tileAsteroidFieldsFront3D2 = -1;
 #endregion
 
 #region Settings
@@ -47,6 +51,11 @@ global.abilityP2 = playerAbilities.none;
 #region Mouse On Top
 mouseOnHud = false;
 mouseOnTopMap = false;
+mouseOnTopDelete = false;
+mouseOnTopZoomIn = false;
+mouseOnTopZoomOut = false;
+mouseOnTopZoomReset = false;
+mouseOnTopDrag = false;
 mouseOnTopSave = false;
 mouseOnTopLoad = false;
 mouseOnTopOptions = false;
@@ -59,7 +68,6 @@ mouseOnTopEnemies = false;
 mouseOnTopItems = false;
 mouseOnTopExpand = false;
 mouseOnTopHide = false;
-collidingSpawner = false;
 #endregion
 
 #region Offsets
@@ -77,10 +85,18 @@ topHudItemsOffset = 0;
 bottomHudOffset = (50 * !bottomHudVisible) - (96 * bottomHudOpen);
 #endregion
 
+#region Window Variables
+windowIndex = -1;
+windowWidth = 10;
+windowHeight = 10;
+windowActive = false;
+windowSelection = 0;
+windowContentAlpha = 0;
+#endregion
+
 #region Other Variables
 active = false;
 canBeInteracted = true;
-windowIndex = -1;
 inventoryPage = 0;
 scr_Maykr_Inventory(global.gambleMaykrMenu,inventoryPage);
 yesBar = 0;
@@ -88,6 +104,17 @@ yesBarMax = 120;
 textureX = 0;
 textureY = 0;
 spawnTimer = 0;
+collidingSpawner = -1;
+selectedSpawner = -1;
+draggedSpawner = -1;
+deleteMode = false;
+dragMode = false;
+selectedSpawnerOptionsExists = false;
+selectedSpawnerOptionsXOffset = false;
+selectedSpawnerOptionsYOffset = false;
+selectedSpawnerDirectionExists = false;
+selectedSpawnerDirectionXOffset = false;
+selectedSpawnerDirectionYOffset = false;
 #endregion
 
 #region Spawn Kirby

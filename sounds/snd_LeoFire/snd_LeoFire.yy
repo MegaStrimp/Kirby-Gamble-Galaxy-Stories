@@ -11,7 +11,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_LeoFire.wav",
+  "soundFile": "snd_leofire.wav",
   "duration": 0.673379,
   "parent": {
     "name": "Enemies",

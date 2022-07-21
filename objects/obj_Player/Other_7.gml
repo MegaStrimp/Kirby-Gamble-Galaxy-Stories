@@ -192,6 +192,14 @@ if ((attackNumber == playerAttacks.mysticBeamBarrierBreak) and (sprite_index == 
 
 if ((attackNumber == playerAttacks.mysticBeamChargeAttack) and (sprite_index == sprBeamAttack5)) image_index = image_number - 1;
 
+//Mystic Beam Up Attack
+
+if ((attackNumber == playerAttacks.mysticBeamUp) and (sprite_index == sprBeamAttack4))
+{
+	image_index = image_number - 1;
+	if (attackTimer == -1) attackTimer = 0;
+}
+
 //Stone Normal Attack Ready
 
 if (((attackNumber == playerAttacks.stoneNormal) or (attackNumber == playerAttacks.gooeyStoneNormal)) and (sprite_index == sprStoneAttack1Ready))

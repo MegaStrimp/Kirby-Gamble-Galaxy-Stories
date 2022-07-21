@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_PointStar_Low.mp3",
-  "duration": 0.485,
+  "soundFile": "snd_pointstar_low.wav",
+  "duration": 0.48,
   "parent": {
     "name": "Objects",
     "path": "folders/Sounds/Sound Effects/Objects.yy",

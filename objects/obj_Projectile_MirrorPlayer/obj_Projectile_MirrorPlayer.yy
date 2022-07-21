@@ -2,6 +2,7 @@
   "spriteId": null,
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "spr_24Square_Mask",
     "path": "sprites/spr_24Square_Mask/spr_24Square_Mask.yy",

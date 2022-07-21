@@ -62,6 +62,8 @@ if ((gamePaused) and (visible))
 		i++;
 		abilityPage[i] = spr_PauseMenu_Ability_MysticBeamMoveset2;
 		i++;
+		abilityPage[i] = spr_PauseMenu_Ability_MysticBeamMoveset3;
+		i++;
 		break;
 		
 		case playerAbilities.stone:
@@ -592,6 +594,8 @@ if ((gamePaused) and (visible))
 	
 	if ((!cellphoneActive) and (keyStartPressed) or ((abilityPage[page] == spr_PauseMenu_Exit) and (keyJumpPressed)))
     {
+		if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+		audio_play_sound(snd_ButtonYes,0,false);
 		if (abilityPage[page] != spr_PauseMenu_Exit) cursorSelection = 0;
 		if (cursorSelection == 0)
 		{
@@ -615,13 +619,15 @@ if ((gamePaused) and (visible))
 				audio_play_sound(snd_Cellphone,0,false);
 				cellphoneActive = true;
 			}*/
-			if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
-			audio_play_sound(snd_ButtonNo,0,false);
+			if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+			audio_play_sound(snd_ButtonChange,0,false);
 		}
 		else if (cursorSelection == 2)
 		{
 			if ((!instance_exists(obj_Pause_Fade)) and (!instance_exists(obj_Fade)))
 			{
+				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+				audio_play_sound(snd_ButtonNo,0,false);
 				if ((!global.debug) and (global.canSave)) scr_SaveGame(global.selectedSave);
 				var pauseFade = instance_create_depth(x,y,depth - 1,obj_Pause_Fade);
 				pauseFade.alphaSpd = .02;
