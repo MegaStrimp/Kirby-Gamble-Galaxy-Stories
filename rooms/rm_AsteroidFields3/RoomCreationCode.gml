@@ -40,3 +40,7 @@ if ((!audio_is_playing(mus_AsteroidFields)) and (!audio_is_playing(mus_KazooFiel
 		scr_PlayMusic(false,mus_AsteroidFields,0,true);
 	}
 }
+
+//Star Controller
+
+instance_create_depth(0,0,0,obj_AsteroidFieldsStarController);

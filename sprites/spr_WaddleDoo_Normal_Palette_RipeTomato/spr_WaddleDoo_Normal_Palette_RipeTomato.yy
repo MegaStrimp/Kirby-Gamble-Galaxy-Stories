@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"fb585042-f0af-4ee6-9e00-07f72222df76","path":"sprites/spr_WaddleDoo_Normal_Palette_RipeTomato/spr_WaddleDoo_Normal_Palette_RipeTomato.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fb585042-f0af-4ee6-9e00-07f72222df76","path":"sprites/spr_WaddleDoo_Normal_Palette_RipeTomato/spr_WaddleDoo_Normal_Palette_RipeTomato.yy",},"LayerId":{"name":"00580588-9bc3-4242-9c47-35519b8e6796","path":"sprites/spr_WaddleDoo_Normal_Palette_RipeTomato/spr_WaddleDoo_Normal_Palette_RipeTomato.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_WaddleDoo_Normal_Palette_RipeTomato","path":"sprites/spr_WaddleDoo_Normal_Palette_RipeTomato/spr_WaddleDoo_Normal_Palette_RipeTomato.yy",},"resourceVersion":"1.0","name":"fb585042-f0af-4ee6-9e00-07f72222df76","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"af4de9bf-2899-45a2-8b2d-e5a6d8135073","path":"sprites/spr_WaddleDoo_Normal_Palette_RipeTomato/spr_WaddleDoo_Normal_Palette_RipeTomato.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"af4de9bf-2899-45a2-8b2d-e5a6d8135073","path":"sprites/spr_WaddleDoo_Normal_Palette_RipeTomato/spr_WaddleDoo_Normal_Palette_RipeTomato.yy",},"LayerId":{"name":"00580588-9bc3-4242-9c47-35519b8e6796","path":"sprites/spr_WaddleDoo_Normal_Palette_RipeTomato/spr_WaddleDoo_Normal_Palette_RipeTomato.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_WaddleDoo_Normal_Palette_RipeTomato","path":"sprites/spr_WaddleDoo_Normal_Palette_RipeTomato/spr_WaddleDoo_Normal_Palette_RipeTomato.yy",},"resourceVersion":"1.0","name":"af4de9bf-2899-45a2-8b2d-e5a6d8135073","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_WaddleDoo_Normal_Palette_RipeTomato","path":"sprites/spr_WaddleDoo_Normal_Palette_RipeTomato/spr_WaddleDoo_Normal_Palette_RipeTomato.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"85787007-3854-482b-bbf6-6cd468337fb2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fb585042-f0af-4ee6-9e00-07f72222df76","path":"sprites/spr_WaddleDoo_Normal_Palette_RipeTomato/spr_WaddleDoo_Normal_Palette_RipeTomato.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c1cb8932-53be-499c-8283-584c96541905","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"af4de9bf-2899-45a2-8b2d-e5a6d8135073","path":"sprites/spr_WaddleDoo_Normal_Palette_RipeTomato/spr_WaddleDoo_Normal_Palette_RipeTomato.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,

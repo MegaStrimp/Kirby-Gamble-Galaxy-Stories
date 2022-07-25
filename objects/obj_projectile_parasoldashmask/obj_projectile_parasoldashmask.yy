@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_Burst_Mask",
-    "path": "sprites/spr_Burst_Mask/spr_Burst_Mask.yy",
+    "name": "spr_ParasolDash_Mask",
+    "path": "sprites/spr_ParasolDash_Mask/spr_ParasolDash_Mask.yy",
   },
   "solid": false,
   "visible": false,

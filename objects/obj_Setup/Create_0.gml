@@ -457,6 +457,7 @@ enum carriedItems
 
 enum carriedItemStates
 {
+	none,
 	light,
 	heavy
 }

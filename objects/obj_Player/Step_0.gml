@@ -173,6 +173,18 @@ if (!global.pause)
 		}
 		break;
 		
+		case playerAbilities.sword:
+		if (carriedItem == carriedItems.none) carriedItemState = carriedItemStates.light;
+		break;
+		
+		case playerAbilities.parasol:
+		if (carriedItem == carriedItems.none) carriedItemState = carriedItemStates.light;
+		break;
+		
+		case playerAbilities.hammer:
+		if (carriedItem == carriedItems.none) carriedItemState = carriedItemStates.light;
+		break;
+		
 		case playerAbilities.water:
 		if (sprite_index != sprWalk) waterWalkHatAnim = 0;
 		break;
@@ -2514,8 +2526,6 @@ else if (characterSetupTimer == 0)
 			i += 1;
 			pal[i] = spr_WaddleDoo_Normal_Palette_TrueBlue;
 			i += 1;
-			pal[i] = spr_WaddleDoo_Normal_Palette_Berry;
-			i += 1;
 			pal[i] = spr_WaddleDoo_Normal_Palette_Lilac;
 			i += 1;
 			pal[i] = spr_WaddleDoo_Normal_Palette_AquaDepths;
@@ -2524,15 +2534,13 @@ else if (characterSetupTimer == 0)
 			i += 1;
 			pal[i] = spr_WaddleDoo_Normal_Palette_MintyBreeze;
 			i += 1;
-			pal[i] = spr_WaddleDoo_Normal_Palette_NoFun;
-			i += 1;
 			pal[i] = spr_WaddleDoo_Normal_Palette_FilthyRich;
 			i += 1;
 			pal[i] = spr_WaddleDoo_Normal_Palette_CowardlyBrother;
 			i += 1;
 			pal[i] = spr_WaddleDoo_Normal_Palette_LetsaGo;
 			i += 1;
-			pal[i] = spr_WaddleDoo_Normal_Palette_Amber;
+			pal[i] = spr_WaddleDoo_Normal_Palette_Choco;
 			i += 1;
 			pal[i] = spr_WaddleDoo_Normal_Palette_Bloodshot;
 			i += 1;
@@ -2551,6 +2559,12 @@ else if (characterSetupTimer == 0)
 			pal[i] = spr_WaddleDoo_Normal_Palette_PinkStar;
 			i += 1;
 			pal[i] = spr_WaddleDoo_Normal_Palette_Brick;
+			i += 1;
+			pal[i] = spr_WaddleDoo_Normal_Palette_CorruptedTwilight;
+			i += 1;
+			pal[i] = spr_WaddleDoo_Normal_Palette_PalePurple;
+			i += 1;
+			pal[i] = spr_WaddleDoo_Normal_Palette_DarkFlux;
 			#endregion
 		
 			#region Sprites

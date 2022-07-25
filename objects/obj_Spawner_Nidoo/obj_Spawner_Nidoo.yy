@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_Nidoo_Normal_Ready",
+    "path": "sprites/spr_Nidoo_Normal_Ready/spr_Nidoo_Normal_Ready.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

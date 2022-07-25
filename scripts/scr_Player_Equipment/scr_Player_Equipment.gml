@@ -491,6 +491,192 @@ function scr_Player_Equipment(argument0,argument1)
 				break;
 			}
 			break;
+			
+			case playerAbilities.bell:
+			if (player == 0)
+			{
+				var altHatToCheck = global.hatTypeBellP1;
+			}
+			else
+			{
+				var altHatToCheck = global.hatTypeBellP2;
+			}
+			
+			switch (altHatToCheck)
+			{
+				case abilityHatSkins.bell_modern:
+				switch (sprite_index)
+				{
+					case sprIdle:
+					case sprIdleBlink:
+					case sprIdleNormalSlopeL:
+					case sprIdleNormalSlopeLBlink:
+					case sprIdleNormalSlopeR:
+					case sprIdleNormalSlopeRBlink:
+					case sprIdleSteepSlopeL:
+					case sprIdleSteepSlopeLBlink:
+					case sprIdleSteepSlopeR:
+					case sprIdleSteepSlopeRBlink:
+					case sprItemCarryLightIdleNormalSlopeL:
+					case sprItemCarryLightIdleNormalSlopeLBlink:
+					case sprItemCarryLightIdleNormalSlopeR:
+					case sprItemCarryLightIdleNormalSlopeRBlink:
+					case sprItemCarryLightIdleSteepSlopeL:
+					case sprItemCarryLightIdleSteepSlopeLBlink:
+					case sprItemCarryLightIdleSteepSlopeR:
+					case sprItemCarryLightIdleSteepSlopeRBlink:
+					case sprItemCarryHeavyIdle:
+					case sprItemCarryHeavyIdleSlopeL:
+					case sprItemCarryHeavyIdleSlopeR:
+					case sprItemCarryThrow:
+					equipmentIndex = spr_Kirby_Equipment_Bell_Modern_Idle;
+					break;
+					
+					case sprWalk:
+					case sprItemCarryLightWalk:
+					case sprItemCarryHeavyWalk:
+					equipmentIndex = spr_Kirby_Equipment_Bell_Modern_Walk;
+					break;
+					
+					case sprRun:
+					equipmentIndex = spr_Kirby_Equipment_Bell_Modern_Run;
+					break;
+					
+					case sprRunTurn:
+					equipmentIndex = spr_Kirby_Equipment_Bell_Modern_RunTurn;
+					break;
+					
+					case sprJump:
+					equipmentIndex = spr_Kirby_Equipment_Bell_Modern_Jump;
+					break;
+					
+					case sprRoll:
+					equipmentIndex = spr_Kirby_Equipment_Bell_Modern_Roll;
+					break;
+					
+					case sprRollDuckReady:
+					equipmentIndex = spr_Kirby_Equipment_Bell_Modern_RollDuckReady;
+					break;
+					
+					case sprRollDuck:
+					equipmentIndex = spr_Kirby_Equipment_Bell_Modern_RollDuck;
+					break;
+					
+					case sprBackflip:
+					equipmentIndex = spr_Kirby_Equipment_Bell_Modern_Backflip;
+					break;
+					
+					case sprFall:
+					equipmentIndex = spr_Kirby_Equipment_Bell_Modern_Fall;
+					break;
+					
+					case sprDuck:
+					case sprDuckBlink:
+					case sprDuckNormalSlopeL:
+					case sprDuckNormalSlopeLBlink:
+					case sprDuckNormalSlopeR:
+					case sprDuckNormalSlopeRBlink:
+					case sprDuckSteepSlopeL:
+					case sprDuckSteepSlopeLBlink:
+					case sprDuckSteepSlopeR:
+					case sprDuckSteepSlopeRBlink:
+					case sprItemCarryLightDuck:
+					case sprItemCarryLightDuckBlink:
+					case sprItemCarryLightDuckNormalSlopeL:
+					case sprItemCarryLightDuckNormalSlopeLBlink:
+					case sprItemCarryLightDuckNormalSlopeR:
+					case sprItemCarryLightDuckNormalSlopeRBlink:
+					case sprItemCarryLightDuckSteepSlopeL:
+					case sprItemCarryLightDuckSteepSlopeLBlink:
+					case sprItemCarryLightDuckSteepSlopeR:
+					case sprItemCarryLightDuckSteepSlopeRBlink:
+					case sprItemCarryHeavyDuck:
+					equipmentIndex = spr_Kirby_Equipment_Bell_Modern_Duck;
+					break;
+					
+					case sprSlide:
+					equipmentIndex = spr_Kirby_Equipment_Bell_Modern_Slide;
+					break;
+					
+					case sprSlideEnd:
+					equipmentIndex = spr_Kirby_Equipment_Bell_Modern_SlideEnd;
+					break;
+					
+					case sprFloatReady:
+					case sprItemCarryLightFloatReady:
+					equipmentIndex = spr_Kirby_Equipment_Bell_Modern_FloatReady;
+					break;
+					
+					case sprFloat:
+					case sprItemCarryLightFloat:
+					equipmentIndex = spr_Kirby_Equipment_Bell_Modern_Float;
+					break;
+					
+					case sprFlap:
+					case sprItemCarryLightFlap:
+					equipmentIndex = spr_Kirby_Equipment_Bell_Modern_Flap;
+					break;
+					
+					case sprFloatSpit:
+					case sprItemCarryLightFloatSpit:
+					equipmentIndex = spr_Kirby_Equipment_Bell_Modern_FloatSpit;
+					break;
+					
+					case sprFloatHurt:
+					equipmentIndex = spr_Kirby_Equipment_Bell_Modern_FloatHurt;
+					break;
+					
+					case sprEnter:
+					equipmentIndex = spr_Kirby_Equipment_Bell_Modern_Enter;
+					break;
+					
+					case sprClimbUp:
+					equipmentIndex = spr_Kirby_Equipment_Bell_Modern_ClimbUp;
+					break;
+					
+					case sprClimbDown:
+					equipmentIndex = spr_Kirby_Equipment_Bell_Modern_ClimbDown;
+					break;
+					
+					case sprAbilityChange:
+					equipmentIndex = spr_Kirby_Equipment_Bell_Modern_AbilityChange;
+					break;
+					
+					case sprWarpStar1:
+					//equipmentIndex = spr_Kirby_Equipment_Bell_Modern_WarpStar1;
+					break;
+					
+					case sprWarpStar2:
+					//equipmentIndex = spr_Kirby_Equipment_Bell_Modern_WarpStar2;
+					break;
+					
+					case sprGuard:
+					equipmentIndex = spr_Kirby_Equipment_Bell_Modern_Guard;
+					break;
+					
+					case sprGuardSlope:
+					equipmentIndex = spr_Kirby_Equipment_Bell_Modern_Guard_Slope;
+					break;
+					
+					case sprHurt:
+					equipmentIndex = spr_Kirby_Equipment_Bell_Modern_Hurt;
+					break;
+					
+					case sprDeath:
+					equipmentIndex = spr_Kirby_Equipment_Bell_Modern_Death;
+					break;
+					
+					default:
+					equipmentIndex = -1;
+					break;
+				}
+				break;
+				
+				default:
+				equipmentIndex = -1;
+				break;
+			}
+			break;
 		}
 		break;
 	}

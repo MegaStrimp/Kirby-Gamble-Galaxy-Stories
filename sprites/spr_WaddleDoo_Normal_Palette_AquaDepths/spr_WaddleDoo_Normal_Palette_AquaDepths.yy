@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"5c92e9f9-27d1-4fa0-b853-991479c24f8c","path":"sprites/spr_WaddleDoo_Normal_Palette_AquaDepths/spr_WaddleDoo_Normal_Palette_AquaDepths.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5c92e9f9-27d1-4fa0-b853-991479c24f8c","path":"sprites/spr_WaddleDoo_Normal_Palette_AquaDepths/spr_WaddleDoo_Normal_Palette_AquaDepths.yy",},"LayerId":{"name":"e566b215-0c21-41a7-9e85-88f405359990","path":"sprites/spr_WaddleDoo_Normal_Palette_AquaDepths/spr_WaddleDoo_Normal_Palette_AquaDepths.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_WaddleDoo_Normal_Palette_AquaDepths","path":"sprites/spr_WaddleDoo_Normal_Palette_AquaDepths/spr_WaddleDoo_Normal_Palette_AquaDepths.yy",},"resourceVersion":"1.0","name":"5c92e9f9-27d1-4fa0-b853-991479c24f8c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"4332fc22-b579-41d7-85f1-eec7eb44f97c","path":"sprites/spr_WaddleDoo_Normal_Palette_AquaDepths/spr_WaddleDoo_Normal_Palette_AquaDepths.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"4332fc22-b579-41d7-85f1-eec7eb44f97c","path":"sprites/spr_WaddleDoo_Normal_Palette_AquaDepths/spr_WaddleDoo_Normal_Palette_AquaDepths.yy",},"LayerId":{"name":"e566b215-0c21-41a7-9e85-88f405359990","path":"sprites/spr_WaddleDoo_Normal_Palette_AquaDepths/spr_WaddleDoo_Normal_Palette_AquaDepths.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_WaddleDoo_Normal_Palette_AquaDepths","path":"sprites/spr_WaddleDoo_Normal_Palette_AquaDepths/spr_WaddleDoo_Normal_Palette_AquaDepths.yy",},"resourceVersion":"1.0","name":"4332fc22-b579-41d7-85f1-eec7eb44f97c","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_WaddleDoo_Normal_Palette_AquaDepths","path":"sprites/spr_WaddleDoo_Normal_Palette_AquaDepths/spr_WaddleDoo_Normal_Palette_AquaDepths.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"822d8579-4166-4323-8e36-17f466bc5db1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5c92e9f9-27d1-4fa0-b853-991479c24f8c","path":"sprites/spr_WaddleDoo_Normal_Palette_AquaDepths/spr_WaddleDoo_Normal_Palette_AquaDepths.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"64e7d920-0cd6-4109-9489-760b0f8fd7c7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4332fc22-b579-41d7-85f1-eec7eb44f97c","path":"sprites/spr_WaddleDoo_Normal_Palette_AquaDepths/spr_WaddleDoo_Normal_Palette_AquaDepths.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,

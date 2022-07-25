@@ -123,7 +123,7 @@ if (!global.pause)
 		
 		//End The Game
 		
-		if ((keyAttackPressed) or (keyboard_check_pressed(vk_escape))) game_end();
+		if (keyboard_check_pressed(vk_escape)) game_end();
 		break;
 		
 		case 1:

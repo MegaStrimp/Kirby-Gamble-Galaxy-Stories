@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d6c434f1-c352-438f-9d6e-fdfb8d19270f","path":"sprites/spr_WaddleDoo_Normal_Palette_MintyBreeze/spr_WaddleDoo_Normal_Palette_MintyBreeze.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d6c434f1-c352-438f-9d6e-fdfb8d19270f","path":"sprites/spr_WaddleDoo_Normal_Palette_MintyBreeze/spr_WaddleDoo_Normal_Palette_MintyBreeze.yy",},"LayerId":{"name":"b9d9801c-674b-48c9-b7fd-2454281f55c7","path":"sprites/spr_WaddleDoo_Normal_Palette_MintyBreeze/spr_WaddleDoo_Normal_Palette_MintyBreeze.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_WaddleDoo_Normal_Palette_MintyBreeze","path":"sprites/spr_WaddleDoo_Normal_Palette_MintyBreeze/spr_WaddleDoo_Normal_Palette_MintyBreeze.yy",},"resourceVersion":"1.0","name":"d6c434f1-c352-438f-9d6e-fdfb8d19270f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c91749b3-e6c9-452c-8110-8cebbf5203d4","path":"sprites/spr_WaddleDoo_Normal_Palette_MintyBreeze/spr_WaddleDoo_Normal_Palette_MintyBreeze.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c91749b3-e6c9-452c-8110-8cebbf5203d4","path":"sprites/spr_WaddleDoo_Normal_Palette_MintyBreeze/spr_WaddleDoo_Normal_Palette_MintyBreeze.yy",},"LayerId":{"name":"b9d9801c-674b-48c9-b7fd-2454281f55c7","path":"sprites/spr_WaddleDoo_Normal_Palette_MintyBreeze/spr_WaddleDoo_Normal_Palette_MintyBreeze.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_WaddleDoo_Normal_Palette_MintyBreeze","path":"sprites/spr_WaddleDoo_Normal_Palette_MintyBreeze/spr_WaddleDoo_Normal_Palette_MintyBreeze.yy",},"resourceVersion":"1.0","name":"c91749b3-e6c9-452c-8110-8cebbf5203d4","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_WaddleDoo_Normal_Palette_MintyBreeze","path":"sprites/spr_WaddleDoo_Normal_Palette_MintyBreeze/spr_WaddleDoo_Normal_Palette_MintyBreeze.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"90881976-5f05-4c7b-bd49-cfd4df4eb2ef","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d6c434f1-c352-438f-9d6e-fdfb8d19270f","path":"sprites/spr_WaddleDoo_Normal_Palette_MintyBreeze/spr_WaddleDoo_Normal_Palette_MintyBreeze.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"87d3bf21-5082-4aa6-80c3-7aa67ebdb0c6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c91749b3-e6c9-452c-8110-8cebbf5203d4","path":"sprites/spr_WaddleDoo_Normal_Palette_MintyBreeze/spr_WaddleDoo_Normal_Palette_MintyBreeze.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,

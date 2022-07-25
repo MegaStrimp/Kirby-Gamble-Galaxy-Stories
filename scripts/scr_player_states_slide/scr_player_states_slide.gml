@@ -90,7 +90,7 @@ function scr_Player_States_Slide()
 							carriedItemIndex.explodeTimer = 30;
 							carriedItem = carriedItems.none;
 							carriedItemIndex = -1;
-							carriedItemState = "none";
+							carriedItemState = carriedItemStates.none;
 							attackTimer = 10;
 						}
 						else
@@ -108,7 +108,7 @@ function scr_Player_States_Slide()
 						carriedItemIndex.explodeTimer = 40;
 						carriedItem = carriedItems.none;
 						carriedItemIndex = -1;
-						carriedItemState = "none";
+						carriedItemState = carriedItemStates.none;
 						bombDownReady = false;
 						canGrabTimer = 15;
 						attackTimer = 20;
@@ -199,8 +199,8 @@ function scr_Player_States_Slide()
 								}
 								else if (grounded)
 								{
-									if (audio_is_playing(snd_BeamAir)) audio_stop_sound(snd_BeamAir);
-									audio_play_sound(snd_BeamAir,0,false);
+									if (audio_is_playing(snd_MysticBeamDown)) audio_stop_sound(snd_MysticBeamDown);
+									audio_play_sound(snd_MysticBeamDown,0,false);
 									sprite_index = sprBeamAttack1;
 									image_index = 0;
 						            attack = true;

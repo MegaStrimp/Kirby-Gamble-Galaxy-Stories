@@ -24,22 +24,23 @@ if (spawnTimer > 0)
 }
 else if (spawnTimer == 0)
 {
-	var spawnedEnemy = instance_create_depth(x,y,depth,AAAAAAAA);
+	var spawnedEnemy = instance_create_depth(x,y,depth,obj_Nidoo);
 	spawnedEnemy.hasSpawner = true;
 	spawnedEnemy.spawner = id;
 	spawnedEnemy.spawnerRange = (spawnerRange * 2);
 	spawnedEnemy.paletteIndex = paletteIndex;
-	spawnedEnemy.decel = decel;
-	spawnedEnemy.movespeed = movespeed;
-	spawnedEnemy.jumpspeed = jumpspeed;
-	spawnedEnemy.gravNormal = gravNormal;
-	spawnedEnemy.gravLimitNormal = gravLimitNormal;
 	spawnedEnemy.character = character;
 	switch (character)
 	{
 		//Normal
 		
 		case 0:
+		spawnedEnemy.sprDoor = spr_Door_Normal;
+		spawnedEnemy.sprReady = spr_Nidoo_Normal_Ready;
+		spawnedEnemy.sprShake = spr_Nidoo_Normal_Shake;
+		spawnedEnemy.sprRelease = spr_Nidoo_Normal_Release;
+		spawnedEnemy.sprHurt = -1;
+		spawnedEnemy.sprStar = spr_Particle_BigStar_Yellow;
 		break;
 	}
 	spawnedEnemy.sprite_index = spawnedEnemy.sprIdle;
@@ -76,5 +77,10 @@ else if (spawnTimer == 0)
 	spawnedEnemy.objectOnDeath = objectOnDeath;
 	spawnedEnemy.objectOnDeathObj = objectOnDeathObj;
 	spawnedEnemy.groundFailsafe = groundFailsafe;
+	spawnedEnemy.shakeCountMax = shakeCountMax;
+	spawnedEnemy.drawText = drawText;
+	spawnedEnemy.parIndexSpd = parIndexSpd;
+	spawnedEnemy.particleTimerMax = particleTimerMax;
+	spawnedEnemy.particleTimer = particleTimer;
 	spawnTimer = -1;
 }

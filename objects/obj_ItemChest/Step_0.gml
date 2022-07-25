@@ -59,7 +59,7 @@ if (!global.pause)
 				if (instance_exists(touchedPlayer.carriedItemIndex)) instance_destroy(touchedPlayer.carriedItemIndex);
 				touchedPlayer.carriedItem = carriedItems.none;
 				touchedPlayer.carriedItemIndex = -1;
-				touchedPlayer.carriedItemState = "none";
+				touchedPlayer.carriedItemState = carriedItemStates.none;
 			}
 			var itemX = x;
 			var itemY = y;

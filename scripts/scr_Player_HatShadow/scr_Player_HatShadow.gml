@@ -861,6 +861,33 @@ function scr_Player_HatShadow(argument0,argument1)
 			}
 			break;
 			
+			case playerAbilities.ufo:
+			if (player == 0)
+			{
+				var altHatToCheck = global.hatTypeUfoP1;
+			}
+			else
+			{
+				var altHatToCheck = global.hatTypeUfoP2;
+			}
+			
+			switch (altHatToCheck)
+			{
+				case abilityHatSkins.ufo_modern:
+				switch (sprite_index)
+				{
+					case sprWarpStar1:
+					hatShadowIndex = spr_Kirby_HatShadow_Ufo_Modern_WarpStar1;
+					break;
+					
+					case sprWarpStar2:
+					hatShadowIndex = spr_Kirby_HatShadow_Ufo_Modern_WarpStar2;
+					break;
+				}
+				break;
+			}
+			break;
+			
 			case playerAbilities.mirror:
 			if (player == 0)
 			{
@@ -2377,6 +2404,10 @@ function scr_Player_HatShadow(argument0,argument1)
 					hatShadowIndex = spr_Kirby_HatShadow_Ice_KSSU_AbilityChange;
 					break;
 					
+					case sprWarpStar1:
+					hatShadowIndex = spr_Kirby_HatShadow_Ice_KSSU_WarpStar1;
+					break;
+					
 					case sprGuard:
 					hatShadowIndex = spr_Kirby_HatShadow_Ice_KSSU_Guard;
 					break;
@@ -2551,6 +2582,14 @@ function scr_Player_HatShadow(argument0,argument1)
 					
 					case sprAbilityChange:
 					hatShadowIndex = spr_Kirby_HatShadow_Ice_Snowman_AbilityChange;
+					break;
+					
+					case sprWarpStar1:
+					hatShadowIndex = spr_Kirby_HatShadow_Ice_Snowman_WarpStar1;
+					break;
+					
+					case sprWarpStar2:
+					hatShadowIndex = spr_Kirby_HatShadow_Ice_Snowman_WarpStar2;
 					break;
 					
 					case sprGuard:
@@ -3555,6 +3594,14 @@ function scr_Player_HatShadow(argument0,argument1)
 					hatShadowIndex = spr_Kirby_HatShadow_Wing_KSSU_AbilityChange;
 					break;
 					
+					case sprWarpStar1:
+					hatShadowIndex = spr_Kirby_HatShadow_Wing_KSSU_WarpStar1;
+					break;
+					
+					case sprWarpStar2:
+					hatShadowIndex = spr_Kirby_HatShadow_Wing_KSSU_WarpStar2;
+					break;
+					
 					case sprGuard:
 					hatShadowIndex = spr_Kirby_HatShadow_Wing_KSSU_Guard;
 					break;
@@ -3707,6 +3754,14 @@ function scr_Player_HatShadow(argument0,argument1)
 					
 					case sprAbilityChange:
 					hatShadowIndex = spr_Kirby_HatShadow_Jet_KSSU_AbilityChange;
+					break;
+					
+					case sprWarpStar1:
+					hatShadowIndex = spr_Kirby_HatShadow_Jet_KSSU_WarpStar1;
+					break;
+					
+					case sprWarpStar2:
+					hatShadowIndex = spr_Kirby_HatShadow_Jet_KSSU_WarpStar2;
 					break;
 					
 					case sprGuard:
@@ -4115,18 +4170,6 @@ function scr_Player_HatShadow(argument0,argument1)
 					hatShadowIndex = spr_Kirby_HatShadow_Bell_Modern_Jump;
 					break;
 					
-					case sprRoll:
-					hatShadowIndex = spr_Kirby_HatShadow_Bell_Modern_Roll;
-					break;
-					
-					case sprRollDuckReady:
-					hatShadowIndex = spr_Kirby_HatShadow_Bell_Modern_Roll;
-					break;
-					
-					case sprBackflip:
-					hatShadowIndex = spr_Kirby_HatShadow_Bell_Modern_Backflip;
-					break;
-					
 					case sprFall:
 					hatShadowIndex = spr_Kirby_HatShadow_Bell_Modern_Fall;
 					break;
@@ -4192,15 +4235,15 @@ function scr_Player_HatShadow(argument0,argument1)
 					break;
 					
 					case sprEnter:
-					hatShadowIndex = spr_Kirby_HatShadow_Wing_KSSU_Enter;
+					hatShadowIndex = spr_Kirby_HatShadow_Bell_Modern_Enter;
 					break;
 					
 					case sprClimbUp:
-					hatShadowIndex = spr_Kirby_HatShadow_Wing_KSSU_ClimbUp;
+					hatShadowIndex = spr_Kirby_HatShadow_Bell_Modern_ClimbUp;
 					break;
 					
 					case sprClimbDown:
-					hatShadowIndex = spr_Kirby_HatShadow_Wing_KSSU_ClimbDown;
+					hatShadowIndex = spr_Kirby_HatShadow_Bell_Modern_ClimbDown;
 					break;
 					
 					case sprAbilityChange:
@@ -4208,11 +4251,11 @@ function scr_Player_HatShadow(argument0,argument1)
 					break;
 					
 					case sprWarpStar1:
-					hatShadowIndex = spr_Kirby_HatShadow_Bell_Modern_WarpStar1;
+					//hatShadowIndex = spr_Kirby_HatShadow_Bell_Modern_WarpStar1;
 					break;
 					
 					case sprWarpStar2:
-					hatShadowIndex = spr_Kirby_HatShadow_Bell_Modern_WarpStar2;
+					//hatShadowIndex = spr_Kirby_HatShadow_Bell_Modern_WarpStar2;
 					break;
 					
 					case sprGuard:
@@ -4230,7 +4273,15 @@ function scr_Player_HatShadow(argument0,argument1)
 					case sprDeath:
 					hatShadowIndex = spr_Kirby_HatShadow_Bell_Modern_Death;
 					break;
+					
+					default:
+					hatShadowIndex = -1;
+					break;
 				}
+				break;
+				
+				default:
+				hatShadowIndex = -1;
 				break;
 			}
 			break;
@@ -4256,6 +4307,14 @@ function scr_Player_HatShadow(argument0,argument1)
 					
 					case sprWalk:
 					hatShadowIndex = spr_Kirby_HatShadow_Water_Modern_Walk;
+					break;
+					
+					case sprWarpStar1:
+					hatShadowIndex = spr_Kirby_HatShadow_Water_Modern_WarpStar1;
+					break;
+					
+					case sprWarpStar2:
+					hatShadowIndex = spr_Kirby_HatShadow_Water_Modern_WarpStar2;
 					break;
 				}
 				break;

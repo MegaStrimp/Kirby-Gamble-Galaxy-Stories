@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d0559833-9adf-4ac9-8990-503df2384a11","path":"sprites/spr_WaddleDoo_Normal_Palette_CowardlyBrother/spr_WaddleDoo_Normal_Palette_CowardlyBrother.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d0559833-9adf-4ac9-8990-503df2384a11","path":"sprites/spr_WaddleDoo_Normal_Palette_CowardlyBrother/spr_WaddleDoo_Normal_Palette_CowardlyBrother.yy",},"LayerId":{"name":"c25f76f8-9861-43d5-8fec-6198308b59a9","path":"sprites/spr_WaddleDoo_Normal_Palette_CowardlyBrother/spr_WaddleDoo_Normal_Palette_CowardlyBrother.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_WaddleDoo_Normal_Palette_CowardlyBrother","path":"sprites/spr_WaddleDoo_Normal_Palette_CowardlyBrother/spr_WaddleDoo_Normal_Palette_CowardlyBrother.yy",},"resourceVersion":"1.0","name":"d0559833-9adf-4ac9-8990-503df2384a11","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"8b2e28ce-0994-434f-8766-ec4bf499bb81","path":"sprites/spr_WaddleDoo_Normal_Palette_CowardlyBrother/spr_WaddleDoo_Normal_Palette_CowardlyBrother.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"8b2e28ce-0994-434f-8766-ec4bf499bb81","path":"sprites/spr_WaddleDoo_Normal_Palette_CowardlyBrother/spr_WaddleDoo_Normal_Palette_CowardlyBrother.yy",},"LayerId":{"name":"c25f76f8-9861-43d5-8fec-6198308b59a9","path":"sprites/spr_WaddleDoo_Normal_Palette_CowardlyBrother/spr_WaddleDoo_Normal_Palette_CowardlyBrother.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_WaddleDoo_Normal_Palette_CowardlyBrother","path":"sprites/spr_WaddleDoo_Normal_Palette_CowardlyBrother/spr_WaddleDoo_Normal_Palette_CowardlyBrother.yy",},"resourceVersion":"1.0","name":"8b2e28ce-0994-434f-8766-ec4bf499bb81","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_WaddleDoo_Normal_Palette_CowardlyBrother","path":"sprites/spr_WaddleDoo_Normal_Palette_CowardlyBrother/spr_WaddleDoo_Normal_Palette_CowardlyBrother.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"a79308f8-6397-422d-93c0-36ff5fc856d4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d0559833-9adf-4ac9-8990-503df2384a11","path":"sprites/spr_WaddleDoo_Normal_Palette_CowardlyBrother/spr_WaddleDoo_Normal_Palette_CowardlyBrother.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"03854be3-3b67-4840-8a18-6db66ea100ca","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8b2e28ce-0994-434f-8766-ec4bf499bb81","path":"sprites/spr_WaddleDoo_Normal_Palette_CowardlyBrother/spr_WaddleDoo_Normal_Palette_CowardlyBrother.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,

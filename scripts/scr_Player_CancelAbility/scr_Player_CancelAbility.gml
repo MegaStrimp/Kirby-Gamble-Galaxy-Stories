@@ -40,6 +40,7 @@ function scr_Player_CancelAbility(argument0)
 		attack = false;
 		attackable = true;
 		attackNumber = playerAttacks.none;
+		if (carriedItem == carriedItems.none) carriedItemState = carriedItemStates.none;
 	}
 	
 	with (obj_Projectile_Beam)

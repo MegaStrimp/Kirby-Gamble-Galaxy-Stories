@@ -24,22 +24,32 @@ if (spawnTimer > 0)
 }
 else if (spawnTimer == 0)
 {
-	var spawnedEnemy = instance_create_depth(x,y,depth,AAAAAAAA);
+	var spawnedEnemy = instance_create_depth(x,y,depth,obj_Foley);
 	spawnedEnemy.hasSpawner = true;
 	spawnedEnemy.spawner = id;
 	spawnedEnemy.spawnerRange = (spawnerRange * 2);
 	spawnedEnemy.paletteIndex = paletteIndex;
-	spawnedEnemy.decel = decel;
-	spawnedEnemy.movespeed = movespeed;
-	spawnedEnemy.jumpspeed = jumpspeed;
-	spawnedEnemy.gravNormal = gravNormal;
-	spawnedEnemy.gravLimitNormal = gravLimitNormal;
+	spawnedEnemy.accel = .1;
+	spawnedEnemy.movespeed = 1;
+	spawnedEnemy.jumpspeed = .5;
+	spawnedEnemy.gravNormal = .05;
+	spawnedEnemy.gravLimitNormal = 1.25;
 	spawnedEnemy.character = character;
 	switch (character)
 	{
 		//Normal
 		
 		case 0:
+		spawnedEnemy.sprIdleNormal = spr_Foley_Normal_Idle;
+		spawnedEnemy.sprIdleExplodeReady = spr_Foley_Normal_Idle_ExplodeReady;
+		spawnedEnemy.sprIdleExplode = spr_Foley_Normal_Idle_Explode;
+		spawnedEnemy.sprWalkNormal = spr_Foley_Normal_Walk;
+		spawnedEnemy.sprWalkExplodeReady = spr_Foley_Normal_Walk_ExplodeReady;
+		spawnedEnemy.sprWalkExplode = spr_Foley_Normal_Walk_Explode;
+		spawnedEnemy.sprHurtIdle = spr_Foley_Normal_Hurt_Idle;
+		spawnedEnemy.sprHurtAttack = spr_Foley_Normal_Hurt_Attack;
+		spawnedEnemy.sprHurt = spawnedEnemy.sprHurtIdle;
+		spawnedEnemy.sprLeaf = spr_Foley_Normal_Leaf;
 		break;
 	}
 	spawnedEnemy.sprite_index = spawnedEnemy.sprIdle;
@@ -76,5 +86,7 @@ else if (spawnTimer == 0)
 	spawnedEnemy.objectOnDeath = objectOnDeath;
 	spawnedEnemy.objectOnDeathObj = objectOnDeathObj;
 	spawnedEnemy.groundFailsafe = groundFailsafe;
+	spawnedEnemy.attackTimer = attackTimer;
+	spawnedEnemy.attackTimerMax = attackTimerMax;
 	spawnTimer = -1;
 }

@@ -2,23 +2,23 @@
 
 //Physics
 
-decel = .05;
-movespeed = 1.5;
-jumpspeed = 4;
-gravNormal = .7;
-gravLimitNormal = 7;
+accel = .1;
+movespeed = 1;
+jumpspeed = .5;
+gravNormal = .05;
+gravLimitNormal = 1.25;
 
 //Other Variables
 
 spawn = false;
 spawnerRange = 24;
 character = 0;
-paletteIndex = AAAAAAAA;
+paletteIndex = spr_Foley_Normal_Palette_ExplosiveCream;
 state = 0;
-hp = AAAAAAAA;
+hp = 8;
 dmg = 1;
 ability = playerAbilities.bomb;
-points = AAAAAAAA;
+points = 300;
 hurtable = true;
 hasGravity = true;
 heavy = false;
@@ -50,3 +50,5 @@ groundFailsafe = true;
 //Timers
 
 spawnTimer = 0;
+attackTimer = -1;
+attackTimerMax = 5;

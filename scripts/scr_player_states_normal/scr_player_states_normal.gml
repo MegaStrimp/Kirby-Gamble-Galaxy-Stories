@@ -33,10 +33,13 @@ function scr_Player_States_Normal()
 			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + collidingWall.vsp + 20 + vspFinal)))) wallAbove = true;
 		}
 		
+		var attackDisableMovement = false;
+		if ((attack) and ((attackNumber != playerAttacks.ufoBeam) and (attackNumber != playerAttacks.ufoCharge) and (attackNumber != playerAttacks.ufoLaser))) attackDisableMovement = true;
+		
 		didJump = false;
 		#endregion
 		
-		#region Diable Fall Hop
+		#region Disable Fall Hop
 		if (wallAbove) fallHop = false;
 		#endregion
 		
@@ -120,7 +123,7 @@ function scr_Player_States_Normal()
 			{
 				if (keyRightHold)
 				{
-					if (!attack)
+					if (!attackDisableMovement)
 					{
 						hsp += accel;
 						if (!runTurn) dir = 1;
@@ -137,7 +140,7 @@ function scr_Player_States_Normal()
 				}
 				if (keyLeftHold)
 				{
-					if (!attack)
+					if (!attackDisableMovement)
 					{
 						hsp -= accel;
 						if (!runTurn) dir = -1;
@@ -160,15 +163,15 @@ function scr_Player_States_Normal()
 				{
 					if (keyUpHold)
 					{
-						if (!attack) vsp -= accel;
+						if (!attackDisableMovement) vsp -= accel;
 					}
 					if (keyDownHold)
 					{
-						if (!attack) vsp += accel;
+						if (!attackDisableMovement) vsp += accel;
 					}
 				}
 				
-				if ((((keyDownHold) and (keyUpHold)) or ((!keyDownHold) and (!keyUpHold))) or (attack) or (global.cutscene))
+				if ((((keyDownHold) and (keyUpHold)) or ((!keyDownHold) and (!keyUpHold))) or (attackDisableMovement) or (global.cutscene))
 				{
 					vsp = scr_Friction(vsp,decel);
 				}
@@ -181,7 +184,7 @@ function scr_Player_States_Normal()
 				if (hspLimit) hsp = clamp(hsp, -movespeed, movespeed);
 			}
 			
-			if ((((keyLeftHold) and (keyRightHold)) or ((!keyLeftHold) and (!keyRightHold))) or (attack) or (runTurn) or (global.cutscene))
+			if ((((keyLeftHold) and (keyRightHold)) or ((!keyLeftHold) and (!keyRightHold))) or (attackDisableMovement) or (runTurn) or (global.cutscene))
 			{
 				var ultiDecel = decel;
 				if (runTurn) ultiDecel = decel * 2;
@@ -307,7 +310,7 @@ function scr_Player_States_Normal()
 						carriedItemIndex.explodeTimer = 30;
 						carriedItem = carriedItems.none;
 						carriedItemIndex = -1;
-						carriedItemState = "none";
+						carriedItemState = carriedItemStates.none;
 						attackTimer = 10;
 					}
 					
@@ -382,7 +385,7 @@ function scr_Player_States_Normal()
 						}
 						carriedItem = carriedItems.none;
 						carriedItemIndex = -1;
-						carriedItemState = "none";
+						carriedItemState = carriedItemStates.none;
 						bombDir = 0;
 						canGrabTimer = 15;
 						attackTimer = 20;
@@ -415,7 +418,7 @@ function scr_Player_States_Normal()
 					carriedItemIndex.angleSpd = carriedItemIndex.hsp * 4;
 					carriedItem = carriedItems.none;
 					carriedItemIndex = -1;
-					carriedItemState = "none";
+					carriedItemState = carriedItemStates.none;
 					bombDir = 0;
 					canGrabTimer = 15;
 					attackTimer = 60;
@@ -442,7 +445,7 @@ function scr_Player_States_Normal()
 					carriedItemIndex.active = true;
 					carriedItem = carriedItems.none;
 					carriedItemIndex = -1;
-					carriedItemState = "none";
+					carriedItemState = carriedItemStates.none;
 				}
 				
 				if (attackNumber == playerAttacks.keyNormal)
@@ -459,7 +462,7 @@ function scr_Player_States_Normal()
 						carriedItemIndex.vsp = lengthdir_y(4,bdir);
 						carriedItem = carriedItems.none;
 						carriedItemIndex = -1;
-						carriedItemState = "none";
+						carriedItemState = carriedItemStates.none;
 						bombDir = 0;
 						canGrabTimer = 15;
 						attackTimer = 20;

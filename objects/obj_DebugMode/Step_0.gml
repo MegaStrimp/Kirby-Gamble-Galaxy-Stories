@@ -1828,7 +1828,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var sprAttack = spr_WaddleDoo_Normal_Attack;
 			var sprHurt = spr_WaddleDoo_Normal_Hurt;
 			var sprDeath = spr_WaddleDoo_Normal_Death;
-			debugPaletteNumberMax = 23;
+			debugPaletteNumberMax = 24;
 			switch (debugPaletteNumber)
 			{
 				case 0:
@@ -1852,79 +1852,83 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 				break;
 				
 				case 5:
-				debugPaletteIndex = spr_WaddleDoo_Normal_Palette_Berry;
-				break;
-				
-				case 6:
 				debugPaletteIndex = spr_WaddleDoo_Normal_Palette_Lilac;
 				break;
 				
-				case 7:
+				case 6:
 				debugPaletteIndex = spr_WaddleDoo_Normal_Palette_AquaDepths;
 				break;
 				
-				case 8:
+				case 7:
 				debugPaletteIndex = spr_WaddleDoo_Normal_Palette_Ocean;
 				break;
 				
-				case 9:
+				case 8:
 				debugPaletteIndex = spr_WaddleDoo_Normal_Palette_MintyBreeze;
 				break;
 				
-				case 10:
-				debugPaletteIndex = spr_WaddleDoo_Normal_Palette_NoFun;
-				break;
-				
-				case 11:
+				case 9:
 				debugPaletteIndex = spr_WaddleDoo_Normal_Palette_FilthyRich;
 				break;
 				
-				case 12:
+				case 10:
 				debugPaletteIndex = spr_WaddleDoo_Normal_Palette_CowardlyBrother;
 				break;
 				
-				case 13:
+				case 11:
 				debugPaletteIndex = spr_WaddleDoo_Normal_Palette_LetsaGo;
 				break;
 				
-				case 14:
-				debugPaletteIndex = spr_WaddleDoo_Normal_Palette_Amber;
+				case 12:
+				debugPaletteIndex = spr_WaddleDoo_Normal_Palette_Choco;
 				break;
 				
-				case 15:
+				case 13:
 				debugPaletteIndex = spr_WaddleDoo_Normal_Palette_Bloodshot;
 				break;
 				
-				case 16:
+				case 14:
 				debugPaletteIndex = spr_WaddleDoo_Normal_Palette_RipeTomato;
 				break;
 				
-				case 17:
+				case 15:
 				debugPaletteIndex = spr_WaddleDoo_Normal_Palette_BeamOfLight;
 				break;
 				
-				case 18:
+				case 16:
 				debugPaletteIndex = spr_WaddleDoo_Normal_Palette_Aluminum;
 				break;
 				
-				case 19:
+				case 17:
 				debugPaletteIndex = spr_WaddleDoo_Normal_Palette_HelperToHero;
 				break;
 				
-				case 20:
+				case 18:
 				debugPaletteIndex = spr_WaddleDoo_Normal_Palette_AngelicGold;
 				break;
 				
-				case 21:
+				case 19:
 				debugPaletteIndex = spr_WaddleDoo_Normal_Palette_FrozenTundra;
 				break;
 				
-				case 22:
+				case 20:
 				debugPaletteIndex = spr_WaddleDoo_Normal_Palette_PinkStar;
 				break;
 				
-				case 23:
+				case 21:
 				debugPaletteIndex = spr_WaddleDoo_Normal_Palette_Brick;
+				break;
+				
+				case 22:
+				debugPaletteIndex = spr_WaddleDoo_Normal_Palette_CorruptedTwilight;
+				break;
+				
+				case 23:
+				debugPaletteIndex = spr_WaddleDoo_Normal_Palette_PalePurple;
+				break;
+				
+				case 24:
+				debugPaletteIndex = spr_WaddleDoo_Normal_Palette_DarkFlux;
 				break;
 				
 				default:

@@ -1,6 +1,0 @@
-///@description Creation Code
-
-character = 1;
-number = 2;
-state = 1;
-dir = -1;

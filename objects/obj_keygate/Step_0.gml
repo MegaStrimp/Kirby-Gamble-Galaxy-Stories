@@ -56,7 +56,7 @@ if (!global.pause)
 					instance_destroy(carriedItemIndex);
 					carriedItem = carriedItems.none;
 					carriedItemIndex = -1;
-					carriedItemState = "none";
+					carriedItemState = carriedItemStates.none;
 					canGrabTimer = 15;
 					other.openCondition = true;
 				}

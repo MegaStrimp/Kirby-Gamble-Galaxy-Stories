@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_Foley_Normal_Idle",
+    "path": "sprites/spr_Foley_Normal_Idle/spr_Foley_Normal_Idle.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
