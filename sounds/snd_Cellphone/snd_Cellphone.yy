@@ -11,7 +11,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_Cellphone.mp3",
+  "soundFile": "snd_cellphone.wav",
   "duration": 0.940408,
   "parent": {
     "name": "Misc",

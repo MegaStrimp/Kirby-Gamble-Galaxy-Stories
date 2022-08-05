@@ -45,7 +45,3 @@ if ((!audio_is_playing(mus_AsteroidFields)) and (!audio_is_playing(mus_KazooFiel
 
 obj_Camera.autoscroll = true;
 obj_Camera.offsetYSpd = -.75;
-
-//Star Controller
-
-instance_create_depth(0,0,0,obj_AsteroidFieldsStarController);

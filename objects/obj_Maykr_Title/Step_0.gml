@@ -10,6 +10,21 @@ if (!global.pause)
 	if (buttonLerp >= .5) startTrigger = 2;
 	#endregion
 	
+	#region Stars Alpha
+	starsAlpha += .005 * starsAlphaDir;
+	if (starsAlpha <= .5)
+	{
+		starsAlpha = .5;
+		starsAlphaDir = 1;
+	}
+	
+	if (starsAlpha >= 1)
+	{
+		starsAlpha = 1;
+		starsAlphaDir = -1;
+	}
+	#endregion
+	
 	switch (windowIndex)
 	{
 		case -1:

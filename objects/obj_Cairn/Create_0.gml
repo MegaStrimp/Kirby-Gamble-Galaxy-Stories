@@ -41,4 +41,5 @@ sectionspd = 0;
 hspDir = 1;
 
 //Timers
+
 attackTimer = 30;

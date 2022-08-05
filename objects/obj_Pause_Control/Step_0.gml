@@ -14,16 +14,12 @@ if ((!instance_exists(obj_Fade)) and (!cellphoneActive))
 		{
 		    if (keyStartPressed)
 		    {
-				if ((gamePaused) and (visible))
-				{
-					if (audio_is_playing(snd_Unpause)) audio_stop_sound(snd_Unpause);
-					audio_play_sound(snd_Unpause,0,false);
-				}
-				else
+				if !((gamePaused) and (visible))
 				{
 					if (audio_is_playing(snd_Pause)) audio_stop_sound(snd_Pause);
 					audio_play_sound(snd_Pause,0,false);
 				}
+				
 		        if (!visible)
 		        {
 					page = 0;

@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_mysticcharge_intro.wav",
-  "duration": 1.46424,
+  "duration": 1.583991,
   "parent": {
     "name": "Attacks",
     "path": "folders/Sounds/Sound Effects/Attacks.yy",

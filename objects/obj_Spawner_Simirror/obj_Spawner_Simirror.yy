@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_Simirror_Normal_Walk",
+    "path": "sprites/spr_Simirror_Normal_Walk/spr_Simirror_Normal_Walk.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

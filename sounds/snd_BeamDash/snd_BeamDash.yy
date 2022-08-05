@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_beamdash.wav",
-  "duration": 0.914943,
+  "duration": 0.914127,
   "parent": {
     "name": "Attacks",
     "path": "folders/Sounds/Sound Effects/Attacks.yy",

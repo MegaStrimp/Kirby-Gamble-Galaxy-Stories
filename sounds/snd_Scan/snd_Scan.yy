@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_scan.wav",
-  "duration": 0.118254,
+  "duration": 0.114626,
   "parent": {
     "name": "Attacks",
     "path": "folders/Sounds/Sound Effects/Attacks.yy",

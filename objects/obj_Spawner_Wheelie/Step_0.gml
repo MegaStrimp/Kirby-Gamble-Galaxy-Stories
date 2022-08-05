@@ -24,12 +24,12 @@ if (spawnTimer > 0)
 }
 else if (spawnTimer == 0)
 {
-	var spawnedEnemy = instance_create_depth(x,y,depth,AAAAAAAA);
+	var spawnedEnemy = instance_create_depth(x,y,depth,obj_Wheelie);
 	spawnedEnemy.hasSpawner = true;
 	spawnedEnemy.spawner = id;
 	spawnedEnemy.spawnerRange = (spawnerRange * 2);
 	spawnedEnemy.paletteIndex = paletteIndex;
-	spawnedEnemy.decel = decel;
+	spawnedEnemy.accel = accel;
 	spawnedEnemy.movespeed = movespeed;
 	spawnedEnemy.jumpspeed = jumpspeed;
 	spawnedEnemy.gravNormal = gravNormal;
@@ -40,6 +40,19 @@ else if (spawnTimer == 0)
 		//Normal
 		
 		case 0:
+		spawnedEnemy.sprIdle = spr_Wheelie_Normal_Idle;
+		spawnedEnemy.sprDecel1 = spr_Wheelie_Normal_Decel1;
+		spawnedEnemy.sprDecel2 = spr_Wheelie_Normal_Decel2;
+		spawnedEnemy.sprHurt = spr_Wheelie_Normal_Hurt;
+		break;
+		
+		//KSSU
+		
+		case 1:
+		spawnedEnemy.sprIdle = spr_Wheelie_KSSU_Idle;
+		spawnedEnemy.sprDecel1 = spr_Wheelie_KSSU_Decel1;
+		spawnedEnemy.sprDecel2 = spr_Wheelie_KSSU_Decel2;
+		spawnedEnemy.sprHurt = spr_Wheelie_KSSU_Hurt;
 		break;
 	}
 	spawnedEnemy.sprite_index = spawnedEnemy.sprIdle;
@@ -76,5 +89,15 @@ else if (spawnTimer == 0)
 	spawnedEnemy.objectOnDeath = objectOnDeath;
 	spawnedEnemy.objectOnDeathObj = objectOnDeathObj;
 	spawnedEnemy.groundFailsafe = groundFailsafe;
+	spawnedEnemy.attackChooseTimer = attackChooseTimer;
+	spawnedEnemy.attackChooseTimerMax = attackChooseTimerMax;
+	spawnedEnemy.canTurnTimer = canTurnTimer;
+	spawnedEnemy.canTurnTimerMax = canTurnTimerMax;
+	spawnedEnemy.jumpTimer = jumpTimer;
+	spawnedEnemy.jumpTimerMax = jumpTimerMax;
+	spawnedEnemy.runParticleTimer = runParticleTimer;
+	spawnedEnemy.runParticleTimerMax = runParticleTimerMax;
+	spawnedEnemy.crashedTimer = crashedTimer;
+	spawnedEnemy.crashedTimerMax = crashedTimerMax;
 	spawnTimer = -1;
 }

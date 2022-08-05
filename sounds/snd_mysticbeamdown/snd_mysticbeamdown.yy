@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_mysticbeamdown.wav",
-  "duration": 1.271292,
+  "duration": 1.271293,
   "parent": {
     "name": "Attacks",
     "path": "folders/Sounds/Sound Effects/Attacks.yy",

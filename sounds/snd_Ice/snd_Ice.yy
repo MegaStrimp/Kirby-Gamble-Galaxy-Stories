@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_ice.wav",
-  "duration": 0.579138,
+  "duration": 0.600816,
   "parent": {
     "name": "Attacks",
     "path": "folders/Sounds/Sound Effects/Attacks.yy",

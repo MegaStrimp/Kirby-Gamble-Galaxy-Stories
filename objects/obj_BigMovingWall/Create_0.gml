@@ -1,7 +1,12 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Initialize Variables
+
+//Event Inherited
 
 event_inherited();
 
-hsp = 2;
+//Other Variables
+
+state = 0;
+activate = false;
 active = false;
+activateAfterStepping = false;

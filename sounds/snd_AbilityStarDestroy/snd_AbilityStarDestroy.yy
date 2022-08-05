@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_abilitystardestroy.wav",
-  "duration": 0.595669,
+  "duration": 0.593243,
   "parent": {
     "name": "Objects",
     "path": "folders/Sounds/Sound Effects/Objects.yy",

@@ -12,8 +12,8 @@
     {"speed":100.0,"x":528.0,"y":72.0,},
   ],
   "parent": {
-    "name": "Paths",
-    "path": "folders/Paths.yy",
+    "name": "Cutscene",
+    "path": "folders/Paths/Cutscene.yy",
   },
   "resourceVersion": "1.0",
   "name": "pth_Cutscene_Intro",

@@ -2,7 +2,7 @@
 
 #region Physics
 spd = 5;
-angle = 215;
+angle = 240;
 #endregion
 
 #region Sprites

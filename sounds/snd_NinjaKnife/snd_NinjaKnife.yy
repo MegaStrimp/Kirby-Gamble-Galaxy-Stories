@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_ninjaknife.wav",
-  "duration": 0.264626,
+  "duration": 0.287347,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",

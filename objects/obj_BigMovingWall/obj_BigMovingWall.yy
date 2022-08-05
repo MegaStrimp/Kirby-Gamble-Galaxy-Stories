@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_BigMovingWall1",
-    "path": "sprites/spr_BigMovingWall1/spr_BigMovingWall1.yy",
+    "name": "spr_BigMovingWall_AsteroidFields_Idle",
+    "path": "sprites/spr_BigMovingWall_AsteroidFields_Idle/spr_BigMovingWall_AsteroidFields_Idle.yy",
   },
   "solid": false,
   "visible": true,

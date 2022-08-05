@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_Secret",
-  "duration": 6.92885,
+  "soundFile": "snd_secret.wav",
+  "duration": 6.922449,
   "parent": {
     "name": "Misc",
     "path": "folders/Sounds/Sound Effects/Misc.yy",

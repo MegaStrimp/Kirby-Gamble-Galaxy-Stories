@@ -188,6 +188,10 @@ if ((attackNumber == playerAttacks.mysticBeamNormal) and (sprite_index == sprBea
 
 if ((attackNumber == playerAttacks.mysticBeamBarrierBreak) and (sprite_index == sprMysticBeamAttack2)) image_index = image_number - 1;
 
+//Mystic Beam Beam Bomb
+
+if ((attackNumber == playerAttacks.mysticBeamDash) and (sprite_index == sprMysticBeamAttack1)) image_index = image_number - 1;
+
 //Mystic Beam Charge Attack
 
 if ((attackNumber == playerAttacks.mysticBeamChargeAttack) and (sprite_index == sprBeamAttack5)) image_index = image_number - 1;

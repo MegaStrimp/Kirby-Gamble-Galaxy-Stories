@@ -357,7 +357,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			debugSpriteSelectedMax = 17;
 			if (mouse_check_button_pressed(mb_left))
 			{
-				var debugObj = instance_create_layer(x,y,"Collision",obj_ParentWall);
+				var debugObj = instance_create_layer(x,y,"Collision",obj_Wall);
 				debugObj.visible = true;
 				debugObj.sprite_index = spr_DebugWall;
 				debugObj.image_index = debugSpriteSelected;
@@ -374,7 +374,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			debugSpriteSelectedMax = 17;
 			if (mouse_check_button_pressed(mb_left))
 			{
-				var debugObj = instance_create_layer(x,y,"Collision",obj_ParentWall);
+				var debugObj = instance_create_layer(x,y,"Collision",obj_Wall);
 				debugObj.visible = true;
 				debugObj.slope = true;
 				debugObj.hasTop = false;
@@ -3768,11 +3768,11 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			switch (debugPaletteNumber)
 			{
 				case 0:
-				debugPaletteIndex = spr_Glunk_Normal_Palette_Melon;
+				debugPaletteIndex = spr_Anemonee_Normal_Palette_VioletYarn;
 				break;
 				
 				default:
-				debugPaletteIndex = spr_Glunk_Normal_Palette_Melon;
+				debugPaletteIndex = spr_Anemonee_Normal_Palette_VioletYarn;
 				break;
 			}
 			break;
@@ -4769,6 +4769,165 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprWalk = sprWalk;
+			debugObj.sprHurt = sprHurt;
+			debugObj.sprite_index = sprIdle;
+			debugObj.paletteIndex = debugPaletteIndex;
+			debugObj.image_xscale = debugXScale;
+			debugObj.dirX = debugXScale;
+			debugObj.walkDirX = debugXScale;
+			debugObj.image_yscale = debugYScale;
+			debugObj.dirY = debugYScale;
+			debugObj.walkDirY = debugYScale;
+			debugObj.state = debugStateSelected;
+		}
+		break;
+		#endregion
+		
+		#region Bouncy Sis
+		case debugObject.bouncySis:
+		debugSpriteSelectedMax = 0;
+		switch (debugSpriteSelected)
+		{
+			#region Normal
+			case 0:
+			var sprIdle = spr_BouncySis_Normal_Idle;
+			var sprJump = spr_BouncySis_Normal_Jump;
+			var sprDuck = spr_BouncySis_Normal_Duck;
+			var sprHurt = spr_BouncySis_Normal_Hurt;
+			debugPaletteNumberMax = 0;
+			switch (debugPaletteNumber)
+			{
+				case 0:
+				debugPaletteIndex = spr_BouncySis_Normal_Palette_GiganticPink;
+				break;
+				
+				default:
+				debugPaletteIndex = spr_BouncySis_Normal_Palette_GiganticPink;
+				break;
+			}
+			break;
+			#endregion
+		}
+		debugSprite = sprIdle;
+		debugIndex = 0;
+		debugStateSelectedMax = 0;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var debugObj = instance_create_layer(x,y,"Enemies",obj_BouncySis);
+			debugObj.character = debugSpriteSelected;
+			debugObj.sprIdle = sprIdle;
+			debugObj.sprJump = sprJump;
+			debugObj.sprDuck = sprDuck;
+			debugObj.sprHurt = sprHurt;
+			debugObj.sprite_index = sprIdle;
+			debugObj.paletteIndex = debugPaletteIndex;
+			debugObj.image_xscale = debugXScale;
+			debugObj.dirX = debugXScale;
+			debugObj.walkDirX = debugXScale;
+			debugObj.image_yscale = debugYScale;
+			debugObj.dirY = debugYScale;
+			debugObj.walkDirY = debugYScale;
+			debugObj.state = debugStateSelected;
+		}
+		break;
+		#endregion
+		
+		#region Flamer
+		case debugObject.flamer:
+		debugSpriteSelectedMax = 0;
+		switch (debugSpriteSelected)
+		{
+			#region Normal
+			case 0:
+			var sprIdle = spr_Flamer_Normal_Idle;
+			var sprReady = spr_Flamer_Normal_Ready;
+			var sprAttack = spr_Flamer_Normal_Attack;
+			var sprHurt = spr_Flamer_Normal_Hurt;
+			debugPaletteNumberMax = 3;
+			switch (debugPaletteNumber)
+			{
+				case 0:
+				debugPaletteIndex = spr_Flamer_Normal_Palette_FieryRed;
+				break;
+				
+				case 1:
+				debugPaletteIndex = spr_Flamer_Normal_Palette_BabyBlue;
+				break;
+				
+				case 2:
+				debugPaletteIndex = spr_Flamer_Normal_Palette_HauntingPurple;
+				break;
+				
+				case 3:
+				debugPaletteIndex = spr_Flamer_Normal_Palette_MintLeaf;
+				break;
+				
+				default:
+				debugPaletteIndex = spr_Flamer_Normal_Palette_FieryRed;
+				break;
+			}
+			break;
+			#endregion
+		}
+		debugSprite = sprIdle;
+		debugIndex = 0;
+		debugStateSelectedMax = 0;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var debugObj = instance_create_layer(x,y,"Enemies",obj_Flamer);
+			debugObj.character = debugSpriteSelected;
+			debugObj.sprIdle = sprIdle;
+			debugObj.sprReady = sprReady;
+			debugObj.sprAttack = sprAttack;
+			debugObj.sprHurt = sprHurt;
+			debugObj.sprite_index = sprIdle;
+			debugObj.paletteIndex = debugPaletteIndex;
+			debugObj.image_xscale = debugXScale;
+			debugObj.dirX = debugXScale;
+			debugObj.walkDirX = debugXScale;
+			debugObj.image_yscale = debugYScale;
+			debugObj.dirY = debugYScale;
+			debugObj.walkDirY = debugYScale;
+			debugObj.state = debugStateSelected;
+		}
+		break;
+		#endregion
+		
+		#region Chuckie
+		case debugObject.chuckie:
+		debugSpriteSelectedMax = 0;
+		switch (debugSpriteSelected)
+		{
+			#region Normal
+			case 0:
+			var sprIdle = spr_Chuckie_Box;
+			var sprReady = spr_Flamer_Normal_Ready;
+			var sprAttack = spr_Flamer_Normal_Attack;
+			var sprHurt = spr_Flamer_Normal_Hurt;
+			debugPaletteNumberMax = 0;
+			switch (debugPaletteNumber)
+			{
+				case 0:
+				debugPaletteIndex = spr_Flamer_Normal_Palette_FieryRed;
+				break;
+				
+				default:
+				debugPaletteIndex = spr_Flamer_Normal_Palette_FieryRed;
+				break;
+			}
+			break;
+			#endregion
+		}
+		debugSprite = sprIdle;
+		debugIndex = 0;
+		debugStateSelectedMax = 0;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var debugObj = instance_create_layer(x,y,"Enemies",obj_ChuckieBox);
+			debugObj.character = debugSpriteSelected;
+			debugObj.sprIdle = sprIdle;
+			debugObj.sprReady = sprReady;
+			debugObj.sprAttack = sprAttack;
 			debugObj.sprHurt = sprHurt;
 			debugObj.sprite_index = sprIdle;
 			debugObj.paletteIndex = debugPaletteIndex;

@@ -26,6 +26,7 @@ hasYCollision = true;
 collisionX = obj_ParentWall;
 collisionY = obj_ParentWall;
 destroyAfterPressed = false;
+activateMovingWall = false;
 
 //Timers
 

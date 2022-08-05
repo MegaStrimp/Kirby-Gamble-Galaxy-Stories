@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_nidoospawn.wav",
-  "duration": 1.122313,
+  "duration": 1.183311,
   "parent": {
     "name": "Enemies",
     "path": "folders/Sounds/Sound Effects/Enemies.yy",

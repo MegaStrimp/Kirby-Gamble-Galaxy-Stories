@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_inhale_loop.wav",
-  "duration": 0.479615,
+  "duration": 0.480091,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",

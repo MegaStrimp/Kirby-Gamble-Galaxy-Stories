@@ -167,7 +167,14 @@ if (!global.pause)
 						}
 						else
 						{
-						    sprite_index = sprWalk;
+							if ((hsp == 0) and (movespeed == 0))
+							{
+							    sprite_index = sprIdle;
+							}
+							else
+							{
+								sprite_index = sprWalk;
+							}
 						}
 					}
 					else

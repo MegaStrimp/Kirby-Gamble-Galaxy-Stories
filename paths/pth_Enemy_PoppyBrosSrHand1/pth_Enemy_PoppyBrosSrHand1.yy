@@ -8,8 +8,8 @@
     {"speed":100.0,"x":-32.0,"y":-27.0,},
   ],
   "parent": {
-    "name": "Paths",
-    "path": "folders/Paths.yy",
+    "name": "Enemy",
+    "path": "folders/Paths/Enemy.yy",
   },
   "resourceVersion": "1.0",
   "name": "pth_Enemy_PoppyBrosSrHand1",

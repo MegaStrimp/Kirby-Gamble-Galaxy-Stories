@@ -4,6 +4,10 @@
 var triWidth = sprite_get_width(spr_Maykr_Triangle);
 #endregion
 
+#region Background
+draw_sprite_ext(bg_MaykrTitle_Stars,0,0,0,.5,.5,image_angle,image_blend,starsAlpha);
+#endregion
+
 #region Triangles
 xx += .2;
 if (xx >= triWidth) xx -= triWidth;

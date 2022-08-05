@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_breakingwall.wav",
-  "duration": 0.500907,
+  "duration": 0.498685,
   "parent": {
     "name": "Objects",
     "path": "folders/Sounds/Sound Effects/Objects.yy",

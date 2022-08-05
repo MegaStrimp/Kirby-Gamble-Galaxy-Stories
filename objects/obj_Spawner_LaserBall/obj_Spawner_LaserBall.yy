@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_LaserBall_Normal_Idle",
+    "path": "sprites/spr_LaserBall_Normal_Idle/spr_LaserBall_Normal_Idle.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

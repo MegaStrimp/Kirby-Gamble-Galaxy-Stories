@@ -24,14 +24,11 @@ if (spawnTimer > 0)
 }
 else if (spawnTimer == 0)
 {
-	var spawnedEnemy = instance_create_depth(x,y,depth,AAAAAAAA);
+	var spawnedEnemy = instance_create_depth(x,y,depth,obj_Yolky);
 	spawnedEnemy.hasSpawner = true;
 	spawnedEnemy.spawner = id;
 	spawnedEnemy.spawnerRange = (spawnerRange * 2);
 	spawnedEnemy.paletteIndex = paletteIndex;
-	spawnedEnemy.decel = decel;
-	spawnedEnemy.movespeed = movespeed;
-	spawnedEnemy.jumpspeed = jumpspeed;
 	spawnedEnemy.gravNormal = gravNormal;
 	spawnedEnemy.gravLimitNormal = gravLimitNormal;
 	spawnedEnemy.character = character;
@@ -40,6 +37,9 @@ else if (spawnTimer == 0)
 		//Normal
 		
 		case 0:
+		spawnedEnemy.sprIdle = spr_Yolky_Normal_Idle;
+		spawnedEnemy.sprShoot = spr_Yolky_Normal_Shoot;
+		spawnedEnemy.sprHurt = -1;
 		break;
 	}
 	spawnedEnemy.sprite_index = spawnedEnemy.sprIdle;
@@ -76,5 +76,11 @@ else if (spawnTimer == 0)
 	spawnedEnemy.objectOnDeath = objectOnDeath;
 	spawnedEnemy.objectOnDeathObj = objectOnDeathObj;
 	spawnedEnemy.groundFailsafe = groundFailsafe;
+	spawnedEnemy.attackCountMax = attackCountMax;
+	spawnedEnemy.projCount = projCount;
+	spawnedEnemy.shootTimer = shootTimer;
+	spawnedEnemy.shootTimerMax = shootTimerMax;
+	spawnedEnemy.attackTimerMax = attackTimerMax;
+	spawnedEnemy.attackTimer = attackTimerMax;
 	spawnTimer = -1;
 }

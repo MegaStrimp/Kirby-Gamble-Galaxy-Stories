@@ -107,6 +107,9 @@ enum debugObject
 	juckle,
 	kookler,
 	ufo,
+	bouncySis,
+	flamer,
+	chuckie,
 	
 	IMSICKOFTHISGUY,
 	

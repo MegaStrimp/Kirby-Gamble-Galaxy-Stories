@@ -10,12 +10,12 @@
   "bbox_left": 0,
   "bbox_right": 455,
   "bbox_top": 0,
-  "bbox_bottom": 239,
+  "bbox_bottom": 607,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "width": 456,
-  "height": 240,
+  "height": 624,
   "textureGroupId": {
     "name": "AsteroidFields",
     "path": "texturegroups/AsteroidFields",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"21daaaae-4a6f-4d9c-918a-db1f2ec4f4c6","path":"sprites/tile_AsteroidFields_Back/tile_AsteroidFields_Back.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"21daaaae-4a6f-4d9c-918a-db1f2ec4f4c6","path":"sprites/tile_AsteroidFields_Back/tile_AsteroidFields_Back.yy",},"LayerId":{"name":"730979cf-a4b6-4a1c-8e28-97c08cc7c6e0","path":"sprites/tile_AsteroidFields_Back/tile_AsteroidFields_Back.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"tile_AsteroidFields_Back","path":"sprites/tile_AsteroidFields_Back/tile_AsteroidFields_Back.yy",},"resourceVersion":"1.0","name":"21daaaae-4a6f-4d9c-918a-db1f2ec4f4c6","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"9769e41b-b64c-4c91-87fb-4a495fa142fd","path":"sprites/tile_AsteroidFields_Back/tile_AsteroidFields_Back.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"9769e41b-b64c-4c91-87fb-4a495fa142fd","path":"sprites/tile_AsteroidFields_Back/tile_AsteroidFields_Back.yy",},"LayerId":{"name":"885339f9-08fc-471e-9691-1d026d25306b","path":"sprites/tile_AsteroidFields_Back/tile_AsteroidFields_Back.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"tile_AsteroidFields_Back","path":"sprites/tile_AsteroidFields_Back/tile_AsteroidFields_Back.yy",},"resourceVersion":"1.0","name":"9769e41b-b64c-4c91-87fb-4a495fa142fd","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"tile_AsteroidFields_Back","path":"sprites/tile_AsteroidFields_Back/tile_AsteroidFields_Back.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"91045bd2-edd9-4089-8b93-e81267a0348e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"21daaaae-4a6f-4d9c-918a-db1f2ec4f4c6","path":"sprites/tile_AsteroidFields_Back/tile_AsteroidFields_Back.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"97acc7d1-c593-46ee-b3cb-48908c65d1fe","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9769e41b-b64c-4c91-87fb-4a495fa142fd","path":"sprites/tile_AsteroidFields_Back/tile_AsteroidFields_Back.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"730979cf-a4b6-4a1c-8e28-97c08cc7c6e0","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"885339f9-08fc-471e-9691-1d026d25306b","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

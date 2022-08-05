@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_Yolky_Normal_Idle",
+    "path": "sprites/spr_Yolky_Normal_Idle/spr_Yolky_Normal_Idle.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

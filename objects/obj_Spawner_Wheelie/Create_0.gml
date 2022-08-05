@@ -2,23 +2,23 @@
 
 //Physics
 
-decel = .05;
-movespeed = 1.5;
-jumpspeed = 4;
-gravNormal = .7;
-gravLimitNormal = 7;
+accel = .15;
+movespeed = 2;
+jumpspeed = 5;
+gravNormal = .4;
+gravLimitNormal = 5;
 
 //Other Variables
 
 spawn = false;
 spawnerRange = 24;
 character = 0;
-paletteIndex = AAAAAAAA;
+paletteIndex = spr_Wheelie_Normal_Palette_Turbo;
 state = 0;
-hp = AAAAAAAA;
+hp = 14;
 dmg = 1;
 ability = playerAbilities.wheel;
-points = AAAAAAAA;
+points = 200;
 hurtable = true;
 hasGravity = true;
 heavy = false;
@@ -50,3 +50,13 @@ groundFailsafe = true;
 //Timers
 
 spawnTimer = 0;
+attackChooseTimer = 45;
+attackChooseTimerMax = 90;
+canTurnTimer = -1;
+canTurnTimerMax = 45;
+jumpTimer = -1;
+jumpTimerMax = 0;
+runParticleTimer = -1;
+runParticleTimerMax = 60;
+crashedTimer = -1;
+crashedTimerMax = 90;

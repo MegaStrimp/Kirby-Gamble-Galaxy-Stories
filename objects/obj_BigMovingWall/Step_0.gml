@@ -1,16 +1,10 @@
-/// @description Insert description here
-// You can write your code in this editor
+///@description Main
+
+//Event Inherited
 
 event_inherited();
 
-if (!active)
+if (!global.pause)
 {
-	with (obj_Player)
-	{
-		if (place_meeting(x,y + 1,other))
-		{
-			obj_Camera.zoomTarget = .5;
-			other.active = true;
-		}
-	}
+	
 }

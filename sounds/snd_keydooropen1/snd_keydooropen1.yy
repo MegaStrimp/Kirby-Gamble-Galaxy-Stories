@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_keydooropen1.wav",
-  "duration": 0.682358,
+  "duration": 0.766667,
   "parent": {
     "name": "Objects",
     "path": "folders/Sounds/Sound Effects/Objects.yy",

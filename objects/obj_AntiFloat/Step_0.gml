@@ -1,5 +1,14 @@
 ///@description Main
 
+if (!global.pause)
+{
+	image_speed = 1;
+}
+else
+{
+	image_speed = 0;
+}
+
 //Tutorial
 
 if ((global.extraTutorials) and (global.gamemode == gamemodes.normal) and (!global.exTut_AntiFloat) and (!global.cutscene) and (global.progression >= progression.greenGreens))

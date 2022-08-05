@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_buttonchange.wav",
-  "duration": 0.178141,
+  "duration": 0.160159,
   "parent": {
     "name": "Misc",
     "path": "folders/Sounds/Sound Effects/Misc.yy",

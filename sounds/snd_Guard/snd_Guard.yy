@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_guard.wav",
-  "duration": 0.156735,
+  "duration": 0.09449,
   "parent": {
     "name": "Player",
     "path": "folders/Sounds/Sound Effects/Player.yy",

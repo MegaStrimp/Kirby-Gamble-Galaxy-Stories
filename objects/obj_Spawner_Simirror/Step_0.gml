@@ -24,7 +24,7 @@ if (spawnTimer > 0)
 }
 else if (spawnTimer == 0)
 {
-	var spawnedEnemy = instance_create_depth(x,y,depth,AAAAAAAA);
+	var spawnedEnemy = instance_create_depth(x,y,depth,obj_Simirror);
 	spawnedEnemy.hasSpawner = true;
 	spawnedEnemy.spawner = id;
 	spawnedEnemy.spawnerRange = (spawnerRange * 2);
@@ -40,9 +40,12 @@ else if (spawnTimer == 0)
 		//Normal
 		
 		case 0:
+		spawnedEnemy.sprWalk = spr_Simirror_Normal_Walk;
+		spawnedEnemy.sprAttack = spr_Simirror_Normal_Attack;
+		spawnedEnemy.sprHurt = spr_Simirror_Normal_Hurt;
 		break;
 	}
-	spawnedEnemy.sprite_index = spawnedEnemy.sprIdle;
+	spawnedEnemy.sprite_index = spawnedEnemy.sprWalk;
 	spawnedEnemy.state = state;
 	spawnedEnemy.hp = hp;
 	spawnedEnemy.dmg = dmg;

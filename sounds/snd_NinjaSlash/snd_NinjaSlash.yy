@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_ninjaslash.wav",
-  "duration": 0.095351,
+  "duration": 0.1161,
   "parent": {
     "name": "Enemies",
     "path": "folders/Sounds/Sound Effects/Enemies.yy",

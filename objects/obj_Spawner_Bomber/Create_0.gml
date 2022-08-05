@@ -2,23 +2,23 @@
 
 //Physics
 
-decel = .05;
-movespeed = 1.5;
+accel = .015;
+movespeed = .75;
 jumpspeed = 4;
-gravNormal = .7;
-gravLimitNormal = 7;
+gravNormal = .2;
+gravLimitNormal = 5;
 
 //Other Variables
 
 spawn = false;
 spawnerRange = 24;
 character = 0;
-paletteIndex = AAAAAAAA;
+paletteIndex = spr_Bomber_Normal_Palette_ExplodingSkull;
 state = 0;
-hp = AAAAAAAA;
+hp = 14;
 dmg = 1;
 ability = playerAbilities.crash;
-points = AAAAAAAA;
+points = 100;
 hurtable = true;
 hasGravity = true;
 heavy = false;

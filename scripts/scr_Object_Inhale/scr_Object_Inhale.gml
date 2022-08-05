@@ -80,6 +80,10 @@ function scr_Object_Inhale(argument0)
 					case obj_1Up:
 					eatMe.inhaleType = 4;
 					break;
+					
+					case obj_InvincibilityCandy:
+					eatMe.inhaleType = 5;
+					break;
 				}
 				
 			    inhaleMask.owner.ateHeavy = heavy;

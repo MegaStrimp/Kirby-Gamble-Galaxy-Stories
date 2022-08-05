@@ -2,23 +2,23 @@
 
 //Physics
 
-decel = .05;
-movespeed = 1.5;
-jumpspeed = 4;
-gravNormal = .7;
-gravLimitNormal = 7;
+accel = .015;
+movespeed = 1;
+jumpspeed = 6;
+gravNormal = .2;
+gravLimitNormal = 5;
 
 //Other Variables
 
 spawn = false;
 spawnerRange = 24;
 character = 0;
-paletteIndex = AAAAAAAA;
+paletteIndex = spr_Cairn_Normal_Palette_HeavyRock;
 state = 0;
-hp = AAAAAAAA;
+hp = 44;
 dmg = 1;
 ability = playerAbilities.stone;
-points = AAAAAAAA;
+points = 400;
 hurtable = true;
 hasGravity = true;
 heavy = false;
@@ -50,3 +50,4 @@ groundFailsafe = true;
 //Timers
 
 spawnTimer = 0;
+attackTimer = 30;

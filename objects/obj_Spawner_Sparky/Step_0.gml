@@ -24,12 +24,12 @@ if (spawnTimer > 0)
 }
 else if (spawnTimer == 0)
 {
-	var spawnedEnemy = instance_create_depth(x,y,depth,AAAAAAAA);
+	var spawnedEnemy = instance_create_depth(x,y,depth,obj_Sparky);
 	spawnedEnemy.hasSpawner = true;
 	spawnedEnemy.spawner = id;
 	spawnedEnemy.spawnerRange = (spawnerRange * 2);
 	spawnedEnemy.paletteIndex = paletteIndex;
-	spawnedEnemy.decel = decel;
+	spawnedEnemy.accel = accel;
 	spawnedEnemy.movespeed = movespeed;
 	spawnedEnemy.jumpspeed = jumpspeed;
 	spawnedEnemy.gravNormal = gravNormal;
@@ -40,6 +40,12 @@ else if (spawnTimer == 0)
 		//Normal
 		
 		case 0:
+		spawnedEnemy.sprIdle = spr_Sparky_Normal_Idle;
+		spawnedEnemy.sprWalk = spr_Sparky_Normal_Walk;
+		spawnedEnemy.sprJump = spr_Sparky_Normal_Jump;
+		spawnedEnemy.sprCharge = spr_Sparky_Normal_Charge;
+		spawnedEnemy.sprAttack = spr_Sparky_Normal_Attack;
+		spawnedEnemy.sprHurt = spr_Sparky_Normal_Hurt;
 		break;
 	}
 	spawnedEnemy.sprite_index = spawnedEnemy.sprIdle;
@@ -76,5 +82,10 @@ else if (spawnTimer == 0)
 	spawnedEnemy.objectOnDeath = objectOnDeath;
 	spawnedEnemy.objectOnDeathObj = objectOnDeathObj;
 	spawnedEnemy.groundFailsafe = groundFailsafe;
+	spawnedEnemy.attackTimerMax = attackTimerMax;
+	spawnedEnemy.attackTimerMin = attackTimerMin;
+	spawnedEnemy.attackTimer = attackTimer;
+	spawnedEnemy.jumpTimer = jumpTimer;
+	spawnedEnemy.jumpTimerMax = jumpTimerMax;
 	spawnTimer = -1;
 }

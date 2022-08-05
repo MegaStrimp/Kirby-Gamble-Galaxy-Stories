@@ -226,6 +226,16 @@ if (!global.pause)
 		}
 		activate = false;
 		active = true;
+		
+		if (activateMovingWall)
+		{
+			if (instance_exists(obj_MovingWall))
+			{
+				var nearestMovingWall = instance_nearest(x,y,obj_MovingWall);
+				if (!nearestMovingWall.active) nearestMovingWall.activate = true;
+			}
+		}
+		
 		if (destroyAfterPressed)
 		{
 			for (var i = 0; i < 2; i++)

@@ -24,12 +24,12 @@ if (spawnTimer > 0)
 }
 else if (spawnTimer == 0)
 {
-	var spawnedEnemy = instance_create_depth(x,y,depth,AAAAAAAA);
+	var spawnedEnemy = instance_create_depth(x,y,depth,obj_LaserBall);
 	spawnedEnemy.hasSpawner = true;
 	spawnedEnemy.spawner = id;
 	spawnedEnemy.spawnerRange = (spawnerRange * 2);
 	spawnedEnemy.paletteIndex = paletteIndex;
-	spawnedEnemy.decel = decel;
+	spawnedEnemy.accel = accel;
 	spawnedEnemy.movespeed = movespeed;
 	spawnedEnemy.jumpspeed = jumpspeed;
 	spawnedEnemy.gravNormal = gravNormal;
@@ -40,6 +40,23 @@ else if (spawnTimer == 0)
 		//Normal
 		
 		case 0:
+		spawnedEnemy.sprIdle = spr_LaserBall_Normal_Idle;
+		spawnedEnemy.sprFace = spr_LaserBall_Normal_Face;
+		spawnedEnemy.sprAttack = spr_LaserBall_Normal_Attack;
+		spawnedEnemy.sprHurt = spr_LaserBall_Normal_Hurt;
+		
+		spawnedEnemy.sprAura1Idle = spr_LaserBall_Normal_Aura1_Idle;
+		spawnedEnemy.sprAura1Attack = spr_LaserBall_Normal_Aura1_Attack;
+		spawnedEnemy.sprAura1Hurt = spr_LaserBall_Normal_Aura1_Hurt;
+		spawnedEnemy.sprAura2Idle = spr_LaserBall_Normal_Aura2_Idle;
+		spawnedEnemy.sprAura2Attack = spr_LaserBall_Normal_Aura2_Attack;
+		spawnedEnemy.sprAura2Hurt = spr_LaserBall_Normal_Aura2_Hurt;
+		spawnedEnemy.sprAura3Idle = spr_LaserBall_Normal_Aura3_Idle;
+		spawnedEnemy.sprAura3Attack = spr_LaserBall_Normal_Aura3_Attack;
+		spawnedEnemy.sprAura3Hurt = spr_LaserBall_Normal_Aura3_Hurt;
+		spawnedEnemy.sprAura4Idle = spr_LaserBall_Normal_Aura4_Idle;
+		spawnedEnemy.sprAura4Attack = spr_LaserBall_Normal_Aura4_Attack;
+		spawnedEnemy.sprAura4Hurt = spr_LaserBall_Normal_Aura4_Hurt;
 		break;
 	}
 	spawnedEnemy.sprite_index = spawnedEnemy.sprIdle;
@@ -76,5 +93,16 @@ else if (spawnTimer == 0)
 	spawnedEnemy.objectOnDeath = objectOnDeath;
 	spawnedEnemy.objectOnDeathObj = objectOnDeathObj;
 	spawnedEnemy.groundFailsafe = groundFailsafe;
+	spawnedEnemy.attackCountMax = attackCountMax;
+	spawnedEnemy.attackDir = attackDir;
+	spawnedEnemy.spawnTimer = spawnTimer;
+	spawnedEnemy.attackTimer = attackTimer;
+	spawnedEnemy.attackTimerMax = attackTimerMax;
+	spawnedEnemy.auraTimerMax = auraTimerMax;
+	spawnedEnemy.auraTimer = auraTimer;
+	spawnedEnemy.canTurnXTimer = canTurnXTimer;
+	spawnedEnemy.canTurnXTimerMax = canTurnXTimerMax;
+	spawnedEnemy.canTurnYTimer = canTurnYTimer;
+	spawnedEnemy.canTurnYTimerMax = canTurnYTimerMax;
 	spawnTimer = -1;
 }

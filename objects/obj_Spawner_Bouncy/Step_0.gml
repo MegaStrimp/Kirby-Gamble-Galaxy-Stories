@@ -50,6 +50,15 @@ else if (spawnTimer == 0)
 		spawnedEnemy.sprDuck = spr_Bouncy_Normal_Duck;
 		spawnedEnemy.sprHurt = spr_Bouncy_Normal_Hurt;
 		break;
+		
+		//Robo
+		
+		case 1:
+		spawnedEnemy.sprIdle = spr_Bouncy_Robo_Idle;
+		spawnedEnemy.sprJump = spr_Bouncy_Robo_Jump;
+		spawnedEnemy.sprDuck = spr_Bouncy_Robo_Duck;
+		spawnedEnemy.sprHurt = spr_Bouncy_Robo_Hurt;
+		break;
 	}
 	spawnedEnemy.sprite_index = spawnedEnemy.sprIdle;
 	spawnedEnemy.state = state;

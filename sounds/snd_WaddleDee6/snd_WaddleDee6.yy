@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_waddledee6.wav",
-  "duration": 0.148844,
+  "duration": 0.216009,
   "parent": {
     "name": "Enemies",
     "path": "folders/Sounds/Sound Effects/Enemies.yy",

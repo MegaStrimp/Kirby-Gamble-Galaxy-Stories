@@ -1,0 +1,13 @@
+///@description Creation Code
+///@description Initialize Variables
+///@description Main
+///@description
+
+///@description Creation Code
+
+dirX = -1;
+walkDirX = -1;
+
+///@description Creation Code
+
+hasTop = false;

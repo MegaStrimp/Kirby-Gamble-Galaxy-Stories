@@ -594,13 +594,13 @@ if ((gamePaused) and (visible))
 	
 	if ((!cellphoneActive) and (keyStartPressed) or ((abilityPage[page] == spr_PauseMenu_Exit) and (keyJumpPressed)))
     {
-		if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
-		audio_play_sound(snd_ButtonYes,0,false);
 		if (abilityPage[page] != spr_PauseMenu_Exit) cursorSelection = 0;
 		if (cursorSelection == 0)
 		{
 			if (!instance_exists(obj_Pause_Fade))
 			{
+				if (audio_is_playing(snd_Unpause)) audio_stop_sound(snd_Unpause);
+				audio_play_sound(snd_Unpause,0,false);
 				var pauseFade = instance_create_depth(x,y,depth - 1,obj_Pause_Fade);
 			    pauseFade.removePause = true;
 			}

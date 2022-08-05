@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_fooditem.wav",
-  "duration": 0.966531,
+  "duration": 0.14449,
   "parent": {
     "name": "Objects",
     "path": "folders/Sounds/Sound Effects/Objects.yy",

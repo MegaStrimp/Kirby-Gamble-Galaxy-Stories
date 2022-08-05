@@ -11,7 +11,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_Select",
+  "soundFile": "snd_select.wav",
   "duration": 0.182857,
   "parent": {
     "name": "Misc",

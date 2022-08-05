@@ -2,23 +2,23 @@
 
 //Physics
 
-decel = .05;
-movespeed = 1.5;
-jumpspeed = 4;
-gravNormal = .7;
-gravLimitNormal = 7;
+accel = .015;
+movespeed = .5;
+jumpspeed = 3;
+gravNormal = .2;
+gravLimitNormal = 5;
 
 //Other Variables
 
 spawn = false;
 spawnerRange = 24;
 character = 0;
-paletteIndex = AAAAAAAA;
+paletteIndex = spr_Sparky_Normal_Palette_LightningLime;
 state = 0;
-hp = AAAAAAAA;
+hp = 16;
 dmg = 1;
 ability = playerAbilities.spark;
-points = AAAAAAAA;
+points = 300;
 hurtable = true;
 hasGravity = true;
 heavy = false;
@@ -50,3 +50,8 @@ groundFailsafe = true;
 //Timers
 
 spawnTimer = 0;
+attackTimerMax = 300;
+attackTimerMin = 120;
+attackTimer = attackTimerMax;
+jumpTimer = -1;
+jumpTimerMax = 30;

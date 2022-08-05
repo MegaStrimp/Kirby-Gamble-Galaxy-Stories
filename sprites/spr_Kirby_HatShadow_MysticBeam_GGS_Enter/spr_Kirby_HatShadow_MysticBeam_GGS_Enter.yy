@@ -71,7 +71,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 13,
-    "yorigin": 17,
+    "yorigin": 22,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_HatShadow_MysticBeam_GGS_Enter","path":"sprites/spr_Kirby_HatShadow_MysticBeam_GGS_Enter/spr_Kirby_HatShadow_MysticBeam_GGS_Enter.yy",},

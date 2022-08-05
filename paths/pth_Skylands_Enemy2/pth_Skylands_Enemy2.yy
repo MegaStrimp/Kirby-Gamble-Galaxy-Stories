@@ -13,8 +13,8 @@
     {"speed":100.0,"x":-24.0,"y":96.0,},
   ],
   "parent": {
-    "name": "Paths",
-    "path": "folders/Paths.yy",
+    "name": "Skylands",
+    "path": "folders/Paths/Skylands.yy",
   },
   "resourceVersion": "1.0",
   "name": "pth_Skylands_Enemy2",

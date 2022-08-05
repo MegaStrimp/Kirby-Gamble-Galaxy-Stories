@@ -5,6 +5,18 @@
 hsp = 0;
 vsp = 0;
 
+//Enums
+
+enum movingWallAttributes
+{
+	asteroidFields1_1,
+	asteroidFields3_1,
+	asteroidFields3_2,
+	asteroidFields3A_1,
+	asteroidFields3A_2,
+	asteroidFields4_1
+}
+
 //Other Variables
 
 slope = false;

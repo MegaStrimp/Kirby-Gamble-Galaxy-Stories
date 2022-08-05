@@ -157,7 +157,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	else if (state == 2)
 	{
 		var spdFinal = spd;
-		if ((instance_exists(owner)) and (owner.attackNumber == playerAttacks.mysticBeamCharge) and (isMystic) and (keyAttackHold))
+		if ((!enemy) and (instance_exists(owner)) and (owner.attackNumber == playerAttacks.mysticBeamCharge) and (isMystic) and (keyAttackHold))
 		{
 			orbitMaxFinal -= .25;
 			spdFinal = spd * 2;

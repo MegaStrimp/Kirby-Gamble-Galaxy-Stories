@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_Cairn_Normal_Idle",
+    "path": "sprites/spr_Cairn_Normal_Idle/spr_Cairn_Normal_Idle.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

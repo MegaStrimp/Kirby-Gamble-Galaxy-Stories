@@ -2,23 +2,23 @@
 
 //Physics
 
-decel = .05;
-movespeed = 1.5;
+accel = .015;
+movespeed = .75;
 jumpspeed = 4;
-gravNormal = .7;
-gravLimitNormal = 7;
+gravNormal = .2;
+gravLimitNormal = 5;
 
 //Other Variables
 
 spawn = false;
 spawnerRange = 24;
 character = 0;
-paletteIndex = AAAAAAAA;
+paletteIndex = spr_Hothead_Normal_Palette_DefaultFlames;
 state = 0;
-hp = AAAAAAAA;
+hp = 16;
 dmg = 1;
 ability = playerAbilities.fire;
-points = AAAAAAAA;
+points = 500;
 hurtable = true;
 hasGravity = true;
 heavy = false;
@@ -50,3 +50,13 @@ groundFailsafe = true;
 //Timers
 
 spawnTimer = 0;
+walkDuckTimer = -1;
+walkDuckTimerMax = 7;
+jumpableTimer = -1;
+jumpableTimerMax = 180;
+jumpTimer = -1;
+jumpTimerMax = -1;
+attackTimerMax = 180;
+attackTimer = attackTimerMax;
+fireTimer = -1;
+fireTimerMax = 5;

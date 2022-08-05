@@ -28,6 +28,11 @@ if (!global.pause)
 	#region Destroy
 	if (place_meeting(x,y,obj_Wall))
 	{
+		if (audio_is_playing(snd_MeteorExplosion)) audio_stop_sound(snd_MeteorExplosion);
+		audio_play_sound(snd_MeteorExplosion,0,false);
+		
+		with (obj_FragileWall) if (distance_to_object(other) <= 12) hp = 0;
+		
 		for (var i = 0; i < 4; i++)
 		{
 			var par = instance_create_depth(x + irandom_range(-24,24),y - irandom_range(-24,24),depth - 1,obj_Particle);
@@ -46,6 +51,8 @@ if (!global.pause)
 		}
 		instance_destroy();
 	}
+	
+	if (y >= room_height + 100) instance_destroy();
 	#endregion
 	
 	#region Animation

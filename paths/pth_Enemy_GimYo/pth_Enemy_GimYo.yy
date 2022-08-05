@@ -15,8 +15,8 @@
     {"speed":100.0,"x":-78.09979,"y":9.5,},
   ],
   "parent": {
-    "name": "Paths",
-    "path": "folders/Paths.yy",
+    "name": "Enemy",
+    "path": "folders/Paths/Enemy.yy",
   },
   "resourceVersion": "1.0",
   "name": "pth_Enemy_GimYo",
