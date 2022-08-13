@@ -22,6 +22,14 @@ if (!active)
 	}
 	#endregion
 	
+	#region Selected Object Buttons
+	if (selectedSpawner != -1)
+	{
+		if (selectedSpawnerOptionsExists) draw_sprite(spr_Maykr_SelectedSpawner_Settings,0,selectedSpawnerOptionsX,selectedSpawnerOptionsY);
+		if (selectedSpawnerDirectionExists) draw_sprite(spr_Maykr_SelectedSpawner_Direction,selectedSpawnerDirection,selectedSpawnerDirectionX,selectedSpawnerDirectionY);
+	}
+	#endregion
+	
 	#region Draw Object
 	if ((canBeInteracted) and (!mouseOnHud) and (!deleteMode) and (!dragMode))
 	{

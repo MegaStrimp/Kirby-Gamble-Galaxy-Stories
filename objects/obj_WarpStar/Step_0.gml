@@ -31,23 +31,49 @@ else if (setupTimer == 0)
 
 if (!global.pause)
 {
-	//Aura Timer
+	//Activate
 	
-	if (auraTimer > 0)
+	if (!active)
 	{
-		auraTimer -= 1;
+		//image_angle += 3;
+		
+		vsp += (accel * walkDirY);
+		if ((abs(vsp) >= jumpspeed)) walkDirY *= -1;
+		y += vsp;
+		
+		with (obj_Player)
+		{
+			if (place_meeting(x,y,other))
+			{
+				other.active = true;
+				other.image_angle = 0;
+				dir = 1;
+				warpStarIndex = other;
+				state = playerStates.warpStar;
+				
+			}
+		}
+		if (active) path_start(warpStarPath,6,path_action_stop,true);
 	}
-	else if (auraTimer == 0)
+	else
 	{
-		if (hasAura)
-		{
-			hasAura = false;
-		}
-		else
-		{
-			hasAura = true;
-		}
-		auraTimer = auraTimerMax;
+		if (particleTimer == -1) particleTimer = particleTimerMax;
+	}
+	
+	//Particle Timer
+	
+	if (particleTimer > 0)
+	{
+		particleTimer -= 1;
+	}
+	else if (particleTimer == 0)
+	{
+		var par = instance_create_depth(x,y,depth + 1,obj_Particle);
+		par.sprite_index = sprTrail;
+		par.direction = irandom_range(-10,10) - path_orientation;
+		par.spdBuiltIn = irandom_range(3,6);
+		par.destroyAfterAnimation = true;
+		particleTimer = -1;
 	}
 	
 	//Animation

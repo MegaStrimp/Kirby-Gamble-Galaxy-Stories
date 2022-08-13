@@ -3112,8 +3112,8 @@ function scr_Player_States_Normal()
 					case playerCharacters.waddleDoo:
 					if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					{
-						if (audio_is_playing(snd_Beam)) audio_stop_sound(snd_Beam);
-						sndBeam = audio_play_sound(snd_Beam,0,false);
+						if (audio_is_playing(snd_EnemyBeam)) audio_stop_sound(snd_EnemyBeam);
+						sndBeam = audio_play_sound(snd_EnemyBeam,0,false);
 						attack = true;
 						attackNumber = "waddleDooBeamNormal";
 						sprite_index = sprBeamAttack1;

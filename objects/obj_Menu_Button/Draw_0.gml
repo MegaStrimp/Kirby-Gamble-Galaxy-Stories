@@ -157,28 +157,31 @@ switch (state)
 	break;
 	
 	case "maykrTitle":
-	draw_self();
-	if (obj_Maykr_Title.selection == index)
+	if (obj_Maykr_Title.windowIndex == -1)
 	{
-		switch (index)
+		draw_self();
+		if (obj_Maykr_Title.selection == index)
 		{
-			case 0:
-			imageIndex += sprite_get_speed(spr_Maykr_Title_PlaySelected) / 60;
-			if (imageIndex >= 9) imageIndex -= 9;
-			draw_sprite(spr_Maykr_Title_PlaySelected,imageIndex,x + 8,y + 7);
-			break;
-			
-			case 1:
-			imageIndex += sprite_get_speed(spr_Maykr_Title_BuildSelected) / 60;
-			if (imageIndex >= 9) imageIndex -= 9;
-			draw_sprite(spr_Maykr_Title_BuildSelected,imageIndex,x - 8,y + 7);
-			break;
-			
-			case 2:
-			imageIndex += sprite_get_speed(spr_Maykr_Title_ExitSelected) / 60;
-			if (imageIndex >= 9) imageIndex -= 9;
-			draw_sprite(spr_Maykr_Title_ExitSelected,imageIndex,x + 8,y + 7);
-			break;
+			switch (index)
+			{
+				case 0:
+				imageIndex += sprite_get_speed(spr_Maykr_Title_PlaySelected) / 60;
+				if (imageIndex >= 9) imageIndex -= 9;
+				draw_sprite(spr_Maykr_Title_PlaySelected,imageIndex,x + 8,y + 7);
+				break;
+				
+				case 1:
+				imageIndex += sprite_get_speed(spr_Maykr_Title_BuildSelected) / 60;
+				if (imageIndex >= 9) imageIndex -= 9;
+				draw_sprite(spr_Maykr_Title_BuildSelected,imageIndex,x - 8,y + 7);
+				break;
+				
+				case 2:
+				imageIndex += sprite_get_speed(spr_Maykr_Title_ExitSelected) / 60;
+				if (imageIndex >= 9) imageIndex -= 9;
+				draw_sprite(spr_Maykr_Title_ExitSelected,imageIndex,x + 8,y + 7);
+				break;
+			}
 		}
 	}
 	break;

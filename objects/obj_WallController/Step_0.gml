@@ -15,18 +15,18 @@ if (!global.pause)
 		if (place_meeting(x,y + 1,obj_ParentWall))
 		{
 			var movingWall = instance_place(x,y + 1,obj_ParentWall);
-			if (movingWall.hsp != 0) x += movingWall.hsp;
-			if (movingWall.vsp != 0) y += movingWall.vsp;
+			if ((movingWall.hsp != 0) and (!place_meeting(x + hsp,y,obj_ParentWall))) x += movingWall.hsp;
+			if ((movingWall.vsp != 0) and (!place_meeting(x,y + vsp,obj_ParentWall))) y += movingWall.vsp;
 		}
 		if (place_meeting(x,y - 1,obj_ParentWall))
 		{
 			var movingWall = instance_place(x,y - 1,obj_ParentWall);
-			if (movingWall.vsp != 0) y += movingWall.vsp;
+			if ((movingWall.vsp != 0) and (!place_meeting(x,y + vsp,obj_ParentWall))) y += movingWall.vsp;
 		}
-		if (place_meeting(x + sign(hspFinal),y,obj_ParentWall))
+		if (place_meeting(x + sign(hsp),y,obj_ParentWall))
 		{
-			var movingWall = instance_place(x + sign(hspFinal),y,obj_ParentWall);
-			if (movingWall.hsp != 0) x += movingWall.hsp;
+			var movingWall = instance_place(x + sign(hsp),y,obj_ParentWall);
+			if ((movingWall.hsp != 0) and (!place_meeting(x + hsp,y,obj_ParentWall))) x += movingWall.hsp;
 		}
 	}
 	
@@ -35,18 +35,38 @@ if (!global.pause)
 		if (place_meeting(x,y + 1,obj_ParentWall))
 		{
 			var movingWall = instance_place(x,y + 1,obj_ParentWall);
-			if (movingWall.hsp != 0) x += movingWall.hsp;
-			if (movingWall.vsp != 0) y += movingWall.vsp;
+			if ((movingWall.hsp != 0) and (!place_meeting(x + hsp,y,obj_ParentWall))) x += movingWall.hsp;
+			if ((movingWall.vsp != 0) and (!place_meeting(x,y + vsp,obj_ParentWall))) y += movingWall.vsp;
 		}
 		if (place_meeting(x,y - 1,obj_ParentWall))
 		{
 			var movingWall = instance_place(x,y - 1,obj_ParentWall);
-			if (movingWall.vsp != 0) y += movingWall.vsp;
+			if ((movingWall.vsp != 0) and (!place_meeting(x,y + vsp,obj_ParentWall))) y += movingWall.vsp;
 		}
-		if (place_meeting(x + sign(hspFinal),y,obj_ParentWall))
+		if (place_meeting(x + sign(hsp),y,obj_ParentWall))
 		{
-			var movingWall = instance_place(x + sign(hspFinal),y,obj_ParentWall);
-			if (movingWall.hsp != 0) x += movingWall.hsp;
+			var movingWall = instance_place(x + sign(hsp),y,obj_ParentWall);
+			if ((movingWall.hsp != 0) and (!place_meeting(x + hsp,y,obj_ParentWall))) x += movingWall.hsp;
+		}
+	}
+	
+	with (obj_Key)
+	{
+		if (place_meeting(x,y + 1,obj_ParentWall))
+		{
+			var movingWall = instance_place(x,y + 1,obj_ParentWall);
+			if ((movingWall.hsp != 0) and (!place_meeting(x + hsp,y,obj_ParentWall))) x += movingWall.hsp;
+			if ((movingWall.vsp != 0) and (!place_meeting(x,y + vsp,obj_ParentWall))) y += movingWall.vsp;
+		}
+		if (place_meeting(x,y - 1,obj_ParentWall))
+		{
+			var movingWall = instance_place(x,y - 1,obj_ParentWall);
+			if ((movingWall.vsp != 0) and (!place_meeting(x,y + vsp,obj_ParentWall))) y += movingWall.vsp;
+		}
+		if (place_meeting(x + sign(hsp),y,obj_ParentWall))
+		{
+			var movingWall = instance_place(x + sign(hsp),y,obj_ParentWall);
+			if ((movingWall.hsp != 0) and (!place_meeting(x + hsp,y,obj_ParentWall))) x += movingWall.hsp;
 		}
 	}
 }

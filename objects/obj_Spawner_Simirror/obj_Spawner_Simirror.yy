@@ -4,7 +4,7 @@
     "path": "sprites/spr_Simirror_Normal_Walk/spr_Simirror_Normal_Walk.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,

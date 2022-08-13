@@ -39,6 +39,10 @@ topWallOwner = id;
 movementState = "none";
 objectOnHit = false;
 objectOnHitObj = obj_PointStar;
+shakeX = 0;
+shakeY = 0;
+drawShakeX = 0;
+drawShakeY = 0;
 
 //Timers
 

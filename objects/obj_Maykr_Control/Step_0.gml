@@ -9,7 +9,7 @@ mouseXGui = device_mouse_x_to_gui(0);
 mouseYGui = device_mouse_y_to_gui(0);
 
 mouseOnHud = false;
-if (((point_in_rectangle(mouseXGui,mouseYGui,0,0,325,27))) or ((point_in_rectangle(mouseXGui,mouseYGui,324,0,480,47))) or ((point_in_rectangle(mouseXGui,mouseYGui,26,233 + bottomHudOffset,454,270))) or ((hudVisible) and ((mouseOnTopMap) or (mouseOnTopDelete) or (mouseOnTopZoomIn) or (mouseOnTopZoomOut) or (mouseOnTopZoomReset) or (mouseOnTopDrag) or (mouseOnTopSave) or (mouseOnTopLoad) or (mouseOnTopOptions) or (mouseOnTopReset) or (mouseOnTopLeave) or (mouseOnTopPlay) or (mouseOnTopEdit) or (mouseOnTopBlocks) or (mouseOnTopEnemies) or (mouseOnTopItems) or (mouseOnTopExpand) or (mouseOnTopHide)))) mouseOnHud = true;
+if (((point_in_rectangle(mouseXGui,mouseYGui,0,0,325,27))) or ((point_in_rectangle(mouseXGui,mouseYGui,324,0,480,47))) or ((point_in_rectangle(mouseXGui,mouseYGui,26,233 + bottomHudOffset,454,270))) or ((hudVisible) and ((mouseOnTopMap) or (mouseOnTopDelete) or (mouseOnTopZoomIn) or (mouseOnTopZoomOut) or (mouseOnTopZoomReset) or (mouseOnTopDrag) or (mouseOnTopSave) or (mouseOnTopLoad) or (mouseOnTopOptions) or (mouseOnTopReset) or (mouseOnTopLeave) or (mouseOnTopPlay) or (mouseOnTopEdit) or (mouseOnTopBlocks) or (mouseOnTopEnemies) or (mouseOnTopItems) or (mouseOnTopExpand) or (mouseOnTopNextInventory) or (mouseOnTopPreviousInventory) or (mouseOnTopHide) or (mouseOnTopSelectedSpawnerOptions) or (mouseOnTopSelectedSpawnerDirection)))) mouseOnHud = true;
 #endregion
 
 #region Load Level
@@ -367,6 +367,24 @@ if (!active)
 			{
 				mouseOnTopExpand = false;
 			}
+			
+			if (point_in_rectangle(mouseXGui,mouseYGui,434,238 + bottomHudOffset,449,266 + bottomHudOffset))
+			{
+				mouseOnTopNextInventory = true;
+			}
+			else
+			{
+				mouseOnTopNextInventory = false;
+			}
+			
+			if (point_in_rectangle(mouseXGui,mouseYGui,31,238 + bottomHudOffset,46,266 + bottomHudOffset))
+			{
+				mouseOnTopPreviousInventory = true;
+			}
+			else
+			{
+				mouseOnTopPreviousInventory = false;
+			}
 		}
 		#endregion
 	
@@ -452,6 +470,81 @@ if (!active)
 				bottomHudOpen = !bottomHudOpen;
 			}
 			#endregion
+			
+			#region Bottom Hud Inventory Next Button
+			if (mouseOnTopNextInventory)
+			{
+				io_clear();
+				var maxInventoryIndex = 0;
+				switch (spawnedLayer)
+				{
+					case "Collision":
+					maxInventoryIndex = maykrObjects.collisionTilesEnd - maykrObjects.collisionTilesStart;
+					break;
+					
+					case "Enemies":
+					maxInventoryIndex = maykrObjects.enemiesEnd - maykrObjects.enemiesStart;
+					break;
+					
+					case "Environment":
+					maxInventoryIndex = maykrObjects.itemsEnd - maykrObjects.itemsStart;
+					break;
+				}
+				if (bottomHudOpen)
+				{
+					inventoryIndex += 12;
+					if (inventoryIndex >= maxInventoryIndex - 1) inventoryIndex = 0;
+				}
+				else
+				{
+					inventoryIndex += 1;
+					if (inventoryIndex >= maxInventoryIndex - 1) inventoryIndex -= maxInventoryIndex - 1;
+				}
+				inventoryIndex = clamp(inventoryIndex,0,maxInventoryIndex);
+			}
+			#endregion
+			
+			#region Bottom Hud Inventory Previous Button
+			if (mouseOnTopPreviousInventory)
+			{
+				io_clear();
+				var maxInventoryIndex = 0;
+				switch (spawnedLayer)
+				{
+					case "Collision":
+					maxInventoryIndex = maykrObjects.collisionTilesEnd - maykrObjects.collisionTilesStart;
+					break;
+					
+					case "Enemies":
+					maxInventoryIndex = maykrObjects.enemiesEnd - maykrObjects.enemiesStart;
+					break;
+					
+					case "Environment":
+					maxInventoryIndex = maykrObjects.itemsEnd - maykrObjects.itemsStart;
+					break;
+				}
+				if (bottomHudOpen)
+				{
+					inventoryIndex -= 12;
+					if (inventoryIndex < 0) inventoryIndex = maxInventoryIndex;
+				}
+				else
+				{
+					inventoryIndex -= 1;
+					if (inventoryIndex < 0) inventoryIndex += maxInventoryIndex - 1;
+				}
+				inventoryIndex = clamp(inventoryIndex,0,maxInventoryIndex);
+			}
+			#endregion
+			
+			if (instance_exists(selectedSpawner))
+			{
+				if ((mouse_check_button_pressed(mb_left)) and (mouseOnTopSelectedSpawnerDirection))
+				{
+					io_clear();
+					selectedSpawner.spawnedDirX *= -1;
+				}
+			}
 		
 			#region Save Button
 			if (mouseOnTopSave)
@@ -687,6 +780,7 @@ if (!active)
 					spawnedLayer = "Collision";
 					spawnedItemString = maykrObjects.debugWall;
 					scr_Maykr_GetFromInventory(spawnedItemString);
+					scr_Maykr_SelectedSpawnerReset();
 					snap = 24;
 				}
 			}
@@ -704,6 +798,7 @@ if (!active)
 					spawnedLayer = "Enemies";
 					spawnedItemString = maykrObjects.waddleDee;
 					scr_Maykr_GetFromInventory(spawnedItemString);
+					scr_Maykr_SelectedSpawnerReset();
 					snap = 6;
 				}
 			}
@@ -721,6 +816,7 @@ if (!active)
 					spawnedLayer = "Environment";
 					spawnedItemString = maykrObjects.pointStarYellow;
 					scr_Maykr_GetFromInventory(spawnedItemString);
+					scr_Maykr_SelectedSpawnerReset();
 					snap = 6;
 				}
 			}
@@ -734,9 +830,9 @@ if (!active)
 				if (point_in_rectangle(mouseXGui,mouseYGui,xx,yy,xx + 26,yy + 26))
 				{
 					io_clear();
-					if (maykrInventory[i] != -1)
+					if (maykrInventory[i + inventoryIndex] != -1)
 					{
-						spawnedItemString = maykrInventory[i];
+						spawnedItemString = maykrInventory[i + inventoryIndex];
 						scr_Maykr_GetFromInventory(spawnedItemString);
 					}
 				}
@@ -769,12 +865,69 @@ if (!active)
 					}
 					else
 					{
-						selectedSpawner = -1;
+						scr_Maykr_SelectedSpawnerReset();
 					}
 				}
 			}
 			
 			if (mouse_check_button_released(mb_left)) draggedSpawner = -1;
+		}
+		#endregion
+		
+		#region Object Attributes
+		if (selectedSpawner != -1)
+		{
+			if (instance_exists(selectedSpawner))
+			{
+				if (selectedSpawnerOptionsExists)
+				{
+					selectedSpawnerOptionsX = selectedSpawner.x + selectedSpawner.xOffset - 22;
+					if ((selectedSpawner.y - 25) <= camera_get_view_y(gameView) + (40 * hudVisible))
+					{
+						selectedSpawnerOptionsY = selectedSpawner.y + sprite_get_height(selectedSpawner.spawnedSprite) + 4;
+					}
+					else
+					{
+						selectedSpawnerOptionsY = selectedSpawner.y - 25;
+					}
+					
+					if (point_in_rectangle(mouseX,mouseY,selectedSpawnerOptionsX,selectedSpawnerOptionsY,selectedSpawnerOptionsX + 21,selectedSpawnerOptionsY + 21))
+					{
+						mouseOnTopSelectedSpawnerOptions = true;
+					}
+					else
+					{
+						mouseOnTopSelectedSpawnerOptions = false;
+					}
+				}
+				if (selectedSpawnerDirectionExists)
+				{
+					selectedSpawnerDirectionX = selectedSpawner.x + selectedSpawner.xOffset + 1;
+					if ((selectedSpawner.y - 25) <= camera_get_view_y(gameView) + (40 * hudVisible))
+					{
+						selectedSpawnerDirectionY = selectedSpawner.y + sprite_get_height(selectedSpawner.spawnedSprite) + 4;
+					}
+					else
+					{
+						selectedSpawnerDirectionY = selectedSpawner.y - 25;
+					}
+					
+					if (point_in_rectangle(mouseX,mouseY,selectedSpawnerDirectionX,selectedSpawnerDirectionY,selectedSpawnerDirectionX + 21,selectedSpawnerDirectionY + 21))
+					{
+						mouseOnTopSelectedSpawnerDirection = true;
+					}
+					else
+					{
+						mouseOnTopSelectedSpawnerDirection = false;
+					}
+					
+					selectedSpawnerDirection = (selectedSpawner.spawnedDirX == 1);
+				}
+			}
+			else
+			{
+				scr_Maykr_SelectedSpawnerReset();
+			}
 		}
 		#endregion
 		

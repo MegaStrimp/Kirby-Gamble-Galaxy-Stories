@@ -29,9 +29,9 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	//Touch Wall
 	
-	if ((charge) and (place_meeting(x + hsp,y,obj_ParentWall)))
+	if ((charge) and (place_meeting(x + hsp,y,obj_Wall)))
 	{
-		var collidedWall = instance_place(x + hsp,y,obj_ParentWall);
+		var collidedWall = instance_place(x + hsp,y,obj_Wall);
 		if ((collidedWall.object) and ((collidedWall.object_index != obj_AbilityBlock) or (collidedWall.damageType == damageTypes.cutter))) collidedWall.hp -= 1;
 		if (collidedWall.hp != 0)
 		{

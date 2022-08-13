@@ -174,7 +174,7 @@ if (!global.pause)
 		}
 		else
 		{
-			if ((attack) and (attackstate == 1))
+			if ((attack) and (attackState == 1))
 			{
 				sprite_index = sprAttack;
 			}
@@ -221,7 +221,7 @@ if (!global.pause)
 		}
 		else
 		{
-			if ((attack) and (attackstate == 1))
+			if ((attack) and (attackState == 1))
 			{
 				sprite_index = sprAttack;
 			}
@@ -254,7 +254,7 @@ if (!global.pause)
 		}
 		else
 		{
-			if ((attack) and (attackstate == 1))
+			if ((attack) and (attackState == 1))
 			{
 				sprite_index = sprAttack;
 			}

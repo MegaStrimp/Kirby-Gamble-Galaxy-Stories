@@ -27,16 +27,8 @@ layer_background_yscale(layer_background_get_id("Background_Parallax1"),.5);
 
 //Music
 
-if ((!audio_is_playing(mus_AsteroidFields)) and (!audio_is_playing(mus_KazooFields)))
+if (!audio_is_playing(mus_NuclearSpelunky))
 {
 	audio_stop_all();
-	var musicIndex = irandom_range(0,97);
-	if (musicIndex == 0)
-	{
-		scr_PlayMusic(false,mus_KazooFields,0,true);
-	}
-	else
-	{
-		scr_PlayMusic(false,mus_AsteroidFields,0,true);
-	}
+	scr_PlayMusic(false,mus_NuclearSpelunky,0,true);
 }

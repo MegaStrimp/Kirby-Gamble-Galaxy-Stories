@@ -110,6 +110,7 @@ enum debugObject
 	bouncySis,
 	flamer,
 	chuckie,
+	walky,
 	
 	IMSICKOFTHISGUY,
 	

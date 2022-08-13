@@ -4,7 +4,7 @@
     "path": "sprites/spr_WarpStar_Normal_Idle/spr_WarpStar_Normal_Idle.yy",
   },
   "solid": false,
-  "visible": false,
+  "visible": true,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,

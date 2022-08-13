@@ -43,7 +43,7 @@ function scr_Player_States_IceGrab()
 		
 		//Revert Back
 		
-		if ((attackNumber != playerAttacks.iceGrab) or (!instance_exists(grabObj))) attackTimer = 0;
+		if (attackNumber != playerAttacks.iceGrab) attackTimer = 0;
 		
 		//Animation
 		

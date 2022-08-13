@@ -56,7 +56,7 @@ if (!global.pause)
 	else
 	{
 		attack = false;
-		attackTimer = -1;
+		attackTimer = attackTimerMax;
 	}
 	
 	//Animation

@@ -78,9 +78,9 @@ if (!active)
 	
 	for (var i = 0; i < 12 + (bottomHudVisible * 36); i++)
 	{
-		var spr = maykrSpr[i];
-		var sprXOffset = maykrSprXOffset[i];
-		var sprYOffset = maykrSprYOffset[i];
+		var spr = maykrSpr[i + inventoryIndex];
+		var sprXOffset = maykrSprXOffset[i + inventoryIndex];
+		var sprYOffset = maykrSprYOffset[i + inventoryIndex];
 		sprXOffset = 0;
 		sprYOffset = 0;
 		

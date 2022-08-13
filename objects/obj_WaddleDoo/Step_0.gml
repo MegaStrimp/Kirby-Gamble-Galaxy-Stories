@@ -529,7 +529,8 @@ if (!global.pause)
 				
 				case 1:
 				attackState += 1;
-				sndBeam = audio_play_sound(snd_Beam,0,false);
+				if (audio_is_playing(snd_EnemyBeam)) audio_stop_sound(snd_EnemyBeam);
+				sndBeam = audio_play_sound(snd_EnemyBeam,0,false);
 				attackTimer = 75;
 				for (var i = 0; i < 4; i++)
 				{

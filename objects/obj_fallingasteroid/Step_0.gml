@@ -26,10 +26,29 @@ if (!global.pause)
 	#endregion
 	
 	#region Destroy
-	if (place_meeting(x,y,obj_Wall))
+	if ((place_meeting(x,y,obj_Wall)) or (place_meeting(x,y,obj_Player)) or (place_meeting(x,y,obj_Enemy)))
 	{
-		if (audio_is_playing(snd_MeteorExplosion)) audio_stop_sound(snd_MeteorExplosion);
-		audio_play_sound(snd_MeteorExplosion,0,false);
+		if (!scr_OutsideView())
+		{
+			if (audio_is_playing(snd_MeteorExplosion)) audio_stop_sound(snd_MeteorExplosion);
+			audio_play_sound(snd_MeteorExplosion,0,false);
+		}
+		
+		var proj = instance_create_depth(x,y,depth,obj_Projectile_ExplosionMask);
+		proj.dmg = 1;
+		proj.enemy = true;
+		proj.hurtsEnemy = false;
+		proj.hurtsPlayer = true;
+		
+		var proj = instance_create_depth(x,y,depth,obj_Projectile_ExplosionMask);
+		proj.dmg = dmg;
+		proj.enemy = false;
+		proj.hurtsEnemy = true;
+		proj.hurtsPlayer = false;
+		
+		var par = instance_create_depth(x,y,depth,obj_Particle);
+		par.sprite_index = spr_Particle_FallingAsteroidDestroy;
+		par.destroyAfterAnimation = true;
 		
 		with (obj_FragileWall) if (distance_to_object(other) <= 12) hp = 0;
 		

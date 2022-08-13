@@ -43,7 +43,6 @@ function scr_Player_CancelAttack(argument0)
 			
 			case playerAttacks.beamGrab:
 			case playerAttacks.mysticBeamGrab:
-			case playerAttacks.iceGrab:
 			if (instance_exists(grabObj)) grabObj.destroyTimer = 0;
 			state = playerStates.normal;
 			break;

@@ -4,7 +4,7 @@
     "path": "sprites/spr_Como_Normal_Idle/spr_Como_Normal_Idle.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,

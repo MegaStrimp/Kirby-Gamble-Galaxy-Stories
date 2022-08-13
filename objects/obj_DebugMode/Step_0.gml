@@ -314,9 +314,9 @@ if (instance_exists(obj_Camera))
 #endregion
 
 #region Room Speed
-if ((room_speed > 10) and (keyboard_check(ord("T")))) room_speed -= .2;
+if ((room_speed > 10) and (keyboard_check(ord("T")))) room_speed -= 1;
 if (keyboard_check_pressed(ord("Y"))) room_speed = 60;
-if (keyboard_check(ord("U"))) room_speed += .2;
+if (keyboard_check(ord("U"))) room_speed += 1;
 #endregion
 
 #region Selected
@@ -4021,7 +4021,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			debugObj.sprReady = sprReady;
 			debugObj.sprShake = sprShake;
 			debugObj.sprRelease = sprRelease;
-			debugObj.sprite_index = sprIdle;
+			debugObj.sprite_index = sprReady;
 			debugObj.paletteIndex = debugPaletteIndex;
 			debugObj.image_xscale = debugXScale;
 			debugObj.dirX = debugXScale;
@@ -4927,6 +4927,55 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprReady = sprReady;
+			debugObj.sprAttack = sprAttack;
+			debugObj.sprHurt = sprHurt;
+			debugObj.sprite_index = sprIdle;
+			debugObj.paletteIndex = debugPaletteIndex;
+			debugObj.image_xscale = debugXScale;
+			debugObj.dirX = debugXScale;
+			debugObj.walkDirX = debugXScale;
+			debugObj.image_yscale = debugYScale;
+			debugObj.dirY = debugYScale;
+			debugObj.walkDirY = debugYScale;
+			debugObj.state = debugStateSelected;
+		}
+		break;
+		#endregion
+		
+		#region Walky
+		case debugObject.walky:
+		debugSpriteSelectedMax = 0;
+		switch (debugSpriteSelected)
+		{
+			#region Normal
+			case 0:
+			var sprIdle = spr_Walky_Normal_Idle;
+			var sprWalk = spr_Walky_Normal_Walk;
+			var sprAttack = spr_Walky_Normal_Attack;
+			var sprHurt = spr_Walky_Normal_Hurt;
+			debugPaletteNumberMax = 0;
+			switch (debugPaletteNumber)
+			{
+				case 0:
+				debugPaletteIndex = spr_Walky_Normal_Palette_MicCheck;
+				break;
+				
+				default:
+				debugPaletteIndex = spr_Walky_Normal_Palette_MicCheck;
+				break;
+			}
+			break;
+			#endregion
+		}
+		debugSprite = sprIdle;
+		debugIndex = 0;
+		debugStateSelectedMax = 0;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var debugObj = instance_create_layer(x,y,"Enemies",obj_Walky);
+			debugObj.character = debugSpriteSelected;
+			debugObj.sprIdle = sprIdle;
+			debugObj.sprWalk = sprWalk;
 			debugObj.sprAttack = sprAttack;
 			debugObj.sprHurt = sprHurt;
 			debugObj.sprite_index = sprIdle;

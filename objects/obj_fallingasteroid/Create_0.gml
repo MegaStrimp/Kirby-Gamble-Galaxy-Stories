@@ -13,6 +13,7 @@ sprDebris = spr_FallingAsteroid_Normal_Debris;
 #region Other Variables
 character = 0;
 dirX = 1;
+dmg = 60;
 #endregion
 
 #region Timers

@@ -26,7 +26,7 @@ function scr_Player_States_Climb()
 				sprite_index = sprClimbUp;
 				vsp = -climbSpeed;
 				
-				if ((!place_meeting(x,y,obj_Ladder)) and (!place_meeting(x,y + 8,obj_Ladder)))
+				if ((!place_meeting(x,y,obj_Ladder)) or (!place_meeting(x,y - 8,obj_Ladder)))
 				{
 					state = playerStates.normal;
 				}

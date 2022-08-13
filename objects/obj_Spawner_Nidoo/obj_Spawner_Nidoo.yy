@@ -4,7 +4,7 @@
     "path": "sprites/spr_Nidoo_Normal_Ready/spr_Nidoo_Normal_Ready.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,

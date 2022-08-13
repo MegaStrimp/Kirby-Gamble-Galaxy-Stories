@@ -25,6 +25,33 @@ targetClampToView = false;
 #region Clamp Values
 switch (room)
 {
+	#region Asteroid Fields 1
+	case rm_AsteroidFields1:
+	
+	#region yLimit1
+	if (cameraX < 1704)
+	{
+		yLimit1 = 1080;
+	}
+	else
+	{
+		yLimit1 = 0;
+	}
+	#endregion
+	
+	#region yLimit2
+	if (cameraX > 2760 - viewWidth)
+	{
+		yLimit2 = room_height - 744;
+	}
+	else
+	{
+		yLimit2 = 0;
+	}
+	#endregion
+	break;
+	#endregion
+	
 	#region Asteroid Fields 5
 	case rm_AsteroidFields5:
 	#region xLimit1
@@ -240,6 +267,23 @@ if ((!debugCamera) and (objectFollowing == -1))
 				
 					if (global.hpP1 != 0)
 					{
+						cameraX = lerp(cameraX,target.x - ((viewWidth / zoomFinal) / 2),spd) + ((offsetX + bossOffsetX + cinematicXOffset) / zoomFinal);
+						cameraY = lerp(cameraY,target.y - ((viewHeight / zoomFinal) / 2),spd) + ((offsetY + bossOffsetY + cinematicYOffset) / zoomFinal);
+						
+						with (obj_BigMovingWall)
+						{
+							if (activate)
+							{
+								other.cameraX = lerp(other.cameraX,x + ((sprite_get_width(sprite_index) * image_xscale) / 2) - ((other.viewWidth / other.zoomFinal) / 2),other.spd) + ((other.offsetX + other.bossOffsetX + other.cinematicXOffset) / other.zoomFinal);
+								other.cameraY = lerp(other.cameraY,y + yOffset - ((other.viewHeight / other.zoomFinal) / 2),other.spd) + ((other.offsetY + other.bossOffsetY + other.cinematicYOffset) / other.zoomFinal);
+							}
+							if (active)
+							{
+								other.cameraX = x + ((sprite_get_width(sprite_index) * image_xscale) / 2) - ((other.viewWidth / other.zoomFinal) / 2);
+								other.cameraY = y + yOffset - ((other.viewHeight / other.zoomFinal) / 2);
+							}
+						}
+						
 						if (instance_exists(obj_WhispyWoods))
 						{
 							switch (obj_WhispyWoods.phase)
@@ -256,11 +300,6 @@ if ((!debugCamera) and (objectFollowing == -1))
 								cameraY = lerp(cameraY,obj_WhispyWoods.y - ((viewHeight / zoomFinal) / 2),.1) + ((offsetY + bossOffsetY + cinematicYOffset) / zoomFinal);
 								break;
 							}
-						}
-						else
-						{
-							cameraX = lerp(cameraX,target.x - ((viewWidth / zoomFinal) / 2),spd) + ((offsetX + bossOffsetX + cinematicXOffset) / zoomFinal);
-							cameraY = lerp(cameraY,target.y - ((viewHeight / zoomFinal) / 2),spd) + ((offsetY + bossOffsetY + cinematicYOffset) / zoomFinal);
 						}
 					}
 				}

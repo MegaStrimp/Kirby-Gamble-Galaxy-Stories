@@ -229,10 +229,10 @@ if (!global.pause)
 		
 		if (activateMovingWall)
 		{
-			if (instance_exists(obj_MovingWall))
+			if (instance_exists(obj_BigMovingWall))
 			{
-				var nearestMovingWall = instance_nearest(x,y,obj_MovingWall);
-				if (!nearestMovingWall.active) nearestMovingWall.activate = true;
+				var nearestMovingWall = instance_nearest(x,y,obj_BigMovingWall);
+				if (!nearestMovingWall.active) and (nearestMovingWall.canBeActivated) nearestMovingWall.activate = true;
 			}
 		}
 		

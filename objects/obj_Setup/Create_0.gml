@@ -63,6 +63,7 @@ enum playerStates
 	wingDash,
 	swordDash,
 	parasolDash,
+	warpStar,
     death
 }
 
@@ -710,45 +711,10 @@ enum talkingCharacter
 	metaKnight,
 	match
 }
-
-enum maykrObjects
-{
-	debugWall,
-	asteroidFieldsFront,
-	
-	waddleDee,
-	waddleDoo,
-	brontoBurt,
-	twizzy,
-	tookey,
-	sirKibble,
-	gordo,
-	bloodGordo,
-	shotzo,
-	mysticDoo,
-	bouncy,
-	mrBoogie,
-	search,
-	hiveDrone,
-	wapod,
-	
-	pointStarYellow,
-	pointStarGreen,
-	pointStarRed,
-	pointStarBlue,
-	food,
-	pepBrew,
-	maximTomato
-}
-
-enum maykrWindows
-{
-	canvasSetup
-}
 #endregion
 
 #region Global Variables
-global.versionNumber = "0.4.0";
+global.versionNumber = "0.4.1";
 
 global.selectedSave = "Save1.ini";
 global.hpMax = 5;

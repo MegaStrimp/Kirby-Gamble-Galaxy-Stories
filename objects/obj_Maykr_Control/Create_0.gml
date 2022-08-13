@@ -48,6 +48,81 @@ global.abilityP1 = playerAbilities.none;
 global.abilityP2 = playerAbilities.none;
 #endregion
 
+#region Enums
+enum maykrObjects
+{
+	collisionTilesStart,
+	debugWall,
+	asteroidFieldsFront,
+	collisionTilesEnd,
+	
+	enemiesStart,
+	waddleDee,
+	waddleDoo,
+	brontoBurt,
+	twizzy,
+	tookey,
+	sirKibble,
+	gordo,
+	bloodGordo,
+	shotzo,
+	mysticDoo,
+	bouncy,
+	search,
+	wapod,
+	cappy,
+	coconut,
+	noddy,
+	blado,
+	scarfy,
+	rocky,
+	grizzo,
+	jungleBomb,
+	glunk,
+	kabu,
+	burningLeo,
+	tomatoo,
+	onion,
+	anemonee,
+	poppyBrosJr,
+	bobo,
+	foley,
+	nidoo,
+	como,
+	cairn,
+	bomber,
+	simirror,
+	hothead,
+	sparky,
+	yolky,
+	wheelie,
+	laserBall,
+	juckle,
+	kookler,
+	ufo,
+	bouncySis,
+	flamer,
+	chuckie,
+	walky,
+	enemiesEnd,
+	
+	itemsStart,
+	pointStarYellow,
+	pointStarGreen,
+	pointStarRed,
+	pointStarBlue,
+	food,
+	pepBrew,
+	maximTomato,
+	itemsEnd
+}
+
+enum maykrWindows
+{
+	canvasSetup
+}
+#endregion
+
 #region Mouse On Top
 mouseOnHud = false;
 mouseOnTopMap = false;
@@ -67,7 +142,11 @@ mouseOnTopBlocks = false;
 mouseOnTopEnemies = false;
 mouseOnTopItems = false;
 mouseOnTopExpand = false;
+mouseOnTopNextInventory = false;
+mouseOnTopPreviousInventory = false;
 mouseOnTopHide = false;
+mouseOnTopSelectedSpawnerOptions = false;
+mouseOnTopSelectedSpawnerDirection = false;
 #endregion
 
 #region Offsets
@@ -97,6 +176,7 @@ windowContentAlpha = 0;
 #region Other Variables
 active = false;
 canBeInteracted = true;
+inventoryIndex = 0;
 inventoryPage = 0;
 scr_Maykr_Inventory(global.gambleMaykrMenu,inventoryPage);
 yesBar = 0;
@@ -110,11 +190,12 @@ draggedSpawner = -1;
 deleteMode = false;
 dragMode = false;
 selectedSpawnerOptionsExists = false;
-selectedSpawnerOptionsXOffset = false;
-selectedSpawnerOptionsYOffset = false;
+selectedSpawnerOptionsX = -100;
+selectedSpawnerOptionsY = -100;
 selectedSpawnerDirectionExists = false;
-selectedSpawnerDirectionXOffset = false;
-selectedSpawnerDirectionYOffset = false;
+selectedSpawnerDirection = 1;
+selectedSpawnerDirectionX = -100;
+selectedSpawnerDirectionY = -100;
 #endregion
 
 #region Spawn Kirby

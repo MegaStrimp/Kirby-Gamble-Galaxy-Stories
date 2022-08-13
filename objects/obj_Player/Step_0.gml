@@ -529,6 +529,12 @@ switch (state)
 	scr_Player_States_ParasolDash();
 	break;
 	
+	//Warp Star
+	
+    case (playerStates.warpStar):
+	scr_Player_States_WarpStar();
+	break;
+	
 	//Death
 	
     case (playerStates.death):

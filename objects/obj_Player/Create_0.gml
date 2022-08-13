@@ -429,6 +429,7 @@ didJump = false;
 collisionX = obj_Wall;
 collisionY = obj_Wall;
 inBackground = false;
+warpStarIndex = -1;
 
 //Inputs
 
