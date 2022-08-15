@@ -14,7 +14,9 @@ enum movingWallAttributes
 	asteroidFields3_2,
 	asteroidFields3A_1,
 	asteroidFields3A_2,
-	asteroidFields4_1
+	asteroidFields4_1,
+	asteroidFields5_1,
+	asteroidFields5_2
 }
 
 //Other Variables

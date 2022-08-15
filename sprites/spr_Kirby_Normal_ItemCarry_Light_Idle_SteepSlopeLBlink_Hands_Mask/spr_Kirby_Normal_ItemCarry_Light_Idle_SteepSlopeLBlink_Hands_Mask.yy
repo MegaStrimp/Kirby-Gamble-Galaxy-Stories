@@ -40,13 +40,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"611269eb-9f5f-4117-bf6a-1a8c6b1180e2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bc659a2b-5be1-43bb-be8f-7cc050d7f6cf","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_Idle_SteepSlopeLBlink_Hands_Mask/spr_Kirby_Normal_ItemCarry_Light_Idle_SteepSlopeLBlink_Hands_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"9c6b0cca-abf4-4be1-b6fb-545ebb9108f0","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"963638e9-5d2e-4c45-9f69-9461ead3d400","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_Idle_SteepSlopeLBlink_Hands_Mask/spr_Kirby_Normal_ItemCarry_Light_Idle_SteepSlopeLBlink_Hands_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+            {"id":"611269eb-9f5f-4117-bf6a-1a8c6b1180e2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bc659a2b-5be1-43bb-be8f-7cc050d7f6cf","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_Idle_SteepSlopeLBlink_Hands_Mask/spr_Kirby_Normal_ItemCarry_Light_Idle_SteepSlopeLBlink_Hands_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"9c6b0cca-abf4-4be1-b6fb-545ebb9108f0","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"963638e9-5d2e-4c45-9f69-9461ead3d400","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_Idle_SteepSlopeLBlink_Hands_Mask/spr_Kirby_Normal_ItemCarry_Light_Idle_SteepSlopeLBlink_Hands_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,

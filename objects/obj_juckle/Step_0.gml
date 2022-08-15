@@ -16,7 +16,11 @@ if (setupTimer == 0)
 		sprHurt = spr_Juckle_Normal_Hurt;
 		break;
 	}
-	if (state == 1)
+	if (state == 0)
+	{
+		attackDir = 90 - dirX;
+	}
+	else if (state == 1)
 	{
 		attackDir = 90;
 	}

@@ -52,10 +52,40 @@ if (!global.pause)
 			
 			case movingWallAttributes.asteroidFields3A_2:
 			vsp = spd;
-			if (y <= 552)
+			if (y <= 180)
 			{
-				y = 552;
+				y = 180;
 				vsp = 0;
+				active = false;
+			}
+			break;
+			
+			case movingWallAttributes.asteroidFields4_1:
+			vsp = spd;
+			if (y <= 312)
+			{
+				y = 312;
+				vsp = 0;
+				active = false;
+			}
+			break;
+			
+			case movingWallAttributes.asteroidFields5_1:
+			hsp = spd;
+			if (x >= 3456)
+			{
+				x = 3456;
+				hsp = 0;
+				active = false;
+			}
+			break;
+			
+			case movingWallAttributes.asteroidFields5_2:
+			hsp = spd;
+			if (x >= 3744)
+			{
+				x = 3744;
+				hsp = 0;
 				active = false;
 			}
 			break;
@@ -68,6 +98,12 @@ if (!global.pause)
 			shakeX = 2;
 			if (canBeActivated)
 			{
+				switch (state)
+				{
+					case movingWallAttributes.asteroidFields5_1:
+					with (obj_BigMovingWall) if (state == movingWallAttributes.asteroidFields5_2) activate = true;
+					break;
+				}
 				canBeActivated = false;
 				activateTimer = activateTimerMax;
 			}

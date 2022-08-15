@@ -738,7 +738,7 @@ global.pointStars = 0;
 global.goldenTomato = false;
 global.stageNumber = 0;
 global.debug = true;
-//global.debug = false;
+global.debug = false;
 //show_debug_overlay(global.debug);
 global.pause = false;
 global.cutscene = false;

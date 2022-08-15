@@ -1,4 +1,11 @@
-Asteroid Fields
+[Asteroid Fields]
 
-Waddle Dee - 
+Waddle Dee - Cotton Candy
 Waddle Doo - Brick
+Sir Kibble - Knightly Pink
+Gordo - Dark Metal
+Grizzo - Zombie
+
+[Egg Garden Surface]
+
+Sir Kibble - Titanium

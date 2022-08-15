@@ -178,6 +178,7 @@ if (!global.pause)
 					projBeam.destroyableByWall = false;
 					projBeam.destroyableByEnemy = false;
 					projBeam.destroyableByObject = false;
+					projBeam.destroyOutsideRoom = true;
 					projBeam.character = 3;
 					projBeam.sprIdle = spr_Projectile_MysticBeam_Enemy;
 				}

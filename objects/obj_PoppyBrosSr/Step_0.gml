@@ -179,8 +179,10 @@ if (!global.pause)
 	{
 		if (attackNumber == enemyAttacks.poppyBroSr_bombThrow)
 		{
-			handX = (path_get_x(pth_Enemy_PoppyBrosSrHand1,handPath) + handXOffset) * dirX;
-			handY = path_get_y(pth_Enemy_PoppyBrosSrHand1,handPath) + handYOffset;
+			handX = (path_get_x(pth_Enemy_PoppyBrosSrHand1,handPath)) * dirX;
+			handY = path_get_y(pth_Enemy_PoppyBrosSrHand1,handPath);
+			//handX = (path_get_x(pth_Enemy_PoppyBrosSrHand1,handPath) + handXOffset) * dirX;
+			//handY = path_get_y(pth_Enemy_PoppyBrosSrHand1,handPath) + handYOffset;
 			
 			switch (bombThrowState)
 			{

@@ -29,6 +29,7 @@ objectOnHit = false;
 objectOnHitObj = obj_Projectile_ExplosionMask;
 objectOnHitDmg = "none";
 destroyOutsideView = true;
+destroyOutsideRoom = false;
 setScale = true;
 damageType = damageTypes.none;
 abilityType = playerAbilities.none;

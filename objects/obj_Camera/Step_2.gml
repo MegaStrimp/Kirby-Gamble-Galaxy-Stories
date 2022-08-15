@@ -28,6 +28,17 @@ switch (room)
 	#region Asteroid Fields 1
 	case rm_AsteroidFields1:
 	
+	#region xLimit1
+	if (cameraX >= 4080)
+	{
+		xLimit1 = 4080;
+	}
+	else
+	{
+		xLimit1 = 0;
+	}
+	#endregion
+	
 	#region yLimit1
 	if (cameraX < 1704)
 	{
@@ -54,6 +65,87 @@ switch (room)
 	
 	#region Asteroid Fields 5
 	case rm_AsteroidFields5:
+	
+	#region xLimit1
+	if (cameraX > 3456)
+	{
+		xLimit1 = 3456;
+	}
+	else
+	{
+		xLimit1 = 0;
+	}
+	#endregion
+	break;
+	#endregion
+	
+	#region Asteroid Fields 6
+	case rm_AsteroidFields6:
+	
+	#region xLimit1
+	if (cameraY < 192)
+	{
+		xLimit1 = 888;
+	}
+	else
+	{
+		xLimit1 = 0;
+	}
+	#endregion
+	
+	#region yLimit1
+	if (cameraX < 888)
+	{
+		yLimit1 = 192;
+	}
+	else
+	{
+		yLimit1 = 0;
+	}
+	#endregion
+	
+	#region yLimit2
+	if ((cameraX > 1176) and (cameraX < 1752 - viewWidth))
+	{
+		yLimit2 = room_height - 552;
+	}
+	else
+	{
+		yLimit2 = 0;
+	}
+	#endregion
+	break;
+	#endregion
+	
+	#region Asteroid Fields 7
+	case rm_AsteroidFields7:
+	
+	#region xLimit1
+	if (cameraY < 312)
+	{
+		xLimit1 = 1008;
+	}
+	else
+	{
+		xLimit1 = 0;
+	}
+	#endregion
+	
+	#region yLimit1
+	if (cameraX < 1008)
+	{
+		yLimit1 = 312;
+	}
+	else
+	{
+		yLimit1 = 0;
+	}
+	#endregion
+	break;
+	#endregion
+	
+	#region Asteroid Fields 5 OLD
+	/*case rm_AsteroidFields5:
 	#region xLimit1
 	if (cameraX < 576)
 	{
@@ -155,10 +247,10 @@ switch (room)
 	}
 	#endregion
 	break;
-	#endregion
+	*/#endregion
 	
-	#region Asteroid Fields 6
-	case rm_AsteroidFields6:
+	#region Asteroid Fields 6 OLD
+	/*case rm_AsteroidFields6:
 	#region xLimit1
 	if (cameraX >= 888)
 	{
@@ -217,7 +309,7 @@ switch (room)
 	}
 	#endregion
 	break;
-	#endregion
+	*/#endregion
 }
 #endregion
 
@@ -272,15 +364,20 @@ if ((!debugCamera) and (objectFollowing == -1))
 						
 						with (obj_BigMovingWall)
 						{
-							if (activate)
+							if (controlCamera)
 							{
-								other.cameraX = lerp(other.cameraX,x + ((sprite_get_width(sprite_index) * image_xscale) / 2) - ((other.viewWidth / other.zoomFinal) / 2),other.spd) + ((other.offsetX + other.bossOffsetX + other.cinematicXOffset) / other.zoomFinal);
-								other.cameraY = lerp(other.cameraY,y + yOffset - ((other.viewHeight / other.zoomFinal) / 2),other.spd) + ((other.offsetY + other.bossOffsetY + other.cinematicYOffset) / other.zoomFinal);
-							}
-							if (active)
-							{
-								other.cameraX = x + ((sprite_get_width(sprite_index) * image_xscale) / 2) - ((other.viewWidth / other.zoomFinal) / 2);
-								other.cameraY = y + yOffset - ((other.viewHeight / other.zoomFinal) / 2);
+								if (activate)
+								{
+									other.cameraX = x + ((sprite_get_width(sprite_index) * image_xscale) / 2) + xOffset - ((other.viewWidth / other.zoomFinal) / 2);
+									other.cameraY = y + yOffset - ((other.viewHeight / other.zoomFinal) / 2);
+									//other.cameraX = lerp(other.cameraX,x + ((sprite_get_width(sprite_index) * image_xscale) / 2) + xOffset - ((other.viewWidth / other.zoomFinal) / 2),other.spd) + ((other.offsetX + other.bossOffsetX + other.cinematicXOffset) / other.zoomFinal);
+									//other.cameraY = lerp(other.cameraY,y + yOffset - ((other.viewHeight / other.zoomFinal) / 2),other.spd) + ((other.offsetY + other.bossOffsetY + other.cinematicYOffset) / other.zoomFinal);
+								}
+								if (active)
+								{
+									other.cameraX = x + ((sprite_get_width(sprite_index) * image_xscale) / 2) + xOffset - ((other.viewWidth / other.zoomFinal) / 2);
+									other.cameraY = y + yOffset - ((other.viewHeight / other.zoomFinal) / 2);
+								}
 							}
 						}
 						

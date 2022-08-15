@@ -5,8 +5,8 @@ function scr_Player_Collision(argument0)
 	//Variables
 	
 	var playerMech = argument0;
-	hspCollision = 0;
-	vspCollision = 0;
+	//hspCollision = 0;
+	//vspCollision = 0;
 	
 	//if ((sign(hspCollision != 0)) and (sign(hsp) != sign(hspCollision))) hsp = 0;
 	//if ((sign(vspCollision != 0)) and (sign(vsp) != sign(vspCollision))) vsp = 0;

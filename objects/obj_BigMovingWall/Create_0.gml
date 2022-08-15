@@ -14,7 +14,9 @@ state = 0;
 canBeActivated = true;
 activate = false;
 active = false;
+xOffset = 0;
 yOffset = -147;
+controlCamera = true;
 
 //Timers
 
