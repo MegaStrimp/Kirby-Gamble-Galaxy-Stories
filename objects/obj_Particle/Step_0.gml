@@ -2,6 +2,11 @@
 
 if ((!pausable) and (!global.pause)) pausable = true;
 
+//Scale
+
+image_xscale = scale * dir;
+image_yscale = scale * dirY;
+
 //Follow Object
 
 if (((pausable) and (!global.pause)) or (!pausable))
@@ -223,6 +228,20 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		trailTimer = trailTimerMax;
 	}
 	
+	//Afterimage
+	
+	if (hasAfterimage)
+	{
+		var afterimage = instance_create_depth(x,y,depth,obj_Afterimage);
+		afterimage.owner = id;
+		afterimage.sprite_index = sprite_index;
+		afterimage.image_index = image_index;
+		afterimage.image_xscale = image_xscale;
+		afterimage.image_yscale = image_yscale;
+		afterimage.image_alpha = .5;
+		afterimage.paletteIndex = paletteSpriteIndex;
+	}
+	
 	//Animation
 	
 	image_speed = imageSpeed;
@@ -232,8 +251,3 @@ else
 	speed = 0;
 	image_speed = 0;
 }
-
-//Scale
-
-image_xscale = scale * dir;
-image_yscale = scale * dirY;

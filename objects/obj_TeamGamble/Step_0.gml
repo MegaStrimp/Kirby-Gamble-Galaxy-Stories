@@ -38,7 +38,17 @@ if (!global.pause)
 			
 			case 3:
 			alphaTarget = 1;
-			transitionTimer = 300;
+			stateTimer = 150;
+			break;
+			
+			case 4:
+			alphaTarget = 0;
+			stateTimer = 120;
+			break;
+			
+			case 5:
+			alphaTarget = 1;
+			transitionTimer = 420;
 			stateTimer = -1;
 			break;
 		}

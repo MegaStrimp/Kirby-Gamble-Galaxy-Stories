@@ -31,9 +31,9 @@ if (!global.pause)
 			//Asteroid Fields
 			
 			case 2:
-			sprClosed = spr_PopFlower_GreenGreens_Closed;
-			sprOpening = -1;
-			sprOpen = spr_PopFlower_GreenGreens_Open;
+			sprClosed = spr_PopFlower_AsteroidFields_Closed;
+			sprOpening = spr_PopFlower_AsteroidFields_Opening;
+			sprOpen = spr_PopFlower_AsteroidFields_Open;
 			break;
 			
 			//Egg Garden Surface

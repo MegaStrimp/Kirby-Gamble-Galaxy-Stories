@@ -40,7 +40,7 @@ airpuffCount = 0;
 airpuffCountMax = 3;
 
 spikeCount = 0;
-spikeCountMax = 5;
+spikeCountMax = 4;
 
 throwObjectChanceMax[0] = 250; //Apple
 throwObjectChance[0] = throwObjectChanceMax[0];

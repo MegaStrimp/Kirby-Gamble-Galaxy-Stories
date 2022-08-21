@@ -464,6 +464,14 @@ function scr_Player_Equipment(argument0,argument1)
 					equipmentIndex = spr_Kirby_Equipment_Parasol_KSSU_AbilityChange;
 					break;
 					
+					case sprWarpStar1:
+					equipmentIndex = spr_Kirby_Equipment_Parasol_KSSU_WarpStar1;
+					break;
+					
+					case sprWarpStar2:
+					equipmentIndex = spr_Kirby_Equipment_Parasol_KSSU_WarpStar2;
+					break;
+					
 					case sprGuard:
 					equipmentIndex = spr_Kirby_Equipment_Parasol_KSSU_Guard;
 					break;

@@ -9,9 +9,13 @@ if (setupTimer == 0)
 		//Normal
 		
 		case 0:
-		sprIdle = spr_WhispyWoods_Normal_RootAttack;
+		sprRootReady = spr_WhispyWoods_Normal_RootReady;
+		sprRoot1 = spr_WhispyWoods_Normal_Root1;
+		sprRoot2 = spr_WhispyWoods_Normal_Root2;
+		sprRoot3 = spr_WhispyWoods_Normal_Root3;
 		break;
 	}
+	sprite_index = sprRootReady;
 }
 
 if (((pausable) and (!global.pause)) or (!pausable))
@@ -32,8 +36,23 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	}
 	else if (readyTimer == 0)
 	{
-		sprite_index = sprIdle;
-		image_index = rootIndex;
+		ready = true;
+		switch (rootIndex)
+		{
+			case 1:
+			sprite_index = sprRoot1;
+			break;
+			
+			case 2:
+			sprite_index = sprRoot2;
+			break;
+			
+			case 3:
+			sprite_index = sprRoot3;
+			break;
+		}
+		image_index = 0;
+		
 		for (var i = 0; i < 2; i++)
 		{
 			var parXDir = 2;

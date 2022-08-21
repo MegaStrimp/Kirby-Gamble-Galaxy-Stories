@@ -22,7 +22,10 @@
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_Player","path":"objects/obj_Player/obj_Player.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":186.0,"y":1236.0,"resourceVersion":"1.0","name":"inst_4104F442_1_2","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":6,"gridY":6,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Player","tags":[],"resourceType":"GMRInstanceLayer",},
-    {"instances":[],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":6,"gridY":6,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Enemies","tags":[],"resourceType":"GMRInstanceLayer",},
+    {"instances":[
+        {"properties":[],"isDnd":false,"objectId":{"name":"obj_Spawner_MysticDoo","path":"objects/obj_Spawner_MysticDoo/obj_Spawner_MysticDoo.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":96.0,"y":870.0,"resourceVersion":"1.0","name":"inst_484B25D5","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"obj_ChuckieBox","path":"objects/obj_ChuckieBox/obj_ChuckieBox.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":24.0,"y":336.0,"resourceVersion":"1.0","name":"inst_6111BE93","tags":[],"resourceType":"GMRInstance",},
+      ],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":6,"gridY":6,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Enemies","tags":[],"resourceType":"GMRInstanceLayer",},
     {"tilesetId":{"name":"ts_AsteroidFields","path":"tilesets/ts_AsteroidFields/ts_AsteroidFields.yy",},"x":0,"y":0,"tiles":{"SerialiseWidth":22,"SerialiseHeight":67,"TileSerialiseData":[
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -1083,6 +1086,8 @@
     {"name":"inst_D7D5D54","path":"rooms/rm_AsteroidFields8/rm_AsteroidFields8.yy",},
     {"name":"inst_545BA237","path":"rooms/rm_AsteroidFields8/rm_AsteroidFields8.yy",},
     {"name":"inst_650FFEFE","path":"rooms/rm_AsteroidFields8/rm_AsteroidFields8.yy",},
+    {"name":"inst_484B25D5","path":"rooms/rm_AsteroidFields8/rm_AsteroidFields8.yy",},
+    {"name":"inst_6111BE93","path":"rooms/rm_AsteroidFields8/rm_AsteroidFields8.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

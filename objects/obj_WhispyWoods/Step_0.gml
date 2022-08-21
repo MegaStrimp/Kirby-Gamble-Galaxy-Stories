@@ -3,8 +3,10 @@
 #region Death
 if (hp <= 0)
 {
-	var fade = instance_create_depth(x,y,-999,obj_Fade);
+	var fade = instance_create_depth(x,y,-999,obj_FadeTimer);
+	fade.alphaSpd = .02;
 	fade.targetRoom = rm_StageSelect;
+	fade.fadeTimer = 60;
 }
 #endregion
 
@@ -187,7 +189,7 @@ if (!global.pause)
 		if (spikeCount < spikeCountMax)
 		{
 			spikeCount += 1;
-			var proj = instance_create_depth(x + ((30 + (72 * spikeCount)) * dirX),y + 8,depth + 1,obj_Projectile_WhispyRoot);
+			var proj = instance_create_depth(x + ((30 + (96 * spikeCount)) * dirX),y + 8,depth + 1,obj_Projectile_WhispyRoot);
 			proj.owner = id;
 			proj.enemy = true;
 			proj.destroyableByWall = false;

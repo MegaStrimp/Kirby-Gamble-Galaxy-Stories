@@ -648,41 +648,6 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		break;
 		#endregion
 		
-		#region Waddle Block
-		case debugObject.waddleBlock:
-		debugSpriteSelectedMax = 1;
-		switch (debugSpriteSelected)
-		{
-			#region Normal
-			case 0:
-			var sprIdle = spr_WaddleBlock_Normal_Idle;
-			var topWallSprite = spr_WaddleBlock_Normal_Top;
-			break;
-			#endregion
-			
-			#region Fire
-			case 1:
-			var sprIdle = spr_WaddleBlock_Fire_Idle;
-			var topWallSprite = spr_WaddleBlock_Fire_Top;
-			break;
-			#endregion
-		}
-		debugSprite = sprIdle;
-		debugIndex = 0;
-		debugStateSelectedMax = 0;
-		if (mouse_check_button_pressed(mb_left))
-		{
-			var debugObj = instance_create_layer(x,y,"Environment",obj_WaddleBlock);
-			debugObj.character = debugSpriteSelected;
-			debugObj.sprIdle = sprIdle;
-			debugObj.topWallSprite = topWallSprite;
-			debugObj.sprite_index = sprIdle;
-			debugObj.image_xscale = debugXScale;
-			debugObj.image_yscale = debugYScale;
-		}
-		break;
-		#endregion
-		
 		#region Moving Cloud
 		case debugObject.movingCloud:
 		debugSpriteSelectedMax = 0;
@@ -2411,6 +2376,41 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			debugObj.dirY = debugYScale;
 			debugObj.walkDirY = debugYScale;
 			debugObj.state = debugStateSelected;
+		}
+		break;
+		#endregion
+		
+		#region Waddle Block
+		case debugObject.waddleBlock:
+		debugSpriteSelectedMax = 1;
+		switch (debugSpriteSelected)
+		{
+			#region Normal
+			case 0:
+			var sprIdle = spr_WaddleBlock_Normal_Idle;
+			var topWallSprite = spr_WaddleBlock_Normal_Top;
+			break;
+			#endregion
+			
+			#region Fire
+			case 1:
+			var sprIdle = spr_WaddleBlock_Fire_Idle;
+			var topWallSprite = spr_WaddleBlock_Fire_Top;
+			break;
+			#endregion
+		}
+		debugSprite = sprIdle;
+		debugIndex = 0;
+		debugStateSelectedMax = 0;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var debugObj = instance_create_layer(x,y,"Environment",obj_WaddleBlock);
+			debugObj.character = debugSpriteSelected;
+			debugObj.sprIdle = sprIdle;
+			debugObj.topWallSprite = topWallSprite;
+			debugObj.sprite_index = sprIdle;
+			debugObj.image_xscale = debugXScale;
+			debugObj.image_yscale = debugYScale;
 		}
 		break;
 		#endregion
@@ -4987,6 +4987,46 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			debugObj.dirY = debugYScale;
 			debugObj.walkDirY = debugYScale;
 			debugObj.state = debugStateSelected;
+		}
+		break;
+		#endregion
+		
+		#region Mystic Block
+		case debugObject.mysticBlock:
+		debugSpriteSelectedMax = 0;
+		switch (debugSpriteSelected)
+		{
+			#region Normal
+			case 0:
+			var sprIdle = spr_MysticBlock_Normal_Idle;
+			var sprReady = spr_MysticBlock_Normal_Ready;
+			var sprAttack = spr_MysticBlock_Normal_Attack;
+			var sprHurt = spr_MysticBlock_Normal_Hurt;
+			var sprToplessIdle = spr_MysticBlock_Normal_ToplessIdle;
+			var sprToplessReady = spr_MysticBlock_Normal_ToplessReady;
+			var sprToplessAttack = spr_MysticBlock_Normal_ToplessAttack;
+			var sprToplessHurt = spr_MysticBlock_Normal_ToplessHurt;
+			break;
+			#endregion
+		}
+		debugSprite = sprIdle;
+		debugIndex = 0;
+		debugStateSelectedMax = 0;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var debugObj = instance_create_layer(x,y,"Environment",obj_MysticBlock);
+			debugObj.character = debugSpriteSelected;
+			debugObj.sprIdle = sprIdle;
+			debugObj.sprReady = sprReady;
+			debugObj.sprAttack = sprAttack;
+			debugObj.sprHurt = sprHurt;
+			debugObj.sprToplessIdle = sprToplessIdle;
+			debugObj.sprToplessReady = sprToplessReady;
+			debugObj.sprToplessAttack = sprToplessAttack;
+			debugObj.sprToplessHurt = sprToplessHurt;
+			debugObj.sprite_index = sprIdle;
+			debugObj.image_xscale = debugXScale;
+			debugObj.image_yscale = debugYScale;
 		}
 		break;
 		#endregion

@@ -9,117 +9,193 @@ if (!global.pause)
 	switch (page)
 	{
 		case 0:
-		//Shine Movement
-	
-		xx += hsp;
-		if (xx >= (sprite_get_width(sprite_index) * (4 * image_xscale))) xx -= (sprite_get_width(sprite_index) * (4 * image_xscale));
-		
-		//Konami Code
-		
-		switch (codeState)
+		if (canBeInteracted)
 		{
-			case 0:
-			if ((keyUpPressed) or (keyboard_check_pressed(vk_up)))
-			{
-				codeState += 1;
-			}
-			break;
+			//Variables
 			
-			case 1:
-			if ((keyUpPressed) or (keyboard_check_pressed(vk_up)))
-			{
-				codeState += 1;
-			}
-			break;
+			cameraY = lerp(cameraY,210 * (introState > 3),.002);
+			blackAlphaVal = lerp(blackAlphaVal,!(introState > 1),.02);
+			y = ystart + cameraY;
 			
-			case 2:
-			if ((keyDownPressed) or (keyboard_check_pressed(vk_down)))
-			{
-				codeState += 1;
-			}
-			break;
+			//Shine Movement
 			
-			case 3:
-			if ((keyDownPressed) or (keyboard_check_pressed(vk_down)))
-			{
-				codeState += 1;
-			}
-			break;
+			xx += hsp;
+			if (xx >= (sprite_get_width(sprite_index) * (4 * image_xscale))) xx -= (sprite_get_width(sprite_index) * (4 * image_xscale));
 			
-			case 4:
-			if ((keyLeftPressed) or (keyboard_check_pressed(vk_left)))
-			{
-				codeState += 1;
-			}
-			break;
+			//Konami Code
 			
-			case 5:
-			if ((keyRightPressed) or (keyboard_check_pressed(vk_right)))
+			switch (codeState)
 			{
-				codeState += 1;
+				case 0:
+				if ((keyUpPressed) or (keyboard_check_pressed(vk_up)))
+				{
+					codeState += 1;
+				}
+				break;
+				
+				case 1:
+				if ((keyUpPressed) or (keyboard_check_pressed(vk_up)))
+				{
+					codeState += 1;
+				}
+				break;
+				
+				case 2:
+				if ((keyDownPressed) or (keyboard_check_pressed(vk_down)))
+				{
+					codeState += 1;
+				}
+				break;
+				
+				case 3:
+				if ((keyDownPressed) or (keyboard_check_pressed(vk_down)))
+				{
+					codeState += 1;
+				}
+				break;
+				
+				case 4:
+				if ((keyLeftPressed) or (keyboard_check_pressed(vk_left)))
+				{
+					codeState += 1;
+				}
+				break;
+				
+				case 5:
+				if ((keyRightPressed) or (keyboard_check_pressed(vk_right)))
+				{
+					codeState += 1;
+				}
+				break;
+				
+				case 6:
+				if ((keyLeftPressed) or (keyboard_check_pressed(vk_left)))
+				{
+					codeState += 1;
+				}
+				break;
+				
+				case 7:
+				if ((keyRightPressed) or (keyboard_check_pressed(vk_right)))
+				{
+					codeState += 1;
+				}
+				break;
+				
+				case 8:
+				if ((keyAttackPressed) or (keyboard_check_pressed(ord("B"))))
+				{
+					codeState += 1;
+				}
+				break;
+				
+				case 9:
+				if ((keyJumpPressed) or (keyboard_check_pressed(ord("A"))))
+				{
+					codeState += 1;
+				}
+				break;
+				
+				case 10:
+				if (keyStartPressed)
+				{
+					io_clear();
+					if (audio_is_playing(snd_Konami)) audio_stop_sound(snd_Konami);
+					audio_play_sound(snd_Konami,0,false);
+					codeState = 0;
+				}
+				break;
 			}
-			break;
 			
-			case 6:
-			if ((keyLeftPressed) or (keyboard_check_pressed(vk_left)))
-			{
-				codeState += 1;
-			}
-			break;
+			//Go To Save Page
 			
-			case 7:
-			if ((keyRightPressed) or (keyboard_check_pressed(vk_right)))
-			{
-				codeState += 1;
-			}
-			break;
-			
-			case 8:
-			if ((keyAttackPressed) or (keyboard_check_pressed(ord("B"))))
-			{
-				codeState += 1;
-			}
-			break;
-			
-			case 9:
-			if ((keyJumpPressed) or (keyboard_check_pressed(ord("A"))))
-			{
-				codeState += 1;
-			}
-			break;
-			
-			case 10:
 			if (keyStartPressed)
 			{
-				if (audio_is_playing(snd_Konami)) audio_stop_sound(snd_Konami);
-				audio_play_sound(snd_Konami,0,false);
 				codeState = 0;
+				
+				var demo = false;
+				demo = true;
+				if (demo)
+				{
+					if (!instance_exists(obj_Fade))
+					{
+						if (audio_is_playing(snd_Enter)) audio_stop_sound(snd_Enter);
+						audio_play_sound(snd_Enter,0,false);
+						if ((!global.debug) and (global.canSave)) scr_LoadGame(global.selectedSave);
+						var fade = instance_create_depth(x,y,-999,obj_Fade);
+						fade.targetRoom = rm_StageSelect_Demo;
+						fade.alpha = 1;
+						fade.state = 1;
+					}
+				}
+				else
+				{
+					page = 1;
+					var button = instance_create_depth(4,4,depth,obj_Menu_Button);
+					button.owner = id;
+					button.sprite_index = spr_Menu_Saves_Box;
+					button.state = "saveSlot";
+					button.number = 0;
+					var button = instance_create_depth(185,58,depth,obj_Menu_Button);
+					button.owner = id;
+					button.sprite_index = spr_Menu_Saves_Box;
+					button.state = "saveSlot";
+					button.number = 1;
+					var button = instance_create_depth(366,4,depth,obj_Menu_Button);
+					button.owner = id;
+					button.sprite_index = spr_Menu_Saves_Box;
+					button.state = "saveSlot";
+					button.number = 2;
+				}
 			}
-			break;
 		}
 		
-		//Go To Save Page
-		
-		if (keyStartPressed)
+		#region Timer
+		if (introStateTimer > 0)
 		{
-			codeState = 0;
-			page = 1;
-			var button = instance_create_depth(4,4,depth,obj_Menu_Button);
-			button.owner = id;
-			button.sprite_index = spr_Menu_Saves_Box;
-			button.state = "saveSlot";
-			button.number = 0;
-			var button = instance_create_depth(185,58,depth,obj_Menu_Button);
-			button.owner = id;
-			button.sprite_index = spr_Menu_Saves_Box;
-			button.state = "saveSlot";
-			button.number = 1;
-			var button = instance_create_depth(366,4,depth,obj_Menu_Button);
-			button.owner = id;
-			button.sprite_index = spr_Menu_Saves_Box;
-			button.state = "saveSlot";
-			button.number = 2;
+			introStateTimer -= 1;
 		}
+		else if (introStateTimer == 0)
+		{
+			switch (introState)
+			{
+				case 0:
+				//Create The Star
+				if (audio_is_playing(snd_TitleStar)) audio_stop_sound(snd_TitleStar);
+				audio_play_sound(snd_TitleStar,0,false);
+				var par = instance_create_depth(-50,135,-999,obj_Particle);
+				par.sprite_index = spr_TitleStar;
+				par.hsp = 8;
+				par.scale = 1.5;
+				par.hasAfterimage = true;
+				par.destroyTimer = 210;
+				introStateTimer = 180;
+				break;
+				
+				case 1:
+				//Stop Alpha Box
+				introStateTimer = 0;
+				break;
+				
+				case 2:
+				//Title Appears With Music - Interactable
+				if (!audio_is_playing(mus_TitleDemo))
+				{
+					audio_stop_all();
+					scr_PlayMusic(false,mus_TitleDemo,0,true);
+				}
+				canBeInteracted = true;
+				introStateTimer = 60;
+				break;
+				
+				case 3:
+				//Move To The Moon
+				introStateTimer = -1;
+				break;
+			}
+			introState += 1;
+		}
+		#endregion
 		
 		//End The Game
 		

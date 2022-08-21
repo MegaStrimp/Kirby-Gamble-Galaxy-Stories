@@ -68,7 +68,7 @@ if (!global.pause)
 	}
 	else if (particleTimer == 0)
 	{
-		var par = instance_create_depth(x,y,depth + 1,obj_Particle);
+		var par = instance_create_depth(x + irandom_range(-10,10),y + irandom_range(-10,10),depth + 1,obj_Particle);
 		par.sprite_index = sprTrail;
 		par.direction = irandom_range(-10,10) - path_orientation;
 		par.spdBuiltIn = irandom_range(3,6);

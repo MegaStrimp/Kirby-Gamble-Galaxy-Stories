@@ -33,7 +33,14 @@ function scr_Player_States_Swallow()
 			{
 				if (swallowAction == 0)
 				{
-					sprite_index = sprSwallow;
+					if (sucked > 2)
+					{
+						sprite_index = sprHardSwallow;
+					}
+					else
+					{
+						sprite_index = sprSwallow;
+					}
 					image_index = 0;
 					var par = instance_create_depth(x + (12 * choose(-1,1)),y - 6 + irandom_range(-3,3),depth - 1,obj_Particle);
 					par.sprite_index = spr_Particle_Shine1;

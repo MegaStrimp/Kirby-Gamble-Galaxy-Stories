@@ -51,7 +51,7 @@ switch (room)
 	#endregion
 	
 	#region yLimit2
-	if (cameraX > 2760 - viewWidth)
+	if ((cameraX > 2760 - viewWidth) and (cameraY <= 744 - viewHeight))
 	{
 		yLimit2 = room_height - 744;
 	}
@@ -321,6 +321,14 @@ if ((!debugCamera) and (objectFollowing == -1))
 	{
 		switch (room)
 		{
+			case rm_Title:
+			cameraX = 0;
+			with (obj_Title)
+			{
+				other.cameraY = cameraY;
+			}
+			break;
+			
 			case rm_StageSelect:
 			if (instance_exists(obj_StageSelect))
 			{

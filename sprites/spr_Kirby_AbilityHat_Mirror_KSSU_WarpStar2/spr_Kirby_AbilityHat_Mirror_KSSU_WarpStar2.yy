@@ -2,20 +2,20 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
-  "origin": 9,
+  "origin": 8,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 29,
+  "bbox_right": 27,
   "bbox_top": 0,
-  "bbox_bottom": 14,
+  "bbox_bottom": 22,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "width": 30,
-  "height": 15,
+  "height": 31,
   "textureGroupId": {
     "name": "Characters",
     "path": "texturegroups/Characters",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"ae18e511-17de-4873-838c-b71adc05bc31","path":"sprites/spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2/spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ae18e511-17de-4873-838c-b71adc05bc31","path":"sprites/spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2/spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2.yy",},"LayerId":{"name":"713a2cf1-99b9-42ac-a245-3b4a4f21b89e","path":"sprites/spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2/spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2","path":"sprites/spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2/spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2.yy",},"resourceVersion":"1.0","name":"ae18e511-17de-4873-838c-b71adc05bc31","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"b5cd1d27-e0c3-46e8-b157-aa6d880b4dcd","path":"sprites/spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2/spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"b5cd1d27-e0c3-46e8-b157-aa6d880b4dcd","path":"sprites/spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2/spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2.yy",},"LayerId":{"name":"713a2cf1-99b9-42ac-a245-3b4a4f21b89e","path":"sprites/spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2/spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2","path":"sprites/spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2/spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2.yy",},"resourceVersion":"1.0","name":"b5cd1d27-e0c3-46e8-b157-aa6d880b4dcd","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2","path":"sprites/spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2/spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"d10a39b5-d6d2-4438-8adb-b0afdf1fc528","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ae18e511-17de-4873-838c-b71adc05bc31","path":"sprites/spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2/spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"954952ac-8a10-4fd6-8a7a-c07452766c0f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b5cd1d27-e0c3-46e8-b157-aa6d880b4dcd","path":"sprites/spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2/spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 3,
-    "yorigin": 26,
+    "xorigin": 30,
+    "yorigin": 31,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2","path":"sprites/spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2/spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2.yy",},

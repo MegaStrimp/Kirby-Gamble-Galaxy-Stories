@@ -32,8 +32,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Stage Elements",
-    "path": "folders/Objects/Gameplay/Stage Elements.yy",
+    "name": "Normal",
+    "path": "folders/Objects/Gameplay/Enemies/Normal.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_WaddleBlock",

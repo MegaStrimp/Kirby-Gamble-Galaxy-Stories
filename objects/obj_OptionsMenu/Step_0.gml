@@ -112,7 +112,16 @@ if (!global.pause)
 		{
 			scr_SaveConfig("config.ini");
 			var fade = instance_create_depth(x,y,-999,obj_Fade);
-			fade.targetRoom = rm_MainMenu;
+			var demo = false;
+			demo = true;
+			if (demo)
+			{
+				fade.targetRoom = rm_StageSelect_Demo;
+			}
+			else
+			{
+				fade.targetRoom = rm_MainMenu;
+			}
 			goBack = false;
 		}
 		break;

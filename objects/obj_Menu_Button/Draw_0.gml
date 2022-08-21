@@ -42,9 +42,22 @@ switch (state)
 	}
 	break;
 	
+	case "back":
+	if (canChangeImageIndex)
+	{
+		var selected = 0;
+		if ((instance_exists(owner)) and (owner.selection == state)) selected = 1;
+		draw_sprite(sprite_index,selected,x,y);
+	}
+	else
+	{
+		draw_self();
+	}
+	break;
+	
 	case "mainMenu":
 	var selected = 0;
-	if ((instance_exists(obj_MainMenu)) and (obj_MainMenu.selection == index)) selected = 1;
+	if ((instance_exists(owner)) and (owner.selection == index)) selected = 1;
 	draw_sprite(sprite_index,selected,x,y);
 	break;
 	

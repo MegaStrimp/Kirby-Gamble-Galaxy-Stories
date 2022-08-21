@@ -634,7 +634,16 @@ if ((gamePaused) and (visible))
 		        pauseFade.fade = 1;
 				var fadeTrans = instance_create_depth(0,0,depth - 1,obj_Fade);
 				pauseFade.alphaSpd = .02;
-				fadeTrans.targetRoom = rm_MainMenu;
+				var demo = false;
+				demo = true;
+				if (demo)
+				{
+					fadeTrans.targetRoom = rm_StageSelect_Demo;
+				}
+				else
+				{
+					fadeTrans.targetRoom = rm_MainMenu;
+				}
 			}
 		}
     }

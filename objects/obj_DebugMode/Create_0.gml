@@ -38,7 +38,6 @@ enum debugObject
 	bombBlock,
 	bombSolidBlock,
 	bombSolidBlockInvis,
-	waddleBlock,
 	movingCloud,
 	bumper,
 	spring,
@@ -67,6 +66,7 @@ enum debugObject
 	sirKibble,
 	gordo,
 	bloodGordo,
+	waddleBlock,
 	shotzo,
 	mysticDoo,
 	bouncy,
@@ -111,6 +111,7 @@ enum debugObject
 	flamer,
 	chuckie,
 	walky,
+	mysticBlock,
 	
 	IMSICKOFTHISGUY,
 	

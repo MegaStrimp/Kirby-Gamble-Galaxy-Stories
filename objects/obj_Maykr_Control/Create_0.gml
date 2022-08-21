@@ -88,7 +88,6 @@ enum maykrObjects
 	bobo,
 	foley,
 	nidoo,
-	como,
 	cairn,
 	bomber,
 	simirror,
@@ -105,6 +104,8 @@ enum maykrObjects
 	chuckie,
 	walky,
 	enemiesEnd,
+	
+	como,
 	
 	itemsStart,
 	pointStarYellow,

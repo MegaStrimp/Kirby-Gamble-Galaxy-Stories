@@ -43,9 +43,17 @@ switch (page)
 draw_set_font(fnt_Menu);
 draw_set_color(c_white);
 draw_set_valign(fa_bottom);
-draw_text(6,room_height,"Version - " + string(global.versionNumber));
+draw_text(6,270 + cameraY,"Version - " + string(global.versionNumber));
 draw_set_valign(fa_top);
 
 //Konami
 
 if (audio_is_playing(snd_Konami)) draw_sprite(spr_Konami,0,0,0);
+
+//Black Alpha Box
+
+draw_set_alpha(blackAlphaVal);
+draw_set_color(c_black);
+draw_rectangle(0,0,480,480,false);
+draw_set_color(c_white);
+draw_set_alpha(1);

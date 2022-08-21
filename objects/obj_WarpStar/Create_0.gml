@@ -1,5 +1,9 @@
 ///@description Initialize Variables
 
+//Randomize
+
+randomize();
+
 //Physics
 
 vsp = 0;
@@ -33,4 +37,4 @@ walkDirY = 1;
 
 setupTimer = 0;
 particleTimer = -1;
-particleTimerMax = 15;
+particleTimerMax = 3;

@@ -443,6 +443,8 @@ enum damageTypes
 
 enum enemyAttacks
 {
+	mysticBlockFirebar,
+	mysticBlockShield,
 	poppyBroSr_bombThrow,
 	poppyBroSr_bombThrowTripleJump,
 	poppyBroSr_dash
@@ -714,7 +716,7 @@ enum talkingCharacter
 #endregion
 
 #region Global Variables
-global.versionNumber = "0.4.1";
+global.versionNumber = "0.4.2";
 
 global.selectedSave = "Save1.ini";
 global.hpMax = 5;
@@ -738,7 +740,7 @@ global.pointStars = 0;
 global.goldenTomato = false;
 global.stageNumber = 0;
 global.debug = true;
-global.debug = false;
+//global.debug = false;
 //show_debug_overlay(global.debug);
 global.pause = false;
 global.cutscene = false;

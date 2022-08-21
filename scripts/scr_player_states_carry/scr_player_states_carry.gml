@@ -196,21 +196,21 @@ function scr_Player_States_Carry()
 						mixRosterIcon[i] = spr_Hud_Icon_Kirby;
 						i += 1;
 						
-						if (global.cutterAbilityKills >= global.cutterAbilityKillsTarget)
-						{
+						//if (global.cutterAbilityKills >= global.cutterAbilityKillsTarget)
+						//{
 							mixRosterAbility[i] = playerAbilities.cutter;
 							mixRosterText[i] = spr_Hud_AbilityText_Cutter;
 							mixRosterIcon[i] = spr_Hud_Icon_Cutter;
 							i += 1;
-						}
+						//}
 						
-						if (global.beamAbilityKills >= global.beamAbilityKillsTarget)
-						{
+						//if (global.beamAbilityKills >= global.beamAbilityKillsTarget)
+						//{
 							mixRosterAbility[i] = playerAbilities.beam;
 							mixRosterText[i] = spr_Hud_AbilityText_Beam;
 							mixRosterIcon[i] = spr_Hud_Icon_Beam;
 							i += 1;
-						}
+						//}
 						
 						if (global.mysticBeamAbilityKills >= global.mysticBeamAbilityKillsTarget)
 						{
@@ -220,29 +220,29 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 						
-						if (global.stoneAbilityKills >= global.stoneAbilityKillsTarget)
-						{
+						//if (global.stoneAbilityKills >= global.stoneAbilityKillsTarget)
+						//{
 							mixRosterAbility[i] = playerAbilities.stone;
 							mixRosterText[i] = spr_Hud_AbilityText_Stone;
 							mixRosterIcon[i] = spr_Hud_Icon_Stone;
 							i += 1;
-						}
+						//}
 						
-						if (global.ufoAbilityKills >= global.ufoAbilityKillsTarget)
-						{
+						//if (global.ufoAbilityKills >= global.ufoAbilityKillsTarget)
+						//{
 							mixRosterAbility[i] = playerAbilities.ufo;
 							mixRosterText[i] = spr_Hud_AbilityText_Ufo;
 							mixRosterIcon[i] = spr_Hud_Icon_Ufo;
 							i += 1;
-						}
+						//}
 						
-						if (global.mirrorAbilityKills >= global.mirrorAbilityKillsTarget)
-						{
+						//if (global.mirrorAbilityKills >= global.mirrorAbilityKillsTarget)
+						//{
 							mixRosterAbility[i] = playerAbilities.mirror;
 							mixRosterText[i] = spr_Hud_AbilityText_Mirror;
 							mixRosterIcon[i] = spr_Hud_Icon_Mirror;
 							i += 1;
-						}
+						//}
 						
 						if (global.ninjaAbilityKills >= global.ninjaAbilityKillsTarget)
 						{
@@ -252,21 +252,21 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 						
-						if (global.bombAbilityKills >= global.bombAbilityKillsTarget)
-						{
+						//if (global.bombAbilityKills >= global.bombAbilityKillsTarget)
+						//{
 							mixRosterAbility[i] = playerAbilities.bomb;
 							mixRosterText[i] = spr_Hud_AbilityText_Bomb;
 							mixRosterIcon[i] = spr_Hud_Icon_Bomb;
 							i += 1;
-						}
+						//}
 						
-						if (global.fireAbilityKills >= global.fireAbilityKillsTarget)
-						{
+						//if (global.fireAbilityKills >= global.fireAbilityKillsTarget)
+						//{
 							mixRosterAbility[i] = playerAbilities.fire;
 							mixRosterText[i] = spr_Hud_AbilityText_Fire;
 							mixRosterIcon[i] = spr_Hud_Icon_Fire;
 							i += 1;
-						}
+						//}
 						
 						if (global.mysticFireAbilityKills >= global.mysticFireAbilityKillsTarget)
 						{
@@ -284,13 +284,13 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 						
-						if (global.sparkAbilityKills >= global.sparkAbilityKillsTarget)
-						{
+						//if (global.sparkAbilityKills >= global.sparkAbilityKillsTarget)
+						//{
 							mixRosterAbility[i] = playerAbilities.spark;
 							mixRosterText[i] = spr_Hud_AbilityText_Spark;
 							mixRosterIcon[i] = spr_Hud_Icon_Spark;
 							i += 1;
-						}
+						//}
 						
 						if (global.yoyoAbilityKills >= global.yoyoAbilityKillsTarget)
 						{

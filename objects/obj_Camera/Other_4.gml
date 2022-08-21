@@ -20,18 +20,17 @@ yLimit2Final = 0;
 
 switch (room)
 {
+	case rm_Title:
+	{
+		cameraX = 0;
+		cameraY = 0;
+	}
+	break;
+	
 	case rm_StageSelect:
 	{
 		cameraX = (obj_StageSelect.x - ((viewWidth / zoom) / 2) + ((offsetX + cinematicXOffset) / zoom));
 		cameraY = (obj_StageSelect.y - ((viewHeight / zoom) / 2) + ((offsetY + cinematicYOffset) / zoom));
-	}
-	break;
-	
-	case rm_Cutscene_Intro:
-	{
-		x = 24;
-		y = 840;
-		path_start(pth_Cutscene_Intro,1,path_action_stop,0);
 	}
 	break;
 	

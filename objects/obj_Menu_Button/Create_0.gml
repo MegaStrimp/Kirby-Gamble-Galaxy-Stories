@@ -11,3 +11,4 @@ targetRoom = rm_MainMenu;
 owner = -1;
 followCamera = false;
 imageIndex = 0;
+canChangeImageIndex = false;

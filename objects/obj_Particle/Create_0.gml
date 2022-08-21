@@ -48,6 +48,7 @@ angleSpd = 0;
 collisionX = -1;
 collisionY = -1;
 stopRotationAfterCollision = false;
+hasAfterimage = false;
 
 //Timers
 

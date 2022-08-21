@@ -583,7 +583,7 @@ if (!active)
 							for (var w = 0; w < 200; w++)
 							{
 								var tileIndex = tilemap_get(tileDebug,w,h);
-								if (tileIndex != 0)
+								if ((tileIndex != -1) and (tileIndex != 0))
 								{
 									file_text_write_string(savedFile,"tileDebug");
 									file_text_writeln(savedFile);
@@ -605,7 +605,7 @@ if (!active)
 							for (var w = 0; w < 200; w++)
 							{
 								var tileIndex = tilemap_get(tileAsteroidFieldsFront,w,h);
-								if (tileIndex != 0)
+								if ((tileIndex != -1) and (tileIndex != 0))
 								{
 									file_text_write_string(savedFile,"tileAsteroidFieldsFront");
 									file_text_writeln(savedFile);
@@ -627,7 +627,7 @@ if (!active)
 							for (var w = 0; w < 200; w++)
 							{
 								var tileIndex = tilemap_get(tileAsteroidFieldsFront3D1,w,h);
-								if (tileIndex != 0)
+								if ((tileIndex != -1) and (tileIndex != 0))
 								{
 									file_text_write_string(savedFile,"tileAsteroidFieldsFront3D1");
 									file_text_writeln(savedFile);
@@ -649,7 +649,7 @@ if (!active)
 							for (var w = 0; w < 200; w++)
 							{
 								var tileIndex = tilemap_get(tileAsteroidFieldsFront3D2,w,h);
-								if (tileIndex != 0)
+								if ((tileIndex != -1) and (tileIndex != 0))
 								{
 									file_text_write_string(savedFile,"tileAsteroidFieldsFront3D2");
 									file_text_writeln(savedFile);
@@ -663,6 +663,7 @@ if (!active)
 							}
 						}
 					}
+					
 					file_text_write_string(savedFile,"tileEnd");
 					file_text_writeln(savedFile);
 					#endregion

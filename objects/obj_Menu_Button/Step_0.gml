@@ -30,21 +30,21 @@ if (!global.pause)
 		
 		case "mainMenu":
 		mask_index = sprite_index;
-		if (instance_exists(obj_MainMenu))
+		if (instance_exists(owner))
 		{
 			if ((!instance_exists(obj_Fade)) and (mouse_check_button_pressed(mb_left)) and (position_meeting(mouse_x,mouse_y,self)))
 			{
-				if (obj_MainMenu.selection == index)
+				if (owner.selection == index)
 				{
 					if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 					audio_play_sound(snd_ButtonYes,0,false);
-					obj_MainMenu.select = true;
+					owner.select = true;
 				}
 				else
 				{
 					if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 					audio_play_sound(snd_BossHealth,0,false);
-					obj_MainMenu.selection = index;
+					owner.selection = index;
 				}
 			}
 		}

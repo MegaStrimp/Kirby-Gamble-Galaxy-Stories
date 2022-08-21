@@ -16,6 +16,14 @@ page = 0;
 selectedFile = 0;
 codeState = 0;
 select = false;
+cameraY = 0;
+canBeInteracted = false;
+introState = 0;
+blackAlphaVal = 1;
+
+//Timers
+
+introStateTimer = 30;
 
 //Save Files
 
