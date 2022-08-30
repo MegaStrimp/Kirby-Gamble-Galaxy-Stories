@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 35,
+  "bbox_right": 55,
   "bbox_top": 0,
-  "bbox_bottom": 60,
+  "bbox_bottom": 68,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 36,
-  "height": 61,
+  "width": 56,
+  "height": 69,
   "textureGroupId": {
     "name": "Enemies",
     "path": "texturegroups/Enemies",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"f4cf279b-04f9-4206-adc9-867dd8ba78c4","path":"sprites/spr_WhispyWoods_Normal_Hurt/spr_WhispyWoods_Normal_Hurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f4cf279b-04f9-4206-adc9-867dd8ba78c4","path":"sprites/spr_WhispyWoods_Normal_Hurt/spr_WhispyWoods_Normal_Hurt.yy",},"LayerId":{"name":"a1a8ea19-ea2d-44f4-9fb1-2f6b3b9d5143","path":"sprites/spr_WhispyWoods_Normal_Hurt/spr_WhispyWoods_Normal_Hurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_WhispyWoods_Normal_Hurt","path":"sprites/spr_WhispyWoods_Normal_Hurt/spr_WhispyWoods_Normal_Hurt.yy",},"resourceVersion":"1.0","name":"f4cf279b-04f9-4206-adc9-867dd8ba78c4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"21886726-c8a5-44cf-8f99-eafc29666c0a","path":"sprites/spr_WhispyWoods_Normal_Hurt/spr_WhispyWoods_Normal_Hurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"21886726-c8a5-44cf-8f99-eafc29666c0a","path":"sprites/spr_WhispyWoods_Normal_Hurt/spr_WhispyWoods_Normal_Hurt.yy",},"LayerId":{"name":"a1a8ea19-ea2d-44f4-9fb1-2f6b3b9d5143","path":"sprites/spr_WhispyWoods_Normal_Hurt/spr_WhispyWoods_Normal_Hurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_WhispyWoods_Normal_Hurt","path":"sprites/spr_WhispyWoods_Normal_Hurt/spr_WhispyWoods_Normal_Hurt.yy",},"resourceVersion":"1.0","name":"21886726-c8a5-44cf-8f99-eafc29666c0a","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_WhispyWoods_Normal_Hurt","path":"sprites/spr_WhispyWoods_Normal_Hurt/spr_WhispyWoods_Normal_Hurt.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"1143c49d-58ab-45d3-90b1-54aea8e233c7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f4cf279b-04f9-4206-adc9-867dd8ba78c4","path":"sprites/spr_WhispyWoods_Normal_Hurt/spr_WhispyWoods_Normal_Hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"7cf354c6-c947-423b-a061-7bb717d3c0a0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"21886726-c8a5-44cf-8f99-eafc29666c0a","path":"sprites/spr_WhispyWoods_Normal_Hurt/spr_WhispyWoods_Normal_Hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 16,
-    "yorigin": 32,
+    "xorigin": 19,
+    "yorigin": 40,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_WhispyWoods_Normal_Hurt","path":"sprites/spr_WhispyWoods_Normal_Hurt/spr_WhispyWoods_Normal_Hurt.yy",},
@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Normal",
-    "path": "folders/Sprites/Bosses/GGS/Whispy Woods/Normal.yy",
+    "name": "Face",
+    "path": "folders/Sprites/Bosses/GGS/Whispy Woods/Normal/Face.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_WhispyWoods_Normal_Hurt",

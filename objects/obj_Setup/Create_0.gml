@@ -443,11 +443,16 @@ enum damageTypes
 
 enum enemyAttacks
 {
-	mysticBlockFirebar,
-	mysticBlockShield,
+	mysticBlock_firebar,
+	mysticBlock_shield,
 	poppyBroSr_bombThrow,
 	poppyBroSr_bombThrowTripleJump,
-	poppyBroSr_dash
+	poppyBroSr_dash,
+	whispyWoods_airpuff,
+	whispyWoods_spike,
+	whispyWoods_throwObject,
+	whispyWoods_bigAirpuff,
+	whispyWoods_inhale
 }
 
 enum carriedItems
@@ -716,7 +721,7 @@ enum talkingCharacter
 #endregion
 
 #region Global Variables
-global.versionNumber = "0.4.2";
+global.versionNumber = "0.4.3";
 
 global.selectedSave = "Save1.ini";
 global.hpMax = 5;
@@ -754,11 +759,13 @@ global.healthbarMarkedEnemy = -1;
 global.musicPlaying = -1;
 global.gambleMaykrMenu = "Collision";
 global.maykrCanvas = rm_Maykr;
+global.loadedMaykrFile = -1;
 global.helperHud = false;
 global.isHub = false;
 global.halberdEscape = false;
 global.treasureGot = false;
 global.buildType = buildTypes.windows;
+//global.buildType = buildTypes.android;
 global.stageMusicIsPlaying = true;
 global.musicFade = 1;
 global.musicIntroTitle = "";
@@ -806,6 +813,47 @@ global.ultraSwordAbilityKillsTarget = 10;
 global.cosmicBladeAbilityKillsTarget = 10;
 #endregion
 
+#region Controller Setup
+global.playerGamepad[0] = -1;
+global.playerGamepad[1] = -1;
+
+for (var i = 0; i < gamepad_get_device_count(); i++)
+{
+	if (global.playerGamepad[0] == -1)
+	{
+		if gamepad_is_connected(i)
+	    {
+	        global.playerGamepad[0] = i;
+	    }
+	}
+	else if (global.playerGamepad[1] == -1)
+	{
+		if gamepad_is_connected(i)
+	    {
+	        global.playerGamepad[1] = i;
+	    }
+	}
+}
+
+for (var i = 0; i < 2; i++)
+{
+    global.stickLeftPressed[i] = false;
+    global.stickRightPressed[i] = false;
+    global.stickUpPressed[i] = false;
+    global.stickDownPressed[i] = false;
+	
+    global.stickLeftHeld[i] = false;
+    global.stickRightHeld[i] = false;
+    global.stickUpHeld[i] = false;
+    global.stickDownHeld[i] = false;
+	
+    global.stickLeftReleased[i] = false;
+    global.stickRightReleased[i] = false;
+    global.stickUpReleased[i] = false;
+    global.stickDownReleased[i] = false;
+}
+#endregion
+
 global.saveLoaded = false;
 
 global.discordDetailText = "Startup";
@@ -814,6 +862,10 @@ global.discordLargeImage = "ggs_icon";
 global.discordLargeImageText = "Kirby Gamble Galaxy Stories - " + global.versionNumber;
 global.discordSmallImage = "teamgamble_icon";
 global.discordSmallImageText = "Team Gamble";
+#endregion
+
+#region Timers
+controllerPressedResetTimer = -1;
 #endregion
 
 #region Load Game
@@ -837,8 +889,9 @@ global.storyModeUnlocked = false;
 #region Fonts
 global.bitmapKSSU = font_add_sprite_ext(spr_Hud_Dialogue_Font_Kssu,"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz .!",false,0);
 global.fontDialogueDefaultKanji = font_add(working_directory + "ARIALUNI.TTF",12,false,false,32,127);
-global.fontMaykrBlue = font_add_sprite_ext(spr_Maykr_Font_Blue,"abcdefghijklmnopqrstuvwxyz",false,0);
-global.fontMaykrRed = font_add_sprite_ext(spr_Maykr_Font_Red,"abcdefghijklmnopqrstuvwxyz",false,0);
+global.fontMaykrBlue = font_add_sprite_ext(spr_Maykr_Font_Blue,"abcdefghijklmnopqrstuvwxyz0123456789.!?/()",false,0);
+global.fontMaykrRed = font_add_sprite_ext(spr_Maykr_Font_Red,"abcdefghijklmnopqrstuvwxyz0123456789.!?/()",false,0);
+global.fontMaykrWhite = font_add_sprite_ext(spr_Maykr_Font_White,"abcdefghijklmnopqrstuvwxyz0123456789.!?/()",false,0);
 #endregion
 
 #region Subtitiles

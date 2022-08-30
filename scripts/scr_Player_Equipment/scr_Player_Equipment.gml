@@ -124,31 +124,31 @@ function scr_Player_Equipment(argument0,argument1)
 				switch (sprite_index)
 				{
 					case sprBeamCharge:
-					equipmentIndex = spr_Kirby_Equipment_Beam_KSSU_Charge;
-					break;
-					
-					case sprBeamAttack1:
-					equipmentIndex = spr_Kirby_Equipment_Beam_KSSU_Attack1;
-					break;
-					
-					case sprBeamAttack2:
-					equipmentIndex = spr_Kirby_Equipment_Beam_KSSU_Attack2;
-					break;
-					
-					case sprBeamAttack3:
-					equipmentIndex = spr_Kirby_Equipment_Beam_KSSU_Attack3;
-					break;
-					
-					case sprBeamAttack4:
-					equipmentIndex = spr_Kirby_Equipment_Beam_KSSU_Attack4;
-					break;
-					
-					case sprBeamAttack5:
-					equipmentIndex = spr_Kirby_Equipment_Beam_KSSU_Attack5;
+					equipmentIndex = spr_Kirby_Equipment_MysticBeam_KSSU_Charge;
 					break;
 					
 					case sprMysticBeamAttack1:
-					equipmentIndex = spr_Kirby_Equipment_Beam_KSSU_Attack3;
+					equipmentIndex = spr_Kirby_Equipment_MysticBeam_KSSU_Attack3;
+					break;
+					
+					case sprBeamAttack1:
+					equipmentIndex = spr_Kirby_Equipment_MysticBeam_KSSU_Attack1;
+					break;
+					
+					case sprBeamAttack2:
+					equipmentIndex = spr_Kirby_Equipment_MysticBeam_KSSU_Attack2;
+					break;
+					
+					case sprBeamAttack3:
+					equipmentIndex = spr_Kirby_Equipment_MysticBeam_KSSU_Attack3;
+					break;
+					
+					case sprBeamAttack4:
+					equipmentIndex = spr_Kirby_Equipment_MysticBeam_KSSU_Attack4;
+					break;
+					
+					case sprBeamAttack5:
+					equipmentIndex = spr_Kirby_Equipment_MysticBeam_KSSU_Attack5;
 					break;
 				}
 				break;

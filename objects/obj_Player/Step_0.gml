@@ -51,7 +51,7 @@ if ((clampToView) and (!death))
 
 if ((((player == 0) and (global.hpP1 == 0)) or ((player == 1) and (global.hpP2 == 0))) and (!death))
 {
-	if ((global.goldenTomato) and (global.gamemode != gamemodes.maykr))
+	if (global.goldenTomato)
 	{
 		if (audio_is_playing(snd_Charge_Ready)) audio_stop_sound(snd_Charge_Ready);
 		audio_play_sound(snd_Charge_Ready,0,false);
@@ -72,6 +72,7 @@ if ((((player == 0) and (global.hpP1 == 0)) or ((player == 1) and (global.hpP2 =
 		audio_play_sound(snd_Hurt,0,false);
 		global.healthbarMarkedEnemy = -1;
 		death = true;
+		blackAlphaBox = true;
 		global.pause = true;
 		if (instance_exists(obj_Camera)) obj_Camera.freezeFrameTimer = -1;
 		sprite_index = sprHurt;
@@ -1742,34 +1743,31 @@ if (setupTimer > 0)
 }
 else if (setupTimer == 0)
 {
-	if (global.gamemode != gamemodes.maykr)
+	if ((playerFamiliar != "none") and ((playerFamiliar == "Gamble") + (playerCharacter = playerCharacters.gamble) != 2))
 	{
-		if ((playerFamiliar != "none") and ((playerFamiliar == "Gamble") + (playerCharacter = playerCharacters.gamble) != 2))
+		var followerObject = instance_create_depth(x + (30 * -dir),y - 15,depth,obj_Familiar);
+		followerObject.owner = id;
+		followerObject.character = playerFamiliar;
+	}
+	if ((global.hasCoop) and (instance_number(obj_Player) == 1))
+	{
+		var xx = x;
+		if (!place_meeting(x - 24,y,obj_ParentWall))
 		{
-			var followerObject = instance_create_depth(x + (30 * -dir),y - 15,depth,obj_Familiar);
-			followerObject.owner = id;
-			followerObject.character = playerFamiliar;
+			xx = x - 24;
 		}
-		if ((global.hasCoop) and (instance_number(obj_Player) == 1))
+		else if (!place_meeting(x + 24,y,obj_ParentWall))
 		{
-			var xx = x;
-			if (!place_meeting(x - 24,y,obj_ParentWall))
-			{
-				xx = x - 24;
-			}
-			else if (!place_meeting(x + 24,y,obj_ParentWall))
-			{
-				xx = x + 24;
-			}
-			else
-			{
-				xx = x;
-			}
+			xx = x + 24;
+		}
+		else
+		{
+			xx = x;
+		}
 			
-			var secondPlayer = instance_create_depth(xx,y,depth,obj_Player);
-			secondPlayer.player = 1;
-			player = 0;
-		}
+		var secondPlayer = instance_create_depth(xx,y,depth,obj_Player);
+		secondPlayer.player = 1;
+		player = 0;
 	}
 	setupTimer = -1;
 }
@@ -3477,4 +3475,16 @@ else if (scanTimer == 0)
 	state = playerStates.swallow;
 	attackTimer = 0;
 	scanTimer = -1;
+}
+
+//Mic Flash Timer
+
+if (micFlashTimer > 0)
+{
+	micFlashTimer -= 1;
+}
+else if (micFlashTimer == 0)
+{
+	micFlash = !micFlash;
+	micFlashTimer = micFlashTimerMax;
 }

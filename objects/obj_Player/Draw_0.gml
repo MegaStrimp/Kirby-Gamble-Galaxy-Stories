@@ -24,6 +24,16 @@ if ((player == 0) and ((blackAlphaBox) or (global.tutorial)))
 	draw_set_alpha(1);
 }
 
+//Mic Alpha Box
+
+if (micFlash)
+{
+	draw_set_alpha(.75);
+	draw_set_color(c_orange);
+	draw_rectangle(camera_get_view_x(gameView),camera_get_view_y(gameView),camera_get_view_x(gameView) + camera_get_view_width(gameView),camera_get_view_y(gameView) + camera_get_view_height(gameView),0);
+	draw_set_alpha(1);
+}
+
 //Draw Self
 
 var paletteFlash = 1;

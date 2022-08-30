@@ -36,6 +36,9 @@ function scr_Player_States_Normal()
 		var attackDisableMovement = false;
 		if ((attack) and ((attackNumber != playerAttacks.ufoBeam) and (attackNumber != playerAttacks.ufoCharge) and (attackNumber != playerAttacks.ufoLaser))) attackDisableMovement = true;
 		
+		var attackDisableDir = false;
+		if (attackNumber == playerAttacks.ufoBeam) attackDisableDir = true;
+		
 		didJump = false;
 		#endregion
 		
@@ -126,12 +129,12 @@ function scr_Player_States_Normal()
 					if (!attackDisableMovement)
 					{
 						hsp += accel;
-						if (!runTurn) dir = 1;
+						if ((!runTurn) and (!attackDisableDir)) dir = 1;
 						if ((canRunTurn) and (carriedItem == carriedItems.none) and (grounded) and (run) and (playerAbility != playerAbilities.mirror) and (sign(hsp) != 0) and (sign(hsp) != sign(dir)))
 						{
 							if (audio_is_playing(snd_DashBegin)) audio_stop_sound(snd_DashBegin);
 							audio_play_sound(snd_DashBegin,0,false);
-							dir = -1;
+							if ((!runTurn) and (!attackDisableDir)) dir = -1;
 							runParticleNum = 0;
 							runParticleTimer = 0;
 							runTurn = true;
@@ -143,12 +146,12 @@ function scr_Player_States_Normal()
 					if (!attackDisableMovement)
 					{
 						hsp -= accel;
-						if (!runTurn) dir = -1;
+						if ((!runTurn) and (!attackDisableDir)) dir = -1;
 						if ((canRunTurn) and (carriedItem == carriedItems.none) and (grounded) and (run) and (playerAbility != playerAbilities.mirror) and (sign(hsp) != 0) and (sign(hsp) != sign(dir)))
 						{
 							if (audio_is_playing(snd_DashBegin)) audio_stop_sound(snd_DashBegin);
 							audio_play_sound(snd_DashBegin,0,false);
-							dir = 1;
+							if ((!runTurn) and (!attackDisableDir)) dir = 1;
 							runParticleNum = 0;
 							runParticleTimer = 0;
 							runTurn = true;
@@ -1685,7 +1688,10 @@ function scr_Player_States_Normal()
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
 							attack = true;
-							attackNumber = playerAttacks.ufoCharge;
+							attackNumber = playerAttacks.ufoBeam;
+							sprite_index = sprUfoAttack1;
+							image_index = 0;
+							//attackNumber = playerAttacks.ufoCharge;
 					    }
 						
 						if (attackNumber == playerAttacks.ufoCharge)

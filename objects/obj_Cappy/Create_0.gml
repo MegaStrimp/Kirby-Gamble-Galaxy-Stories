@@ -24,8 +24,9 @@ mask_index = spr_24SquareOriginless_Mask;
 sprIdleL = spr_Cappy_Normal_IdleL;
 sprIdleR = spr_Cappy_Normal_IdleR;
 sprShroomIdle = spr_Cappy_Normal_ShroomIdle;
-sprHurt = spr_Cappy_Normal_Hurt;
+sprHurtCapless = spr_Cappy_Normal_Hurt;
 sprShroom = spr_Cappy_Normal_Shroom;
+sprHurt = sprHurtCapless;
 
 //Other Variables
 

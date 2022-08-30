@@ -9,15 +9,15 @@ randomize();
 #endregion
 
 #region Physics
-accel = .015;
-movespeed = .75;
-jumpspeed = 3;
+decel = .05;
+movespeed = 2;
+jumpspeed = 4;
 gravNormal = .2;
-gravLimitNormal = 4;
+gravLimitNormal = 5;
 #endregion
 
 #region Sprites
-sprIdle = spr_PoppyBrosSr_Normal_Idle;
+sprIdle = spr_Wizzkid_Normal_Idle;
 sprIdleHat = spr_PoppyBrosSr_Normal_IdleHat;
 sprAttack = spr_PoppyBrosSr_Normal_Attack;
 sprAttackHat = spr_PoppyBrosSr_Normal_AttackHat;
@@ -26,40 +26,33 @@ sprHand = spr_PoppyBrosSr_Normal_Hand;
 sprHurt = spr_PoppyBrosSr_Normal_Hurt;
 sprDeath = spr_PoppyBrosSr_Normal_Death;
 
-sprBossIcon = spr_Healthbar_Boss_Icon_PoppyBrosSr;
+sprBossIcon = spr_Healthbar_Boss_Icon_Wizzkid;
 #endregion
 
 #region Other Variables
 paletteIndex = spr_PoppyBrosSr_Normal_Palette_BlueBomber;
-hp = 120;
+hp = 153;
 dmg = 1;
-ability = playerAbilities.bomb;
+ability = playerAbilities.mysticBeam;
 points = 2000;
-attack = false;
-attackNumber = -1;
-isAttacking = false;
-jumpCount = 0;
-dashDir = 1;
-walkDirX = -1;
-hatIndex = 0;
 isMiniBoss = true;
 hbSetup = true;
+healthbarIndex = 2;
 hasXKnockback = false;
 hasYKnockback = false;
 hasDeathKnockback = false;
-handIndex = 0;
-handX = 0;
-handY = 0;
-handPath = 0;
-handXOffset = 18;
-handYOffset = -4;
+
+slideTargetX = -1;
+attack = false;
+attackNumber = -1;
+isAttacking = false;
+
+collisionX = obj_EnemyWall;
 #endregion
 
 #region Timers
 attackReadyTimer = -1;
 attackStopTimer = -1;
-dashStopTimer = -1;
-dashStopTimerMax = 90;
-bombThrowTimer = -1;
-bombThrowTimerMax = 30;
+slideTimer = -1;
+slideTimerMax = 70;
 #endregion

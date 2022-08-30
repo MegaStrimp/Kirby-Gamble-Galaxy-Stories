@@ -17,6 +17,18 @@ function scr_Maykr_GetFromInventory(argument0)
 		spawnedSprite = spr_Maykr_Spawner_DebugWall;
 		break;
 		
+		case maykrObjects.debugWall24x24SlopeLeft:
+		spawnedItemIndex = obj_ParentWall;
+		spawnedSprite = spr_Maykr_Spawner_DebugWall;
+		spawnedSlopeType = 1;
+		break;
+		
+		case maykrObjects.debugWall24x24SlopeRight:
+		spawnedItemIndex = obj_ParentWall;
+		spawnedSprite = spr_Maykr_Spawner_DebugWall;
+		spawnedSlopeType = 1;
+		break;
+		
 		case maykrObjects.asteroidFieldsFront:
 		spawnedItemIndex = obj_ParentWall;
 		spawnedSprite = spr_Maykr_Spawner_AsteroidFieldsFront;
@@ -359,24 +371,130 @@ function scr_Maykr_GetFromInventory(argument0)
 		spawnedItemIndex = obj_PointStar;
 		spawnedSprite = spr_PointStar_Yellow_Idle;
 		spawnedState = 0;
+		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
+		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
 		break;
 		
 		case maykrObjects.pointStarGreen:
 		spawnedItemIndex = obj_PointStar;
 		spawnedSprite = spr_PointStar_Green_Idle;
 		spawnedState = 1;
+		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
+		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
 		break;
 		
 		case maykrObjects.pointStarRed:
 		spawnedItemIndex = obj_PointStar;
 		spawnedSprite = spr_PointStar_Red_Idle;
 		spawnedState = 2;
+		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
+		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
 		break;
 		
 		case maykrObjects.pointStarBlue:
 		spawnedItemIndex = obj_PointStar;
 		spawnedSprite = spr_PointStar_Blue_Idle;
 		spawnedState = 3;
+		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
+		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
+		break;
+		
+		case maykrObjects.food:
+		spawnedItemIndex = obj_Food;
+		spawnedSprite = spr_Food;
+		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
+		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
+		break;
+		
+		case maykrObjects.pepBrew:
+		spawnedItemIndex = obj_PepBrew;
+		spawnedSprite = spr_PepBrew;
+		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
+		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
+		break;
+		
+		case maykrObjects.maximTomato:
+		spawnedItemIndex = obj_MaximTomato;
+		spawnedSprite = spr_MaximTomato;
+		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
+		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
+		break;
+		
+		case maykrObjects.starBlock:
+		spawnedItemIndex = obj_StarBlock;
+		spawnedSprite = spr_StarBlock_Normal_Idle;
+		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
+		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
+		break;
+		
+		case maykrObjects.bigStarBlock:
+		spawnedItemIndex = obj_BigStarBlock;
+		spawnedSprite = spr_BigStarBlock_Normal_Idle;
+		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
+		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
+		break;
+		
+		case maykrObjects.crate:
+		spawnedItemIndex = obj_Crate;
+		spawnedSprite = spr_Crate_Normal_Idle;
+		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
+		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
+		break;
+		
+		case maykrObjects.bombBlock:
+		spawnedItemIndex = obj_BombBlock;
+		spawnedSprite = spr_BombBlock_Normal_Idle;
+		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
+		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
+		break;
+		
+		case maykrObjects.bombSolidBlock:
+		spawnedItemIndex = obj_BombSolidBlock;
+		spawnedSprite = spr_BombSolidBlock_Normal_Idle;
+		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
+		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
+		break;
+		
+		case maykrObjects.breakingWall:
+		spawnedItemIndex = obj_BreakingWall;
+		spawnedSprite = spr_BreakingWall_Normal_Idle;
+		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
+		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
+		break;
+		
+		case maykrObjects.cuttableGrass:
+		spawnedItemIndex = obj_CuttableGrass;
+		spawnedSprite = spr_CuttableGrass_Normal_Idle;
+		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
+		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
+		break;
+		
+		case maykrObjects.durableBlock:
+		spawnedItemIndex = obj_DurableBlock;
+		spawnedSprite = spr_DurableBlock_Normal_Idle;
+		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
+		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
+		break;
+		
+		case maykrObjects.eggPlant:
+		spawnedItemIndex = obj_EggPlant;
+		spawnedSprite = spr_EggPlant;
+		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
+		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
+		break;
+		
+		case maykrObjects.itemChest:
+		spawnedItemIndex = obj_ItemChest;
+		spawnedSprite = spr_ItemChest_Normal_Closed;
+		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
+		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
+		break;
+		
+		case maykrObjects.popFlower:
+		spawnedItemIndex = obj_PopFlower;
+		spawnedSprite = spr_PopFlower_GreenGreens_Closed;
+		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
+		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
 		break;
 		#endregion
 	}

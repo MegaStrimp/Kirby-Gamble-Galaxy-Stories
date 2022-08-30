@@ -45,6 +45,8 @@ if (!global.pause)
 		{
 			if (place_meeting(x,y,other))
 			{
+				if (audio_is_playing(snd_WarpStar1)) audio_stop_sound(snd_WarpStar1);
+				audio_play_sound(snd_WarpStar1,0,false);
 				other.active = true;
 				other.image_angle = 0;
 				dir = 1;
@@ -57,6 +59,14 @@ if (!global.pause)
 	}
 	else
 	{
+		if ((!instance_exists(obj_Fade)) and (path_position == 1))
+		{
+			if (audio_is_playing(snd_Enter)) audio_stop_sound(snd_Enter);
+			audio_play_sound(snd_Enter,0,false);
+			var fade = instance_create_depth(x,y,-999,obj_Fade);
+			fade.targetRoom = targetRoom;
+		}
+		
 		if (particleTimer == -1) particleTimer = particleTimerMax;
 	}
 	

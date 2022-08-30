@@ -50,13 +50,13 @@ if (!global.pause)
 			
 			if (distance_to_object(nearestPlayer) <= 120)
 			{
-				attackNumber = enemyAttacks.mysticBlockFirebar;
+				attackNumber = enemyAttacks.mysticBlock_firebar;
 				sprite_index = sprReadyFinal;
 				image_index = 0;
 			}
 			else if (distance_to_object(nearestPlayer) <= 480)
 			{
-				attackNumber = enemyAttacks.mysticBlockShield;
+				attackNumber = enemyAttacks.mysticBlock_shield;
 				sprite_index = sprReadyFinal;
 				image_index = 0;
 			}
@@ -71,7 +71,7 @@ if (!global.pause)
 			case 2:
 			switch (attackNumber)
 			{
-				case enemyAttacks.mysticBlockFirebar:
+				case enemyAttacks.mysticBlock_firebar:
 				if (audio_is_playing(snd_EnemyBeam)) audio_stop_sound(snd_EnemyBeam);
 				audio_play_sound(snd_EnemyBeam,0,false);
 				sprite_index = sprFirebarFinal;
@@ -123,7 +123,7 @@ if (!global.pause)
 				}
 				break;
 			
-				case enemyAttacks.mysticBlockShield:
+				case enemyAttacks.mysticBlock_shield:
 				sprite_index = sprAttackFinal;
 				image_index = 0;
 				attackState += 1;

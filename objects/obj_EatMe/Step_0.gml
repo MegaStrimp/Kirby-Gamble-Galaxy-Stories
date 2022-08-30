@@ -102,7 +102,7 @@ if (!global.pause)
 					}
 				}
 			}
-			if (global.gamemode != gamemodes.maykr) global.points += points;
+			global.points += points;
 			if ((instance_exists(obj_SquadControl)) and (squadType != -1))
 			{
 				obj_SquadControl.waveEnemyCount[obj_SquadControl.currentWave][squadType] += 1;

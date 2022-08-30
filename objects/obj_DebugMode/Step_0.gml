@@ -2936,7 +2936,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var sprIdleL = spr_Cappy_Normal_IdleL;
 			var sprIdleR = spr_Cappy_Normal_IdleR;
 			var sprShroomIdle = spr_Cappy_Normal_ShroomIdle;
-			var sprHurt = spr_Cappy_Normal_Hurt;
+			var sprHurtCapless = spr_Cappy_Normal_Hurt;
 			var sprShroom = spr_Cappy_Normal_Shroom;
 			debugPaletteNumberMax = 4;
 			switch (debugPaletteNumber)
@@ -2973,7 +2973,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var sprIdleL = spr_Cappy_Robo_IdleL;
 			var sprIdleR = spr_Cappy_Robo_IdleR;
 			var sprShroomIdle = spr_Cappy_Robo_ShroomIdle;
-			var sprHurt = spr_Cappy_Robo_Hurt;
+			var sprHurtCapless = spr_Cappy_Robo_Hurt;
 			var sprShroom = spr_Cappy_Robo_Shroom;
 			debugPaletteNumberMax = 0;
 			switch (debugPaletteNumber)
@@ -2999,7 +2999,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			debugObj.sprIdleL = sprIdleL;
 			debugObj.sprIdleR = sprIdleR;
 			debugObj.sprShroomIdle = sprShroomIdle;
-			debugObj.sprHurt = sprHurt;
+			debugObj.sprHurtCapless = sprHurtCapless;
 			debugObj.sprShroom = sprShroom;
 			debugObj.sprite_index = sprIdleL;
 			debugObj.paletteIndex = debugPaletteIndex;

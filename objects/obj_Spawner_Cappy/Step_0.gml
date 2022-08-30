@@ -49,7 +49,7 @@ else if (spawnTimer == 0)
 		spawnedEnemy.sprIdleL = spr_Cappy_Normal_IdleL;
 		spawnedEnemy.sprIdleR = spr_Cappy_Normal_IdleR;
 		spawnedEnemy.sprShroomIdle = spr_Cappy_Normal_ShroomIdle;
-		spawnedEnemy.sprHurt = spr_Cappy_Normal_Hurt;
+		spawnedEnemy.sprHurtCapless = spr_Cappy_Normal_Hurt;
 		spawnedEnemy.sprShroom = spr_Cappy_Normal_Shroom;
 		break;
 		
@@ -59,7 +59,7 @@ else if (spawnTimer == 0)
 		spawnedEnemy.sprIdleL = spr_Cappy_Robo_IdleL;
 		spawnedEnemy.sprIdleR = spr_Cappy_Robo_IdleR;
 		spawnedEnemy.sprShroomIdle = spr_Cappy_Robo_ShroomIdle;
-		spawnedEnemy.sprHurt = spr_Cappy_Robo_Hurt;
+		spawnedEnemy.sprHurtCapless = spr_Cappy_Robo_Hurt;
 		spawnedEnemy.sprShroom = spr_Cappy_Robo_Shroom;
 		break;
 	}

@@ -49,6 +49,7 @@ if (!global.pause)
 		
 		if (select)
 		{
+			global.familiarP1 = familiars.gamble;
 			var fade = instance_create_depth(x,y,-999,obj_Fade);
 			fade.targetRoom = rm_GreenGreens1;
 			select = false;
@@ -75,6 +76,7 @@ if (!global.pause)
 		
 		if (select)
 		{
+			global.familiarP1 = familiars.none;
 			var fade = instance_create_depth(x,y,-999,obj_Fade);
 			fade.targetRoom = rm_AsteroidFields1;
 			select = false;

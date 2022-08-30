@@ -59,6 +59,8 @@ if (!global.pause)
 			{
 				#region Apple
 				case 0:
+				if (audio_is_playing(snd_WhispyFallingApple)) audio_stop_sound(snd_WhispyFallingApple);
+				audio_play_sound(snd_WhispyFallingApple,0,false);
 				active = true;
 				hasGravity = true;
 				mask_index = sprite_index;
@@ -67,6 +69,8 @@ if (!global.pause)
 				
 				#region Gordo
 				case 1:
+				if (audio_is_playing(snd_WhispyFallingGordo)) audio_stop_sound(snd_WhispyFallingGordo);
+				audio_play_sound(snd_WhispyFallingGordo,0,false);
 				var obj = instance_create_depth(x,y,depth,obj_Gordo);
 				obj.state = 3;
 				obj.walkDirX = owner.dirX;
@@ -77,6 +81,8 @@ if (!global.pause)
 				
 				#region Como
 				case 2:
+				if (audio_is_playing(snd_WhispyFallingApple)) audio_stop_sound(snd_WhispyFallingApple);
+				audio_play_sound(snd_WhispyFallingApple,0,false);
 				var obj = instance_create_depth(x,y,depth,obj_Como);
 				instance_destroy();
 				break;
@@ -84,6 +90,8 @@ if (!global.pause)
 				
 				#region Waddle Dee
 				case 3:
+				if (audio_is_playing(snd_WhispyFallingApple)) audio_stop_sound(snd_WhispyFallingApple);
+				audio_play_sound(snd_WhispyFallingApple,0,false);
 				var obj = instance_create_depth(x,y,depth,obj_WaddleDee);
 				obj.state = 1;
 				obj.dirX = owner.dirX;

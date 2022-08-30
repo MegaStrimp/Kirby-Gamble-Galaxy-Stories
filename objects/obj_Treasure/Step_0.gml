@@ -36,7 +36,7 @@ if (!global.pause)
 		if (instance_exists(obj_Camera)) obj_Camera.freezeFrameTimer = -1;
 		#endregion
 		
-		if (global.gamemode != gamemodes.maykr) global.points += points;
+		global.points += points;
 		instance_destroy();
 	}
 	

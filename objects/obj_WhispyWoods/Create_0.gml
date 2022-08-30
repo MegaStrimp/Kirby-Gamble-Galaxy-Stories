@@ -15,6 +15,9 @@ gravLimitNormal = 5;
 sprIdle = spr_WhispyWoods_Normal_Idle;
 sprBlink = spr_WhispyWoods_Normal_Blink;
 sprSpit = spr_WhispyWoods_Normal_Spit;
+sprBigSpit = spr_WhispyWoods_Normal_BigSpit;
+sprHurt = spr_WhispyWoods_Normal_Hurt;
+sprDeath = spr_WhispyWoods_Normal_Death;
 sprGamble = spr_WhispyWoods_Normal_Gamble;
 sprGambleLeaf = spr_WhispyWoods_Normal_GambleLeaf;
 sprApple = spr_WhispyWoods_Normal_Apple;
@@ -22,10 +25,13 @@ sprBossIcon = spr_Healthbar_Boss_Icon_WhispyWoods;
 #endregion
 
 #region Other Variables
-hp = 500;
+hp = 550;
 dmg = 1;
 points = 200;
+canShakeX = false;
+canShakeY = false;
 isBoss = true;
+healthbarIndex = 3;
 hasXKnockback = false;
 hasYKnockback = false;
 
@@ -35,6 +41,8 @@ faceIndex = 0;
 gambleIndex = 0;
 gambleShake = false;
 spawnHealthbar = true;
+attackNumber = -1;
+idleAnimation = false;
 
 airpuffCount = 0;
 airpuffCountMax = 3;
@@ -57,27 +65,24 @@ throwObjectCount = 0;
 bigAirpuffState = 0;
 
 inhaleState = 0;
+
+spawnedDeathFade = false;
 #endregion
 
 #region Timers
 gambleShakeTimerMax = 150;
 gambleShakeTimer = gambleShakeTimerMax;
-
+idleAnimationTimer = 0;
+idleAnimationTimerMax = 90;
 phaseChangeTimer = -1;
-
 attackChooseTimer = -1;
 attackChooseTimerMax = 180;
-
 spikeTimer = -1;
 spikeTimerMax = 60;
-
 airpuffTimer = -1;
 airpuffTimerMax = 20;
-
 throwObjectTimer = -1;
 throwObjectTimerMax = 45;
-
 bigAirpuffTimer = -1;
-
 inhaleTimer = -1;
 #endregion

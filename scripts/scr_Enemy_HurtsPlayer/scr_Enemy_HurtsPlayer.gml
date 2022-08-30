@@ -91,7 +91,7 @@ function scr_Enemy_HurtsPlayer(argument0)
 				abilityDropStar.owner = collidedPlayer;
 				abilityDropStar.hsp = -collidedPlayer.dir * 1.5;
 				abilityDropStar.vsp = -abilityDropStar.jumpspeed;
-				abilityDropStar.dir = -image_xscale;
+				abilityDropStar.dir = -collidedPlayer.image_xscale;
 				abilityDropStar.ability = playerAbility;
 				abilityDropStar.player = collidedPlayer;
 				

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_PoppyBrosSr_Normal_Idle",
-    "path": "sprites/spr_PoppyBrosSr_Normal_Idle/spr_PoppyBrosSr_Normal_Idle.yy",
+    "name": "spr_Wizzkid_Normal_Idle",
+    "path": "sprites/spr_Wizzkid_Normal_Idle/spr_Wizzkid_Normal_Idle.yy",
   },
   "solid": false,
   "visible": true,
@@ -27,7 +27,6 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

@@ -74,3 +74,95 @@ if (global.gameTimeMinutes >= 60)
 	global.gameTimeMinutes -= 60;
 	global.gameTimeHours += 1;
 }
+
+#region Controllers
+var controllerSensitivity = .9;
+
+for (var i = 0; i < 2; i++)
+{
+    if (!global.stickLeftHeld[i] && gamepad_axis_value(global.playerGamepad[i],gp_axislh) <= -controllerSensitivity)
+    {
+        global.stickLeftHeld[i] = true;
+        global.stickLeftPressed[i] = true;
+        global.stickLeftReleased[i] = false;
+        controllerPressedResetTimer = 1;
+    }
+	
+    else if (global.stickLeftHeld[i] && gamepad_axis_value(global.playerGamepad[i],gp_axislh) > -controllerSensitivity)
+    {
+        global.stickLeftHeld[i] = false;
+        global.stickLeftPressed[i] = false;
+        global.stickLeftReleased[i] = true;
+        controllerPressedResetTimer = 1;
+    }
+	
+    if (!global.stickRightHeld[i] && gamepad_axis_value(global.playerGamepad[i],gp_axislh) >= controllerSensitivity)
+    {
+        global.stickRightHeld[i] = true;
+        global.stickRightPressed[i] = true;
+        global.stickRightReleased[i] = false;
+        controllerPressedResetTimer = 1;
+    }
+	
+    else if (global.stickRightHeld[i] && gamepad_axis_value(global.playerGamepad[i],gp_axislh) < controllerSensitivity)
+    {
+        global.stickRightHeld[i] = false;
+        global.stickRightPressed[i] = false;
+        global.stickRightReleased[i] = true;
+        controllerPressedResetTimer = 1;
+    }
+	
+    if (!global.stickUpHeld[i] && gamepad_axis_value(global.playerGamepad[i],gp_axislv) >= controllerSensitivity)
+    {
+        global.stickUpHeld[i] = true;
+        global.stickUpPressed[i] = true;
+        global.stickUpReleased[i] = false;
+        controllerPressedResetTimer = 1;
+    }
+	
+    else if (global.stickUpHeld[i] && gamepad_axis_value(global.playerGamepad[i],gp_axislv) < controllerSensitivity)
+    {
+        global.stickUpHeld[i] = false;
+        global.stickUpPressed[i] = false;
+        global.stickUpReleased[i] = true;
+        controllerPressedResetTimer = 1;
+    }
+	
+    if (!global.stickDownHeld[i] && gamepad_axis_value(global.playerGamepad[i],gp_axislv) <= -controllerSensitivity)
+    {
+        global.stickDownHeld[i] = true;
+        global.stickDownPressed[i] = true;
+        global.stickDownReleased[i] = false;
+        controllerPressedResetTimer = 1;
+    }
+	
+    else if (global.stickDownHeld[i] && gamepad_axis_value(global.playerGamepad[i],gp_axislv) > -controllerSensitivity)
+    {
+        global.stickDownHeld[i] = false;
+        global.stickDownPressed[i] = false;
+        global.stickDownReleased[i] = true;
+        controllerPressedResetTimer = 1;
+    }
+}
+
+if (controllerPressedResetTimer > 0)
+{
+	controllerPressedResetTimer -= 1;
+}
+else if (controllerPressedResetTimer == 0)
+{
+	for (var i = 0; i < 2; i++)
+	{
+	    global.stickLeftPressed[i] = false;
+	    global.stickRightPressed[i] = false;
+	    global.stickUpPressed[i] = false;
+	    global.stickDownPressed[i] = false;
+		
+	    global.stickLeftReleased[i] = false;
+	    global.stickRightReleased[i] = false;
+	    global.stickUpReleased[i] = false;
+	    global.stickDownReleased[i] = false;
+	}
+	controllerPressedResetTimer = -1;
+}
+#endregion

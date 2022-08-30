@@ -12,16 +12,23 @@ mouseOnHud = false;
 if (((point_in_rectangle(mouseXGui,mouseYGui,0,0,325,27))) or ((point_in_rectangle(mouseXGui,mouseYGui,324,0,480,47))) or ((point_in_rectangle(mouseXGui,mouseYGui,26,233 + bottomHudOffset,454,270))) or ((hudVisible) and ((mouseOnTopMap) or (mouseOnTopDelete) or (mouseOnTopZoomIn) or (mouseOnTopZoomOut) or (mouseOnTopZoomReset) or (mouseOnTopDrag) or (mouseOnTopSave) or (mouseOnTopLoad) or (mouseOnTopOptions) or (mouseOnTopReset) or (mouseOnTopLeave) or (mouseOnTopPlay) or (mouseOnTopEdit) or (mouseOnTopBlocks) or (mouseOnTopEnemies) or (mouseOnTopItems) or (mouseOnTopExpand) or (mouseOnTopNextInventory) or (mouseOnTopPreviousInventory) or (mouseOnTopHide) or (mouseOnTopSelectedSpawnerOptions) or (mouseOnTopSelectedSpawnerDirection)))) mouseOnHud = true;
 #endregion
 
+#region Music
+if (!audio_is_playing(global.musicPlaying)) scr_PlayMusic(true,selectedMusicIndex,0,true);
+#endregion
+
 #region Load Level
+if ((global.loadedMaykrFile != -1) and (global.loadedMaykrFile != "")) loadState = 0;
+
 switch (loadState)
 {
 	case 0:
-	var file;
-	file = get_open_filename(working_directory + "maykr file|*.maykr","");
-	if (file != "")
+	if (global.loadedMaykrFile == -1) global.loadedMaykrFile = get_open_filename(working_directory + "maykr file|*.maykr","");
+	if (global.loadedMaykrFile == "") global.loadedMaykrFile = -1;
+	if (global.loadedMaykrFile != -1)
 	{
 		var creationIndex = -1;
-		loadedFile = file_text_open_read(file);
+		loadedFile = file_text_open_read(global.loadedMaykrFile);
+		global.loadedMaykrFile = -1;
 		var maykrStart = file_text_read_string(loadedFile);
 		if (maykrStart == maykrStartMsg)
 		{
@@ -51,9 +58,12 @@ switch (loadState)
 				#endregion
 				break;
 			}
+			loadState = 1;
 		}
 		else
 		{
+			global.loadedMaykrFile = -1;
+			loadState = -1;
 			show_debug_message("Invalid Maykr File");
 			//errorAlpha = 1;
 			//errorAlphaTimer = errorAlphaTimerMax;
@@ -61,11 +71,12 @@ switch (loadState)
 	}
 	else
 	{
+		global.loadedMaykrFile = -1;
+		loadState = -1;
 		show_debug_message("Open A Maykr File");
 		//errorAlpha = 1;
 		//errorAlphaTimer = errorAlphaTimerMax;
 	}
-	loadState = 1;
 	break;
 	
 	case 1:
@@ -216,8 +227,10 @@ switch (loadState)
 		}
 	}
 	#endregion
+	
 	file_text_close(loadedFile);
 	loadedFile = -1;
+	global.loadedMaykrFile = -1;
 	loadState = -1;
 	break;
 }
@@ -981,6 +994,30 @@ if (!active)
 					if (tilemap_get(tileDebug,wx,wy - 1) == 0) tilemap_set(tileDebug,99,wx,wy - 1);
 					break;
 					
+					case maykrObjects.debugWall24x24SlopeLeft:
+					spawner.spawnedDirX = 1;
+					if (tileDebug == -1)
+					{
+						layer_create(299,"tileDebug");
+						tileDebug = layer_tilemap_create("tileDebug",0,0,ts_Debug,floor(room_width / 24) + 1,floor(room_height / 24) + 1);
+					}
+					var wx = mouseX / 24;
+					var wy = mouseY / 24;
+					tilemap_set(tileDebug,64,wx,wy);
+					break;
+					
+					case maykrObjects.debugWall24x24SlopeRight:
+					spawner.spawnedDirX = -1;
+					if (tileDebug == -1)
+					{
+						layer_create(299,"tileDebug");
+						tileDebug = layer_tilemap_create("tileDebug",0,0,ts_Debug,floor(room_width / 24) + 1,floor(room_height / 24) + 1);
+					}
+					var wx = mouseX / 24;
+					var wy = mouseY / 24;
+					tilemap_set(tileDebug,65,wx,wy);
+					break;
+					
 					case maykrObjects.asteroidFieldsFront:
 					if (tileAsteroidFieldsFront == -1)
 					{
@@ -1036,23 +1073,25 @@ if (!active)
 				switch (spawnedItemString)
 				{
 					case maykrObjects.debugWall:
-					tilemap_set(obj_Maykr_Control.tileDebug,0,floor(x / 24),floor(y / 24));
+					case maykrObjects.debugWall24x24SlopeLeft:
+					case maykrObjects.debugWall24x24SlopeRight:
+					tilemap_set(obj_Maykr_Control.tileDebug,-1,floor(x / 24),floor(y / 24));
 					var topTile = tilemap_get(obj_Maykr_Control.tileDebug,floor(x / 24),floor(y / 24) - 1);
 					var bottomTile = tilemap_get(obj_Maykr_Control.tileDebug,floor(x / 24),floor(y / 24) + 1);
-					if (topTile == 99) tilemap_set(obj_Maykr_Control.tileDebug,0,floor(x / 24),floor(y / 24) - 1);
+					if (topTile == 99) tilemap_set(obj_Maykr_Control.tileDebug,-1,floor(x / 24),floor(y / 24) - 1);
 					if (bottomTile == 80) tilemap_set(obj_Maykr_Control.tileDebug,99,floor(x / 24),floor(y / 24));
 					break;
 					
 					case maykrObjects.asteroidFieldsFront:
-					tilemap_set(obj_Maykr_Control.tileAsteroidFieldsFront,0,floor(x / 24),floor(y / 24));
+					tilemap_set(obj_Maykr_Control.tileAsteroidFieldsFront,-1,floor(x / 24),floor(y / 24));
 					var topTile = tilemap_get(obj_Maykr_Control.tileAsteroidFieldsFront,floor(x / 24),floor(y / 24) - 1);
 					var bottomTile = tilemap_get(obj_Maykr_Control.tileAsteroidFieldsFront,floor(x / 24),floor(y / 24) + 1);
 					if (((topTile >= 1) and (topTile <= 6)) or ((topTile >= 39) and (topTile <= 44)) or ((topTile >= 115) and (topTile <= 120)))
 					{
 						tilemap_set(obj_Maykr_Control.tileAsteroidFieldsFront,0,floor(x / 24),floor(y / 24) - 1);
 					}
-					tilemap_set(obj_Maykr_Control.tileAsteroidFieldsFront3D1,0,floor(x / 24),floor(y / 24) - 1);
-					tilemap_set(obj_Maykr_Control.tileAsteroidFieldsFront3D2,0,floor(x / 24),floor(y / 24) - 1);
+					tilemap_set(obj_Maykr_Control.tileAsteroidFieldsFront3D1,-1,floor(x / 24),floor(y / 24) - 1);
+					tilemap_set(obj_Maykr_Control.tileAsteroidFieldsFront3D2,-1,floor(x / 24),floor(y / 24) - 1);
 					
 					if ((bottomTile >= 20) and (bottomTile <= 25))
 					{
@@ -1094,6 +1133,10 @@ if (!active)
 		#region Windows
 		switch (windowIndex)
 		{
+			case maykrWindows.levelSettings:
+			layer_background_xscale(layer_background_get_id("Background_Parallax1"),.5);
+			break;
+			
 			case "clear":
 			if (yesBar < yesBarMax) yesBar += 1;
 			
@@ -1191,6 +1234,10 @@ else
 		if (instance_exists(obj_Hud)) instance_destroy(obj_Hud);
 		with (obj_Particle) instance_destroy();
 		with (obj_Projectile) instance_destroy();
+		with (obj_PointStar) instance_destroy();
+		with (obj_PopFlowerStar) instance_destroy();
+		with (obj_Food) instance_destroy();
+		with (obj_Butterfly) instance_destroy();
 		
 		if (instance_exists(obj_Camera)) obj_Camera.freezeFrameTimer = -1;
 		with (obj_Maykr_Spawner)
@@ -1204,6 +1251,7 @@ else
 			}
 			if (spawnedItem != -1) instance_destroy(spawnedItem);
 		}
+		with (obj_Enemy) instance_destroy();
 	}
 	#endregion
 }

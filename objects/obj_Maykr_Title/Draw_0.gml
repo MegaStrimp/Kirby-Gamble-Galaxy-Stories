@@ -84,11 +84,43 @@ switch (windowIndex)
 	draw_sprite_ext(spr_Maykr_Window_Border,0,x1,y1,windowXScale,windowYScale,image_angle,image_blend,image_alpha);
 	
 	draw_set_alpha(windowContentAlpha);
+	
 	draw_set_color(c_white);
 	draw_set_halign(fa_center);
 	draw_set_font(global.fontMaykrRed);
 	draw_text(((x2 - x1) / 2),y1 + 3,"create canvas");
 	draw_set_halign(fa_left);
+	
+	draw_sprite_ext(spr_Maykr_EnterBar,0,19,54,(102 / 27),1,image_angle,image_blend,windowContentAlpha);
+	draw_sprite_ext(spr_Maykr_EnterBar,0,19,104,(102 / 27),1,image_angle,image_blend,windowContentAlpha);
+	
+	draw_sprite_ext(spr_Maykr_Plus,(windowSelection == 0),126,57,1,1,image_angle,image_blend,windowContentAlpha);
+	draw_sprite_ext(spr_Maykr_Minus,(windowSelection == 1),149,57,1,1,image_angle,image_blend,windowContentAlpha);
+	draw_sprite_ext(spr_Maykr_Plus,(windowSelection == 2),126,107,1,1,image_angle,image_blend,windowContentAlpha);
+	draw_sprite_ext(spr_Maykr_Minus,(windowSelection == 3),149,107,1,1,image_angle,image_blend,windowContentAlpha);
+	
+	draw_sprite_ext(spr_Maykr_Preset_Micro,(windowSelection == 4),189,54,1,1,image_angle,image_blend,windowContentAlpha);
+	draw_sprite_ext(spr_Maykr_Preset_Small,(windowSelection == 5),227,54,1,1,image_angle,image_blend,windowContentAlpha);
+	draw_sprite_ext(spr_Maykr_Preset_Medium,(windowSelection == 6),265,54,1,1,image_angle,image_blend,windowContentAlpha);
+	draw_sprite_ext(spr_Maykr_Preset_Large,(windowSelection == 7),303,54,1,1,image_angle,image_blend,windowContentAlpha);
+	draw_sprite_ext(spr_Maykr_Preset_Vertical,(windowSelection == 8),341,54,1,1,image_angle,image_blend,windowContentAlpha);
+	draw_sprite_ext(spr_Maykr_Preset_Horizontal,(windowSelection == 9),379,54,1,1,image_angle,image_blend,windowContentAlpha);
+	draw_sprite_ext(spr_Maykr_Preset_Random,(windowSelection == 10),417,54,1,1,image_angle,image_blend,windowContentAlpha);
+	
+	draw_sprite_ext(spr_Maykr_Create,(windowSelection == 11),19,226,1,1,image_angle,image_blend,windowContentAlpha);
+	draw_sprite_ext(spr_Maykr_Load,(windowSelection == 12),180,226,1,1,image_angle,image_blend,windowContentAlpha);
+	draw_sprite_ext(spr_Maykr_Back,(windowSelection == 13),341,226,1,1,image_angle,image_blend,windowContentAlpha);
+	
+	draw_set_font(global.fontMaykrBlue);
+	draw_text(23,35,"room width");
+	draw_text(23,86,"room height");
+	draw_text(193,35,"presets");
+	
+	draw_set_font(global.fontMaykrWhite);
+	draw_text(25,60,string(maykrRoomWidth));
+	draw_text(25,110,string(maykrRoomHeight));
+	
+	draw_set_color(c_white);
 	draw_set_alpha(1);
 	break;
 }

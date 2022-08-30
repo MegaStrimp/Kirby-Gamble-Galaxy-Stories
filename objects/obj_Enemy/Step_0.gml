@@ -89,8 +89,9 @@ if (!global.pause)
 	
 	//Death
 	
-	if ((death) or ((!hasDeathAnimation) and (hp <= 0)))
+	if ((!deathAnimationPlayed) and ((death) or ((!hasDeathAnimation) and (hp <= 0))))
 	{
+		deathAnimationPlayed = true;
 		if (takenDamageType == damageTypes.ice)
 		{
 			var iceCube = instance_create_depth(x,y,depth,obj_Projectile_IceCube);
@@ -162,6 +163,21 @@ if (!global.pause)
 					}
 					par.dir = parScaleDir;
 				}
+				
+				with (obj_Hud)
+				{
+					hasBossDeathOverlay = true;
+					bossDeathColor = c_white;
+					bossDeathColorTimer = 0;
+				}
+				
+				with (obj_Camera)
+				{
+					if (audio_is_playing(snd_BossDeath1)) audio_stop_sound(snd_BossDeath1);
+					audio_play_sound(snd_BossDeath1,0,false);
+					bossDeath = true;
+					freezeFrameTimer = 60;
+				}
 			}
 			else
 			{
@@ -210,7 +226,7 @@ if (!global.pause)
 				}
 			}
 		}
-		if (global.gamemode != gamemodes.maykr) global.points += points;
+		global.points += points;
 		
 		checkEnemySpawners = true;
 		with (obj_Enemy) if ((id != other.id) and (spawner == other.spawner)) other.checkEnemySpawners = false;
@@ -231,8 +247,8 @@ if (!global.pause)
 			abilityDropStar.isBubble = true;
 			abilityDropStar.jumpspeed = .25;
 			abilityDropStar.scale = .1;
-			abilityDropStar.image_xscale = scale;
-			abilityDropStar.image_yscale = scale;
+			abilityDropStar.image_xscale = abilityDropStar.scale;
+			abilityDropStar.image_yscale = abilityDropStar.scale;
 			switch (abilityDropStar.ability)
 			{
 				case playerAbilities.cutter:
@@ -505,7 +521,7 @@ if (!global.pause)
 		
 		//Destroy
 		
-		instance_destroy();
+		if (!isBoss) instance_destroy();
 	}
 	
 	//Animation
@@ -846,7 +862,7 @@ if (!global.pause)
 						other.bubbleX = x;
 						other.bubbleY = y;
 						other.hurtTimer = ((other.hurtStopTimerMax + 5) * (!other.instaDeath));
-						if ((other.hasDeathKnockback) and (other.takenDamageType != damageTypes.ice)) other.hurtStopTimer = other.hurtStopTimerMax;
+						if ((other.hasDeathKnockback) and (!other.isBoss) and (other.isMiniBoss) and (other.takenDamageType != damageTypes.ice)) other.hurtStopTimer = other.hurtStopTimerMax;
 			            other.shake = 1;
 			            if (instance_exists(obj_Camera)) obj_Camera.shake = 3;
 					}
@@ -1016,7 +1032,7 @@ if (!global.pause)
 							obj_Camera.freezeFrameTimer = obj_Camera.freezeFrameTimerMax;
 							obj_Camera.shakeX = 3;
 							obj_Camera.shakeY = 3;
-							obj_Camera.hitZoom += .05;
+							//obj_Camera.hitZoom += .05;
 						}
 			
 						if (!other.hurtable)

@@ -49,10 +49,6 @@ if (!global.pause)
 		setupTimer = -1;
 	}
 	
-	//Destroy If Maykr
-	
-	if (global.gamemode == gamemodes.maykr) instance_destroy();
-	
 	//Shake
 	
 	if (place_meeting(x,y,obj_InhaleMask))
@@ -116,11 +112,9 @@ if (!global.pause)
 			particle.sprite_index = spr_Particle_Sparkle1;
 			particle.destroyAfterAnimation = true;
 		}
-		if (global.gamemode != gamemodes.maykr)
-		{
-			global.points += points;
-			global.pointStars += pointStarPoints;
-		}
+		global.points += points;
+		global.pointStars += pointStarPoints;
+		
 		instance_destroy();
 	}
 	

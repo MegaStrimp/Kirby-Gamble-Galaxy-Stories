@@ -12,7 +12,7 @@ drawPaletteFlash = paletteFlash;
 if ((hurt) and (invincibleFlash)) drawPaletteFlash = 3;
 
 if (global.shaders) pal_swap_set(paletteIndex,drawPaletteFlash,false);
-draw_sprite_ext(sprite_index,image_index,x + drawShakeX,y + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle,image_blend,image_alpha);
+draw_sprite_ext(sprite_index,image_index,x + ((canShakeX) * drawShakeX),y + ((canShakeY) * drawShakeY),image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle,image_blend,image_alpha);
 if (global.shaders) pal_swap_reset();
 
 //Flux Overlay
@@ -27,14 +27,14 @@ if (isMystic)
 	draw_rectangle(0,0,room_width,room_height,false);
 	
 	draw_set_alpha(1);
-	draw_sprite_ext(sprite_index,image_index,x + irandom_range(-shakeX,shakeX),y + irandom_range(-shakeY,shakeY),image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle,image_blend,fluxOverlayAlpha);
+	draw_sprite_ext(sprite_index,image_index,x + ((canShakeX) * drawShakeX),y + ((canShakeY) * drawShakeY),image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle,image_blend,fluxOverlayAlpha);
 	gpu_set_blendenable(true);
 	gpu_set_colorwriteenable(true,true,true,true);
 	
 	gpu_set_blendmode_ext(bm_dest_alpha,bm_inv_dest_alpha);
 	gpu_set_alphatestenable(true);
 	
-	draw_sprite(spr_Texture_Flux,0,x + irandom_range(-shakeX,shakeX),y + irandom_range(-shakeY,shakeY));
+	draw_sprite(spr_Texture_Flux,0,x + ((canShakeX) * drawShakeX),y + ((canShakeY) * drawShakeY));
 	
 	gpu_set_alphatestenable(false);
 	gpu_set_alphatestenable(false);
@@ -64,7 +64,7 @@ else
 
 //Healthbar
 
-if ((!isMiniBoss) and (!isBoss))
+if (healthbarIndex == 0)
 {
 	var hbHp = hp;
 	hbHp = max(hbHp,0);

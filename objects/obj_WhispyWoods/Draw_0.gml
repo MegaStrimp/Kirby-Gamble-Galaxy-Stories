@@ -5,7 +5,7 @@ event_inherited();
 #endregion
 
 #region Draw Face
-if (faceSprite != -1) draw_sprite_ext(faceSprite,faceIndex,x + (24 * dirX),y - 72,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+if (faceSprite != -1) draw_sprite_ext(faceSprite,faceIndex,x + (24 * dirX) + irandom_range(-shakeX,shakeX),y - 72 + irandom_range(-shakeY,shakeY),image_xscale,image_yscale,image_angle,image_blend,image_alpha);
 #endregion
 
 #region Draw Bark

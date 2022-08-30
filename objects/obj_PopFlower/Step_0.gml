@@ -115,7 +115,7 @@ if (!global.pause)
 		var particle = instance_create_depth(x,y - 4,depth,obj_Particle);
 		particle.sprite_index = spr_Particle_Sparkle1;
 		particle.destroyAfterAnimation = true;
-		if (global.gamemode != gamemodes.maykr) global.points += points;
+		global.points += points;
 	}
 	
 	//Animation

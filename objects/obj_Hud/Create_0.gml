@@ -25,6 +25,8 @@ mixRosterText[0] = spr_Hud_AbilityText_Kirby;
 mixRosterIcon[0] = spr_Hud_Icon_Kirby;
 musicIntroActive = false;
 musicIntroAlpha = 0;
+hasBossDeathOverlay = false;
+bossDeathColor = c_white;
 
 //Timers
 
@@ -43,3 +45,5 @@ mixIndexTimer = -1;
 mixIndexTimerMax = 4;
 musicIntroTimer = -1;
 musicIntroTimerMax = 120;
+bossDeathColorTimer = -1;
+bossDeathColorTimerMax = 10;

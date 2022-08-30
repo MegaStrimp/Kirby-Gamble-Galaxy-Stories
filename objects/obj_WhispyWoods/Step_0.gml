@@ -1,12 +1,27 @@
 ///@description Main
 
 #region Death
-if (hp <= 0)
+if (death)
 {
-	var fade = instance_create_depth(x,y,-999,obj_FadeTimer);
-	fade.alphaSpd = .02;
-	fade.targetRoom = rm_StageSelect;
-	fade.fadeTimer = 60;
+	if (!spawnedDeathFade)
+	{
+		spawnedDeathFade = true;
+		var fade = instance_create_depth(x,y,-999,obj_FadeTimer);
+		fade.alphaSpd = .005;
+		fade.targetRoom = rm_DemoEnd;
+		fade.fadeTimer = 60;
+	}
+	
+	idleAnimation = false;
+	idleAnimationTimer = 0;
+	idleAnimationTimerMax = -1;
+	attackNumber = -1;
+	attackChooseTimer = -1;
+	spikeTimer = -1;
+	airpuffTimer = -1;
+	throwObjectTimer = -1;
+	bigAirpuffTimer = -1;
+	inhaleTimer = -1;
 }
 #endregion
 
@@ -17,7 +32,7 @@ event_inherited();
 if (!global.pause)
 {
 	#region Hurt Player
-	scr_Enemy_HurtsPlayer(dmg);
+	if (!death) scr_Enemy_HurtsPlayer(dmg);
 	#endregion
 	
 	#region Phases
@@ -32,6 +47,56 @@ if (!global.pause)
 		
 		#region Phase 1
 		case 1:
+		#region Animation
+		faceIndex += sprite_get_speed(faceSprite) / 60;
+		
+		image_speed = 1;
+		
+		if (death)
+		{
+			faceSprite = sprDeath;
+		}
+		else
+		{
+			switch (attackNumber)
+			{
+				default:
+				if (hurt)
+				{
+					faceSprite = sprHurt;
+				}
+				else
+				{
+					if (!idleAnimation)
+					{
+						faceSprite = sprIdle;
+					}
+					else
+					{
+						faceSprite = sprBlink;
+						if (faceIndex >= sprite_get_number(faceSprite))
+						{
+							idleAnimation = false;
+							idleAnimationTimer = 0;
+							idleAnimationTimerMax = choose(60,90,120);
+						}
+					}
+				}
+				break;
+				
+				case enemyAttacks.whispyWoods_airpuff:
+				faceSprite = sprSpit;
+				//if (faceIndex >= sprite_get_number(faceSprite)) faceIndex -= sprite_get_number(faceSprite);
+				if (faceIndex >= sprite_get_number(faceSprite)) faceIndex = sprite_get_number(faceSprite) - 1;
+				break;
+				
+				case enemyAttacks.whispyWoods_bigAirpuff:
+				faceSprite = sprBigSpit;
+				if (faceIndex >= sprite_get_number(faceSprite)) faceIndex = sprite_get_number(faceSprite) - 1;
+				break;
+			}
+		}
+		#endregion
 		break;
 		#endregion
 		
@@ -63,6 +128,23 @@ if (!global.pause)
 		phaseChangeTimer = -1;
 	}
 	#endregion
+	
+	#region Idle Animation Timer
+	if (!idleAnimation)
+	{
+		if ((idleAnimationTimer < idleAnimationTimerMax) and (attackNumber == -1))
+		{
+			idleAnimationTimer += 1;
+		}
+		else
+		{
+			faceIndex = 0;
+			idleAnimationTimer = 0;
+			idleAnimation = true;
+		}
+	}
+	#endregion
+	
 	#region Attack Choose Timer
 	if (attackChooseTimer > 0)
 	{
@@ -70,32 +152,36 @@ if (!global.pause)
 	}
 	else if (attackChooseTimer == 0)
 	{
-		var attack = -1;
+		faceSprite = sprIdle;
+		idleAnimation = false;
+		idleAnimationTimer = 0;
+		idleAnimationTimerMax = choose(10,30,45);
+		attackNumber = -1;
 		if (phase == 1)
 		{
-			attack = choose(0,1,2,3,4);
-			attack = choose(0,1,2,3);
+			attackNumber = choose(enemyAttacks.whispyWoods_airpuff,enemyAttacks.whispyWoods_airpuff,enemyAttacks.whispyWoods_airpuff,enemyAttacks.whispyWoods_spike,enemyAttacks.whispyWoods_spike,enemyAttacks.whispyWoods_throwObject,enemyAttacks.whispyWoods_throwObject,enemyAttacks.whispyWoods_throwObject,enemyAttacks.whispyWoods_bigAirpuff);
 		}
 		else if (phase == 3)
 		{
 		}
 		
-		switch (attack)
+		switch (attackNumber)
 		{
 			#region Airpuff
-			case 0:
+			case enemyAttacks.whispyWoods_airpuff:
+			image_index = 0;
 			airpuffTimer = 0;
 			break;
 			#endregion
 			
 			#region Spike
-			case 1:
+			case enemyAttacks.whispyWoods_spike:
 			spikeTimer = 0;
 			break;
 			#endregion
 			
 			#region Throw Object
-			case 2:
+			case enemyAttacks.whispyWoods_throwObject:
 			throwObjectList = ds_list_create();
 			for (var i = 0; i < 4; i++)
 			{
@@ -119,13 +205,14 @@ if (!global.pause)
 			#endregion
 			
 			#region Big Airpuff
-			case 3:
+			case enemyAttacks.whispyWoods_bigAirpuff:
+			image_index = 0;
 			bigAirpuffTimer = 0;
 			break;
 			#endregion
 			
 			#region Inhale
-			case 4:
+			case enemyAttacks.whispyWoods_inhale:
 			inhaleTimer = 0;
 			break;
 			#endregion
@@ -143,37 +230,42 @@ if (!global.pause)
 	{
 		if (airpuffCount < airpuffCountMax)
 		{
-			if (audio_is_playing(snd_AirPuff)) audio_stop_sound(snd_AirPuff);
-			audio_play_sound(snd_AirPuff,0,false);
-			var proj = instance_create_depth(x + ((28 + 22) * dirX),y - 52,depth + 1,obj_AirPuff);
-			proj.owner = id;
-			proj.enemy = true;
-			proj.destroyableByWall = true;
-			proj.destroyableByPlayer = true;
-			proj.destroyableByEnemy = false;
-			proj.destroyableByObject = false;
-			proj.hurtsObject = false;
-			proj.hurtsEnemy = false;
-			proj.hurtsPlayer = true;
-			proj.dirX = dirX;
-			proj.scale = 2;
-			proj.image_xscale = proj.dirX * 2;
-			proj.image_yscale = 2;
-			proj.hsp = ((6 * dirX) + hsp);
-			proj.decel = 0;
-			proj.grav = .02;
-			proj.gravLimit = 3;
-			proj.sprIdle = spr_AirPuff_Normal_Idle;
-			proj.sprDestroy = spr_AirPuff_Normal_Destroy;
-			proj.sprite_index = proj.sprIdle;
-			proj.character = 0;
-			airpuffCount += 1;
-			airpuffTimer = airpuffTimerMax;
+			if (faceIndex >= 2)
+			{
+				if (audio_is_playing(snd_AirPuff)) audio_stop_sound(snd_AirPuff);
+				audio_play_sound(snd_AirPuff,0,false);
+				faceIndex = 2;
+				var proj = instance_create_depth(x + ((28 + 22) * dirX),y - 52,depth - 1,obj_AirPuff);
+				proj.owner = id;
+				proj.enemy = true;
+				proj.destroyableByWall = true;
+				proj.destroyableByPlayer = true;
+				proj.destroyableByEnemy = false;
+				proj.destroyableByObject = false;
+				proj.hurtsObject = false;
+				proj.hurtsEnemy = false;
+				proj.hurtsPlayer = true;
+				proj.dirX = dirX;
+				proj.scale = 2;
+				proj.image_xscale = proj.dirX * 2;
+				proj.image_yscale = 2;
+				proj.hsp = ((6 * dirX) + hsp);
+				proj.decel = 0;
+				proj.grav = .02;
+				proj.gravLimit = 3;
+				proj.sprIdle = spr_AirPuff_Normal_Idle;
+				proj.sprDestroy = spr_AirPuff_Normal_Destroy;
+				proj.sprite_index = proj.sprIdle;
+				proj.character = 0;
+				airpuffCount += 1;
+				airpuffTimer = airpuffTimerMax;
+			}
 		}
 		else
 		{
 			airpuffCount = 0;
 			attackChooseTimer = attackChooseTimerMax;
+			attackNumber = -1;
 			airpuffTimer = -1;
 		}
 	}
@@ -189,7 +281,7 @@ if (!global.pause)
 		if (spikeCount < spikeCountMax)
 		{
 			spikeCount += 1;
-			var proj = instance_create_depth(x + ((30 + (96 * spikeCount)) * dirX),y + 8,depth + 1,obj_Projectile_WhispyRoot);
+			var proj = instance_create_depth(x + ((30 + (96 * spikeCount)) * dirX),y + 10,depth + 1,obj_Projectile_WhispyRoot);
 			proj.owner = id;
 			proj.enemy = true;
 			proj.destroyableByWall = false;
@@ -199,7 +291,7 @@ if (!global.pause)
 			proj.destroyableByProjectile = false;
 			proj.hurtsObject = false;
 			proj.hurtsEnemy = false;
-			proj.hurtsPlayer = true;
+			proj.hurtsPlayer = false;
 			proj.rootIndex = irandom_range(1,3);
 			if (spikeCount == spikeCountMax) proj.recoilTimer = 120;
 			spikeTimer = spikeTimerMax;
@@ -208,6 +300,7 @@ if (!global.pause)
 		{
 			spikeCount = 0;
 			attackChooseTimer = attackChooseTimerMax;
+			attackNumber = -1;
 			spikeTimer = -1;
 		}
 	}
@@ -262,6 +355,7 @@ if (!global.pause)
 			ds_list_destroy(throwObjectList);
 			throwObjectCount = 0;
 			attackChooseTimer = attackChooseTimerMax;
+			attackNumber = -1;
 			throwObjectTimer = -1;
 		}
 	}
@@ -285,7 +379,7 @@ if (!global.pause)
 			bigAirpuffState = 2;
 			if (audio_is_playing(snd_AirPuff)) audio_stop_sound(snd_AirPuff);
 			audio_play_sound(snd_AirPuff,0,false);
-			var proj = instance_create_depth(x + ((28 + 22) * dirX),y - 52,depth + 1,obj_AirPuff);
+			var proj = instance_create_depth(x + ((28 + 22) * dirX),y - 52,depth - 1,obj_AirPuff);
 			proj.owner = id;
 			proj.enemy = true;
 			proj.destroyableByWall = true;
@@ -298,20 +392,18 @@ if (!global.pause)
 			proj.hurtsPlayer = true;
 			proj.canBeReflected = false;
 			proj.dirX = dirX;
-			proj.scale = 4;
-			proj.image_xscale = proj.dirX * 4;
-			proj.image_yscale = 4;
 			proj.hsp = ((10 * dirX) + hsp);
-			proj.sprIdle = spr_AirPuff_Normal_Idle;
-			proj.sprDestroy = spr_AirPuff_Normal_Destroy;
+			proj.sprIdle = spr_AirPuff_WhispyBig_Idle;
+			proj.sprDestroy = -1;
 			proj.sprite_index = proj.sprIdle;
-			proj.character = 0;
+			proj.character = 2;
 			bigAirpuffTimer = 90;
 			break;
 			
 			case 2:
 			bigAirpuffState = 0;
 			attackChooseTimer = attackChooseTimerMax;
+			attackNumber = -1;
 			bigAirpuffTimer = -1;
 			break;
 		}

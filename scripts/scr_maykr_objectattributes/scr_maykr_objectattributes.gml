@@ -22,6 +22,11 @@ function scr_Maykr_ObjectAttributes(argument0,argument1)
 	
 	switch (spawnedItemString)
 	{
+		case maykrObjects.player:
+		hasOptionsButton = true;
+		hasDirectionButton = true;
+		break;
+		
 		case maykrObjects.waddleDee:
 		hasOptionsButton = true;
 		hasDirectionButton = true;
@@ -256,7 +261,99 @@ function scr_Maykr_ObjectAttributes(argument0,argument1)
 		hasOptionsButton = true;
 		hasDirectionButton = true;
 		break;
+		
+		case maykrObjects.pointStarYellow:
+		hasOptionsButton = true;
+		hasDirectionButton = true;
+		break;
+		
+		case maykrObjects.pointStarGreen:
+		hasOptionsButton = true;
+		hasDirectionButton = true;
+		break;
+		
+		case maykrObjects.pointStarRed:
+		hasOptionsButton = true;
+		hasDirectionButton = true;
+		break;
+		
+		case maykrObjects.pointStarBlue:
+		hasOptionsButton = true;
+		hasDirectionButton = true;
+		break;
+		
+		case maykrObjects.food:
+		hasOptionsButton = true;
+		hasDirectionButton = true;
+		break;
+		
+		case maykrObjects.pepBrew:
+		hasOptionsButton = true;
+		hasDirectionButton = true;
+		break;
+		
+		case maykrObjects.maximTomato:
+		hasOptionsButton = true;
+		hasDirectionButton = true;
+		break;
+		
+		case maykrObjects.starBlock:
+		hasOptionsButton = true;
+		hasDirectionButton = true;
+		break;
+		
+		case maykrObjects.bigStarBlock:
+		hasOptionsButton = true;
+		hasDirectionButton = true;
+		break;
+		
+		case maykrObjects.crate:
+		hasOptionsButton = true;
+		hasDirectionButton = true;
+		break;
+		
+		case maykrObjects.bombBlock:
+		hasOptionsButton = true;
+		hasDirectionButton = true;
+		break;
+		
+		case maykrObjects.bombSolidBlock:
+		hasOptionsButton = true;
+		hasDirectionButton = true;
+		break;
+		
+		case maykrObjects.breakingWall:
+		hasOptionsButton = true;
+		hasDirectionButton = true;
+		break;
+		
+		case maykrObjects.cuttableGrass:
+		hasOptionsButton = true;
+		hasDirectionButton = true;
+		break;
+		
+		case maykrObjects.durableBlock:
+		hasOptionsButton = true;
+		hasDirectionButton = true;
+		break;
+		
+		case maykrObjects.eggPlant:
+		hasOptionsButton = true;
+		hasDirectionButton = true;
+		break;
+		
+		case maykrObjects.itemChest:
+		hasOptionsButton = true;
+		hasDirectionButton = true;
+		break;
+		
+		case maykrObjects.popFlower:
+		hasOptionsButton = true;
+		hasDirectionButton = true;
+		break;
 	}
+	
+	hasOptionsButton = false;
 	
 	switch (whichAttributeToCheck)
 	{

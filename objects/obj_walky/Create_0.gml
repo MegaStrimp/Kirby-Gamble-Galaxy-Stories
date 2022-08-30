@@ -27,6 +27,7 @@ paletteIndex = spr_Walky_Normal_Palette_MicCheck;
 hp = 16;
 dmg = 1;
 ability = playerAbilities.mic;
+ability = playerAbilities.none;
 points = 890;
 attack = false;
 

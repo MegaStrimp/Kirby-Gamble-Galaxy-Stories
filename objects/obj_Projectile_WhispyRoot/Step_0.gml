@@ -13,6 +13,9 @@ if (setupTimer == 0)
 		sprRoot1 = spr_WhispyWoods_Normal_Root1;
 		sprRoot2 = spr_WhispyWoods_Normal_Root2;
 		sprRoot3 = spr_WhispyWoods_Normal_Root3;
+		sprRoot1R = spr_WhispyWoods_Normal_Root1R;
+		sprRoot2R = spr_WhispyWoods_Normal_Root2R;
+		sprRoot3R = spr_WhispyWoods_Normal_Root3R;
 		break;
 	}
 	sprite_index = sprRootReady;
@@ -36,7 +39,10 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	}
 	else if (readyTimer == 0)
 	{
+		if (audio_is_playing(snd_WhispySpike)) audio_stop_sound(snd_WhispySpike);
+		audio_play_sound(snd_WhispySpike,0,false);
 		ready = true;
+		hurtsPlayer = true;
 		switch (rootIndex)
 		{
 			case 1:
@@ -83,7 +89,22 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	}
 	else if (destroyTimer == 0)
 	{
-		instance_destroy();
+		switch (rootIndex)
+		{
+			case 1:
+			sprReverseFinal = sprRoot1R;
+			break;
+			
+			case 2:
+			sprReverseFinal = sprRoot2R;
+			break;
+			
+			case 3:
+			sprReverseFinal = sprRoot3R;
+			break;
+		}
+		sprite_index = sprReverseFinal;
+		hurtsPlayer = false;
 		destroyTimer = -1;
 	}
 	#endregion

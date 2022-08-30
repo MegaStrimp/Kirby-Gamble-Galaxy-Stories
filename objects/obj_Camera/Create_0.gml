@@ -54,6 +54,7 @@ xLimit1Final = 0;
 xLimit2Final = 0;
 yLimit1Final = 0;
 yLimit2Final = 0;
+bossDeath = false;
 
 //Timers
 

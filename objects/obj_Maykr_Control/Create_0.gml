@@ -53,8 +53,14 @@ enum maykrObjects
 {
 	collisionTilesStart,
 	debugWall,
+	debugWall24x24SlopeLeft,
+	debugWall24x24SlopeRight,
+	//debugWall48x24Slope,
+	//debugWall72x24Slope,
 	asteroidFieldsFront,
 	collisionTilesEnd,
+	
+	player,
 	
 	enemiesStart,
 	waddleDee,
@@ -115,13 +121,35 @@ enum maykrObjects
 	food,
 	pepBrew,
 	maximTomato,
+	starBlock,
+	bigStarBlock,
+	crate,
+	bombBlock,
+	bombSolidBlock,
+	breakingWall,
+	cuttableGrass,
+	durableBlock,
+	eggPlant,
+	itemChest,
+	popFlower,
 	itemsEnd
 }
 
 enum maykrWindows
 {
-	canvasSetup
+	canvasSetup,
+	levelSettings
 }
+#endregion
+
+#region Backgrounds
+var i = 0;
+maykrBackground[i] = bg_EggGarden_SurfaceSunset;
+i += 1;
+maykrBackground[i] = bg_EggGarden_SurfaceSunset;
+#endregion
+
+#region Music
 #endregion
 
 #region Mouse On Top
@@ -197,10 +225,15 @@ selectedSpawnerDirectionExists = false;
 selectedSpawnerDirection = 1;
 selectedSpawnerDirectionX = -100;
 selectedSpawnerDirectionY = -100;
+selectedBackground = 0;
+selectedBackgroundIndex = bg_EggGarden_SurfaceSunset;
+selectedMusic = 0;
+selectedMusicIndex = mus_Maykr;
 #endregion
 
 #region Spawn Kirby
 var spawner = instance_create_layer(60,room_height - 91,"Player",obj_Maykr_Spawner);
+spawner.spawnedItemString = maykrObjects.player;
 spawner.spawnedItemIndex = obj_Player;
 spawner.spawnedSprite = spr_Kirby_Normal_Idle;
 spawner.spawnedPaletteIndex = scr_Player_SprayPaint(global.sprayPaintKirbyP1,playerCharacters.kirby,global.skinKirbyP1);

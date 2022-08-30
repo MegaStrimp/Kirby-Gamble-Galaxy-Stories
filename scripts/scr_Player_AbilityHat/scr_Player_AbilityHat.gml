@@ -815,8 +815,40 @@ function scr_Player_AbilityHat(argument0,argument1)
 					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Hurt;
 					break;
 					
+					case sprBeamCharge:
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Charge;
+					break;
+					
+					case sprMysticBeamAttack1:
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Attack1;
+					break;
+					
 					case sprMysticBeamAttack2:
 					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Attack2;
+					break;
+					
+					case sprBeamAttack1:
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Attack3;
+					break;
+					
+					case sprBeamAttack2:
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Attack4;
+					break;
+					
+					case sprBeamAttack3:
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Attack5;
+					break;
+					
+					case sprBeamAttack4:
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Attack6;
+					break;
+					
+					case sprBeamAttack5:
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Attack7;
+					break;
+					
+					case sprBeamAttack6:
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Attack8;
 					break;
 					
 					default:
@@ -3380,6 +3412,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					
 					case sprAbilityChange:
 					abilityHatIndex = spr_Kirby_AbilityHat_Spark_KSSU_AbilityChange;
+					break;
+					
+					case sprWarpStar1:
+					abilityHatIndex = spr_Kirby_AbilityHat_Spark_KSSU_WarpStar1;
+					break;
+					
+					case sprWarpStar2:
+					abilityHatIndex = spr_Kirby_AbilityHat_Spark_KSSU_WarpStar2;
 					break;
 					
 					case sprGuard:

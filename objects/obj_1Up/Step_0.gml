@@ -26,11 +26,8 @@ if (!global.pause)
 	{
 		if (audio_is_playing(snd_1Up)) audio_stop_sound(snd_1Up);
 		audio_play_sound(snd_1Up,0,false);
-		if (global.gamemode != gamemodes.maykr)
-		{
-			global.points += points;
-			global.playerLives += 1;
-		}
+		global.points += points;
+		global.playerLives += 1;
 		instance_destroy();
 	}
 

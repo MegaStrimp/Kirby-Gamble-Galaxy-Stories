@@ -7,7 +7,7 @@ if (setupTimer == 0)
 	{
 		#region Normal
 		case 0:
-		sprIdle = spr_PoppyBrosSr_Normal_Idle;
+		sprIdle = spr_Wizzkid_Normal_Idle;
 		sprIdleHat = spr_PoppyBrosSr_Normal_IdleHat;
 		sprAttack = spr_PoppyBrosSr_Normal_Attack;
 		sprAttackHat = spr_PoppyBrosSr_Normal_AttackHat;
@@ -52,125 +52,23 @@ if (!global.pause)
 	#endregion
 	
 	#region Movement
-	if (attack)
+	if (!attack)
 	{
-		switch (attackNumber)
-		{
-			case enemyAttacks.poppyBroSr_dash:
-			if (isAttacking)
-			{
-				movespeed = 4;
-			}
-			else
-			{
-				movespeed = 0;
-			}
-			break;
-			
-			default:
-			movespeed = 0;
-			hsp = 0;
-			break;
-		}
-	}
-	else
-	{
-		with (obj_Player)
-		{
-			if (player == 0)
-			{
-				if (x > other.x)
-				{
-					other.dirX = 1;
-				}
-				else
-				{
-					other.dirX = -1;
-				}
-			}
-		}
+		var nearestPlayer = -1;
+		nearestPlayer = instance_nearest(x,y,obj_Player);
 		
-		switch (jumpCount)
+		if ((nearestPlayer != -1) and (instance_exists(nearestPlayer))) slideTargetX = nearestPlayer.x;
+		
+		if (slideTargetX > x)
 		{
-			case 5:
-			var tempWalkDirX = 1;
-			if ((instance_exists(obj_Player)) and (obj_Player.x < x)) tempWalkDirX = -1;
-			if (tempWalkDirX == walkDirX) jumpCount -= 1;
-			break;
-			
-			case 6:
-			movespeed = 2;
-			jumpspeed = 3.5;
-			break;
-			
-			case 7:
-			movespeed = 2;
-			jumpspeed = 3.5;
-			break;
-			
-			case 8:
-			movespeed = 4;
-			jumpspeed = 4.75;
-			break;
-			
-			case 9:
-			movespeed = 3;
-			jumpspeed = 4.5;
-			break;
-			
-			default:
-			movespeed = .75;
-			jumpspeed = 3;
-			break;
-		}
-	}
-	
-	hsp = movespeed * walkDirX;
-	#endregion
-	
-	#region Jump
-	if (place_meeting(x,y + 1,collisionY))
-	{
-		if (!attack)
-		{
-			if (jumpCount == 15)
-			{
-				attackReadyTimer = 0;
-			}
-			else
-			{
-				if (audio_is_playing(snd_EnemyJump3)) audio_stop_sound(snd_EnemyJump3);
-				audio_play_sound(snd_EnemyJump3,0,false);
-				walkDirX *= -1;
-				if (walkDirX == 1)
-				{
-					image_index = 0;
-				}
-				else if (walkDirX == -1)
-				{
-					image_index = image_number - 1;
-				}
-				jumpCount += 1;
-				vsp = -jumpspeed;
-			}
+			walkDirX = 1;
 		}
 		else
 		{
-			switch (attackNumber)
-			{
-				case enemyAttacks.poppyBroSr_bombThrowTripleJump:
-				if (jumpCount == 3)
-				{
-					attackStopTimer = 0;
-				}
-				else
-				{
-					jumpCount += 1;
-					vsp = -7;
-				}
-				break;
-			}
+			walkDirX = -1;
 		}
+		
+		if (slideTimer == -1) slideTimer = slideTimerMax;
 	}
 	#endregion
 	
@@ -265,39 +163,18 @@ if (!global.pause)
 	}
 	#endregion
 	
-	#region Dash Stop Timer
-	if (dashStopTimer > 0)
+	#region Slide Timer
+	if (slideTimer > 0)
 	{
-		dashStopTimer -= 1;
+		slideTimer -= 1;
 	}
-	else if (dashStopTimer == 0)
+	else if (slideTimer == 0)
 	{
-		isAttacking = false;
-		attackStopTimer = 0;
-		dashStopTimer = -1;
-	}
-	#endregion
-	
-	#region Bomb Throw Timer
-	if (bombThrowTimer > 0)
-	{
-		bombThrowTimer -= 1;
-	}
-	else if (bombThrowTimer == 0)
-	{
-		bombThrowState = 2;
-		if (instance_exists(bomb))
+		if (place_meeting(x,y + 1,collisionY))
 		{
-			bomb.active = true;
-			bomb.destroyableByPlayer = true;
-			bomb.destroyableByEnemy = false;
-			bomb.hsp = 2.5 * dirX;
-			bomb.vsp = -4.5;
-			bomb.angleSpd = bomb.hsp * 4;
+			hsp = movespeed * walkDirX;
+			slideTimer = -1;
 		}
-		isAttacking = false;
-		attackStopTimer = 60;
-		bombThrowTimer = -1;
 	}
 	#endregion
 	
@@ -320,17 +197,11 @@ if (!global.pause)
 	#endregion
 	
 	#region Animation
-	image_speed = 1 * walkDirX;
-	sprite_index = sprIdle;
+	dirX = walkDirX;
 	
-	if ((walkDirX == 1) and (image_index >= image_number - 1))
-	{
-		image_index = image_number - 1;
-	}
-	else if ((walkDirX == -1) and (image_index < 1))
-	{
-		image_index = .9;
-	}
+	image_speed = 1;
+	
+	sprite_index = sprIdle;
 	#endregion
 }
 else

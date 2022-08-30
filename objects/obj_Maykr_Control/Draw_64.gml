@@ -90,60 +90,117 @@ if (!active)
 	}
 	draw_sprite(spr_Maykr_ItemHud,0,26,366 + bottomHudOffset);
 	#endregion
-	
-	#region Windows
-	if (windowIndex != -1)
-	{
-		draw_set_color(c_black);
-		draw_set_alpha(.5);
-		draw_rectangle(0,0,480,270,false);
-		draw_set_color(c_white);
-		draw_set_alpha(1);
-		
-		switch (windowIndex)
-		{
-			case "clear":
-			case "leave":
-			textureY += .15;
-			if (textureY >= 48) textureY -= 48;
-			textureX += .15;
-			if (textureX >= 48) textureX -= 48;
-			
-			gpu_set_blendenable(false)
-			gpu_set_colorwriteenable(false,false,false,true);
-			draw_set_alpha(0);
-			draw_rectangle(0,0,room_width,room_height,false);
-			
-			draw_set_alpha(1);
-			draw_sprite(spr_Maykr_Window_Leave_Mask,0,158,111);
-			gpu_set_blendenable(true);
-			gpu_set_colorwriteenable(true,true,true,true);
-			
-			gpu_set_blendmode_ext(bm_dest_alpha,bm_inv_dest_alpha);
-			gpu_set_alphatestenable(true);
-			
-			for (var i = 0; i < 6; i++)
-			{
-				for (var h = 0; h < 6; h++)
-				{
-					draw_sprite(spr_Maykr_Window_Texture,0,158 + textureX + (48 * (i - 1)),111 + textureY + (48 * (h - 1)));
-				}
-			}
-			
-			gpu_set_alphatestenable(false);
-			gpu_set_blendmode(bm_normal);
-			
-			draw_sprite(spr_Maykr_Window_Leave,0,157,90);
-			
-			draw_sprite(spr_Maykr_Window_Yes,(yesBar >= yesBarMax),180,116);
-			draw_sprite_part(spr_Maykr_Window_YesBar,0,0,0,sprite_get_width(spr_Maykr_Window_YesBar) * (1 - ((yesBarMax - yesBar) / yesBarMax)),sprite_get_height(spr_Maykr_Window_YesBar),185,138);
-			draw_sprite(spr_Maykr_Window_No,0,180,149);
-			break;
-		}
-	}
-	#endregion
 }
 else
 {
 	draw_sprite(spr_Maykr_TopHud_Edit,0,12 - (topHudOffset * 330),-24 + (topHudEditOffset * 27));
 }
+
+#region Windows
+if (windowIndex != -1)
+{
+	draw_set_color(c_black);
+	draw_set_alpha(.5);
+	draw_rectangle(0,0,480,270,false);
+	draw_set_color(c_white);
+	draw_set_alpha(1);
+}
+
+switch (windowIndex)
+{
+	case maykrWindows.levelSettings:
+	var x1 = 10;
+	var y1 = 10;
+	var x2 = room_width - 10;
+	var y2 = room_height - 10;
+	
+	var spriteWidth = sprite_get_width(spr_Maykr_Window_Border);
+	var spriteHeight = sprite_get_height(spr_Maykr_Window_Border);
+	
+	windowWidth = lerp(windowWidth,x2,.2);
+	windowHeight = lerp(windowHeight,y2,.2);
+	if ((!windowActive) and (windowWidth > (x2 * .85))) windowActive = true;
+	windowContentAlpha = lerp(windowContentAlpha,windowActive,.2);
+	
+	var windowXScale = ((windowWidth - x1) / spriteWidth);
+	var windowYScale = ((windowHeight - y1) / spriteHeight);
+	
+	textureY += .15;
+	if (textureY >= 48) textureY -= 48;
+	textureX += .15;
+	if (textureX >= 48) textureX -= 48;
+	
+	gpu_set_blendenable(false)
+	gpu_set_colorwriteenable(false,false,false,true);
+	draw_set_alpha(0);
+	draw_rectangle(0,0,room_width,room_height,false);
+	
+	draw_set_alpha(1);
+	draw_sprite_ext(spr_Maykr_Window_Border,1,x1,y1,windowXScale,windowYScale,image_angle,image_blend,image_alpha);
+	gpu_set_blendenable(true);
+	gpu_set_colorwriteenable(true,true,true,true);
+	
+	gpu_set_blendmode_ext(bm_dest_alpha,bm_inv_dest_alpha);
+	gpu_set_alphatestenable(true);
+	
+	for (var i = 0; i < floor((x2 - x1) / 48) + 2; i++)
+	{
+		for (var h = 0; h < floor((y2 - y1) / 48) + 2; h++)
+		{
+			draw_sprite(spr_Maykr_Window_Texture,0,x1 + textureX + (48 * (i - 1)),y1 + textureY + (48 * (h - 1)));
+		}
+	}
+	
+	gpu_set_alphatestenable(false);
+	gpu_set_blendmode(bm_normal);
+	
+	draw_sprite_ext(spr_Maykr_Window_Border,0,x1,y1,windowXScale,windowYScale,image_angle,image_blend,image_alpha);
+	
+	draw_set_alpha(windowContentAlpha);
+	draw_set_color(c_white);
+	draw_set_halign(fa_center);
+	draw_set_font(global.fontMaykrRed);
+	draw_text(((x2 - x1) / 2),y1 + 3,"create canvas");
+	draw_set_halign(fa_left);
+	draw_set_alpha(1);
+	break;
+	
+	case "clear":
+	case "leave":
+	textureY += .15;
+	if (textureY >= 48) textureY -= 48;
+	textureX += .15;
+	if (textureX >= 48) textureX -= 48;
+	
+	gpu_set_blendenable(false)
+	gpu_set_colorwriteenable(false,false,false,true);
+	draw_set_alpha(0);
+	draw_rectangle(0,0,room_width,room_height,false);
+	
+	draw_set_alpha(1);
+	draw_sprite(spr_Maykr_Window_Leave_Mask,0,158,111);
+	gpu_set_blendenable(true);
+	gpu_set_colorwriteenable(true,true,true,true);
+	
+	gpu_set_blendmode_ext(bm_dest_alpha,bm_inv_dest_alpha);
+	gpu_set_alphatestenable(true);
+	
+	for (var i = 0; i < 6; i++)
+	{
+		for (var h = 0; h < 6; h++)
+		{
+			draw_sprite(spr_Maykr_Window_Texture,0,158 + textureX + (48 * (i - 1)),111 + textureY + (48 * (h - 1)));
+		}
+	}
+	
+	gpu_set_alphatestenable(false);
+	gpu_set_blendmode(bm_normal);
+	
+	draw_sprite(spr_Maykr_Window_Leave,0,157,90);
+	
+	draw_sprite(spr_Maykr_Window_Yes,(yesBar >= yesBarMax),180,116);
+	draw_sprite_part(spr_Maykr_Window_YesBar,0,0,0,sprite_get_width(spr_Maykr_Window_YesBar) * (1 - ((yesBarMax - yesBar) / yesBarMax)),sprite_get_height(spr_Maykr_Window_YesBar),185,138);
+	draw_sprite(spr_Maykr_Window_No,0,180,149);
+	break;
+}
+#endregion

@@ -22,9 +22,9 @@ if (!global.pause)
 			
 			case movingWallAttributes.asteroidFields3_1:
 			hsp = spd;
-			if (x <= 72)
+			if (x <= 720)
 			{
-				x = 72;
+				x = 720;
 				hsp = 0;
 				active = false;
 			}

@@ -12,8 +12,15 @@ if (setupTimer == 0)
 		sprIdle = spr_AirPuff_Normal_Idle;
 		sprDestroy = spr_AirPuff_Normal_Destroy;
 		break;
+		
+		//Whispy Big
+		
+		case 2:
+		sprIdle = spr_AirPuff_WhispyBig_Idle;
+		sprDestroy = spr_AirPuff_WhispyBig_Idle;
+		break;
 	}
-	particleOnHitSpr = sprDestroy;
+	if (sprDestroy != -1) particleOnHitSpr = sprDestroy;
 	sprite_index = sprIdle;
 }
 
@@ -40,12 +47,15 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	if (hsp <= -decel) hsp += decel;
 	if ((hsp > -decel) and (hsp < decel))
 	{
-		var par = instance_create_depth(x,y,depth,obj_Particle);
-		par.sprite_index = sprDestroy;
-		par.image_xscale = image_xscale;
-		par.image_yscale = image_yscale;
-		par.dir = dirX;
-		par.destroyAfterAnimation = true;
+		if (sprDestroy != -1)
+		{
+			var par = instance_create_depth(x,y,depth,obj_Particle);
+			par.sprite_index = sprDestroy;
+			par.image_xscale = image_xscale;
+			par.image_yscale = image_yscale;
+			par.dir = dirX;
+			par.destroyAfterAnimation = true;
+		}
 		instance_destroy();
 	}
 	
@@ -58,7 +68,8 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	else if (particleTimer == 0)
 	{
 		var par = instance_create_depth(x,y,depth - 1,obj_Particle);
-		par.sprite_index = spr_Particle_AirPuff;
+		par.sprite_index = spr_Particle_AirPuff1;
+		if (character == 1) par.sprite_index = spr_Particle_AirPuff2;
 		par.image_xscale = image_xscale;
 		par.image_yscale = image_yscale;
 		par.destroyAfterAnimation = true;

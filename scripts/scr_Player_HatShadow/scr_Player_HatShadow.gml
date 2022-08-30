@@ -559,8 +559,40 @@ function scr_Player_HatShadow(argument0,argument1)
 					hatShadowIndex = spr_Kirby_HatShadow_MysticBeam_GGS_Hurt;
 					break;
 					
+					case sprBeamCharge:
+					hatShadowIndex = spr_Kirby_HatShadow_MysticBeam_GGS_Charge;
+					break;
+					
+					case sprMysticBeamAttack1:
+					hatShadowIndex = spr_Kirby_HatShadow_MysticBeam_GGS_Attack1;
+					break;
+					
 					case sprMysticBeamAttack2:
 					hatShadowIndex = spr_Kirby_HatShadow_MysticBeam_GGS_Attack2;
+					break;
+					
+					case sprBeamAttack1:
+					hatShadowIndex = spr_Kirby_HatShadow_MysticBeam_GGS_Attack3;
+					break;
+					
+					case sprBeamAttack2:
+					hatShadowIndex = spr_Kirby_HatShadow_MysticBeam_GGS_Attack4;
+					break;
+					
+					case sprBeamAttack3:
+					hatShadowIndex = spr_Kirby_HatShadow_MysticBeam_GGS_Attack5;
+					break;
+					
+					case sprBeamAttack4:
+					hatShadowIndex = spr_Kirby_HatShadow_MysticBeam_GGS_Attack6;
+					break;
+					
+					case sprBeamAttack5:
+					hatShadowIndex = spr_Kirby_HatShadow_MysticBeam_GGS_Attack7;
+					break;
+					
+					case sprBeamAttack6:
+					hatShadowIndex = spr_Kirby_HatShadow_MysticBeam_GGS_Attack8;
 					break;
 				}
 				break;
@@ -2756,6 +2788,14 @@ function scr_Player_HatShadow(argument0,argument1)
 					
 					case sprAbilityChange:
 					hatShadowIndex = spr_Kirby_HatShadow_Spark_KSSU_AbilityChange;
+					break;
+					
+					case sprWarpStar1:
+					hatShadowIndex = spr_Kirby_HatShadow_Spark_KSSU_WarpStar1;
+					break;
+					
+					case sprWarpStar2:
+					hatShadowIndex = spr_Kirby_HatShadow_Spark_KSSU_WarpStar2;
 					break;
 					
 					case sprGuard:

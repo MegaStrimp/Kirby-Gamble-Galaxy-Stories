@@ -18,17 +18,16 @@ if (active)
 		break;
 		
 		case obj_ParentWall:
-		spawnedItem.visible = true;
 		spawnedItem.image_xscale = spawnedDirX;
 		switch (spawnedSlopeType)
 		{
 			case 0:
-			spawnedItem.sprite_index = spr_Maykr_Spawner_DebugWall;
-			spawnedItem.topWallSprite = spr_Maykr_Debug_TopWall;
+			//spawnedItem.sprite_index = spr_Maykr_Spawner_DebugWall;
+			//spawnedItem.topWallSprite = spr_Maykr_Debug_TopWall;
 			break;
 			
 			case 1:
-			spawnedItem.sprite_index = spr_Maykr_Debug_Slope;
+			//spawnedItem.sprite_index = spr_Maykr_Debug_Slope;
 			spawnedItem.mask_index = spr_DebugSlopeMask;
 			spawnedItem.slope = true;
 			spawnedItem.slopeType = "normal";
@@ -36,7 +35,7 @@ if (active)
 			break;
 			
 			case 2:
-			spawnedItem.sprite_index = spr_Maykr_Debug_GentleSlopeSpawner;
+			//spawnedItem.sprite_index = spr_Maykr_Debug_GentleSlopeSpawner;
 			spawnedItem.mask_index = spr_48x24Slope;
 			spawnedItem.slope = true;
 			spawnedItem.slopeType = "gentle";
@@ -44,7 +43,7 @@ if (active)
 			break;
 			
 			case 3:
-			spawnedItem.sprite_index = spr_Maykr_Debug_SuperGentleSlopeSpawner;
+			//spawnedItem.sprite_index = spr_Maykr_Debug_SuperGentleSlopeSpawner;
 			spawnedItem.mask_index = spr_72x24Slope;
 			spawnedItem.slope = true;
 			spawnedItem.slopeType = "gentle";

@@ -25,6 +25,18 @@ targetClampToView = false;
 #region Clamp Values
 switch (room)
 {
+	#region Green Greens Boss
+	case rm_GreenGreens_Boss:
+	#region xLimit1
+	xLimit1 = 1272;
+	#endregion
+	
+	#region xLimit2
+	xLimit2 = room_width - 1800;
+	#endregion
+	break;
+	#endregion
+	
 	#region Asteroid Fields 1
 	case rm_AsteroidFields1:
 	

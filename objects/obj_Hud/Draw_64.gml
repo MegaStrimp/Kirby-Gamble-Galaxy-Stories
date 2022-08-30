@@ -495,8 +495,6 @@ var livesPosY = 18 + (hasTreasure * 28);
 starsPosX = 17;
 starsPosY = 44 + (hasTreasure * 28);
 
-if (global.gamemode != gamemodes.maykr)
-{
 	//Lives
 	
 	draw_sprite_ext(livesBg,0,livesPosX - 13,livesPosY - 3,1,1,image_angle,image_blend,drawAlpha);
@@ -597,7 +595,17 @@ if (global.gamemode != gamemodes.maykr)
 	global.points = clamp(global.points,0,999999);
 	
 	//draw_text(hudX + 25,hudY + 10,pointsSep + string(global.points));
+
+//Draw Boss Death Overlay
+
+if (hasBossDeathOverlay)
+{
+	draw_set_color(bossDeathColor);
+	draw_set_alpha(.2);
+	draw_rectangle(0,0,room_width,room_height,false);
+	draw_set_color(c_white);
 }
+
 draw_set_alpha(1);
 
 #region Mix Timer
@@ -647,5 +655,30 @@ else if (musicIntroTimer == 0)
 {
 	musicIntroActive = false;
 	musicIntroTimer = -1;
+}
+#endregion
+
+#region Boss Death Color Timer
+if (bossDeathColorTimer > 0)
+{
+	bossDeathColorTimer -= 1;
+}
+else if (bossDeathColorTimer == 0)
+{
+	switch (bossDeathColor)
+	{
+		case c_white:
+		bossDeathColor = c_red;
+		break;
+		
+		case c_red:
+		bossDeathColor = c_black;
+		break;
+		
+		case c_black:
+		bossDeathColor = c_white;
+		break;
+	}
+	bossDeathColorTimer = bossDeathColorTimerMax;
 }
 #endregion

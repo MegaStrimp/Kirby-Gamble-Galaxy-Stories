@@ -8,7 +8,7 @@ if (!global.pause)
 	{
 		active = true;
 		global.stageMusicIsPlaying = false;
-		audio_play_sound(mus_MiniBoss,0,false);
+		audio_play_sound(mus_MiniBoss,0,true);
 		with (obj_Camera)
 		{
 			objectFollowing = other.id;

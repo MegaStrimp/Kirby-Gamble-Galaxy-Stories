@@ -1,5 +1,9 @@
 ///@description Initialize Variables
 
+#region Randomize
+randomize();
+#endregion
+
 #region Start Mode
 scr_Maykr_StartMode();
 #endregion
@@ -27,6 +31,10 @@ windowHeight = 10;
 windowActive = false;
 windowSelection = 0;
 windowContentAlpha = 0;
+maykrRoomWidth = 100;
+maykrRoomHeight = 100;
+
+global.loadedMaykrFile = -1;
 #endregion
 
 #region Buttons

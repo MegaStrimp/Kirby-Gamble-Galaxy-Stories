@@ -1,6 +1,6 @@
 ///@description Room End
 
-if ((followTarget) and (global.gamemode != gamemodes.maykr))
+if (followTarget)
 {
 	global.points += points;
 	global.pointStars += pointStarPoints;

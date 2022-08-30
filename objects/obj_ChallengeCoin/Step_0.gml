@@ -39,10 +39,6 @@ if (!global.pause)
 		setupTimer = -1;
 	}
 	
-	//Destroy If Maykr
-	
-	if (global.gamemode == gamemodes.maykr) instance_destroy();
-	
 	//Shake
 	
 	if (place_meeting(x,y,obj_InhaleMask))

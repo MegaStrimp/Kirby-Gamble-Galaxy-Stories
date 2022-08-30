@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 39,
+  "bbox_right": 57,
   "bbox_top": 0,
-  "bbox_bottom": 61,
+  "bbox_bottom": 63,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 40,
-  "height": 62,
+  "width": 58,
+  "height": 64,
   "textureGroupId": {
     "name": "Enemies",
     "path": "texturegroups/Enemies",
@@ -24,18 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"7fab54be-ac99-42f8-b7e3-829caf51083f","path":"sprites/spr_WhispyWoods_Normal_Death/spr_WhispyWoods_Normal_Death.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7fab54be-ac99-42f8-b7e3-829caf51083f","path":"sprites/spr_WhispyWoods_Normal_Death/spr_WhispyWoods_Normal_Death.yy",},"LayerId":{"name":"a1a8ea19-ea2d-44f4-9fb1-2f6b3b9d5143","path":"sprites/spr_WhispyWoods_Normal_Death/spr_WhispyWoods_Normal_Death.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_WhispyWoods_Normal_Death","path":"sprites/spr_WhispyWoods_Normal_Death/spr_WhispyWoods_Normal_Death.yy",},"resourceVersion":"1.0","name":"7fab54be-ac99-42f8-b7e3-829caf51083f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e80080f4-79d0-4447-a0b0-4bf61da5618f","path":"sprites/spr_WhispyWoods_Normal_Death/spr_WhispyWoods_Normal_Death.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e80080f4-79d0-4447-a0b0-4bf61da5618f","path":"sprites/spr_WhispyWoods_Normal_Death/spr_WhispyWoods_Normal_Death.yy",},"LayerId":{"name":"a1a8ea19-ea2d-44f4-9fb1-2f6b3b9d5143","path":"sprites/spr_WhispyWoods_Normal_Death/spr_WhispyWoods_Normal_Death.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_WhispyWoods_Normal_Death","path":"sprites/spr_WhispyWoods_Normal_Death/spr_WhispyWoods_Normal_Death.yy",},"resourceVersion":"1.0","name":"e80080f4-79d0-4447-a0b0-4bf61da5618f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0fc76be9-1736-475c-abf8-58d2871526e8","path":"sprites/spr_WhispyWoods_Normal_Death/spr_WhispyWoods_Normal_Death.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0fc76be9-1736-475c-abf8-58d2871526e8","path":"sprites/spr_WhispyWoods_Normal_Death/spr_WhispyWoods_Normal_Death.yy",},"LayerId":{"name":"a1a8ea19-ea2d-44f4-9fb1-2f6b3b9d5143","path":"sprites/spr_WhispyWoods_Normal_Death/spr_WhispyWoods_Normal_Death.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_WhispyWoods_Normal_Death","path":"sprites/spr_WhispyWoods_Normal_Death/spr_WhispyWoods_Normal_Death.yy",},"resourceVersion":"1.0","name":"0fc76be9-1736-475c-abf8-58d2871526e8","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"681614ca-e548-4f94-8a44-261d2de3cd59","path":"sprites/spr_WhispyWoods_Normal_Death/spr_WhispyWoods_Normal_Death.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"681614ca-e548-4f94-8a44-261d2de3cd59","path":"sprites/spr_WhispyWoods_Normal_Death/spr_WhispyWoods_Normal_Death.yy",},"LayerId":{"name":"a1a8ea19-ea2d-44f4-9fb1-2f6b3b9d5143","path":"sprites/spr_WhispyWoods_Normal_Death/spr_WhispyWoods_Normal_Death.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_WhispyWoods_Normal_Death","path":"sprites/spr_WhispyWoods_Normal_Death/spr_WhispyWoods_Normal_Death.yy",},"resourceVersion":"1.0","name":"681614ca-e548-4f94-8a44-261d2de3cd59","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"76acccfc-9361-49f4-a37d-bca78e2ca828","path":"sprites/spr_WhispyWoods_Normal_Death/spr_WhispyWoods_Normal_Death.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"76acccfc-9361-49f4-a37d-bca78e2ca828","path":"sprites/spr_WhispyWoods_Normal_Death/spr_WhispyWoods_Normal_Death.yy",},"LayerId":{"name":"a1a8ea19-ea2d-44f4-9fb1-2f6b3b9d5143","path":"sprites/spr_WhispyWoods_Normal_Death/spr_WhispyWoods_Normal_Death.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_WhispyWoods_Normal_Death","path":"sprites/spr_WhispyWoods_Normal_Death/spr_WhispyWoods_Normal_Death.yy",},"resourceVersion":"1.0","name":"76acccfc-9361-49f4-a37d-bca78e2ca828","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_WhispyWoods_Normal_Death","path":"sprites/spr_WhispyWoods_Normal_Death/spr_WhispyWoods_Normal_Death.yy",},
@@ -45,15 +36,12 @@
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 4.0,
+    "length": 1.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"d89375be-0d80-4380-baa8-bf38ba9575c1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7fab54be-ac99-42f8-b7e3-829caf51083f","path":"sprites/spr_WhispyWoods_Normal_Death/spr_WhispyWoods_Normal_Death.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"0a298ad1-8c35-4914-94dc-485f2119bddb","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e80080f4-79d0-4447-a0b0-4bf61da5618f","path":"sprites/spr_WhispyWoods_Normal_Death/spr_WhispyWoods_Normal_Death.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"09112876-bcad-4d7e-bc84-d5d230efdf77","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0fc76be9-1736-475c-abf8-58d2871526e8","path":"sprites/spr_WhispyWoods_Normal_Death/spr_WhispyWoods_Normal_Death.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"7e58720b-8f3e-4ffa-9e71-d4c466047c52","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"681614ca-e548-4f94-8a44-261d2de3cd59","path":"sprites/spr_WhispyWoods_Normal_Death/spr_WhispyWoods_Normal_Death.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"f115be63-b053-4a2a-94d2-8f48cee99178","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"76acccfc-9361-49f4-a37d-bca78e2ca828","path":"sprites/spr_WhispyWoods_Normal_Death/spr_WhispyWoods_Normal_Death.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -66,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 20,
-    "yorigin": 35,
+    "xorigin": 21,
+    "yorigin": 34,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_WhispyWoods_Normal_Death","path":"sprites/spr_WhispyWoods_Normal_Death/spr_WhispyWoods_Normal_Death.yy",},
@@ -81,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Normal",
-    "path": "folders/Sprites/Bosses/GGS/Whispy Woods/Normal.yy",
+    "name": "Face",
+    "path": "folders/Sprites/Bosses/GGS/Whispy Woods/Normal/Face.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_WhispyWoods_Normal_Death",
