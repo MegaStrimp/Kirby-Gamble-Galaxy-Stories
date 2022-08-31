@@ -8,13 +8,18 @@ if (setupTimer == 0)
 		#region Normal
 		case 0:
 		sprIdle = spr_Wizzkid_Normal_Idle;
-		sprIdleHat = spr_PoppyBrosSr_Normal_IdleHat;
-		sprAttack = spr_PoppyBrosSr_Normal_Attack;
-		sprAttackHat = spr_PoppyBrosSr_Normal_AttackHat;
-		sprDash = spr_PoppyBrosSr_Normal_Dash;
-		sprHand = spr_PoppyBrosSr_Normal_Hand;
-		sprHurt = spr_PoppyBrosSr_Normal_Hurt;
-		sprDeath = spr_PoppyBrosSr_Normal_Death;
+		sprWalk = spr_Wizzkid_Normal_Walk;
+		sprHighJump = spr_Wizzkid_Normal_HighJump;
+		sprHighFall = spr_Wizzkid_Normal_HighFall;
+		sprLaserReady = spr_Wizzkid_Normal_LaserReady;
+		sprLaser = spr_Wizzkid_Normal_Laser;
+		sprLaserRelease = spr_Wizzkid_Normal_LaserRelease;
+		sprDeathAir = spr_Wizzkid_Normal_DeathAir;
+		sprDeathGround = spr_Wizzkid_Normal_DeathGround;
+		
+		sprLaserProjStart = spr_Wizzkid_Normal_LaserProjStart;
+		sprLaserProjLoop = spr_Wizzkid_Normal_LaserProjLoop;
+		sprLaserProjParticle = spr_Wizzkid_Normal_LaserProjParticle;
 		break;
 		#endregion
 	}
@@ -52,12 +57,12 @@ if (!global.pause)
 	#endregion
 	
 	#region Movement
-	if (!attack)
+	if ((!attack) or ((attackNumber == enemyAttacks.wizzkid_laser) and (attackState == 0)))
 	{
 		var nearestPlayer = -1;
 		nearestPlayer = instance_nearest(x,y,obj_Player);
 		
-		if ((nearestPlayer != -1) and (instance_exists(nearestPlayer))) slideTargetX = nearestPlayer.x;
+		if ((!attack) and (nearestPlayer != -1) and (instance_exists(nearestPlayer))) slideTargetX = nearestPlayer.x;
 		
 		if (slideTargetX > x)
 		{
@@ -75,91 +80,67 @@ if (!global.pause)
 	#region Attack
 	if (attack)
 	{
-		if (attackNumber == enemyAttacks.poppyBroSr_bombThrow)
+		switch (attackNumber)
 		{
-			handX = (path_get_x(pth_Enemy_PoppyBrosSrHand1,handPath)) * dirX;
-			handY = path_get_y(pth_Enemy_PoppyBrosSrHand1,handPath);
-			//handX = (path_get_x(pth_Enemy_PoppyBrosSrHand1,handPath) + handXOffset) * dirX;
-			//handY = path_get_y(pth_Enemy_PoppyBrosSrHand1,handPath) + handYOffset;
+			case enemyAttacks.wizzkid_jump:
+			if ((attackState == 0) and (hasYCollision) and (place_meeting(x,y + (1 + vspFinal),collisionY)) and (vsp > 1))
+			{
+				if (audio_is_playing(snd_BeamBombExplode)) audio_stop_sound(snd_BeamBombExplode);
+				audio_play_sound(snd_BeamBombExplode,0,false);
+				for (var i = 0; i < 2; i++)
+				{
+					var parXDir = 2;
+					if (i == 1) var parXDir = -2;
+					var par = instance_create_depth(x + parXDir,y - 8,depth - 1,obj_RecoilStar);
+					if (i == 0)
+					{
+						par.hsp = 3;
+					}
+					else if (i == 1)
+					{
+						par.hsp = -3;
+					}
+					par.dir = sign(par.hsp);
+					par.hurtsObject = false;
+					par.hurtsEnemy = false;
+					par.canBeInhaled = true;
+					par.destroyTimer = 25;
+				}
+				attackState = 1;
+				attackStopTimer = 30;
+				with (obj_Camera) shakeY = 3;
+			}
+			break;
 			
-			switch (bombThrowState)
+			case enemyAttacks.wizzkid_laser:
+			switch (attackState)
 			{
 				case 0:
-				handIndex = 0;
-				handPath += .04;
-				handPath = clamp(handPath,0,1);
-				if (handPath == 1) bombThrowState = 1;
-				break;
-				
-				case 1:
-				handPath -= .07;
-				handPath = clamp(handPath,0,1);
-				if (handPath == 0)
+				if ((x <= xLimit1) or (x >= xLimit2))
 				{
-					bombThrowState = 2;
-					bombThrowTimer = 0;
+					if (audio_is_playing(snd_Charge_Ready)) audio_stop_sound(snd_Charge_Ready);
+					audio_play_sound(snd_Charge_Ready,0,false);
+					slideTimer = -1;
+					var nearestPlayer = -1;
+					nearestPlayer = instance_nearest(x,y,obj_Player);
+					
+					if ((nearestPlayer != -1) and (instance_exists(nearestPlayer))) slideTargetX = nearestPlayer.x;
+					
+					if (nearestPlayer.x > x)
+					{
+						walkDirX = 1;
+					}
+					else
+					{
+						walkDirX = -1;
+					}
+					attackState = 1;
+					sprite_index = sprLaserReady;
+					image_index = 0;
 				}
-				break;
-				
-				case 2:
-				handIndex = 2;
-				handXOffset -= .15;
-				handYOffset += .05;
 				break;
 			}
 		}
-	}
-	#endregion
-	
-	#region Attack Ready Timer
-	if (attackReadyTimer > 0)
-	{
-		attackReadyTimer -= 1;
-	}
-	else if (attackReadyTimer == 0)
-	{
-		jumpCount = 0;
-		attackNumber = choose(enemyAttacks.poppyBroSr_bombThrow,enemyAttacks.poppyBroSr_dash);
-		attackNumber = choose(enemyAttacks.poppyBroSr_bombThrow);
-		switch (attackNumber)
-		{
-			case enemyAttacks.poppyBroSr_bombThrow:
-			bombThrowState = 0;
-			jumpCount += 1;
-			gravLimitNormal = 3.5;
-			hsp = 0;
-			vsp = -7;
-			attack = true;
-			bomb = instance_create_depth(x,y,depth + 1,obj_Projectile_Bomb);
-			bomb.owner = id;
-			bomb.active = false;
-			bomb.enemy = true;
-			bomb.destroyableByWall = false;
-			bomb.destroyableByPlayer = false;
-			bomb.destroyableByEnemy = false;
-			bomb.destroyableByObject = false;
-			bomb.destroyableByProjectile = false;
-			bomb.hurtsObject = false;
-			bomb.hurtsEnemy = false;
-			bomb.hurtsBoss = false;
-			bomb.hurtsPlayer = false;
-			bomb.hurtsProjectile = false;
-			bomb.hurtsObject = false;
-			bomb.hurtsEnemy = false;
-			bomb.hurtsPlayer = true;
-			bomb.destroyAfterHurt = false;
-			bomb.canBeInhaled = true;
-			//bombThrowTimer = bombThrowTimerMax;
-			break;
-			
-			case enemyAttacks.poppyBroSr_dash:
-			dashDir = dirX;
-			dashStopTimer = dashStopTimerMax;
-			attack = true;
-			isAttacking = true;
-			break;
-		}
-		attackReadyTimer = -1;
 	}
 	#endregion
 	
@@ -172,9 +153,66 @@ if (!global.pause)
 	{
 		if (place_meeting(x,y + 1,collisionY))
 		{
+			image_index = 0;
 			hsp = movespeed * walkDirX;
 			slideTimer = -1;
 		}
+	}
+	#endregion
+	
+	#region Attack Ready Timer
+	if (attackReadyTimer > 0)
+	{
+		attackReadyTimer -= 1;
+	}
+	else if (attackReadyTimer == 0)
+	{
+		attackNumber = choose(enemyAttacks.wizzkid_jump,enemyAttacks.wizzkid_jump,enemyAttacks.wizzkid_laser);
+		switch (attackNumber)
+		{
+			case enemyAttacks.wizzkid_jump:
+			slideTimer = -1;
+			if (audio_is_playing(snd_BigJump)) audio_stop_sound(snd_BigJump);
+			audio_play_sound(snd_BigJump,0,false);
+			attack = true;
+			vsp = -jumpspeedHighJump;
+			attackStopTimer = 480;
+			break;
+			
+			case enemyAttacks.wizzkid_laser:
+			slideTargetX = xLimit1;
+			if (x > xstart) slideTargetX = xLimit2;
+			attack = true;
+			break;
+		}
+		attackReadyTimer = -1;
+	}
+	#endregion
+	
+	#region Jump Attack Timer
+	if (jumpAttackTimer > 0)
+	{
+		jumpAttackTimer -= 1;
+	}
+	else if (jumpAttackTimer == 0)
+	{
+		jumpAttackTimer = -1;
+	}
+	#endregion
+	
+	#region Laser Attack Timer
+	if (laserAttackTimer > 0)
+	{
+		laserAttackTimer -= 1;
+	}
+	else if (laserAttackTimer == 0)
+	{
+		if (attackState == 2)
+		{
+			sprite_index = sprLaserRelease;
+			image_index = 0;
+		}
+		laserAttackTimer = -1;
 	}
 	#endregion
 	
@@ -185,13 +223,10 @@ if (!global.pause)
 	}
 	else if (attackStopTimer == 0)
 	{
-		//walkDirX = 1;
-		//if ((instance_exists(obj_Player)) and (obj_Player.x < x)) walkDirX *= -1;
-		jumpCount = 0;
-		gravLimitNormal = 4;
 		attack = false;
 		attackNumber = -1;
-		isAttacking = false;
+		attackState = 0;
+		attackReadyTimer = attackReadyTimerMax;
 		attackStopTimer = -1;
 	}
 	#endregion
@@ -201,7 +236,53 @@ if (!global.pause)
 	
 	image_speed = 1;
 	
-	sprite_index = sprIdle;
+	switch (attackNumber)
+	{
+		case -1:
+		if (hsp == 0)
+		{
+			sprite_index = sprIdle;
+		}
+		else
+		{
+			sprite_index = sprWalk;
+		}
+		break;
+		
+		case enemyAttacks.wizzkid_jump:
+		if ((hasYCollision) and (place_meeting(x,y + (1 + vspFinal),collisionY)))
+		{
+			sprite_index = sprHighFall;
+		}
+		else
+		{
+			if (vsp > 0)
+			{
+				sprite_index = sprHighFall;
+			}
+			else
+			{
+				sprite_index = sprHighJump;
+			}
+		}
+		break;
+		
+		case enemyAttacks.wizzkid_laser:
+		switch (attackState)
+		{
+			case 0:
+			if (hsp == 0)
+			{
+				sprite_index = sprIdle;
+			}
+			else
+			{
+				sprite_index = sprWalk;
+			}
+			break;
+		}
+		break;
+	}
 	#endregion
 }
 else

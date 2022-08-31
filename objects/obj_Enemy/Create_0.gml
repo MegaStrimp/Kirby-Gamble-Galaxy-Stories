@@ -99,6 +99,7 @@ healthbarIndex = 0;
 groundFailsafe = true;
 sprHurt = -1;
 sprBossIcon = -1;
+sprBossText = -1;
 drawShakeX = 0;
 drawShakeY = 0;
 squadType = -1;

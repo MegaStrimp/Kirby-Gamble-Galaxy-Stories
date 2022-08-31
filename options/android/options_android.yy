@@ -33,7 +33,7 @@
   "option_android_screen_depth": 0,
   "option_android_device_support": 0,
   "option_android_scale": 0,
-  "option_android_texture_page": "4096x4096",
+  "option_android_texture_page": "2048x2048",
   "option_android_icon_ldpi": "icons/ldpi.png",
   "option_android_icon_mdpi": "icons/mdpi.png",
   "option_android_icon_hdpi": "icons/hdpi.png",

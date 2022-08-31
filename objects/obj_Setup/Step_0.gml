@@ -87,7 +87,6 @@ for (var i = 0; i < 2; i++)
         global.stickLeftReleased[i] = false;
         controllerPressedResetTimer = 1;
     }
-	
     else if (global.stickLeftHeld[i] && gamepad_axis_value(global.playerGamepad[i],gp_axislh) > -controllerSensitivity)
     {
         global.stickLeftHeld[i] = false;
@@ -103,7 +102,6 @@ for (var i = 0; i < 2; i++)
         global.stickRightReleased[i] = false;
         controllerPressedResetTimer = 1;
     }
-	
     else if (global.stickRightHeld[i] && gamepad_axis_value(global.playerGamepad[i],gp_axislh) < controllerSensitivity)
     {
         global.stickRightHeld[i] = false;
@@ -112,15 +110,14 @@ for (var i = 0; i < 2; i++)
         controllerPressedResetTimer = 1;
     }
 	
-    if (!global.stickUpHeld[i] && gamepad_axis_value(global.playerGamepad[i],gp_axislv) >= controllerSensitivity)
+    if (!global.stickUpHeld[i] && gamepad_axis_value(global.playerGamepad[i],gp_axislv) <= -controllerSensitivity)
     {
         global.stickUpHeld[i] = true;
         global.stickUpPressed[i] = true;
         global.stickUpReleased[i] = false;
         controllerPressedResetTimer = 1;
     }
-	
-    else if (global.stickUpHeld[i] && gamepad_axis_value(global.playerGamepad[i],gp_axislv) < controllerSensitivity)
+    else if (global.stickUpHeld[i] && gamepad_axis_value(global.playerGamepad[i],gp_axislv) > -controllerSensitivity)
     {
         global.stickUpHeld[i] = false;
         global.stickUpPressed[i] = false;
@@ -128,15 +125,14 @@ for (var i = 0; i < 2; i++)
         controllerPressedResetTimer = 1;
     }
 	
-    if (!global.stickDownHeld[i] && gamepad_axis_value(global.playerGamepad[i],gp_axislv) <= -controllerSensitivity)
+    if (!global.stickDownHeld[i] && gamepad_axis_value(global.playerGamepad[i],gp_axislv) >= controllerSensitivity)
     {
         global.stickDownHeld[i] = true;
         global.stickDownPressed[i] = true;
         global.stickDownReleased[i] = false;
         controllerPressedResetTimer = 1;
     }
-	
-    else if (global.stickDownHeld[i] && gamepad_axis_value(global.playerGamepad[i],gp_axislv) > -controllerSensitivity)
+    else if (global.stickDownHeld[i] && gamepad_axis_value(global.playerGamepad[i],gp_axislv) < controllerSensitivity)
     {
         global.stickDownHeld[i] = false;
         global.stickDownPressed[i] = false;

@@ -33,7 +33,7 @@ function scr_Maykr_Inventory(argument0,argument1)
 			i += 1;
 			maykrInventory[i] = maykrObjects.debugWall24x24SlopeRight;
 			maykrSpr[i] = spr_Maykr_Spawner_DebugWall24x24SlopeRight;
-			maykrSprXOffset[i] = sprite_get_xoffset(maykrSpr[i]);
+			spawnedXOffset[i] = 24;
 			maykrSprYOffset[i] = sprite_get_yoffset(maykrSpr[i]);
 			i += 1;
 			maykrInventory[i] = maykrObjects.asteroidFieldsFront;

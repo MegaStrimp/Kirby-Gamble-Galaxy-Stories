@@ -1,5 +1,9 @@
 ///@description Initialize Variables
 
+#region Randomize
+randomize();
+#endregion
+
 #region Mouse
 mouseX = mouse_x;
 mouseY = mouse_y;
@@ -138,18 +142,53 @@ enum maykrObjects
 enum maykrWindows
 {
 	canvasSetup,
-	levelSettings
+	levelSettings,
+	clearCanvas,
+	leaveCanvas
 }
 #endregion
 
 #region Backgrounds
-var i = 0;
-maykrBackground[i] = bg_EggGarden_SurfaceSunset;
-i += 1;
-maykrBackground[i] = bg_EggGarden_SurfaceSunset;
+maykrBackgroundList = ds_list_create();
+ds_list_add(maykrBackgroundList,bg_GreenGreens1);
+ds_list_add(maykrBackgroundList,bg_GreenGreens2);
+ds_list_add(maykrBackgroundList,bg_BattleshipHalberd_Sky);
+ds_list_add(maykrBackgroundList,bg_AsteroidFields_Sky);
+ds_list_add(maykrBackgroundList,bg_Aquatia_Harbor_Day);
+ds_list_add(maykrBackgroundList,bg_EggGarden_Surface);
+ds_list_add(maykrBackgroundList,bg_EggGarden_Clouds);
+ds_list_add(maykrBackgroundList,bg_EggGarden_SurfaceSunset);
+ds_list_add(maykrBackgroundList,bg_EggGarden_Temple);
+ds_list_add(maykrBackgroundList,bg_EggGarden_Caves);
+ds_list_add(maykrBackgroundList,bg_GearCube_Hangar);
+
+selectedBackgroundSize = ds_list_size(maykrBackgroundList);
+selectedBackground = irandom_range(0,selectedBackgroundSize - 1);
+selectedBackgroundIndex = ds_list_find_value(maykrBackgroundList,selectedBackground);
+layer_background_sprite(layer_background_get_id("Background_Parallax1"),selectedBackgroundIndex);
 #endregion
 
 #region Music
+maykrMusicList = ds_list_create();
+ds_list_add(maykrMusicList,mus_Maykr);
+ds_list_add(maykrMusicList,mus_GreenGreens);
+ds_list_add(maykrMusicList,mus_BattleshipHalberd);
+ds_list_add(maykrMusicList,mus_HalberdEscape);
+ds_list_add(maykrMusicList,mus_AsteroidFields);
+ds_list_add(maykrMusicList,mus_EggGarden_Hub);
+ds_list_add(maykrMusicList,mus_EggGarden_Surface);
+ds_list_add(maykrMusicList,mus_EggGarden_Temple);
+ds_list_add(maykrMusicList,mus_EggGarden_Caves);
+ds_list_add(maykrMusicList,mus_GearCube_Hangar);
+ds_list_add(maykrMusicList,mus_GearCube_Depths);
+ds_list_add(maykrMusicList,mus_Aquatia_Harbor);
+ds_list_add(maykrMusicList,mus_PopstarMoon);
+ds_list_add(maykrMusicList,mus_AbilityChallenge);
+
+selectedMusicSize = ds_list_size(maykrMusicList);
+selectedMusic = irandom_range(0,selectedMusicSize - 1);
+selectedMusicIndex = ds_list_find_value(maykrMusicList,selectedMusic);
+if (audio_is_playing(global.musicPlaying)) audio_stop_sound(global.musicPlaying);
 #endregion
 
 #region Mouse On Top
@@ -225,10 +264,6 @@ selectedSpawnerDirectionExists = false;
 selectedSpawnerDirection = 1;
 selectedSpawnerDirectionX = -100;
 selectedSpawnerDirectionY = -100;
-selectedBackground = 0;
-selectedBackgroundIndex = bg_EggGarden_SurfaceSunset;
-selectedMusic = 0;
-selectedMusicIndex = mus_Maykr;
 #endregion
 
 #region Spawn Kirby

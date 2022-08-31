@@ -1,5 +1,9 @@
 ///@description Main
 
+#region Inputs
+scr_Player_Inputs(0);
+#endregion
+
 #region Mouse
 mouseXPrev = mouseX;
 mouseYPrev = mouseY;
@@ -10,10 +14,6 @@ mouseYGui = device_mouse_y_to_gui(0);
 
 mouseOnHud = false;
 if (((point_in_rectangle(mouseXGui,mouseYGui,0,0,325,27))) or ((point_in_rectangle(mouseXGui,mouseYGui,324,0,480,47))) or ((point_in_rectangle(mouseXGui,mouseYGui,26,233 + bottomHudOffset,454,270))) or ((hudVisible) and ((mouseOnTopMap) or (mouseOnTopDelete) or (mouseOnTopZoomIn) or (mouseOnTopZoomOut) or (mouseOnTopZoomReset) or (mouseOnTopDrag) or (mouseOnTopSave) or (mouseOnTopLoad) or (mouseOnTopOptions) or (mouseOnTopReset) or (mouseOnTopLeave) or (mouseOnTopPlay) or (mouseOnTopEdit) or (mouseOnTopBlocks) or (mouseOnTopEnemies) or (mouseOnTopItems) or (mouseOnTopExpand) or (mouseOnTopNextInventory) or (mouseOnTopPreviousInventory) or (mouseOnTopHide) or (mouseOnTopSelectedSpawnerOptions) or (mouseOnTopSelectedSpawnerDirection)))) mouseOnHud = true;
-#endregion
-
-#region Music
-if (!audio_is_playing(global.musicPlaying)) scr_PlayMusic(true,selectedMusicIndex,0,true);
 #endregion
 
 #region Load Level
@@ -46,13 +46,21 @@ switch (loadState)
 								
 				#region Load Room Attribues
 				var roomWidthLoad = real(file_text_read_real(loadedFile));
-				show_debug_message("Room Height - " + string(roomWidthLoad));
+				show_debug_message("Room Width - " + string(roomWidthLoad));
 				file_text_readln(loadedFile);
 				var roomHeightLoad = real(file_text_read_real(loadedFile));
 				show_debug_message("Room Height - " + string(roomHeightLoad));
 				file_text_readln(loadedFile);
+				backgroundLoad = real(file_text_read_real(loadedFile));
+				show_debug_message("Background - " + string(backgroundLoad));
 				file_text_readln(loadedFile);
-								
+				var musicLoad = real(file_text_read_real(loadedFile));
+				show_debug_message("Music - " + string(musicLoad));
+				file_text_readln(loadedFile);
+				file_text_readln(loadedFile);
+				
+				if (audio_is_playing(global.musicPlaying)) audio_stop_sound(global.musicPlaying);
+				global.musicPlaying = musicLoad;
 				scr_Maykr_CreateRoom(roomWidthLoad,roomHeightLoad);
 				room_goto(global.maykrCanvas);
 				#endregion
@@ -80,6 +88,10 @@ switch (loadState)
 	break;
 	
 	case 1:
+	#region Set Background
+	layer_background_sprite(layer_background_get_id("Background_Parallax1"),backgroundLoad);
+	#endregion
+	
 	creationIndex = file_text_read_string(loadedFile);
 	file_text_readln(loadedFile);
 	
@@ -243,7 +255,11 @@ if (!active)
 	canBeInteracted = true;
 	if (windowIndex != -1) canBeInteracted = false;
 	#endregion
-
+	
+	#region Music
+	if (!audio_is_playing(global.musicPlaying)) scr_PlayMusic(true,selectedMusicIndex,0,true);
+	#endregion
+	
 	if (canBeInteracted)
 	{
 		#region Mouse On Top
@@ -581,6 +597,10 @@ if (!active)
 					file_text_writeln(savedFile);
 					file_text_write_string(savedFile,room_height);
 					file_text_writeln(savedFile);
+					file_text_write_string(savedFile,selectedBackgroundIndex);
+					file_text_writeln(savedFile);
+					file_text_write_string(savedFile,selectedMusicIndex);
+					file_text_writeln(savedFile);
 					
 					file_text_write_string(savedFile,"roomAttributesEnd");
 					file_text_writeln(savedFile);
@@ -737,12 +757,23 @@ if (!active)
 			}
 			#endregion
 			
+			#region Options Button
+			if (mouseOnTopOptions)
+			{
+				io_clear();
+				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+				audio_play_sound(snd_ButtonYes,0,false);
+				scr_Maykr_WindowReset();
+				windowIndex = maykrWindows.levelSettings;
+			}
+			#endregion
+			
 			#region Reset Button
 			if (mouseOnTopReset)
 			{
 				io_clear();
 				yesBar = 0;
-				windowIndex = "clear";
+				windowIndex = maykrWindows.clearCanvas;
 			}
 			#endregion
 			
@@ -751,7 +782,7 @@ if (!active)
 			{
 				io_clear();
 				yesBar = 0;
-				windowIndex = "leave";
+				windowIndex = maykrWindows.leaveCanvas;
 			}
 			#endregion
 			
@@ -1134,10 +1165,81 @@ if (!active)
 		switch (windowIndex)
 		{
 			case maykrWindows.levelSettings:
-			layer_background_xscale(layer_background_get_id("Background_Parallax1"),.5);
+			if (!instance_exists(obj_Fade))
+			{
+				if (keyRightPressed)
+				{
+					windowSelection += 1;
+				}
+				if (keyLeftPressed)
+				{
+					windowSelection -= 1;
+				}
+				
+				if (windowSelection < 0) windowSelection += 5;
+				if (windowSelection > 4) windowSelection -= 5;
+				
+				if (((windowSelection == 0) and (keyJumpPressed)) or ((point_in_rectangle(mouseXGui,mouseYGui,126,57,147,78)) and (mouse_check_button_pressed(mb_left))))
+				{
+					windowSelection = 0;
+					io_clear();
+					if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+					audio_play_sound(snd_ButtonChange,0,false);
+					selectedBackground += 1;
+					if (selectedBackground > selectedBackgroundSize - 1) selectedBackground -= selectedBackgroundSize;
+					selectedBackgroundIndex = ds_list_find_value(maykrBackgroundList,selectedBackground);
+					layer_background_sprite(layer_background_get_id("Background_Parallax1"),selectedBackgroundIndex);
+				}
+				
+				if (((windowSelection == 1) and (keyJumpPressed)) or ((point_in_rectangle(mouseXGui,mouseYGui,149,57,170,78)) and (mouse_check_button_pressed(mb_left))))
+				{
+					windowSelection = 1;
+					io_clear();
+					if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+					audio_play_sound(snd_ButtonChange,0,false);
+					selectedBackground -= 1;
+					if (selectedBackground < 0) selectedBackground += selectedBackgroundSize;
+					selectedBackgroundIndex = ds_list_find_value(maykrBackgroundList,selectedBackground);
+					layer_background_sprite(layer_background_get_id("Background_Parallax1"),selectedBackgroundIndex);
+				}
+				
+				if (((windowSelection == 2) and (keyJumpPressed)) or ((point_in_rectangle(mouseXGui,mouseYGui,126,107,147,128)) and (mouse_check_button_pressed(mb_left))))
+				{
+					windowSelection = 2;
+					io_clear();
+					if (audio_is_playing(global.musicPlaying)) audio_stop_sound(global.musicPlaying);
+					if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+					audio_play_sound(snd_ButtonChange,0,false);
+					selectedMusic += 1;
+					if (selectedMusic > selectedMusicSize - 1) selectedMusic -= selectedMusicSize;
+					selectedMusicIndex = ds_list_find_value(maykrMusicList,selectedMusic);
+				}
+				
+				if (((windowSelection == 3) and (keyJumpPressed)) or ((point_in_rectangle(mouseXGui,mouseYGui,149,107,170,128)) and (mouse_check_button_pressed(mb_left))))
+				{
+					windowSelection = 3;
+					io_clear();
+					if (audio_is_playing(global.musicPlaying)) audio_stop_sound(global.musicPlaying);
+					if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+					audio_play_sound(snd_ButtonChange,0,false);
+					selectedMusic -= 1;
+					if (selectedMusic < 0) selectedMusic += selectedMusicSize;
+					selectedMusicIndex = ds_list_find_value(maykrMusicList,selectedMusic);
+				}
+				
+				if ((keyAttackPressed) or ((windowSelection == 4) and (keyJumpPressed)) or ((point_in_rectangle(mouseXGui,mouseYGui,19,226,139,251)) and (mouse_check_button_pressed(mb_left))))
+				{
+					windowSelection = 4;
+					io_clear();
+					if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+					audio_play_sound(snd_ButtonNo,0,false);
+					windowSelection = 0;
+					windowIndex = -1;
+				}
+			}
 			break;
 			
-			case "clear":
+			case maykrWindows.clearCanvas:
 			if (yesBar < yesBarMax) yesBar += 1;
 			
 			if (mouse_check_button_pressed(mb_left))
@@ -1176,7 +1278,7 @@ if (!active)
 			yesBar = clamp(yesBar,0,yesBarMax);
 			break;
 			
-			case "leave":
+			case maykrWindows.leaveCanvas:
 			if (yesBar < yesBarMax) yesBar += 1;
 			
 			if ((mouse_check_button_pressed(mb_left)) and (!instance_exists(obj_Fade)))
@@ -1230,6 +1332,8 @@ else
 		global.pause = true;
 		global.abilityP1 = playerAbilities.none;
 		global.abilityP2 = playerAbilities.none;
+		
+		if (audio_is_playing(mus_Death1)) audio_stop_sound(mus_Death1);
 		
 		if (instance_exists(obj_Hud)) instance_destroy(obj_Hud);
 		with (obj_Particle) instance_destroy();

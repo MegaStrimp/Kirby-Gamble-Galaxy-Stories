@@ -12,21 +12,30 @@ randomize();
 decel = .05;
 movespeed = 2;
 jumpspeed = 4;
+jumpspeedHighJump = 8;
 gravNormal = .2;
 gravLimitNormal = 5;
 #endregion
 
 #region Sprites
+mask_index = spr_Wizzkid_Normal_Idle;
+
 sprIdle = spr_Wizzkid_Normal_Idle;
-sprIdleHat = spr_PoppyBrosSr_Normal_IdleHat;
-sprAttack = spr_PoppyBrosSr_Normal_Attack;
-sprAttackHat = spr_PoppyBrosSr_Normal_AttackHat;
-sprDash = spr_PoppyBrosSr_Normal_Dash;
-sprHand = spr_PoppyBrosSr_Normal_Hand;
-sprHurt = spr_PoppyBrosSr_Normal_Hurt;
-sprDeath = spr_PoppyBrosSr_Normal_Death;
+sprWalk = spr_Wizzkid_Normal_Walk;
+sprHighJump = spr_Wizzkid_Normal_HighJump;
+sprHighFall = spr_Wizzkid_Normal_HighFall;
+sprLaserReady = spr_Wizzkid_Normal_LaserReady;
+sprLaser = spr_Wizzkid_Normal_Laser;
+sprLaserRelease = spr_Wizzkid_Normal_LaserRelease;
+sprDeathAir = spr_Wizzkid_Normal_DeathAir;
+sprDeathGround = spr_Wizzkid_Normal_DeathGround;
+
+sprLaserProjStart = spr_Wizzkid_Normal_LaserProjStart;
+sprLaserProjLoop = spr_Wizzkid_Normal_LaserProjLoop;
+sprLaserProjParticle = spr_Wizzkid_Normal_LaserProjParticle;
 
 sprBossIcon = spr_Healthbar_Boss_Icon_Wizzkid;
+sprBossText = spr_Healthbar_Boss_Text_Wizzkid;
 #endregion
 
 #region Other Variables
@@ -45,14 +54,17 @@ hasDeathKnockback = false;
 slideTargetX = -1;
 attack = false;
 attackNumber = -1;
-isAttacking = false;
-
-collisionX = obj_EnemyWall;
+attackState = 0;
+xLimit1 = x - 180;
+xLimit2 = x + 180;
 #endregion
 
 #region Timers
-attackReadyTimer = -1;
-attackStopTimer = -1;
 slideTimer = -1;
 slideTimerMax = 70;
+attackReadyTimerMax = 240;
+attackReadyTimer = attackReadyTimerMax;
+jumpAttackTimer = -1;
+laserAttackTimer = -1;
+attackStopTimer = -1;
 #endregion

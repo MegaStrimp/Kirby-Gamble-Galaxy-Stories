@@ -111,11 +111,11 @@ function scr_Player_Equipment(argument0,argument1)
 			case playerAbilities.mysticBeam:
 			if (player == 0)
 			{
-				var altHatToCheck = global.hatTypeBeamP1;
+				var altHatToCheck = global.hatTypeMysticBeamP1;
 			}
 			else
 			{
-				var altHatToCheck = global.hatTypeBeamP2;
+				var altHatToCheck = global.hatTypeMysticBeamP2;
 			}
 			
 			switch (altHatToCheck)

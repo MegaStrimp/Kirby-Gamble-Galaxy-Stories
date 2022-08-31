@@ -91,6 +91,7 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_StarBlock","path":"objects/obj_StarBlock/obj_StarBlock.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":360.0,"y":48.0,"resourceVersion":"1.0","name":"inst_852A4C2","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_StarBlock","path":"objects/obj_StarBlock/obj_StarBlock.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":360.0,"y":120.0,"resourceVersion":"1.0","name":"inst_7FDACA3B","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_StarBlock","path":"objects/obj_StarBlock/obj_StarBlock.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":360.0,"y":96.0,"resourceVersion":"1.0","name":"inst_39F1A37A","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"obj_Door","path":"objects/obj_Door/obj_Door.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":396.0,"y":208.0,"resourceVersion":"1.0","name":"inst_21DEF29C","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":600,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":6,"gridY":6,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Environment","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_Background_AsteroidFields1","path":"objects/obj_Background_AsteroidFields1/obj_Background_AsteroidFields1.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":420.0,"y":192.0,"resourceVersion":"1.0","name":"inst_84BF76E_1","tags":[],"resourceType":"GMRInstance",},
@@ -309,6 +310,7 @@
     {"name":"inst_7FDACA3B","path":"rooms/rm_AsteroidFields_Gamble/rm_AsteroidFields_Gamble.yy",},
     {"name":"inst_39F1A37A","path":"rooms/rm_AsteroidFields_Gamble/rm_AsteroidFields_Gamble.yy",},
     {"name":"inst_496DDF3D","path":"rooms/rm_AsteroidFields_Gamble/rm_AsteroidFields_Gamble.yy",},
+    {"name":"inst_21DEF29C","path":"rooms/rm_AsteroidFields_Gamble/rm_AsteroidFields_Gamble.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

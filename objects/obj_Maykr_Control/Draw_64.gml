@@ -111,8 +111,8 @@ switch (windowIndex)
 	case maykrWindows.levelSettings:
 	var x1 = 10;
 	var y1 = 10;
-	var x2 = room_width - 10;
-	var y2 = room_height - 10;
+	var x2 = 480 - 10;
+	var y2 = 270 - 10;
 	
 	var spriteWidth = sprite_get_width(spr_Maykr_Window_Border);
 	var spriteHeight = sprite_get_height(spr_Maykr_Window_Border);
@@ -160,13 +160,33 @@ switch (windowIndex)
 	draw_set_color(c_white);
 	draw_set_halign(fa_center);
 	draw_set_font(global.fontMaykrRed);
-	draw_text(((x2 - x1) / 2),y1 + 3,"create canvas");
+	draw_text(((x2 - x1) / 2),y1 + 3,"level options");
 	draw_set_halign(fa_left);
+	
+	draw_sprite_ext(spr_Maykr_EnterBar,0,19,54,(102 / 27),1,image_angle,image_blend,windowContentAlpha);
+	draw_sprite_ext(spr_Maykr_EnterBar,0,19,104,(102 / 27),1,image_angle,image_blend,windowContentAlpha);
+	
+	draw_sprite_ext(spr_Maykr_Plus,(windowSelection == 0),126,57,1,1,image_angle,image_blend,windowContentAlpha);
+	draw_sprite_ext(spr_Maykr_Minus,(windowSelection == 1),149,57,1,1,image_angle,image_blend,windowContentAlpha);
+	draw_sprite_ext(spr_Maykr_Plus,(windowSelection == 2),126,107,1,1,image_angle,image_blend,windowContentAlpha);
+	draw_sprite_ext(spr_Maykr_Minus,(windowSelection == 3),149,107,1,1,image_angle,image_blend,windowContentAlpha);
+	
+	draw_sprite_ext(spr_Maykr_Back,(windowSelection == 4),19,226,1,1,image_angle,image_blend,windowContentAlpha);
+	
+	draw_set_font(global.fontMaykrBlue);
+	draw_text(23,35,"background");
+	draw_text(23,86,"music");
+	
+	draw_set_font(global.fontMaykrWhite);
+	draw_text(25,60,string(selectedBackground));
+	draw_text(25,110,string(selectedMusic));
+	
+	draw_set_color(c_white);
 	draw_set_alpha(1);
 	break;
 	
-	case "clear":
-	case "leave":
+	case maykrWindows.clearCanvas:
+	case maykrWindows.leaveCanvas:
 	textureY += .15;
 	if (textureY >= 48) textureY -= 48;
 	textureX += .15;

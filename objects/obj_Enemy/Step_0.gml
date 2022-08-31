@@ -109,7 +109,7 @@ if (!global.pause)
 		}
 		else
 		{
-			if ((hasDeathParticles) and (!fellDown))
+			if ((!isMiniBoss) and (hasDeathParticles) and (!fellDown))
 			{
 				if (audio_is_playing(snd_DeathParticles)) audio_stop_sound(snd_DeathParticles);
 				audio_play_sound(snd_DeathParticles,0,false);
@@ -117,12 +117,15 @@ if (!global.pause)
 			
 			if (isMiniBoss)
 			{
+				if (audio_is_playing(snd_MinibossDeath)) audio_stop_sound(snd_MinibossDeath);
+				audio_play_sound(snd_MinibossDeath,0,false);
 				var deathObj = instance_create_depth(x,y - 12,depth,obj_Miniboss_Death);
-				deathObj.ownerIndex = object_get_name(id);
+				deathObj.hsp = 2 * projectileHitKnockbackDir;
+				deathObj.vsp = -6;
+				deathObj.ownerIndex = object_index;
 				deathObj.points = points;
 				deathObj.ability = ability;
-				deathObj.hsp = 2 * projectileHitKnockbackDir;
-				deathObj.vsp = -4;
+				deathObj.dirX = dirX;
 			}
 			else if (isBoss)
 			{

@@ -1380,7 +1380,7 @@ function scr_Player_States_Normal()
 								parBeamCycle1 = instance_create_depth(-100,-100,depth - 1,obj_Particle);
 			                    parBeamCycle1.followObject = false;
 			                    parBeamCycle1.followedObject = id;
-			                    parBeamCycle1.sprite_index = spr_Particle_BeamCycle;
+			                    parBeamCycle1.sprite_index = spr_Particle_MysticBeamCycle;
 								parBeamCycle1.turnSpd = (5 * -dir);
 								parBeamCycle1.turnAroundObject = true;
 								parBeamCycle1.angle = 90 + (10 * dir);

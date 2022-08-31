@@ -463,7 +463,7 @@ if ((debugCamera) and (keyboard_check(vk_control)))
 	}
 }
 
-if ((global.gamemode == gamemodes.maykr) and (instance_exists(obj_Maykr_Control)) and (!obj_Maykr_Control.active))
+if ((global.gamemode == gamemodes.maykr) and (instance_exists(obj_Maykr_Control)) and (!obj_Maykr_Control.active) and (obj_Maykr_Control.windowIndex == -1))
 {
 	if (keyboard_check(vk_control))
 	{

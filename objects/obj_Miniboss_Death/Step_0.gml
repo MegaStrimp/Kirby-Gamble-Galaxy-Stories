@@ -46,7 +46,7 @@ if (!global.pause)
 	
 	switch (ownerIndex)
 	{
-		case "obj_PoppyBrosSr":
+		case obj_PoppyBrosSr:
 		mask_index = spr_PoppyBrosSr_Normal_Death;
 		if (place_meeting(x,y + 1,collisionY))
 		{
@@ -55,6 +55,18 @@ if (!global.pause)
 		else
 		{
 			sprite_index = spr_PoppyBrosSr_Normal_Hurt;
+		}
+		break;
+		
+		case obj_Wizzkid:
+		mask_index = spr_Wizzkid_Normal_DeathGround;
+		if (place_meeting(x,y + 1,collisionY))
+		{
+			sprite_index = spr_Wizzkid_Normal_DeathGround;
+		}
+		else
+		{
+			sprite_index = spr_Wizzkid_Normal_DeathAir;
 		}
 		break;
 	}

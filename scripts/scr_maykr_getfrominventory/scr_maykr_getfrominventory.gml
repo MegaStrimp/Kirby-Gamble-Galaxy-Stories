@@ -19,14 +19,15 @@ function scr_Maykr_GetFromInventory(argument0)
 		
 		case maykrObjects.debugWall24x24SlopeLeft:
 		spawnedItemIndex = obj_ParentWall;
-		spawnedSprite = spr_Maykr_Spawner_DebugWall;
+		spawnedSprite = spr_Maykr_Spawner_DebugWall24x24SlopeLeft;
 		spawnedSlopeType = 1;
 		break;
 		
 		case maykrObjects.debugWall24x24SlopeRight:
 		spawnedItemIndex = obj_ParentWall;
-		spawnedSprite = spr_Maykr_Spawner_DebugWall;
+		spawnedSprite = spr_Maykr_Spawner_DebugWall24x24SlopeRight;
 		spawnedSlopeType = 1;
+		spawnedXOffset = 24;
 		break;
 		
 		case maykrObjects.asteroidFieldsFront:

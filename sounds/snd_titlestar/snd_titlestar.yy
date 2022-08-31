@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_titlestar.mp3",
-  "duration": 1.358367,
+  "soundFile": "snd_titlestar.wav",
+  "duration": 1.38449,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",

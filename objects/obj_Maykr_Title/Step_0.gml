@@ -112,8 +112,8 @@ if (!global.pause)
 				windowSelection -= 1;
 			}
 			
-			if (selection < 0) windowSelection += 14;
-			if (selection > 13) windowSelection -= 14;
+			if (windowSelection < 0) windowSelection += 14;
+			if (windowSelection > 13) windowSelection -= 14;
 			
 			if (((windowSelection == 0) and (keyJumpPressed)) or ((point_in_rectangle(mouse_x,mouse_y,126,57,147,78)) and (mouse_check_button_pressed(mb_left))))
 			{

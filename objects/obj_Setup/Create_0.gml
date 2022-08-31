@@ -448,6 +448,8 @@ enum enemyAttacks
 	poppyBroSr_bombThrow,
 	poppyBroSr_bombThrowTripleJump,
 	poppyBroSr_dash,
+	wizzkid_jump,
+	wizzkid_laser,
 	whispyWoods_airpuff,
 	whispyWoods_spike,
 	whispyWoods_throwObject,
@@ -721,7 +723,7 @@ enum talkingCharacter
 #endregion
 
 #region Global Variables
-global.versionNumber = "0.4.3";
+global.versionNumber = "0.5.0";
 
 global.selectedSave = "Save1.ini";
 global.hpMax = 5;

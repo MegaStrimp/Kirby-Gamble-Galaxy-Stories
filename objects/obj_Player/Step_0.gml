@@ -279,10 +279,12 @@ if (!global.pause)
 			{
 				finalForce *= 1.25;
 				drawOffsetForce = 16;
+				if (audio_is_playing(snd_BigJump)) audio_stop_sound(snd_BigJump);
 				audio_play_sound(snd_BigJump,0,false);
 			}
 			else
 			{
+				if (audio_is_playing(snd_Jump)) audio_stop_sound(snd_Jump);
 				audio_play_sound(snd_Jump,0,false);
 			}
 			

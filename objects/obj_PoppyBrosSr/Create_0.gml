@@ -27,6 +27,7 @@ sprHurt = spr_PoppyBrosSr_Normal_Hurt;
 sprDeath = spr_PoppyBrosSr_Normal_Death;
 
 sprBossIcon = spr_Healthbar_Boss_Icon_PoppyBrosSr;
+sprBossText = spr_Healthbar_Boss_Text_PoppyBrosSr;
 #endregion
 
 #region Other Variables

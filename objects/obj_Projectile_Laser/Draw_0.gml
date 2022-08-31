@@ -15,7 +15,7 @@ for (var i = 0; i < maxLength; i++)
 	var xEnd = x + lengthdir_x(i,dirr);
 	var yEnd = y + lengthdir_y(i,dirr);
 	laserMaxLength = i;
-	if (collision_point(xEnd,yEnd,obj_ParentWall,0,0))
+	if ((collision_point(xEnd,yEnd,obj_ParentWall,0,0)))
 	{
 		var par = instance_create_depth(xEnd,yEnd,owner.depth,obj_Particle);
 		par.sprite_index = spr_Particle_Aura1;
