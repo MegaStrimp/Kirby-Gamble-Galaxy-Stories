@@ -13,7 +13,7 @@ if (!instance_exists(obj_Fade))
 		global.playerLives = 3;
 		global.pause = false;
 		var fade = instance_create_depth(x,y,-999,obj_Fade);
-		fade.targetRoom = rm_StageSelect;
+		fade.targetRoom = rm_stageselect_demo;
 		fade.pausable = false;
 	}
 }
