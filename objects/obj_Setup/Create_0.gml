@@ -1095,3 +1095,10 @@ rousr_dissonance_handler_on_join_request(example_on_join_request, id);
 #region Palette Swap Setup
 if (global.shaders) pal_swap_init_system(shd_pal_swapper,shd_pal_html_sprite,shd_pal_html_surface);
 #endregion
+
+#region Localization system
+
+//Create the manager object
+instance_create_depth(0,0,depth,obj_polyglot);
+
+#endregion

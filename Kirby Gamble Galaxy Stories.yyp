@@ -1161,6 +1161,7 @@
     {"id":{"name":"spr_Blado_Normal_Palette_BrownBlades","path":"sprites/spr_Blado_Normal_Palette_BrownBlades/spr_Blado_Normal_Palette_BrownBlades.yy",},"order":0,},
     {"id":{"name":"spr_Kirby_Equipment_Bell_Modern_ClimbDown","path":"sprites/spr_Kirby_Equipment_Bell_Modern_ClimbDown/spr_Kirby_Equipment_Bell_Modern_ClimbDown.yy",},"order":20,},
     {"id":{"name":"spr_BloodGordo_Normal_Idle","path":"sprites/spr_BloodGordo_Normal_Idle/spr_BloodGordo_Normal_Idle.yy",},"order":0,},
+    {"id":{"name":"scr_polyglot","path":"scripts/scr_polyglot/scr_polyglot.yy",},"order":1,},
     {"id":{"name":"spr_BloodGordo_Normal_Palette_BloodyThorns","path":"sprites/spr_BloodGordo_Normal_Palette_BloodyThorns/spr_BloodGordo_Normal_Palette_BloodyThorns.yy",},"order":0,},
     {"id":{"name":"spr_Bobo_Normal_Fall","path":"sprites/spr_Bobo_Normal_Fall/spr_Bobo_Normal_Fall.yy",},"order":0,},
     {"id":{"name":"spr_Bobo_Normal_Flame","path":"sprites/spr_Bobo_Normal_Flame/spr_Bobo_Normal_Flame.yy",},"order":1,},
@@ -1705,6 +1706,7 @@
     {"id":{"name":"obj_Projectile_YolkyYolk","path":"objects/obj_Projectile_YolkyYolk/obj_Projectile_YolkyYolk.yy",},"order":59,},
     {"id":{"name":"spr_Kirby_Normal_Float_Mask","path":"sprites/spr_Kirby_Normal_Float_Mask/spr_Kirby_Normal_Float_Mask.yy",},"order":60,},
     {"id":{"name":"spr_Hud_Dialogue_Portrait_Gamble_Stressed","path":"sprites/spr_Hud_Dialogue_Portrait_Gamble_Stressed/spr_Hud_Dialogue_Portrait_Gamble_Stressed.yy",},"order":13,},
+    {"id":{"name":"obj_polyglot","path":"objects/obj_polyglot/obj_polyglot.yy",},"order":0,},
     {"id":{"name":"spr_Hud_Dialogue_Portrait_Gamble_Teary","path":"sprites/spr_Hud_Dialogue_Portrait_Gamble_Teary/spr_Hud_Dialogue_Portrait_Gamble_Teary.yy",},"order":14,},
     {"id":{"name":"spr_Hud_Dialogue_Portrait_Gamble_TipsFingers","path":"sprites/spr_Hud_Dialogue_Portrait_Gamble_TipsFingers/spr_Hud_Dialogue_Portrait_Gamble_TipsFingers.yy",},"order":15,},
     {"id":{"name":"spr_Hud_Dialogue_Portrait_Infraflux_Normal","path":"sprites/spr_Hud_Dialogue_Portrait_Infraflux_Normal/spr_Hud_Dialogue_Portrait_Infraflux_Normal.yy",},"order":0,},
@@ -6244,6 +6246,7 @@
     {"folderPath":"folders/Sprites/Characters/Kirby/Ability Hats/Mystic Beam/GGS/Equipment.yy","order":2,"resourceVersion":"1.0","name":"Equipment","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Hud/Healthbars/Boss/Text.yy","order":5,"resourceVersion":"1.0","name":"Text","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Bosses/GGS/Wizzkid/Normal/Attacks.yy","order":9,"resourceVersion":"1.0","name":"Attacks","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Localization.yy","order":18,"resourceVersion":"1.0","name":"Localization","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
@@ -6268,6 +6271,7 @@
   ],
   "IncludedFiles": [
     {"CopyToMask":3035461389054378222,"filePath":"datafiles","resourceVersion":"1.0","name":"ARIALUNI.TTF","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/i18n","resourceVersion":"1.0","name":"en.json","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2022.6.1.26",

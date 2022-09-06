@@ -1,0 +1,171 @@
+{
+
+    "playerCharacters": {
+        
+        "kirby": {
+
+            "title": "Kirby",
+            "description": "Riding in on the spring breeze, it's Kirby! Inhale enemies and copy their powers. A galaxy stretches beyond your wildest dreams, so it's time to get going!"
+
+        },
+
+        "gamble": {
+
+            "title": "Gamble",
+            "description": "This new friend from outer space came to Popstar to ask Kirby for a hand in defeating the Cosmic Fluxbender! Gamble wields dice, cards, roulettes, and magical energy to take down the enemy. Make them fold!"
+
+        },
+
+        "metaKnight": {
+
+            "title": "Meta Knight",
+            "description": "The mysterious masked knight from Kirby's Adventure is here! He is chivalrous and always willing to fight any source of evil. All of Dream Land fears his sword!"
+
+        },
+
+        "helper": {
+        
+            "title": "Helper",
+            "description": "Folks from all over have come together to help Kirby on his adventure! Play as a plethora of creatures from across Gamble Galaxy, from stubby Waddle Dees to invincible Gordos!"
+
+        },
+
+        "gooey": {
+
+            "title": "Gooey",
+            "description": "While of strange origin, Gooey has a heart of gold, always eager to show up by his friends. With his ridiculously long tongue, he's happy to help Kirby along his adventure!"
+
+        },
+
+        "magolor": {
+
+            "title": "Magolor",
+            "description": "'Flux? I'll show you real power!' This tricky wizard hails from Kirby's Return to Dream Land. He used to be a lying cheat, but he's reformed... right? His otherworldly magic will make short work of your enemies!"
+
+        },
+
+        "keeby": {
+
+            "title": "Keeby",
+            "description": "While not as adventurous as his friendly rival, Keeby seemed eager to join him on his quest! Can he take a little break from his golfing career?"
+
+        }
+
+    },
+
+    "customizeSubMenus":{
+
+        "skins": {
+
+            "title": "Skins"
+
+        },
+
+        "sprayPaints":{
+
+            "title": "Spray Paints"
+
+        },
+
+        "hatSkins":{
+
+            "title": "Hat Skins"
+
+        },
+
+        "hatPaints":{
+
+            "title": "Hat Paints"
+
+        },
+
+        "familiars":{
+
+            "title": "Familiars"
+
+        }
+
+    },
+
+    "enemies":{
+
+        "waddleDee":{
+
+            "title": "Waddle Dee"
+
+        },
+
+        "waddleDoo":{
+
+            "title": "Waddle Doo"
+
+        },
+        
+        "brontoBurt":{
+
+            "title": "Bronto Burt"
+
+        },
+
+        "twizzy":{
+
+            "title": "Twizzy"
+
+        },
+
+        "tookey":{
+
+            "title": "Tookey"
+
+        }
+
+    },
+
+    "languages":{
+
+        "english": "English",
+        "turkish": "Türkçe",
+        "german": "Deutsch",
+        "italian": "Italiano",
+        "french": "Français",
+        "polish": "Polski",
+        "chinese": "Chinese (WIP)",
+        "spanish": "Español",
+        "japanese": "日本語",
+        "portuguese": "Português",
+        "norwegian": "Norwegian (WIP)",
+        "arabic": "عربي"
+
+    },
+
+    "options":{
+
+        "true": "True",
+        "false": "False",
+        "display": "Display",
+        "audio": "Audio",
+        "controls": "Controls",
+        "language": "Language",
+        "other": "Other",
+        "fullscreen": "Fullscreen",
+        "windowSize": "Window Size",
+        "music": "Music",
+        "soundEffects": "Sound Effects",
+        "left": "Left",
+        "right": "Right",
+        "up": "Up",
+        "down": "Down",
+        "jump": "Jump",
+        "attack": "Attack",
+        "start": "Start",
+        "select": "Select",
+        "pressAnyKey": "Press Any Key",
+        "extraTutorials": "Extra Tutorials",
+        "autoSwallow": "Auto Swallow",
+        "musicIntro": "Music Intro",
+        "default": "Default"
+
+    }
+
+
+}

@@ -263,7 +263,7 @@ switch (page)
 			col2 = c_yellow;
 		}
 		if (subSelection == i) alpha = 1;
-		scr_Draw_Text_Color_Outline(140 + (120 * ((i - (i % 8)) / 10)),60 + (24 * (i % 8)),languageIndex[i],-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
+		scr_Draw_Text_Color_Outline(140 + (120 * ((i - (i % 8)) / 10)),60 + (24 * (i % 8)),str(languageIndex[i]),-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
 	}
 	break;
 	
