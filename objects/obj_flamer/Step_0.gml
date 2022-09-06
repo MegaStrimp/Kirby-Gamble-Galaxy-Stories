@@ -108,14 +108,14 @@ if (!global.pause)
 		}
 		else if (attackState == 1)
 		{
-			hsp = lengthdir_x(movespeed,playerDir);
-			vsp = lengthdir_y(movespeed,playerDir);
+			hsp = lengthdir_x(-movespeed,playerDir);
+			vsp = lengthdir_y(-movespeed,playerDir);
 		}
 		else if (attackState == 2)
 		{
 			movespeed += .05;
-			hsp = lengthdir_x(-movespeed,playerDir);
-			vsp = lengthdir_y(-movespeed,playerDir);
+			hsp = lengthdir_x(movespeed,playerDir);
+			vsp = lengthdir_y(movespeed,playerDir);
 			
 			if (particleTimer == -1) particleTimer = particleTimerMax;
 		}

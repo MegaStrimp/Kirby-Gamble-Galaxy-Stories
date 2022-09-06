@@ -3553,7 +3553,7 @@ function scr_Player_States_Normal()
 		
 		//Float
 		
-		if ((!global.cutscene) and (canFloat) and ((carriedItem == carriedItems.none) and (carriedItemState != carriedItemStates.heavy)) and (playerAbility != playerAbilities.ufo) and ((keyJumpPressed) and (!place_meeting(x,y,obj_AntiFloat)) and (!place_meeting(x,y + 1,obj_ParentWall))) and (!attack))
+		if ((!global.cutscene) and (canFloat) and ((carriedItem == carriedItems.none) and (carriedItemState != carriedItemStates.heavy)) and (playerAbility != playerAbilities.ufo) and ((keyJumpPressed) and (!place_meeting(x,y,obj_AntiFloat)) and (!grounded)) and (!attack))
 		{
 			switch (playerCharacter)
 			{

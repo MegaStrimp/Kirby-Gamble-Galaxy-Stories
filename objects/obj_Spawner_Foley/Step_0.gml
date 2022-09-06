@@ -29,11 +29,11 @@ else if (spawnTimer == 0)
 	spawnedEnemy.spawner = id;
 	spawnedEnemy.spawnerRange = (spawnerRange * 2);
 	spawnedEnemy.paletteIndex = paletteIndex;
-	spawnedEnemy.accel = .1;
-	spawnedEnemy.movespeed = 1;
-	spawnedEnemy.jumpspeed = .5;
-	spawnedEnemy.gravNormal = .05;
-	spawnedEnemy.gravLimitNormal = 1.25;
+	spawnedEnemy.accel = accel;
+	spawnedEnemy.movespeed = movespeed;
+	spawnedEnemy.jumpspeed = jumpspeed;
+	spawnedEnemy.gravNormal = gravNormal;
+	spawnedEnemy.gravLimitNormal = gravLimitNormal;
 	spawnedEnemy.character = character;
 	switch (character)
 	{
@@ -52,7 +52,7 @@ else if (spawnTimer == 0)
 		spawnedEnemy.sprLeaf = spr_Foley_Normal_Leaf;
 		break;
 	}
-	spawnedEnemy.sprite_index = spawnedEnemy.sprIdle;
+	spawnedEnemy.sprite_index = spawnedEnemy.sprIdleNormal;
 	spawnedEnemy.state = state;
 	spawnedEnemy.hp = hp;
 	spawnedEnemy.dmg = dmg;

@@ -23,6 +23,7 @@ switch (sprite_index)
 	projectile.hurtsEnemy = false;
 	projectile.hurtsBoss = false;
 	projectile.hurtsPlayer = true;
+	projectile.isBoss = true;
 	break;
 	
 	case sprLaserRelease:

@@ -34,11 +34,13 @@ switch (loadState)
 		{
 			scr_Maykr_ClearRoom();
 			file_text_readln(loadedFile);
-			var versionNumber = file_text_read_string(loadedFile);
+			loadedVersionNumber = file_text_read_string(loadedFile);
 			file_text_readln(loadedFile);
-			switch (versionNumber)
+			switch (loadedVersionNumber)
 			{
+				#region Version 1.0.0 - 1.0.1
 				case "Version - 1.0.0":
+				case "Version - 1.0.1":
 				creationIndex = file_text_read_string(loadedFile);
 				file_text_readln(loadedFile);
 								
@@ -65,6 +67,7 @@ switch (loadState)
 				room_goto(global.maykrCanvas);
 				#endregion
 				break;
+				#endregion
 			}
 			loadState = 1;
 		}
@@ -88,157 +91,326 @@ switch (loadState)
 	break;
 	
 	case 1:
-	#region Set Background
-	layer_background_sprite(layer_background_get_id("Background_Parallax1"),backgroundLoad);
-	#endregion
-	
-	creationIndex = file_text_read_string(loadedFile);
-	file_text_readln(loadedFile);
-	
-	if (creationIndex == "stageEnd") break;
-	
-	#region Load Tiles
-	for (;;)
+	switch (loadedVersionNumber)
 	{
-		var tileLayerIndexLoad = file_text_read_string(loadedFile);
-		show_debug_message(" - " + string(tileLayerIndexLoad));
+		#region Version 1.0.0
+		case "Version - 1.0.0":
+		#region Set Background
+		layer_background_sprite(layer_background_get_id("Background_Parallax1"),backgroundLoad);
+		#endregion
+	
+		creationIndex = file_text_read_string(loadedFile);
 		file_text_readln(loadedFile);
-		
-		if (tileLayerIndexLoad == "tileEnd") break;
-		
-		switch (creationIndex)
+	
+		if (creationIndex == "stageEnd") break;
+	
+		#region Load Tiles
+		for (;;)
 		{
-			case "tileStart":
-			
-			var tileIndexLoad = real(file_text_read_string(loadedFile));
-			show_debug_message(tileIndexLoad);
+			var tileLayerIndexLoad = file_text_read_string(loadedFile);
+			show_debug_message(" - " + string(tileLayerIndexLoad));
 			file_text_readln(loadedFile);
-			var tileXLoad = real(file_text_read_string(loadedFile));
-			show_debug_message(tileXLoad);
-			file_text_readln(loadedFile);
-			var tileYLoad = real(file_text_read_string(loadedFile));
-			show_debug_message(tileYLoad);
-			file_text_readln(loadedFile);
-			
-			var tileSetIndex = -1;
-			switch (tileLayerIndexLoad)
+		
+			if (tileLayerIndexLoad == "tileEnd") break;
+		
+			switch (creationIndex)
 			{
-				case "tileAsteroidFieldsFront":
-				if (tileAsteroidFieldsFront == -1)
+				case "tileStart":
+			
+				var tileIndexLoad = real(file_text_read_string(loadedFile));
+				show_debug_message(tileIndexLoad);
+				file_text_readln(loadedFile);
+				var tileXLoad = real(file_text_read_string(loadedFile));
+				show_debug_message(tileXLoad);
+				file_text_readln(loadedFile);
+				var tileYLoad = real(file_text_read_string(loadedFile));
+				show_debug_message(tileYLoad);
+				file_text_readln(loadedFile);
+			
+				var tileSetIndex = -1;
+				switch (tileLayerIndexLoad)
 				{
-					layer_create(299,"tileAsteroidFieldsFront");
-					tileAsteroidFieldsFront = layer_tilemap_create("tileAsteroidFieldsFront",0,0,ts_AsteroidFields,floor(room_width / 24) + 1,floor(room_height / 24) + 1);
-				}
-				tileSetIndex = tileAsteroidFieldsFront;
-				break;
+					case "tileAsteroidFieldsFront":
+					if (tileAsteroidFieldsFront == -1)
+					{
+						layer_create(299,"tileAsteroidFieldsFront");
+						tileAsteroidFieldsFront = layer_tilemap_create("tileAsteroidFieldsFront",0,0,ts_AsteroidFields,floor(room_width / 24) + 1,floor(room_height / 24) + 1);
+					}
+					tileSetIndex = tileAsteroidFieldsFront;
+					break;
 				
-				case "tileAsteroidFieldsFront3D1":
-				if (tileAsteroidFieldsFront3D1 == -1)
-				{
-					layer_create(299,"tileAsteroidFieldsFront3D1");
-					tileAsteroidFieldsFront3D1 = layer_tilemap_create("tileAsteroidFieldsFront3D1",0,0,ts_AsteroidFields,floor(room_width / 24) + 1,floor(room_height / 24) + 1);
-				}
-				tileSetIndex = tileAsteroidFieldsFront3D1;
-				break;
+					case "tileAsteroidFieldsFront3D1":
+					if (tileAsteroidFieldsFront3D1 == -1)
+					{
+						layer_create(299,"tileAsteroidFieldsFront3D1");
+						tileAsteroidFieldsFront3D1 = layer_tilemap_create("tileAsteroidFieldsFront3D1",0,0,ts_AsteroidFields,floor(room_width / 24) + 1,floor(room_height / 24) + 1);
+					}
+					tileSetIndex = tileAsteroidFieldsFront3D1;
+					break;
 				
-				case "tileAsteroidFieldsFront3D2":
-				if (tileAsteroidFieldsFront3D2 == -1)
-				{
-					layer_create(299,"tileAsteroidFieldsFront3D2");
-					tileAsteroidFieldsFront3D2 = layer_tilemap_create("tileAsteroidFieldsFront3D2",0,0,ts_AsteroidFields,floor(room_width / 24) + 1,floor(room_height / 24) + 1);
-				}
-				tileSetIndex = tileAsteroidFieldsFront3D2;
-				break;
+					case "tileAsteroidFieldsFront3D2":
+					if (tileAsteroidFieldsFront3D2 == -1)
+					{
+						layer_create(299,"tileAsteroidFieldsFront3D2");
+						tileAsteroidFieldsFront3D2 = layer_tilemap_create("tileAsteroidFieldsFront3D2",0,0,ts_AsteroidFields,floor(room_width / 24) + 1,floor(room_height / 24) + 1);
+					}
+					tileSetIndex = tileAsteroidFieldsFront3D2;
+					break;
 					
-				case "tileDebug":
-				if (tileDebug == -1)
-				{
-					layer_create(299,"tileDebug");
-					tileDebug = layer_tilemap_create("tileDebug",0,0,ts_Debug,floor(room_width / 24) + 1,floor(room_height / 24) + 1);
+					case "tileDebug":
+					if (tileDebug == -1)
+					{
+						layer_create(299,"tileDebug");
+						tileDebug = layer_tilemap_create("tileDebug",0,0,ts_Debug,floor(room_width / 24) + 1,floor(room_height / 24) + 1);
+					}
+					tileSetIndex = tileDebug;
+					break;
 				}
-				tileSetIndex = tileDebug;
+			
+				if (tileSetIndex != -1) tilemap_set(tileSetIndex,tileIndexLoad,tileXLoad,tileYLoad);
+				break;
+				
+				default:
+				file_text_readln(loadedFile);
 				break;
 			}
-			
-			if (tileSetIndex != -1) tilemap_set(tileSetIndex,tileIndexLoad,tileXLoad,tileYLoad);
-			break;
-			
-			default:
-			file_text_readln(loadedFile);
-			break;
 		}
-	}
-	#endregion
+		#endregion
 								
-	creationIndex = file_text_read_string(loadedFile);
-	show_debug_message(creationIndex);
-	file_text_readln(loadedFile);
-	
-	if (creationIndex == "stageEnd") break;
-	
-	#region Load Spawners
-	for (;;)
-	{
-		var spawnerItemIndexLoad = file_text_read_string(loadedFile);
+		creationIndex = file_text_read_string(loadedFile);
+		show_debug_message(creationIndex);
 		file_text_readln(loadedFile);
-		
-		show_debug_message(spawnerItemIndexLoad);
-		if (spawnerItemIndexLoad == "spawnerEnd") break;
-		
-		switch (creationIndex)
+	
+		if (creationIndex == "stageEnd") break;
+	
+		#region Load Spawners
+		for (;;)
 		{
-			case "spawnerStart":
-										
-			var spawnerItemXLoad = real(file_text_read_string(loadedFile));
+			var spawnerItemIndexLoad = file_text_read_string(loadedFile);
 			file_text_readln(loadedFile);
-			var spawnerItemYLoad = real(file_text_read_string(loadedFile));
-			file_text_readln(loadedFile);
-			var spawnedItemStringLoad = file_text_read_string(loadedFile);
-			file_text_readln(loadedFile);
-			var spawnerItemLayerLoad = file_text_read_string(loadedFile);
-			file_text_readln(loadedFile);
-			var spawnerSpriteLoad = file_text_read_string(loadedFile);
-			file_text_readln(loadedFile);
-			var spawnerStateLoad = file_text_read_string(loadedFile);
-			file_text_readln(loadedFile);
-			var spawnerDirXLoad = real(file_text_read_string(loadedFile));
-			file_text_readln(loadedFile);
-			var spawnerPaletteLoad = file_text_read_string(loadedFile);
-			file_text_readln(loadedFile);
-									
-			var spawner = instance_create_layer(spawnerItemXLoad,spawnerItemYLoad,"enemies",obj_Maykr_Spawner);
-			show_debug_message("spawn");
-			spawner.spawnedItemIndex = asset_get_index(spawnerItemIndexLoad);
-			spawner.spawnedSprite = asset_get_index(spawnerSpriteLoad);
-			spawner.spawnedItemString = spawnedItemStringLoad;
-			spawner.spawnedLayer = spawnerItemLayerLoad;
-			spawner.spawnedState = spawnerStateLoad;
-			spawner.spawnedDirX = spawnerDirXLoad;
-			spawner.spawnedPaletteIndex = asset_get_index(spawnerPaletteLoad);
-									
-			switch (spawner.spawnedItemIndex)
+		
+			show_debug_message(spawnerItemIndexLoad);
+			if (spawnerItemIndexLoad == "spawnerEnd") break;
+		
+			switch (creationIndex)
 			{
-				case obj_ParentWall:
-				var spawnerSlopeTypeLoad = real(file_text_read_string(loadedFile));
+				case "spawnerStart":
+										
+				var spawnerItemXLoad = real(file_text_read_string(loadedFile));
 				file_text_readln(loadedFile);
-				spawner.spawnedSlopeType = spawnerSlopeTypeLoad;
-				spawner.spawnedSprite = -1;
+				var spawnerItemYLoad = real(file_text_read_string(loadedFile));
+				file_text_readln(loadedFile);
+				var spawnedItemStringLoad = file_text_read_string(loadedFile);
+				file_text_readln(loadedFile);
+				var spawnerItemLayerLoad = file_text_read_string(loadedFile);
+				file_text_readln(loadedFile);
+				var spawnerSpriteLoad = file_text_read_string(loadedFile);
+				file_text_readln(loadedFile);
+				var spawnerStateLoad = file_text_read_string(loadedFile);
+				file_text_readln(loadedFile);
+				var spawnerDirXLoad = real(file_text_read_string(loadedFile));
+				file_text_readln(loadedFile);
+				var spawnerPaletteLoad = file_text_read_string(loadedFile);
+				file_text_readln(loadedFile);
+			
+				show_debug_message("spawn");
+				var spawner = instance_create_layer(spawnerItemXLoad,spawnerItemYLoad,"enemies",obj_Maykr_Spawner);
+				spawner.spawnedItemIndex = asset_get_index(spawnerItemIndexLoad);
+				spawner.spawnedSprite = asset_get_index(spawnerSpriteLoad);
+				spawner.spawnedItemString = spawnedItemStringLoad;
+				spawner.spawnedLayer = spawnerItemLayerLoad;
+				spawner.spawnedState = spawnerStateLoad;
+				spawner.spawnedDirX = spawnerDirXLoad;
+				spawner.spawnedPaletteIndex = asset_get_index(spawnerPaletteLoad);
+									
+				switch (spawner.spawnedItemIndex)
+				{
+					case obj_ParentWall:
+					var spawnerSlopeTypeLoad = real(file_text_read_string(loadedFile));
+					file_text_readln(loadedFile);
+					spawner.spawnedSlopeType = spawnerSlopeTypeLoad;
+					spawner.spawnedSprite = -1;
+					break;
+										
+					case obj_AbilityTrophy:
+					var spawnerAbilityIndexLoad = file_text_read_string(loadedFile);
+					file_text_readln(loadedFile);
+					spawner.spawnedAbilityIndex = spawnerAbilityIndexLoad;
+					break;
+				}
 				break;
 										
-				case obj_AbilityTrophy:
-				var spawnerAbilityIndexLoad = file_text_read_string(loadedFile);
+				default:
 				file_text_readln(loadedFile);
-				spawner.spawnedAbilityIndex = spawnerAbilityIndexLoad;
 				break;
 			}
-			break;
-										
-			default:
-			file_text_readln(loadedFile);
-			break;
 		}
+		#endregion
+		break;
+		#endregion
+		
+		#region Version 1.0.1
+		case "Version - 1.0.1":
+		#region Set Background
+		layer_background_sprite(layer_background_get_id("Background_Parallax1"),backgroundLoad);
+		#endregion
+	
+		creationIndex = file_text_read_string(loadedFile);
+		file_text_readln(loadedFile);
+	
+		if (creationIndex == "stageEnd") break;
+	
+		#region Load Tiles
+		for (;;)
+		{
+			var tileLayerIndexLoad = file_text_read_string(loadedFile);
+			show_debug_message(" - " + string(tileLayerIndexLoad));
+			file_text_readln(loadedFile);
+		
+			if (tileLayerIndexLoad == "tileEnd") break;
+		
+			switch (creationIndex)
+			{
+				case "tileStart":
+			
+				var tileIndexLoad = real(file_text_read_string(loadedFile));
+				show_debug_message(tileIndexLoad);
+				file_text_readln(loadedFile);
+				var tileXLoad = real(file_text_read_string(loadedFile));
+				show_debug_message(tileXLoad);
+				file_text_readln(loadedFile);
+				var tileYLoad = real(file_text_read_string(loadedFile));
+				show_debug_message(tileYLoad);
+				file_text_readln(loadedFile);
+			
+				var tileSetIndex = -1;
+				switch (tileLayerIndexLoad)
+				{
+					case "tileAsteroidFieldsFront":
+					if (tileAsteroidFieldsFront == -1)
+					{
+						layer_create(299,"tileAsteroidFieldsFront");
+						tileAsteroidFieldsFront = layer_tilemap_create("tileAsteroidFieldsFront",0,0,ts_AsteroidFields,floor(room_width / 24) + 1,floor(room_height / 24) + 1);
+					}
+					tileSetIndex = tileAsteroidFieldsFront;
+					break;
+				
+					case "tileAsteroidFieldsFront3D1":
+					if (tileAsteroidFieldsFront3D1 == -1)
+					{
+						layer_create(299,"tileAsteroidFieldsFront3D1");
+						tileAsteroidFieldsFront3D1 = layer_tilemap_create("tileAsteroidFieldsFront3D1",0,0,ts_AsteroidFields,floor(room_width / 24) + 1,floor(room_height / 24) + 1);
+					}
+					tileSetIndex = tileAsteroidFieldsFront3D1;
+					break;
+				
+					case "tileAsteroidFieldsFront3D2":
+					if (tileAsteroidFieldsFront3D2 == -1)
+					{
+						layer_create(299,"tileAsteroidFieldsFront3D2");
+						tileAsteroidFieldsFront3D2 = layer_tilemap_create("tileAsteroidFieldsFront3D2",0,0,ts_AsteroidFields,floor(room_width / 24) + 1,floor(room_height / 24) + 1);
+					}
+					tileSetIndex = tileAsteroidFieldsFront3D2;
+					break;
+					
+					case "tileDebug":
+					if (tileDebug == -1)
+					{
+						layer_create(299,"tileDebug");
+						tileDebug = layer_tilemap_create("tileDebug",0,0,ts_Debug,floor(room_width / 24) + 1,floor(room_height / 24) + 1);
+					}
+					tileSetIndex = tileDebug;
+					break;
+				}
+			
+				if (tileSetIndex != -1) tilemap_set(tileSetIndex,tileIndexLoad,tileXLoad,tileYLoad);
+				break;
+				
+				default:
+				file_text_readln(loadedFile);
+				break;
+			}
+		}
+		#endregion
+								
+		creationIndex = file_text_read_string(loadedFile);
+		show_debug_message(creationIndex);
+		file_text_readln(loadedFile);
+	
+		if (creationIndex == "stageEnd") break;
+	
+		#region Load Spawners
+		for (;;)
+		{
+			var spawnerItemIndexLoad = file_text_read_string(loadedFile);
+			file_text_readln(loadedFile);
+		
+			show_debug_message(spawnerItemIndexLoad);
+			if (spawnerItemIndexLoad == "spawnerEnd") break;
+		
+			switch (creationIndex)
+			{
+				case "spawnerStart":
+										
+				var spawnerItemXLoad = real(file_text_read_string(loadedFile));
+				file_text_readln(loadedFile);
+				var spawnerItemYLoad = real(file_text_read_string(loadedFile));
+				file_text_readln(loadedFile);
+				var spawnerItemXOffsetLoad = real(file_text_read_string(loadedFile));
+				file_text_readln(loadedFile);
+				var spawnerItemYOffsetLoad = real(file_text_read_string(loadedFile));
+				file_text_readln(loadedFile);
+				var spawnedItemStringLoad = file_text_read_string(loadedFile);
+				file_text_readln(loadedFile);
+				var spawnerItemLayerLoad = file_text_read_string(loadedFile);
+				file_text_readln(loadedFile);
+				var spawnerSpriteLoad = file_text_read_string(loadedFile);
+				file_text_readln(loadedFile);
+				var spawnerStateLoad = file_text_read_string(loadedFile);
+				file_text_readln(loadedFile);
+				var spawnerDirXLoad = real(file_text_read_string(loadedFile));
+				file_text_readln(loadedFile);
+				var spawnerPaletteLoad = file_text_read_string(loadedFile);
+				file_text_readln(loadedFile);
+			
+				show_debug_message("spawn");
+				var spawner = instance_create_layer(spawnerItemXLoad,spawnerItemYLoad,"enemies",obj_Maykr_Spawner);
+				spawner.xOffset = spawnerItemXOffsetLoad;
+				spawner.yOffset = spawnerItemYOffsetLoad;
+				spawner.spawnedItemIndex = asset_get_index(spawnerItemIndexLoad);
+				spawner.spawnedSprite = asset_get_index(spawnerSpriteLoad);
+				spawner.spawnedItemString = spawnedItemStringLoad;
+				spawner.spawnedLayer = spawnerItemLayerLoad;
+				spawner.spawnedState = spawnerStateLoad;
+				spawner.spawnedDirX = spawnerDirXLoad;
+				spawner.spawnedPaletteIndex = asset_get_index(spawnerPaletteLoad);
+									
+				switch (spawner.spawnedItemIndex)
+				{
+					case obj_ParentWall:
+					var spawnerSlopeTypeLoad = real(file_text_read_string(loadedFile));
+					file_text_readln(loadedFile);
+					spawner.spawnedSlopeType = spawnerSlopeTypeLoad;
+					spawner.spawnedSprite = -1;
+					break;
+										
+					case obj_AbilityTrophy:
+					var spawnerAbilityIndexLoad = file_text_read_string(loadedFile);
+					file_text_readln(loadedFile);
+					spawner.spawnedAbilityIndex = spawnerAbilityIndexLoad;
+					break;
+				}
+				break;
+										
+				default:
+				file_text_readln(loadedFile);
+				break;
+			}
+		}
+		#endregion
+		break;
+		#endregion
 	}
-	#endregion
 	
 	file_text_close(loadedFile);
 	loadedFile = -1;
@@ -611,9 +783,9 @@ if (!active)
 					file_text_writeln(savedFile);
 					if (tileDebug != -1)
 					{
-						for (var h = 0; h < 120; h++)
+						for (var h = 0; h < floor(room_height / 24) + 1; h++)
 						{
-							for (var w = 0; w < 200; w++)
+							for (var w = 0; w < floor(room_width / 24) + 1; w++)
 							{
 								var tileIndex = tilemap_get(tileDebug,w,h);
 								if ((tileIndex != -1) and (tileIndex != 0))
@@ -633,9 +805,9 @@ if (!active)
 					
 					if (tileAsteroidFieldsFront != -1)
 					{
-						for (var h = 0; h < 120; h++)
+						for (var h = 0; h < floor(room_height / 24) + 1; h++)
 						{
-							for (var w = 0; w < 200; w++)
+							for (var w = 0; w < floor(room_width / 24) + 1; w++)
 							{
 								var tileIndex = tilemap_get(tileAsteroidFieldsFront,w,h);
 								if ((tileIndex != -1) and (tileIndex != 0))
@@ -655,9 +827,9 @@ if (!active)
 					
 					if (tileAsteroidFieldsFront3D1 != -1)
 					{
-						for (var h = 0; h < 120; h++)
+						for (var h = 0; h < floor(room_height / 24) + 1; h++)
 						{
-							for (var w = 0; w < 200; w++)
+							for (var w = 0; w < floor(room_width / 24) + 1; w++)
 							{
 								var tileIndex = tilemap_get(tileAsteroidFieldsFront3D1,w,h);
 								if ((tileIndex != -1) and (tileIndex != 0))
@@ -677,9 +849,9 @@ if (!active)
 					
 					if (tileAsteroidFieldsFront3D2 != -1)
 					{
-						for (var h = 0; h < 120; h++)
+						for (var h = 0; h < floor(room_height / 24) + 1; h++)
 						{
-							for (var w = 0; w < 200; w++)
+							for (var w = 0; w < floor(room_width / 24) + 1; w++)
 							{
 								var tileIndex = tilemap_get(tileAsteroidFieldsFront3D2,w,h);
 								if ((tileIndex != -1) and (tileIndex != 0))
@@ -711,6 +883,10 @@ if (!active)
 						file_text_write_string(savedFile,x);
 						file_text_writeln(savedFile);
 						file_text_write_string(savedFile,y);
+						file_text_writeln(savedFile);
+						file_text_write_string(savedFile,xOffset);
+						file_text_writeln(savedFile);
+						file_text_write_string(savedFile,yOffset);
 						file_text_writeln(savedFile);
 						file_text_write_string(savedFile,spawnedItemString);
 						file_text_writeln(savedFile);
@@ -790,6 +966,7 @@ if (!active)
 			if (mouseOnTopPlay)
 			{
 				io_clear();
+				
 				active = true;
 				mouseOnTopPlay = false;
 				topHudOffset = 0;
@@ -809,7 +986,22 @@ if (!active)
 				global.hpP2 = global.hpMax;
 				
 				with (obj_Particle) instance_destroy();
-				with (obj_Maykr_Spawner) active = true;
+				with (obj_Maykr_Spawner) activeState = 0;
+				
+				with (obj_Maykr_Spawner)
+				{
+					if ((spawnedItemIndex == obj_Player) and (instance_exists(obj_Camera)))
+					{
+						obj_Camera.cameraX = x - (obj_Camera.viewWidth / 2);
+						obj_Camera.cameraY = y - (obj_Camera.viewHeight / 2);
+					}
+				}
+				
+				with (obj_Camera)
+				{
+					zoom = 1;
+					zoomTarget = 1;
+				}
 			}
 			#endregion
 			
@@ -1106,23 +1298,23 @@ if (!active)
 					case maykrObjects.debugWall:
 					case maykrObjects.debugWall24x24SlopeLeft:
 					case maykrObjects.debugWall24x24SlopeRight:
-					tilemap_set(obj_Maykr_Control.tileDebug,-1,floor(x / 24),floor(y / 24));
+					tilemap_set(obj_Maykr_Control.tileDebug,0,floor(x / 24),floor(y / 24));
 					var topTile = tilemap_get(obj_Maykr_Control.tileDebug,floor(x / 24),floor(y / 24) - 1);
 					var bottomTile = tilemap_get(obj_Maykr_Control.tileDebug,floor(x / 24),floor(y / 24) + 1);
-					if (topTile == 99) tilemap_set(obj_Maykr_Control.tileDebug,-1,floor(x / 24),floor(y / 24) - 1);
+					if (topTile == 99) tilemap_set(obj_Maykr_Control.tileDebug,0,floor(x / 24),floor(y / 24) - 1);
 					if (bottomTile == 80) tilemap_set(obj_Maykr_Control.tileDebug,99,floor(x / 24),floor(y / 24));
 					break;
 					
 					case maykrObjects.asteroidFieldsFront:
-					tilemap_set(obj_Maykr_Control.tileAsteroidFieldsFront,-1,floor(x / 24),floor(y / 24));
+					tilemap_set(obj_Maykr_Control.tileAsteroidFieldsFront,0,floor(x / 24),floor(y / 24));
 					var topTile = tilemap_get(obj_Maykr_Control.tileAsteroidFieldsFront,floor(x / 24),floor(y / 24) - 1);
 					var bottomTile = tilemap_get(obj_Maykr_Control.tileAsteroidFieldsFront,floor(x / 24),floor(y / 24) + 1);
 					if (((topTile >= 1) and (topTile <= 6)) or ((topTile >= 39) and (topTile <= 44)) or ((topTile >= 115) and (topTile <= 120)))
 					{
 						tilemap_set(obj_Maykr_Control.tileAsteroidFieldsFront,0,floor(x / 24),floor(y / 24) - 1);
 					}
-					tilemap_set(obj_Maykr_Control.tileAsteroidFieldsFront3D1,-1,floor(x / 24),floor(y / 24) - 1);
-					tilemap_set(obj_Maykr_Control.tileAsteroidFieldsFront3D2,-1,floor(x / 24),floor(y / 24) - 1);
+					tilemap_set(obj_Maykr_Control.tileAsteroidFieldsFront3D1,0,floor(x / 24),floor(y / 24) - 1);
+					tilemap_set(obj_Maykr_Control.tileAsteroidFieldsFront3D2,0,floor(x / 24),floor(y / 24) - 1);
 					
 					if ((bottomTile >= 20) and (bottomTile <= 25))
 					{
@@ -1335,6 +1527,7 @@ else
 		
 		if (audio_is_playing(mus_Death1)) audio_stop_sound(mus_Death1);
 		
+		instance_activate_all();
 		if (instance_exists(obj_Hud)) instance_destroy(obj_Hud);
 		with (obj_Particle) instance_destroy();
 		with (obj_Projectile) instance_destroy();
@@ -1346,7 +1539,7 @@ else
 		if (instance_exists(obj_Camera)) obj_Camera.freezeFrameTimer = -1;
 		with (obj_Maykr_Spawner)
 		{
-			active = false;
+			activeState = -1;
 			visible = true;
 			if ((spawnedItemIndex == obj_Player) and (instance_exists(obj_Camera)))
 			{

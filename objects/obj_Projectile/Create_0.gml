@@ -37,6 +37,7 @@ scale = 1;
 dirX = 1;
 dirY = 1;
 enemy = false;
+isBoss = false;
 dmg = 1;
 hurt = false;
 invincible = false;

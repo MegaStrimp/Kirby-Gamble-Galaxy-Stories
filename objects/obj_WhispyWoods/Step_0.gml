@@ -257,6 +257,7 @@ if (!global.pause)
 				proj.sprDestroy = spr_AirPuff_Normal_Destroy;
 				proj.sprite_index = proj.sprIdle;
 				proj.character = 0;
+				proj.isBoss = true;
 				airpuffCount += 1;
 				airpuffTimer = airpuffTimerMax;
 			}
@@ -292,6 +293,7 @@ if (!global.pause)
 			proj.hurtsObject = false;
 			proj.hurtsEnemy = false;
 			proj.hurtsPlayer = false;
+			proj.isBoss = true;
 			proj.rootIndex = irandom_range(1,3);
 			if (spikeCount == spikeCountMax) proj.recoilTimer = 120;
 			spikeTimer = spikeTimerMax;
@@ -316,8 +318,10 @@ if (!global.pause)
 		var objValue = ds_list_find_value(throwObjectList,throwObjectCount);
 		
 		var obj = instance_create_depth(x + ((30 + irandom_range(0,320)) * dirX),irandom_range(0,72),depth - 101,obj_WhispyApple);
+		obj.owner = id;
 		obj.objValue = objValue;
 		obj.destroyOutsideView = true;
+		obj.isBossMinion = false;
 		switch (objValue)
 		{
 			#region Apple
@@ -397,6 +401,7 @@ if (!global.pause)
 			proj.sprDestroy = -1;
 			proj.sprite_index = proj.sprIdle;
 			proj.character = 2;
+			proj.isBoss = true;
 			bigAirpuffTimer = 90;
 			break;
 			

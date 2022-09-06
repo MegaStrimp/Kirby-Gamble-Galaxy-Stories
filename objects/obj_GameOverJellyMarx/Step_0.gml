@@ -48,7 +48,8 @@ else if (stateTimer == 0)
 		global.playerLives = 3;
 		global.pause = false;
 		var fade = instance_create_depth(x,y,-999,obj_Fade);
-		fade.targetRoom = rm_StageSelect;
+		//fade.targetRoom = rm_StageSelect;
+		fade.targetRoom = rm_StageSelect_Demo;
 		fade.pausable = false;
 		break;
 	}

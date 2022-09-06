@@ -41,7 +41,7 @@ bottomHudOpen = false;
 #endregion
 
 #region Save Values
-maykrFileVersion = "1.0.0";
+maykrFileVersion = "1.0.1";
 maykrStartMsg = "This is Gamble Maykr's custom data file made by MegaStrimp for the fangame Kirby Gamble Galaxy Stories. Modifying this file may cause major issues.";
 loadState = -1;
 loadedFile = -1;

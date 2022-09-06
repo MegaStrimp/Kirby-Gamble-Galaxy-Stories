@@ -43,7 +43,7 @@ else if (spawnTimer == 0)
 		spawnedEnemy.sprStar = spr_Particle_BigStar_Yellow;
 		break;
 	}
-	spawnedEnemy.sprite_index = spawnedEnemy.sprIdle;
+	spawnedEnemy.sprite_index = spawnedEnemy.sprReady;
 	spawnedEnemy.state = state;
 	spawnedEnemy.hp = hp;
 	spawnedEnemy.dmg = dmg;

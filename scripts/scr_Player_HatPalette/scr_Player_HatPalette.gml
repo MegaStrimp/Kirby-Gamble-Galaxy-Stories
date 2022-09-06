@@ -48,6 +48,10 @@ function scr_Player_HatPalette(argument0,argument1)
 					case abilityHatPaints.cutter_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Cutter_KSSU_Palette_Bitcrushed;
 					break;
+					
+					case abilityHatPaints.cutter_kssu_mallardGreen:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Cutter_KSSU_Palette_MallardGreen;
+					break;
 				}
 				break;
 			}
@@ -145,6 +149,10 @@ function scr_Player_HatPalette(argument0,argument1)
 				{
 					case abilityHatPaints.mysticBeam_ggs_nastyFlux:
 					hatPaletteIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Palette_NastyFlux;
+					break;
+					
+					case abilityHatPaints.mysticBeam_ggs_mageRose:
+					hatPaletteIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Palette_MageRose;
 					break;
 				}
 				break;
@@ -426,6 +434,14 @@ function scr_Player_HatPalette(argument0,argument1)
 					case abilityHatPaints.bomb_modern_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Bomb_Modern_Palette_Bitcrushed;
 					break;
+					
+					case abilityHatPaints.bomb_modern_outburstingConspiracy:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Bomb_Modern_Palette_OutburstingConspiracy;
+					break;
+					
+					case abilityHatPaints.bomb_modern_dragonsCastle:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Bomb_Modern_Palette_DragonsCastle;
+					break;
 				}
 				break;
 			}
@@ -541,6 +557,10 @@ function scr_Player_HatPalette(argument0,argument1)
 					
 					case abilityHatPaints.ice_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Ice_KSSU_Palette_Bitcrushed;
+					break;
+					
+					case abilityHatPaints.ice_kssu_frostyObsidian:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Ice_KSSU_Palette_FrostyObsidian;
 					break;
 				}
 				break;
@@ -874,6 +894,10 @@ function scr_Player_HatPalette(argument0,argument1)
 					case abilityHatPaints.jet_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Jet_KSSU_Palette_Bitcrushed;
 					break;
+					
+					case abilityHatPaints.jet_kssu_lavender01:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Jet_KSSU_Palette_Lavender01;
+					break;
 				}
 				break;
 			}
@@ -949,6 +973,10 @@ function scr_Player_HatPalette(argument0,argument1)
 					
 					case abilityHatPaints.parasol_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Parasol_KSSU_Palette_Bitcrushed;
+					break;
+					
+					case abilityHatPaints.parasol_kssu_wagasaDee:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Parasol_KSSU_Palette_WagasaDee;
 					break;
 				}
 				break;
@@ -1133,6 +1161,10 @@ function scr_Player_HatPalette(argument0,argument1)
 					
 					case abilityHatPaints.scan_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Scan_KSSU_Palette_Bitcrushed;
+					break;
+					
+					case abilityHatPaints.scan_kssu_militaryGreen:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Scan_KSSU_Palette_MilitaryGreen;
 					break;
 				}
 				break;

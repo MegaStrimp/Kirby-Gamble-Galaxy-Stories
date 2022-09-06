@@ -109,7 +109,7 @@ if (!global.pause)
 			
 			//Go To Save Page
 			
-			if (keyStartPressed)
+			if ((keyStartPressed) and (!audio_is_playing(snd_Konami)))
 			{
 				codeState = 0;
 				

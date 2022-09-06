@@ -7,6 +7,21 @@ zoomFinal = zoom * hitZoom;
 
 if (!global.pause) hitZoom = lerp(hitZoom,1,.05);
 
+var zoomMax = 100;
+if (room_width >= room_height)
+{
+	zoomMax = viewHeight / room_height;
+}
+else
+{
+	zoomMax = viewWidth / room_width;
+}
+
+show_debug_message("zoom - " + string(zoomFinal));
+show_debug_message("zoomMax - " + string(zoomMax));
+//zoomFinal = max(zoomFinal,zoomMax);
+show_debug_message("zoomFinal - " + string(zoomFinal));
+
 //Camera View Size
 
 camera_set_view_size(gameView,viewWidth / zoomFinal,viewHeight / zoomFinal);
@@ -38,7 +53,7 @@ switch (room)
 	#endregion
 	
 	#region Asteroid Fields 1
-	case rm_AsteroidFields1:
+	/*case rm_AsteroidFields1:
 	
 	#region xLimit1
 	if (cameraX >= 4080)
@@ -76,7 +91,7 @@ switch (room)
 	#endregion
 	
 	#region Asteroid Fields 5
-	case rm_AsteroidFields5:
+	c/*ase rm_AsteroidFields5:
 	
 	#region xLimit1
 	if (cameraX > 3456)
@@ -89,10 +104,10 @@ switch (room)
 	}
 	#endregion
 	break;
-	#endregion
+	*/#endregion
 	
 	#region Asteroid Fields 6
-	case rm_AsteroidFields6:
+	/*case rm_AsteroidFields6:
 	
 	#region xLimit1
 	if (cameraY < 192)
@@ -127,10 +142,10 @@ switch (room)
 	}
 	#endregion
 	break;
-	#endregion
+	*/#endregion
 	
 	#region Asteroid Fields 7
-	case rm_AsteroidFields7:
+	/*case rm_AsteroidFields7:
 	
 	#region xLimit1
 	if (cameraY < 312)
@@ -154,7 +169,7 @@ switch (room)
 	}
 	#endregion
 	break;
-	#endregion
+	*/#endregion
 	
 	#region Asteroid Fields 5 OLD
 	/*case rm_AsteroidFields5:

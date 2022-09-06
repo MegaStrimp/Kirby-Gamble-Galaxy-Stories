@@ -13,6 +13,7 @@ gravLimitNormal = 4;
 
 //Other Variables
 
+owner = id;
 state = 0;
 points = 10;
 sprHurt = -1;

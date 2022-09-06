@@ -18,7 +18,7 @@ if (setupTimer == 0)
 	}
 	if (state == 0)
 	{
-		attackDir = 90 - dirX;
+		attackDir = 90 - (dirX * 90);
 	}
 	else if (state == 1)
 	{

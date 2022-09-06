@@ -37,6 +37,13 @@ function scr_Customize_AbilityHats()
 	abilityHatPaintUnlocked[i][k][h] = true;
 	abilityHatPaintOffset[i][k][h] = 0;
 	abilityHatPaintOffsetLerp[i][k][h] = 0;
+	h += 1;
+	abilityHatPaintTitle[i][k][h] = "Mallard Green";
+	abilityHatPaintValue[i][k][h] = abilityHatPaints.cutter_kssu_mallardGreen;
+	abilityHatPaint[i][k][h] = spr_Kirby_AbilityHat_Cutter_KSSU_Palette_MallardGreen;
+	abilityHatPaintUnlocked[i][k][h] = true;
+	abilityHatPaintOffset[i][k][h] = 0;
+	abilityHatPaintOffsetLerp[i][k][h] = 0;
 	#endregion
 	
 	#region Beam
@@ -122,6 +129,13 @@ function scr_Customize_AbilityHats()
 	abilityHatPaintTitle[i][k][h] = "Nasty Flux";
 	abilityHatPaintValue[i][k][h] = abilityHatPaints.mysticBeam_ggs_nastyFlux;
 	abilityHatPaint[i][k][h] = spr_Kirby_AbilityHat_MysticBeam_GGS_Palette_NastyFlux;
+	abilityHatPaintUnlocked[i][k][h] = true;
+	abilityHatPaintOffset[i][k][h] = 0;
+	abilityHatPaintOffsetLerp[i][k][h] = 0;
+	h += 1;
+	abilityHatPaintTitle[i][k][h] = "Mage Rose";
+	abilityHatPaintValue[i][k][h] = abilityHatPaints.mysticBeam_ggs_mageRose;
+	abilityHatPaint[i][k][h] = spr_Kirby_AbilityHat_MysticBeam_GGS_Palette_MageRose;
 	abilityHatPaintUnlocked[i][k][h] = true;
 	abilityHatPaintOffset[i][k][h] = 0;
 	abilityHatPaintOffsetLerp[i][k][h] = 0;
@@ -357,6 +371,20 @@ function scr_Customize_AbilityHats()
 	abilityHatPaintUnlocked[i][k][h] = true;
 	abilityHatPaintOffset[i][k][h] = 0;
 	abilityHatPaintOffsetLerp[i][k][h] = 0;
+	h += 1;
+	abilityHatPaintTitle[i][k][h] = "Outbursting Conspiracy";
+	abilityHatPaintValue[i][k][h] = abilityHatPaints.bomb_modern_outburstingConspiracy;
+	abilityHatPaint[i][k][h] = spr_Kirby_AbilityHat_Bomb_Modern_Palette_OutburstingConspiracy;
+	abilityHatPaintUnlocked[i][k][h] = true;
+	abilityHatPaintOffset[i][k][h] = 0;
+	abilityHatPaintOffsetLerp[i][k][h] = 0;
+	h += 1;
+	abilityHatPaintTitle[i][k][h] = "Dragon's Castle";
+	abilityHatPaintValue[i][k][h] = abilityHatPaints.bomb_modern_dragonsCastle;
+	abilityHatPaint[i][k][h] = spr_Kirby_AbilityHat_Bomb_Modern_Palette_DragonsCastle;
+	abilityHatPaintUnlocked[i][k][h] = true;
+	abilityHatPaintOffset[i][k][h] = 0;
+	abilityHatPaintOffsetLerp[i][k][h] = 0;
 	#endregion
 	
 	#region Fire
@@ -435,6 +463,13 @@ function scr_Customize_AbilityHats()
 	abilityHatPaintTitle[i][k][h] = "Bitcrushed";
 	abilityHatPaintValue[i][k][h] = abilityHatPaints.ice_kssu_bitcrushed;
 	abilityHatPaint[i][k][h] = spr_Kirby_AbilityHat_Ice_KSSU_Palette_Bitcrushed;
+	abilityHatPaintUnlocked[i][k][h] = true;
+	abilityHatPaintOffset[i][k][h] = 0;
+	abilityHatPaintOffsetLerp[i][k][h] = 0;
+	h += 1;
+	abilityHatPaintTitle[i][k][h] = "Frosty Obsidian";
+	abilityHatPaintValue[i][k][h] = abilityHatPaints.ice_kssu_frostyObsidian;
+	abilityHatPaint[i][k][h] = spr_Kirby_AbilityHat_Ice_KSSU_Palette_FrostyObsidian;
 	abilityHatPaintUnlocked[i][k][h] = true;
 	abilityHatPaintOffset[i][k][h] = 0;
 	abilityHatPaintOffsetLerp[i][k][h] = 0;
@@ -706,6 +741,13 @@ function scr_Customize_AbilityHats()
 	abilityHatPaintUnlocked[i][k][h] = true;
 	abilityHatPaintOffset[i][k][h] = 0;
 	abilityHatPaintOffsetLerp[i][k][h] = 0;
+	h += 1;
+	abilityHatPaintTitle[i][k][h] = "Lavender-01";
+	abilityHatPaintValue[i][k][h] = abilityHatPaints.jet_kssu_lavender01;
+	abilityHatPaint[i][k][h] = spr_Kirby_AbilityHat_Jet_KSSU_Palette_Lavender01;
+	abilityHatPaintUnlocked[i][k][h] = true;
+	abilityHatPaintOffset[i][k][h] = 0;
+	abilityHatPaintOffsetLerp[i][k][h] = 0;
 	#endregion
 	
 	#region Sword
@@ -770,6 +812,13 @@ function scr_Customize_AbilityHats()
 	abilityHatPaintTitle[i][k][h] = "Bitcrushed";
 	abilityHatPaintValue[i][k][h] = abilityHatPaints.parasol_kssu_bitcrushed;
 	abilityHatPaint[i][k][h] = spr_Kirby_AbilityHat_Parasol_KSSU_Palette_Bitcrushed;
+	abilityHatPaintUnlocked[i][k][h] = true;
+	abilityHatPaintOffset[i][k][h] = 0;
+	abilityHatPaintOffsetLerp[i][k][h] = 0;
+	h += 1;
+	abilityHatPaintTitle[i][k][h] = "Wagasa Dee";
+	abilityHatPaintValue[i][k][h] = abilityHatPaints.parasol_kssu_wagasaDee;
+	abilityHatPaint[i][k][h] = spr_Kirby_AbilityHat_Parasol_KSSU_Palette_WagasaDee;
 	abilityHatPaintUnlocked[i][k][h] = true;
 	abilityHatPaintOffset[i][k][h] = 0;
 	abilityHatPaintOffsetLerp[i][k][h] = 0;
@@ -960,6 +1009,13 @@ function scr_Customize_AbilityHats()
 	abilityHatPaintTitle[i][k][h] = "Bitcrushed";
 	abilityHatPaintValue[i][k][h] = abilityHatPaints.scan_kssu_bitcrushed;
 	abilityHatPaint[i][k][h] = spr_Kirby_AbilityHat_Scan_KSSU_Palette_Bitcrushed;
+	abilityHatPaintUnlocked[i][k][h] = true;
+	abilityHatPaintOffset[i][k][h] = 0;
+	abilityHatPaintOffsetLerp[i][k][h] = 0;
+	h += 1;
+	abilityHatPaintTitle[i][k][h] = "Military Green";
+	abilityHatPaintValue[i][k][h] = abilityHatPaints.scan_kssu_militaryGreen;
+	abilityHatPaint[i][k][h] = spr_Kirby_AbilityHat_Scan_KSSU_Palette_MilitaryGreen;
 	abilityHatPaintUnlocked[i][k][h] = true;
 	abilityHatPaintOffset[i][k][h] = 0;
 	abilityHatPaintOffsetLerp[i][k][h] = 0;

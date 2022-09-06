@@ -2,20 +2,20 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
-  "origin": 6,
+  "origin": 8,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 24,
+  "bbox_right": 25,
   "bbox_top": 0,
-  "bbox_bottom": 13,
+  "bbox_bottom": 16,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 25,
-  "height": 14,
+  "width": 28,
+  "height": 31,
   "textureGroupId": {
     "name": "Characters",
     "path": "texturegroups/Characters",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"8394278d-622d-448d-982b-7e9cc2648c18","path":"sprites/spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2/spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8394278d-622d-448d-982b-7e9cc2648c18","path":"sprites/spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2/spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2.yy",},"LayerId":{"name":"713a2cf1-99b9-42ac-a245-3b4a4f21b89e","path":"sprites/spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2/spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2","path":"sprites/spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2/spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2.yy",},"resourceVersion":"1.0","name":"8394278d-622d-448d-982b-7e9cc2648c18","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"bb262c8c-e420-42a6-9909-39eb2c2576e2","path":"sprites/spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2/spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"bb262c8c-e420-42a6-9909-39eb2c2576e2","path":"sprites/spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2/spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2.yy",},"LayerId":{"name":"713a2cf1-99b9-42ac-a245-3b4a4f21b89e","path":"sprites/spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2/spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2","path":"sprites/spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2/spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2.yy",},"resourceVersion":"1.0","name":"bb262c8c-e420-42a6-9909-39eb2c2576e2","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2","path":"sprites/spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2/spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"e2589401-854b-43b8-bd9d-a6f7b8b9c713","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8394278d-622d-448d-982b-7e9cc2648c18","path":"sprites/spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2/spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"9137aaec-1137-4286-bc57-0480da55a991","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bb262c8c-e420-42a6-9909-39eb2c2576e2","path":"sprites/spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2/spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 0,
-    "yorigin": 14,
+    "xorigin": 28,
+    "yorigin": 31,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2","path":"sprites/spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2/spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2.yy",},

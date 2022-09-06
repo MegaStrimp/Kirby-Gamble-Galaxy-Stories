@@ -324,6 +324,7 @@ enum abilityHatPaints
 	cutter_kssu_slicingGold,
 	cutter_kssu_bloodBlade,
 	cutter_kssu_bitcrushed,
+	cutter_kssu_mallardGreen,
 	beam_kssu_sparklingBeam,
 	beam_kssu_fluxNostalgia,
 	beam_kssu_bitcrushed,
@@ -331,6 +332,7 @@ enum abilityHatPaints
 	beam_marxSoul_summerFruits,
 	beam_marxSoul_bitcrushed,
 	mysticBeam_ggs_nastyFlux,
+	mysticBeam_ggs_mageRose,
 	stone_kssu_rockyRoad,
 	stone_kssu_bitcrushed,
 	stone_modern_rockyRoad,
@@ -351,6 +353,8 @@ enum abilityHatPaints
 	bomb_kssu_bitcrushed,
 	bomb_modern_explosiveB,
 	bomb_modern_bitcrushed,
+	bomb_modern_outburstingConspiracy,
+	bomb_modern_dragonsCastle,
 	fire_kssu_scorchingScarlet,
 	fire_kssu_blazingBlue,
 	fire_kssu_fluxNostalgia,
@@ -358,6 +362,7 @@ enum abilityHatPaints
 	fire_kssu_bitcrushed,
 	ice_kssu_frostedShard,
 	ice_kssu_bitcrushed,
+	ice_kssu_frostyObsidian,
 	ice_snowman_chilly,
 	ice_snowman_bitcrushed,
 	spark_kssu_electroMarine,
@@ -377,11 +382,13 @@ enum abilityHatPaints
 	jet_kssu_speedMachine,
 	jet_kssu_speedyScarlet,
 	jet_kssu_bitcrushed,
+	jet_kssu_lavender01,
 	sword_kssu_slicingGreen,
 	sword_kssu_thunderingCloud,
 	sword_kssu_bitcrushed,
 	parasol_kssu_lazyRed,
 	parasol_kssu_bitcrushed,
+	parasol_kssu_wagasaDee,
 	hammer_kssu_crushingBrown,
 	hammer_kssu_constructionWork,	
 	hammer_kssu_bitcrushed,
@@ -399,7 +406,8 @@ enum abilityHatPaints
 	sleep_kssu_royalPurple,
 	sleep_kssu_bitcrushed,
 	scan_kssu_metallicRed,
-	scan_kssu_bitcrushed
+	scan_kssu_bitcrushed,
+	scan_kssu_militaryGreen
 }
 
 enum damageTypes
@@ -723,7 +731,7 @@ enum talkingCharacter
 #endregion
 
 #region Global Variables
-global.versionNumber = "0.5.0";
+global.versionNumber = "0.5.3";
 
 global.selectedSave = "Save1.ini";
 global.hpMax = 5;
@@ -748,7 +756,7 @@ global.goldenTomato = false;
 global.stageNumber = 0;
 global.debug = true;
 //global.debug = false;
-//show_debug_overlay(global.debug);
+show_debug_overlay(global.debug);
 global.pause = false;
 global.cutscene = false;
 global.tutorial = false;
@@ -871,6 +879,17 @@ controllerPressedResetTimer = -1;
 #endregion
 
 #region Load Game
+/*ini_open("Save1.ini");
+var saveCheck = ini_read_real("playerCustomization","hatTypeBeamP1",abilityHatSkins.beam_kssu);
+ini_close();
+
+if (saveCheck == "kssu")
+{
+	if (file_exists("Save1.ini")) file_delete("Save1.ini");
+	if (file_exists("Save2.ini")) file_delete("Save2.ini");
+	if (file_exists("Save3.ini")) file_delete("Save2.ini");
+}*/
+
 scr_LoadGame(global.selectedSave);
 //if ((!global.debug) and (global.canSave)) scr_SaveGame(global.selectedSave);
 if (global.debug) scr_DebugSave();

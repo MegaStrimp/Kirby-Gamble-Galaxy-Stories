@@ -3677,6 +3677,10 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 				debugPaletteIndex = spr_Tomatoo_Normal_Palette_RedTomato;
 				break;
 				
+				case 1:
+				debugPaletteIndex = spr_Tomatoo_Normal_Palette_RipeTomato;
+				break;
+				
 				default:
 				debugPaletteIndex = spr_Tomatoo_Normal_Palette_RedTomato;
 				break;
@@ -3949,6 +3953,10 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 				debugPaletteIndex = spr_Foley_Normal_Palette_ExplosiveCream;
 				break;
 				
+				case 1:
+				debugPaletteIndex = spr_Foley_Normal_Palette_CascadeViolet;
+				break;
+				
 				default:
 				debugPaletteIndex = spr_Foley_Normal_Palette_ExplosiveCream;
 				break;
@@ -4098,6 +4106,10 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			{
 				case 0:
 				debugPaletteIndex = spr_Cairn_Normal_Palette_HeavyRock;
+				break;
+				
+				case 1:
+				debugPaletteIndex = spr_Cairn_Normal_Palette_TropicalPebbles;
 				break;
 				
 				default:
@@ -4705,6 +4717,10 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			{
 				case 0:
 				debugPaletteIndex = spr_Kookler_Normal_Palette_BlueSpin;
+				break;
+				
+				case 1:
+				debugPaletteIndex = spr_Kookler_Normal_Palette_PinkWhiskers;
 				break;
 				
 				default:

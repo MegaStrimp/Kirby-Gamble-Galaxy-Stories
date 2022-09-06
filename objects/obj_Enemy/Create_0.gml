@@ -27,6 +27,7 @@ gravLimitParasol = .5;
 
 //Other Variables
 
+owner = id;
 destroyOutsideView = false;
 hasSpawner = false;
 spawner = id;
@@ -53,6 +54,7 @@ ability = playerAbilities.none;
 points = 0;
 isMiniBoss = false;
 isBoss = false;
+isBossMinion = false;
 hurtable = true;
 hasGravity = true;
 enemy = true;
@@ -94,6 +96,7 @@ fluxOverlayAlpha = 0;
 hasDeathKnockback = true;
 hasDeathAnimation = true;
 hasDeathParticles = true;
+canGetHealthbar = true;
 healthbarBackHp = 0;
 healthbarIndex = 0;
 groundFailsafe = true;

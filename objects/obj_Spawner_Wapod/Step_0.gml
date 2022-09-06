@@ -52,7 +52,7 @@ else if (spawnTimer == 0)
 		spawnedEnemy.sprGhostHurt = spr_Wapod_Normal_Hurt;
 		break;
 	}
-	spawnedEnemy.sprite_index = spawnedEnemy.sprIdle;
+	spawnedEnemy.sprite_index = spawnedEnemy.sprPot;
 	spawnedEnemy.state = state;
 	spawnedEnemy.hp = hp;
 	spawnedEnemy.dmg = dmg;

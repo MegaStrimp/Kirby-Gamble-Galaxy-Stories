@@ -251,6 +251,7 @@ if (!global.pause)
 			bomb.hurtsPlayer = true;
 			bomb.destroyAfterHurt = false;
 			bomb.canBeInhaled = true;
+			bomb.isBoss = true;
 			//bombThrowTimer = bombThrowTimerMax;
 			break;
 			

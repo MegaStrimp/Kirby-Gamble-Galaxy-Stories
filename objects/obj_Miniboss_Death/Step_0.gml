@@ -28,6 +28,18 @@ if (!global.pause)
 	
 	hsp = scr_Friction(hsp,decel);
 	
+	//Invincible Timer
+	
+	if (invincibleTimer > 0)
+	{
+		invincibleTimer -= 1;
+	}
+	else if (invincibleTimer == 0)
+	{
+		invincible = false;
+		invincibleTimer = -1;
+	}
+	
 	//Destroy Timer
 	
 	if (destroyTimer > 0)

@@ -75,6 +75,7 @@ if (!global.pause)
 				obj.state = 3;
 				obj.walkDirX = owner.dirX;
 				obj.destroyOutsideView = true;
+				obj.isBossMinion = true;
 				instance_destroy();
 				break;
 				#endregion
@@ -84,6 +85,7 @@ if (!global.pause)
 				if (audio_is_playing(snd_WhispyFallingApple)) audio_stop_sound(snd_WhispyFallingApple);
 				audio_play_sound(snd_WhispyFallingApple,0,false);
 				var obj = instance_create_depth(x,y,depth,obj_Como);
+				obj.isBossMinion = true;
 				instance_destroy();
 				break;
 				#endregion
@@ -97,6 +99,7 @@ if (!global.pause)
 				obj.dirX = owner.dirX;
 				obj.walkDirX = owner.dirX;
 				obj.destroyOutsideView = true;
+				obj.isBossMinion = true;
 				instance_destroy();
 				break;
 				#endregion

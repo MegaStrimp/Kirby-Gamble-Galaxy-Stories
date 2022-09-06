@@ -35,6 +35,7 @@ maykrRoomWidth = 100;
 maykrRoomHeight = 100;
 
 global.loadedMaykrFile = -1;
+global.gambleMaykrMenu = "Collision";
 #endregion
 
 #region Buttons

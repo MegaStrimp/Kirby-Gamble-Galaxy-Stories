@@ -18,7 +18,7 @@ if (sprite_index == sprReady)
 	switch (state)
 	{
 		case 1:
-		attackDir += (dirX * 90);
+		attackDir -= (dirX * 90);
 		break;
 		
 		case 2:

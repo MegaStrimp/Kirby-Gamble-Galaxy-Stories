@@ -873,7 +873,7 @@ if (!global.pause)
 					{
 						other.hurtTimer = other.hurtTimerMax;
 					}
-					if ((!other.isMiniBoss) or (!other.isBoss)) global.healthbarMarkedEnemy = other.id;
+					if ((other.canGetHealthbar) and ((!other.isMiniBoss) or (!other.isBoss))) global.healthbarMarkedEnemy = other.id;
 					other.hp -= dmg;
 					if (other.hp <= 0)
 					{

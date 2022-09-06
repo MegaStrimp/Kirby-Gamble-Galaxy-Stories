@@ -7,6 +7,7 @@ if (!active)
 	var x2 = camera_get_view_x(gameView) + camera_get_view_width(gameView) + 64;
 	var y2 = camera_get_view_y(gameView) + camera_get_view_height(gameView) + 64;
 	
+	/*
 	#region View Grid
 	for (var i = 0; i < floor(room_width / 480) + 1; i++)
 	{
@@ -26,6 +27,7 @@ if (!active)
 		}
 	}
 	#endregion
+	*/
 	
 	#region Selected Object Buttons
 	if (selectedSpawner != -1)

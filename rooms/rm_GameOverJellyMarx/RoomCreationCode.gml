@@ -16,8 +16,14 @@ layer_background_yscale(layer_background_get_id("Floor"),.5);
 
 //Music
 
-if (!audio_is_playing(mus_GameOverJellyMarx))
+/*if (!audio_is_playing(mus_GameOverJellyMarx))
 {
 	audio_stop_all();
 	scr_PlayMusic(false,mus_GameOverJellyMarx,0,false);
+}*/
+
+if (!audio_is_playing(mus_Cellphone))
+{
+	audio_stop_all();
+	scr_PlayMusic(false,mus_Cellphone,0,false);
 }

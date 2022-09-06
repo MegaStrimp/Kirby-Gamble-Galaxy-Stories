@@ -33,7 +33,7 @@ function scr_Maykr_Inventory(argument0,argument1)
 			i += 1;
 			maykrInventory[i] = maykrObjects.debugWall24x24SlopeRight;
 			maykrSpr[i] = spr_Maykr_Spawner_DebugWall24x24SlopeRight;
-			spawnedXOffset[i] = 24;
+			maykrSprXOffset[i] = 24;
 			maykrSprYOffset[i] = sprite_get_yoffset(maykrSpr[i]);
 			i += 1;
 			maykrInventory[i] = maykrObjects.asteroidFieldsFront;
@@ -206,11 +206,11 @@ function scr_Maykr_Inventory(argument0,argument1)
 			maykrSprXOffset[i] = sprite_get_xoffset(maykrSpr[i]);
 			maykrSprYOffset[i] = sprite_get_yoffset(maykrSpr[i]);
 			i += 1;
-			maykrInventory[i] = maykrObjects.como;
-			maykrSpr[i] = spr_Como_Normal_Idle;
-			maykrSprXOffset[i] = sprite_get_xoffset(maykrSpr[i]);
-			maykrSprYOffset[i] = sprite_get_yoffset(maykrSpr[i]);
-			i += 1;
+			//maykrInventory[i] = maykrObjects.como;
+			//maykrSpr[i] = spr_Como_Normal_Idle;
+			//maykrSprXOffset[i] = sprite_get_xoffset(maykrSpr[i]);
+			//maykrSprYOffset[i] = sprite_get_yoffset(maykrSpr[i]);
+			//i += 1;
 			maykrInventory[i] = maykrObjects.cairn;
 			maykrSpr[i] = spr_Cairn_Normal_Idle;
 			maykrSprXOffset[i] = sprite_get_xoffset(maykrSpr[i]);

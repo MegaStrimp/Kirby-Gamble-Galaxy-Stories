@@ -2,7 +2,7 @@
 
 //Spawn Item
 
-if (active)
+if (activeState == 0)
 {
 	if ((spawnedItemIndex == obj_ParentWall) and (spawnedSlopeType != 0)) yOffset = -4;
 	spawnedItem = instance_create_layer(x + xOffset,y + yOffset,spawnedLayer,spawnedItemIndex);
@@ -72,10 +72,10 @@ if (active)
 		case obj_WaddleDee:
 		break;
 	}
-	active = false;
+	activeState = -1;
 	visible = false;
 }
-else
+else if (activeState == 1)
 {
 	switch (spawnedItemIndex)
 	{
@@ -366,4 +366,5 @@ else
 		spawnedStateMax = 1;
 		break;
 	}
+	activeState = -1;
 }
