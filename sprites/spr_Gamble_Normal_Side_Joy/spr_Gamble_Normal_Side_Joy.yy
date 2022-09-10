@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Gamble_Normal_Side_Joy",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"949befcf-9d65-410d-863a-e589e21ca33d","path":"sprites/spr_Gamble_Normal_Side_Joy/spr_Gamble_Normal_Side_Joy.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"949befcf-9d65-410d-863a-e589e21ca33d","path":"sprites/spr_Gamble_Normal_Side_Joy/spr_Gamble_Normal_Side_Joy.yy",},"LayerId":{"name":"d59de7b3-113e-4269-95bb-6fa7efaaa0e5","path":"sprites/spr_Gamble_Normal_Side_Joy/spr_Gamble_Normal_Side_Joy.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Gamble_Normal_Side_Joy","path":"sprites/spr_Gamble_Normal_Side_Joy/spr_Gamble_Normal_Side_Joy.yy",},"resourceVersion":"1.0","name":"949befcf-9d65-410d-863a-e589e21ca33d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3d6c9a04-0e4b-45f0-bf8c-cdfa15f43042","path":"sprites/spr_Gamble_Normal_Side_Joy/spr_Gamble_Normal_Side_Joy.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3d6c9a04-0e4b-45f0-bf8c-cdfa15f43042","path":"sprites/spr_Gamble_Normal_Side_Joy/spr_Gamble_Normal_Side_Joy.yy",},"LayerId":{"name":"d59de7b3-113e-4269-95bb-6fa7efaaa0e5","path":"sprites/spr_Gamble_Normal_Side_Joy/spr_Gamble_Normal_Side_Joy.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Gamble_Normal_Side_Joy","path":"sprites/spr_Gamble_Normal_Side_Joy/spr_Gamble_Normal_Side_Joy.yy",},"resourceVersion":"1.0","name":"3d6c9a04-0e4b-45f0-bf8c-cdfa15f43042","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"37a08168-92f2-49af-9333-35c5755e9f3f","path":"sprites/spr_Gamble_Normal_Side_Joy/spr_Gamble_Normal_Side_Joy.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"37a08168-92f2-49af-9333-35c5755e9f3f","path":"sprites/spr_Gamble_Normal_Side_Joy/spr_Gamble_Normal_Side_Joy.yy",},"LayerId":{"name":"d59de7b3-113e-4269-95bb-6fa7efaaa0e5","path":"sprites/spr_Gamble_Normal_Side_Joy/spr_Gamble_Normal_Side_Joy.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Gamble_Normal_Side_Joy","path":"sprites/spr_Gamble_Normal_Side_Joy/spr_Gamble_Normal_Side_Joy.yy",},"resourceVersion":"1.0","name":"37a08168-92f2-49af-9333-35c5755e9f3f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"09140217-203d-490a-928c-5ce8e75a7cb3","path":"sprites/spr_Gamble_Normal_Side_Joy/spr_Gamble_Normal_Side_Joy.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"09140217-203d-490a-928c-5ce8e75a7cb3","path":"sprites/spr_Gamble_Normal_Side_Joy/spr_Gamble_Normal_Side_Joy.yy",},"LayerId":{"name":"d59de7b3-113e-4269-95bb-6fa7efaaa0e5","path":"sprites/spr_Gamble_Normal_Side_Joy/spr_Gamble_Normal_Side_Joy.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Gamble_Normal_Side_Joy","path":"sprites/spr_Gamble_Normal_Side_Joy/spr_Gamble_Normal_Side_Joy.yy",},"resourceVersion":"1.0","name":"09140217-203d-490a-928c-5ce8e75a7cb3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"949befcf-9d65-410d-863a-e589e21ca33d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3d6c9a04-0e4b-45f0-bf8c-cdfa15f43042",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"37a08168-92f2-49af-9333-35c5755e9f3f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"09140217-203d-490a-928c-5ce8e75a7cb3",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Gamble_Normal_Side_Joy","path":"sprites/spr_Gamble_Normal_Side_Joy/spr_Gamble_Normal_Side_Joy.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Gamble_Normal_Side_Joy",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 9.0,
@@ -46,15 +43,15 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 4.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"d2586c64-3700-4bf2-8314-0a1db8ba0fe3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"949befcf-9d65-410d-863a-e589e21ca33d","path":"sprites/spr_Gamble_Normal_Side_Joy/spr_Gamble_Normal_Side_Joy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"917dd7f3-7c81-4db5-ab4a-3e8b026a9a4b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3d6c9a04-0e4b-45f0-bf8c-cdfa15f43042","path":"sprites/spr_Gamble_Normal_Side_Joy/spr_Gamble_Normal_Side_Joy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"61306616-e441-49ac-bbb2-2157d921e770","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"37a08168-92f2-49af-9333-35c5755e9f3f","path":"sprites/spr_Gamble_Normal_Side_Joy/spr_Gamble_Normal_Side_Joy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"0ecf7ff7-dd76-40b9-bb58-84379eea247e","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"09140217-203d-490a-928c-5ce8e75a7cb3","path":"sprites/spr_Gamble_Normal_Side_Joy/spr_Gamble_Normal_Side_Joy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"d2586c64-3700-4bf2-8314-0a1db8ba0fe3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"949befcf-9d65-410d-863a-e589e21ca33d","path":"sprites/spr_Gamble_Normal_Side_Joy/spr_Gamble_Normal_Side_Joy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"917dd7f3-7c81-4db5-ab4a-3e8b026a9a4b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3d6c9a04-0e4b-45f0-bf8c-cdfa15f43042","path":"sprites/spr_Gamble_Normal_Side_Joy/spr_Gamble_Normal_Side_Joy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"61306616-e441-49ac-bbb2-2157d921e770","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"37a08168-92f2-49af-9333-35c5755e9f3f","path":"sprites/spr_Gamble_Normal_Side_Joy/spr_Gamble_Normal_Side_Joy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0ecf7ff7-dd76-40b9-bb58-84379eea247e","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"09140217-203d-490a-928c-5ce8e75a7cb3","path":"sprites/spr_Gamble_Normal_Side_Joy/spr_Gamble_Normal_Side_Joy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -70,22 +67,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Gamble_Normal_Side_Joy","path":"sprites/spr_Gamble_Normal_Side_Joy/spr_Gamble_Normal_Side_Joy.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Gamble_Normal_Side_Joy",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d59de7b3-113e-4269-95bb-6fa7efaaa0e5","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d59de7b3-113e-4269-95bb-6fa7efaaa0e5","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Side",
     "path": "folders/Sprites/Characters/Gamble/Normal/Side.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Gamble_Normal_Side_Joy",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

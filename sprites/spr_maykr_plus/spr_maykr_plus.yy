@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Maykr_Plus",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"89a9c10f-1468-42a7-a3d1-20893c7125e5","path":"sprites/spr_Maykr_Plus/spr_Maykr_Plus.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"89a9c10f-1468-42a7-a3d1-20893c7125e5","path":"sprites/spr_Maykr_Plus/spr_Maykr_Plus.yy",},"LayerId":{"name":"d06eae15-2232-409e-bede-5b226da4626f","path":"sprites/spr_Maykr_Plus/spr_Maykr_Plus.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Maykr_Plus","path":"sprites/spr_Maykr_Plus/spr_Maykr_Plus.yy",},"resourceVersion":"1.0","name":"89a9c10f-1468-42a7-a3d1-20893c7125e5","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e6da57aa-bcb2-4cc7-9b80-6f1c8787a95c","path":"sprites/spr_Maykr_Plus/spr_Maykr_Plus.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e6da57aa-bcb2-4cc7-9b80-6f1c8787a95c","path":"sprites/spr_Maykr_Plus/spr_Maykr_Plus.yy",},"LayerId":{"name":"d06eae15-2232-409e-bede-5b226da4626f","path":"sprites/spr_Maykr_Plus/spr_Maykr_Plus.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Maykr_Plus","path":"sprites/spr_Maykr_Plus/spr_Maykr_Plus.yy",},"resourceVersion":"1.0","name":"e6da57aa-bcb2-4cc7-9b80-6f1c8787a95c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"89a9c10f-1468-42a7-a3d1-20893c7125e5",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e6da57aa-bcb2-4cc7-9b80-6f1c8787a95c",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Maykr_Plus","path":"sprites/spr_Maykr_Plus/spr_Maykr_Plus.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Maykr_Plus",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"0c8c1ce6-dc9f-4510-b900-34221ad80989","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"89a9c10f-1468-42a7-a3d1-20893c7125e5","path":"sprites/spr_Maykr_Plus/spr_Maykr_Plus.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"63706878-d2c6-4fb9-a330-a062d285d092","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e6da57aa-bcb2-4cc7-9b80-6f1c8787a95c","path":"sprites/spr_Maykr_Plus/spr_Maykr_Plus.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"0c8c1ce6-dc9f-4510-b900-34221ad80989","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"89a9c10f-1468-42a7-a3d1-20893c7125e5","path":"sprites/spr_Maykr_Plus/spr_Maykr_Plus.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"63706878-d2c6-4fb9-a330-a062d285d092","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e6da57aa-bcb2-4cc7-9b80-6f1c8787a95c","path":"sprites/spr_Maykr_Plus/spr_Maykr_Plus.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -62,22 +63,13 @@
     "yorigin": 1,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Maykr_Plus","path":"sprites/spr_Maykr_Plus/spr_Maykr_Plus.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Maykr_Plus",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d06eae15-2232-409e-bede-5b226da4626f","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d06eae15-2232-409e-bede-5b226da4626f","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Hud",
     "path": "folders/Sprites/Subgames/Maykr/Hud.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Maykr_Plus",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

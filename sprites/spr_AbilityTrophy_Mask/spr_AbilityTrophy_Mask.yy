@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_AbilityTrophy_Mask",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"ca99d2d6-6684-4bdb-8878-9542b9e89c7c","path":"sprites/spr_AbilityTrophy_Mask/spr_AbilityTrophy_Mask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ca99d2d6-6684-4bdb-8878-9542b9e89c7c","path":"sprites/spr_AbilityTrophy_Mask/spr_AbilityTrophy_Mask.yy",},"LayerId":{"name":"8379d1ce-8a25-40fc-b564-6cbef6f814c6","path":"sprites/spr_AbilityTrophy_Mask/spr_AbilityTrophy_Mask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_AbilityTrophy_Mask","path":"sprites/spr_AbilityTrophy_Mask/spr_AbilityTrophy_Mask.yy",},"resourceVersion":"1.0","name":"ca99d2d6-6684-4bdb-8878-9542b9e89c7c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ca99d2d6-6684-4bdb-8878-9542b9e89c7c",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_AbilityTrophy_Mask","path":"sprites/spr_AbilityTrophy_Mask/spr_AbilityTrophy_Mask.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_AbilityTrophy_Mask",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"da983cd7-f515-497d-bd6f-5a61390358a2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ca99d2d6-6684-4bdb-8878-9542b9e89c7c","path":"sprites/spr_AbilityTrophy_Mask/spr_AbilityTrophy_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"da983cd7-f515-497d-bd6f-5a61390358a2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ca99d2d6-6684-4bdb-8878-9542b9e89c7c","path":"sprites/spr_AbilityTrophy_Mask/spr_AbilityTrophy_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 24,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_AbilityTrophy_Mask","path":"sprites/spr_AbilityTrophy_Mask/spr_AbilityTrophy_Mask.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_AbilityTrophy_Mask",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8379d1ce-8a25-40fc-b564-6cbef6f814c6","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"8379d1ce-8a25-40fc-b564-6cbef6f814c6","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Misc",
     "path": "folders/Sprites/Stage Elements/Ability Trophy/Misc.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_AbilityTrophy_Mask",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_AbilityHat_Beam_MarxSoul_Fall",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"718add4a-3d05-478f-95dd-f13adbe3ebf7","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"718add4a-3d05-478f-95dd-f13adbe3ebf7","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall.yy",},"LayerId":{"name":"efa40a05-8a81-46b6-b5f9-cdf97f16eb79","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Beam_MarxSoul_Fall","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall.yy",},"resourceVersion":"1.0","name":"718add4a-3d05-478f-95dd-f13adbe3ebf7","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d13f8525-4adf-4855-987c-6bd8ae92c083","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d13f8525-4adf-4855-987c-6bd8ae92c083","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall.yy",},"LayerId":{"name":"efa40a05-8a81-46b6-b5f9-cdf97f16eb79","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Beam_MarxSoul_Fall","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall.yy",},"resourceVersion":"1.0","name":"d13f8525-4adf-4855-987c-6bd8ae92c083","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"718add4a-3d05-478f-95dd-f13adbe3ebf7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d13f8525-4adf-4855-987c-6bd8ae92c083",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_AbilityHat_Beam_MarxSoul_Fall","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_AbilityHat_Beam_MarxSoul_Fall",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 12.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"e04aa13f-d222-43d0-9888-f4dd69505780","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"718add4a-3d05-478f-95dd-f13adbe3ebf7","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"bb9c604c-00ae-4263-b8f9-153e3c654f5f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d13f8525-4adf-4855-987c-6bd8ae92c083","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"e04aa13f-d222-43d0-9888-f4dd69505780","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"718add4a-3d05-478f-95dd-f13adbe3ebf7","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"bb9c604c-00ae-4263-b8f9-153e3c654f5f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d13f8525-4adf-4855-987c-6bd8ae92c083","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -62,22 +63,13 @@
     "yorigin": 34,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_AbilityHat_Beam_MarxSoul_Fall","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall/spr_Kirby_AbilityHat_Beam_MarxSoul_Fall.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_AbilityHat_Beam_MarxSoul_Fall",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"efa40a05-8a81-46b6-b5f9-cdf97f16eb79","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"efa40a05-8a81-46b6-b5f9-cdf97f16eb79","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Hat",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Beam/Marx Soul/Hat.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_AbilityHat_Beam_MarxSoul_Fall",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

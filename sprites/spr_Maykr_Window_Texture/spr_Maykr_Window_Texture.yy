@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Maykr_Window_Texture",
   "bboxMode": 2,
   "collisionKind": 0,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"61b0c698-c3e1-4fb2-892e-ef89a51b0a4e","path":"sprites/spr_Maykr_Window_Texture/spr_Maykr_Window_Texture.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"61b0c698-c3e1-4fb2-892e-ef89a51b0a4e","path":"sprites/spr_Maykr_Window_Texture/spr_Maykr_Window_Texture.yy",},"LayerId":{"name":"50c4fa74-8fee-4c33-ab7a-6c5f08c98ca3","path":"sprites/spr_Maykr_Window_Texture/spr_Maykr_Window_Texture.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Maykr_Window_Texture","path":"sprites/spr_Maykr_Window_Texture/spr_Maykr_Window_Texture.yy",},"resourceVersion":"1.0","name":"61b0c698-c3e1-4fb2-892e-ef89a51b0a4e","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"61b0c698-c3e1-4fb2-892e-ef89a51b0a4e",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Maykr_Window_Texture","path":"sprites/spr_Maykr_Window_Texture/spr_Maykr_Window_Texture.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Maykr_Window_Texture",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"cd423864-91b2-4b57-99db-1595569786d7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"61b0c698-c3e1-4fb2-892e-ef89a51b0a4e","path":"sprites/spr_Maykr_Window_Texture/spr_Maykr_Window_Texture.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"cd423864-91b2-4b57-99db-1595569786d7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"61b0c698-c3e1-4fb2-892e-ef89a51b0a4e","path":"sprites/spr_Maykr_Window_Texture/spr_Maykr_Window_Texture.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Maykr_Window_Texture","path":"sprites/spr_Maykr_Window_Texture/spr_Maykr_Window_Texture.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Maykr_Window_Texture",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"50c4fa74-8fee-4c33-ab7a-6c5f08c98ca3","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"50c4fa74-8fee-4c33-ab7a-6c5f08c98ca3","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Hud",
     "path": "folders/Sprites/Subgames/Maykr/Hud.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Maykr_Window_Texture",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

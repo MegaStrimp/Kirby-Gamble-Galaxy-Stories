@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_Equipment_Beam_MarxSoul_Attack2",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b3aa39a7-d3d8-46f0-897e-f5a3dcb23bcc","path":"sprites/spr_Kirby_Equipment_Beam_MarxSoul_Attack2/spr_Kirby_Equipment_Beam_MarxSoul_Attack2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b3aa39a7-d3d8-46f0-897e-f5a3dcb23bcc","path":"sprites/spr_Kirby_Equipment_Beam_MarxSoul_Attack2/spr_Kirby_Equipment_Beam_MarxSoul_Attack2.yy",},"LayerId":{"name":"37ce5ede-683d-4883-a9f6-ee97f14e6e38","path":"sprites/spr_Kirby_Equipment_Beam_MarxSoul_Attack2/spr_Kirby_Equipment_Beam_MarxSoul_Attack2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Equipment_Beam_MarxSoul_Attack2","path":"sprites/spr_Kirby_Equipment_Beam_MarxSoul_Attack2/spr_Kirby_Equipment_Beam_MarxSoul_Attack2.yy",},"resourceVersion":"1.0","name":"b3aa39a7-d3d8-46f0-897e-f5a3dcb23bcc","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b3aa39a7-d3d8-46f0-897e-f5a3dcb23bcc",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_Equipment_Beam_MarxSoul_Attack2","path":"sprites/spr_Kirby_Equipment_Beam_MarxSoul_Attack2/spr_Kirby_Equipment_Beam_MarxSoul_Attack2.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_Equipment_Beam_MarxSoul_Attack2",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"fc2f8f05-3c5b-4c29-93da-ac12fdc4bff4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b3aa39a7-d3d8-46f0-897e-f5a3dcb23bcc","path":"sprites/spr_Kirby_Equipment_Beam_MarxSoul_Attack2/spr_Kirby_Equipment_Beam_MarxSoul_Attack2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"fc2f8f05-3c5b-4c29-93da-ac12fdc4bff4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b3aa39a7-d3d8-46f0-897e-f5a3dcb23bcc","path":"sprites/spr_Kirby_Equipment_Beam_MarxSoul_Attack2/spr_Kirby_Equipment_Beam_MarxSoul_Attack2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": -3,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_Equipment_Beam_MarxSoul_Attack2","path":"sprites/spr_Kirby_Equipment_Beam_MarxSoul_Attack2/spr_Kirby_Equipment_Beam_MarxSoul_Attack2.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_Equipment_Beam_MarxSoul_Attack2",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"37ce5ede-683d-4883-a9f6-ee97f14e6e38","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"37ce5ede-683d-4883-a9f6-ee97f14e6e38","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Equipment",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Beam/Marx Soul/Equipment.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_Equipment_Beam_MarxSoul_Attack2",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

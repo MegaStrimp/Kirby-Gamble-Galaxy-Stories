@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_PopFlower_Halberd_Open",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"489b5f6f-4fde-4bdd-b880-bec7e7d30294","path":"sprites/spr_PopFlower_Halberd_Open/spr_PopFlower_Halberd_Open.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"489b5f6f-4fde-4bdd-b880-bec7e7d30294","path":"sprites/spr_PopFlower_Halberd_Open/spr_PopFlower_Halberd_Open.yy",},"LayerId":{"name":"edb80d3c-b9ea-4c46-b228-595351ec183d","path":"sprites/spr_PopFlower_Halberd_Open/spr_PopFlower_Halberd_Open.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_PopFlower_Halberd_Open","path":"sprites/spr_PopFlower_Halberd_Open/spr_PopFlower_Halberd_Open.yy",},"resourceVersion":"1.0","name":"489b5f6f-4fde-4bdd-b880-bec7e7d30294","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ee238f79-00ff-4e62-8fea-edaeb901356e","path":"sprites/spr_PopFlower_Halberd_Open/spr_PopFlower_Halberd_Open.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ee238f79-00ff-4e62-8fea-edaeb901356e","path":"sprites/spr_PopFlower_Halberd_Open/spr_PopFlower_Halberd_Open.yy",},"LayerId":{"name":"edb80d3c-b9ea-4c46-b228-595351ec183d","path":"sprites/spr_PopFlower_Halberd_Open/spr_PopFlower_Halberd_Open.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_PopFlower_Halberd_Open","path":"sprites/spr_PopFlower_Halberd_Open/spr_PopFlower_Halberd_Open.yy",},"resourceVersion":"1.0","name":"ee238f79-00ff-4e62-8fea-edaeb901356e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b12da1cf-04f5-4283-85d0-3fb03ebafe96","path":"sprites/spr_PopFlower_Halberd_Open/spr_PopFlower_Halberd_Open.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b12da1cf-04f5-4283-85d0-3fb03ebafe96","path":"sprites/spr_PopFlower_Halberd_Open/spr_PopFlower_Halberd_Open.yy",},"LayerId":{"name":"edb80d3c-b9ea-4c46-b228-595351ec183d","path":"sprites/spr_PopFlower_Halberd_Open/spr_PopFlower_Halberd_Open.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_PopFlower_Halberd_Open","path":"sprites/spr_PopFlower_Halberd_Open/spr_PopFlower_Halberd_Open.yy",},"resourceVersion":"1.0","name":"b12da1cf-04f5-4283-85d0-3fb03ebafe96","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"489b5f6f-4fde-4bdd-b880-bec7e7d30294",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ee238f79-00ff-4e62-8fea-edaeb901356e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b12da1cf-04f5-4283-85d0-3fb03ebafe96",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_PopFlower_Halberd_Open","path":"sprites/spr_PopFlower_Halberd_Open/spr_PopFlower_Halberd_Open.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_PopFlower_Halberd_Open",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 9.0,
@@ -43,14 +42,14 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 3.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"37f2867d-4f7e-46ad-98ca-94931cd59638","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"489b5f6f-4fde-4bdd-b880-bec7e7d30294","path":"sprites/spr_PopFlower_Halberd_Open/spr_PopFlower_Halberd_Open.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"aa9460af-b843-4e1a-a60f-60728d0f446b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ee238f79-00ff-4e62-8fea-edaeb901356e","path":"sprites/spr_PopFlower_Halberd_Open/spr_PopFlower_Halberd_Open.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"961b6392-8e4e-457f-a0bf-f662f5a18831","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b12da1cf-04f5-4283-85d0-3fb03ebafe96","path":"sprites/spr_PopFlower_Halberd_Open/spr_PopFlower_Halberd_Open.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"37f2867d-4f7e-46ad-98ca-94931cd59638","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"489b5f6f-4fde-4bdd-b880-bec7e7d30294","path":"sprites/spr_PopFlower_Halberd_Open/spr_PopFlower_Halberd_Open.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"aa9460af-b843-4e1a-a60f-60728d0f446b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ee238f79-00ff-4e62-8fea-edaeb901356e","path":"sprites/spr_PopFlower_Halberd_Open/spr_PopFlower_Halberd_Open.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"961b6392-8e4e-457f-a0bf-f662f5a18831","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b12da1cf-04f5-4283-85d0-3fb03ebafe96","path":"sprites/spr_PopFlower_Halberd_Open/spr_PopFlower_Halberd_Open.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -66,22 +65,13 @@
     "yorigin": 22,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_PopFlower_Halberd_Open","path":"sprites/spr_PopFlower_Halberd_Open/spr_PopFlower_Halberd_Open.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_PopFlower_Halberd_Open",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"edb80d3c-b9ea-4c46-b228-595351ec183d","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"edb80d3c-b9ea-4c46-b228-595351ec183d","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Halberd",
     "path": "folders/Sprites/Stage Elements/Pop Flower/Halberd.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_PopFlower_Halberd_Open",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

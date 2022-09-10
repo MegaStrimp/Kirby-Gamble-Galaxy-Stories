@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_WaddleDee_Normal_Palette_Mulberry",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"88a8d6d9-7e25-4951-8b55-6f2e29742cba","path":"sprites/spr_WaddleDee_Normal_Palette_Mulberry/spr_WaddleDee_Normal_Palette_Mulberry.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"88a8d6d9-7e25-4951-8b55-6f2e29742cba","path":"sprites/spr_WaddleDee_Normal_Palette_Mulberry/spr_WaddleDee_Normal_Palette_Mulberry.yy",},"LayerId":{"name":"fc7ecff1-a52b-4e0a-9b6f-db282bf34823","path":"sprites/spr_WaddleDee_Normal_Palette_Mulberry/spr_WaddleDee_Normal_Palette_Mulberry.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_WaddleDee_Normal_Palette_Mulberry","path":"sprites/spr_WaddleDee_Normal_Palette_Mulberry/spr_WaddleDee_Normal_Palette_Mulberry.yy",},"resourceVersion":"1.0","name":"88a8d6d9-7e25-4951-8b55-6f2e29742cba","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"88a8d6d9-7e25-4951-8b55-6f2e29742cba",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_WaddleDee_Normal_Palette_Mulberry","path":"sprites/spr_WaddleDee_Normal_Palette_Mulberry/spr_WaddleDee_Normal_Palette_Mulberry.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_WaddleDee_Normal_Palette_Mulberry",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"3e50008d-1322-45e4-99b9-cb7841e45bd0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"88a8d6d9-7e25-4951-8b55-6f2e29742cba","path":"sprites/spr_WaddleDee_Normal_Palette_Mulberry/spr_WaddleDee_Normal_Palette_Mulberry.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"3e50008d-1322-45e4-99b9-cb7841e45bd0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"88a8d6d9-7e25-4951-8b55-6f2e29742cba","path":"sprites/spr_WaddleDee_Normal_Palette_Mulberry/spr_WaddleDee_Normal_Palette_Mulberry.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_WaddleDee_Normal_Palette_Mulberry","path":"sprites/spr_WaddleDee_Normal_Palette_Mulberry/spr_WaddleDee_Normal_Palette_Mulberry.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_WaddleDee_Normal_Palette_Mulberry",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"fc7ecff1-a52b-4e0a-9b6f-db282bf34823","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"fc7ecff1-a52b-4e0a-9b6f-db282bf34823","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Palettes",
     "path": "folders/Sprites/Enemies/Waddle Dee/Normal/Palettes.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_WaddleDee_Normal_Palette_Mulberry",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

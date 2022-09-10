@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Hud_Icon_Wheel",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"e4240ec6-2f60-4c7b-a4db-3afa43302767","path":"sprites/spr_Hud_Icon_Wheel/spr_Hud_Icon_Wheel.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e4240ec6-2f60-4c7b-a4db-3afa43302767","path":"sprites/spr_Hud_Icon_Wheel/spr_Hud_Icon_Wheel.yy",},"LayerId":{"name":"cf213762-55e9-4f3f-a678-27a932d1b286","path":"sprites/spr_Hud_Icon_Wheel/spr_Hud_Icon_Wheel.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Hud_Icon_Wheel","path":"sprites/spr_Hud_Icon_Wheel/spr_Hud_Icon_Wheel.yy",},"resourceVersion":"1.0","name":"e4240ec6-2f60-4c7b-a4db-3afa43302767","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e4240ec6-2f60-4c7b-a4db-3afa43302767",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Hud_Icon_Wheel","path":"sprites/spr_Hud_Icon_Wheel/spr_Hud_Icon_Wheel.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Hud_Icon_Wheel",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"2557b623-60a2-4f13-af9a-59bd27a24950","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e4240ec6-2f60-4c7b-a4db-3afa43302767","path":"sprites/spr_Hud_Icon_Wheel/spr_Hud_Icon_Wheel.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"2557b623-60a2-4f13-af9a-59bd27a24950","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e4240ec6-2f60-4c7b-a4db-3afa43302767","path":"sprites/spr_Hud_Icon_Wheel/spr_Hud_Icon_Wheel.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 20,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Hud_Icon_Wheel","path":"sprites/spr_Hud_Icon_Wheel/spr_Hud_Icon_Wheel.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Hud_Icon_Wheel",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"cf213762-55e9-4f3f-a678-27a932d1b286","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"cf213762-55e9-4f3f-a678-27a932d1b286","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Hud/Icons/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Hud_Icon_Wheel",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "tile_BattleshipHalberd",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"7cf15d97-cbbe-47a5-8203-6a6435eafe3d","path":"sprites/tile_BattleshipHalberd/tile_BattleshipHalberd.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7cf15d97-cbbe-47a5-8203-6a6435eafe3d","path":"sprites/tile_BattleshipHalberd/tile_BattleshipHalberd.yy",},"LayerId":{"name":"44d98555-21f5-4bcf-8730-e51ad8ba50bd","path":"sprites/tile_BattleshipHalberd/tile_BattleshipHalberd.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"tile_BattleshipHalberd","path":"sprites/tile_BattleshipHalberd/tile_BattleshipHalberd.yy",},"resourceVersion":"1.0","name":"7cf15d97-cbbe-47a5-8203-6a6435eafe3d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7cf15d97-cbbe-47a5-8203-6a6435eafe3d",},
   ],
   "sequence": {
-    "spriteId": {"name":"tile_BattleshipHalberd","path":"sprites/tile_BattleshipHalberd/tile_BattleshipHalberd.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "tile_BattleshipHalberd",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"97bfcc0a-7d29-402b-8bbf-984e2fba8198","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7cf15d97-cbbe-47a5-8203-6a6435eafe3d","path":"sprites/tile_BattleshipHalberd/tile_BattleshipHalberd.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"97bfcc0a-7d29-402b-8bbf-984e2fba8198","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7cf15d97-cbbe-47a5-8203-6a6435eafe3d","path":"sprites/tile_BattleshipHalberd/tile_BattleshipHalberd.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"tile_BattleshipHalberd","path":"sprites/tile_BattleshipHalberd/tile_BattleshipHalberd.yy",},
-    "resourceVersion": "1.4",
-    "name": "tile_BattleshipHalberd",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"44d98555-21f5-4bcf-8730-e51ad8ba50bd","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"44d98555-21f5-4bcf-8730-e51ad8ba50bd","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Tiles",
     "path": "folders/Tiles.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "tile_BattleshipHalberd",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

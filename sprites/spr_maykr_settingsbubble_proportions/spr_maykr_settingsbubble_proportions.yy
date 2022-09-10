@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Maykr_SettingsBubble_Proportions",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"9e9f8cad-64bd-484c-9842-58143d938353","path":"sprites/spr_Maykr_SettingsBubble_Proportions/spr_Maykr_SettingsBubble_Proportions.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9e9f8cad-64bd-484c-9842-58143d938353","path":"sprites/spr_Maykr_SettingsBubble_Proportions/spr_Maykr_SettingsBubble_Proportions.yy",},"LayerId":{"name":"58e3b369-7fba-49c0-8d0c-80595ae05c92","path":"sprites/spr_Maykr_SettingsBubble_Proportions/spr_Maykr_SettingsBubble_Proportions.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Maykr_SettingsBubble_Proportions","path":"sprites/spr_Maykr_SettingsBubble_Proportions/spr_Maykr_SettingsBubble_Proportions.yy",},"resourceVersion":"1.0","name":"9e9f8cad-64bd-484c-9842-58143d938353","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9e9f8cad-64bd-484c-9842-58143d938353",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Maykr_SettingsBubble_Proportions","path":"sprites/spr_Maykr_SettingsBubble_Proportions/spr_Maykr_SettingsBubble_Proportions.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Maykr_SettingsBubble_Proportions",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"f6618782-ca29-401c-8713-c3adc15baa9c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9e9f8cad-64bd-484c-9842-58143d938353","path":"sprites/spr_Maykr_SettingsBubble_Proportions/spr_Maykr_SettingsBubble_Proportions.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"f6618782-ca29-401c-8713-c3adc15baa9c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9e9f8cad-64bd-484c-9842-58143d938353","path":"sprites/spr_Maykr_SettingsBubble_Proportions/spr_Maykr_SettingsBubble_Proportions.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Maykr_SettingsBubble_Proportions","path":"sprites/spr_Maykr_SettingsBubble_Proportions/spr_Maykr_SettingsBubble_Proportions.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Maykr_SettingsBubble_Proportions",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"58e3b369-7fba-49c0-8d0c-80595ae05c92","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"58e3b369-7fba-49c0-8d0c-80595ae05c92","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Settings Bubbles",
     "path": "folders/Sprites/Subgames/Maykr/Hud/Settings Bubbles.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Maykr_SettingsBubble_Proportions",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

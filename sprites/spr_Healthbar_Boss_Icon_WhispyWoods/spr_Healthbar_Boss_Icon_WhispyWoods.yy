@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Healthbar_Boss_Icon_WhispyWoods",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"de8ef506-58d0-412c-a97a-eb46b6348a17","path":"sprites/spr_Healthbar_Boss_Icon_WhispyWoods/spr_Healthbar_Boss_Icon_WhispyWoods.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"de8ef506-58d0-412c-a97a-eb46b6348a17","path":"sprites/spr_Healthbar_Boss_Icon_WhispyWoods/spr_Healthbar_Boss_Icon_WhispyWoods.yy",},"LayerId":{"name":"7ca44279-99b9-47e5-8203-a82d4e1521ee","path":"sprites/spr_Healthbar_Boss_Icon_WhispyWoods/spr_Healthbar_Boss_Icon_WhispyWoods.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Healthbar_Boss_Icon_WhispyWoods","path":"sprites/spr_Healthbar_Boss_Icon_WhispyWoods/spr_Healthbar_Boss_Icon_WhispyWoods.yy",},"resourceVersion":"1.0","name":"de8ef506-58d0-412c-a97a-eb46b6348a17","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"de8ef506-58d0-412c-a97a-eb46b6348a17",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Healthbar_Boss_Icon_WhispyWoods","path":"sprites/spr_Healthbar_Boss_Icon_WhispyWoods/spr_Healthbar_Boss_Icon_WhispyWoods.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Healthbar_Boss_Icon_WhispyWoods",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"5665c21b-c5b0-44d9-ab47-c392386f16fd","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"de8ef506-58d0-412c-a97a-eb46b6348a17","path":"sprites/spr_Healthbar_Boss_Icon_WhispyWoods/spr_Healthbar_Boss_Icon_WhispyWoods.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"5665c21b-c5b0-44d9-ab47-c392386f16fd","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"de8ef506-58d0-412c-a97a-eb46b6348a17","path":"sprites/spr_Healthbar_Boss_Icon_WhispyWoods/spr_Healthbar_Boss_Icon_WhispyWoods.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Healthbar_Boss_Icon_WhispyWoods","path":"sprites/spr_Healthbar_Boss_Icon_WhispyWoods/spr_Healthbar_Boss_Icon_WhispyWoods.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Healthbar_Boss_Icon_WhispyWoods",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7ca44279-99b9-47e5-8203-a82d4e1521ee","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"7ca44279-99b9-47e5-8203-a82d4e1521ee","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Icons",
     "path": "folders/Sprites/Hud/Healthbars/Boss/Icons.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Healthbar_Boss_Icon_WhispyWoods",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

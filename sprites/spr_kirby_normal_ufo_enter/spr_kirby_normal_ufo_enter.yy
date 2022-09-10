@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_Normal_Ufo_Enter",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,33 +27,19 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"dc0749ed-6de9-4a9b-88af-1dedea549371","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"dc0749ed-6de9-4a9b-88af-1dedea549371","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"LayerId":{"name":"7c42db6b-b4b8-4454-a94d-96205c9c149c","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Ufo_Enter","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","name":"dc0749ed-6de9-4a9b-88af-1dedea549371","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"64bfa55f-72f3-43b7-b0ac-e9cc09e3ffc5","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"64bfa55f-72f3-43b7-b0ac-e9cc09e3ffc5","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"LayerId":{"name":"7c42db6b-b4b8-4454-a94d-96205c9c149c","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Ufo_Enter","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","name":"64bfa55f-72f3-43b7-b0ac-e9cc09e3ffc5","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d9a5a29c-7d15-4455-b768-5f6bd42238f1","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d9a5a29c-7d15-4455-b768-5f6bd42238f1","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"LayerId":{"name":"7c42db6b-b4b8-4454-a94d-96205c9c149c","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Ufo_Enter","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","name":"d9a5a29c-7d15-4455-b768-5f6bd42238f1","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5e4b3cca-2e88-4fca-98f3-7b7d69922078","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5e4b3cca-2e88-4fca-98f3-7b7d69922078","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"LayerId":{"name":"7c42db6b-b4b8-4454-a94d-96205c9c149c","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Ufo_Enter","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","name":"5e4b3cca-2e88-4fca-98f3-7b7d69922078","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2a7bc3aa-266f-49b3-b152-561c1cd3f74b","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2a7bc3aa-266f-49b3-b152-561c1cd3f74b","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"LayerId":{"name":"7c42db6b-b4b8-4454-a94d-96205c9c149c","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Ufo_Enter","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","name":"2a7bc3aa-266f-49b3-b152-561c1cd3f74b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a97fb0bf-142e-42de-b1f3-71335d067612","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a97fb0bf-142e-42de-b1f3-71335d067612","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"LayerId":{"name":"7c42db6b-b4b8-4454-a94d-96205c9c149c","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Ufo_Enter","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","name":"a97fb0bf-142e-42de-b1f3-71335d067612","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"bfd408d1-7d4c-48a5-a2f8-4ce1e77e7853","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bfd408d1-7d4c-48a5-a2f8-4ce1e77e7853","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"LayerId":{"name":"7c42db6b-b4b8-4454-a94d-96205c9c149c","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Ufo_Enter","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","name":"bfd408d1-7d4c-48a5-a2f8-4ce1e77e7853","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"66f2c375-ea60-4b14-84a2-d02599eae13d","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"66f2c375-ea60-4b14-84a2-d02599eae13d","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"LayerId":{"name":"7c42db6b-b4b8-4454-a94d-96205c9c149c","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Ufo_Enter","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","name":"66f2c375-ea60-4b14-84a2-d02599eae13d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dc0749ed-6de9-4a9b-88af-1dedea549371",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"64bfa55f-72f3-43b7-b0ac-e9cc09e3ffc5",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d9a5a29c-7d15-4455-b768-5f6bd42238f1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5e4b3cca-2e88-4fca-98f3-7b7d69922078",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2a7bc3aa-266f-49b3-b152-561c1cd3f74b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a97fb0bf-142e-42de-b1f3-71335d067612",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bfd408d1-7d4c-48a5-a2f8-4ce1e77e7853",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"66f2c375-ea60-4b14-84a2-d02599eae13d",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_Normal_Ufo_Enter","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_Normal_Ufo_Enter",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 9.0,
@@ -58,19 +47,19 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 8.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"e61b7b0e-ec13-42bb-a107-ec1b56771c0f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dc0749ed-6de9-4a9b-88af-1dedea549371","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"7e4ae11e-49ad-46df-9b03-c2a69d7d536a","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"64bfa55f-72f3-43b7-b0ac-e9cc09e3ffc5","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"14032847-90eb-4a1a-85ea-c9c000b51496","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d9a5a29c-7d15-4455-b768-5f6bd42238f1","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"edd141ff-c093-48fa-b141-306501047195","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5e4b3cca-2e88-4fca-98f3-7b7d69922078","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"381e4901-22ec-49f6-aeca-593b43c75492","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2a7bc3aa-266f-49b3-b152-561c1cd3f74b","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"e86ffe21-055e-4766-b226-9aa986745707","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a97fb0bf-142e-42de-b1f3-71335d067612","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"8b41994f-705d-4478-8e21-586b8f166387","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bfd408d1-7d4c-48a5-a2f8-4ce1e77e7853","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"5e03b2f8-8c14-4711-a0e8-3e9ea0cd97cb","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"66f2c375-ea60-4b14-84a2-d02599eae13d","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"e61b7b0e-ec13-42bb-a107-ec1b56771c0f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dc0749ed-6de9-4a9b-88af-1dedea549371","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"7e4ae11e-49ad-46df-9b03-c2a69d7d536a","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"64bfa55f-72f3-43b7-b0ac-e9cc09e3ffc5","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"14032847-90eb-4a1a-85ea-c9c000b51496","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d9a5a29c-7d15-4455-b768-5f6bd42238f1","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"edd141ff-c093-48fa-b141-306501047195","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5e4b3cca-2e88-4fca-98f3-7b7d69922078","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"381e4901-22ec-49f6-aeca-593b43c75492","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2a7bc3aa-266f-49b3-b152-561c1cd3f74b","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e86ffe21-055e-4766-b226-9aa986745707","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a97fb0bf-142e-42de-b1f3-71335d067612","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"8b41994f-705d-4478-8e21-586b8f166387","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bfd408d1-7d4c-48a5-a2f8-4ce1e77e7853","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"5e03b2f8-8c14-4711-a0e8-3e9ea0cd97cb","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"66f2c375-ea60-4b14-84a2-d02599eae13d","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -86,22 +75,13 @@
     "yorigin": 11,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_Normal_Ufo_Enter","path":"sprites/spr_Kirby_Normal_Ufo_Enter/spr_Kirby_Normal_Ufo_Enter.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_Normal_Ufo_Enter",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7c42db6b-b4b8-4454-a94d-96205c9c149c","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"7c42db6b-b4b8-4454-a94d-96205c9c149c","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Characters/Kirby/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_Normal_Ufo_Enter",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

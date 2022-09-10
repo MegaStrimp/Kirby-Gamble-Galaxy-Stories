@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Hud_Helper_Gordo",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"ce7959d7-ac06-4b4d-8711-7f63c93bdd13","path":"sprites/spr_Hud_Helper_Gordo/spr_Hud_Helper_Gordo.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ce7959d7-ac06-4b4d-8711-7f63c93bdd13","path":"sprites/spr_Hud_Helper_Gordo/spr_Hud_Helper_Gordo.yy",},"LayerId":{"name":"1c96190b-edf6-4ffb-911c-7472b1e45f06","path":"sprites/spr_Hud_Helper_Gordo/spr_Hud_Helper_Gordo.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Hud_Helper_Gordo","path":"sprites/spr_Hud_Helper_Gordo/spr_Hud_Helper_Gordo.yy",},"resourceVersion":"1.0","name":"ce7959d7-ac06-4b4d-8711-7f63c93bdd13","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3d93ed0f-eaec-4807-993a-0a6e914e0481","path":"sprites/spr_Hud_Helper_Gordo/spr_Hud_Helper_Gordo.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3d93ed0f-eaec-4807-993a-0a6e914e0481","path":"sprites/spr_Hud_Helper_Gordo/spr_Hud_Helper_Gordo.yy",},"LayerId":{"name":"1c96190b-edf6-4ffb-911c-7472b1e45f06","path":"sprites/spr_Hud_Helper_Gordo/spr_Hud_Helper_Gordo.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Hud_Helper_Gordo","path":"sprites/spr_Hud_Helper_Gordo/spr_Hud_Helper_Gordo.yy",},"resourceVersion":"1.0","name":"3d93ed0f-eaec-4807-993a-0a6e914e0481","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ce7959d7-ac06-4b4d-8711-7f63c93bdd13",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3d93ed0f-eaec-4807-993a-0a6e914e0481",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Hud_Helper_Gordo","path":"sprites/spr_Hud_Helper_Gordo/spr_Hud_Helper_Gordo.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Hud_Helper_Gordo",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"182b7bc0-202f-4b4b-b4ec-68e53a0019e8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ce7959d7-ac06-4b4d-8711-7f63c93bdd13","path":"sprites/spr_Hud_Helper_Gordo/spr_Hud_Helper_Gordo.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"11f30f82-226b-4200-af8c-f735ec3483b7","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3d93ed0f-eaec-4807-993a-0a6e914e0481","path":"sprites/spr_Hud_Helper_Gordo/spr_Hud_Helper_Gordo.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"182b7bc0-202f-4b4b-b4ec-68e53a0019e8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ce7959d7-ac06-4b4d-8711-7f63c93bdd13","path":"sprites/spr_Hud_Helper_Gordo/spr_Hud_Helper_Gordo.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"11f30f82-226b-4200-af8c-f735ec3483b7","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3d93ed0f-eaec-4807-993a-0a6e914e0481","path":"sprites/spr_Hud_Helper_Gordo/spr_Hud_Helper_Gordo.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -62,22 +63,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Hud_Helper_Gordo","path":"sprites/spr_Hud_Helper_Gordo/spr_Hud_Helper_Gordo.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Hud_Helper_Gordo",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1c96190b-edf6-4ffb-911c-7472b1e45f06","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"1c96190b-edf6-4ffb-911c-7472b1e45f06","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Helper",
     "path": "folders/Sprites/Hud/Helper.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Hud_Helper_Gordo",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Hud_PointStars_Icon",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"76add101-0aa5-4ff5-b33d-e42e896056a8","path":"sprites/spr_Hud_PointStars_Icon/spr_Hud_PointStars_Icon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"76add101-0aa5-4ff5-b33d-e42e896056a8","path":"sprites/spr_Hud_PointStars_Icon/spr_Hud_PointStars_Icon.yy",},"LayerId":{"name":"0b9be621-1840-48e4-ae23-9409192ce3ba","path":"sprites/spr_Hud_PointStars_Icon/spr_Hud_PointStars_Icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Hud_PointStars_Icon","path":"sprites/spr_Hud_PointStars_Icon/spr_Hud_PointStars_Icon.yy",},"resourceVersion":"1.0","name":"76add101-0aa5-4ff5-b33d-e42e896056a8","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"76add101-0aa5-4ff5-b33d-e42e896056a8",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Hud_PointStars_Icon","path":"sprites/spr_Hud_PointStars_Icon/spr_Hud_PointStars_Icon.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Hud_PointStars_Icon",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"ad2a6578-f627-456b-8a31-05e95323c072","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"76add101-0aa5-4ff5-b33d-e42e896056a8","path":"sprites/spr_Hud_PointStars_Icon/spr_Hud_PointStars_Icon.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"ad2a6578-f627-456b-8a31-05e95323c072","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"76add101-0aa5-4ff5-b33d-e42e896056a8","path":"sprites/spr_Hud_PointStars_Icon/spr_Hud_PointStars_Icon.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 10,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Hud_PointStars_Icon","path":"sprites/spr_Hud_PointStars_Icon/spr_Hud_PointStars_Icon.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Hud_PointStars_Icon",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0b9be621-1840-48e4-ae23-9409192ce3ba","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"0b9be621-1840-48e4-ae23-9409192ce3ba","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Point Stars",
     "path": "folders/Sprites/Hud/Point Stars.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Hud_PointStars_Icon",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

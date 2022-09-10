@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_HatFront_Wing_KSSU_Roll",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,27 +27,17 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"3d7987ed-b12e-423c-bdaa-12ad2d83e030","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3d7987ed-b12e-423c-bdaa-12ad2d83e030","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatFront_Wing_KSSU_Roll","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"resourceVersion":"1.0","name":"3d7987ed-b12e-423c-bdaa-12ad2d83e030","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f4df2b15-af8f-41b6-abb6-61079403a2e9","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f4df2b15-af8f-41b6-abb6-61079403a2e9","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatFront_Wing_KSSU_Roll","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"resourceVersion":"1.0","name":"f4df2b15-af8f-41b6-abb6-61079403a2e9","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f2c69539-3b86-4729-a395-7221f53a1f9a","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f2c69539-3b86-4729-a395-7221f53a1f9a","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatFront_Wing_KSSU_Roll","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"resourceVersion":"1.0","name":"f2c69539-3b86-4729-a395-7221f53a1f9a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6b05ad2d-5531-446c-86ab-746c81fcc608","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6b05ad2d-5531-446c-86ab-746c81fcc608","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatFront_Wing_KSSU_Roll","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"resourceVersion":"1.0","name":"6b05ad2d-5531-446c-86ab-746c81fcc608","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"205d32ed-f456-4834-b62c-d47f20949ea9","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"205d32ed-f456-4834-b62c-d47f20949ea9","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatFront_Wing_KSSU_Roll","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"resourceVersion":"1.0","name":"205d32ed-f456-4834-b62c-d47f20949ea9","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"10053d35-2f23-4389-ab50-aaf8ba6dfc83","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"10053d35-2f23-4389-ab50-aaf8ba6dfc83","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatFront_Wing_KSSU_Roll","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"resourceVersion":"1.0","name":"10053d35-2f23-4389-ab50-aaf8ba6dfc83","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3d7987ed-b12e-423c-bdaa-12ad2d83e030",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f4df2b15-af8f-41b6-abb6-61079403a2e9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f2c69539-3b86-4729-a395-7221f53a1f9a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6b05ad2d-5531-446c-86ab-746c81fcc608",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"205d32ed-f456-4834-b62c-d47f20949ea9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"10053d35-2f23-4389-ab50-aaf8ba6dfc83",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_HatFront_Wing_KSSU_Roll","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_HatFront_Wing_KSSU_Roll",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 24.0,
@@ -52,17 +45,17 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 6.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"8aba3240-b965-49b7-92e2-b8f463744f23","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3d7987ed-b12e-423c-bdaa-12ad2d83e030","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"22f755b0-0cb7-4882-bf07-fa71422eb29f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f4df2b15-af8f-41b6-abb6-61079403a2e9","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"6f668f85-e346-4c4d-a793-d6d25622704b","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f2c69539-3b86-4729-a395-7221f53a1f9a","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"d58e21b6-2165-437c-a0b5-028492a25d78","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6b05ad2d-5531-446c-86ab-746c81fcc608","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"d6030707-8f8c-4212-bb74-9011257360d5","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"205d32ed-f456-4834-b62c-d47f20949ea9","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"d0e5e6b2-6b4b-4466-aad9-17c5a9098d5e","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"10053d35-2f23-4389-ab50-aaf8ba6dfc83","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"8aba3240-b965-49b7-92e2-b8f463744f23","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3d7987ed-b12e-423c-bdaa-12ad2d83e030","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"22f755b0-0cb7-4882-bf07-fa71422eb29f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f4df2b15-af8f-41b6-abb6-61079403a2e9","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6f668f85-e346-4c4d-a793-d6d25622704b","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f2c69539-3b86-4729-a395-7221f53a1f9a","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d58e21b6-2165-437c-a0b5-028492a25d78","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6b05ad2d-5531-446c-86ab-746c81fcc608","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d6030707-8f8c-4212-bb74-9011257360d5","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"205d32ed-f456-4834-b62c-d47f20949ea9","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d0e5e6b2-6b4b-4466-aad9-17c5a9098d5e","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"10053d35-2f23-4389-ab50-aaf8ba6dfc83","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -78,22 +71,13 @@
     "yorigin": 11,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_HatFront_Wing_KSSU_Roll","path":"sprites/spr_Kirby_HatFront_Wing_KSSU_Roll/spr_Kirby_HatFront_Wing_KSSU_Roll.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_HatFront_Wing_KSSU_Roll",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Front",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Wing/KSSU/Front.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_HatFront_Wing_KSSU_Roll",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

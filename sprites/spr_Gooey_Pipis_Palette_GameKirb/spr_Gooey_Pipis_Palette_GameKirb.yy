@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Gooey_Pipis_Palette_GameKirb",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"18ea3778-ee90-44e1-9e74-fd9b28852623","path":"sprites/spr_Gooey_Pipis_Palette_GameKirb/spr_Gooey_Pipis_Palette_GameKirb.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"18ea3778-ee90-44e1-9e74-fd9b28852623","path":"sprites/spr_Gooey_Pipis_Palette_GameKirb/spr_Gooey_Pipis_Palette_GameKirb.yy",},"LayerId":{"name":"6e9a2141-ce22-4854-a22b-a765a70edc27","path":"sprites/spr_Gooey_Pipis_Palette_GameKirb/spr_Gooey_Pipis_Palette_GameKirb.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Gooey_Pipis_Palette_GameKirb","path":"sprites/spr_Gooey_Pipis_Palette_GameKirb/spr_Gooey_Pipis_Palette_GameKirb.yy",},"resourceVersion":"1.0","name":"18ea3778-ee90-44e1-9e74-fd9b28852623","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"18ea3778-ee90-44e1-9e74-fd9b28852623",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Gooey_Pipis_Palette_GameKirb","path":"sprites/spr_Gooey_Pipis_Palette_GameKirb/spr_Gooey_Pipis_Palette_GameKirb.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Gooey_Pipis_Palette_GameKirb",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"e84a9656-fdab-48a6-9715-23b11b9fd0bd","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"18ea3778-ee90-44e1-9e74-fd9b28852623","path":"sprites/spr_Gooey_Pipis_Palette_GameKirb/spr_Gooey_Pipis_Palette_GameKirb.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"e84a9656-fdab-48a6-9715-23b11b9fd0bd","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"18ea3778-ee90-44e1-9e74-fd9b28852623","path":"sprites/spr_Gooey_Pipis_Palette_GameKirb/spr_Gooey_Pipis_Palette_GameKirb.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Gooey_Pipis_Palette_GameKirb","path":"sprites/spr_Gooey_Pipis_Palette_GameKirb/spr_Gooey_Pipis_Palette_GameKirb.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Gooey_Pipis_Palette_GameKirb",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6e9a2141-ce22-4854-a22b-a765a70edc27","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6e9a2141-ce22-4854-a22b-a765a70edc27","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Palettes",
     "path": "folders/Sprites/Characters/Gooey/Pipis/Palettes.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Gooey_Pipis_Palette_GameKirb",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

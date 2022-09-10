@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Grizzo_Normal_Palette_Tiger",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"aba4b52a-e5f3-4646-a92e-5f294717533d","path":"sprites/spr_Grizzo_Normal_Palette_Tiger/spr_Grizzo_Normal_Palette_Tiger.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"aba4b52a-e5f3-4646-a92e-5f294717533d","path":"sprites/spr_Grizzo_Normal_Palette_Tiger/spr_Grizzo_Normal_Palette_Tiger.yy",},"LayerId":{"name":"4d95826e-8d1f-4bef-b8de-e48bfb43b75f","path":"sprites/spr_Grizzo_Normal_Palette_Tiger/spr_Grizzo_Normal_Palette_Tiger.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Grizzo_Normal_Palette_Tiger","path":"sprites/spr_Grizzo_Normal_Palette_Tiger/spr_Grizzo_Normal_Palette_Tiger.yy",},"resourceVersion":"1.0","name":"aba4b52a-e5f3-4646-a92e-5f294717533d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"aba4b52a-e5f3-4646-a92e-5f294717533d",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Grizzo_Normal_Palette_Tiger","path":"sprites/spr_Grizzo_Normal_Palette_Tiger/spr_Grizzo_Normal_Palette_Tiger.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Grizzo_Normal_Palette_Tiger",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"0be27976-d7a1-4110-a629-57804bfa7f0d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"aba4b52a-e5f3-4646-a92e-5f294717533d","path":"sprites/spr_Grizzo_Normal_Palette_Tiger/spr_Grizzo_Normal_Palette_Tiger.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"0be27976-d7a1-4110-a629-57804bfa7f0d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"aba4b52a-e5f3-4646-a92e-5f294717533d","path":"sprites/spr_Grizzo_Normal_Palette_Tiger/spr_Grizzo_Normal_Palette_Tiger.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Grizzo_Normal_Palette_Tiger","path":"sprites/spr_Grizzo_Normal_Palette_Tiger/spr_Grizzo_Normal_Palette_Tiger.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Grizzo_Normal_Palette_Tiger",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4d95826e-8d1f-4bef-b8de-e48bfb43b75f","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"4d95826e-8d1f-4bef-b8de-e48bfb43b75f","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Palettes",
     "path": "folders/Sprites/Enemies/Grizzo/Normal/Palettes.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Grizzo_Normal_Palette_Tiger",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

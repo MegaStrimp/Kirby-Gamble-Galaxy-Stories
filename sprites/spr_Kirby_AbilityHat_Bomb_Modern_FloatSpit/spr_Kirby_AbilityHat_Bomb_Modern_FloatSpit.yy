@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,24 +27,16 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4bff9cdf-ecae-41a8-8922-7eedfb6aedee","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4bff9cdf-ecae-41a8-8922-7eedfb6aedee","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"LayerId":{"name":"39cc3224-8f27-497f-afb1-bdcab6b0a3a0","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"resourceVersion":"1.0","name":"4bff9cdf-ecae-41a8-8922-7eedfb6aedee","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"165f22da-34e7-4d79-904d-d7ae35abf26b","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"165f22da-34e7-4d79-904d-d7ae35abf26b","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"LayerId":{"name":"39cc3224-8f27-497f-afb1-bdcab6b0a3a0","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"resourceVersion":"1.0","name":"165f22da-34e7-4d79-904d-d7ae35abf26b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"63eadd94-37b8-4c10-b7a7-af777d8f2d7f","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"63eadd94-37b8-4c10-b7a7-af777d8f2d7f","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"LayerId":{"name":"39cc3224-8f27-497f-afb1-bdcab6b0a3a0","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"resourceVersion":"1.0","name":"63eadd94-37b8-4c10-b7a7-af777d8f2d7f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b410e3eb-1752-456f-8def-42ba1ae9c07f","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b410e3eb-1752-456f-8def-42ba1ae9c07f","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"LayerId":{"name":"39cc3224-8f27-497f-afb1-bdcab6b0a3a0","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"resourceVersion":"1.0","name":"b410e3eb-1752-456f-8def-42ba1ae9c07f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"1e248194-e217-46ed-939a-267cac231470","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1e248194-e217-46ed-939a-267cac231470","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"LayerId":{"name":"39cc3224-8f27-497f-afb1-bdcab6b0a3a0","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"resourceVersion":"1.0","name":"1e248194-e217-46ed-939a-267cac231470","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4bff9cdf-ecae-41a8-8922-7eedfb6aedee",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"165f22da-34e7-4d79-904d-d7ae35abf26b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"63eadd94-37b8-4c10-b7a7-af777d8f2d7f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b410e3eb-1752-456f-8def-42ba1ae9c07f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1e248194-e217-46ed-939a-267cac231470",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 21.0,
@@ -49,16 +44,16 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 5.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"2477886a-f2b2-4ce5-8b80-1e1f089dd9c3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4bff9cdf-ecae-41a8-8922-7eedfb6aedee","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"63f41ab0-2e93-42e6-93ea-bc6caac245a9","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"165f22da-34e7-4d79-904d-d7ae35abf26b","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"c59f9041-fdac-4ab5-a279-6e0fb918695e","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"63eadd94-37b8-4c10-b7a7-af777d8f2d7f","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"edd2bbe7-2724-4991-b37b-d1dd7c5427ce","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b410e3eb-1752-456f-8def-42ba1ae9c07f","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"af98795e-6f13-4cd0-a950-93e92ef23035","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1e248194-e217-46ed-939a-267cac231470","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"2477886a-f2b2-4ce5-8b80-1e1f089dd9c3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4bff9cdf-ecae-41a8-8922-7eedfb6aedee","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"63f41ab0-2e93-42e6-93ea-bc6caac245a9","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"165f22da-34e7-4d79-904d-d7ae35abf26b","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c59f9041-fdac-4ab5-a279-6e0fb918695e","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"63eadd94-37b8-4c10-b7a7-af777d8f2d7f","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"edd2bbe7-2724-4991-b37b-d1dd7c5427ce","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b410e3eb-1752-456f-8def-42ba1ae9c07f","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"af98795e-6f13-4cd0-a950-93e92ef23035","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1e248194-e217-46ed-939a-267cac231470","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -74,22 +69,13 @@
     "yorigin": 27,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit/spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"39cc3224-8f27-497f-afb1-bdcab6b0a3a0","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"39cc3224-8f27-497f-afb1-bdcab6b0a3a0","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Hat",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Bomb/Modern/Hat.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_AbilityHat_Bomb_Modern_FloatSpit",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

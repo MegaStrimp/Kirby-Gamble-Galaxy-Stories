@@ -26,21 +26,26 @@ event_inherited();
 if (!global.pause)
 {
 	//Detect Player
-
-	if (state == 0)
+	
+	switch (state)
 	{
+		//Detect Player
+		
+		case 0:
 		image_speed = 0;
 		if (place_meeting(x,y - 1, obj_Player))
 		{
 			state = 1;
+			if ((isTop) and (instance_exists(topWallOwner))) topWallOwner.state = 1;
+			image_index = 0;
 		}
-	}
-
-	//Destroy
-
-	if (state == 1)
-	{
+		break;
+		
+		//Destroy
+		
+		case 1:
 		image_speed = 1;
+		break;
 	}
 }
 else

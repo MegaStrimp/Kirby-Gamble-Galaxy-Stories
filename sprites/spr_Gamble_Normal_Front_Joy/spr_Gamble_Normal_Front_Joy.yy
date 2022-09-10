@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Gamble_Normal_Front_Joy",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"bffbe9a4-537e-4b02-a51c-b3f1607d04df","path":"sprites/spr_Gamble_Normal_Front_Joy/spr_Gamble_Normal_Front_Joy.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bffbe9a4-537e-4b02-a51c-b3f1607d04df","path":"sprites/spr_Gamble_Normal_Front_Joy/spr_Gamble_Normal_Front_Joy.yy",},"LayerId":{"name":"310bc36f-64a0-4936-9c7c-a74813f5abdc","path":"sprites/spr_Gamble_Normal_Front_Joy/spr_Gamble_Normal_Front_Joy.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Gamble_Normal_Front_Joy","path":"sprites/spr_Gamble_Normal_Front_Joy/spr_Gamble_Normal_Front_Joy.yy",},"resourceVersion":"1.0","name":"bffbe9a4-537e-4b02-a51c-b3f1607d04df","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ab8d3ddd-59f4-4099-b39f-11e5b02cba1c","path":"sprites/spr_Gamble_Normal_Front_Joy/spr_Gamble_Normal_Front_Joy.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ab8d3ddd-59f4-4099-b39f-11e5b02cba1c","path":"sprites/spr_Gamble_Normal_Front_Joy/spr_Gamble_Normal_Front_Joy.yy",},"LayerId":{"name":"310bc36f-64a0-4936-9c7c-a74813f5abdc","path":"sprites/spr_Gamble_Normal_Front_Joy/spr_Gamble_Normal_Front_Joy.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Gamble_Normal_Front_Joy","path":"sprites/spr_Gamble_Normal_Front_Joy/spr_Gamble_Normal_Front_Joy.yy",},"resourceVersion":"1.0","name":"ab8d3ddd-59f4-4099-b39f-11e5b02cba1c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"dcc34055-174c-41af-b259-6066e4791695","path":"sprites/spr_Gamble_Normal_Front_Joy/spr_Gamble_Normal_Front_Joy.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"dcc34055-174c-41af-b259-6066e4791695","path":"sprites/spr_Gamble_Normal_Front_Joy/spr_Gamble_Normal_Front_Joy.yy",},"LayerId":{"name":"310bc36f-64a0-4936-9c7c-a74813f5abdc","path":"sprites/spr_Gamble_Normal_Front_Joy/spr_Gamble_Normal_Front_Joy.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Gamble_Normal_Front_Joy","path":"sprites/spr_Gamble_Normal_Front_Joy/spr_Gamble_Normal_Front_Joy.yy",},"resourceVersion":"1.0","name":"dcc34055-174c-41af-b259-6066e4791695","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"fff20053-c9d0-4a44-9a28-ce190e1e6621","path":"sprites/spr_Gamble_Normal_Front_Joy/spr_Gamble_Normal_Front_Joy.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fff20053-c9d0-4a44-9a28-ce190e1e6621","path":"sprites/spr_Gamble_Normal_Front_Joy/spr_Gamble_Normal_Front_Joy.yy",},"LayerId":{"name":"310bc36f-64a0-4936-9c7c-a74813f5abdc","path":"sprites/spr_Gamble_Normal_Front_Joy/spr_Gamble_Normal_Front_Joy.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Gamble_Normal_Front_Joy","path":"sprites/spr_Gamble_Normal_Front_Joy/spr_Gamble_Normal_Front_Joy.yy",},"resourceVersion":"1.0","name":"fff20053-c9d0-4a44-9a28-ce190e1e6621","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bffbe9a4-537e-4b02-a51c-b3f1607d04df",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ab8d3ddd-59f4-4099-b39f-11e5b02cba1c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dcc34055-174c-41af-b259-6066e4791695",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fff20053-c9d0-4a44-9a28-ce190e1e6621",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Gamble_Normal_Front_Joy","path":"sprites/spr_Gamble_Normal_Front_Joy/spr_Gamble_Normal_Front_Joy.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Gamble_Normal_Front_Joy",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 9.0,
@@ -46,15 +43,15 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 4.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"6caab1d9-78b3-42c1-a0b2-5269cf7ed6b4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bffbe9a4-537e-4b02-a51c-b3f1607d04df","path":"sprites/spr_Gamble_Normal_Front_Joy/spr_Gamble_Normal_Front_Joy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"b26df6ce-6f10-490f-bf07-cae8c7fee628","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ab8d3ddd-59f4-4099-b39f-11e5b02cba1c","path":"sprites/spr_Gamble_Normal_Front_Joy/spr_Gamble_Normal_Front_Joy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"69965988-ffcb-4c0f-8e56-051215150aa1","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dcc34055-174c-41af-b259-6066e4791695","path":"sprites/spr_Gamble_Normal_Front_Joy/spr_Gamble_Normal_Front_Joy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"542e2224-6467-48d9-ba7d-cf5dff4f6a27","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fff20053-c9d0-4a44-9a28-ce190e1e6621","path":"sprites/spr_Gamble_Normal_Front_Joy/spr_Gamble_Normal_Front_Joy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"6caab1d9-78b3-42c1-a0b2-5269cf7ed6b4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bffbe9a4-537e-4b02-a51c-b3f1607d04df","path":"sprites/spr_Gamble_Normal_Front_Joy/spr_Gamble_Normal_Front_Joy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b26df6ce-6f10-490f-bf07-cae8c7fee628","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ab8d3ddd-59f4-4099-b39f-11e5b02cba1c","path":"sprites/spr_Gamble_Normal_Front_Joy/spr_Gamble_Normal_Front_Joy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"69965988-ffcb-4c0f-8e56-051215150aa1","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dcc34055-174c-41af-b259-6066e4791695","path":"sprites/spr_Gamble_Normal_Front_Joy/spr_Gamble_Normal_Front_Joy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"542e2224-6467-48d9-ba7d-cf5dff4f6a27","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fff20053-c9d0-4a44-9a28-ce190e1e6621","path":"sprites/spr_Gamble_Normal_Front_Joy/spr_Gamble_Normal_Front_Joy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -70,22 +67,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Gamble_Normal_Front_Joy","path":"sprites/spr_Gamble_Normal_Front_Joy/spr_Gamble_Normal_Front_Joy.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Gamble_Normal_Front_Joy",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"310bc36f-64a0-4936-9c7c-a74813f5abdc","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"310bc36f-64a0-4936-9c7c-a74813f5abdc","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Front",
     "path": "folders/Sprites/Characters/Gamble/Normal/Front.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Gamble_Normal_Front_Joy",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

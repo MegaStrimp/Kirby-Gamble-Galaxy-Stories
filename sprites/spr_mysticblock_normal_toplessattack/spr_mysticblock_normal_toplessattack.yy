@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_MysticBlock_Normal_ToplessAttack",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"05c650f8-e943-493d-82dd-e30e081b7d71","path":"sprites/spr_MysticBlock_Normal_ToplessAttack/spr_MysticBlock_Normal_ToplessAttack.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"05c650f8-e943-493d-82dd-e30e081b7d71","path":"sprites/spr_MysticBlock_Normal_ToplessAttack/spr_MysticBlock_Normal_ToplessAttack.yy",},"LayerId":{"name":"2b1b6d6d-8c53-475a-b578-54e5df58675d","path":"sprites/spr_MysticBlock_Normal_ToplessAttack/spr_MysticBlock_Normal_ToplessAttack.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_MysticBlock_Normal_ToplessAttack","path":"sprites/spr_MysticBlock_Normal_ToplessAttack/spr_MysticBlock_Normal_ToplessAttack.yy",},"resourceVersion":"1.0","name":"05c650f8-e943-493d-82dd-e30e081b7d71","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"05c650f8-e943-493d-82dd-e30e081b7d71",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_MysticBlock_Normal_ToplessAttack","path":"sprites/spr_MysticBlock_Normal_ToplessAttack/spr_MysticBlock_Normal_ToplessAttack.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_MysticBlock_Normal_ToplessAttack",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"03ef3f91-3afc-46c0-a5db-fcb7d970479a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"05c650f8-e943-493d-82dd-e30e081b7d71","path":"sprites/spr_MysticBlock_Normal_ToplessAttack/spr_MysticBlock_Normal_ToplessAttack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"03ef3f91-3afc-46c0-a5db-fcb7d970479a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"05c650f8-e943-493d-82dd-e30e081b7d71","path":"sprites/spr_MysticBlock_Normal_ToplessAttack/spr_MysticBlock_Normal_ToplessAttack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 3,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_MysticBlock_Normal_ToplessAttack","path":"sprites/spr_MysticBlock_Normal_ToplessAttack/spr_MysticBlock_Normal_ToplessAttack.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_MysticBlock_Normal_ToplessAttack",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2b1b6d6d-8c53-475a-b578-54e5df58675d","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"2b1b6d6d-8c53-475a-b578-54e5df58675d","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Enemies/Mystic Block/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_MysticBlock_Normal_ToplessAttack",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

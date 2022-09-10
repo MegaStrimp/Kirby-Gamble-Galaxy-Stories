@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"aaf58439-ccbd-407e-a89b-239df40c44da","path":"sprites/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"aaf58439-ccbd-407e-a89b-239df40c44da","path":"sprites/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown.yy",},"LayerId":{"name":"c7610408-f1bd-45a6-b6b5-31405141352a","path":"sprites/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown","path":"sprites/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown.yy",},"resourceVersion":"1.0","name":"aaf58439-ccbd-407e-a89b-239df40c44da","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a525f2a1-54e5-404e-8f22-f5e37d159d26","path":"sprites/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a525f2a1-54e5-404e-8f22-f5e37d159d26","path":"sprites/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown.yy",},"LayerId":{"name":"c7610408-f1bd-45a6-b6b5-31405141352a","path":"sprites/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown","path":"sprites/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown.yy",},"resourceVersion":"1.0","name":"a525f2a1-54e5-404e-8f22-f5e37d159d26","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b27a0b1c-b423-44e3-8a02-52d8a2d7b9c0","path":"sprites/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b27a0b1c-b423-44e3-8a02-52d8a2d7b9c0","path":"sprites/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown.yy",},"LayerId":{"name":"c7610408-f1bd-45a6-b6b5-31405141352a","path":"sprites/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown","path":"sprites/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown.yy",},"resourceVersion":"1.0","name":"b27a0b1c-b423-44e3-8a02-52d8a2d7b9c0","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"aaf58439-ccbd-407e-a89b-239df40c44da",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a525f2a1-54e5-404e-8f22-f5e37d159d26",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b27a0b1c-b423-44e3-8a02-52d8a2d7b9c0",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown","path":"sprites/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 12.0,
@@ -43,14 +42,14 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 3.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"b1d335eb-6bc6-479e-8f84-d20a50ee690d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"aaf58439-ccbd-407e-a89b-239df40c44da","path":"sprites/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"a6b05f53-21f4-4712-8c0f-fd1bfdf94321","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a525f2a1-54e5-404e-8f22-f5e37d159d26","path":"sprites/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"109d5f0e-47b3-44c5-bac9-5940b4860df3","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b27a0b1c-b423-44e3-8a02-52d8a2d7b9c0","path":"sprites/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"b1d335eb-6bc6-479e-8f84-d20a50ee690d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"aaf58439-ccbd-407e-a89b-239df40c44da","path":"sprites/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a6b05f53-21f4-4712-8c0f-fd1bfdf94321","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a525f2a1-54e5-404e-8f22-f5e37d159d26","path":"sprites/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"109d5f0e-47b3-44c5-bac9-5940b4860df3","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b27a0b1c-b423-44e3-8a02-52d8a2d7b9c0","path":"sprites/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -66,22 +65,13 @@
     "yorigin": 19,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown","path":"sprites/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown/spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c7610408-f1bd-45a6-b6b5-31405141352a","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c7610408-f1bd-45a6-b6b5-31405141352a","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Hat",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Ninja/KSSU/Hat.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_AbilityHat_Ninja_KSSU_ClimbDown",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

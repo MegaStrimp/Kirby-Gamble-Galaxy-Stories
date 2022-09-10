@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_Equipment_Bell_Modern_ClimbDown",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"23ea4978-a63f-4e84-99b4-034410e03d01","path":"sprites/spr_Kirby_Equipment_Bell_Modern_ClimbDown/spr_Kirby_Equipment_Bell_Modern_ClimbDown.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"23ea4978-a63f-4e84-99b4-034410e03d01","path":"sprites/spr_Kirby_Equipment_Bell_Modern_ClimbDown/spr_Kirby_Equipment_Bell_Modern_ClimbDown.yy",},"LayerId":{"name":"c7610408-f1bd-45a6-b6b5-31405141352a","path":"sprites/spr_Kirby_Equipment_Bell_Modern_ClimbDown/spr_Kirby_Equipment_Bell_Modern_ClimbDown.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Equipment_Bell_Modern_ClimbDown","path":"sprites/spr_Kirby_Equipment_Bell_Modern_ClimbDown/spr_Kirby_Equipment_Bell_Modern_ClimbDown.yy",},"resourceVersion":"1.0","name":"23ea4978-a63f-4e84-99b4-034410e03d01","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"40c62ca9-2a86-4b7b-9b2e-e8b572813752","path":"sprites/spr_Kirby_Equipment_Bell_Modern_ClimbDown/spr_Kirby_Equipment_Bell_Modern_ClimbDown.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"40c62ca9-2a86-4b7b-9b2e-e8b572813752","path":"sprites/spr_Kirby_Equipment_Bell_Modern_ClimbDown/spr_Kirby_Equipment_Bell_Modern_ClimbDown.yy",},"LayerId":{"name":"c7610408-f1bd-45a6-b6b5-31405141352a","path":"sprites/spr_Kirby_Equipment_Bell_Modern_ClimbDown/spr_Kirby_Equipment_Bell_Modern_ClimbDown.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Equipment_Bell_Modern_ClimbDown","path":"sprites/spr_Kirby_Equipment_Bell_Modern_ClimbDown/spr_Kirby_Equipment_Bell_Modern_ClimbDown.yy",},"resourceVersion":"1.0","name":"40c62ca9-2a86-4b7b-9b2e-e8b572813752","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"493633ec-2667-45f3-a855-cacbaa101185","path":"sprites/spr_Kirby_Equipment_Bell_Modern_ClimbDown/spr_Kirby_Equipment_Bell_Modern_ClimbDown.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"493633ec-2667-45f3-a855-cacbaa101185","path":"sprites/spr_Kirby_Equipment_Bell_Modern_ClimbDown/spr_Kirby_Equipment_Bell_Modern_ClimbDown.yy",},"LayerId":{"name":"c7610408-f1bd-45a6-b6b5-31405141352a","path":"sprites/spr_Kirby_Equipment_Bell_Modern_ClimbDown/spr_Kirby_Equipment_Bell_Modern_ClimbDown.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Equipment_Bell_Modern_ClimbDown","path":"sprites/spr_Kirby_Equipment_Bell_Modern_ClimbDown/spr_Kirby_Equipment_Bell_Modern_ClimbDown.yy",},"resourceVersion":"1.0","name":"493633ec-2667-45f3-a855-cacbaa101185","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"23ea4978-a63f-4e84-99b4-034410e03d01",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"40c62ca9-2a86-4b7b-9b2e-e8b572813752",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"493633ec-2667-45f3-a855-cacbaa101185",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_Equipment_Bell_Modern_ClimbDown","path":"sprites/spr_Kirby_Equipment_Bell_Modern_ClimbDown/spr_Kirby_Equipment_Bell_Modern_ClimbDown.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_Equipment_Bell_Modern_ClimbDown",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 12.0,
@@ -43,14 +42,14 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 3.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"c4c0f44f-b429-4eb6-a009-767d62a29e90","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"23ea4978-a63f-4e84-99b4-034410e03d01","path":"sprites/spr_Kirby_Equipment_Bell_Modern_ClimbDown/spr_Kirby_Equipment_Bell_Modern_ClimbDown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"929b7035-2a30-4d0b-80b3-73414eb84d2d","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"40c62ca9-2a86-4b7b-9b2e-e8b572813752","path":"sprites/spr_Kirby_Equipment_Bell_Modern_ClimbDown/spr_Kirby_Equipment_Bell_Modern_ClimbDown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"51ed60ed-0b82-4442-9685-e819ef2786cc","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"493633ec-2667-45f3-a855-cacbaa101185","path":"sprites/spr_Kirby_Equipment_Bell_Modern_ClimbDown/spr_Kirby_Equipment_Bell_Modern_ClimbDown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"c4c0f44f-b429-4eb6-a009-767d62a29e90","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"23ea4978-a63f-4e84-99b4-034410e03d01","path":"sprites/spr_Kirby_Equipment_Bell_Modern_ClimbDown/spr_Kirby_Equipment_Bell_Modern_ClimbDown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"929b7035-2a30-4d0b-80b3-73414eb84d2d","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"40c62ca9-2a86-4b7b-9b2e-e8b572813752","path":"sprites/spr_Kirby_Equipment_Bell_Modern_ClimbDown/spr_Kirby_Equipment_Bell_Modern_ClimbDown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"51ed60ed-0b82-4442-9685-e819ef2786cc","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"493633ec-2667-45f3-a855-cacbaa101185","path":"sprites/spr_Kirby_Equipment_Bell_Modern_ClimbDown/spr_Kirby_Equipment_Bell_Modern_ClimbDown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -66,22 +65,13 @@
     "yorigin": 24,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_Equipment_Bell_Modern_ClimbDown","path":"sprites/spr_Kirby_Equipment_Bell_Modern_ClimbDown/spr_Kirby_Equipment_Bell_Modern_ClimbDown.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_Equipment_Bell_Modern_ClimbDown",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c7610408-f1bd-45a6-b6b5-31405141352a","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c7610408-f1bd-45a6-b6b5-31405141352a","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Equipment",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Bell/Modern/Equipment.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_Equipment_Bell_Modern_ClimbDown",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

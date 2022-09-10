@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_SirKibble_Normal_HurtAir",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"28258a1a-6ac8-470c-a3ff-ac8cf75d44ae","path":"sprites/spr_SirKibble_Normal_HurtAir/spr_SirKibble_Normal_HurtAir.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"28258a1a-6ac8-470c-a3ff-ac8cf75d44ae","path":"sprites/spr_SirKibble_Normal_HurtAir/spr_SirKibble_Normal_HurtAir.yy",},"LayerId":{"name":"3288b7d8-2d7f-4888-9c6d-43f3a12b3437","path":"sprites/spr_SirKibble_Normal_HurtAir/spr_SirKibble_Normal_HurtAir.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_SirKibble_Normal_HurtAir","path":"sprites/spr_SirKibble_Normal_HurtAir/spr_SirKibble_Normal_HurtAir.yy",},"resourceVersion":"1.0","name":"28258a1a-6ac8-470c-a3ff-ac8cf75d44ae","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"28258a1a-6ac8-470c-a3ff-ac8cf75d44ae",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_SirKibble_Normal_HurtAir","path":"sprites/spr_SirKibble_Normal_HurtAir/spr_SirKibble_Normal_HurtAir.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_SirKibble_Normal_HurtAir",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"1daf8bda-bfa9-4173-8225-9d734225afbf","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"28258a1a-6ac8-470c-a3ff-ac8cf75d44ae","path":"sprites/spr_SirKibble_Normal_HurtAir/spr_SirKibble_Normal_HurtAir.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"1daf8bda-bfa9-4173-8225-9d734225afbf","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"28258a1a-6ac8-470c-a3ff-ac8cf75d44ae","path":"sprites/spr_SirKibble_Normal_HurtAir/spr_SirKibble_Normal_HurtAir.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_SirKibble_Normal_HurtAir","path":"sprites/spr_SirKibble_Normal_HurtAir/spr_SirKibble_Normal_HurtAir.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_SirKibble_Normal_HurtAir",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3288b7d8-2d7f-4888-9c6d-43f3a12b3437","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"3288b7d8-2d7f-4888-9c6d-43f3a12b3437","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Enemies/Sir Kibble/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_SirKibble_Normal_HurtAir",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

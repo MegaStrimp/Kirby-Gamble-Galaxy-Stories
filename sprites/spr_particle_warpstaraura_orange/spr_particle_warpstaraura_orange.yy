@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Particle_WarpStarAura_Orange",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"5b0c9af1-8b3b-4843-a194-5b0556a95ae7","path":"sprites/spr_Particle_WarpStarAura_Orange/spr_Particle_WarpStarAura_Orange.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5b0c9af1-8b3b-4843-a194-5b0556a95ae7","path":"sprites/spr_Particle_WarpStarAura_Orange/spr_Particle_WarpStarAura_Orange.yy",},"LayerId":{"name":"b7e15a1b-ea4c-4414-9322-cf869e22582a","path":"sprites/spr_Particle_WarpStarAura_Orange/spr_Particle_WarpStarAura_Orange.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Particle_WarpStarAura_Orange","path":"sprites/spr_Particle_WarpStarAura_Orange/spr_Particle_WarpStarAura_Orange.yy",},"resourceVersion":"1.0","name":"5b0c9af1-8b3b-4843-a194-5b0556a95ae7","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5b0c9af1-8b3b-4843-a194-5b0556a95ae7",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Particle_WarpStarAura_Orange","path":"sprites/spr_Particle_WarpStarAura_Orange/spr_Particle_WarpStarAura_Orange.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Particle_WarpStarAura_Orange",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"0b558115-89c2-400e-87f7-7d34f91cea0c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5b0c9af1-8b3b-4843-a194-5b0556a95ae7","path":"sprites/spr_Particle_WarpStarAura_Orange/spr_Particle_WarpStarAura_Orange.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"0b558115-89c2-400e-87f7-7d34f91cea0c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5b0c9af1-8b3b-4843-a194-5b0556a95ae7","path":"sprites/spr_Particle_WarpStarAura_Orange/spr_Particle_WarpStarAura_Orange.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 43,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Particle_WarpStarAura_Orange","path":"sprites/spr_Particle_WarpStarAura_Orange/spr_Particle_WarpStarAura_Orange.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Particle_WarpStarAura_Orange",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b7e15a1b-ea4c-4414-9322-cf869e22582a","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b7e15a1b-ea4c-4414-9322-cf869e22582a","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Particles",
     "path": "folders/Sprites/Particles.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Particle_WarpStarAura_Orange",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

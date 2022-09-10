@@ -357,7 +357,6 @@ function scr_Localization_Options(argument0,argument1,argument2,argument3)
 	dialogue[stringAttributes.options_musicIntro][stringAttributes.title][0][languages.norwegian] = "";
 	dialogue[stringAttributes.options_musicIntro][stringAttributes.title][0][languages.arabic] = "";
 	#endregion
-	#endregion
 	
 	#region Default
 	dialogue[stringAttributes.options_default][stringAttributes.title][0][languages.english] = "Default";

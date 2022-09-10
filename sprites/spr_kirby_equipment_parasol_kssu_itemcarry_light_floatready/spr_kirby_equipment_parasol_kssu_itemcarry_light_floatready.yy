@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"5e965b81-02bb-4d85-8822-e465f0174ee5","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5e965b81-02bb-4d85-8822-e465f0174ee5","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady.yy",},"LayerId":{"name":"4d52e9c7-7099-4cf8-8176-d2cd972ecb68","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady.yy",},"resourceVersion":"1.0","name":"5e965b81-02bb-4d85-8822-e465f0174ee5","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b8c4e7fd-6ff6-4e64-a2f2-9203a124cae0","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b8c4e7fd-6ff6-4e64-a2f2-9203a124cae0","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady.yy",},"LayerId":{"name":"4d52e9c7-7099-4cf8-8176-d2cd972ecb68","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady.yy",},"resourceVersion":"1.0","name":"b8c4e7fd-6ff6-4e64-a2f2-9203a124cae0","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"1517b8e5-5273-49be-91d7-632d317f43d6","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1517b8e5-5273-49be-91d7-632d317f43d6","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady.yy",},"LayerId":{"name":"4d52e9c7-7099-4cf8-8176-d2cd972ecb68","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady.yy",},"resourceVersion":"1.0","name":"1517b8e5-5273-49be-91d7-632d317f43d6","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2d35e2ed-4e1d-4d31-aae3-afdcd21ad5d3","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2d35e2ed-4e1d-4d31-aae3-afdcd21ad5d3","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady.yy",},"LayerId":{"name":"4d52e9c7-7099-4cf8-8176-d2cd972ecb68","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady.yy",},"resourceVersion":"1.0","name":"2d35e2ed-4e1d-4d31-aae3-afdcd21ad5d3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5e965b81-02bb-4d85-8822-e465f0174ee5",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b8c4e7fd-6ff6-4e64-a2f2-9203a124cae0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1517b8e5-5273-49be-91d7-632d317f43d6",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2d35e2ed-4e1d-4d31-aae3-afdcd21ad5d3",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 21.0,
@@ -46,15 +43,15 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 4.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"76a6ba1d-a1ff-47e9-be11-a740b44a81a0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5e965b81-02bb-4d85-8822-e465f0174ee5","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"9cf5ea7b-ff1f-4795-85b8-dde85a4202c3","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b8c4e7fd-6ff6-4e64-a2f2-9203a124cae0","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"ea048ea8-5fd0-4a03-8e78-7a31c0d53bbc","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1517b8e5-5273-49be-91d7-632d317f43d6","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"03b99131-1349-4a65-920d-9d1a10f6b6d2","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2d35e2ed-4e1d-4d31-aae3-afdcd21ad5d3","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"76a6ba1d-a1ff-47e9-be11-a740b44a81a0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5e965b81-02bb-4d85-8822-e465f0174ee5","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9cf5ea7b-ff1f-4795-85b8-dde85a4202c3","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b8c4e7fd-6ff6-4e64-a2f2-9203a124cae0","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ea048ea8-5fd0-4a03-8e78-7a31c0d53bbc","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1517b8e5-5273-49be-91d7-632d317f43d6","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"03b99131-1349-4a65-920d-9d1a10f6b6d2","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2d35e2ed-4e1d-4d31-aae3-afdcd21ad5d3","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -70,22 +67,13 @@
     "yorigin": 41,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady/spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4d52e9c7-7099-4cf8-8176-d2cd972ecb68","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"4d52e9c7-7099-4cf8-8176-d2cd972ecb68","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Equipment",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Parasol/KSSU/Equipment.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_FloatReady",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

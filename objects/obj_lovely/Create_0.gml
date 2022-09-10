@@ -46,13 +46,6 @@ caughtKirby = false;
 //Physics
 
 
-
-accel = .1;
-movespeed = 1;
-jumpspeed = 4;
-gravNormal = .2;
-gravLimitNormal = 5;
-
 //Sprites
 
 mask_index = spr_16Square_Mask;
@@ -89,6 +82,7 @@ turnableX = true;
 turnableY = true;
 rotateImage = false;
 sprFaceIndex = 0;
+attackState = 0;
 
 //Timers
 damageTimer = 4;

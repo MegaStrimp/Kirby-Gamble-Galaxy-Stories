@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Gooey_Pipis_Palette_PlumpTomato",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"abdc7d25-ff62-431a-bb3f-f3aec508c909","path":"sprites/spr_Gooey_Pipis_Palette_PlumpTomato/spr_Gooey_Pipis_Palette_PlumpTomato.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"abdc7d25-ff62-431a-bb3f-f3aec508c909","path":"sprites/spr_Gooey_Pipis_Palette_PlumpTomato/spr_Gooey_Pipis_Palette_PlumpTomato.yy",},"LayerId":{"name":"467af234-dc1e-4047-aeb9-36d9961a8a5e","path":"sprites/spr_Gooey_Pipis_Palette_PlumpTomato/spr_Gooey_Pipis_Palette_PlumpTomato.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Gooey_Pipis_Palette_PlumpTomato","path":"sprites/spr_Gooey_Pipis_Palette_PlumpTomato/spr_Gooey_Pipis_Palette_PlumpTomato.yy",},"resourceVersion":"1.0","name":"abdc7d25-ff62-431a-bb3f-f3aec508c909","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"abdc7d25-ff62-431a-bb3f-f3aec508c909",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Gooey_Pipis_Palette_PlumpTomato","path":"sprites/spr_Gooey_Pipis_Palette_PlumpTomato/spr_Gooey_Pipis_Palette_PlumpTomato.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Gooey_Pipis_Palette_PlumpTomato",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"05ea8f9c-b0d3-461c-b077-13c647c3d3dd","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"abdc7d25-ff62-431a-bb3f-f3aec508c909","path":"sprites/spr_Gooey_Pipis_Palette_PlumpTomato/spr_Gooey_Pipis_Palette_PlumpTomato.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"05ea8f9c-b0d3-461c-b077-13c647c3d3dd","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"abdc7d25-ff62-431a-bb3f-f3aec508c909","path":"sprites/spr_Gooey_Pipis_Palette_PlumpTomato/spr_Gooey_Pipis_Palette_PlumpTomato.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Gooey_Pipis_Palette_PlumpTomato","path":"sprites/spr_Gooey_Pipis_Palette_PlumpTomato/spr_Gooey_Pipis_Palette_PlumpTomato.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Gooey_Pipis_Palette_PlumpTomato",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"467af234-dc1e-4047-aeb9-36d9961a8a5e","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"467af234-dc1e-4047-aeb9-36d9961a8a5e","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Palettes",
     "path": "folders/Sprites/Characters/Gooey/Pipis/Palettes.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Gooey_Pipis_Palette_PlumpTomato",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_FallingAsteroid_Normal_Debris",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"db53502f-21f2-4a8e-b4d4-4cbe08c5c9ad","path":"sprites/spr_FallingAsteroid_Normal_Debris/spr_FallingAsteroid_Normal_Debris.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"db53502f-21f2-4a8e-b4d4-4cbe08c5c9ad","path":"sprites/spr_FallingAsteroid_Normal_Debris/spr_FallingAsteroid_Normal_Debris.yy",},"LayerId":{"name":"d236bf5b-9dc8-44d1-a235-6717beb16fd8","path":"sprites/spr_FallingAsteroid_Normal_Debris/spr_FallingAsteroid_Normal_Debris.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_FallingAsteroid_Normal_Debris","path":"sprites/spr_FallingAsteroid_Normal_Debris/spr_FallingAsteroid_Normal_Debris.yy",},"resourceVersion":"1.0","name":"db53502f-21f2-4a8e-b4d4-4cbe08c5c9ad","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a43aeb58-fdef-48e2-9eb2-7939083576f7","path":"sprites/spr_FallingAsteroid_Normal_Debris/spr_FallingAsteroid_Normal_Debris.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a43aeb58-fdef-48e2-9eb2-7939083576f7","path":"sprites/spr_FallingAsteroid_Normal_Debris/spr_FallingAsteroid_Normal_Debris.yy",},"LayerId":{"name":"d236bf5b-9dc8-44d1-a235-6717beb16fd8","path":"sprites/spr_FallingAsteroid_Normal_Debris/spr_FallingAsteroid_Normal_Debris.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_FallingAsteroid_Normal_Debris","path":"sprites/spr_FallingAsteroid_Normal_Debris/spr_FallingAsteroid_Normal_Debris.yy",},"resourceVersion":"1.0","name":"a43aeb58-fdef-48e2-9eb2-7939083576f7","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"1b28644d-d0d4-4409-8725-f1f89fd8a0f8","path":"sprites/spr_FallingAsteroid_Normal_Debris/spr_FallingAsteroid_Normal_Debris.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1b28644d-d0d4-4409-8725-f1f89fd8a0f8","path":"sprites/spr_FallingAsteroid_Normal_Debris/spr_FallingAsteroid_Normal_Debris.yy",},"LayerId":{"name":"d236bf5b-9dc8-44d1-a235-6717beb16fd8","path":"sprites/spr_FallingAsteroid_Normal_Debris/spr_FallingAsteroid_Normal_Debris.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_FallingAsteroid_Normal_Debris","path":"sprites/spr_FallingAsteroid_Normal_Debris/spr_FallingAsteroid_Normal_Debris.yy",},"resourceVersion":"1.0","name":"1b28644d-d0d4-4409-8725-f1f89fd8a0f8","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"83f1fb39-40b0-46e5-950c-7017a8769943","path":"sprites/spr_FallingAsteroid_Normal_Debris/spr_FallingAsteroid_Normal_Debris.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"83f1fb39-40b0-46e5-950c-7017a8769943","path":"sprites/spr_FallingAsteroid_Normal_Debris/spr_FallingAsteroid_Normal_Debris.yy",},"LayerId":{"name":"d236bf5b-9dc8-44d1-a235-6717beb16fd8","path":"sprites/spr_FallingAsteroid_Normal_Debris/spr_FallingAsteroid_Normal_Debris.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_FallingAsteroid_Normal_Debris","path":"sprites/spr_FallingAsteroid_Normal_Debris/spr_FallingAsteroid_Normal_Debris.yy",},"resourceVersion":"1.0","name":"83f1fb39-40b0-46e5-950c-7017a8769943","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"db53502f-21f2-4a8e-b4d4-4cbe08c5c9ad",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a43aeb58-fdef-48e2-9eb2-7939083576f7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1b28644d-d0d4-4409-8725-f1f89fd8a0f8",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"83f1fb39-40b0-46e5-950c-7017a8769943",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_FallingAsteroid_Normal_Debris","path":"sprites/spr_FallingAsteroid_Normal_Debris/spr_FallingAsteroid_Normal_Debris.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_FallingAsteroid_Normal_Debris",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -46,15 +43,15 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 4.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"963a3c06-73f9-4e5f-a28c-fb5e0a4de115","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"db53502f-21f2-4a8e-b4d4-4cbe08c5c9ad","path":"sprites/spr_FallingAsteroid_Normal_Debris/spr_FallingAsteroid_Normal_Debris.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"c6f8d9b3-6c59-404d-9805-e5ff060b162b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a43aeb58-fdef-48e2-9eb2-7939083576f7","path":"sprites/spr_FallingAsteroid_Normal_Debris/spr_FallingAsteroid_Normal_Debris.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"16641817-4187-47e3-a5a4-440bed0c7f93","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1b28644d-d0d4-4409-8725-f1f89fd8a0f8","path":"sprites/spr_FallingAsteroid_Normal_Debris/spr_FallingAsteroid_Normal_Debris.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"4c69f9ba-98f6-465a-bbd3-543740025baa","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"83f1fb39-40b0-46e5-950c-7017a8769943","path":"sprites/spr_FallingAsteroid_Normal_Debris/spr_FallingAsteroid_Normal_Debris.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"963a3c06-73f9-4e5f-a28c-fb5e0a4de115","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"db53502f-21f2-4a8e-b4d4-4cbe08c5c9ad","path":"sprites/spr_FallingAsteroid_Normal_Debris/spr_FallingAsteroid_Normal_Debris.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c6f8d9b3-6c59-404d-9805-e5ff060b162b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a43aeb58-fdef-48e2-9eb2-7939083576f7","path":"sprites/spr_FallingAsteroid_Normal_Debris/spr_FallingAsteroid_Normal_Debris.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"16641817-4187-47e3-a5a4-440bed0c7f93","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1b28644d-d0d4-4409-8725-f1f89fd8a0f8","path":"sprites/spr_FallingAsteroid_Normal_Debris/spr_FallingAsteroid_Normal_Debris.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4c69f9ba-98f6-465a-bbd3-543740025baa","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"83f1fb39-40b0-46e5-950c-7017a8769943","path":"sprites/spr_FallingAsteroid_Normal_Debris/spr_FallingAsteroid_Normal_Debris.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -70,22 +67,13 @@
     "yorigin": 9,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_FallingAsteroid_Normal_Debris","path":"sprites/spr_FallingAsteroid_Normal_Debris/spr_FallingAsteroid_Normal_Debris.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_FallingAsteroid_Normal_Debris",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d236bf5b-9dc8-44d1-a235-6717beb16fd8","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d236bf5b-9dc8-44d1-a235-6717beb16fd8","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Stage Elements/Falling Asteroid/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_FallingAsteroid_Normal_Debris",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Particle_BeamFlareYellow",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c4c26b6e-798e-401e-94bd-1a41ab492e81","path":"sprites/spr_Particle_BeamFlareYellow/spr_Particle_BeamFlareYellow.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c4c26b6e-798e-401e-94bd-1a41ab492e81","path":"sprites/spr_Particle_BeamFlareYellow/spr_Particle_BeamFlareYellow.yy",},"LayerId":{"name":"0da76078-5373-486f-9708-490f5d9a9725","path":"sprites/spr_Particle_BeamFlareYellow/spr_Particle_BeamFlareYellow.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Particle_BeamFlareYellow","path":"sprites/spr_Particle_BeamFlareYellow/spr_Particle_BeamFlareYellow.yy",},"resourceVersion":"1.0","name":"c4c26b6e-798e-401e-94bd-1a41ab492e81","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3df95397-08f9-411c-87b1-c683e777b9c8","path":"sprites/spr_Particle_BeamFlareYellow/spr_Particle_BeamFlareYellow.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3df95397-08f9-411c-87b1-c683e777b9c8","path":"sprites/spr_Particle_BeamFlareYellow/spr_Particle_BeamFlareYellow.yy",},"LayerId":{"name":"0da76078-5373-486f-9708-490f5d9a9725","path":"sprites/spr_Particle_BeamFlareYellow/spr_Particle_BeamFlareYellow.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Particle_BeamFlareYellow","path":"sprites/spr_Particle_BeamFlareYellow/spr_Particle_BeamFlareYellow.yy",},"resourceVersion":"1.0","name":"3df95397-08f9-411c-87b1-c683e777b9c8","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"39a5f5b7-92ef-4eb6-87f3-837e1b5d5bcd","path":"sprites/spr_Particle_BeamFlareYellow/spr_Particle_BeamFlareYellow.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"39a5f5b7-92ef-4eb6-87f3-837e1b5d5bcd","path":"sprites/spr_Particle_BeamFlareYellow/spr_Particle_BeamFlareYellow.yy",},"LayerId":{"name":"0da76078-5373-486f-9708-490f5d9a9725","path":"sprites/spr_Particle_BeamFlareYellow/spr_Particle_BeamFlareYellow.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Particle_BeamFlareYellow","path":"sprites/spr_Particle_BeamFlareYellow/spr_Particle_BeamFlareYellow.yy",},"resourceVersion":"1.0","name":"39a5f5b7-92ef-4eb6-87f3-837e1b5d5bcd","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c4c26b6e-798e-401e-94bd-1a41ab492e81",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3df95397-08f9-411c-87b1-c683e777b9c8",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"39a5f5b7-92ef-4eb6-87f3-837e1b5d5bcd",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Particle_BeamFlareYellow","path":"sprites/spr_Particle_BeamFlareYellow/spr_Particle_BeamFlareYellow.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Particle_BeamFlareYellow",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -43,14 +42,14 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 3.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"e88e7b6f-c8eb-45e0-b2b3-b8f28d46b70e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c4c26b6e-798e-401e-94bd-1a41ab492e81","path":"sprites/spr_Particle_BeamFlareYellow/spr_Particle_BeamFlareYellow.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"4b7a6497-088d-4db6-9b78-acf3331961dc","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3df95397-08f9-411c-87b1-c683e777b9c8","path":"sprites/spr_Particle_BeamFlareYellow/spr_Particle_BeamFlareYellow.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"e8e6b0fb-fc31-412f-b0ac-0bc6a629234a","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"39a5f5b7-92ef-4eb6-87f3-837e1b5d5bcd","path":"sprites/spr_Particle_BeamFlareYellow/spr_Particle_BeamFlareYellow.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"e88e7b6f-c8eb-45e0-b2b3-b8f28d46b70e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c4c26b6e-798e-401e-94bd-1a41ab492e81","path":"sprites/spr_Particle_BeamFlareYellow/spr_Particle_BeamFlareYellow.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4b7a6497-088d-4db6-9b78-acf3331961dc","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3df95397-08f9-411c-87b1-c683e777b9c8","path":"sprites/spr_Particle_BeamFlareYellow/spr_Particle_BeamFlareYellow.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e8e6b0fb-fc31-412f-b0ac-0bc6a629234a","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"39a5f5b7-92ef-4eb6-87f3-837e1b5d5bcd","path":"sprites/spr_Particle_BeamFlareYellow/spr_Particle_BeamFlareYellow.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -66,22 +65,13 @@
     "yorigin": 10,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Particle_BeamFlareYellow","path":"sprites/spr_Particle_BeamFlareYellow/spr_Particle_BeamFlareYellow.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Particle_BeamFlareYellow",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0da76078-5373-486f-9708-490f5d9a9725","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"0da76078-5373-486f-9708-490f5d9a9725","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Particles",
     "path": "folders/Sprites/Particles.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Particle_BeamFlareYellow",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Twizzy_Normal_Palette_Orange",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"da803ba1-b998-4c56-bdfe-1410bd79ad17","path":"sprites/spr_Twizzy_Normal_Palette_Orange/spr_Twizzy_Normal_Palette_Orange.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"da803ba1-b998-4c56-bdfe-1410bd79ad17","path":"sprites/spr_Twizzy_Normal_Palette_Orange/spr_Twizzy_Normal_Palette_Orange.yy",},"LayerId":{"name":"0bb6d461-ee4a-4489-ae1e-a910f9f28d00","path":"sprites/spr_Twizzy_Normal_Palette_Orange/spr_Twizzy_Normal_Palette_Orange.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Twizzy_Normal_Palette_Orange","path":"sprites/spr_Twizzy_Normal_Palette_Orange/spr_Twizzy_Normal_Palette_Orange.yy",},"resourceVersion":"1.0","name":"da803ba1-b998-4c56-bdfe-1410bd79ad17","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"da803ba1-b998-4c56-bdfe-1410bd79ad17",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Twizzy_Normal_Palette_Orange","path":"sprites/spr_Twizzy_Normal_Palette_Orange/spr_Twizzy_Normal_Palette_Orange.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Twizzy_Normal_Palette_Orange",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"75377639-8a11-47f5-8609-1a9af4598966","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"da803ba1-b998-4c56-bdfe-1410bd79ad17","path":"sprites/spr_Twizzy_Normal_Palette_Orange/spr_Twizzy_Normal_Palette_Orange.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"75377639-8a11-47f5-8609-1a9af4598966","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"da803ba1-b998-4c56-bdfe-1410bd79ad17","path":"sprites/spr_Twizzy_Normal_Palette_Orange/spr_Twizzy_Normal_Palette_Orange.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Twizzy_Normal_Palette_Orange","path":"sprites/spr_Twizzy_Normal_Palette_Orange/spr_Twizzy_Normal_Palette_Orange.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Twizzy_Normal_Palette_Orange",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0bb6d461-ee4a-4489-ae1e-a910f9f28d00","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"0bb6d461-ee4a-4489-ae1e-a910f9f28d00","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Palettes",
     "path": "folders/Sprites/Enemies/Twizzy/Normal/Palettes.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Twizzy_Normal_Palette_Orange",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

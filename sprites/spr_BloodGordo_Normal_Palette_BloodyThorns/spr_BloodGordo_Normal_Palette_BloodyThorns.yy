@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_BloodGordo_Normal_Palette_BloodyThorns",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"fd636fe1-bbf9-4215-acba-4aca751093cd","path":"sprites/spr_BloodGordo_Normal_Palette_BloodyThorns/spr_BloodGordo_Normal_Palette_BloodyThorns.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fd636fe1-bbf9-4215-acba-4aca751093cd","path":"sprites/spr_BloodGordo_Normal_Palette_BloodyThorns/spr_BloodGordo_Normal_Palette_BloodyThorns.yy",},"LayerId":{"name":"4c9c0705-f58d-4de6-9fcd-fc7ed609f63d","path":"sprites/spr_BloodGordo_Normal_Palette_BloodyThorns/spr_BloodGordo_Normal_Palette_BloodyThorns.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_BloodGordo_Normal_Palette_BloodyThorns","path":"sprites/spr_BloodGordo_Normal_Palette_BloodyThorns/spr_BloodGordo_Normal_Palette_BloodyThorns.yy",},"resourceVersion":"1.0","name":"fd636fe1-bbf9-4215-acba-4aca751093cd","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fd636fe1-bbf9-4215-acba-4aca751093cd",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_BloodGordo_Normal_Palette_BloodyThorns","path":"sprites/spr_BloodGordo_Normal_Palette_BloodyThorns/spr_BloodGordo_Normal_Palette_BloodyThorns.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_BloodGordo_Normal_Palette_BloodyThorns",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"1e91eb3e-5a37-4e29-bf9a-054418f8590a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fd636fe1-bbf9-4215-acba-4aca751093cd","path":"sprites/spr_BloodGordo_Normal_Palette_BloodyThorns/spr_BloodGordo_Normal_Palette_BloodyThorns.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"1e91eb3e-5a37-4e29-bf9a-054418f8590a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fd636fe1-bbf9-4215-acba-4aca751093cd","path":"sprites/spr_BloodGordo_Normal_Palette_BloodyThorns/spr_BloodGordo_Normal_Palette_BloodyThorns.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_BloodGordo_Normal_Palette_BloodyThorns","path":"sprites/spr_BloodGordo_Normal_Palette_BloodyThorns/spr_BloodGordo_Normal_Palette_BloodyThorns.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_BloodGordo_Normal_Palette_BloodyThorns",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4c9c0705-f58d-4de6-9fcd-fc7ed609f63d","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"4c9c0705-f58d-4de6-9fcd-fc7ed609f63d","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Palettes",
     "path": "folders/Sprites/Enemies/Blood Gordo/Normal/Palettes.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_BloodGordo_Normal_Palette_BloodyThorns",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

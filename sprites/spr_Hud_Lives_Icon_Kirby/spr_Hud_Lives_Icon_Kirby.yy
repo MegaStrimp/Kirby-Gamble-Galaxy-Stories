@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Hud_Lives_Icon_Kirby",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"68221807-eb49-4cae-8bb1-aae10ff19675","path":"sprites/spr_Hud_Lives_Icon_Kirby/spr_Hud_Lives_Icon_Kirby.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"68221807-eb49-4cae-8bb1-aae10ff19675","path":"sprites/spr_Hud_Lives_Icon_Kirby/spr_Hud_Lives_Icon_Kirby.yy",},"LayerId":{"name":"c30755bc-0a87-400f-bc64-c8ea1bd84fb7","path":"sprites/spr_Hud_Lives_Icon_Kirby/spr_Hud_Lives_Icon_Kirby.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Hud_Lives_Icon_Kirby","path":"sprites/spr_Hud_Lives_Icon_Kirby/spr_Hud_Lives_Icon_Kirby.yy",},"resourceVersion":"1.0","name":"68221807-eb49-4cae-8bb1-aae10ff19675","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"68221807-eb49-4cae-8bb1-aae10ff19675",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Hud_Lives_Icon_Kirby","path":"sprites/spr_Hud_Lives_Icon_Kirby/spr_Hud_Lives_Icon_Kirby.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Hud_Lives_Icon_Kirby",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"224383b3-b366-47d6-999b-f5c92958d03f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"68221807-eb49-4cae-8bb1-aae10ff19675","path":"sprites/spr_Hud_Lives_Icon_Kirby/spr_Hud_Lives_Icon_Kirby.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"224383b3-b366-47d6-999b-f5c92958d03f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"68221807-eb49-4cae-8bb1-aae10ff19675","path":"sprites/spr_Hud_Lives_Icon_Kirby/spr_Hud_Lives_Icon_Kirby.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Hud_Lives_Icon_Kirby","path":"sprites/spr_Hud_Lives_Icon_Kirby/spr_Hud_Lives_Icon_Kirby.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Hud_Lives_Icon_Kirby",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c30755bc-0a87-400f-bc64-c8ea1bd84fb7","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c30755bc-0a87-400f-bc64-c8ea1bd84fb7","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Lives",
     "path": "folders/Sprites/Hud/Lives.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Hud_Lives_Icon_Kirby",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

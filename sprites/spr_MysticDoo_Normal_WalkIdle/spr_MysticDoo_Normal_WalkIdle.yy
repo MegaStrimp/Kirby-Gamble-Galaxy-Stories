@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_MysticDoo_Normal_WalkIdle",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4d60b3ea-e650-4df6-a771-c5048f13c9ca","path":"sprites/spr_MysticDoo_Normal_WalkIdle/spr_MysticDoo_Normal_WalkIdle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4d60b3ea-e650-4df6-a771-c5048f13c9ca","path":"sprites/spr_MysticDoo_Normal_WalkIdle/spr_MysticDoo_Normal_WalkIdle.yy",},"LayerId":{"name":"5f576d54-8777-43f8-b5c6-c13b98e38e65","path":"sprites/spr_MysticDoo_Normal_WalkIdle/spr_MysticDoo_Normal_WalkIdle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_MysticDoo_Normal_WalkIdle","path":"sprites/spr_MysticDoo_Normal_WalkIdle/spr_MysticDoo_Normal_WalkIdle.yy",},"resourceVersion":"1.0","name":"4d60b3ea-e650-4df6-a771-c5048f13c9ca","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4d60b3ea-e650-4df6-a771-c5048f13c9ca",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_MysticDoo_Normal_WalkIdle","path":"sprites/spr_MysticDoo_Normal_WalkIdle/spr_MysticDoo_Normal_WalkIdle.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_MysticDoo_Normal_WalkIdle",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"a7fa56cc-aa1d-4c6c-9f7c-45ba627797b8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4d60b3ea-e650-4df6-a771-c5048f13c9ca","path":"sprites/spr_MysticDoo_Normal_WalkIdle/spr_MysticDoo_Normal_WalkIdle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"a7fa56cc-aa1d-4c6c-9f7c-45ba627797b8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4d60b3ea-e650-4df6-a771-c5048f13c9ca","path":"sprites/spr_MysticDoo_Normal_WalkIdle/spr_MysticDoo_Normal_WalkIdle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 21,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_MysticDoo_Normal_WalkIdle","path":"sprites/spr_MysticDoo_Normal_WalkIdle/spr_MysticDoo_Normal_WalkIdle.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_MysticDoo_Normal_WalkIdle",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5f576d54-8777-43f8-b5c6-c13b98e38e65","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"5f576d54-8777-43f8-b5c6-c13b98e38e65","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Enemies/Mystic Doo/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_MysticDoo_Normal_WalkIdle",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

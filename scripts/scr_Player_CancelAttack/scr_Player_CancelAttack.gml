@@ -30,8 +30,13 @@ function scr_Player_CancelAttack(argument0)
 			case playerAttacks.beamNormal:
 			if (instance_exists(parBeamCycle1)) instance_destroy(parBeamCycle1);
 			with (obj_Projectile_Beam) if ((state == 0) and (owner == other.id)) instance_destroy();
-			case playerAttacks.beamAir:
 			case playerAttacks.beamUp:
+			if (audio_is_playing(sndBeam)) audio_stop_sound(sndBeam);
+			beamAttack2Timer = -1;
+			break;
+			
+			case playerAttacks.beamAir:
+			gravLimit = gravLimitNormal;
 			if (audio_is_playing(sndBeam)) audio_stop_sound(sndBeam);
 			beamAttack2Timer = -1;
 			break;

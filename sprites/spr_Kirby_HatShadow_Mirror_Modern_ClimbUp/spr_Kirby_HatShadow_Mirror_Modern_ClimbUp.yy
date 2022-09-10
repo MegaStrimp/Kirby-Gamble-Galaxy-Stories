@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_HatShadow_Mirror_Modern_ClimbUp",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,33 +27,19 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b025ad20-3a8d-4502-8d50-2dcbdb8ad072","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b025ad20-3a8d-4502-8d50-2dcbdb8ad072","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Mirror_Modern_ClimbUp","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"b025ad20-3a8d-4502-8d50-2dcbdb8ad072","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"18580d34-a516-433b-9a61-d8fe03f06b56","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"18580d34-a516-433b-9a61-d8fe03f06b56","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Mirror_Modern_ClimbUp","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"18580d34-a516-433b-9a61-d8fe03f06b56","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b86822e5-fee7-4587-920a-704514848470","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b86822e5-fee7-4587-920a-704514848470","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Mirror_Modern_ClimbUp","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"b86822e5-fee7-4587-920a-704514848470","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6c3e435c-abb3-4c91-b214-f89974eafe15","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6c3e435c-abb3-4c91-b214-f89974eafe15","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Mirror_Modern_ClimbUp","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"6c3e435c-abb3-4c91-b214-f89974eafe15","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"452c03bf-e3d0-4352-852b-6e6856f88ee9","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"452c03bf-e3d0-4352-852b-6e6856f88ee9","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Mirror_Modern_ClimbUp","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"452c03bf-e3d0-4352-852b-6e6856f88ee9","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"12292888-5392-4efe-8155-d4cd84b34759","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"12292888-5392-4efe-8155-d4cd84b34759","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Mirror_Modern_ClimbUp","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"12292888-5392-4efe-8155-d4cd84b34759","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2c4dc828-c89b-46fe-97f6-172700064d7b","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2c4dc828-c89b-46fe-97f6-172700064d7b","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Mirror_Modern_ClimbUp","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"2c4dc828-c89b-46fe-97f6-172700064d7b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e3410261-2c20-4a9e-8823-73224647cbf8","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e3410261-2c20-4a9e-8823-73224647cbf8","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Mirror_Modern_ClimbUp","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"e3410261-2c20-4a9e-8823-73224647cbf8","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b025ad20-3a8d-4502-8d50-2dcbdb8ad072",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"18580d34-a516-433b-9a61-d8fe03f06b56",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b86822e5-fee7-4587-920a-704514848470",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6c3e435c-abb3-4c91-b214-f89974eafe15",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"452c03bf-e3d0-4352-852b-6e6856f88ee9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"12292888-5392-4efe-8155-d4cd84b34759",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2c4dc828-c89b-46fe-97f6-172700064d7b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e3410261-2c20-4a9e-8823-73224647cbf8",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_HatShadow_Mirror_Modern_ClimbUp","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_HatShadow_Mirror_Modern_ClimbUp",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 12.0,
@@ -58,19 +47,19 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 8.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"d31e55dd-f685-4b2d-9302-39175339f279","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b025ad20-3a8d-4502-8d50-2dcbdb8ad072","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"8cf7cad1-f31f-47a8-a64a-bc2863329480","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"18580d34-a516-433b-9a61-d8fe03f06b56","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"9deba674-7ade-4bb7-ad56-b15d8c6202bc","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b86822e5-fee7-4587-920a-704514848470","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"4226dd9d-c485-423a-ba1a-7a3aa8fd3860","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6c3e435c-abb3-4c91-b214-f89974eafe15","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"d0e12498-5577-4476-b1c7-06ba63c7c72c","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"452c03bf-e3d0-4352-852b-6e6856f88ee9","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"5a512d1f-8609-4d51-8fc4-2780f9aafef5","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"12292888-5392-4efe-8155-d4cd84b34759","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"28b5b77a-25e7-4ba9-ab92-3074b27f8efe","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2c4dc828-c89b-46fe-97f6-172700064d7b","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"4b92601f-358e-49dc-9df2-d410491043e5","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e3410261-2c20-4a9e-8823-73224647cbf8","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"d31e55dd-f685-4b2d-9302-39175339f279","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b025ad20-3a8d-4502-8d50-2dcbdb8ad072","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"8cf7cad1-f31f-47a8-a64a-bc2863329480","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"18580d34-a516-433b-9a61-d8fe03f06b56","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9deba674-7ade-4bb7-ad56-b15d8c6202bc","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b86822e5-fee7-4587-920a-704514848470","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4226dd9d-c485-423a-ba1a-7a3aa8fd3860","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6c3e435c-abb3-4c91-b214-f89974eafe15","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d0e12498-5577-4476-b1c7-06ba63c7c72c","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"452c03bf-e3d0-4352-852b-6e6856f88ee9","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"5a512d1f-8609-4d51-8fc4-2780f9aafef5","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"12292888-5392-4efe-8155-d4cd84b34759","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"28b5b77a-25e7-4ba9-ab92-3074b27f8efe","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2c4dc828-c89b-46fe-97f6-172700064d7b","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4b92601f-358e-49dc-9df2-d410491043e5","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e3410261-2c20-4a9e-8823-73224647cbf8","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -86,22 +75,13 @@
     "yorigin": 10,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_HatShadow_Mirror_Modern_ClimbUp","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp/spr_Kirby_HatShadow_Mirror_Modern_ClimbUp.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_HatShadow_Mirror_Modern_ClimbUp",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Shadow",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Mirror/Modern/Shadow.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_HatShadow_Mirror_Modern_ClimbUp",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

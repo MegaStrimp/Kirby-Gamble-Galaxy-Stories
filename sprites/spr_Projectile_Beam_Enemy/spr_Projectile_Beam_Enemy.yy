@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Projectile_Beam_Enemy",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"eec3d2bb-cc29-4f07-8f06-119fb94cff42","path":"sprites/spr_Projectile_Beam_Enemy/spr_Projectile_Beam_Enemy.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"eec3d2bb-cc29-4f07-8f06-119fb94cff42","path":"sprites/spr_Projectile_Beam_Enemy/spr_Projectile_Beam_Enemy.yy",},"LayerId":{"name":"e3f29d15-71ce-4dd5-a649-0a410b1ba3d2","path":"sprites/spr_Projectile_Beam_Enemy/spr_Projectile_Beam_Enemy.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_Beam_Enemy","path":"sprites/spr_Projectile_Beam_Enemy/spr_Projectile_Beam_Enemy.yy",},"resourceVersion":"1.0","name":"eec3d2bb-cc29-4f07-8f06-119fb94cff42","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"19e5cb6e-0f5d-4d14-b65b-d0c650dce6c7","path":"sprites/spr_Projectile_Beam_Enemy/spr_Projectile_Beam_Enemy.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"19e5cb6e-0f5d-4d14-b65b-d0c650dce6c7","path":"sprites/spr_Projectile_Beam_Enemy/spr_Projectile_Beam_Enemy.yy",},"LayerId":{"name":"e3f29d15-71ce-4dd5-a649-0a410b1ba3d2","path":"sprites/spr_Projectile_Beam_Enemy/spr_Projectile_Beam_Enemy.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_Beam_Enemy","path":"sprites/spr_Projectile_Beam_Enemy/spr_Projectile_Beam_Enemy.yy",},"resourceVersion":"1.0","name":"19e5cb6e-0f5d-4d14-b65b-d0c650dce6c7","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"eec3d2bb-cc29-4f07-8f06-119fb94cff42",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"19e5cb6e-0f5d-4d14-b65b-d0c650dce6c7",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Projectile_Beam_Enemy","path":"sprites/spr_Projectile_Beam_Enemy/spr_Projectile_Beam_Enemy.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Projectile_Beam_Enemy",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"cc73416b-93ee-4833-8425-5c01316fe832","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"eec3d2bb-cc29-4f07-8f06-119fb94cff42","path":"sprites/spr_Projectile_Beam_Enemy/spr_Projectile_Beam_Enemy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"1e3d1461-c585-4952-8b74-45dd91a611c9","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"19e5cb6e-0f5d-4d14-b65b-d0c650dce6c7","path":"sprites/spr_Projectile_Beam_Enemy/spr_Projectile_Beam_Enemy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"cc73416b-93ee-4833-8425-5c01316fe832","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"eec3d2bb-cc29-4f07-8f06-119fb94cff42","path":"sprites/spr_Projectile_Beam_Enemy/spr_Projectile_Beam_Enemy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1e3d1461-c585-4952-8b74-45dd91a611c9","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"19e5cb6e-0f5d-4d14-b65b-d0c650dce6c7","path":"sprites/spr_Projectile_Beam_Enemy/spr_Projectile_Beam_Enemy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -62,22 +63,13 @@
     "yorigin": 10,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Projectile_Beam_Enemy","path":"sprites/spr_Projectile_Beam_Enemy/spr_Projectile_Beam_Enemy.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Projectile_Beam_Enemy",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e3f29d15-71ce-4dd5-a649-0a410b1ba3d2","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e3f29d15-71ce-4dd5-a649-0a410b1ba3d2","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Beam",
     "path": "folders/Sprites/Projectiles/Beam.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Projectile_Beam_Enemy",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

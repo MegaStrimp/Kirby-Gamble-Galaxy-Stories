@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Projectile_CutterCharge_Normal",
   "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6dd07178-f27c-4d67-abe5-0a3273873f6a","path":"sprites/spr_Projectile_CutterCharge_Normal/spr_Projectile_CutterCharge_Normal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6dd07178-f27c-4d67-abe5-0a3273873f6a","path":"sprites/spr_Projectile_CutterCharge_Normal/spr_Projectile_CutterCharge_Normal.yy",},"LayerId":{"name":"7e98e9bd-8162-490c-9481-a3f0cc069f17","path":"sprites/spr_Projectile_CutterCharge_Normal/spr_Projectile_CutterCharge_Normal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_CutterCharge_Normal","path":"sprites/spr_Projectile_CutterCharge_Normal/spr_Projectile_CutterCharge_Normal.yy",},"resourceVersion":"1.0","name":"6dd07178-f27c-4d67-abe5-0a3273873f6a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"86038b60-74cf-4a96-ac3b-96a9817bcb7b","path":"sprites/spr_Projectile_CutterCharge_Normal/spr_Projectile_CutterCharge_Normal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"86038b60-74cf-4a96-ac3b-96a9817bcb7b","path":"sprites/spr_Projectile_CutterCharge_Normal/spr_Projectile_CutterCharge_Normal.yy",},"LayerId":{"name":"7e98e9bd-8162-490c-9481-a3f0cc069f17","path":"sprites/spr_Projectile_CutterCharge_Normal/spr_Projectile_CutterCharge_Normal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_CutterCharge_Normal","path":"sprites/spr_Projectile_CutterCharge_Normal/spr_Projectile_CutterCharge_Normal.yy",},"resourceVersion":"1.0","name":"86038b60-74cf-4a96-ac3b-96a9817bcb7b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6dd07178-f27c-4d67-abe5-0a3273873f6a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"86038b60-74cf-4a96-ac3b-96a9817bcb7b",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Projectile_CutterCharge_Normal","path":"sprites/spr_Projectile_CutterCharge_Normal/spr_Projectile_CutterCharge_Normal.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Projectile_CutterCharge_Normal",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 15.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"11503c73-0dbe-4253-9dbf-b74cad53767a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6dd07178-f27c-4d67-abe5-0a3273873f6a","path":"sprites/spr_Projectile_CutterCharge_Normal/spr_Projectile_CutterCharge_Normal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"f4055ff8-b5f1-4392-8aac-bd97fef29f3a","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"86038b60-74cf-4a96-ac3b-96a9817bcb7b","path":"sprites/spr_Projectile_CutterCharge_Normal/spr_Projectile_CutterCharge_Normal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"11503c73-0dbe-4253-9dbf-b74cad53767a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6dd07178-f27c-4d67-abe5-0a3273873f6a","path":"sprites/spr_Projectile_CutterCharge_Normal/spr_Projectile_CutterCharge_Normal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f4055ff8-b5f1-4392-8aac-bd97fef29f3a","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"86038b60-74cf-4a96-ac3b-96a9817bcb7b","path":"sprites/spr_Projectile_CutterCharge_Normal/spr_Projectile_CutterCharge_Normal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -62,22 +63,13 @@
     "yorigin": 19,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Projectile_CutterCharge_Normal","path":"sprites/spr_Projectile_CutterCharge_Normal/spr_Projectile_CutterCharge_Normal.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Projectile_CutterCharge_Normal",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7e98e9bd-8162-490c-9481-a3f0cc069f17","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"7e98e9bd-8162-490c-9481-a3f0cc069f17","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Projectiles/Cutter Charge/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Projectile_CutterCharge_Normal",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

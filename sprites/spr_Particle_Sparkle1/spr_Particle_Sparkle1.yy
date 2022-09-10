@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Particle_Sparkle1",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"5883d813-9f4d-4d73-b330-1c5a9adf4465","path":"sprites/spr_Particle_Sparkle1/spr_Particle_Sparkle1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5883d813-9f4d-4d73-b330-1c5a9adf4465","path":"sprites/spr_Particle_Sparkle1/spr_Particle_Sparkle1.yy",},"LayerId":{"name":"f1d0d0b3-d3b2-4f8f-87db-b22e30423b8a","path":"sprites/spr_Particle_Sparkle1/spr_Particle_Sparkle1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Particle_Sparkle1","path":"sprites/spr_Particle_Sparkle1/spr_Particle_Sparkle1.yy",},"resourceVersion":"1.0","name":"5883d813-9f4d-4d73-b330-1c5a9adf4465","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a9ebaa5e-4a00-414a-b021-de2058189c01","path":"sprites/spr_Particle_Sparkle1/spr_Particle_Sparkle1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a9ebaa5e-4a00-414a-b021-de2058189c01","path":"sprites/spr_Particle_Sparkle1/spr_Particle_Sparkle1.yy",},"LayerId":{"name":"f1d0d0b3-d3b2-4f8f-87db-b22e30423b8a","path":"sprites/spr_Particle_Sparkle1/spr_Particle_Sparkle1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Particle_Sparkle1","path":"sprites/spr_Particle_Sparkle1/spr_Particle_Sparkle1.yy",},"resourceVersion":"1.0","name":"a9ebaa5e-4a00-414a-b021-de2058189c01","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5883d813-9f4d-4d73-b330-1c5a9adf4465",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a9ebaa5e-4a00-414a-b021-de2058189c01",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Particle_Sparkle1","path":"sprites/spr_Particle_Sparkle1/spr_Particle_Sparkle1.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Particle_Sparkle1",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 12.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"cd15d469-c8b1-4763-be34-d0ddabdc85f1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5883d813-9f4d-4d73-b330-1c5a9adf4465","path":"sprites/spr_Particle_Sparkle1/spr_Particle_Sparkle1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"fe0fe496-b53b-492e-8ee1-5534a06ee1a7","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a9ebaa5e-4a00-414a-b021-de2058189c01","path":"sprites/spr_Particle_Sparkle1/spr_Particle_Sparkle1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"cd15d469-c8b1-4763-be34-d0ddabdc85f1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5883d813-9f4d-4d73-b330-1c5a9adf4465","path":"sprites/spr_Particle_Sparkle1/spr_Particle_Sparkle1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"fe0fe496-b53b-492e-8ee1-5534a06ee1a7","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a9ebaa5e-4a00-414a-b021-de2058189c01","path":"sprites/spr_Particle_Sparkle1/spr_Particle_Sparkle1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -62,22 +63,13 @@
     "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Particle_Sparkle1","path":"sprites/spr_Particle_Sparkle1/spr_Particle_Sparkle1.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Particle_Sparkle1",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f1d0d0b3-d3b2-4f8f-87db-b22e30423b8a","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f1d0d0b3-d3b2-4f8f-87db-b22e30423b8a","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Particles",
     "path": "folders/Sprites/Particles.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Particle_Sparkle1",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_TutorialSign_Symbol_DpadUp",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"0120525c-59a2-4194-8e21-c161f94bac9b","path":"sprites/spr_TutorialSign_Symbol_DpadUp/spr_TutorialSign_Symbol_DpadUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0120525c-59a2-4194-8e21-c161f94bac9b","path":"sprites/spr_TutorialSign_Symbol_DpadUp/spr_TutorialSign_Symbol_DpadUp.yy",},"LayerId":{"name":"afb7e78c-c08f-45f1-ba90-17ea62e81e3d","path":"sprites/spr_TutorialSign_Symbol_DpadUp/spr_TutorialSign_Symbol_DpadUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_TutorialSign_Symbol_DpadUp","path":"sprites/spr_TutorialSign_Symbol_DpadUp/spr_TutorialSign_Symbol_DpadUp.yy",},"resourceVersion":"1.0","name":"0120525c-59a2-4194-8e21-c161f94bac9b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0120525c-59a2-4194-8e21-c161f94bac9b",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_TutorialSign_Symbol_DpadUp","path":"sprites/spr_TutorialSign_Symbol_DpadUp/spr_TutorialSign_Symbol_DpadUp.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_TutorialSign_Symbol_DpadUp",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"6bacbabe-dbf9-424c-b3a1-804d294ce8b9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0120525c-59a2-4194-8e21-c161f94bac9b","path":"sprites/spr_TutorialSign_Symbol_DpadUp/spr_TutorialSign_Symbol_DpadUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"6bacbabe-dbf9-424c-b3a1-804d294ce8b9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0120525c-59a2-4194-8e21-c161f94bac9b","path":"sprites/spr_TutorialSign_Symbol_DpadUp/spr_TutorialSign_Symbol_DpadUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_TutorialSign_Symbol_DpadUp","path":"sprites/spr_TutorialSign_Symbol_DpadUp/spr_TutorialSign_Symbol_DpadUp.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_TutorialSign_Symbol_DpadUp",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"afb7e78c-c08f-45f1-ba90-17ea62e81e3d","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"afb7e78c-c08f-45f1-ba90-17ea62e81e3d","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Symbols",
     "path": "folders/Sprites/Stage Elements/Tutorial Sign/Symbols.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_TutorialSign_Symbol_DpadUp",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

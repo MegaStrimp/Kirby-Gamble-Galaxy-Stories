@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,33 +27,19 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"8c9d0946-d3f6-44e8-80e4-ef3d8194c435","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8c9d0946-d3f6-44e8-80e4-ef3d8194c435","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"8c9d0946-d3f6-44e8-80e4-ef3d8194c435","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"bc22c073-075e-46ae-8055-ff8b56b7e441","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bc22c073-075e-46ae-8055-ff8b56b7e441","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"bc22c073-075e-46ae-8055-ff8b56b7e441","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"79da0455-897d-4604-b18d-1401ff33ca3d","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"79da0455-897d-4604-b18d-1401ff33ca3d","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"79da0455-897d-4604-b18d-1401ff33ca3d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3082b475-8f90-4cda-b720-623edabbbac4","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3082b475-8f90-4cda-b720-623edabbbac4","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"3082b475-8f90-4cda-b720-623edabbbac4","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"67759808-549c-49e4-be0d-6f54eb3a5a88","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"67759808-549c-49e4-be0d-6f54eb3a5a88","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"67759808-549c-49e4-be0d-6f54eb3a5a88","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8af08269-2032-4acb-9ecc-00edbefeaaa9","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8af08269-2032-4acb-9ecc-00edbefeaaa9","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"8af08269-2032-4acb-9ecc-00edbefeaaa9","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"eaf86559-c180-46d6-81e9-5b3cdbdea65e","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"eaf86559-c180-46d6-81e9-5b3cdbdea65e","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"eaf86559-c180-46d6-81e9-5b3cdbdea65e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c31ce510-452c-4fa7-8464-a07b7704e9e9","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c31ce510-452c-4fa7-8464-a07b7704e9e9","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"c31ce510-452c-4fa7-8464-a07b7704e9e9","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8c9d0946-d3f6-44e8-80e4-ef3d8194c435",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bc22c073-075e-46ae-8055-ff8b56b7e441",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"79da0455-897d-4604-b18d-1401ff33ca3d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3082b475-8f90-4cda-b720-623edabbbac4",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"67759808-549c-49e4-be0d-6f54eb3a5a88",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8af08269-2032-4acb-9ecc-00edbefeaaa9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"eaf86559-c180-46d6-81e9-5b3cdbdea65e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c31ce510-452c-4fa7-8464-a07b7704e9e9",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 12.0,
@@ -58,19 +47,19 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 8.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"5920dfdb-4f93-4d76-8869-d7fff68c058d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8c9d0946-d3f6-44e8-80e4-ef3d8194c435","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"0af677f7-21ee-45f3-8b1f-4cc1f0dc5828","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bc22c073-075e-46ae-8055-ff8b56b7e441","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"d5be31f2-c172-4f0d-89b5-a3f23807c13c","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"79da0455-897d-4604-b18d-1401ff33ca3d","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"16afacec-8ed0-472a-8015-5a8bac27dfe6","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3082b475-8f90-4cda-b720-623edabbbac4","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"652a23c5-6ed7-4734-adf4-3b4f2422a48d","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"67759808-549c-49e4-be0d-6f54eb3a5a88","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"4f59dee2-3629-4c5c-9884-17743a005c13","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8af08269-2032-4acb-9ecc-00edbefeaaa9","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"853763a6-30dc-4add-a59e-4d389c2c797a","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"eaf86559-c180-46d6-81e9-5b3cdbdea65e","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"474cec44-560e-48d7-ae5a-26d3810f0822","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c31ce510-452c-4fa7-8464-a07b7704e9e9","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"5920dfdb-4f93-4d76-8869-d7fff68c058d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8c9d0946-d3f6-44e8-80e4-ef3d8194c435","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0af677f7-21ee-45f3-8b1f-4cc1f0dc5828","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bc22c073-075e-46ae-8055-ff8b56b7e441","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d5be31f2-c172-4f0d-89b5-a3f23807c13c","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"79da0455-897d-4604-b18d-1401ff33ca3d","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"16afacec-8ed0-472a-8015-5a8bac27dfe6","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3082b475-8f90-4cda-b720-623edabbbac4","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"652a23c5-6ed7-4734-adf4-3b4f2422a48d","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"67759808-549c-49e4-be0d-6f54eb3a5a88","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4f59dee2-3629-4c5c-9884-17743a005c13","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8af08269-2032-4acb-9ecc-00edbefeaaa9","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"853763a6-30dc-4add-a59e-4d389c2c797a","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"eaf86559-c180-46d6-81e9-5b3cdbdea65e","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"474cec44-560e-48d7-ae5a-26d3810f0822","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c31ce510-452c-4fa7-8464-a07b7704e9e9","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -86,22 +75,13 @@
     "yorigin": 20,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp/spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Hat",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Ninja/Modern/Hat.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_AbilityHat_Ninja_Modern_ClimbUp",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

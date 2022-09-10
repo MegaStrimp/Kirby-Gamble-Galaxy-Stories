@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"fab74ffa-595d-439d-a114-8a79dd27a8fb","path":"sprites/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fab74ffa-595d-439d-a114-8a79dd27a8fb","path":"sprites/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask.yy",},"LayerId":{"name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","path":"sprites/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask","path":"sprites/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask.yy",},"resourceVersion":"1.0","name":"fab74ffa-595d-439d-a114-8a79dd27a8fb","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9eaed5ca-0495-4e53-81ce-5b95576e8cb3","path":"sprites/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9eaed5ca-0495-4e53-81ce-5b95576e8cb3","path":"sprites/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask.yy",},"LayerId":{"name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","path":"sprites/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask","path":"sprites/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask.yy",},"resourceVersion":"1.0","name":"9eaed5ca-0495-4e53-81ce-5b95576e8cb3","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8354e789-b0e9-42a9-b5a2-91bd9aa9e2a9","path":"sprites/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8354e789-b0e9-42a9-b5a2-91bd9aa9e2a9","path":"sprites/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask.yy",},"LayerId":{"name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","path":"sprites/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask","path":"sprites/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask.yy",},"resourceVersion":"1.0","name":"8354e789-b0e9-42a9-b5a2-91bd9aa9e2a9","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"1de76354-2b82-4752-94ba-5c3103f6233b","path":"sprites/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1de76354-2b82-4752-94ba-5c3103f6233b","path":"sprites/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask.yy",},"LayerId":{"name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","path":"sprites/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask","path":"sprites/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask.yy",},"resourceVersion":"1.0","name":"1de76354-2b82-4752-94ba-5c3103f6233b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fab74ffa-595d-439d-a114-8a79dd27a8fb",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9eaed5ca-0495-4e53-81ce-5b95576e8cb3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8354e789-b0e9-42a9-b5a2-91bd9aa9e2a9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1de76354-2b82-4752-94ba-5c3103f6233b",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask","path":"sprites/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 21.0,
@@ -46,15 +43,15 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 4.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"57d436ff-0bfc-48e5-9b23-50c0e30b40a3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fab74ffa-595d-439d-a114-8a79dd27a8fb","path":"sprites/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"e0b1eb58-9557-4ee3-b48a-e9274f4fc46d","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9eaed5ca-0495-4e53-81ce-5b95576e8cb3","path":"sprites/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"dcaba1fc-1308-4dd6-8859-f43dbea4dc84","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8354e789-b0e9-42a9-b5a2-91bd9aa9e2a9","path":"sprites/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"846ee779-f11a-4b64-abc4-54871177af1e","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1de76354-2b82-4752-94ba-5c3103f6233b","path":"sprites/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"57d436ff-0bfc-48e5-9b23-50c0e30b40a3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fab74ffa-595d-439d-a114-8a79dd27a8fb","path":"sprites/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e0b1eb58-9557-4ee3-b48a-e9274f4fc46d","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9eaed5ca-0495-4e53-81ce-5b95576e8cb3","path":"sprites/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"dcaba1fc-1308-4dd6-8859-f43dbea4dc84","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8354e789-b0e9-42a9-b5a2-91bd9aa9e2a9","path":"sprites/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"846ee779-f11a-4b64-abc4-54871177af1e","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1de76354-2b82-4752-94ba-5c3103f6233b","path":"sprites/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -70,22 +67,13 @@
     "yorigin": 18,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask","path":"sprites/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask/spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Masks",
     "path": "folders/Sprites/Characters/Kirby/Normal/Masks.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR_Mask",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

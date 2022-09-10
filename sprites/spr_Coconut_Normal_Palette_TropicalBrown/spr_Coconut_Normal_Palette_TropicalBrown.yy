@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Coconut_Normal_Palette_TropicalBrown",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"5b50923f-6d7a-4e84-b40c-36a150c35ca7","path":"sprites/spr_Coconut_Normal_Palette_TropicalBrown/spr_Coconut_Normal_Palette_TropicalBrown.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5b50923f-6d7a-4e84-b40c-36a150c35ca7","path":"sprites/spr_Coconut_Normal_Palette_TropicalBrown/spr_Coconut_Normal_Palette_TropicalBrown.yy",},"LayerId":{"name":"27b36631-091e-4109-8a95-4e62667d5501","path":"sprites/spr_Coconut_Normal_Palette_TropicalBrown/spr_Coconut_Normal_Palette_TropicalBrown.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Coconut_Normal_Palette_TropicalBrown","path":"sprites/spr_Coconut_Normal_Palette_TropicalBrown/spr_Coconut_Normal_Palette_TropicalBrown.yy",},"resourceVersion":"1.0","name":"5b50923f-6d7a-4e84-b40c-36a150c35ca7","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5b50923f-6d7a-4e84-b40c-36a150c35ca7",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Coconut_Normal_Palette_TropicalBrown","path":"sprites/spr_Coconut_Normal_Palette_TropicalBrown/spr_Coconut_Normal_Palette_TropicalBrown.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Coconut_Normal_Palette_TropicalBrown",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"d0cf87b9-a83a-4d20-b15f-aac38f9b1676","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5b50923f-6d7a-4e84-b40c-36a150c35ca7","path":"sprites/spr_Coconut_Normal_Palette_TropicalBrown/spr_Coconut_Normal_Palette_TropicalBrown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"d0cf87b9-a83a-4d20-b15f-aac38f9b1676","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5b50923f-6d7a-4e84-b40c-36a150c35ca7","path":"sprites/spr_Coconut_Normal_Palette_TropicalBrown/spr_Coconut_Normal_Palette_TropicalBrown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Coconut_Normal_Palette_TropicalBrown","path":"sprites/spr_Coconut_Normal_Palette_TropicalBrown/spr_Coconut_Normal_Palette_TropicalBrown.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Coconut_Normal_Palette_TropicalBrown",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"27b36631-091e-4109-8a95-4e62667d5501","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"27b36631-091e-4109-8a95-4e62667d5501","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Palettes",
     "path": "folders/Sprites/Enemies/Coconut/Normal/Palettes.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Coconut_Normal_Palette_TropicalBrown",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

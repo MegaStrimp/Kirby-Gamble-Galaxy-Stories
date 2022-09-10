@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Foley_Normal_Walk_Explode",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"cca79433-d40d-4fcf-b2dd-03d164ba6918","path":"sprites/spr_Foley_Normal_Walk_Explode/spr_Foley_Normal_Walk_Explode.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cca79433-d40d-4fcf-b2dd-03d164ba6918","path":"sprites/spr_Foley_Normal_Walk_Explode/spr_Foley_Normal_Walk_Explode.yy",},"LayerId":{"name":"631863c9-62d9-4bf6-9a97-b39893d2b0ec","path":"sprites/spr_Foley_Normal_Walk_Explode/spr_Foley_Normal_Walk_Explode.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Foley_Normal_Walk_Explode","path":"sprites/spr_Foley_Normal_Walk_Explode/spr_Foley_Normal_Walk_Explode.yy",},"resourceVersion":"1.0","name":"cca79433-d40d-4fcf-b2dd-03d164ba6918","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f5a2232e-5932-4bc7-a70e-7accb1b61b86","path":"sprites/spr_Foley_Normal_Walk_Explode/spr_Foley_Normal_Walk_Explode.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f5a2232e-5932-4bc7-a70e-7accb1b61b86","path":"sprites/spr_Foley_Normal_Walk_Explode/spr_Foley_Normal_Walk_Explode.yy",},"LayerId":{"name":"631863c9-62d9-4bf6-9a97-b39893d2b0ec","path":"sprites/spr_Foley_Normal_Walk_Explode/spr_Foley_Normal_Walk_Explode.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Foley_Normal_Walk_Explode","path":"sprites/spr_Foley_Normal_Walk_Explode/spr_Foley_Normal_Walk_Explode.yy",},"resourceVersion":"1.0","name":"f5a2232e-5932-4bc7-a70e-7accb1b61b86","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cca79433-d40d-4fcf-b2dd-03d164ba6918",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f5a2232e-5932-4bc7-a70e-7accb1b61b86",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Foley_Normal_Walk_Explode","path":"sprites/spr_Foley_Normal_Walk_Explode/spr_Foley_Normal_Walk_Explode.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Foley_Normal_Walk_Explode",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 15.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"b521d0a5-fcc7-4362-bb4b-102b425ef669","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cca79433-d40d-4fcf-b2dd-03d164ba6918","path":"sprites/spr_Foley_Normal_Walk_Explode/spr_Foley_Normal_Walk_Explode.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"6d564a8f-c6b9-4d17-a8e9-cc2f5cbeac97","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f5a2232e-5932-4bc7-a70e-7accb1b61b86","path":"sprites/spr_Foley_Normal_Walk_Explode/spr_Foley_Normal_Walk_Explode.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"b521d0a5-fcc7-4362-bb4b-102b425ef669","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cca79433-d40d-4fcf-b2dd-03d164ba6918","path":"sprites/spr_Foley_Normal_Walk_Explode/spr_Foley_Normal_Walk_Explode.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6d564a8f-c6b9-4d17-a8e9-cc2f5cbeac97","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f5a2232e-5932-4bc7-a70e-7accb1b61b86","path":"sprites/spr_Foley_Normal_Walk_Explode/spr_Foley_Normal_Walk_Explode.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -62,22 +63,13 @@
     "yorigin": 19,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Foley_Normal_Walk_Explode","path":"sprites/spr_Foley_Normal_Walk_Explode/spr_Foley_Normal_Walk_Explode.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Foley_Normal_Walk_Explode",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"631863c9-62d9-4bf6-9a97-b39893d2b0ec","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"631863c9-62d9-4bf6-9a97-b39893d2b0ec","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Enemies/Foley/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Foley_Normal_Walk_Explode",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

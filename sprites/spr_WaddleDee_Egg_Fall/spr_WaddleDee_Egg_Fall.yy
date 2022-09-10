@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_WaddleDee_Egg_Fall",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b436ffb7-cfc3-4fea-9a92-2f21da5da3d2","path":"sprites/spr_WaddleDee_Egg_Fall/spr_WaddleDee_Egg_Fall.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b436ffb7-cfc3-4fea-9a92-2f21da5da3d2","path":"sprites/spr_WaddleDee_Egg_Fall/spr_WaddleDee_Egg_Fall.yy",},"LayerId":{"name":"420f3a0e-4881-40b7-b6f4-7d0f9b3e4cf6","path":"sprites/spr_WaddleDee_Egg_Fall/spr_WaddleDee_Egg_Fall.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_WaddleDee_Egg_Fall","path":"sprites/spr_WaddleDee_Egg_Fall/spr_WaddleDee_Egg_Fall.yy",},"resourceVersion":"1.0","name":"b436ffb7-cfc3-4fea-9a92-2f21da5da3d2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b436ffb7-cfc3-4fea-9a92-2f21da5da3d2",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_WaddleDee_Egg_Fall","path":"sprites/spr_WaddleDee_Egg_Fall/spr_WaddleDee_Egg_Fall.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_WaddleDee_Egg_Fall",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"1a7cc5ae-7c3b-44e9-9d4b-f775a9b3648d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b436ffb7-cfc3-4fea-9a92-2f21da5da3d2","path":"sprites/spr_WaddleDee_Egg_Fall/spr_WaddleDee_Egg_Fall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"1a7cc5ae-7c3b-44e9-9d4b-f775a9b3648d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b436ffb7-cfc3-4fea-9a92-2f21da5da3d2","path":"sprites/spr_WaddleDee_Egg_Fall/spr_WaddleDee_Egg_Fall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 17,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_WaddleDee_Egg_Fall","path":"sprites/spr_WaddleDee_Egg_Fall/spr_WaddleDee_Egg_Fall.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_WaddleDee_Egg_Fall",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"420f3a0e-4881-40b7-b6f4-7d0f9b3e4cf6","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"420f3a0e-4881-40b7-b6f4-7d0f9b3e4cf6","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Egg",
     "path": "folders/Sprites/Enemies/Waddle Dee/Egg.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_WaddleDee_Egg_Fall",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

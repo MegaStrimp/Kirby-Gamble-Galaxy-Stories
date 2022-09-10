@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_Equipment_Sword_KSSU_Attack2",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"3a50f12d-557f-4b15-a02c-6f018e0a8c20","path":"sprites/spr_Kirby_Equipment_Sword_KSSU_Attack2/spr_Kirby_Equipment_Sword_KSSU_Attack2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3a50f12d-557f-4b15-a02c-6f018e0a8c20","path":"sprites/spr_Kirby_Equipment_Sword_KSSU_Attack2/spr_Kirby_Equipment_Sword_KSSU_Attack2.yy",},"LayerId":{"name":"c5d9e88f-a9da-48c3-ab3b-075cba1a79aa","path":"sprites/spr_Kirby_Equipment_Sword_KSSU_Attack2/spr_Kirby_Equipment_Sword_KSSU_Attack2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Equipment_Sword_KSSU_Attack2","path":"sprites/spr_Kirby_Equipment_Sword_KSSU_Attack2/spr_Kirby_Equipment_Sword_KSSU_Attack2.yy",},"resourceVersion":"1.0","name":"3a50f12d-557f-4b15-a02c-6f018e0a8c20","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f07dd6c5-b94a-4bc7-b531-d0fb0ebd05e7","path":"sprites/spr_Kirby_Equipment_Sword_KSSU_Attack2/spr_Kirby_Equipment_Sword_KSSU_Attack2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f07dd6c5-b94a-4bc7-b531-d0fb0ebd05e7","path":"sprites/spr_Kirby_Equipment_Sword_KSSU_Attack2/spr_Kirby_Equipment_Sword_KSSU_Attack2.yy",},"LayerId":{"name":"c5d9e88f-a9da-48c3-ab3b-075cba1a79aa","path":"sprites/spr_Kirby_Equipment_Sword_KSSU_Attack2/spr_Kirby_Equipment_Sword_KSSU_Attack2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Equipment_Sword_KSSU_Attack2","path":"sprites/spr_Kirby_Equipment_Sword_KSSU_Attack2/spr_Kirby_Equipment_Sword_KSSU_Attack2.yy",},"resourceVersion":"1.0","name":"f07dd6c5-b94a-4bc7-b531-d0fb0ebd05e7","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9189bcc6-6bb9-4c14-92b2-7ecbd9e3e688","path":"sprites/spr_Kirby_Equipment_Sword_KSSU_Attack2/spr_Kirby_Equipment_Sword_KSSU_Attack2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9189bcc6-6bb9-4c14-92b2-7ecbd9e3e688","path":"sprites/spr_Kirby_Equipment_Sword_KSSU_Attack2/spr_Kirby_Equipment_Sword_KSSU_Attack2.yy",},"LayerId":{"name":"c5d9e88f-a9da-48c3-ab3b-075cba1a79aa","path":"sprites/spr_Kirby_Equipment_Sword_KSSU_Attack2/spr_Kirby_Equipment_Sword_KSSU_Attack2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Equipment_Sword_KSSU_Attack2","path":"sprites/spr_Kirby_Equipment_Sword_KSSU_Attack2/spr_Kirby_Equipment_Sword_KSSU_Attack2.yy",},"resourceVersion":"1.0","name":"9189bcc6-6bb9-4c14-92b2-7ecbd9e3e688","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9e89cace-d1fb-43d2-8527-ba57eb52d7f0","path":"sprites/spr_Kirby_Equipment_Sword_KSSU_Attack2/spr_Kirby_Equipment_Sword_KSSU_Attack2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9e89cace-d1fb-43d2-8527-ba57eb52d7f0","path":"sprites/spr_Kirby_Equipment_Sword_KSSU_Attack2/spr_Kirby_Equipment_Sword_KSSU_Attack2.yy",},"LayerId":{"name":"c5d9e88f-a9da-48c3-ab3b-075cba1a79aa","path":"sprites/spr_Kirby_Equipment_Sword_KSSU_Attack2/spr_Kirby_Equipment_Sword_KSSU_Attack2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Equipment_Sword_KSSU_Attack2","path":"sprites/spr_Kirby_Equipment_Sword_KSSU_Attack2/spr_Kirby_Equipment_Sword_KSSU_Attack2.yy",},"resourceVersion":"1.0","name":"9e89cace-d1fb-43d2-8527-ba57eb52d7f0","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3a50f12d-557f-4b15-a02c-6f018e0a8c20",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f07dd6c5-b94a-4bc7-b531-d0fb0ebd05e7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9189bcc6-6bb9-4c14-92b2-7ecbd9e3e688",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9e89cace-d1fb-43d2-8527-ba57eb52d7f0",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_Equipment_Sword_KSSU_Attack2","path":"sprites/spr_Kirby_Equipment_Sword_KSSU_Attack2/spr_Kirby_Equipment_Sword_KSSU_Attack2.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_Equipment_Sword_KSSU_Attack2",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 21.0,
@@ -46,15 +43,15 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 4.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"ecf60d1c-2901-49b1-b4bb-e40134f760c3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3a50f12d-557f-4b15-a02c-6f018e0a8c20","path":"sprites/spr_Kirby_Equipment_Sword_KSSU_Attack2/spr_Kirby_Equipment_Sword_KSSU_Attack2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"be927bb2-d614-418c-be6d-8f212e00a12d","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f07dd6c5-b94a-4bc7-b531-d0fb0ebd05e7","path":"sprites/spr_Kirby_Equipment_Sword_KSSU_Attack2/spr_Kirby_Equipment_Sword_KSSU_Attack2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"8cf94796-f678-4f77-adb4-fd1c1b344915","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9189bcc6-6bb9-4c14-92b2-7ecbd9e3e688","path":"sprites/spr_Kirby_Equipment_Sword_KSSU_Attack2/spr_Kirby_Equipment_Sword_KSSU_Attack2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"5d86e158-dd5f-453f-91a1-e86b891b336b","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9e89cace-d1fb-43d2-8527-ba57eb52d7f0","path":"sprites/spr_Kirby_Equipment_Sword_KSSU_Attack2/spr_Kirby_Equipment_Sword_KSSU_Attack2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"ecf60d1c-2901-49b1-b4bb-e40134f760c3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3a50f12d-557f-4b15-a02c-6f018e0a8c20","path":"sprites/spr_Kirby_Equipment_Sword_KSSU_Attack2/spr_Kirby_Equipment_Sword_KSSU_Attack2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"be927bb2-d614-418c-be6d-8f212e00a12d","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f07dd6c5-b94a-4bc7-b531-d0fb0ebd05e7","path":"sprites/spr_Kirby_Equipment_Sword_KSSU_Attack2/spr_Kirby_Equipment_Sword_KSSU_Attack2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"8cf94796-f678-4f77-adb4-fd1c1b344915","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9189bcc6-6bb9-4c14-92b2-7ecbd9e3e688","path":"sprites/spr_Kirby_Equipment_Sword_KSSU_Attack2/spr_Kirby_Equipment_Sword_KSSU_Attack2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"5d86e158-dd5f-453f-91a1-e86b891b336b","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9e89cace-d1fb-43d2-8527-ba57eb52d7f0","path":"sprites/spr_Kirby_Equipment_Sword_KSSU_Attack2/spr_Kirby_Equipment_Sword_KSSU_Attack2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -70,22 +67,13 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_Equipment_Sword_KSSU_Attack2","path":"sprites/spr_Kirby_Equipment_Sword_KSSU_Attack2/spr_Kirby_Equipment_Sword_KSSU_Attack2.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_Equipment_Sword_KSSU_Attack2",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c5d9e88f-a9da-48c3-ab3b-075cba1a79aa","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c5d9e88f-a9da-48c3-ab3b-075cba1a79aa","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Equipment",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Sword/KSSU/Equipment.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_Equipment_Sword_KSSU_Attack2",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

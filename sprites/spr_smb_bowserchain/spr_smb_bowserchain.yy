@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_SMB_BowserChain",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"5454bd78-56ce-4186-9bea-9118856f5119","path":"sprites/spr_SMB_BowserChain/spr_SMB_BowserChain.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5454bd78-56ce-4186-9bea-9118856f5119","path":"sprites/spr_SMB_BowserChain/spr_SMB_BowserChain.yy",},"LayerId":{"name":"4bed8910-69a5-4f03-87e0-52a193c1bd7c","path":"sprites/spr_SMB_BowserChain/spr_SMB_BowserChain.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_SMB_BowserChain","path":"sprites/spr_SMB_BowserChain/spr_SMB_BowserChain.yy",},"resourceVersion":"1.0","name":"5454bd78-56ce-4186-9bea-9118856f5119","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5454bd78-56ce-4186-9bea-9118856f5119",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_SMB_BowserChain","path":"sprites/spr_SMB_BowserChain/spr_SMB_BowserChain.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_SMB_BowserChain",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"406975f6-97a0-4899-87e8-3d8b934d8d3d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5454bd78-56ce-4186-9bea-9118856f5119","path":"sprites/spr_SMB_BowserChain/spr_SMB_BowserChain.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"406975f6-97a0-4899-87e8-3d8b934d8d3d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5454bd78-56ce-4186-9bea-9118856f5119","path":"sprites/spr_SMB_BowserChain/spr_SMB_BowserChain.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_SMB_BowserChain","path":"sprites/spr_SMB_BowserChain/spr_SMB_BowserChain.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_SMB_BowserChain",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4bed8910-69a5-4f03-87e0-52a193c1bd7c","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"4bed8910-69a5-4f03-87e0-52a193c1bd7c","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Stage Elements",
     "path": "folders/Sprites/Bosses/Super Mario Bros/Stage Elements.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_SMB_BowserChain",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

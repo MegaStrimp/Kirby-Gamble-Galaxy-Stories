@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_Normal_Stone_Attack1_Uncommon2",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,33 +27,19 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"017addee-5654-4f56-a208-f3f6f3f13ebf","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"017addee-5654-4f56-a208-f3f6f3f13ebf","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"LayerId":{"name":"009f9784-e907-4a2f-9ca3-6ef8b8e9428e","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Stone_Attack1_Uncommon2","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","name":"017addee-5654-4f56-a208-f3f6f3f13ebf","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e2a80dc9-29dd-4f5d-93cd-e8f368efb45f","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e2a80dc9-29dd-4f5d-93cd-e8f368efb45f","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"LayerId":{"name":"009f9784-e907-4a2f-9ca3-6ef8b8e9428e","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Stone_Attack1_Uncommon2","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","name":"e2a80dc9-29dd-4f5d-93cd-e8f368efb45f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"058f2b56-db83-4192-a2ef-53dc9afb2cfe","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"058f2b56-db83-4192-a2ef-53dc9afb2cfe","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"LayerId":{"name":"009f9784-e907-4a2f-9ca3-6ef8b8e9428e","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Stone_Attack1_Uncommon2","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","name":"058f2b56-db83-4192-a2ef-53dc9afb2cfe","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7fc807c8-1c71-4307-93b9-898d29b0facf","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7fc807c8-1c71-4307-93b9-898d29b0facf","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"LayerId":{"name":"009f9784-e907-4a2f-9ca3-6ef8b8e9428e","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Stone_Attack1_Uncommon2","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","name":"7fc807c8-1c71-4307-93b9-898d29b0facf","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0664225e-8653-4bb2-a825-f4f9c3c1b193","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0664225e-8653-4bb2-a825-f4f9c3c1b193","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"LayerId":{"name":"009f9784-e907-4a2f-9ca3-6ef8b8e9428e","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Stone_Attack1_Uncommon2","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","name":"0664225e-8653-4bb2-a825-f4f9c3c1b193","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2c6bbf50-637f-449a-b3ee-cb926e4d1259","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2c6bbf50-637f-449a-b3ee-cb926e4d1259","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"LayerId":{"name":"009f9784-e907-4a2f-9ca3-6ef8b8e9428e","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Stone_Attack1_Uncommon2","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","name":"2c6bbf50-637f-449a-b3ee-cb926e4d1259","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"289b34e7-f296-415f-af41-731a9900930d","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"289b34e7-f296-415f-af41-731a9900930d","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"LayerId":{"name":"009f9784-e907-4a2f-9ca3-6ef8b8e9428e","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Stone_Attack1_Uncommon2","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","name":"289b34e7-f296-415f-af41-731a9900930d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"084e7c22-6c11-4d0a-b262-940aa4b95794","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"084e7c22-6c11-4d0a-b262-940aa4b95794","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"LayerId":{"name":"009f9784-e907-4a2f-9ca3-6ef8b8e9428e","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Stone_Attack1_Uncommon2","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","name":"084e7c22-6c11-4d0a-b262-940aa4b95794","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"017addee-5654-4f56-a208-f3f6f3f13ebf",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e2a80dc9-29dd-4f5d-93cd-e8f368efb45f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"058f2b56-db83-4192-a2ef-53dc9afb2cfe",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7fc807c8-1c71-4307-93b9-898d29b0facf",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0664225e-8653-4bb2-a825-f4f9c3c1b193",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2c6bbf50-637f-449a-b3ee-cb926e4d1259",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"289b34e7-f296-415f-af41-731a9900930d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"084e7c22-6c11-4d0a-b262-940aa4b95794",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_Normal_Stone_Attack1_Uncommon2","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_Normal_Stone_Attack1_Uncommon2",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -58,19 +47,19 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 8.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"e70c1556-3c72-45bb-8a46-0ad49242b370","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"017addee-5654-4f56-a208-f3f6f3f13ebf","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"8b47e70e-73f5-49b2-8c94-50d32561b047","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e2a80dc9-29dd-4f5d-93cd-e8f368efb45f","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"0cd7936f-ce29-43f4-99c1-d7f1f66b14a4","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"058f2b56-db83-4192-a2ef-53dc9afb2cfe","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"9f5d299b-65e4-4518-ba02-bfa31f60db38","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7fc807c8-1c71-4307-93b9-898d29b0facf","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"b6596ccf-21e3-4527-ad92-6e86d8f00eeb","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0664225e-8653-4bb2-a825-f4f9c3c1b193","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"e51310e7-b8d8-4ecb-8e7a-af12c1003eec","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2c6bbf50-637f-449a-b3ee-cb926e4d1259","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"6d9585cb-85f4-4a4a-b0e6-6a70ac08d9f1","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"289b34e7-f296-415f-af41-731a9900930d","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"623e5583-a60e-40de-b67b-941df7d75d42","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"084e7c22-6c11-4d0a-b262-940aa4b95794","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"e70c1556-3c72-45bb-8a46-0ad49242b370","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"017addee-5654-4f56-a208-f3f6f3f13ebf","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"8b47e70e-73f5-49b2-8c94-50d32561b047","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e2a80dc9-29dd-4f5d-93cd-e8f368efb45f","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0cd7936f-ce29-43f4-99c1-d7f1f66b14a4","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"058f2b56-db83-4192-a2ef-53dc9afb2cfe","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9f5d299b-65e4-4518-ba02-bfa31f60db38","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7fc807c8-1c71-4307-93b9-898d29b0facf","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b6596ccf-21e3-4527-ad92-6e86d8f00eeb","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0664225e-8653-4bb2-a825-f4f9c3c1b193","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e51310e7-b8d8-4ecb-8e7a-af12c1003eec","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2c6bbf50-637f-449a-b3ee-cb926e4d1259","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6d9585cb-85f4-4a4a-b0e6-6a70ac08d9f1","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"289b34e7-f296-415f-af41-731a9900930d","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"623e5583-a60e-40de-b67b-941df7d75d42","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"084e7c22-6c11-4d0a-b262-940aa4b95794","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -86,22 +75,13 @@
     "yorigin": 39,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_Normal_Stone_Attack1_Uncommon2","path":"sprites/spr_Kirby_Normal_Stone_Attack1_Uncommon2/spr_Kirby_Normal_Stone_Attack1_Uncommon2.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_Normal_Stone_Attack1_Uncommon2",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"009f9784-e907-4a2f-9ca3-6ef8b8e9428e","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"009f9784-e907-4a2f-9ca3-6ef8b8e9428e","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Characters/Kirby/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_Normal_Stone_Attack1_Uncommon2",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

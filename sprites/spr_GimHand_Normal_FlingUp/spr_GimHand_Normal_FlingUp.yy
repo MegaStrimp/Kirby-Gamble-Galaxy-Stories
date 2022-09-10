@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_GimHand_Normal_FlingUp",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"f2062a3a-4c49-4c8c-bc93-0c2dc804406e","path":"sprites/spr_GimHand_Normal_FlingUp/spr_GimHand_Normal_FlingUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f2062a3a-4c49-4c8c-bc93-0c2dc804406e","path":"sprites/spr_GimHand_Normal_FlingUp/spr_GimHand_Normal_FlingUp.yy",},"LayerId":{"name":"d7be3eac-915b-446f-8246-b32385b9e1a5","path":"sprites/spr_GimHand_Normal_FlingUp/spr_GimHand_Normal_FlingUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_GimHand_Normal_FlingUp","path":"sprites/spr_GimHand_Normal_FlingUp/spr_GimHand_Normal_FlingUp.yy",},"resourceVersion":"1.0","name":"f2062a3a-4c49-4c8c-bc93-0c2dc804406e","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f2062a3a-4c49-4c8c-bc93-0c2dc804406e",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_GimHand_Normal_FlingUp","path":"sprites/spr_GimHand_Normal_FlingUp/spr_GimHand_Normal_FlingUp.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_GimHand_Normal_FlingUp",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"d18e93dd-92dc-4f0e-80de-38306740bac9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f2062a3a-4c49-4c8c-bc93-0c2dc804406e","path":"sprites/spr_GimHand_Normal_FlingUp/spr_GimHand_Normal_FlingUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"d18e93dd-92dc-4f0e-80de-38306740bac9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f2062a3a-4c49-4c8c-bc93-0c2dc804406e","path":"sprites/spr_GimHand_Normal_FlingUp/spr_GimHand_Normal_FlingUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_GimHand_Normal_FlingUp","path":"sprites/spr_GimHand_Normal_FlingUp/spr_GimHand_Normal_FlingUp.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_GimHand_Normal_FlingUp",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d7be3eac-915b-446f-8246-b32385b9e1a5","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d7be3eac-915b-446f-8246-b32385b9e1a5","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Hand",
     "path": "folders/Sprites/Enemies/Gim/Normal/Hand.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_GimHand_Normal_FlingUp",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_BurningLeo_Normal_Attack",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a56aa6f9-1d64-4dd5-b915-c3d191d90145","path":"sprites/spr_BurningLeo_Normal_Attack/spr_BurningLeo_Normal_Attack.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a56aa6f9-1d64-4dd5-b915-c3d191d90145","path":"sprites/spr_BurningLeo_Normal_Attack/spr_BurningLeo_Normal_Attack.yy",},"LayerId":{"name":"6bb31ada-264b-4731-8ec4-dbbf7f8df54d","path":"sprites/spr_BurningLeo_Normal_Attack/spr_BurningLeo_Normal_Attack.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_BurningLeo_Normal_Attack","path":"sprites/spr_BurningLeo_Normal_Attack/spr_BurningLeo_Normal_Attack.yy",},"resourceVersion":"1.0","name":"a56aa6f9-1d64-4dd5-b915-c3d191d90145","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e3010dcb-38b9-48a8-9205-9dd5fd899a72","path":"sprites/spr_BurningLeo_Normal_Attack/spr_BurningLeo_Normal_Attack.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e3010dcb-38b9-48a8-9205-9dd5fd899a72","path":"sprites/spr_BurningLeo_Normal_Attack/spr_BurningLeo_Normal_Attack.yy",},"LayerId":{"name":"6bb31ada-264b-4731-8ec4-dbbf7f8df54d","path":"sprites/spr_BurningLeo_Normal_Attack/spr_BurningLeo_Normal_Attack.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_BurningLeo_Normal_Attack","path":"sprites/spr_BurningLeo_Normal_Attack/spr_BurningLeo_Normal_Attack.yy",},"resourceVersion":"1.0","name":"e3010dcb-38b9-48a8-9205-9dd5fd899a72","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a56aa6f9-1d64-4dd5-b915-c3d191d90145",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e3010dcb-38b9-48a8-9205-9dd5fd899a72",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_BurningLeo_Normal_Attack","path":"sprites/spr_BurningLeo_Normal_Attack/spr_BurningLeo_Normal_Attack.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_BurningLeo_Normal_Attack",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 12.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"316952c7-a04c-4ef4-abda-c36cf862b643","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a56aa6f9-1d64-4dd5-b915-c3d191d90145","path":"sprites/spr_BurningLeo_Normal_Attack/spr_BurningLeo_Normal_Attack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"808218e5-ea2e-46a7-ad3b-078acb1c339d","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e3010dcb-38b9-48a8-9205-9dd5fd899a72","path":"sprites/spr_BurningLeo_Normal_Attack/spr_BurningLeo_Normal_Attack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"316952c7-a04c-4ef4-abda-c36cf862b643","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a56aa6f9-1d64-4dd5-b915-c3d191d90145","path":"sprites/spr_BurningLeo_Normal_Attack/spr_BurningLeo_Normal_Attack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"808218e5-ea2e-46a7-ad3b-078acb1c339d","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e3010dcb-38b9-48a8-9205-9dd5fd899a72","path":"sprites/spr_BurningLeo_Normal_Attack/spr_BurningLeo_Normal_Attack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -62,22 +63,13 @@
     "yorigin": 24,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_BurningLeo_Normal_Attack","path":"sprites/spr_BurningLeo_Normal_Attack/spr_BurningLeo_Normal_Attack.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_BurningLeo_Normal_Attack",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6bb31ada-264b-4731-8ec4-dbbf7f8df54d","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6bb31ada-264b-4731-8ec4-dbbf7f8df54d","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Enemies/Burning Leo/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_BurningLeo_Normal_Attack",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

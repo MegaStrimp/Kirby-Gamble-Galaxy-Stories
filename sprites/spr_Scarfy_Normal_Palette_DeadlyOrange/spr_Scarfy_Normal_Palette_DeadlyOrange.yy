@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Scarfy_Normal_Palette_DeadlyOrange",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"99ea7203-dca8-4067-91ee-b8d1d8f2eec5","path":"sprites/spr_Scarfy_Normal_Palette_DeadlyOrange/spr_Scarfy_Normal_Palette_DeadlyOrange.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"99ea7203-dca8-4067-91ee-b8d1d8f2eec5","path":"sprites/spr_Scarfy_Normal_Palette_DeadlyOrange/spr_Scarfy_Normal_Palette_DeadlyOrange.yy",},"LayerId":{"name":"27b36631-091e-4109-8a95-4e62667d5501","path":"sprites/spr_Scarfy_Normal_Palette_DeadlyOrange/spr_Scarfy_Normal_Palette_DeadlyOrange.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Scarfy_Normal_Palette_DeadlyOrange","path":"sprites/spr_Scarfy_Normal_Palette_DeadlyOrange/spr_Scarfy_Normal_Palette_DeadlyOrange.yy",},"resourceVersion":"1.0","name":"99ea7203-dca8-4067-91ee-b8d1d8f2eec5","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"99ea7203-dca8-4067-91ee-b8d1d8f2eec5",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Scarfy_Normal_Palette_DeadlyOrange","path":"sprites/spr_Scarfy_Normal_Palette_DeadlyOrange/spr_Scarfy_Normal_Palette_DeadlyOrange.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Scarfy_Normal_Palette_DeadlyOrange",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"191299a2-d78d-4bbf-8f80-eb1ccc16db7a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"99ea7203-dca8-4067-91ee-b8d1d8f2eec5","path":"sprites/spr_Scarfy_Normal_Palette_DeadlyOrange/spr_Scarfy_Normal_Palette_DeadlyOrange.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"191299a2-d78d-4bbf-8f80-eb1ccc16db7a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"99ea7203-dca8-4067-91ee-b8d1d8f2eec5","path":"sprites/spr_Scarfy_Normal_Palette_DeadlyOrange/spr_Scarfy_Normal_Palette_DeadlyOrange.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Scarfy_Normal_Palette_DeadlyOrange","path":"sprites/spr_Scarfy_Normal_Palette_DeadlyOrange/spr_Scarfy_Normal_Palette_DeadlyOrange.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Scarfy_Normal_Palette_DeadlyOrange",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"27b36631-091e-4109-8a95-4e62667d5501","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"27b36631-091e-4109-8a95-4e62667d5501","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Palettes",
     "path": "folders/Sprites/Enemies/Scarfy/Normal/Palettes.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Scarfy_Normal_Palette_DeadlyOrange",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

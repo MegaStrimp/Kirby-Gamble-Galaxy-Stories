@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_AbilityBlock_Wheel_Idle",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a8c7f2c7-bd2e-4955-b03c-cf55ecc66f70","path":"sprites/spr_AbilityBlock_Wheel_Idle/spr_AbilityBlock_Wheel_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a8c7f2c7-bd2e-4955-b03c-cf55ecc66f70","path":"sprites/spr_AbilityBlock_Wheel_Idle/spr_AbilityBlock_Wheel_Idle.yy",},"LayerId":{"name":"bc3a5732-31d0-4973-808c-b2c12a7febac","path":"sprites/spr_AbilityBlock_Wheel_Idle/spr_AbilityBlock_Wheel_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_AbilityBlock_Wheel_Idle","path":"sprites/spr_AbilityBlock_Wheel_Idle/spr_AbilityBlock_Wheel_Idle.yy",},"resourceVersion":"1.0","name":"a8c7f2c7-bd2e-4955-b03c-cf55ecc66f70","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a8c7f2c7-bd2e-4955-b03c-cf55ecc66f70",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_AbilityBlock_Wheel_Idle","path":"sprites/spr_AbilityBlock_Wheel_Idle/spr_AbilityBlock_Wheel_Idle.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_AbilityBlock_Wheel_Idle",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"f676b92e-59e5-415e-9bd7-556c585cf229","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a8c7f2c7-bd2e-4955-b03c-cf55ecc66f70","path":"sprites/spr_AbilityBlock_Wheel_Idle/spr_AbilityBlock_Wheel_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"f676b92e-59e5-415e-9bd7-556c585cf229","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a8c7f2c7-bd2e-4955-b03c-cf55ecc66f70","path":"sprites/spr_AbilityBlock_Wheel_Idle/spr_AbilityBlock_Wheel_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_AbilityBlock_Wheel_Idle","path":"sprites/spr_AbilityBlock_Wheel_Idle/spr_AbilityBlock_Wheel_Idle.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_AbilityBlock_Wheel_Idle",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"bc3a5732-31d0-4973-808c-b2c12a7febac","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"bc3a5732-31d0-4973-808c-b2c12a7febac","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Wheel",
     "path": "folders/Sprites/Stage Elements/Ability Block/Wheel.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_AbilityBlock_Wheel_Idle",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

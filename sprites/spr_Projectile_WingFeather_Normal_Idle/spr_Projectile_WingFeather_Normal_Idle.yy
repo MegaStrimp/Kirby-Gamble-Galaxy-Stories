@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Projectile_WingFeather_Normal_Idle",
   "bboxMode": 0,
   "collisionKind": 4,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"935c9017-69bb-4e42-b0ec-9b31b354b1bd","path":"sprites/spr_Projectile_WingFeather_Normal_Idle/spr_Projectile_WingFeather_Normal_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"935c9017-69bb-4e42-b0ec-9b31b354b1bd","path":"sprites/spr_Projectile_WingFeather_Normal_Idle/spr_Projectile_WingFeather_Normal_Idle.yy",},"LayerId":{"name":"b16d8135-ff43-42cd-807b-8857c31759f8","path":"sprites/spr_Projectile_WingFeather_Normal_Idle/spr_Projectile_WingFeather_Normal_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_WingFeather_Normal_Idle","path":"sprites/spr_Projectile_WingFeather_Normal_Idle/spr_Projectile_WingFeather_Normal_Idle.yy",},"resourceVersion":"1.0","name":"935c9017-69bb-4e42-b0ec-9b31b354b1bd","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0b8f2795-6e84-41a4-b902-22a8f41769c8","path":"sprites/spr_Projectile_WingFeather_Normal_Idle/spr_Projectile_WingFeather_Normal_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0b8f2795-6e84-41a4-b902-22a8f41769c8","path":"sprites/spr_Projectile_WingFeather_Normal_Idle/spr_Projectile_WingFeather_Normal_Idle.yy",},"LayerId":{"name":"b16d8135-ff43-42cd-807b-8857c31759f8","path":"sprites/spr_Projectile_WingFeather_Normal_Idle/spr_Projectile_WingFeather_Normal_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_WingFeather_Normal_Idle","path":"sprites/spr_Projectile_WingFeather_Normal_Idle/spr_Projectile_WingFeather_Normal_Idle.yy",},"resourceVersion":"1.0","name":"0b8f2795-6e84-41a4-b902-22a8f41769c8","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2d9dd395-9f17-4a8e-b87e-a532693b8da2","path":"sprites/spr_Projectile_WingFeather_Normal_Idle/spr_Projectile_WingFeather_Normal_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2d9dd395-9f17-4a8e-b87e-a532693b8da2","path":"sprites/spr_Projectile_WingFeather_Normal_Idle/spr_Projectile_WingFeather_Normal_Idle.yy",},"LayerId":{"name":"b16d8135-ff43-42cd-807b-8857c31759f8","path":"sprites/spr_Projectile_WingFeather_Normal_Idle/spr_Projectile_WingFeather_Normal_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_WingFeather_Normal_Idle","path":"sprites/spr_Projectile_WingFeather_Normal_Idle/spr_Projectile_WingFeather_Normal_Idle.yy",},"resourceVersion":"1.0","name":"2d9dd395-9f17-4a8e-b87e-a532693b8da2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"935c9017-69bb-4e42-b0ec-9b31b354b1bd",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0b8f2795-6e84-41a4-b902-22a8f41769c8",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2d9dd395-9f17-4a8e-b87e-a532693b8da2",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Projectile_WingFeather_Normal_Idle","path":"sprites/spr_Projectile_WingFeather_Normal_Idle/spr_Projectile_WingFeather_Normal_Idle.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Projectile_WingFeather_Normal_Idle",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -43,14 +42,14 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 3.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"b8f7290a-c424-4032-ab1c-b366c894704b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"935c9017-69bb-4e42-b0ec-9b31b354b1bd","path":"sprites/spr_Projectile_WingFeather_Normal_Idle/spr_Projectile_WingFeather_Normal_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"4ad34b6d-0eb0-4be7-93d5-eae788501a35","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0b8f2795-6e84-41a4-b902-22a8f41769c8","path":"sprites/spr_Projectile_WingFeather_Normal_Idle/spr_Projectile_WingFeather_Normal_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"b2a0c411-1d5c-4bc9-8258-55db1f4655bc","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2d9dd395-9f17-4a8e-b87e-a532693b8da2","path":"sprites/spr_Projectile_WingFeather_Normal_Idle/spr_Projectile_WingFeather_Normal_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"b8f7290a-c424-4032-ab1c-b366c894704b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"935c9017-69bb-4e42-b0ec-9b31b354b1bd","path":"sprites/spr_Projectile_WingFeather_Normal_Idle/spr_Projectile_WingFeather_Normal_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4ad34b6d-0eb0-4be7-93d5-eae788501a35","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0b8f2795-6e84-41a4-b902-22a8f41769c8","path":"sprites/spr_Projectile_WingFeather_Normal_Idle/spr_Projectile_WingFeather_Normal_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b2a0c411-1d5c-4bc9-8258-55db1f4655bc","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2d9dd395-9f17-4a8e-b87e-a532693b8da2","path":"sprites/spr_Projectile_WingFeather_Normal_Idle/spr_Projectile_WingFeather_Normal_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -66,22 +65,13 @@
     "yorigin": 3,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Projectile_WingFeather_Normal_Idle","path":"sprites/spr_Projectile_WingFeather_Normal_Idle/spr_Projectile_WingFeather_Normal_Idle.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Projectile_WingFeather_Normal_Idle",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b16d8135-ff43-42cd-807b-8857c31759f8","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b16d8135-ff43-42cd-807b-8857c31759f8","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Projectiles/Wing Feather/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Projectile_WingFeather_Normal_Idle",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

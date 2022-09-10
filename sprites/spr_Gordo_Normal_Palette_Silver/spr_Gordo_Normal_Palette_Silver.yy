@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Gordo_Normal_Palette_Silver",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4804a690-e15d-49ff-8e76-d4d9dec9ae05","path":"sprites/spr_Gordo_Normal_Palette_Silver/spr_Gordo_Normal_Palette_Silver.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4804a690-e15d-49ff-8e76-d4d9dec9ae05","path":"sprites/spr_Gordo_Normal_Palette_Silver/spr_Gordo_Normal_Palette_Silver.yy",},"LayerId":{"name":"8ace03b3-c784-4318-af54-fda9e15a33c7","path":"sprites/spr_Gordo_Normal_Palette_Silver/spr_Gordo_Normal_Palette_Silver.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Gordo_Normal_Palette_Silver","path":"sprites/spr_Gordo_Normal_Palette_Silver/spr_Gordo_Normal_Palette_Silver.yy",},"resourceVersion":"1.0","name":"4804a690-e15d-49ff-8e76-d4d9dec9ae05","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4804a690-e15d-49ff-8e76-d4d9dec9ae05",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Gordo_Normal_Palette_Silver","path":"sprites/spr_Gordo_Normal_Palette_Silver/spr_Gordo_Normal_Palette_Silver.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Gordo_Normal_Palette_Silver",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"e2536373-4e00-4ff5-b910-fd67d26d4110","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4804a690-e15d-49ff-8e76-d4d9dec9ae05","path":"sprites/spr_Gordo_Normal_Palette_Silver/spr_Gordo_Normal_Palette_Silver.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"e2536373-4e00-4ff5-b910-fd67d26d4110","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4804a690-e15d-49ff-8e76-d4d9dec9ae05","path":"sprites/spr_Gordo_Normal_Palette_Silver/spr_Gordo_Normal_Palette_Silver.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Gordo_Normal_Palette_Silver","path":"sprites/spr_Gordo_Normal_Palette_Silver/spr_Gordo_Normal_Palette_Silver.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Gordo_Normal_Palette_Silver",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8ace03b3-c784-4318-af54-fda9e15a33c7","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"8ace03b3-c784-4318-af54-fda9e15a33c7","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Palettes",
     "path": "folders/Sprites/Enemies/Gordo/Normal/Palettes.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Gordo_Normal_Palette_Silver",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

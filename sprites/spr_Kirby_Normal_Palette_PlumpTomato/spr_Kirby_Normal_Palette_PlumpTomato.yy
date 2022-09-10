@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_Normal_Palette_PlumpTomato",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"39fcc298-2189-462b-8821-1aa4497efac5","path":"sprites/spr_Kirby_Normal_Palette_PlumpTomato/spr_Kirby_Normal_Palette_PlumpTomato.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"39fcc298-2189-462b-8821-1aa4497efac5","path":"sprites/spr_Kirby_Normal_Palette_PlumpTomato/spr_Kirby_Normal_Palette_PlumpTomato.yy",},"LayerId":{"name":"6552c4d3-c910-4c00-9e6c-de45218f13de","path":"sprites/spr_Kirby_Normal_Palette_PlumpTomato/spr_Kirby_Normal_Palette_PlumpTomato.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Palette_PlumpTomato","path":"sprites/spr_Kirby_Normal_Palette_PlumpTomato/spr_Kirby_Normal_Palette_PlumpTomato.yy",},"resourceVersion":"1.0","name":"39fcc298-2189-462b-8821-1aa4497efac5","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"39fcc298-2189-462b-8821-1aa4497efac5",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_Normal_Palette_PlumpTomato","path":"sprites/spr_Kirby_Normal_Palette_PlumpTomato/spr_Kirby_Normal_Palette_PlumpTomato.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_Normal_Palette_PlumpTomato",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"654f00f8-3cfc-4b07-9208-8930030ff7df","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"39fcc298-2189-462b-8821-1aa4497efac5","path":"sprites/spr_Kirby_Normal_Palette_PlumpTomato/spr_Kirby_Normal_Palette_PlumpTomato.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"654f00f8-3cfc-4b07-9208-8930030ff7df","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"39fcc298-2189-462b-8821-1aa4497efac5","path":"sprites/spr_Kirby_Normal_Palette_PlumpTomato/spr_Kirby_Normal_Palette_PlumpTomato.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_Normal_Palette_PlumpTomato","path":"sprites/spr_Kirby_Normal_Palette_PlumpTomato/spr_Kirby_Normal_Palette_PlumpTomato.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_Normal_Palette_PlumpTomato",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6552c4d3-c910-4c00-9e6c-de45218f13de","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6552c4d3-c910-4c00-9e6c-de45218f13de","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Palettes",
     "path": "folders/Sprites/Characters/Kirby/Normal/Palettes.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_Normal_Palette_PlumpTomato",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

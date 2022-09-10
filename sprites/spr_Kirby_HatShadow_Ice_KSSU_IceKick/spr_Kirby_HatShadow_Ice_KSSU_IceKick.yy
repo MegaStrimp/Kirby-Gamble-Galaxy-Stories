@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_HatShadow_Ice_KSSU_IceKick",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"3054cad8-70f6-4b2d-88aa-f25ecdd49f54","path":"sprites/spr_Kirby_HatShadow_Ice_KSSU_IceKick/spr_Kirby_HatShadow_Ice_KSSU_IceKick.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3054cad8-70f6-4b2d-88aa-f25ecdd49f54","path":"sprites/spr_Kirby_HatShadow_Ice_KSSU_IceKick/spr_Kirby_HatShadow_Ice_KSSU_IceKick.yy",},"LayerId":{"name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","path":"sprites/spr_Kirby_HatShadow_Ice_KSSU_IceKick/spr_Kirby_HatShadow_Ice_KSSU_IceKick.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Ice_KSSU_IceKick","path":"sprites/spr_Kirby_HatShadow_Ice_KSSU_IceKick/spr_Kirby_HatShadow_Ice_KSSU_IceKick.yy",},"resourceVersion":"1.0","name":"3054cad8-70f6-4b2d-88aa-f25ecdd49f54","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"28881699-78ed-48c4-ab30-54d07e0fbde4","path":"sprites/spr_Kirby_HatShadow_Ice_KSSU_IceKick/spr_Kirby_HatShadow_Ice_KSSU_IceKick.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"28881699-78ed-48c4-ab30-54d07e0fbde4","path":"sprites/spr_Kirby_HatShadow_Ice_KSSU_IceKick/spr_Kirby_HatShadow_Ice_KSSU_IceKick.yy",},"LayerId":{"name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","path":"sprites/spr_Kirby_HatShadow_Ice_KSSU_IceKick/spr_Kirby_HatShadow_Ice_KSSU_IceKick.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Ice_KSSU_IceKick","path":"sprites/spr_Kirby_HatShadow_Ice_KSSU_IceKick/spr_Kirby_HatShadow_Ice_KSSU_IceKick.yy",},"resourceVersion":"1.0","name":"28881699-78ed-48c4-ab30-54d07e0fbde4","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"acb61905-980f-4d90-a040-17eff05a1c84","path":"sprites/spr_Kirby_HatShadow_Ice_KSSU_IceKick/spr_Kirby_HatShadow_Ice_KSSU_IceKick.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"acb61905-980f-4d90-a040-17eff05a1c84","path":"sprites/spr_Kirby_HatShadow_Ice_KSSU_IceKick/spr_Kirby_HatShadow_Ice_KSSU_IceKick.yy",},"LayerId":{"name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","path":"sprites/spr_Kirby_HatShadow_Ice_KSSU_IceKick/spr_Kirby_HatShadow_Ice_KSSU_IceKick.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Ice_KSSU_IceKick","path":"sprites/spr_Kirby_HatShadow_Ice_KSSU_IceKick/spr_Kirby_HatShadow_Ice_KSSU_IceKick.yy",},"resourceVersion":"1.0","name":"acb61905-980f-4d90-a040-17eff05a1c84","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3054cad8-70f6-4b2d-88aa-f25ecdd49f54",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"28881699-78ed-48c4-ab30-54d07e0fbde4",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"acb61905-980f-4d90-a040-17eff05a1c84",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_HatShadow_Ice_KSSU_IceKick","path":"sprites/spr_Kirby_HatShadow_Ice_KSSU_IceKick/spr_Kirby_HatShadow_Ice_KSSU_IceKick.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_HatShadow_Ice_KSSU_IceKick",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 18.0,
@@ -43,14 +42,14 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 3.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"d459da2f-5635-49c4-8bcc-8cd1e8f23ee8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3054cad8-70f6-4b2d-88aa-f25ecdd49f54","path":"sprites/spr_Kirby_HatShadow_Ice_KSSU_IceKick/spr_Kirby_HatShadow_Ice_KSSU_IceKick.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"8f941e8f-44f3-4533-933a-e19f8c10c3a6","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"28881699-78ed-48c4-ab30-54d07e0fbde4","path":"sprites/spr_Kirby_HatShadow_Ice_KSSU_IceKick/spr_Kirby_HatShadow_Ice_KSSU_IceKick.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"e6534605-2c88-46db-8a33-4f3fb7f1c6f7","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"acb61905-980f-4d90-a040-17eff05a1c84","path":"sprites/spr_Kirby_HatShadow_Ice_KSSU_IceKick/spr_Kirby_HatShadow_Ice_KSSU_IceKick.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"d459da2f-5635-49c4-8bcc-8cd1e8f23ee8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3054cad8-70f6-4b2d-88aa-f25ecdd49f54","path":"sprites/spr_Kirby_HatShadow_Ice_KSSU_IceKick/spr_Kirby_HatShadow_Ice_KSSU_IceKick.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"8f941e8f-44f3-4533-933a-e19f8c10c3a6","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"28881699-78ed-48c4-ab30-54d07e0fbde4","path":"sprites/spr_Kirby_HatShadow_Ice_KSSU_IceKick/spr_Kirby_HatShadow_Ice_KSSU_IceKick.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e6534605-2c88-46db-8a33-4f3fb7f1c6f7","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"acb61905-980f-4d90-a040-17eff05a1c84","path":"sprites/spr_Kirby_HatShadow_Ice_KSSU_IceKick/spr_Kirby_HatShadow_Ice_KSSU_IceKick.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -66,22 +65,13 @@
     "yorigin": 17,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_HatShadow_Ice_KSSU_IceKick","path":"sprites/spr_Kirby_HatShadow_Ice_KSSU_IceKick/spr_Kirby_HatShadow_Ice_KSSU_IceKick.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_HatShadow_Ice_KSSU_IceKick",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Shadow",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Ice/KSSU/Shadow.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_HatShadow_Ice_KSSU_IceKick",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

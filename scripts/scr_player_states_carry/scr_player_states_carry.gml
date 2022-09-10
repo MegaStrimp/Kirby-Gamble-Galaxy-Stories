@@ -16,7 +16,7 @@ function scr_Player_States_Carry()
 		if (place_meeting(x,y + 1,obj_ParentWall))
 		{
 			var collidingWall = instance_place(x,y + 1,obj_ParentWall);
-			if ((!collidingWall.platform) or ((collidingWall.platform) and (!(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal)))) grounded = true;
+			if ((!collidingWall.platform) or ((collidingWall.platform) and (!(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal)) and (!place_meeting(x,y + 1,obj_Wall)))) grounded = true;
 		}
 		else if (place_meeting(x,y + 1,obj_Spring))
 		{

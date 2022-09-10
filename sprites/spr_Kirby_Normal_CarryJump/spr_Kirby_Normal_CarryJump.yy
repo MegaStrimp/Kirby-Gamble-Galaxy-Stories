@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_Normal_CarryJump",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"56c71d5e-5a0f-4744-a7d9-714c4f549660","path":"sprites/spr_Kirby_Normal_CarryJump/spr_Kirby_Normal_CarryJump.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"56c71d5e-5a0f-4744-a7d9-714c4f549660","path":"sprites/spr_Kirby_Normal_CarryJump/spr_Kirby_Normal_CarryJump.yy",},"LayerId":{"name":"234d6ac4-5219-40c0-950a-8582aafb5667","path":"sprites/spr_Kirby_Normal_CarryJump/spr_Kirby_Normal_CarryJump.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_CarryJump","path":"sprites/spr_Kirby_Normal_CarryJump/spr_Kirby_Normal_CarryJump.yy",},"resourceVersion":"1.0","name":"56c71d5e-5a0f-4744-a7d9-714c4f549660","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"27ab928a-0b66-45a8-9335-3ba026df5007","path":"sprites/spr_Kirby_Normal_CarryJump/spr_Kirby_Normal_CarryJump.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"27ab928a-0b66-45a8-9335-3ba026df5007","path":"sprites/spr_Kirby_Normal_CarryJump/spr_Kirby_Normal_CarryJump.yy",},"LayerId":{"name":"234d6ac4-5219-40c0-950a-8582aafb5667","path":"sprites/spr_Kirby_Normal_CarryJump/spr_Kirby_Normal_CarryJump.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_CarryJump","path":"sprites/spr_Kirby_Normal_CarryJump/spr_Kirby_Normal_CarryJump.yy",},"resourceVersion":"1.0","name":"27ab928a-0b66-45a8-9335-3ba026df5007","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"022ec5e4-5139-44bb-b6b3-d19727b9e637","path":"sprites/spr_Kirby_Normal_CarryJump/spr_Kirby_Normal_CarryJump.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"022ec5e4-5139-44bb-b6b3-d19727b9e637","path":"sprites/spr_Kirby_Normal_CarryJump/spr_Kirby_Normal_CarryJump.yy",},"LayerId":{"name":"234d6ac4-5219-40c0-950a-8582aafb5667","path":"sprites/spr_Kirby_Normal_CarryJump/spr_Kirby_Normal_CarryJump.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_CarryJump","path":"sprites/spr_Kirby_Normal_CarryJump/spr_Kirby_Normal_CarryJump.yy",},"resourceVersion":"1.0","name":"022ec5e4-5139-44bb-b6b3-d19727b9e637","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"286fc999-bdd6-4eb4-b45f-7a6f06c78253","path":"sprites/spr_Kirby_Normal_CarryJump/spr_Kirby_Normal_CarryJump.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"286fc999-bdd6-4eb4-b45f-7a6f06c78253","path":"sprites/spr_Kirby_Normal_CarryJump/spr_Kirby_Normal_CarryJump.yy",},"LayerId":{"name":"234d6ac4-5219-40c0-950a-8582aafb5667","path":"sprites/spr_Kirby_Normal_CarryJump/spr_Kirby_Normal_CarryJump.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_CarryJump","path":"sprites/spr_Kirby_Normal_CarryJump/spr_Kirby_Normal_CarryJump.yy",},"resourceVersion":"1.0","name":"286fc999-bdd6-4eb4-b45f-7a6f06c78253","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"56c71d5e-5a0f-4744-a7d9-714c4f549660",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"27ab928a-0b66-45a8-9335-3ba026df5007",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"022ec5e4-5139-44bb-b6b3-d19727b9e637",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"286fc999-bdd6-4eb4-b45f-7a6f06c78253",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_Normal_CarryJump","path":"sprites/spr_Kirby_Normal_CarryJump/spr_Kirby_Normal_CarryJump.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_Normal_CarryJump",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 21.0,
@@ -46,15 +43,15 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 4.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"e7323f38-03e3-4dfc-a4ed-22ef66a77b44","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"56c71d5e-5a0f-4744-a7d9-714c4f549660","path":"sprites/spr_Kirby_Normal_CarryJump/spr_Kirby_Normal_CarryJump.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"653c9ae2-c250-414e-88f7-53ec67834567","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"27ab928a-0b66-45a8-9335-3ba026df5007","path":"sprites/spr_Kirby_Normal_CarryJump/spr_Kirby_Normal_CarryJump.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"1a80d5c3-dc33-4d55-bdc0-5af90e7687fc","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"022ec5e4-5139-44bb-b6b3-d19727b9e637","path":"sprites/spr_Kirby_Normal_CarryJump/spr_Kirby_Normal_CarryJump.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"fa59d780-3ddb-4330-bc4d-804dba9eaed2","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"286fc999-bdd6-4eb4-b45f-7a6f06c78253","path":"sprites/spr_Kirby_Normal_CarryJump/spr_Kirby_Normal_CarryJump.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"e7323f38-03e3-4dfc-a4ed-22ef66a77b44","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"56c71d5e-5a0f-4744-a7d9-714c4f549660","path":"sprites/spr_Kirby_Normal_CarryJump/spr_Kirby_Normal_CarryJump.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"653c9ae2-c250-414e-88f7-53ec67834567","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"27ab928a-0b66-45a8-9335-3ba026df5007","path":"sprites/spr_Kirby_Normal_CarryJump/spr_Kirby_Normal_CarryJump.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1a80d5c3-dc33-4d55-bdc0-5af90e7687fc","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"022ec5e4-5139-44bb-b6b3-d19727b9e637","path":"sprites/spr_Kirby_Normal_CarryJump/spr_Kirby_Normal_CarryJump.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"fa59d780-3ddb-4330-bc4d-804dba9eaed2","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"286fc999-bdd6-4eb4-b45f-7a6f06c78253","path":"sprites/spr_Kirby_Normal_CarryJump/spr_Kirby_Normal_CarryJump.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -70,22 +67,13 @@
     "yorigin": 30,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_Normal_CarryJump","path":"sprites/spr_Kirby_Normal_CarryJump/spr_Kirby_Normal_CarryJump.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_Normal_CarryJump",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"234d6ac4-5219-40c0-950a-8582aafb5667","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"234d6ac4-5219-40c0-950a-8582aafb5667","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Characters/Kirby/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_Normal_CarryJump",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

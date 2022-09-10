@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Projectile_GambleEnergyBall_Normal_Idle",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d2ecb665-5ec1-4ba3-93d1-d356edc76fbf","path":"sprites/spr_Projectile_GambleEnergyBall_Normal_Idle/spr_Projectile_GambleEnergyBall_Normal_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d2ecb665-5ec1-4ba3-93d1-d356edc76fbf","path":"sprites/spr_Projectile_GambleEnergyBall_Normal_Idle/spr_Projectile_GambleEnergyBall_Normal_Idle.yy",},"LayerId":{"name":"75185384-1bc1-405f-9e24-96ea93e529aa","path":"sprites/spr_Projectile_GambleEnergyBall_Normal_Idle/spr_Projectile_GambleEnergyBall_Normal_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_GambleEnergyBall_Normal_Idle","path":"sprites/spr_Projectile_GambleEnergyBall_Normal_Idle/spr_Projectile_GambleEnergyBall_Normal_Idle.yy",},"resourceVersion":"1.0","name":"d2ecb665-5ec1-4ba3-93d1-d356edc76fbf","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"60826022-c2f0-4995-bff2-2927c9ef163e","path":"sprites/spr_Projectile_GambleEnergyBall_Normal_Idle/spr_Projectile_GambleEnergyBall_Normal_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"60826022-c2f0-4995-bff2-2927c9ef163e","path":"sprites/spr_Projectile_GambleEnergyBall_Normal_Idle/spr_Projectile_GambleEnergyBall_Normal_Idle.yy",},"LayerId":{"name":"75185384-1bc1-405f-9e24-96ea93e529aa","path":"sprites/spr_Projectile_GambleEnergyBall_Normal_Idle/spr_Projectile_GambleEnergyBall_Normal_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_GambleEnergyBall_Normal_Idle","path":"sprites/spr_Projectile_GambleEnergyBall_Normal_Idle/spr_Projectile_GambleEnergyBall_Normal_Idle.yy",},"resourceVersion":"1.0","name":"60826022-c2f0-4995-bff2-2927c9ef163e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"37f92892-7b31-4d36-8c92-d7853b479c8b","path":"sprites/spr_Projectile_GambleEnergyBall_Normal_Idle/spr_Projectile_GambleEnergyBall_Normal_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"37f92892-7b31-4d36-8c92-d7853b479c8b","path":"sprites/spr_Projectile_GambleEnergyBall_Normal_Idle/spr_Projectile_GambleEnergyBall_Normal_Idle.yy",},"LayerId":{"name":"75185384-1bc1-405f-9e24-96ea93e529aa","path":"sprites/spr_Projectile_GambleEnergyBall_Normal_Idle/spr_Projectile_GambleEnergyBall_Normal_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_GambleEnergyBall_Normal_Idle","path":"sprites/spr_Projectile_GambleEnergyBall_Normal_Idle/spr_Projectile_GambleEnergyBall_Normal_Idle.yy",},"resourceVersion":"1.0","name":"37f92892-7b31-4d36-8c92-d7853b479c8b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8ea0b21f-de5a-4599-a849-4540e139aff2","path":"sprites/spr_Projectile_GambleEnergyBall_Normal_Idle/spr_Projectile_GambleEnergyBall_Normal_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8ea0b21f-de5a-4599-a849-4540e139aff2","path":"sprites/spr_Projectile_GambleEnergyBall_Normal_Idle/spr_Projectile_GambleEnergyBall_Normal_Idle.yy",},"LayerId":{"name":"75185384-1bc1-405f-9e24-96ea93e529aa","path":"sprites/spr_Projectile_GambleEnergyBall_Normal_Idle/spr_Projectile_GambleEnergyBall_Normal_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_GambleEnergyBall_Normal_Idle","path":"sprites/spr_Projectile_GambleEnergyBall_Normal_Idle/spr_Projectile_GambleEnergyBall_Normal_Idle.yy",},"resourceVersion":"1.0","name":"8ea0b21f-de5a-4599-a849-4540e139aff2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d2ecb665-5ec1-4ba3-93d1-d356edc76fbf",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"60826022-c2f0-4995-bff2-2927c9ef163e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"37f92892-7b31-4d36-8c92-d7853b479c8b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8ea0b21f-de5a-4599-a849-4540e139aff2",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Projectile_GambleEnergyBall_Normal_Idle","path":"sprites/spr_Projectile_GambleEnergyBall_Normal_Idle/spr_Projectile_GambleEnergyBall_Normal_Idle.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Projectile_GambleEnergyBall_Normal_Idle",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -46,15 +43,15 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 4.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"5708b02d-9495-4d57-98c9-642b2953bb91","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d2ecb665-5ec1-4ba3-93d1-d356edc76fbf","path":"sprites/spr_Projectile_GambleEnergyBall_Normal_Idle/spr_Projectile_GambleEnergyBall_Normal_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"b28b5ba8-b687-4439-bc68-b404c7237043","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"60826022-c2f0-4995-bff2-2927c9ef163e","path":"sprites/spr_Projectile_GambleEnergyBall_Normal_Idle/spr_Projectile_GambleEnergyBall_Normal_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"907e486f-21b3-4f9d-8737-0927285ef7f0","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"37f92892-7b31-4d36-8c92-d7853b479c8b","path":"sprites/spr_Projectile_GambleEnergyBall_Normal_Idle/spr_Projectile_GambleEnergyBall_Normal_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"a0f22306-9d11-407e-8b81-935004489179","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8ea0b21f-de5a-4599-a849-4540e139aff2","path":"sprites/spr_Projectile_GambleEnergyBall_Normal_Idle/spr_Projectile_GambleEnergyBall_Normal_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"5708b02d-9495-4d57-98c9-642b2953bb91","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d2ecb665-5ec1-4ba3-93d1-d356edc76fbf","path":"sprites/spr_Projectile_GambleEnergyBall_Normal_Idle/spr_Projectile_GambleEnergyBall_Normal_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b28b5ba8-b687-4439-bc68-b404c7237043","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"60826022-c2f0-4995-bff2-2927c9ef163e","path":"sprites/spr_Projectile_GambleEnergyBall_Normal_Idle/spr_Projectile_GambleEnergyBall_Normal_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"907e486f-21b3-4f9d-8737-0927285ef7f0","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"37f92892-7b31-4d36-8c92-d7853b479c8b","path":"sprites/spr_Projectile_GambleEnergyBall_Normal_Idle/spr_Projectile_GambleEnergyBall_Normal_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a0f22306-9d11-407e-8b81-935004489179","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8ea0b21f-de5a-4599-a849-4540e139aff2","path":"sprites/spr_Projectile_GambleEnergyBall_Normal_Idle/spr_Projectile_GambleEnergyBall_Normal_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -70,22 +67,13 @@
     "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Projectile_GambleEnergyBall_Normal_Idle","path":"sprites/spr_Projectile_GambleEnergyBall_Normal_Idle/spr_Projectile_GambleEnergyBall_Normal_Idle.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Projectile_GambleEnergyBall_Normal_Idle",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"75185384-1bc1-405f-9e24-96ea93e529aa","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"75185384-1bc1-405f-9e24-96ea93e529aa","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Projectiles/Gamble Energy Ball/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Projectile_GambleEnergyBall_Normal_Idle",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

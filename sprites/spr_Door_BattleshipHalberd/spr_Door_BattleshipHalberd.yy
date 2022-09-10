@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Door_BattleshipHalberd",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4e868329-6419-4ca5-b68f-35439254a4f2","path":"sprites/spr_Door_BattleshipHalberd/spr_Door_BattleshipHalberd.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4e868329-6419-4ca5-b68f-35439254a4f2","path":"sprites/spr_Door_BattleshipHalberd/spr_Door_BattleshipHalberd.yy",},"LayerId":{"name":"443e97ba-1cae-406a-9755-d4c0735fb9db","path":"sprites/spr_Door_BattleshipHalberd/spr_Door_BattleshipHalberd.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Door_BattleshipHalberd","path":"sprites/spr_Door_BattleshipHalberd/spr_Door_BattleshipHalberd.yy",},"resourceVersion":"1.0","name":"4e868329-6419-4ca5-b68f-35439254a4f2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4e868329-6419-4ca5-b68f-35439254a4f2",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Door_BattleshipHalberd","path":"sprites/spr_Door_BattleshipHalberd/spr_Door_BattleshipHalberd.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Door_BattleshipHalberd",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"770d51a5-d75c-4590-a47c-dcd448fff1e4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4e868329-6419-4ca5-b68f-35439254a4f2","path":"sprites/spr_Door_BattleshipHalberd/spr_Door_BattleshipHalberd.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"770d51a5-d75c-4590-a47c-dcd448fff1e4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4e868329-6419-4ca5-b68f-35439254a4f2","path":"sprites/spr_Door_BattleshipHalberd/spr_Door_BattleshipHalberd.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 39,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Door_BattleshipHalberd","path":"sprites/spr_Door_BattleshipHalberd/spr_Door_BattleshipHalberd.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Door_BattleshipHalberd",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"443e97ba-1cae-406a-9755-d4c0735fb9db","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"443e97ba-1cae-406a-9755-d4c0735fb9db","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Door",
     "path": "folders/Sprites/Stage Elements/Door.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Door_BattleshipHalberd",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

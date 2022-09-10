@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6d99d173-f959-4e27-a4aa-4778c1ccdddb","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6d99d173-f959-4e27-a4aa-4778c1ccdddb","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt.yy",},"LayerId":{"name":"94b40e56-ec2d-4ca7-95ad-1b838731eef0","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt.yy",},"resourceVersion":"1.0","name":"6d99d173-f959-4e27-a4aa-4778c1ccdddb","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5e1f8fa0-de78-4dde-813d-4cc9464240b5","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5e1f8fa0-de78-4dde-813d-4cc9464240b5","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt.yy",},"LayerId":{"name":"94b40e56-ec2d-4ca7-95ad-1b838731eef0","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt.yy",},"resourceVersion":"1.0","name":"5e1f8fa0-de78-4dde-813d-4cc9464240b5","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"bb3ffec9-a876-40d0-9538-d677b1782e3e","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bb3ffec9-a876-40d0-9538-d677b1782e3e","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt.yy",},"LayerId":{"name":"94b40e56-ec2d-4ca7-95ad-1b838731eef0","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt.yy",},"resourceVersion":"1.0","name":"bb3ffec9-a876-40d0-9538-d677b1782e3e","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6d99d173-f959-4e27-a4aa-4778c1ccdddb",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5e1f8fa0-de78-4dde-813d-4cc9464240b5",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bb3ffec9-a876-40d0-9538-d677b1782e3e",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 12.0,
@@ -43,14 +42,14 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 3.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"4c10bc94-aa67-437b-940b-8d6f7f73c4c2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6d99d173-f959-4e27-a4aa-4778c1ccdddb","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"d797c0a5-a5c2-4390-a02b-65ecd50f78ce","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5e1f8fa0-de78-4dde-813d-4cc9464240b5","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"29ed203a-3370-4e04-9f66-b9103b973ec3","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bb3ffec9-a876-40d0-9538-d677b1782e3e","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"4c10bc94-aa67-437b-940b-8d6f7f73c4c2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6d99d173-f959-4e27-a4aa-4778c1ccdddb","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d797c0a5-a5c2-4390-a02b-65ecd50f78ce","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5e1f8fa0-de78-4dde-813d-4cc9464240b5","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"29ed203a-3370-4e04-9f66-b9103b973ec3","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bb3ffec9-a876-40d0-9538-d677b1782e3e","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -66,22 +65,13 @@
     "yorigin": 26,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt/spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"94b40e56-ec2d-4ca7-95ad-1b838731eef0","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"94b40e56-ec2d-4ca7-95ad-1b838731eef0","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Hat",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Ninja/Modern/Hat.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_AbilityHat_Ninja_Modern_FloatHurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

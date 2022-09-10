@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_Normal_Ufo_Up_Mask",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"de6ebc66-4f4a-48ac-9684-d8b2b1f91c23","path":"sprites/spr_Kirby_Normal_Ufo_Up_Mask/spr_Kirby_Normal_Ufo_Up_Mask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"de6ebc66-4f4a-48ac-9684-d8b2b1f91c23","path":"sprites/spr_Kirby_Normal_Ufo_Up_Mask/spr_Kirby_Normal_Ufo_Up_Mask.yy",},"LayerId":{"name":"6fd0fd3c-5a8d-421a-9129-2d0cd4d43b70","path":"sprites/spr_Kirby_Normal_Ufo_Up_Mask/spr_Kirby_Normal_Ufo_Up_Mask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Ufo_Up_Mask","path":"sprites/spr_Kirby_Normal_Ufo_Up_Mask/spr_Kirby_Normal_Ufo_Up_Mask.yy",},"resourceVersion":"1.0","name":"de6ebc66-4f4a-48ac-9684-d8b2b1f91c23","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d80ba2ab-c18e-44a3-a2da-6853e2658e3b","path":"sprites/spr_Kirby_Normal_Ufo_Up_Mask/spr_Kirby_Normal_Ufo_Up_Mask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d80ba2ab-c18e-44a3-a2da-6853e2658e3b","path":"sprites/spr_Kirby_Normal_Ufo_Up_Mask/spr_Kirby_Normal_Ufo_Up_Mask.yy",},"LayerId":{"name":"6fd0fd3c-5a8d-421a-9129-2d0cd4d43b70","path":"sprites/spr_Kirby_Normal_Ufo_Up_Mask/spr_Kirby_Normal_Ufo_Up_Mask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Ufo_Up_Mask","path":"sprites/spr_Kirby_Normal_Ufo_Up_Mask/spr_Kirby_Normal_Ufo_Up_Mask.yy",},"resourceVersion":"1.0","name":"d80ba2ab-c18e-44a3-a2da-6853e2658e3b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2a5da26a-1ea4-4ab4-9fb7-f1d8b39614cf","path":"sprites/spr_Kirby_Normal_Ufo_Up_Mask/spr_Kirby_Normal_Ufo_Up_Mask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2a5da26a-1ea4-4ab4-9fb7-f1d8b39614cf","path":"sprites/spr_Kirby_Normal_Ufo_Up_Mask/spr_Kirby_Normal_Ufo_Up_Mask.yy",},"LayerId":{"name":"6fd0fd3c-5a8d-421a-9129-2d0cd4d43b70","path":"sprites/spr_Kirby_Normal_Ufo_Up_Mask/spr_Kirby_Normal_Ufo_Up_Mask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Ufo_Up_Mask","path":"sprites/spr_Kirby_Normal_Ufo_Up_Mask/spr_Kirby_Normal_Ufo_Up_Mask.yy",},"resourceVersion":"1.0","name":"2a5da26a-1ea4-4ab4-9fb7-f1d8b39614cf","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"de6ebc66-4f4a-48ac-9684-d8b2b1f91c23",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d80ba2ab-c18e-44a3-a2da-6853e2658e3b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2a5da26a-1ea4-4ab4-9fb7-f1d8b39614cf",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_Normal_Ufo_Up_Mask","path":"sprites/spr_Kirby_Normal_Ufo_Up_Mask/spr_Kirby_Normal_Ufo_Up_Mask.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_Normal_Ufo_Up_Mask",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 12.0,
@@ -43,14 +42,14 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 3.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"107bfbef-98a4-4c15-8538-081843f94433","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"de6ebc66-4f4a-48ac-9684-d8b2b1f91c23","path":"sprites/spr_Kirby_Normal_Ufo_Up_Mask/spr_Kirby_Normal_Ufo_Up_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"c55e9733-a218-4f27-bb36-b40f10ffac6e","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d80ba2ab-c18e-44a3-a2da-6853e2658e3b","path":"sprites/spr_Kirby_Normal_Ufo_Up_Mask/spr_Kirby_Normal_Ufo_Up_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"c59194e9-b9d6-4511-8c5a-38cd164c0a20","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2a5da26a-1ea4-4ab4-9fb7-f1d8b39614cf","path":"sprites/spr_Kirby_Normal_Ufo_Up_Mask/spr_Kirby_Normal_Ufo_Up_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"107bfbef-98a4-4c15-8538-081843f94433","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"de6ebc66-4f4a-48ac-9684-d8b2b1f91c23","path":"sprites/spr_Kirby_Normal_Ufo_Up_Mask/spr_Kirby_Normal_Ufo_Up_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c55e9733-a218-4f27-bb36-b40f10ffac6e","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d80ba2ab-c18e-44a3-a2da-6853e2658e3b","path":"sprites/spr_Kirby_Normal_Ufo_Up_Mask/spr_Kirby_Normal_Ufo_Up_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c59194e9-b9d6-4511-8c5a-38cd164c0a20","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2a5da26a-1ea4-4ab4-9fb7-f1d8b39614cf","path":"sprites/spr_Kirby_Normal_Ufo_Up_Mask/spr_Kirby_Normal_Ufo_Up_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -66,22 +65,13 @@
     "yorigin": 13,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_Normal_Ufo_Up_Mask","path":"sprites/spr_Kirby_Normal_Ufo_Up_Mask/spr_Kirby_Normal_Ufo_Up_Mask.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_Normal_Ufo_Up_Mask",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6fd0fd3c-5a8d-421a-9129-2d0cd4d43b70","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6fd0fd3c-5a8d-421a-9129-2d0cd4d43b70","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Masks",
     "path": "folders/Sprites/Characters/Kirby/Normal/Masks.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_Normal_Ufo_Up_Mask",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

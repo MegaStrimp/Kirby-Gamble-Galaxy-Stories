@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "bg_Aquatia_Harbor_Clouds",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"19ecabbe-9629-4118-aa2b-e6718b0b4b4c","path":"sprites/bg_Aquatia_Harbor_Clouds/bg_Aquatia_Harbor_Clouds.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"19ecabbe-9629-4118-aa2b-e6718b0b4b4c","path":"sprites/bg_Aquatia_Harbor_Clouds/bg_Aquatia_Harbor_Clouds.yy",},"LayerId":{"name":"ee387472-6e21-4e7d-a92c-0e4418ee1b81","path":"sprites/bg_Aquatia_Harbor_Clouds/bg_Aquatia_Harbor_Clouds.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"bg_Aquatia_Harbor_Clouds","path":"sprites/bg_Aquatia_Harbor_Clouds/bg_Aquatia_Harbor_Clouds.yy",},"resourceVersion":"1.0","name":"19ecabbe-9629-4118-aa2b-e6718b0b4b4c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"19ecabbe-9629-4118-aa2b-e6718b0b4b4c",},
   ],
   "sequence": {
-    "spriteId": {"name":"bg_Aquatia_Harbor_Clouds","path":"sprites/bg_Aquatia_Harbor_Clouds/bg_Aquatia_Harbor_Clouds.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "bg_Aquatia_Harbor_Clouds",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"6857c6ec-9862-4e85-aa8c-4b665e09b360","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"19ecabbe-9629-4118-aa2b-e6718b0b4b4c","path":"sprites/bg_Aquatia_Harbor_Clouds/bg_Aquatia_Harbor_Clouds.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"6857c6ec-9862-4e85-aa8c-4b665e09b360","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"19ecabbe-9629-4118-aa2b-e6718b0b4b4c","path":"sprites/bg_Aquatia_Harbor_Clouds/bg_Aquatia_Harbor_Clouds.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"bg_Aquatia_Harbor_Clouds","path":"sprites/bg_Aquatia_Harbor_Clouds/bg_Aquatia_Harbor_Clouds.yy",},
-    "resourceVersion": "1.4",
-    "name": "bg_Aquatia_Harbor_Clouds",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ee387472-6e21-4e7d-a92c-0e4418ee1b81","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ee387472-6e21-4e7d-a92c-0e4418ee1b81","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Aquatia",
     "path": "folders/Backgrounds/Aquatia.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "bg_Aquatia_Harbor_Clouds",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

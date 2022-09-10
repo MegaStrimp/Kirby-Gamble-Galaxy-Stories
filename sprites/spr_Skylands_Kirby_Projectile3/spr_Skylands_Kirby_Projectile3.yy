@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Skylands_Kirby_Projectile3",
   "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"145a6ed5-3e87-427a-83ce-3982c1df0343","path":"sprites/spr_Skylands_Kirby_Projectile3/spr_Skylands_Kirby_Projectile3.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"145a6ed5-3e87-427a-83ce-3982c1df0343","path":"sprites/spr_Skylands_Kirby_Projectile3/spr_Skylands_Kirby_Projectile3.yy",},"LayerId":{"name":"8788209c-f206-468a-9c22-e3f077cfc7a2","path":"sprites/spr_Skylands_Kirby_Projectile3/spr_Skylands_Kirby_Projectile3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Skylands_Kirby_Projectile3","path":"sprites/spr_Skylands_Kirby_Projectile3/spr_Skylands_Kirby_Projectile3.yy",},"resourceVersion":"1.0","name":"145a6ed5-3e87-427a-83ce-3982c1df0343","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0dd4cc15-dab9-400c-8990-edd3692f7807","path":"sprites/spr_Skylands_Kirby_Projectile3/spr_Skylands_Kirby_Projectile3.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0dd4cc15-dab9-400c-8990-edd3692f7807","path":"sprites/spr_Skylands_Kirby_Projectile3/spr_Skylands_Kirby_Projectile3.yy",},"LayerId":{"name":"8788209c-f206-468a-9c22-e3f077cfc7a2","path":"sprites/spr_Skylands_Kirby_Projectile3/spr_Skylands_Kirby_Projectile3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Skylands_Kirby_Projectile3","path":"sprites/spr_Skylands_Kirby_Projectile3/spr_Skylands_Kirby_Projectile3.yy",},"resourceVersion":"1.0","name":"0dd4cc15-dab9-400c-8990-edd3692f7807","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"75faaab6-4baf-42f8-bdd8-608047443cbb","path":"sprites/spr_Skylands_Kirby_Projectile3/spr_Skylands_Kirby_Projectile3.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"75faaab6-4baf-42f8-bdd8-608047443cbb","path":"sprites/spr_Skylands_Kirby_Projectile3/spr_Skylands_Kirby_Projectile3.yy",},"LayerId":{"name":"8788209c-f206-468a-9c22-e3f077cfc7a2","path":"sprites/spr_Skylands_Kirby_Projectile3/spr_Skylands_Kirby_Projectile3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Skylands_Kirby_Projectile3","path":"sprites/spr_Skylands_Kirby_Projectile3/spr_Skylands_Kirby_Projectile3.yy",},"resourceVersion":"1.0","name":"75faaab6-4baf-42f8-bdd8-608047443cbb","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f4a959b3-816a-48f6-81e1-6923ef084320","path":"sprites/spr_Skylands_Kirby_Projectile3/spr_Skylands_Kirby_Projectile3.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f4a959b3-816a-48f6-81e1-6923ef084320","path":"sprites/spr_Skylands_Kirby_Projectile3/spr_Skylands_Kirby_Projectile3.yy",},"LayerId":{"name":"8788209c-f206-468a-9c22-e3f077cfc7a2","path":"sprites/spr_Skylands_Kirby_Projectile3/spr_Skylands_Kirby_Projectile3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Skylands_Kirby_Projectile3","path":"sprites/spr_Skylands_Kirby_Projectile3/spr_Skylands_Kirby_Projectile3.yy",},"resourceVersion":"1.0","name":"f4a959b3-816a-48f6-81e1-6923ef084320","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"145a6ed5-3e87-427a-83ce-3982c1df0343",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0dd4cc15-dab9-400c-8990-edd3692f7807",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"75faaab6-4baf-42f8-bdd8-608047443cbb",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f4a959b3-816a-48f6-81e1-6923ef084320",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Skylands_Kirby_Projectile3","path":"sprites/spr_Skylands_Kirby_Projectile3/spr_Skylands_Kirby_Projectile3.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Skylands_Kirby_Projectile3",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 12.0,
@@ -46,15 +43,15 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 4.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"7b077303-7d80-4494-aaa6-03129614c9a5","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"145a6ed5-3e87-427a-83ce-3982c1df0343","path":"sprites/spr_Skylands_Kirby_Projectile3/spr_Skylands_Kirby_Projectile3.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"f4768326-787e-43f6-a71e-bbd0267d2ad7","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0dd4cc15-dab9-400c-8990-edd3692f7807","path":"sprites/spr_Skylands_Kirby_Projectile3/spr_Skylands_Kirby_Projectile3.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"a0334aeb-682c-4ba0-9c22-d2931adcbe96","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"75faaab6-4baf-42f8-bdd8-608047443cbb","path":"sprites/spr_Skylands_Kirby_Projectile3/spr_Skylands_Kirby_Projectile3.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"5a82a4ed-3b29-4bfb-a67a-9138d19fe052","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f4a959b3-816a-48f6-81e1-6923ef084320","path":"sprites/spr_Skylands_Kirby_Projectile3/spr_Skylands_Kirby_Projectile3.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"7b077303-7d80-4494-aaa6-03129614c9a5","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"145a6ed5-3e87-427a-83ce-3982c1df0343","path":"sprites/spr_Skylands_Kirby_Projectile3/spr_Skylands_Kirby_Projectile3.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f4768326-787e-43f6-a71e-bbd0267d2ad7","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0dd4cc15-dab9-400c-8990-edd3692f7807","path":"sprites/spr_Skylands_Kirby_Projectile3/spr_Skylands_Kirby_Projectile3.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a0334aeb-682c-4ba0-9c22-d2931adcbe96","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"75faaab6-4baf-42f8-bdd8-608047443cbb","path":"sprites/spr_Skylands_Kirby_Projectile3/spr_Skylands_Kirby_Projectile3.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"5a82a4ed-3b29-4bfb-a67a-9138d19fe052","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f4a959b3-816a-48f6-81e1-6923ef084320","path":"sprites/spr_Skylands_Kirby_Projectile3/spr_Skylands_Kirby_Projectile3.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -70,22 +67,13 @@
     "yorigin": 5,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Skylands_Kirby_Projectile3","path":"sprites/spr_Skylands_Kirby_Projectile3/spr_Skylands_Kirby_Projectile3.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Skylands_Kirby_Projectile3",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8788209c-f206-468a-9c22-e3f077cfc7a2","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"8788209c-f206-468a-9c22-e3f077cfc7a2","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Kirby",
     "path": "folders/Sprites/Subgames/Skylands/Characters/Kirby.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Skylands_Kirby_Projectile3",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

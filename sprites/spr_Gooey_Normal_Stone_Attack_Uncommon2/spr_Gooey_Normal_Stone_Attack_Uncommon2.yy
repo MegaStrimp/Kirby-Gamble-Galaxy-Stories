@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Gooey_Normal_Stone_Attack_Uncommon2",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a6d718a9-a7b4-4b10-ab82-64c8093ecd79","path":"sprites/spr_Gooey_Normal_Stone_Attack_Uncommon2/spr_Gooey_Normal_Stone_Attack_Uncommon2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a6d718a9-a7b4-4b10-ab82-64c8093ecd79","path":"sprites/spr_Gooey_Normal_Stone_Attack_Uncommon2/spr_Gooey_Normal_Stone_Attack_Uncommon2.yy",},"LayerId":{"name":"93e7a3a5-8cd7-4f7d-a1a7-d4425a946c0f","path":"sprites/spr_Gooey_Normal_Stone_Attack_Uncommon2/spr_Gooey_Normal_Stone_Attack_Uncommon2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Gooey_Normal_Stone_Attack_Uncommon2","path":"sprites/spr_Gooey_Normal_Stone_Attack_Uncommon2/spr_Gooey_Normal_Stone_Attack_Uncommon2.yy",},"resourceVersion":"1.0","name":"a6d718a9-a7b4-4b10-ab82-64c8093ecd79","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"cd0816f5-7a6b-4c3c-90ff-04ca75d94cd0","path":"sprites/spr_Gooey_Normal_Stone_Attack_Uncommon2/spr_Gooey_Normal_Stone_Attack_Uncommon2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cd0816f5-7a6b-4c3c-90ff-04ca75d94cd0","path":"sprites/spr_Gooey_Normal_Stone_Attack_Uncommon2/spr_Gooey_Normal_Stone_Attack_Uncommon2.yy",},"LayerId":{"name":"93e7a3a5-8cd7-4f7d-a1a7-d4425a946c0f","path":"sprites/spr_Gooey_Normal_Stone_Attack_Uncommon2/spr_Gooey_Normal_Stone_Attack_Uncommon2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Gooey_Normal_Stone_Attack_Uncommon2","path":"sprites/spr_Gooey_Normal_Stone_Attack_Uncommon2/spr_Gooey_Normal_Stone_Attack_Uncommon2.yy",},"resourceVersion":"1.0","name":"cd0816f5-7a6b-4c3c-90ff-04ca75d94cd0","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"88641c36-780e-47a9-8abd-d8d653d240f3","path":"sprites/spr_Gooey_Normal_Stone_Attack_Uncommon2/spr_Gooey_Normal_Stone_Attack_Uncommon2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"88641c36-780e-47a9-8abd-d8d653d240f3","path":"sprites/spr_Gooey_Normal_Stone_Attack_Uncommon2/spr_Gooey_Normal_Stone_Attack_Uncommon2.yy",},"LayerId":{"name":"93e7a3a5-8cd7-4f7d-a1a7-d4425a946c0f","path":"sprites/spr_Gooey_Normal_Stone_Attack_Uncommon2/spr_Gooey_Normal_Stone_Attack_Uncommon2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Gooey_Normal_Stone_Attack_Uncommon2","path":"sprites/spr_Gooey_Normal_Stone_Attack_Uncommon2/spr_Gooey_Normal_Stone_Attack_Uncommon2.yy",},"resourceVersion":"1.0","name":"88641c36-780e-47a9-8abd-d8d653d240f3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a6d718a9-a7b4-4b10-ab82-64c8093ecd79",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cd0816f5-7a6b-4c3c-90ff-04ca75d94cd0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"88641c36-780e-47a9-8abd-d8d653d240f3",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Gooey_Normal_Stone_Attack_Uncommon2","path":"sprites/spr_Gooey_Normal_Stone_Attack_Uncommon2/spr_Gooey_Normal_Stone_Attack_Uncommon2.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Gooey_Normal_Stone_Attack_Uncommon2",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -43,14 +42,14 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 3.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"2832ee04-651a-4203-bfc6-4809951c4a91","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a6d718a9-a7b4-4b10-ab82-64c8093ecd79","path":"sprites/spr_Gooey_Normal_Stone_Attack_Uncommon2/spr_Gooey_Normal_Stone_Attack_Uncommon2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"11ef4ec2-2bfd-4fd5-a90a-19deb8b4f07b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cd0816f5-7a6b-4c3c-90ff-04ca75d94cd0","path":"sprites/spr_Gooey_Normal_Stone_Attack_Uncommon2/spr_Gooey_Normal_Stone_Attack_Uncommon2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"4fec035b-e45f-4008-88cd-0fa0dfb89c67","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"88641c36-780e-47a9-8abd-d8d653d240f3","path":"sprites/spr_Gooey_Normal_Stone_Attack_Uncommon2/spr_Gooey_Normal_Stone_Attack_Uncommon2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"2832ee04-651a-4203-bfc6-4809951c4a91","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a6d718a9-a7b4-4b10-ab82-64c8093ecd79","path":"sprites/spr_Gooey_Normal_Stone_Attack_Uncommon2/spr_Gooey_Normal_Stone_Attack_Uncommon2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"11ef4ec2-2bfd-4fd5-a90a-19deb8b4f07b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cd0816f5-7a6b-4c3c-90ff-04ca75d94cd0","path":"sprites/spr_Gooey_Normal_Stone_Attack_Uncommon2/spr_Gooey_Normal_Stone_Attack_Uncommon2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4fec035b-e45f-4008-88cd-0fa0dfb89c67","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"88641c36-780e-47a9-8abd-d8d653d240f3","path":"sprites/spr_Gooey_Normal_Stone_Attack_Uncommon2/spr_Gooey_Normal_Stone_Attack_Uncommon2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -66,22 +65,13 @@
     "yorigin": 26,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Gooey_Normal_Stone_Attack_Uncommon2","path":"sprites/spr_Gooey_Normal_Stone_Attack_Uncommon2/spr_Gooey_Normal_Stone_Attack_Uncommon2.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Gooey_Normal_Stone_Attack_Uncommon2",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"93e7a3a5-8cd7-4f7d-a1a7-d4425a946c0f","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"93e7a3a5-8cd7-4f7d-a1a7-d4425a946c0f","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Characters/Gooey/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Gooey_Normal_Stone_Attack_Uncommon2",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_HatBackground_Fire_KSSU_Walk",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"5bc19c87-31f3-4444-b8bb-58c1434e1821","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Walk/spr_Kirby_HatBackground_Fire_KSSU_Walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5bc19c87-31f3-4444-b8bb-58c1434e1821","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Walk/spr_Kirby_HatBackground_Fire_KSSU_Walk.yy",},"LayerId":{"name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Walk/spr_Kirby_HatBackground_Fire_KSSU_Walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatBackground_Fire_KSSU_Walk","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Walk/spr_Kirby_HatBackground_Fire_KSSU_Walk.yy",},"resourceVersion":"1.0","name":"5bc19c87-31f3-4444-b8bb-58c1434e1821","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8c5b3934-0a8b-4845-a048-9515c8bc6c8e","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Walk/spr_Kirby_HatBackground_Fire_KSSU_Walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8c5b3934-0a8b-4845-a048-9515c8bc6c8e","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Walk/spr_Kirby_HatBackground_Fire_KSSU_Walk.yy",},"LayerId":{"name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Walk/spr_Kirby_HatBackground_Fire_KSSU_Walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatBackground_Fire_KSSU_Walk","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Walk/spr_Kirby_HatBackground_Fire_KSSU_Walk.yy",},"resourceVersion":"1.0","name":"8c5b3934-0a8b-4845-a048-9515c8bc6c8e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f57186d0-d36a-4820-8baf-3517c48332a3","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Walk/spr_Kirby_HatBackground_Fire_KSSU_Walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f57186d0-d36a-4820-8baf-3517c48332a3","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Walk/spr_Kirby_HatBackground_Fire_KSSU_Walk.yy",},"LayerId":{"name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Walk/spr_Kirby_HatBackground_Fire_KSSU_Walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatBackground_Fire_KSSU_Walk","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Walk/spr_Kirby_HatBackground_Fire_KSSU_Walk.yy",},"resourceVersion":"1.0","name":"f57186d0-d36a-4820-8baf-3517c48332a3","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"452aa497-901f-489a-a919-b3242da38606","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Walk/spr_Kirby_HatBackground_Fire_KSSU_Walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"452aa497-901f-489a-a919-b3242da38606","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Walk/spr_Kirby_HatBackground_Fire_KSSU_Walk.yy",},"LayerId":{"name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Walk/spr_Kirby_HatBackground_Fire_KSSU_Walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatBackground_Fire_KSSU_Walk","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Walk/spr_Kirby_HatBackground_Fire_KSSU_Walk.yy",},"resourceVersion":"1.0","name":"452aa497-901f-489a-a919-b3242da38606","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5bc19c87-31f3-4444-b8bb-58c1434e1821",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8c5b3934-0a8b-4845-a048-9515c8bc6c8e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f57186d0-d36a-4820-8baf-3517c48332a3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"452aa497-901f-489a-a919-b3242da38606",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_HatBackground_Fire_KSSU_Walk","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Walk/spr_Kirby_HatBackground_Fire_KSSU_Walk.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_HatBackground_Fire_KSSU_Walk",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 15.0,
@@ -46,15 +43,15 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 4.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"53b70f7b-e123-4c18-999e-4a432aaa1ef8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5bc19c87-31f3-4444-b8bb-58c1434e1821","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Walk/spr_Kirby_HatBackground_Fire_KSSU_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"980b62f1-d19c-453f-8582-47db5cfb4e5f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8c5b3934-0a8b-4845-a048-9515c8bc6c8e","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Walk/spr_Kirby_HatBackground_Fire_KSSU_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"334843b6-5545-499b-aa62-2b5a759f8f7f","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f57186d0-d36a-4820-8baf-3517c48332a3","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Walk/spr_Kirby_HatBackground_Fire_KSSU_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"cded31ff-d8dc-42e9-9da5-e52bc8757c76","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"452aa497-901f-489a-a919-b3242da38606","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Walk/spr_Kirby_HatBackground_Fire_KSSU_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"53b70f7b-e123-4c18-999e-4a432aaa1ef8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5bc19c87-31f3-4444-b8bb-58c1434e1821","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Walk/spr_Kirby_HatBackground_Fire_KSSU_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"980b62f1-d19c-453f-8582-47db5cfb4e5f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8c5b3934-0a8b-4845-a048-9515c8bc6c8e","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Walk/spr_Kirby_HatBackground_Fire_KSSU_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"334843b6-5545-499b-aa62-2b5a759f8f7f","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f57186d0-d36a-4820-8baf-3517c48332a3","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Walk/spr_Kirby_HatBackground_Fire_KSSU_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"cded31ff-d8dc-42e9-9da5-e52bc8757c76","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"452aa497-901f-489a-a919-b3242da38606","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Walk/spr_Kirby_HatBackground_Fire_KSSU_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -70,22 +67,13 @@
     "yorigin": 33,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_HatBackground_Fire_KSSU_Walk","path":"sprites/spr_Kirby_HatBackground_Fire_KSSU_Walk/spr_Kirby_HatBackground_Fire_KSSU_Walk.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_HatBackground_Fire_KSSU_Walk",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Background",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Fire/KSSU/Background.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_HatBackground_Fire_KSSU_Walk",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

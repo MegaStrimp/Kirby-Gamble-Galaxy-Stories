@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Noddy_Normal_Hurt",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"5894ed43-803b-49e1-9a1f-dc20f18d2658","path":"sprites/spr_Noddy_Normal_Hurt/spr_Noddy_Normal_Hurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5894ed43-803b-49e1-9a1f-dc20f18d2658","path":"sprites/spr_Noddy_Normal_Hurt/spr_Noddy_Normal_Hurt.yy",},"LayerId":{"name":"bcc2143f-4357-4c80-9e70-0a8882e12088","path":"sprites/spr_Noddy_Normal_Hurt/spr_Noddy_Normal_Hurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Noddy_Normal_Hurt","path":"sprites/spr_Noddy_Normal_Hurt/spr_Noddy_Normal_Hurt.yy",},"resourceVersion":"1.0","name":"5894ed43-803b-49e1-9a1f-dc20f18d2658","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5894ed43-803b-49e1-9a1f-dc20f18d2658",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Noddy_Normal_Hurt","path":"sprites/spr_Noddy_Normal_Hurt/spr_Noddy_Normal_Hurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Noddy_Normal_Hurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"9e866ca5-b782-43e0-9fb0-31227ef0b0c7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5894ed43-803b-49e1-9a1f-dc20f18d2658","path":"sprites/spr_Noddy_Normal_Hurt/spr_Noddy_Normal_Hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"9e866ca5-b782-43e0-9fb0-31227ef0b0c7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5894ed43-803b-49e1-9a1f-dc20f18d2658","path":"sprites/spr_Noddy_Normal_Hurt/spr_Noddy_Normal_Hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Noddy_Normal_Hurt","path":"sprites/spr_Noddy_Normal_Hurt/spr_Noddy_Normal_Hurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Noddy_Normal_Hurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"bcc2143f-4357-4c80-9e70-0a8882e12088","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"bcc2143f-4357-4c80-9e70-0a8882e12088","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Enemies/Noddy/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Noddy_Normal_Hurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

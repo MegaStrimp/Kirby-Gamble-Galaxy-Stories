@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_Normal_Bomb_Attack3Release_Mask",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d98bb3c5-80d6-45a0-bea2-4f3880b4d74a","path":"sprites/spr_Kirby_Normal_Bomb_Attack3Release_Mask/spr_Kirby_Normal_Bomb_Attack3Release_Mask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d98bb3c5-80d6-45a0-bea2-4f3880b4d74a","path":"sprites/spr_Kirby_Normal_Bomb_Attack3Release_Mask/spr_Kirby_Normal_Bomb_Attack3Release_Mask.yy",},"LayerId":{"name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","path":"sprites/spr_Kirby_Normal_Bomb_Attack3Release_Mask/spr_Kirby_Normal_Bomb_Attack3Release_Mask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Bomb_Attack3Release_Mask","path":"sprites/spr_Kirby_Normal_Bomb_Attack3Release_Mask/spr_Kirby_Normal_Bomb_Attack3Release_Mask.yy",},"resourceVersion":"1.0","name":"d98bb3c5-80d6-45a0-bea2-4f3880b4d74a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5ad88b9c-bee8-4477-9276-d3541c603aeb","path":"sprites/spr_Kirby_Normal_Bomb_Attack3Release_Mask/spr_Kirby_Normal_Bomb_Attack3Release_Mask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5ad88b9c-bee8-4477-9276-d3541c603aeb","path":"sprites/spr_Kirby_Normal_Bomb_Attack3Release_Mask/spr_Kirby_Normal_Bomb_Attack3Release_Mask.yy",},"LayerId":{"name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","path":"sprites/spr_Kirby_Normal_Bomb_Attack3Release_Mask/spr_Kirby_Normal_Bomb_Attack3Release_Mask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Bomb_Attack3Release_Mask","path":"sprites/spr_Kirby_Normal_Bomb_Attack3Release_Mask/spr_Kirby_Normal_Bomb_Attack3Release_Mask.yy",},"resourceVersion":"1.0","name":"5ad88b9c-bee8-4477-9276-d3541c603aeb","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d98bb3c5-80d6-45a0-bea2-4f3880b4d74a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5ad88b9c-bee8-4477-9276-d3541c603aeb",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_Normal_Bomb_Attack3Release_Mask","path":"sprites/spr_Kirby_Normal_Bomb_Attack3Release_Mask/spr_Kirby_Normal_Bomb_Attack3Release_Mask.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_Normal_Bomb_Attack3Release_Mask",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 3.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"1e3b8af7-9e7b-4fe3-a44f-fcc3ed70f09b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d98bb3c5-80d6-45a0-bea2-4f3880b4d74a","path":"sprites/spr_Kirby_Normal_Bomb_Attack3Release_Mask/spr_Kirby_Normal_Bomb_Attack3Release_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"35527959-011b-4908-815b-0a9266191f3b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5ad88b9c-bee8-4477-9276-d3541c603aeb","path":"sprites/spr_Kirby_Normal_Bomb_Attack3Release_Mask/spr_Kirby_Normal_Bomb_Attack3Release_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"1e3b8af7-9e7b-4fe3-a44f-fcc3ed70f09b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d98bb3c5-80d6-45a0-bea2-4f3880b4d74a","path":"sprites/spr_Kirby_Normal_Bomb_Attack3Release_Mask/spr_Kirby_Normal_Bomb_Attack3Release_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"35527959-011b-4908-815b-0a9266191f3b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5ad88b9c-bee8-4477-9276-d3541c603aeb","path":"sprites/spr_Kirby_Normal_Bomb_Attack3Release_Mask/spr_Kirby_Normal_Bomb_Attack3Release_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -62,22 +63,13 @@
     "yorigin": 22,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_Normal_Bomb_Attack3Release_Mask","path":"sprites/spr_Kirby_Normal_Bomb_Attack3Release_Mask/spr_Kirby_Normal_Bomb_Attack3Release_Mask.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_Normal_Bomb_Attack3Release_Mask",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Masks",
     "path": "folders/Sprites/Characters/Kirby/Normal/Masks.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_Normal_Bomb_Attack3Release_Mask",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_HatShadow_Stone_Modern_ClimbUp",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,33 +27,19 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"bd6cf3c2-1cdb-473f-8c93-dd5fb516a409","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bd6cf3c2-1cdb-473f-8c93-dd5fb516a409","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Stone_Modern_ClimbUp","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"bd6cf3c2-1cdb-473f-8c93-dd5fb516a409","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"889f1546-0f57-4e7c-9933-7a02725be4ff","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"889f1546-0f57-4e7c-9933-7a02725be4ff","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Stone_Modern_ClimbUp","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"889f1546-0f57-4e7c-9933-7a02725be4ff","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"85e1e9fa-e801-4aa7-b230-22d72749947f","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"85e1e9fa-e801-4aa7-b230-22d72749947f","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Stone_Modern_ClimbUp","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"85e1e9fa-e801-4aa7-b230-22d72749947f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"237c4661-3911-47d4-b256-605c5255245c","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"237c4661-3911-47d4-b256-605c5255245c","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Stone_Modern_ClimbUp","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"237c4661-3911-47d4-b256-605c5255245c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7cad362c-6538-4c39-a338-be7208b38f3a","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7cad362c-6538-4c39-a338-be7208b38f3a","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Stone_Modern_ClimbUp","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"7cad362c-6538-4c39-a338-be7208b38f3a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"eadd377b-266f-4c3f-8c44-80d2db74e920","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"eadd377b-266f-4c3f-8c44-80d2db74e920","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Stone_Modern_ClimbUp","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"eadd377b-266f-4c3f-8c44-80d2db74e920","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3a959577-f683-4b29-9f66-248a540f61e3","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3a959577-f683-4b29-9f66-248a540f61e3","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Stone_Modern_ClimbUp","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"3a959577-f683-4b29-9f66-248a540f61e3","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9bf8b92a-b54d-46b3-876a-4a0a1643ac86","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9bf8b92a-b54d-46b3-876a-4a0a1643ac86","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Stone_Modern_ClimbUp","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","name":"9bf8b92a-b54d-46b3-876a-4a0a1643ac86","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bd6cf3c2-1cdb-473f-8c93-dd5fb516a409",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"889f1546-0f57-4e7c-9933-7a02725be4ff",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"85e1e9fa-e801-4aa7-b230-22d72749947f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"237c4661-3911-47d4-b256-605c5255245c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7cad362c-6538-4c39-a338-be7208b38f3a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"eadd377b-266f-4c3f-8c44-80d2db74e920",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3a959577-f683-4b29-9f66-248a540f61e3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9bf8b92a-b54d-46b3-876a-4a0a1643ac86",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_HatShadow_Stone_Modern_ClimbUp","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_HatShadow_Stone_Modern_ClimbUp",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 12.0,
@@ -58,19 +47,19 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 8.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"de6adbf2-1c2c-4cb7-ab6a-fc6602463db4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bd6cf3c2-1cdb-473f-8c93-dd5fb516a409","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"fb0f9082-8ac7-4247-9aef-dc1015b46b39","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"889f1546-0f57-4e7c-9933-7a02725be4ff","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"e1560d11-c5f7-4d36-9541-b2ea84be69ae","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"85e1e9fa-e801-4aa7-b230-22d72749947f","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"72a17b75-9885-4f13-b311-33c5a26ba83c","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"237c4661-3911-47d4-b256-605c5255245c","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"fce0fb39-b399-45e1-a6ad-7b47253767fc","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7cad362c-6538-4c39-a338-be7208b38f3a","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"f6fc0153-7927-4883-8ad2-7601a19e09fb","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"eadd377b-266f-4c3f-8c44-80d2db74e920","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"df1a5f79-bee0-4bf8-bc27-439d7911718e","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3a959577-f683-4b29-9f66-248a540f61e3","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"afb16279-df4f-4d7d-92ce-3c5a49c712ea","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9bf8b92a-b54d-46b3-876a-4a0a1643ac86","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"de6adbf2-1c2c-4cb7-ab6a-fc6602463db4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bd6cf3c2-1cdb-473f-8c93-dd5fb516a409","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"fb0f9082-8ac7-4247-9aef-dc1015b46b39","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"889f1546-0f57-4e7c-9933-7a02725be4ff","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e1560d11-c5f7-4d36-9541-b2ea84be69ae","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"85e1e9fa-e801-4aa7-b230-22d72749947f","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"72a17b75-9885-4f13-b311-33c5a26ba83c","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"237c4661-3911-47d4-b256-605c5255245c","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"fce0fb39-b399-45e1-a6ad-7b47253767fc","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7cad362c-6538-4c39-a338-be7208b38f3a","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f6fc0153-7927-4883-8ad2-7601a19e09fb","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"eadd377b-266f-4c3f-8c44-80d2db74e920","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"df1a5f79-bee0-4bf8-bc27-439d7911718e","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3a959577-f683-4b29-9f66-248a540f61e3","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"afb16279-df4f-4d7d-92ce-3c5a49c712ea","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9bf8b92a-b54d-46b3-876a-4a0a1643ac86","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -86,22 +75,13 @@
     "yorigin": 19,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_HatShadow_Stone_Modern_ClimbUp","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_ClimbUp/spr_Kirby_HatShadow_Stone_Modern_ClimbUp.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_HatShadow_Stone_Modern_ClimbUp",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Shadow",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Stone/Modern/Shadow.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_HatShadow_Stone_Modern_ClimbUp",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

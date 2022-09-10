@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,33 +27,19 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"740af9f4-d7a4-4f6a-b4b7-9b5d34f48ed4","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"740af9f4-d7a4-4f6a-b4b7-9b5d34f48ed4","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","name":"740af9f4-d7a4-4f6a-b4b7-9b5d34f48ed4","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b3e97b58-ecc5-46fb-aa61-77f4726c234c","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b3e97b58-ecc5-46fb-aa61-77f4726c234c","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","name":"b3e97b58-ecc5-46fb-aa61-77f4726c234c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"aa7706e7-72c3-483c-9de0-c3da49b7f570","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"aa7706e7-72c3-483c-9de0-c3da49b7f570","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","name":"aa7706e7-72c3-483c-9de0-c3da49b7f570","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"729818ea-1950-4bc1-b5cf-c3aa664af2e2","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"729818ea-1950-4bc1-b5cf-c3aa664af2e2","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","name":"729818ea-1950-4bc1-b5cf-c3aa664af2e2","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"1e06150b-2c57-4bf9-95ea-c71f30cf0223","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1e06150b-2c57-4bf9-95ea-c71f30cf0223","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","name":"1e06150b-2c57-4bf9-95ea-c71f30cf0223","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"880d55cd-b831-4d2e-9a06-078a39bdab9a","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"880d55cd-b831-4d2e-9a06-078a39bdab9a","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","name":"880d55cd-b831-4d2e-9a06-078a39bdab9a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"77678a67-bdb8-4142-9803-4c2c2641790e","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"77678a67-bdb8-4142-9803-4c2c2641790e","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","name":"77678a67-bdb8-4142-9803-4c2c2641790e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"de9e5d0a-3a49-463e-92d6-72699324e975","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"de9e5d0a-3a49-463e-92d6-72699324e975","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","name":"de9e5d0a-3a49-463e-92d6-72699324e975","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"740af9f4-d7a4-4f6a-b4b7-9b5d34f48ed4",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b3e97b58-ecc5-46fb-aa61-77f4726c234c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"aa7706e7-72c3-483c-9de0-c3da49b7f570",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"729818ea-1950-4bc1-b5cf-c3aa664af2e2",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1e06150b-2c57-4bf9-95ea-c71f30cf0223",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"880d55cd-b831-4d2e-9a06-078a39bdab9a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"77678a67-bdb8-4142-9803-4c2c2641790e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"de9e5d0a-3a49-463e-92d6-72699324e975",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 12.0,
@@ -58,19 +47,19 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 8.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"80d1f5a6-fbce-4016-91b0-e1bf567f94d0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"740af9f4-d7a4-4f6a-b4b7-9b5d34f48ed4","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"7bf4803b-8236-40a2-b6b9-771874b1ded1","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b3e97b58-ecc5-46fb-aa61-77f4726c234c","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"393b8324-fc42-4424-b868-287f8660184c","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"aa7706e7-72c3-483c-9de0-c3da49b7f570","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"78c1c8e8-958f-472d-b19e-b4e66cafcde1","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"729818ea-1950-4bc1-b5cf-c3aa664af2e2","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"7da85c10-a9da-4b7e-b019-fbe5fc4303af","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1e06150b-2c57-4bf9-95ea-c71f30cf0223","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"05c34116-4b66-4d64-95b1-7d34e4916e64","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"880d55cd-b831-4d2e-9a06-078a39bdab9a","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"413b1de3-fe07-440d-8b3a-d4b1d8b3950c","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"77678a67-bdb8-4142-9803-4c2c2641790e","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"b42f206d-9924-41c7-b93e-fb2b1e2bf043","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"de9e5d0a-3a49-463e-92d6-72699324e975","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"80d1f5a6-fbce-4016-91b0-e1bf567f94d0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"740af9f4-d7a4-4f6a-b4b7-9b5d34f48ed4","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"7bf4803b-8236-40a2-b6b9-771874b1ded1","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b3e97b58-ecc5-46fb-aa61-77f4726c234c","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"393b8324-fc42-4424-b868-287f8660184c","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"aa7706e7-72c3-483c-9de0-c3da49b7f570","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"78c1c8e8-958f-472d-b19e-b4e66cafcde1","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"729818ea-1950-4bc1-b5cf-c3aa664af2e2","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"7da85c10-a9da-4b7e-b019-fbe5fc4303af","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1e06150b-2c57-4bf9-95ea-c71f30cf0223","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"05c34116-4b66-4d64-95b1-7d34e4916e64","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"880d55cd-b831-4d2e-9a06-078a39bdab9a","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"413b1de3-fe07-440d-8b3a-d4b1d8b3950c","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"77678a67-bdb8-4142-9803-4c2c2641790e","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b42f206d-9924-41c7-b93e-fb2b1e2bf043","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"de9e5d0a-3a49-463e-92d6-72699324e975","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -86,22 +75,13 @@
     "yorigin": 24,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp/spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Hat",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Stone/KSSU/Hat.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_AbilityHat_Stone_KSSU_ClimbUp",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

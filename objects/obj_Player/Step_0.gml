@@ -1006,6 +1006,7 @@ if (!global.pause)
 		}
 		else if (beamAttack2Timer == 0)
 		{
+			//vsp = -.15;
 			var projBeam = instance_create_depth(x + (15 * dir),y + 10,depth,obj_Projectile_Beam);
 			projBeam.imageSpeed = 1;
 			projBeam.owner = id;
@@ -1016,7 +1017,7 @@ if (!global.pause)
 		    projBeam.dir = dir;
 			projBeam.image_xscale = projBeam.dirX;
 			projBeam.spd = random_range(6,8);
-			projBeam.direction = 270 + (projBeam.dir * 45) + irandom_range(-25,25);
+			projBeam.direction = 270 + (projBeam.dir * 45) + irandom_range(-35,35);
 		    projBeam.state = 1;
 		    projBeam.enemy = false;
 			projBeam.invisTimer = -1;
@@ -1817,6 +1818,7 @@ else if (characterSetupTimer == 0)
 		gravFireDash = .05;
 		gravLimitNormal = 5;
 		gravLimitFloat = 2.3;
+		gravLimitBeamAir = 3;
 		gravLimitStone = 7;
 		gravLimitFireDash = 1.25;
 		gravLimit = gravLimitNormal;
@@ -2072,6 +2074,7 @@ else if (characterSetupTimer == 0)
 		gravFireDash = .05;
 		gravLimitNormal = 5;
 		gravLimitFloat = 2.3;
+		gravLimitBeamAir = 3;
 		gravLimitStone = 7;
 		gravLimitFireDash = 1.25;
 		gravLimit = gravLimitNormal;
@@ -2149,6 +2152,7 @@ else if (characterSetupTimer == 0)
 		gravFireDash = .05;
 		gravLimitNormal = 5;
 		gravLimitFloat = 1.5;
+		gravLimitBeamAir = 3;
 		gravLimitStone = 7;
 		gravLimitFireDash = 1.25;
 		gravLimit = gravLimitNormal;

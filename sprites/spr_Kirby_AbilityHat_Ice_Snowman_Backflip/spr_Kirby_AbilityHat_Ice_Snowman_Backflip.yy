@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_AbilityHat_Ice_Snowman_Backflip",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,27 +27,17 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"03b0fbb3-a054-41f5-a8a7-4516e4c9fef4","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"03b0fbb3-a054-41f5-a8a7-4516e4c9fef4","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ice_Snowman_Backflip","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"resourceVersion":"1.0","name":"03b0fbb3-a054-41f5-a8a7-4516e4c9fef4","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"06634344-bbda-4e04-a78c-f450705348a7","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"06634344-bbda-4e04-a78c-f450705348a7","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ice_Snowman_Backflip","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"resourceVersion":"1.0","name":"06634344-bbda-4e04-a78c-f450705348a7","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b837389b-371b-418c-a7d1-d76d5419a373","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b837389b-371b-418c-a7d1-d76d5419a373","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ice_Snowman_Backflip","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"resourceVersion":"1.0","name":"b837389b-371b-418c-a7d1-d76d5419a373","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"60635791-f9e7-4714-aa12-2a7c8df56583","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"60635791-f9e7-4714-aa12-2a7c8df56583","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ice_Snowman_Backflip","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"resourceVersion":"1.0","name":"60635791-f9e7-4714-aa12-2a7c8df56583","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0ed7162e-3fc5-4113-b471-48751904b4fb","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0ed7162e-3fc5-4113-b471-48751904b4fb","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ice_Snowman_Backflip","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"resourceVersion":"1.0","name":"0ed7162e-3fc5-4113-b471-48751904b4fb","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c67e42d0-51f5-4e30-8108-c0bb270aa75d","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c67e42d0-51f5-4e30-8108-c0bb270aa75d","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ice_Snowman_Backflip","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"resourceVersion":"1.0","name":"c67e42d0-51f5-4e30-8108-c0bb270aa75d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"03b0fbb3-a054-41f5-a8a7-4516e4c9fef4",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"06634344-bbda-4e04-a78c-f450705348a7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b837389b-371b-418c-a7d1-d76d5419a373",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"60635791-f9e7-4714-aa12-2a7c8df56583",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0ed7162e-3fc5-4113-b471-48751904b4fb",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c67e42d0-51f5-4e30-8108-c0bb270aa75d",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_AbilityHat_Ice_Snowman_Backflip","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_AbilityHat_Ice_Snowman_Backflip",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 21.0,
@@ -52,17 +45,17 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 6.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"f1d59e7b-43d8-431a-a5a1-ff4ca59c6b53","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"03b0fbb3-a054-41f5-a8a7-4516e4c9fef4","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"a6581839-8f57-4731-a146-45485f213ada","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"06634344-bbda-4e04-a78c-f450705348a7","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"a15520a9-73d8-4a4e-95c3-7616135053e0","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b837389b-371b-418c-a7d1-d76d5419a373","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"e99e691f-f90c-4679-b1ae-b8198aa3fd0e","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"60635791-f9e7-4714-aa12-2a7c8df56583","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"6f7c7828-fabf-430d-8e82-47d285967ffc","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0ed7162e-3fc5-4113-b471-48751904b4fb","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"9a1ce416-0977-4c6d-9f10-6405383a66dd","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c67e42d0-51f5-4e30-8108-c0bb270aa75d","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"f1d59e7b-43d8-431a-a5a1-ff4ca59c6b53","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"03b0fbb3-a054-41f5-a8a7-4516e4c9fef4","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a6581839-8f57-4731-a146-45485f213ada","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"06634344-bbda-4e04-a78c-f450705348a7","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a15520a9-73d8-4a4e-95c3-7616135053e0","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b837389b-371b-418c-a7d1-d76d5419a373","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e99e691f-f90c-4679-b1ae-b8198aa3fd0e","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"60635791-f9e7-4714-aa12-2a7c8df56583","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6f7c7828-fabf-430d-8e82-47d285967ffc","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0ed7162e-3fc5-4113-b471-48751904b4fb","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9a1ce416-0977-4c6d-9f10-6405383a66dd","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c67e42d0-51f5-4e30-8108-c0bb270aa75d","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -78,22 +71,13 @@
     "yorigin": 24,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_AbilityHat_Ice_Snowman_Backflip","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_Backflip/spr_Kirby_AbilityHat_Ice_Snowman_Backflip.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_AbilityHat_Ice_Snowman_Backflip",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Hat",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Ice/Snowman/Hat.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_AbilityHat_Ice_Snowman_Backflip",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

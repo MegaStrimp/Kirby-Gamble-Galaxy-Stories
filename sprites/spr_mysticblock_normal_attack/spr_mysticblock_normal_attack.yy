@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_MysticBlock_Normal_Attack",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"0b8dca42-8820-408d-a9b0-9ad926aeab96","path":"sprites/spr_MysticBlock_Normal_Attack/spr_MysticBlock_Normal_Attack.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0b8dca42-8820-408d-a9b0-9ad926aeab96","path":"sprites/spr_MysticBlock_Normal_Attack/spr_MysticBlock_Normal_Attack.yy",},"LayerId":{"name":"50b664b1-c261-46b2-9c11-4ae410c7964f","path":"sprites/spr_MysticBlock_Normal_Attack/spr_MysticBlock_Normal_Attack.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_MysticBlock_Normal_Attack","path":"sprites/spr_MysticBlock_Normal_Attack/spr_MysticBlock_Normal_Attack.yy",},"resourceVersion":"1.0","name":"0b8dca42-8820-408d-a9b0-9ad926aeab96","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0b8dca42-8820-408d-a9b0-9ad926aeab96",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_MysticBlock_Normal_Attack","path":"sprites/spr_MysticBlock_Normal_Attack/spr_MysticBlock_Normal_Attack.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_MysticBlock_Normal_Attack",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"19252992-ab71-42e6-8280-a54778c5624e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0b8dca42-8820-408d-a9b0-9ad926aeab96","path":"sprites/spr_MysticBlock_Normal_Attack/spr_MysticBlock_Normal_Attack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"19252992-ab71-42e6-8280-a54778c5624e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0b8dca42-8820-408d-a9b0-9ad926aeab96","path":"sprites/spr_MysticBlock_Normal_Attack/spr_MysticBlock_Normal_Attack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 5,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_MysticBlock_Normal_Attack","path":"sprites/spr_MysticBlock_Normal_Attack/spr_MysticBlock_Normal_Attack.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_MysticBlock_Normal_Attack",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"50b664b1-c261-46b2-9c11-4ae410c7964f","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"50b664b1-c261-46b2-9c11-4ae410c7964f","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Enemies/Mystic Block/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_MysticBlock_Normal_Attack",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

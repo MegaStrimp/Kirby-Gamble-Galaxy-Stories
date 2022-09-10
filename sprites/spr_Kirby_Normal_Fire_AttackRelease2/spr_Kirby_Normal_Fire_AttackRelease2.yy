@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_Normal_Fire_AttackRelease2",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"2cff215d-5acf-4a3c-af9a-a4c336751561","path":"sprites/spr_Kirby_Normal_Fire_AttackRelease2/spr_Kirby_Normal_Fire_AttackRelease2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2cff215d-5acf-4a3c-af9a-a4c336751561","path":"sprites/spr_Kirby_Normal_Fire_AttackRelease2/spr_Kirby_Normal_Fire_AttackRelease2.yy",},"LayerId":{"name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","path":"sprites/spr_Kirby_Normal_Fire_AttackRelease2/spr_Kirby_Normal_Fire_AttackRelease2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Fire_AttackRelease2","path":"sprites/spr_Kirby_Normal_Fire_AttackRelease2/spr_Kirby_Normal_Fire_AttackRelease2.yy",},"resourceVersion":"1.0","name":"2cff215d-5acf-4a3c-af9a-a4c336751561","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e5e2a80b-c485-4133-802c-40bd0d503e4e","path":"sprites/spr_Kirby_Normal_Fire_AttackRelease2/spr_Kirby_Normal_Fire_AttackRelease2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e5e2a80b-c485-4133-802c-40bd0d503e4e","path":"sprites/spr_Kirby_Normal_Fire_AttackRelease2/spr_Kirby_Normal_Fire_AttackRelease2.yy",},"LayerId":{"name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","path":"sprites/spr_Kirby_Normal_Fire_AttackRelease2/spr_Kirby_Normal_Fire_AttackRelease2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Fire_AttackRelease2","path":"sprites/spr_Kirby_Normal_Fire_AttackRelease2/spr_Kirby_Normal_Fire_AttackRelease2.yy",},"resourceVersion":"1.0","name":"e5e2a80b-c485-4133-802c-40bd0d503e4e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"59e79e5f-4026-42ed-be8b-133bd5deeb91","path":"sprites/spr_Kirby_Normal_Fire_AttackRelease2/spr_Kirby_Normal_Fire_AttackRelease2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"59e79e5f-4026-42ed-be8b-133bd5deeb91","path":"sprites/spr_Kirby_Normal_Fire_AttackRelease2/spr_Kirby_Normal_Fire_AttackRelease2.yy",},"LayerId":{"name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","path":"sprites/spr_Kirby_Normal_Fire_AttackRelease2/spr_Kirby_Normal_Fire_AttackRelease2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Fire_AttackRelease2","path":"sprites/spr_Kirby_Normal_Fire_AttackRelease2/spr_Kirby_Normal_Fire_AttackRelease2.yy",},"resourceVersion":"1.0","name":"59e79e5f-4026-42ed-be8b-133bd5deeb91","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5a145e1c-dcd3-4453-ada2-541cfe26528b","path":"sprites/spr_Kirby_Normal_Fire_AttackRelease2/spr_Kirby_Normal_Fire_AttackRelease2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5a145e1c-dcd3-4453-ada2-541cfe26528b","path":"sprites/spr_Kirby_Normal_Fire_AttackRelease2/spr_Kirby_Normal_Fire_AttackRelease2.yy",},"LayerId":{"name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","path":"sprites/spr_Kirby_Normal_Fire_AttackRelease2/spr_Kirby_Normal_Fire_AttackRelease2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Fire_AttackRelease2","path":"sprites/spr_Kirby_Normal_Fire_AttackRelease2/spr_Kirby_Normal_Fire_AttackRelease2.yy",},"resourceVersion":"1.0","name":"5a145e1c-dcd3-4453-ada2-541cfe26528b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2cff215d-5acf-4a3c-af9a-a4c336751561",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e5e2a80b-c485-4133-802c-40bd0d503e4e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"59e79e5f-4026-42ed-be8b-133bd5deeb91",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5a145e1c-dcd3-4453-ada2-541cfe26528b",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_Normal_Fire_AttackRelease2","path":"sprites/spr_Kirby_Normal_Fire_AttackRelease2/spr_Kirby_Normal_Fire_AttackRelease2.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_Normal_Fire_AttackRelease2",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 21.0,
@@ -46,15 +43,15 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 4.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"526c9239-5ee3-4f7f-8534-d85aeb89a330","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2cff215d-5acf-4a3c-af9a-a4c336751561","path":"sprites/spr_Kirby_Normal_Fire_AttackRelease2/spr_Kirby_Normal_Fire_AttackRelease2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"6da2fc14-cfe0-46e7-892d-2a51f2277ebe","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e5e2a80b-c485-4133-802c-40bd0d503e4e","path":"sprites/spr_Kirby_Normal_Fire_AttackRelease2/spr_Kirby_Normal_Fire_AttackRelease2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"edf2285b-7592-4c41-8f3b-4cca5f99c37e","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"59e79e5f-4026-42ed-be8b-133bd5deeb91","path":"sprites/spr_Kirby_Normal_Fire_AttackRelease2/spr_Kirby_Normal_Fire_AttackRelease2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"2311ba23-44c7-4052-931d-2aa375c5cdbc","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5a145e1c-dcd3-4453-ada2-541cfe26528b","path":"sprites/spr_Kirby_Normal_Fire_AttackRelease2/spr_Kirby_Normal_Fire_AttackRelease2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"526c9239-5ee3-4f7f-8534-d85aeb89a330","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2cff215d-5acf-4a3c-af9a-a4c336751561","path":"sprites/spr_Kirby_Normal_Fire_AttackRelease2/spr_Kirby_Normal_Fire_AttackRelease2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6da2fc14-cfe0-46e7-892d-2a51f2277ebe","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e5e2a80b-c485-4133-802c-40bd0d503e4e","path":"sprites/spr_Kirby_Normal_Fire_AttackRelease2/spr_Kirby_Normal_Fire_AttackRelease2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"edf2285b-7592-4c41-8f3b-4cca5f99c37e","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"59e79e5f-4026-42ed-be8b-133bd5deeb91","path":"sprites/spr_Kirby_Normal_Fire_AttackRelease2/spr_Kirby_Normal_Fire_AttackRelease2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"2311ba23-44c7-4052-931d-2aa375c5cdbc","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5a145e1c-dcd3-4453-ada2-541cfe26528b","path":"sprites/spr_Kirby_Normal_Fire_AttackRelease2/spr_Kirby_Normal_Fire_AttackRelease2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -70,22 +67,13 @@
     "yorigin": 14,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_Normal_Fire_AttackRelease2","path":"sprites/spr_Kirby_Normal_Fire_AttackRelease2/spr_Kirby_Normal_Fire_AttackRelease2.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_Normal_Fire_AttackRelease2",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Characters/Kirby/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_Normal_Fire_AttackRelease2",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

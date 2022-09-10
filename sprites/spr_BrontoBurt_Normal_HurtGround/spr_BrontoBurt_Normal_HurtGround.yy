@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_BrontoBurt_Normal_HurtGround",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"fefeabdf-958d-478b-8d58-be496d554c7a","path":"sprites/spr_BrontoBurt_Normal_HurtGround/spr_BrontoBurt_Normal_HurtGround.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fefeabdf-958d-478b-8d58-be496d554c7a","path":"sprites/spr_BrontoBurt_Normal_HurtGround/spr_BrontoBurt_Normal_HurtGround.yy",},"LayerId":{"name":"ceb9ba14-d22c-4591-ba6a-fbc6dada6482","path":"sprites/spr_BrontoBurt_Normal_HurtGround/spr_BrontoBurt_Normal_HurtGround.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_BrontoBurt_Normal_HurtGround","path":"sprites/spr_BrontoBurt_Normal_HurtGround/spr_BrontoBurt_Normal_HurtGround.yy",},"resourceVersion":"1.0","name":"fefeabdf-958d-478b-8d58-be496d554c7a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fefeabdf-958d-478b-8d58-be496d554c7a",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_BrontoBurt_Normal_HurtGround","path":"sprites/spr_BrontoBurt_Normal_HurtGround/spr_BrontoBurt_Normal_HurtGround.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_BrontoBurt_Normal_HurtGround",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"f1443f66-f57c-4a1a-88bd-64f8f9f1e5b8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fefeabdf-958d-478b-8d58-be496d554c7a","path":"sprites/spr_BrontoBurt_Normal_HurtGround/spr_BrontoBurt_Normal_HurtGround.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"f1443f66-f57c-4a1a-88bd-64f8f9f1e5b8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fefeabdf-958d-478b-8d58-be496d554c7a","path":"sprites/spr_BrontoBurt_Normal_HurtGround/spr_BrontoBurt_Normal_HurtGround.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_BrontoBurt_Normal_HurtGround","path":"sprites/spr_BrontoBurt_Normal_HurtGround/spr_BrontoBurt_Normal_HurtGround.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_BrontoBurt_Normal_HurtGround",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ceb9ba14-d22c-4591-ba6a-fbc6dada6482","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ceb9ba14-d22c-4591-ba6a-fbc6dada6482","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Enemies/Bronto Burt/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_BrontoBurt_Normal_HurtGround",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

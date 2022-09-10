@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Door_GearCube_Storage",
   "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d0463f52-0167-48fb-a3f7-b44e93167618","path":"sprites/spr_Door_GearCube_Storage/spr_Door_GearCube_Storage.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d0463f52-0167-48fb-a3f7-b44e93167618","path":"sprites/spr_Door_GearCube_Storage/spr_Door_GearCube_Storage.yy",},"LayerId":{"name":"d0370965-78d0-4c85-b0d8-c5a80039d941","path":"sprites/spr_Door_GearCube_Storage/spr_Door_GearCube_Storage.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Door_GearCube_Storage","path":"sprites/spr_Door_GearCube_Storage/spr_Door_GearCube_Storage.yy",},"resourceVersion":"1.0","name":"d0463f52-0167-48fb-a3f7-b44e93167618","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5dc77994-c362-47c7-91f4-d8b0ef8d6cb1","path":"sprites/spr_Door_GearCube_Storage/spr_Door_GearCube_Storage.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5dc77994-c362-47c7-91f4-d8b0ef8d6cb1","path":"sprites/spr_Door_GearCube_Storage/spr_Door_GearCube_Storage.yy",},"LayerId":{"name":"d0370965-78d0-4c85-b0d8-c5a80039d941","path":"sprites/spr_Door_GearCube_Storage/spr_Door_GearCube_Storage.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Door_GearCube_Storage","path":"sprites/spr_Door_GearCube_Storage/spr_Door_GearCube_Storage.yy",},"resourceVersion":"1.0","name":"5dc77994-c362-47c7-91f4-d8b0ef8d6cb1","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d0463f52-0167-48fb-a3f7-b44e93167618",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5dc77994-c362-47c7-91f4-d8b0ef8d6cb1",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Door_GearCube_Storage","path":"sprites/spr_Door_GearCube_Storage/spr_Door_GearCube_Storage.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Door_GearCube_Storage",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"1717bf3d-7c7b-4d6c-b2ca-2e3ad0eaef6e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d0463f52-0167-48fb-a3f7-b44e93167618","path":"sprites/spr_Door_GearCube_Storage/spr_Door_GearCube_Storage.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"406581e1-a165-4c2b-a759-8c6b412e8a38","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5dc77994-c362-47c7-91f4-d8b0ef8d6cb1","path":"sprites/spr_Door_GearCube_Storage/spr_Door_GearCube_Storage.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"1717bf3d-7c7b-4d6c-b2ca-2e3ad0eaef6e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d0463f52-0167-48fb-a3f7-b44e93167618","path":"sprites/spr_Door_GearCube_Storage/spr_Door_GearCube_Storage.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"406581e1-a165-4c2b-a759-8c6b412e8a38","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5dc77994-c362-47c7-91f4-d8b0ef8d6cb1","path":"sprites/spr_Door_GearCube_Storage/spr_Door_GearCube_Storage.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -62,22 +63,13 @@
     "yorigin": 42,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Door_GearCube_Storage","path":"sprites/spr_Door_GearCube_Storage/spr_Door_GearCube_Storage.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Door_GearCube_Storage",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d0370965-78d0-4c85-b0d8-c5a80039d941","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d0370965-78d0-4c85-b0d8-c5a80039d941","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Door",
     "path": "folders/Sprites/Stage Elements/Door.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Door_GearCube_Storage",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

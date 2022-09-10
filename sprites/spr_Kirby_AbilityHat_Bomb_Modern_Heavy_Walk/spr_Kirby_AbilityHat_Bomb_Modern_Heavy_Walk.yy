@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,27 +27,17 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"5d66915d-3f4d-4046-b8db-a5bc3fb375bb","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5d66915d-3f4d-4046-b8db-a5bc3fb375bb","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"LayerId":{"name":"038271b3-f773-435d-b7a5-9828ad205aeb","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"resourceVersion":"1.0","name":"5d66915d-3f4d-4046-b8db-a5bc3fb375bb","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c97a9615-35d8-4e5f-a670-0392f108dd88","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c97a9615-35d8-4e5f-a670-0392f108dd88","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"LayerId":{"name":"038271b3-f773-435d-b7a5-9828ad205aeb","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"resourceVersion":"1.0","name":"c97a9615-35d8-4e5f-a670-0392f108dd88","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a49fce53-3ebc-43c7-96f8-f856ffe56152","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a49fce53-3ebc-43c7-96f8-f856ffe56152","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"LayerId":{"name":"038271b3-f773-435d-b7a5-9828ad205aeb","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"resourceVersion":"1.0","name":"a49fce53-3ebc-43c7-96f8-f856ffe56152","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"cb4028a2-f5bf-4e06-8dfe-910aaed48f72","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cb4028a2-f5bf-4e06-8dfe-910aaed48f72","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"LayerId":{"name":"038271b3-f773-435d-b7a5-9828ad205aeb","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"resourceVersion":"1.0","name":"cb4028a2-f5bf-4e06-8dfe-910aaed48f72","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5e9e078b-e63a-49e2-b834-1cfe6d55f37e","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5e9e078b-e63a-49e2-b834-1cfe6d55f37e","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"LayerId":{"name":"038271b3-f773-435d-b7a5-9828ad205aeb","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"resourceVersion":"1.0","name":"5e9e078b-e63a-49e2-b834-1cfe6d55f37e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c038c29b-71e4-4a76-83da-ee9e5086e043","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c038c29b-71e4-4a76-83da-ee9e5086e043","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"LayerId":{"name":"038271b3-f773-435d-b7a5-9828ad205aeb","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"resourceVersion":"1.0","name":"c038c29b-71e4-4a76-83da-ee9e5086e043","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5d66915d-3f4d-4046-b8db-a5bc3fb375bb",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c97a9615-35d8-4e5f-a670-0392f108dd88",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a49fce53-3ebc-43c7-96f8-f856ffe56152",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cb4028a2-f5bf-4e06-8dfe-910aaed48f72",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5e9e078b-e63a-49e2-b834-1cfe6d55f37e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c038c29b-71e4-4a76-83da-ee9e5086e043",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 9.0,
@@ -52,17 +45,17 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 6.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"27bbc6d2-22e0-4f13-b686-a097bde31e82","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5d66915d-3f4d-4046-b8db-a5bc3fb375bb","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"929e4cdf-0066-4ebc-a08d-187d1c2342d8","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c97a9615-35d8-4e5f-a670-0392f108dd88","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"6c4c672e-66dd-4e57-b0fe-74a0548492b2","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a49fce53-3ebc-43c7-96f8-f856ffe56152","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"6f87f55d-7fc3-4e94-b2c8-c9319247f06f","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cb4028a2-f5bf-4e06-8dfe-910aaed48f72","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"06a015a8-49e7-454a-a4d5-a38127a9bd10","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5e9e078b-e63a-49e2-b834-1cfe6d55f37e","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"d00a1972-1030-4add-aa1e-bf67618fecdf","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c038c29b-71e4-4a76-83da-ee9e5086e043","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"27bbc6d2-22e0-4f13-b686-a097bde31e82","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5d66915d-3f4d-4046-b8db-a5bc3fb375bb","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"929e4cdf-0066-4ebc-a08d-187d1c2342d8","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c97a9615-35d8-4e5f-a670-0392f108dd88","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6c4c672e-66dd-4e57-b0fe-74a0548492b2","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a49fce53-3ebc-43c7-96f8-f856ffe56152","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6f87f55d-7fc3-4e94-b2c8-c9319247f06f","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cb4028a2-f5bf-4e06-8dfe-910aaed48f72","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"06a015a8-49e7-454a-a4d5-a38127a9bd10","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5e9e078b-e63a-49e2-b834-1cfe6d55f37e","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d00a1972-1030-4add-aa1e-bf67618fecdf","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c038c29b-71e4-4a76-83da-ee9e5086e043","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -78,22 +71,13 @@
     "yorigin": 31,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"038271b3-f773-435d-b7a5-9828ad205aeb","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"038271b3-f773-435d-b7a5-9828ad205aeb","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Hat",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Bomb/Modern/Hat.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_HeavyLobster_Normal_Claw",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"bd3c7db8-f563-4d85-9063-25682928a7f9","path":"sprites/spr_HeavyLobster_Normal_Claw/spr_HeavyLobster_Normal_Claw.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bd3c7db8-f563-4d85-9063-25682928a7f9","path":"sprites/spr_HeavyLobster_Normal_Claw/spr_HeavyLobster_Normal_Claw.yy",},"LayerId":{"name":"e57eae60-ec78-427f-81c1-8d82f93cf6f4","path":"sprites/spr_HeavyLobster_Normal_Claw/spr_HeavyLobster_Normal_Claw.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_HeavyLobster_Normal_Claw","path":"sprites/spr_HeavyLobster_Normal_Claw/spr_HeavyLobster_Normal_Claw.yy",},"resourceVersion":"1.0","name":"bd3c7db8-f563-4d85-9063-25682928a7f9","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"590cc269-4886-4bac-9643-57531d1af17b","path":"sprites/spr_HeavyLobster_Normal_Claw/spr_HeavyLobster_Normal_Claw.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"590cc269-4886-4bac-9643-57531d1af17b","path":"sprites/spr_HeavyLobster_Normal_Claw/spr_HeavyLobster_Normal_Claw.yy",},"LayerId":{"name":"e57eae60-ec78-427f-81c1-8d82f93cf6f4","path":"sprites/spr_HeavyLobster_Normal_Claw/spr_HeavyLobster_Normal_Claw.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_HeavyLobster_Normal_Claw","path":"sprites/spr_HeavyLobster_Normal_Claw/spr_HeavyLobster_Normal_Claw.yy",},"resourceVersion":"1.0","name":"590cc269-4886-4bac-9643-57531d1af17b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bd3c7db8-f563-4d85-9063-25682928a7f9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"590cc269-4886-4bac-9643-57531d1af17b",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_HeavyLobster_Normal_Claw","path":"sprites/spr_HeavyLobster_Normal_Claw/spr_HeavyLobster_Normal_Claw.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_HeavyLobster_Normal_Claw",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"9f5b7581-1d78-42e1-8417-db781ba8b58e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bd3c7db8-f563-4d85-9063-25682928a7f9","path":"sprites/spr_HeavyLobster_Normal_Claw/spr_HeavyLobster_Normal_Claw.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"9865242b-de56-4e5d-9cae-7b3c7074a5ff","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"590cc269-4886-4bac-9643-57531d1af17b","path":"sprites/spr_HeavyLobster_Normal_Claw/spr_HeavyLobster_Normal_Claw.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"9f5b7581-1d78-42e1-8417-db781ba8b58e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bd3c7db8-f563-4d85-9063-25682928a7f9","path":"sprites/spr_HeavyLobster_Normal_Claw/spr_HeavyLobster_Normal_Claw.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9865242b-de56-4e5d-9cae-7b3c7074a5ff","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"590cc269-4886-4bac-9643-57531d1af17b","path":"sprites/spr_HeavyLobster_Normal_Claw/spr_HeavyLobster_Normal_Claw.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -62,22 +63,13 @@
     "yorigin": 14,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_HeavyLobster_Normal_Claw","path":"sprites/spr_HeavyLobster_Normal_Claw/spr_HeavyLobster_Normal_Claw.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_HeavyLobster_Normal_Claw",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e57eae60-ec78-427f-81c1-8d82f93cf6f4","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e57eae60-ec78-427f-81c1-8d82f93cf6f4","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Mechs/Heavy Lobster/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_HeavyLobster_Normal_Claw",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

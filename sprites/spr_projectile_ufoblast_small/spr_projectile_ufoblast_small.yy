@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Projectile_UfoBlast_Small",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b6763a22-05a1-4f8a-86fc-041f08d1584b","path":"sprites/spr_Projectile_UfoBlast_Small/spr_Projectile_UfoBlast_Small.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b6763a22-05a1-4f8a-86fc-041f08d1584b","path":"sprites/spr_Projectile_UfoBlast_Small/spr_Projectile_UfoBlast_Small.yy",},"LayerId":{"name":"53835f02-0ad1-4631-b293-cc3b97d19a7f","path":"sprites/spr_Projectile_UfoBlast_Small/spr_Projectile_UfoBlast_Small.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_UfoBlast_Small","path":"sprites/spr_Projectile_UfoBlast_Small/spr_Projectile_UfoBlast_Small.yy",},"resourceVersion":"1.0","name":"b6763a22-05a1-4f8a-86fc-041f08d1584b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ef0b8ee7-14fd-4523-b714-061402a53781","path":"sprites/spr_Projectile_UfoBlast_Small/spr_Projectile_UfoBlast_Small.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ef0b8ee7-14fd-4523-b714-061402a53781","path":"sprites/spr_Projectile_UfoBlast_Small/spr_Projectile_UfoBlast_Small.yy",},"LayerId":{"name":"53835f02-0ad1-4631-b293-cc3b97d19a7f","path":"sprites/spr_Projectile_UfoBlast_Small/spr_Projectile_UfoBlast_Small.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_UfoBlast_Small","path":"sprites/spr_Projectile_UfoBlast_Small/spr_Projectile_UfoBlast_Small.yy",},"resourceVersion":"1.0","name":"ef0b8ee7-14fd-4523-b714-061402a53781","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4dce5e70-abaa-4003-a32c-4da715b027c3","path":"sprites/spr_Projectile_UfoBlast_Small/spr_Projectile_UfoBlast_Small.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4dce5e70-abaa-4003-a32c-4da715b027c3","path":"sprites/spr_Projectile_UfoBlast_Small/spr_Projectile_UfoBlast_Small.yy",},"LayerId":{"name":"53835f02-0ad1-4631-b293-cc3b97d19a7f","path":"sprites/spr_Projectile_UfoBlast_Small/spr_Projectile_UfoBlast_Small.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_UfoBlast_Small","path":"sprites/spr_Projectile_UfoBlast_Small/spr_Projectile_UfoBlast_Small.yy",},"resourceVersion":"1.0","name":"4dce5e70-abaa-4003-a32c-4da715b027c3","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"84d890bc-6733-4818-a9b2-37e6dfaaa33c","path":"sprites/spr_Projectile_UfoBlast_Small/spr_Projectile_UfoBlast_Small.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"84d890bc-6733-4818-a9b2-37e6dfaaa33c","path":"sprites/spr_Projectile_UfoBlast_Small/spr_Projectile_UfoBlast_Small.yy",},"LayerId":{"name":"53835f02-0ad1-4631-b293-cc3b97d19a7f","path":"sprites/spr_Projectile_UfoBlast_Small/spr_Projectile_UfoBlast_Small.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_UfoBlast_Small","path":"sprites/spr_Projectile_UfoBlast_Small/spr_Projectile_UfoBlast_Small.yy",},"resourceVersion":"1.0","name":"84d890bc-6733-4818-a9b2-37e6dfaaa33c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b6763a22-05a1-4f8a-86fc-041f08d1584b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ef0b8ee7-14fd-4523-b714-061402a53781",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4dce5e70-abaa-4003-a32c-4da715b027c3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"84d890bc-6733-4818-a9b2-37e6dfaaa33c",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Projectile_UfoBlast_Small","path":"sprites/spr_Projectile_UfoBlast_Small/spr_Projectile_UfoBlast_Small.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Projectile_UfoBlast_Small",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 15.0,
@@ -46,15 +43,15 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 4.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"d4dba5d5-3eb0-488c-b897-1ff2f605df53","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b6763a22-05a1-4f8a-86fc-041f08d1584b","path":"sprites/spr_Projectile_UfoBlast_Small/spr_Projectile_UfoBlast_Small.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"81be0152-0f86-409d-83f7-dbc07a547854","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ef0b8ee7-14fd-4523-b714-061402a53781","path":"sprites/spr_Projectile_UfoBlast_Small/spr_Projectile_UfoBlast_Small.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"8f138042-29fe-410f-a990-21b6f17cd095","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4dce5e70-abaa-4003-a32c-4da715b027c3","path":"sprites/spr_Projectile_UfoBlast_Small/spr_Projectile_UfoBlast_Small.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"ba55d1a4-7918-4f00-9a3e-2a061554f633","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"84d890bc-6733-4818-a9b2-37e6dfaaa33c","path":"sprites/spr_Projectile_UfoBlast_Small/spr_Projectile_UfoBlast_Small.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"d4dba5d5-3eb0-488c-b897-1ff2f605df53","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b6763a22-05a1-4f8a-86fc-041f08d1584b","path":"sprites/spr_Projectile_UfoBlast_Small/spr_Projectile_UfoBlast_Small.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"81be0152-0f86-409d-83f7-dbc07a547854","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ef0b8ee7-14fd-4523-b714-061402a53781","path":"sprites/spr_Projectile_UfoBlast_Small/spr_Projectile_UfoBlast_Small.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"8f138042-29fe-410f-a990-21b6f17cd095","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4dce5e70-abaa-4003-a32c-4da715b027c3","path":"sprites/spr_Projectile_UfoBlast_Small/spr_Projectile_UfoBlast_Small.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ba55d1a4-7918-4f00-9a3e-2a061554f633","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"84d890bc-6733-4818-a9b2-37e6dfaaa33c","path":"sprites/spr_Projectile_UfoBlast_Small/spr_Projectile_UfoBlast_Small.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -70,22 +67,13 @@
     "yorigin": 3,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Projectile_UfoBlast_Small","path":"sprites/spr_Projectile_UfoBlast_Small/spr_Projectile_UfoBlast_Small.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Projectile_UfoBlast_Small",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"53835f02-0ad1-4631-b293-cc3b97d19a7f","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"53835f02-0ad1-4631-b293-cc3b97d19a7f","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Projectiles/Ufo Blast/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Projectile_UfoBlast_Small",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

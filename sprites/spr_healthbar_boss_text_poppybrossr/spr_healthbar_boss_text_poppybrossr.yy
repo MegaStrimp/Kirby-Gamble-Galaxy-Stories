@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Healthbar_Boss_Text_PoppyBrosSr",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"cc316cb6-9a0d-4722-be2a-0090e1aca70d","path":"sprites/spr_Healthbar_Boss_Text_PoppyBrosSr/spr_Healthbar_Boss_Text_PoppyBrosSr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cc316cb6-9a0d-4722-be2a-0090e1aca70d","path":"sprites/spr_Healthbar_Boss_Text_PoppyBrosSr/spr_Healthbar_Boss_Text_PoppyBrosSr.yy",},"LayerId":{"name":"a2b05526-af82-4879-95f1-62549fab475f","path":"sprites/spr_Healthbar_Boss_Text_PoppyBrosSr/spr_Healthbar_Boss_Text_PoppyBrosSr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Healthbar_Boss_Text_PoppyBrosSr","path":"sprites/spr_Healthbar_Boss_Text_PoppyBrosSr/spr_Healthbar_Boss_Text_PoppyBrosSr.yy",},"resourceVersion":"1.0","name":"cc316cb6-9a0d-4722-be2a-0090e1aca70d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cc316cb6-9a0d-4722-be2a-0090e1aca70d",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Healthbar_Boss_Text_PoppyBrosSr","path":"sprites/spr_Healthbar_Boss_Text_PoppyBrosSr/spr_Healthbar_Boss_Text_PoppyBrosSr.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Healthbar_Boss_Text_PoppyBrosSr",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"329e0c5b-3ed1-4d16-bb0b-8d73c757e4c1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cc316cb6-9a0d-4722-be2a-0090e1aca70d","path":"sprites/spr_Healthbar_Boss_Text_PoppyBrosSr/spr_Healthbar_Boss_Text_PoppyBrosSr.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"329e0c5b-3ed1-4d16-bb0b-8d73c757e4c1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cc316cb6-9a0d-4722-be2a-0090e1aca70d","path":"sprites/spr_Healthbar_Boss_Text_PoppyBrosSr/spr_Healthbar_Boss_Text_PoppyBrosSr.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Healthbar_Boss_Text_PoppyBrosSr","path":"sprites/spr_Healthbar_Boss_Text_PoppyBrosSr/spr_Healthbar_Boss_Text_PoppyBrosSr.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Healthbar_Boss_Text_PoppyBrosSr",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a2b05526-af82-4879-95f1-62549fab475f","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a2b05526-af82-4879-95f1-62549fab475f","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Text",
     "path": "folders/Sprites/Hud/Healthbars/Boss/Text.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Healthbar_Boss_Text_PoppyBrosSr",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

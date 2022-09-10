@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,27 +27,17 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c169b291-ab79-4206-846f-a2613c891ecb","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c169b291-ab79-4206-846f-a2613c891ecb","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"LayerId":{"name":"038271b3-f773-435d-b7a5-9828ad205aeb","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"resourceVersion":"1.0","name":"c169b291-ab79-4206-846f-a2613c891ecb","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"43465d8f-812e-4e70-a5af-d75b891b3d8c","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"43465d8f-812e-4e70-a5af-d75b891b3d8c","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"LayerId":{"name":"038271b3-f773-435d-b7a5-9828ad205aeb","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"resourceVersion":"1.0","name":"43465d8f-812e-4e70-a5af-d75b891b3d8c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3e61c47e-216b-47bd-b1bf-ce83ac92bc14","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3e61c47e-216b-47bd-b1bf-ce83ac92bc14","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"LayerId":{"name":"038271b3-f773-435d-b7a5-9828ad205aeb","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"resourceVersion":"1.0","name":"3e61c47e-216b-47bd-b1bf-ce83ac92bc14","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"98c01f50-6641-4d50-9b6c-492dc1638c66","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"98c01f50-6641-4d50-9b6c-492dc1638c66","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"LayerId":{"name":"038271b3-f773-435d-b7a5-9828ad205aeb","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"resourceVersion":"1.0","name":"98c01f50-6641-4d50-9b6c-492dc1638c66","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"84d718ea-18e2-4b9c-95c9-52a4ff95c1a1","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"84d718ea-18e2-4b9c-95c9-52a4ff95c1a1","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"LayerId":{"name":"038271b3-f773-435d-b7a5-9828ad205aeb","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"resourceVersion":"1.0","name":"84d718ea-18e2-4b9c-95c9-52a4ff95c1a1","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b24c5665-9eb2-4c67-ae4f-9a84d131a66b","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b24c5665-9eb2-4c67-ae4f-9a84d131a66b","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"LayerId":{"name":"038271b3-f773-435d-b7a5-9828ad205aeb","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"resourceVersion":"1.0","name":"b24c5665-9eb2-4c67-ae4f-9a84d131a66b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c169b291-ab79-4206-846f-a2613c891ecb",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"43465d8f-812e-4e70-a5af-d75b891b3d8c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3e61c47e-216b-47bd-b1bf-ce83ac92bc14",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"98c01f50-6641-4d50-9b6c-492dc1638c66",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"84d718ea-18e2-4b9c-95c9-52a4ff95c1a1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b24c5665-9eb2-4c67-ae4f-9a84d131a66b",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 9.0,
@@ -52,17 +45,17 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 6.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"b7f6c84c-e2b7-4728-9a13-3ff76285ce57","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c169b291-ab79-4206-846f-a2613c891ecb","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"c8d7ea48-02c4-4f2c-be98-4a4f5ae272cf","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"43465d8f-812e-4e70-a5af-d75b891b3d8c","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"f58dced8-54b5-4b33-8ca7-1da0fb5b15c4","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3e61c47e-216b-47bd-b1bf-ce83ac92bc14","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"32e39cb1-e4cf-499c-abcf-bda651e05ad8","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"98c01f50-6641-4d50-9b6c-492dc1638c66","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"d29969aa-0c96-4583-a4fa-831abfd84de4","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"84d718ea-18e2-4b9c-95c9-52a4ff95c1a1","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"cadda81c-f930-4a5c-8353-3e6904e1e02e","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b24c5665-9eb2-4c67-ae4f-9a84d131a66b","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"b7f6c84c-e2b7-4728-9a13-3ff76285ce57","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c169b291-ab79-4206-846f-a2613c891ecb","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c8d7ea48-02c4-4f2c-be98-4a4f5ae272cf","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"43465d8f-812e-4e70-a5af-d75b891b3d8c","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f58dced8-54b5-4b33-8ca7-1da0fb5b15c4","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3e61c47e-216b-47bd-b1bf-ce83ac92bc14","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"32e39cb1-e4cf-499c-abcf-bda651e05ad8","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"98c01f50-6641-4d50-9b6c-492dc1638c66","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d29969aa-0c96-4583-a4fa-831abfd84de4","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"84d718ea-18e2-4b9c-95c9-52a4ff95c1a1","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"cadda81c-f930-4a5c-8353-3e6904e1e02e","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b24c5665-9eb2-4c67-ae4f-9a84d131a66b","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -78,22 +71,13 @@
     "yorigin": 15,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask","path":"sprites/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask/spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"038271b3-f773-435d-b7a5-9828ad205aeb","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"038271b3-f773-435d-b7a5-9828ad205aeb","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Masks",
     "path": "folders/Sprites/Characters/Kirby/Normal/Masks.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_Normal_ItemCarry_Heavy_Walk_Mask",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

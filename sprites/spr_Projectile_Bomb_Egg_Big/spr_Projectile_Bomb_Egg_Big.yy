@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Projectile_Bomb_Egg_Big",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"7e1d0573-7d2c-4907-aea3-8d11416d0cb5","path":"sprites/spr_Projectile_Bomb_Egg_Big/spr_Projectile_Bomb_Egg_Big.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7e1d0573-7d2c-4907-aea3-8d11416d0cb5","path":"sprites/spr_Projectile_Bomb_Egg_Big/spr_Projectile_Bomb_Egg_Big.yy",},"LayerId":{"name":"67cc9c7f-ecd6-4d7f-893a-0efce1563a26","path":"sprites/spr_Projectile_Bomb_Egg_Big/spr_Projectile_Bomb_Egg_Big.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_Bomb_Egg_Big","path":"sprites/spr_Projectile_Bomb_Egg_Big/spr_Projectile_Bomb_Egg_Big.yy",},"resourceVersion":"1.0","name":"7e1d0573-7d2c-4907-aea3-8d11416d0cb5","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7e1d0573-7d2c-4907-aea3-8d11416d0cb5",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Projectile_Bomb_Egg_Big","path":"sprites/spr_Projectile_Bomb_Egg_Big/spr_Projectile_Bomb_Egg_Big.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Projectile_Bomb_Egg_Big",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"d30e0da8-ffde-4650-b09f-de39febab246","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7e1d0573-7d2c-4907-aea3-8d11416d0cb5","path":"sprites/spr_Projectile_Bomb_Egg_Big/spr_Projectile_Bomb_Egg_Big.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"d30e0da8-ffde-4650-b09f-de39febab246","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7e1d0573-7d2c-4907-aea3-8d11416d0cb5","path":"sprites/spr_Projectile_Bomb_Egg_Big/spr_Projectile_Bomb_Egg_Big.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 15,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Projectile_Bomb_Egg_Big","path":"sprites/spr_Projectile_Bomb_Egg_Big/spr_Projectile_Bomb_Egg_Big.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Projectile_Bomb_Egg_Big",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"67cc9c7f-ecd6-4d7f-893a-0efce1563a26","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"67cc9c7f-ecd6-4d7f-893a-0efce1563a26","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Bomb",
     "path": "folders/Sprites/Projectiles/Bomb.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Projectile_Bomb_Egg_Big",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

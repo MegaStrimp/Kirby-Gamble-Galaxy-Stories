@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_Equipment_Bell_Modern_Slide",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b41e28d6-cf19-4b46-b6fd-eb4d9f5e946d","path":"sprites/spr_Kirby_Equipment_Bell_Modern_Slide/spr_Kirby_Equipment_Bell_Modern_Slide.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b41e28d6-cf19-4b46-b6fd-eb4d9f5e946d","path":"sprites/spr_Kirby_Equipment_Bell_Modern_Slide/spr_Kirby_Equipment_Bell_Modern_Slide.yy",},"LayerId":{"name":"2ed2bb0b-b3e2-4396-af28-19fedc5c5e34","path":"sprites/spr_Kirby_Equipment_Bell_Modern_Slide/spr_Kirby_Equipment_Bell_Modern_Slide.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Equipment_Bell_Modern_Slide","path":"sprites/spr_Kirby_Equipment_Bell_Modern_Slide/spr_Kirby_Equipment_Bell_Modern_Slide.yy",},"resourceVersion":"1.0","name":"b41e28d6-cf19-4b46-b6fd-eb4d9f5e946d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e746375e-23cf-48cb-9cae-96f273c42ba9","path":"sprites/spr_Kirby_Equipment_Bell_Modern_Slide/spr_Kirby_Equipment_Bell_Modern_Slide.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e746375e-23cf-48cb-9cae-96f273c42ba9","path":"sprites/spr_Kirby_Equipment_Bell_Modern_Slide/spr_Kirby_Equipment_Bell_Modern_Slide.yy",},"LayerId":{"name":"2ed2bb0b-b3e2-4396-af28-19fedc5c5e34","path":"sprites/spr_Kirby_Equipment_Bell_Modern_Slide/spr_Kirby_Equipment_Bell_Modern_Slide.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Equipment_Bell_Modern_Slide","path":"sprites/spr_Kirby_Equipment_Bell_Modern_Slide/spr_Kirby_Equipment_Bell_Modern_Slide.yy",},"resourceVersion":"1.0","name":"e746375e-23cf-48cb-9cae-96f273c42ba9","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b41e28d6-cf19-4b46-b6fd-eb4d9f5e946d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e746375e-23cf-48cb-9cae-96f273c42ba9",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_Equipment_Bell_Modern_Slide","path":"sprites/spr_Kirby_Equipment_Bell_Modern_Slide/spr_Kirby_Equipment_Bell_Modern_Slide.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_Equipment_Bell_Modern_Slide",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 18.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"fed4e5aa-c382-44e8-be90-dadcf9c0f150","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b41e28d6-cf19-4b46-b6fd-eb4d9f5e946d","path":"sprites/spr_Kirby_Equipment_Bell_Modern_Slide/spr_Kirby_Equipment_Bell_Modern_Slide.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"48544eb5-5cf9-431c-afbf-16f510820aa1","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e746375e-23cf-48cb-9cae-96f273c42ba9","path":"sprites/spr_Kirby_Equipment_Bell_Modern_Slide/spr_Kirby_Equipment_Bell_Modern_Slide.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"fed4e5aa-c382-44e8-be90-dadcf9c0f150","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b41e28d6-cf19-4b46-b6fd-eb4d9f5e946d","path":"sprites/spr_Kirby_Equipment_Bell_Modern_Slide/spr_Kirby_Equipment_Bell_Modern_Slide.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"48544eb5-5cf9-431c-afbf-16f510820aa1","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e746375e-23cf-48cb-9cae-96f273c42ba9","path":"sprites/spr_Kirby_Equipment_Bell_Modern_Slide/spr_Kirby_Equipment_Bell_Modern_Slide.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -62,22 +63,13 @@
     "yorigin": 20,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_Equipment_Bell_Modern_Slide","path":"sprites/spr_Kirby_Equipment_Bell_Modern_Slide/spr_Kirby_Equipment_Bell_Modern_Slide.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_Equipment_Bell_Modern_Slide",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2ed2bb0b-b3e2-4396-af28-19fedc5c5e34","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"2ed2bb0b-b3e2-4396-af28-19fedc5c5e34","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Equipment",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Bell/Modern/Equipment.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_Equipment_Bell_Modern_Slide",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -18,7 +18,7 @@ draw_set_alpha(1);
 draw_set_color(c_white);
 draw_set_halign(fa_center);
 
-for (var i = 0; i < array_length(languageIndex); i++)
+for (var i = 0; i < array_length(languageArray); i++)
 {
 	if (i == languages.english)
 	{
@@ -39,6 +39,7 @@ for (var i = 0; i < array_length(languageIndex); i++)
 		col1 = c_yellow;
 		col2 = c_yellow;
 	}
-	scr_Draw_Text_Color_Outline(room_width / 2,42 + (i * 18),languageIndex[i],-1,-1,col1,col2,image_alpha,c_black,c_black,image_alpha,2,5,image_xscale,image_yscale,image_angle);
+	//scr_Draw_Text_Color_Outline(room_width / 2,42 + (i * 18),languageIndex[i],-1,-1,col1,col2,image_alpha,c_black,c_black,image_alpha,2,5,image_xscale,image_yscale,image_angle);
+	scr_Draw_Text_Color_Outline(room_width / 2,42 + (i * 18),str("Languages." + languageArray[i]),-1,-1,col1,col2,image_alpha,c_black,c_black,image_alpha,2,5,image_xscale,image_yscale,image_angle);
 }
 draw_set_halign(fa_left);

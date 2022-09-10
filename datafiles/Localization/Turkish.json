@@ -1,0 +1,1536 @@
+{
+    "Player Characters":
+    {
+        "Kirby":
+        {
+            "Title": "Kirby",
+            
+            "Description": "İşte bu Kirby! Düşmanlarını ye ve onların özelliklerini kopyala. Tüm galaksiyi kurtarmak için yola çık!"
+        },
+        
+        "Gamble":
+        {
+            "Title": "Gamble",
+            
+            "Description": "Bu yeni dostumuz Kirby'e Kozmik Fluxbükücü'yü yenmesine yardım etmek için uzaydan geldi! Gamble, düşmanları yenmek için zarlar, kartlar, ruletler ve sihirli enerjisini kullanacak. Hepsini katla!"
+        },
+        
+        "Meta Knight":
+        {
+            "Title": "Meta Knight",
+            
+            "Description": "İlk Kirby's Adventure'da görünen gizemli maskeli şovalye geri döndü! Cesur bir şekilde tüm kötülüklerle savaşmaya hazır. Tüm Dream Land onun kılıcından korkar!"
+        },
+        
+        "Helper":
+        {
+            "Title": "Yardımcı",
+            
+            "Description": "Her yerden dostlarımız Kirby'e macerasında yardım etmeye geldi! Ufak Waddle Deelerden yenilmez Gordolara kadar bir çok yaratıkla oyna!"
+        },
+        
+        "Gooey":
+        {
+            "Title": "Gooey",
+            
+            "Description": "Garip bir yerden gelse de, Gooey'in altın gibi bir kalbi vardır ve her zaman arkadaşlarının yardımına koşar. Uzun diliyle Kirby'nin macerasında ona katıldığı için çok mutlu!"
+        },
+        
+        "Magolor":
+        {
+            "Title": "Magolor",
+            
+            "Description": "'Flux'mı? Sana gerçek gücü göstereceğim!' Bu şakacı büyücü, ilk önce Kirby's Adventure Wii'de görülmüştür. Eskiden yalancı bir kötüydü, ama artık değişti... değil mi? Onun dünya dışı büyüsü düşmanları kısa sürede yok edecek!"
+        },
+        
+        "Keeby":
+        {
+            "Title": "Keeby",
+            
+            "Description": "Rakibi Kirby kadar maceracı olmasa da, Keeby istekli bir şekilde onun yardımına koştu! Acaba golf kariyerine biraz ara verebilecek mi?"
+        }
+    },
+	
+	"Player Abilities":
+    {
+        "Cutter":
+        {
+            "Title": "Bıçak",
+            
+            "Description": "Keskin bir bumerangla düşmanları parçala!"
+        },
+		
+		"Beam":
+        {
+            "Title": "Işın",
+            
+            "Description": "Etrafında elektrik ışınları çevir. Uzağa ateşlemek için şarj et!"
+        },
+		
+		"Mystic Beam":
+        {
+            "Title": "Mistik Işın",
+            
+            "Description": "Flux'ın gücü Işınımızı Mistik Işın'a çevirdi! Işın kalkanı düşmanlara zarar verir!"
+        },
+		
+		"Stone":
+        {
+            "Title": "Taş",
+            
+            "Description": "Yenilmez bir taşa dönüş! Bu garip heykeller de ne böyle?"
+        },
+		
+		"Ufo":
+        {
+            "Title": "Ufo",
+            
+            "Description": "Bir uzay gemisine dönüş ve düşmanları lazerlerle alt et!"
+        },
+		
+		"Mirror":
+        {
+            "Title": "Ayna",
+            
+            "Description": "Yansımanın gücü ile düşman saldırılarını geri gönder!"
+        },
+		
+		"Ninja":
+        {
+            "Title": "Ninja",
+            
+            "Description": "Gölge bir suikastçi ol ve gizlice saldır!"
+        },
+		
+		"Bomb":
+        {
+            "Title": "Bomba",
+            
+            "Description": "Bir bomba al ve fırlat, ama sakın elinde çok uzun tutma!"
+        },
+		
+		"Fire":
+        {
+            "Title": "Ateş",
+            
+            "Description": "Tüm rakiplerini güçlü alevlerle yak!"
+        },
+		
+		"Mystic Fire":
+        {
+            "Title": "Mistik Ateş",
+            
+            "Description": "Flux'ın gücü ateşini daha da güçlendirdi! Artık nişan almana gerek yok, düşmanlarını daha kolay kızart!"
+        },
+		
+		"Ice":
+        {
+            "Title": "Buz",
+            
+            "Description": "Kayak yap ve soğuk nefesinle düşmanları dondur!"
+        },
+		
+		"Spark":
+        {
+            "Title": "Elektrik",
+            
+            "Description": "Yön tuşlarına basıp şarj edebilir ve düşmanları çarpabilirsin!"
+        },
+		
+		"Yoyo":
+        {
+            "Title": "Yoyo",
+            
+            "Description": "Yoyonun şık gücüyle düşmalarını korkut!"
+        },
+		
+		"Wheel":
+        {
+            "Title": "Tekerlek",
+            
+            "Description": "Neredeyse yenilmez olarak kalabalık düşmanlarına doğru hız yap, vın vın!"
+        },
+		
+		"Artist":
+        {
+            "Title": "Ressam",
+            
+            "Description": "Düşmanlarını fırçanla tokatla veya seninle birlikte savaşmaları için bir resim ordusu yarat!"
+        },
+		
+		"Fighter":
+        {
+            "Title": "Dövüşçü",
+            
+            "Description": "Bir dövüş sanatçısına dönüş ve düşmanlarını KO'la. Ka-pow!"
+        },
+		
+		"Suplex":
+        {
+            "Title": "Güreşçi",
+            
+            "Description": "Güreşçi ruhunu canlandır ve düşmanları tutup etrafa fırlat!"
+        },
+		
+		"Wing":
+        {
+            "Title": "Kanat",
+            
+            "Description": "Gökyüzünde asil bir şekilde uç. Düşmanlara hücum et ve onlara tüy fırlat!"
+        },
+		
+		"Jet":
+        {
+            "Title": "Jet",
+            
+            "Description": "Motorunu çalıştır ve düşmanlarını süper hızla ez!"
+        },
+		
+		"Sword":
+        {
+            "Title": "Kılıç",
+            
+            "Description": "Keskin bir kılıç ile herşeyi kes ve doğra!"
+        },
+		
+		"Parasol":
+        {
+            "Title": "Şemsiye",
+            
+            "Description": "Kendini düşen nesnelerden koru, canavarları püskürt ve havada yavaşça süzül!"
+        },
+		
+		"Hammer":
+        {
+            "Title": "Çekiç",
+            
+            "Description": "Düşmanları güçlü bir çekiç hamlesiyle ezip geç!"
+        },
+		
+		"Bell":
+        {
+            "Title": "Zil",
+            
+            "Description": "Çın çın! Bu iki gürültülü ensturmanı alıp yok edici bir müzik bestele!"
+        },
+		
+		"Water":
+        {
+            "Title": "Su",
+            
+            "Description": "Suyu dilediğin gibi büküp düşmanlarını yıka. Sörf zamanı!"
+        },
+		
+		"Sleep":
+        {
+            "Title": "Uyku",
+            
+            "Description": "zzzzz... lütfen 5 dakika daha... zzzzzzzzzzz..."
+        },
+		
+		"Scan":
+        {
+            "Title": "Tarama",
+            
+            "Description": "Düşmanlarının özelliklerini kopyalayan özel bir başlık kullan!"
+        },
+		
+		"Crash":
+        {
+            "Title": "Patlama",
+            
+            "Description": "Tek bir patlamayle tüm ekranı temizle!"
+        },
+		
+		"Mic":
+        {
+            "Title": "Mikrofon",
+            
+            "Description": "Güçlü sesinle etrafındaki tüm düşmanları yok et! CHESTO!"
+        },
+		
+		"Chef":
+        {
+            "Title": "Aşçı"
+        },
+		
+		"Ultra Sword":
+        {
+            "Title": "Ultra Kılıç",
+            
+            "Description": "Bu dev kılıç düşmanları ve etrafı paramparça eder! Lime lime et!"
+        },
+		
+		"Cosmic Blade":
+        {
+            "Title": "Kozmik Kılıç"
+        }
+    },
+    
+    "Enemies":
+    {
+        "Waddle Dee":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Waddle Doo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Bronto Burt":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Twizzy":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Tookey":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Sir Kibble":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Gordo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Blood Gordo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Shotzo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Mystic Doo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Bouncy":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Mr. Boogie":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Search":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Hive Drone":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Wapod":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Flamebelch":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Cappy":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Broom Hatter":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Coconut":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Noddy":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Blado":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Scarfy":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Rocky":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Grizzo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Jungle Bomb":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Glunk":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Kabu":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Burning Leo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Tomatoo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "'Onion'":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Anemonee":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Gim":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Poppy Bros Jr.":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Bobo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Foley":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Nidoo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Como":
+        {
+            "Title": "",
+            
+            "Description": ""
+        }
+        ,
+        "Cairn":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Bomber":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Simirror":
+        {
+            "Title": "",
+            
+            "Description": ""
+        }
+    },
+    
+    "Spray Paints":
+    {
+        "Friendly Pink":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Yellow":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Red":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Green":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Dreamy Blueberry":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Carbon":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Cherry":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Deep Fried Kirb":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Emerald":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"GameKirb":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Haunting Purple":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Invis Sprinkle":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Monochrome Kirb":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Yolk Temple":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Plump Tomato":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Waddle Waddle":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Mystic":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Shadow of the Mirror":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Delirious":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Greenjolt":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Butter Knife":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Blurple":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Beam":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Stone":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Mirror":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Ninja":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Fire":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Ice":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Plasma":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Unearthly Hand":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"So Meta":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Gooey Blue":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Egg Brown":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Telltale Keeby":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Royal Yarn":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Smiley White":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Edd":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Musician's Light":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Aege":
+        {
+            "Title": "Aege",
+            
+            "Description": ""
+        },
+		
+		"Stray":
+        {
+            "Title": "Stray",
+            
+            "Description": ""
+        },
+		
+		"Glitch":
+        {
+            "Title": "Glitch",
+            
+            "Description": ""
+        }
+    },
+	
+	"Ability Hat Skins":
+	{
+		"Marx Soul":
+        {
+            "Title": "Marx'ın Ruhu"
+        },
+		
+		"Snowman":
+        {
+            "Title": "Kardan Adam"
+        }
+	},
+	
+	"Ability Hat Paints":
+	{
+		"Slicing Gold":
+        {
+            "Title": "Keskin Altın"
+        },
+		
+		"Blood Blade":
+        {
+            "Title": "Kanlı Bıçak"
+        },
+		
+		"Bitcrushed":
+        {
+            "Title": "Eski Pixel"
+        },
+		
+		"Mallard Green":
+        {
+            "Title": "Yeşilbaş"
+        },
+		
+		"Black Swedish":
+        {
+            "Title": "Siyah Ördek"
+        },
+		
+		"Flux Nostalgia":
+        {
+            "Title": "Flux Nostaljisi"
+        },
+		
+		"Sparkling Beam":
+        {
+            "Title": "Parlayan Işın"
+        },
+		
+		"Jester Spirit":
+        {
+            "Title": "Soytarı Ruhu"
+        },
+		
+		"Summer Fruits":
+        {
+            "Title": "Yaz Meyveleri"
+        },
+		
+		"Nasty Flux":
+        {
+            "Title": "Kötü Flux"
+        },
+		
+		"Mage Rose":
+        {
+            "Title": "Gül Büyücüsü"
+        },
+		
+		"Rocky Road":
+        {
+            "Title": "Taşlı Yol"
+        },
+		
+		"Molten Rock":
+        {
+            "Title": "Erimiş Kaya"
+        },
+		
+		"Crying Cobblestone":
+        {
+            "Title": "Ağlayan Taş"
+        },
+		
+		"Jester Reflection":
+        {
+            "Title": "Soytarı'nın Yansıması"
+        },
+		
+		"Beta Block":
+        {
+            "Title": "Beta Block"
+        },
+		
+		"Stealthy Maroon":
+        {
+            "Title": "Sinsi Bordo"
+        },
+		
+		"Sliver-Lined Warrior":
+        {
+            "Title": "Gümüş Kaplı Savaşçı"
+        },
+		
+		"Viridian Ambush":
+        {
+            "Title": "Viridyen Tuzak"
+        },
+		
+		"Explosive B":
+        {
+            "Title": "Patlayıcı B"
+        },
+		
+		"Blooming Poppy":
+        {
+            "Title": "Gelincik Sarısı"
+        },
+		
+		"Outbursting Conspiracy":
+        {
+            "Title": "Patlayan Komplo"
+        },
+		
+		"Dragon's Castle":
+        {
+            "Title": "Ejderin Kalesi"
+        },
+		
+		"Scorching Scarlet":
+        {
+            "Title": "Kavurucu Kızıl"
+        },
+		
+		"Blazing Blue":
+        {
+            "Title": "Yakıcı Mavi"
+        },
+		
+		"Scarlet Rose":
+        {
+            "Title": "Kızıl Gül"
+        },
+		
+		"Frosted Shard":
+        {
+            "Title": "Buz Parçası"
+        },
+		
+		"Frosty Obsidian":
+        {
+            "Title": "Donan Obsidiyen"
+        },
+		
+		"Chilly":
+        {
+            "Title": "Buzlu"
+        },
+		
+		"Chocolate Mousse":
+        {
+            "Title": "Çikolatalı Köpük"
+        },
+		
+		"Electro Marine":
+        {
+            "Title": "Elektro Daniz"
+        },
+		
+		"Spinning Violet":
+        {
+            "Title": "Dönen Menekşe"
+        },
+		
+		"Rushing Red":
+        {
+            "Title": "Firarlı Kırmızı"
+        },
+		
+		"Muffler Blue":
+        {
+            "Title": "Mavi Atkı"
+        },
+		
+		"Dapper Painter":
+        {
+            "Title": "Hoş Boyacı"
+        },
+		
+		"Crimson Champion":
+        {
+            "Title": "Kızıl Şampiyon"
+        },
+		
+		"Blue Banner":
+        {
+            "Title": "Mavi Bayrak"
+        },
+		
+		"Rainbow Flight":
+        {
+            "Title": "Gökkuşağı Uçuşu"
+        },
+		
+		"Pekin Breeze":
+        {
+            "Title": "Pekin Ördeği"
+        },
+		
+		"Speed Machine":
+        {
+            "Title": "Hız Makinesi"
+        },
+		
+		"Speedy Scarlet":
+        {
+            "Title": "Hızlı Kızıl"
+        },
+		
+		"Lavender-01":
+        {
+            "Title": "Eflatun-01"
+        },
+		
+		"Slicing Green":
+        {
+            "Title": "Keskin Yeşil"
+        },
+		
+		"Thundering Cloud":
+        {
+            "Title": "Fırtınalı Bulut"
+        },
+		
+		"Lazy Red":
+        {
+            "Title": "Tembel Kırmızı"
+        },
+		
+		"Wagasa Dee":
+        {
+            "Title": "Wagasa Dee"
+        },
+		
+		"Crushing Brown":
+        {
+            "Title": "Ezici Kahverengi"
+        },
+		
+		"Construction Work":
+        {
+            "Title": "İnşaat İşi"
+        },
+		
+		"Dazzling Default":
+        {
+            "Title": "Göz Kamaştırıcı Varsayılan"
+        },
+		
+		"Presto Purple":
+        {
+            "Title": "Presto Mor"
+        },
+		
+		"Tempo Teal":
+        {
+            "Title": "Tempo Mavi"
+        },
+		
+		"Ringing Rose":
+        {
+            "Title": "Güllü Zil"
+        },
+		
+		"Candescent Copper":
+        {
+            "Title": "Mum Işığı Bakır"
+        },
+		
+		"Shining Silver":
+        {
+            "Title": "Parlak Gümüş"
+        },
+		
+		"Polished Plant":
+        {
+            "Title": "Cilalı Bitki"
+        },
+		
+		"Illuminated Ivory":
+        {
+            "Title": "Işıklı Fil Dişi"
+        },
+		
+		"Bubbly Green":
+        {
+            "Title": "Baloncuk Yeşili"
+        },
+		
+		"Noddy Peach":
+        {
+            "Title": "Noddy Şeftalisi"
+        },
+		
+		"Royal Purple":
+        {
+            "Title": "Soylu Mor"
+        },
+		
+		"Metallic Red":
+        {
+            "Title": "Metalik Kırmızı"
+        },
+		
+		"Military Green":
+        {
+            "Title": "Asker Yeşili"
+        }
+	},
+	
+	"Familiars":
+    {
+		"Gamble":
+        {
+			"Description": "Kirby'nin gizemli yardımcısı! Kötülükleri durdurmana yardım etmek istiyor."
+        },
+		
+		"Happy Pea":
+        {
+            "Title": "Mutlu Bezelye",
+			
+			"Description": "Bir çiçek mi?! Düşmanları Kirby'den uzak tutabilir!"
+        },
+		
+		"Epic Jar":
+        {
+            "Title": "Destansı Kavanoz",
+			
+			"Description": "Bu bilim adamı icatlarıyla tüm düşmanları patlatabilir!"
+        },
+		
+		"Krackle":
+        {
+            "Title": "Krackle",
+			
+			"Description": "Bu ufak bulut mor kötülüğü püskürtmek istiyor!"
+        },
+		
+		"Omega Matter":
+        {
+            "Title": "Omega Madde",
+			
+			"Description": "Merhaba ben Subsandwich."
+        }
+	},
+    
+    "Languages":
+    {
+        "English": "English",
+        
+        "Turkish": "Türkçe",
+        
+        "German": "Deutsch",
+        
+        "Italian": "Italiano",
+        
+        "French": "Français",
+        
+        "Polish": "Polski",
+        
+        "Chinese": "Chinese (WIP)",
+        
+        "Spanish": "Español",
+        
+        "Japanese": "日本語",
+        
+        "Portuguese": "Português",
+        
+        "Norwegian": "Norwegian (WIP)",
+        
+        "Arabic": "عربي"
+    },
+    
+    "Options":
+    {
+        "True": "Etkin",
+        
+        "False": "Devre Dışı",
+        
+        "Display": "Görüntü",
+        
+        "Audio": "Ses",
+        
+        "Controls": "Kontroller",
+        
+        "Language": "Dil",
+        
+        "Other": "Diğer",
+        
+        "Fullscreen": "Tam Ekran",
+        
+        "Window Size": "Pencere Boyutu",
+        
+        "Music": "Müzik",
+        
+        "Sound Effects": "Ses Efektleri",
+        
+        "Left": "Sol",
+        
+        "Right": "Sağ",
+        
+        "Up": "Yukarı",
+        
+        "Down": "Aşağı",
+        
+        "Jump": "Zıplama",
+        
+        "Attack": "Saldırı",
+        
+        "Start": "Başlat",
+        
+        "Select": "Seç",
+        
+        "Press Any Key": "Herhangi Tuşa Bas",
+        
+        "Extra Tutorials": "Ek Eğitim",
+        
+        "Auto Swallow": "Otomatik Yeme",
+        
+        "Music Intro": "Müzik Başlangıcı",
+        
+        "Default": "Varsayılan"
+    },
+    
+    "Customize Sub-Menus":
+    {
+        "Skins":
+        {
+            "Title": "Kostümler"
+        },
+        
+        "Spray Paints":
+        {
+            "Title": "Sprey Boyalar"
+        },
+        
+        "Hat Skins":
+        {
+            "Title": "Şapka Tarzları"
+        },
+        
+        "Hat Paints":
+        {
+            "Title": "Şapka Boyaları"
+        },
+        
+        "Familiars":
+        {
+            "Title": "Dostlar"
+        }
+    },
+    
+    "Unlock Methods":
+    {
+        "Default": "Varsayılan",
+		
+		"Beat Stage Missions": "Bölüm görevlerini geç",
+		
+		"Tomatoo Catch 3 Stars": "Tomatoo Yakalama'da 3 Yıldız al",
+		
+		"Fill 10 Bestiary": "Rehberde 10 kayıt doldur",
+		
+		"Fill 20 Bestiary": "Rehberde 20 kayıt doldur",
+		
+		"Fill 50 Bestiary": "Rehberde 50 kayıt doldur",
+		
+		"Unlock 5 Familiars": "5 Dost aç",
+		
+		"Log Into Gamejolt": "Gamejolt'ta oturum aç",
+		
+		"Log Into Discord": "Discord'ta oturum aç",
+		
+		"Beam Gold Medal": "Işın Meydan Okumasında Altın Madalya al",
+		
+		"Stone Gold Medal": "Taş Meydan Okumasında Altın Madalya al",
+		
+		"Mirror Gold Medal": "Ayna Meydan Okumasında Altın Madalya al",
+		
+		"Ninja Gold Medal": "Ninja Meydan Okumasında Altın Madalya al",
+		
+		"Fire Gold Medal": "Ateş Meydan Okumasında Altın Madalya al",
+		
+		"Ice Gold Medal": "Buz Meydan Okumasında Altın Madalya al",
+		
+		"Spark Gold Medal": "",
+		
+		"Unlock Gamble": "Gamble'ı aç",
+		
+		"Unlock Meta Knight": "Meta Knight'ı aç",
+		
+		"Unlock Gooey": "Gooey'i aç",
+		
+		"Unlock Magolor": "Magolor'u aç",
+		
+		"Unlock Keeby": "Keeby'i aç",
+		
+		"Unlock Prince Fluff": "Prens Fluff'ı aç",
+		
+		"Secret": ""
+    },
+	
+	"Shop General":
+    {
+		"Buy": "SATIN AL",
+		
+		"Talk": "KONUŞ",
+		
+		"Leave": "KONUŞ",
+		
+		"Next": "AYRIL",
+		
+		"Back": "GERİ"
+	},
+	
+	"Magolor Shop":
+    {
+		"First Time Entrance":
+        {
+            "1": "Selam! En son Lor'a geleli uzun zaman oldu değil mi? Eğer paran varsa sattıklarıma bakmak isteyebilirsin!"
+        },
+		
+		"Entrance":
+        {
+            "1": "Tekrar hoşgeldin!",
+			
+			"2": "Seni tek parça görmek çok iyi.",
+			
+			"3": "Merhaba!",
+			
+			"4": "Seni tekrar görmek güzel!",
+			
+			"5": "Macera nasıl gidiyor?",
+			
+			"6": "Yorulmuş görünüyorsun, yemek almaya ne dersin?"
+        },
+		
+		"Entrance New Items":
+        {
+            "1": "Yük ambarında çılgın bir şeyler buldum!",
+			
+			"2": "Sen yokken Başka Boyut'a gezmeye gidip hoşuna gidebilecek şeyler buldum!"
+        },
+		
+		"Buy Dialogue":
+        {
+            "1": "Gözünü eski eşyalarıma dikmiş gibisin, onlar da satılık!",
+			
+			"2": "Bende her türlu kullanışlı şey var!",
+			
+			"3": "Eminim işine yarayacak bir şeyim vardır!",
+			
+			"4": "Etrafa bak bakalım istediğin bir şey var mı."
+        },
+		
+		"Purchase Item":
+        {
+            "1": "Para için sağol!",
+			
+			"2": "Tatlı, tatlı para.",
+			
+			"3": "Bununla Lor'a boya yaptırabilirim!",
+			
+			"4": "Bununla gemimi geçindirebilirim!",
+			
+			"5": "Sonunda istediğim saç fırçasını alabileceğim!"
+        },
+		
+		"Not Enough Money":
+        {
+            "1": "Tamam beni kurtardın ama yine de paranı ödemelisin!",
+			
+			"2": "Üzgünüm dostum.",
+			
+			"3": "Fiyatları tartışmak istemiyorum.",
+			
+			"4": "Bu eski dostunu kazıklamaya çalışmıyorsun, değil mi?",
+			
+			"5": "Sana bedava eşya falan veremem!"
+        },
+		
+		"Talk Dialogue":
+        {
+            "1": "Anlatacak çok fazla hikayem var!",
+			
+			"2": "Ne öğrenmek istersin?",
+			
+			"3": "Neler var aklında?"
+        },
+		
+		"Talk Options":
+        {
+            "1": "Yumurta Bahçesinde ne yapıyordun?",
+			
+			"2": "İyi misin?",
+			
+			"3": "Senin saçın mı var?",
+			
+			"4": "Görebilir miyim?"
+        },
+		
+		"Why Were You At Egg Garden":
+        {
+			"1": "Popstar'daki lunaparkı işletmekten çok yorulmuştım. Biraz tatil yapmak istedim.",
+			
+			"2": "Orayı işletmek çok zor, sen de biliyorsun!",
+			
+			"3": "Yanıma bir arkadaşımı alıp gezmeye çıkmıştım ama galiba arkadaşım o garip adamla çatışmaya girdi..."
+        },
+		
+		"Are You Okay":
+        {
+			"1": "O adamla karşılaşmamızdan sonra gerçekten yoruldum.",
+			
+			"2": "Bana yaptığı büyü... şimdiye kadar hiç görmediğim bir şeydi.",
+			
+			"3": "İyi ki beni kendime geri getirdin! Kim bilir sen gelmesen neler olacaktı..."
+        },
+		
+		"You Have Hair":
+        {
+			"1": "Tabiki de var! Gözümün önüne gelirse kapşonumun içine sokuyorum.",
+			
+			"2": "Lor'u tamir ederken tatlı saçımın sıkışmasını istemem!",
+			
+			"3": "Çok fena olurdu!"
+        },
+		
+		"Can I See It":
+        {
+            "1": "Yoo."
+        },
+		
+		"Leave Shop":
+        {
+            "1": "Dikkatli ol!",
+			
+			"2": "Her zaman gelebilirsin!",
+			
+			"3": "Bol şans!",
+			
+			"4": "Sonra görüşürüz!",
+			
+			"5": "Seni bekliyor olacağım!"
+        }
+	},
+	
+	"Gear Cube Shop":
+    {
+	},
+	
+	"Minigames":
+    {
+        "Tomatoo Catch":
+        {
+            "Title": "Tomatoo Yakalama"
+        }
+	},
+	
+	"Cutscenes":
+    {
+	},
+	
+	"Extra Tutorials":
+    {
+		"Treasure":
+        {
+            "1": "Bir hazine buldun!",
+			
+			"2": "Hazinelerine ve topladıklarına bakmak için Koleksiyon Menüsüne gir!"
+        },
+		
+		"Anti Float":
+        {
+            "1 - Kirby": "Dikkatli ol Kirby!",
+			
+			"2": "Burada havasız bir boşluk hissediyorum.",
+			
+			"3 - Default": "Eğer onun içine girersen uçamayabilirsin. Zıplamana güvenmen lazım.",
+			
+			"3 - Kirby": "Sana etki eder mi bilmiyorum, yinede dikkat et."
+        }
+	}
+}

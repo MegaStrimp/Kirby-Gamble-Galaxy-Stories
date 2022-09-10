@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_LaserBall_Normal_Aura3_Attack",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d01c4b53-e598-4a42-91af-01f6635f14b1","path":"sprites/spr_LaserBall_Normal_Aura3_Attack/spr_LaserBall_Normal_Aura3_Attack.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d01c4b53-e598-4a42-91af-01f6635f14b1","path":"sprites/spr_LaserBall_Normal_Aura3_Attack/spr_LaserBall_Normal_Aura3_Attack.yy",},"LayerId":{"name":"51b26068-db54-4d82-8c06-54f0db1ffeda","path":"sprites/spr_LaserBall_Normal_Aura3_Attack/spr_LaserBall_Normal_Aura3_Attack.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_LaserBall_Normal_Aura3_Attack","path":"sprites/spr_LaserBall_Normal_Aura3_Attack/spr_LaserBall_Normal_Aura3_Attack.yy",},"resourceVersion":"1.0","name":"d01c4b53-e598-4a42-91af-01f6635f14b1","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d01c4b53-e598-4a42-91af-01f6635f14b1",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_LaserBall_Normal_Aura3_Attack","path":"sprites/spr_LaserBall_Normal_Aura3_Attack/spr_LaserBall_Normal_Aura3_Attack.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_LaserBall_Normal_Aura3_Attack",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"8c8b4e0c-6fce-4da4-9305-b519f3be1c99","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d01c4b53-e598-4a42-91af-01f6635f14b1","path":"sprites/spr_LaserBall_Normal_Aura3_Attack/spr_LaserBall_Normal_Aura3_Attack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"8c8b4e0c-6fce-4da4-9305-b519f3be1c99","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d01c4b53-e598-4a42-91af-01f6635f14b1","path":"sprites/spr_LaserBall_Normal_Aura3_Attack/spr_LaserBall_Normal_Aura3_Attack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_LaserBall_Normal_Aura3_Attack","path":"sprites/spr_LaserBall_Normal_Aura3_Attack/spr_LaserBall_Normal_Aura3_Attack.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_LaserBall_Normal_Aura3_Attack",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"51b26068-db54-4d82-8c06-54f0db1ffeda","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"51b26068-db54-4d82-8c06-54f0db1ffeda","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Aura",
     "path": "folders/Sprites/Enemies/Laser Ball/Normal/Aura.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_LaserBall_Normal_Aura3_Attack",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

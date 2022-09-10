@@ -52,6 +52,10 @@ function scr_Player_HatPalette(argument0,argument1)
 					case abilityHatPaints.cutter_kssu_mallardGreen:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Cutter_KSSU_Palette_MallardGreen;
 					break;
+					
+					case abilityHatPaints.cutter_kssu_blackSwedish:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Cutter_KSSU_Palette_BlackSwedish;
+					break;
 				}
 				break;
 			}
@@ -216,6 +220,10 @@ function scr_Player_HatPalette(argument0,argument1)
 					case abilityHatPaints.stone_modern_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Stone_Modern_Palette_Bitcrushed;
 					break;
+					
+					case abilityHatPaints.stone_modern_cryingCobblestone:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Stone_Modern_Palette_CryingCobblestone;
+					break;
 				}
 				break;
 			}
@@ -376,6 +384,10 @@ function scr_Player_HatPalette(argument0,argument1)
 					case abilityHatPaints.ninja_modern_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Ninja_Modern_Palette_Bitcrushed;
 					break;
+					
+					case abilityHatPaints.ninja_modern_viridianAmbush:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Ninja_Modern_Palette_ViridianAmbush;
+					break;
 				}
 				break;
 			}
@@ -411,6 +423,10 @@ function scr_Player_HatPalette(argument0,argument1)
 					
 					case abilityHatPaints.bomb_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Bomb_KSSU_Palette_Bitcrushed;
+					break;
+					
+					case abilityHatPaints.bomb_kssu_bloomingPoppy:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Bomb_KSSU_Palette_BloomingPoppy;
 					break;
 				}
 				break;
@@ -562,6 +578,10 @@ function scr_Player_HatPalette(argument0,argument1)
 					case abilityHatPaints.ice_kssu_frostyObsidian:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Ice_KSSU_Palette_FrostyObsidian;
 					break;
+					
+					case abilityHatPaints.ice_kssu_fluxNostalgia:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Ice_KSSU_Palette_FluxNostalgia;
+					break;
 				}
 				break;
 				
@@ -583,6 +603,10 @@ function scr_Player_HatPalette(argument0,argument1)
 					
 					case abilityHatPaints.ice_snowman_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Ice_Snowman_Palette_Bitcrushed;
+					break;
+					
+					case abilityHatPaints.ice_snowman_chocolateMousse:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Ice_Snowman_Palette_ChocolateMousse;
 					break;
 				}
 				break;
@@ -691,6 +715,14 @@ function scr_Player_HatPalette(argument0,argument1)
 					
 					case abilityHatPaints.wheel_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Wheel_KSSU_Palette_Bitcrushed;
+					break;
+					
+					case abilityHatPaints.wheel_kssu_mufflerBlue:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Wheel_KSSU_Palette_MufflerBlue;
+					break;
+					
+					case abilityHatPaints.wheel_kssu_fluxNostalgia:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Wheel_KSSU_Palette_FluxNostalgia;
 					break;
 				}
 				break;
@@ -854,6 +886,10 @@ function scr_Player_HatPalette(argument0,argument1)
 					case abilityHatPaints.wing_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Wing_KSSU_Palette_Bitcrushed;
 					break;
+					
+					case abilityHatPaints.wing_kssu_pekinBreeze:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Wing_KSSU_Palette_PekinBreeze;
+					break;
 				}
 				break;
 			}
@@ -938,6 +974,10 @@ function scr_Player_HatPalette(argument0,argument1)
 					case abilityHatPaints.sword_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Sword_KSSU_Palette_Bitcrushed;
 					break;
+					
+					case abilityHatPaints.sword_kssu_fluxNostalgia:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Sword_KSSU_Palette_FluxNostalgia;
+					break;
 				}
 				break;
 			}
@@ -1017,6 +1057,10 @@ function scr_Player_HatPalette(argument0,argument1)
 					
 					case abilityHatPaints.hammer_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Hammer_KSSU_Palette_Bitcrushed;
+					break;
+					
+					case abilityHatPaints.hammer_kssu_fluxNostalgia:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Hammer_KSSU_Palette_FluxNostalgia;
 					break;
 				}
 				break;

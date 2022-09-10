@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Wapod_Normal_Pot",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"1ad9054e-7c8b-4c8e-84e9-0762460151a3","path":"sprites/spr_Wapod_Normal_Pot/spr_Wapod_Normal_Pot.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1ad9054e-7c8b-4c8e-84e9-0762460151a3","path":"sprites/spr_Wapod_Normal_Pot/spr_Wapod_Normal_Pot.yy",},"LayerId":{"name":"26f85a98-c436-4d84-a2a9-191019062d1d","path":"sprites/spr_Wapod_Normal_Pot/spr_Wapod_Normal_Pot.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Wapod_Normal_Pot","path":"sprites/spr_Wapod_Normal_Pot/spr_Wapod_Normal_Pot.yy",},"resourceVersion":"1.0","name":"1ad9054e-7c8b-4c8e-84e9-0762460151a3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1ad9054e-7c8b-4c8e-84e9-0762460151a3",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Wapod_Normal_Pot","path":"sprites/spr_Wapod_Normal_Pot/spr_Wapod_Normal_Pot.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Wapod_Normal_Pot",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"0fe69fd9-c693-43ea-84f2-c0d312873c40","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1ad9054e-7c8b-4c8e-84e9-0762460151a3","path":"sprites/spr_Wapod_Normal_Pot/spr_Wapod_Normal_Pot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"0fe69fd9-c693-43ea-84f2-c0d312873c40","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1ad9054e-7c8b-4c8e-84e9-0762460151a3","path":"sprites/spr_Wapod_Normal_Pot/spr_Wapod_Normal_Pot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 17,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Wapod_Normal_Pot","path":"sprites/spr_Wapod_Normal_Pot/spr_Wapod_Normal_Pot.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Wapod_Normal_Pot",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"26f85a98-c436-4d84-a2a9-191019062d1d","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"26f85a98-c436-4d84-a2a9-191019062d1d","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Enemies/Wapod/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Wapod_Normal_Pot",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

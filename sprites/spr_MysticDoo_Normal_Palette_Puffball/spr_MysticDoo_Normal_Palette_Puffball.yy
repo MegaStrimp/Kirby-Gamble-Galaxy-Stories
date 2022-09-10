@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_MysticDoo_Normal_Palette_Puffball",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"1f3ba6da-4c7a-4379-ae28-fb9bfa73c228","path":"sprites/spr_MysticDoo_Normal_Palette_Puffball/spr_MysticDoo_Normal_Palette_Puffball.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1f3ba6da-4c7a-4379-ae28-fb9bfa73c228","path":"sprites/spr_MysticDoo_Normal_Palette_Puffball/spr_MysticDoo_Normal_Palette_Puffball.yy",},"LayerId":{"name":"db273219-ae6c-4c2e-9e91-65fc8bfa5751","path":"sprites/spr_MysticDoo_Normal_Palette_Puffball/spr_MysticDoo_Normal_Palette_Puffball.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_MysticDoo_Normal_Palette_Puffball","path":"sprites/spr_MysticDoo_Normal_Palette_Puffball/spr_MysticDoo_Normal_Palette_Puffball.yy",},"resourceVersion":"1.0","name":"1f3ba6da-4c7a-4379-ae28-fb9bfa73c228","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1f3ba6da-4c7a-4379-ae28-fb9bfa73c228",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_MysticDoo_Normal_Palette_Puffball","path":"sprites/spr_MysticDoo_Normal_Palette_Puffball/spr_MysticDoo_Normal_Palette_Puffball.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_MysticDoo_Normal_Palette_Puffball",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"68b95fdd-6e8d-4e3f-b622-6bb23feb59c3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1f3ba6da-4c7a-4379-ae28-fb9bfa73c228","path":"sprites/spr_MysticDoo_Normal_Palette_Puffball/spr_MysticDoo_Normal_Palette_Puffball.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"68b95fdd-6e8d-4e3f-b622-6bb23feb59c3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1f3ba6da-4c7a-4379-ae28-fb9bfa73c228","path":"sprites/spr_MysticDoo_Normal_Palette_Puffball/spr_MysticDoo_Normal_Palette_Puffball.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_MysticDoo_Normal_Palette_Puffball","path":"sprites/spr_MysticDoo_Normal_Palette_Puffball/spr_MysticDoo_Normal_Palette_Puffball.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_MysticDoo_Normal_Palette_Puffball",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"db273219-ae6c-4c2e-9e91-65fc8bfa5751","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"db273219-ae6c-4c2e-9e91-65fc8bfa5751","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Palettes",
     "path": "folders/Sprites/Enemies/Mystic Doo/Normal/Palettes.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_MysticDoo_Normal_Palette_Puffball",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Skylands_Kirby_Death",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b1dde3d6-2025-4180-ade6-a90543a9473a","path":"sprites/spr_Skylands_Kirby_Death/spr_Skylands_Kirby_Death.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b1dde3d6-2025-4180-ade6-a90543a9473a","path":"sprites/spr_Skylands_Kirby_Death/spr_Skylands_Kirby_Death.yy",},"LayerId":{"name":"754f45bd-b0a7-4de3-b8bd-69e54e2a1aea","path":"sprites/spr_Skylands_Kirby_Death/spr_Skylands_Kirby_Death.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Skylands_Kirby_Death","path":"sprites/spr_Skylands_Kirby_Death/spr_Skylands_Kirby_Death.yy",},"resourceVersion":"1.0","name":"b1dde3d6-2025-4180-ade6-a90543a9473a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b1dde3d6-2025-4180-ade6-a90543a9473a",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Skylands_Kirby_Death","path":"sprites/spr_Skylands_Kirby_Death/spr_Skylands_Kirby_Death.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Skylands_Kirby_Death",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 12.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"77f53e4c-51b0-408f-b822-d041bfcb02ff","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b1dde3d6-2025-4180-ade6-a90543a9473a","path":"sprites/spr_Skylands_Kirby_Death/spr_Skylands_Kirby_Death.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"77f53e4c-51b0-408f-b822-d041bfcb02ff","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b1dde3d6-2025-4180-ade6-a90543a9473a","path":"sprites/spr_Skylands_Kirby_Death/spr_Skylands_Kirby_Death.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 7,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Skylands_Kirby_Death","path":"sprites/spr_Skylands_Kirby_Death/spr_Skylands_Kirby_Death.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Skylands_Kirby_Death",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"754f45bd-b0a7-4de3-b8bd-69e54e2a1aea","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"754f45bd-b0a7-4de3-b8bd-69e54e2a1aea","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Kirby",
     "path": "folders/Sprites/Subgames/Skylands/Characters/Kirby.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Skylands_Kirby_Death",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_AbilityHat_Artist_KSSU_Duck",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"bc795d23-3819-4b3f-8ec5-d6ea75c72580","path":"sprites/spr_Kirby_AbilityHat_Artist_KSSU_Duck/spr_Kirby_AbilityHat_Artist_KSSU_Duck.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bc795d23-3819-4b3f-8ec5-d6ea75c72580","path":"sprites/spr_Kirby_AbilityHat_Artist_KSSU_Duck/spr_Kirby_AbilityHat_Artist_KSSU_Duck.yy",},"LayerId":{"name":"066c471e-bfbf-4dfb-bf33-de831d9c8643","path":"sprites/spr_Kirby_AbilityHat_Artist_KSSU_Duck/spr_Kirby_AbilityHat_Artist_KSSU_Duck.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Artist_KSSU_Duck","path":"sprites/spr_Kirby_AbilityHat_Artist_KSSU_Duck/spr_Kirby_AbilityHat_Artist_KSSU_Duck.yy",},"resourceVersion":"1.0","name":"bc795d23-3819-4b3f-8ec5-d6ea75c72580","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bc795d23-3819-4b3f-8ec5-d6ea75c72580",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_AbilityHat_Artist_KSSU_Duck","path":"sprites/spr_Kirby_AbilityHat_Artist_KSSU_Duck/spr_Kirby_AbilityHat_Artist_KSSU_Duck.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_AbilityHat_Artist_KSSU_Duck",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"b8111ffb-25ab-4124-be3a-7f11aa8d5454","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bc795d23-3819-4b3f-8ec5-d6ea75c72580","path":"sprites/spr_Kirby_AbilityHat_Artist_KSSU_Duck/spr_Kirby_AbilityHat_Artist_KSSU_Duck.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"b8111ffb-25ab-4124-be3a-7f11aa8d5454","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bc795d23-3819-4b3f-8ec5-d6ea75c72580","path":"sprites/spr_Kirby_AbilityHat_Artist_KSSU_Duck/spr_Kirby_AbilityHat_Artist_KSSU_Duck.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 11,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_AbilityHat_Artist_KSSU_Duck","path":"sprites/spr_Kirby_AbilityHat_Artist_KSSU_Duck/spr_Kirby_AbilityHat_Artist_KSSU_Duck.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_AbilityHat_Artist_KSSU_Duck",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"066c471e-bfbf-4dfb-bf33-de831d9c8643","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"066c471e-bfbf-4dfb-bf33-de831d9c8643","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Hat",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Artist/KSSU/Hat.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_AbilityHat_Artist_KSSU_Duck",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

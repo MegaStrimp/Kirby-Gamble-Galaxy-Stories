@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_AbilityHat_Cutter_KSSU_Attack6",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,30 +27,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d6b302f2-6bf6-47de-aec8-dc7e3884ef54","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d6b302f2-6bf6-47de-aec8-dc7e3884ef54","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"LayerId":{"name":"8aa5acfa-0a92-4fd3-991b-72977f60bc40","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Cutter_KSSU_Attack6","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","name":"d6b302f2-6bf6-47de-aec8-dc7e3884ef54","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"00024844-cb7f-4d3d-9570-212697336573","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"00024844-cb7f-4d3d-9570-212697336573","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"LayerId":{"name":"8aa5acfa-0a92-4fd3-991b-72977f60bc40","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Cutter_KSSU_Attack6","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","name":"00024844-cb7f-4d3d-9570-212697336573","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3328a11e-4032-43b6-a4c8-939b4bf9b71b","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3328a11e-4032-43b6-a4c8-939b4bf9b71b","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"LayerId":{"name":"8aa5acfa-0a92-4fd3-991b-72977f60bc40","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Cutter_KSSU_Attack6","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","name":"3328a11e-4032-43b6-a4c8-939b4bf9b71b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c20edc03-05b2-4921-bb43-957ece476f61","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c20edc03-05b2-4921-bb43-957ece476f61","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"LayerId":{"name":"8aa5acfa-0a92-4fd3-991b-72977f60bc40","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Cutter_KSSU_Attack6","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","name":"c20edc03-05b2-4921-bb43-957ece476f61","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e1127f1f-6d86-4786-aa53-ccf47c1aa3d1","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e1127f1f-6d86-4786-aa53-ccf47c1aa3d1","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"LayerId":{"name":"8aa5acfa-0a92-4fd3-991b-72977f60bc40","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Cutter_KSSU_Attack6","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","name":"e1127f1f-6d86-4786-aa53-ccf47c1aa3d1","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c3429a06-fd1d-4b78-b00f-b9682773d78c","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c3429a06-fd1d-4b78-b00f-b9682773d78c","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"LayerId":{"name":"8aa5acfa-0a92-4fd3-991b-72977f60bc40","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Cutter_KSSU_Attack6","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","name":"c3429a06-fd1d-4b78-b00f-b9682773d78c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e4d5e130-a518-4e17-9d99-7cdd95ec61f6","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e4d5e130-a518-4e17-9d99-7cdd95ec61f6","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"LayerId":{"name":"8aa5acfa-0a92-4fd3-991b-72977f60bc40","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Cutter_KSSU_Attack6","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","name":"e4d5e130-a518-4e17-9d99-7cdd95ec61f6","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d6b302f2-6bf6-47de-aec8-dc7e3884ef54",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"00024844-cb7f-4d3d-9570-212697336573",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3328a11e-4032-43b6-a4c8-939b4bf9b71b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c20edc03-05b2-4921-bb43-957ece476f61",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e1127f1f-6d86-4786-aa53-ccf47c1aa3d1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c3429a06-fd1d-4b78-b00f-b9682773d78c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e4d5e130-a518-4e17-9d99-7cdd95ec61f6",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_AbilityHat_Cutter_KSSU_Attack6","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_AbilityHat_Cutter_KSSU_Attack6",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -55,18 +46,18 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 7.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"110eeda8-1073-4aaf-9211-d63687e7e90e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d6b302f2-6bf6-47de-aec8-dc7e3884ef54","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"c9373caa-5009-4d8d-bedc-05f167836a38","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"00024844-cb7f-4d3d-9570-212697336573","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"fd4eecae-58d1-4d09-a3a3-22a772c72788","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3328a11e-4032-43b6-a4c8-939b4bf9b71b","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"ff95b4ec-0506-4420-8b3e-fa610f4b99dd","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c20edc03-05b2-4921-bb43-957ece476f61","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"739ff60b-5696-43d0-8689-970bd63161f2","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e1127f1f-6d86-4786-aa53-ccf47c1aa3d1","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"cd93eb1a-92ce-4581-a596-8091d4c0a605","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c3429a06-fd1d-4b78-b00f-b9682773d78c","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"12e7490f-f7dc-4763-8ae7-ce8bc677398e","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e4d5e130-a518-4e17-9d99-7cdd95ec61f6","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"110eeda8-1073-4aaf-9211-d63687e7e90e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d6b302f2-6bf6-47de-aec8-dc7e3884ef54","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c9373caa-5009-4d8d-bedc-05f167836a38","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"00024844-cb7f-4d3d-9570-212697336573","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"fd4eecae-58d1-4d09-a3a3-22a772c72788","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3328a11e-4032-43b6-a4c8-939b4bf9b71b","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ff95b4ec-0506-4420-8b3e-fa610f4b99dd","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c20edc03-05b2-4921-bb43-957ece476f61","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"739ff60b-5696-43d0-8689-970bd63161f2","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e1127f1f-6d86-4786-aa53-ccf47c1aa3d1","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"cd93eb1a-92ce-4581-a596-8091d4c0a605","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c3429a06-fd1d-4b78-b00f-b9682773d78c","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"12e7490f-f7dc-4763-8ae7-ce8bc677398e","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e4d5e130-a518-4e17-9d99-7cdd95ec61f6","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -82,22 +73,13 @@
     "yorigin": 36,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_AbilityHat_Cutter_KSSU_Attack6","path":"sprites/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6/spr_Kirby_AbilityHat_Cutter_KSSU_Attack6.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_AbilityHat_Cutter_KSSU_Attack6",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8aa5acfa-0a92-4fd3-991b-72977f60bc40","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"8aa5acfa-0a92-4fd3-991b-72977f60bc40","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Hat",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Cutter/KSSU/Hat.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_AbilityHat_Cutter_KSSU_Attack6",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

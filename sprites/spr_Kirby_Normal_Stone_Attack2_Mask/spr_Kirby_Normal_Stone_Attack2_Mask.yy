@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_Normal_Stone_Attack2_Mask",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"11f64e33-f4df-46e5-b94d-fdeed0d97911","path":"sprites/spr_Kirby_Normal_Stone_Attack2_Mask/spr_Kirby_Normal_Stone_Attack2_Mask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"11f64e33-f4df-46e5-b94d-fdeed0d97911","path":"sprites/spr_Kirby_Normal_Stone_Attack2_Mask/spr_Kirby_Normal_Stone_Attack2_Mask.yy",},"LayerId":{"name":"23b2e428-697a-4ac5-a180-5e357406ce17","path":"sprites/spr_Kirby_Normal_Stone_Attack2_Mask/spr_Kirby_Normal_Stone_Attack2_Mask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Stone_Attack2_Mask","path":"sprites/spr_Kirby_Normal_Stone_Attack2_Mask/spr_Kirby_Normal_Stone_Attack2_Mask.yy",},"resourceVersion":"1.0","name":"11f64e33-f4df-46e5-b94d-fdeed0d97911","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"74f24c2a-f4d7-4261-aa50-af832e0c90fd","path":"sprites/spr_Kirby_Normal_Stone_Attack2_Mask/spr_Kirby_Normal_Stone_Attack2_Mask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"74f24c2a-f4d7-4261-aa50-af832e0c90fd","path":"sprites/spr_Kirby_Normal_Stone_Attack2_Mask/spr_Kirby_Normal_Stone_Attack2_Mask.yy",},"LayerId":{"name":"23b2e428-697a-4ac5-a180-5e357406ce17","path":"sprites/spr_Kirby_Normal_Stone_Attack2_Mask/spr_Kirby_Normal_Stone_Attack2_Mask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Stone_Attack2_Mask","path":"sprites/spr_Kirby_Normal_Stone_Attack2_Mask/spr_Kirby_Normal_Stone_Attack2_Mask.yy",},"resourceVersion":"1.0","name":"74f24c2a-f4d7-4261-aa50-af832e0c90fd","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c82f25f9-a831-4284-a354-252341910720","path":"sprites/spr_Kirby_Normal_Stone_Attack2_Mask/spr_Kirby_Normal_Stone_Attack2_Mask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c82f25f9-a831-4284-a354-252341910720","path":"sprites/spr_Kirby_Normal_Stone_Attack2_Mask/spr_Kirby_Normal_Stone_Attack2_Mask.yy",},"LayerId":{"name":"23b2e428-697a-4ac5-a180-5e357406ce17","path":"sprites/spr_Kirby_Normal_Stone_Attack2_Mask/spr_Kirby_Normal_Stone_Attack2_Mask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Stone_Attack2_Mask","path":"sprites/spr_Kirby_Normal_Stone_Attack2_Mask/spr_Kirby_Normal_Stone_Attack2_Mask.yy",},"resourceVersion":"1.0","name":"c82f25f9-a831-4284-a354-252341910720","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ddf1965b-30dc-4851-8d0f-34a7e03e2e08","path":"sprites/spr_Kirby_Normal_Stone_Attack2_Mask/spr_Kirby_Normal_Stone_Attack2_Mask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ddf1965b-30dc-4851-8d0f-34a7e03e2e08","path":"sprites/spr_Kirby_Normal_Stone_Attack2_Mask/spr_Kirby_Normal_Stone_Attack2_Mask.yy",},"LayerId":{"name":"23b2e428-697a-4ac5-a180-5e357406ce17","path":"sprites/spr_Kirby_Normal_Stone_Attack2_Mask/spr_Kirby_Normal_Stone_Attack2_Mask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_Stone_Attack2_Mask","path":"sprites/spr_Kirby_Normal_Stone_Attack2_Mask/spr_Kirby_Normal_Stone_Attack2_Mask.yy",},"resourceVersion":"1.0","name":"ddf1965b-30dc-4851-8d0f-34a7e03e2e08","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"11f64e33-f4df-46e5-b94d-fdeed0d97911",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"74f24c2a-f4d7-4261-aa50-af832e0c90fd",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c82f25f9-a831-4284-a354-252341910720",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ddf1965b-30dc-4851-8d0f-34a7e03e2e08",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_Normal_Stone_Attack2_Mask","path":"sprites/spr_Kirby_Normal_Stone_Attack2_Mask/spr_Kirby_Normal_Stone_Attack2_Mask.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_Normal_Stone_Attack2_Mask",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -46,15 +43,15 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 4.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"5f67d7e3-26da-44b4-acce-f495b8112b28","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"11f64e33-f4df-46e5-b94d-fdeed0d97911","path":"sprites/spr_Kirby_Normal_Stone_Attack2_Mask/spr_Kirby_Normal_Stone_Attack2_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"86299d5a-6116-4463-b192-c60756f7fbe4","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"74f24c2a-f4d7-4261-aa50-af832e0c90fd","path":"sprites/spr_Kirby_Normal_Stone_Attack2_Mask/spr_Kirby_Normal_Stone_Attack2_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"b9355db1-273d-4aa5-add4-989bfa8c84cd","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c82f25f9-a831-4284-a354-252341910720","path":"sprites/spr_Kirby_Normal_Stone_Attack2_Mask/spr_Kirby_Normal_Stone_Attack2_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"a994a194-0d04-4e29-b96c-0f452b541d87","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ddf1965b-30dc-4851-8d0f-34a7e03e2e08","path":"sprites/spr_Kirby_Normal_Stone_Attack2_Mask/spr_Kirby_Normal_Stone_Attack2_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"5f67d7e3-26da-44b4-acce-f495b8112b28","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"11f64e33-f4df-46e5-b94d-fdeed0d97911","path":"sprites/spr_Kirby_Normal_Stone_Attack2_Mask/spr_Kirby_Normal_Stone_Attack2_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"86299d5a-6116-4463-b192-c60756f7fbe4","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"74f24c2a-f4d7-4261-aa50-af832e0c90fd","path":"sprites/spr_Kirby_Normal_Stone_Attack2_Mask/spr_Kirby_Normal_Stone_Attack2_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b9355db1-273d-4aa5-add4-989bfa8c84cd","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c82f25f9-a831-4284-a354-252341910720","path":"sprites/spr_Kirby_Normal_Stone_Attack2_Mask/spr_Kirby_Normal_Stone_Attack2_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a994a194-0d04-4e29-b96c-0f452b541d87","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ddf1965b-30dc-4851-8d0f-34a7e03e2e08","path":"sprites/spr_Kirby_Normal_Stone_Attack2_Mask/spr_Kirby_Normal_Stone_Attack2_Mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -70,22 +67,13 @@
     "yorigin": 15,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_Normal_Stone_Attack2_Mask","path":"sprites/spr_Kirby_Normal_Stone_Attack2_Mask/spr_Kirby_Normal_Stone_Attack2_Mask.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_Normal_Stone_Attack2_Mask",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"23b2e428-697a-4ac5-a180-5e357406ce17","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"23b2e428-697a-4ac5-a180-5e357406ce17","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Masks",
     "path": "folders/Sprites/Characters/Kirby/Normal/Masks.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_Normal_Stone_Attack2_Mask",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

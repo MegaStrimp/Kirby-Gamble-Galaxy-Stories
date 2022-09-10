@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_SamuraiKirby_Wheelie_IdleFrontOutline",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"13e8f1ac-5757-4baa-b377-5757ca0a5060","path":"sprites/spr_SamuraiKirby_Wheelie_IdleFrontOutline/spr_SamuraiKirby_Wheelie_IdleFrontOutline.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"13e8f1ac-5757-4baa-b377-5757ca0a5060","path":"sprites/spr_SamuraiKirby_Wheelie_IdleFrontOutline/spr_SamuraiKirby_Wheelie_IdleFrontOutline.yy",},"LayerId":{"name":"237118bb-d0b6-42f4-9e33-0bd8a01ad26e","path":"sprites/spr_SamuraiKirby_Wheelie_IdleFrontOutline/spr_SamuraiKirby_Wheelie_IdleFrontOutline.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_SamuraiKirby_Wheelie_IdleFrontOutline","path":"sprites/spr_SamuraiKirby_Wheelie_IdleFrontOutline/spr_SamuraiKirby_Wheelie_IdleFrontOutline.yy",},"resourceVersion":"1.0","name":"13e8f1ac-5757-4baa-b377-5757ca0a5060","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"13e8f1ac-5757-4baa-b377-5757ca0a5060",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_SamuraiKirby_Wheelie_IdleFrontOutline","path":"sprites/spr_SamuraiKirby_Wheelie_IdleFrontOutline/spr_SamuraiKirby_Wheelie_IdleFrontOutline.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_SamuraiKirby_Wheelie_IdleFrontOutline",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"6e061c8a-04c7-45d4-9d4f-24a601e7718e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"13e8f1ac-5757-4baa-b377-5757ca0a5060","path":"sprites/spr_SamuraiKirby_Wheelie_IdleFrontOutline/spr_SamuraiKirby_Wheelie_IdleFrontOutline.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"6e061c8a-04c7-45d4-9d4f-24a601e7718e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"13e8f1ac-5757-4baa-b377-5757ca0a5060","path":"sprites/spr_SamuraiKirby_Wheelie_IdleFrontOutline/spr_SamuraiKirby_Wheelie_IdleFrontOutline.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 46,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_SamuraiKirby_Wheelie_IdleFrontOutline","path":"sprites/spr_SamuraiKirby_Wheelie_IdleFrontOutline/spr_SamuraiKirby_Wheelie_IdleFrontOutline.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_SamuraiKirby_Wheelie_IdleFrontOutline",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"237118bb-d0b6-42f4-9e33-0bd8a01ad26e","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"237118bb-d0b6-42f4-9e33-0bd8a01ad26e","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Wheelie",
     "path": "folders/Sprites/Subgames/Samurai Kirby/Wheelie.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_SamuraiKirby_Wheelie_IdleFrontOutline",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

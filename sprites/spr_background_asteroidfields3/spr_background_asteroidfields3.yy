@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Background_AsteroidFields3",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"8e8b0f89-00fc-4dfd-bcb4-d399c8a6b607","path":"sprites/spr_Background_AsteroidFields3/spr_Background_AsteroidFields3.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8e8b0f89-00fc-4dfd-bcb4-d399c8a6b607","path":"sprites/spr_Background_AsteroidFields3/spr_Background_AsteroidFields3.yy",},"LayerId":{"name":"3d6deef1-9338-4247-90f1-c9832b57ccf0","path":"sprites/spr_Background_AsteroidFields3/spr_Background_AsteroidFields3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Background_AsteroidFields3","path":"sprites/spr_Background_AsteroidFields3/spr_Background_AsteroidFields3.yy",},"resourceVersion":"1.0","name":"8e8b0f89-00fc-4dfd-bcb4-d399c8a6b607","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"82914bc1-c251-43e1-ab57-add6d2b8a1a3","path":"sprites/spr_Background_AsteroidFields3/spr_Background_AsteroidFields3.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"82914bc1-c251-43e1-ab57-add6d2b8a1a3","path":"sprites/spr_Background_AsteroidFields3/spr_Background_AsteroidFields3.yy",},"LayerId":{"name":"3d6deef1-9338-4247-90f1-c9832b57ccf0","path":"sprites/spr_Background_AsteroidFields3/spr_Background_AsteroidFields3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Background_AsteroidFields3","path":"sprites/spr_Background_AsteroidFields3/spr_Background_AsteroidFields3.yy",},"resourceVersion":"1.0","name":"82914bc1-c251-43e1-ab57-add6d2b8a1a3","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9a1c8b9a-ee18-4df0-b7c1-400c3fda7985","path":"sprites/spr_Background_AsteroidFields3/spr_Background_AsteroidFields3.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9a1c8b9a-ee18-4df0-b7c1-400c3fda7985","path":"sprites/spr_Background_AsteroidFields3/spr_Background_AsteroidFields3.yy",},"LayerId":{"name":"3d6deef1-9338-4247-90f1-c9832b57ccf0","path":"sprites/spr_Background_AsteroidFields3/spr_Background_AsteroidFields3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Background_AsteroidFields3","path":"sprites/spr_Background_AsteroidFields3/spr_Background_AsteroidFields3.yy",},"resourceVersion":"1.0","name":"9a1c8b9a-ee18-4df0-b7c1-400c3fda7985","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"fb2f32d1-7be9-44b1-b92c-5f47fc6f8793","path":"sprites/spr_Background_AsteroidFields3/spr_Background_AsteroidFields3.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fb2f32d1-7be9-44b1-b92c-5f47fc6f8793","path":"sprites/spr_Background_AsteroidFields3/spr_Background_AsteroidFields3.yy",},"LayerId":{"name":"3d6deef1-9338-4247-90f1-c9832b57ccf0","path":"sprites/spr_Background_AsteroidFields3/spr_Background_AsteroidFields3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Background_AsteroidFields3","path":"sprites/spr_Background_AsteroidFields3/spr_Background_AsteroidFields3.yy",},"resourceVersion":"1.0","name":"fb2f32d1-7be9-44b1-b92c-5f47fc6f8793","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8e8b0f89-00fc-4dfd-bcb4-d399c8a6b607",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"82914bc1-c251-43e1-ab57-add6d2b8a1a3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9a1c8b9a-ee18-4df0-b7c1-400c3fda7985",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fb2f32d1-7be9-44b1-b92c-5f47fc6f8793",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Background_AsteroidFields3","path":"sprites/spr_Background_AsteroidFields3/spr_Background_AsteroidFields3.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Background_AsteroidFields3",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 15.0,
@@ -46,15 +43,15 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 4.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"ff868878-cba0-43db-8bb8-862b58f7a1a6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8e8b0f89-00fc-4dfd-bcb4-d399c8a6b607","path":"sprites/spr_Background_AsteroidFields3/spr_Background_AsteroidFields3.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"64ff4fdb-f507-4d9a-ac39-64853505644d","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"82914bc1-c251-43e1-ab57-add6d2b8a1a3","path":"sprites/spr_Background_AsteroidFields3/spr_Background_AsteroidFields3.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"016c1fee-b46c-4d5f-9c91-fffb7390f521","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9a1c8b9a-ee18-4df0-b7c1-400c3fda7985","path":"sprites/spr_Background_AsteroidFields3/spr_Background_AsteroidFields3.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"ca2f11ac-ff57-42c4-8dac-a8f1db192cf2","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fb2f32d1-7be9-44b1-b92c-5f47fc6f8793","path":"sprites/spr_Background_AsteroidFields3/spr_Background_AsteroidFields3.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"ff868878-cba0-43db-8bb8-862b58f7a1a6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8e8b0f89-00fc-4dfd-bcb4-d399c8a6b607","path":"sprites/spr_Background_AsteroidFields3/spr_Background_AsteroidFields3.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"64ff4fdb-f507-4d9a-ac39-64853505644d","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"82914bc1-c251-43e1-ab57-add6d2b8a1a3","path":"sprites/spr_Background_AsteroidFields3/spr_Background_AsteroidFields3.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"016c1fee-b46c-4d5f-9c91-fffb7390f521","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9a1c8b9a-ee18-4df0-b7c1-400c3fda7985","path":"sprites/spr_Background_AsteroidFields3/spr_Background_AsteroidFields3.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ca2f11ac-ff57-42c4-8dac-a8f1db192cf2","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fb2f32d1-7be9-44b1-b92c-5f47fc6f8793","path":"sprites/spr_Background_AsteroidFields3/spr_Background_AsteroidFields3.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -70,22 +67,13 @@
     "yorigin": 41,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Background_AsteroidFields3","path":"sprites/spr_Background_AsteroidFields3/spr_Background_AsteroidFields3.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Background_AsteroidFields3",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3d6deef1-9338-4247-90f1-c9832b57ccf0","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"3d6deef1-9338-4247-90f1-c9832b57ccf0","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Asteroid Fields",
     "path": "folders/Sprites/Stage Elements/Background Elements/Asteroid Fields.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Background_AsteroidFields3",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

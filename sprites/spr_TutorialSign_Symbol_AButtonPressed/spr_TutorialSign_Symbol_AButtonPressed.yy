@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_TutorialSign_Symbol_AButtonPressed",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b704574a-852f-4143-a62b-70c46729545e","path":"sprites/spr_TutorialSign_Symbol_AButtonPressed/spr_TutorialSign_Symbol_AButtonPressed.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b704574a-852f-4143-a62b-70c46729545e","path":"sprites/spr_TutorialSign_Symbol_AButtonPressed/spr_TutorialSign_Symbol_AButtonPressed.yy",},"LayerId":{"name":"e1b871f3-2606-4640-bfcf-8e21fb7a692b","path":"sprites/spr_TutorialSign_Symbol_AButtonPressed/spr_TutorialSign_Symbol_AButtonPressed.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_TutorialSign_Symbol_AButtonPressed","path":"sprites/spr_TutorialSign_Symbol_AButtonPressed/spr_TutorialSign_Symbol_AButtonPressed.yy",},"resourceVersion":"1.0","name":"b704574a-852f-4143-a62b-70c46729545e","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b704574a-852f-4143-a62b-70c46729545e",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_TutorialSign_Symbol_AButtonPressed","path":"sprites/spr_TutorialSign_Symbol_AButtonPressed/spr_TutorialSign_Symbol_AButtonPressed.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_TutorialSign_Symbol_AButtonPressed",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"b941659c-f220-40b9-bc29-7040e943d2ca","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b704574a-852f-4143-a62b-70c46729545e","path":"sprites/spr_TutorialSign_Symbol_AButtonPressed/spr_TutorialSign_Symbol_AButtonPressed.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"b941659c-f220-40b9-bc29-7040e943d2ca","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b704574a-852f-4143-a62b-70c46729545e","path":"sprites/spr_TutorialSign_Symbol_AButtonPressed/spr_TutorialSign_Symbol_AButtonPressed.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 7,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_TutorialSign_Symbol_AButtonPressed","path":"sprites/spr_TutorialSign_Symbol_AButtonPressed/spr_TutorialSign_Symbol_AButtonPressed.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_TutorialSign_Symbol_AButtonPressed",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e1b871f3-2606-4640-bfcf-8e21fb7a692b","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e1b871f3-2606-4640-bfcf-8e21fb7a692b","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Symbols",
     "path": "folders/Sprites/Stage Elements/Tutorial Sign/Symbols.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_TutorialSign_Symbol_AButtonPressed",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

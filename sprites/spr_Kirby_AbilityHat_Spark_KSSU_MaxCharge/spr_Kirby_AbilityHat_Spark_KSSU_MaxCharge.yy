@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"25b141e7-de91-4fba-9e70-1a579b0c34c5","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"25b141e7-de91-4fba-9e70-1a579b0c34c5","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge.yy",},"LayerId":{"name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge.yy",},"resourceVersion":"1.0","name":"25b141e7-de91-4fba-9e70-1a579b0c34c5","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"fa7dbd09-65a7-488a-81ae-9d57c0de0bcb","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fa7dbd09-65a7-488a-81ae-9d57c0de0bcb","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge.yy",},"LayerId":{"name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge.yy",},"resourceVersion":"1.0","name":"fa7dbd09-65a7-488a-81ae-9d57c0de0bcb","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e9655471-1823-4cad-878d-6ec20792bf0e","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e9655471-1823-4cad-878d-6ec20792bf0e","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge.yy",},"LayerId":{"name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge.yy",},"resourceVersion":"1.0","name":"e9655471-1823-4cad-878d-6ec20792bf0e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"08f1a2b7-0445-4c59-903e-d96a475a611e","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"08f1a2b7-0445-4c59-903e-d96a475a611e","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge.yy",},"LayerId":{"name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge.yy",},"resourceVersion":"1.0","name":"08f1a2b7-0445-4c59-903e-d96a475a611e","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"25b141e7-de91-4fba-9e70-1a579b0c34c5",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fa7dbd09-65a7-488a-81ae-9d57c0de0bcb",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e9655471-1823-4cad-878d-6ec20792bf0e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"08f1a2b7-0445-4c59-903e-d96a475a611e",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 21.0,
@@ -46,15 +43,15 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 4.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"bc436e5e-f426-4bd0-8c4a-6d824730367e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"25b141e7-de91-4fba-9e70-1a579b0c34c5","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"e621713e-9a41-490a-bd51-807872b45f4c","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fa7dbd09-65a7-488a-81ae-9d57c0de0bcb","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"0d35e8a1-ab48-44eb-97b1-5b36e7c35faa","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e9655471-1823-4cad-878d-6ec20792bf0e","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"fa902dd2-0663-4e3e-9c58-5f7fc69e5ef1","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"08f1a2b7-0445-4c59-903e-d96a475a611e","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"bc436e5e-f426-4bd0-8c4a-6d824730367e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"25b141e7-de91-4fba-9e70-1a579b0c34c5","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e621713e-9a41-490a-bd51-807872b45f4c","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fa7dbd09-65a7-488a-81ae-9d57c0de0bcb","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0d35e8a1-ab48-44eb-97b1-5b36e7c35faa","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e9655471-1823-4cad-878d-6ec20792bf0e","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"fa902dd2-0663-4e3e-9c58-5f7fc69e5ef1","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"08f1a2b7-0445-4c59-903e-d96a475a611e","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -70,22 +67,13 @@
     "yorigin": 31,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge","path":"sprites/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge/spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Hat",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Spark/KSSU/Hat.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_AbilityHat_Spark_KSSU_MaxCharge",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

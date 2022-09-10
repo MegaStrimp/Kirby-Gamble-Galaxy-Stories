@@ -18,7 +18,7 @@ function scr_Player_States_Normal()
 		if (place_meeting(x,y + 1,obj_ParentWall))
 		{
 			var collidingWall = instance_place(x,y + 1,obj_ParentWall);
-			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal)))) grounded = true;
+			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal) and (!place_meeting(x,y + vspFinal,obj_Wall))))) grounded = true;
 		}
 		else if (place_meeting(x,y + 1,obj_Spring))
 		{
@@ -30,7 +30,7 @@ function scr_Player_States_Normal()
 		if (place_meeting(x,y - 1,obj_Wall))
 		{
 			var collidingWall = instance_place(x,y - 1,obj_Wall);
-			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + collidingWall.vsp + 20 + vspFinal)))) wallAbove = true;
+			if ((!collidingWall.platform)/* or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + collidingWall.vsp + 20 + vspFinal)))*/) wallAbove = true;
 		}
 		
 		var attackDisableMovement = false;
@@ -192,7 +192,7 @@ function scr_Player_States_Normal()
 				var ultiDecel = decel;
 				if (runTurn) ultiDecel = decel * 2;
 				if (attackNumber == playerAttacks.fireWheel) ultiDecel = decelSlide;
-				if (attackNumber == playerAttacks.beamAir) ultiDecel = decel - .025;
+				if (attackNumber == playerAttacks.beamAir) ultiDecel = decel - .05;
 				if (hsp >= ultiDecel) hsp -= ultiDecel;
 				if (hsp <= -ultiDecel) hsp += ultiDecel;
 				if ((hsp > -ultiDecel) and (hsp < ultiDecel)) hsp = 0;
@@ -810,6 +810,8 @@ function scr_Player_States_Normal()
 											sndBeam = audio_play_sound(snd_BeamAir,0,false);
 											attack = true;
 											attackNumber = playerAttacks.beamAir;
+											hsp = 2 * dir;
+											gravLimit = gravLimitBeamAir;
 											beamAttack2FirstHit = true;
 											jumpLimit = false;
 											jumpLimitTimer = jumpLimitTimerMax;

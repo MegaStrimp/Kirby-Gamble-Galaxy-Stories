@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_BroomHatter_Normal_Idle",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"13ae9278-414f-4774-be56-f66903c83126","path":"sprites/spr_BroomHatter_Normal_Idle/spr_BroomHatter_Normal_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"13ae9278-414f-4774-be56-f66903c83126","path":"sprites/spr_BroomHatter_Normal_Idle/spr_BroomHatter_Normal_Idle.yy",},"LayerId":{"name":"176bd99b-bbc1-4166-af7b-adefc05f1c85","path":"sprites/spr_BroomHatter_Normal_Idle/spr_BroomHatter_Normal_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_BroomHatter_Normal_Idle","path":"sprites/spr_BroomHatter_Normal_Idle/spr_BroomHatter_Normal_Idle.yy",},"resourceVersion":"1.0","name":"13ae9278-414f-4774-be56-f66903c83126","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"13ae9278-414f-4774-be56-f66903c83126",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_BroomHatter_Normal_Idle","path":"sprites/spr_BroomHatter_Normal_Idle/spr_BroomHatter_Normal_Idle.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_BroomHatter_Normal_Idle",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"82c360a3-ac7c-4b88-b79b-d2545687397a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"13ae9278-414f-4774-be56-f66903c83126","path":"sprites/spr_BroomHatter_Normal_Idle/spr_BroomHatter_Normal_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"82c360a3-ac7c-4b88-b79b-d2545687397a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"13ae9278-414f-4774-be56-f66903c83126","path":"sprites/spr_BroomHatter_Normal_Idle/spr_BroomHatter_Normal_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_BroomHatter_Normal_Idle","path":"sprites/spr_BroomHatter_Normal_Idle/spr_BroomHatter_Normal_Idle.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_BroomHatter_Normal_Idle",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"176bd99b-bbc1-4166-af7b-adefc05f1c85","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"176bd99b-bbc1-4166-af7b-adefc05f1c85","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Enemies/Broom Hatter/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_BroomHatter_Normal_Idle",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

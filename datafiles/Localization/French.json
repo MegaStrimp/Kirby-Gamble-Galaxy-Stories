@@ -1,0 +1,187 @@
+{
+    "Player Characters":
+    {
+        "Kirby":
+        {
+            "Title": "Kirby",
+            
+            "Description": "Arrivant avec la brise de printemps, c'est Kirby ! Avalez des ennemis et copiez leurs pouvoirs. Une galaxie s'étend au-delà de vos plus grands rêves, il est temps d'y aller !"
+        },
+        
+        "Gamble":
+        {
+            "Title": "Gamble",
+            
+            "Description": "Ce nouvel ami d'un espace lointain est venu sur la planète Pop demander à Kirby un coup de main pour vaincre le Fluxbender cosmique ! Gamble utilise des dés, cartes, roulettes, et de l'énergie magique contre ses ennemis. Pliez-les en deux !"
+        },
+        
+        "Meta Knight":
+        {
+            "Title": "Meta Knight",
+            
+            "Description": "Le chevalier masqué mystérieux de Kirby's Adventure est là ! Il est toujours respectueux et combat toutes les sources du mal. L'entièreté de Dream Land redoute son épée !"
+        },
+        
+        "Helper":
+        {
+            "Title": "Acolyte",
+            
+            "Description": "Des amis de toute part se sont rassemblés pour venir en aide à Kirby dans son aventure ! Jouez avec une multitude de créatures provenant de la galaxie Gamble, de petits Waddle Dee aux Minérissons invincibles !"
+        },
+        
+        "Gooey":
+        {
+            "Title": "Gooey",
+            
+            "Description": "Outre son origine étrange, Gooey possède un cœur d'or, étant toujours présent pour ses amis. À l'aide de sa langue beaucoup trop longue, il est heureux d'aider Kirby dans son aventure !"
+        },
+        
+        "Magolor":
+        {
+            "Title": "Magolor",
+            
+            "Description": "'Du flux ? Je vais vous montrer de la vraie puissance !' Ce magicien sournois arrive de Kirby's Adventure Wii. Il était autrefois un menteur sans scrupule, mais il a changé... pas vrai ? Sa magie extraordinaire va faire succomber les ennemis !"
+        },
+        
+        "Keeby":
+        {
+            "Title": "Keeby",
+            
+            "Description": "Bien qu'il ne soit pas aussi aventureux que son ami rival, Keeby semblait vouloir l'accompagner dans sa quête ! Peut-il prendre une pause dans sa carrière de golf ?"
+        }
+    },
+    
+    "Customize Sub-Menus":
+    {
+        "Skins":
+        {
+            "Title": ""
+        },
+        
+        "Spray Paints":
+        {
+            "Title": ""
+        },
+        
+        "Hat Skins":
+        {
+            "Title": ""
+        },
+        
+        "Hat Paints":
+        {
+            "Title": ""
+        },
+        
+        "Familiars":
+        {
+            "Title": ""
+        }
+    },
+    
+    "Enemies":
+    {
+        "Waddle Dee":
+        {
+            "Title": ""
+        },
+        
+        "Waddle Doo":
+        {
+            "Title": ""
+        },
+        
+        "Bronto Burt":
+        {
+            "Title": ""
+        },
+        
+        "Twizzy":
+        {
+            "Title": ""
+        },
+        
+        "Tookey":
+        {
+            "Title": ""
+        }
+    },
+    
+    "Languages":
+    {
+        "English": "English",
+        
+        "Turkish": "Türkçe",
+        
+        "German": "Deutsch",
+        
+        "Italian": "Italiano",
+        
+        "French": "Français",
+        
+        "Polish": "Polski",
+        
+        "Chinese": "Chinese (WIP)",
+        
+        "Spanish": "Español",
+        
+        "Japanese": "日本語",
+        
+        "Portuguese": "Português",
+        
+        "Norwegian": "Norwegian (WIP)",
+        
+        "Arabic": "عربي"
+    },
+    
+    "Options":
+    {
+        "True": "Oui",
+        
+        "False": "Non",
+        
+        "Display": "Affichage",
+        
+        "Audio": "Audio",
+        
+        "Controls": "Contrôles",
+        
+        "Language": "Langue",
+        
+        "Other": "Autre",
+        
+        "Fullscreen": "Plein écran",
+        
+        "Window Size": "Taille de l'écran",
+        
+        "Music": "Musique",
+        
+        "Sound Effects": "Effet sonores",
+        
+        "Left": "Gauche",
+        
+        "Right": "Droite",
+        
+        "Up": "Haut",
+        
+        "Down": "Bas",
+        
+        "Jump": "",
+        
+        "Attack": "",
+        
+        "Start": "",
+        
+        "Select": "",
+        
+        "Press Any Key": "",
+        
+        "Extra Tutorials": "",
+        
+        "Auto Swallow": "",
+        
+        "Music Intro": "",
+        
+        "Default": ""
+    }
+}

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Projectile_Cutter_Enemy",
   "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4a7133b7-f068-42a5-9062-796f0a5f1570","path":"sprites/spr_Projectile_Cutter_Enemy/spr_Projectile_Cutter_Enemy.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4a7133b7-f068-42a5-9062-796f0a5f1570","path":"sprites/spr_Projectile_Cutter_Enemy/spr_Projectile_Cutter_Enemy.yy",},"LayerId":{"name":"fb6f25fd-7f03-4e65-a2df-43f32e29d698","path":"sprites/spr_Projectile_Cutter_Enemy/spr_Projectile_Cutter_Enemy.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_Cutter_Enemy","path":"sprites/spr_Projectile_Cutter_Enemy/spr_Projectile_Cutter_Enemy.yy",},"resourceVersion":"1.0","name":"4a7133b7-f068-42a5-9062-796f0a5f1570","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"82c4af69-1569-4738-a415-af371b8257d2","path":"sprites/spr_Projectile_Cutter_Enemy/spr_Projectile_Cutter_Enemy.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"82c4af69-1569-4738-a415-af371b8257d2","path":"sprites/spr_Projectile_Cutter_Enemy/spr_Projectile_Cutter_Enemy.yy",},"LayerId":{"name":"fb6f25fd-7f03-4e65-a2df-43f32e29d698","path":"sprites/spr_Projectile_Cutter_Enemy/spr_Projectile_Cutter_Enemy.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_Cutter_Enemy","path":"sprites/spr_Projectile_Cutter_Enemy/spr_Projectile_Cutter_Enemy.yy",},"resourceVersion":"1.0","name":"82c4af69-1569-4738-a415-af371b8257d2","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"681e6aba-c28e-4eaa-ba05-2c419a25a007","path":"sprites/spr_Projectile_Cutter_Enemy/spr_Projectile_Cutter_Enemy.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"681e6aba-c28e-4eaa-ba05-2c419a25a007","path":"sprites/spr_Projectile_Cutter_Enemy/spr_Projectile_Cutter_Enemy.yy",},"LayerId":{"name":"fb6f25fd-7f03-4e65-a2df-43f32e29d698","path":"sprites/spr_Projectile_Cutter_Enemy/spr_Projectile_Cutter_Enemy.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_Cutter_Enemy","path":"sprites/spr_Projectile_Cutter_Enemy/spr_Projectile_Cutter_Enemy.yy",},"resourceVersion":"1.0","name":"681e6aba-c28e-4eaa-ba05-2c419a25a007","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"76ecd1ba-e026-4e28-abb7-a2884ace45ed","path":"sprites/spr_Projectile_Cutter_Enemy/spr_Projectile_Cutter_Enemy.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"76ecd1ba-e026-4e28-abb7-a2884ace45ed","path":"sprites/spr_Projectile_Cutter_Enemy/spr_Projectile_Cutter_Enemy.yy",},"LayerId":{"name":"fb6f25fd-7f03-4e65-a2df-43f32e29d698","path":"sprites/spr_Projectile_Cutter_Enemy/spr_Projectile_Cutter_Enemy.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_Cutter_Enemy","path":"sprites/spr_Projectile_Cutter_Enemy/spr_Projectile_Cutter_Enemy.yy",},"resourceVersion":"1.0","name":"76ecd1ba-e026-4e28-abb7-a2884ace45ed","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4a7133b7-f068-42a5-9062-796f0a5f1570",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"82c4af69-1569-4738-a415-af371b8257d2",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"681e6aba-c28e-4eaa-ba05-2c419a25a007",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"76ecd1ba-e026-4e28-abb7-a2884ace45ed",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Projectile_Cutter_Enemy","path":"sprites/spr_Projectile_Cutter_Enemy/spr_Projectile_Cutter_Enemy.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Projectile_Cutter_Enemy",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 27.0,
@@ -46,15 +43,15 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 4.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"4cd5f1d9-44d2-4ecf-a8a3-c8f84e886ede","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4a7133b7-f068-42a5-9062-796f0a5f1570","path":"sprites/spr_Projectile_Cutter_Enemy/spr_Projectile_Cutter_Enemy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"b50979e9-1bab-457e-9e33-8b1bdde08fea","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"82c4af69-1569-4738-a415-af371b8257d2","path":"sprites/spr_Projectile_Cutter_Enemy/spr_Projectile_Cutter_Enemy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"76447b4e-eff6-4fd3-9b15-6ec15c708508","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"681e6aba-c28e-4eaa-ba05-2c419a25a007","path":"sprites/spr_Projectile_Cutter_Enemy/spr_Projectile_Cutter_Enemy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"cbb476b0-4926-4134-8d75-49ed1a9697f0","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"76ecd1ba-e026-4e28-abb7-a2884ace45ed","path":"sprites/spr_Projectile_Cutter_Enemy/spr_Projectile_Cutter_Enemy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"4cd5f1d9-44d2-4ecf-a8a3-c8f84e886ede","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4a7133b7-f068-42a5-9062-796f0a5f1570","path":"sprites/spr_Projectile_Cutter_Enemy/spr_Projectile_Cutter_Enemy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b50979e9-1bab-457e-9e33-8b1bdde08fea","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"82c4af69-1569-4738-a415-af371b8257d2","path":"sprites/spr_Projectile_Cutter_Enemy/spr_Projectile_Cutter_Enemy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"76447b4e-eff6-4fd3-9b15-6ec15c708508","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"681e6aba-c28e-4eaa-ba05-2c419a25a007","path":"sprites/spr_Projectile_Cutter_Enemy/spr_Projectile_Cutter_Enemy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"cbb476b0-4926-4134-8d75-49ed1a9697f0","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"76ecd1ba-e026-4e28-abb7-a2884ace45ed","path":"sprites/spr_Projectile_Cutter_Enemy/spr_Projectile_Cutter_Enemy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -70,22 +67,13 @@
     "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Projectile_Cutter_Enemy","path":"sprites/spr_Projectile_Cutter_Enemy/spr_Projectile_Cutter_Enemy.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Projectile_Cutter_Enemy",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"fb6f25fd-7f03-4e65-a2df-43f32e29d698","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"fb6f25fd-7f03-4e65-a2df-43f32e29d698","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Enemy",
     "path": "folders/Sprites/Projectiles/Cutter/Enemy.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Projectile_Cutter_Enemy",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

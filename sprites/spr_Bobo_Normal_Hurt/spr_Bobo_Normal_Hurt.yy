@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Bobo_Normal_Hurt",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c1cd931d-c839-4362-8518-231325e2cce6","path":"sprites/spr_Bobo_Normal_Hurt/spr_Bobo_Normal_Hurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c1cd931d-c839-4362-8518-231325e2cce6","path":"sprites/spr_Bobo_Normal_Hurt/spr_Bobo_Normal_Hurt.yy",},"LayerId":{"name":"397e5761-9374-4b43-9e60-d354c7de2135","path":"sprites/spr_Bobo_Normal_Hurt/spr_Bobo_Normal_Hurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Bobo_Normal_Hurt","path":"sprites/spr_Bobo_Normal_Hurt/spr_Bobo_Normal_Hurt.yy",},"resourceVersion":"1.0","name":"c1cd931d-c839-4362-8518-231325e2cce6","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c1cd931d-c839-4362-8518-231325e2cce6",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Bobo_Normal_Hurt","path":"sprites/spr_Bobo_Normal_Hurt/spr_Bobo_Normal_Hurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Bobo_Normal_Hurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"3b8e41a5-3707-4e11-b7ac-dc610fdb82f9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c1cd931d-c839-4362-8518-231325e2cce6","path":"sprites/spr_Bobo_Normal_Hurt/spr_Bobo_Normal_Hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"3b8e41a5-3707-4e11-b7ac-dc610fdb82f9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c1cd931d-c839-4362-8518-231325e2cce6","path":"sprites/spr_Bobo_Normal_Hurt/spr_Bobo_Normal_Hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 15,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Bobo_Normal_Hurt","path":"sprites/spr_Bobo_Normal_Hurt/spr_Bobo_Normal_Hurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Bobo_Normal_Hurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"397e5761-9374-4b43-9e60-d354c7de2135","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"397e5761-9374-4b43-9e60-d354c7de2135","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Enemies/Bobo/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Bobo_Normal_Hurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

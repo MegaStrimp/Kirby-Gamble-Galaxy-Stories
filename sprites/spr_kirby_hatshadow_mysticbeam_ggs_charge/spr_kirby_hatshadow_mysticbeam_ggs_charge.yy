@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_HatShadow_MysticBeam_GGS_Charge",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"5584f5c2-bb2b-4ed0-a0a2-615d8fa586f9","path":"sprites/spr_Kirby_HatShadow_MysticBeam_GGS_Charge/spr_Kirby_HatShadow_MysticBeam_GGS_Charge.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5584f5c2-bb2b-4ed0-a0a2-615d8fa586f9","path":"sprites/spr_Kirby_HatShadow_MysticBeam_GGS_Charge/spr_Kirby_HatShadow_MysticBeam_GGS_Charge.yy",},"LayerId":{"name":"6efb701c-058b-45b5-bd13-c0dfd1b4fede","path":"sprites/spr_Kirby_HatShadow_MysticBeam_GGS_Charge/spr_Kirby_HatShadow_MysticBeam_GGS_Charge.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_MysticBeam_GGS_Charge","path":"sprites/spr_Kirby_HatShadow_MysticBeam_GGS_Charge/spr_Kirby_HatShadow_MysticBeam_GGS_Charge.yy",},"resourceVersion":"1.0","name":"5584f5c2-bb2b-4ed0-a0a2-615d8fa586f9","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5584f5c2-bb2b-4ed0-a0a2-615d8fa586f9",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_HatShadow_MysticBeam_GGS_Charge","path":"sprites/spr_Kirby_HatShadow_MysticBeam_GGS_Charge/spr_Kirby_HatShadow_MysticBeam_GGS_Charge.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_HatShadow_MysticBeam_GGS_Charge",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"28f3a294-e6e2-46d5-b59b-24a2a29a6465","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5584f5c2-bb2b-4ed0-a0a2-615d8fa586f9","path":"sprites/spr_Kirby_HatShadow_MysticBeam_GGS_Charge/spr_Kirby_HatShadow_MysticBeam_GGS_Charge.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"28f3a294-e6e2-46d5-b59b-24a2a29a6465","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5584f5c2-bb2b-4ed0-a0a2-615d8fa586f9","path":"sprites/spr_Kirby_HatShadow_MysticBeam_GGS_Charge/spr_Kirby_HatShadow_MysticBeam_GGS_Charge.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 26,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_HatShadow_MysticBeam_GGS_Charge","path":"sprites/spr_Kirby_HatShadow_MysticBeam_GGS_Charge/spr_Kirby_HatShadow_MysticBeam_GGS_Charge.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_HatShadow_MysticBeam_GGS_Charge",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6efb701c-058b-45b5-bd13-c0dfd1b4fede","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6efb701c-058b-45b5-bd13-c0dfd1b4fede","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Shadow",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Mystic Beam/GGS/Shadow.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_HatShadow_MysticBeam_GGS_Charge",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_HatShadow_Stone_Modern_Run",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,33 +27,19 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"3d97781d-e64c-46d4-9b1c-dd56eec2a486","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3d97781d-e64c-46d4-9b1c-dd56eec2a486","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"LayerId":{"name":"038271b3-f773-435d-b7a5-9828ad205aeb","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Stone_Modern_Run","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","name":"3d97781d-e64c-46d4-9b1c-dd56eec2a486","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"1530a5ac-aa92-4c10-abfa-5bce405c6893","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1530a5ac-aa92-4c10-abfa-5bce405c6893","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"LayerId":{"name":"038271b3-f773-435d-b7a5-9828ad205aeb","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Stone_Modern_Run","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","name":"1530a5ac-aa92-4c10-abfa-5bce405c6893","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"04fcb239-c3ac-43d2-82fe-0c4cbfba5b5f","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"04fcb239-c3ac-43d2-82fe-0c4cbfba5b5f","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"LayerId":{"name":"038271b3-f773-435d-b7a5-9828ad205aeb","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Stone_Modern_Run","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","name":"04fcb239-c3ac-43d2-82fe-0c4cbfba5b5f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"1b848020-6585-4a86-bacb-9fb9cfd12f9b","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1b848020-6585-4a86-bacb-9fb9cfd12f9b","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"LayerId":{"name":"038271b3-f773-435d-b7a5-9828ad205aeb","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Stone_Modern_Run","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","name":"1b848020-6585-4a86-bacb-9fb9cfd12f9b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7cfbd170-5d0c-41ec-a8b2-9b421d226af1","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7cfbd170-5d0c-41ec-a8b2-9b421d226af1","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"LayerId":{"name":"038271b3-f773-435d-b7a5-9828ad205aeb","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Stone_Modern_Run","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","name":"7cfbd170-5d0c-41ec-a8b2-9b421d226af1","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"309c81ab-9ac6-4918-bd87-974bda4a736a","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"309c81ab-9ac6-4918-bd87-974bda4a736a","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"LayerId":{"name":"038271b3-f773-435d-b7a5-9828ad205aeb","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Stone_Modern_Run","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","name":"309c81ab-9ac6-4918-bd87-974bda4a736a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"fad813dd-a0ae-42b8-85ab-02d13d88f01a","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fad813dd-a0ae-42b8-85ab-02d13d88f01a","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"LayerId":{"name":"038271b3-f773-435d-b7a5-9828ad205aeb","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Stone_Modern_Run","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","name":"fad813dd-a0ae-42b8-85ab-02d13d88f01a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e70fb9f9-477a-4075-8fb0-1f7849d153a3","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e70fb9f9-477a-4075-8fb0-1f7849d153a3","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"LayerId":{"name":"038271b3-f773-435d-b7a5-9828ad205aeb","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Stone_Modern_Run","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","name":"e70fb9f9-477a-4075-8fb0-1f7849d153a3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3d97781d-e64c-46d4-9b1c-dd56eec2a486",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1530a5ac-aa92-4c10-abfa-5bce405c6893",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"04fcb239-c3ac-43d2-82fe-0c4cbfba5b5f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1b848020-6585-4a86-bacb-9fb9cfd12f9b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7cfbd170-5d0c-41ec-a8b2-9b421d226af1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"309c81ab-9ac6-4918-bd87-974bda4a736a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fad813dd-a0ae-42b8-85ab-02d13d88f01a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e70fb9f9-477a-4075-8fb0-1f7849d153a3",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_HatShadow_Stone_Modern_Run","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_HatShadow_Stone_Modern_Run",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 21.0,
@@ -58,19 +47,19 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 8.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"b781ad5b-9166-40a2-9486-45d9b3550497","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3d97781d-e64c-46d4-9b1c-dd56eec2a486","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"111c2bbe-e97d-4ade-b0fc-4c889d339636","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1530a5ac-aa92-4c10-abfa-5bce405c6893","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"abd842d4-a665-402d-ad98-a47b2434aee3","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"04fcb239-c3ac-43d2-82fe-0c4cbfba5b5f","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"eaf90406-35a1-4533-88b4-c5450e09baf3","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1b848020-6585-4a86-bacb-9fb9cfd12f9b","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"78b23a04-c522-4a5c-8460-d6ec578c6546","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7cfbd170-5d0c-41ec-a8b2-9b421d226af1","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"2f7f22a8-cd3d-4245-b457-1279e2fca6d3","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"309c81ab-9ac6-4918-bd87-974bda4a736a","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"34cfaec7-4339-45bc-a6c1-b99cd1a0b9a6","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fad813dd-a0ae-42b8-85ab-02d13d88f01a","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"02769b58-2d1a-4a5b-8907-20d9bbdca07f","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e70fb9f9-477a-4075-8fb0-1f7849d153a3","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"b781ad5b-9166-40a2-9486-45d9b3550497","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3d97781d-e64c-46d4-9b1c-dd56eec2a486","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"111c2bbe-e97d-4ade-b0fc-4c889d339636","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1530a5ac-aa92-4c10-abfa-5bce405c6893","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"abd842d4-a665-402d-ad98-a47b2434aee3","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"04fcb239-c3ac-43d2-82fe-0c4cbfba5b5f","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"eaf90406-35a1-4533-88b4-c5450e09baf3","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1b848020-6585-4a86-bacb-9fb9cfd12f9b","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"78b23a04-c522-4a5c-8460-d6ec578c6546","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7cfbd170-5d0c-41ec-a8b2-9b421d226af1","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"2f7f22a8-cd3d-4245-b457-1279e2fca6d3","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"309c81ab-9ac6-4918-bd87-974bda4a736a","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"34cfaec7-4339-45bc-a6c1-b99cd1a0b9a6","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fad813dd-a0ae-42b8-85ab-02d13d88f01a","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"02769b58-2d1a-4a5b-8907-20d9bbdca07f","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e70fb9f9-477a-4075-8fb0-1f7849d153a3","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -86,22 +75,13 @@
     "yorigin": 10,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_HatShadow_Stone_Modern_Run","path":"sprites/spr_Kirby_HatShadow_Stone_Modern_Run/spr_Kirby_HatShadow_Stone_Modern_Run.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_HatShadow_Stone_Modern_Run",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"038271b3-f773-435d-b7a5-9828ad205aeb","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"038271b3-f773-435d-b7a5-9828ad205aeb","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Shadow",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Stone/Modern/Shadow.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_HatShadow_Stone_Modern_Run",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

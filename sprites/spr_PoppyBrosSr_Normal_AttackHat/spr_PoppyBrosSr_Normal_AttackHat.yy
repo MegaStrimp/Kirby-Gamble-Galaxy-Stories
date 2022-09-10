@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_PoppyBrosSr_Normal_AttackHat",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"7efa232c-63aa-46cb-8d8a-85988f72e184","path":"sprites/spr_PoppyBrosSr_Normal_AttackHat/spr_PoppyBrosSr_Normal_AttackHat.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7efa232c-63aa-46cb-8d8a-85988f72e184","path":"sprites/spr_PoppyBrosSr_Normal_AttackHat/spr_PoppyBrosSr_Normal_AttackHat.yy",},"LayerId":{"name":"51c42713-13b2-4073-b7ee-13d6820dba80","path":"sprites/spr_PoppyBrosSr_Normal_AttackHat/spr_PoppyBrosSr_Normal_AttackHat.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_PoppyBrosSr_Normal_AttackHat","path":"sprites/spr_PoppyBrosSr_Normal_AttackHat/spr_PoppyBrosSr_Normal_AttackHat.yy",},"resourceVersion":"1.0","name":"7efa232c-63aa-46cb-8d8a-85988f72e184","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7efa232c-63aa-46cb-8d8a-85988f72e184",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_PoppyBrosSr_Normal_AttackHat","path":"sprites/spr_PoppyBrosSr_Normal_AttackHat/spr_PoppyBrosSr_Normal_AttackHat.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_PoppyBrosSr_Normal_AttackHat",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"607d23cd-e2c7-4338-b20d-543fc2ac4df3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7efa232c-63aa-46cb-8d8a-85988f72e184","path":"sprites/spr_PoppyBrosSr_Normal_AttackHat/spr_PoppyBrosSr_Normal_AttackHat.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"607d23cd-e2c7-4338-b20d-543fc2ac4df3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7efa232c-63aa-46cb-8d8a-85988f72e184","path":"sprites/spr_PoppyBrosSr_Normal_AttackHat/spr_PoppyBrosSr_Normal_AttackHat.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_PoppyBrosSr_Normal_AttackHat","path":"sprites/spr_PoppyBrosSr_Normal_AttackHat/spr_PoppyBrosSr_Normal_AttackHat.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_PoppyBrosSr_Normal_AttackHat",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"51c42713-13b2-4073-b7ee-13d6820dba80","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"51c42713-13b2-4073-b7ee-13d6820dba80","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Bosses/GGS/Poppy Bros Sr/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_PoppyBrosSr_Normal_AttackHat",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

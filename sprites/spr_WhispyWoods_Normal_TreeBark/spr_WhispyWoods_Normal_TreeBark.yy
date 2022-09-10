@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_WhispyWoods_Normal_TreeBark",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"82de9950-1442-4b85-8ef9-65a3c02bab78","path":"sprites/spr_WhispyWoods_Normal_TreeBark/spr_WhispyWoods_Normal_TreeBark.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"82de9950-1442-4b85-8ef9-65a3c02bab78","path":"sprites/spr_WhispyWoods_Normal_TreeBark/spr_WhispyWoods_Normal_TreeBark.yy",},"LayerId":{"name":"b6d619cf-b022-4f14-b5dd-3662f4f2a90d","path":"sprites/spr_WhispyWoods_Normal_TreeBark/spr_WhispyWoods_Normal_TreeBark.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_WhispyWoods_Normal_TreeBark","path":"sprites/spr_WhispyWoods_Normal_TreeBark/spr_WhispyWoods_Normal_TreeBark.yy",},"resourceVersion":"1.0","name":"82de9950-1442-4b85-8ef9-65a3c02bab78","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"82de9950-1442-4b85-8ef9-65a3c02bab78",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_WhispyWoods_Normal_TreeBark","path":"sprites/spr_WhispyWoods_Normal_TreeBark/spr_WhispyWoods_Normal_TreeBark.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_WhispyWoods_Normal_TreeBark",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"5755868b-16c7-418b-9bfb-30b45544707a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"82de9950-1442-4b85-8ef9-65a3c02bab78","path":"sprites/spr_WhispyWoods_Normal_TreeBark/spr_WhispyWoods_Normal_TreeBark.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"5755868b-16c7-418b-9bfb-30b45544707a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"82de9950-1442-4b85-8ef9-65a3c02bab78","path":"sprites/spr_WhispyWoods_Normal_TreeBark/spr_WhispyWoods_Normal_TreeBark.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 47,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_WhispyWoods_Normal_TreeBark","path":"sprites/spr_WhispyWoods_Normal_TreeBark/spr_WhispyWoods_Normal_TreeBark.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_WhispyWoods_Normal_TreeBark",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b6d619cf-b022-4f14-b5dd-3662f4f2a90d","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b6d619cf-b022-4f14-b5dd-3662f4f2a90d","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Tree",
     "path": "folders/Sprites/Bosses/GGS/Whispy Woods/Normal/Tree.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_WhispyWoods_Normal_TreeBark",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

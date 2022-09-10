@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Projectile_SparkNormal_Normal_Ring_Blue",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"3de946bc-4461-4834-8184-b8eb03e16cb0","path":"sprites/spr_Projectile_SparkNormal_Normal_Ring_Blue/spr_Projectile_SparkNormal_Normal_Ring_Blue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3de946bc-4461-4834-8184-b8eb03e16cb0","path":"sprites/spr_Projectile_SparkNormal_Normal_Ring_Blue/spr_Projectile_SparkNormal_Normal_Ring_Blue.yy",},"LayerId":{"name":"7bd6fede-0737-4b13-b6f1-9203de66608d","path":"sprites/spr_Projectile_SparkNormal_Normal_Ring_Blue/spr_Projectile_SparkNormal_Normal_Ring_Blue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_SparkNormal_Normal_Ring_Blue","path":"sprites/spr_Projectile_SparkNormal_Normal_Ring_Blue/spr_Projectile_SparkNormal_Normal_Ring_Blue.yy",},"resourceVersion":"1.0","name":"3de946bc-4461-4834-8184-b8eb03e16cb0","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3de946bc-4461-4834-8184-b8eb03e16cb0",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Projectile_SparkNormal_Normal_Ring_Blue","path":"sprites/spr_Projectile_SparkNormal_Normal_Ring_Blue/spr_Projectile_SparkNormal_Normal_Ring_Blue.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Projectile_SparkNormal_Normal_Ring_Blue",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"c1ce1c8b-cecd-4efb-b201-3d46d3bd09f7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3de946bc-4461-4834-8184-b8eb03e16cb0","path":"sprites/spr_Projectile_SparkNormal_Normal_Ring_Blue/spr_Projectile_SparkNormal_Normal_Ring_Blue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"c1ce1c8b-cecd-4efb-b201-3d46d3bd09f7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3de946bc-4461-4834-8184-b8eb03e16cb0","path":"sprites/spr_Projectile_SparkNormal_Normal_Ring_Blue/spr_Projectile_SparkNormal_Normal_Ring_Blue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 27,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Projectile_SparkNormal_Normal_Ring_Blue","path":"sprites/spr_Projectile_SparkNormal_Normal_Ring_Blue/spr_Projectile_SparkNormal_Normal_Ring_Blue.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Projectile_SparkNormal_Normal_Ring_Blue",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7bd6fede-0737-4b13-b6f1-9203de66608d","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"7bd6fede-0737-4b13-b6f1-9203de66608d","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Projectiles/Spark Normal/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Projectile_SparkNormal_Normal_Ring_Blue",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

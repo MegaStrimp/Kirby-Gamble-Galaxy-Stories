@@ -64,7 +64,7 @@ if (!global.pause)
 	#endregion
 	
 	#region States
-	switch (state)
+	switch (attackState)
 	{
 		#region Normal Movement
 		case 0:
@@ -142,13 +142,15 @@ if (!global.pause)
 			//y+=vsp;
 				x += (idealPosX-x)*accel;
 				y += (idealPosY-y)*accel;
-			if(attackRange >= attackRangeMax && point_distance(x,y,idealPosX,idealPosY) < 6){
+			if ((attackRange >= attackRangeMax && point_distance(x,y,idealPosX,idealPosY) < 6))
+			{
 				stallTimer --;
 				spriteIndex = sprAttack;
 				image_index = 2;
 				image_angle = 0;
 				image_yscale = myBody.image_yscale;
-				if(stallTimer <= 0){
+				if (stallTimer <= 0)
+				{
 					stallTimer = stallTimerMax;
 					attackNumber = state_idle;
 					spriteIndex = sprIdle;
@@ -166,44 +168,47 @@ if (!global.pause)
 			break;
 	
 			case state_windup://pulls away from the player before launching self in the attack attackNumber
-				//add to the windup
-				windupRange += windupSpeed;
-				windupRange = clamp(windupRange,0,windupRangeMax);
-				//pull the enemy away from the player
-				var idealPosX = originX-lengthdir_x((windupRange/windupRangeMax)*windupRangeMax,playerDir);
-				var idealPosY =  originY-lengthdir_y((windupRange/windupRangeMax)*windupRangeMax,playerDir);
+			//add to the windup
+			windupRange += windupSpeed;
+			windupRange = clamp(windupRange,0,windupRangeMax);
+			//pull the enemy away from the player
+			var idealPosX = originX-lengthdir_x((windupRange/windupRangeMax)*windupRangeMax,playerDir);
+			var idealPosY =  originY-lengthdir_y((windupRange/windupRangeMax)*windupRangeMax,playerDir);
 		
-				//hsp = -lengthdir_x(windupSpeed,playerDir);
-				//vsp = -lengthdir_y(windupSpeed,playerDir);
+			//hsp = -lengthdir_x(windupSpeed,playerDir);
+			//vsp = -lengthdir_y(windupSpeed,playerDir);
+			image_angle = 0;
+			//handle sprite
+			spriteIndex = sprAttack;
+			if (playerIsDiagonal)
+			{
+				spriteIndex = sprAttackDiagonal;
+				if(instance_exists(obj_Player))image_yscale = sign(obj_Player.y-y);
 				image_angle = 0;
-				//handle sprite
+			}
+			else if (playerIsStraightAbove)
+			{
 				spriteIndex = sprAttack;
-				if(playerIsDiagonal){
-					spriteIndex = sprAttackDiagonal;
-					if(instance_exists(obj_Player))image_yscale = sign(obj_Player.y-y);
-					image_angle = 0;
-				}else if(playerIsStraightAbove){
-					spriteIndex = sprAttack;
-					image_angle = 90*image_xscale;
-					if(instance_exists(obj_Player))image_yscale = sign(obj_Player.y-y);
-				}
-				image_index = 0;
+				image_angle = 90*image_xscale;
+				if(instance_exists(obj_Player))image_yscale = sign(obj_Player.y-y);
+			}
+			image_index = 0;
 		
-				if (windupRange >= windupRangeMax)
+			if (windupRange >= windupRangeMax)
+			{
+				windupRange = windupRangeMax;
+				windupTimer--;
+				if (windupTimer <= 0)
 				{
-					windupRange = windupRangeMax;
-					windupTimer--;
-					if (windupTimer <= 0)
-					{
-						attackNumber = state_attack;
-						windupTimer = windupTimerMax;
-						hsp = lengthdir_x(attackSpeed,playerDir);
-						vsp = lengthdir_y(attackSpeed,playerDir);
-					}
+					attackNumber = state_attack;
+					windupTimer = windupTimerMax;
+					hsp = lengthdir_x(attackSpeed,playerDir);
+					vsp = lengthdir_y(attackSpeed,playerDir);
 				}
+			}
 		
-				hsp = (idealPosX - x) * accel;
-				vsp = (idealPosY - y) * accel;
+			hsp = (idealPosX - x) * accel;
+			vsp = (idealPosY - y) * accel;
 			break;
 		}
 		

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "bg_ColdOdyssey_Fountain1",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a4633938-9c3c-4026-a92f-205d3a17e66a","path":"sprites/bg_ColdOdyssey_Fountain1/bg_ColdOdyssey_Fountain1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a4633938-9c3c-4026-a92f-205d3a17e66a","path":"sprites/bg_ColdOdyssey_Fountain1/bg_ColdOdyssey_Fountain1.yy",},"LayerId":{"name":"920f1cfe-ef4f-435f-9e20-4269731b7aec","path":"sprites/bg_ColdOdyssey_Fountain1/bg_ColdOdyssey_Fountain1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"bg_ColdOdyssey_Fountain1","path":"sprites/bg_ColdOdyssey_Fountain1/bg_ColdOdyssey_Fountain1.yy",},"resourceVersion":"1.0","name":"a4633938-9c3c-4026-a92f-205d3a17e66a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a4633938-9c3c-4026-a92f-205d3a17e66a",},
   ],
   "sequence": {
-    "spriteId": {"name":"bg_ColdOdyssey_Fountain1","path":"sprites/bg_ColdOdyssey_Fountain1/bg_ColdOdyssey_Fountain1.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "bg_ColdOdyssey_Fountain1",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"09821542-3ba8-44cc-9cde-fe65e6f579d5","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a4633938-9c3c-4026-a92f-205d3a17e66a","path":"sprites/bg_ColdOdyssey_Fountain1/bg_ColdOdyssey_Fountain1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"09821542-3ba8-44cc-9cde-fe65e6f579d5","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a4633938-9c3c-4026-a92f-205d3a17e66a","path":"sprites/bg_ColdOdyssey_Fountain1/bg_ColdOdyssey_Fountain1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 259,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"bg_ColdOdyssey_Fountain1","path":"sprites/bg_ColdOdyssey_Fountain1/bg_ColdOdyssey_Fountain1.yy",},
-    "resourceVersion": "1.4",
-    "name": "bg_ColdOdyssey_Fountain1",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"920f1cfe-ef4f-435f-9e20-4269731b7aec","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"920f1cfe-ef4f-435f-9e20-4269731b7aec","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Cold Odyssey",
     "path": "folders/Backgrounds/Cold Odyssey.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "bg_ColdOdyssey_Fountain1",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

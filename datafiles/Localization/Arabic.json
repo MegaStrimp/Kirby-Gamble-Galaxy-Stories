@@ -1,0 +1,1540 @@
+{
+    "Player Characters":
+    {
+        "Kirby":
+        {
+            "Title": "كيربي",
+            
+            "Description": "وهو يركض في نسيم الربيع ، إنه كيربي!  ابتلع الأعداء وانسخ قوتهم.  تمتد المجرة إلى ما وراء أعنف أحلامك ، لذا حان الوقت للبدء!"
+        },
+        
+        "Gamble":
+        {
+            "Title": "غامبل",
+            
+            "Description": "جاء هذا الصديق الجديد من الفضاء الخارجي إلى Popstar ليطلب من كيربي مساعدته في هزيمة Cosmic Fluxbender!  تستخدم لعبة Gamble النرد والبطاقات والروليت والطاقة السحرية للقضاء على العدو.  اجعلها تطوي!"
+        },
+        
+        "Meta Knight":
+        {
+            "Title": "ميتا كنايت",
+            
+            "Description": "الفارس المقنع الغامض من Kirby's Adventure هنا!  إنه شهم ومستعد دائمًا لمحاربة أي مصدر للشر.  كل دريم لاند تخشى سيفه!"
+        },
+        
+        "Helper":
+        {
+            "Title": "هيلبر",
+            
+            "Description": "اجتمع الناس من جميع أنحاء العالم لمساعدة كيربي في مغامرته!  العب كمجموعة كبيرة من المخلوقات من جميع أنحاء Gamble Galaxy ، من Waddle Dees القصير إلى Gordos الذي لا يقهر!"
+        },
+        
+        "Gooey":
+        {
+            "Title": "قووي",
+            
+            "Description": "بينما من أصل غريب ، يتمتع Gooey بقلب من الذهب ، ويتوق دائمًا إلى الظهور من قبل أصدقائه.  بلسانه الطويل السخيف ، يسعده مساعدة كيربي طوال مغامرته!"
+        },
+        
+        "Magolor":
+        {
+            "Title": "ماجولور",
+            
+            "Description": "تدفق؟  سأريك القوة الحقيقية!  هذا المعالج المخادع ينحدر من Kirby's Return to Dream Land.  لقد اعتاد أن يكون غشاشًا كاذبًا ، لكنه تم إصلاحه ... أليس كذلك؟  سحره الآخر سيجعل أعدائك يعمدون إلى أعمال قصيرة!"
+        },
+        
+        "Keeby":
+        {
+            "Title": "كييبي",
+            
+            "Description": "مع انه ليس مغامرًا مثل منافسه الودود ، بدا Keeby حريصًا على الانضمام إليه في سعيه!  هل يمكنه أخذ استراحة قصيرة من مسيرته في لعبة الجولف؟"
+        }
+    },
+	
+	"Player Abilities":
+    {
+        "Cutter":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Beam":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Mystic Beam":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Stone":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Ufo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Mirror":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Ninja":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Bomb":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Fire":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Mystic Fire":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Ice":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Spark":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Yoyo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Wheel":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Artist":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Fighter":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Suplex":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Wing":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Jet":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Sword":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Parasol":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Hammer":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Bell":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Water":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Sleep":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Scan":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Crash":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Mic":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Chef":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Ultra Sword":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Cosmic Blade":
+        {
+            "Title": "",
+            
+            "Description": ""
+        }
+    },
+    
+    "Enemies":
+    {
+        "Waddle Dee":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Waddle Doo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Bronto Burt":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Twizzy":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Tookey":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Sir Kibble":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Gordo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+    
+    "Spray Paints":
+    {
+        "Friendly Pink":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Yellow":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Red":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Green":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Dreamy Blueberry":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Carbon":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Cherry":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Deep Fried Kirb":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Emerald":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"GameKirb":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Haunting Purple":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Invis Sprinkle":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Monochrome Kirb":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Yolk Temple":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Plump Tomato":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Waddle Waddle":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Mystic":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Shadow of the Mirror":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Delirious":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Greenjolt":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Butter Knife":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Blurple":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Beam":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Stone":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Mirror":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Ninja":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Fire":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Ice":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Plasma":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Unearthly Hand":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"So Meta":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Gooey Blue":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Egg Brown":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Telltale Keeby":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Royal Yarn":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Smiley White":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Edd":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Musician's Light":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Aege":
+        {
+            "Title": "Aege",
+            
+            "Description": ""
+        },
+		
+		"Stray":
+        {
+            "Title": "Stray",
+            
+            "Description": ""
+        },
+		
+		"Glitch":
+        {
+            "Title": "Glitch",
+            
+            "Description": ""
+        }
+    },
+	
+	"Ability Hat Skins":
+	{
+		"Marx Soul":
+        {
+            "Title": ""
+        },
+		
+		"Snowman":
+        {
+            "Title": ""
+        }
+	},
+	
+	"Ability Hat Paints":
+	{
+		"Slicing Gold":
+        {
+            "Title": ""
+        },
+		
+		"Blood Blade":
+        {
+            "Title": ""
+        },
+		
+		"Bitcrushed":
+        {
+            "Title": ""
+        },
+		
+		"Mallard Green":
+        {
+            "Title": ""
+        },
+		
+		"Black Swedish":
+        {
+            "Title": ""
+        },
+		
+		"Flux Nostalgia":
+        {
+            "Title": ""
+        },
+		
+		"Sparkling Beam":
+        {
+            "Title": ""
+        },
+		
+		"Jester Spirit":
+        {
+            "Title": ""
+        },
+		
+		"Summer Fruits":
+        {
+            "Title": ""
+        },
+		
+		"Nasty Flux":
+        {
+            "Title": ""
+        },
+		
+		"Mage Rose":
+        {
+            "Title": ""
+        },
+		
+		"Rocky Road":
+        {
+            "Title": ""
+        },
+		
+		"Molten Rock":
+        {
+            "Title": ""
+        },
+		
+		"Crying Cobblestone":
+        {
+            "Title": ""
+        },
+		
+		"Jester Reflection":
+        {
+            "Title": ""
+        },
+		
+		"Beta Block":
+        {
+            "Title": ""
+        },
+		
+		"Stealthy Maroon":
+        {
+            "Title": ""
+        },
+		
+		"Sliver-Lined Warrior":
+        {
+            "Title": ""
+        },
+		
+		"Viridian Ambush":
+        {
+            "Title": ""
+        },
+		
+		"Explosive B":
+        {
+            "Title": ""
+        },
+		
+		"Blooming Poppy":
+        {
+            "Title": ""
+        },
+		
+		"Outbursting Conspiracy":
+        {
+            "Title": ""
+        },
+		
+		"Dragon's Castle":
+        {
+            "Title": ""
+        },
+		
+		"Scorching Scarlet":
+        {
+            "Title": ""
+        },
+		
+		"Blazing Blue":
+        {
+            "Title": ""
+        },
+		
+		"Scarlet Rose":
+        {
+            "Title": ""
+        },
+		
+		"Frosted Shard":
+        {
+            "Title": ""
+        },
+		
+		"Frosty Obsidian":
+        {
+            "Title": ""
+        },
+		
+		"Chilly":
+        {
+            "Title": ""
+        },
+		
+		"Chocolate Mousse":
+        {
+            "Title": ""
+        },
+		
+		"Electro Marine":
+        {
+            "Title": ""
+        },
+		
+		"Spinning Violet":
+        {
+            "Title": ""
+        },
+		
+		"Rushing Red":
+        {
+            "Title": ""
+        },
+		
+		"Muffler Blue":
+        {
+            "Title": ""
+        },
+		
+		"Dapper Painter":
+        {
+            "Title": ""
+        },
+		
+		"Crimson Champion":
+        {
+            "Title": ""
+        },
+		
+		"Blue Banner":
+        {
+            "Title": ""
+        },
+		
+		"Rainbow Flight":
+        {
+            "Title": ""
+        },
+		
+		"Pekin Breeze":
+        {
+            "Title": ""
+        },
+		
+		"Speed Machine":
+        {
+            "Title": ""
+        },
+		
+		"Speedy Scarlet":
+        {
+            "Title": ""
+        },
+		
+		"Lavender-01":
+        {
+            "Title": ""
+        },
+		
+		"Slicing Green":
+        {
+            "Title": ""
+        },
+		
+		"Thundering Cloud":
+        {
+            "Title": ""
+        },
+		
+		"Lazy Red":
+        {
+            "Title": ""
+        },
+		
+		"Wagasa Dee":
+        {
+            "Title": ""
+        },
+		
+		"Crushing Brown":
+        {
+            "Title": ""
+        },
+		
+		"Construction Work":
+        {
+            "Title": ""
+        },
+		
+		"Dazzling Default":
+        {
+            "Title": ""
+        },
+		
+		"Presto Purple":
+        {
+            "Title": ""
+        },
+		
+		"Tempo Teal":
+        {
+            "Title": ""
+        },
+		
+		"Ringing Rose":
+        {
+            "Title": ""
+        },
+		
+		"Candescent Copper":
+        {
+            "Title": ""
+        },
+		
+		"Shining Silver":
+        {
+            "Title": ""
+        },
+		
+		"Polished Plant":
+        {
+            "Title": ""
+        },
+		
+		"Illuminated Ivory":
+        {
+            "Title": ""
+        },
+		
+		"Bubbly Green":
+        {
+            "Title": ""
+        },
+		
+		"Noddy Peach":
+        {
+            "Title": ""
+        },
+		
+		"Royal Purple":
+        {
+            "Title": ""
+        },
+		
+		"Metallic Red":
+        {
+            "Title": ""
+        },
+		
+		"Military Green":
+        {
+            "Title": ""
+        }
+	},
+	
+	"Familiars":
+    {
+		"Gamble":
+        {
+			"Description": ""
+        },
+		
+		"Happy Pea":
+        {
+            "Title": "",
+			
+			"Description": ""
+        },
+		
+		"Epic Jar":
+        {
+            "Title": "",
+			
+			"Description": ""
+        },
+		
+		"Krackle":
+        {
+            "Title": "",
+			
+			"Description": ""
+        },
+		
+		"Omega Matter":
+        {
+            "Title": "",
+			
+			"Description": ""
+        }
+	},
+        
+        "Blood Gordo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Shotzo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Mystic Doo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Bouncy":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Mr. Boogie":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Search":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Hive Drone":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Wapod":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Flamebelch":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Cappy":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Broom Hatter":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Coconut":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Noddy":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Blado":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Scarfy":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Rocky":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Grizzo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Jungle Bomb":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Glunk":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Kabu":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Burning Leo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Tomatoo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "'Onion'":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Anemonee":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Gim":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Poppy Bros Jr.":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Bobo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Foley":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Nidoo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Como":
+        {
+            "Title": "",
+            
+            "Description": ""
+        }
+        ,
+        "Cairn":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Bomber":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+        
+        "Simirror":
+        {
+            "Title": "",
+            
+            "Description": ""
+        }
+    },
+    
+    "Languages":
+    {
+        "English": "English",
+        
+        "Turkish": "Türkçe",
+        
+        "German": "Deutsch",
+        
+        "Italian": "Italiano",
+        
+        "French": "Français",
+        
+        "Polish": "Polski",
+        
+        "Chinese": "Chinese (WIP)",
+        
+        "Spanish": "Español",
+        
+        "Japanese": "日本語",
+        
+        "Portuguese": "Português",
+        
+        "Norwegian": "Norwegian (WIP)",
+        
+        "Arabic": "عربي"
+    },
+    
+    "Options":
+    {
+        "True": "صحيح",
+        
+        "False": "خاطئ",
+        
+        "Display": "الشاشة",
+        
+        "Audio": "الصوت",
+        
+        "Controls": "التحكم",
+        
+        "Language": "اللغة",
+        
+        "Other": "أخرى",
+        
+        "Fullscreen": "شاشة كاملة",
+        
+        "Window Size": "حجم النافذة",
+        
+        "Music": "الموسيقى",
+        
+        "Sound Effects": "التأثيرات الصوتية",
+        
+        "Left": "يسار",
+        
+        "Right": "يمين",
+        
+        "Up": "فوق",
+        
+        "Down": "تحت",
+        
+        "Jump": "قفز",
+        
+        "Attack": "هجوم",
+        
+        "Start": "بدء",
+        
+        "Select": "اختيار",
+        
+        "Press Any Key": "",
+        
+        "Extra Tutorials": "",
+        
+        "Auto Swallow": "",
+        
+        "Music Intro": "",
+        
+        "Default": ""
+    },
+    
+    "Customize Sub-Menus":
+    {
+        "Skins":
+        {
+            "Title": ""
+        },
+        
+        "Spray Paints":
+        {
+            "Title": ""
+        },
+        
+        "Hat Skins":
+        {
+            "Title": ""
+        },
+        
+        "Hat Paints":
+        {
+            "Title": ""
+        },
+        
+        "Familiars":
+        {
+            "Title": ""
+        }
+    },
+    
+    "Unlock Methods":
+    {
+        "Default": "",
+		
+		"Beat Stage Missions": "",
+		
+		"Tomatoo Catch 3 Stars": "",
+		
+		"Fill 10 Bestiary": "",
+		
+		"Fill 20 Bestiary": "",
+		
+		"Fill 50 Bestiary": "",
+		
+		"Unlock 5 Familiars": "",
+		
+		"Log Into Gamejolt": "",
+		
+		"Log Into Discord": "",
+		
+		"Beam Gold Medal": "",
+		
+		"Stone Gold Medal": "",
+		
+		"Mirror Gold Medal": "",
+		
+		"Ninja Gold Medal": "",
+		
+		"Fire Gold Medal": "",
+		
+		"Ice Gold Medal": "",
+		
+		"Spark Gold Medal": "",
+		
+		"Unlock Gamble": "",
+		
+		"Unlock Meta Knight": "",
+		
+		"Unlock Gooey": "",
+		
+		"Unlock Magolor": "",
+		
+		"Unlock Keeby": "",
+		
+		"Unlock Prince Fluff": "",
+		
+		"Secret": ""
+    },
+	
+	"Shop General":
+    {
+		"Buy": "",
+		
+		"Talk": "",
+		
+		"Leave": "",
+		
+		"Next": "",
+		
+		"Back": ""
+	},
+	
+	"Magolor Shop":
+    {
+		"First Time Entrance":
+        {
+            "1": ""
+        },
+		
+		"Entrance":
+        {
+            "1": "",
+			
+			"2": "",
+			
+			"3": "",
+			
+			"4": "",
+			
+			"5": "",
+			
+			"6": ""
+        },
+		
+		"Entrance New Items":
+        {
+            "1": "",
+			
+			"2": ""
+        },
+		
+		"Buy Dialogue":
+        {
+            "1": "",
+			
+			"2": "",
+			
+			"3": "",
+			
+			"4": ""
+        },
+		
+		"Purchase Item":
+        {
+            "1": "",
+			
+			"2": "",
+			
+			"3": "",
+			
+			"4": "",
+			
+			"5": ""
+        },
+		
+		"Not Enough Money":
+        {
+            "1": "",
+			
+			"2": "",
+			
+			"3": "",
+			
+			"4": "",
+			
+			"5": ""
+        },
+		
+		"Talk Dialogue":
+        {
+            "1": "",
+			
+			"2": "",
+			
+			"3": ""
+        },
+		
+		"Talk Options":
+        {
+            "1": "",
+			
+			"2": "",
+			
+			"3": "",
+			
+			"4": ""
+        },
+		
+		"Why Were You At Egg Garden":
+        {
+			"1": "",
+			
+			"2": "",
+			
+			"3": ""
+        },
+		
+		"Are You Okay":
+        {
+			"1": "",
+			
+			"2": "",
+			
+			"3": ""
+        },
+		
+		"You Have Hair":
+        {
+			"1": "",
+			
+			"2": "",
+			
+			"3": ""
+        },
+		
+		"Can I See It":
+        {
+            "1": ""
+        },
+		
+		"Leave Shop":
+        {
+            "1": "",
+			
+			"2": "",
+			
+			"3": "",
+			
+			"4": "",
+			
+			"5": ""
+        }
+	},
+	
+	"Gear Cube Shop":
+    {
+	},
+	
+	"Minigames":
+    {
+        "Tomatoo Catch":
+        {
+            "Title": ""
+        }
+	},
+	
+	"Cutscenes":
+    {
+	},
+	
+	"Extra Tutorials":
+    {
+		"Treasure":
+        {
+            "1": "",
+			
+			"2": ""
+        }
+		
+		"Anti Float":
+        {
+            "1 - Kirby": "",
+			
+			"2": "",
+			
+			"3 - Default": "",
+			
+			"3 - Kirby": ""
+        }
+	}
+}

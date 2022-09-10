@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Hud_Healthbar_Background_Kirby",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"943483a6-016b-46db-ba1e-b397125fc60c","path":"sprites/spr_Hud_Healthbar_Background_Kirby/spr_Hud_Healthbar_Background_Kirby.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"943483a6-016b-46db-ba1e-b397125fc60c","path":"sprites/spr_Hud_Healthbar_Background_Kirby/spr_Hud_Healthbar_Background_Kirby.yy",},"LayerId":{"name":"9379d8a0-b45b-4369-b5a0-80d765f41d5b","path":"sprites/spr_Hud_Healthbar_Background_Kirby/spr_Hud_Healthbar_Background_Kirby.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Hud_Healthbar_Background_Kirby","path":"sprites/spr_Hud_Healthbar_Background_Kirby/spr_Hud_Healthbar_Background_Kirby.yy",},"resourceVersion":"1.0","name":"943483a6-016b-46db-ba1e-b397125fc60c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"943483a6-016b-46db-ba1e-b397125fc60c",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Hud_Healthbar_Background_Kirby","path":"sprites/spr_Hud_Healthbar_Background_Kirby/spr_Hud_Healthbar_Background_Kirby.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Hud_Healthbar_Background_Kirby",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"4022d809-43b5-4e80-b460-c5f3c3ccc79f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"943483a6-016b-46db-ba1e-b397125fc60c","path":"sprites/spr_Hud_Healthbar_Background_Kirby/spr_Hud_Healthbar_Background_Kirby.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"4022d809-43b5-4e80-b460-c5f3c3ccc79f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"943483a6-016b-46db-ba1e-b397125fc60c","path":"sprites/spr_Hud_Healthbar_Background_Kirby/spr_Hud_Healthbar_Background_Kirby.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 25,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Hud_Healthbar_Background_Kirby","path":"sprites/spr_Hud_Healthbar_Background_Kirby/spr_Hud_Healthbar_Background_Kirby.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Hud_Healthbar_Background_Kirby",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"9379d8a0-b45b-4369-b5a0-80d765f41d5b","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9379d8a0-b45b-4369-b5a0-80d765f41d5b","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Backgrounds",
     "path": "folders/Sprites/Hud/Healthbars/Backgrounds.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Hud_Healthbar_Background_Kirby",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

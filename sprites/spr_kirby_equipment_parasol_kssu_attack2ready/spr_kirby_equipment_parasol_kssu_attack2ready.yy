@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,27 +27,17 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"ee7757e1-5c24-46ce-a711-82e65d4dad07","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ee7757e1-5c24-46ce-a711-82e65d4dad07","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"LayerId":{"name":"ff0b6ed6-774a-4fd0-992c-5a3e4d134394","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"resourceVersion":"1.0","name":"ee7757e1-5c24-46ce-a711-82e65d4dad07","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2b48e426-543b-4f38-aef8-f226d9b2c289","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2b48e426-543b-4f38-aef8-f226d9b2c289","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"LayerId":{"name":"ff0b6ed6-774a-4fd0-992c-5a3e4d134394","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"resourceVersion":"1.0","name":"2b48e426-543b-4f38-aef8-f226d9b2c289","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b2aa494b-4c52-4943-b9e7-6a46b3c3633e","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b2aa494b-4c52-4943-b9e7-6a46b3c3633e","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"LayerId":{"name":"ff0b6ed6-774a-4fd0-992c-5a3e4d134394","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"resourceVersion":"1.0","name":"b2aa494b-4c52-4943-b9e7-6a46b3c3633e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"aa6fd170-8d0e-4baa-b6fa-76fd85be0f93","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"aa6fd170-8d0e-4baa-b6fa-76fd85be0f93","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"LayerId":{"name":"ff0b6ed6-774a-4fd0-992c-5a3e4d134394","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"resourceVersion":"1.0","name":"aa6fd170-8d0e-4baa-b6fa-76fd85be0f93","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"1c04082d-575a-4eb9-97e2-d38f405e9ce1","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1c04082d-575a-4eb9-97e2-d38f405e9ce1","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"LayerId":{"name":"ff0b6ed6-774a-4fd0-992c-5a3e4d134394","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"resourceVersion":"1.0","name":"1c04082d-575a-4eb9-97e2-d38f405e9ce1","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ad654a64-737d-4d51-bb7c-506b72b1ee82","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ad654a64-737d-4d51-bb7c-506b72b1ee82","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"LayerId":{"name":"ff0b6ed6-774a-4fd0-992c-5a3e4d134394","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"resourceVersion":"1.0","name":"ad654a64-737d-4d51-bb7c-506b72b1ee82","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ee7757e1-5c24-46ce-a711-82e65d4dad07",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2b48e426-543b-4f38-aef8-f226d9b2c289",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b2aa494b-4c52-4943-b9e7-6a46b3c3633e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"aa6fd170-8d0e-4baa-b6fa-76fd85be0f93",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1c04082d-575a-4eb9-97e2-d38f405e9ce1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ad654a64-737d-4d51-bb7c-506b72b1ee82",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 24.0,
@@ -52,17 +45,17 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 6.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"ce92aab2-097f-45e1-aaa4-4555e32fe31b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ee7757e1-5c24-46ce-a711-82e65d4dad07","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"8c2616b7-8d2c-402e-90d2-826539b35297","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2b48e426-543b-4f38-aef8-f226d9b2c289","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"fe3b04c4-4de8-46cd-ad23-578127dc1402","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b2aa494b-4c52-4943-b9e7-6a46b3c3633e","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"ec49e793-1dee-48b5-9ad7-f2dd36697212","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"aa6fd170-8d0e-4baa-b6fa-76fd85be0f93","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"11ae8236-62bc-4b32-95d5-da4d48a1ae02","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1c04082d-575a-4eb9-97e2-d38f405e9ce1","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"0fd7e2b6-e854-48b9-8ea3-b8fbbb52feb9","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ad654a64-737d-4d51-bb7c-506b72b1ee82","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"ce92aab2-097f-45e1-aaa4-4555e32fe31b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ee7757e1-5c24-46ce-a711-82e65d4dad07","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"8c2616b7-8d2c-402e-90d2-826539b35297","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2b48e426-543b-4f38-aef8-f226d9b2c289","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"fe3b04c4-4de8-46cd-ad23-578127dc1402","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b2aa494b-4c52-4943-b9e7-6a46b3c3633e","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ec49e793-1dee-48b5-9ad7-f2dd36697212","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"aa6fd170-8d0e-4baa-b6fa-76fd85be0f93","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"11ae8236-62bc-4b32-95d5-da4d48a1ae02","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1c04082d-575a-4eb9-97e2-d38f405e9ce1","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0fd7e2b6-e854-48b9-8ea3-b8fbbb52feb9","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ad654a64-737d-4d51-bb7c-506b72b1ee82","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -78,22 +71,13 @@
     "yorigin": 31,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready","path":"sprites/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready/spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ff0b6ed6-774a-4fd0-992c-5a3e4d134394","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ff0b6ed6-774a-4fd0-992c-5a3e4d134394","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Equipment",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Parasol/KSSU/Equipment.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_Equipment_Parasol_KSSU_Attack2Ready",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

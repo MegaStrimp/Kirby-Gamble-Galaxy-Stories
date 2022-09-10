@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Cappy_Normal_IdleR",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"1866be37-065a-4978-88b8-dd16bdcd5fed","path":"sprites/spr_Cappy_Normal_IdleR/spr_Cappy_Normal_IdleR.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1866be37-065a-4978-88b8-dd16bdcd5fed","path":"sprites/spr_Cappy_Normal_IdleR/spr_Cappy_Normal_IdleR.yy",},"LayerId":{"name":"aa9787e9-59f4-4b03-a3de-8d16d3e7baba","path":"sprites/spr_Cappy_Normal_IdleR/spr_Cappy_Normal_IdleR.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Cappy_Normal_IdleR","path":"sprites/spr_Cappy_Normal_IdleR/spr_Cappy_Normal_IdleR.yy",},"resourceVersion":"1.0","name":"1866be37-065a-4978-88b8-dd16bdcd5fed","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b702f8e8-bf78-47cc-a35b-2aaa7e000e06","path":"sprites/spr_Cappy_Normal_IdleR/spr_Cappy_Normal_IdleR.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b702f8e8-bf78-47cc-a35b-2aaa7e000e06","path":"sprites/spr_Cappy_Normal_IdleR/spr_Cappy_Normal_IdleR.yy",},"LayerId":{"name":"aa9787e9-59f4-4b03-a3de-8d16d3e7baba","path":"sprites/spr_Cappy_Normal_IdleR/spr_Cappy_Normal_IdleR.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Cappy_Normal_IdleR","path":"sprites/spr_Cappy_Normal_IdleR/spr_Cappy_Normal_IdleR.yy",},"resourceVersion":"1.0","name":"b702f8e8-bf78-47cc-a35b-2aaa7e000e06","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1866be37-065a-4978-88b8-dd16bdcd5fed",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b702f8e8-bf78-47cc-a35b-2aaa7e000e06",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Cappy_Normal_IdleR","path":"sprites/spr_Cappy_Normal_IdleR/spr_Cappy_Normal_IdleR.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Cappy_Normal_IdleR",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 15.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"ced7e3a6-037c-491f-89b5-fa0f919ec6f1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1866be37-065a-4978-88b8-dd16bdcd5fed","path":"sprites/spr_Cappy_Normal_IdleR/spr_Cappy_Normal_IdleR.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"2d5874c2-76b2-40f2-b464-58e6a8cc53ff","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b702f8e8-bf78-47cc-a35b-2aaa7e000e06","path":"sprites/spr_Cappy_Normal_IdleR/spr_Cappy_Normal_IdleR.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"ced7e3a6-037c-491f-89b5-fa0f919ec6f1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1866be37-065a-4978-88b8-dd16bdcd5fed","path":"sprites/spr_Cappy_Normal_IdleR/spr_Cappy_Normal_IdleR.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"2d5874c2-76b2-40f2-b464-58e6a8cc53ff","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b702f8e8-bf78-47cc-a35b-2aaa7e000e06","path":"sprites/spr_Cappy_Normal_IdleR/spr_Cappy_Normal_IdleR.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -62,22 +63,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Cappy_Normal_IdleR","path":"sprites/spr_Cappy_Normal_IdleR/spr_Cappy_Normal_IdleR.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Cappy_Normal_IdleR",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"aa9787e9-59f4-4b03-a3de-8d16d3e7baba","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"aa9787e9-59f4-4b03-a3de-8d16d3e7baba","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Enemies/Cappy/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Cappy_Normal_IdleR",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

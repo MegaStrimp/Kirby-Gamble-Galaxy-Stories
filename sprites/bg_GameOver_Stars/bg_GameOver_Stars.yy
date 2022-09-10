@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "bg_GameOver_Stars",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"40ab701d-d2b7-49b3-ad20-9b0de4e9fdb6","path":"sprites/bg_GameOver_Stars/bg_GameOver_Stars.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"40ab701d-d2b7-49b3-ad20-9b0de4e9fdb6","path":"sprites/bg_GameOver_Stars/bg_GameOver_Stars.yy",},"LayerId":{"name":"3b92334b-a491-4ea0-bfed-2c43d692a997","path":"sprites/bg_GameOver_Stars/bg_GameOver_Stars.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"bg_GameOver_Stars","path":"sprites/bg_GameOver_Stars/bg_GameOver_Stars.yy",},"resourceVersion":"1.0","name":"40ab701d-d2b7-49b3-ad20-9b0de4e9fdb6","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"40ab701d-d2b7-49b3-ad20-9b0de4e9fdb6",},
   ],
   "sequence": {
-    "spriteId": {"name":"bg_GameOver_Stars","path":"sprites/bg_GameOver_Stars/bg_GameOver_Stars.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "bg_GameOver_Stars",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"053c8089-0bc9-43a4-b99a-591d1dc7d3cf","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"40ab701d-d2b7-49b3-ad20-9b0de4e9fdb6","path":"sprites/bg_GameOver_Stars/bg_GameOver_Stars.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"053c8089-0bc9-43a4-b99a-591d1dc7d3cf","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"40ab701d-d2b7-49b3-ad20-9b0de4e9fdb6","path":"sprites/bg_GameOver_Stars/bg_GameOver_Stars.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"bg_GameOver_Stars","path":"sprites/bg_GameOver_Stars/bg_GameOver_Stars.yy",},
-    "resourceVersion": "1.4",
-    "name": "bg_GameOver_Stars",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3b92334b-a491-4ea0-bfed-2c43d692a997","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"3b92334b-a491-4ea0-bfed-2c43d692a997","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Game Over",
     "path": "folders/Backgrounds/Game Over.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "bg_GameOver_Stars",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

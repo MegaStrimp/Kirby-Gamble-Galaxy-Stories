@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Gooey_Normal_Palette_RoyalYarn",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"2282b681-801a-4cc5-8da7-cc2d68f23963","path":"sprites/spr_Gooey_Normal_Palette_RoyalYarn/spr_Gooey_Normal_Palette_RoyalYarn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2282b681-801a-4cc5-8da7-cc2d68f23963","path":"sprites/spr_Gooey_Normal_Palette_RoyalYarn/spr_Gooey_Normal_Palette_RoyalYarn.yy",},"LayerId":{"name":"61122fcb-925a-4d9e-8a8e-c263c21273ce","path":"sprites/spr_Gooey_Normal_Palette_RoyalYarn/spr_Gooey_Normal_Palette_RoyalYarn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Gooey_Normal_Palette_RoyalYarn","path":"sprites/spr_Gooey_Normal_Palette_RoyalYarn/spr_Gooey_Normal_Palette_RoyalYarn.yy",},"resourceVersion":"1.0","name":"2282b681-801a-4cc5-8da7-cc2d68f23963","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2282b681-801a-4cc5-8da7-cc2d68f23963",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Gooey_Normal_Palette_RoyalYarn","path":"sprites/spr_Gooey_Normal_Palette_RoyalYarn/spr_Gooey_Normal_Palette_RoyalYarn.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Gooey_Normal_Palette_RoyalYarn",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"769f42ff-6f5f-428f-92bc-f3221bf814c2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2282b681-801a-4cc5-8da7-cc2d68f23963","path":"sprites/spr_Gooey_Normal_Palette_RoyalYarn/spr_Gooey_Normal_Palette_RoyalYarn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"769f42ff-6f5f-428f-92bc-f3221bf814c2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2282b681-801a-4cc5-8da7-cc2d68f23963","path":"sprites/spr_Gooey_Normal_Palette_RoyalYarn/spr_Gooey_Normal_Palette_RoyalYarn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Gooey_Normal_Palette_RoyalYarn","path":"sprites/spr_Gooey_Normal_Palette_RoyalYarn/spr_Gooey_Normal_Palette_RoyalYarn.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Gooey_Normal_Palette_RoyalYarn",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"61122fcb-925a-4d9e-8a8e-c263c21273ce","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"61122fcb-925a-4d9e-8a8e-c263c21273ce","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Palettes",
     "path": "folders/Sprites/Characters/Gooey/Normal/Palettes.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Gooey_Normal_Palette_RoyalYarn",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

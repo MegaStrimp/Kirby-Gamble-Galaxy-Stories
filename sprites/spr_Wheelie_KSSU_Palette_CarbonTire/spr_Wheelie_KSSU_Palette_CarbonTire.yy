@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Wheelie_KSSU_Palette_CarbonTire",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a811dff9-7c0e-4b4f-ad62-9c7eca63f284","path":"sprites/spr_Wheelie_KSSU_Palette_CarbonTire/spr_Wheelie_KSSU_Palette_CarbonTire.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a811dff9-7c0e-4b4f-ad62-9c7eca63f284","path":"sprites/spr_Wheelie_KSSU_Palette_CarbonTire/spr_Wheelie_KSSU_Palette_CarbonTire.yy",},"LayerId":{"name":"226dea85-5e9d-49ee-9fbf-45f179ad5995","path":"sprites/spr_Wheelie_KSSU_Palette_CarbonTire/spr_Wheelie_KSSU_Palette_CarbonTire.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Wheelie_KSSU_Palette_CarbonTire","path":"sprites/spr_Wheelie_KSSU_Palette_CarbonTire/spr_Wheelie_KSSU_Palette_CarbonTire.yy",},"resourceVersion":"1.0","name":"a811dff9-7c0e-4b4f-ad62-9c7eca63f284","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a811dff9-7c0e-4b4f-ad62-9c7eca63f284",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Wheelie_KSSU_Palette_CarbonTire","path":"sprites/spr_Wheelie_KSSU_Palette_CarbonTire/spr_Wheelie_KSSU_Palette_CarbonTire.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Wheelie_KSSU_Palette_CarbonTire",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"b5ec54c9-92c3-4e5f-bf59-8c4a7b87dd6e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a811dff9-7c0e-4b4f-ad62-9c7eca63f284","path":"sprites/spr_Wheelie_KSSU_Palette_CarbonTire/spr_Wheelie_KSSU_Palette_CarbonTire.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"b5ec54c9-92c3-4e5f-bf59-8c4a7b87dd6e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a811dff9-7c0e-4b4f-ad62-9c7eca63f284","path":"sprites/spr_Wheelie_KSSU_Palette_CarbonTire/spr_Wheelie_KSSU_Palette_CarbonTire.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Wheelie_KSSU_Palette_CarbonTire","path":"sprites/spr_Wheelie_KSSU_Palette_CarbonTire/spr_Wheelie_KSSU_Palette_CarbonTire.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Wheelie_KSSU_Palette_CarbonTire",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"226dea85-5e9d-49ee-9fbf-45f179ad5995","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"226dea85-5e9d-49ee-9fbf-45f179ad5995","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Palettes",
     "path": "folders/Sprites/Enemies/Wheelie/KSSU/Palettes.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Wheelie_KSSU_Palette_CarbonTire",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

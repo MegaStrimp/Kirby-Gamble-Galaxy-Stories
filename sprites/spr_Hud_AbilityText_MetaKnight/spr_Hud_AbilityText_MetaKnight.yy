@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Hud_AbilityText_MetaKnight",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"bf0a7308-1c27-410a-9521-7109e5c32da4","path":"sprites/spr_Hud_AbilityText_MetaKnight/spr_Hud_AbilityText_MetaKnight.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bf0a7308-1c27-410a-9521-7109e5c32da4","path":"sprites/spr_Hud_AbilityText_MetaKnight/spr_Hud_AbilityText_MetaKnight.yy",},"LayerId":{"name":"ff8d028b-56bd-444e-a465-ca93f5c46658","path":"sprites/spr_Hud_AbilityText_MetaKnight/spr_Hud_AbilityText_MetaKnight.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Hud_AbilityText_MetaKnight","path":"sprites/spr_Hud_AbilityText_MetaKnight/spr_Hud_AbilityText_MetaKnight.yy",},"resourceVersion":"1.0","name":"bf0a7308-1c27-410a-9521-7109e5c32da4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bf0a7308-1c27-410a-9521-7109e5c32da4",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Hud_AbilityText_MetaKnight","path":"sprites/spr_Hud_AbilityText_MetaKnight/spr_Hud_AbilityText_MetaKnight.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Hud_AbilityText_MetaKnight",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"e9e5996c-d7c8-481e-9f5e-c39ca8188e82","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bf0a7308-1c27-410a-9521-7109e5c32da4","path":"sprites/spr_Hud_AbilityText_MetaKnight/spr_Hud_AbilityText_MetaKnight.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"e9e5996c-d7c8-481e-9f5e-c39ca8188e82","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bf0a7308-1c27-410a-9521-7109e5c32da4","path":"sprites/spr_Hud_AbilityText_MetaKnight/spr_Hud_AbilityText_MetaKnight.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Hud_AbilityText_MetaKnight","path":"sprites/spr_Hud_AbilityText_MetaKnight/spr_Hud_AbilityText_MetaKnight.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Hud_AbilityText_MetaKnight",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ff8d028b-56bd-444e-a465-ca93f5c46658","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ff8d028b-56bd-444e-a465-ca93f5c46658","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Characters",
     "path": "folders/Sprites/Hud/Ability Text/Characters.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Hud_AbilityText_MetaKnight",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Bobo_Normal_Palette_FunnyFlame",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"3770159c-567a-4b96-a1ab-106ce58007a4","path":"sprites/spr_Bobo_Normal_Palette_FunnyFlame/spr_Bobo_Normal_Palette_FunnyFlame.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3770159c-567a-4b96-a1ab-106ce58007a4","path":"sprites/spr_Bobo_Normal_Palette_FunnyFlame/spr_Bobo_Normal_Palette_FunnyFlame.yy",},"LayerId":{"name":"d44aeb8f-508b-4740-bdf6-08b2161dd9c1","path":"sprites/spr_Bobo_Normal_Palette_FunnyFlame/spr_Bobo_Normal_Palette_FunnyFlame.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Bobo_Normal_Palette_FunnyFlame","path":"sprites/spr_Bobo_Normal_Palette_FunnyFlame/spr_Bobo_Normal_Palette_FunnyFlame.yy",},"resourceVersion":"1.0","name":"3770159c-567a-4b96-a1ab-106ce58007a4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3770159c-567a-4b96-a1ab-106ce58007a4",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Bobo_Normal_Palette_FunnyFlame","path":"sprites/spr_Bobo_Normal_Palette_FunnyFlame/spr_Bobo_Normal_Palette_FunnyFlame.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Bobo_Normal_Palette_FunnyFlame",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"4792286a-5b38-4252-955d-ee519c3cfb1c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3770159c-567a-4b96-a1ab-106ce58007a4","path":"sprites/spr_Bobo_Normal_Palette_FunnyFlame/spr_Bobo_Normal_Palette_FunnyFlame.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"4792286a-5b38-4252-955d-ee519c3cfb1c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3770159c-567a-4b96-a1ab-106ce58007a4","path":"sprites/spr_Bobo_Normal_Palette_FunnyFlame/spr_Bobo_Normal_Palette_FunnyFlame.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Bobo_Normal_Palette_FunnyFlame","path":"sprites/spr_Bobo_Normal_Palette_FunnyFlame/spr_Bobo_Normal_Palette_FunnyFlame.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Bobo_Normal_Palette_FunnyFlame",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d44aeb8f-508b-4740-bdf6-08b2161dd9c1","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d44aeb8f-508b-4740-bdf6-08b2161dd9c1","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Palettes",
     "path": "folders/Sprites/Enemies/Bobo/Normal/Palettes.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Bobo_Normal_Palette_FunnyFlame",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

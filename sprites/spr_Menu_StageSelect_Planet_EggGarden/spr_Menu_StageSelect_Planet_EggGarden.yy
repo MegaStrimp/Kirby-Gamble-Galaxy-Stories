@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Menu_StageSelect_Planet_EggGarden",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"9ae78022-ea13-4e54-84a4-613504b4ec39","path":"sprites/spr_Menu_StageSelect_Planet_EggGarden/spr_Menu_StageSelect_Planet_EggGarden.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9ae78022-ea13-4e54-84a4-613504b4ec39","path":"sprites/spr_Menu_StageSelect_Planet_EggGarden/spr_Menu_StageSelect_Planet_EggGarden.yy",},"LayerId":{"name":"71f9eab4-94ec-4c96-8f58-7c06ca329fde","path":"sprites/spr_Menu_StageSelect_Planet_EggGarden/spr_Menu_StageSelect_Planet_EggGarden.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Menu_StageSelect_Planet_EggGarden","path":"sprites/spr_Menu_StageSelect_Planet_EggGarden/spr_Menu_StageSelect_Planet_EggGarden.yy",},"resourceVersion":"1.0","name":"9ae78022-ea13-4e54-84a4-613504b4ec39","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9ae78022-ea13-4e54-84a4-613504b4ec39",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Menu_StageSelect_Planet_EggGarden","path":"sprites/spr_Menu_StageSelect_Planet_EggGarden/spr_Menu_StageSelect_Planet_EggGarden.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Menu_StageSelect_Planet_EggGarden",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"7a08c2f9-9e63-4d60-bfed-5b78ed64e269","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9ae78022-ea13-4e54-84a4-613504b4ec39","path":"sprites/spr_Menu_StageSelect_Planet_EggGarden/spr_Menu_StageSelect_Planet_EggGarden.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"7a08c2f9-9e63-4d60-bfed-5b78ed64e269","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9ae78022-ea13-4e54-84a4-613504b4ec39","path":"sprites/spr_Menu_StageSelect_Planet_EggGarden/spr_Menu_StageSelect_Planet_EggGarden.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 57,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Menu_StageSelect_Planet_EggGarden","path":"sprites/spr_Menu_StageSelect_Planet_EggGarden/spr_Menu_StageSelect_Planet_EggGarden.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Menu_StageSelect_Planet_EggGarden",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"71f9eab4-94ec-4c96-8f58-7c06ca329fde","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"71f9eab4-94ec-4c96-8f58-7c06ca329fde","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Planets",
     "path": "folders/Sprites/Menu/Stage Select/Planets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Menu_StageSelect_Planet_EggGarden",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

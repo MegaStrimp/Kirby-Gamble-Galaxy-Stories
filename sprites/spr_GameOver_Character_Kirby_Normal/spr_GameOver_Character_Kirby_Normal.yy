@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_GameOver_Character_Kirby_Normal",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"297eea66-3927-4768-a9ca-1237976c33a5","path":"sprites/spr_GameOver_Character_Kirby_Normal/spr_GameOver_Character_Kirby_Normal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"297eea66-3927-4768-a9ca-1237976c33a5","path":"sprites/spr_GameOver_Character_Kirby_Normal/spr_GameOver_Character_Kirby_Normal.yy",},"LayerId":{"name":"2c535ec7-4bc3-405e-b619-d1ccff44359e","path":"sprites/spr_GameOver_Character_Kirby_Normal/spr_GameOver_Character_Kirby_Normal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_GameOver_Character_Kirby_Normal","path":"sprites/spr_GameOver_Character_Kirby_Normal/spr_GameOver_Character_Kirby_Normal.yy",},"resourceVersion":"1.0","name":"297eea66-3927-4768-a9ca-1237976c33a5","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4e93bd94-21fc-4fd5-84e3-5c896fde071a","path":"sprites/spr_GameOver_Character_Kirby_Normal/spr_GameOver_Character_Kirby_Normal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4e93bd94-21fc-4fd5-84e3-5c896fde071a","path":"sprites/spr_GameOver_Character_Kirby_Normal/spr_GameOver_Character_Kirby_Normal.yy",},"LayerId":{"name":"2c535ec7-4bc3-405e-b619-d1ccff44359e","path":"sprites/spr_GameOver_Character_Kirby_Normal/spr_GameOver_Character_Kirby_Normal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_GameOver_Character_Kirby_Normal","path":"sprites/spr_GameOver_Character_Kirby_Normal/spr_GameOver_Character_Kirby_Normal.yy",},"resourceVersion":"1.0","name":"4e93bd94-21fc-4fd5-84e3-5c896fde071a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b757a9bd-0712-478d-8099-77fcd207e732","path":"sprites/spr_GameOver_Character_Kirby_Normal/spr_GameOver_Character_Kirby_Normal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b757a9bd-0712-478d-8099-77fcd207e732","path":"sprites/spr_GameOver_Character_Kirby_Normal/spr_GameOver_Character_Kirby_Normal.yy",},"LayerId":{"name":"2c535ec7-4bc3-405e-b619-d1ccff44359e","path":"sprites/spr_GameOver_Character_Kirby_Normal/spr_GameOver_Character_Kirby_Normal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_GameOver_Character_Kirby_Normal","path":"sprites/spr_GameOver_Character_Kirby_Normal/spr_GameOver_Character_Kirby_Normal.yy",},"resourceVersion":"1.0","name":"b757a9bd-0712-478d-8099-77fcd207e732","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"297eea66-3927-4768-a9ca-1237976c33a5",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4e93bd94-21fc-4fd5-84e3-5c896fde071a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b757a9bd-0712-478d-8099-77fcd207e732",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_GameOver_Character_Kirby_Normal","path":"sprites/spr_GameOver_Character_Kirby_Normal/spr_GameOver_Character_Kirby_Normal.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_GameOver_Character_Kirby_Normal",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -43,14 +42,14 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 3.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"37269218-884e-4261-a3c1-38f007d95688","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"297eea66-3927-4768-a9ca-1237976c33a5","path":"sprites/spr_GameOver_Character_Kirby_Normal/spr_GameOver_Character_Kirby_Normal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"b804a57a-7b13-4462-a227-193ff48e52e1","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4e93bd94-21fc-4fd5-84e3-5c896fde071a","path":"sprites/spr_GameOver_Character_Kirby_Normal/spr_GameOver_Character_Kirby_Normal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"10759e21-12e1-49e9-8b37-49a0f4a8962c","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b757a9bd-0712-478d-8099-77fcd207e732","path":"sprites/spr_GameOver_Character_Kirby_Normal/spr_GameOver_Character_Kirby_Normal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"37269218-884e-4261-a3c1-38f007d95688","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"297eea66-3927-4768-a9ca-1237976c33a5","path":"sprites/spr_GameOver_Character_Kirby_Normal/spr_GameOver_Character_Kirby_Normal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b804a57a-7b13-4462-a227-193ff48e52e1","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4e93bd94-21fc-4fd5-84e3-5c896fde071a","path":"sprites/spr_GameOver_Character_Kirby_Normal/spr_GameOver_Character_Kirby_Normal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"10759e21-12e1-49e9-8b37-49a0f4a8962c","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b757a9bd-0712-478d-8099-77fcd207e732","path":"sprites/spr_GameOver_Character_Kirby_Normal/spr_GameOver_Character_Kirby_Normal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -66,22 +65,13 @@
     "yorigin": 40,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_GameOver_Character_Kirby_Normal","path":"sprites/spr_GameOver_Character_Kirby_Normal/spr_GameOver_Character_Kirby_Normal.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_GameOver_Character_Kirby_Normal",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2c535ec7-4bc3-405e-b619-d1ccff44359e","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"2c535ec7-4bc3-405e-b619-d1ccff44359e","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Game Over",
     "path": "folders/Sprites/Menu/Game Over.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_GameOver_Character_Kirby_Normal",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

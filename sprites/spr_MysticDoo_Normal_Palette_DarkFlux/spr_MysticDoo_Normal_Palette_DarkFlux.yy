@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_MysticDoo_Normal_Palette_DarkFlux",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"3c14252a-007a-42a5-b90e-8eb7870701a3","path":"sprites/spr_MysticDoo_Normal_Palette_DarkFlux/spr_MysticDoo_Normal_Palette_DarkFlux.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3c14252a-007a-42a5-b90e-8eb7870701a3","path":"sprites/spr_MysticDoo_Normal_Palette_DarkFlux/spr_MysticDoo_Normal_Palette_DarkFlux.yy",},"LayerId":{"name":"168687b2-39b3-47d2-adf9-a5db6cedc070","path":"sprites/spr_MysticDoo_Normal_Palette_DarkFlux/spr_MysticDoo_Normal_Palette_DarkFlux.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_MysticDoo_Normal_Palette_DarkFlux","path":"sprites/spr_MysticDoo_Normal_Palette_DarkFlux/spr_MysticDoo_Normal_Palette_DarkFlux.yy",},"resourceVersion":"1.0","name":"3c14252a-007a-42a5-b90e-8eb7870701a3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3c14252a-007a-42a5-b90e-8eb7870701a3",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_MysticDoo_Normal_Palette_DarkFlux","path":"sprites/spr_MysticDoo_Normal_Palette_DarkFlux/spr_MysticDoo_Normal_Palette_DarkFlux.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_MysticDoo_Normal_Palette_DarkFlux",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"554e2953-d827-44f2-bb0d-d2b6a5668c8f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3c14252a-007a-42a5-b90e-8eb7870701a3","path":"sprites/spr_MysticDoo_Normal_Palette_DarkFlux/spr_MysticDoo_Normal_Palette_DarkFlux.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"554e2953-d827-44f2-bb0d-d2b6a5668c8f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3c14252a-007a-42a5-b90e-8eb7870701a3","path":"sprites/spr_MysticDoo_Normal_Palette_DarkFlux/spr_MysticDoo_Normal_Palette_DarkFlux.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_MysticDoo_Normal_Palette_DarkFlux","path":"sprites/spr_MysticDoo_Normal_Palette_DarkFlux/spr_MysticDoo_Normal_Palette_DarkFlux.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_MysticDoo_Normal_Palette_DarkFlux",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"168687b2-39b3-47d2-adf9-a5db6cedc070","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"168687b2-39b3-47d2-adf9-a5db6cedc070","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Palettes",
     "path": "folders/Sprites/Enemies/Mystic Doo/Normal/Palettes.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_MysticDoo_Normal_Palette_DarkFlux",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

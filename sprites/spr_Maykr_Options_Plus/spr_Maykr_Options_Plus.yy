@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Maykr_Options_Plus",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"52f9ca9d-6cf9-4d2d-8fc6-f630a679aac2","path":"sprites/spr_Maykr_Options_Plus/spr_Maykr_Options_Plus.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"52f9ca9d-6cf9-4d2d-8fc6-f630a679aac2","path":"sprites/spr_Maykr_Options_Plus/spr_Maykr_Options_Plus.yy",},"LayerId":{"name":"455027fb-67b7-4e39-afb4-0f1a5a95079c","path":"sprites/spr_Maykr_Options_Plus/spr_Maykr_Options_Plus.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Maykr_Options_Plus","path":"sprites/spr_Maykr_Options_Plus/spr_Maykr_Options_Plus.yy",},"resourceVersion":"1.0","name":"52f9ca9d-6cf9-4d2d-8fc6-f630a679aac2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"52f9ca9d-6cf9-4d2d-8fc6-f630a679aac2",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Maykr_Options_Plus","path":"sprites/spr_Maykr_Options_Plus/spr_Maykr_Options_Plus.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Maykr_Options_Plus",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"e1dd9b1c-698a-42a9-9030-e14b92b6e657","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"52f9ca9d-6cf9-4d2d-8fc6-f630a679aac2","path":"sprites/spr_Maykr_Options_Plus/spr_Maykr_Options_Plus.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"e1dd9b1c-698a-42a9-9030-e14b92b6e657","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"52f9ca9d-6cf9-4d2d-8fc6-f630a679aac2","path":"sprites/spr_Maykr_Options_Plus/spr_Maykr_Options_Plus.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Maykr_Options_Plus","path":"sprites/spr_Maykr_Options_Plus/spr_Maykr_Options_Plus.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Maykr_Options_Plus",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"455027fb-67b7-4e39-afb4-0f1a5a95079c","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"455027fb-67b7-4e39-afb4-0f1a5a95079c","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Options",
     "path": "folders/Sprites/Subgames/Maykr/Options.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Maykr_Options_Plus",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

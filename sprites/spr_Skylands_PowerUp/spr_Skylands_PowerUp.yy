@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Skylands_PowerUp",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,30 +27,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"073c0574-2028-4fee-a121-9eca767d8387","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"073c0574-2028-4fee-a121-9eca767d8387","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"LayerId":{"name":"a67f5197-0ef2-4a9f-b4ce-5c444f5ca3e6","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Skylands_PowerUp","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","name":"073c0574-2028-4fee-a121-9eca767d8387","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b65d0318-7e7c-40db-aac5-b7e55fb9b8c9","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b65d0318-7e7c-40db-aac5-b7e55fb9b8c9","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"LayerId":{"name":"a67f5197-0ef2-4a9f-b4ce-5c444f5ca3e6","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Skylands_PowerUp","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","name":"b65d0318-7e7c-40db-aac5-b7e55fb9b8c9","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"870f9bbb-b7cc-4e47-a01c-ce173c855d0f","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"870f9bbb-b7cc-4e47-a01c-ce173c855d0f","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"LayerId":{"name":"a67f5197-0ef2-4a9f-b4ce-5c444f5ca3e6","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Skylands_PowerUp","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","name":"870f9bbb-b7cc-4e47-a01c-ce173c855d0f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"1aea8148-e443-437f-9555-508031b38c30","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1aea8148-e443-437f-9555-508031b38c30","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"LayerId":{"name":"a67f5197-0ef2-4a9f-b4ce-5c444f5ca3e6","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Skylands_PowerUp","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","name":"1aea8148-e443-437f-9555-508031b38c30","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"aecc2955-90ca-4912-a70c-9de0204634ff","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"aecc2955-90ca-4912-a70c-9de0204634ff","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"LayerId":{"name":"a67f5197-0ef2-4a9f-b4ce-5c444f5ca3e6","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Skylands_PowerUp","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","name":"aecc2955-90ca-4912-a70c-9de0204634ff","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a234905e-dd31-46e1-aa33-ac8dd93e7d10","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a234905e-dd31-46e1-aa33-ac8dd93e7d10","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"LayerId":{"name":"a67f5197-0ef2-4a9f-b4ce-5c444f5ca3e6","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Skylands_PowerUp","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","name":"a234905e-dd31-46e1-aa33-ac8dd93e7d10","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"92afafeb-6fb5-4493-b4bb-2ead24e3bf99","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"92afafeb-6fb5-4493-b4bb-2ead24e3bf99","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"LayerId":{"name":"a67f5197-0ef2-4a9f-b4ce-5c444f5ca3e6","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Skylands_PowerUp","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","name":"92afafeb-6fb5-4493-b4bb-2ead24e3bf99","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"073c0574-2028-4fee-a121-9eca767d8387",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b65d0318-7e7c-40db-aac5-b7e55fb9b8c9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"870f9bbb-b7cc-4e47-a01c-ce173c855d0f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1aea8148-e443-437f-9555-508031b38c30",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"aecc2955-90ca-4912-a70c-9de0204634ff",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a234905e-dd31-46e1-aa33-ac8dd93e7d10",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"92afafeb-6fb5-4493-b4bb-2ead24e3bf99",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Skylands_PowerUp","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Skylands_PowerUp",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 6.0,
@@ -55,18 +46,18 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 7.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"d7d64315-64a9-4ac1-8e89-2c2d92420713","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"073c0574-2028-4fee-a121-9eca767d8387","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"f5e8527e-d0b6-4784-8ab4-ca4531dadb81","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b65d0318-7e7c-40db-aac5-b7e55fb9b8c9","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"0f141e3a-a1c3-42d6-a07f-d67fb0eee0db","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"870f9bbb-b7cc-4e47-a01c-ce173c855d0f","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"bd82dadd-23e1-43a9-8c1b-effffa0ee77b","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1aea8148-e443-437f-9555-508031b38c30","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"b2b30f55-148e-47b1-a732-faa38f4d36f2","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"aecc2955-90ca-4912-a70c-9de0204634ff","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"f1275a7b-ed0c-47bf-8977-6ee8a632ee8d","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a234905e-dd31-46e1-aa33-ac8dd93e7d10","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"fa2ce3e8-424e-44be-8351-55b32ad0881f","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"92afafeb-6fb5-4493-b4bb-2ead24e3bf99","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"d7d64315-64a9-4ac1-8e89-2c2d92420713","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"073c0574-2028-4fee-a121-9eca767d8387","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f5e8527e-d0b6-4784-8ab4-ca4531dadb81","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b65d0318-7e7c-40db-aac5-b7e55fb9b8c9","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0f141e3a-a1c3-42d6-a07f-d67fb0eee0db","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"870f9bbb-b7cc-4e47-a01c-ce173c855d0f","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"bd82dadd-23e1-43a9-8c1b-effffa0ee77b","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1aea8148-e443-437f-9555-508031b38c30","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b2b30f55-148e-47b1-a732-faa38f4d36f2","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"aecc2955-90ca-4912-a70c-9de0204634ff","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f1275a7b-ed0c-47bf-8977-6ee8a632ee8d","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a234905e-dd31-46e1-aa33-ac8dd93e7d10","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"fa2ce3e8-424e-44be-8351-55b32ad0881f","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"92afafeb-6fb5-4493-b4bb-2ead24e3bf99","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -82,22 +73,13 @@
     "yorigin": 9,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Skylands_PowerUp","path":"sprites/spr_Skylands_PowerUp/spr_Skylands_PowerUp.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Skylands_PowerUp",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a67f5197-0ef2-4a9f-b4ce-5c444f5ca3e6","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a67f5197-0ef2-4a9f-b4ce-5c444f5ca3e6","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Stage Elements",
     "path": "folders/Sprites/Subgames/Skylands/Stage Elements.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Skylands_PowerUp",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

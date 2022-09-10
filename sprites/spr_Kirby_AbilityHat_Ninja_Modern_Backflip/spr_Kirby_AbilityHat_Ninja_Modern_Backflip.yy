@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_AbilityHat_Ninja_Modern_Backflip",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,27 +27,17 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"1d5ef055-dfd6-4ac2-a5b0-125ded422c34","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1d5ef055-dfd6-4ac2-a5b0-125ded422c34","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ninja_Modern_Backflip","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"resourceVersion":"1.0","name":"1d5ef055-dfd6-4ac2-a5b0-125ded422c34","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"922c361f-0359-43e2-a71b-8ba1790cc387","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"922c361f-0359-43e2-a71b-8ba1790cc387","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ninja_Modern_Backflip","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"resourceVersion":"1.0","name":"922c361f-0359-43e2-a71b-8ba1790cc387","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"544d1fda-b0e0-468c-b02f-8550196d5405","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"544d1fda-b0e0-468c-b02f-8550196d5405","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ninja_Modern_Backflip","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"resourceVersion":"1.0","name":"544d1fda-b0e0-468c-b02f-8550196d5405","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b55be7ed-1c37-4e93-ace3-7e575798c86b","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b55be7ed-1c37-4e93-ace3-7e575798c86b","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ninja_Modern_Backflip","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"resourceVersion":"1.0","name":"b55be7ed-1c37-4e93-ace3-7e575798c86b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7e2e6179-e8e5-4c5b-acd3-a7ab82d70bd7","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7e2e6179-e8e5-4c5b-acd3-a7ab82d70bd7","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ninja_Modern_Backflip","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"resourceVersion":"1.0","name":"7e2e6179-e8e5-4c5b-acd3-a7ab82d70bd7","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c6c37acb-77ef-4e4c-acff-60de9a05ad8f","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c6c37acb-77ef-4e4c-acff-60de9a05ad8f","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ninja_Modern_Backflip","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"resourceVersion":"1.0","name":"c6c37acb-77ef-4e4c-acff-60de9a05ad8f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1d5ef055-dfd6-4ac2-a5b0-125ded422c34",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"922c361f-0359-43e2-a71b-8ba1790cc387",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"544d1fda-b0e0-468c-b02f-8550196d5405",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b55be7ed-1c37-4e93-ace3-7e575798c86b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7e2e6179-e8e5-4c5b-acd3-a7ab82d70bd7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c6c37acb-77ef-4e4c-acff-60de9a05ad8f",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_AbilityHat_Ninja_Modern_Backflip","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_AbilityHat_Ninja_Modern_Backflip",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 21.0,
@@ -52,17 +45,17 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 6.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"62cd5846-8e12-4f31-be27-cfffdb671ca7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1d5ef055-dfd6-4ac2-a5b0-125ded422c34","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"f9602bde-db43-4b9a-b351-42a210a70f1d","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"922c361f-0359-43e2-a71b-8ba1790cc387","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"31cea1a3-cc5d-4027-b31b-45c3613cc8bd","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"544d1fda-b0e0-468c-b02f-8550196d5405","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"e005152e-7d87-46a0-a52a-1d3bde020e93","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b55be7ed-1c37-4e93-ace3-7e575798c86b","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"68fee45c-745e-457e-b296-d1c36ec099fa","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7e2e6179-e8e5-4c5b-acd3-a7ab82d70bd7","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"fdbe1dea-2a2a-4eca-8b1c-e098bd46dda0","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c6c37acb-77ef-4e4c-acff-60de9a05ad8f","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"62cd5846-8e12-4f31-be27-cfffdb671ca7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1d5ef055-dfd6-4ac2-a5b0-125ded422c34","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f9602bde-db43-4b9a-b351-42a210a70f1d","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"922c361f-0359-43e2-a71b-8ba1790cc387","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"31cea1a3-cc5d-4027-b31b-45c3613cc8bd","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"544d1fda-b0e0-468c-b02f-8550196d5405","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e005152e-7d87-46a0-a52a-1d3bde020e93","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b55be7ed-1c37-4e93-ace3-7e575798c86b","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"68fee45c-745e-457e-b296-d1c36ec099fa","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7e2e6179-e8e5-4c5b-acd3-a7ab82d70bd7","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"fdbe1dea-2a2a-4eca-8b1c-e098bd46dda0","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c6c37acb-77ef-4e4c-acff-60de9a05ad8f","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -78,22 +71,13 @@
     "yorigin": 22,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_AbilityHat_Ninja_Modern_Backflip","path":"sprites/spr_Kirby_AbilityHat_Ninja_Modern_Backflip/spr_Kirby_AbilityHat_Ninja_Modern_Backflip.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_AbilityHat_Ninja_Modern_Backflip",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Hat",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Ninja/Modern/Hat.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_AbilityHat_Ninja_Modern_Backflip",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

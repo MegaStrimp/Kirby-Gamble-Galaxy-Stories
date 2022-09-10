@@ -112,31 +112,6 @@ function scr_Player_Collision(argument0)
 	
 	//Vertical Collision
 	
-	if (place_meeting(x,y + vspFinal,obj_Platform))
-	{
-		collidingWall = instance_place(x,y + vspFinal,obj_Platform);
-		if ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + collidingWall.vsp + 20 + vspFinal)) or (place_meeting(x, y + 1, obj_Wall))
-		{
-			while (!place_meeting(x,y + sign(vspFinal),obj_Platform))
-			{
-				y += sign(vspFinal);
-			}
-			if (place_meeting(x,y - 1,obj_ParentWall))
-			{
-				var collidedWall = instance_place(x,y - 1,obj_ParentWall);
-				if (collidedWall.object)
-				{
-					if (((state == playerStates.normal) or (state == playerStates.carry) or (state == playerStates.inhale)) and (!place_meeting(x,y + 1,obj_ParentWall)) and (collidedWall.damageType == damageTypes.none) and (sign(vsp) == -1))
-					{
-						collidedWall.hp -= dmg;
-					}
-				}
-			}
-			vsp = 0;
-			vspFinal = 0;
-		}
-	}
-	
 	if (place_meeting(x,y + vspFinal,obj_ParentWall))
 	{
 		collidingWall = instance_place(x,y + vspFinal,obj_ParentWall);
@@ -156,6 +131,36 @@ function scr_Player_Collision(argument0)
 						collidedWall.hp -= dmg;
 					}
 				}
+			}
+			vsp = 0;
+			vspFinal = 0;
+		}
+	}
+	
+	if (place_meeting(x,y + vspFinal,obj_Platform))
+	{
+		collidingWall = instance_place(x,y + vspFinal,obj_Platform);
+		if (((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + collidingWall.vsp + 20 + vspFinal)) or (place_meeting(x,y + vspFinal,obj_Wall)))
+		{
+			/*while (!place_meeting(x,y + sign(vspFinal),obj_Platform))
+			{
+				y += sign(vspFinal);
+			}*/
+			if (place_meeting(x,y - 1,obj_ParentWall))
+			{
+				var collidedWall = instance_place(x,y - 1,obj_ParentWall);
+				if (collidedWall.object)
+				{
+					if (((state == playerStates.normal) or (state == playerStates.carry) or (state == playerStates.inhale)) and (!place_meeting(x,y + 1,obj_ParentWall)) and (collidedWall.damageType == damageTypes.none) and (sign(vsp) == -1))
+					{
+						collidedWall.hp -= dmg;
+					}
+				}
+			}
+			
+			if (!place_meeting(x,collidingWall.y + 12,obj_Wall))
+			{
+				y = collidingWall.y + 12;
 			}
 			vsp = 0;
 			vspFinal = 0;

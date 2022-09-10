@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Lantern_Normal_Fire",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"da7af2bb-4414-46b9-bdcb-9e1ad8849617","path":"sprites/spr_Lantern_Normal_Fire/spr_Lantern_Normal_Fire.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"da7af2bb-4414-46b9-bdcb-9e1ad8849617","path":"sprites/spr_Lantern_Normal_Fire/spr_Lantern_Normal_Fire.yy",},"LayerId":{"name":"cd13d90d-28c5-4c75-98b7-0ef28072f712","path":"sprites/spr_Lantern_Normal_Fire/spr_Lantern_Normal_Fire.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Lantern_Normal_Fire","path":"sprites/spr_Lantern_Normal_Fire/spr_Lantern_Normal_Fire.yy",},"resourceVersion":"1.0","name":"da7af2bb-4414-46b9-bdcb-9e1ad8849617","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8bba01f1-9393-4eb3-a45d-af25baff1479","path":"sprites/spr_Lantern_Normal_Fire/spr_Lantern_Normal_Fire.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8bba01f1-9393-4eb3-a45d-af25baff1479","path":"sprites/spr_Lantern_Normal_Fire/spr_Lantern_Normal_Fire.yy",},"LayerId":{"name":"cd13d90d-28c5-4c75-98b7-0ef28072f712","path":"sprites/spr_Lantern_Normal_Fire/spr_Lantern_Normal_Fire.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Lantern_Normal_Fire","path":"sprites/spr_Lantern_Normal_Fire/spr_Lantern_Normal_Fire.yy",},"resourceVersion":"1.0","name":"8bba01f1-9393-4eb3-a45d-af25baff1479","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"da7af2bb-4414-46b9-bdcb-9e1ad8849617",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8bba01f1-9393-4eb3-a45d-af25baff1479",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Lantern_Normal_Fire","path":"sprites/spr_Lantern_Normal_Fire/spr_Lantern_Normal_Fire.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Lantern_Normal_Fire",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 12.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"2811efa7-35d9-46cc-a51f-a0890e77031d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"da7af2bb-4414-46b9-bdcb-9e1ad8849617","path":"sprites/spr_Lantern_Normal_Fire/spr_Lantern_Normal_Fire.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"e7d91373-158d-4560-a7c8-d16474489f09","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8bba01f1-9393-4eb3-a45d-af25baff1479","path":"sprites/spr_Lantern_Normal_Fire/spr_Lantern_Normal_Fire.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"2811efa7-35d9-46cc-a51f-a0890e77031d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"da7af2bb-4414-46b9-bdcb-9e1ad8849617","path":"sprites/spr_Lantern_Normal_Fire/spr_Lantern_Normal_Fire.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e7d91373-158d-4560-a7c8-d16474489f09","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8bba01f1-9393-4eb3-a45d-af25baff1479","path":"sprites/spr_Lantern_Normal_Fire/spr_Lantern_Normal_Fire.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -62,22 +63,13 @@
     "yorigin": 15,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Lantern_Normal_Fire","path":"sprites/spr_Lantern_Normal_Fire/spr_Lantern_Normal_Fire.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Lantern_Normal_Fire",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"cd13d90d-28c5-4c75-98b7-0ef28072f712","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"cd13d90d-28c5-4c75-98b7-0ef28072f712","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Stage Elements/Lantern/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Lantern_Normal_Fire",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

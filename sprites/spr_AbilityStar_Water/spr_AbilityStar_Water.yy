@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_AbilityStar_Water",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"2593cffc-d9a8-4022-98bc-e64e34deeba7","path":"sprites/spr_AbilityStar_Water/spr_AbilityStar_Water.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2593cffc-d9a8-4022-98bc-e64e34deeba7","path":"sprites/spr_AbilityStar_Water/spr_AbilityStar_Water.yy",},"LayerId":{"name":"c40596f7-82f9-49f1-90a5-788090464e1c","path":"sprites/spr_AbilityStar_Water/spr_AbilityStar_Water.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_AbilityStar_Water","path":"sprites/spr_AbilityStar_Water/spr_AbilityStar_Water.yy",},"resourceVersion":"1.0","name":"2593cffc-d9a8-4022-98bc-e64e34deeba7","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d0bcde1b-54df-44fd-a9ab-0218d0f5dc3b","path":"sprites/spr_AbilityStar_Water/spr_AbilityStar_Water.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d0bcde1b-54df-44fd-a9ab-0218d0f5dc3b","path":"sprites/spr_AbilityStar_Water/spr_AbilityStar_Water.yy",},"LayerId":{"name":"c40596f7-82f9-49f1-90a5-788090464e1c","path":"sprites/spr_AbilityStar_Water/spr_AbilityStar_Water.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_AbilityStar_Water","path":"sprites/spr_AbilityStar_Water/spr_AbilityStar_Water.yy",},"resourceVersion":"1.0","name":"d0bcde1b-54df-44fd-a9ab-0218d0f5dc3b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2593cffc-d9a8-4022-98bc-e64e34deeba7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d0bcde1b-54df-44fd-a9ab-0218d0f5dc3b",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_AbilityStar_Water","path":"sprites/spr_AbilityStar_Water/spr_AbilityStar_Water.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_AbilityStar_Water",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 15.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"38da5627-1d5c-477f-97cb-e7f4107920a1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2593cffc-d9a8-4022-98bc-e64e34deeba7","path":"sprites/spr_AbilityStar_Water/spr_AbilityStar_Water.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"31b235c4-aed2-41b1-9a48-767a09357fd9","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d0bcde1b-54df-44fd-a9ab-0218d0f5dc3b","path":"sprites/spr_AbilityStar_Water/spr_AbilityStar_Water.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"38da5627-1d5c-477f-97cb-e7f4107920a1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2593cffc-d9a8-4022-98bc-e64e34deeba7","path":"sprites/spr_AbilityStar_Water/spr_AbilityStar_Water.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"31b235c4-aed2-41b1-9a48-767a09357fd9","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d0bcde1b-54df-44fd-a9ab-0218d0f5dc3b","path":"sprites/spr_AbilityStar_Water/spr_AbilityStar_Water.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -62,22 +63,13 @@
     "yorigin": 11,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_AbilityStar_Water","path":"sprites/spr_AbilityStar_Water/spr_AbilityStar_Water.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_AbilityStar_Water",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c40596f7-82f9-49f1-90a5-788090464e1c","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c40596f7-82f9-49f1-90a5-788090464e1c","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Ability Stars",
     "path": "folders/Sprites/Misc/Ability Stars.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_AbilityStar_Water",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

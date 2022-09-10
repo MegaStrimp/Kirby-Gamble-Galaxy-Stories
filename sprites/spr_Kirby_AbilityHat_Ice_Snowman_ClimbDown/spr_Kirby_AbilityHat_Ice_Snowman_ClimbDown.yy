@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4e4a5f19-5a37-40f9-89c2-eb2b25ea8e66","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4e4a5f19-5a37-40f9-89c2-eb2b25ea8e66","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown.yy",},"LayerId":{"name":"c7610408-f1bd-45a6-b6b5-31405141352a","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown.yy",},"resourceVersion":"1.0","name":"4e4a5f19-5a37-40f9-89c2-eb2b25ea8e66","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"63722177-2034-4612-b7db-7086fb4cf59f","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"63722177-2034-4612-b7db-7086fb4cf59f","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown.yy",},"LayerId":{"name":"c7610408-f1bd-45a6-b6b5-31405141352a","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown.yy",},"resourceVersion":"1.0","name":"63722177-2034-4612-b7db-7086fb4cf59f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d0a6dcc3-fe25-4ae8-a814-245b8ac77d2d","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d0a6dcc3-fe25-4ae8-a814-245b8ac77d2d","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown.yy",},"LayerId":{"name":"c7610408-f1bd-45a6-b6b5-31405141352a","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown.yy",},"resourceVersion":"1.0","name":"d0a6dcc3-fe25-4ae8-a814-245b8ac77d2d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4e4a5f19-5a37-40f9-89c2-eb2b25ea8e66",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"63722177-2034-4612-b7db-7086fb4cf59f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d0a6dcc3-fe25-4ae8-a814-245b8ac77d2d",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 12.0,
@@ -43,14 +42,14 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 3.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"c45ba180-9d04-4937-968b-8cf780bf19df","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4e4a5f19-5a37-40f9-89c2-eb2b25ea8e66","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"1004ba6b-f66d-4d20-bbbd-24624116b73b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"63722177-2034-4612-b7db-7086fb4cf59f","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"34f31e75-e4a3-40ca-b285-58d66dcf77f0","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d0a6dcc3-fe25-4ae8-a814-245b8ac77d2d","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"c45ba180-9d04-4937-968b-8cf780bf19df","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4e4a5f19-5a37-40f9-89c2-eb2b25ea8e66","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1004ba6b-f66d-4d20-bbbd-24624116b73b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"63722177-2034-4612-b7db-7086fb4cf59f","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"34f31e75-e4a3-40ca-b285-58d66dcf77f0","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d0a6dcc3-fe25-4ae8-a814-245b8ac77d2d","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -66,22 +65,13 @@
     "yorigin": 18,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown","path":"sprites/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown/spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c7610408-f1bd-45a6-b6b5-31405141352a","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c7610408-f1bd-45a6-b6b5-31405141352a","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Hat",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Ice/Snowman/Hat.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_AbilityHat_Ice_Snowman_ClimbDown",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

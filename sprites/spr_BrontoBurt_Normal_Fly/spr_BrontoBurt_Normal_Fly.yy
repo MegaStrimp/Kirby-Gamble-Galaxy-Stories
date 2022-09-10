@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_BrontoBurt_Normal_Fly",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"7c7a47c5-f015-4800-a67d-c93a91479fb9","path":"sprites/spr_BrontoBurt_Normal_Fly/spr_BrontoBurt_Normal_Fly.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7c7a47c5-f015-4800-a67d-c93a91479fb9","path":"sprites/spr_BrontoBurt_Normal_Fly/spr_BrontoBurt_Normal_Fly.yy",},"LayerId":{"name":"e0be7370-1f07-4d27-8646-5333f1703211","path":"sprites/spr_BrontoBurt_Normal_Fly/spr_BrontoBurt_Normal_Fly.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_BrontoBurt_Normal_Fly","path":"sprites/spr_BrontoBurt_Normal_Fly/spr_BrontoBurt_Normal_Fly.yy",},"resourceVersion":"1.0","name":"7c7a47c5-f015-4800-a67d-c93a91479fb9","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"78706a83-1fd5-4e7e-a58f-61c78f6ef3a4","path":"sprites/spr_BrontoBurt_Normal_Fly/spr_BrontoBurt_Normal_Fly.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"78706a83-1fd5-4e7e-a58f-61c78f6ef3a4","path":"sprites/spr_BrontoBurt_Normal_Fly/spr_BrontoBurt_Normal_Fly.yy",},"LayerId":{"name":"e0be7370-1f07-4d27-8646-5333f1703211","path":"sprites/spr_BrontoBurt_Normal_Fly/spr_BrontoBurt_Normal_Fly.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_BrontoBurt_Normal_Fly","path":"sprites/spr_BrontoBurt_Normal_Fly/spr_BrontoBurt_Normal_Fly.yy",},"resourceVersion":"1.0","name":"78706a83-1fd5-4e7e-a58f-61c78f6ef3a4","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6eb5f319-9341-43da-9e44-3da4ca70da38","path":"sprites/spr_BrontoBurt_Normal_Fly/spr_BrontoBurt_Normal_Fly.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6eb5f319-9341-43da-9e44-3da4ca70da38","path":"sprites/spr_BrontoBurt_Normal_Fly/spr_BrontoBurt_Normal_Fly.yy",},"LayerId":{"name":"e0be7370-1f07-4d27-8646-5333f1703211","path":"sprites/spr_BrontoBurt_Normal_Fly/spr_BrontoBurt_Normal_Fly.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_BrontoBurt_Normal_Fly","path":"sprites/spr_BrontoBurt_Normal_Fly/spr_BrontoBurt_Normal_Fly.yy",},"resourceVersion":"1.0","name":"6eb5f319-9341-43da-9e44-3da4ca70da38","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7c7a47c5-f015-4800-a67d-c93a91479fb9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"78706a83-1fd5-4e7e-a58f-61c78f6ef3a4",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6eb5f319-9341-43da-9e44-3da4ca70da38",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_BrontoBurt_Normal_Fly","path":"sprites/spr_BrontoBurt_Normal_Fly/spr_BrontoBurt_Normal_Fly.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_BrontoBurt_Normal_Fly",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 9.0,
@@ -43,14 +42,14 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 3.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"55b66c4e-fbf0-4f26-9e74-16a14d476eea","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7c7a47c5-f015-4800-a67d-c93a91479fb9","path":"sprites/spr_BrontoBurt_Normal_Fly/spr_BrontoBurt_Normal_Fly.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"61464a21-3eb1-4393-b425-6938957d55c8","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"78706a83-1fd5-4e7e-a58f-61c78f6ef3a4","path":"sprites/spr_BrontoBurt_Normal_Fly/spr_BrontoBurt_Normal_Fly.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"12eff1ba-92a1-4f58-9446-8944f9e39a3a","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6eb5f319-9341-43da-9e44-3da4ca70da38","path":"sprites/spr_BrontoBurt_Normal_Fly/spr_BrontoBurt_Normal_Fly.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"55b66c4e-fbf0-4f26-9e74-16a14d476eea","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7c7a47c5-f015-4800-a67d-c93a91479fb9","path":"sprites/spr_BrontoBurt_Normal_Fly/spr_BrontoBurt_Normal_Fly.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"61464a21-3eb1-4393-b425-6938957d55c8","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"78706a83-1fd5-4e7e-a58f-61c78f6ef3a4","path":"sprites/spr_BrontoBurt_Normal_Fly/spr_BrontoBurt_Normal_Fly.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"12eff1ba-92a1-4f58-9446-8944f9e39a3a","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6eb5f319-9341-43da-9e44-3da4ca70da38","path":"sprites/spr_BrontoBurt_Normal_Fly/spr_BrontoBurt_Normal_Fly.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -66,22 +65,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_BrontoBurt_Normal_Fly","path":"sprites/spr_BrontoBurt_Normal_Fly/spr_BrontoBurt_Normal_Fly.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_BrontoBurt_Normal_Fly",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e0be7370-1f07-4d27-8646-5333f1703211","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e0be7370-1f07-4d27-8646-5333f1703211","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Enemies/Bronto Burt/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_BrontoBurt_Normal_Fly",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

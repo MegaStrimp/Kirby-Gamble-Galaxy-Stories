@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4750f8f3-ccc9-454e-9294-51ee99cd6a7b","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4750f8f3-ccc9-454e-9294-51ee99cd6a7b","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands.yy",},"LayerId":{"name":"066c471e-bfbf-4dfb-bf33-de831d9c8643","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands.yy",},"resourceVersion":"1.0","name":"4750f8f3-ccc9-454e-9294-51ee99cd6a7b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"959d511e-3f07-47e4-b584-9b1bbc25c199","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"959d511e-3f07-47e4-b584-9b1bbc25c199","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands.yy",},"LayerId":{"name":"066c471e-bfbf-4dfb-bf33-de831d9c8643","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands.yy",},"resourceVersion":"1.0","name":"959d511e-3f07-47e4-b584-9b1bbc25c199","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4750f8f3-ccc9-454e-9294-51ee99cd6a7b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"959d511e-3f07-47e4-b584-9b1bbc25c199",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 15.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"e81e3989-b0a7-4e33-928b-09b8d64aa764","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4750f8f3-ccc9-454e-9294-51ee99cd6a7b","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"c60178dc-e04f-475b-8e9d-6eb1c9aaa055","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"959d511e-3f07-47e4-b584-9b1bbc25c199","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"e81e3989-b0a7-4e33-928b-09b8d64aa764","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4750f8f3-ccc9-454e-9294-51ee99cd6a7b","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c60178dc-e04f-475b-8e9d-6eb1c9aaa055","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"959d511e-3f07-47e4-b584-9b1bbc25c199","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -62,22 +63,13 @@
     "yorigin": 7,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands/spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"066c471e-bfbf-4dfb-bf33-de831d9c8643","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"066c471e-bfbf-4dfb-bf33-de831d9c8643","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Hands",
     "path": "folders/Sprites/Characters/Kirby/Normal/Hands.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_Normal_ItemCarry_Light_DuckBlink_Hands",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

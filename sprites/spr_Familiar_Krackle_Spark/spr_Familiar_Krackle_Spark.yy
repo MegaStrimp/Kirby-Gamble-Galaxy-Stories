@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Familiar_Krackle_Spark",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b7b72f8e-f3e7-490e-9fcb-1b6a1edec775","path":"sprites/spr_Familiar_Krackle_Spark/spr_Familiar_Krackle_Spark.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b7b72f8e-f3e7-490e-9fcb-1b6a1edec775","path":"sprites/spr_Familiar_Krackle_Spark/spr_Familiar_Krackle_Spark.yy",},"LayerId":{"name":"47140771-37ba-4ef3-8434-e5e3cc007bc8","path":"sprites/spr_Familiar_Krackle_Spark/spr_Familiar_Krackle_Spark.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Familiar_Krackle_Spark","path":"sprites/spr_Familiar_Krackle_Spark/spr_Familiar_Krackle_Spark.yy",},"resourceVersion":"1.0","name":"b7b72f8e-f3e7-490e-9fcb-1b6a1edec775","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b7b72f8e-f3e7-490e-9fcb-1b6a1edec775",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Familiar_Krackle_Spark","path":"sprites/spr_Familiar_Krackle_Spark/spr_Familiar_Krackle_Spark.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Familiar_Krackle_Spark",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"f6340c71-c916-41c0-839c-fbe61146a7a3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b7b72f8e-f3e7-490e-9fcb-1b6a1edec775","path":"sprites/spr_Familiar_Krackle_Spark/spr_Familiar_Krackle_Spark.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"f6340c71-c916-41c0-839c-fbe61146a7a3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b7b72f8e-f3e7-490e-9fcb-1b6a1edec775","path":"sprites/spr_Familiar_Krackle_Spark/spr_Familiar_Krackle_Spark.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 5,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Familiar_Krackle_Spark","path":"sprites/spr_Familiar_Krackle_Spark/spr_Familiar_Krackle_Spark.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Familiar_Krackle_Spark",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"47140771-37ba-4ef3-8434-e5e3cc007bc8","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"47140771-37ba-4ef3-8434-e5e3cc007bc8","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Misc",
     "path": "folders/Sprites/Familiars/Krackle/Misc.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Familiar_Krackle_Spark",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

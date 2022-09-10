@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_SamuraiKirby_Kirby_IdleFront",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"88cd99de-9400-4aa1-ad71-e3ab97e4fa30","path":"sprites/spr_SamuraiKirby_Kirby_IdleFront/spr_SamuraiKirby_Kirby_IdleFront.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"88cd99de-9400-4aa1-ad71-e3ab97e4fa30","path":"sprites/spr_SamuraiKirby_Kirby_IdleFront/spr_SamuraiKirby_Kirby_IdleFront.yy",},"LayerId":{"name":"db661b38-67e1-4bc9-af4d-57cc116c594e","path":"sprites/spr_SamuraiKirby_Kirby_IdleFront/spr_SamuraiKirby_Kirby_IdleFront.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_SamuraiKirby_Kirby_IdleFront","path":"sprites/spr_SamuraiKirby_Kirby_IdleFront/spr_SamuraiKirby_Kirby_IdleFront.yy",},"resourceVersion":"1.0","name":"88cd99de-9400-4aa1-ad71-e3ab97e4fa30","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"88cd99de-9400-4aa1-ad71-e3ab97e4fa30",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_SamuraiKirby_Kirby_IdleFront","path":"sprites/spr_SamuraiKirby_Kirby_IdleFront/spr_SamuraiKirby_Kirby_IdleFront.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_SamuraiKirby_Kirby_IdleFront",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"56a38989-ffff-4a8f-ae5b-14d3e6c28991","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"88cd99de-9400-4aa1-ad71-e3ab97e4fa30","path":"sprites/spr_SamuraiKirby_Kirby_IdleFront/spr_SamuraiKirby_Kirby_IdleFront.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"56a38989-ffff-4a8f-ae5b-14d3e6c28991","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"88cd99de-9400-4aa1-ad71-e3ab97e4fa30","path":"sprites/spr_SamuraiKirby_Kirby_IdleFront/spr_SamuraiKirby_Kirby_IdleFront.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 40,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_SamuraiKirby_Kirby_IdleFront","path":"sprites/spr_SamuraiKirby_Kirby_IdleFront/spr_SamuraiKirby_Kirby_IdleFront.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_SamuraiKirby_Kirby_IdleFront",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"db661b38-67e1-4bc9-af4d-57cc116c594e","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"db661b38-67e1-4bc9-af4d-57cc116c594e","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Kirby",
     "path": "folders/Sprites/Subgames/Samurai Kirby/Kirby.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_SamuraiKirby_Kirby_IdleFront",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

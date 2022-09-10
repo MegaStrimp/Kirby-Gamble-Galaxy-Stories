@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Gordo_Normal_Palette_Vintage",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"650795e8-524b-4ac4-ae94-02e9e87011fa","path":"sprites/spr_Gordo_Normal_Palette_Vintage/spr_Gordo_Normal_Palette_Vintage.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"650795e8-524b-4ac4-ae94-02e9e87011fa","path":"sprites/spr_Gordo_Normal_Palette_Vintage/spr_Gordo_Normal_Palette_Vintage.yy",},"LayerId":{"name":"662cc76a-d017-4ce3-b8da-3f6c5d1a2549","path":"sprites/spr_Gordo_Normal_Palette_Vintage/spr_Gordo_Normal_Palette_Vintage.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Gordo_Normal_Palette_Vintage","path":"sprites/spr_Gordo_Normal_Palette_Vintage/spr_Gordo_Normal_Palette_Vintage.yy",},"resourceVersion":"1.0","name":"650795e8-524b-4ac4-ae94-02e9e87011fa","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"650795e8-524b-4ac4-ae94-02e9e87011fa",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Gordo_Normal_Palette_Vintage","path":"sprites/spr_Gordo_Normal_Palette_Vintage/spr_Gordo_Normal_Palette_Vintage.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Gordo_Normal_Palette_Vintage",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"a8c51161-0764-401a-80d2-ed1f482fa01a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"650795e8-524b-4ac4-ae94-02e9e87011fa","path":"sprites/spr_Gordo_Normal_Palette_Vintage/spr_Gordo_Normal_Palette_Vintage.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"a8c51161-0764-401a-80d2-ed1f482fa01a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"650795e8-524b-4ac4-ae94-02e9e87011fa","path":"sprites/spr_Gordo_Normal_Palette_Vintage/spr_Gordo_Normal_Palette_Vintage.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Gordo_Normal_Palette_Vintage","path":"sprites/spr_Gordo_Normal_Palette_Vintage/spr_Gordo_Normal_Palette_Vintage.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Gordo_Normal_Palette_Vintage",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"662cc76a-d017-4ce3-b8da-3f6c5d1a2549","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"662cc76a-d017-4ce3-b8da-3f6c5d1a2549","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Palettes",
     "path": "folders/Sprites/Enemies/Gordo/Normal/Palettes.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Gordo_Normal_Palette_Vintage",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

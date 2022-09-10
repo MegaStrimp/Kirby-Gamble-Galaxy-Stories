@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_TutorialSign_Symbol_Check",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"107344ba-0077-4757-8094-3cd0f2adc591","path":"sprites/spr_TutorialSign_Symbol_Check/spr_TutorialSign_Symbol_Check.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"107344ba-0077-4757-8094-3cd0f2adc591","path":"sprites/spr_TutorialSign_Symbol_Check/spr_TutorialSign_Symbol_Check.yy",},"LayerId":{"name":"c43831a9-0f14-4d44-ac8a-fba47df98fce","path":"sprites/spr_TutorialSign_Symbol_Check/spr_TutorialSign_Symbol_Check.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_TutorialSign_Symbol_Check","path":"sprites/spr_TutorialSign_Symbol_Check/spr_TutorialSign_Symbol_Check.yy",},"resourceVersion":"1.0","name":"107344ba-0077-4757-8094-3cd0f2adc591","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"107344ba-0077-4757-8094-3cd0f2adc591",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_TutorialSign_Symbol_Check","path":"sprites/spr_TutorialSign_Symbol_Check/spr_TutorialSign_Symbol_Check.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_TutorialSign_Symbol_Check",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"f576fc79-b4c9-4823-bc61-1de120e97060","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"107344ba-0077-4757-8094-3cd0f2adc591","path":"sprites/spr_TutorialSign_Symbol_Check/spr_TutorialSign_Symbol_Check.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"f576fc79-b4c9-4823-bc61-1de120e97060","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"107344ba-0077-4757-8094-3cd0f2adc591","path":"sprites/spr_TutorialSign_Symbol_Check/spr_TutorialSign_Symbol_Check.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 9,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_TutorialSign_Symbol_Check","path":"sprites/spr_TutorialSign_Symbol_Check/spr_TutorialSign_Symbol_Check.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_TutorialSign_Symbol_Check",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c43831a9-0f14-4d44-ac8a-fba47df98fce","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c43831a9-0f14-4d44-ac8a-fba47df98fce","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Symbols",
     "path": "folders/Sprites/Stage Elements/Tutorial Sign/Symbols.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_TutorialSign_Symbol_Check",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

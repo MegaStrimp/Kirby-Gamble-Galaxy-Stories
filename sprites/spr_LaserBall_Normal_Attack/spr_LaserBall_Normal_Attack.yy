@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_LaserBall_Normal_Attack",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4684d5d1-65da-455a-9582-5641fc43513d","path":"sprites/spr_LaserBall_Normal_Attack/spr_LaserBall_Normal_Attack.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4684d5d1-65da-455a-9582-5641fc43513d","path":"sprites/spr_LaserBall_Normal_Attack/spr_LaserBall_Normal_Attack.yy",},"LayerId":{"name":"bc648128-3a01-4de8-9568-8e2d7c0f04be","path":"sprites/spr_LaserBall_Normal_Attack/spr_LaserBall_Normal_Attack.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_LaserBall_Normal_Attack","path":"sprites/spr_LaserBall_Normal_Attack/spr_LaserBall_Normal_Attack.yy",},"resourceVersion":"1.0","name":"4684d5d1-65da-455a-9582-5641fc43513d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3ff7566c-00d5-488c-9b88-f0e71f6f2600","path":"sprites/spr_LaserBall_Normal_Attack/spr_LaserBall_Normal_Attack.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3ff7566c-00d5-488c-9b88-f0e71f6f2600","path":"sprites/spr_LaserBall_Normal_Attack/spr_LaserBall_Normal_Attack.yy",},"LayerId":{"name":"bc648128-3a01-4de8-9568-8e2d7c0f04be","path":"sprites/spr_LaserBall_Normal_Attack/spr_LaserBall_Normal_Attack.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_LaserBall_Normal_Attack","path":"sprites/spr_LaserBall_Normal_Attack/spr_LaserBall_Normal_Attack.yy",},"resourceVersion":"1.0","name":"3ff7566c-00d5-488c-9b88-f0e71f6f2600","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4684d5d1-65da-455a-9582-5641fc43513d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3ff7566c-00d5-488c-9b88-f0e71f6f2600",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_LaserBall_Normal_Attack","path":"sprites/spr_LaserBall_Normal_Attack/spr_LaserBall_Normal_Attack.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_LaserBall_Normal_Attack",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 21.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"8b8a0ad0-ad47-4825-8676-c53611a3bd47","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4684d5d1-65da-455a-9582-5641fc43513d","path":"sprites/spr_LaserBall_Normal_Attack/spr_LaserBall_Normal_Attack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"dc89b72f-e2c9-4a78-ade5-a38132537a28","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3ff7566c-00d5-488c-9b88-f0e71f6f2600","path":"sprites/spr_LaserBall_Normal_Attack/spr_LaserBall_Normal_Attack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"8b8a0ad0-ad47-4825-8676-c53611a3bd47","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4684d5d1-65da-455a-9582-5641fc43513d","path":"sprites/spr_LaserBall_Normal_Attack/spr_LaserBall_Normal_Attack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"dc89b72f-e2c9-4a78-ade5-a38132537a28","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3ff7566c-00d5-488c-9b88-f0e71f6f2600","path":"sprites/spr_LaserBall_Normal_Attack/spr_LaserBall_Normal_Attack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -62,22 +63,13 @@
     "yorigin": 11,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_LaserBall_Normal_Attack","path":"sprites/spr_LaserBall_Normal_Attack/spr_LaserBall_Normal_Attack.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_LaserBall_Normal_Attack",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"bc648128-3a01-4de8-9568-8e2d7c0f04be","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"bc648128-3a01-4de8-9568-8e2d7c0f04be","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Enemies/Laser Ball/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_LaserBall_Normal_Attack",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

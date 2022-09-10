@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b292a736-8234-4fb1-87f3-c8324e7485c2","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b292a736-8234-4fb1-87f3-c8324e7485c2","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown.yy",},"LayerId":{"name":"4d05d2e0-ce66-4d89-99c1-4a1664bdccda","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown.yy",},"resourceVersion":"1.0","name":"b292a736-8234-4fb1-87f3-c8324e7485c2","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"913e5855-adf6-47f3-b965-92ccacb3a6f4","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"913e5855-adf6-47f3-b965-92ccacb3a6f4","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown.yy",},"LayerId":{"name":"4d05d2e0-ce66-4d89-99c1-4a1664bdccda","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown.yy",},"resourceVersion":"1.0","name":"913e5855-adf6-47f3-b965-92ccacb3a6f4","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"bb8dca8e-cba7-4baf-bd90-ebde07d9744d","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bb8dca8e-cba7-4baf-bd90-ebde07d9744d","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown.yy",},"LayerId":{"name":"4d05d2e0-ce66-4d89-99c1-4a1664bdccda","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown.yy",},"resourceVersion":"1.0","name":"bb8dca8e-cba7-4baf-bd90-ebde07d9744d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b292a736-8234-4fb1-87f3-c8324e7485c2",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"913e5855-adf6-47f3-b965-92ccacb3a6f4",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bb8dca8e-cba7-4baf-bd90-ebde07d9744d",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 12.0,
@@ -43,14 +42,14 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 3.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"264323c8-c050-47aa-b8da-dfa6a3d15a2f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b292a736-8234-4fb1-87f3-c8324e7485c2","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"c07f1ef4-30fc-457e-9e70-c19bb32329d4","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"913e5855-adf6-47f3-b965-92ccacb3a6f4","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"547537b4-e7bc-44ab-8552-aa4a5c4d7b80","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bb8dca8e-cba7-4baf-bd90-ebde07d9744d","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"264323c8-c050-47aa-b8da-dfa6a3d15a2f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b292a736-8234-4fb1-87f3-c8324e7485c2","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c07f1ef4-30fc-457e-9e70-c19bb32329d4","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"913e5855-adf6-47f3-b965-92ccacb3a6f4","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"547537b4-e7bc-44ab-8552-aa4a5c4d7b80","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bb8dca8e-cba7-4baf-bd90-ebde07d9744d","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -66,22 +65,13 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown","path":"sprites/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown/spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4d05d2e0-ce66-4d89-99c1-4a1664bdccda","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"4d05d2e0-ce66-4d89-99c1-4a1664bdccda","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Hat",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Beam/Marx Soul/Hat.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_AbilityHat_Beam_MarxSoul_ClimbDown",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

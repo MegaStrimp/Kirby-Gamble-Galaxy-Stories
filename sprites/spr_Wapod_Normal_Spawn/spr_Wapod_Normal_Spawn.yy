@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Wapod_Normal_Spawn",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d26cb366-8793-430d-be0f-68476cef0a93","path":"sprites/spr_Wapod_Normal_Spawn/spr_Wapod_Normal_Spawn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d26cb366-8793-430d-be0f-68476cef0a93","path":"sprites/spr_Wapod_Normal_Spawn/spr_Wapod_Normal_Spawn.yy",},"LayerId":{"name":"94b567d6-d4a1-443a-a8ad-d6147877f402","path":"sprites/spr_Wapod_Normal_Spawn/spr_Wapod_Normal_Spawn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Wapod_Normal_Spawn","path":"sprites/spr_Wapod_Normal_Spawn/spr_Wapod_Normal_Spawn.yy",},"resourceVersion":"1.0","name":"d26cb366-8793-430d-be0f-68476cef0a93","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9acf0552-8a77-4017-976d-aabb9a8918d7","path":"sprites/spr_Wapod_Normal_Spawn/spr_Wapod_Normal_Spawn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9acf0552-8a77-4017-976d-aabb9a8918d7","path":"sprites/spr_Wapod_Normal_Spawn/spr_Wapod_Normal_Spawn.yy",},"LayerId":{"name":"94b567d6-d4a1-443a-a8ad-d6147877f402","path":"sprites/spr_Wapod_Normal_Spawn/spr_Wapod_Normal_Spawn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Wapod_Normal_Spawn","path":"sprites/spr_Wapod_Normal_Spawn/spr_Wapod_Normal_Spawn.yy",},"resourceVersion":"1.0","name":"9acf0552-8a77-4017-976d-aabb9a8918d7","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"97a52424-80b6-4ffd-acb9-cbbf3f80e3da","path":"sprites/spr_Wapod_Normal_Spawn/spr_Wapod_Normal_Spawn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"97a52424-80b6-4ffd-acb9-cbbf3f80e3da","path":"sprites/spr_Wapod_Normal_Spawn/spr_Wapod_Normal_Spawn.yy",},"LayerId":{"name":"94b567d6-d4a1-443a-a8ad-d6147877f402","path":"sprites/spr_Wapod_Normal_Spawn/spr_Wapod_Normal_Spawn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Wapod_Normal_Spawn","path":"sprites/spr_Wapod_Normal_Spawn/spr_Wapod_Normal_Spawn.yy",},"resourceVersion":"1.0","name":"97a52424-80b6-4ffd-acb9-cbbf3f80e3da","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d26cb366-8793-430d-be0f-68476cef0a93",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9acf0552-8a77-4017-976d-aabb9a8918d7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"97a52424-80b6-4ffd-acb9-cbbf3f80e3da",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Wapod_Normal_Spawn","path":"sprites/spr_Wapod_Normal_Spawn/spr_Wapod_Normal_Spawn.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Wapod_Normal_Spawn",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 9.0,
@@ -43,14 +42,14 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 3.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"2ec00fbc-54aa-4b7d-a81a-98006dd99baf","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d26cb366-8793-430d-be0f-68476cef0a93","path":"sprites/spr_Wapod_Normal_Spawn/spr_Wapod_Normal_Spawn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"dca36197-9d97-418d-a009-8a5e022bc297","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9acf0552-8a77-4017-976d-aabb9a8918d7","path":"sprites/spr_Wapod_Normal_Spawn/spr_Wapod_Normal_Spawn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"389bdacb-13fc-4896-b7fa-fdde17789398","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"97a52424-80b6-4ffd-acb9-cbbf3f80e3da","path":"sprites/spr_Wapod_Normal_Spawn/spr_Wapod_Normal_Spawn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"2ec00fbc-54aa-4b7d-a81a-98006dd99baf","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d26cb366-8793-430d-be0f-68476cef0a93","path":"sprites/spr_Wapod_Normal_Spawn/spr_Wapod_Normal_Spawn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"dca36197-9d97-418d-a009-8a5e022bc297","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9acf0552-8a77-4017-976d-aabb9a8918d7","path":"sprites/spr_Wapod_Normal_Spawn/spr_Wapod_Normal_Spawn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"389bdacb-13fc-4896-b7fa-fdde17789398","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"97a52424-80b6-4ffd-acb9-cbbf3f80e3da","path":"sprites/spr_Wapod_Normal_Spawn/spr_Wapod_Normal_Spawn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -66,22 +65,13 @@
     "yorigin": 18,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Wapod_Normal_Spawn","path":"sprites/spr_Wapod_Normal_Spawn/spr_Wapod_Normal_Spawn.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Wapod_Normal_Spawn",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"94b567d6-d4a1-443a-a8ad-d6147877f402","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"94b567d6-d4a1-443a-a8ad-d6147877f402","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Enemies/Wapod/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Wapod_Normal_Spawn",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

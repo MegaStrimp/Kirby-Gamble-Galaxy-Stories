@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_AbilityBlock_Sword_Top",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"dd10e573-8c98-483f-a787-e807ac0c5263","path":"sprites/spr_AbilityBlock_Sword_Top/spr_AbilityBlock_Sword_Top.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"dd10e573-8c98-483f-a787-e807ac0c5263","path":"sprites/spr_AbilityBlock_Sword_Top/spr_AbilityBlock_Sword_Top.yy",},"LayerId":{"name":"d2efe42f-0736-4fb7-999a-7366a7e81beb","path":"sprites/spr_AbilityBlock_Sword_Top/spr_AbilityBlock_Sword_Top.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_AbilityBlock_Sword_Top","path":"sprites/spr_AbilityBlock_Sword_Top/spr_AbilityBlock_Sword_Top.yy",},"resourceVersion":"1.0","name":"dd10e573-8c98-483f-a787-e807ac0c5263","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dd10e573-8c98-483f-a787-e807ac0c5263",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_AbilityBlock_Sword_Top","path":"sprites/spr_AbilityBlock_Sword_Top/spr_AbilityBlock_Sword_Top.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_AbilityBlock_Sword_Top",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"269b91fe-7ae9-4484-a82d-cbf8c4ce35eb","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dd10e573-8c98-483f-a787-e807ac0c5263","path":"sprites/spr_AbilityBlock_Sword_Top/spr_AbilityBlock_Sword_Top.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"269b91fe-7ae9-4484-a82d-cbf8c4ce35eb","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dd10e573-8c98-483f-a787-e807ac0c5263","path":"sprites/spr_AbilityBlock_Sword_Top/spr_AbilityBlock_Sword_Top.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_AbilityBlock_Sword_Top","path":"sprites/spr_AbilityBlock_Sword_Top/spr_AbilityBlock_Sword_Top.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_AbilityBlock_Sword_Top",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d2efe42f-0736-4fb7-999a-7366a7e81beb","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d2efe42f-0736-4fb7-999a-7366a7e81beb","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Sword",
     "path": "folders/Sprites/Stage Elements/Ability Block/Sword.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_AbilityBlock_Sword_Top",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

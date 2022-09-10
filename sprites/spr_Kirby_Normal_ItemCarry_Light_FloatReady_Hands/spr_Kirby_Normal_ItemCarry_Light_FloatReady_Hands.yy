@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a884a8e3-bf5c-4851-a50a-85faa6781a34","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a884a8e3-bf5c-4851-a50a-85faa6781a34","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands.yy",},"LayerId":{"name":"4d52e9c7-7099-4cf8-8176-d2cd972ecb68","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands.yy",},"resourceVersion":"1.0","name":"a884a8e3-bf5c-4851-a50a-85faa6781a34","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a484fe43-7e47-424a-b0c0-28e95abeb78d","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a484fe43-7e47-424a-b0c0-28e95abeb78d","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands.yy",},"LayerId":{"name":"4d52e9c7-7099-4cf8-8176-d2cd972ecb68","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands.yy",},"resourceVersion":"1.0","name":"a484fe43-7e47-424a-b0c0-28e95abeb78d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"396dc1c3-4aee-4aa2-abcb-7b1ef736a422","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"396dc1c3-4aee-4aa2-abcb-7b1ef736a422","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands.yy",},"LayerId":{"name":"4d52e9c7-7099-4cf8-8176-d2cd972ecb68","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands.yy",},"resourceVersion":"1.0","name":"396dc1c3-4aee-4aa2-abcb-7b1ef736a422","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7356f48e-38fe-4f1d-bb12-fc457617c8d3","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7356f48e-38fe-4f1d-bb12-fc457617c8d3","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands.yy",},"LayerId":{"name":"4d52e9c7-7099-4cf8-8176-d2cd972ecb68","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands.yy",},"resourceVersion":"1.0","name":"7356f48e-38fe-4f1d-bb12-fc457617c8d3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a884a8e3-bf5c-4851-a50a-85faa6781a34",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a484fe43-7e47-424a-b0c0-28e95abeb78d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"396dc1c3-4aee-4aa2-abcb-7b1ef736a422",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7356f48e-38fe-4f1d-bb12-fc457617c8d3",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 21.0,
@@ -46,15 +43,15 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 4.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"4c19ef85-faae-412f-bda1-751546101ed4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a884a8e3-bf5c-4851-a50a-85faa6781a34","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"4cb54715-3a96-4482-9fbc-22cc8e41ede9","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a484fe43-7e47-424a-b0c0-28e95abeb78d","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"1b744403-30f6-49e3-952e-4465e1a9de6b","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"396dc1c3-4aee-4aa2-abcb-7b1ef736a422","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"4a4a41d4-68e9-4484-8c28-bb38d7f44cee","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7356f48e-38fe-4f1d-bb12-fc457617c8d3","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"4c19ef85-faae-412f-bda1-751546101ed4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a884a8e3-bf5c-4851-a50a-85faa6781a34","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4cb54715-3a96-4482-9fbc-22cc8e41ede9","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a484fe43-7e47-424a-b0c0-28e95abeb78d","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1b744403-30f6-49e3-952e-4465e1a9de6b","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"396dc1c3-4aee-4aa2-abcb-7b1ef736a422","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4a4a41d4-68e9-4484-8c28-bb38d7f44cee","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7356f48e-38fe-4f1d-bb12-fc457617c8d3","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -70,22 +67,13 @@
     "yorigin": 20,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands","path":"sprites/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands/spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4d52e9c7-7099-4cf8-8176-d2cd972ecb68","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"4d52e9c7-7099-4cf8-8176-d2cd972ecb68","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Hands",
     "path": "folders/Sprites/Characters/Kirby/Normal/Hands.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_Normal_ItemCarry_Light_FloatReady_Hands",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

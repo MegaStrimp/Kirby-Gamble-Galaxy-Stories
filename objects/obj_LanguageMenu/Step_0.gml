@@ -20,8 +20,8 @@ if (!global.pause)
 		selection -= 1;
 	}
 	
-	if (selection < 0) selection += array_length(languageIndex);
-	if (selection > array_length(languageIndex) - 1) selection -= array_length(languageIndex);
+	if (selection < 0) selection += array_length(languageArray);
+	if (selection > array_length(languageArray) - 1) selection -= array_length(languageArray);
 	
 	if (!instance_exists(obj_Fade))
 	{
@@ -30,6 +30,7 @@ if (!global.pause)
 			if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 			audio_play_sound(snd_ButtonYes,0,false);
 			global.language = languageVal[selection];
+			obj_Polyglot.setLocale(languageArray[selection]);
 			var rm = rm_Options;
 			if (global.firstTimeBooting) rm = rm_Startup;
 			rm = rm_Startup;

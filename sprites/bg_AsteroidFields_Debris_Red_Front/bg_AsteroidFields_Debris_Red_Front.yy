@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "bg_AsteroidFields_Debris_Red_Front",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"e0310c8c-47f8-4b9f-9ada-7478c440d9c6","path":"sprites/bg_AsteroidFields_Debris_Red_Front/bg_AsteroidFields_Debris_Red_Front.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e0310c8c-47f8-4b9f-9ada-7478c440d9c6","path":"sprites/bg_AsteroidFields_Debris_Red_Front/bg_AsteroidFields_Debris_Red_Front.yy",},"LayerId":{"name":"1939d1a6-a28b-4653-bb64-818ef9a6a0c5","path":"sprites/bg_AsteroidFields_Debris_Red_Front/bg_AsteroidFields_Debris_Red_Front.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"bg_AsteroidFields_Debris_Red_Front","path":"sprites/bg_AsteroidFields_Debris_Red_Front/bg_AsteroidFields_Debris_Red_Front.yy",},"resourceVersion":"1.0","name":"e0310c8c-47f8-4b9f-9ada-7478c440d9c6","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e0310c8c-47f8-4b9f-9ada-7478c440d9c6",},
   ],
   "sequence": {
-    "spriteId": {"name":"bg_AsteroidFields_Debris_Red_Front","path":"sprites/bg_AsteroidFields_Debris_Red_Front/bg_AsteroidFields_Debris_Red_Front.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "bg_AsteroidFields_Debris_Red_Front",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"a979371e-d38d-4342-8a3c-c83b1c0dd640","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e0310c8c-47f8-4b9f-9ada-7478c440d9c6","path":"sprites/bg_AsteroidFields_Debris_Red_Front/bg_AsteroidFields_Debris_Red_Front.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"a979371e-d38d-4342-8a3c-c83b1c0dd640","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e0310c8c-47f8-4b9f-9ada-7478c440d9c6","path":"sprites/bg_AsteroidFields_Debris_Red_Front/bg_AsteroidFields_Debris_Red_Front.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"bg_AsteroidFields_Debris_Red_Front","path":"sprites/bg_AsteroidFields_Debris_Red_Front/bg_AsteroidFields_Debris_Red_Front.yy",},
-    "resourceVersion": "1.4",
-    "name": "bg_AsteroidFields_Debris_Red_Front",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1939d1a6-a28b-4653-bb64-818ef9a6a0c5","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"1939d1a6-a28b-4653-bb64-818ef9a6a0c5","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Red",
     "path": "folders/Backgrounds/Asteroid Fields/Debris/Red.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "bg_AsteroidFields_Debris_Red_Front",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Projectile_SparkNormal_Normal_Star_Blue",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d9c6de87-cac8-4b5a-9846-61d63a3ecf69","path":"sprites/spr_Projectile_SparkNormal_Normal_Star_Blue/spr_Projectile_SparkNormal_Normal_Star_Blue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d9c6de87-cac8-4b5a-9846-61d63a3ecf69","path":"sprites/spr_Projectile_SparkNormal_Normal_Star_Blue/spr_Projectile_SparkNormal_Normal_Star_Blue.yy",},"LayerId":{"name":"1c7fdeb1-11af-4271-8326-ebbbcd6ab489","path":"sprites/spr_Projectile_SparkNormal_Normal_Star_Blue/spr_Projectile_SparkNormal_Normal_Star_Blue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_SparkNormal_Normal_Star_Blue","path":"sprites/spr_Projectile_SparkNormal_Normal_Star_Blue/spr_Projectile_SparkNormal_Normal_Star_Blue.yy",},"resourceVersion":"1.0","name":"d9c6de87-cac8-4b5a-9846-61d63a3ecf69","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d9c6de87-cac8-4b5a-9846-61d63a3ecf69",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Projectile_SparkNormal_Normal_Star_Blue","path":"sprites/spr_Projectile_SparkNormal_Normal_Star_Blue/spr_Projectile_SparkNormal_Normal_Star_Blue.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Projectile_SparkNormal_Normal_Star_Blue",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"85c14181-adb6-4be9-9219-c5c9831b9d6b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d9c6de87-cac8-4b5a-9846-61d63a3ecf69","path":"sprites/spr_Projectile_SparkNormal_Normal_Star_Blue/spr_Projectile_SparkNormal_Normal_Star_Blue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"85c14181-adb6-4be9-9219-c5c9831b9d6b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d9c6de87-cac8-4b5a-9846-61d63a3ecf69","path":"sprites/spr_Projectile_SparkNormal_Normal_Star_Blue/spr_Projectile_SparkNormal_Normal_Star_Blue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 29,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Projectile_SparkNormal_Normal_Star_Blue","path":"sprites/spr_Projectile_SparkNormal_Normal_Star_Blue/spr_Projectile_SparkNormal_Normal_Star_Blue.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Projectile_SparkNormal_Normal_Star_Blue",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1c7fdeb1-11af-4271-8326-ebbbcd6ab489","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"1c7fdeb1-11af-4271-8326-ebbbcd6ab489","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Projectiles/Spark Normal/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Projectile_SparkNormal_Normal_Star_Blue",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

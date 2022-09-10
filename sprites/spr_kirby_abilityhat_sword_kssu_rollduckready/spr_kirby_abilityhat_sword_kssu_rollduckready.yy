@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_AbilityHat_Sword_KSSU_RollDuckReady",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4ad088da-5309-44f6-a033-9d7f25c5e8f9","path":"sprites/spr_Kirby_AbilityHat_Sword_KSSU_RollDuckReady/spr_Kirby_AbilityHat_Sword_KSSU_RollDuckReady.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4ad088da-5309-44f6-a033-9d7f25c5e8f9","path":"sprites/spr_Kirby_AbilityHat_Sword_KSSU_RollDuckReady/spr_Kirby_AbilityHat_Sword_KSSU_RollDuckReady.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_AbilityHat_Sword_KSSU_RollDuckReady/spr_Kirby_AbilityHat_Sword_KSSU_RollDuckReady.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Sword_KSSU_RollDuckReady","path":"sprites/spr_Kirby_AbilityHat_Sword_KSSU_RollDuckReady/spr_Kirby_AbilityHat_Sword_KSSU_RollDuckReady.yy",},"resourceVersion":"1.0","name":"4ad088da-5309-44f6-a033-9d7f25c5e8f9","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4ad088da-5309-44f6-a033-9d7f25c5e8f9",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_AbilityHat_Sword_KSSU_RollDuckReady","path":"sprites/spr_Kirby_AbilityHat_Sword_KSSU_RollDuckReady/spr_Kirby_AbilityHat_Sword_KSSU_RollDuckReady.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_AbilityHat_Sword_KSSU_RollDuckReady",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 24.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"6269706e-0947-461b-9a32-41bb02f623bf","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4ad088da-5309-44f6-a033-9d7f25c5e8f9","path":"sprites/spr_Kirby_AbilityHat_Sword_KSSU_RollDuckReady/spr_Kirby_AbilityHat_Sword_KSSU_RollDuckReady.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"6269706e-0947-461b-9a32-41bb02f623bf","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4ad088da-5309-44f6-a033-9d7f25c5e8f9","path":"sprites/spr_Kirby_AbilityHat_Sword_KSSU_RollDuckReady/spr_Kirby_AbilityHat_Sword_KSSU_RollDuckReady.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 19,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_AbilityHat_Sword_KSSU_RollDuckReady","path":"sprites/spr_Kirby_AbilityHat_Sword_KSSU_RollDuckReady/spr_Kirby_AbilityHat_Sword_KSSU_RollDuckReady.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_AbilityHat_Sword_KSSU_RollDuckReady",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Hat",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Sword/KSSU/Hat.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_AbilityHat_Sword_KSSU_RollDuckReady",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

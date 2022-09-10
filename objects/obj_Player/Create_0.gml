@@ -28,6 +28,7 @@ gravFloat = .075;
 gravFireDash = .05;
 gravLimitNormal = 5;
 gravLimitFloat = 2.3;
+gravLimitBeamAir = 3;
 gravLimitStone = 7;
 gravLimitFireDash = 1.25;
 gravLimitWheel = 5;

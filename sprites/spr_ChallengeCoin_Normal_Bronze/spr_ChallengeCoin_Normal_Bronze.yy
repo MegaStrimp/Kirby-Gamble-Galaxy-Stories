@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_ChallengeCoin_Normal_Bronze",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,27 +27,17 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"34cefa93-c97d-41f9-a43d-37f35b5f266a","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"34cefa93-c97d-41f9-a43d-37f35b5f266a","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"LayerId":{"name":"afc0ceff-fb04-4e1e-b39e-7e392cebd76a","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_ChallengeCoin_Normal_Bronze","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"resourceVersion":"1.0","name":"34cefa93-c97d-41f9-a43d-37f35b5f266a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ceb1eeae-61c7-436a-a135-c641da0a87e7","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ceb1eeae-61c7-436a-a135-c641da0a87e7","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"LayerId":{"name":"afc0ceff-fb04-4e1e-b39e-7e392cebd76a","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_ChallengeCoin_Normal_Bronze","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"resourceVersion":"1.0","name":"ceb1eeae-61c7-436a-a135-c641da0a87e7","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"bc34dd58-34b2-4aa1-b4d0-e2c5d88442f2","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bc34dd58-34b2-4aa1-b4d0-e2c5d88442f2","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"LayerId":{"name":"afc0ceff-fb04-4e1e-b39e-7e392cebd76a","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_ChallengeCoin_Normal_Bronze","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"resourceVersion":"1.0","name":"bc34dd58-34b2-4aa1-b4d0-e2c5d88442f2","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0517a2b7-cda8-41fe-99e6-417203045b94","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0517a2b7-cda8-41fe-99e6-417203045b94","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"LayerId":{"name":"afc0ceff-fb04-4e1e-b39e-7e392cebd76a","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_ChallengeCoin_Normal_Bronze","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"resourceVersion":"1.0","name":"0517a2b7-cda8-41fe-99e6-417203045b94","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"45b6f0ae-a039-41e2-b596-383d2b75f80c","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"45b6f0ae-a039-41e2-b596-383d2b75f80c","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"LayerId":{"name":"afc0ceff-fb04-4e1e-b39e-7e392cebd76a","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_ChallengeCoin_Normal_Bronze","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"resourceVersion":"1.0","name":"45b6f0ae-a039-41e2-b596-383d2b75f80c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0213c8b0-b405-4490-ae02-1de43a8c99d3","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0213c8b0-b405-4490-ae02-1de43a8c99d3","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"LayerId":{"name":"afc0ceff-fb04-4e1e-b39e-7e392cebd76a","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_ChallengeCoin_Normal_Bronze","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"resourceVersion":"1.0","name":"0213c8b0-b405-4490-ae02-1de43a8c99d3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"34cefa93-c97d-41f9-a43d-37f35b5f266a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ceb1eeae-61c7-436a-a135-c641da0a87e7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bc34dd58-34b2-4aa1-b4d0-e2c5d88442f2",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0517a2b7-cda8-41fe-99e6-417203045b94",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"45b6f0ae-a039-41e2-b596-383d2b75f80c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0213c8b0-b405-4490-ae02-1de43a8c99d3",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_ChallengeCoin_Normal_Bronze","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_ChallengeCoin_Normal_Bronze",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 12.0,
@@ -52,17 +45,17 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 6.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"df9d47aa-c766-4ccb-9773-a4f26a0aa4b5","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"34cefa93-c97d-41f9-a43d-37f35b5f266a","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"13734654-6e6f-4187-b7e7-c0166899b89c","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ceb1eeae-61c7-436a-a135-c641da0a87e7","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"653d384f-9674-4cf1-8cb2-1c1485cfeb72","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bc34dd58-34b2-4aa1-b4d0-e2c5d88442f2","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"0625a6f9-3aef-43c4-ae26-3813f9f9be6d","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0517a2b7-cda8-41fe-99e6-417203045b94","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"dab920d8-83bf-49be-9564-9156b2e112fc","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"45b6f0ae-a039-41e2-b596-383d2b75f80c","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"3a258ce6-37d6-4699-8400-20de51794ad1","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0213c8b0-b405-4490-ae02-1de43a8c99d3","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"df9d47aa-c766-4ccb-9773-a4f26a0aa4b5","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"34cefa93-c97d-41f9-a43d-37f35b5f266a","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"13734654-6e6f-4187-b7e7-c0166899b89c","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ceb1eeae-61c7-436a-a135-c641da0a87e7","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"653d384f-9674-4cf1-8cb2-1c1485cfeb72","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bc34dd58-34b2-4aa1-b4d0-e2c5d88442f2","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0625a6f9-3aef-43c4-ae26-3813f9f9be6d","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0517a2b7-cda8-41fe-99e6-417203045b94","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"dab920d8-83bf-49be-9564-9156b2e112fc","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"45b6f0ae-a039-41e2-b596-383d2b75f80c","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"3a258ce6-37d6-4699-8400-20de51794ad1","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0213c8b0-b405-4490-ae02-1de43a8c99d3","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -78,22 +71,13 @@
     "yorigin": 7,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_ChallengeCoin_Normal_Bronze","path":"sprites/spr_ChallengeCoin_Normal_Bronze/spr_ChallengeCoin_Normal_Bronze.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_ChallengeCoin_Normal_Bronze",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"afc0ceff-fb04-4e1e-b39e-7e392cebd76a","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"afc0ceff-fb04-4e1e-b39e-7e392cebd76a","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Stage Elements/Challenge Coin/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_ChallengeCoin_Normal_Bronze",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

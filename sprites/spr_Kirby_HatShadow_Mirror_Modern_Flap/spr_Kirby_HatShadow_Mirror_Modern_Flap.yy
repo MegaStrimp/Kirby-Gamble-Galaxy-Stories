@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_HatShadow_Mirror_Modern_Flap",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,24 +27,16 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"81b8495d-f533-4aac-879b-b3fcdcaeb1ce","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"81b8495d-f533-4aac-879b-b3fcdcaeb1ce","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"LayerId":{"name":"aa6a2716-17b6-45e0-9572-164cc817a583","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Mirror_Modern_Flap","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"resourceVersion":"1.0","name":"81b8495d-f533-4aac-879b-b3fcdcaeb1ce","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"856bf359-950a-47d6-9a35-c5995ba3b2f8","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"856bf359-950a-47d6-9a35-c5995ba3b2f8","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"LayerId":{"name":"aa6a2716-17b6-45e0-9572-164cc817a583","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Mirror_Modern_Flap","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"resourceVersion":"1.0","name":"856bf359-950a-47d6-9a35-c5995ba3b2f8","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"eedc4855-539b-4ec6-a297-839c30ec1240","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"eedc4855-539b-4ec6-a297-839c30ec1240","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"LayerId":{"name":"aa6a2716-17b6-45e0-9572-164cc817a583","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Mirror_Modern_Flap","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"resourceVersion":"1.0","name":"eedc4855-539b-4ec6-a297-839c30ec1240","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d3353753-a3ae-4dec-8dbc-b4408cbe746b","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d3353753-a3ae-4dec-8dbc-b4408cbe746b","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"LayerId":{"name":"aa6a2716-17b6-45e0-9572-164cc817a583","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Mirror_Modern_Flap","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"resourceVersion":"1.0","name":"d3353753-a3ae-4dec-8dbc-b4408cbe746b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c6882b31-e494-415b-83ef-c2a9cab2a071","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c6882b31-e494-415b-83ef-c2a9cab2a071","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"LayerId":{"name":"aa6a2716-17b6-45e0-9572-164cc817a583","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Mirror_Modern_Flap","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"resourceVersion":"1.0","name":"c6882b31-e494-415b-83ef-c2a9cab2a071","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"81b8495d-f533-4aac-879b-b3fcdcaeb1ce",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"856bf359-950a-47d6-9a35-c5995ba3b2f8",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"eedc4855-539b-4ec6-a297-839c30ec1240",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d3353753-a3ae-4dec-8dbc-b4408cbe746b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c6882b31-e494-415b-83ef-c2a9cab2a071",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_HatShadow_Mirror_Modern_Flap","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_HatShadow_Mirror_Modern_Flap",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 18.0,
@@ -49,16 +44,16 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 5.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"8c11a4fd-2a8a-48e1-a501-2d932dc160d6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"81b8495d-f533-4aac-879b-b3fcdcaeb1ce","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"be13688a-b333-4d90-be2b-0d1ee975a6af","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"856bf359-950a-47d6-9a35-c5995ba3b2f8","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"50e444d3-7ef3-4edd-ad7c-4db2b7b21aaa","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"eedc4855-539b-4ec6-a297-839c30ec1240","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"8d32bd6f-8e12-4d57-bade-dc7572dbd608","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d3353753-a3ae-4dec-8dbc-b4408cbe746b","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"167ea80e-21e2-48f6-8046-7709d7306fc7","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c6882b31-e494-415b-83ef-c2a9cab2a071","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"8c11a4fd-2a8a-48e1-a501-2d932dc160d6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"81b8495d-f533-4aac-879b-b3fcdcaeb1ce","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"be13688a-b333-4d90-be2b-0d1ee975a6af","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"856bf359-950a-47d6-9a35-c5995ba3b2f8","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"50e444d3-7ef3-4edd-ad7c-4db2b7b21aaa","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"eedc4855-539b-4ec6-a297-839c30ec1240","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"8d32bd6f-8e12-4d57-bade-dc7572dbd608","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d3353753-a3ae-4dec-8dbc-b4408cbe746b","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"167ea80e-21e2-48f6-8046-7709d7306fc7","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c6882b31-e494-415b-83ef-c2a9cab2a071","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -74,22 +69,13 @@
     "yorigin": 20,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_HatShadow_Mirror_Modern_Flap","path":"sprites/spr_Kirby_HatShadow_Mirror_Modern_Flap/spr_Kirby_HatShadow_Mirror_Modern_Flap.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_HatShadow_Mirror_Modern_Flap",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"aa6a2716-17b6-45e0-9572-164cc817a583","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"aa6a2716-17b6-45e0-9572-164cc817a583","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Shadow",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Mirror/Modern/Shadow.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_HatShadow_Mirror_Modern_Flap",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Healthbar_Boss_InnerBack",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"52cd2d3f-8c74-48f8-8f4b-a09d54d67458","path":"sprites/spr_Healthbar_Boss_InnerBack/spr_Healthbar_Boss_InnerBack.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"52cd2d3f-8c74-48f8-8f4b-a09d54d67458","path":"sprites/spr_Healthbar_Boss_InnerBack/spr_Healthbar_Boss_InnerBack.yy",},"LayerId":{"name":"6a8f3887-7f1e-4209-a950-3de737cb0b38","path":"sprites/spr_Healthbar_Boss_InnerBack/spr_Healthbar_Boss_InnerBack.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Healthbar_Boss_InnerBack","path":"sprites/spr_Healthbar_Boss_InnerBack/spr_Healthbar_Boss_InnerBack.yy",},"resourceVersion":"1.0","name":"52cd2d3f-8c74-48f8-8f4b-a09d54d67458","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"52cd2d3f-8c74-48f8-8f4b-a09d54d67458",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Healthbar_Boss_InnerBack","path":"sprites/spr_Healthbar_Boss_InnerBack/spr_Healthbar_Boss_InnerBack.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Healthbar_Boss_InnerBack",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"7436bcf2-ce3b-4f9b-8b2f-6bbc3fc5c21d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"52cd2d3f-8c74-48f8-8f4b-a09d54d67458","path":"sprites/spr_Healthbar_Boss_InnerBack/spr_Healthbar_Boss_InnerBack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"7436bcf2-ce3b-4f9b-8b2f-6bbc3fc5c21d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"52cd2d3f-8c74-48f8-8f4b-a09d54d67458","path":"sprites/spr_Healthbar_Boss_InnerBack/spr_Healthbar_Boss_InnerBack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Healthbar_Boss_InnerBack","path":"sprites/spr_Healthbar_Boss_InnerBack/spr_Healthbar_Boss_InnerBack.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Healthbar_Boss_InnerBack",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":50.0,"displayName":"default","resourceVersion":"1.0","name":"6a8f3887-7f1e-4209-a950-3de737cb0b38","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6a8f3887-7f1e-4209-a950-3de737cb0b38","visible":true,"isLocked":false,"blendMode":0,"opacity":50.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Boss",
     "path": "folders/Sprites/Hud/Healthbars/Boss.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Healthbar_Boss_InnerBack",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

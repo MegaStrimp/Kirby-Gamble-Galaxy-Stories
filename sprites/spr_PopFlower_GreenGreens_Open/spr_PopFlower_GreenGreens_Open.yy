@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_PopFlower_GreenGreens_Open",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"11e0a727-5dea-432e-a68f-8c558b7ac904","path":"sprites/spr_PopFlower_GreenGreens_Open/spr_PopFlower_GreenGreens_Open.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"11e0a727-5dea-432e-a68f-8c558b7ac904","path":"sprites/spr_PopFlower_GreenGreens_Open/spr_PopFlower_GreenGreens_Open.yy",},"LayerId":{"name":"ceb648ff-9e6b-4f2e-9889-6605f22ce832","path":"sprites/spr_PopFlower_GreenGreens_Open/spr_PopFlower_GreenGreens_Open.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_PopFlower_GreenGreens_Open","path":"sprites/spr_PopFlower_GreenGreens_Open/spr_PopFlower_GreenGreens_Open.yy",},"resourceVersion":"1.0","name":"11e0a727-5dea-432e-a68f-8c558b7ac904","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"1ae9d39c-651e-4dae-b7d1-0af5b65a85ad","path":"sprites/spr_PopFlower_GreenGreens_Open/spr_PopFlower_GreenGreens_Open.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1ae9d39c-651e-4dae-b7d1-0af5b65a85ad","path":"sprites/spr_PopFlower_GreenGreens_Open/spr_PopFlower_GreenGreens_Open.yy",},"LayerId":{"name":"ceb648ff-9e6b-4f2e-9889-6605f22ce832","path":"sprites/spr_PopFlower_GreenGreens_Open/spr_PopFlower_GreenGreens_Open.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_PopFlower_GreenGreens_Open","path":"sprites/spr_PopFlower_GreenGreens_Open/spr_PopFlower_GreenGreens_Open.yy",},"resourceVersion":"1.0","name":"1ae9d39c-651e-4dae-b7d1-0af5b65a85ad","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"acec0292-4a0e-469a-9fdf-5c9b22b77417","path":"sprites/spr_PopFlower_GreenGreens_Open/spr_PopFlower_GreenGreens_Open.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"acec0292-4a0e-469a-9fdf-5c9b22b77417","path":"sprites/spr_PopFlower_GreenGreens_Open/spr_PopFlower_GreenGreens_Open.yy",},"LayerId":{"name":"ceb648ff-9e6b-4f2e-9889-6605f22ce832","path":"sprites/spr_PopFlower_GreenGreens_Open/spr_PopFlower_GreenGreens_Open.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_PopFlower_GreenGreens_Open","path":"sprites/spr_PopFlower_GreenGreens_Open/spr_PopFlower_GreenGreens_Open.yy",},"resourceVersion":"1.0","name":"acec0292-4a0e-469a-9fdf-5c9b22b77417","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c9aef953-b14b-4df7-9823-812ecbf51ede","path":"sprites/spr_PopFlower_GreenGreens_Open/spr_PopFlower_GreenGreens_Open.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c9aef953-b14b-4df7-9823-812ecbf51ede","path":"sprites/spr_PopFlower_GreenGreens_Open/spr_PopFlower_GreenGreens_Open.yy",},"LayerId":{"name":"ceb648ff-9e6b-4f2e-9889-6605f22ce832","path":"sprites/spr_PopFlower_GreenGreens_Open/spr_PopFlower_GreenGreens_Open.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_PopFlower_GreenGreens_Open","path":"sprites/spr_PopFlower_GreenGreens_Open/spr_PopFlower_GreenGreens_Open.yy",},"resourceVersion":"1.0","name":"c9aef953-b14b-4df7-9823-812ecbf51ede","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"11e0a727-5dea-432e-a68f-8c558b7ac904",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1ae9d39c-651e-4dae-b7d1-0af5b65a85ad",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"acec0292-4a0e-469a-9fdf-5c9b22b77417",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c9aef953-b14b-4df7-9823-812ecbf51ede",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_PopFlower_GreenGreens_Open","path":"sprites/spr_PopFlower_GreenGreens_Open/spr_PopFlower_GreenGreens_Open.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_PopFlower_GreenGreens_Open",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 3.0,
@@ -46,15 +43,15 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 4.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"b861f2ba-09bb-4a4e-8b5b-30938991a48b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"11e0a727-5dea-432e-a68f-8c558b7ac904","path":"sprites/spr_PopFlower_GreenGreens_Open/spr_PopFlower_GreenGreens_Open.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"8a5ac63c-b53a-43c0-ad3a-3444323a160b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1ae9d39c-651e-4dae-b7d1-0af5b65a85ad","path":"sprites/spr_PopFlower_GreenGreens_Open/spr_PopFlower_GreenGreens_Open.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"b81b0dc4-145d-41eb-a679-8868264cf18e","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"acec0292-4a0e-469a-9fdf-5c9b22b77417","path":"sprites/spr_PopFlower_GreenGreens_Open/spr_PopFlower_GreenGreens_Open.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"0dfa6679-b527-4721-b4f7-19ac598e62ca","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c9aef953-b14b-4df7-9823-812ecbf51ede","path":"sprites/spr_PopFlower_GreenGreens_Open/spr_PopFlower_GreenGreens_Open.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"b861f2ba-09bb-4a4e-8b5b-30938991a48b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"11e0a727-5dea-432e-a68f-8c558b7ac904","path":"sprites/spr_PopFlower_GreenGreens_Open/spr_PopFlower_GreenGreens_Open.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"8a5ac63c-b53a-43c0-ad3a-3444323a160b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1ae9d39c-651e-4dae-b7d1-0af5b65a85ad","path":"sprites/spr_PopFlower_GreenGreens_Open/spr_PopFlower_GreenGreens_Open.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b81b0dc4-145d-41eb-a679-8868264cf18e","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"acec0292-4a0e-469a-9fdf-5c9b22b77417","path":"sprites/spr_PopFlower_GreenGreens_Open/spr_PopFlower_GreenGreens_Open.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0dfa6679-b527-4721-b4f7-19ac598e62ca","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c9aef953-b14b-4df7-9823-812ecbf51ede","path":"sprites/spr_PopFlower_GreenGreens_Open/spr_PopFlower_GreenGreens_Open.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -70,22 +67,13 @@
     "yorigin": 17,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_PopFlower_GreenGreens_Open","path":"sprites/spr_PopFlower_GreenGreens_Open/spr_PopFlower_GreenGreens_Open.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_PopFlower_GreenGreens_Open",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ceb648ff-9e6b-4f2e-9889-6605f22ce832","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ceb648ff-9e6b-4f2e-9889-6605f22ce832","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Green Greens",
     "path": "folders/Sprites/Stage Elements/Pop Flower/Green Greens.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_PopFlower_GreenGreens_Open",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

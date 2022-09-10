@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Particle_Aura3",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6429481d-2eba-41b1-ba1c-766dff5d7ef9","path":"sprites/spr_Particle_Aura3/spr_Particle_Aura3.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6429481d-2eba-41b1-ba1c-766dff5d7ef9","path":"sprites/spr_Particle_Aura3/spr_Particle_Aura3.yy",},"LayerId":{"name":"3476bc46-5205-4fff-91fb-be26570b2dde","path":"sprites/spr_Particle_Aura3/spr_Particle_Aura3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Particle_Aura3","path":"sprites/spr_Particle_Aura3/spr_Particle_Aura3.yy",},"resourceVersion":"1.0","name":"6429481d-2eba-41b1-ba1c-766dff5d7ef9","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"486d92b3-7484-485f-a315-c7ff0f6cce1d","path":"sprites/spr_Particle_Aura3/spr_Particle_Aura3.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"486d92b3-7484-485f-a315-c7ff0f6cce1d","path":"sprites/spr_Particle_Aura3/spr_Particle_Aura3.yy",},"LayerId":{"name":"3476bc46-5205-4fff-91fb-be26570b2dde","path":"sprites/spr_Particle_Aura3/spr_Particle_Aura3.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Particle_Aura3","path":"sprites/spr_Particle_Aura3/spr_Particle_Aura3.yy",},"resourceVersion":"1.0","name":"486d92b3-7484-485f-a315-c7ff0f6cce1d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6429481d-2eba-41b1-ba1c-766dff5d7ef9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"486d92b3-7484-485f-a315-c7ff0f6cce1d",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Particle_Aura3","path":"sprites/spr_Particle_Aura3/spr_Particle_Aura3.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Particle_Aura3",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 12.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"b3b98fb2-d40f-4413-afee-66d1c9ee9379","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6429481d-2eba-41b1-ba1c-766dff5d7ef9","path":"sprites/spr_Particle_Aura3/spr_Particle_Aura3.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"6f505d57-432b-4b40-ad2b-27af052e78f9","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"486d92b3-7484-485f-a315-c7ff0f6cce1d","path":"sprites/spr_Particle_Aura3/spr_Particle_Aura3.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"b3b98fb2-d40f-4413-afee-66d1c9ee9379","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6429481d-2eba-41b1-ba1c-766dff5d7ef9","path":"sprites/spr_Particle_Aura3/spr_Particle_Aura3.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6f505d57-432b-4b40-ad2b-27af052e78f9","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"486d92b3-7484-485f-a315-c7ff0f6cce1d","path":"sprites/spr_Particle_Aura3/spr_Particle_Aura3.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -62,22 +63,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Particle_Aura3","path":"sprites/spr_Particle_Aura3/spr_Particle_Aura3.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Particle_Aura3",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3476bc46-5205-4fff-91fb-be26570b2dde","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"3476bc46-5205-4fff-91fb-be26570b2dde","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Particles",
     "path": "folders/Sprites/Particles.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Particle_Aura3",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

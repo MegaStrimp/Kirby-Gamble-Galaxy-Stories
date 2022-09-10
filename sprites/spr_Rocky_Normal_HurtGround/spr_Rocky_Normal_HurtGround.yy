@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Rocky_Normal_HurtGround",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"2ca39841-2c73-45c7-93ed-74af0729237d","path":"sprites/spr_Rocky_Normal_HurtGround/spr_Rocky_Normal_HurtGround.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2ca39841-2c73-45c7-93ed-74af0729237d","path":"sprites/spr_Rocky_Normal_HurtGround/spr_Rocky_Normal_HurtGround.yy",},"LayerId":{"name":"f42403ec-ebc1-4b73-af50-5771b37305a8","path":"sprites/spr_Rocky_Normal_HurtGround/spr_Rocky_Normal_HurtGround.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Rocky_Normal_HurtGround","path":"sprites/spr_Rocky_Normal_HurtGround/spr_Rocky_Normal_HurtGround.yy",},"resourceVersion":"1.0","name":"2ca39841-2c73-45c7-93ed-74af0729237d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2ca39841-2c73-45c7-93ed-74af0729237d",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Rocky_Normal_HurtGround","path":"sprites/spr_Rocky_Normal_HurtGround/spr_Rocky_Normal_HurtGround.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Rocky_Normal_HurtGround",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"d3403bfa-68cc-4597-917e-c167321cdb49","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2ca39841-2c73-45c7-93ed-74af0729237d","path":"sprites/spr_Rocky_Normal_HurtGround/spr_Rocky_Normal_HurtGround.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"d3403bfa-68cc-4597-917e-c167321cdb49","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2ca39841-2c73-45c7-93ed-74af0729237d","path":"sprites/spr_Rocky_Normal_HurtGround/spr_Rocky_Normal_HurtGround.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 17,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Rocky_Normal_HurtGround","path":"sprites/spr_Rocky_Normal_HurtGround/spr_Rocky_Normal_HurtGround.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Rocky_Normal_HurtGround",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f42403ec-ebc1-4b73-af50-5771b37305a8","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f42403ec-ebc1-4b73-af50-5771b37305a8","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Enemies/Rocky/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Rocky_Normal_HurtGround",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

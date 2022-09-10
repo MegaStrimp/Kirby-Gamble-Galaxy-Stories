@@ -1,1 +1,0 @@
-spawnBoss = obj_Wizzkid;

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_AbilityStar_Sword",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"853a6d7a-355f-4615-a44d-39bd24272192","path":"sprites/spr_AbilityStar_Sword/spr_AbilityStar_Sword.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"853a6d7a-355f-4615-a44d-39bd24272192","path":"sprites/spr_AbilityStar_Sword/spr_AbilityStar_Sword.yy",},"LayerId":{"name":"dba83e7e-8216-45e4-a3ab-e7c0f35afa93","path":"sprites/spr_AbilityStar_Sword/spr_AbilityStar_Sword.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_AbilityStar_Sword","path":"sprites/spr_AbilityStar_Sword/spr_AbilityStar_Sword.yy",},"resourceVersion":"1.0","name":"853a6d7a-355f-4615-a44d-39bd24272192","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a35f8b69-ef09-4faf-850f-12d5fcb612f5","path":"sprites/spr_AbilityStar_Sword/spr_AbilityStar_Sword.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a35f8b69-ef09-4faf-850f-12d5fcb612f5","path":"sprites/spr_AbilityStar_Sword/spr_AbilityStar_Sword.yy",},"LayerId":{"name":"dba83e7e-8216-45e4-a3ab-e7c0f35afa93","path":"sprites/spr_AbilityStar_Sword/spr_AbilityStar_Sword.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_AbilityStar_Sword","path":"sprites/spr_AbilityStar_Sword/spr_AbilityStar_Sword.yy",},"resourceVersion":"1.0","name":"a35f8b69-ef09-4faf-850f-12d5fcb612f5","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"853a6d7a-355f-4615-a44d-39bd24272192",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a35f8b69-ef09-4faf-850f-12d5fcb612f5",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_AbilityStar_Sword","path":"sprites/spr_AbilityStar_Sword/spr_AbilityStar_Sword.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_AbilityStar_Sword",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 15.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"7bbf5578-c8ac-459e-a5c9-b816243131e2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"853a6d7a-355f-4615-a44d-39bd24272192","path":"sprites/spr_AbilityStar_Sword/spr_AbilityStar_Sword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"59251636-edc4-4e6e-adc8-8727f630689b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a35f8b69-ef09-4faf-850f-12d5fcb612f5","path":"sprites/spr_AbilityStar_Sword/spr_AbilityStar_Sword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"7bbf5578-c8ac-459e-a5c9-b816243131e2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"853a6d7a-355f-4615-a44d-39bd24272192","path":"sprites/spr_AbilityStar_Sword/spr_AbilityStar_Sword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"59251636-edc4-4e6e-adc8-8727f630689b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a35f8b69-ef09-4faf-850f-12d5fcb612f5","path":"sprites/spr_AbilityStar_Sword/spr_AbilityStar_Sword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -62,22 +63,13 @@
     "yorigin": 11,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_AbilityStar_Sword","path":"sprites/spr_AbilityStar_Sword/spr_AbilityStar_Sword.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_AbilityStar_Sword",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"dba83e7e-8216-45e4-a3ab-e7c0f35afa93","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"dba83e7e-8216-45e4-a3ab-e7c0f35afa93","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Ability Stars",
     "path": "folders/Sprites/Misc/Ability Stars.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_AbilityStar_Sword",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

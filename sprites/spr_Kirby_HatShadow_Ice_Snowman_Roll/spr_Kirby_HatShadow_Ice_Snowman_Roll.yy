@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_HatShadow_Ice_Snowman_Roll",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,27 +27,17 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"1e13d9d1-ef4f-4e42-8259-a6df7674c39b","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1e13d9d1-ef4f-4e42-8259-a6df7674c39b","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Ice_Snowman_Roll","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"resourceVersion":"1.0","name":"1e13d9d1-ef4f-4e42-8259-a6df7674c39b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"761ea18d-6a31-44f9-aacf-8fd512c0acf3","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"761ea18d-6a31-44f9-aacf-8fd512c0acf3","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Ice_Snowman_Roll","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"resourceVersion":"1.0","name":"761ea18d-6a31-44f9-aacf-8fd512c0acf3","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"26ff5765-1bef-4f92-8ddf-4a3fadd59e32","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"26ff5765-1bef-4f92-8ddf-4a3fadd59e32","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Ice_Snowman_Roll","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"resourceVersion":"1.0","name":"26ff5765-1bef-4f92-8ddf-4a3fadd59e32","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f7b3759a-a7e9-4d33-ac6a-b2be48d3d364","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f7b3759a-a7e9-4d33-ac6a-b2be48d3d364","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Ice_Snowman_Roll","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"resourceVersion":"1.0","name":"f7b3759a-a7e9-4d33-ac6a-b2be48d3d364","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"fe961b73-777c-47e5-a3c4-fd22d5c02260","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fe961b73-777c-47e5-a3c4-fd22d5c02260","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Ice_Snowman_Roll","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"resourceVersion":"1.0","name":"fe961b73-777c-47e5-a3c4-fd22d5c02260","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3ed541c6-a27a-440d-9827-a9e37f90291d","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3ed541c6-a27a-440d-9827-a9e37f90291d","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatShadow_Ice_Snowman_Roll","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"resourceVersion":"1.0","name":"3ed541c6-a27a-440d-9827-a9e37f90291d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1e13d9d1-ef4f-4e42-8259-a6df7674c39b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"761ea18d-6a31-44f9-aacf-8fd512c0acf3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"26ff5765-1bef-4f92-8ddf-4a3fadd59e32",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f7b3759a-a7e9-4d33-ac6a-b2be48d3d364",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fe961b73-777c-47e5-a3c4-fd22d5c02260",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3ed541c6-a27a-440d-9827-a9e37f90291d",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_HatShadow_Ice_Snowman_Roll","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_HatShadow_Ice_Snowman_Roll",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 24.0,
@@ -52,17 +45,17 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 6.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"788a93d7-93f8-4f93-be4a-2255756c30ef","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1e13d9d1-ef4f-4e42-8259-a6df7674c39b","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"135d9a70-2797-4000-b98c-509d61e8469f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"761ea18d-6a31-44f9-aacf-8fd512c0acf3","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"9258ebc4-fe9e-41a6-808e-608153725737","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"26ff5765-1bef-4f92-8ddf-4a3fadd59e32","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"049b79ef-a57e-471f-a7d2-8c750533f588","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f7b3759a-a7e9-4d33-ac6a-b2be48d3d364","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"b28e3591-8633-4fbf-bfa9-a115b9352635","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fe961b73-777c-47e5-a3c4-fd22d5c02260","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"c209fbb9-24ff-41fb-900b-9a45d9fe9ad4","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3ed541c6-a27a-440d-9827-a9e37f90291d","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"788a93d7-93f8-4f93-be4a-2255756c30ef","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1e13d9d1-ef4f-4e42-8259-a6df7674c39b","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"135d9a70-2797-4000-b98c-509d61e8469f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"761ea18d-6a31-44f9-aacf-8fd512c0acf3","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9258ebc4-fe9e-41a6-808e-608153725737","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"26ff5765-1bef-4f92-8ddf-4a3fadd59e32","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"049b79ef-a57e-471f-a7d2-8c750533f588","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f7b3759a-a7e9-4d33-ac6a-b2be48d3d364","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b28e3591-8633-4fbf-bfa9-a115b9352635","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fe961b73-777c-47e5-a3c4-fd22d5c02260","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c209fbb9-24ff-41fb-900b-9a45d9fe9ad4","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3ed541c6-a27a-440d-9827-a9e37f90291d","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -78,22 +71,13 @@
     "yorigin": 24,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_HatShadow_Ice_Snowman_Roll","path":"sprites/spr_Kirby_HatShadow_Ice_Snowman_Roll/spr_Kirby_HatShadow_Ice_Snowman_Roll.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_HatShadow_Ice_Snowman_Roll",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Shadow",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Ice/Snowman/Shadow.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_HatShadow_Ice_Snowman_Roll",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

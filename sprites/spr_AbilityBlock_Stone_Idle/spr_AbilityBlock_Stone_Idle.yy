@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_AbilityBlock_Stone_Idle",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"0171fa39-e84a-41d9-b7b9-4fa9215ebd97","path":"sprites/spr_AbilityBlock_Stone_Idle/spr_AbilityBlock_Stone_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0171fa39-e84a-41d9-b7b9-4fa9215ebd97","path":"sprites/spr_AbilityBlock_Stone_Idle/spr_AbilityBlock_Stone_Idle.yy",},"LayerId":{"name":"5c3e3d9f-0157-4245-afd2-82c9d823f246","path":"sprites/spr_AbilityBlock_Stone_Idle/spr_AbilityBlock_Stone_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_AbilityBlock_Stone_Idle","path":"sprites/spr_AbilityBlock_Stone_Idle/spr_AbilityBlock_Stone_Idle.yy",},"resourceVersion":"1.0","name":"0171fa39-e84a-41d9-b7b9-4fa9215ebd97","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0171fa39-e84a-41d9-b7b9-4fa9215ebd97",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_AbilityBlock_Stone_Idle","path":"sprites/spr_AbilityBlock_Stone_Idle/spr_AbilityBlock_Stone_Idle.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_AbilityBlock_Stone_Idle",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"c2a376f2-a5e3-4ef8-8077-aa95664457e0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0171fa39-e84a-41d9-b7b9-4fa9215ebd97","path":"sprites/spr_AbilityBlock_Stone_Idle/spr_AbilityBlock_Stone_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"c2a376f2-a5e3-4ef8-8077-aa95664457e0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0171fa39-e84a-41d9-b7b9-4fa9215ebd97","path":"sprites/spr_AbilityBlock_Stone_Idle/spr_AbilityBlock_Stone_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_AbilityBlock_Stone_Idle","path":"sprites/spr_AbilityBlock_Stone_Idle/spr_AbilityBlock_Stone_Idle.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_AbilityBlock_Stone_Idle",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5c3e3d9f-0157-4245-afd2-82c9d823f246","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"5c3e3d9f-0157-4245-afd2-82c9d823f246","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Stone",
     "path": "folders/Sprites/Stage Elements/Ability Block/Stone.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_AbilityBlock_Stone_Idle",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

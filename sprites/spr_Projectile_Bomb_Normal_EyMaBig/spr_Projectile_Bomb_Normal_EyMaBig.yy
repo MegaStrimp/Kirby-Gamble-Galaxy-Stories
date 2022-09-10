@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Projectile_Bomb_Normal_EyMaBig",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"93a2ebb3-320f-4fa5-a78e-8880b218c9a4","path":"sprites/spr_Projectile_Bomb_Normal_EyMaBig/spr_Projectile_Bomb_Normal_EyMaBig.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"93a2ebb3-320f-4fa5-a78e-8880b218c9a4","path":"sprites/spr_Projectile_Bomb_Normal_EyMaBig/spr_Projectile_Bomb_Normal_EyMaBig.yy",},"LayerId":{"name":"65aeadeb-391b-4c10-bb01-5c74a9fbd4f5","path":"sprites/spr_Projectile_Bomb_Normal_EyMaBig/spr_Projectile_Bomb_Normal_EyMaBig.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_Bomb_Normal_EyMaBig","path":"sprites/spr_Projectile_Bomb_Normal_EyMaBig/spr_Projectile_Bomb_Normal_EyMaBig.yy",},"resourceVersion":"1.0","name":"93a2ebb3-320f-4fa5-a78e-8880b218c9a4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"93a2ebb3-320f-4fa5-a78e-8880b218c9a4",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Projectile_Bomb_Normal_EyMaBig","path":"sprites/spr_Projectile_Bomb_Normal_EyMaBig/spr_Projectile_Bomb_Normal_EyMaBig.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Projectile_Bomb_Normal_EyMaBig",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"75af5959-3065-47bf-bbc7-09332a2e3e1a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"93a2ebb3-320f-4fa5-a78e-8880b218c9a4","path":"sprites/spr_Projectile_Bomb_Normal_EyMaBig/spr_Projectile_Bomb_Normal_EyMaBig.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"75af5959-3065-47bf-bbc7-09332a2e3e1a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"93a2ebb3-320f-4fa5-a78e-8880b218c9a4","path":"sprites/spr_Projectile_Bomb_Normal_EyMaBig/spr_Projectile_Bomb_Normal_EyMaBig.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 15,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Projectile_Bomb_Normal_EyMaBig","path":"sprites/spr_Projectile_Bomb_Normal_EyMaBig/spr_Projectile_Bomb_Normal_EyMaBig.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Projectile_Bomb_Normal_EyMaBig",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"65aeadeb-391b-4c10-bb01-5c74a9fbd4f5","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"65aeadeb-391b-4c10-bb01-5c74a9fbd4f5","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Bomb",
     "path": "folders/Sprites/Projectiles/Bomb.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Projectile_Bomb_Normal_EyMaBig",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

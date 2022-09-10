@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "bg_BattleshipHalberd_Sky",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"9240c98e-7b6e-4881-bb83-69a0ead016d9","path":"sprites/bg_BattleshipHalberd_Sky/bg_BattleshipHalberd_Sky.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9240c98e-7b6e-4881-bb83-69a0ead016d9","path":"sprites/bg_BattleshipHalberd_Sky/bg_BattleshipHalberd_Sky.yy",},"LayerId":{"name":"daac613d-f57c-4014-ac9d-51d522f2e5bd","path":"sprites/bg_BattleshipHalberd_Sky/bg_BattleshipHalberd_Sky.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"bg_BattleshipHalberd_Sky","path":"sprites/bg_BattleshipHalberd_Sky/bg_BattleshipHalberd_Sky.yy",},"resourceVersion":"1.0","name":"9240c98e-7b6e-4881-bb83-69a0ead016d9","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9240c98e-7b6e-4881-bb83-69a0ead016d9",},
   ],
   "sequence": {
-    "spriteId": {"name":"bg_BattleshipHalberd_Sky","path":"sprites/bg_BattleshipHalberd_Sky/bg_BattleshipHalberd_Sky.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "bg_BattleshipHalberd_Sky",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"7a009b87-5e81-451c-8843-a7e51727ba97","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9240c98e-7b6e-4881-bb83-69a0ead016d9","path":"sprites/bg_BattleshipHalberd_Sky/bg_BattleshipHalberd_Sky.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"7a009b87-5e81-451c-8843-a7e51727ba97","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9240c98e-7b6e-4881-bb83-69a0ead016d9","path":"sprites/bg_BattleshipHalberd_Sky/bg_BattleshipHalberd_Sky.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"bg_BattleshipHalberd_Sky","path":"sprites/bg_BattleshipHalberd_Sky/bg_BattleshipHalberd_Sky.yy",},
-    "resourceVersion": "1.4",
-    "name": "bg_BattleshipHalberd_Sky",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"daac613d-f57c-4014-ac9d-51d522f2e5bd","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"daac613d-f57c-4014-ac9d-51d522f2e5bd","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Battleship Halberd",
     "path": "folders/Backgrounds/Battleship Halberd.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "bg_BattleshipHalberd_Sky",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

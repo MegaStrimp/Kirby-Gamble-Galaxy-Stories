@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_RecoilStar_Normal_Spawn",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"8b7eaa29-ddde-4986-a1ec-883c50feee2f","path":"sprites/spr_RecoilStar_Normal_Spawn/spr_RecoilStar_Normal_Spawn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8b7eaa29-ddde-4986-a1ec-883c50feee2f","path":"sprites/spr_RecoilStar_Normal_Spawn/spr_RecoilStar_Normal_Spawn.yy",},"LayerId":{"name":"5a5a8f58-eeef-4f66-b4fd-be6163510569","path":"sprites/spr_RecoilStar_Normal_Spawn/spr_RecoilStar_Normal_Spawn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_RecoilStar_Normal_Spawn","path":"sprites/spr_RecoilStar_Normal_Spawn/spr_RecoilStar_Normal_Spawn.yy",},"resourceVersion":"1.0","name":"8b7eaa29-ddde-4986-a1ec-883c50feee2f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8b7eaa29-ddde-4986-a1ec-883c50feee2f",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_RecoilStar_Normal_Spawn","path":"sprites/spr_RecoilStar_Normal_Spawn/spr_RecoilStar_Normal_Spawn.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_RecoilStar_Normal_Spawn",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"2d4827e8-0c82-40e8-b33d-bcd02bb8cb79","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8b7eaa29-ddde-4986-a1ec-883c50feee2f","path":"sprites/spr_RecoilStar_Normal_Spawn/spr_RecoilStar_Normal_Spawn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"2d4827e8-0c82-40e8-b33d-bcd02bb8cb79","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8b7eaa29-ddde-4986-a1ec-883c50feee2f","path":"sprites/spr_RecoilStar_Normal_Spawn/spr_RecoilStar_Normal_Spawn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 15,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_RecoilStar_Normal_Spawn","path":"sprites/spr_RecoilStar_Normal_Spawn/spr_RecoilStar_Normal_Spawn.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_RecoilStar_Normal_Spawn",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5a5a8f58-eeef-4f66-b4fd-be6163510569","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"5a5a8f58-eeef-4f66-b4fd-be6163510569","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Projectiles/Recoil Star/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_RecoilStar_Normal_Spawn",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

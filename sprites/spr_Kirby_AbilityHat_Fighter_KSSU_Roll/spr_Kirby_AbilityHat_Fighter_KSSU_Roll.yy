@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_AbilityHat_Fighter_KSSU_Roll",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,27 +27,17 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a57ffbd0-b8cf-4751-8e36-7f8811753b22","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a57ffbd0-b8cf-4751-8e36-7f8811753b22","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Fighter_KSSU_Roll","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"resourceVersion":"1.0","name":"a57ffbd0-b8cf-4751-8e36-7f8811753b22","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"386c54a8-51f5-4378-b6bf-9d6aac2e07bf","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"386c54a8-51f5-4378-b6bf-9d6aac2e07bf","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Fighter_KSSU_Roll","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"resourceVersion":"1.0","name":"386c54a8-51f5-4378-b6bf-9d6aac2e07bf","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"30832602-7957-433b-8f5c-7fc2f64a89b3","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"30832602-7957-433b-8f5c-7fc2f64a89b3","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Fighter_KSSU_Roll","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"resourceVersion":"1.0","name":"30832602-7957-433b-8f5c-7fc2f64a89b3","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e3cf5c46-59f2-4026-b2f8-8a9628a0dd03","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e3cf5c46-59f2-4026-b2f8-8a9628a0dd03","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Fighter_KSSU_Roll","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"resourceVersion":"1.0","name":"e3cf5c46-59f2-4026-b2f8-8a9628a0dd03","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d02c3ffc-5b81-4c17-adab-70ed8750ea5e","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d02c3ffc-5b81-4c17-adab-70ed8750ea5e","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Fighter_KSSU_Roll","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"resourceVersion":"1.0","name":"d02c3ffc-5b81-4c17-adab-70ed8750ea5e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"97d47b6a-7e41-4fe0-98a3-b923c49dcb16","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"97d47b6a-7e41-4fe0-98a3-b923c49dcb16","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"LayerId":{"name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Fighter_KSSU_Roll","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"resourceVersion":"1.0","name":"97d47b6a-7e41-4fe0-98a3-b923c49dcb16","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a57ffbd0-b8cf-4751-8e36-7f8811753b22",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"386c54a8-51f5-4378-b6bf-9d6aac2e07bf",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"30832602-7957-433b-8f5c-7fc2f64a89b3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e3cf5c46-59f2-4026-b2f8-8a9628a0dd03",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d02c3ffc-5b81-4c17-adab-70ed8750ea5e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"97d47b6a-7e41-4fe0-98a3-b923c49dcb16",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_AbilityHat_Fighter_KSSU_Roll","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_AbilityHat_Fighter_KSSU_Roll",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 24.0,
@@ -52,17 +45,17 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 6.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"ef47d3e3-da2f-4917-ae84-3dff1508f5d4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a57ffbd0-b8cf-4751-8e36-7f8811753b22","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"6bbb7801-de05-4c8f-ab16-1fef60f31a53","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"386c54a8-51f5-4378-b6bf-9d6aac2e07bf","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"a50f24c9-d951-4539-94a3-a5886b6b52e1","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"30832602-7957-433b-8f5c-7fc2f64a89b3","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"6f211025-848d-4c2f-b0df-d4cfffba6807","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e3cf5c46-59f2-4026-b2f8-8a9628a0dd03","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"16eef12b-87d9-4c66-886e-ab8957a264fe","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d02c3ffc-5b81-4c17-adab-70ed8750ea5e","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"a2cda291-2938-4e6e-83e6-b8cd05814a72","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"97d47b6a-7e41-4fe0-98a3-b923c49dcb16","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"ef47d3e3-da2f-4917-ae84-3dff1508f5d4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a57ffbd0-b8cf-4751-8e36-7f8811753b22","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6bbb7801-de05-4c8f-ab16-1fef60f31a53","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"386c54a8-51f5-4378-b6bf-9d6aac2e07bf","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a50f24c9-d951-4539-94a3-a5886b6b52e1","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"30832602-7957-433b-8f5c-7fc2f64a89b3","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6f211025-848d-4c2f-b0df-d4cfffba6807","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e3cf5c46-59f2-4026-b2f8-8a9628a0dd03","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"16eef12b-87d9-4c66-886e-ab8957a264fe","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d02c3ffc-5b81-4c17-adab-70ed8750ea5e","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a2cda291-2938-4e6e-83e6-b8cd05814a72","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"97d47b6a-7e41-4fe0-98a3-b923c49dcb16","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -78,22 +71,13 @@
     "yorigin": 24,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_AbilityHat_Fighter_KSSU_Roll","path":"sprites/spr_Kirby_AbilityHat_Fighter_KSSU_Roll/spr_Kirby_AbilityHat_Fighter_KSSU_Roll.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_AbilityHat_Fighter_KSSU_Roll",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"baccec8f-cbff-41f9-bfb4-3787a81213e7","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Hat",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Fighter/KSSU/Hat.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_AbilityHat_Fighter_KSSU_Roll",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

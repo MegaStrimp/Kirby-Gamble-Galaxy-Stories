@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Skylands_BrontoBurt_Idle",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"690697c2-b1d9-4202-8117-3d0fd251704a","path":"sprites/spr_Skylands_BrontoBurt_Idle/spr_Skylands_BrontoBurt_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"690697c2-b1d9-4202-8117-3d0fd251704a","path":"sprites/spr_Skylands_BrontoBurt_Idle/spr_Skylands_BrontoBurt_Idle.yy",},"LayerId":{"name":"0f58ab21-6ff6-4d2c-b9d2-ab25323c3684","path":"sprites/spr_Skylands_BrontoBurt_Idle/spr_Skylands_BrontoBurt_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Skylands_BrontoBurt_Idle","path":"sprites/spr_Skylands_BrontoBurt_Idle/spr_Skylands_BrontoBurt_Idle.yy",},"resourceVersion":"1.0","name":"690697c2-b1d9-4202-8117-3d0fd251704a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c0a7daf5-7b2b-4dad-b3c6-e4fb619a2b6f","path":"sprites/spr_Skylands_BrontoBurt_Idle/spr_Skylands_BrontoBurt_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c0a7daf5-7b2b-4dad-b3c6-e4fb619a2b6f","path":"sprites/spr_Skylands_BrontoBurt_Idle/spr_Skylands_BrontoBurt_Idle.yy",},"LayerId":{"name":"0f58ab21-6ff6-4d2c-b9d2-ab25323c3684","path":"sprites/spr_Skylands_BrontoBurt_Idle/spr_Skylands_BrontoBurt_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Skylands_BrontoBurt_Idle","path":"sprites/spr_Skylands_BrontoBurt_Idle/spr_Skylands_BrontoBurt_Idle.yy",},"resourceVersion":"1.0","name":"c0a7daf5-7b2b-4dad-b3c6-e4fb619a2b6f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0910db44-7a9e-44c8-91fe-9a1cd88c4402","path":"sprites/spr_Skylands_BrontoBurt_Idle/spr_Skylands_BrontoBurt_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0910db44-7a9e-44c8-91fe-9a1cd88c4402","path":"sprites/spr_Skylands_BrontoBurt_Idle/spr_Skylands_BrontoBurt_Idle.yy",},"LayerId":{"name":"0f58ab21-6ff6-4d2c-b9d2-ab25323c3684","path":"sprites/spr_Skylands_BrontoBurt_Idle/spr_Skylands_BrontoBurt_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Skylands_BrontoBurt_Idle","path":"sprites/spr_Skylands_BrontoBurt_Idle/spr_Skylands_BrontoBurt_Idle.yy",},"resourceVersion":"1.0","name":"0910db44-7a9e-44c8-91fe-9a1cd88c4402","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"84a790f2-0008-4de9-bbfa-3767919e88c9","path":"sprites/spr_Skylands_BrontoBurt_Idle/spr_Skylands_BrontoBurt_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"84a790f2-0008-4de9-bbfa-3767919e88c9","path":"sprites/spr_Skylands_BrontoBurt_Idle/spr_Skylands_BrontoBurt_Idle.yy",},"LayerId":{"name":"0f58ab21-6ff6-4d2c-b9d2-ab25323c3684","path":"sprites/spr_Skylands_BrontoBurt_Idle/spr_Skylands_BrontoBurt_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Skylands_BrontoBurt_Idle","path":"sprites/spr_Skylands_BrontoBurt_Idle/spr_Skylands_BrontoBurt_Idle.yy",},"resourceVersion":"1.0","name":"84a790f2-0008-4de9-bbfa-3767919e88c9","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"690697c2-b1d9-4202-8117-3d0fd251704a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c0a7daf5-7b2b-4dad-b3c6-e4fb619a2b6f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0910db44-7a9e-44c8-91fe-9a1cd88c4402",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"84a790f2-0008-4de9-bbfa-3767919e88c9",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Skylands_BrontoBurt_Idle","path":"sprites/spr_Skylands_BrontoBurt_Idle/spr_Skylands_BrontoBurt_Idle.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Skylands_BrontoBurt_Idle",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 12.0,
@@ -46,15 +43,15 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 4.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"567234db-1917-4178-9540-1996040b59da","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"690697c2-b1d9-4202-8117-3d0fd251704a","path":"sprites/spr_Skylands_BrontoBurt_Idle/spr_Skylands_BrontoBurt_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"5f444ffe-0e2b-40a6-b3e4-3ccc578ac15f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c0a7daf5-7b2b-4dad-b3c6-e4fb619a2b6f","path":"sprites/spr_Skylands_BrontoBurt_Idle/spr_Skylands_BrontoBurt_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"85b94061-0465-4b46-adcd-3cb3bf61dbc6","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0910db44-7a9e-44c8-91fe-9a1cd88c4402","path":"sprites/spr_Skylands_BrontoBurt_Idle/spr_Skylands_BrontoBurt_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"f1c6aa58-d180-491c-96d2-ac32ba2bace8","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"84a790f2-0008-4de9-bbfa-3767919e88c9","path":"sprites/spr_Skylands_BrontoBurt_Idle/spr_Skylands_BrontoBurt_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"567234db-1917-4178-9540-1996040b59da","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"690697c2-b1d9-4202-8117-3d0fd251704a","path":"sprites/spr_Skylands_BrontoBurt_Idle/spr_Skylands_BrontoBurt_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"5f444ffe-0e2b-40a6-b3e4-3ccc578ac15f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c0a7daf5-7b2b-4dad-b3c6-e4fb619a2b6f","path":"sprites/spr_Skylands_BrontoBurt_Idle/spr_Skylands_BrontoBurt_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"85b94061-0465-4b46-adcd-3cb3bf61dbc6","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0910db44-7a9e-44c8-91fe-9a1cd88c4402","path":"sprites/spr_Skylands_BrontoBurt_Idle/spr_Skylands_BrontoBurt_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f1c6aa58-d180-491c-96d2-ac32ba2bace8","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"84a790f2-0008-4de9-bbfa-3767919e88c9","path":"sprites/spr_Skylands_BrontoBurt_Idle/spr_Skylands_BrontoBurt_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -70,22 +67,13 @@
     "yorigin": 14,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Skylands_BrontoBurt_Idle","path":"sprites/spr_Skylands_BrontoBurt_Idle/spr_Skylands_BrontoBurt_Idle.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Skylands_BrontoBurt_Idle",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0f58ab21-6ff6-4d2c-b9d2-ab25323c3684","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"0f58ab21-6ff6-4d2c-b9d2-ab25323c3684","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Bronto Burt",
     "path": "folders/Sprites/Subgames/Skylands/Enemies/Bronto Burt.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Skylands_BrontoBurt_Idle",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

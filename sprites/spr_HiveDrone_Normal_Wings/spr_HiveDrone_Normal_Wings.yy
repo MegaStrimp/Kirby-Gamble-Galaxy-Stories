@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_HiveDrone_Normal_Wings",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"eac6c95f-99f1-4c0d-806b-f1e80a55bd1f","path":"sprites/spr_HiveDrone_Normal_Wings/spr_HiveDrone_Normal_Wings.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"eac6c95f-99f1-4c0d-806b-f1e80a55bd1f","path":"sprites/spr_HiveDrone_Normal_Wings/spr_HiveDrone_Normal_Wings.yy",},"LayerId":{"name":"78999fce-8523-4bde-ba4f-51af972371b6","path":"sprites/spr_HiveDrone_Normal_Wings/spr_HiveDrone_Normal_Wings.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_HiveDrone_Normal_Wings","path":"sprites/spr_HiveDrone_Normal_Wings/spr_HiveDrone_Normal_Wings.yy",},"resourceVersion":"1.0","name":"eac6c95f-99f1-4c0d-806b-f1e80a55bd1f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"caf336f5-127e-439d-92a8-d0afdcea5728","path":"sprites/spr_HiveDrone_Normal_Wings/spr_HiveDrone_Normal_Wings.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"caf336f5-127e-439d-92a8-d0afdcea5728","path":"sprites/spr_HiveDrone_Normal_Wings/spr_HiveDrone_Normal_Wings.yy",},"LayerId":{"name":"78999fce-8523-4bde-ba4f-51af972371b6","path":"sprites/spr_HiveDrone_Normal_Wings/spr_HiveDrone_Normal_Wings.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_HiveDrone_Normal_Wings","path":"sprites/spr_HiveDrone_Normal_Wings/spr_HiveDrone_Normal_Wings.yy",},"resourceVersion":"1.0","name":"caf336f5-127e-439d-92a8-d0afdcea5728","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"eac6c95f-99f1-4c0d-806b-f1e80a55bd1f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"caf336f5-127e-439d-92a8-d0afdcea5728",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_HiveDrone_Normal_Wings","path":"sprites/spr_HiveDrone_Normal_Wings/spr_HiveDrone_Normal_Wings.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_HiveDrone_Normal_Wings",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"ae92b06c-0f50-4cac-8cd6-fad07be7eced","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"eac6c95f-99f1-4c0d-806b-f1e80a55bd1f","path":"sprites/spr_HiveDrone_Normal_Wings/spr_HiveDrone_Normal_Wings.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"2b34040a-19b1-40f3-8170-11ae5472926b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"caf336f5-127e-439d-92a8-d0afdcea5728","path":"sprites/spr_HiveDrone_Normal_Wings/spr_HiveDrone_Normal_Wings.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"ae92b06c-0f50-4cac-8cd6-fad07be7eced","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"eac6c95f-99f1-4c0d-806b-f1e80a55bd1f","path":"sprites/spr_HiveDrone_Normal_Wings/spr_HiveDrone_Normal_Wings.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"2b34040a-19b1-40f3-8170-11ae5472926b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"caf336f5-127e-439d-92a8-d0afdcea5728","path":"sprites/spr_HiveDrone_Normal_Wings/spr_HiveDrone_Normal_Wings.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -62,22 +63,13 @@
     "yorigin": 14,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_HiveDrone_Normal_Wings","path":"sprites/spr_HiveDrone_Normal_Wings/spr_HiveDrone_Normal_Wings.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_HiveDrone_Normal_Wings",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"78999fce-8523-4bde-ba4f-51af972371b6","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"78999fce-8523-4bde-ba4f-51af972371b6","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Enemies/Hive Drone/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_HiveDrone_Normal_Wings",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

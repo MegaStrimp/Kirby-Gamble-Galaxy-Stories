@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Menu_Collection_Bestiary_GameIcon_PR",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"948208df-7ba1-42df-bf3c-119732ca6934","path":"sprites/spr_Menu_Collection_Bestiary_GameIcon_PR/spr_Menu_Collection_Bestiary_GameIcon_PR.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"948208df-7ba1-42df-bf3c-119732ca6934","path":"sprites/spr_Menu_Collection_Bestiary_GameIcon_PR/spr_Menu_Collection_Bestiary_GameIcon_PR.yy",},"LayerId":{"name":"44108809-f0e0-4174-9b90-3206e06c97c2","path":"sprites/spr_Menu_Collection_Bestiary_GameIcon_PR/spr_Menu_Collection_Bestiary_GameIcon_PR.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Menu_Collection_Bestiary_GameIcon_PR","path":"sprites/spr_Menu_Collection_Bestiary_GameIcon_PR/spr_Menu_Collection_Bestiary_GameIcon_PR.yy",},"resourceVersion":"1.0","name":"948208df-7ba1-42df-bf3c-119732ca6934","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"948208df-7ba1-42df-bf3c-119732ca6934",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Menu_Collection_Bestiary_GameIcon_PR","path":"sprites/spr_Menu_Collection_Bestiary_GameIcon_PR/spr_Menu_Collection_Bestiary_GameIcon_PR.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Menu_Collection_Bestiary_GameIcon_PR",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"375a265c-c1c7-43c3-bf1b-7f74f256d4e8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"948208df-7ba1-42df-bf3c-119732ca6934","path":"sprites/spr_Menu_Collection_Bestiary_GameIcon_PR/spr_Menu_Collection_Bestiary_GameIcon_PR.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"375a265c-c1c7-43c3-bf1b-7f74f256d4e8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"948208df-7ba1-42df-bf3c-119732ca6934","path":"sprites/spr_Menu_Collection_Bestiary_GameIcon_PR/spr_Menu_Collection_Bestiary_GameIcon_PR.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 20,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Menu_Collection_Bestiary_GameIcon_PR","path":"sprites/spr_Menu_Collection_Bestiary_GameIcon_PR/spr_Menu_Collection_Bestiary_GameIcon_PR.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Menu_Collection_Bestiary_GameIcon_PR",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"44108809-f0e0-4174-9b90-3206e06c97c2","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"44108809-f0e0-4174-9b90-3206e06c97c2","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Game Icons",
     "path": "folders/Sprites/Menu/Collection Menu/Bestiary/Game Icons.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Menu_Collection_Bestiary_GameIcon_PR",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_AbilityHat_Bomb_Modern_Attack1",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"8411885f-9fe8-47cd-8e77-e052aabbcf99","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Attack1/spr_Kirby_AbilityHat_Bomb_Modern_Attack1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8411885f-9fe8-47cd-8e77-e052aabbcf99","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Attack1/spr_Kirby_AbilityHat_Bomb_Modern_Attack1.yy",},"LayerId":{"name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Attack1/spr_Kirby_AbilityHat_Bomb_Modern_Attack1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Bomb_Modern_Attack1","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Attack1/spr_Kirby_AbilityHat_Bomb_Modern_Attack1.yy",},"resourceVersion":"1.0","name":"8411885f-9fe8-47cd-8e77-e052aabbcf99","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"024a0d29-2c98-4d80-92fe-b45237c69a52","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Attack1/spr_Kirby_AbilityHat_Bomb_Modern_Attack1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"024a0d29-2c98-4d80-92fe-b45237c69a52","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Attack1/spr_Kirby_AbilityHat_Bomb_Modern_Attack1.yy",},"LayerId":{"name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Attack1/spr_Kirby_AbilityHat_Bomb_Modern_Attack1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Bomb_Modern_Attack1","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Attack1/spr_Kirby_AbilityHat_Bomb_Modern_Attack1.yy",},"resourceVersion":"1.0","name":"024a0d29-2c98-4d80-92fe-b45237c69a52","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8411885f-9fe8-47cd-8e77-e052aabbcf99",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"024a0d29-2c98-4d80-92fe-b45237c69a52",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_AbilityHat_Bomb_Modern_Attack1","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Attack1/spr_Kirby_AbilityHat_Bomb_Modern_Attack1.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_AbilityHat_Bomb_Modern_Attack1",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"e3a1c392-47f5-4306-9e3c-b42d67127ab5","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8411885f-9fe8-47cd-8e77-e052aabbcf99","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Attack1/spr_Kirby_AbilityHat_Bomb_Modern_Attack1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"0a6ebe33-9bea-454d-8542-48445d583313","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"024a0d29-2c98-4d80-92fe-b45237c69a52","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Attack1/spr_Kirby_AbilityHat_Bomb_Modern_Attack1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"e3a1c392-47f5-4306-9e3c-b42d67127ab5","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8411885f-9fe8-47cd-8e77-e052aabbcf99","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Attack1/spr_Kirby_AbilityHat_Bomb_Modern_Attack1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0a6ebe33-9bea-454d-8542-48445d583313","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"024a0d29-2c98-4d80-92fe-b45237c69a52","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Attack1/spr_Kirby_AbilityHat_Bomb_Modern_Attack1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -62,22 +63,13 @@
     "yorigin": 28,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_AbilityHat_Bomb_Modern_Attack1","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Attack1/spr_Kirby_AbilityHat_Bomb_Modern_Attack1.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_AbilityHat_Bomb_Modern_Attack1",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c65f011a-c6b3-4223-a262-74bcf95ae4d2","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Hat",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Bomb/Modern/Hat.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_AbilityHat_Bomb_Modern_Attack1",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

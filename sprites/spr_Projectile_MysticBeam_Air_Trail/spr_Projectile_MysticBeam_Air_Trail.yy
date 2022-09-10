@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Projectile_MysticBeam_Air_Trail",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"248988f1-b97d-4b2a-a81e-95b3c09131f0","path":"sprites/spr_Projectile_MysticBeam_Air_Trail/spr_Projectile_MysticBeam_Air_Trail.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"248988f1-b97d-4b2a-a81e-95b3c09131f0","path":"sprites/spr_Projectile_MysticBeam_Air_Trail/spr_Projectile_MysticBeam_Air_Trail.yy",},"LayerId":{"name":"848f87ea-a6f8-46ca-882c-ad68971a742f","path":"sprites/spr_Projectile_MysticBeam_Air_Trail/spr_Projectile_MysticBeam_Air_Trail.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_MysticBeam_Air_Trail","path":"sprites/spr_Projectile_MysticBeam_Air_Trail/spr_Projectile_MysticBeam_Air_Trail.yy",},"resourceVersion":"1.0","name":"248988f1-b97d-4b2a-a81e-95b3c09131f0","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"dcc4dd4a-a601-440c-bf94-7ccb8a1e1033","path":"sprites/spr_Projectile_MysticBeam_Air_Trail/spr_Projectile_MysticBeam_Air_Trail.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"dcc4dd4a-a601-440c-bf94-7ccb8a1e1033","path":"sprites/spr_Projectile_MysticBeam_Air_Trail/spr_Projectile_MysticBeam_Air_Trail.yy",},"LayerId":{"name":"848f87ea-a6f8-46ca-882c-ad68971a742f","path":"sprites/spr_Projectile_MysticBeam_Air_Trail/spr_Projectile_MysticBeam_Air_Trail.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_MysticBeam_Air_Trail","path":"sprites/spr_Projectile_MysticBeam_Air_Trail/spr_Projectile_MysticBeam_Air_Trail.yy",},"resourceVersion":"1.0","name":"dcc4dd4a-a601-440c-bf94-7ccb8a1e1033","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"248988f1-b97d-4b2a-a81e-95b3c09131f0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dcc4dd4a-a601-440c-bf94-7ccb8a1e1033",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Projectile_MysticBeam_Air_Trail","path":"sprites/spr_Projectile_MysticBeam_Air_Trail/spr_Projectile_MysticBeam_Air_Trail.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Projectile_MysticBeam_Air_Trail",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 33.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"9f5ab5ce-9d0c-43d8-bcef-b827f32de959","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"248988f1-b97d-4b2a-a81e-95b3c09131f0","path":"sprites/spr_Projectile_MysticBeam_Air_Trail/spr_Projectile_MysticBeam_Air_Trail.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"7a482314-45a6-4993-8071-ad19e862863a","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dcc4dd4a-a601-440c-bf94-7ccb8a1e1033","path":"sprites/spr_Projectile_MysticBeam_Air_Trail/spr_Projectile_MysticBeam_Air_Trail.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"9f5ab5ce-9d0c-43d8-bcef-b827f32de959","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"248988f1-b97d-4b2a-a81e-95b3c09131f0","path":"sprites/spr_Projectile_MysticBeam_Air_Trail/spr_Projectile_MysticBeam_Air_Trail.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"7a482314-45a6-4993-8071-ad19e862863a","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dcc4dd4a-a601-440c-bf94-7ccb8a1e1033","path":"sprites/spr_Projectile_MysticBeam_Air_Trail/spr_Projectile_MysticBeam_Air_Trail.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -62,22 +63,13 @@
     "yorigin": 5,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Projectile_MysticBeam_Air_Trail","path":"sprites/spr_Projectile_MysticBeam_Air_Trail/spr_Projectile_MysticBeam_Air_Trail.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Projectile_MysticBeam_Air_Trail",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"848f87ea-a6f8-46ca-882c-ad68971a742f","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"848f87ea-a6f8-46ca-882c-ad68971a742f","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Beam",
     "path": "folders/Sprites/Projectiles/Beam.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Projectile_MysticBeam_Air_Trail",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

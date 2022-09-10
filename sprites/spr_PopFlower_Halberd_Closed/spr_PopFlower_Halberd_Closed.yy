@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_PopFlower_Halberd_Closed",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"0b10ed1a-aa90-417d-a27d-64dda6f1160f","path":"sprites/spr_PopFlower_Halberd_Closed/spr_PopFlower_Halberd_Closed.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0b10ed1a-aa90-417d-a27d-64dda6f1160f","path":"sprites/spr_PopFlower_Halberd_Closed/spr_PopFlower_Halberd_Closed.yy",},"LayerId":{"name":"ceb648ff-9e6b-4f2e-9889-6605f22ce832","path":"sprites/spr_PopFlower_Halberd_Closed/spr_PopFlower_Halberd_Closed.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_PopFlower_Halberd_Closed","path":"sprites/spr_PopFlower_Halberd_Closed/spr_PopFlower_Halberd_Closed.yy",},"resourceVersion":"1.0","name":"0b10ed1a-aa90-417d-a27d-64dda6f1160f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0b10ed1a-aa90-417d-a27d-64dda6f1160f",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_PopFlower_Halberd_Closed","path":"sprites/spr_PopFlower_Halberd_Closed/spr_PopFlower_Halberd_Closed.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_PopFlower_Halberd_Closed",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 6.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"304caa9e-7c2f-4a5c-ba82-7a72db4f083c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0b10ed1a-aa90-417d-a27d-64dda6f1160f","path":"sprites/spr_PopFlower_Halberd_Closed/spr_PopFlower_Halberd_Closed.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"304caa9e-7c2f-4a5c-ba82-7a72db4f083c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0b10ed1a-aa90-417d-a27d-64dda6f1160f","path":"sprites/spr_PopFlower_Halberd_Closed/spr_PopFlower_Halberd_Closed.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 3,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_PopFlower_Halberd_Closed","path":"sprites/spr_PopFlower_Halberd_Closed/spr_PopFlower_Halberd_Closed.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_PopFlower_Halberd_Closed",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ceb648ff-9e6b-4f2e-9889-6605f22ce832","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ceb648ff-9e6b-4f2e-9889-6605f22ce832","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Halberd",
     "path": "folders/Sprites/Stage Elements/Pop Flower/Halberd.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_PopFlower_Halberd_Closed",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

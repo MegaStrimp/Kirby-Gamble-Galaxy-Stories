@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_FluxCritter_Normal_Idle",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"cfd2cb90-567d-4137-8cd2-c1ba7452b30c","path":"sprites/spr_FluxCritter_Normal_Idle/spr_FluxCritter_Normal_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cfd2cb90-567d-4137-8cd2-c1ba7452b30c","path":"sprites/spr_FluxCritter_Normal_Idle/spr_FluxCritter_Normal_Idle.yy",},"LayerId":{"name":"3df3f439-dbf8-43dd-9829-aedace2fa80e","path":"sprites/spr_FluxCritter_Normal_Idle/spr_FluxCritter_Normal_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_FluxCritter_Normal_Idle","path":"sprites/spr_FluxCritter_Normal_Idle/spr_FluxCritter_Normal_Idle.yy",},"resourceVersion":"1.0","name":"cfd2cb90-567d-4137-8cd2-c1ba7452b30c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cfd2cb90-567d-4137-8cd2-c1ba7452b30c",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_FluxCritter_Normal_Idle","path":"sprites/spr_FluxCritter_Normal_Idle/spr_FluxCritter_Normal_Idle.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_FluxCritter_Normal_Idle",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"8eac8b1a-8af8-4cff-86c0-d5f47aa85d2c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cfd2cb90-567d-4137-8cd2-c1ba7452b30c","path":"sprites/spr_FluxCritter_Normal_Idle/spr_FluxCritter_Normal_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"8eac8b1a-8af8-4cff-86c0-d5f47aa85d2c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cfd2cb90-567d-4137-8cd2-c1ba7452b30c","path":"sprites/spr_FluxCritter_Normal_Idle/spr_FluxCritter_Normal_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 7,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_FluxCritter_Normal_Idle","path":"sprites/spr_FluxCritter_Normal_Idle/spr_FluxCritter_Normal_Idle.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_FluxCritter_Normal_Idle",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3df3f439-dbf8-43dd-9829-aedace2fa80e","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"3df3f439-dbf8-43dd-9829-aedace2fa80e","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Enemies/Flux Critter/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_FluxCritter_Normal_Idle",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

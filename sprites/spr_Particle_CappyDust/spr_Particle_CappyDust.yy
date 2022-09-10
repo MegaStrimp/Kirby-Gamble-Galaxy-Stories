@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Particle_CappyDust",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"7d708b6a-c64a-4dcd-8970-68c4b9177226","path":"sprites/spr_Particle_CappyDust/spr_Particle_CappyDust.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7d708b6a-c64a-4dcd-8970-68c4b9177226","path":"sprites/spr_Particle_CappyDust/spr_Particle_CappyDust.yy",},"LayerId":{"name":"368511f7-19ff-4970-8a15-f2c94da1b43b","path":"sprites/spr_Particle_CappyDust/spr_Particle_CappyDust.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Particle_CappyDust","path":"sprites/spr_Particle_CappyDust/spr_Particle_CappyDust.yy",},"resourceVersion":"1.0","name":"7d708b6a-c64a-4dcd-8970-68c4b9177226","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8d1ae856-ab4c-4648-bdc1-7067f8975456","path":"sprites/spr_Particle_CappyDust/spr_Particle_CappyDust.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8d1ae856-ab4c-4648-bdc1-7067f8975456","path":"sprites/spr_Particle_CappyDust/spr_Particle_CappyDust.yy",},"LayerId":{"name":"368511f7-19ff-4970-8a15-f2c94da1b43b","path":"sprites/spr_Particle_CappyDust/spr_Particle_CappyDust.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Particle_CappyDust","path":"sprites/spr_Particle_CappyDust/spr_Particle_CappyDust.yy",},"resourceVersion":"1.0","name":"8d1ae856-ab4c-4648-bdc1-7067f8975456","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7d708b6a-c64a-4dcd-8970-68c4b9177226",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8d1ae856-ab4c-4648-bdc1-7067f8975456",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Particle_CappyDust","path":"sprites/spr_Particle_CappyDust/spr_Particle_CappyDust.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Particle_CappyDust",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 15.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"c4e73003-9969-4e6d-9614-af18ef6dbabe","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7d708b6a-c64a-4dcd-8970-68c4b9177226","path":"sprites/spr_Particle_CappyDust/spr_Particle_CappyDust.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"2df67d2d-894c-4813-8bb4-fbd2d22d2c06","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8d1ae856-ab4c-4648-bdc1-7067f8975456","path":"sprites/spr_Particle_CappyDust/spr_Particle_CappyDust.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"c4e73003-9969-4e6d-9614-af18ef6dbabe","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7d708b6a-c64a-4dcd-8970-68c4b9177226","path":"sprites/spr_Particle_CappyDust/spr_Particle_CappyDust.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"2df67d2d-894c-4813-8bb4-fbd2d22d2c06","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8d1ae856-ab4c-4648-bdc1-7067f8975456","path":"sprites/spr_Particle_CappyDust/spr_Particle_CappyDust.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -62,22 +63,13 @@
     "yorigin": 4,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Particle_CappyDust","path":"sprites/spr_Particle_CappyDust/spr_Particle_CappyDust.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Particle_CappyDust",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"368511f7-19ff-4970-8a15-f2c94da1b43b","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"368511f7-19ff-4970-8a15-f2c94da1b43b","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Particles",
     "path": "folders/Sprites/Particles.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Particle_CappyDust",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

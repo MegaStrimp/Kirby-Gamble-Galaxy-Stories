@@ -17,10 +17,10 @@ else
 	zoomMax = viewWidth / room_width;
 }
 
-show_debug_message("zoom - " + string(zoomFinal));
-show_debug_message("zoomMax - " + string(zoomMax));
+//show_debug_message("zoom - " + string(zoomFinal));
+//show_debug_message("zoomMax - " + string(zoomMax));
 //zoomFinal = max(zoomFinal,zoomMax);
-show_debug_message("zoomFinal - " + string(zoomFinal));
+//show_debug_message("zoomFinal - " + string(zoomFinal));
 
 //Camera View Size
 

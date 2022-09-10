@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Gamble_Normal_Side_Annoyed",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"da15c722-20b6-47b1-a1b7-85f61ef38062","path":"sprites/spr_Gamble_Normal_Side_Annoyed/spr_Gamble_Normal_Side_Annoyed.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"da15c722-20b6-47b1-a1b7-85f61ef38062","path":"sprites/spr_Gamble_Normal_Side_Annoyed/spr_Gamble_Normal_Side_Annoyed.yy",},"LayerId":{"name":"8d27e90d-429f-4a65-97e8-0929f4a10f88","path":"sprites/spr_Gamble_Normal_Side_Annoyed/spr_Gamble_Normal_Side_Annoyed.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Gamble_Normal_Side_Annoyed","path":"sprites/spr_Gamble_Normal_Side_Annoyed/spr_Gamble_Normal_Side_Annoyed.yy",},"resourceVersion":"1.0","name":"da15c722-20b6-47b1-a1b7-85f61ef38062","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"da15c722-20b6-47b1-a1b7-85f61ef38062",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Gamble_Normal_Side_Annoyed","path":"sprites/spr_Gamble_Normal_Side_Annoyed/spr_Gamble_Normal_Side_Annoyed.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Gamble_Normal_Side_Annoyed",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"a6dc46dd-53f2-49ac-990f-1d80040435ac","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"da15c722-20b6-47b1-a1b7-85f61ef38062","path":"sprites/spr_Gamble_Normal_Side_Annoyed/spr_Gamble_Normal_Side_Annoyed.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"a6dc46dd-53f2-49ac-990f-1d80040435ac","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"da15c722-20b6-47b1-a1b7-85f61ef38062","path":"sprites/spr_Gamble_Normal_Side_Annoyed/spr_Gamble_Normal_Side_Annoyed.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 10,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Gamble_Normal_Side_Annoyed","path":"sprites/spr_Gamble_Normal_Side_Annoyed/spr_Gamble_Normal_Side_Annoyed.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Gamble_Normal_Side_Annoyed",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8d27e90d-429f-4a65-97e8-0929f4a10f88","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"8d27e90d-429f-4a65-97e8-0929f4a10f88","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Side",
     "path": "folders/Sprites/Characters/Gamble/Normal/Side.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Gamble_Normal_Side_Annoyed",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

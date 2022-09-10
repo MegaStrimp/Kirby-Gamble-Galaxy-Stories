@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Gordo_Normal_Palette_Lunar",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"cc3984a7-0ba9-4166-8bf1-2084814344ea","path":"sprites/spr_Gordo_Normal_Palette_Lunar/spr_Gordo_Normal_Palette_Lunar.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cc3984a7-0ba9-4166-8bf1-2084814344ea","path":"sprites/spr_Gordo_Normal_Palette_Lunar/spr_Gordo_Normal_Palette_Lunar.yy",},"LayerId":{"name":"87c8f5fa-d92d-47e5-a371-19cf7357f67c","path":"sprites/spr_Gordo_Normal_Palette_Lunar/spr_Gordo_Normal_Palette_Lunar.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Gordo_Normal_Palette_Lunar","path":"sprites/spr_Gordo_Normal_Palette_Lunar/spr_Gordo_Normal_Palette_Lunar.yy",},"resourceVersion":"1.0","name":"cc3984a7-0ba9-4166-8bf1-2084814344ea","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cc3984a7-0ba9-4166-8bf1-2084814344ea",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Gordo_Normal_Palette_Lunar","path":"sprites/spr_Gordo_Normal_Palette_Lunar/spr_Gordo_Normal_Palette_Lunar.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Gordo_Normal_Palette_Lunar",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"939c0f60-d984-414e-a5ee-9ca2de1ec33c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cc3984a7-0ba9-4166-8bf1-2084814344ea","path":"sprites/spr_Gordo_Normal_Palette_Lunar/spr_Gordo_Normal_Palette_Lunar.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"939c0f60-d984-414e-a5ee-9ca2de1ec33c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cc3984a7-0ba9-4166-8bf1-2084814344ea","path":"sprites/spr_Gordo_Normal_Palette_Lunar/spr_Gordo_Normal_Palette_Lunar.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Gordo_Normal_Palette_Lunar","path":"sprites/spr_Gordo_Normal_Palette_Lunar/spr_Gordo_Normal_Palette_Lunar.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Gordo_Normal_Palette_Lunar",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"87c8f5fa-d92d-47e5-a371-19cf7357f67c","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"87c8f5fa-d92d-47e5-a371-19cf7357f67c","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Palettes",
     "path": "folders/Sprites/Enemies/Gordo/Normal/Palettes.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Gordo_Normal_Palette_Lunar",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

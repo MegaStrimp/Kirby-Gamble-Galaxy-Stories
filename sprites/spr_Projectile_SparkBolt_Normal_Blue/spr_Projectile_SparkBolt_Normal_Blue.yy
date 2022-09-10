@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Projectile_SparkBolt_Normal_Blue",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b18a69e1-ffba-4170-b0e2-03565b9fd909","path":"sprites/spr_Projectile_SparkBolt_Normal_Blue/spr_Projectile_SparkBolt_Normal_Blue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b18a69e1-ffba-4170-b0e2-03565b9fd909","path":"sprites/spr_Projectile_SparkBolt_Normal_Blue/spr_Projectile_SparkBolt_Normal_Blue.yy",},"LayerId":{"name":"2538646c-42ee-401d-9127-237cb20b0e0c","path":"sprites/spr_Projectile_SparkBolt_Normal_Blue/spr_Projectile_SparkBolt_Normal_Blue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_SparkBolt_Normal_Blue","path":"sprites/spr_Projectile_SparkBolt_Normal_Blue/spr_Projectile_SparkBolt_Normal_Blue.yy",},"resourceVersion":"1.0","name":"b18a69e1-ffba-4170-b0e2-03565b9fd909","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c4f0c361-5219-4ccc-acc3-5254fc32075c","path":"sprites/spr_Projectile_SparkBolt_Normal_Blue/spr_Projectile_SparkBolt_Normal_Blue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c4f0c361-5219-4ccc-acc3-5254fc32075c","path":"sprites/spr_Projectile_SparkBolt_Normal_Blue/spr_Projectile_SparkBolt_Normal_Blue.yy",},"LayerId":{"name":"2538646c-42ee-401d-9127-237cb20b0e0c","path":"sprites/spr_Projectile_SparkBolt_Normal_Blue/spr_Projectile_SparkBolt_Normal_Blue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_SparkBolt_Normal_Blue","path":"sprites/spr_Projectile_SparkBolt_Normal_Blue/spr_Projectile_SparkBolt_Normal_Blue.yy",},"resourceVersion":"1.0","name":"c4f0c361-5219-4ccc-acc3-5254fc32075c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f2ffde0d-0c19-44ea-8e42-09fbfb1e3116","path":"sprites/spr_Projectile_SparkBolt_Normal_Blue/spr_Projectile_SparkBolt_Normal_Blue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f2ffde0d-0c19-44ea-8e42-09fbfb1e3116","path":"sprites/spr_Projectile_SparkBolt_Normal_Blue/spr_Projectile_SparkBolt_Normal_Blue.yy",},"LayerId":{"name":"2538646c-42ee-401d-9127-237cb20b0e0c","path":"sprites/spr_Projectile_SparkBolt_Normal_Blue/spr_Projectile_SparkBolt_Normal_Blue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Projectile_SparkBolt_Normal_Blue","path":"sprites/spr_Projectile_SparkBolt_Normal_Blue/spr_Projectile_SparkBolt_Normal_Blue.yy",},"resourceVersion":"1.0","name":"f2ffde0d-0c19-44ea-8e42-09fbfb1e3116","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b18a69e1-ffba-4170-b0e2-03565b9fd909",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c4f0c361-5219-4ccc-acc3-5254fc32075c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f2ffde0d-0c19-44ea-8e42-09fbfb1e3116",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Projectile_SparkBolt_Normal_Blue","path":"sprites/spr_Projectile_SparkBolt_Normal_Blue/spr_Projectile_SparkBolt_Normal_Blue.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Projectile_SparkBolt_Normal_Blue",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 21.0,
@@ -43,14 +42,14 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 3.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"e635a715-903c-4389-8a73-ff0fccbd65b5","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b18a69e1-ffba-4170-b0e2-03565b9fd909","path":"sprites/spr_Projectile_SparkBolt_Normal_Blue/spr_Projectile_SparkBolt_Normal_Blue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"812bb3d5-1f8d-4351-b606-91a14550750e","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c4f0c361-5219-4ccc-acc3-5254fc32075c","path":"sprites/spr_Projectile_SparkBolt_Normal_Blue/spr_Projectile_SparkBolt_Normal_Blue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"fec8a24a-16b7-4d42-9af9-a78c72380f31","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f2ffde0d-0c19-44ea-8e42-09fbfb1e3116","path":"sprites/spr_Projectile_SparkBolt_Normal_Blue/spr_Projectile_SparkBolt_Normal_Blue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"e635a715-903c-4389-8a73-ff0fccbd65b5","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b18a69e1-ffba-4170-b0e2-03565b9fd909","path":"sprites/spr_Projectile_SparkBolt_Normal_Blue/spr_Projectile_SparkBolt_Normal_Blue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"812bb3d5-1f8d-4351-b606-91a14550750e","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c4f0c361-5219-4ccc-acc3-5254fc32075c","path":"sprites/spr_Projectile_SparkBolt_Normal_Blue/spr_Projectile_SparkBolt_Normal_Blue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"fec8a24a-16b7-4d42-9af9-a78c72380f31","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f2ffde0d-0c19-44ea-8e42-09fbfb1e3116","path":"sprites/spr_Projectile_SparkBolt_Normal_Blue/spr_Projectile_SparkBolt_Normal_Blue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -66,22 +65,13 @@
     "yorigin": 15,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Projectile_SparkBolt_Normal_Blue","path":"sprites/spr_Projectile_SparkBolt_Normal_Blue/spr_Projectile_SparkBolt_Normal_Blue.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Projectile_SparkBolt_Normal_Blue",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2538646c-42ee-401d-9127-237cb20b0e0c","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"2538646c-42ee-401d-9127-237cb20b0e0c","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Projectiles/Spark Bolt/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Projectile_SparkBolt_Normal_Blue",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

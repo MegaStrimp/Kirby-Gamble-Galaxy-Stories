@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_AbilityHat_Stone_KSSU_FloatReady",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"ae04a605-bbe1-4abf-82c2-a6410bb8a266","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ae04a605-bbe1-4abf-82c2-a6410bb8a266","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady.yy",},"LayerId":{"name":"4d52e9c7-7099-4cf8-8176-d2cd972ecb68","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Stone_KSSU_FloatReady","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady.yy",},"resourceVersion":"1.0","name":"ae04a605-bbe1-4abf-82c2-a6410bb8a266","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7021eec2-5b36-4a29-ab59-728f3c02d226","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7021eec2-5b36-4a29-ab59-728f3c02d226","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady.yy",},"LayerId":{"name":"4d52e9c7-7099-4cf8-8176-d2cd972ecb68","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Stone_KSSU_FloatReady","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady.yy",},"resourceVersion":"1.0","name":"7021eec2-5b36-4a29-ab59-728f3c02d226","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"53661b5a-accd-4884-8a5c-c0ea03786d26","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"53661b5a-accd-4884-8a5c-c0ea03786d26","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady.yy",},"LayerId":{"name":"4d52e9c7-7099-4cf8-8176-d2cd972ecb68","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Stone_KSSU_FloatReady","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady.yy",},"resourceVersion":"1.0","name":"53661b5a-accd-4884-8a5c-c0ea03786d26","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ca219e44-91be-4565-b4ae-4c870781224b","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ca219e44-91be-4565-b4ae-4c870781224b","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady.yy",},"LayerId":{"name":"4d52e9c7-7099-4cf8-8176-d2cd972ecb68","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Stone_KSSU_FloatReady","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady.yy",},"resourceVersion":"1.0","name":"ca219e44-91be-4565-b4ae-4c870781224b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ae04a605-bbe1-4abf-82c2-a6410bb8a266",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7021eec2-5b36-4a29-ab59-728f3c02d226",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"53661b5a-accd-4884-8a5c-c0ea03786d26",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ca219e44-91be-4565-b4ae-4c870781224b",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_AbilityHat_Stone_KSSU_FloatReady","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_AbilityHat_Stone_KSSU_FloatReady",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 21.0,
@@ -46,15 +43,15 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 4.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"3f06ef64-fcf4-48ad-87b6-b1b3a8bc7e72","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ae04a605-bbe1-4abf-82c2-a6410bb8a266","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"7b4c31c7-9aa3-495f-8853-e3c3a9e1ec43","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7021eec2-5b36-4a29-ab59-728f3c02d226","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"ba3671bf-97f3-4ede-9eaa-e7c854c9891b","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"53661b5a-accd-4884-8a5c-c0ea03786d26","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"7679f3f3-2bc0-4f41-a05b-428d6c23701c","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ca219e44-91be-4565-b4ae-4c870781224b","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"3f06ef64-fcf4-48ad-87b6-b1b3a8bc7e72","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ae04a605-bbe1-4abf-82c2-a6410bb8a266","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"7b4c31c7-9aa3-495f-8853-e3c3a9e1ec43","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7021eec2-5b36-4a29-ab59-728f3c02d226","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ba3671bf-97f3-4ede-9eaa-e7c854c9891b","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"53661b5a-accd-4884-8a5c-c0ea03786d26","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"7679f3f3-2bc0-4f41-a05b-428d6c23701c","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ca219e44-91be-4565-b4ae-4c870781224b","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -70,22 +67,13 @@
     "yorigin": 25,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_AbilityHat_Stone_KSSU_FloatReady","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady/spr_Kirby_AbilityHat_Stone_KSSU_FloatReady.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_AbilityHat_Stone_KSSU_FloatReady",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4d52e9c7-7099-4cf8-8176-d2cd972ecb68","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"4d52e9c7-7099-4cf8-8176-d2cd972ecb68","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Hat",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Stone/KSSU/Hat.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_AbilityHat_Stone_KSSU_FloatReady",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

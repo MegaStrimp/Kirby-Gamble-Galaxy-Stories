@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_AbilityHat_Stone_KSSU_Jump",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"e46200a3-c1de-4efc-81e4-556ebfb84f55","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_Jump/spr_Kirby_AbilityHat_Stone_KSSU_Jump.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e46200a3-c1de-4efc-81e4-556ebfb84f55","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_Jump/spr_Kirby_AbilityHat_Stone_KSSU_Jump.yy",},"LayerId":{"name":"bdc9e29b-5551-4129-a285-67808911b398","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_Jump/spr_Kirby_AbilityHat_Stone_KSSU_Jump.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Stone_KSSU_Jump","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_Jump/spr_Kirby_AbilityHat_Stone_KSSU_Jump.yy",},"resourceVersion":"1.0","name":"e46200a3-c1de-4efc-81e4-556ebfb84f55","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"af38f7bf-0c6b-43ac-8346-54134356cca9","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_Jump/spr_Kirby_AbilityHat_Stone_KSSU_Jump.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"af38f7bf-0c6b-43ac-8346-54134356cca9","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_Jump/spr_Kirby_AbilityHat_Stone_KSSU_Jump.yy",},"LayerId":{"name":"bdc9e29b-5551-4129-a285-67808911b398","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_Jump/spr_Kirby_AbilityHat_Stone_KSSU_Jump.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_AbilityHat_Stone_KSSU_Jump","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_Jump/spr_Kirby_AbilityHat_Stone_KSSU_Jump.yy",},"resourceVersion":"1.0","name":"af38f7bf-0c6b-43ac-8346-54134356cca9","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e46200a3-c1de-4efc-81e4-556ebfb84f55",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"af38f7bf-0c6b-43ac-8346-54134356cca9",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_AbilityHat_Stone_KSSU_Jump","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_Jump/spr_Kirby_AbilityHat_Stone_KSSU_Jump.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_AbilityHat_Stone_KSSU_Jump",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 18.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"37ee2710-eeb1-4ede-9b55-bc4197408c0f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e46200a3-c1de-4efc-81e4-556ebfb84f55","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_Jump/spr_Kirby_AbilityHat_Stone_KSSU_Jump.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"5f08be3d-2f04-42ad-9932-0ab9b601d47d","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"af38f7bf-0c6b-43ac-8346-54134356cca9","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_Jump/spr_Kirby_AbilityHat_Stone_KSSU_Jump.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"37ee2710-eeb1-4ede-9b55-bc4197408c0f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e46200a3-c1de-4efc-81e4-556ebfb84f55","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_Jump/spr_Kirby_AbilityHat_Stone_KSSU_Jump.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"5f08be3d-2f04-42ad-9932-0ab9b601d47d","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"af38f7bf-0c6b-43ac-8346-54134356cca9","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_Jump/spr_Kirby_AbilityHat_Stone_KSSU_Jump.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -62,22 +63,13 @@
     "yorigin": 24,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_AbilityHat_Stone_KSSU_Jump","path":"sprites/spr_Kirby_AbilityHat_Stone_KSSU_Jump/spr_Kirby_AbilityHat_Stone_KSSU_Jump.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_AbilityHat_Stone_KSSU_Jump",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"bdc9e29b-5551-4129-a285-67808911b398","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"bdc9e29b-5551-4129-a285-67808911b398","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Hat",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Stone/KSSU/Hat.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_AbilityHat_Stone_KSSU_Jump",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

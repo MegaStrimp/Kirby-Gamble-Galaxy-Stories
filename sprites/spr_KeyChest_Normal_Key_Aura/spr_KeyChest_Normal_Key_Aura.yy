@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_KeyChest_Normal_Key_Aura",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6936e350-35a4-45bd-a069-f12e46855d33","path":"sprites/spr_KeyChest_Normal_Key_Aura/spr_KeyChest_Normal_Key_Aura.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6936e350-35a4-45bd-a069-f12e46855d33","path":"sprites/spr_KeyChest_Normal_Key_Aura/spr_KeyChest_Normal_Key_Aura.yy",},"LayerId":{"name":"1125ace1-f256-4e84-bf55-a29bb895e3c9","path":"sprites/spr_KeyChest_Normal_Key_Aura/spr_KeyChest_Normal_Key_Aura.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_KeyChest_Normal_Key_Aura","path":"sprites/spr_KeyChest_Normal_Key_Aura/spr_KeyChest_Normal_Key_Aura.yy",},"resourceVersion":"1.0","name":"6936e350-35a4-45bd-a069-f12e46855d33","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6936e350-35a4-45bd-a069-f12e46855d33",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_KeyChest_Normal_Key_Aura","path":"sprites/spr_KeyChest_Normal_Key_Aura/spr_KeyChest_Normal_Key_Aura.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_KeyChest_Normal_Key_Aura",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"f321ab08-d924-4c75-891e-36cca21f7ce6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6936e350-35a4-45bd-a069-f12e46855d33","path":"sprites/spr_KeyChest_Normal_Key_Aura/spr_KeyChest_Normal_Key_Aura.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"f321ab08-d924-4c75-891e-36cca21f7ce6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6936e350-35a4-45bd-a069-f12e46855d33","path":"sprites/spr_KeyChest_Normal_Key_Aura/spr_KeyChest_Normal_Key_Aura.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 14,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_KeyChest_Normal_Key_Aura","path":"sprites/spr_KeyChest_Normal_Key_Aura/spr_KeyChest_Normal_Key_Aura.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_KeyChest_Normal_Key_Aura",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1125ace1-f256-4e84-bf55-a29bb895e3c9","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"1125ace1-f256-4e84-bf55-a29bb895e3c9","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Stage Elements/Key Chest/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_KeyChest_Normal_Key_Aura",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

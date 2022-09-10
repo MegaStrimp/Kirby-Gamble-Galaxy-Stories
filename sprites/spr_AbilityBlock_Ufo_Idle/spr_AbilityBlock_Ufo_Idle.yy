@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_AbilityBlock_Ufo_Idle",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"655e5db2-bdf9-4d11-a4f7-9435e30852fd","path":"sprites/spr_AbilityBlock_Ufo_Idle/spr_AbilityBlock_Ufo_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"655e5db2-bdf9-4d11-a4f7-9435e30852fd","path":"sprites/spr_AbilityBlock_Ufo_Idle/spr_AbilityBlock_Ufo_Idle.yy",},"LayerId":{"name":"27e3b05d-5408-4340-8164-1b99c2420a67","path":"sprites/spr_AbilityBlock_Ufo_Idle/spr_AbilityBlock_Ufo_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_AbilityBlock_Ufo_Idle","path":"sprites/spr_AbilityBlock_Ufo_Idle/spr_AbilityBlock_Ufo_Idle.yy",},"resourceVersion":"1.0","name":"655e5db2-bdf9-4d11-a4f7-9435e30852fd","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"655e5db2-bdf9-4d11-a4f7-9435e30852fd",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_AbilityBlock_Ufo_Idle","path":"sprites/spr_AbilityBlock_Ufo_Idle/spr_AbilityBlock_Ufo_Idle.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_AbilityBlock_Ufo_Idle",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"c619ae72-3c63-4056-9d9f-9abf91f966d4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"655e5db2-bdf9-4d11-a4f7-9435e30852fd","path":"sprites/spr_AbilityBlock_Ufo_Idle/spr_AbilityBlock_Ufo_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"c619ae72-3c63-4056-9d9f-9abf91f966d4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"655e5db2-bdf9-4d11-a4f7-9435e30852fd","path":"sprites/spr_AbilityBlock_Ufo_Idle/spr_AbilityBlock_Ufo_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_AbilityBlock_Ufo_Idle","path":"sprites/spr_AbilityBlock_Ufo_Idle/spr_AbilityBlock_Ufo_Idle.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_AbilityBlock_Ufo_Idle",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"27e3b05d-5408-4340-8164-1b99c2420a67","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"27e3b05d-5408-4340-8164-1b99c2420a67","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Ufo",
     "path": "folders/Sprites/Stage Elements/Ability Block/Ufo.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_AbilityBlock_Ufo_Idle",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

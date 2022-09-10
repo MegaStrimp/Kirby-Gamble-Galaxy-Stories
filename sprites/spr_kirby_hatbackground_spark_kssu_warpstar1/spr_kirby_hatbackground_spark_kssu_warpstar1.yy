@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Kirby_HatBackground_Spark_KSSU_WarpStar1",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"29ed8183-6603-45d6-bcd8-a0dc88125c6a","path":"sprites/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"29ed8183-6603-45d6-bcd8-a0dc88125c6a","path":"sprites/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1.yy",},"LayerId":{"name":"713a2cf1-99b9-42ac-a245-3b4a4f21b89e","path":"sprites/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatBackground_Spark_KSSU_WarpStar1","path":"sprites/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1.yy",},"resourceVersion":"1.0","name":"29ed8183-6603-45d6-bcd8-a0dc88125c6a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e09284c2-8118-4713-861e-c56cd9f4f8a2","path":"sprites/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e09284c2-8118-4713-861e-c56cd9f4f8a2","path":"sprites/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1.yy",},"LayerId":{"name":"713a2cf1-99b9-42ac-a245-3b4a4f21b89e","path":"sprites/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatBackground_Spark_KSSU_WarpStar1","path":"sprites/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1.yy",},"resourceVersion":"1.0","name":"e09284c2-8118-4713-861e-c56cd9f4f8a2","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"845160ab-396d-4456-8c62-b66a240e877b","path":"sprites/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"845160ab-396d-4456-8c62-b66a240e877b","path":"sprites/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1.yy",},"LayerId":{"name":"713a2cf1-99b9-42ac-a245-3b4a4f21b89e","path":"sprites/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatBackground_Spark_KSSU_WarpStar1","path":"sprites/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1.yy",},"resourceVersion":"1.0","name":"845160ab-396d-4456-8c62-b66a240e877b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"84292532-a113-486f-99a3-569875727ad1","path":"sprites/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"84292532-a113-486f-99a3-569875727ad1","path":"sprites/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1.yy",},"LayerId":{"name":"713a2cf1-99b9-42ac-a245-3b4a4f21b89e","path":"sprites/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Kirby_HatBackground_Spark_KSSU_WarpStar1","path":"sprites/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1.yy",},"resourceVersion":"1.0","name":"84292532-a113-486f-99a3-569875727ad1","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"29ed8183-6603-45d6-bcd8-a0dc88125c6a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e09284c2-8118-4713-861e-c56cd9f4f8a2",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"845160ab-396d-4456-8c62-b66a240e877b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"84292532-a113-486f-99a3-569875727ad1",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Kirby_HatBackground_Spark_KSSU_WarpStar1","path":"sprites/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Kirby_HatBackground_Spark_KSSU_WarpStar1",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 12.0,
@@ -46,15 +43,15 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 4.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"fdb34e9d-774e-4fca-995b-06273c66056c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"29ed8183-6603-45d6-bcd8-a0dc88125c6a","path":"sprites/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"f8879107-49d8-46d5-82c6-9a04bf0fbbb2","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e09284c2-8118-4713-861e-c56cd9f4f8a2","path":"sprites/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"7f6e6a66-dfde-4087-8e25-d55f3e7d4581","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"845160ab-396d-4456-8c62-b66a240e877b","path":"sprites/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"f10204da-5132-4815-8601-9c1de868a445","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"84292532-a113-486f-99a3-569875727ad1","path":"sprites/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"fdb34e9d-774e-4fca-995b-06273c66056c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"29ed8183-6603-45d6-bcd8-a0dc88125c6a","path":"sprites/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f8879107-49d8-46d5-82c6-9a04bf0fbbb2","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e09284c2-8118-4713-861e-c56cd9f4f8a2","path":"sprites/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"7f6e6a66-dfde-4087-8e25-d55f3e7d4581","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"845160ab-396d-4456-8c62-b66a240e877b","path":"sprites/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f10204da-5132-4815-8601-9c1de868a445","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"84292532-a113-486f-99a3-569875727ad1","path":"sprites/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -70,22 +67,13 @@
     "yorigin": 41,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Kirby_HatBackground_Spark_KSSU_WarpStar1","path":"sprites/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1/spr_Kirby_HatBackground_Spark_KSSU_WarpStar1.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Kirby_HatBackground_Spark_KSSU_WarpStar1",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"713a2cf1-99b9-42ac-a245-3b4a4f21b89e","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"713a2cf1-99b9-42ac-a245-3b4a4f21b89e","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Background",
     "path": "folders/Sprites/Characters/Kirby/Ability Hats/Spark/KSSU/Background.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Kirby_HatBackground_Spark_KSSU_WarpStar1",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

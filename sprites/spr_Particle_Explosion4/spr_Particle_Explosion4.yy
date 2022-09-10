@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Particle_Explosion4",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b7124cd3-a718-4558-a4ce-d8671b18bfb0","path":"sprites/spr_Particle_Explosion4/spr_Particle_Explosion4.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b7124cd3-a718-4558-a4ce-d8671b18bfb0","path":"sprites/spr_Particle_Explosion4/spr_Particle_Explosion4.yy",},"LayerId":{"name":"ce3e02d4-bd47-4a76-bca0-8bb0a8d4df53","path":"sprites/spr_Particle_Explosion4/spr_Particle_Explosion4.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Particle_Explosion4","path":"sprites/spr_Particle_Explosion4/spr_Particle_Explosion4.yy",},"resourceVersion":"1.0","name":"b7124cd3-a718-4558-a4ce-d8671b18bfb0","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"35bc078a-7654-494b-b198-472ae2fa1826","path":"sprites/spr_Particle_Explosion4/spr_Particle_Explosion4.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"35bc078a-7654-494b-b198-472ae2fa1826","path":"sprites/spr_Particle_Explosion4/spr_Particle_Explosion4.yy",},"LayerId":{"name":"ce3e02d4-bd47-4a76-bca0-8bb0a8d4df53","path":"sprites/spr_Particle_Explosion4/spr_Particle_Explosion4.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Particle_Explosion4","path":"sprites/spr_Particle_Explosion4/spr_Particle_Explosion4.yy",},"resourceVersion":"1.0","name":"35bc078a-7654-494b-b198-472ae2fa1826","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8d63288d-f5b8-48cf-8a8d-043ac3e941b6","path":"sprites/spr_Particle_Explosion4/spr_Particle_Explosion4.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8d63288d-f5b8-48cf-8a8d-043ac3e941b6","path":"sprites/spr_Particle_Explosion4/spr_Particle_Explosion4.yy",},"LayerId":{"name":"ce3e02d4-bd47-4a76-bca0-8bb0a8d4df53","path":"sprites/spr_Particle_Explosion4/spr_Particle_Explosion4.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Particle_Explosion4","path":"sprites/spr_Particle_Explosion4/spr_Particle_Explosion4.yy",},"resourceVersion":"1.0","name":"8d63288d-f5b8-48cf-8a8d-043ac3e941b6","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b7124cd3-a718-4558-a4ce-d8671b18bfb0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"35bc078a-7654-494b-b198-472ae2fa1826",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8d63288d-f5b8-48cf-8a8d-043ac3e941b6",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Particle_Explosion4","path":"sprites/spr_Particle_Explosion4/spr_Particle_Explosion4.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Particle_Explosion4",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 12.0,
@@ -43,14 +42,14 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 3.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"66254c33-6ed1-4393-bfed-d692b94094d8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b7124cd3-a718-4558-a4ce-d8671b18bfb0","path":"sprites/spr_Particle_Explosion4/spr_Particle_Explosion4.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"fc8f8499-a48c-4ef5-b127-3d96f7092e45","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"35bc078a-7654-494b-b198-472ae2fa1826","path":"sprites/spr_Particle_Explosion4/spr_Particle_Explosion4.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"e0a50226-21b2-46da-9bce-2415be87416f","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8d63288d-f5b8-48cf-8a8d-043ac3e941b6","path":"sprites/spr_Particle_Explosion4/spr_Particle_Explosion4.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"66254c33-6ed1-4393-bfed-d692b94094d8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b7124cd3-a718-4558-a4ce-d8671b18bfb0","path":"sprites/spr_Particle_Explosion4/spr_Particle_Explosion4.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"fc8f8499-a48c-4ef5-b127-3d96f7092e45","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"35bc078a-7654-494b-b198-472ae2fa1826","path":"sprites/spr_Particle_Explosion4/spr_Particle_Explosion4.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e0a50226-21b2-46da-9bce-2415be87416f","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8d63288d-f5b8-48cf-8a8d-043ac3e941b6","path":"sprites/spr_Particle_Explosion4/spr_Particle_Explosion4.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -66,22 +65,13 @@
     "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Particle_Explosion4","path":"sprites/spr_Particle_Explosion4/spr_Particle_Explosion4.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Particle_Explosion4",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ce3e02d4-bd47-4a76-bca0-8bb0a8d4df53","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ce3e02d4-bd47-4a76-bca0-8bb0a8d4df53","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Particles",
     "path": "folders/Sprites/Particles.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Particle_Explosion4",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

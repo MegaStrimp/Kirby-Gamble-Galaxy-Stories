@@ -14,36 +14,44 @@ textAlpha = 0;
 goBack = false;
 textY = 147 - (selection * 36);
 paused = false;
+
+menuTitle[5] = 0;
+menuValue[5] = 0;
+menuOffset[5] = 0;
+menuOffsetLerp[5] = 0;
+
 setStrings = false;
+
+updateMenu = function(){
 
 #region Menus
 var i = 0;
-menuTitle[i] = scr_Localization_Main(stringAttributes.options_display,stringAttributes.title,0,global.language);
+menuTitle[i] = str("Options.Display");
 menuValue[i] = "Display";
 menuOffset[i] = 0;
 menuOffsetLerp[i] = 0;
 i += 1;
-menuTitle[i] = scr_Localization_Main(stringAttributes.options_audio,stringAttributes.title,0,global.language);
+menuTitle[i] = str("Options.Audio");
 menuValue[i] = "Audio";
 menuOffset[i] = 0;
 menuOffsetLerp[i] = 0;
 i += 1;
-menuTitle[i] = scr_Localization_Main(stringAttributes.options_controls,stringAttributes.title,0,global.language);
+menuTitle[i] = str("Options.Controls");
 menuValue[i] = "Controls";
 menuOffset[i] = 0;
 menuOffsetLerp[i] = 0;
 i += 1;
-menuTitle[i] = scr_Localization_Main(stringAttributes.options_language,stringAttributes.title,0,global.language);
+menuTitle[i] = str("Options.Language");
 menuValue[i] = "Language";
 menuOffset[i] = 0;
 menuOffsetLerp[i] = 0;
 i += 1;
-menuTitle[i] = scr_Localization_Main(stringAttributes.options_other,stringAttributes.title,0,global.language);
+menuTitle[i] = str("Options.Other");
 menuValue[i] = "Other";
 menuOffset[i] = 0;
 menuOffsetLerp[i] = 0;
 i += 1;
-menuTitle[i] = scr_Localization_Main(stringAttributes.options_default,stringAttributes.title,0,global.language);
+menuTitle[i] = str("Options.Default");
 menuValue[i] = "Default";
 menuOffset[i] = 0;
 menuOffsetLerp[i] = 0;
@@ -53,32 +61,69 @@ menuOffsetLerp[i] = 0;
 var i = 0;
 for (var i = 0; i < languages.length; i++)
 {
-	languageIndex[i] = scr_Localization_Main(stringAttributes.language,stringAttributes.title,i,0);
+	//languageIndex[i] = scr_Localization_Main(stringAttributes.language,stringAttributes.title,i,0);
 	languageVal[i] = i;
 }
+
+languageArray =
+[
+	"English",
+    "Turkish",
+    "German",
+    "Italian",
+    "French",
+    "Polish",
+    "Chinese",
+    "Spanish",
+    "Japanese",
+    "Portuguese",
+    "Norwegian",
+    "Arabic"
+]
+
+languageIndex =
+[
+	"Languages.English",
+    "Languages.Turkish",
+    "Languages.German",
+    "Languages.Italian",
+    "Languages.French",
+    "Languages.Polish",
+    "Languages.Chinese",
+    "Languages.Spanish",
+    "Languages.Japanese",
+    "Languages.Portuguese",
+    "Languages.Norwegian",
+    "Languages.Arabic"
+]
+
 languageArrayLength = languages.length;
 #endregion
 
 #region Misc Strings
-strTrue = scr_Localization_Main(stringAttributes.options_true,stringAttributes.title,0,global.language);
-strFalse = scr_Localization_Main(stringAttributes.options_false,stringAttributes.title,0,global.language);
-strFullscreen = scr_Localization_Main(stringAttributes.options_fullscreen,stringAttributes.title,0,global.language);
-strWindowSize = scr_Localization_Main(stringAttributes.options_windowSize,stringAttributes.title,0,global.language);
-strMusic = scr_Localization_Main(stringAttributes.options_music,stringAttributes.title,0,global.language);
-strSoundEffects = scr_Localization_Main(stringAttributes.options_soundEffects,stringAttributes.title,0,global.language);
-strLeft = scr_Localization_Main(stringAttributes.options_left,stringAttributes.title,0,global.language);
-strRight = scr_Localization_Main(stringAttributes.options_right,stringAttributes.title,0,global.language);
-strUp = scr_Localization_Main(stringAttributes.options_up,stringAttributes.title,0,global.language);
-strDown = scr_Localization_Main(stringAttributes.options_down,stringAttributes.title,0,global.language);
-strJump = scr_Localization_Main(stringAttributes.options_jump,stringAttributes.title,0,global.language);
-strAttack = scr_Localization_Main(stringAttributes.options_attack,stringAttributes.title,0,global.language);
-strStart = scr_Localization_Main(stringAttributes.options_start,stringAttributes.title,0,global.language);
-strSelect = scr_Localization_Main(stringAttributes.options_select,stringAttributes.title,0,global.language);
-strPressAnyKey = scr_Localization_Main(stringAttributes.options_pressAnyKey,stringAttributes.title,0,global.language);
-strExtraTutorials = scr_Localization_Main(stringAttributes.options_extraTutorials,stringAttributes.title,0,global.language);
-strAutoSwallow = scr_Localization_Main(stringAttributes.options_autoSwallow,stringAttributes.title,0,global.language);
-strMusicIntro = scr_Localization_Main(stringAttributes.options_musicIntro,stringAttributes.title,0,global.language);
+strTrue = str("Options.True");
+strFalse = str("Options.False");
+strFullscreen = str("Options.Fullscreen");
+strWindowSize = str("Options.Window Size");
+strMusic = str("Options.Music");
+strSoundEffects = str("Options.Sound Effects");
+strLeft = str("Options.Left");
+strRight = str("Options.Right");
+strUp = str("Options.Up");
+strDown = str("Options.Down");
+strJump = str("Options.Jump");
+strAttack = str("Options.Attack");
+strStart = str("Options.Start");
+strSelect = str("Options.Select");
+strPressAnyKey = str("Options.Press Any Key");
+strExtraTutorials = str("Options.Extra Tutorials");
+strAutoSwallow = str("Options.Auto Swallow");
+strMusicIntro = str("Options.Music Intro");
 #endregion
+
+}
+
+updateMenu();
 
 #region Spawn Buttons
 var button = instance_create_depth(480,0,depth - 1,obj_Menu_Button);

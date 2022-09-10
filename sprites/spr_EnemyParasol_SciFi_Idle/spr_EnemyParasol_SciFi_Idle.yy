@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_EnemyParasol_SciFi_Idle",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6ccfa62f-b76a-4ae0-9a68-9f17ac98b3dc","path":"sprites/spr_EnemyParasol_SciFi_Idle/spr_EnemyParasol_SciFi_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6ccfa62f-b76a-4ae0-9a68-9f17ac98b3dc","path":"sprites/spr_EnemyParasol_SciFi_Idle/spr_EnemyParasol_SciFi_Idle.yy",},"LayerId":{"name":"07575054-4875-4efd-b7c2-00a5fb2f5ad0","path":"sprites/spr_EnemyParasol_SciFi_Idle/spr_EnemyParasol_SciFi_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_EnemyParasol_SciFi_Idle","path":"sprites/spr_EnemyParasol_SciFi_Idle/spr_EnemyParasol_SciFi_Idle.yy",},"resourceVersion":"1.0","name":"6ccfa62f-b76a-4ae0-9a68-9f17ac98b3dc","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"65f41dfa-19bb-42f2-b403-e1b84e3f9618","path":"sprites/spr_EnemyParasol_SciFi_Idle/spr_EnemyParasol_SciFi_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"65f41dfa-19bb-42f2-b403-e1b84e3f9618","path":"sprites/spr_EnemyParasol_SciFi_Idle/spr_EnemyParasol_SciFi_Idle.yy",},"LayerId":{"name":"07575054-4875-4efd-b7c2-00a5fb2f5ad0","path":"sprites/spr_EnemyParasol_SciFi_Idle/spr_EnemyParasol_SciFi_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_EnemyParasol_SciFi_Idle","path":"sprites/spr_EnemyParasol_SciFi_Idle/spr_EnemyParasol_SciFi_Idle.yy",},"resourceVersion":"1.0","name":"65f41dfa-19bb-42f2-b403-e1b84e3f9618","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"abbfada2-f177-4b26-b083-7df8e12946c0","path":"sprites/spr_EnemyParasol_SciFi_Idle/spr_EnemyParasol_SciFi_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"abbfada2-f177-4b26-b083-7df8e12946c0","path":"sprites/spr_EnemyParasol_SciFi_Idle/spr_EnemyParasol_SciFi_Idle.yy",},"LayerId":{"name":"07575054-4875-4efd-b7c2-00a5fb2f5ad0","path":"sprites/spr_EnemyParasol_SciFi_Idle/spr_EnemyParasol_SciFi_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_EnemyParasol_SciFi_Idle","path":"sprites/spr_EnemyParasol_SciFi_Idle/spr_EnemyParasol_SciFi_Idle.yy",},"resourceVersion":"1.0","name":"abbfada2-f177-4b26-b083-7df8e12946c0","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"eaa5c717-b24c-4c0c-87bc-d896cc0ecd00","path":"sprites/spr_EnemyParasol_SciFi_Idle/spr_EnemyParasol_SciFi_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"eaa5c717-b24c-4c0c-87bc-d896cc0ecd00","path":"sprites/spr_EnemyParasol_SciFi_Idle/spr_EnemyParasol_SciFi_Idle.yy",},"LayerId":{"name":"07575054-4875-4efd-b7c2-00a5fb2f5ad0","path":"sprites/spr_EnemyParasol_SciFi_Idle/spr_EnemyParasol_SciFi_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_EnemyParasol_SciFi_Idle","path":"sprites/spr_EnemyParasol_SciFi_Idle/spr_EnemyParasol_SciFi_Idle.yy",},"resourceVersion":"1.0","name":"eaa5c717-b24c-4c0c-87bc-d896cc0ecd00","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6ccfa62f-b76a-4ae0-9a68-9f17ac98b3dc",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"65f41dfa-19bb-42f2-b403-e1b84e3f9618",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"abbfada2-f177-4b26-b083-7df8e12946c0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"eaa5c717-b24c-4c0c-87bc-d896cc0ecd00",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_EnemyParasol_SciFi_Idle","path":"sprites/spr_EnemyParasol_SciFi_Idle/spr_EnemyParasol_SciFi_Idle.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_EnemyParasol_SciFi_Idle",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 9.0,
@@ -46,15 +43,15 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 4.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"3245d2a3-f379-49f4-9ec8-b7deff67e8e9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6ccfa62f-b76a-4ae0-9a68-9f17ac98b3dc","path":"sprites/spr_EnemyParasol_SciFi_Idle/spr_EnemyParasol_SciFi_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"dc844863-f1af-4870-af3c-bec254366ebf","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"65f41dfa-19bb-42f2-b403-e1b84e3f9618","path":"sprites/spr_EnemyParasol_SciFi_Idle/spr_EnemyParasol_SciFi_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"05ef5379-10fe-4e4c-b16c-ce89396a7553","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"abbfada2-f177-4b26-b083-7df8e12946c0","path":"sprites/spr_EnemyParasol_SciFi_Idle/spr_EnemyParasol_SciFi_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"7b5ebb2a-cdf2-4ac0-8733-e76afa01e95e","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"eaa5c717-b24c-4c0c-87bc-d896cc0ecd00","path":"sprites/spr_EnemyParasol_SciFi_Idle/spr_EnemyParasol_SciFi_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"3245d2a3-f379-49f4-9ec8-b7deff67e8e9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6ccfa62f-b76a-4ae0-9a68-9f17ac98b3dc","path":"sprites/spr_EnemyParasol_SciFi_Idle/spr_EnemyParasol_SciFi_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"dc844863-f1af-4870-af3c-bec254366ebf","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"65f41dfa-19bb-42f2-b403-e1b84e3f9618","path":"sprites/spr_EnemyParasol_SciFi_Idle/spr_EnemyParasol_SciFi_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"05ef5379-10fe-4e4c-b16c-ce89396a7553","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"abbfada2-f177-4b26-b083-7df8e12946c0","path":"sprites/spr_EnemyParasol_SciFi_Idle/spr_EnemyParasol_SciFi_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"7b5ebb2a-cdf2-4ac0-8733-e76afa01e95e","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"eaa5c717-b24c-4c0c-87bc-d896cc0ecd00","path":"sprites/spr_EnemyParasol_SciFi_Idle/spr_EnemyParasol_SciFi_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -70,22 +67,13 @@
     "yorigin": 18,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_EnemyParasol_SciFi_Idle","path":"sprites/spr_EnemyParasol_SciFi_Idle/spr_EnemyParasol_SciFi_Idle.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_EnemyParasol_SciFi_Idle",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"07575054-4875-4efd-b7c2-00a5fb2f5ad0","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"07575054-4875-4efd-b7c2-00a5fb2f5ad0","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Sci-Fi",
     "path": "folders/Sprites/Enemies/Enemy Parasol/Sci-Fi.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_EnemyParasol_SciFi_Idle",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

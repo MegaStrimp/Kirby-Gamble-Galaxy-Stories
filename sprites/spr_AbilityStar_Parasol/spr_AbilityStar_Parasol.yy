@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_AbilityStar_Parasol",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"ce91cb95-ac7e-46db-b0f5-3fdffbf4f468","path":"sprites/spr_AbilityStar_Parasol/spr_AbilityStar_Parasol.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ce91cb95-ac7e-46db-b0f5-3fdffbf4f468","path":"sprites/spr_AbilityStar_Parasol/spr_AbilityStar_Parasol.yy",},"LayerId":{"name":"8af1ca5a-e1c9-40b8-a189-2e2664e285f0","path":"sprites/spr_AbilityStar_Parasol/spr_AbilityStar_Parasol.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_AbilityStar_Parasol","path":"sprites/spr_AbilityStar_Parasol/spr_AbilityStar_Parasol.yy",},"resourceVersion":"1.0","name":"ce91cb95-ac7e-46db-b0f5-3fdffbf4f468","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0550ffc3-5a31-4488-9411-789c66c5825a","path":"sprites/spr_AbilityStar_Parasol/spr_AbilityStar_Parasol.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0550ffc3-5a31-4488-9411-789c66c5825a","path":"sprites/spr_AbilityStar_Parasol/spr_AbilityStar_Parasol.yy",},"LayerId":{"name":"8af1ca5a-e1c9-40b8-a189-2e2664e285f0","path":"sprites/spr_AbilityStar_Parasol/spr_AbilityStar_Parasol.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_AbilityStar_Parasol","path":"sprites/spr_AbilityStar_Parasol/spr_AbilityStar_Parasol.yy",},"resourceVersion":"1.0","name":"0550ffc3-5a31-4488-9411-789c66c5825a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ce91cb95-ac7e-46db-b0f5-3fdffbf4f468",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0550ffc3-5a31-4488-9411-789c66c5825a",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_AbilityStar_Parasol","path":"sprites/spr_AbilityStar_Parasol/spr_AbilityStar_Parasol.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_AbilityStar_Parasol",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 15.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"3d2f7e23-9314-4e28-9aea-9453bce9f627","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ce91cb95-ac7e-46db-b0f5-3fdffbf4f468","path":"sprites/spr_AbilityStar_Parasol/spr_AbilityStar_Parasol.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"e7f2db8c-7aaf-43a2-b709-bc34ccbbc376","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0550ffc3-5a31-4488-9411-789c66c5825a","path":"sprites/spr_AbilityStar_Parasol/spr_AbilityStar_Parasol.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"3d2f7e23-9314-4e28-9aea-9453bce9f627","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ce91cb95-ac7e-46db-b0f5-3fdffbf4f468","path":"sprites/spr_AbilityStar_Parasol/spr_AbilityStar_Parasol.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e7f2db8c-7aaf-43a2-b709-bc34ccbbc376","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0550ffc3-5a31-4488-9411-789c66c5825a","path":"sprites/spr_AbilityStar_Parasol/spr_AbilityStar_Parasol.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -62,22 +63,13 @@
     "yorigin": 11,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_AbilityStar_Parasol","path":"sprites/spr_AbilityStar_Parasol/spr_AbilityStar_Parasol.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_AbilityStar_Parasol",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8af1ca5a-e1c9-40b8-a189-2e2664e285f0","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"8af1ca5a-e1c9-40b8-a189-2e2664e285f0","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Ability Stars",
     "path": "folders/Sprites/Misc/Ability Stars.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_AbilityStar_Parasol",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

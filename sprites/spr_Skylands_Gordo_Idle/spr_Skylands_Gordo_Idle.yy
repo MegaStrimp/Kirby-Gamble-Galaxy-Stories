@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Skylands_Gordo_Idle",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"10fa32af-8ebe-4075-a42c-3bd688c58bcd","path":"sprites/spr_Skylands_Gordo_Idle/spr_Skylands_Gordo_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"10fa32af-8ebe-4075-a42c-3bd688c58bcd","path":"sprites/spr_Skylands_Gordo_Idle/spr_Skylands_Gordo_Idle.yy",},"LayerId":{"name":"5791dd89-96b3-49e5-8fc5-3454d0212b57","path":"sprites/spr_Skylands_Gordo_Idle/spr_Skylands_Gordo_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Skylands_Gordo_Idle","path":"sprites/spr_Skylands_Gordo_Idle/spr_Skylands_Gordo_Idle.yy",},"resourceVersion":"1.0","name":"10fa32af-8ebe-4075-a42c-3bd688c58bcd","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"01a549b4-cb3b-429e-aabe-12f53402471a","path":"sprites/spr_Skylands_Gordo_Idle/spr_Skylands_Gordo_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"01a549b4-cb3b-429e-aabe-12f53402471a","path":"sprites/spr_Skylands_Gordo_Idle/spr_Skylands_Gordo_Idle.yy",},"LayerId":{"name":"5791dd89-96b3-49e5-8fc5-3454d0212b57","path":"sprites/spr_Skylands_Gordo_Idle/spr_Skylands_Gordo_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Skylands_Gordo_Idle","path":"sprites/spr_Skylands_Gordo_Idle/spr_Skylands_Gordo_Idle.yy",},"resourceVersion":"1.0","name":"01a549b4-cb3b-429e-aabe-12f53402471a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"10fa32af-8ebe-4075-a42c-3bd688c58bcd",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"01a549b4-cb3b-429e-aabe-12f53402471a",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Skylands_Gordo_Idle","path":"sprites/spr_Skylands_Gordo_Idle/spr_Skylands_Gordo_Idle.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Skylands_Gordo_Idle",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 6.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"3836689a-23f9-493d-8af1-6bd33d658ea3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"10fa32af-8ebe-4075-a42c-3bd688c58bcd","path":"sprites/spr_Skylands_Gordo_Idle/spr_Skylands_Gordo_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"f8321d52-a7dc-42b4-8728-f38d3f0f102e","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"01a549b4-cb3b-429e-aabe-12f53402471a","path":"sprites/spr_Skylands_Gordo_Idle/spr_Skylands_Gordo_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"3836689a-23f9-493d-8af1-6bd33d658ea3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"10fa32af-8ebe-4075-a42c-3bd688c58bcd","path":"sprites/spr_Skylands_Gordo_Idle/spr_Skylands_Gordo_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f8321d52-a7dc-42b4-8728-f38d3f0f102e","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"01a549b4-cb3b-429e-aabe-12f53402471a","path":"sprites/spr_Skylands_Gordo_Idle/spr_Skylands_Gordo_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -62,22 +63,13 @@
     "yorigin": 14,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Skylands_Gordo_Idle","path":"sprites/spr_Skylands_Gordo_Idle/spr_Skylands_Gordo_Idle.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Skylands_Gordo_Idle",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5791dd89-96b3-49e5-8fc5-3454d0212b57","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"5791dd89-96b3-49e5-8fc5-3454d0212b57","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Gordo",
     "path": "folders/Sprites/Subgames/Skylands/Enemies/Gordo.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Skylands_Gordo_Idle",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Menu_Collection_Cheats_Disc",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"faf0d7d1-78c2-4b7c-b163-773d58fe0f3d","path":"sprites/spr_Menu_Collection_Cheats_Disc/spr_Menu_Collection_Cheats_Disc.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"faf0d7d1-78c2-4b7c-b163-773d58fe0f3d","path":"sprites/spr_Menu_Collection_Cheats_Disc/spr_Menu_Collection_Cheats_Disc.yy",},"LayerId":{"name":"7800811b-02c3-4860-8fef-b0f456829597","path":"sprites/spr_Menu_Collection_Cheats_Disc/spr_Menu_Collection_Cheats_Disc.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Menu_Collection_Cheats_Disc","path":"sprites/spr_Menu_Collection_Cheats_Disc/spr_Menu_Collection_Cheats_Disc.yy",},"resourceVersion":"1.0","name":"faf0d7d1-78c2-4b7c-b163-773d58fe0f3d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2ad66ff4-ab1a-4e4e-8830-b2883d3cf79e","path":"sprites/spr_Menu_Collection_Cheats_Disc/spr_Menu_Collection_Cheats_Disc.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2ad66ff4-ab1a-4e4e-8830-b2883d3cf79e","path":"sprites/spr_Menu_Collection_Cheats_Disc/spr_Menu_Collection_Cheats_Disc.yy",},"LayerId":{"name":"7800811b-02c3-4860-8fef-b0f456829597","path":"sprites/spr_Menu_Collection_Cheats_Disc/spr_Menu_Collection_Cheats_Disc.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Menu_Collection_Cheats_Disc","path":"sprites/spr_Menu_Collection_Cheats_Disc/spr_Menu_Collection_Cheats_Disc.yy",},"resourceVersion":"1.0","name":"2ad66ff4-ab1a-4e4e-8830-b2883d3cf79e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c5894d68-49c1-4e36-8286-f17fb04654be","path":"sprites/spr_Menu_Collection_Cheats_Disc/spr_Menu_Collection_Cheats_Disc.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c5894d68-49c1-4e36-8286-f17fb04654be","path":"sprites/spr_Menu_Collection_Cheats_Disc/spr_Menu_Collection_Cheats_Disc.yy",},"LayerId":{"name":"7800811b-02c3-4860-8fef-b0f456829597","path":"sprites/spr_Menu_Collection_Cheats_Disc/spr_Menu_Collection_Cheats_Disc.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Menu_Collection_Cheats_Disc","path":"sprites/spr_Menu_Collection_Cheats_Disc/spr_Menu_Collection_Cheats_Disc.yy",},"resourceVersion":"1.0","name":"c5894d68-49c1-4e36-8286-f17fb04654be","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"faf0d7d1-78c2-4b7c-b163-773d58fe0f3d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2ad66ff4-ab1a-4e4e-8830-b2883d3cf79e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c5894d68-49c1-4e36-8286-f17fb04654be",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Menu_Collection_Cheats_Disc","path":"sprites/spr_Menu_Collection_Cheats_Disc/spr_Menu_Collection_Cheats_Disc.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Menu_Collection_Cheats_Disc",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -43,14 +42,14 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 3.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"b013300d-2b21-4dbd-93b7-1174a872b28d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"faf0d7d1-78c2-4b7c-b163-773d58fe0f3d","path":"sprites/spr_Menu_Collection_Cheats_Disc/spr_Menu_Collection_Cheats_Disc.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"b541b316-43f8-4d4d-961d-6554ac247ab6","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2ad66ff4-ab1a-4e4e-8830-b2883d3cf79e","path":"sprites/spr_Menu_Collection_Cheats_Disc/spr_Menu_Collection_Cheats_Disc.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"b1dddb21-bd63-4908-917b-5611216c454f","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c5894d68-49c1-4e36-8286-f17fb04654be","path":"sprites/spr_Menu_Collection_Cheats_Disc/spr_Menu_Collection_Cheats_Disc.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"b013300d-2b21-4dbd-93b7-1174a872b28d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"faf0d7d1-78c2-4b7c-b163-773d58fe0f3d","path":"sprites/spr_Menu_Collection_Cheats_Disc/spr_Menu_Collection_Cheats_Disc.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b541b316-43f8-4d4d-961d-6554ac247ab6","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2ad66ff4-ab1a-4e4e-8830-b2883d3cf79e","path":"sprites/spr_Menu_Collection_Cheats_Disc/spr_Menu_Collection_Cheats_Disc.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b1dddb21-bd63-4908-917b-5611216c454f","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c5894d68-49c1-4e36-8286-f17fb04654be","path":"sprites/spr_Menu_Collection_Cheats_Disc/spr_Menu_Collection_Cheats_Disc.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -66,22 +65,13 @@
     "yorigin": 55,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Menu_Collection_Cheats_Disc","path":"sprites/spr_Menu_Collection_Cheats_Disc/spr_Menu_Collection_Cheats_Disc.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Menu_Collection_Cheats_Disc",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7800811b-02c3-4860-8fef-b0f456829597","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"7800811b-02c3-4860-8fef-b0f456829597","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Cheats",
     "path": "folders/Sprites/Menu/Collection Menu/Cheats.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Menu_Collection_Cheats_Disc",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Background_BattleshipHalberd_OrangeLight",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"ffa9c685-be51-458a-840d-80aecc24e569","path":"sprites/spr_Background_BattleshipHalberd_OrangeLight/spr_Background_BattleshipHalberd_OrangeLight.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ffa9c685-be51-458a-840d-80aecc24e569","path":"sprites/spr_Background_BattleshipHalberd_OrangeLight/spr_Background_BattleshipHalberd_OrangeLight.yy",},"LayerId":{"name":"8f6123e6-9d03-4c0c-9939-19fe1554dec1","path":"sprites/spr_Background_BattleshipHalberd_OrangeLight/spr_Background_BattleshipHalberd_OrangeLight.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Background_BattleshipHalberd_OrangeLight","path":"sprites/spr_Background_BattleshipHalberd_OrangeLight/spr_Background_BattleshipHalberd_OrangeLight.yy",},"resourceVersion":"1.0","name":"ffa9c685-be51-458a-840d-80aecc24e569","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9447502d-e3b4-4819-b121-ba5bfa75c929","path":"sprites/spr_Background_BattleshipHalberd_OrangeLight/spr_Background_BattleshipHalberd_OrangeLight.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9447502d-e3b4-4819-b121-ba5bfa75c929","path":"sprites/spr_Background_BattleshipHalberd_OrangeLight/spr_Background_BattleshipHalberd_OrangeLight.yy",},"LayerId":{"name":"8f6123e6-9d03-4c0c-9939-19fe1554dec1","path":"sprites/spr_Background_BattleshipHalberd_OrangeLight/spr_Background_BattleshipHalberd_OrangeLight.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Background_BattleshipHalberd_OrangeLight","path":"sprites/spr_Background_BattleshipHalberd_OrangeLight/spr_Background_BattleshipHalberd_OrangeLight.yy",},"resourceVersion":"1.0","name":"9447502d-e3b4-4819-b121-ba5bfa75c929","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"da4e8542-2f10-4880-8d12-d52264566650","path":"sprites/spr_Background_BattleshipHalberd_OrangeLight/spr_Background_BattleshipHalberd_OrangeLight.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"da4e8542-2f10-4880-8d12-d52264566650","path":"sprites/spr_Background_BattleshipHalberd_OrangeLight/spr_Background_BattleshipHalberd_OrangeLight.yy",},"LayerId":{"name":"8f6123e6-9d03-4c0c-9939-19fe1554dec1","path":"sprites/spr_Background_BattleshipHalberd_OrangeLight/spr_Background_BattleshipHalberd_OrangeLight.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Background_BattleshipHalberd_OrangeLight","path":"sprites/spr_Background_BattleshipHalberd_OrangeLight/spr_Background_BattleshipHalberd_OrangeLight.yy",},"resourceVersion":"1.0","name":"da4e8542-2f10-4880-8d12-d52264566650","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ffa9c685-be51-458a-840d-80aecc24e569",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9447502d-e3b4-4819-b121-ba5bfa75c929",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"da4e8542-2f10-4880-8d12-d52264566650",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Background_BattleshipHalberd_OrangeLight","path":"sprites/spr_Background_BattleshipHalberd_OrangeLight/spr_Background_BattleshipHalberd_OrangeLight.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Background_BattleshipHalberd_OrangeLight",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 15.0,
@@ -43,14 +42,14 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 3.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"5da1d045-4ea5-442e-9404-3edb770ef7a3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ffa9c685-be51-458a-840d-80aecc24e569","path":"sprites/spr_Background_BattleshipHalberd_OrangeLight/spr_Background_BattleshipHalberd_OrangeLight.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"bcd0248e-6276-4d24-a432-e20466461849","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9447502d-e3b4-4819-b121-ba5bfa75c929","path":"sprites/spr_Background_BattleshipHalberd_OrangeLight/spr_Background_BattleshipHalberd_OrangeLight.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"b46b202b-ae2f-4f4a-9673-048933ea57ea","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"da4e8542-2f10-4880-8d12-d52264566650","path":"sprites/spr_Background_BattleshipHalberd_OrangeLight/spr_Background_BattleshipHalberd_OrangeLight.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"5da1d045-4ea5-442e-9404-3edb770ef7a3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ffa9c685-be51-458a-840d-80aecc24e569","path":"sprites/spr_Background_BattleshipHalberd_OrangeLight/spr_Background_BattleshipHalberd_OrangeLight.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"bcd0248e-6276-4d24-a432-e20466461849","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9447502d-e3b4-4819-b121-ba5bfa75c929","path":"sprites/spr_Background_BattleshipHalberd_OrangeLight/spr_Background_BattleshipHalberd_OrangeLight.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b46b202b-ae2f-4f4a-9673-048933ea57ea","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"da4e8542-2f10-4880-8d12-d52264566650","path":"sprites/spr_Background_BattleshipHalberd_OrangeLight/spr_Background_BattleshipHalberd_OrangeLight.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -66,22 +65,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Background_BattleshipHalberd_OrangeLight","path":"sprites/spr_Background_BattleshipHalberd_OrangeLight/spr_Background_BattleshipHalberd_OrangeLight.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Background_BattleshipHalberd_OrangeLight",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8f6123e6-9d03-4c0c-9939-19fe1554dec1","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"8f6123e6-9d03-4c0c-9939-19fe1554dec1","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Battleship Halberd",
     "path": "folders/Sprites/Stage Elements/Background Elements/Battleship Halberd.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Background_BattleshipHalberd_OrangeLight",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

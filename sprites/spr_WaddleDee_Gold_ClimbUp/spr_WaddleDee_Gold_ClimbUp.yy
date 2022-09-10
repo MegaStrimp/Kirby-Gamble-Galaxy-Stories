@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_WaddleDee_Gold_ClimbUp",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,27 +27,17 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"938879e9-2b60-42f8-a8cb-b846466dbc2f","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"938879e9-2b60-42f8-a8cb-b846466dbc2f","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_WaddleDee_Gold_ClimbUp","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"resourceVersion":"1.0","name":"938879e9-2b60-42f8-a8cb-b846466dbc2f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7990472a-b0e0-4578-b815-1b9821e93327","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7990472a-b0e0-4578-b815-1b9821e93327","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_WaddleDee_Gold_ClimbUp","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"resourceVersion":"1.0","name":"7990472a-b0e0-4578-b815-1b9821e93327","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"67b71fc0-fd53-4a5c-83f0-113e32689c37","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"67b71fc0-fd53-4a5c-83f0-113e32689c37","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_WaddleDee_Gold_ClimbUp","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"resourceVersion":"1.0","name":"67b71fc0-fd53-4a5c-83f0-113e32689c37","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"01d149fc-4e90-4248-8855-4c184f910614","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"01d149fc-4e90-4248-8855-4c184f910614","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_WaddleDee_Gold_ClimbUp","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"resourceVersion":"1.0","name":"01d149fc-4e90-4248-8855-4c184f910614","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c7244ab9-c203-47d1-aba6-caea6d5c9f0f","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c7244ab9-c203-47d1-aba6-caea6d5c9f0f","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_WaddleDee_Gold_ClimbUp","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"resourceVersion":"1.0","name":"c7244ab9-c203-47d1-aba6-caea6d5c9f0f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9e737415-14ef-4830-aaa2-aa5f259e1a4b","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9e737415-14ef-4830-aaa2-aa5f259e1a4b","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"LayerId":{"name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_WaddleDee_Gold_ClimbUp","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"resourceVersion":"1.0","name":"9e737415-14ef-4830-aaa2-aa5f259e1a4b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"938879e9-2b60-42f8-a8cb-b846466dbc2f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7990472a-b0e0-4578-b815-1b9821e93327",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"67b71fc0-fd53-4a5c-83f0-113e32689c37",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"01d149fc-4e90-4248-8855-4c184f910614",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c7244ab9-c203-47d1-aba6-caea6d5c9f0f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9e737415-14ef-4830-aaa2-aa5f259e1a4b",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_WaddleDee_Gold_ClimbUp","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_WaddleDee_Gold_ClimbUp",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 9.0,
@@ -52,17 +45,17 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 6.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"6c5701fc-3f22-41ae-81f1-36bb7ca4ad62","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"938879e9-2b60-42f8-a8cb-b846466dbc2f","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"ea0cc5db-f313-409a-8131-c34356b29b7d","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7990472a-b0e0-4578-b815-1b9821e93327","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"7c7d9136-7bc3-4fe2-9f23-61c667fe0841","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"67b71fc0-fd53-4a5c-83f0-113e32689c37","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"51c71d39-b58f-4ff6-84b9-d7a41c35d65e","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"01d149fc-4e90-4248-8855-4c184f910614","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"6b567612-4eab-42ad-a3fc-94d25b5b162b","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c7244ab9-c203-47d1-aba6-caea6d5c9f0f","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"7eccffbb-acfa-4bd9-a264-11605d0e7fb3","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9e737415-14ef-4830-aaa2-aa5f259e1a4b","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"6c5701fc-3f22-41ae-81f1-36bb7ca4ad62","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"938879e9-2b60-42f8-a8cb-b846466dbc2f","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ea0cc5db-f313-409a-8131-c34356b29b7d","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7990472a-b0e0-4578-b815-1b9821e93327","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"7c7d9136-7bc3-4fe2-9f23-61c667fe0841","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"67b71fc0-fd53-4a5c-83f0-113e32689c37","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"51c71d39-b58f-4ff6-84b9-d7a41c35d65e","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"01d149fc-4e90-4248-8855-4c184f910614","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6b567612-4eab-42ad-a3fc-94d25b5b162b","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c7244ab9-c203-47d1-aba6-caea6d5c9f0f","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"7eccffbb-acfa-4bd9-a264-11605d0e7fb3","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9e737415-14ef-4830-aaa2-aa5f259e1a4b","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -78,22 +71,13 @@
     "yorigin": 22,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_WaddleDee_Gold_ClimbUp","path":"sprites/spr_WaddleDee_Gold_ClimbUp/spr_WaddleDee_Gold_ClimbUp.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_WaddleDee_Gold_ClimbUp",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"47c5cec2-96a3-4d03-8fc4-983a962cd581","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Gold",
     "path": "folders/Sprites/Enemies/Waddle Dee/Gold.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_WaddleDee_Gold_ClimbUp",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

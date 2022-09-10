@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Grizzo_Normal_Dash",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,15 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"98b7efe3-bfcd-4252-8770-2dfe372e8865","path":"sprites/spr_Grizzo_Normal_Dash/spr_Grizzo_Normal_Dash.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"98b7efe3-bfcd-4252-8770-2dfe372e8865","path":"sprites/spr_Grizzo_Normal_Dash/spr_Grizzo_Normal_Dash.yy",},"LayerId":{"name":"de7ee32e-2995-4b35-9c2f-e34eca4e647a","path":"sprites/spr_Grizzo_Normal_Dash/spr_Grizzo_Normal_Dash.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Grizzo_Normal_Dash","path":"sprites/spr_Grizzo_Normal_Dash/spr_Grizzo_Normal_Dash.yy",},"resourceVersion":"1.0","name":"98b7efe3-bfcd-4252-8770-2dfe372e8865","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"1e8ae9ab-b401-4b72-9307-282b4549a9bb","path":"sprites/spr_Grizzo_Normal_Dash/spr_Grizzo_Normal_Dash.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1e8ae9ab-b401-4b72-9307-282b4549a9bb","path":"sprites/spr_Grizzo_Normal_Dash/spr_Grizzo_Normal_Dash.yy",},"LayerId":{"name":"de7ee32e-2995-4b35-9c2f-e34eca4e647a","path":"sprites/spr_Grizzo_Normal_Dash/spr_Grizzo_Normal_Dash.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Grizzo_Normal_Dash","path":"sprites/spr_Grizzo_Normal_Dash/spr_Grizzo_Normal_Dash.yy",},"resourceVersion":"1.0","name":"1e8ae9ab-b401-4b72-9307-282b4549a9bb","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"98b7efe3-bfcd-4252-8770-2dfe372e8865",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1e8ae9ab-b401-4b72-9307-282b4549a9bb",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Grizzo_Normal_Dash","path":"sprites/spr_Grizzo_Normal_Dash/spr_Grizzo_Normal_Dash.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Grizzo_Normal_Dash",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 18.0,
@@ -40,13 +41,13 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 2.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"e06e622a-da2d-4bae-8a6a-ae74b5ddfecc","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"98b7efe3-bfcd-4252-8770-2dfe372e8865","path":"sprites/spr_Grizzo_Normal_Dash/spr_Grizzo_Normal_Dash.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"41776ffa-7acb-489f-a2ca-b110084b7e99","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1e8ae9ab-b401-4b72-9307-282b4549a9bb","path":"sprites/spr_Grizzo_Normal_Dash/spr_Grizzo_Normal_Dash.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"e06e622a-da2d-4bae-8a6a-ae74b5ddfecc","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"98b7efe3-bfcd-4252-8770-2dfe372e8865","path":"sprites/spr_Grizzo_Normal_Dash/spr_Grizzo_Normal_Dash.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"41776ffa-7acb-489f-a2ca-b110084b7e99","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1e8ae9ab-b401-4b72-9307-282b4549a9bb","path":"sprites/spr_Grizzo_Normal_Dash/spr_Grizzo_Normal_Dash.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -62,22 +63,13 @@
     "yorigin": 31,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Grizzo_Normal_Dash","path":"sprites/spr_Grizzo_Normal_Dash/spr_Grizzo_Normal_Dash.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Grizzo_Normal_Dash",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"de7ee32e-2995-4b35-9c2f-e34eca4e647a","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"de7ee32e-2995-4b35-9c2f-e34eca4e647a","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Normal",
     "path": "folders/Sprites/Enemies/Grizzo/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Grizzo_Normal_Dash",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

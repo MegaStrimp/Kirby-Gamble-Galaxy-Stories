@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Particle_InhaleBig",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d7b745c1-98d9-4270-855d-2e32001dc552","path":"sprites/spr_Particle_InhaleBig/spr_Particle_InhaleBig.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d7b745c1-98d9-4270-855d-2e32001dc552","path":"sprites/spr_Particle_InhaleBig/spr_Particle_InhaleBig.yy",},"LayerId":{"name":"c516f1b8-ff57-4df9-8e9e-91970d1aece0","path":"sprites/spr_Particle_InhaleBig/spr_Particle_InhaleBig.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Particle_InhaleBig","path":"sprites/spr_Particle_InhaleBig/spr_Particle_InhaleBig.yy",},"resourceVersion":"1.0","name":"d7b745c1-98d9-4270-855d-2e32001dc552","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"cf675b5e-a139-4095-a0ed-9008b2d948a5","path":"sprites/spr_Particle_InhaleBig/spr_Particle_InhaleBig.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cf675b5e-a139-4095-a0ed-9008b2d948a5","path":"sprites/spr_Particle_InhaleBig/spr_Particle_InhaleBig.yy",},"LayerId":{"name":"c516f1b8-ff57-4df9-8e9e-91970d1aece0","path":"sprites/spr_Particle_InhaleBig/spr_Particle_InhaleBig.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Particle_InhaleBig","path":"sprites/spr_Particle_InhaleBig/spr_Particle_InhaleBig.yy",},"resourceVersion":"1.0","name":"cf675b5e-a139-4095-a0ed-9008b2d948a5","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"aa86f06c-7715-4672-b277-17bbbdfcd9cf","path":"sprites/spr_Particle_InhaleBig/spr_Particle_InhaleBig.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"aa86f06c-7715-4672-b277-17bbbdfcd9cf","path":"sprites/spr_Particle_InhaleBig/spr_Particle_InhaleBig.yy",},"LayerId":{"name":"c516f1b8-ff57-4df9-8e9e-91970d1aece0","path":"sprites/spr_Particle_InhaleBig/spr_Particle_InhaleBig.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Particle_InhaleBig","path":"sprites/spr_Particle_InhaleBig/spr_Particle_InhaleBig.yy",},"resourceVersion":"1.0","name":"aa86f06c-7715-4672-b277-17bbbdfcd9cf","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d7b745c1-98d9-4270-855d-2e32001dc552",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cf675b5e-a139-4095-a0ed-9008b2d948a5",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"aa86f06c-7715-4672-b277-17bbbdfcd9cf",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Particle_InhaleBig","path":"sprites/spr_Particle_InhaleBig/spr_Particle_InhaleBig.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Particle_InhaleBig",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 15.0,
@@ -43,14 +42,14 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 3.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"83b72881-0995-49be-931a-3431ddad0fc1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d7b745c1-98d9-4270-855d-2e32001dc552","path":"sprites/spr_Particle_InhaleBig/spr_Particle_InhaleBig.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"d719904c-002c-4535-87d9-ec6a6cdab577","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cf675b5e-a139-4095-a0ed-9008b2d948a5","path":"sprites/spr_Particle_InhaleBig/spr_Particle_InhaleBig.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"f990ceca-b497-4daa-9150-231b60379b5c","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"aa86f06c-7715-4672-b277-17bbbdfcd9cf","path":"sprites/spr_Particle_InhaleBig/spr_Particle_InhaleBig.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"83b72881-0995-49be-931a-3431ddad0fc1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d7b745c1-98d9-4270-855d-2e32001dc552","path":"sprites/spr_Particle_InhaleBig/spr_Particle_InhaleBig.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d719904c-002c-4535-87d9-ec6a6cdab577","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cf675b5e-a139-4095-a0ed-9008b2d948a5","path":"sprites/spr_Particle_InhaleBig/spr_Particle_InhaleBig.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f990ceca-b497-4daa-9150-231b60379b5c","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"aa86f06c-7715-4672-b277-17bbbdfcd9cf","path":"sprites/spr_Particle_InhaleBig/spr_Particle_InhaleBig.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -66,22 +65,13 @@
     "yorigin": 5,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Particle_InhaleBig","path":"sprites/spr_Particle_InhaleBig/spr_Particle_InhaleBig.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Particle_InhaleBig",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c516f1b8-ff57-4df9-8e9e-91970d1aece0","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c516f1b8-ff57-4df9-8e9e-91970d1aece0","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Particles",
     "path": "folders/Sprites/Particles.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Particle_InhaleBig",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

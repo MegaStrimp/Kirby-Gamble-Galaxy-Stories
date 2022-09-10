@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_WaddleDee_Gold_Idle",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"44295626-0b92-4f59-8a79-23d527b96349","path":"sprites/spr_WaddleDee_Gold_Idle/spr_WaddleDee_Gold_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"44295626-0b92-4f59-8a79-23d527b96349","path":"sprites/spr_WaddleDee_Gold_Idle/spr_WaddleDee_Gold_Idle.yy",},"LayerId":{"name":"4a82ca80-28b3-4f4e-b91d-6e10f6a09242","path":"sprites/spr_WaddleDee_Gold_Idle/spr_WaddleDee_Gold_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_WaddleDee_Gold_Idle","path":"sprites/spr_WaddleDee_Gold_Idle/spr_WaddleDee_Gold_Idle.yy",},"resourceVersion":"1.0","name":"44295626-0b92-4f59-8a79-23d527b96349","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"44295626-0b92-4f59-8a79-23d527b96349",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_WaddleDee_Gold_Idle","path":"sprites/spr_WaddleDee_Gold_Idle/spr_WaddleDee_Gold_Idle.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_WaddleDee_Gold_Idle",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"077ac9cb-6d51-4f85-81e0-47a517f48f77","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"44295626-0b92-4f59-8a79-23d527b96349","path":"sprites/spr_WaddleDee_Gold_Idle/spr_WaddleDee_Gold_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"077ac9cb-6d51-4f85-81e0-47a517f48f77","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"44295626-0b92-4f59-8a79-23d527b96349","path":"sprites/spr_WaddleDee_Gold_Idle/spr_WaddleDee_Gold_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 15,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_WaddleDee_Gold_Idle","path":"sprites/spr_WaddleDee_Gold_Idle/spr_WaddleDee_Gold_Idle.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_WaddleDee_Gold_Idle",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4a82ca80-28b3-4f4e-b91d-6e10f6a09242","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"4a82ca80-28b3-4f4e-b91d-6e10f6a09242","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Gold",
     "path": "folders/Sprites/Enemies/Waddle Dee/Gold.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_WaddleDee_Gold_Idle",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

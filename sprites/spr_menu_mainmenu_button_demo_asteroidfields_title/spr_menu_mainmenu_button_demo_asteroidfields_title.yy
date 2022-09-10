@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Menu_MainMenu_Button_Demo_AsteroidFields_Title",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a680db45-e0d8-41f0-b6b6-b026c9d7c635","path":"sprites/spr_Menu_MainMenu_Button_Demo_AsteroidFields_Title/spr_Menu_MainMenu_Button_Demo_AsteroidFields_Title.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a680db45-e0d8-41f0-b6b6-b026c9d7c635","path":"sprites/spr_Menu_MainMenu_Button_Demo_AsteroidFields_Title/spr_Menu_MainMenu_Button_Demo_AsteroidFields_Title.yy",},"LayerId":{"name":"00c45dcd-9bde-4e1c-8fe4-89e73a3c8aa6","path":"sprites/spr_Menu_MainMenu_Button_Demo_AsteroidFields_Title/spr_Menu_MainMenu_Button_Demo_AsteroidFields_Title.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Menu_MainMenu_Button_Demo_AsteroidFields_Title","path":"sprites/spr_Menu_MainMenu_Button_Demo_AsteroidFields_Title/spr_Menu_MainMenu_Button_Demo_AsteroidFields_Title.yy",},"resourceVersion":"1.0","name":"a680db45-e0d8-41f0-b6b6-b026c9d7c635","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a680db45-e0d8-41f0-b6b6-b026c9d7c635",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Menu_MainMenu_Button_Demo_AsteroidFields_Title","path":"sprites/spr_Menu_MainMenu_Button_Demo_AsteroidFields_Title/spr_Menu_MainMenu_Button_Demo_AsteroidFields_Title.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Menu_MainMenu_Button_Demo_AsteroidFields_Title",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"797b4c40-1181-4363-be40-73e52b4c268a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a680db45-e0d8-41f0-b6b6-b026c9d7c635","path":"sprites/spr_Menu_MainMenu_Button_Demo_AsteroidFields_Title/spr_Menu_MainMenu_Button_Demo_AsteroidFields_Title.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"797b4c40-1181-4363-be40-73e52b4c268a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a680db45-e0d8-41f0-b6b6-b026c9d7c635","path":"sprites/spr_Menu_MainMenu_Button_Demo_AsteroidFields_Title/spr_Menu_MainMenu_Button_Demo_AsteroidFields_Title.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Menu_MainMenu_Button_Demo_AsteroidFields_Title","path":"sprites/spr_Menu_MainMenu_Button_Demo_AsteroidFields_Title/spr_Menu_MainMenu_Button_Demo_AsteroidFields_Title.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Menu_MainMenu_Button_Demo_AsteroidFields_Title",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"00c45dcd-9bde-4e1c-8fe4-89e73a3c8aa6","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"00c45dcd-9bde-4e1c-8fe4-89e73a3c8aa6","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Buttons",
     "path": "folders/Sprites/Menu/Main Menu/Buttons.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Menu_MainMenu_Button_Demo_AsteroidFields_Title",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

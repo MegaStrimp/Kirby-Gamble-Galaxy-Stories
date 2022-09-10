@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Gamble_Normal_Front_Hopeless",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"f13da904-c929-4db5-9bfc-63f186857750","path":"sprites/spr_Gamble_Normal_Front_Hopeless/spr_Gamble_Normal_Front_Hopeless.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f13da904-c929-4db5-9bfc-63f186857750","path":"sprites/spr_Gamble_Normal_Front_Hopeless/spr_Gamble_Normal_Front_Hopeless.yy",},"LayerId":{"name":"2c3774ce-6450-40a4-aef9-a94ed050f23e","path":"sprites/spr_Gamble_Normal_Front_Hopeless/spr_Gamble_Normal_Front_Hopeless.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Gamble_Normal_Front_Hopeless","path":"sprites/spr_Gamble_Normal_Front_Hopeless/spr_Gamble_Normal_Front_Hopeless.yy",},"resourceVersion":"1.0","name":"f13da904-c929-4db5-9bfc-63f186857750","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9f66c731-ee9e-4094-955a-e301d845a78d","path":"sprites/spr_Gamble_Normal_Front_Hopeless/spr_Gamble_Normal_Front_Hopeless.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9f66c731-ee9e-4094-955a-e301d845a78d","path":"sprites/spr_Gamble_Normal_Front_Hopeless/spr_Gamble_Normal_Front_Hopeless.yy",},"LayerId":{"name":"2c3774ce-6450-40a4-aef9-a94ed050f23e","path":"sprites/spr_Gamble_Normal_Front_Hopeless/spr_Gamble_Normal_Front_Hopeless.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Gamble_Normal_Front_Hopeless","path":"sprites/spr_Gamble_Normal_Front_Hopeless/spr_Gamble_Normal_Front_Hopeless.yy",},"resourceVersion":"1.0","name":"9f66c731-ee9e-4094-955a-e301d845a78d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f4064609-6348-4b75-ae7b-77fc8b5e940a","path":"sprites/spr_Gamble_Normal_Front_Hopeless/spr_Gamble_Normal_Front_Hopeless.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f4064609-6348-4b75-ae7b-77fc8b5e940a","path":"sprites/spr_Gamble_Normal_Front_Hopeless/spr_Gamble_Normal_Front_Hopeless.yy",},"LayerId":{"name":"2c3774ce-6450-40a4-aef9-a94ed050f23e","path":"sprites/spr_Gamble_Normal_Front_Hopeless/spr_Gamble_Normal_Front_Hopeless.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Gamble_Normal_Front_Hopeless","path":"sprites/spr_Gamble_Normal_Front_Hopeless/spr_Gamble_Normal_Front_Hopeless.yy",},"resourceVersion":"1.0","name":"f4064609-6348-4b75-ae7b-77fc8b5e940a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f13da904-c929-4db5-9bfc-63f186857750",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9f66c731-ee9e-4094-955a-e301d845a78d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f4064609-6348-4b75-ae7b-77fc8b5e940a",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Gamble_Normal_Front_Hopeless","path":"sprites/spr_Gamble_Normal_Front_Hopeless/spr_Gamble_Normal_Front_Hopeless.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Gamble_Normal_Front_Hopeless",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 3.0,
@@ -43,14 +42,14 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 3.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"9db8d1f0-de59-4bed-b623-d6b2981f6ec3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f13da904-c929-4db5-9bfc-63f186857750","path":"sprites/spr_Gamble_Normal_Front_Hopeless/spr_Gamble_Normal_Front_Hopeless.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"b6f0bbf9-a135-4d72-865c-840c5f106502","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9f66c731-ee9e-4094-955a-e301d845a78d","path":"sprites/spr_Gamble_Normal_Front_Hopeless/spr_Gamble_Normal_Front_Hopeless.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"9c48206a-a007-4a22-b18a-871bd803beec","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f4064609-6348-4b75-ae7b-77fc8b5e940a","path":"sprites/spr_Gamble_Normal_Front_Hopeless/spr_Gamble_Normal_Front_Hopeless.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"9db8d1f0-de59-4bed-b623-d6b2981f6ec3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f13da904-c929-4db5-9bfc-63f186857750","path":"sprites/spr_Gamble_Normal_Front_Hopeless/spr_Gamble_Normal_Front_Hopeless.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b6f0bbf9-a135-4d72-865c-840c5f106502","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9f66c731-ee9e-4094-955a-e301d845a78d","path":"sprites/spr_Gamble_Normal_Front_Hopeless/spr_Gamble_Normal_Front_Hopeless.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9c48206a-a007-4a22-b18a-871bd803beec","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f4064609-6348-4b75-ae7b-77fc8b5e940a","path":"sprites/spr_Gamble_Normal_Front_Hopeless/spr_Gamble_Normal_Front_Hopeless.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -66,22 +65,13 @@
     "yorigin": 10,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Gamble_Normal_Front_Hopeless","path":"sprites/spr_Gamble_Normal_Front_Hopeless/spr_Gamble_Normal_Front_Hopeless.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Gamble_Normal_Front_Hopeless",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2c3774ce-6450-40a4-aef9-a94ed050f23e","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"2c3774ce-6450-40a4-aef9-a94ed050f23e","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Front",
     "path": "folders/Sprites/Characters/Gamble/Normal/Front.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Gamble_Normal_Front_Hopeless",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

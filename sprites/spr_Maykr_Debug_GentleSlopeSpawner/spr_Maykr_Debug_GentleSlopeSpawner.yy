@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_Maykr_Debug_GentleSlopeSpawner",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a094c3ac-1e6b-4fca-8889-26265c6f4f29","path":"sprites/spr_Maykr_Debug_GentleSlopeSpawner/spr_Maykr_Debug_GentleSlopeSpawner.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a094c3ac-1e6b-4fca-8889-26265c6f4f29","path":"sprites/spr_Maykr_Debug_GentleSlopeSpawner/spr_Maykr_Debug_GentleSlopeSpawner.yy",},"LayerId":{"name":"1453b680-4fde-48a4-a8c0-4d434ee844e9","path":"sprites/spr_Maykr_Debug_GentleSlopeSpawner/spr_Maykr_Debug_GentleSlopeSpawner.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Maykr_Debug_GentleSlopeSpawner","path":"sprites/spr_Maykr_Debug_GentleSlopeSpawner/spr_Maykr_Debug_GentleSlopeSpawner.yy",},"resourceVersion":"1.0","name":"a094c3ac-1e6b-4fca-8889-26265c6f4f29","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a094c3ac-1e6b-4fca-8889-26265c6f4f29",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Maykr_Debug_GentleSlopeSpawner","path":"sprites/spr_Maykr_Debug_GentleSlopeSpawner/spr_Maykr_Debug_GentleSlopeSpawner.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_Maykr_Debug_GentleSlopeSpawner",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"f0027e95-ef4e-440a-a109-cf17ca3e2d11","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a094c3ac-1e6b-4fca-8889-26265c6f4f29","path":"sprites/spr_Maykr_Debug_GentleSlopeSpawner/spr_Maykr_Debug_GentleSlopeSpawner.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"f0027e95-ef4e-440a-a109-cf17ca3e2d11","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a094c3ac-1e6b-4fca-8889-26265c6f4f29","path":"sprites/spr_Maykr_Debug_GentleSlopeSpawner/spr_Maykr_Debug_GentleSlopeSpawner.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -58,22 +61,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Maykr_Debug_GentleSlopeSpawner","path":"sprites/spr_Maykr_Debug_GentleSlopeSpawner/spr_Maykr_Debug_GentleSlopeSpawner.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_Maykr_Debug_GentleSlopeSpawner",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1453b680-4fde-48a4-a8c0-4d434ee844e9","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"1453b680-4fde-48a4-a8c0-4d434ee844e9","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Spawners",
     "path": "folders/Sprites/Subgames/Maykr/Spawners.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_Maykr_Debug_GentleSlopeSpawner",
-  "tags": [],
-  "resourceType": "GMSprite",
 }
