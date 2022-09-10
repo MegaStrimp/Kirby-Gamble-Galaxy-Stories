@@ -564,24 +564,38 @@ function scr_Player_States_Normal()
 							}
 							else
 							{
-								if (vsp == 0)
-								{
-									attack = true;
-									attackNumber = playerAttacks.cutterCharge;
-								}
-								else
-								{
-									if (!cutterAirThrown)
-									{
-										cutterAirThrown = true;
-										attack = true;
-										attackNumber = playerAttacks.cutterNormal;
-										sprite_index = sprCutterAttack1;
-									    image_index = 0;
-									}
-								}
+								//if (vsp == 0)
+								//{
+								//	attack = true;
+								//	attackNumber = playerAttacks.cutterCharge;
+								//}
+								//else
+								//{
+								//	if (!cutterAirThrown)
+								//	{
+								//		cutterAirThrown = true;
+								//		attack = true;
+								//		attackNumber = playerAttacks.cutterNormal;
+								//		sprite_index = sprCutterAttack1;
+								//	    image_index = 0;
+								//	}
+								//}
+								attack = true;
+								attackNumber = playerAttacks.finalCutter;
+								sprite_index = sprCutterAttack3;
+								image_index = 0;
+								cutterCatch = false;
 							}
 					    }
+						
+						if(attackNumber == playerAttacks.finalCutter){
+							if(attackable){
+								attackable = false;
+								attackTimer = 10;
+								//hsp = 5*dir;
+								state = playerStates.finalCutter;
+							}
+						}
 					
 						if (attackNumber == playerAttacks.cutterCharge)
 						{

@@ -472,6 +472,12 @@ switch (state)
 	scr_Player_States_CutterDrop();
 	break;
 	
+	//Cleaving Cutter, Nonstop Cutter, and Final Cutter
+	
+	case (playerStates.finalCutter):
+	scr_Player_States_FinalCutter();
+	break;
+	
 	//Beam Grab
 	
     case (playerStates.beamGrab):

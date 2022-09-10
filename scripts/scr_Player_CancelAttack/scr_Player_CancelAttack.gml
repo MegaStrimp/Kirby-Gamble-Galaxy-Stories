@@ -27,6 +27,10 @@ function scr_Player_CancelAttack(argument0)
 	        state = playerStates.normal;
 			break;
 			
+			case playerAttacks.finalCutter:
+			state = playerStates.normal;
+			break;
+			
 			case playerAttacks.beamNormal:
 			if (instance_exists(parBeamCycle1)) instance_destroy(parBeamCycle1);
 			with (obj_Projectile_Beam) if ((state == 0) and (owner == other.id)) instance_destroy();

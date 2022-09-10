@@ -53,6 +53,7 @@ enum playerStates
 	swallow,
 	cutterDash,
 	cutterDrop,
+	finalCutter,
 	beamGrab,
 	mysticBeamGrab,
 	mirrorDash,
@@ -149,6 +150,7 @@ enum playerAttacks
 	cutterDash,
 	cutterAir,
 	cutterDrop,
+	finalCutter,
 	
 	beamNormal,
 	beamCharge,
