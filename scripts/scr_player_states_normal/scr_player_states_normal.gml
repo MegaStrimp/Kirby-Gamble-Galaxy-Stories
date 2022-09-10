@@ -580,6 +580,10 @@ function scr_Player_States_Normal()
 								//	    image_index = 0;
 								//	}
 								//}
+								var cutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_CutterDropMask);
+								cutterMaskProj.owner = id;
+								cutterMaskProj.abilityType = playerAbilities.cutter;
+								cutterMaskProj.dmg = 8;
 								attack = true;
 								attackNumber = playerAttacks.finalCutter;
 								sprite_index = sprCutterAttack3;

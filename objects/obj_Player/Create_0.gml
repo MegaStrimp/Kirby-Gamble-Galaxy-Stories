@@ -341,6 +341,7 @@ cutterCharge = 0;
 cutterChargeMax = 45;
 cutterAirThrown = true;
 cutterCatch = false;
+finalCutterState = 0; // this is used to determine which attack between Cleaving Cutter, Nonstop Cutter, and Final Cutter is used.
 beamAttack2FirstHit = false;
 beamCharge = 0;
 beamChargeMax = 45;

@@ -3500,3 +3500,8 @@ else if (micFlashTimer == 0)
 	micFlash = !micFlash;
 	micFlashTimer = micFlashTimerMax;
 }
+
+//Reset Final Cutter State Counter
+if(!attack){
+	finalCutterState = 0;
+}
