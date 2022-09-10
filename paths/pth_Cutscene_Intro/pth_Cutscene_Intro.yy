@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMPath",
+  "resourceVersion": "1.0",
+  "name": "pth_Cutscene_Intro",
   "kind": 1,
   "closed": false,
   "precision": 4,
@@ -15,8 +18,4 @@
     "name": "Cutscene",
     "path": "folders/Paths/Cutscene.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "pth_Cutscene_Intro",
-  "tags": [],
-  "resourceType": "GMPath",
 }

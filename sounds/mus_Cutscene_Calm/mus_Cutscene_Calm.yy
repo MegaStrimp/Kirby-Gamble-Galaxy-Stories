@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "mus_Cutscene_Calm",
   "conversionMode": 0,
   "compression": 3,
   "volume": 1.0,
@@ -17,8 +20,4 @@
     "name": "Cutscenes",
     "path": "folders/Sounds/Music/Cutscenes.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "mus_Cutscene_Calm",
-  "tags": [],
-  "resourceType": "GMSound",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "ts_GearCube_Depths_Mask",
   "spriteId": {
     "name": "tile_GearCube_Depths_Mask",
     "path": "sprites/tile_GearCube_Depths_Mask/tile_GearCube_Depths_Mask.yy",
@@ -70,8 +73,4 @@
     "name": "Tile Sets",
     "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ts_GearCube_Depths_Mask",
-  "tags": [],
-  "resourceType": "GMTileSet",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "ts_EggGarden_Temple",
   "spriteId": {
     "name": "tile_EggGarden_Temple",
     "path": "sprites/tile_EggGarden_Temple/tile_EggGarden_Temple.yy",
@@ -67,8 +70,4 @@
     "name": "Tile Sets",
     "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ts_EggGarden_Temple",
-  "tags": [],
-  "resourceType": "GMTileSet",
 }

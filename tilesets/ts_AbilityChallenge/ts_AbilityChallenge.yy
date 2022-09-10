@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "ts_AbilityChallenge",
   "spriteId": {
     "name": "tile_AbilityChallenge",
     "path": "sprites/tile_AbilityChallenge/tile_AbilityChallenge.yy",
@@ -105,8 +108,4 @@
     "name": "Tile Sets",
     "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ts_AbilityChallenge",
-  "tags": [],
-  "resourceType": "GMTileSet",
 }

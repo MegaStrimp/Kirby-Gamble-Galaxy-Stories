@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_WallController",
   "spriteId": null,
   "solid": false,
   "visible": false,
@@ -19,7 +22,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":2,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":2,"eventType":3,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -27,8 +30,4 @@
     "name": "Control",
     "path": "folders/Objects/Control.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_WallController",
-  "tags": [],
-  "resourceType": "GMObject",
 }

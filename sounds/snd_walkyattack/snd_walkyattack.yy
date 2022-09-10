@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_WalkyAttack",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -17,8 +20,4 @@
     "name": "Enemies",
     "path": "folders/Sounds/Sound Effects/Enemies.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_WalkyAttack",
-  "tags": [],
-  "resourceType": "GMSound",
 }

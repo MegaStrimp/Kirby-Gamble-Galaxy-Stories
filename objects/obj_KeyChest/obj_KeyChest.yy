@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_KeyChest",
   "spriteId": {
     "name": "spr_KeyChest_Normal_Chest_Closed",
     "path": "sprites/spr_KeyChest_Normal_Chest_Closed/spr_KeyChest_Normal_Chest_Closed.yy",
@@ -25,7 +28,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -33,8 +36,4 @@
     "name": "Stage Elements",
     "path": "folders/Objects/Gameplay/Stage Elements.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_KeyChest",
-  "tags": [],
-  "resourceType": "GMObject",
 }

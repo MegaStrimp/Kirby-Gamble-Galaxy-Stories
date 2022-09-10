@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "mus_BossTension",
   "conversionMode": 0,
   "compression": 3,
   "volume": 1.0,
@@ -17,8 +20,4 @@
     "name": "Bosses",
     "path": "folders/Sounds/Music/Bosses.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "mus_BossTension",
-  "tags": [],
-  "resourceType": "GMSound",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_Projectile_InhaleStar",
   "spriteId": null,
   "solid": false,
   "visible": true,
@@ -25,8 +28,4 @@
     "name": "Projectiles",
     "path": "folders/Objects/Gameplay/Projectiles.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_Projectile_InhaleStar",
-  "tags": [],
-  "resourceType": "GMObject",
 }

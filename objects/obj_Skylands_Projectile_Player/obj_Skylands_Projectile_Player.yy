@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_Skylands_Projectile_Player",
   "spriteId": {
     "name": "spr_Skylands_Kirby_Projectile1",
     "path": "sprites/spr_Skylands_Kirby_Projectile1/spr_Skylands_Kirby_Projectile1.yy",
@@ -25,8 +28,8 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -34,8 +37,4 @@
     "name": "Projectiles",
     "path": "folders/Objects/Gameplay/Subgames/Skylands/Projectiles.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_Skylands_Projectile_Player",
-  "tags": [],
-  "resourceType": "GMObject",
 }

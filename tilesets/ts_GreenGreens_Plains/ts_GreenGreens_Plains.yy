@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "ts_GreenGreens_Plains",
   "spriteId": {
     "name": "tile_GreenGreens_Plains",
     "path": "sprites/tile_GreenGreens_Plains/tile_GreenGreens_Plains.yy",
@@ -125,8 +128,4 @@
     "name": "Tile Sets",
     "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ts_GreenGreens_Plains",
-  "tags": [],
-  "resourceType": "GMTileSet",
 }

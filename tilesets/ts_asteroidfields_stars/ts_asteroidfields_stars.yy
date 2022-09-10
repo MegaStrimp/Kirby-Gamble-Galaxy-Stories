@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "ts_AsteroidFields_Stars",
   "spriteId": {
     "name": "tile_AsteroidFields_Stars",
     "path": "sprites/tile_AsteroidFields_Stars/tile_AsteroidFields_Stars.yy",
@@ -45,8 +48,4 @@
     "name": "Tile Sets",
     "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ts_AsteroidFields_Stars",
-  "tags": [],
-  "resourceType": "GMTileSet",
 }

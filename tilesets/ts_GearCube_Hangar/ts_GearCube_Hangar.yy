@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "ts_GearCube_Hangar",
   "spriteId": {
     "name": "tile_GearCube_Hangar",
     "path": "sprites/tile_GearCube_Hangar/tile_GearCube_Hangar.yy",
@@ -55,8 +58,4 @@
     "name": "Tile Sets",
     "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ts_GearCube_Hangar",
-  "tags": [],
-  "resourceType": "GMTileSet",
 }

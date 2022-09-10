@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "ts_AbilityChallenge_Transparent",
   "spriteId": {
     "name": "tile_AbilityChallenge_Transparent",
     "path": "sprites/tile_AbilityChallenge_Transparent/tile_AbilityChallenge_Transparent.yy",
@@ -105,8 +108,4 @@
     "name": "Tile Sets",
     "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ts_AbilityChallenge_Transparent",
-  "tags": [],
-  "resourceType": "GMTileSet",
 }

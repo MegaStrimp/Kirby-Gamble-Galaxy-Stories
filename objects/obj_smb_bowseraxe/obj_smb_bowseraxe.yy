@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_SMB_BowserAxe",
   "spriteId": {
     "name": "spr_SMB_BowserAxe",
     "path": "sprites/spr_SMB_BowserAxe/spr_SMB_BowserAxe.yy",
@@ -28,8 +31,4 @@
     "name": "Stage Elements",
     "path": "folders/Objects/Gameplay/Stage Elements.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_SMB_BowserAxe",
-  "tags": [],
-  "resourceType": "GMObject",
 }

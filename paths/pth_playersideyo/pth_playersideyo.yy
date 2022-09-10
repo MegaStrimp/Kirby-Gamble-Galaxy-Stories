@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMPath",
+  "resourceVersion": "1.0",
+  "name": "pth_PlayerSideYo",
   "kind": 1,
   "closed": false,
   "precision": 4,
@@ -17,8 +20,4 @@
     "name": "Player",
     "path": "folders/Paths/Player.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "pth_PlayerSideYo",
-  "tags": [],
-  "resourceType": "GMPath",
 }

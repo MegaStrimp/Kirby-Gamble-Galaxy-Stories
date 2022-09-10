@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "mus_Skylands",
   "conversionMode": 0,
   "compression": 3,
   "volume": 1.0,
@@ -17,8 +20,4 @@
     "name": "Subgames",
     "path": "folders/Sounds/Music/Subgames.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "mus_Skylands",
-  "tags": [],
-  "resourceType": "GMSound",
 }

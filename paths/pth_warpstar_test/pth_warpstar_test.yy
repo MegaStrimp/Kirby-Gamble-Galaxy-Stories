@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMPath",
+  "resourceVersion": "1.0",
+  "name": "pth_WarpStar_Test",
   "kind": 1,
   "closed": false,
   "precision": 4,
@@ -42,8 +45,4 @@
     "name": "Warp Star",
     "path": "folders/Paths/Warp Star.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "pth_WarpStar_Test",
-  "tags": [],
-  "resourceType": "GMPath",
 }

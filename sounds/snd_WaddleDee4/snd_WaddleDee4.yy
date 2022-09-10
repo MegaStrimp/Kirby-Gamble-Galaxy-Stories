@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_WaddleDee4",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -17,8 +20,4 @@
     "name": "Enemies",
     "path": "folders/Sounds/Sound Effects/Enemies.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_WaddleDee4",
-  "tags": [],
-  "resourceType": "GMSound",
 }

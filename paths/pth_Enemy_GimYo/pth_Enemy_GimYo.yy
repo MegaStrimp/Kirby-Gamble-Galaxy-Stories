@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMPath",
+  "resourceVersion": "1.0",
+  "name": "pth_Enemy_GimYo",
   "kind": 1,
   "closed": true,
   "precision": 4,
@@ -18,8 +21,4 @@
     "name": "Enemy",
     "path": "folders/Paths/Enemy.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "pth_Enemy_GimYo",
-  "tags": [],
-  "resourceType": "GMPath",
 }

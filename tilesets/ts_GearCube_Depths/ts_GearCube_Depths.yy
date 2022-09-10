@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "ts_GearCube_Depths",
   "spriteId": {
     "name": "tile_GearCube_Depths",
     "path": "sprites/tile_GearCube_Depths/tile_GearCube_Depths.yy",
@@ -70,8 +73,4 @@
     "name": "Tile Sets",
     "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ts_GearCube_Depths",
-  "tags": [],
-  "resourceType": "GMTileSet",
 }

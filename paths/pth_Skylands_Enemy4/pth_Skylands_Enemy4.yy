@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMPath",
+  "resourceVersion": "1.0",
+  "name": "pth_Skylands_Enemy4",
   "kind": 1,
   "closed": false,
   "precision": 4,
@@ -12,8 +15,4 @@
     "name": "Skylands",
     "path": "folders/Paths/Skylands.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "pth_Skylands_Enemy4",
-  "tags": [],
-  "resourceType": "GMPath",
 }

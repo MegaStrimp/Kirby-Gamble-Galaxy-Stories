@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_ChestOpen",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -17,8 +20,4 @@
     "name": "Objects",
     "path": "folders/Sounds/Sound Effects/Objects.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_ChestOpen",
-  "tags": [],
-  "resourceType": "GMSound",
 }

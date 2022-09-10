@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "mus_Aquatia_Harbor",
   "conversionMode": 0,
   "compression": 3,
   "volume": 1.0,
@@ -17,8 +20,4 @@
     "name": "Stages",
     "path": "folders/Sounds/Music/Stages.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "mus_Aquatia_Harbor",
-  "tags": [],
-  "resourceType": "GMSound",
 }

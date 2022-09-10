@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMPath",
+  "resourceVersion": "1.0",
+  "name": "pth_Enemy_Juckle_Up",
   "kind": 1,
   "closed": false,
   "precision": 4,
@@ -15,8 +18,4 @@
     "name": "Enemy",
     "path": "folders/Paths/Enemy.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "pth_Enemy_Juckle_Up",
-  "tags": [],
-  "resourceType": "GMPath",
 }

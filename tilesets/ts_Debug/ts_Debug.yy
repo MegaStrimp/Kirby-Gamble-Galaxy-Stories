@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "ts_Debug",
   "spriteId": {
     "name": "tile_Debug",
     "path": "sprites/tile_Debug/tile_Debug.yy",
@@ -243,8 +246,4 @@
     "name": "Tile Sets",
     "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ts_Debug",
-  "tags": [],
-  "resourceType": "GMTileSet",
 }

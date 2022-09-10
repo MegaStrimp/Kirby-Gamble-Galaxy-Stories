@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "ts_SMB_Castle",
   "spriteId": {
     "name": "tile_SMB_Castle",
     "path": "sprites/tile_SMB_Castle/tile_SMB_Castle.yy",
@@ -39,8 +42,4 @@
     "name": "Tile Sets",
     "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ts_SMB_Castle",
-  "tags": [],
-  "resourceType": "GMTileSet",
 }

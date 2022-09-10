@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "ts_Aquatia_Harbor",
   "spriteId": {
     "name": "tile_Aquatia_Harbor",
     "path": "sprites/tile_Aquatia_Harbor/tile_Aquatia_Harbor.yy",
@@ -65,8 +68,4 @@
     "name": "Tile Sets",
     "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ts_Aquatia_Harbor",
-  "tags": [],
-  "resourceType": "GMTileSet",
 }

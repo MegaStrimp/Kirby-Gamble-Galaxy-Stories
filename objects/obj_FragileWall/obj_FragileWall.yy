@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_FragileWall",
   "spriteId": {
     "name": "spr_24SquareOriginlessAlt_Mask",
     "path": "sprites/spr_24SquareOriginlessAlt_Mask/spr_24SquareOriginlessAlt_Mask.yy",
@@ -25,7 +28,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -33,8 +36,4 @@
     "name": "Collision",
     "path": "folders/Objects/Gameplay/Stage Elements/Collision.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_FragileWall",
-  "tags": [],
-  "resourceType": "GMObject",
 }

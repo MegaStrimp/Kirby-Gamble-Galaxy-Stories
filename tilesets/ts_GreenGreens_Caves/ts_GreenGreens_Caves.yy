@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "ts_GreenGreens_Caves",
   "spriteId": {
     "name": "tile_GreenGreens_Caves",
     "path": "sprites/tile_GreenGreens_Caves/tile_GreenGreens_Caves.yy",
@@ -115,8 +118,4 @@
     "name": "Tile Sets",
     "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ts_GreenGreens_Caves",
-  "tags": [],
-  "resourceType": "GMTileSet",
 }

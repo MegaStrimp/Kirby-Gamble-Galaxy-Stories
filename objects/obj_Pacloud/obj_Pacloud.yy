@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_Pacloud",
   "spriteId": {
     "name": "spr_Pacloud_Normal_Idle",
     "path": "sprites/spr_Pacloud_Normal_Idle/spr_Pacloud_Normal_Idle.yy",
@@ -31,8 +34,4 @@
     "name": "Normal",
     "path": "folders/Objects/Gameplay/Enemies/Normal.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_Pacloud",
-  "tags": [],
-  "resourceType": "GMObject",
 }

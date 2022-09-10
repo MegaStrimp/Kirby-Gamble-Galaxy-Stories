@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_WarpStarTarget",
   "spriteId": {
     "name": "spr_24Square_Mask",
     "path": "sprites/spr_24Square_Mask/spr_24Square_Mask.yy",
@@ -28,8 +31,4 @@
     "name": "Stage Elements",
     "path": "folders/Objects/Gameplay/Stage Elements.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_WarpStarTarget",
-  "tags": [],
-  "resourceType": "GMObject",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "ts_Cave",
   "spriteId": {
     "name": "tile_Cave",
     "path": "sprites/tile_Cave/tile_Cave.yy",
@@ -101,8 +104,4 @@
     "name": "Tile Sets",
     "path": "folders/Tile Sets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ts_Cave",
-  "tags": [],
-  "resourceType": "GMTileSet",
 }

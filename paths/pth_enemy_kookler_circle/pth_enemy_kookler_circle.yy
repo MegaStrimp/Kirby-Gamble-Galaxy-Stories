@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMPath",
+  "resourceVersion": "1.0",
+  "name": "pth_Enemy_Kookler_Circle",
   "kind": 1,
   "closed": true,
   "precision": 4,
@@ -12,8 +15,4 @@
     "name": "Enemy",
     "path": "folders/Paths/Enemy.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "pth_Enemy_Kookler_Circle",
-  "tags": [],
-  "resourceType": "GMPath",
 }

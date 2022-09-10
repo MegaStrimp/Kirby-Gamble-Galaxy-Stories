@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_SMB_BowserBridge",
   "spriteId": {
     "name": "spr_SMB_BowserBridge",
     "path": "sprites/spr_SMB_BowserBridge/spr_SMB_BowserBridge.yy",
@@ -31,8 +34,4 @@
     "name": "Collision",
     "path": "folders/Objects/Gameplay/Stage Elements/Collision.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_SMB_BowserBridge",
-  "tags": [],
-  "resourceType": "GMObject",
 }

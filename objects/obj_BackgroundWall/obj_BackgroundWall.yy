@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_BackgroundWall",
   "spriteId": {
     "name": "spr_BackgroundWall",
     "path": "sprites/spr_BackgroundWall/spr_BackgroundWall.yy",
@@ -31,8 +34,4 @@
     "name": "Collision",
     "path": "folders/Objects/Gameplay/Stage Elements/Collision.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_BackgroundWall",
-  "tags": [],
-  "resourceType": "GMObject",
 }

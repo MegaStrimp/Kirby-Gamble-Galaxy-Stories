@@ -1,8 +1,5 @@
 {
-  "extensionId": {
-    "name": "extRousrDissonance",
-    "path": "extensions/extRousrDissonance/extRousrDissonance.yy"
-  },
+  "extensionId": null,
   "resourceVersion": "1.0",
   "resourceType": "GMExtensionConfigSet",
   "configurables": null

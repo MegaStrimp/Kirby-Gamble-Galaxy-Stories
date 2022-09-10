@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_Spark6",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -17,8 +20,4 @@
     "name": "Attacks",
     "path": "folders/Sounds/Sound Effects/Attacks.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_Spark6",
-  "tags": [],
-  "resourceType": "GMSound",
 }

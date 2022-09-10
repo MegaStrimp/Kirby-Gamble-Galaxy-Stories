@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "mus_Death2",
   "conversionMode": 0,
   "compression": 3,
   "volume": 1.0,
@@ -17,8 +20,4 @@
     "name": "Misc",
     "path": "folders/Sounds/Music/Misc.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "mus_Death2",
-  "tags": [],
-  "resourceType": "GMSound",
 }

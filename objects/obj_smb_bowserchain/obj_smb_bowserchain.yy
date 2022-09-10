@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_SMB_BowserChain",
   "spriteId": {
     "name": "spr_SMB_BowserChain",
     "path": "sprites/spr_SMB_BowserChain/spr_SMB_BowserChain.yy",
@@ -28,8 +31,4 @@
     "name": "Stage Elements",
     "path": "folders/Objects/Gameplay/Stage Elements.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_SMB_BowserChain",
-  "tags": [],
-  "resourceType": "GMObject",
 }

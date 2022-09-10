@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_HexTransition",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -17,8 +20,4 @@
     "name": "Misc",
     "path": "folders/Sounds/Sound Effects/Misc.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_HexTransition",
-  "tags": [],
-  "resourceType": "GMSound",
 }

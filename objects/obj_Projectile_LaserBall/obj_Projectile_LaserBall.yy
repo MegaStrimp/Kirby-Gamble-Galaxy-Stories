@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_Projectile_LaserBall",
   "spriteId": {
     "name": "spr_Projectile_LaserBall_Normal_Ball",
     "path": "sprites/spr_Projectile_LaserBall_Normal_Ball/spr_Projectile_LaserBall_Normal_Ball.yy",
@@ -31,8 +34,4 @@
     "name": "Projectiles",
     "path": "folders/Objects/Gameplay/Projectiles.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_Projectile_LaserBall",
-  "tags": [],
-  "resourceType": "GMObject",
 }
