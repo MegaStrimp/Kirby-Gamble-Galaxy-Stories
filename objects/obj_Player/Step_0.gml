@@ -18,7 +18,7 @@ grounded = false;
 if (place_meeting(x,y + 1,obj_ParentWall))
 {
 	var collidingWall = instance_place(x,y + 1,obj_ParentWall);
-	if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + (bbox_bottom - bbox_top) + vspFinal)))) grounded = true;
+	if ((!collidingWall.platform) or ((collidingWall.platform) and (((!keyDownHold) or (downHeld < 8)) and !(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal) and (!place_meeting(x,y + vspFinal,obj_Wall))))) grounded = true;
 }
 else if (place_meeting(x,y + 1,obj_Spring))
 {
@@ -105,6 +105,11 @@ if (!global.pause)
 		if (movingWall.hsp != 0) x += movingWall.hsp;
 	}
 	*/
+	
+	//Down Held
+
+    if (keyDownReleased) downHeld = 0;
+    if ((keyDownHold) and (downHeld < 1000)) downHeld += 1;
 	
 	//In Background
 	
@@ -3502,6 +3507,12 @@ else if (micFlashTimer == 0)
 }
 
 //Reset Final Cutter State Counter
-if(!attack){
+if(finalCutterBuffer <= 0 && !attack){
 	finalCutterState = 0;
+	finalCutterReadInput = false;
+}else{
+	finalCutterBuffer--;
 }
+
+//Reset Combo Buffer
+comboBuffer = clamp(comboBuffer-1,0,99990);

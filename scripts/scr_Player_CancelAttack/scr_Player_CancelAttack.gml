@@ -28,6 +28,18 @@ function scr_Player_CancelAttack(argument0)
 			break;
 			
 			case playerAttacks.finalCutter:
+	        //if (instance_exists(cleavingCutterMaskProj)) instance_destroy(cleavingCutterMaskProj);
+	        //if (instance_exists(nonstopCutterMaskProj)) instance_destroy(nonstopCutterMaskProj);
+	        //if (instance_exists(finalCutterMaskProj)) instance_destroy(finalCutterMaskProj);
+			if(finalCutterState > 2){
+				finalCutterBuffer = 0;
+				finalCutterState = 0;
+				finalCutterReadInput = false;
+			}else{
+				finalCutterReadInput = true;
+				comboBuffer = 1;
+			}
+			invincible = false;
 			state = playerStates.normal;
 			break;
 			

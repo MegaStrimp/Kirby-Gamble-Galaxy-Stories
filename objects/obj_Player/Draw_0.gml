@@ -193,4 +193,6 @@ if ((playerIsHelper) and (helperTimer != -1))
 /*
 draw_set_color(c_black);
 draw_text(x,y - 12,string(global.hatPaletteBeamKSSUP1));
-draw_text(x,y - 24,string(abilityHatPaints.beam_kssu_bitcrushed));
+draw_text(x,y - 24,string(abilityHatPaints.beam_kssu_bitcrushed));*/
+//draw_text(x,y - 24,string(finalCutterState));
+//draw_text(x+20,y - 24,string(attackTimer));

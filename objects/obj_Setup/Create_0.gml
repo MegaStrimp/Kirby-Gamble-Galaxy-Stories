@@ -1041,6 +1041,8 @@ subtitles[i] = "Kirb!";
 i += 1;
 subtitles[i] = "Borb!";
 i += 1;
+subtitles[i] = "Zwat's perfect running the True Arena again";
+i += 1;
 
 selectedSubtitle = irandom_range(0,array_length(subtitles) - 1);
 #endregion

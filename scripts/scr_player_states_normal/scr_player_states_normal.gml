@@ -18,7 +18,7 @@ function scr_Player_States_Normal()
 		if (place_meeting(x,y + 1,obj_ParentWall))
 		{
 			var collidingWall = instance_place(x,y + 1,obj_ParentWall);
-			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal) and (!place_meeting(x,y + vspFinal,obj_Wall))))) grounded = true;
+			if ((!collidingWall.platform) or ((collidingWall.platform) and (((!keyDownHold) or (downHeld < 8)) and !(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal) and (!place_meeting(x,y + vspFinal,obj_Wall))))) grounded = true;
 		}
 		else if (place_meeting(x,y + 1,obj_Spring))
 		{
@@ -34,7 +34,7 @@ function scr_Player_States_Normal()
 		}
 		
 		var attackDisableMovement = false;
-		if ((attack) and ((attackNumber != playerAttacks.ufoBeam) and (attackNumber != playerAttacks.ufoCharge) and (attackNumber != playerAttacks.ufoLaser))) attackDisableMovement = true;
+		if ((attack) and ((attackNumber != playerAttacks.ufoBeam) and (attackNumber != playerAttacks.ufoCharge) and (attackNumber != playerAttacks.ufoLaser) and (attackNumber != playerAttacks.cutterAir))) attackDisableMovement = true;
 		
 		var attackDisableDir = false;
 		if (attackNumber == playerAttacks.ufoBeam) attackDisableDir = true;
@@ -562,40 +562,120 @@ function scr_Player_States_Normal()
 								image_index = 0;
 				                state = playerStates.cutterDrop;
 							}
-							else
+							else if (keyUpHold)
 							{
-								//if (vsp == 0)
-								//{
-								//	attack = true;
-								//	attackNumber = playerAttacks.cutterCharge;
-								//}
-								//else
-								//{
-								//	if (!cutterAirThrown)
-								//	{
-								//		cutterAirThrown = true;
-								//		attack = true;
-								//		attackNumber = playerAttacks.cutterNormal;
-								//		sprite_index = sprCutterAttack1;
-								//	    image_index = 0;
-								//	}
-								//}
-								var cutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_CutterDropMask);
-								cutterMaskProj.owner = id;
-								cutterMaskProj.abilityType = playerAbilities.cutter;
-								cutterMaskProj.dmg = 8;
-								attack = true;
-								attackNumber = playerAttacks.finalCutter;
-								sprite_index = sprCutterAttack3;
-								image_index = 0;
-								cutterCatch = false;
+								if (comboBuffer <= 0 && (finalCutterReadInput || finalCutterState == 0) && state == playerStates.normal && keyUpHold){
+									//if (vsp == 0)
+									//{
+									//	attack = true;
+									//	attackNumber = playerAttacks.cutterCharge;
+									//}
+									//else
+									//{
+									//	if (!cutterAirThrown)
+									//	{
+									//		cutterAirThrown = true;
+									//		attack = true;
+									//		attackNumber = playerAttacks.cutterNormal;
+									//		sprite_index = sprCutterAttack1;
+									//	    image_index = 0;
+									//	}
+									//}
+									//cleavingCutterMaskProj = noone;
+									//nonstopCutterMaskProj = noone;
+									//finalCutterMaskProj = noone;
+									attack = true;
+									attackNumber = playerAttacks.finalCutter;
+									cutterCatch = false;
+								}
+							}else{
+								if (vsp == 0)
+								{
+									attack = true;
+									attackNumber = playerAttacks.cutterCharge;
+								}
+								else
+								{
+									if (!cutterAirThrown)
+									{
+										cutterAirThrown = true;
+										attack = true;
+										attackNumber = playerAttacks.cutterNormal;
+										sprite_index = sprCutterAttack1;
+									    image_index = 0;
+									}
+								}
+								cleavingCutterMaskProj = noone;
+								nonstopCutterMaskProj = noone;
+								finalCutterMaskProj = noone;
 							}
 					    }
 						
 						if(attackNumber == playerAttacks.finalCutter){
 							if(attackable){
 								attackable = false;
-								attackTimer = 10;
+								//if(finalCutterState == 0 || finalCutterReadInput){
+									finalCutterState++;
+									//finalCutterState = 3;
+									finalCutterReadInput = false;
+								//}
+									switch(finalCutterState){
+										case 1: 
+											var cleavingCutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_CleavingCutterMask);
+											cleavingCutterMaskProj.owner = id;
+											cleavingCutterMaskProj.abilityType = playerAbilities.cutter;
+											cleavingCutterMaskProj.dmg = 6;
+											break;
+										case 2: 
+											var nonstopCutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_NonstopCutterMask);
+											nonstopCutterMaskProj.owner = id;
+											nonstopCutterMaskProj.abilityType = playerAbilities.cutter;
+											nonstopCutterMaskProj.dmg = 6;
+											break;
+										case 3: 
+											if(attackTimer > (5940-15)){
+												// rising slash
+												var finalCutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_FinalCutterRisingSlashMask);
+												finalCutterMaskProj.owner = id;
+												finalCutterMaskProj.abilityType = playerAbilities.cutter;
+												finalCutterMaskProj.dmg = 8; // make sure to create two additional hitboxes, one for the falling slash and one for the shockwave, both dealing 32 damage.		
+											}else if (attackTimer > 5){
+												// falling slash
+												var finalCutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_FinalCutterRisingSlashMask);
+												finalCutterMaskProj.owner = id;
+												finalCutterMaskProj.abilityType = playerAbilities.cutter;
+												finalCutterMaskProj.dmg = 32; // make sure to create two additional hitboxes, one for the falling slash and one for the shockwave, both dealing 32 damage.		
+											}
+											if(grounded && vsp > 0){
+												// cutter wave
+											}
+											break;
+										default:
+											break;
+									}
+									switch(finalCutterState){
+										case 1:
+											sprite_index = sprCutterAttack3;
+											image_index = 0;
+											attackTimer = 10;
+											finalCutterBuffer = 30;
+											break;
+										case 2:
+											sprite_index = sprCutterAttack2;
+											image_index = 0;
+											attackTimer = 10;
+											finalCutterBuffer = 25;
+											break;
+										case 3:
+											sprite_index = sprNinjaCharge;
+											image_index = 0;
+											attackTimer = 5940;
+											finalCutterBuffer = 0;
+											invincible = true;
+											break;
+										default:
+											break;
+									}
 								//hsp = 5*dir;
 								state = playerStates.finalCutter;
 							}

@@ -20,6 +20,7 @@ instance_create_depth(x,y,-9999,obj_Dialogue);
 
 //Physics
 
+downHeld = 0;
 gravNormal = .23;
 gravStone = .7;
 gravWheel = .5;
@@ -341,6 +342,9 @@ cutterCharge = 0;
 cutterChargeMax = 45;
 cutterAirThrown = true;
 cutterCatch = false;
+comboBuffer = 0;
+finalCutterReadInput = false;
+finalCutterBuffer = 0;
 finalCutterState = 0; // this is used to determine which attack between Cleaving Cutter, Nonstop Cutter, and Final Cutter is used.
 beamAttack2FirstHit = false;
 beamCharge = 0;
