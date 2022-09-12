@@ -2426,7 +2426,7 @@ function scr_Player_States_Normal()
 						if(attackNumber == playerAttacks.fireWheelClimb){
 							attackTimer = clamp(attackTimer-1,0,90);
 							hsp = 0;
-							if(!place_meeting(x + (1 * dir),y,obj_ParentWall) || /*place_meeting(x,y-1,obj_ParentWall)*/ grounded && vsp >= 0){
+							if(!place_meeting(x + (1 * dir),y,obj_ParentWall) || place_meeting(x,y-1,obj_ParentWall) || grounded && vsp >= 0){
 								vsp = -5;
 								attackTimer = 0;
 							}
