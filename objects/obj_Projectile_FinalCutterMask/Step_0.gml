@@ -6,13 +6,13 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	if (!instance_exists(owner))
 	{
-		//instance_destroy();
+		instance_destroy();
 	}
 	else
 	{
-		if (owner.attackNumber != playerAttacks.finalCutter)
+		if (owner.attackNumber != playerAttacks.finalCutter || owner.finalCutterState == 3)
 		{
-			//instance_destroy();
+			instance_destroy();
 		}
 	}
 	

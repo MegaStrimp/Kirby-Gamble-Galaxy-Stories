@@ -107,6 +107,7 @@ enum playerAbilities
 	mysticCutter,
     beam,
 	mysticBeam,
+	mysticBeam2,
 	stone,
 	ufo,
 	mirror,
@@ -197,6 +198,7 @@ enum playerAttacks
 	fireDash,
 	fireAerial,
 	fireWheel,
+	fireWheelClimb,
 	fireBack,
 	
 	iceNormal,

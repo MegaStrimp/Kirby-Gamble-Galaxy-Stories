@@ -28,7 +28,7 @@ grav = gravNormal;
 gravFloat = .075;
 gravFireDash = .05;
 gravLimitNormal = 5;
-gravLimitFloat = 2.3;
+gravLimitFloat = 1.6;
 gravLimitBeamAir = 3;
 gravLimitStone = 7;
 gravLimitFireDash = 1.25;
@@ -538,6 +538,10 @@ deathRestartTimer = -1;
 deathRestartTimerMax = 210;
 bubblePosTimerMax = 20;
 bubblePosTimer = bubblePosTimerMax;
+
+//Zwat's testing grounds
+
+//////////////////
 
 //Create Objects
 

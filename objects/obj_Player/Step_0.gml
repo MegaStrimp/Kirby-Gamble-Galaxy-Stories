@@ -18,7 +18,7 @@ grounded = false;
 if (place_meeting(x,y + 1,obj_ParentWall))
 {
 	var collidingWall = instance_place(x,y + 1,obj_ParentWall);
-	if ((!collidingWall.platform) or ((collidingWall.platform) and (((!keyDownHold) or (downHeld < 8)) and !(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal) and (!place_meeting(x,y + vspFinal,obj_Wall))))) grounded = true;
+	if ((!collidingWall.platform) or ((collidingWall.platform) and (((!keyDownHold) or (downHeld < 3)) and !(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal) and (!place_meeting(x,y + vspFinal,obj_Wall))))) grounded = true;
 }
 else if (place_meeting(x,y + 1,obj_Spring))
 {
@@ -108,8 +108,8 @@ if (!global.pause)
 	
 	//Down Held
 
-    if (keyDownReleased) downHeld = 0;
-    if ((keyDownHold) and (downHeld < 1000)) downHeld += 1;
+    if ((keyDownHold) and (downHeld < 1000) and grounded) downHeld += 1;
+    if (keyDownReleased || attack || hsp != 0 && state == 1) downHeld = 0;
 	
 	//In Background
 	

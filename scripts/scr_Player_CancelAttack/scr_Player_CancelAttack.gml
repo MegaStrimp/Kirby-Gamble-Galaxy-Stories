@@ -75,7 +75,7 @@ function scr_Player_CancelAttack(argument0)
 			break;
 			
 			case playerAttacks.mysticBeamDash:
-			if (instance_exists(beamBombProj)) beamBombProj.explode = true;
+			//if (instance_exists(beamBombProj)) beamBombProj.explode = true;
 			break;
 			
 			case playerAttacks.mysticBeamUp:
@@ -115,6 +115,7 @@ function scr_Player_CancelAttack(argument0)
 			
 			case playerAttacks.fireAerial:
 			case playerAttacks.fireWheel:
+			case playerAttacks.fireWheelClimb:
 			if (instance_exists(fireMaskProj)) instance_destroy(fireMaskProj);
 			invincible = false;
 			break;

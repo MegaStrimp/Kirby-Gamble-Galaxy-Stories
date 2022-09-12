@@ -18,7 +18,7 @@ function scr_Player_States_Normal()
 		if (place_meeting(x,y + 1,obj_ParentWall))
 		{
 			var collidingWall = instance_place(x,y + 1,obj_ParentWall);
-			if ((!collidingWall.platform) or ((collidingWall.platform) and (((!keyDownHold) or (downHeld < 8)) and !(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal) and (!place_meeting(x,y + vspFinal,obj_Wall))))) grounded = true;
+			if ((!collidingWall.platform) or ((collidingWall.platform) and (((!keyDownHold) or (downHeld < 3)) and !(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal) and (!place_meeting(x,y + vspFinal,obj_Wall))))) grounded = true;
 		}
 		else if (place_meeting(x,y + 1,obj_Spring))
 		{
@@ -34,10 +34,10 @@ function scr_Player_States_Normal()
 		}
 		
 		var attackDisableMovement = false;
-		if ((attack) and ((attackNumber != playerAttacks.ufoBeam) and (attackNumber != playerAttacks.ufoCharge) and (attackNumber != playerAttacks.ufoLaser) and (attackNumber != playerAttacks.cutterAir))) attackDisableMovement = true;
+		if ((attack) and ((attackNumber != playerAttacks.ufoBeam) and (attackNumber != playerAttacks.ufoCharge) and (attackNumber != playerAttacks.ufoLaser) and (attackNumber != playerAttacks.cutterAir) and (attackNumber != playerAttacks.fireAerial))) attackDisableMovement = true;
 		
 		var attackDisableDir = false;
-		if (attackNumber == playerAttacks.ufoBeam) attackDisableDir = true;
+		if ((attackNumber == playerAttacks.ufoBeam) or (attackNumber == playerAttacks.cutterAir) or (attackNumber == playerAttacks.fireAerial)) attackDisableDir = true;
 		
 		didJump = false;
 		#endregion
@@ -1177,6 +1177,22 @@ function scr_Player_States_Normal()
 						
 						#region Mystic Beam
 						case playerAbilities.mysticBeam:
+						if ((!canMysticBeamShield) and (!attack))
+                        {
+                            mysticBeamProjCount = 0
+                            if (instance_exists(obj_Projectile_Beam))
+                            {
+                                with (obj_Projectile_Beam)
+                                {
+                                    if ((isMystic) and (state == 2) and (owner == other.id))
+                                    {
+                                        other.mysticBeamProjCount += 1;
+                                        //canMysticBeamShield = true;
+                                    }
+                                }
+                            }
+                            if (mysticBeamProjCount == 0) canMysticBeamShield = true;
+                        }
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
 							if ((keyUpHold) or ((dir = 1) and (keyRightHold)) or ((dir = -1) and (keyLeftHold)))
@@ -1218,7 +1234,7 @@ function scr_Player_States_Normal()
 								{
 									if (grounded)
 									{
-										attackTimer = 150;
+										attackTimer = 20;
 										if (audio_is_playing(snd_BeamBombRelease)) audio_stop_sound(snd_BeamBombRelease);
 										audio_play_sound(snd_BeamBombRelease,0,false);
 										attack = true;
@@ -1537,6 +1553,7 @@ function scr_Player_States_Normal()
 						{
 							if (attackable)
 							{
+								run = false;
 								var par = instance_create_depth(x + (16 * dir) + hsp,y - 9,depth - 1,obj_Particle);
 								par.sprite_index = spr_Particle_MysticBeamLaser;
 								par.dir = dir;
@@ -1554,14 +1571,6 @@ function scr_Player_States_Normal()
 								beamBombProj.destroyableByEnemy = false;
 								beamBombProj.destroyableByObject = false;
 								attackable = false;
-							}
-							else
-							{
-								if ((keyAttackPressed) and (instance_exists(beamBombProj)))
-								{
-									attackTimer = 0;
-									beamBombProj.explode = true;
-								}
 							}
 						}
 					
@@ -1628,41 +1637,6 @@ function scr_Player_States_Normal()
 								attackTimer = 0;
 							}
 						}
-					
-						/*if (attackNumber == "mysticBeamUp")
-						{
-							if (attackable)
-							{
-								attackTimer = 24;
-								for (var i = 0; i < 5; i++)
-								{
-									var projBeam = instance_create_depth(-100,-100,depth + 1,obj_Projectile_Beam);
-									projBeam.owner = id;
-									projBeam.abilityType = playerAbilities.mysticBeam;
-									projBeam.player = player;
-									projBeam.invisTimer = -1 + (2 * i);
-									if (i > 0) projBeam.visible = false;
-									projBeam.imageIndex = i - 1;
-									if (projBeam.imageIndex < 0) projBeam.imageIndex = 0;
-									projBeam.orbit = 20 + (15 * i);
-									projBeam.angle = 90 + ((40 - (5 * i)) * -dir);
-									projBeam.spd = 0;
-									projBeam.orbitSpd = 2;
-									projBeam.image_index = projBeam.imageIndex;
-									projBeam.enemy = false;
-									projBeam.destroyableByWall = false;
-									projBeam.destroyableByEnemy = false;
-									projBeam.destroyableByObject = false;
-									projBeam.hitInvincibility = projBeam.hitInvincibilityMax;
-									projBeam.hasLimit = false;
-									projBeam.pulseTimer = projBeam.pulseTimerMax;
-									projBeam.invisTimerMax = -1;
-									projBeam.destroyTimer = 4 + (2 * i);
-									if (i == 4) projBeam.destroyTimer = 22;
-								}
-								attackable = false;
-							}
-						}*/
 						break;
 						#endregion
 						
@@ -2229,7 +2203,10 @@ function scr_Player_States_Normal()
 					    {
 							if ((keyAttackHold) and ((!attack) or (attackNumber == playerAttacks.fireAerial)))
 							{
-								if ((!grounded) and (place_meeting(x,y + 16,obj_ParentWall)))
+								if((place_meeting(x + 1,y,obj_ParentWall) && keyRightHold || place_meeting(x - 1,y,obj_ParentWall) && keyLeftHold) and attackTimer > 0){
+									attackNumber = playerAttacks.fireWheelClimb;
+								}
+								if ((!grounded) and (place_meeting(x,y + 16,obj_ParentWall) and attackTimer > 0))
 								{
 									hspLimit = false;
 									hsp = (movespeedBurst * (1 + (fireMagicCharcoalUpgrade / 4))) * dir;
@@ -2421,6 +2398,26 @@ function scr_Player_States_Normal()
 					        {
 					            attackTimer = 0;
 					        }
+						}
+						
+						if(attackNumber == playerAttacks.fireWheel){
+							if(keyJumpPressed && grounded){
+								vsp = -5;
+							}
+							if(vsp > 0 && grounded){
+								attackTimer = 0;
+							}
+							if(place_meeting(x + (1 * dir),y,obj_ParentWall)){
+								attackNumber = playerAttacks.fireWheelClimb;
+							}
+						}
+						if(attackNumber == playerAttacks.fireWheelClimb){
+							attackTimer = clamp(attackTimer-1,0,120);
+							hsp = 0;
+							vsp = -5;
+							if(!place_meeting(x + (1 * dir),y,obj_ParentWall) || place_meeting(x,y-1,obj_ParentWall)){
+								attackTimer = 0;
+							}
 						}
 						break;
 						#endregion
@@ -3638,7 +3635,7 @@ function scr_Player_States_Normal()
 		
 		if ((!global.cutscene) and (playerAbility != playerAbilities.ufo) and (canClimb) and (place_meeting(x,y,obj_Ladder)))
 		{
-		    if ((((!place_meeting(x,y - 1,obj_ParentWall)) and (keyUpPressed)) or ((!place_meeting(x,y + 1,obj_ParentWall)) and (keyDownPressed))) and (!attack))
+		    if ((((!place_meeting(x,y - 1,obj_ParentWall)) and (keyUpHold) and vsp > -1) or ((!place_meeting(x,y + 1,obj_ParentWall)) and (keyDownHold))) and (!attack))
 		    {
 				fallRoll = false;
 				if (fallHopCounter != 0) fallHopCounter = 0;
@@ -3681,7 +3678,7 @@ function scr_Player_States_Normal()
 		
 		//Door
 		
-		if ((!global.cutscene) and (canEnter) and (position_meeting(x,y,obj_Door)) and (keyUpPressed) and (!attack))
+		if ((!global.cutscene) and (canEnter) and (position_meeting(x,y,obj_Door)) and (keyUpHold) and (!attack))
 		{
 		    if ((!instance_exists(obj_Fade)) and (!hurt))
 		    {

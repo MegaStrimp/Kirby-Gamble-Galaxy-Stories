@@ -6,13 +6,13 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	if (!instance_exists(owner))
 	{
-		//instance_destroy();
+		instance_destroy();
 	}
 	else
 	{
 		if ((owner.attackNumber != playerAttacks.cutterAir) and (owner.attackNumber != playerAttacks.cutterDrop))
 		{
-			//instance_destroy();
+			instance_destroy();
 		}
 	}
 	
