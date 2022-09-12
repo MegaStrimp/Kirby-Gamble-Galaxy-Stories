@@ -108,8 +108,8 @@ if (!global.pause)
 	
 	//Down Held
 
-    if ((keyDownHold) and (downHeld < 1000) and grounded) downHeld += 1;
-    if (keyDownReleased || attack || hsp != 0 && state == 1) downHeld = 0;
+    if ((keyDownHold) and (downHeld < 1000)) downHeld += 1;
+    if (keyDownReleased || attack || state == 5 || hsp != 0) downHeld = 0;
 	
 	//In Background
 	

@@ -222,4 +222,4 @@ draw_text(x,y - 24,string(abilityHatPaints.beam_kssu_bitcrushed));*/
 //draw_text(x,y - 24,string(finalCutterState));
 draw_text(x+20,y - 24,string(attackTimer));
 draw_text(x,y - 34,"State:"+string(state));
-draw_text(x,y - 54,"Can MBS:"+string((canMysticBeamShield)));
+draw_text(x,y - 54,"Down Held:"+string(downHeld));
