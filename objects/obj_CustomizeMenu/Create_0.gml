@@ -66,11 +66,11 @@ button.state = "back";
 
 //Misc Strings
 
-strSkins = scr_Localization_Main(stringAttributes.customizeSubMenus_skins,stringAttributes.title,0,global.language);
-strSprayPaints = scr_Localization_Main(stringAttributes.customizeSubMenus_sprayPaints,stringAttributes.title,0,global.language);
-strHatSkins = scr_Localization_Main(stringAttributes.customizeSubMenus_hatSkins,stringAttributes.title,0,global.language);
-strHatPaints = scr_Localization_Main(stringAttributes.customizeSubMenus_hatPaints,stringAttributes.title,0,global.language);
-strFamiliars = scr_Localization_Main(stringAttributes.customizeSubMenus_familiars,stringAttributes.title,0,global.language);
+strSkins = str("Customize Sub-Menus.Skins.Title");
+strSprayPaints = str("Customize Sub-Menus.Spray Paints.Title");
+strHatSkins = str("Customize Sub-Menus.Hat Skins.Title");
+strHatPaints = str("Customize Sub-Menus.Hat Paints.Title");
+strFamiliars = str("Customize Sub-Menus.Familiars.Title");
 
 //Timers
 

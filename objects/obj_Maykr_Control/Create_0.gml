@@ -16,7 +16,7 @@ mouseYGui = device_mouse_y_to_gui(0);
 #region Spawn Values
 spawnedLayer = "Collision";
 spawnedItemString = maykrObjects.debugWall;
-spawnedItemIndex = obj_ParentWall;
+spawnedItemIndex = obj_Wall;
 spawnedSprite = spr_Maykr_Spawner_DebugWall;
 spawnedName = "Player";
 spawnedPaletteIndex = -1;
@@ -28,7 +28,10 @@ snap = 24;
 #endregion
 
 #region Tiles
+tileDebugLadder = -1;
 tileDebug = -1;
+tileDebugPlatform = -1;
+tileDebugPlatformTop = -1;
 tileAsteroidFieldsFront = -1;
 tileAsteroidFieldsFront3D1 = -1;
 tileAsteroidFieldsFront3D2 = -1;
@@ -61,6 +64,8 @@ enum maykrObjects
 	debugWall24x24SlopeRight,
 	//debugWall48x24Slope,
 	//debugWall72x24Slope,
+	debugPlatform,
+	debugLadder,
 	asteroidFieldsFront,
 	collisionTilesEnd,
 	
@@ -125,11 +130,14 @@ enum maykrObjects
 	food,
 	pepBrew,
 	maximTomato,
+	invincibilityCandy,
 	starBlock,
 	bigStarBlock,
 	crate,
 	bombBlock,
 	bombSolidBlock,
+	bouncyCloudLow,
+	bouncyCloudHigh,
 	breakingWall,
 	cuttableGrass,
 	durableBlock,

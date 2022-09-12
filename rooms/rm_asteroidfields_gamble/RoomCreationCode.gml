@@ -30,5 +30,5 @@ layer_background_yscale(layer_background_get_id("Background_Parallax1"),.5);
 if (!audio_is_playing(mus_NuclearSpelunky))
 {
 	audio_stop_all();
-	scr_PlayMusic(false,mus_NuclearSpelunky,0,true);
+	scr_PlayMusic(true,false,mus_NuclearSpelunky,0,true);
 }

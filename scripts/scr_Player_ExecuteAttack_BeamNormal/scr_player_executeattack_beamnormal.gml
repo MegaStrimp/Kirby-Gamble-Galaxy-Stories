@@ -9,7 +9,7 @@ function scr_Player_ExecuteAttack_BeamNormal()
 	attackNumber = playerAttacks.beamNormal;
 	sprite_index = sprBeamAttack1;
 	image_index = 0;
-	attackTimer = 25;
+	attackTimer = 30;
 	parBeamCycle1 = instance_create_depth(-100,-100,depth - 1,obj_Particle);
 	parBeamCycle1.followObject = false;
 	parBeamCycle1.followedObject = id;
@@ -47,11 +47,11 @@ function scr_Player_ExecuteAttack_BeamNormal()
 			break;
 				
 			case 4:
-			projBeam.angle = 90 - (8 * -dir);
+			projBeam.angle = 90 - (18 * -dir);
 			break;
 				
 			case 5:
-			projBeam.angle = 90 - (16 * -dir);
+			projBeam.angle = 90 - (36 * -dir);
 			break;
 		}
 		projBeam.centerX = (10 * dir);
@@ -62,7 +62,7 @@ function scr_Player_ExecuteAttack_BeamNormal()
 		projBeam.imageIndex = i - 1;
 		if (projBeam.imageIndex < 0) projBeam.imageIndex = 0;
 		if (projBeam.imageIndex > 3) projBeam.imageIndex = 3;
-		projBeam.spd = (2.4 + (i * .4)) * -dir;
+		projBeam.spd = (3 + (i * .4)) * -dir;
 		projBeam.image_index = projBeam.imageIndex;
 		projBeam.enemy = false;
 		projBeam.destroyableByWall = false;

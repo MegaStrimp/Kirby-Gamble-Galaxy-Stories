@@ -11,7 +11,7 @@ function scr_Enemy_HurtsPlayer(argument0)
 	if ((place_meeting(x,y,obj_Player)) and (!hurt))
 	{
 		collidedPlayer = instance_place(x,y,obj_Player);
-		if ((collidedPlayer.canGetHurt) and (!collidedPlayer.invincible))
+		if ((collidedPlayer.canGetHurt) and (!collidedPlayer.invincible) and (!collidedPlayer.hasInvinCandy))
 		{
 			//Variables
 			

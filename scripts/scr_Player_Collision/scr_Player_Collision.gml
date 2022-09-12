@@ -140,7 +140,7 @@ function scr_Player_Collision(argument0)
 	if (place_meeting(x,y + vspFinal,obj_Platform))
 	{
 		collidingWall = instance_place(x,y + vspFinal,obj_Platform);
-		if (((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + collidingWall.vsp + 20 + vspFinal)) or (place_meeting(x,y + vspFinal,obj_Wall)))
+		if ((((!keyDownHold) or (downHeld < 8)) and !(round(bbox_bottom) > collidingWall.y + collidingWall.vsp + 20 + vspFinal)) or (place_meeting(x,y + vspFinal,obj_Wall)))
 		{
 			/*while (!place_meeting(x,y + sign(vspFinal),obj_Platform))
 			{

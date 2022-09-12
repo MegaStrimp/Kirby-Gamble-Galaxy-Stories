@@ -20,14 +20,14 @@ gravLimitNormal = 0;
 
 mask_index = spr_24SquareOriginless_Mask;
 
-sprIdle = spr_plasmaWisp_Normal_Idle;
-sprCharge = spr_plasmaWisp_Normal_Charge;
-sprAttack = spr_plasmaWisp_Normal_Shoot;
-sprHurt = spr_plasmaWisp_normal_Hurt;
-sprAttackBasic = spr_plasmaWisp_Normal_AttackBasic;
-sprAttackRecharge =spr_plasmaWisp_Normal_Recharge;
+sprIdle = spr_PlasmaWisp_Normal_Idle;
+sprCharge = spr_PlasmaWisp_Normal_Charge;
+sprAttack = spr_PlasmaWisp_Normal_Shoot;
+sprAttackBasic = spr_PlasmaWisp_Normal_AttackBasic;
+sprAttackRecharge = spr_PlasmaWisp_Normal_AttackRecharge;
+sprHurt = spr_PlasmaWisp_Normal_Hurt;
 
-sprCurrent = sprIdle
+sprCurrent = sprIdle;
 
 //Other Variables
 
@@ -37,6 +37,8 @@ dmg = 1;
 ability = playerAbilities.spark;
 points = 200;
 hasGravity = false;
+hasXKnockback = false;
+hasYKnockback = false;
 hasXCollision = false;
 hasYCollision = false;
 canTurnX = true;

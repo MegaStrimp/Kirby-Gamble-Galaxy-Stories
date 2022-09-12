@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_plasmawisp_normal_hurt",
+  "name": "spr_PlasmaWisp_Normal_Hurt",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -32,7 +32,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_plasmawisp_normal_hurt",
+    "name": "spr_PlasmaWisp_Normal_Hurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -44,7 +44,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"f15e0cbc-1f12-436d-a3b4-7a25649cfe29","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"95782917-2ff6-41ea-a65b-766429bd2165","path":"sprites/spr_plasmawisp_normal_hurt/spr_plasmawisp_normal_hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f15e0cbc-1f12-436d-a3b4-7a25649cfe29","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"95782917-2ff6-41ea-a65b-766429bd2165","path":"sprites/spr_PlasmaWisp_Normal_Hurt/spr_PlasmaWisp_Normal_Hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,

@@ -18,7 +18,7 @@ function scr_Player_States_Normal()
 		if (place_meeting(x,y + 1,obj_ParentWall))
 		{
 			var collidingWall = instance_place(x,y + 1,obj_ParentWall);
-			if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal) and (!place_meeting(x,y + vspFinal,obj_Wall))))) grounded = true;
+			if ((!collidingWall.platform) or ((collidingWall.platform) and (((!keyDownHold) or (downHeld < 8)) and !(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal) and (!place_meeting(x,y + vspFinal,obj_Wall))))) grounded = true;
 		}
 		else if (place_meeting(x,y + 1,obj_Spring))
 		{
@@ -338,7 +338,7 @@ function scr_Player_States_Normal()
 				
 				if (attackNumber == playerAttacks.bombNormal)
 				{
-					if ((!keyAttackHold) or (hurt))
+					if ((keyAttackReleased) or (hurt))
 					{
 						if (audio_is_playing(snd_BombThrow)) audio_stop_sound(snd_BombThrow);
 						audio_play_sound(snd_BombThrow,0,false);
@@ -628,7 +628,7 @@ function scr_Player_States_Normal()
 						
 							if (cutterCharge < cutterChargeMax)
 							{
-								if ((!global.cutscene) and (!keyAttackHold))
+								if ((!global.cutscene) and (keyAttackReleased))
 								{
 									cutterCharge = 0;
 									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
@@ -644,7 +644,7 @@ function scr_Player_States_Normal()
 							else
 							{
 								if (invincibleFlashTimer == -1) invincibleFlashTimer = invincibleFlashTimerMax;
-								if ((!global.cutscene) and (!keyAttackHold))
+								if ((!global.cutscene) and (keyAttackReleased))
 								{
 									cutterCharge = 0;
 									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
@@ -732,7 +732,7 @@ function scr_Player_States_Normal()
 					
 						if (attackNumber == playerAttacks.cutterAir)
 						{
-							if (!keyAttackHold)
+							if (keyAttackReleased)
 							{
 								attackTimer = 0;
 							}
@@ -880,7 +880,7 @@ function scr_Player_States_Normal()
 						
 							if (beamCharge < beamChargeMax)
 							{
-								if ((!global.cutscene) and (!keyAttackHold))
+								if ((!global.cutscene) and (keyAttackReleased))
 								{
 									beamCharge = 0;
 									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
@@ -891,7 +891,7 @@ function scr_Player_States_Normal()
 							else
 							{
 								if (invincibleFlashTimer == -1) invincibleFlashTimer = invincibleFlashTimerMax;
-								if ((!global.cutscene) and (!keyAttackHold))
+								if ((!global.cutscene) and (keyAttackReleased))
 								{
 									beamCharge = 0;
 									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
@@ -1079,6 +1079,22 @@ function scr_Player_States_Normal()
 						
 						#region Mystic Beam
 						case playerAbilities.mysticBeam:
+						if ((!canMysticBeamShield) and (!attack))
+						{
+							mysticBeamProjCount = 0;
+							if (instance_exists(obj_Projectile_Beam))
+							{
+								with (obj_Projectile_Beam)
+								{
+									if ((isMystic) and (state == 2) and (owner == other.id))
+									{
+										other.mysticBeamProjCount += 1;
+									}
+								}
+							}
+							if (mysticBeamProjCount == 0) canMysticBeamShield = true;
+						}
+						
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
 							if ((keyUpHold) or ((dir = 1) and (keyRightHold)) or ((dir = -1) and (keyLeftHold)))
@@ -1120,7 +1136,7 @@ function scr_Player_States_Normal()
 								{
 									if (grounded)
 									{
-										attackTimer = 150;
+										attackTimer = 20;
 										if (audio_is_playing(snd_BeamBombRelease)) audio_stop_sound(snd_BeamBombRelease);
 										audio_play_sound(snd_BeamBombRelease,0,false);
 										attack = true;
@@ -1288,7 +1304,7 @@ function scr_Player_States_Normal()
 							
 							if (beamCharge < beamChargeMax)
 							{
-								if ((!global.cutscene) and (!keyAttackHold))
+								if ((!global.cutscene) and (keyAttackReleased))
 								{
 									if (instance_exists(obj_Projectile_Beam))
 									{
@@ -1359,7 +1375,7 @@ function scr_Player_States_Normal()
 							else
 							{
 								if (invincibleFlashTimer == -1) invincibleFlashTimer = invincibleFlashTimerMax;
-								if ((!global.cutscene) and (!keyAttackHold))
+								if ((!global.cutscene) and (keyAttackReleased))
 								{
 									beamCharge = 0;
 									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
@@ -1439,6 +1455,7 @@ function scr_Player_States_Normal()
 						{
 							if (attackable)
 							{
+                                run = false;
 								var par = instance_create_depth(x + (16 * dir) + hsp,y - 9,depth - 1,obj_Particle);
 								par.sprite_index = spr_Particle_MysticBeamLaser;
 								par.dir = dir;
@@ -1457,14 +1474,14 @@ function scr_Player_States_Normal()
 								beamBombProj.destroyableByObject = false;
 								attackable = false;
 							}
-							else
+							/*else
 							{
 								if ((keyAttackPressed) and (instance_exists(beamBombProj)))
 								{
 									attackTimer = 0;
 									beamBombProj.explode = true;
 								}
-							}
+							}*/
 						}
 					
 						if (attackNumber == playerAttacks.mysticBeamAir)
@@ -1678,7 +1695,7 @@ function scr_Player_States_Normal()
 							}
 						}
 						
-						if ((!global.cutscene) and (attackNumber == playerAttacks.stoneUp) and (!keyAttackHold) and (stoneFistReady))
+						if ((!global.cutscene) and (attackNumber == playerAttacks.stoneUp) and (keyAttackReleased) and (stoneFistReady))
 						{
 							stoneFistReadyTimer = 0;
 						}
@@ -1739,7 +1756,7 @@ function scr_Player_States_Normal()
 						
 							if (ufoCharge < ufoChargeMax)
 							{
-								if ((!global.cutscene) and (!keyAttackHold))
+								if ((!global.cutscene) and (keyAttackReleased))
 								{
 									ufoCharge = 0;
 									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
@@ -1753,7 +1770,7 @@ function scr_Player_States_Normal()
 							else
 							{
 								if (invincibleFlashTimer == -1) invincibleFlashTimer = invincibleFlashTimerMax;
-								if ((!global.cutscene) and (!keyAttackHold))
+								if ((!global.cutscene) and (keyAttackReleased))
 								{
 									ufoCharge = 0;
 									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
@@ -1984,7 +2001,7 @@ function scr_Player_States_Normal()
 							attack = true;
 							attackable = false;
 							if ((mirrorHold) and (mirrorNormalAttackTimer == -1)) mirrorNormalAttackTimer = mirrorNormalAttackTimerMax;
-					        if ((mirrorHold) and (!global.cutscene) and (!keyAttackHold))
+					        if ((mirrorHold) and (!global.cutscene) and (keyAttackReleased))
 					        {
 								mirrorHold = false;
 								mirrorFirstAttack = true;
@@ -2014,7 +2031,7 @@ function scr_Player_States_Normal()
 						
 							if (ninjaHoldCharge < ninjaHoldChargeMax)
 							{
-								if ((!global.cutscene) and (!keyAttackHold))
+								if ((!global.cutscene) and (keyAttackReleased))
 								{
 									ninjaHoldCharge = 0;
 									attack = true;
@@ -2288,7 +2305,7 @@ function scr_Player_States_Normal()
 						{
 							shakeX = 1;
 							if (fireNormalAttackTimer == -1) fireNormalAttackTimer = fireNormalAttackTimerMax;
-					        if ((!global.cutscene) and (!keyAttackHold))
+					        if ((!global.cutscene) and (keyAttackReleased))
 					        {
 					            attackTimer = 0;
 					        }
@@ -2319,7 +2336,7 @@ function scr_Player_States_Normal()
 					
 						if (attackNumber == playerAttacks.fireBack)
 						{
-					        if ((!global.cutscene) and (!keyAttackHold))
+					        if ((!global.cutscene) and (keyAttackReleased))
 					        {
 					            attackTimer = 0;
 					        }
@@ -2364,7 +2381,7 @@ function scr_Player_States_Normal()
 							if ((!iceReady) and (!iceRelease))
 							{
 								if (iceNormalAttackTimer == -1) iceNormalAttackTimer = iceNormalAttackTimerMax;
-						        if ((!global.cutscene) and (!keyAttackHold))
+						        if ((!global.cutscene) and (keyAttackReleased))
 						        {
 									iceRelease = true;
 									sprite_index = sprIceAttack1Release;
@@ -2420,7 +2437,7 @@ function scr_Player_States_Normal()
 						
 							if (sparkHoldCharge < sparkHoldChargeMax)
 							{
-								if ((!global.cutscene) and (!keyAttackHold))
+								if ((!global.cutscene) and (keyAttackReleased))
 								{
 									sparkHoldCharge = 0;
 									if (sparkMaxCharge)
@@ -2493,7 +2510,7 @@ function scr_Player_States_Normal()
 							if (sparkCooldown > 0) sparkCooldown -= 1;
 							if (sparkCooldown <= 0)
 							{
-								if (!keyAttackHold) attackTimer = 0;
+								if (keyAttackReleased) attackTimer = 0;
 							}
 						}
 						break;
@@ -2760,7 +2777,7 @@ function scr_Player_States_Normal()
 						
 							if (cutterCharge < cutterChargeMax)
 							{
-								if ((!global.cutscene) and (!keyAttackHold))
+								if ((!global.cutscene) and (keyAttackReleased))
 								{
 									cutterCharge = 0;
 									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
@@ -2777,7 +2794,7 @@ function scr_Player_States_Normal()
 							else
 							{
 								if (invincibleFlashTimer == -1) invincibleFlashTimer = invincibleFlashTimerMax;
-								if ((!global.cutscene) and (!keyAttackHold))
+								if ((!global.cutscene) and (keyAttackReleased))
 								{
 									cutterCharge = 0;
 									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
@@ -2864,7 +2881,7 @@ function scr_Player_States_Normal()
 					
 						if (attackNumber == playerAttacks.cutterAir)
 						{
-							if (!keyAttackHold)
+							if (keyAttackReleased)
 							{
 								attackTimer = 0;
 							}
@@ -2973,7 +2990,7 @@ function scr_Player_States_Normal()
 							freezeMaskProj.image_yscale = image_yscale;
 					    }
 					
-						if ((attackNumber == 7) and (!keyAttackHold) and (!freezeReady))
+						if ((attackNumber == 7) and (keyAttackReleased) and (!freezeReady))
 					    {
 							invincible = false;
 							attackTimer = 15;
@@ -3224,7 +3241,7 @@ function scr_Player_States_Normal()
 						
 						if (cutterCharge < cutterChargeMax)
 						{
-							if ((!global.cutscene) and (!keyAttackHold))
+							if ((!global.cutscene) and (keyAttackReleased))
 							{
 								cutterCharge = 0;
 								if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
@@ -3240,7 +3257,7 @@ function scr_Player_States_Normal()
 						else
 						{
 							if (invincibleFlashTimer == -1) invincibleFlashTimer = invincibleFlashTimerMax;
-							if ((!global.cutscene) and (!keyAttackHold))
+							if ((!global.cutscene) and (keyAttackReleased))
 							{
 								cutterCharge = 0;
 								if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
@@ -3540,7 +3557,8 @@ function scr_Player_States_Normal()
 		
 		if ((!global.cutscene) and (playerAbility != playerAbilities.ufo) and (canClimb) and (place_meeting(x,y,obj_Ladder)))
 		{
-		    if ((((!place_meeting(x,y - 1,obj_ParentWall)) and (keyUpPressed)) or ((!place_meeting(x,y + 1,obj_ParentWall)) and (keyDownPressed))) and (!attack))
+		    //if ((((!place_meeting(x,y - 1,obj_ParentWall)) and (keyUpPressed)) or ((!place_meeting(x,y + 1,obj_ParentWall)) and (keyDownPressed))) and (!attack))
+            if ((((!place_meeting(x,y - 1,obj_ParentWall)) and (keyUpHold) and (vsp > -1)) or ((!place_meeting(x,y + 1,obj_ParentWall)) and (keyDownHold))) and (!attack))
 		    {
 				fallRoll = false;
 				if (fallHopCounter != 0) fallHopCounter = 0;
@@ -3583,7 +3601,7 @@ function scr_Player_States_Normal()
 		
 		//Door
 		
-		if ((!global.cutscene) and (canEnter) and (position_meeting(x,y,obj_Door)) and (keyUpPressed) and (!attack))
+		if ((!global.cutscene) and (canEnter) and (position_meeting(x,y,obj_Door)) and (keyUpHold) and (!attack))
 		{
 		    if ((!instance_exists(obj_Fade)) and (!hurt))
 		    {

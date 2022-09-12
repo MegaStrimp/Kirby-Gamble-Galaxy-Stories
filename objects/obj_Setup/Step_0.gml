@@ -2,6 +2,7 @@
 
 //Variables
 
+global.globalTimer += 1;
 if (global.gamemode == gamemodes.maykr)
 {
 	//window_set_cursor(cr_none);
@@ -40,7 +41,22 @@ var gamePaused = 1;
 
 if ((instance_exists(obj_Pause_Control)) and (obj_Pause_Control.gamePaused)) gamePaused = .5;
 
-global.musicFade = lerp(global.musicFade,global.stageMusicIsPlaying,.05);
+global.hasInvinCandy = false;
+with (obj_Player)
+{
+	if (hasInvinCandy)
+	{
+		global.hasInvinCandy = true;
+		if (!audio_is_playing(mus_InvincibilityCandy)) scr_PlayMusic(false,false,mus_InvincibilityCandy,0,true);
+	}
+}
+
+if ((!global.hasInvinCandy) and (audio_is_playing(mus_InvincibilityCandy))) audio_stop_sound(mus_InvincibilityCandy);
+
+var musicIsPlaying = true;
+if ((!global.stageMusicIsPlaying) or (global.hasInvinCandy)) musicIsPlaying = false;
+
+global.musicFade = lerp(global.musicFade,musicIsPlaying,.05);
 
 for (var i = 0; audio_exists(i); i++)
 {
@@ -48,7 +64,8 @@ for (var i = 0; audio_exists(i); i++)
     if (soundString == "mus")
 	{
 		var fadeMultiplier = 1;
-		if (audio_get_name(i) == audio_get_name(global.musicPlaying)) fadeMultiplier = global.musicFade;
+		var audioName = audio_get_name(i);
+		if ((audioName == audio_get_name(global.musicPlaying)) and (audioName != "mus_MiniBoss") and (audioName != "mus_InvincibilityCandy")) fadeMultiplier = global.musicFade;
 		var musicVolume = global.musicVolume * gamePaused * fadeMultiplier;
 		if (global.muted) musicVolume = 0;
         audio_sound_gain(i,musicVolume,0);

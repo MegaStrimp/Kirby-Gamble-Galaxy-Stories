@@ -18,7 +18,7 @@ grounded = false;
 if (place_meeting(x,y + 1,obj_ParentWall))
 {
 	var collidingWall = instance_place(x,y + 1,obj_ParentWall);
-	if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + (bbox_bottom - bbox_top) + vspFinal)))) grounded = true;
+	if ((!collidingWall.platform) or ((collidingWall.platform) and (((!keyDownHold) or (downHeld < 8)) and !(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal) and (!place_meeting(x,y + vspFinal,obj_Wall))))) grounded = true;
 }
 else if (place_meeting(x,y + 1,obj_Spring))
 {
@@ -105,6 +105,11 @@ if (!global.pause)
 		if (movingWall.hsp != 0) x += movingWall.hsp;
 	}
 	*/
+	
+	//Down Held
+	
+	if (keyDownReleased) downHeld = 0;
+	if ((keyDownHold) and (downHeld < 1000)) downHeld += 1;
 	
 	//In Background
 	
@@ -288,7 +293,7 @@ if (!global.pause)
 				audio_play_sound(snd_Jump,0,false);
 			}
 			
-			if (collidedSpring.object_index == obj_BouncyCloud)
+			if ((collidedSpring.object_index == obj_BouncyCloud) or (collidedSpring.object_index == obj_BouncyCloudHigh))
 			{
 				collidedSpring.scaleExY = -.2;
 				collidedSpring.yDrawOffset = drawOffsetForce;
@@ -852,6 +857,64 @@ if (!global.pause)
 			invincibleFlash = true;
 		}
 		invincibleFlashTimer = invincibleFlashTimerMax;
+	}
+	
+	if (player == 0)
+	{
+		//Invin Candy Timer P1
+		
+		if (global.invinCandyTimerP1 > 0)
+		{
+			global.invinCandyTimerP1 -= 1;
+		}
+		else if (global.invinCandyTimerP1 == 0)
+		{
+			invincibleFlash = false;
+			invincibleFlashTimer = -1;
+			global.invinCandyTimerP1 = -1;
+		}
+	}
+	else
+	{
+		//Invin Candy Timer P2
+		
+		if (global.invinCandyTimerP2 > 0)
+		{
+			global.invinCandyTimerP2 -= 1;
+		}
+		else if (global.invinCandyTimerP2 == 0)
+		{
+			invincibleFlash = false;
+			invincibleFlashTimer = -1;
+			global.invinCandyTimerP2 = -1;
+		}
+	}
+	
+	//Invincibility Candy Particle Timer
+	
+	if (hasInvinCandy)
+	{
+		if (invinCandyParticleTimer > 0)
+		{
+			invinCandyParticleTimer -= 1;
+		}
+		else if (invinCandyParticleTimer == 0)
+		{
+			var par = instance_create_depth(x + (irandom_range(12,-12)),y - 8 + (irandom_range(12,-12)),depth - 1,obj_Particle);
+	        par.sprite_index = spr_Particle_ShrinkingStar3;
+	        par.direction = irandom_range(0,359);
+			var angle = 90 - par.direction;
+			if (angle > 360) angle -= 360;
+			if (angle < 0) angle += 360;
+	        par.image_angle = angle;
+	        par.spdBuiltIn = irandom_range(2,3);
+			par.destroyAfterAnimation = true;
+		    invinCandyParticleTimer = -1;
+		}
+	}
+	else
+	{
+		invinCandyParticleTimer = -1;
 	}
 	
 	//Jump Limit Timer

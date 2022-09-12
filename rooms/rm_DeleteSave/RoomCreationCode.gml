@@ -10,5 +10,5 @@ global.discordLargeImage = "ggs_icon";
 if (!audio_is_playing(mus_Options))
 {
 	audio_stop_all();
-	scr_PlayMusic(false,mus_Options,0,true);
+	scr_PlayMusic(true,false,mus_Options,0,true);
 }

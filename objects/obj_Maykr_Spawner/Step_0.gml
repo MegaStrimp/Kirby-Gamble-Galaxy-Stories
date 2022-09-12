@@ -4,7 +4,7 @@
 
 if (activeState == 0)
 {
-	if ((spawnedItemIndex == obj_ParentWall) and (spawnedSlopeType != 0)) yOffset = -4;
+	if (((spawnedItemIndex == obj_ParentWall) or (spawnedItemIndex == obj_Wall)) and (spawnedSlopeType != 0)) yOffset = -4;
 	spawnedItem = instance_create_layer(x + xOffset,y + yOffset,spawnedLayer,spawnedItemIndex);
 	spawnedItem.state = spawnedState;
 	spawnedItem.dirX = spawnedDirX;
@@ -18,6 +18,7 @@ if (activeState == 0)
 		break;
 		
 		case obj_ParentWall:
+		case obj_Wall:
 		spawnedItem.image_xscale = spawnedDirX;
 		switch (spawnedSlopeType)
 		{
@@ -52,16 +53,6 @@ if (activeState == 0)
 		}
 		break;
 		
-		case obj_Ladder:
-		spawnedItem.visible = true;
-		spawnedItem.sprite_index = spr_Maykr_Debug_Ladder;
-		break;
-		
-		case obj_Platform:
-		spawnedItem.visible = true;
-		spawnedItem.sprIdle = spr_Maykr_Debug_Platform;
-		break;
-		
 		case obj_StarBlock:
 		break;
 		
@@ -85,6 +76,7 @@ else if (activeState == 1)
 		break;
 		
 		case obj_ParentWall:
+		case obj_Wall:
 		switch (spawnedSlopeType)
 		{
 			case 0:

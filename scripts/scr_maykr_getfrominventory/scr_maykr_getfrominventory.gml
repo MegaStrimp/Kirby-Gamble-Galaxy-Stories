@@ -13,25 +13,36 @@ function scr_Maykr_GetFromInventory(argument0)
 	{
 		#region Collision
 		case maykrObjects.debugWall:
-		spawnedItemIndex = obj_ParentWall;
+		spawnedItemIndex = obj_Wall;
 		spawnedSprite = spr_Maykr_Spawner_DebugWall;
 		break;
 		
 		case maykrObjects.debugWall24x24SlopeLeft:
-		spawnedItemIndex = obj_ParentWall;
+		spawnedItemIndex = obj_Wall;
 		spawnedSprite = spr_Maykr_Spawner_DebugWall24x24SlopeLeft;
 		spawnedSlopeType = 1;
 		break;
 		
 		case maykrObjects.debugWall24x24SlopeRight:
-		spawnedItemIndex = obj_ParentWall;
+		spawnedItemIndex = obj_Wall;
 		spawnedSprite = spr_Maykr_Spawner_DebugWall24x24SlopeRight;
 		spawnedSlopeType = 1;
 		spawnedXOffset = 24;
 		break;
 		
+		case maykrObjects.debugPlatform:
+		spawnedItemIndex = obj_Platform;
+		spawnedSprite = spr_Maykr_Spawner_DebugPlatform;
+		spawnedYOffset = -24;
+		break;
+		
+		case maykrObjects.debugLadder:
+		spawnedItemIndex = obj_Ladder;
+		spawnedSprite = spr_Maykr_Spawner_DebugLadder;
+		break;
+		
 		case maykrObjects.asteroidFieldsFront:
-		spawnedItemIndex = obj_ParentWall;
+		spawnedItemIndex = obj_Wall;
 		spawnedSprite = spr_Maykr_Spawner_AsteroidFieldsFront;
 		break;
 		#endregion
@@ -421,6 +432,13 @@ function scr_Maykr_GetFromInventory(argument0)
 		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
 		break;
 		
+		case maykrObjects.invincibilityCandy:
+		spawnedItemIndex = obj_InvincibilityCandy;
+		spawnedSprite = spr_InvincibilityCandy;
+		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
+		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
+		break;
+		
 		case maykrObjects.starBlock:
 		spawnedItemIndex = obj_StarBlock;
 		spawnedSprite = spr_StarBlock_Normal_Idle;
@@ -452,6 +470,20 @@ function scr_Maykr_GetFromInventory(argument0)
 		case maykrObjects.bombSolidBlock:
 		spawnedItemIndex = obj_BombSolidBlock;
 		spawnedSprite = spr_BombSolidBlock_Normal_Idle;
+		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
+		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
+		break;
+		
+		case maykrObjects.bouncyCloudLow:
+		spawnedItemIndex = obj_BouncyCloud;
+		spawnedSprite = spr_BouncyCloud_Normal;
+		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
+		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
+		break;
+		
+		case maykrObjects.bouncyCloudHigh:
+		spawnedItemIndex = obj_BouncyCloudHigh;
+		spawnedSprite = spr_BouncyCloud_High;
 		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
 		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
 		break;

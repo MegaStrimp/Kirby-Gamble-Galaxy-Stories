@@ -7,12 +7,12 @@ if (setupTimer == 0)
 	{
 		#region Normal
 		case 0:
-		sprIdle = spr_plasmaWisp_Normal_Idle;
-		sprCharge = spr_plasmaWisp_Normal_Charge;
-		sprAttack = spr_plasmaWisp_Normal_Shoot;
-		sprHurt = spr_plasmaWisp_normal_Hurt;
-		sprAttackBasic = spr_plasmaWisp_Normal_AttackBasic;
-		sprAttackRecharge =spr_plasmaWisp_Normal_Recharge;
+		sprIdle = spr_PlasmaWisp_Normal_Idle;
+		sprCharge = spr_PlasmaWisp_Normal_Charge;
+		sprAttack = spr_PlasmaWisp_Normal_Shoot;
+		sprAttackBasic = spr_PlasmaWisp_Normal_AttackBasic;
+		sprAttackRecharge = spr_PlasmaWisp_Normal_AttackRecharge;
+		sprHurt = spr_PlasmaWisp_Normal_Hurt;
 		break;
 		#endregion
 	}

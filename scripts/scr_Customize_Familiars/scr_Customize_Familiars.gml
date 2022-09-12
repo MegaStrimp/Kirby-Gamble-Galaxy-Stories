@@ -5,9 +5,9 @@ function scr_Customize_Familiars()
 	var i = 0;
 	
 	#region Gamble
-	familiarTitle[i] = scr_Localization_Main(stringAttributes.familiars_gamble,stringAttributes.title,0,global.language);
+	familiarTitle[i] = str("Player Characters.Gamble.Title");
 	familiarValue[i] = familiars.gamble;
-	familiarDescription[i] = scr_Localization_Main(stringAttributes.familiars_gamble,stringAttributes.description,0,global.language);
+	familiarDescription[i] = str("Familiars.Gamble.Description");
 	familiarUnlocked[i] = global.gambleFamiliarUnlocked;
 	familiarUnlockMethod[i] = "TBD";
 	familiarSprite[i] = spr_Menu_Collection_Customize_Familiar_Gamble;
@@ -63,9 +63,9 @@ function scr_Customize_Familiars()
 	#endregion
 	
 	#region Happy Pea
-	familiarTitle[i] = scr_Localization_Main(stringAttributes.familiars_happyPea,stringAttributes.title,0,global.language);
+	familiarTitle[i] = str("Familiars.Happy Pea.Title");
 	familiarValue[i] = familiars.happyPea;
-	familiarDescription[i] = scr_Localization_Main(stringAttributes.familiars_happyPea,stringAttributes.description,0,global.language);
+	familiarDescription[i] = str("Familiars.Happy Pea.Description");
 	familiarUnlocked[i] = global.happyPeaFamiliarUnlocked;
 	familiarUnlockMethod[i] = "TBD";
 	familiarSprite[i] = spr_Menu_Collection_Customize_Familiar_HappyPea;
@@ -109,9 +109,9 @@ function scr_Customize_Familiars()
 	#endregion
 	
 	#region Epic Jar
-	familiarTitle[i] = scr_Localization_Main(stringAttributes.familiars_epicJar,stringAttributes.title,0,global.language);
+	familiarTitle[i] = str("Familiars.Epic Jar.Title");
 	familiarValue[i] = familiars.epicJar;
-	familiarDescription[i] = scr_Localization_Main(stringAttributes.familiars_epicJar,stringAttributes.description,0,global.language);
+	familiarDescription[i] = str("Familiars.Epic Jar.Description");
 	familiarUnlocked[i] = global.epicJarFamiliarUnlocked;
 	familiarUnlockMethod[i] = "TBD";
 	familiarSprite[i] = spr_Menu_Collection_Customize_Familiar_EpicJar;
@@ -155,9 +155,9 @@ function scr_Customize_Familiars()
 	#endregion
 	
 	#region Krackle
-	familiarTitle[i] = scr_Localization_Main(stringAttributes.familiars_krackle,stringAttributes.title,0,global.language);
+	familiarTitle[i] = str("Familiars.Krackle.Title");
 	familiarValue[i] = familiars.krackle;
-	familiarDescription[i] = scr_Localization_Main(stringAttributes.familiars_krackle,stringAttributes.description,0,global.language);
+	familiarDescription[i] = str("Familiars.Krackle.Description");
 	familiarUnlocked[i] = global.krackleFamiliarUnlocked;
 	familiarUnlockMethod[i] = "TBD";
 	familiarSprite[i] = spr_Menu_Collection_Customize_Familiar_Krackle;
@@ -201,9 +201,9 @@ function scr_Customize_Familiars()
 	#endregion
 	
 	#region Omega Matter
-	familiarTitle[i] = scr_Localization_Main(stringAttributes.familiars_omegaMatter,stringAttributes.title,0,global.language);
+	familiarTitle[i] = str("Familiars.Omega Matter.Title");
 	familiarValue[i] = familiars.omegaMatter;
-	familiarDescription[i] = scr_Localization_Main(stringAttributes.familiars_omegaMatter,stringAttributes.description,0,global.language);
+	familiarDescription[i] = str("Familiars.Omega Matter.Description");
 	familiarUnlocked[i] = global.omegaMatterFamiliarUnlocked;
 	familiarUnlockMethod[i] = "TBD";
 	familiarSprite[i] = spr_Menu_Collection_Customize_Familiar_Gamble;

@@ -748,8 +748,9 @@ enum talkingCharacter
 #endregion
 
 #region Global Variables
-global.versionNumber = "0.5.4";
+global.versionNumber = "0.5.6";
 
+global.globalTimer = 0;
 global.selectedSave = "Save1.ini";
 global.hpMax = 5;
 global.hpP1 = global.hpMax;
@@ -805,6 +806,7 @@ global.mixActive = -1;
 global.canSave = false;
 global.inStage = false;
 for (var i = 0; i < 4; i++) global.stageCollectibleTreasures[i] = -1;
+global.hasInvinCandy = false;
 
 #region Ability Kill Targets
 global.cutterAbilityKillsTarget = 10;
@@ -892,6 +894,11 @@ global.discordSmallImageText = "Team Gamble";
 #endregion
 
 #region Timers
+global.invinCandyTimerP1 = -1;
+global.invinCandyTimerP1Max = 3600;
+global.invinCandyTimerP2 = -1;
+global.invinCandyTimerP2Max = 3600;
+
 controllerPressedResetTimer = -1;
 #endregion
 

@@ -27,8 +27,8 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1beaa664-65b6-4bea-9aff-02ccb5857dd3",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1d6ca938-8c8a-4766-b3eb-b4647cb76f74",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1beaa664-65b6-4bea-9aff-02ccb5857dd3",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -45,8 +45,8 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"0a0d70e1-a114-4cd1-a58c-0a3086bbf2b8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1beaa664-65b6-4bea-9aff-02ccb5857dd3","path":"sprites/spr_AbilityStar_Suplex/spr_AbilityStar_Suplex.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"8ba3419e-f34b-4345-83c0-a50a033d0f6c","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1d6ca938-8c8a-4766-b3eb-b4647cb76f74","path":"sprites/spr_AbilityStar_Suplex/spr_AbilityStar_Suplex.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"8ba3419e-f34b-4345-83c0-a50a033d0f6c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1d6ca938-8c8a-4766-b3eb-b4647cb76f74","path":"sprites/spr_AbilityStar_Suplex/spr_AbilityStar_Suplex.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0a0d70e1-a114-4cd1-a58c-0a3086bbf2b8","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1beaa664-65b6-4bea-9aff-02ccb5857dd3","path":"sprites/spr_AbilityStar_Suplex/spr_AbilityStar_Suplex.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,

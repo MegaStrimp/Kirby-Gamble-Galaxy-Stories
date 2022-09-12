@@ -59,7 +59,7 @@ function scr_Player_CancelAttack(argument0)
 			break;
 			
 			case playerAttacks.mysticBeamDash:
-			if (instance_exists(beamBombProj)) beamBombProj.explode = true;
+			//if (instance_exists(beamBombProj)) beamBombProj.explode = true;
 			break;
 			
 			case playerAttacks.mysticBeamUp:

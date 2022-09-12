@@ -29,11 +29,11 @@ if (!global.pause)
 		var collidedPlayer = instance_place(x,y,obj_Player);
 		if (collidedPlayer.player == 0)
 		{
-			global.hpP1 += global.hpMax;
+			global.invinCandyTimerP1 = global.invinCandyTimerP1Max;
 		}
 		else
 		{
-			global.hpP2 += global.hpMax;
+			global.invinCandyTimerP2 = global.invinCandyTimerP2Max;
 		}
 		global.points += points;
 		instance_destroy();

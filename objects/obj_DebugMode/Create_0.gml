@@ -53,6 +53,7 @@ enum debugObject
 	cuttableGrass,
 	pepBrew,
 	maximTomato,
+	invinciblityCandy,
 	oneUp,
 	backgroundEnvironment,
 	fallingAsteroid,

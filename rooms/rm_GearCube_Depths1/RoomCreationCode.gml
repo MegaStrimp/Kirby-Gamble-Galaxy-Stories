@@ -15,5 +15,5 @@ global.roomCheckpoint = room;
 if (!audio_is_playing(mus_GearCube_Depths))
 {
 	audio_stop_all();
-	scr_PlayMusic(false,mus_GearCube_Depths,0,true);
+	scr_PlayMusic(true,false,mus_GearCube_Depths,0,true);
 }

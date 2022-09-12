@@ -231,6 +231,13 @@ switch (loadState)
 					spawner.spawnedSlopeType = spawnerSlopeTypeLoad;
 					spawner.spawnedSprite = -1;
 					break;
+					
+					case obj_Wall:
+					var spawnerSlopeTypeLoad = real(file_text_read_string(loadedFile));
+					file_text_readln(loadedFile);
+					spawner.spawnedSlopeType = spawnerSlopeTypeLoad;
+					spawner.spawnedSprite = -1;
+					break;
 										
 					case obj_AbilityTrophy:
 					var spawnerAbilityIndexLoad = file_text_read_string(loadedFile);
@@ -286,6 +293,42 @@ switch (loadState)
 				var tileSetIndex = -1;
 				switch (tileLayerIndexLoad)
 				{
+					case "tileDebugLadder":
+					if (tileDebugLadder == -1)
+					{
+						layer_create(298,"tileDebugLadder");
+						tileDebugLadder = layer_tilemap_create("tileDebugLadder",0,0,ts_Debug,floor(room_width / 24) + 1,floor(room_height / 24) + 1);
+					}
+					tileSetIndex = tileDebugLadder;
+					break;
+					
+					case "tileDebug":
+					if (tileDebug == -1)
+					{
+						layer_create(299,"tileDebug");
+						tileDebug = layer_tilemap_create("tileDebug",0,0,ts_Debug,floor(room_width / 24) + 1,floor(room_height / 24) + 1);
+					}
+					tileSetIndex = tileDebug;
+					break;
+					
+					case "tileDebugPlatform":
+					if (tileDebugPlatform == -1)
+					{
+						layer_create(299,"tileDebugPlatform");
+						tileDebugPlatform = layer_tilemap_create("tileDebugPlatform",0,0,ts_Debug,floor(room_width / 24) + 1,floor(room_height / 24) + 1);
+					}
+					tileSetIndex = tileDebugPlatform;
+					break;
+					
+					case "tileDebugPlatformTop":
+					if (tileDebugPlatformTop == -1)
+					{
+						layer_create(299,"tileDebugPlatformTop");
+						tileDebugPlatformTop = layer_tilemap_create("tileDebugPlatformTop",0,0,ts_Debug,floor(room_width / 24) + 1,floor(room_height / 24) + 1);
+					}
+					tileSetIndex = tileDebugPlatformTop;
+					break;
+					
 					case "tileAsteroidFieldsFront":
 					if (tileAsteroidFieldsFront == -1)
 					{
@@ -311,15 +354,6 @@ switch (loadState)
 						tileAsteroidFieldsFront3D2 = layer_tilemap_create("tileAsteroidFieldsFront3D2",0,0,ts_AsteroidFields,floor(room_width / 24) + 1,floor(room_height / 24) + 1);
 					}
 					tileSetIndex = tileAsteroidFieldsFront3D2;
-					break;
-					
-					case "tileDebug":
-					if (tileDebug == -1)
-					{
-						layer_create(299,"tileDebug");
-						tileDebug = layer_tilemap_create("tileDebug",0,0,ts_Debug,floor(room_width / 24) + 1,floor(room_height / 24) + 1);
-					}
-					tileSetIndex = tileDebug;
 					break;
 				}
 			
@@ -393,6 +427,21 @@ switch (loadState)
 					spawner.spawnedSlopeType = spawnerSlopeTypeLoad;
 					spawner.spawnedSprite = -1;
 					break;
+					
+					case obj_Wall:
+					var spawnerSlopeTypeLoad = real(file_text_read_string(loadedFile));
+					file_text_readln(loadedFile);
+					spawner.spawnedSlopeType = spawnerSlopeTypeLoad;
+					spawner.spawnedSprite = -1;
+					break;
+					
+					case obj_Platform:
+					spawner.spawnedSprite = -1;
+					break;
+					
+					case obj_Ladder:
+					spawner.spawnedSprite = -1;
+					break;
 										
 					case obj_AbilityTrophy:
 					var spawnerAbilityIndexLoad = file_text_read_string(loadedFile);
@@ -429,7 +478,7 @@ if (!active)
 	#endregion
 	
 	#region Music
-	if (!audio_is_playing(global.musicPlaying)) scr_PlayMusic(true,selectedMusicIndex,0,true);
+	if (!audio_is_playing(global.musicPlaying)) scr_PlayMusic(true,true,selectedMusicIndex,0,true);
 	#endregion
 	
 	if (canBeInteracted)
@@ -781,6 +830,28 @@ if (!active)
 					#region Save Tiles
 					file_text_write_string(savedFile,"tileStart");
 					file_text_writeln(savedFile);
+					if (tileDebugLadder != -1)
+					{
+						for (var h = 0; h < floor(room_height / 24) + 1; h++)
+						{
+							for (var w = 0; w < floor(room_width / 24) + 1; w++)
+							{
+								var tileIndex = tilemap_get(tileDebugLadder,w,h);
+								if ((tileIndex != -1) and (tileIndex != 0))
+								{
+									file_text_write_string(savedFile,"tileDebugLadder");
+									file_text_writeln(savedFile);
+									file_text_write_string(savedFile,tileIndex);
+									file_text_writeln(savedFile);
+									file_text_write_string(savedFile,w);
+									file_text_writeln(savedFile);
+									file_text_write_string(savedFile,h);
+									file_text_writeln(savedFile);
+								}
+							}
+						}
+					}
+					
 					if (tileDebug != -1)
 					{
 						for (var h = 0; h < floor(room_height / 24) + 1; h++)
@@ -791,6 +862,50 @@ if (!active)
 								if ((tileIndex != -1) and (tileIndex != 0))
 								{
 									file_text_write_string(savedFile,"tileDebug");
+									file_text_writeln(savedFile);
+									file_text_write_string(savedFile,tileIndex);
+									file_text_writeln(savedFile);
+									file_text_write_string(savedFile,w);
+									file_text_writeln(savedFile);
+									file_text_write_string(savedFile,h);
+									file_text_writeln(savedFile);
+								}
+							}
+						}
+					}
+					
+					if (tileDebugPlatform != -1)
+					{
+						for (var h = 0; h < floor(room_height / 24) + 1; h++)
+						{
+							for (var w = 0; w < floor(room_width / 24) + 1; w++)
+							{
+								var tileIndex = tilemap_get(tileDebugPlatform,w,h);
+								if ((tileIndex != -1) and (tileIndex != 0))
+								{
+									file_text_write_string(savedFile,"tileDebugPlatform");
+									file_text_writeln(savedFile);
+									file_text_write_string(savedFile,tileIndex);
+									file_text_writeln(savedFile);
+									file_text_write_string(savedFile,w);
+									file_text_writeln(savedFile);
+									file_text_write_string(savedFile,h);
+									file_text_writeln(savedFile);
+								}
+							}
+						}
+					}
+					
+					if (tileDebugPlatformTop != -1)
+					{
+						for (var h = 0; h < floor(room_height / 24) + 1; h++)
+						{
+							for (var w = 0; w < floor(room_width / 24) + 1; w++)
+							{
+								var tileIndex = tilemap_get(tileDebugPlatformTop,w,h);
+								if ((tileIndex != -1) and (tileIndex != 0))
+								{
+									file_text_write_string(savedFile,"tileDebugPlatformTop");
 									file_text_writeln(savedFile);
 									file_text_write_string(savedFile,tileIndex);
 									file_text_writeln(savedFile);
@@ -904,7 +1019,7 @@ if (!active)
 						file_text_writeln(savedFile);
 						switch (spawnedItemIndex)
 						{
-							case obj_ParentWall:
+							case obj_Wall:
 							file_text_write_string(savedFile,spawnedSlopeType);
 							file_text_writeln(savedFile);
 							break;
@@ -1202,7 +1317,13 @@ if (!active)
 					spawner.spawnedSprite = -1;
 					spawner.spawnedSlopeType = spawnedSlopeType;
 					break;
+					
+					case obj_Wall:
+					spawner.spawnedSprite = -1;
+					spawner.spawnedSlopeType = spawnedSlopeType;
+					break;
 				}
+				
 				switch (spawnedItemString)
 				{
 					case maykrObjects.debugWall:
@@ -1239,6 +1360,32 @@ if (!active)
 					var wx = mouseX / 24;
 					var wy = mouseY / 24;
 					tilemap_set(tileDebug,65,wx,wy);
+					break;
+					
+					case maykrObjects.debugPlatform:
+					if (tileDebugPlatform == -1)
+					{
+						layer_create(299,"tileDebugPlatform");
+						tileDebugPlatform = layer_tilemap_create("tileDebugPlatform",0,0,ts_Debug,floor(room_width / 24) + 1,floor(room_height / 24) + 1);
+						
+						layer_create(299,"tileDebugPlatformTop");
+						tileDebugPlatformTop = layer_tilemap_create("tileDebugPlatformTop",0,0,ts_Debug,floor(room_width / 24) + 1,floor(room_height / 24) + 1);
+					}
+					var wx = mouseX / 24;
+					var wy = mouseY / 24;
+					tilemap_set(tileDebugPlatform,63,wx,wy);
+					if (tilemap_get(tileDebugPlatformTop,wx,wy - 1) == 0) tilemap_set(tileDebugPlatformTop,101,wx,wy - 1);
+					break;
+					
+					case maykrObjects.debugLadder:
+					if (tileDebugLadder == -1)
+					{
+						layer_create(298,"tileDebugLadder");
+						tileDebugLadder = layer_tilemap_create("tileDebugLadder",0,0,ts_Debug,floor(room_width / 24) + 1,floor(room_height / 24) + 1);
+					}
+					var wx = mouseX / 24;
+					var wy = mouseY / 24;
+					tilemap_set(tileDebugLadder,14,wx,wy);
 					break;
 					
 					case maykrObjects.asteroidFieldsFront:
@@ -1303,6 +1450,15 @@ if (!active)
 					var bottomTile = tilemap_get(obj_Maykr_Control.tileDebug,floor(x / 24),floor(y / 24) + 1);
 					if (topTile == 99) tilemap_set(obj_Maykr_Control.tileDebug,0,floor(x / 24),floor(y / 24) - 1);
 					if (bottomTile == 80) tilemap_set(obj_Maykr_Control.tileDebug,99,floor(x / 24),floor(y / 24));
+					break;
+					
+					case maykrObjects.debugPlatform:
+					tilemap_set(obj_Maykr_Control.tileDebugPlatform,0,floor(x / 24),floor(y / 24));
+					tilemap_set(obj_Maykr_Control.tileDebugPlatformTop,0,floor(x / 24),floor(y / 24) - 1);
+					break;
+					
+					case maykrObjects.debugLadder:
+					tilemap_set(obj_Maykr_Control.tileDebugLadder,0,floor(x / 24),floor(y / 24));
 					break;
 					
 					case maykrObjects.asteroidFieldsFront:

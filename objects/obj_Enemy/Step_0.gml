@@ -607,7 +607,7 @@ if (!global.pause)
 			
 			audio_play_sound(snd_BigJump,0,false);
 			
-			if (collidedSpring.object_index == obj_BouncyCloud)
+			if ((collidedSpring.object_index == obj_BouncyCloud) or (collidedSpring.object_index == obj_BouncyCloudHigh))
 			{
 				collidedSpring.scaleExY = -.2;
 				collidedSpring.yDrawOffset = drawOffsetForce;

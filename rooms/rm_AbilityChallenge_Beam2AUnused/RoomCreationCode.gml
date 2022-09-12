@@ -21,5 +21,5 @@ layer_background_yscale(layer_background_get_id("AbilityChallenge_Background"),.
 if (!audio_is_playing(mus_AbilityChallenge))
 {
 	audio_stop_all();
-	scr_PlayMusic(false,mus_AbilityChallenge,0,true);
+	scr_PlayMusic(true,false,mus_AbilityChallenge,0,true);
 }

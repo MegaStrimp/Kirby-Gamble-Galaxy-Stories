@@ -476,7 +476,7 @@ function scr_Player_States_Carry()
 		
 		//Enter Door
 		
-		if ((!global.cutscene) and (canEnter) and (position_meeting(x,y,obj_Door)) and (keyUpPressed) and (!inhaleEnd) and (!spit))
+		if ((!global.cutscene) and (canEnter) and (position_meeting(x,y,obj_Door)) and (keyUpHold) and (!inhaleEnd) and (!spit))
 		{
 		    if ((!instance_exists(obj_Fade)) and (!hurt))
 		    {

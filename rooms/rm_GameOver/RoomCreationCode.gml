@@ -19,5 +19,5 @@ layer_background_yscale(layer_background_get_id("Floor"),.5);
 if (!audio_is_playing(mus_GameOver))
 {
 	audio_stop_all();
-	scr_PlayMusic(false,mus_GameOver,0,false);
+	scr_PlayMusic(true,false,mus_GameOver,0,false);
 }

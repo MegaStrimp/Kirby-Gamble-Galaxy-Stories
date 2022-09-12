@@ -297,6 +297,11 @@ function scr_Maykr_ObjectAttributes(argument0,argument1)
 		hasDirectionButton = true;
 		break;
 		
+		case maykrObjects.invincibilityCandy:
+		hasOptionsButton = true;
+		hasDirectionButton = true;
+		break;
+		
 		case maykrObjects.starBlock:
 		hasOptionsButton = true;
 		hasDirectionButton = true;
@@ -318,6 +323,16 @@ function scr_Maykr_ObjectAttributes(argument0,argument1)
 		break;
 		
 		case maykrObjects.bombSolidBlock:
+		hasOptionsButton = true;
+		hasDirectionButton = true;
+		break;
+		
+		case maykrObjects.bouncyCloudLow:
+		hasOptionsButton = true;
+		hasDirectionButton = true;
+		break;
+		
+		case maykrObjects.bouncyCloudHigh:
 		hasOptionsButton = true;
 		hasDirectionButton = true;
 		break;

@@ -434,6 +434,9 @@ collisionX = obj_Wall;
 collisionY = obj_Wall;
 inBackground = false;
 warpStarIndex = -1;
+downHeld = 0;
+hasInvinCandy = false;
+invinCandyMask = -1;
 
 //Inputs
 
@@ -455,6 +458,8 @@ invincibleTimer = -1;
 invincibleTimerMax = 60;
 invincibleFlashTimer = -1;
 invincibleFlashTimerMax = 2;
+invinCandyParticleTimer = -1;
+invinCandyParticleTimerMax = 5;
 jumpLimitTimer = -1;
 jumpLimitTimerMax = 15;
 hspLimitTimer = -1;

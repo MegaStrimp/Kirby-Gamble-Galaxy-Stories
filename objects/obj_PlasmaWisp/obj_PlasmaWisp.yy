@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_PlasmaWisp",
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_PlasmaWisp_Normal_Idle",
+    "path": "sprites/spr_PlasmaWisp_Normal_Idle/spr_PlasmaWisp_Normal_Idle.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

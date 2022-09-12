@@ -1228,6 +1228,21 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		break;
 		#endregion
 		
+		#region Invinciblity Candy
+		case debugObject.invinciblityCandy:
+		debugSprite = spr_InvincibilityCandy;
+		debugSpriteSelectedMax = 0;
+		debugIndex = 0;
+		debugStateSelectedMax = 0;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var debugObj = instance_create_layer(x,y,"Environment",obj_InvincibilityCandy);
+			debugObj.image_xscale = debugXScale;
+			debugObj.image_yscale = debugYScale;
+		}
+		break;
+		#endregion
+		
 		#region 1-Up
 		case debugObject.oneUp:
 		debugSprite = spr_1Up;
@@ -3466,13 +3481,31 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		
 		#region Glunk
 		case debugObject.glunk:
-		debugSpriteSelectedMax = 0;
+		debugSpriteSelectedMax = 1;
 		switch (debugSpriteSelected)
 		{
 			#region Normal
 			case 0:
 			var sprIdle = spr_Glunk_Normal_Idle;
 			var sprHurt = spr_Glunk_Normal_Hurt;
+			debugPaletteNumberMax = 0;
+			switch (debugPaletteNumber)
+			{
+				case 0:
+				debugPaletteIndex = spr_Glunk_Normal_Palette_Melon;
+				break;
+				
+				default:
+				debugPaletteIndex = spr_Glunk_Normal_Palette_Melon;
+				break;
+			}
+			break;
+			#endregion
+			
+			#region Glunker
+			case 1:
+			var sprIdle = spr_Glunk_Glunker_Idle;
+			var sprHurt = spr_Glunk_Glunker_Hurt;
 			debugPaletteNumberMax = 0;
 			switch (debugPaletteNumber)
 			{

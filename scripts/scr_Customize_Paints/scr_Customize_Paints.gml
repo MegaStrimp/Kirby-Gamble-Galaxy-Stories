@@ -5,10 +5,10 @@ function scr_Customize_Paints()
 	var i = 0;
 	
 	#region Friendly Pink
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_friendlyPink,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_friendlyPink,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Friendly Pink.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Friendly Pink.Description");
 	sprayPaintUnlocked[i] = global.friendlyPinkSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_Default,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Default");
 	sprayPaintValue[i] = playerSprayPaints.friendlyPink;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_FriendlyPink;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_FriendlyPink;
@@ -23,10 +23,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Yellow
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_yellow,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_yellow,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Yellow.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Yellow.Description");
 	sprayPaintUnlocked[i] = global.yellowSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_Default,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Default");
 	sprayPaintValue[i] = playerSprayPaints.yellow;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Yellow;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Yellow;
@@ -41,10 +41,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Red
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_red,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_red,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Red.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Red.Description");
 	sprayPaintUnlocked[i] = global.redSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_Default,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Default");
 	sprayPaintValue[i] = playerSprayPaints.red;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Red;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Red;
@@ -59,10 +59,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Green
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_green,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_green,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Green.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Green.Description");
 	sprayPaintUnlocked[i] = global.greenSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_Default,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Default");
 	sprayPaintValue[i] = playerSprayPaints.green;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Green;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Green;
@@ -77,10 +77,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Dreamy Blueberry
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_dreamyBlueberry,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_dreamyBlueberry,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Dreamy Blueberry.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Dreamy Blueberry.Description");
 	sprayPaintUnlocked[i] = global.dreamyBlueberrySprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_beatStageMissions,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Beat Stage Missions");
 	sprayPaintValue[i] = playerSprayPaints.dreamyBlueberry;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_DreamyBlueberry;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_DreamyBlueberry;
@@ -94,10 +94,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Carbon
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_carbon,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_carbon,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Carbon.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Carbon.Description");
 	sprayPaintUnlocked[i] = global.carbonSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_beatStageMissions,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Beat Stage Missions");
 	sprayPaintValue[i] = playerSprayPaints.carbon;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Carbon;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Carbon;
@@ -111,10 +111,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Cherry
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_cherry,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_cherry,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Cherry.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Cherry.Description");
 	sprayPaintUnlocked[i] = global.cherrySprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_beatStageMissions,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Beat Stage Missions");
 	sprayPaintValue[i] = playerSprayPaints.cherry;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Cherry;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Cherry;
@@ -128,10 +128,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Deep Fried Kirb
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_deepFriedKirb,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_deepFriedKirb,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Deep Fried Kirb.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Deep Fried Kirb.Description");
 	sprayPaintUnlocked[i] = global.deepFriedKirbSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_beatStageMissions,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Beat Stage Missions");
 	sprayPaintValue[i] = playerSprayPaints.deepFriedKirb;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_DeepFriedKirb;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_DeepFriedKirb;
@@ -145,10 +145,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Emerald
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_emerald,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_emerald,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Emerald.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Emerald.Description");
 	sprayPaintUnlocked[i] = global.emeraldSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_beatStageMissions,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Beat Stage Missions");
 	sprayPaintValue[i] = playerSprayPaints.emerald;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Emerald;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Emerald;
@@ -162,10 +162,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region GameKirb
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_gameKirb,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_gameKirb,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.GameKirb.Title");
+	sprayPaintDescription[i] = str("Spray Paints.GameKirb.Description");
 	sprayPaintUnlocked[i] = global.gameKirbSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_beatStageMissions,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Beat Stage Missions");
 	sprayPaintValue[i] = playerSprayPaints.gameKirb;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_GameKirb;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_GameKirb;
@@ -179,10 +179,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Haunting Purple
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_hauntingPurple,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_hauntingPurple,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Haunting Purple.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Haunting Purple.Description");
 	sprayPaintUnlocked[i] = global.hauntingPurpleSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_beatStageMissions,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Beat Stage Missions");
 	sprayPaintValue[i] = playerSprayPaints.hauntingPurple;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_HauntingPurple;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_HauntingPurple;
@@ -196,10 +196,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Invis Sprinkle
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_invisSprinkle,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_invisSprinkle,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Invis Sprinkle.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Invis Sprinkle.Description");
 	sprayPaintUnlocked[i] = global.invisSprinkleSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_beatStageMissions,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Beat Stage Missions");
 	sprayPaintValue[i] = playerSprayPaints.invisSprinkle;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_InvisSprinkle;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_InvisSprinkle;
@@ -213,10 +213,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Monochrome Kirb
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_monochromeKirb,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_monochromeKirb,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Monochrome Kirb.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Monochrome Kirb.Description");
 	sprayPaintUnlocked[i] = global.monochromeKirbSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_beatStageMissions,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Beat Stage Missions");
 	sprayPaintValue[i] = playerSprayPaints.monochromeKirb;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_MonochromeKirb;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_MonochromeKirb;
@@ -230,10 +230,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Yolk Temple
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_yolkTemple,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_yolkTemple,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Yolk Temple.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Yolk Temple.Description");
 	sprayPaintUnlocked[i] = global.yolkTempleSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_beatStageMissions,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Beat Stage Missions");
 	sprayPaintValue[i] = playerSprayPaints.yolkTemple;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_YolkTemple;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_YolkTemple;
@@ -247,10 +247,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Plump Tomato
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_plumpTomato,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_plumpTomato,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Plump Tomato.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Plump Tomato.Description");
 	sprayPaintUnlocked[i] = global.plumpTomatoSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_tomatooCatch3Stars,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Tomatoo Catch 3 Stars");
 	sprayPaintValue[i] = playerSprayPaints.plumpTomato;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_PlumpTomato;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_PlumpTomato;
@@ -264,10 +264,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Waddle Waddle
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_waddleWaddle,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_waddleWaddle,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Waddle Waddle.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Waddle Waddle.Description");
 	sprayPaintUnlocked[i] = global.waddleWaddleSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_fill10Bestiary,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Fill 10 Bestiary");
 	sprayPaintValue[i] = playerSprayPaints.waddleWaddle;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_WaddleWaddle;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_WaddleWaddle;
@@ -281,10 +281,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Mystic
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_mystic,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_mystic,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Mystic.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Mystic.Description");
 	sprayPaintUnlocked[i] = global.mysticSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_fill25Bestiary,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Fill 20 Bestiary");
 	sprayPaintValue[i] = playerSprayPaints.mystic;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Mystic;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Mystic;
@@ -297,11 +297,11 @@ function scr_Customize_Paints()
 	i += 1;
 	#endregion
 	
-	#region Shadow of the Mirror
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_shadowOfTheMirror,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_shadowOfTheMirror,stringAttributes.description,0,global.language);
+	#region Shadow of the Mirror 
+	sprayPaintTitle[i] = str("Spray Paints.Shadow of the Mirror.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Shadow of the Mirror.Description");
 	sprayPaintUnlocked[i] = global.shadowOfTheMirrorSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_fill50Bestiary,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Fill 50 Bestiary");
 	sprayPaintValue[i] = playerSprayPaints.shadowOfTheMirror;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_ShadowOfTheMirror;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_ShadowOfTheMirror;
@@ -315,10 +315,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Delirious
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_delirious,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_delirious,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Delirious.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Delirious.Description");
 	sprayPaintUnlocked[i] = global.deliriousSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_unlock5Familiars,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Unlock 5 Familiars");
 	sprayPaintValue[i] = playerSprayPaints.delirious;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Delirious;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Delirious;
@@ -332,10 +332,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Greenjolt
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_greenjolt,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_greenjolt,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Greenjolt.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Greenjolt.Description");
 	sprayPaintUnlocked[i] = global.greenjoltSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_logIntoGamejolt,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Log Into Gamejolt");
 	sprayPaintValue[i] = playerSprayPaints.greenjolt;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_GreenJolt;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_GreenJolt;
@@ -349,10 +349,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Butter Knife
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_butterKnife,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_butterKnife,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Butter Knife.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Butter Knife.Description");
 	sprayPaintUnlocked[i] = global.butterKnifeSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_logIntoGamejolt,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Log Into Gamejolt");
 	sprayPaintValue[i] = playerSprayPaints.butterKnife;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_ButterKnife;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_ButterKnife;
@@ -366,10 +366,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Blurple
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_blurple,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_blurple,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Blurple.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Blurple.Description");
 	sprayPaintUnlocked[i] = global.blurpleSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_logIntoDiscord,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Log Into Discord");
 	sprayPaintValue[i] = playerSprayPaints.blurple;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Blurple;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Blurple;
@@ -383,10 +383,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Beam
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_beam,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_beam,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Beam.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Beam.Description");
 	sprayPaintUnlocked[i] = global.beamSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_beamGoldMedal,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Beam Gold Medal");
 	sprayPaintValue[i] = playerSprayPaints.beam;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Beam;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Beam;
@@ -400,10 +400,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Stone
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_stone,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_stone,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Stone.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Stone.Description");
 	sprayPaintUnlocked[i] = global.stoneSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_stoneGoldMedal,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Stone Gold Medal");
 	sprayPaintValue[i] = playerSprayPaints.stone;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Stone;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Stone;
@@ -417,10 +417,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Mirror
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_mirror,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_mirror,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Mirror.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Mirror.Description");
 	sprayPaintUnlocked[i] = global.mirrorSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_mirrorGoldMedal,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Mirror Gold Medal");
 	sprayPaintValue[i] = playerSprayPaints.mirror;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Mirror;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Mirror;
@@ -434,10 +434,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Ninja
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_ninja,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_ninja,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Ninja.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Ninja.Description");
 	sprayPaintUnlocked[i] = global.ninjaSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_ninjaGoldMedal,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Ninja Gold Medal");
 	sprayPaintValue[i] = playerSprayPaints.ninja;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Mirror;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Mirror;
@@ -451,10 +451,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Fire
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_fire,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_fire,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Fire.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Fire.Description");
 	sprayPaintUnlocked[i] = global.fireSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_fireGoldMedal,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Fire Gold Medal");
 	sprayPaintValue[i] = playerSprayPaints.fire;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Fire;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Fire;
@@ -468,10 +468,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Ice
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_ice,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_ice,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Ice.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Ice.Description");
 	sprayPaintUnlocked[i] = global.iceSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_iceGoldMedal,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Ice Gold Medal");
 	sprayPaintValue[i] = playerSprayPaints.ice;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Ice;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Ice;
@@ -485,10 +485,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Plasma
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_plasma,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_plasma,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Plasma.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Plasma.Description");
 	sprayPaintUnlocked[i] = global.plasmaSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_sparkGoldMedal,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Plasma Gold Medal");
 	sprayPaintValue[i] = playerSprayPaints.plasma;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Plasma;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Plasma;
@@ -502,10 +502,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Unearthly Hand
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_unearthlyHand,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_unearthlyHand,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Unearthly Hand.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Unearthly Hand.Description");
 	sprayPaintUnlocked[i] = global.unearthlyHandSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_unlockGamble,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Unlock Gamble");
 	sprayPaintValue[i] = playerSprayPaints.unearthlyHand;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_UnearthlyHand;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_UnearthlyHand;
@@ -519,10 +519,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region So Meta
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_soMeta,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_soMeta,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.So Meta.Title");
+	sprayPaintDescription[i] = str("Spray Paints.So Meta.Description");
 	sprayPaintUnlocked[i] = global.soMetaSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_unlockMetaKnight,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Unlock Meta Knight");
 	sprayPaintValue[i] = playerSprayPaints.soMeta;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_SoMeta;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_SoMeta;
@@ -536,10 +536,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Gooey Blue
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_gooeyBlue,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_gooeyBlue,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Gooey Blue.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Gooey Blue.Description");
 	sprayPaintUnlocked[i] = global.gooeyBlueSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_unlockGooey,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Unlock Gooey");
 	sprayPaintValue[i] = playerSprayPaints.gooeyBlue;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_GooeyBlue;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_GooeyBlue;
@@ -553,10 +553,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Egg Brown
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_eggBrown,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_eggBrown,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Egg Brown.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Egg Brown.Description");
 	sprayPaintUnlocked[i] = global.eggBrownSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_unlockMagolor,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] =str("Unlock Methods.Unlock Magolor");
 	sprayPaintValue[i] = playerSprayPaints.eggBrown;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_EggBrown;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_EggBrown;
@@ -571,10 +571,10 @@ function scr_Customize_Paints()
 	
 	/*
 	#region Telltale Keeby
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_telltaleKeeby,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_telltaleKeeby,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Telltale Keeby.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Telltale Keeby.Description");
 	sprayPaintUnlocked[i] = global.telltaleKeebySprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_unlockKeeby,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Unlock Keeby");
 	sprayPaintValue[i] = playerSprayPaints.telltaleKeeby;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_TelltaleKeeby;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_TelltaleKeeby;
@@ -588,10 +588,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Royal Yarn
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_royalYarn,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_royalYarn,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Royal Yarn.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Royal Yarn.Description");
 	sprayPaintUnlocked[i] = global.royalYarnSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_unlockPrinceFluff,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Unlock Prince Fluff");
 	sprayPaintValue[i] = playerSprayPaints.royalYarn;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_RoyalYarn;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_RoyalYarn;
@@ -606,10 +606,10 @@ function scr_Customize_Paints()
 	*/
 	
 	#region Smiley White
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_smileyWhite,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_smileyWhite,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Smiley White.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Smiley White.Description");
 	sprayPaintUnlocked[i] = global.smileyWhiteSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_secret,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = "???";
 	sprayPaintValue[i] = playerSprayPaints.smileyWhite;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_SmileyWhite;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_SmileyWhite;
@@ -623,10 +623,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Edd
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_edd,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_edd,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Edd.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Edd.Description");
 	sprayPaintUnlocked[i] = global.eddSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_secret,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = "???";
 	sprayPaintValue[i] = playerSprayPaints.edd;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Edd;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Edd;
@@ -640,10 +640,10 @@ function scr_Customize_Paints()
 	#endregion
 	
 	#region Musician's Light
-	sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_musiciansLight,stringAttributes.title,0,global.language);
-	sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_musiciansLight,stringAttributes.description,0,global.language);
+	sprayPaintTitle[i] = str("Spray Paints.Musician's Light.Title");
+	sprayPaintDescription[i] = str("Spray Paints.Musician's Light.Description");
 	sprayPaintUnlocked[i] = global.musiciansLightSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_secret,stringAttributes.description,0,global.language);
+	sprayPaintUnlockMethod[i] = "???";
 	sprayPaintValue[i] = playerSprayPaints.musiciansLight;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_MusiciansLight;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_MusiciansLight;
@@ -659,10 +659,10 @@ function scr_Customize_Paints()
 	if (global.kirbyBattleBlitzCrossoverKeycard)
 	{
 		#region Aege
-		sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_aege,stringAttributes.title,0,global.language);
-		sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_aege,stringAttributes.description,0,global.language);
+		sprayPaintTitle[i] = str("Spray Paints.Aege.Title");
+		sprayPaintDescription[i] = str("Spray Paints.aege.Description");
 		sprayPaintUnlocked[i] = true;
-		sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_secret,stringAttributes.description,0,global.language);
+		sprayPaintUnlockMethod[i] = "???";
 		sprayPaintValue[i] = playerSprayPaints.aege;
 		sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Aege;
 		sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Aege;
@@ -676,10 +676,10 @@ function scr_Customize_Paints()
 		#endregion
 		
 		#region Stray
-		sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_stray,stringAttributes.title,0,global.language);
-		sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_stray,stringAttributes.description,0,global.language);
+		sprayPaintTitle[i] = str("Spray Paints.Stray.Title");
+		sprayPaintDescription[i] = str("Spray Paints.Stray.Description");
 		sprayPaintUnlocked[i] = true;
-		sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_secret,stringAttributes.description,0,global.language);
+		sprayPaintUnlockMethod[i] = "???";
 		sprayPaintValue[i] = playerSprayPaints.stray;
 		sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Stray;
 		sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Stray;
@@ -693,10 +693,10 @@ function scr_Customize_Paints()
 		#endregion
 		
 		#region Glitch
-		sprayPaintTitle[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_glitch,stringAttributes.title,0,global.language);
-		sprayPaintDescription[i] = scr_Localization_Main(stringAttributes.playerSprayPaints_glitch,stringAttributes.description,0,global.language);
+		sprayPaintTitle[i] = str("Spray Paints.Glitch.Title");
+		sprayPaintDescription[i] = str("Spray Paints.Glitch.Description");
 		sprayPaintUnlocked[i] = true;
-		sprayPaintUnlockMethod[i] = scr_Localization_Main(stringAttributes.unlockMethods_secret,stringAttributes.description,0,global.language);
+		sprayPaintUnlockMethod[i] = "???";
 		sprayPaintValue[i] = playerSprayPaints.glitch;
 		sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Glitch;
 		sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Glitch;

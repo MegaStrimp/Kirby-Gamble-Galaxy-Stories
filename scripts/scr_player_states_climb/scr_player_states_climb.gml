@@ -67,6 +67,10 @@ function scr_Player_States_Climb()
 		
 		if ((place_meeting(x,y + 1,obj_ParentWall)) and (!instance_place(x,y + 1,obj_ParentWall).platform) and (keyDownHold)) state = playerStates.normal;
 		
+		//Move Left or Right
+		
+		if ((!global.cutscene) and ((keyLeftPressed) or (keyRightPressed))) state = playerStates.normal;
+		
 		//Collision
 		
 		scr_Player_Collision(playerMechs.none);

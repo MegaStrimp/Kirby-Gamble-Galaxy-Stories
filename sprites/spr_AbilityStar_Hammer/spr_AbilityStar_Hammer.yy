@@ -27,8 +27,8 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bc756538-f457-4397-a78f-b7039beb1dff",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5956f4a5-4753-4ec0-934b-1ec3db01a345",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bc756538-f457-4397-a78f-b7039beb1dff",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -45,8 +45,8 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"c89f6abc-4114-40cc-b813-240988f865df","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bc756538-f457-4397-a78f-b7039beb1dff","path":"sprites/spr_AbilityStar_Hammer/spr_AbilityStar_Hammer.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"2ca25b43-faa4-4cb0-8842-aeaca0a15e74","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5956f4a5-4753-4ec0-934b-1ec3db01a345","path":"sprites/spr_AbilityStar_Hammer/spr_AbilityStar_Hammer.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"2ca25b43-faa4-4cb0-8842-aeaca0a15e74","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5956f4a5-4753-4ec0-934b-1ec3db01a345","path":"sprites/spr_AbilityStar_Hammer/spr_AbilityStar_Hammer.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c89f6abc-4114-40cc-b813-240988f865df","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bc756538-f457-4397-a78f-b7039beb1dff","path":"sprites/spr_AbilityStar_Hammer/spr_AbilityStar_Hammer.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,

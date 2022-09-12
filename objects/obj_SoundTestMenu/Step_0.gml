@@ -134,7 +134,7 @@ if (!global.pause)
 					if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 					audio_play_sound(snd_ButtonYes,0,false);
 					if (audio_is_playing(global.musicPlaying)) audio_stop_sound(global.musicPlaying);
-					scr_PlayMusic(false,soundIndex[soundCategory][selection],0,true);
+					scr_PlayMusic(true,false,soundIndex[soundCategory][selection],0,true);
 				}
 			}
 			else

@@ -182,7 +182,7 @@ if (!global.pause)
 				if (!audio_is_playing(mus_TitleDemo))
 				{
 					audio_stop_all();
-					scr_PlayMusic(false,mus_TitleDemo,0,true);
+					scr_PlayMusic(true,false,mus_TitleDemo,0,true);
 				}
 				canBeInteracted = true;
 				introStateTimer = 60;

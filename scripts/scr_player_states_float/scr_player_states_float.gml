@@ -122,7 +122,7 @@ function scr_Player_States_Float()
 		
 		//Door
 		
-		if ((!global.cutscene) and (canEnter) and (position_meeting(x,y,obj_Door)) and (keyUpPressed) and (!attack))
+		if ((!global.cutscene) and (canEnter) and (position_meeting(x,y,obj_Door)) and (keyUpHold) and (!attack))
 		{
 		    if ((!instance_exists(obj_Fade)) and (!hurt))
 		    {

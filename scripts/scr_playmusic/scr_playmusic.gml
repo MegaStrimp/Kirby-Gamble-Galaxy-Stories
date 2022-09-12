@@ -4,12 +4,13 @@
 ///@param {real} priority Music priority.
 ///@param {real} loops Can loop or not.
 
-function scr_PlayMusic(argument0,argument1,argument2,argument3)
+function scr_PlayMusic(argument0,argument1,argument2,argument3,argument4)
 {
-	var pause = argument0;
-	var soundid = argument1;
-	var priority = argument2;
-	var loops = argument3;
+	var setMusicPlaying = argument0;
+	var pause = argument1;
+	var soundid = argument2;
+	var priority = argument3;
+	var loops = argument4;
 	
 	if (global.musicIntro)
 	{
@@ -121,8 +122,13 @@ function scr_PlayMusic(argument0,argument1,argument2,argument3)
 			global.musicIntroComposer = "Strimp";
 			break;
 			
-			case mus_Collection: //
-			global.musicIntroTitle = "";
+			case mus_Collection:
+			global.musicIntroTitle = "Sifting Through Mementos";
+			global.musicIntroComposer = "Rhey";
+			break;
+			
+			case mus_InvincibilityCandy:
+			global.musicIntroTitle = "Invincibility";
 			global.musicIntroComposer = "Rhey";
 			break;
 		}
@@ -171,10 +177,10 @@ function scr_PlayMusic(argument0,argument1,argument2,argument3)
 			global.musicIntroColorComposer = make_color_rgb(255,255,255);
 			break;
 			
-			case "Tater-Tot Tunes": //
-			global.musicIntroColorBg = make_color_rgb(70,47,70);
-			global.musicIntroColorLight = make_color_rgb(248,168,248);
-			global.musicIntroColorDark = make_color_rgb(134,91,134);
+			case "Tater-Tot Tunes":
+			global.musicIntroColorBg = make_color_rgb(94,52,6);
+			global.musicIntroColorLight = make_color_rgb(255,164,23);
+			global.musicIntroColorDark = make_color_rgb(179,97,12);
 			global.musicIntroColorComposer = make_color_rgb(255,255,255);
 			break;
 			
@@ -185,15 +191,23 @@ function scr_PlayMusic(argument0,argument1,argument2,argument3)
 			global.musicIntroColorComposer = make_color_rgb(255,255,255);
 			break;
 			
-			case "Rhey": //
-			global.musicIntroColorBg = make_color_rgb(70,47,70);
-			global.musicIntroColorLight = make_color_rgb(248,168,248);
-			global.musicIntroColorDark = make_color_rgb(134,91,134);
+			case "Rhey":
+			global.musicIntroColorBg = make_color_rgb(87,6,94);
+			global.musicIntroColorLight = make_color_rgb(255,23,253);
+			global.musicIntroColorDark = make_color_rgb(164,12,179);
 			global.musicIntroColorComposer = make_color_rgb(255,255,255);
 			break;
 		}
 	}
 	
 	if (pause) audio_stop_sound(global.musicPlaying);
-	global.musicPlaying = audio_play_sound(soundid,priority,loops);
+	
+	if (setMusicPlaying)
+	{
+		global.musicPlaying = audio_play_sound(soundid,priority,loops);
+	}
+	else
+	{
+		audio_play_sound(soundid,priority,loops);
+	}
 }

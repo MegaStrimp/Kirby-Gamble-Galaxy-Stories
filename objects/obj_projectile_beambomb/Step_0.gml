@@ -29,6 +29,8 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	//Explode
 	
+	if ((instance_exists(owner)) and (owner.attackTimer <= 0) and (owner.keyAttackReleased) and (!didExplode)) explode = true;
+	
 	if (explode)
 	{
 		didExplode = true;
