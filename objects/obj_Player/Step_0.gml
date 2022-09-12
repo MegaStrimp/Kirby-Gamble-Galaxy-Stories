@@ -109,7 +109,7 @@ if (!global.pause)
 	//Down Held
 
     if ((keyDownHold) and (downHeld < 1000)) downHeld += 1;
-    if (keyDownReleased || attack || state == 5 || hsp != 0) downHeld = 0;
+    if (keyDownReleased || attack || /*state == 5 || */hsp != 0) downHeld = 0;
 	
 	//In Background
 	
@@ -3574,3 +3574,8 @@ if(finalCutterBuffer <= 0 && !attack){
 
 //Reset Combo Buffer
 comboBuffer = clamp(comboBuffer-1,0,99990);
+
+//Reset Upward Fire Dash on landing
+if(grounded){
+	fireDashUp = 2;
+}

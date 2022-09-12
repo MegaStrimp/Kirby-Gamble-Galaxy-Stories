@@ -37,7 +37,7 @@ function scr_Player_States_Normal()
 		if ((attack) and ((attackNumber != playerAttacks.ufoBeam) and (attackNumber != playerAttacks.ufoCharge) and (attackNumber != playerAttacks.ufoLaser) and (attackNumber != playerAttacks.cutterAir) and (attackNumber != playerAttacks.fireAerial))) attackDisableMovement = true;
 		
 		var attackDisableDir = false;
-		if ((attackNumber == playerAttacks.ufoBeam) or (attackNumber == playerAttacks.cutterAir) or (attackNumber == playerAttacks.fireAerial)) attackDisableDir = true;
+		if ((attackNumber == playerAttacks.ufoBeam) or (attackNumber == playerAttacks.cutterAir) or (attackNumber == playerAttacks.fireAerial) or (attackNumber == playerAttacks.fireWheel && !grounded) or (attackNumber == playerAttacks.fireNormal)) attackDisableDir = true;
 		
 		didJump = false;
 		#endregion
@@ -2204,75 +2204,85 @@ function scr_Player_States_Normal()
 							{
 								if((place_meeting(x + 1,y,obj_ParentWall) && keyRightHold || place_meeting(x - 1,y,obj_ParentWall) && keyLeftHold) and attackTimer > 0){
 									attackNumber = playerAttacks.fireWheelClimb;
+									//y -= 5;
+									vsp = -5;
 								}
 								if ((!grounded) and (place_meeting(x,y + 16,obj_ParentWall) and attackTimer > 0))
 								{
-									hspLimit = false;
-									hsp = (movespeedBurst * (1 + (fireMagicCharcoalUpgrade / 4))) * dir;
-									invincible = true;
-									attack = true;
-									attackNumber = playerAttacks.fireWheel;
-									if (audio_is_playing(snd_Fire2)) audio_stop_sound(snd_Fire2);
-						            audio_play_sound(snd_Fire2,0,false);
-									sprite_index = sprFireAttack3;
-									image_index = 0;
-									fireMaskProj = instance_create_depth(x,y,depth,obj_Projectile_FireMask);
-									fireMaskProj.owner = id;
-									fireMaskProj.abilityType = playerAbilities.fire;
-									fireMaskProj.sprite_index = sprFireAttack3;
-									fireMaskProj.dmg = 18;
-									fireMaskProj.image_xscale = image_xscale;
-									fireMaskProj.image_yscale = image_yscale;
-									if (fireMagicCharcoalUpgrade)
-									{
-										for (var i = 0; i < 4; i++)
+									if(fireLandWheel = true){
+										hspLimit = false;
+										hsp = (movespeedBurst * (1 + (fireMagicCharcoalUpgrade / 4))) * dir;
+										invincible = true;
+										attack = true;
+										attackNumber = playerAttacks.fireWheel;
+										fireLandWheel = false;
+										if (audio_is_playing(snd_Fire2)) audio_stop_sound(snd_Fire2);
+								        audio_play_sound(snd_Fire2,0,false);
+										sprite_index = sprFireAttack3;
+										image_index = 0;
+										fireMaskProj = instance_create_depth(x,y,depth,obj_Projectile_FireMask);
+										fireMaskProj.owner = id;
+										fireMaskProj.abilityType = playerAbilities.fire;
+										fireMaskProj.sprite_index = sprFireAttack3;
+										fireMaskProj.dmg = 18;
+										fireMaskProj.image_xscale = image_xscale;
+										fireMaskProj.image_yscale = image_yscale;
+										if (fireMagicCharcoalUpgrade)
 										{
-											var extra = instance_create_depth(x,y,depth + 1,obj_Projectile_FireExtra);
-											extra.owner = id;
-											extra.abilityType = playerAbilities.fire;
-											extra.dmg = 8;
-											extra.paletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
-											switch (i)
+											for (var i = 0; i < 4; i++)
 											{
-												case 0:
-												extra.hsp = 2;
-												extra.vsp = -3;
-												break;
+												var extra = instance_create_depth(x,y,depth + 1,obj_Projectile_FireExtra);
+												extra.owner = id;
+												extra.abilityType = playerAbilities.fire;
+												extra.dmg = 8;
+												extra.paletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
+												switch (i)
+												{
+													case 0:
+													extra.hsp = 2;
+													extra.vsp = -3;
+													break;
 												
-												case 1:
-												extra.hsp = 3;
-												extra.vsp = -4;
-												break;
+													case 1:
+													extra.hsp = 3;
+													extra.vsp = -4;
+													break;
 												
-												case 2:
-												extra.hsp = -2;
-												extra.vsp = -3;
-												break;
+													case 2:
+													extra.hsp = -2;
+													extra.vsp = -3;
+													break;
 												
-												case 3:
-												extra.hsp = -3;
-												extra.vsp = -4;
-												break;
+													case 3:
+													extra.hsp = -3;
+													extra.vsp = -4;
+													break;
+												}
 											}
 										}
+									    fireReleaseTimer = 45;
+									    attackTimer = 60;
+										hspLimitTimer = 45;
+									}else{
+										attackTimer = 0;
 									}
-							        fireReleaseTimer = 45;
-							        attackTimer = 60;
-									hspLimitTimer = 45;
 								}
 							}
 							if ((keyAttackPressed) and (!attack))
 							{
-								if ((run) and (hsp != 0))
+								if ((run) and (hsp != 0) and (!(keyDownHold && !grounded)))
 								{
 									invincible = true;
 									vsp = 0;
 									fireDashHsp = (movespeedBurst * ((fireMagicCharcoalUpgrade / 2) + 1)) * dir;
-									run = false;
+									//run = false;
 					                attack = true;
 									attackNumber = playerAttacks.fireDash;
 									fireDashDir = 1;
-									if (keyUpHold) fireDashDir = -1;
+									if (keyUpHold and fireDashUp > 0){
+										fireDashDir = -1;
+										fireDashUp--;
+									}
 									attackable = false;
 					                fireReleaseTimer = 35;
 					                attackTimer = 45;
@@ -2296,19 +2306,13 @@ function scr_Player_States_Normal()
 								}
 								else
 								{
-									if (grounded)
-									{
-										attack = true;
-										attackNumber = playerAttacks.fireNormal;
-										sprite_index = sprFireAttack1;
-								        image_index = 0;
-									}
-									else
+									if (keyDownHold)
 									{
 										invincible = true;
 										attack = true;
 										attackTimer = 300;
 										attackNumber = playerAttacks.fireAerial;
+										fireLandWheel = true;
 										if (audio_is_playing(snd_Fire2)) audio_stop_sound(snd_Fire2);
 					                    audio_play_sound(snd_Fire2,0,false);
 										sprite_index = sprFireAttack3;
@@ -2354,6 +2358,13 @@ function scr_Player_States_Normal()
 											}
 										}
 									}
+									else
+									{
+										attack = true;
+										attackNumber = playerAttacks.fireNormal;
+										sprite_index = sprFireAttack1;
+								        image_index = 0;
+									}									
 								}
 						    }
 						}
@@ -2408,14 +2419,22 @@ function scr_Player_States_Normal()
 							}
 							if(place_meeting(x + (1 * dir),y,obj_ParentWall)){
 								attackNumber = playerAttacks.fireWheelClimb;
+								//y -= 5;
+								vsp = -5;
 							}
 						}
 						if(attackNumber == playerAttacks.fireWheelClimb){
-							attackTimer = clamp(attackTimer-1,0,120);
+							attackTimer = clamp(attackTimer-1,0,90);
 							hsp = 0;
-							vsp = -5;
-							if(!place_meeting(x + (1 * dir),y,obj_ParentWall) || place_meeting(x,y-1,obj_ParentWall)){
+							if(!place_meeting(x + (1 * dir),y,obj_ParentWall) || /*place_meeting(x,y-1,obj_ParentWall)*/ grounded && vsp >= 0){
+								vsp = -5;
 								attackTimer = 0;
+							}
+							if(place_meeting(x + 1,y,obj_ParentWall) && keyRightHold || place_meeting(x - 1,y,obj_ParentWall) && keyLeftHold){
+								vsp = -5;
+							}
+							if(place_meeting(x + 1,y,obj_ParentWall) && !keyRightHold && keyLeftHold || place_meeting(x - 1,y,obj_ParentWall) && !keyLeftHold && keyRightHold){
+								attackNumber = playerAttacks.fireAerial;
 							}
 						}
 						break;
