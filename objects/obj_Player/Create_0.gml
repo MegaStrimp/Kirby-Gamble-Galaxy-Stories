@@ -20,6 +20,7 @@ instance_create_depth(x,y,-9999,obj_Dialogue);
 
 //Physics
 
+downHeld = 0;
 gravNormal = .23;
 gravStone = .7;
 gravWheel = .5;
@@ -27,7 +28,7 @@ grav = gravNormal;
 gravFloat = .075;
 gravFireDash = .05;
 gravLimitNormal = 5;
-gravLimitFloat = 2.3;
+gravLimitFloat = 1.6;
 gravLimitBeamAir = 3;
 gravLimitStone = 7;
 gravLimitFireDash = 1.25;
@@ -341,6 +342,10 @@ cutterCharge = 0;
 cutterChargeMax = 45;
 cutterAirThrown = true;
 cutterCatch = false;
+comboBuffer = 0;
+finalCutterReadInput = false;
+finalCutterBuffer = 0;
+finalCutterState = 0; // this is used to determine which attack between Cleaving Cutter, Nonstop Cutter, and Final Cutter is used.
 beamAttack2FirstHit = false;
 beamCharge = 0;
 beamChargeMax = 45;
@@ -538,6 +543,10 @@ deathRestartTimer = -1;
 deathRestartTimerMax = 210;
 bubblePosTimerMax = 20;
 bubblePosTimer = bubblePosTimerMax;
+
+//Zwat's testing grounds
+
+//////////////////
 
 //Create Objects
 

@@ -7,7 +7,7 @@ function scr_Player_States_CutterDrop()
 		//Movement
 		
 		hsp = 2.5 * dir;
-		vsp = 5;
+		vsp = 6.2;
 		
 		//Afterimage
 		

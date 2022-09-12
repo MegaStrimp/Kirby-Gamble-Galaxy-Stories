@@ -27,6 +27,22 @@ function scr_Player_CancelAttack(argument0)
 	        state = playerStates.normal;
 			break;
 			
+			case playerAttacks.finalCutter:
+	        //if (instance_exists(cleavingCutterMaskProj)) instance_destroy(cleavingCutterMaskProj);
+	        //if (instance_exists(nonstopCutterMaskProj)) instance_destroy(nonstopCutterMaskProj);
+	        //if (instance_exists(finalCutterMaskProj)) instance_destroy(finalCutterMaskProj);
+			if(finalCutterState > 2){
+				finalCutterBuffer = 0;
+				finalCutterState = 0;
+				finalCutterReadInput = false;
+			}else{
+				finalCutterReadInput = true;
+				comboBuffer = 1;
+			}
+			invincible = false;
+			state = playerStates.normal;
+			break;
+			
 			case playerAttacks.beamNormal:
 			if (instance_exists(parBeamCycle1)) instance_destroy(parBeamCycle1);
 			with (obj_Projectile_Beam) if ((state == 0) and (owner == other.id)) instance_destroy();
@@ -99,6 +115,7 @@ function scr_Player_CancelAttack(argument0)
 			
 			case playerAttacks.fireAerial:
 			case playerAttacks.fireWheel:
+			case playerAttacks.fireWheelClimb:
 			if (instance_exists(fireMaskProj)) instance_destroy(fireMaskProj);
 			invincible = false;
 			break;

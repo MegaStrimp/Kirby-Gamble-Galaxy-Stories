@@ -642,6 +642,7 @@ function scr_Player_AbilityHat(argument0,argument1)
 			break;
 			
 			case playerAbilities.mysticBeam:
+			case playerAbilities.mysticBeam2:
 			if (player == 0)
 			{
 				var altHatToCheck = global.hatTypeMysticBeamP1;

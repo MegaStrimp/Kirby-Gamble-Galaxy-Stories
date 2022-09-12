@@ -78,6 +78,12 @@ function scr_Player_States_Climb()
 		//Animation
 		
 		if ((sprite_index != sprClimbUp) and (sprite_index != sprClimbDown)) sprite_index = sprClimbUp;
+		
+		// Get off ladder with left or right
+		
+		if((!global.cutscene) and (keyLeftPressed || keyRightPressed)){
+			state = playerStates.normal;
+		}
 	}
 	else
 	{

@@ -53,6 +53,7 @@ enum playerStates
 	swallow,
 	cutterDash,
 	cutterDrop,
+	finalCutter,
 	beamGrab,
 	mysticBeamGrab,
 	mirrorDash,
@@ -106,6 +107,7 @@ enum playerAbilities
 	mysticCutter,
     beam,
 	mysticBeam,
+	mysticBeam2,
 	stone,
 	ufo,
 	mirror,
@@ -149,6 +151,7 @@ enum playerAttacks
 	cutterDash,
 	cutterAir,
 	cutterDrop,
+	finalCutter,
 	
 	beamNormal,
 	beamCharge,
@@ -195,6 +198,7 @@ enum playerAttacks
 	fireDash,
 	fireAerial,
 	fireWheel,
+	fireWheelClimb,
 	fireBack,
 	
 	iceNormal,
@@ -1045,6 +1049,8 @@ i += 1;
 subtitles[i] = "Kirb!";
 i += 1;
 subtitles[i] = "Borb!";
+i += 1;
+subtitles[i] = "Zwat's perfect running the True Arena again";
 i += 1;
 
 selectedSubtitle = irandom_range(0,array_length(subtitles) - 1);
