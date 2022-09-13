@@ -3066,6 +3066,50 @@ function scr_Player_States_Normal()
 					    }
 						break;
 						#endregion
+						
+						#region Jet
+						case playerAbilities.jet:
+						if((!global.cutscene) and (!hurt) and (attackable)){
+							if(keyAttackReleased){
+								invincible = true;
+								vsp = 0;
+								fireDashHsp = (movespeedBurst * ((fireMagicCharcoalUpgrade / 2) + 1)) * dir;
+								//run = false;
+					            attack = true;
+								attackNumber = playerAttacks.jetDash;
+								fireDashDir = 0;
+								if (keyUpHold and jetDashUp > 1){
+									fireDashDir = -1;
+									jetDashUp--;
+								}else if (keyDownHold or jetDashUp > 0){
+									fireDashDir = 1;
+								}else{
+									jetDashUp--;
+								}
+								attackable = false;
+					            fireReleaseTimer = 35;
+					            attackTimer = 45;
+					            state = playerStates.jetDash;
+								if (audio_is_playing(snd_Fire3)) audio_stop_sound(snd_Fire3);
+				                audio_play_sound(snd_Fire3,0,false);
+								fireDashMaskProj = instance_create_depth(x,y,depth,obj_Projectile_BurstMask);
+								fireDashMaskProj.owner = id;
+								fireDashMaskProj.abilityType = playerAbilities.jet;
+								fireDashMaskProj.dmgMin = 18;
+								fireDashMaskProj.dmgMax = 21;
+								fireDashMaskProj.image_xscale = image_xscale;
+								fireDashMaskProj.image_yscale = image_yscale;
+				                var par = instance_create_depth(x + (dir * 10),y - 4,depth - 1,obj_Particle);
+				                par.dir = dir;
+				                par.sprite_index = spr_Particle_Fire2;
+				                par.scale = 1 + (fireMagicCharcoalUpgrade / 2);
+								par.paletteSpriteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
+								par.paletteIndex = 1;
+								par.destroyAfterAnimation = true;
+							}
+						}	
+						break;
+						#endregion
 					
 						/*case "freeze":
 					    if ((keyAttackPressed) and (!hurt) and (attackable))

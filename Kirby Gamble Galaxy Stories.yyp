@@ -536,6 +536,7 @@
     {"id":{"name":"scr_Customize_Paints","path":"scripts/scr_Customize_Paints/scr_Customize_Paints.yy",},"order":3,},
     {"id":{"name":"scr_Dialogue","path":"scripts/scr_Dialogue/scr_Dialogue.yy",},"order":7,},
     {"id":{"name":"spr_Kirby_AbilityHat_Artist_KSSU_WarpStar1","path":"sprites/spr_Kirby_AbilityHat_Artist_KSSU_WarpStar1/spr_Kirby_AbilityHat_Artist_KSSU_WarpStar1.yy",},"order":27,},
+    {"id":{"name":"scr_Player_States_JetDash","path":"scripts/scr_Player_States_JetDash/scr_Player_States_JetDash.yy",},"order":23,},
     {"id":{"name":"scr_Draw_Text_Color_Outline","path":"scripts/scr_Draw_Text_Color_Outline/scr_Draw_Text_Color_Outline.yy",},"order":0,},
     {"id":{"name":"scr_draw_trail","path":"scripts/scr_draw_trail/scr_draw_trail.yy",},"order":4,},
     {"id":{"name":"scr_EndStage","path":"scripts/scr_EndStage/scr_EndStage.yy",},"order":8,},

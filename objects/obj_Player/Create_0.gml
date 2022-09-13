@@ -547,7 +547,7 @@ bubblePosTimerMax = 20;
 bubblePosTimer = bubblePosTimerMax;
 
 //Zwat's testing grounds
-
+jetDashUp = 3;
 //////////////////
 
 //Create Objects

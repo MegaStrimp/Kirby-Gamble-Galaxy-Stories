@@ -3578,4 +3578,5 @@ comboBuffer = clamp(comboBuffer-1,0,99990);
 //Reset Upward Fire Dash on landing
 if(grounded){
 	fireDashUp = 2;
+	jetDashUp = 3;
 }

@@ -64,6 +64,7 @@ enum playerStates
 	wingDash,
 	swordDash,
 	parasolDash,
+	jetDash,
 	warpStar,
     death
 }
@@ -229,6 +230,8 @@ enum playerAttacks
 	sleepNormal,
 	
 	scanNormal,
+	
+	jetDash,
 	
 	gooeyStoneNormal,
 	gooeyFireDash

@@ -108,6 +108,7 @@ function scr_Player_CancelAttack(argument0)
 			
 			case playerAttacks.fireDash:
 			case playerAttacks.gooeyFireDash:
+			case playerAttacks.jetDash:
 			if (instance_exists(fireDashMaskProj)) instance_destroy(fireDashMaskProj);
 			invincible = false;
 			state = playerStates.normal;
