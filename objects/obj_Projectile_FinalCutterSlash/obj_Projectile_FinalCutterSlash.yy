@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_Projectile_FinalCutterSlash",
   "spriteId": {
-    "name": "spr_Projectile_UfoBlast_Small",
-    "path": "sprites/spr_Projectile_UfoBlast_Small/spr_Projectile_UfoBlast_Small.yy",
+    "name": "spr_Projectile_FinalCutter",
+    "path": "sprites/spr_Projectile_FinalCutter/spr_Projectile_FinalCutter.yy",
   },
   "solid": false,
   "visible": true,

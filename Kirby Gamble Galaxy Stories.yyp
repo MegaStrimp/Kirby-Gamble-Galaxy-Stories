@@ -3741,6 +3741,7 @@
     {"id":{"name":"spr_Kirby_Normal_Death_Mask","path":"sprites/spr_Kirby_Normal_Death_Mask/spr_Kirby_Normal_Death_Mask.yy",},"order":168,},
     {"id":{"name":"spr_Maykr_SelectedSpawner_Settings","path":"sprites/spr_Maykr_SelectedSpawner_Settings/spr_Maykr_SelectedSpawner_Settings.yy",},"order":29,},
     {"id":{"name":"spr_Kirby_HatShadow_Wing_KSSU_Guard_Slope","path":"sprites/spr_Kirby_HatShadow_Wing_KSSU_Guard_Slope/spr_Kirby_HatShadow_Wing_KSSU_Guard_Slope.yy",},"order":11,},
+    {"id":{"name":"spr_Projectile_FinalCutter","path":"sprites/spr_Projectile_FinalCutter/spr_Projectile_FinalCutter.yy",},"order":1,},
     {"id":{"name":"spr_Kirby_HatShadow_Wing_KSSU_Hurt","path":"sprites/spr_Kirby_HatShadow_Wing_KSSU_Hurt/spr_Kirby_HatShadow_Wing_KSSU_Hurt.yy",},"order":12,},
     {"id":{"name":"spr_Kirby_HatShadow_Wing_KSSU_Idle","path":"sprites/spr_Kirby_HatShadow_Wing_KSSU_Idle/spr_Kirby_HatShadow_Wing_KSSU_Idle.yy",},"order":13,},
     {"id":{"name":"spr_Kirby_HatShadow_Wing_KSSU_Jump","path":"sprites/spr_Kirby_HatShadow_Wing_KSSU_Jump/spr_Kirby_HatShadow_Wing_KSSU_Jump.yy",},"order":14,},
