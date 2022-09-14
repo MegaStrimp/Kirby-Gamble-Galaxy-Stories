@@ -32,6 +32,10 @@ function scr_Player_States_FinalCutter(){
 				//	attackTimer = 0;
 				//	finalCutterState++;
 				//}
+				
+				if(attackTimer <= 2){
+					image_index = 1;
+				}
 				break;
 			case 2: // Nonstop Cutter
 				if (vsp < gravLimitNormal)
@@ -58,16 +62,25 @@ function scr_Player_States_FinalCutter(){
 				//	attackTimer = 0;
 				//	finalCutterState++;
 				//}
+				
+				if(attackTimer <= 2){
+					image_index = 1;
+				}
 				break;
 			case 3: // Final Cutter
 				if(attackTimer > (5940-5)){
 					image_index = 0;
 				}else if(attackTimer <= finalCutterEndlag){
 					image_index = 6;
+				}else if(vsp < 0 && vsp > -5){
+					image_index = 2;
+					image_speed = 2;
 				}else if(vsp < 0){
 					image_index = 1;
-				}else{
-					image_index = 5;
+				}
+				
+				if(image_index == 5){
+					image_speed = 0;
 				}
 			
 				var afterimage = instance_create_depth(x,y,depth,obj_Afterimage);
@@ -78,12 +91,13 @@ function scr_Player_States_FinalCutter(){
 				afterimage.paletteIndex = paletteIndex;
 				if(attackTimer > (5940-5)){
 					hsp+=1*dir;
-					if(attackTimer > (5940-15)){
-						vsp = -12;
+					if(attackTimer > (5940-10)){
+						vsp = -10;
 					}
 				}else if(vsp < 0){
 					hsp = 0;
 					vsp = clamp(vsp+0.6,-15,0);
+				
 					if(vsp >= 0){
 						vsp = 16;
 						

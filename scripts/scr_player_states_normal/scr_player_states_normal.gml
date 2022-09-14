@@ -566,7 +566,7 @@ function scr_Player_States_Normal()
 							}
 							else if (keyUpHold)
 							{
-								if (comboBuffer <= 0 && (finalCutterReadInput || finalCutterState == 0) && state == playerStates.normal && keyUpHold){
+								if ((comboBuffer <= 0) && (finalCutterReadInput || finalCutterState == 0) && state == playerStates.normal && keyUpHold){
 									if (audio_is_playing(snd_Slash)) audio_stop_sound(snd_Slash);
 									audio_play_sound(snd_Slash,0,false);
 									//if (vsp == 0)
@@ -657,9 +657,9 @@ function scr_Player_States_Normal()
 												finalCutterMaskProj.abilityType = playerAbilities.cutter;
 												finalCutterMaskProj.dmg = 32; // make sure to create two additional hitboxes, one for the falling slash and one for the shockwave, both dealing 32 damage.		
 											}
-											if(grounded && vsp > 0){
-												// cutter wave
-											}
+											//if(grounded && vsp > 0){
+											//	// cutter wave
+											//}
 											break;
 										default:
 											break;
@@ -2321,7 +2321,7 @@ function scr_Player_States_Normal()
 									{
 										invincible = true;
 										attack = true;
-										attackTimer = 300;
+										attackTimer = 80;
 										attackNumber = playerAttacks.fireAerial;
 										fireLandWheel = true;
 										if (audio_is_playing(snd_Fire2)) audio_stop_sound(snd_Fire2);

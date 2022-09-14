@@ -41,7 +41,7 @@
     "name": "spr_Kirby_AbilityHat_Cutter_KSSU_Attack6",
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 0.0,
+    "playbackSpeed": 10.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
