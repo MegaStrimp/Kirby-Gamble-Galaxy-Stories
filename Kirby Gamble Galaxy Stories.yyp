@@ -1393,6 +1393,7 @@
     {"id":{"name":"spr_DreamRod_Normal_Idle","path":"sprites/spr_DreamRod_Normal_Idle/spr_DreamRod_Normal_Idle.yy",},"order":0,},
     {"id":{"name":"spr_DurableBlock_Normal_Idle","path":"sprites/spr_DurableBlock_Normal_Idle/spr_DurableBlock_Normal_Idle.yy",},"order":0,},
     {"id":{"name":"spr_DurableBlock_Normal_Top","path":"sprites/spr_DurableBlock_Normal_Top/spr_DurableBlock_Normal_Top.yy",},"order":1,},
+    {"id":{"name":"obj_Projectile_FinalCutterSlash","path":"objects/obj_Projectile_FinalCutterSlash/obj_Projectile_FinalCutterSlash.yy",},"order":75,},
     {"id":{"name":"spr_EggPlant","path":"sprites/spr_EggPlant/spr_EggPlant.yy",},"order":20,},
     {"id":{"name":"spr_EnemyParasol_Normal_FloatReady","path":"sprites/spr_EnemyParasol_Normal_FloatReady/spr_EnemyParasol_Normal_FloatReady.yy",},"order":1,},
     {"id":{"name":"spr_EnemyParasol_Normal_Idle","path":"sprites/spr_EnemyParasol_Normal_Idle/spr_EnemyParasol_Normal_Idle.yy",},"order":0,},

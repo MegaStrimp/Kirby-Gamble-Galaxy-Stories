@@ -19,6 +19,7 @@ function scr_Player_CancelAttack(argument0)
 			if (audio_is_playing(slideSfx)) audio_stop_sound(slideSfx);
 	        if (instance_exists(cutterDashMaskProj)) instance_destroy(cutterDashMaskProj);
 			state = playerStates.normal;
+			hspLimit = true;
 			break;
 			
 			case playerAttacks.cutterAir:

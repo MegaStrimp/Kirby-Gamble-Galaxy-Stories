@@ -78,16 +78,42 @@ function scr_Player_States_FinalCutter(){
 				afterimage.paletteIndex = paletteIndex;
 				if(attackTimer > (5940-5)){
 					hsp+=1*dir;
-				}else if(attackTimer > (5940-15)){
+					if(attackTimer > (5940-15)){
+						vsp = -12;
+					}
+				}else if(vsp < 0){
 					hsp = 0;
-					vsp = -12;
+					vsp = clamp(vsp+0.6,-15,0);
+					if(vsp >= 0){
+						vsp = 16;
+						
+						//just until we can disable Kirby's collision with the level temporarily do we need this bit of code:
+						while(place_meeting(x,y-1,obj_Wall)){
+							y++;
+						}
+					}
 				}else if (attackTimer > finalCutterEndlag){
 					hsp = 0;
 					vsp = 16;
-					if(grounded && vsp > 0){
+					if(grounded){
 						audio_play_sound(snd_FinalCutter,0,false);
 						attackTimer = finalCutterEndlag;
 						vsp = 0;
+						
+						var finalCutterSlash = instance_create_depth(x,y - 5,depth,obj_Projectile_FinalCutterSlash);
+						finalCutterSlash.owner = id;
+						finalCutterSlash.abilityType = playerAbilities.cutter;
+						finalCutterSlash.paletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
+						finalCutterSlash.dmg = 32;
+						finalCutterSlash.sprite_index = finalCutterSlash.sprIdle;
+						finalCutterSlash.hsp = dir * finalCutterSlash.decelMax;
+						finalCutterSlash.dirX = dir;
+						finalCutterSlash.image_xscale = finalCutterSlash.dirX;
+						finalCutterSlash.enemy = false;
+						finalCutterSlash.player = player;
+						finalCutterSlash.destroyableByWall = false;
+						finalCutterSlash.destroyableByEnemy = false;
+						finalCutterSlash.destroyableByObject = false;
 					}
 				}
 				break;

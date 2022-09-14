@@ -291,6 +291,8 @@ if ((global.hpP1 == 0) or (global.hpP2 == 0))
 	global.hpP2 = global.hpMax;
 }
 player = 0;
+playerCharacter = 0;
+playerAbility = 0;
 hatBackgroundImageIndex = 0;
 hatBackgroundImageIndexSpd = .25;
 hatFrontImageIndex = 0;
@@ -556,6 +558,8 @@ bubblePosTimer = bubblePosTimerMax;
 //Zwat's testing grounds
 jetDashAir = 3;
 finalCutterEndlag = 12;
+downInputBuffer = 15;
+downInputBufferTimer = 0;
 //////////////////
 
 //Create Objects

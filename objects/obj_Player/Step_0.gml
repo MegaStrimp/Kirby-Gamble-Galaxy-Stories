@@ -3586,3 +3586,10 @@ if(grounded){
 	fireDashUp = 2;
 	jetDashAir = 3;
 }
+
+//Input Buffers (for motion input attacks)
+if(keyDownHold){
+	downInputBufferTimer = downInputBuffer;
+}else{
+	downInputBufferTimer--;
+}

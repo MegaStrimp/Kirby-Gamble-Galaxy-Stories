@@ -544,6 +544,8 @@ function scr_Player_States_Normal()
 								sprite_index = sprCutterAttack2;
 						        image_index = 0;
 				                cutterCatch = false;
+								hspLimit = false;
+								hsp = movespeedRun * 1.3;
 							}
 							else if (keyDownHold)
 							{
@@ -587,6 +589,13 @@ function scr_Player_States_Normal()
 									//nonstopCutterMaskProj = noone;
 									//finalCutterMaskProj = noone;
 									attack = true;
+									
+									//Motion Input - Instant Final Cutter
+									if(downInputBufferTimer > 0){
+										downInputBufferTimer = 0;
+										finalCutterState = 2;
+									}
+									
 									attackNumber = playerAttacks.finalCutter;
 									cutterCatch = false;
 								}
