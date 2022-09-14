@@ -20,15 +20,15 @@
   "width": 14,
   "height": 13,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "Enemies",
+    "path": "texturegroups/Enemies",
   },
   "swatchColours": null,
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1ec6124a-721d-42e0-bfca-6bd2087f1afe",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"509fa877-f7df-4853-bbf7-99080bc82876",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1ec6124a-721d-42e0-bfca-6bd2087f1afe",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2ae915ec-7498-4c46-8424-82a63ebf77a8",},
   ],
   "sequence": {
@@ -46,8 +46,8 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"46979fc2-008d-43ab-9dc8-734b8a0b0ad2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1ec6124a-721d-42e0-bfca-6bd2087f1afe","path":"sprites/spr_Lovely_Normal_Eyes_Blink/spr_Lovely_Normal_Eyes_Blink.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"b11435d3-b010-4e9a-95bb-389e3dbd36f2","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"509fa877-f7df-4853-bbf7-99080bc82876","path":"sprites/spr_Lovely_Normal_Eyes_Blink/spr_Lovely_Normal_Eyes_Blink.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b11435d3-b010-4e9a-95bb-389e3dbd36f2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"509fa877-f7df-4853-bbf7-99080bc82876","path":"sprites/spr_Lovely_Normal_Eyes_Blink/spr_Lovely_Normal_Eyes_Blink.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"46979fc2-008d-43ab-9dc8-734b8a0b0ad2","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1ec6124a-721d-42e0-bfca-6bd2087f1afe","path":"sprites/spr_Lovely_Normal_Eyes_Blink/spr_Lovely_Normal_Eyes_Blink.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"f5001aae-c198-4605-87e5-47767a28191e","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2ae915ec-7498-4c46-8424-82a63ebf77a8","path":"sprites/spr_Lovely_Normal_Eyes_Blink/spr_Lovely_Normal_Eyes_Blink.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],

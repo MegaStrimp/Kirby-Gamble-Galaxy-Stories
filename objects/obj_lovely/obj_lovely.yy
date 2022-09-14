@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_Lovely",
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_Lovely_Normal_Face",
+    "path": "sprites/spr_Lovely_Normal_Face/spr_Lovely_Normal_Face.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

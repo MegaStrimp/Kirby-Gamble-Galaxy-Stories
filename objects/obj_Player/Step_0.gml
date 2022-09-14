@@ -269,76 +269,79 @@ if (!global.pause)
 			//Variables
 			
 			var collidedSpring = instance_place(x,y + 1,obj_Spring);
-			collidedSpring.hit = true;
-			collidedSpring.hitTimer = collidedSpring.hitTimerMax;
-			var finalForce = collidedSpring.force;
-			var drawOffsetForce = 8;
-			
-			//Cancel Attack
-			
-			scr_Player_CancelAttack(id);
-			
-			//Jump
-			
-			if ((keyJumpHold) or (keyUpHold))
+			if (instance_exists(collidedSpring))
 			{
-				finalForce *= 1.25;
-				drawOffsetForce = 16;
-				if (audio_is_playing(snd_BigJump)) audio_stop_sound(snd_BigJump);
-				audio_play_sound(snd_BigJump,0,false);
-			}
-			else
-			{
-				if (audio_is_playing(snd_Jump)) audio_stop_sound(snd_Jump);
-				audio_play_sound(snd_Jump,0,false);
-			}
+				collidedSpring.hit = true;
+				collidedSpring.hitTimer = collidedSpring.hitTimerMax;
+				var finalForce = collidedSpring.force;
+				var drawOffsetForce = 8;
 			
-			if ((collidedSpring.object_index == obj_BouncyCloud) or (collidedSpring.object_index == obj_BouncyCloudHigh))
-			{
-				collidedSpring.scaleExY = -.2;
-				collidedSpring.yDrawOffset = drawOffsetForce;
-			}
+				//Cancel Attack
 			
-			if (carriedItem == carriedItems.none) fallRoll = true;
-			jumpLimit = false;
-			jumpLimitTimer = jumpLimitTimerMax + floor((finalForce - 6) * 3);
+				scr_Player_CancelAttack(id);
 			
-			//Particles
+				//Jump
 			
-			for (var i = 0; i < 2; i++)
-			{
-				var par = instance_create_depth(x,y + 4,depth,obj_Particle);
-				par.sprite_index = spr_Particle_SmallStar;
-				par.hsp = 6;
-				if (i == 0)
+				if ((keyJumpHold) or (keyUpHold))
 				{
-					par.hsp = 2;
-					par.dir = 1;
+					finalForce *= 1.25;
+					drawOffsetForce = 16;
+					if (audio_is_playing(snd_BigJump)) audio_stop_sound(snd_BigJump);
+					audio_play_sound(snd_BigJump,0,false);
 				}
-				else if (i == 1)
+				else
 				{
-					par.hsp = -2;
-					par.dir = -1;
+					if (audio_is_playing(snd_Jump)) audio_stop_sound(snd_Jump);
+					audio_play_sound(snd_Jump,0,false);
 				}
-				par.vsp = -4;
-				par.grav = .5;
-				par.destroyTimer = 15;
-				par.hasGravity = true;
+			
+				if ((collidedSpring.object_index == obj_BouncyCloud) or (collidedSpring.object_index == obj_BouncyCloudHigh))
+				{
+					collidedSpring.scaleExY = -.2;
+					collidedSpring.yDrawOffset = drawOffsetForce;
+				}
+			
+				if (carriedItem == carriedItems.none) fallRoll = true;
+				jumpLimit = false;
+				jumpLimitTimer = jumpLimitTimerMax + floor((finalForce - 6) * 3);
+			
+				//Particles
+			
+				for (var i = 0; i < 2; i++)
+				{
+					var par = instance_create_depth(x,y + 4,depth,obj_Particle);
+					par.sprite_index = spr_Particle_SmallStar;
+					par.hsp = 6;
+					if (i == 0)
+					{
+						par.hsp = 2;
+						par.dir = 1;
+					}
+					else if (i == 1)
+					{
+						par.hsp = -2;
+						par.dir = -1;
+					}
+					par.vsp = -4;
+					par.grav = .5;
+					par.destroyTimer = 15;
+					par.hasGravity = true;
+				}
+			
+				//Change State To Normal
+			
+				if ((state == playerStates.inhale) or (state == playerStates.climb) or (state == playerStates.slide))
+				{
+					inhaleSoundCont = false;
+					if (audio_is_playing(snd_Inhale_Intro)) audio_stop_sound(snd_Inhale_Intro);
+					if (audio_is_playing(snd_Inhale_Loop)) audio_stop_sound(snd_Inhale_Loop);
+					state = playerStates.normal;
+				}
+			
+				//Vertical Knockback
+			
+				vsp = -finalForce;
 			}
-			
-			//Change State To Normal
-			
-			if ((state == playerStates.inhale) or (state == playerStates.climb) or (state == playerStates.slide))
-			{
-				inhaleSoundCont = false;
-				if (audio_is_playing(snd_Inhale_Intro)) audio_stop_sound(snd_Inhale_Intro);
-				if (audio_is_playing(snd_Inhale_Loop)) audio_stop_sound(snd_Inhale_Loop);
-				state = playerStates.normal;
-			}
-			
-			//Vertical Knockback
-			
-			vsp = -finalForce;
 		}
 	}
 	
@@ -1809,7 +1812,7 @@ if (setupTimer > 0)
 }
 else if (setupTimer == 0)
 {
-	if ((playerFamiliar != "none") and ((playerFamiliar == "Gamble") + (playerCharacter = playerCharacters.gamble) != 2))
+	if ((playerFamiliar != -1) and ((playerFamiliar == "Gamble") + (playerCharacter = playerCharacters.gamble) != 2))
 	{
 		var followerObject = instance_create_depth(x + (30 * -dir),y - 15,depth,obj_Familiar);
 		followerObject.owner = id;

@@ -44,7 +44,7 @@
     "name": "spr_Cerulean_Normal_AttackRelease",
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 0.0,
+    "playbackSpeed": 9.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

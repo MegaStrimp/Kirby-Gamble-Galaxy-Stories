@@ -38,7 +38,7 @@ else if (spawnTimer == 0)
 		
 		case 0:
 		spawnedEnemy.sprIdle = spr_Anemonee_Normal_Idle;
-		spawnedEnemy.sprHurt = "none";
+		spawnedEnemy.sprHurt = -1;
 		break;
 	}
 	spawnedEnemy.sprite_index = spawnedEnemy.sprIdle;

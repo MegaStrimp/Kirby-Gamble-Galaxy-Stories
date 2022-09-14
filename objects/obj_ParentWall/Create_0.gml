@@ -38,13 +38,14 @@ canExplode = false;
 topWallSprite = -1;
 topWallMask = spr_24x4Originless_Mask;
 topWallOwner = id;
-movementState = "none";
+movementState = -1;
 objectOnHit = false;
 objectOnHitObj = obj_PointStar;
 shakeX = 0;
 shakeY = 0;
 drawShakeX = 0;
 drawShakeY = 0;
+paletteIndex = -1;
 
 //Timers
 

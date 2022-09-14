@@ -63,7 +63,7 @@ function scr_Player_States_Slide()
 							grabObj.owner = id;
 							grabObj.abilityType = playerAbilities.bomb;
 							grabObj.dirX = grabEnemy.dirX;
-							grabObj.dmg = "none";
+							grabObj.dmg = -1;
 							grabObj.active = true;
 							grabObj.particleTimer = grabObj.particleTimerMax;
 							if (!bombSmartBombUpgrade) grabObj.destroyTimer = 30;

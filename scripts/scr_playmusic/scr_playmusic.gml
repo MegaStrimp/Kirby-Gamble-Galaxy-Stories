@@ -184,17 +184,17 @@ function scr_PlayMusic(argument0,argument1,argument2,argument3,argument4)
 			global.musicIntroColorComposer = make_color_rgb(255,255,255);
 			break;
 			
-			case "Strimp": //
-			global.musicIntroColorBg = make_color_rgb(70,47,70);
-			global.musicIntroColorLight = make_color_rgb(248,168,248);
-			global.musicIntroColorDark = make_color_rgb(134,91,134);
+			case "Strimp":
+			global.musicIntroColorBg = make_color_rgb(0,0,0);
+			global.musicIntroColorLight = make_color_rgb(10,10,10);
+			global.musicIntroColorDark = make_color_rgb(5,5,5);
 			global.musicIntroColorComposer = make_color_rgb(255,255,255);
 			break;
 			
 			case "Rhey":
-			global.musicIntroColorBg = make_color_rgb(87,6,94);
-			global.musicIntroColorLight = make_color_rgb(255,23,253);
-			global.musicIntroColorDark = make_color_rgb(164,12,179);
+			global.musicIntroColorBg = make_color_rgb(1,90,102);
+			global.musicIntroColorLight = make_color_rgb(9,206,255);
+			global.musicIntroColorDark = make_color_rgb(2,173,194);
 			global.musicIntroColorComposer = make_color_rgb(255,255,255);
 			break;
 		}

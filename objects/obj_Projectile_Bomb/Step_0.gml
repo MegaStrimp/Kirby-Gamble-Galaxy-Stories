@@ -177,7 +177,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 				var particle = instance_create_depth(x,y,depth,obj_DeathParticles);
 				particle.state = "explosion1";
 				var proj = instance_create_depth(x,y,depth,obj_Projectile_ExplosionMask);
-				if (objectOnHitDmg != "none") proj.dmg = dmg;
+				if (objectOnHitDmg != -1) proj.dmg = dmg;
 				if (enemy)
 				{
 					proj.enemy = true;
@@ -306,7 +306,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		if (audio_is_playing(snd_BombExplode)) audio_stop_sound(snd_BombExplode);
 		audio_play_sound(snd_BombExplode,0,false);
 		var obj = instance_create_depth(x,y,depth,objectOnHitObj);
-		if (objectOnHitDmg != "none") obj.dmg = objectOnHitDmg;
+		if (objectOnHitDmg != -1) obj.dmg = objectOnHitDmg;
 		if (objectOnHitObj == obj_Projectile_ExplosionMask)
 		{
 			obj.enemy = enemy;

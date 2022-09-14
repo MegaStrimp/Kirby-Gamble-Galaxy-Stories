@@ -12,7 +12,10 @@ function scr_Maykr_ClearRoom()
 	if (tileAsteroidFieldsFront3D1 != -1) tilemap_clear(tileAsteroidFieldsFront3D1,0);
 	if (tileAsteroidFieldsFront3D2 != -1) tilemap_clear(tileAsteroidFieldsFront3D2,0);
 	
+	tileDebugLadder = -1;
 	tileDebug = -1;
+	tileDebugPlatform = -1;
+	tileDebugPlatformTop = -1;
 	tileAsteroidFieldsFront = -1;
 	tileAsteroidFieldsFront3D1 = -1;
 	tileAsteroidFieldsFront3D2 = -1;

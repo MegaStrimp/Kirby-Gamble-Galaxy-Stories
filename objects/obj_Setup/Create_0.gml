@@ -748,7 +748,7 @@ enum talkingCharacter
 #endregion
 
 #region Global Variables
-global.versionNumber = "0.5.6";
+global.versionNumber = "0.5.7";
 
 global.globalTimer = 0;
 global.selectedSave = "Save1.ini";
@@ -895,9 +895,9 @@ global.discordSmallImageText = "Team Gamble";
 
 #region Timers
 global.invinCandyTimerP1 = -1;
-global.invinCandyTimerP1Max = 3600;
+global.invinCandyTimerP1Max = 1800;
 global.invinCandyTimerP2 = -1;
-global.invinCandyTimerP2Max = 3600;
+global.invinCandyTimerP2Max = 1800;
 
 controllerPressedResetTimer = -1;
 #endregion

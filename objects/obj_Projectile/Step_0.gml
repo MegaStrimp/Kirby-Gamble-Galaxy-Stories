@@ -34,7 +34,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 			if (objectOnHit)
 			{
 				var obj = instance_create_depth(x,y,depth,objectOnHitObj);
-				if (objectOnHitDmg != "none") obj.dmg = objectOnHitDmg;
+				if (objectOnHitDmg != -1) obj.dmg = objectOnHitDmg;
 				if (objectOnHitObj == obj_Projectile_ExplosionMask)
 				{
 					if (enemy)

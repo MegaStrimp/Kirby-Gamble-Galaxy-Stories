@@ -654,7 +654,7 @@ function scr_Player_States_Carry()
 					{
 					    if (vsp < 0)
 						{
-							if (sprCarryJump != "none")
+							if (sprCarryJump != -1)
 							{
 								sprite_index = sprCarryJump;
 							}
@@ -665,7 +665,7 @@ function scr_Player_States_Carry()
 						}
 						else
 						{
-							if (sprCarryFall != "none")
+							if (sprCarryFall != -1)
 							{
 								sprite_index = sprCarryFall;
 							}

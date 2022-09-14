@@ -31,7 +31,7 @@ sprCurrent = sprIdle;
 
 //Other Variables
 
-paletteIndex = spr_LaserBall_Normal_Palette_OrangeLaser;
+paletteIndex = spr_PlasmaWisp_Normal_Palette_Plasma;
 hp = 14;
 dmg = 1;
 ability = playerAbilities.spark;

@@ -9,14 +9,12 @@ if (setupTimer == 0)
 		//Normal
 		
 		case 0:
-		sprIdle = spr_BroomHatter_Normal_Idle;
-		sprAttackReady = spr_BroomHatter_Normal_Walk;
-		sprAttackRelease = spr_BroomHatter_Normal_Inhale;
-		sprHurt = spr_BroomHatter_Normal_Hurt;
+		sprIdle = spr_Cerulean_Normal_Idle;
+		sprAttackReady = spr_Cerulean_Normal_AttackReady;
+		sprAttackRelease = spr_Cerulean_Normal_AttackRelease;
+		sprHurt = spr_Cerulean_Normal_Hurt;
 		break;
 	}
-	if (state == 1) attackTimer = -1;
-	sprite_index = sprIdle;
 }
 
 //Event Inherited
@@ -35,50 +33,34 @@ if (!global.pause)
 	
 	hsp = scr_Friction(hsp,decel);
 	
-	//States
+	//Attack
 	
-	switch (state)
+	if (hurt) attack = false;
+	
+	if ((!attack) and (!hurt) and (attackTimer == -1)) attackTimer = attackTimerMax;
+	
+	//Animation
+	
+	image_speed = 1;
+	
+	if ((hurt) and (sprHurt != -1))
 	{
-		//Normal
-		
-		case 0:
-		//Animation
-		
-		image_speed = 1;
-		
-		if ((hurt) and (sprHurt != -1))
-		{
-			sprite_index = sprHurt;
-		}
-		break;
-		
-		//Stand Still
-		
-		case 1:
-		//Animation
-		
-		image_speed = 1;
-		
-		if ((hurt) and (sprHurt != -1))
-		{
-			sprite_index = sprHurtNormal;
-		}
-		else
-		{
-			sprite_index = sprIdle;
-		}
-		break;
+		sprite_index = sprHurt;
+	}
+	else if (!attack)
+	{
+		sprite_index = sprIdle;
 	}
 	
 	//Attack Timer
 	
-	if ((!hurt) and (place_meeting(x,y + 1,collisionY)))
+	if (attackTimer > 0)
 	{
-		if (attackTimer > 0)
-		{
-			attackTimer -= 1;
-		}
-		else if (attackTimer == 0)
+		attackTimer -= 1;
+	}
+	else if (attackTimer == 0)
+	{
+		if (state != 1)
 		{
 			if (turnCounter != -1)
 			{
@@ -89,12 +71,11 @@ if (!global.pause)
 				}
 				if (turnCounter <= turnCounterMax) turnCounter += 1;
 			}
-			particleReleased = false;
-			sprite_index = sprWalk;
-			image_index = 0;
-			hsp = movespeed * dirX;
-			attackTimer = attackTimerMax;
 		}
+		attack = false;
+		sprite_index = sprAttackReady;
+		image_index = 0;
+		attackTimer = -1;
 	}
 }
 else
