@@ -53,6 +53,10 @@ movespeedSlide = 5;
 movespeedFloat = 1.9;
 movespeedCarry = 2;
 movespeedBurst = 7;
+movespeedJetKick = 7;
+movespeedJetBoost = 7;
+movespeedJetAirBoostSmall = 7;
+movespeedJetAirDashBoostSmall = 7;
 movespeedWheel = 6;
 movespeed = movespeedNormal;
 ufoFloatSpd = 2;
@@ -67,6 +71,9 @@ decelSwordDash = .1;
 decelParasolDash = .1;
 decelFloat = .025;
 climbSpeed = 2.5;
+jetCharge = 0;
+gravJetDash = 0.25;
+gravLimitJetDash = 0.65;
 
 //Sprites
 
@@ -547,7 +554,8 @@ bubblePosTimerMax = 20;
 bubblePosTimer = bubblePosTimerMax;
 
 //Zwat's testing grounds
-jetDashUp = 3;
+jetDashAir = 3;
+finalCutterEndlag = 12;
 //////////////////
 
 //Create Objects

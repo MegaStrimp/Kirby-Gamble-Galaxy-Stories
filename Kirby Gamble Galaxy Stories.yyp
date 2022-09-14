@@ -1341,6 +1341,7 @@
     {"id":{"name":"spr_Cappy_Normal_Palette_Gold","path":"sprites/spr_Cappy_Normal_Palette_Gold/spr_Cappy_Normal_Palette_Gold.yy",},"order":0,},
     {"id":{"name":"spr_Cappy_Normal_Palette_GreenCap","path":"sprites/spr_Cappy_Normal_Palette_GreenCap/spr_Cappy_Normal_Palette_GreenCap.yy",},"order":1,},
     {"id":{"name":"spr_Cappy_Normal_Palette_Lilac","path":"sprites/spr_Cappy_Normal_Palette_Lilac/spr_Cappy_Normal_Palette_Lilac.yy",},"order":2,},
+    {"id":{"name":"snd_FinalCutter","path":"sounds/snd_FinalCutter/snd_FinalCutter.yy",},"order":48,},
     {"id":{"name":"spr_Cappy_Normal_Palette_RedCap","path":"sprites/spr_Cappy_Normal_Palette_RedCap/spr_Cappy_Normal_Palette_RedCap.yy",},"order":3,},
     {"id":{"name":"spr_Cappy_Normal_Palette_Shadow","path":"sprites/spr_Cappy_Normal_Palette_Shadow/spr_Cappy_Normal_Palette_Shadow.yy",},"order":4,},
     {"id":{"name":"spr_Cappy_Normal_Shroom","path":"sprites/spr_Cappy_Normal_Shroom/spr_Cappy_Normal_Shroom.yy",},"order":4,},

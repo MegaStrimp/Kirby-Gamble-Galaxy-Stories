@@ -4,28 +4,47 @@ function scr_Player_States_JetDash()
 {
 	if (!global.pause)
 	{
-		//Gravity
+		//if (fireDashHsp >= decelSlide) fireDashHsp -= decelSlide;
+		//if (fireDashHsp <= -decelSlide) fireDashHsp += decelSlide;
+		//if ((fireDashHsp > -decelSlide) and (fireDashHsp < decelSlide)) fireDashHsp = 0;
+		if(attackTimer <= 3 || attackTimer <= 7 && jetDashAir <= 0){
+			hsp = 0;
+			if(jetDashAir >= 0){
+				if (vsp < gravLimitNormal)
+				{
+					vsp += grav;
+				}
+				else
+				{
+					vsp = gravLimitNormal;
+				}
+			}else{
+				vsp = 0;
+			}
+		}else{
+			//Gravity
 		
-		if (sign(vsp) < gravLimitFireDash)
-		{
-			vsp += gravFireDash * fireDashDir;
+			if (sign(vsp) < gravLimitFireDash)
+			{
+				vsp += gravJetDash * fireDashDir;
+			}
+			else
+			{
+				if(fireDashDir > 0){
+					vsp = (gravLimitJetDash*0.25) * fireDashDir;
+				}else{
+					vsp = gravLimitJetDash * fireDashDir;
+				}
+			}
+		
+			//Movement
+		
+			hsp = fireDashHsp;
 		}
-		else
-		{
-			vsp = gravLimitFireDash * fireDashDir;
-		}
-		
-		//Movement
-		
-		hsp = fireDashHsp;
-		
-		if (fireDashHsp >= decelSlide) fireDashHsp -= decelSlide;
-		if (fireDashHsp <= -decelSlide) fireDashHsp += decelSlide;
-		if ((fireDashHsp > -decelSlide) and (fireDashHsp < decelSlide)) fireDashHsp = 0;
 		
 		//Cancel
 		
-		if ((fireMagicCharcoalUpgrade) and (keyAttackPressed)) attackTimer = 0;
+		//if ((fireMagicCharcoalUpgrade) and (keyAttackPressed)) attackTimer = 0;
 		
 		//Animation
 		

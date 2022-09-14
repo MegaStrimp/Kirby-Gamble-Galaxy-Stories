@@ -565,6 +565,8 @@ function scr_Player_States_Normal()
 							else if (keyUpHold)
 							{
 								if (comboBuffer <= 0 && (finalCutterReadInput || finalCutterState == 0) && state == playerStates.normal && keyUpHold){
+									if (audio_is_playing(snd_Slash)) audio_stop_sound(snd_Slash);
+									audio_play_sound(snd_Slash,0,false);
 									//if (vsp == 0)
 									//{
 									//	attack = true;
@@ -655,19 +657,19 @@ function scr_Player_States_Normal()
 									}
 									switch(finalCutterState){
 										case 1:
-											sprite_index = sprCutterAttack3;
+											sprite_index = sprCutterAttack4;
 											image_index = 0;
-											attackTimer = 10;
+											attackTimer = 6;
 											finalCutterBuffer = 30;
 											break;
 										case 2:
-											sprite_index = sprCutterAttack2;
+											sprite_index = sprCutterAttack5;
 											image_index = 0;
-											attackTimer = 10;
+											attackTimer = 6;
 											finalCutterBuffer = 25;
 											break;
 										case 3:
-											sprite_index = sprNinjaCharge;
+											sprite_index = sprCutterAttack6;
 											image_index = 0;
 											attackTimer = 5940;
 											finalCutterBuffer = 0;
@@ -3069,26 +3071,64 @@ function scr_Player_States_Normal()
 						
 						#region Jet
 						case playerAbilities.jet:
-						if((!global.cutscene) and (!hurt) and (attackable)){
-							if(keyAttackReleased){
+						if((!global.cutscene) and (!hurt)){
+							if(state == playerStates.float){
+								if(jetCharge >= 120){
+									// rocket jump
+								}else{
+									//state == playerStates.jetHover;
+								}
+							}
+							//if(state == playerStates.jetHover){
+							//	// accelerate upward, and release a hitbox below Kirby
+							//}
+							if(keyAttackPressed && attackable && !attack){
+								if(run && !grounded){
+									attackNumber = playerAttacks.jetDash;
+								}else{
+									attackNumber = playerAttacks.jetCharge;
+								    attackable = false;
+									// need to set the state as well to jetCharge
+									sprite_index = sprSleepReady;
+									image_index = 0;
+								}
+							}
+							if(attackNumber == playerAttacks.jetCharge){
+								attackTimer = 99;
+								if(keyAttackReleased){
+									attackNumber = playerAttacks.jetDash;
+								}
+							}
+							if(attackNumber = playerAttacks.jetDash){
 								invincible = true;
 								vsp = 0;
-								fireDashHsp = (movespeedBurst * ((fireMagicCharcoalUpgrade / 2) + 1)) * dir;
+								
+								fireDashHsp = (movespeedJetAirDashBoostSmall) * dir;
+								if(jetDashAir <= 0){
+									fireDashHsp = fireDashHsp*0.75;
+								}
+								
 								//run = false;
 					            attack = true;
 								attackNumber = playerAttacks.jetDash;
 								fireDashDir = 0;
-								if (keyUpHold and jetDashUp > 1){
+								if (keyUpHold and jetDashAir > 1){
 									fireDashDir = -1;
-									jetDashUp--;
-								}else if (keyDownHold or jetDashUp > 0){
+									jetDashAir--;
+								}else if (keyDownHold or jetDashAir <= 0){
 									fireDashDir = 1;
+									jetDashAir--;
 								}else{
-									jetDashUp--;
+									jetDashAir--;
+								}
+					            attackTimer = 25;
+								if(jetDashAir == 1){
+									attackTimer = 20;
+								//}else if(jetDashAir <= 0){
+								//	attackTimer = 16;
 								}
 								attackable = false;
 					            fireReleaseTimer = 35;
-					            attackTimer = 45;
 					            state = playerStates.jetDash;
 								if (audio_is_playing(snd_Fire3)) audio_stop_sound(snd_Fire3);
 				                audio_play_sound(snd_Fire3,0,false);
@@ -3102,7 +3142,7 @@ function scr_Player_States_Normal()
 				                var par = instance_create_depth(x + (dir * 10),y - 4,depth - 1,obj_Particle);
 				                par.dir = dir;
 				                par.sprite_index = spr_Particle_Fire2;
-				                par.scale = 1 + (fireMagicCharcoalUpgrade / 2);
+				                par.scale = 1;
 								par.paletteSpriteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
 								par.paletteIndex = 1;
 								par.destroyAfterAnimation = true;

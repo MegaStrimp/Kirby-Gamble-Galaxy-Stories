@@ -17,7 +17,7 @@ function scr_Player_States_FinalCutter(){
 				
 				// move the player forward a tiny bit and spawn a hitbox
 				//hsp = 2*dir;
-				if(attackTimer > 5){
+				if(attackTimer > 2){
 					hsp += 0.3*dir;
 				}
 				
@@ -43,7 +43,7 @@ function scr_Player_States_FinalCutter(){
 					vsp = gravLimitNormal;
 				}
 				
-				if(attackTimer > 5){
+				if(attackTimer > 2){
 					hsp = 0.3*dir;
 				}
 				
@@ -60,9 +60,19 @@ function scr_Player_States_FinalCutter(){
 				//}
 				break;
 			case 3: // Final Cutter
+				if(attackTimer > (5940-5)){
+					image_index = 0;
+				}else if(attackTimer <= finalCutterEndlag){
+					image_index = 6;
+				}else if(vsp < 0){
+					image_index = 1;
+				}else{
+					image_index = 5;
+				}
+			
 				var afterimage = instance_create_depth(x,y,depth,obj_Afterimage);
 				afterimage.owner = id;
-				afterimage.sprite_index = sprCutterAttack3;
+				afterimage.sprite_index = sprCutterAttack6;
 				afterimage.image_xscale = image_xscale;
 				afterimage.image_alpha = .5;
 				afterimage.paletteIndex = paletteIndex;
@@ -71,11 +81,12 @@ function scr_Player_States_FinalCutter(){
 				}else if(attackTimer > (5940-15)){
 					hsp = 0;
 					vsp = -12;
-				}else if (attackTimer > 5){
+				}else if (attackTimer > finalCutterEndlag){
 					hsp = 0;
 					vsp = 16;
 					if(grounded && vsp > 0){
-						attackTimer = 5;
+						audio_play_sound(snd_FinalCutter,0,false);
+						attackTimer = finalCutterEndlag;
 						vsp = 0;
 					}
 				}
@@ -83,6 +94,8 @@ function scr_Player_States_FinalCutter(){
 			//default:
 			//	break;
 		}
+		
+		//image_speed = 1;
 		
 		//Revert Back
 		

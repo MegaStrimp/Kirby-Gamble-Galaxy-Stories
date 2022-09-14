@@ -543,6 +543,12 @@ switch (state)
 	scr_Player_States_ParasolDash();
 	break;
 	
+	//Jet Dash
+	
+    case (playerStates.jetDash):
+	scr_Player_States_JetDash();
+	break;
+	
 	//Warp Star
 	
     case (playerStates.warpStar):
@@ -3578,5 +3584,5 @@ comboBuffer = clamp(comboBuffer-1,0,99990);
 //Reset Upward Fire Dash on landing
 if(grounded){
 	fireDashUp = 2;
-	jetDashUp = 3;
+	jetDashAir = 3;
 }

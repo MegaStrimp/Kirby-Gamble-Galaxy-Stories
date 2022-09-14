@@ -231,6 +231,7 @@ enum playerAttacks
 	
 	scanNormal,
 	
+	jetCharge,
 	jetDash,
 	
 	gooeyStoneNormal,
