@@ -77,7 +77,7 @@ if (!global.pause)
 				if (objectOnHit)
 				{
 					var proj = instance_create_depth(x,y,depth,objectOnHitObj);
-					if (objectOnHitDmg != "none") proj.dmg = objectOnHitDmg;
+					if (objectOnHitDmg != -1) proj.dmg = objectOnHitDmg;
 					if (objectOnHitObj == obj_Projectile_ExplosionMask)
 					{
 						if (enemy)

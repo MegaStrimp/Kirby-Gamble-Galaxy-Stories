@@ -448,8 +448,8 @@ if ((!debugCamera) and (objectFollowing == -1))
 				{
 				    if (isBoss)
 					{
-						if (bossOffsetX != "none") other.cameraX = bossOffsetX;
-						if (bossOffsetY != "none") other.cameraY = bossOffsetY;
+						if (bossOffsetX != -1) other.cameraX = bossOffsetX;
+						if (bossOffsetY != -1) other.cameraY = bossOffsetY;
 					}
 				}
 				break;

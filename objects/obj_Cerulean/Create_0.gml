@@ -10,35 +10,32 @@ randomize();
 
 //Physics
 
-decel = .05;
-movespeed = 1.5;
-jumpspeed = 4;
-gravNormal = .2;
-gravLimitNormal = 5;
+decel = .02;
+movespeed = 3;
 
 //Sprites
 
 mask_index = spr_24SquareOriginless_Mask;
 
-sprIdle = spr_BroomHatter_Normal_Idle;
-sprWalk = spr_BroomHatter_Normal_Walk;
-sprHurt = spr_BroomHatter_Normal_Inhale;
-sprHurtNormal = spr_BroomHatter_Normal_Hurt;
+sprIdle = spr_Cerulean_Normal_Idle;
+sprAttackReady = spr_Cerulean_Normal_AttackReady;
+sprAttackRelease = spr_Cerulean_Normal_AttackRelease;
+sprHurt = spr_Cerulean_Normal_Hurt;
 
 //Other Variables
 
-paletteIndex = spr_BroomHatter_Normal_Palette_YellowBroom;
+paletteIndex = spr_Cerulean_Normal_Palette_GreenBean;
 hp = 16;
 dmg = 1;
 points = 200;
 hasGravity = false;
 hasXCollision = false;
 hasYCollision = false;
-particleReleased = true;
 turnCounter = 0;
 turnCounterMax = 2;
+attack = false;
 
 //Timers
 
-attackTimerMax = 45;
+attackTimerMax = 30;
 attackTimer = attackTimerMax;

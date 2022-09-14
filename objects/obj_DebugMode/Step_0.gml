@@ -5080,6 +5080,38 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		break;
 		#endregion
 		
+		#region Cerulean
+		case debugObject.cerulean:
+		debugSpriteSelectedMax = 0;
+		switch (debugSpriteSelected)
+		{
+			#region Normal
+			case 0:
+			var sprIdle = spr_Cerulean_Normal_Idle;
+			var sprAttackReady = spr_Cerulean_Normal_AttackReady;
+			var sprAttackRelease = spr_Cerulean_Normal_AttackRelease;
+			var sprHurt = spr_Cerulean_Normal_Hurt;
+			break;
+			#endregion
+		}
+		debugSprite = sprIdle;
+		debugIndex = 0;
+		debugStateSelectedMax = 1;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var debugObj = instance_create_layer(x,y,"Environment",obj_Cerulean);
+			debugObj.character = debugSpriteSelected;
+			debugObj.sprIdle = sprIdle;
+			debugObj.sprAttackReady = sprAttackReady;
+			debugObj.sprAttackRelease = sprAttackRelease;
+			debugObj.sprHurt = sprHurt;
+			debugObj.sprite_index = sprIdle;
+			debugObj.image_xscale = debugXScale;
+			debugObj.image_yscale = debugYScale;
+		}
+		break;
+		#endregion
+		
 		#region IM SICK OF THIS GUY
 		case debugObject.IMSICKOFTHISGUY:
 		debugSprite = spr_IMSICKOFTHISGUY;

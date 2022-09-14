@@ -286,7 +286,7 @@ function scr_Player_States_Normal()
 						grabObj.owner = id;
 						grabObj.abilityType = playerAbilities.bomb;
 						grabObj.dirX = grabEnemy.dirX;
-						grabObj.dmg = "none";
+						grabObj.dmg = -1;
 						grabObj.active = true;
 						grabObj.particleTimer = grabObj.particleTimerMax;
 						grabObj.destroyTimer = 30;

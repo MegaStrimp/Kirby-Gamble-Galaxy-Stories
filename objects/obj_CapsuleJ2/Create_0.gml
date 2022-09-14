@@ -46,4 +46,4 @@ v_range = 30; // the vertical range J2 looks for when trying to jetdash
 // jetflame variables
 jet_flametime = 0;
 
-isBossMinion = false;
+paletteIndex = spr_CapsuleJ2_Normal_Palette_SpeedDemon;

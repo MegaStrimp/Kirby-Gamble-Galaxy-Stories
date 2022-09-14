@@ -12,7 +12,7 @@ sprIdle = spr_MovingWall_Normal_Idle;
 
 character = 0;
 hasTop = false;
-movementState = "none";
+movementState = -1;
 movementSubState = 0;
 
 //Timers

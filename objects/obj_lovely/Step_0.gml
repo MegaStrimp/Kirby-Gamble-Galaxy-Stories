@@ -27,6 +27,13 @@ if (setupTimer == 0)
 event_inherited();
 #endregion
 
+if(keyboard_check_pressed(ord("T"))){
+	hurt = true;
+	attackNumber = state_damaged;
+	knockbackX = 2;
+	knockbackY = -2;
+	
+}
 if (!global.pause)
 {
 	#region Variables
@@ -74,8 +81,8 @@ if (!global.pause)
 			var idealPosX = originX + sin((pi / 2) + sinValX) * maxXTravel;
 			var idealPosY = originY + sin(sinValY * 2 + pi) * maxYTravel;
 	
-			x += (idealPosX - x) * accel;
-			y += (idealPosY - y) * accel;
+			x += (idealPosX - x) * TravelAccel;
+			y += (idealPosY - y) * TravelAccel;
 			dirX = playerXscale;
 	
 			if (playerInRange)
@@ -140,8 +147,8 @@ if (!global.pause)
 		
 			//x+=hsp;
 			//y+=vsp;
-				x += (idealPosX-x)*accel;
-				y += (idealPosY-y)*accel;
+				x += (idealPosX-x)*TravelAccel;
+				y += (idealPosY-y)*TravelAccel;
 			if ((attackRange >= attackRangeMax && point_distance(x,y,idealPosX,idealPosY) < 6))
 			{
 				stallTimer --;
@@ -163,8 +170,27 @@ if (!global.pause)
 	
 			case state_damaged:
 			//image_yscale = myBody.image_yscale;
-			hsp *= .9;
-			vsp *= .9;
+			//the ideal pose in the game is the opposite of the player knockback
+			
+			var idealPosX = originX-knockbackX;
+			var idealPosY = originY-knockbackY;
+			
+			x += (idealPosX-x)*TravelAccel+knockbackX;
+			y += (idealPosY-y)*TravelAccel+knockbackY;
+			
+			//end the state damage
+			if(damageTimer <=0){
+					attackNumber = state_idle;
+					spriteIndex = sprIdle;
+					damageTimer = damageTimerMax;
+					hurt = false;
+			}else{
+				spriteIndex = sprHurt;
+				damageTimer--;
+				sprFace = sprFaceHurt;
+				sprFaceIndex = 0;
+			}
+			
 			break;
 	
 			case state_windup://pulls away from the player before launching self in the attack attackNumber
@@ -207,15 +233,15 @@ if (!global.pause)
 				}
 			}
 		
-			hsp = (idealPosX - x) * accel;
-			vsp = (idealPosY - y) * accel;
+			hsp = (idealPosX - x) * TravelAccel;
+			vsp = (idealPosY - y) * TravelAccel;
 			break;
 		}
 		
 		#region Animation
 		image_speed = 1;
 		
-		sprite_index = spriteIndex;
+		if(!hurt && spriteIndex != noone)sprite_index = spriteIndex;
 		#endregion
 		break;
 		#endregion

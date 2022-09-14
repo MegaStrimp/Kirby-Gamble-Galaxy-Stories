@@ -16,5 +16,5 @@ event_inherited();
 #endregion
 
 #region Draw Face
-if (state == state_idle) draw_sprite_ext(sprFace,sprFaceIndex,x,y,image_xscale,image_yscale,0,c_white,1);
+if ((attackNumber == state_idle || attackNumber = state_damaged) && sprFace != noone) draw_sprite_ext(sprFace,sprFaceIndex,x,y,image_xscale,image_yscale,0,c_white,1);
 #endregion

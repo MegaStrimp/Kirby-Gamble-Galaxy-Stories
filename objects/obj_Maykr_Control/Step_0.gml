@@ -68,6 +68,37 @@ switch (loadState)
 				#endregion
 				break;
 				#endregion
+				
+				#region Version 1.0.2
+				case "Version - 1.0.2":
+				creationIndex = file_text_read_string(loadedFile);
+				file_text_readln(loadedFile);
+								
+				if (creationIndex == "stageEnd") break;
+								
+				#region Load Room Attribues
+				var roomWidthLoad = real(file_text_read_real(loadedFile));
+				show_debug_message("Room Width - " + string(roomWidthLoad));
+				file_text_readln(loadedFile);
+				var roomHeightLoad = real(file_text_read_real(loadedFile));
+				show_debug_message("Room Height - " + string(roomHeightLoad));
+				file_text_readln(loadedFile);
+				backgroundLoad = file_text_read_string(loadedFile);
+				show_debug_message("Background - " + string(backgroundLoad));
+				backgroundLoad = asset_get_index(backgroundLoad);
+				file_text_readln(loadedFile);
+				var musicLoad = file_text_read_string(loadedFile);
+				show_debug_message("Music - " + string(musicLoad));
+				file_text_readln(loadedFile);
+				file_text_readln(loadedFile);
+				
+				if (audio_is_playing(global.musicPlaying)) audio_stop_sound(global.musicPlaying);
+				selectedMusicIndex = asset_get_index(musicLoad);
+				scr_Maykr_CreateRoom(roomWidthLoad,roomHeightLoad);
+				room_goto(global.maykrCanvas);
+				#endregion
+				break;
+				#endregion
 			}
 			loadState = 1;
 		}
@@ -256,8 +287,9 @@ switch (loadState)
 		break;
 		#endregion
 		
-		#region Version 1.0.1
+		#region Version 1.0.1 - 1.0.2
 		case "Version - 1.0.1":
+		case "Version - 1.0.2":
 		#region Set Background
 		layer_background_sprite(layer_background_get_id("Background_Parallax1"),backgroundLoad);
 		#endregion
@@ -818,9 +850,9 @@ if (!active)
 					file_text_writeln(savedFile);
 					file_text_write_string(savedFile,room_height);
 					file_text_writeln(savedFile);
-					file_text_write_string(savedFile,selectedBackgroundIndex);
+					file_text_write_string(savedFile,sprite_get_name(selectedBackgroundIndex));
 					file_text_writeln(savedFile);
-					file_text_write_string(savedFile,selectedMusicIndex);
+					file_text_write_string(savedFile,audio_get_name(selectedMusicIndex));
 					file_text_writeln(savedFile);
 					
 					file_text_write_string(savedFile,"roomAttributesEnd");

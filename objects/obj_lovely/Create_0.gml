@@ -21,7 +21,7 @@ viewRange = 96;
 //figure 8 path variables
 maxXTravel = 12;
 maxYTravel = 8;
-
+TravelAccel = .1;
 //attacking
 attackSpeed = 6;
 attackRange = 0;
@@ -41,10 +41,6 @@ attackNumber = state_idle;
 
 caughtKirby = false;
 
-//part
-
-//Physics
-
 
 //Sprites
 
@@ -55,9 +51,9 @@ sprAttack = spr_Lovely_Normal_Face_Attack;
 sprAttackDiagonal = spr_Lovely_Normal_Face_Attack_Diagonal;
 sprFaceIdle = spr_Lovely_Normal_Eyes_Blink;
 sprFaceWink = spr_Lovely_Normal_Eyes_Wink;
-sprFaceDamage = spr_Lovely_Normal_Eyes_Damaged;
+sprFaceHurt = spr_Lovely_Normal_Eyes_Damaged;
 sprBalls = spr_Lovely_Normal_Balls;
-sprHurt = -1;
+sprHurt = spr_Lovely_Normal_Face_Damaged;
 
 spriteIndex = sprIdle;
 sprFace = sprFaceIdle;
@@ -76,8 +72,8 @@ hasGravity = false;
 clampPositionX = false;
 clampPositionY = false;
 offScreenTurning = true;
-hasXKnockback = false;
-hasYKnockback = false;
+hasXKnockback = true;
+hasYKnockback = true;
 turnableX = true;
 turnableY = true;
 rotateImage = false;
@@ -85,8 +81,8 @@ sprFaceIndex = 0;
 attackState = 0;
 
 //Timers
-damageTimer = 4;
-damageTimerMax = 4;
+damageTimer = room_speed/2;
+damageTimerMax = room_speed/2;
 windupTimer = room_speed/2;
 windupTimerMax = room_speed/2;
 attackTimer = room_speed*1.25;

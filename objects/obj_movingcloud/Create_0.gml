@@ -16,7 +16,7 @@ sprRight = spr_MovingCloud_Normal_Right;
 
 character = 0;
 hasTop = false;
-movementState = "none";
+movementState = -1;
 movementSubState = 0;
 
 //Timers

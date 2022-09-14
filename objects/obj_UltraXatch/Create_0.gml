@@ -14,7 +14,7 @@ mask_index = spr_UltraXatch_Normal_Idle;
 
 sprIdle = spr_UltraXatch_Normal_Idle;
 sprCrown = spr_UltraXatch_Normal_Crown;
-sprHurt = "none";
+sprHurt = -1;
 
 //Other Variables
 

@@ -113,6 +113,7 @@ enum debugObject
 	chuckie,
 	walky,
 	mysticBlock,
+	cerulean,
 	
 	IMSICKOFTHISGUY,
 	

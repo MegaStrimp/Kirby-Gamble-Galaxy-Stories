@@ -168,7 +168,7 @@ if (instance_number(obj_Player) > 1)
 		}
 	}
 	
-	var barIndex = scr_Hud_Healthbar("back","none",global.characterP2);
+	var barIndex = scr_Hud_Healthbar("back",-1,global.characterP2);
 	
 	for (var i = 0; i < global.skylandsHpMax; i++)
 	{
@@ -179,7 +179,7 @@ if (instance_number(obj_Player) > 1)
 	
 	hudHpP2 = clamp(hudHpP2,0,global.skylandsHpMax);
 	
-	var barIndex = scr_Hud_Healthbar("normal","none",global.characterP2);
+	var barIndex = scr_Hud_Healthbar("normal",-1,global.characterP2);
 	
 	if (global.shaders) pal_swap_set(paletteP2,1 + (flashP2 * 2),false);
 	for (var i = 0; i < hudHpP2; i++)
