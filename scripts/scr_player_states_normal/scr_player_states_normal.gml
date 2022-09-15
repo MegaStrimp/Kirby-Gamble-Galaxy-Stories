@@ -3080,16 +3080,21 @@ function scr_Player_States_Normal()
 						
 						#region Jet
 						case playerAbilities.jet:
+						//canFloat = false;
 						if((!global.cutscene) and (!hurt)){
-							if(state == playerStates.float){
-								if(jetCharge >= 120){
-									// rocket jump
-								}else{
-									//state == playerStates.jetHover;
-								}
-							}
+							//if(state == playerStates.float){
+							//	if(jetCharge >= 120){
+							//		// rocket jump
+							//	}else{
+							//		state = playerStates.jetHover;
+							//	}
+							//}
 							//if(state == playerStates.jetHover){
 							//	// accelerate upward, and release a hitbox below Kirby
+							//	vsp = clamp(vsp-jetHoverAccel,-jetHoverMax,2);
+							//	if(!keyJumpHold){
+							//		state = playerStates.normal;
+							//	}
 							//}
 							if(keyAttackPressed && attackable && !attack){
 								if(run && !grounded){
@@ -3761,28 +3766,57 @@ function scr_Player_States_Normal()
 		
 		//Float
 		
-		if ((!global.cutscene) and (canFloat) and ((carriedItem == carriedItems.none) and (carriedItemState != carriedItemStates.heavy)) and (playerAbility != playerAbilities.ufo) and ((keyJumpPressed) and (!place_meeting(x,y,obj_AntiFloat)) and (!grounded)) and (!attack))
+		if ((!global.cutscene) and (canFloat) and ((carriedItem == carriedItems.none) and (carriedItemState != carriedItemStates.heavy)) and ((keyJumpPressed) and (!place_meeting(x,y,obj_AntiFloat)) and (!grounded)) and (!attack))
 		{
 			switch (playerCharacter)
 			{
-				default:
-				attackTimer = 0;
-			    hurt = false;
-				jumpspeed = jumpspeedFloat;
-			    vsp = -jumpspeed;
-			    float = false;
-			    image_index = 0;
-			    state = playerStates.float;
+				case playerCharacters.kirby:
+				switch(playerAbility){
+					case playerAbilities.jet:
+					attackTimer = 0;
+					hurt = false;
+					//jumpspeed = jumpspeedFloat;
+					// accelerate upward, and release a hitbox below Kirby
+					vsp = clamp(vsp-jetHoverAccel,-jetHoverMax,5);
+					//if(!keyJumpHold){
+					//	state = playerStates.normal;
+					//}
+					//float = true;
+					image_index = 0;
+					state = playerStates.jetHover;
+					//add code that makes the player use jet jump instead if jetCHarge >= 120
+					break;
+					
+					default:
+					attackTimer = 0;
+					hurt = false;
+					jumpspeed = jumpspeedFloat;
+					vsp = -jumpspeed;
+					float = true;
+					image_index = 0;
+					state = playerStates.float;
+					break;
+				}
 				break;
-				
+					
 				case playerCharacters.gooey:
 				attackTimer = 0;
-			    hurt = false;
+				hurt = false;
 				jumpspeed = jumpspeedFloat;
-			    vsp = -jumpspeed;
-			    float = true;
-			    image_index = 0;
-			    state = playerStates.float;
+				vsp = -jumpspeed;
+				float = true;
+				image_index = 0;
+				state = playerStates.float;
+				break;
+					
+				default:
+				attackTimer = 0;
+				hurt = false;
+				jumpspeed = jumpspeedFloat;
+				vsp = -jumpspeed;
+				float = false;
+				image_index = 0;
+				state = playerStates.float;
 				break;
 			}
 		}

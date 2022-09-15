@@ -110,6 +110,9 @@ if (!global.pause)
 
     if ((keyDownHold) and (downHeld < 1000)) downHeld += 1;
     if (keyDownReleased || attack || /*state == 5 || */hsp != 0) downHeld = 0;
+	if(playerAbility == playerAbilities.ufo){
+		downHeld = 10;
+	}
 	
 	//In Background
 	
@@ -436,6 +439,12 @@ switch (state)
 	
     case (playerStates.float):
 	scr_Player_States_Float();
+	break;
+	
+	//Jet Hover
+	
+    case (playerStates.jetHover):
+	scr_Player_States_JetHover();
 	break;
 	
 	//Climb
@@ -3588,6 +3597,12 @@ comboBuffer = clamp(comboBuffer-1,0,99990);
 if(grounded){
 	fireDashUp = 2;
 	jetDashAir = 3;
+}
+
+//Fast Fall
+if(keyDownPressed && downInputBufferTimer > 0){
+	vsp = gravLimit;
+	fallHop = true;
 }
 
 //Input Buffers (for motion input attacks)

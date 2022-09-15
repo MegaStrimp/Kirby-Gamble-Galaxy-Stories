@@ -2173,6 +2173,7 @@
     {"id":{"name":"spr_Kirby_AbilityHat_Bomb_Modern_Heavy_SlopeL","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_SlopeL/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_SlopeL.yy",},"order":21,},
     {"id":{"name":"spr_en_J2_jetflame","path":"sprites/spr_en_J2_jetflame/spr_en_J2_jetflame.yy",},"order":6,},
     {"id":{"name":"obj_Spawner_Nidoo","path":"objects/obj_Spawner_Nidoo/obj_Spawner_Nidoo.yy",},"order":32,},
+    {"id":{"name":"scr_Player_States_JetHover","path":"scripts/scr_Player_States_JetHover/scr_Player_States_JetHover.yy",},"order":24,},
     {"id":{"name":"spr_Kirby_Normal_CarryIdle_SteepSlopeL_Mask","path":"sprites/spr_Kirby_Normal_CarryIdle_SteepSlopeL_Mask/spr_Kirby_Normal_CarryIdle_SteepSlopeL_Mask.yy",},"order":79,},
     {"id":{"name":"spr_Kirby_AbilityHat_Bomb_Modern_Heavy_SlopeR","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_SlopeR/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_SlopeR.yy",},"order":22,},
     {"id":{"name":"spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk","path":"sprites/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk/spr_Kirby_AbilityHat_Bomb_Modern_Heavy_Walk.yy",},"order":23,},

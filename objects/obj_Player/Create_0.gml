@@ -560,6 +560,8 @@ jetDashAir = 3;
 finalCutterEndlag = 12;
 downInputBuffer = 15;
 downInputBufferTimer = 0;
+jetHoverAccel = 0.7;
+jetHoverMax = 3.5;
 //////////////////
 
 //Create Objects

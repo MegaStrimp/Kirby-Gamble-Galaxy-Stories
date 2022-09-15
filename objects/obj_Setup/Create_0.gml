@@ -64,6 +64,9 @@ enum playerStates
 	wingDash,
 	swordDash,
 	parasolDash,
+	jetHover,
+	jetJump,
+	jetCharge,
 	jetDash,
 	warpStar,
     death
@@ -233,6 +236,7 @@ enum playerAttacks
 	
 	jetCharge,
 	jetDash,
+	jetJump,
 	
 	gooeyStoneNormal,
 	gooeyFireDash
