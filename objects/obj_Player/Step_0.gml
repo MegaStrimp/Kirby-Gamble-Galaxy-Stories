@@ -3599,11 +3599,11 @@ if(grounded){
 	jetDashAir = 3;
 }
 
-//Fast Fall
-if(keyDownPressed && downInputBufferTimer > 0){
-	vsp = gravLimit;
-	fallHop = true;
-}
+////Fast Fall
+//if(keyDownPressed && downInputBufferTimer > 0){
+//	vsp = gravLimit;
+//	fallHop = true;
+//}
 
 //Input Buffers (for motion input attacks)
 if(keyDownHold){
