@@ -284,11 +284,11 @@ waterEggSoilUpgrade = false;
 
 //Other Variables
 
-if ((global.hpP1 == 0) or (global.hpP2 == 0))
+if ((global.healthP1 == 0) or (global.healthP2 == 0))
 {
 	if (global.pause) global.pause = false;
-	global.hpP1 = global.hpMax;
-	global.hpP2 = global.hpMax;
+	global.healthP1 = global.healthP1Max;
+	global.healthP1 = global.healthP1Max;
 }
 player = 0;
 playerCharacter = 0;
