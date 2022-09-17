@@ -4,7 +4,7 @@
 //if(keyboard_check(ord("L"))){
 palIndex += .1;
 //}
-if (palIndex >= sprite_get_width(sprBGPal)) palIndex -= sprite_get_width(sprBGPal);
+if (palIndex >= sprite_get_width(sprBGPal)-.1) palIndex -= sprite_get_width(sprBGPal);
 
 if (global.shaders) pal_swap_set(sprBGPal,palIndex,false);
 
