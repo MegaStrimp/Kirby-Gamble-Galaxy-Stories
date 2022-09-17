@@ -49,7 +49,7 @@ if ((clampToView) and (!death))
 
 //Death
 
-if ((((player == 0) and (global.hpP1 == 0)) or ((player == 1) and (global.hpP2 == 0))) and (!death))
+if ((((player == 0) and (global.healthP1 == 0)) or ((player == 1) and (global.healthP2 == 0))) and (!death))
 {
 	if (global.goldenTomato)
 	{
@@ -61,8 +61,10 @@ if ((((player == 0) and (global.hpP1 == 0)) or ((player == 1) and (global.hpP2 =
 			particle.sprite_index = spr_Particle_Flash1;
 			particle.destroyAfterAnimation = true;
 		}
-		global.hpP1 = global.hpMax;
-		global.hpP2 = global.hpMax;
+		//global.hpP1 = global.hpMax;
+		//global.hpP2 = global.hpMax;
+		global.healthP1 = global.healthMax;
+		global.healthP2 = global.healthMax;
 		global.goldenTomato = false;
 	}
 	else
@@ -782,6 +784,9 @@ if (!global.pause)
 
 global.hpP1 = clamp(global.hpP1,0,global.hpMax);
 global.hpP2 = clamp(global.hpP2,0,global.hpMax);
+
+global.healthP1 = clamp(global.healthP1,0,global.healthP1Max);
+global.healthP2 = clamp(global.healthP2,0,global.healthP2Max);
 
 //Scale
 

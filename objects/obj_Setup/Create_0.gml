@@ -764,9 +764,17 @@ global.versionNumber = "0.5.7";
 
 global.globalTimer = 0;
 global.selectedSave = "Save1.ini";
+//old hp system
 global.hpMax = 5;
 global.hpP1 = global.hpMax;
 global.hpP2 = global.hpMax;
+//new healthbar system
+global.healthP1Max = 45;
+global.healthP2Max = 45;
+global.healthP1 = global.healthMax;
+global.healthP2 = global.healthMax;
+global.undershotVal = 20; // if the player's health is higher than this value when they take a hit and the attack is not marked as a "finishing blow", the player will survive with this much health.
+///////////////////////////
 global.skylandsHpMax = 5;
 global.skylandsHpP1 = global.skylandsHpMax;
 global.skylandsHpP2 = global.skylandsHpMax;

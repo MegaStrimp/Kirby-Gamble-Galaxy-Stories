@@ -283,33 +283,40 @@ for (var i = 0; i < global.hpMax; i++)
 }
 if (global.shaders) pal_swap_reset();
 
-hudHpP1 = clamp(hudHpP1,0,global.hpMax);
+hudHpP1 = clamp(hudHpP1,0,global.healthP1Max);
 
 if (global.shaders) pal_swap_set(pal,1 + (flashP1 * 2),false);
-for (var i = 0; i < hudHpP1; i++)
+
+//for (var i = 0; i < hudHpP1; i++)
 {
-	var offset = 0;
-	switch (i)
-	{
-		case 1:
-		offset = 10;
-		break;
+	//var offset = 0;
+	//switch (i)
+	//{
+	//	case 1:
+	//	offset = 10;
+	//	break;
 		
-		case 2:
-		offset = 23;
-		break;
+	//	case 2:
+	//	offset = 23;
+	//	break;
 		
-		case 3:
-		offset = 37;
-		break;
+	//	case 3:
+	//	offset = 37;
+	//	break;
 		
-		case 4:
-		offset = 50;
-		break;
-	}
+	//	case 4:
+	//	offset = 50;
+	//	break;
+	//}
 	
-	draw_sprite_ext(spr_Hud_Healthbar_Kirby,i,hudX + 24 + offset,hudY + 11,1,1,image_angle,image_blend,drawAlpha);
+	//draw_sprite_ext(spr_Hud_Healthbar_Kirby,i,hudX + 24 + offset,hudY + 11,1,1,image_angle,image_blend,drawAlpha);
+	
+	healthbarWidth = sprite_get_width(spr_Hud_Healthbar_Background_Kirby);
+	healthbarHeight = sprite_get_height(spr_Hud_Healthbar_Background_Kirby);
+	
+	draw_sprite_part_ext(spr_Hud_Healthbar_Kirby,0,0,0,healthbarWidth,healthbarHeight,hudX + 25,hudY - 9,1,1,image_blend,drawAlpha);
 }
+
 if (global.shaders) pal_swap_reset();
 
 //P1 Health Background
