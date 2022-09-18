@@ -29,11 +29,11 @@ if (!global.pause)
 		var collidedPlayer = instance_place(x,y,obj_Player);
 		if (collidedPlayer.player == 0)
 		{
-			global.hpP1 += 2;
+			global.healthP1 += global.healthP1Max*0.5;
 		}
 		else
 		{
-			global.hpP2 += 2;
+			global.healthP2 += global.healthP2Max*0.5;
 		}
 		global.points += points;
 		instance_destroy();

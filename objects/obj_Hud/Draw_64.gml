@@ -258,7 +258,7 @@ var pal = scr_Hud_Healthbar_Palette(global.abilityP1,global.characterP1,paletteP
 
 if (global.shaders) pal_swap_set(pal,1,false);
 
-draw_sprite_ext(spr_Hud_HealthbarBack_Kirby,0,hudX + 25,hudY + 11,1,1,image_angle,image_blend,drawAlpha);
+draw_sprite_ext(spr_Hud_HealthbarBack_Kirby,0,hudX + 25,hudY + 12,1,1,image_angle,image_blend,drawAlpha);
 
 if (global.shaders) pal_swap_reset();
 
@@ -375,7 +375,7 @@ if (instance_number(obj_Player) > 1)
 	
 	if (global.shaders) pal_swap_set(pal,1,false);
 	
-	draw_sprite_ext(spr_Hud_HealthbarBack_Kirby,0,hudX + 489 - (sprite_get_width(spr_Hud_Icon_Kirby) / 2) - sprite_get_width(spr_Hud_HealthbarBack_Kirby),hudY + 11,-1,1,image_angle,image_blend,drawAlpha);
+	draw_sprite_ext(spr_Hud_HealthbarBack_Kirby,0,hudX + 489 - (sprite_get_width(spr_Hud_Icon_Kirby) / 2) - sprite_get_width(spr_Hud_HealthbarBack_Kirby),hudY + 12,-1,1,image_angle,image_blend,drawAlpha);
 	if (global.shaders) pal_swap_reset();
 	
 	hudHpP2 = clamp(hudHpP2,0,global.healthP2Max);
