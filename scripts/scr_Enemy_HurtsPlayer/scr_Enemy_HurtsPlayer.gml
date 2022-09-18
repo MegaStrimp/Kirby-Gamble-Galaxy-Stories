@@ -66,7 +66,7 @@ function scr_Enemy_HurtsPlayer(argument0)
 			{
 				//global.hpP2 -= dmg;
 				global.healthP2 -= dmg;
-				if(global.healthP2 <= 0 && oldHealthP1 > global.undershotValP2){
+				if(global.healthP2 <= 0 && oldHealthP2 > global.undershotValP2){
 					global.healthP2 = global.undershotValP2;
 				}
 			}
@@ -85,7 +85,7 @@ function scr_Enemy_HurtsPlayer(argument0)
 			if ((collidedPlayer.player == 1) and (global.healthP2 <= (0.2*global.healthP2Max)))
 			{
 				if (audio_is_playing(snd_LowHp)) audio_stop_sound(snd_LowHp);
-				if(oldHealthP1 > (0.2*global.healthP2Max)){
+				if(oldHealthP2 > (0.2*global.healthP2Max)){
 					audio_play_sound(snd_LowHp,0,false);
 				}
 				if (instance_exists(obj_Hud))
