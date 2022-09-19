@@ -53,7 +53,20 @@ function scr_Player_States_Float()
 		
 		//Grounded
 		
-		if ((grounded) and (jumpLimit)) vsp = 0;
+		if (grounded)
+		{
+			if (jumpLimit) vsp = 0;
+		}
+		else
+		{
+			//Fast Fall
+			
+			if ((keyDownPressed) and (downInputBufferTimer > 0))
+			{
+			    vsp = gravLimit;
+			    fallHop = true;
+			}
+		}
 		
 		//Attack
 		

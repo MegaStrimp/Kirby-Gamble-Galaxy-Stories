@@ -4,7 +4,7 @@
 
 event_inherited();
 
-if (!global.pause)
+if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 {
 	//Get Inhaled
 	
@@ -72,6 +72,7 @@ if (!global.pause)
 				if (audio_is_playing(snd_WhispyFallingGordo)) audio_stop_sound(snd_WhispyFallingGordo);
 				audio_play_sound(snd_WhispyFallingGordo,0,false);
 				var obj = instance_create_depth(x,y,depth,obj_Gordo);
+				obj.owner = owner;
 				obj.state = 3;
 				obj.walkDirX = owner.dirX;
 				obj.destroyOutsideView = true;
@@ -85,6 +86,7 @@ if (!global.pause)
 				if (audio_is_playing(snd_WhispyFallingApple)) audio_stop_sound(snd_WhispyFallingApple);
 				audio_play_sound(snd_WhispyFallingApple,0,false);
 				var obj = instance_create_depth(x,y,depth,obj_Como);
+				obj.owner = owner;
 				obj.isBossMinion = true;
 				instance_destroy();
 				break;
@@ -95,6 +97,7 @@ if (!global.pause)
 				if (audio_is_playing(snd_WhispyFallingApple)) audio_stop_sound(snd_WhispyFallingApple);
 				audio_play_sound(snd_WhispyFallingApple,0,false);
 				var obj = instance_create_depth(x,y,depth,obj_WaddleDee);
+				obj.owner = owner;
 				obj.state = 1;
 				obj.dirX = owner.dirX;
 				obj.walkDirX = owner.dirX;

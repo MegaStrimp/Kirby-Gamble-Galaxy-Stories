@@ -29,10 +29,10 @@ if (death)
 event_inherited();
 #endregion
 
-if (!global.pause)
+if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 {
 	#region Hurt Player
-	if (!death) scr_Enemy_HurtsPlayer(dmg);
+	//if (!death) scr_Enemy_HurtsPlayer(dmg);
 	#endregion
 	
 	#region Phases
@@ -321,7 +321,7 @@ if (!global.pause)
 		obj.owner = id;
 		obj.objValue = objValue;
 		obj.destroyOutsideView = true;
-		obj.isBossMinion = false;
+		obj.isBossMinion = true;
 		switch (objValue)
 		{
 			#region Apple

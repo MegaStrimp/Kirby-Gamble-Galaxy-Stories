@@ -20,7 +20,7 @@ if (setupTimer == 0)
 
 event_inherited();
 
-if (!global.pause)
+if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 {
 	if (!parasol) scr_Object_Inhale(enemy);
 	
@@ -77,7 +77,7 @@ if (!global.pause)
 }
 else
 {
-	path_speed = 0;
+	pathsp = 0;
 	image_speed = 0;
 	shakeX = 0;
 	shakeY = 0;

@@ -108,6 +108,10 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		destroyTimer = -1;
 	}
 	#endregion
+	
+	#region Animation
+	image_speed = 1;
+	#endregion
 }
 else
 {

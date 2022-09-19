@@ -14,11 +14,12 @@ function scr_Player_States_Normal()
 		var playerSprayPaint = global.sprayPaintP1;
 		if (player == 1) playerSprayPaint = global.sprayPaintP2;
 		
+		var collidingWall = -1;
 		var grounded = false;
 		if (place_meeting(x,y + 1,obj_ParentWall))
 		{
-			var collidingWall = instance_place(x,y + 1,obj_ParentWall);
-			if ((!collidingWall.platform) or ((collidingWall.platform) and (((!keyDownHold) or (downHeld < 3)) and !(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal) and (!place_meeting(x,y + vspFinal,obj_Wall))))) grounded = true;
+			collidingWall = instance_place(x,y + 1,obj_ParentWall);
+			if ((!collidingWall.platform) or ((collidingWall.platform) and (((!keyDownHold) or ((downHeld < 8) and (playerAbility != playerAbilities.ufo))) and !(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal) and (!place_meeting(x,y + vspFinal,obj_Wall))))) grounded = true;
 		}
 		else if (place_meeting(x,y + 1,obj_Spring))
 		{
@@ -257,6 +258,16 @@ function scr_Player_States_Normal()
 		}
 		else
 		{
+			//Fast Fall
+			
+			if ((keyDownPressed) and (downInputBufferTimer > 0))
+			{
+			    vsp = gravLimit;
+			    //fallHop = true;
+			}
+			
+			//Gamble Float
+			
 			if (playerCharacter == playerCharacters.gamble)
 			{
 				canUfoFloat = true; 
@@ -519,6 +530,23 @@ function scr_Player_States_Normal()
 						
 						#region Cutter
 						case playerAbilities.cutter:
+						var grabEnemy = -1;
+						if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
+						{
+							if (place_meeting(x + (16 * dir),y,obj_Enemy)) grabEnemy = instance_place(x + (16 * dir),y,obj_Enemy);
+							if (grabEnemy != -1)
+							{
+								if ((comboBuffer <= 0) && (finalCutterReadInput || finalCutterState == 0) && state == playerStates.normal)
+								{
+									if (audio_is_playing(snd_Slash)) audio_stop_sound(snd_Slash);
+									audio_play_sound(snd_Slash,0,false);
+									attack = true;
+									attackNumber = playerAttacks.finalCutter;
+									cutterCatch = false;
+								}
+							}
+						}
+						
 					    if ((!global.cutscene) and (keyAttackHold) and (!hurt) and (!attack) and (cutterAirThrown))
 						{
 							if (audio_is_playing(snd_Slash)) audio_stop_sound(snd_Slash);
@@ -564,42 +592,20 @@ function scr_Player_States_Normal()
 								image_index = 0;
 				                state = playerStates.cutterDrop;
 							}
-							else if (keyUpHold)
+							else if ((keyUpHold) and (cutterMotorCutterUpgrade))
 							{
-								if ((comboBuffer <= 0) && (finalCutterReadInput || finalCutterState == 0) && state == playerStates.normal && keyUpHold){
+								if ((comboBuffer <= 0) && (finalCutterReadInput || finalCutterState == 0) && state == playerStates.normal && keyUpHold)
+								{
 									if (audio_is_playing(snd_Slash)) audio_stop_sound(snd_Slash);
 									audio_play_sound(snd_Slash,0,false);
-									//if (vsp == 0)
-									//{
-									//	attack = true;
-									//	attackNumber = playerAttacks.cutterCharge;
-									//}
-									//else
-									//{
-									//	if (!cutterAirThrown)
-									//	{
-									//		cutterAirThrown = true;
-									//		attack = true;
-									//		attackNumber = playerAttacks.cutterNormal;
-									//		sprite_index = sprCutterAttack1;
-									//	    image_index = 0;
-									//	}
-									//}
-									//cleavingCutterMaskProj = noone;
-									//nonstopCutterMaskProj = noone;
-									//finalCutterMaskProj = noone;
 									attack = true;
-									
-									//Motion Input - Instant Final Cutter
-									if(downInputBufferTimer > 0){
-										downInputBufferTimer = 0;
-										finalCutterState = 2;
-									}
-									
+									finalCutterState = 2;
 									attackNumber = playerAttacks.finalCutter;
 									cutterCatch = false;
 								}
-							}else{
+							}
+							else
+							{
 								if (vsp == 0)
 								{
 									attack = true;
@@ -622,72 +628,80 @@ function scr_Player_States_Normal()
 							}
 					    }
 						
-						if(attackNumber == playerAttacks.finalCutter){
-							if(attackable){
+						if (attackNumber == playerAttacks.finalCutter)
+						{
+							if (attackable)
+							{
 								attackable = false;
-								//if(finalCutterState == 0 || finalCutterReadInput){
-									finalCutterState++;
-									//finalCutterState = 3;
-									finalCutterReadInput = false;
-								//}
-									switch(finalCutterState){
-										case 1: 
-											var cleavingCutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_CleavingCutterMask);
-											cleavingCutterMaskProj.owner = id;
-											cleavingCutterMaskProj.abilityType = playerAbilities.cutter;
-											cleavingCutterMaskProj.dmg = 6;
-											break;
-										case 2: 
-											var nonstopCutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_NonstopCutterMask);
-											nonstopCutterMaskProj.owner = id;
-											nonstopCutterMaskProj.abilityType = playerAbilities.cutter;
-											nonstopCutterMaskProj.dmg = 6;
-											break;
-										case 3: 
-											if(attackTimer > (5940-15)){
-												// rising slash
-												var finalCutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_FinalCutterRisingSlashMask);
-												finalCutterMaskProj.owner = id;
-												finalCutterMaskProj.abilityType = playerAbilities.cutter;
-												finalCutterMaskProj.dmg = 8; // make sure to create two additional hitboxes, one for the falling slash and one for the shockwave, both dealing 32 damage.		
-											}else if (attackTimer > 5){
-												// falling slash
-												var finalCutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_FinalCutterRisingSlashMask);
-												finalCutterMaskProj.owner = id;
-												finalCutterMaskProj.abilityType = playerAbilities.cutter;
-												finalCutterMaskProj.dmg = 32; // make sure to create two additional hitboxes, one for the falling slash and one for the shockwave, both dealing 32 damage.		
-											}
-											//if(grounded && vsp > 0){
-											//	// cutter wave
-											//}
-											break;
-										default:
-											break;
+								finalCutterState++;
+								finalCutterReadInput = false;
+								
+								switch (finalCutterState)
+								{
+									case 1: 
+									var cleavingCutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_CleavingCutterMask);
+									cleavingCutterMaskProj.owner = id;
+									cleavingCutterMaskProj.abilityType = playerAbilities.cutter;
+									cleavingCutterMaskProj.dmg = 6;
+									break;
+									
+									case 2: 
+									var nonstopCutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_NonstopCutterMask);
+									nonstopCutterMaskProj.owner = id;
+									nonstopCutterMaskProj.abilityType = playerAbilities.cutter;
+									nonstopCutterMaskProj.dmg = 6;
+									break;
+									
+									case 3: 
+									if (attackTimer > (5940 - 15))
+									{
+										// rising slash
+										var finalCutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_FinalCutterRisingSlashMask);
+										finalCutterMaskProj.owner = id;
+										finalCutterMaskProj.abilityType = playerAbilities.cutter;
+										finalCutterMaskProj.dmg = 8; // make sure to create two additional hitboxes, one for the falling slash and one for the shockwave, both dealing 32 damage.		
 									}
-									switch(finalCutterState){
-										case 1:
-											sprite_index = sprCutterAttack4;
-											image_index = 0;
-											attackTimer = 6;
-											finalCutterBuffer = 30;
-											break;
-										case 2:
-											sprite_index = sprCutterAttack5;
-											image_index = 0;
-											attackTimer = 6;
-											finalCutterBuffer = 25;
-											break;
-										case 3:
-											sprite_index = sprCutterAttack6;
-											image_index = 0;
-											attackTimer = 5940;
-											finalCutterBuffer = 0;
-											invincible = true;
-											break;
-										default:
-											break;
+									else if (attackTimer > 5)
+									{
+										// falling slash
+										var finalCutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_FinalCutterRisingSlashMask);
+										finalCutterMaskProj.owner = id;
+										finalCutterMaskProj.abilityType = playerAbilities.cutter;
+										finalCutterMaskProj.dmg = 32; // make sure to create two additional hitboxes, one for the falling slash and one for the shockwave, both dealing 32 damage.		
 									}
-								//hsp = 5*dir;
+									break;
+									
+									default:
+									break;
+								}
+								switch(finalCutterState)
+								{
+									case 1:
+									sprite_index = sprCutterAttack4;
+									image_index = 0;
+									attackTimer = 6;
+									finalCutterBuffer = 30;
+									break;
+									
+									case 2:
+									sprite_index = sprCutterAttack5;
+									image_index = 0;
+									attackTimer = 6;
+									finalCutterBuffer = 25;
+									break;
+									
+									case 3:
+									sprite_index = sprCutterAttack6;
+									image_index = 0;
+									attackTimer = 5940;
+									finalCutterBuffer = 0;
+									invincible = true;
+									if (invincibleFlashTimer == -1) invincibleFlashTimer = invincibleFlashTimerMax;
+									break;
+									
+									default:
+									break;
+								}
 								state = playerStates.finalCutter;
 							}
 						}
@@ -2619,6 +2633,7 @@ function scr_Player_States_Normal()
 							{
 								if (keyAttackReleased) attackTimer = 0;
 							}
+							else if (keyAttackReleased) attackTimer = 10;
 						}
 						break;
 						

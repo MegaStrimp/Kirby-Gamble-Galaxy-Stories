@@ -12,6 +12,16 @@ goBack = false;
 
 var i = 0;
 
+upgradeTitle[i] = "Motor Cutter";
+upgradeDescription[i] = "Buffs Cutter Ability";
+upgradeUnlocked[i] = global.cutterMotorCutterUpgradeUnlocked;
+upgradeUnlockMethod[i] = "???";
+upgradeColor[i] = make_color_rgb(255,255,102);
+upgradeStar[i] = spr_AbilityStar_Cutter;
+upgradeItem[i] = spr_Menu_Upgrades_GoldenFlare;
+upgradeNumber[i] = i;
+i += 1;
+
 upgradeTitle[i] = "Golden Flare";
 upgradeDescription[i] = "Buffs Beam Ability";
 upgradeUnlocked[i] = global.beamGoldenFlareUpgradeUnlocked;

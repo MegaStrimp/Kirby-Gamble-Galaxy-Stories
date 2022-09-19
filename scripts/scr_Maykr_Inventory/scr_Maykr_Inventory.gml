@@ -295,6 +295,11 @@ function scr_Maykr_Inventory(argument0,argument1)
 			maykrSpr[i] = spr_Walky_Normal_Idle;
 			maykrSprXOffset[i] = sprite_get_xoffset(maykrSpr[i]);
 			maykrSprYOffset[i] = sprite_get_yoffset(maykrSpr[i]);
+			i += 1;
+			maykrInventory[i] = maykrObjects.cerulean;
+			maykrSpr[i] = spr_Cerulean_Normal_Idle;
+			maykrSprXOffset[i] = sprite_get_xoffset(maykrSpr[i]);
+			maykrSprYOffset[i] = sprite_get_yoffset(maykrSpr[i]);
 			break;
 		}
 		break;

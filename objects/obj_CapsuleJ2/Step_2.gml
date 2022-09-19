@@ -1,4 +1,4 @@
-///// @description Wall Bounce Logic
+///@description Wall Bounce Logic
 
 switch(attackNumber)
 {
@@ -7,130 +7,130 @@ switch(attackNumber)
 	{
 		while (place_meeting(x,y+1,coll_obj)) y -= 1;
 		
-		attackNumber = "walking";
-		action_timer = 30;
-		v_speed = 0;
+		attackNumber = enemyAttacks.capsuleJ2_walking;
+		actionTimer = 30;
+		vsp = 0;
 	}
 	
 	if (place_meeting(x - (sprite_width / 2),y, coll_obj))
 	{
-		while (place_meeting(x - (sprite_width / 2) - (1 * spr_dir),y,coll_obj)) x += spr_dir;
+		while (place_meeting(x - (sprite_width / 2) - (1 * dirX),y,coll_obj)) x += dirX;
 	}
 	break;
 	
 	case enemyAttacks.capsuleJ2_jetDash:
-	if (h_speed > 1)
+	if (hsp > 1)
 	{
-		if (place_meeting(x + (4 * spr_dir),y, coll_obj))
+		if (place_meeting(x + (4 * dirX),y, coll_obj))
 		{
-			while (place_meeting(x + (4 * spr_dir) + (1 * spr_dir),y,coll_obj)) x -= spr_dir;
+			while (place_meeting(x + (4 * dirX) + (1 * dirX),y,coll_obj)) x -= dirX;
 			
 			attackNumber = enemyAttacks.capsuleJ2_bounceBack;
-			h_speed = -3;
+			hsp = -3;
 		}
 	}
 	break;
 	
 	case enemyAttacks.capsuleJ2_hovering:
 	case enemyAttacks.capsuleJ2_dashStart:
-		if(v_speed < 0){
+		if(vsp < 0){
 			while(place_meeting(x,y-5-1,coll_obj)){
 				y++;
-				if(h_speed > 0){
-					if(place_meeting(x+(4*spr_dir)+(2*spr_dir),y,coll_obj)){
-						x-=spr_dir;
+				if(hsp > 0){
+					if(place_meeting(x+(4*dirX)+(2*dirX),y,coll_obj)){
+						x-=dirX;
 					}
-				}else if(h_speed < 0){
-					if(place_meeting(x-(4*spr_dir)-(1*spr_dir),y,coll_obj)){
-						x+=spr_dir;
+				}else if(hsp < 0){
+					if(place_meeting(x-(4*dirX)-(1*dirX),y,coll_obj)){
+						x+=dirX;
 					}
 				}
-				v_speed = fall_max;
+				vsp = gravLimit;
 			}
-			if(h_speed > 0){
-				while(place_meeting(x+(4*spr_dir)+(2*spr_dir),y,coll_obj)){
-					x-=spr_dir;
+			if(hsp > 0){
+				while(place_meeting(x+(4*dirX)+(2*dirX),y,coll_obj)){
+					x-=dirX;
 				}
-			}else if(h_speed < 0){
-				while(place_meeting(x-(4*spr_dir)-(1*spr_dir),y,coll_obj)){
-					x+=spr_dir;
+			}else if(hsp < 0){
+				while(place_meeting(x-(4*dirX)-(1*dirX),y,coll_obj)){
+					x+=dirX;
 				}
 			}
-		}else if(v_speed >= 0){
+		}else if(vsp >= 0){
 			while(place_meeting(x,y+5+1,coll_obj)){
 				y--;
-				if(h_speed > 0){
-					if(place_meeting(x+(4*spr_dir)+(2*spr_dir),y,coll_obj)){
-						x-=spr_dir;
+				if(hsp > 0){
+					if(place_meeting(x+(4*dirX)+(2*dirX),y,coll_obj)){
+						x-=dirX;
 					}
-				}else if(h_speed < 0){
-					if(place_meeting(x-(4*spr_dir)-(1*spr_dir),y,coll_obj)){
-						x+=spr_dir;
+				}else if(hsp < 0){
+					if(place_meeting(x-(4*dirX)-(1*dirX),y,coll_obj)){
+						x+=dirX;
 					}
 				}
-				//v_speed = fall_max;
-				v_speed = 0;
-				attackNumber = "walking";
-				action_timer = 30;
-				has_landed = true;
+				//vsp = gravLimit;
+				vsp = 0;
+				attackNumber = enemyAttacks.capsuleJ2_walking;
+				actionTimer = 30;
+				hasLanded = true;
 			}
-			if(h_speed > 0){
-				while(place_meeting(x+(4*spr_dir)+(2*spr_dir),y,coll_obj)){
-					x-=spr_dir;
+			if(hsp > 0){
+				while(place_meeting(x+(4*dirX)+(2*dirX),y,coll_obj)){
+					x-=dirX;
 				}
-			}else if(h_speed < 0){
-				while(place_meeting(x-(4*spr_dir)-(1*spr_dir),y,coll_obj)){
-					x+=spr_dir;
+			}else if(hsp < 0){
+				while(place_meeting(x-(4*dirX)-(1*dirX),y,coll_obj)){
+					x+=dirX;
 				}
 			}
 		}
 		break;
 	default:
-		if(v_speed < 0){
+		if(vsp < 0){
 			while(place_meeting(x,y-5-1,coll_obj)){
 				y++;
-				if(h_speed > 0){
-					if(place_meeting(x+(4*spr_dir)+(2*spr_dir),y,coll_obj)){
-						x-=spr_dir;
+				if(hsp > 0){
+					if(place_meeting(x+(4*dirX)+(2*dirX),y,coll_obj)){
+						x-=dirX;
 					}
-				}else if(h_speed < 0){
-					if(place_meeting(x-(4*spr_dir)-(1*spr_dir),y,coll_obj)){
-						x+=spr_dir;
+				}else if(hsp < 0){
+					if(place_meeting(x-(4*dirX)-(1*dirX),y,coll_obj)){
+						x+=dirX;
 					}
 				}
-				v_speed = fall_max;
+				vsp = gravLimit;
 			}
-			if(h_speed > 0){
-				while(place_meeting(x+(4*spr_dir)+(2*spr_dir),y,coll_obj)){
-					x-=spr_dir;
+			if(hsp > 0){
+				while(place_meeting(x+(4*dirX)+(2*dirX),y,coll_obj)){
+					x-=dirX;
 				}
-			}else if(h_speed < 0){
-				while(place_meeting(x-(4*spr_dir)-(1*spr_dir),y,coll_obj)){
-					x+=spr_dir;
+			}else if(hsp < 0){
+				while(place_meeting(x-(4*dirX)-(1*dirX),y,coll_obj)){
+					x+=dirX;
 				}
 			}
-		}else if(v_speed >= 0){
+		}else if(vsp >= 0){
 			while(place_meeting(x,y+5+1,coll_obj)){
 				y--;
-				if(h_speed > 0){
-					if(place_meeting(x+(4*spr_dir)+(2*spr_dir),y,coll_obj)){
-						x-=spr_dir;
+				if(hsp > 0){
+					if(place_meeting(x+(4*dirX)+(2*dirX),y,coll_obj)){
+						x-=dirX;
 					}
-				}else if(h_speed < 0){
-					if(place_meeting(x-(4*spr_dir)-(1*spr_dir),y,coll_obj)){
-						x+=spr_dir;
+				}else if(hsp < 0){
+					if(place_meeting(x-(4*dirX)-(1*dirX),y,coll_obj)){
+						x+=dirX;
 					}
 				}
-				//v_speed = fall_max;
-				has_landed = true;
+				//vsp = gravLimit;
+				hasLanded = true;
 			}
-			if(h_speed > 0){
-				while(place_meeting(x+(4*spr_dir)+(2*spr_dir),y,coll_obj)){
-					x-=spr_dir;
+			if(hsp > 0){
+				while(place_meeting(x+(4*dirX)+(2*dirX),y,coll_obj)){
+					x-=dirX;
 				}
-			}else if(h_speed < 0){
-				while(place_meeting(x-(4*spr_dir)-(1*spr_dir),y,coll_obj)){
-					x+=spr_dir;
+			}else if(hsp < 0){
+				while(place_meeting(x-(4*dirX)-(1*dirX),y,coll_obj)){
+					x+=dirX;
 				}
 			}
 		}

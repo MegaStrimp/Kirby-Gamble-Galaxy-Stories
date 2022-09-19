@@ -62,6 +62,7 @@ if (!global.pause)
 				collidedPlayer.sucked = 0;
 				collidedPlayer.cAbility = playerAbilities.none;
 				collidedPlayer.ateHeavy = false;
+				collidedPlayer.ateAbilityStar = -1;
 				collidedPlayer.ateCappyShroom = false;
 			}
 			scr_Player_CancelAbility(collidedPlayer);

@@ -4,7 +4,7 @@
 
 event_inherited();
 
-if (!global.pause)
+if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 {
 	if (destroyTimer <= (destroyTimerMax / 3)) shakeX = 1;
 	

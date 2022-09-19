@@ -1,7 +1,8 @@
 ///@description Cleaving Cutter, Nonstop Cutter, and Final Cutter
 
 function scr_Player_States_FinalCutter(){
-	if(!global.pause){	
+	if (!global.pause)
+	{	
 		switch(finalCutterState){
 			case 1: // Cleaving Cutter
 				//Gravity
@@ -135,7 +136,7 @@ function scr_Player_States_FinalCutter(){
 			//	break;
 		}
 		
-		//image_speed = 1;
+		image_speed = 1;
 		
 		//Revert Back
 		
@@ -149,5 +150,9 @@ function scr_Player_States_FinalCutter(){
 		//	x += hsp;
 			//y += vsp;
 		//}
+	}
+	else
+	{
+		image_speed = 0;
 	}
 }

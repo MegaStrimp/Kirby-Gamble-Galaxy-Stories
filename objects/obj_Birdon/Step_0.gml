@@ -77,7 +77,7 @@ if (setupTimer == 0)
 
 event_inherited();
 
-if (!global.pause)
+if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 {
 	//Get Inhaled
 	

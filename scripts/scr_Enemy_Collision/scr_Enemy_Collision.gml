@@ -80,7 +80,7 @@ function scr_Enemy_Collision()
 		}
 		else
 		{
-			if (collidingWall.hp > 0)
+			if ((collidingWall.hp > 0) and (collidingWall.owner != id))
 			{
 				death = true;
 			}

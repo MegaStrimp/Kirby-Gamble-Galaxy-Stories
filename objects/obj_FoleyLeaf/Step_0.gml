@@ -1,6 +1,6 @@
 ///@description Main
 
-if (!global.pause)
+if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 {
 	//Destroy
 	
