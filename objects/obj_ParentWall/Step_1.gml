@@ -8,7 +8,7 @@ if (setupTimer > 0)
 }
 else if (setupTimer == 0)
 {
-	if (hasTop)
+	if ((hasTop) and (!enemyCollisionHitbox))
 	{
 		topWall = instance_create_depth(x,y,depth,object_index);
 		if (topWallSprite != -1)
@@ -23,7 +23,7 @@ else if (setupTimer == 0)
 		topWall.damageType = damageType;
 		topWall.hasTop = false;
 		topWall.isTop = true;
-		topWall.enemyCollisionMask = enemyCollisionMask;
+		topWall.enemyCollisionHitbox = enemyCollisionHitbox;
 		topWall.topWallOwner = id;
 		topWall.setupTimer = 0;
 	}
@@ -38,9 +38,12 @@ else if (setupTimer == 0)
 		{
 			with (obj_Player)
 			{
-				while (place_meeting(x,y,other))
+				if (other.owner != id)
 				{
-					y -= 1;
+					while (place_meeting(x,y,other))
+					{
+						y -= 1;
+					}
 				}
 			}
 		}
@@ -49,12 +52,19 @@ else if (setupTimer == 0)
 		{
 			with (obj_Enemy)
 			{
-				while (place_meeting(x,y,other))
+				if (other.owner != id)
 				{
-					y -= 1;
+					while (place_meeting(x,y,other))
+					{
+						y -= 1;
+					}
 				}
 			}
 		}
 	}
 	setupTimer = -1;
 }
+
+//Destroy
+
+if ((enemyCollisionHitbox) and ((!instance_exists(owner)) or (owner.death))) instance_destroy();

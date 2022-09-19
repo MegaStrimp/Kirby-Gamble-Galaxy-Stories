@@ -262,6 +262,11 @@ function scr_Maykr_ObjectAttributes(argument0,argument1)
 		hasDirectionButton = true;
 		break;
 		
+		case maykrObjects.cerulean:
+		hasOptionsButton = true;
+		hasDirectionButton = true;
+		break;
+		
 		case maykrObjects.pointStarYellow:
 		hasOptionsButton = true;
 		hasDirectionButton = true;

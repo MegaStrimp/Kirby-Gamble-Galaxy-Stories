@@ -3,6 +3,7 @@
 #region Reset Global Variables
 global.isHub = false;
 global.halberdEscape = false;
+global.cutscene = false;
 #endregion
 
 #region Room Cleanup

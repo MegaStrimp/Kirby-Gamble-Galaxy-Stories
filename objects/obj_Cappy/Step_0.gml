@@ -45,7 +45,7 @@ else
 
 event_inherited();
 
-if (!global.pause)
+if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 {
 	if (!parasol) scr_Object_Inhale(enemy);
 	

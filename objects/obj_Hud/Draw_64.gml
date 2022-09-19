@@ -218,6 +218,7 @@ if (!global.pause)
 	}
 	else if (hudHpP1Timer == 0)
 	{
+		if (!audio_is_playing(snd_Select)) audio_stop_sound(snd_Select);
 		audio_play_sound(snd_Select,0,false);
 		hudHpP1 += 1;
 		hudHpP1Timer = -1;
@@ -369,6 +370,7 @@ if (instance_number(obj_Player) > 1)
 		}
 		else if (hudHpP2Timer == 0)
 		{
+			if (!audio_is_playing(snd_Select)) audio_stop_sound(snd_Select);
 			audio_play_sound(snd_Select,0,false);
 			hudHpP2 += 1;
 			hudHpP2Timer = -1;

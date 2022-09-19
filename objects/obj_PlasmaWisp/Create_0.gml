@@ -13,8 +13,6 @@ randomize();
 accel = .1;
 movespeed = 1.5;
 jumpspeed = 1.5;
-gravNormal = 0;
-gravLimitNormal = 0;
 
 //Sprites
 
@@ -43,8 +41,11 @@ hasXCollision = false;
 hasYCollision = false;
 canTurnX = true;
 canTurnY = true;
+attackState = 0;
+loopCount = 3;
+chargeX = x;
+chargeY = y;
 
-PWattackTimer=0
-loopCount=3
-chargeX=x
-chargeY=y
+//Timers
+
+attackTimer = 0;

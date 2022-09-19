@@ -24,7 +24,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 			var yDir = 1;
 			if (owner.attackNumber == playerAttacks.sparkUp) yDir = -1;
 			obj = instance_create_depth(x,owner.y - 4 + (14 * yDir),depth,obj_Projectile_SparkPillar);
-			obj.owner = id;
+			obj.owner = owner;
 			obj.image_yscale = yDir;
 			obj.dirY = yDir;
 			createObject = false;

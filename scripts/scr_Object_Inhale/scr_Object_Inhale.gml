@@ -11,11 +11,15 @@ function scr_Object_Inhale(argument0)
 	if ((place_meeting(x,y,obj_InhaleMask)) and (instance_number(obj_EatMe) < 5))
 	{
 		var inhaleMask = instance_place(x,y,obj_InhaleMask);
-		if ((object_index == obj_AbilityDropStar) and (isBubble))
+		if (object_index == obj_AbilityDropStar)
 		{
-			var particle = instance_create_depth(x,y,depth,obj_Particle);
-			particle.sprite_index = spr_Particle_Bubble3;
-			particle.destroyAfterAnimation = true;
+			if (isBubble)
+			{
+				var particle = instance_create_depth(x,y,depth,obj_Particle);
+				particle.sprite_index = spr_Particle_Bubble3;
+				particle.destroyAfterAnimation = true;
+			}
+			inhaleMask.owner.ateAbilityStar = ability;
 		}
 		if (object_index == obj_Cappy)
 		{
@@ -56,7 +60,7 @@ function scr_Object_Inhale(argument0)
 				eatMe.dir = sign(inhaleMask.owner.image_xscale);
 				eatMe.owner = inhaleMask.owner;
 				if (object_get_parent(object_index) == obj_Enemy) eatMe.squadType = squadType;
-				if (variable_instance_exists(id, "paletteIndex")) eatMe.paletteIndex = paletteIndex;
+				if (variable_instance_exists(id,"paletteIndex")) eatMe.paletteIndex = paletteIndex;
 				switch (object_index)
 				{
 					case obj_StarBlock:

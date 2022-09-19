@@ -40,6 +40,10 @@ if (upgradeUnlocked[selection])
 var activeText = "Disabled";
 switch (upgradeTitle[selection])
 {
+	case "Motor Cutter":
+	if (global.cutterMotorCutterUpgradeEquipped) activeText = "Active";
+	break;
+	
 	case "Golden Flare":
 	if (global.beamGoldenFlareUpgradeEquipped) activeText = "Active";
 	break;

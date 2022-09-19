@@ -25,6 +25,69 @@ function scr_Player_States_Float()
 			if (!hurt)
 			{
 				if ((!global.cutscene))
+				var ultiDecel = decel;
+				if (hsp >= ultiDecel) hsp -= ultiDecel;
+				if (hsp <= -ultiDecel) hsp += ultiDecel;
+				if ((hsp > -ultiDecel) and (hsp < ultiDecel)) hsp = 0;
+			}
+			
+			hsp = clamp(hsp,-movespeedNormal,movespeedNormal);
+		}
+		
+		if (vsp < gravLimitFloat)
+		{
+			vsp += gravFloat;
+		}
+		else
+		{
+			vsp = gravLimitFloat;
+		}
+		
+		//Grounded
+		
+		if (grounded)
+		{
+			if (jumpLimit) vsp = 0;
+		}
+		else
+		{
+			//Fast Fall
+			
+			if ((keyDownPressed) and (downInputBufferTimer > 0))
+			{
+			    vsp = gravLimit;
+			    fallHop = true;
+			}
+		}
+		
+		//Attack
+		
+		switch (playerCharacter)
+		{
+			case playerCharacters.gooey:
+			if ((!hurt) and (!attack) and (keyAttackPressed))
+			{
+				attack = true;
+				attackTimer = 20;
+				shakeX = 1.5;
+				shakeY = 1.5;
+				var projectile = instance_create_depth(x + (14 * dir) + hsp,y + vsp,depth + 1,obj_Projectile_MockMatterLaser);
+				projectile.image_xscale = dir;
+				projectile.image_angle += irandom_range(-10,10);
+				projectile.dirX = dir;
+				projectile.hsp = lengthdir_x(6 * dir,projectile.image_angle) + hsp;
+				projectile.vsp = lengthdir_y(6 * dir,projectile.image_angle) + vsp;
+			}
+			break;
+		}
+		
+		//Flap
+		
+		if ((!floatSpit) and (float) and (!hurt))
+		{
+			if ((!global.cutscene) and (floatingTimer == -1) and ((keyJumpHold) or (keyUpHold)))
+			{
+				switch (playerCharacter)
 				{
 					if (keyLeftHold)
 					{

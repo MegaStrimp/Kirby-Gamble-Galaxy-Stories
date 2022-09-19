@@ -114,6 +114,8 @@ bubbleY = 0;
 instaDeath = false;
 fellDown = false;
 hurtImageIndex = 0;
+collisionHitbox = -1;
+pausedInCutscenes = true;
 
 //Timers
 

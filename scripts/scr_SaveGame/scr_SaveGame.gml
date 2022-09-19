@@ -138,6 +138,7 @@ function scr_SaveGame(argument0)
 	ini_write_real("unlocks","omegaMatterFamiliarLevel",global.omegaMatterFamiliarLevel);
 	ini_write_real("unlocks","omegaMatterFamiliarExp",global.omegaMatterFamiliarExp);
 	
+	ini_write_real("unlocks","cutterMotorCutterUpgradeUnlocked",global.cutterMotorCutterUpgradeUnlocked);
 	ini_write_real("unlocks","beamGoldenFlareUpgradeUnlocked",global.beamGoldenFlareUpgradeUnlocked);
 	ini_write_real("unlocks","mysticBeamVortexInAJarUpgradeUnlocked",global.mysticBeamVortexInAJarUpgradeUnlocked);
 	ini_write_real("unlocks","stoneRockCandyUpgradeUnlocked",global.stoneRockCandyUpgradeUnlocked);
@@ -337,6 +338,7 @@ function scr_SaveGame(argument0)
 	ini_write_real("playerCustomization","hatPaletteBellModernP2",global.hatPaletteBellModernP2);
 	ini_write_real("playerCustomization","hatPaletteScanKSSUP2",global.hatPaletteScanKSSUP2);
 	
+	ini_write_real("playerCustomization","cutterMotorCutterUpgradeEquipped",global.cutterMotorCutterUpgradeEquipped);
 	ini_write_real("playerCustomization","beamGoldenFlareUpgradeEquipped",global.beamGoldenFlareUpgradeEquipped);
 	ini_write_real("playerCustomization","mysticBeamVortexInAJarUpgradeEquipped",global.mysticBeamVortexInAJarUpgradeEquipped);
 	ini_write_real("playerCustomization","stoneRockCandyUpgradeEquipped",global.stoneRockCandyUpgradeEquipped);

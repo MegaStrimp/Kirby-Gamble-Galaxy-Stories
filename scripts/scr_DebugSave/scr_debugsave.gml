@@ -94,6 +94,7 @@ function scr_DebugSave()
 	global.krackleFamiliarUnlocked = true;
 	global.omegaMatterFamiliarUnlocked = true;
 	
+	global.cutterMotorCutterUpgradeUnlocked = true;
 	global.beamGoldenFlareUpgradeUnlocked = true;
 	global.mysticBeamVortexInAJarUpgradeUnlocked = true;
 	global.stoneRockCandyUpgradeUnlocked = true;

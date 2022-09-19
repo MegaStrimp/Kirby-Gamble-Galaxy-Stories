@@ -34,7 +34,7 @@ if(keyboard_check_pressed(ord("T"))){
 	knockbackY = -2;
 	
 }
-if (!global.pause)
+if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 {
 	#region Variables
 	var playerInRange = false;

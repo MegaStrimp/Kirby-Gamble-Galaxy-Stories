@@ -166,6 +166,7 @@ function scr_Player_States_Carry()
 				sucked = 0;
 		        cAbility = playerAbilities.none;
 				if (ateHeavy) ateHeavy = false;
+				if (ateAbilityStar) ateAbilityStar = -1;
 				if (ateCappyShroom) ateCappyShroom = false;
 		    }
 			
@@ -191,28 +192,28 @@ function scr_Player_States_Carry()
 						mixIndexTimer = mixIndexTimerMax;
 						
 						var i = 0;
-						mixRosterAbility[i] = playerAbilities.none;
-						mixRosterText[i] = spr_Hud_AbilityText_Kirby;
-						mixRosterIcon[i] = spr_Hud_Icon_Kirby;
-						i += 1;
+						//mixRosterAbility[i] = playerAbilities.none;
+						//mixRosterText[i] = spr_Hud_AbilityText_Kirby;
+						//mixRosterIcon[i] = spr_Hud_Icon_Kirby;
+						//i += 1;
 						
-						//if (global.cutterAbilityKills >= global.cutterAbilityKillsTarget)
-						//{
+						if ((global.cutterAbilityKills >= global.cutterAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.cutter) != -1))
+						{
 							mixRosterAbility[i] = playerAbilities.cutter;
 							mixRosterText[i] = spr_Hud_AbilityText_Cutter;
 							mixRosterIcon[i] = spr_Hud_Icon_Cutter;
 							i += 1;
-						//}
+						}
 						
-						//if (global.beamAbilityKills >= global.beamAbilityKillsTarget)
-						//{
+						if ((global.beamAbilityKills >= global.beamAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.beam) != -1))
+						{
 							mixRosterAbility[i] = playerAbilities.beam;
 							mixRosterText[i] = spr_Hud_AbilityText_Beam;
 							mixRosterIcon[i] = spr_Hud_Icon_Beam;
 							i += 1;
-						//}
+						}
 						
-						if (global.mysticBeamAbilityKills >= global.mysticBeamAbilityKillsTarget)
+						if ((global.mysticBeamAbilityKills >= global.mysticBeamAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.mysticBeam) != -1))
 						{
 							mixRosterAbility[i] = playerAbilities.mysticBeam;
 							mixRosterText[i] = spr_Hud_AbilityText_MysticBeam;
@@ -220,31 +221,31 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 						
-						//if (global.stoneAbilityKills >= global.stoneAbilityKillsTarget)
-						//{
+						if ((global.stoneAbilityKills >= global.stoneAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.stone) != -1))
+						{
 							mixRosterAbility[i] = playerAbilities.stone;
 							mixRosterText[i] = spr_Hud_AbilityText_Stone;
 							mixRosterIcon[i] = spr_Hud_Icon_Stone;
 							i += 1;
-						//}
+						}
 						
-						//if (global.ufoAbilityKills >= global.ufoAbilityKillsTarget)
-						//{
+						if ((global.ufoAbilityKills >= global.ufoAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.ufo) != -1))
+						{
 							mixRosterAbility[i] = playerAbilities.ufo;
 							mixRosterText[i] = spr_Hud_AbilityText_Ufo;
 							mixRosterIcon[i] = spr_Hud_Icon_Ufo;
 							i += 1;
-						//}
+						}
 						
-						//if (global.mirrorAbilityKills >= global.mirrorAbilityKillsTarget)
-						//{
+						if ((global.mirrorAbilityKills >= global.mirrorAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.mirror) != -1))
+						{
 							mixRosterAbility[i] = playerAbilities.mirror;
 							mixRosterText[i] = spr_Hud_AbilityText_Mirror;
 							mixRosterIcon[i] = spr_Hud_Icon_Mirror;
 							i += 1;
-						//}
+						}
 						
-						if (global.ninjaAbilityKills >= global.ninjaAbilityKillsTarget)
+						if ((global.ninjaAbilityKills >= global.ninjaAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.ninja) != -1))
 						{
 							mixRosterAbility[i] = playerAbilities.ninja;
 							mixRosterText[i] = spr_Hud_AbilityText_Ninja;
@@ -252,23 +253,23 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 						
-						//if (global.bombAbilityKills >= global.bombAbilityKillsTarget)
-						//{
+						if ((global.bombAbilityKills >= global.bombAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.bomb) != -1))
+						{
 							mixRosterAbility[i] = playerAbilities.bomb;
 							mixRosterText[i] = spr_Hud_AbilityText_Bomb;
 							mixRosterIcon[i] = spr_Hud_Icon_Bomb;
 							i += 1;
-						//}
+						}
 						
-						//if (global.fireAbilityKills >= global.fireAbilityKillsTarget)
-						//{
+						if ((global.fireAbilityKills >= global.fireAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.fire) != -1))
+						{
 							mixRosterAbility[i] = playerAbilities.fire;
 							mixRosterText[i] = spr_Hud_AbilityText_Fire;
 							mixRosterIcon[i] = spr_Hud_Icon_Fire;
 							i += 1;
-						//}
+						}
 						
-						if (global.mysticFireAbilityKills >= global.mysticFireAbilityKillsTarget)
+						if ((global.mysticFireAbilityKills >= global.mysticFireAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.mysticFire) != -1))
 						{
 							mixRosterAbility[i] = playerAbilities.mysticFire;
 							mixRosterText[i] = spr_Hud_AbilityText_MysticFire;
@@ -276,7 +277,7 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 						
-						if (global.iceAbilityKills >= global.iceAbilityKillsTarget)
+						if ((global.iceAbilityKills >= global.iceAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.ice) != -1))
 						{
 							mixRosterAbility[i] = playerAbilities.ice;
 							mixRosterText[i] = spr_Hud_AbilityText_Ice;
@@ -284,15 +285,15 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 						
-						//if (global.sparkAbilityKills >= global.sparkAbilityKillsTarget)
-						//{
+						if ((global.sparkAbilityKills >= global.sparkAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.spark) != -1))
+						{
 							mixRosterAbility[i] = playerAbilities.spark;
 							mixRosterText[i] = spr_Hud_AbilityText_Spark;
 							mixRosterIcon[i] = spr_Hud_Icon_Spark;
 							i += 1;
-						//}
+						}
 						
-						if (global.yoyoAbilityKills >= global.yoyoAbilityKillsTarget)
+						if ((global.yoyoAbilityKills >= global.yoyoAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.yoyo) != -1))
 						{
 							mixRosterAbility[i] = playerAbilities.yoyo;
 							mixRosterText[i] = spr_Hud_AbilityText_Yoyo;
@@ -300,7 +301,7 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 						
-						if (global.wheelAbilityKills >= global.wheelAbilityKillsTarget)
+						if ((global.wheelAbilityKills >= global.wheelAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.wheel) != -1))
 						{
 							mixRosterAbility[i] = playerAbilities.wheel;
 							mixRosterText[i] = spr_Hud_AbilityText_Wheel;
@@ -308,7 +309,7 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 						
-						if (global.artistAbilityKills >= global.artistAbilityKillsTarget)
+						if ((global.artistAbilityKills >= global.artistAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.artist) != -1))
 						{
 							mixRosterAbility[i] = playerAbilities.artist;
 							mixRosterText[i] = spr_Hud_AbilityText_Artist;
@@ -316,7 +317,7 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 						
-						if (global.fighterAbilityKills >= global.fighterAbilityKillsTarget)
+						if ((global.fighterAbilityKills >= global.fighterAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.fighter) != -1))
 						{
 							mixRosterAbility[i] = playerAbilities.fighter;
 							mixRosterText[i] = spr_Hud_AbilityText_Fighter;
@@ -324,7 +325,7 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 						
-						if (global.suplexAbilityKills >= global.suplexAbilityKillsTarget)
+						if ((global.suplexAbilityKills >= global.suplexAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.suplex) != -1))
 						{
 							mixRosterAbility[i] = playerAbilities.suplex;
 							mixRosterText[i] = spr_Hud_AbilityText_Suplex;
@@ -332,7 +333,7 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 						
-						if (global.wingAbilityKills >= global.wingAbilityKillsTarget)
+						if ((global.wingAbilityKills >= global.wingAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.wing) != -1))
 						{
 							mixRosterAbility[i] = playerAbilities.wing;
 							mixRosterText[i] = spr_Hud_AbilityText_Wing;
@@ -340,7 +341,7 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 						
-						if (global.jetAbilityKills >= global.jetAbilityKillsTarget)
+						if ((global.jetAbilityKills >= global.jetAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.jet) != -1))
 						{
 							mixRosterAbility[i] = playerAbilities.jet;
 							mixRosterText[i] = spr_Hud_AbilityText_Jet;
@@ -348,7 +349,7 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 						
-						if (global.swordAbilityKills >= global.swordAbilityKillsTarget)
+						if ((global.swordAbilityKills >= global.swordAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.sword) != -1))
 						{
 							mixRosterAbility[i] = playerAbilities.sword;
 							mixRosterText[i] = spr_Hud_AbilityText_Sword;
@@ -356,7 +357,7 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 						
-						if (global.parasolAbilityKills >= global.parasolAbilityKillsTarget)
+						if ((global.parasolAbilityKills >= global.parasolAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.parasol) != -1))
 						{
 							mixRosterAbility[i] = playerAbilities.parasol;
 							mixRosterText[i] = spr_Hud_AbilityText_Parasol;
@@ -364,7 +365,7 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 						
-						if (global.hammerAbilityKills >= global.hammerAbilityKillsTarget)
+						if ((global.hammerAbilityKills >= global.hammerAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.hammer) != -1))
 						{
 							mixRosterAbility[i] = playerAbilities.hammer;
 							mixRosterText[i] = spr_Hud_AbilityText_Hammer;
@@ -372,7 +373,7 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 						
-						if (global.bellAbilityKills >= global.bellAbilityKillsTarget)
+						if ((global.bellAbilityKills >= global.bellAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.bell) != -1))
 						{
 							mixRosterAbility[i] = playerAbilities.bell;
 							mixRosterText[i] = spr_Hud_AbilityText_Bell;
@@ -380,7 +381,7 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 						
-						if (global.waterAbilityKills >= global.waterAbilityKillsTarget)
+						if ((global.waterAbilityKills >= global.waterAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.water) != -1))
 						{
 							mixRosterAbility[i] = playerAbilities.water;
 							mixRosterText[i] = spr_Hud_AbilityText_Water;
@@ -388,7 +389,7 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 						
-						if (global.sleepAbilityKills >= global.sleepAbilityKillsTarget)
+						if ((global.sleepAbilityKills >= global.sleepAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.sleep) != -1))
 						{
 							mixRosterAbility[i] = playerAbilities.sleep;
 							mixRosterText[i] = spr_Hud_AbilityText_Sleep;
@@ -396,7 +397,7 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 						
-						if (global.scanAbilityKills >= global.scanAbilityKillsTarget)
+						if ((global.scanAbilityKills >= global.scanAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.scan) != -1))
 						{
 							mixRosterAbility[i] = playerAbilities.scan;
 							mixRosterText[i] = spr_Hud_AbilityText_Scan;
@@ -404,7 +405,7 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 						
-						if (global.crashAbilityKills >= global.crashAbilityKillsTarget)
+						if ((global.crashAbilityKills >= global.crashAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.crash) != -1))
 						{
 							mixRosterAbility[i] = playerAbilities.crash;
 							mixRosterText[i] = spr_Hud_AbilityText_Crash;
@@ -412,7 +413,7 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 						
-						if (global.micAbilityKills >= global.micAbilityKillsTarget)
+						if ((global.micAbilityKills >= global.micAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.mic) != -1))
 						{
 							mixRosterAbility[i] = playerAbilities.mic;
 							mixRosterText[i] = spr_Hud_AbilityText_Mic;
@@ -420,7 +421,7 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 						
-						if (global.chefAbilityKills >= global.chefAbilityKillsTarget)
+						if ((global.chefAbilityKills >= global.chefAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.chef) != -1))
 						{
 							mixRosterAbility[i] = playerAbilities.chef;
 							mixRosterText[i] = spr_Hud_AbilityText_Chef;
@@ -428,9 +429,16 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 					}
+					
+					if (other.mixAbilities != -1)
+					{
+						ds_list_destroy(other.mixAbilities);
+						other.mixAbilities = -1;
+					}
 				}
 				if (global.mixActive == -1)
 				{
+					if (ateAbilityStar != -1) cAbility = ateAbilityStar;
 					if (player == 0)
 					{
 						global.abilityP1 = cAbility;
@@ -468,6 +476,7 @@ function scr_Player_States_Carry()
 				swallow = true;
 			    cAbility = playerAbilities.none;
 				ateHeavy = false;
+				ateAbilityStar = -1;
 				ateCappyShroom = false;
 				image_index = 0;
 			    state = playerStates.swallow;

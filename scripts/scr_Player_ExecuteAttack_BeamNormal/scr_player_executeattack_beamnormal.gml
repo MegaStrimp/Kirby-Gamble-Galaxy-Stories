@@ -9,7 +9,7 @@ function scr_Player_ExecuteAttack_BeamNormal()
 	attackNumber = playerAttacks.beamNormal;
 	sprite_index = sprBeamAttack1;
 	image_index = 0;
-	attackTimer = 30;
+	attackTimer = 35;
 	parBeamCycle1 = instance_create_depth(-100,-100,depth - 1,obj_Particle);
 	parBeamCycle1.followObject = false;
 	parBeamCycle1.followedObject = id;

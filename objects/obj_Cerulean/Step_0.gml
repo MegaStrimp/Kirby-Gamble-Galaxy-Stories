@@ -21,7 +21,7 @@ if (setupTimer == 0)
 
 event_inherited();
 
-if (!global.pause)
+if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 {
 	if (!parasol) scr_Object_Inhale(enemy);
 	
@@ -62,7 +62,7 @@ if (!global.pause)
 	{
 		if (state != 1)
 		{
-			if (turnCounter != -1)
+			if (turnCounterMax != -1)
 			{
 				if (turnCounter >= turnCounterMax)
 				{
@@ -72,7 +72,7 @@ if (!global.pause)
 				if (turnCounter <= turnCounterMax) turnCounter += 1;
 			}
 		}
-		attack = false;
+		attack = true;
 		sprite_index = sprAttackReady;
 		image_index = 0;
 		attackTimer = -1;

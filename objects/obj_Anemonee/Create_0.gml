@@ -26,5 +26,3 @@ paletteIndex = spr_Anemonee_Normal_Palette_VioletYarn;
 hp = 16;
 dmg = 1;
 points = 300;
-hasXKnockback = false;
-hasYKnockback = false;

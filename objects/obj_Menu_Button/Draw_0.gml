@@ -113,6 +113,10 @@ switch (state)
 	var active = spr_Menu_Upgrades_Cross;
 	switch (index)
 	{
+		case "Motor Cutter":
+		if (global.cutterMotorCutterUpgradeEquipped) active = spr_Menu_Upgrades_Check;
+		break;
+		
 		case "Golden Flare":
 		if (global.beamGoldenFlareUpgradeEquipped) active = spr_Menu_Upgrades_Check;
 		break;

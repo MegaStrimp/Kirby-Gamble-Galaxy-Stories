@@ -27,6 +27,8 @@ hp = 12;
 dmg = 1;
 ability = playerAbilities.cutter;
 points = 400;
+hasXKnockback = false;
+hasYKnockback = false;
 attack = false;
 attackDir = 0;
 

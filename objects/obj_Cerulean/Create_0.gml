@@ -11,7 +11,7 @@ randomize();
 //Physics
 
 decel = .02;
-movespeed = 3;
+movespeed = 1.5;
 
 //Sprites
 
@@ -31,11 +31,13 @@ points = 200;
 hasGravity = false;
 hasXCollision = false;
 hasYCollision = false;
+hasXKnockback = false;
+hasYKnockback = false;
 turnCounter = 0;
 turnCounterMax = 2;
 attack = false;
 
 //Timers
 
-attackTimerMax = 30;
+attackTimerMax = 15;
 attackTimer = attackTimerMax;

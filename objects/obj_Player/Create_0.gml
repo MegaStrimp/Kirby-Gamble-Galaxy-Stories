@@ -268,6 +268,7 @@ sprDeath = spr_Kirby_Normal_Death;
 
 //Upgrades
 
+cutterMotorCutterUpgrade = false;
 beamGoldenFlareUpgrade = false;
 mysticBeamVortexInAJarUpgrade = false;
 stoneRockCandyUpgrade = false;
@@ -415,6 +416,7 @@ invincible = false;
 invincibleFlash = false;
 inhaleSoundCont = false;
 ateHeavy = false;
+ateAbilityStar = -1;
 ateCappyShroom = false;
 swallow = false;
 cAbility = playerAbilities.none;
@@ -453,6 +455,7 @@ warpStarIndex = -1;
 downHeld = 0;
 hasInvinCandy = false;
 invinCandyMask = -1;
+mixAbilities = -1;
 
 //Inputs
 

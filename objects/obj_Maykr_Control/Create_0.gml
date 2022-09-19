@@ -118,6 +118,7 @@ enum maykrObjects
 	flamer,
 	chuckie,
 	walky,
+	cerulean,
 	enemiesEnd,
 	
 	como,

@@ -22,7 +22,7 @@ else
 	}
 }
 
-if (!global.pause)
+if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 {
 	//Destroy Outside View
 	
@@ -539,7 +539,19 @@ if (!global.pause)
 	
 	if (hp > 0)
 	{
-		if ((setupTimer == 0) and (groundFailsafe)) while (place_meeting(x,y + 1,obj_ParentWall)) y -= 1;
+		if ((setupTimer == 0) and (groundFailsafe))
+		{
+			with (obj_ParentWall)
+			{
+				if (owner != other.id)
+				{
+					while (place_meeting(x,y,other))
+					{
+						other.y -= 1;
+					}
+				}
+			}
+		}
 		scr_Enemy_Collision();
 	}
 	
@@ -774,7 +786,7 @@ if (!global.pause)
 	
 	//Hurt
 	
-	if (!hurtable)
+	if ((!hurtable) and (collisionHitbox == -1))
 	{
 		with (obj_Projectile)
 		{
@@ -852,227 +864,7 @@ if (!global.pause)
 		{
 			if (place_meeting(x,y,other))
 			{
-				var canBeHurt = false;
-				if ((owner != other) and (enemy != other.enemy) and (((object_index == obj_Projectile_ExplosionMask)/* and (!other.explosionResistance)*/) or (object_index != obj_Projectile_ExplosionMask)) and ((((!other.isMiniBoss) and (!other.isBoss)) and (hurtsEnemy)) or (((other.isMiniBoss) or (other.isBoss)) and (hurtsEnemy) and (hurtsBoss)))) canBeHurt = true;
-				if (canBeHurt)
-				{
-					if (audio_is_playing(snd_EnemyHurt)) audio_stop_sound(snd_EnemyHurt);
-					audio_play_sound(snd_EnemyHurt,0,false);
-					other.takenDamageType = damageType;
-					other.takenIsFamiliar = isFamiliar;
-					if (dmg >= other.hp)
-					{
-						other.bubbleX = x;
-						other.bubbleY = y;
-						other.hurtTimer = ((other.hurtStopTimerMax + 5) * (!other.instaDeath));
-						if ((other.hasDeathKnockback) and (!other.isBoss) and (other.isMiniBoss) and (other.takenDamageType != damageTypes.ice)) other.hurtStopTimer = other.hurtStopTimerMax;
-			            other.shake = 1;
-			            if (instance_exists(obj_Camera)) obj_Camera.shake = 3;
-					}
-					else
-					{
-						other.hurtTimer = other.hurtTimerMax;
-					}
-					if ((other.canGetHealthbar) and ((!other.isMiniBoss) or (!other.isBoss))) global.healthbarMarkedEnemy = other.id;
-					other.hp -= dmg;
-					if (other.hp <= 0)
-					{
-						switch (abilityType)
-						{
-							case playerAbilities.cutter:
-							global.cutterAbilityKills += 1;
-							break;
-	
-							case playerAbilities.beam:
-							global.beamAbilityKills += 1;
-							break;
-	
-							case playerAbilities.mysticBeam:
-							global.mysticBeamAbilityKills += 1;
-							break;
-	
-							case playerAbilities.stone:
-							global.stoneAbilityKills += 1;
-							break;
-	
-							case playerAbilities.ufo:
-							global.ufoAbilityKills += 1;
-							break;
-	
-							case playerAbilities.mirror:
-							global.mirrorAbilityKills += 1;
-							break;
-	
-							case playerAbilities.ninja:
-							global.ninjaAbilityKills += 1;
-							break;
-	
-							case playerAbilities.bomb:
-							global.bombAbilityKills += 1;
-							break;
-	
-							case playerAbilities.fire:
-							global.fireAbilityKills += 1;
-							break;
-	
-							case playerAbilities.mysticFire:
-							global.mysticFireAbilityKills += 1;
-							break;
-	
-							case playerAbilities.ice:
-							global.iceAbilityKills += 1;
-							break;
-	
-							case playerAbilities.spark:
-							global.sparkAbilityKills += 1;
-							break;
-	
-							case playerAbilities.yoyo:
-							global.yoyoAbilityKills += 1;
-							break;
-	
-							case playerAbilities.wheel:
-							global.wheelAbilityKills += 1;
-							break;
-	
-							case playerAbilities.artist:
-							global.artistAbilityKills += 1;
-							break;
-	
-							case playerAbilities.fighter:
-							global.fighterAbilityKills += 1;
-							break;
-	
-							case playerAbilities.suplex:
-							global.suplexAbilityKills += 1;
-							break;
-	
-							case playerAbilities.wing:
-							global.wingAbilityKills += 1;
-							break;
-	
-							case playerAbilities.jet:
-							global.jetAbilityKills += 1;
-							break;
-	
-							case playerAbilities.sword:
-							global.swordAbilityKills += 1;
-							break;
-	
-							case playerAbilities.parasol:
-							global.parasolAbilityKills += 1;
-							break;
-	
-							case playerAbilities.hammer:
-							global.hammerAbilityKills += 1;
-							break;
-	
-							case playerAbilities.bell:
-							global.bellAbilityKills += 1;
-							break;
-	
-							case playerAbilities.water:
-							global.waterAbilityKills += 1;
-							break;
-	
-							case playerAbilities.sleep:
-							global.sleepAbilityKills += 1;
-							break;
-	
-							case playerAbilities.scan:
-							global.scanAbilityKills += 1;
-							break;
-	
-							case playerAbilities.crash:
-							global.crashAbilityKills += 1;
-							break;
-	
-							case playerAbilities.mic:
-							global.micAbilityKills += 1;
-							break;
-	
-							case playerAbilities.chef:
-							global.chefAbilityKills += 1;
-							break;
-	
-							case playerAbilities.ultraSword:
-							global.ultraSwordAbilityKills += 1;
-							break;
-	
-							case playerAbilities.cosmicBlade:
-							global.cosmicBladeAbilityKills += 1;
-							break;
-						}
-					}
-					other.shakeX = 2;
-					other.shakeY = 2;
-					other.direction = point_direction(other.x,other.y,x,y) + irandom_range(150,210);
-					scr_HurtKnockback(other,id);
-					if (hsp == 0)
-					{
-						if (x < other.x) other.projectileHitKnockbackDir = -1;
-					}
-					else
-					{
-						other.projectileHitKnockbackDir = -sign(hsp);
-					}
-					other.hurt = true;
-					if (other.sprHurt != -1) other.hurtImageIndex = irandom_range(0,sprite_get_number(other.sprHurt) - 1);
-					if (!destroyableByEnemy)
-					{
-						other.invincible = true;
-						other.invincibleTimer = hitInvincibility;
-						other.invincibleFlashTimer = other.invincibleFlashTimerMax;
-					}
-					if (other.isMystic) other.fluxOverlayAlpha = .8;
-					
-					if (object_index == obj_Projectile_SlideMask)
-					{
-						//Kill
-			
-						if ((other.hp <= -30) and (instance_exists(obj_Camera)))
-						{
-							obj_Camera.freezeFrameTimer = obj_Camera.freezeFrameTimerMax;
-							obj_Camera.shakeX = 3;
-							obj_Camera.shakeY = 3;
-							//obj_Camera.hitZoom += .05;
-						}
-			
-						if (!other.hurtable)
-						{
-							var parDir = 1;
-							if (x < other.x) parDir = -1;
-							var parCarryStart = instance_create_depth(other.x + ((sprite_get_width(other.mask_index) / 2) * parDir),other.y,other.depth - 1,obj_Particle);
-							parCarryStart.sprite_index = spr_Particle_SlideToSentry;
-							parCarryStart.imageSpeed = 1;
-							parCarryStart.destroyAfterAnimation = true;
-						}
-					}
-				}
-			
-				if ((owner != other) and (!enemy))
-				{
-					switch (damageType)
-					{
-						case playerAbilities.cutter:
-						var particle = instance_create_depth(other.x,other.y,other.depth - 1,obj_Particle);
-						particle.sprite_index = spr_Particle_CutterHit;
-						particle.destroyAfterAnimation = true;
-						break;
-				
-						case playerAbilities.ninja:
-						var particle = instance_create_depth(other.x,other.y,other.depth - 1,obj_Particle);
-						particle.sprite_index = spr_Particle_CutterHit;
-						particle.destroyAfterAnimation = true;
-						break;
-				
-						case playerAbilities.wing:
-						var particle = instance_create_depth(other.x,other.y,other.depth - 1,obj_Particle);
-						particle.sprite_index = spr_Particle_CutterHit;
-						particle.destroyAfterAnimation = true;
-						break;
-					}
-				}
+				scr_Enemy_Hurt(other,id);
 			
 				if ((destroyableByEnemy) and (owner != other) and (!enemy))
 				{
