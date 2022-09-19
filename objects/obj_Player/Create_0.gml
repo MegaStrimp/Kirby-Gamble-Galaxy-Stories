@@ -288,7 +288,9 @@ if ((global.healthP1 == 0) or (global.healthP2 == 0))
 {
 	if (global.pause) global.pause = false;
 	global.healthP1 = global.healthP1Max;
-	global.healthP1 = global.healthP1Max;
+	global.healthP2 = global.healthP2Max;
+	global.healP1Mod = global.healthP1;
+	global.healP2Mod = global.healthP2;
 }
 player = 0;
 playerCharacter = 0;

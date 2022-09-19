@@ -775,6 +775,10 @@ global.healthP1 = global.healthP1Max;
 global.healthP2 = global.healthP2Max;
 global.undershotValP1 = 5; // if the player's health is higher than this value when they take a hit and the attack is not marked as a "finishing blow", the player will survive with this much health.
 global.undershotValP2 = 5;
+global.healP1Mod = global.healthP1;
+global.healP2Mod = global.healthP2;
+//global.healP1End = global.healthP1;
+//global.healP2End = global.healthP2;
 ///////////////////////////
 global.skylandsHpMax = 5;
 global.skylandsHpP1 = global.skylandsHpMax;

@@ -68,6 +68,10 @@ if (instance_exists(obj_Player))
 			{
 				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.ultraSword;
 			}
+			if (keyboard_check_pressed(ord("0")))
+			{
+				if (global.characterP1 == playerCharacters.kirby) global.abilityP1 = playerAbilities.cosmicBlade;
+			}
 		}
 		else if (keyboard_check(vk_shift))
 		{

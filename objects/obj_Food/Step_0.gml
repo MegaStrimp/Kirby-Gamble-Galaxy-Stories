@@ -39,11 +39,15 @@ if (!global.pause)
 		var collidedPlayer = instance_place(x,y,obj_Player);
 		if (collidedPlayer.player == 0)
 		{
-			global.healthP1 += global.healthP1Max*0.1;
+			//global.healP1Mod = global.healthP1;
+			global.healthP1 += round(global.healthP1Max*0.1);
+			//global.healP1Diff += global.healthP1Max*0.1;
 		}
 		else
 		{
-			global.healthP2 += global.healthP2Max*0.1;
+			//global.healP2Mod = global.healthP2;
+			global.healthP2 += round(global.healthP2Max*0.1);
+			//global.healP2Diff += global.healthP2Max*0.1;
 		}
 		global.points += points;
 		instance_destroy();

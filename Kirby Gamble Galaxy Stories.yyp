@@ -1566,6 +1566,7 @@
     {"id":{"name":"spr_Gooey_Normal_Run","path":"sprites/spr_Gooey_Normal_Run/spr_Gooey_Normal_Run.yy",},"order":15,},
     {"id":{"name":"spr_Gooey_Normal_RunTurn","path":"sprites/spr_Gooey_Normal_RunTurn/spr_Gooey_Normal_RunTurn.yy",},"order":16,},
     {"id":{"name":"spr_Kirby_AbilityHat_Fire_KSSU_WarpStar2","path":"sprites/spr_Kirby_AbilityHat_Fire_KSSU_WarpStar2/spr_Kirby_AbilityHat_Fire_KSSU_WarpStar2.yy",},"order":35,},
+    {"id":{"name":"spr_Hud_HealthbarHeal_Kirby","path":"sprites/spr_Hud_HealthbarHeal_Kirby/spr_Hud_HealthbarHeal_Kirby.yy",},"order":9,},
     {"id":{"name":"spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2","path":"sprites/spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2/spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2.yy",},"order":33,},
     {"id":{"name":"spr_Gooey_Normal_Slide","path":"sprites/spr_Gooey_Normal_Slide/spr_Gooey_Normal_Slide.yy",},"order":17,},
     {"id":{"name":"spr_Gooey_Normal_SlideEnd","path":"sprites/spr_Gooey_Normal_SlideEnd/spr_Gooey_Normal_SlideEnd.yy",},"order":18,},
