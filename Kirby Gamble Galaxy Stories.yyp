@@ -5269,6 +5269,7 @@
   },
   "RoomOrderNodes": [
     {"roomId":{"name":"rm_Setup","path":"rooms/rm_Setup/rm_Setup.yy",},},
+    {"roomId":{"name":"rm_Debug_StageSelect","path":"rooms/rm_Debug_StageSelect/rm_Debug_StageSelect.yy",},},
     {"roomId":{"name":"rm_MarxSoulTest","path":"rooms/rm_MarxSoulTest/rm_MarxSoulTest.yy",},},
     {"roomId":{"name":"rm_Startup","path":"rooms/rm_Startup/rm_Startup.yy",},},
     {"roomId":{"name":"rm_Title","path":"rooms/rm_Title/rm_Title.yy",},},
@@ -5316,7 +5317,6 @@
     {"roomId":{"name":"rm_Cutscene_Intro","path":"rooms/rm_Cutscene_Intro/rm_Cutscene_Intro.yy",},},
     {"roomId":{"name":"rm_Cutscene_IntroNew","path":"rooms/rm_Cutscene_IntroNew/rm_Cutscene_IntroNew.yy",},},
     {"roomId":{"name":"rm_Cutscene_MeetingGamble","path":"rooms/rm_Cutscene_MeetingGamble/rm_Cutscene_MeetingGamble.yy",},},
-    {"roomId":{"name":"rm_Debug_StageSelect","path":"rooms/rm_Debug_StageSelect/rm_Debug_StageSelect.yy",},},
     {"roomId":{"name":"rm_DeleteSave","path":"rooms/rm_DeleteSave/rm_DeleteSave.yy",},},
     {"roomId":{"name":"rm_EggGarden_Caves1","path":"rooms/rm_EggGarden_Caves1/rm_EggGarden_Caves1.yy",},},
     {"roomId":{"name":"rm_EggGarden_Caves2","path":"rooms/rm_EggGarden_Caves2/rm_EggGarden_Caves2.yy",},},

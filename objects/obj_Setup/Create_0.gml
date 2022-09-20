@@ -68,7 +68,6 @@ enum playerStates
 	jetHover,
 	jetJump,
 	jetCharge,
-	jetDash,
 	warpStar,
     death
 }
@@ -225,9 +224,6 @@ enum playerAttacks
 	
 	wingNormal,
 	wingDash,
-	
-	jetCharge,
-	jetDash,
 	
 	swordNormal,
 	swordDash,

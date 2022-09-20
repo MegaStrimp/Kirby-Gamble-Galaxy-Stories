@@ -18,6 +18,7 @@
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Player","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4E94BBF7","properties":[],"isDnd":false,"objectId":{"name":"obj_Player","path":"objects/obj_Player/obj_Player.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":81.0,"y":233.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3F9EB222","properties":[],"isDnd":false,"objectId":{"name":"obj_CapsuleJ2","path":"objects/obj_CapsuleJ2/obj_CapsuleJ2.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":320.0,"y":160.0,},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Ground","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_ACA49F7","properties":[],"isDnd":false,"objectId":{"name":"obj_MarxSoulArena","path":"objects/obj_MarxSoulArena/obj_MarxSoulArena.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":0.0,},
@@ -74,6 +75,7 @@
     {"name":"inst_64032164","path":"rooms/rm_MarxSoulTest/rm_MarxSoulTest.yy",},
     {"name":"inst_4467324B","path":"rooms/rm_MarxSoulTest/rm_MarxSoulTest.yy",},
     {"name":"inst_4E94BBF7","path":"rooms/rm_MarxSoulTest/rm_MarxSoulTest.yy",},
+    {"name":"inst_3F9EB222","path":"rooms/rm_MarxSoulTest/rm_MarxSoulTest.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
