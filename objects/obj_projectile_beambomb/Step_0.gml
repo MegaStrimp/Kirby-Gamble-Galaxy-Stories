@@ -27,10 +27,24 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	event_inherited();
 	
+	// Explode on releasing button
+	if(!didExplode && owner.keyAttackReleased){
+		should_explode = true;
+	}
+	
+	if(owner.keyAttackHold/* && !place_meeting(x,y,obj_ParentWall)*/){
+		if(explode){
+			explode = false;
+		}
+	}else if(owner.attackTimer <= 0 && should_explode/* || place_meeting(x,y,obj_ParentWall) && !didExplode*/){
+		explode = true;
+		should_explode = false;
+	}
+	
 	//Explode
 	//if ((instance_exists(owner)) and (owner.attackTimer <= 0) and (owner.keyAttackReleased) and (!didExplode)) explode = true;
 	
-	if ((instance_exists(owner)) and (owner.attackTimer <= 0) and (owner.keyAttackPressed) and (!didExplode)) explode = true;
+	if ((instance_exists(owner)) and (owner.attackTimer <= 0) and (owner.keyAttackReleased) and (!didExplode)) explode = true;
 	
 	if (explode)
 	{
