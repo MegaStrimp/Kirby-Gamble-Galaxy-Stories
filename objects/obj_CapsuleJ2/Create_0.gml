@@ -51,6 +51,10 @@ tracking_obj = obj_Player;
 v_range = 30; // the vertical range J2 looks for when trying to jetdash
 tracking_range = 60;
 
+//DEBUG
+
+last_action_roll = 0;
+
 // Timers
 
 action_timer = 80; // used for the dashstart and jetdash actions, and the cooldown before another dash can be made

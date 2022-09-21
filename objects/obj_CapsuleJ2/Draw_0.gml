@@ -49,7 +49,7 @@ switch(current_action){
 		}
 		break;
 	case enemyAttacks.capsuleJ2_jetDash:
-		if(hsp <= 1){
+		if(hsp*dirX <= 1){
 			if(jet_flametime >= 3){
 				jet_flametime = 0;
 			}
@@ -92,3 +92,4 @@ switch(current_action){
 }
 
 draw_sprite_ext(stored_sprite,stored_subimg,x,y,dirX,1,0,c_white,1);
+draw_text(x,y-24,string(last_action_roll));
