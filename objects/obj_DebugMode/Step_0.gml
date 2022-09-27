@@ -5095,6 +5095,17 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var sprAttackReady = spr_Cerulean_Normal_AttackReady;
 			var sprAttackRelease = spr_Cerulean_Normal_AttackRelease;
 			var sprHurt = spr_Cerulean_Normal_Hurt;
+			debugPaletteNumberMax = 0;
+			switch (debugPaletteNumber)
+			{
+				case 0:
+				debugPaletteIndex = spr_Cerulean_Normal_Palette_GreenBean;
+				break;
+				
+				default:
+				debugPaletteIndex = spr_Cerulean_Normal_Palette_GreenBean;
+				break;
+			}
 			break;
 			#endregion
 		}
@@ -5103,15 +5114,21 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 1;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Environment",obj_Cerulean);
+			var debugObj = instance_create_layer(x,y,"Enemies",obj_Cerulean);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprAttackReady = sprAttackReady;
 			debugObj.sprAttackRelease = sprAttackRelease;
 			debugObj.sprHurt = sprHurt;
 			debugObj.sprite_index = sprIdle;
+			debugObj.paletteIndex = debugPaletteIndex;
 			debugObj.image_xscale = debugXScale;
+			debugObj.dirX = debugXScale;
+			debugObj.walkDirX = debugXScale;
 			debugObj.image_yscale = debugYScale;
+			debugObj.dirY = debugYScale;
+			debugObj.walkDirY = debugYScale;
+			debugObj.state = debugStateSelected;
 		}
 		break;
 		#endregion

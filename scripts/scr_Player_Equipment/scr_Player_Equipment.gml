@@ -168,36 +168,80 @@ function scr_Player_Equipment(argument0,argument1)
 			switch (altHatToCheck)
 			{
 				case abilityHatSkins.stone_kssu:
-				switch (sprite_index)
+				var isBitcrushed = false;
+				if ((object_index == obj_Player) and (((player == 0) and (global.hatPaletteStoneKSSUP1 == abilityHatPaints.stone_kssu_bitcrushed)) or ((player == 1) and (global.hatPaletteStoneKSSUP2 == abilityHatPaints.stone_kssu_bitcrushed)))) isBitcrushed = true;
+				if (isBitcrushed)
 				{
-					case sprStoneAttack2Ready:
-					equipmentIndex = spr_Kirby_Equipment_Stone_KSSU_Attack2Ready;
-					break;
-					
-					case sprStoneAttack2:
-					equipmentIndex = spr_Kirby_Equipment_Stone_KSSU_Attack2;
-					break;
-					
-					case sprStoneAttack2Release:
-					equipmentIndex = spr_Kirby_Equipment_Stone_KSSU_Attack2Release;
-					break;
+					switch (sprite_index)
+					{
+						case sprStoneAttack2Ready:
+						equipmentIndex = spr_Kirby_Equipment_Stone_KSSU_Attack2Ready_Bitcrushed;
+						break;
+						
+						case sprStoneAttack2:
+						equipmentIndex = spr_Kirby_Equipment_Stone_KSSU_Attack2_Bitcrushed;
+						break;
+						
+						case sprStoneAttack2Release:
+						equipmentIndex = spr_Kirby_Equipment_Stone_KSSU_Attack2Release_Bitcrushed;
+						break;
+					}
+				}
+				else
+				{
+					switch (sprite_index)
+					{
+						case sprStoneAttack2Ready:
+						equipmentIndex = spr_Kirby_Equipment_Stone_KSSU_Attack2Ready;
+						break;
+						
+						case sprStoneAttack2:
+						equipmentIndex = spr_Kirby_Equipment_Stone_KSSU_Attack2;
+						break;
+						
+						case sprStoneAttack2Release:
+						equipmentIndex = spr_Kirby_Equipment_Stone_KSSU_Attack2Release;
+						break;
+					}
 				}
 				break;
 				
 				case abilityHatSkins.stone_modern:
-				switch (sprite_index)
+				var isBitcrushed = false;
+				if ((object_index == obj_Player) and (((player == 0) and (global.hatPaletteStoneModernP1 == abilityHatPaints.stone_modern_bitcrushed)) or ((player == 1) and (global.hatPaletteStoneModernP2 == abilityHatPaints.stone_modern_bitcrushed)))) isBitcrushed = true;
+				if (isBitcrushed)
 				{
-					case sprStoneAttack2Ready:
-					equipmentIndex = spr_Kirby_Equipment_Stone_Modern_Attack2Ready;
-					break;
-					
-					case sprStoneAttack2:
-					equipmentIndex = spr_Kirby_Equipment_Stone_Modern_Attack2;
-					break;
-					
-					case sprStoneAttack2Release:
-					equipmentIndex = spr_Kirby_Equipment_Stone_Modern_Attack2Release;
-					break;
+					switch (sprite_index)
+					{
+						case sprStoneAttack2Ready:
+						equipmentIndex = spr_Kirby_Equipment_Stone_Modern_Attack2Ready_Bitcrushed;
+						break;
+						
+						case sprStoneAttack2:
+						equipmentIndex = spr_Kirby_Equipment_Stone_Modern_Attack2_Bitcrushed;
+						break;
+						
+						case sprStoneAttack2Release:
+						equipmentIndex = spr_Kirby_Equipment_Stone_Modern_Attack2Release_Bitcrushed;
+						break;
+					}
+				}
+				else
+				{
+					switch (sprite_index)
+					{
+						case sprStoneAttack2Ready:
+						equipmentIndex = spr_Kirby_Equipment_Stone_Modern_Attack2Ready;
+						break;
+						
+						case sprStoneAttack2:
+						equipmentIndex = spr_Kirby_Equipment_Stone_Modern_Attack2;
+						break;
+						
+						case sprStoneAttack2Release:
+						equipmentIndex = spr_Kirby_Equipment_Stone_Modern_Attack2Release;
+						break;
+					}
 				}
 				break;
 			}

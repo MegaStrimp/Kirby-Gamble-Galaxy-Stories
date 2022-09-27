@@ -8,7 +8,7 @@ function scr_Enemy_HurtsPlayer(argument0)
 	
 	//Hurt Player
 	
-	if ((place_meeting(x,y,obj_Player)) and (!hurt))
+	if ((place_meeting(x,y,obj_Player)) and (!hurt) and (!global.cutscene))
 	{
 		collidedPlayer = instance_place(x,y,obj_Player);
 		if ((collidedPlayer.canGetHurt) and (!collidedPlayer.invincible) and (!collidedPlayer.hasInvinCandy))
@@ -286,7 +286,7 @@ function scr_Enemy_HurtsPlayer(argument0)
 		
 		//Hurt Enemy
 		
-		if ((hurtable) and (!isBoss))
+		if ((hurtable) and (!isBoss) and (!invincible))
 		{
 			if (audio_is_playing(snd_EnemyHurt)) audio_stop_sound(snd_EnemyHurt);
 			audio_play_sound(snd_EnemyHurt,0,false);

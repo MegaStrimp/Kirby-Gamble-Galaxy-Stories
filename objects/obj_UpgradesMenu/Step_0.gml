@@ -27,6 +27,17 @@ if (!global.pause)
 	{
 		switch (upgradeTitle[selection])
 		{
+			case "Motor Cutter":
+			if (global.cutterMotorCutterUpgradeEquipped)
+			{
+				global.cutterMotorCutterUpgradeEquipped = false;
+			}
+			else
+			{
+				global.cutterMotorCutterUpgradeEquipped = true;
+			}
+			break;
+			
 			case "Golden Flare":
 			if (global.beamGoldenFlareUpgradeEquipped)
 			{

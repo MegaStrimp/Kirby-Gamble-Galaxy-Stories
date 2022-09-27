@@ -12,7 +12,7 @@ if (!global.pause)
 	if (vsp <= -decel) vsp += decel;
 	if ((vsp > -decel) and (vsp < decel)) vsp = 0;
 	
-	path_speed = spd;
+	pathsp = spd;
 	
 	//Animation
 	
@@ -30,5 +30,5 @@ if (!global.pause)
 else
 {
 	image_speed = 0;
-	path_speed = 0;
+	pathsp = 0;
 }

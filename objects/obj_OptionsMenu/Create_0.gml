@@ -119,6 +119,7 @@ strPressAnyKey = str("Options.Press Any Key");
 strExtraTutorials = str("Options.Extra Tutorials");
 strAutoSwallow = str("Options.Auto Swallow");
 strMusicIntro = str("Options.Music Intro");
+strHitNumbers = str("Options.Music Intro");
 #endregion
 
 }

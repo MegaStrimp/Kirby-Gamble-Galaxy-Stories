@@ -474,11 +474,11 @@ if (!global.pause)
 		
 		if (subSelection < 0)
 		{
-			subSelection += 3;
+			subSelection += 4;
 		}
-		if (subSelection > 2)
+		if (subSelection > 3)
 		{
-			subSelection -= 3;
+			subSelection -= 4;
 		}
 		
 		switch (subSelection)
@@ -507,6 +507,15 @@ if (!global.pause)
 				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 				audio_play_sound(snd_BossHealth,0,false);
 				global.musicIntro = !global.musicIntro;
+			}
+			break;
+			
+			case 3:
+			if ((keyJumpPressed) or (keyLeftPressed) or (keyRightPressed))
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				global.hitNumbers = !global.hitNumbers;
 			}
 			break;
 		}

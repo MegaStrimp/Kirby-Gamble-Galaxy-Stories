@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_CapsuleJ2",
   "spriteId": {
-    "name": "spr_en_J2_walk",
-    "path": "sprites/spr_en_J2_walk/spr_en_J2_walk.yy",
+    "name": "spr_CapsuleJ2_Normal_Walk",
+    "path": "sprites/spr_CapsuleJ2_Normal_Walk/spr_CapsuleJ2_Normal_Walk.yy",
   },
   "solid": false,
   "visible": true,
@@ -30,7 +30,6 @@
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":2,"eventType":3,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
   ],
   "properties": [],

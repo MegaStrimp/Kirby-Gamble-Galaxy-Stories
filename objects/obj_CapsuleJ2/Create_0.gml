@@ -1,49 +1,65 @@
-///@description Initialize Variables
+/// @description Initialization
+// You can write your code in this editor
 
-active = false; // whether or not the enemy is active. Turns true when the player gets close (ie, J2 appears in the camera view relative to the player)
+event_inherited();
 
-attackNumber = enemyAttacks.capsuleJ2_hovering; // possible actions: enemyAttacks.capsuleJ2_hovering, enemyAttacks.capsuleJ2_dashStart, enemyAttacks.capsuleJ2_jetDash, enemyAttacks.capsuleJ2_bounceBack (other strings use the default walking case)
-//attackNumber = enemyAttacks.capsuleJ2_dashStart;
+randomize();
+
+//active = false; // whether or not the enemy is active. Turns true when the player gets close (ie, J2 appears in the camera view relative to the player)
+
+//current_action = "hovering"; // possible actions: "hovering", "dashstart", "jetdash" (other strings use the default walking case)
+current_action = enemyAttacks.capsuleJ2_hovering; 
+//current_action = "dashstart";
+
+// Physics
+
+hAccel = 0.08;
+hMax = 1.65;
+hsp = 0;
+jumpSpeed = 0.24;
+ascendMax = 1.25;
+gravNormal = 0.12;
+gravLimitNormal = 2.85;
+vsp = 0;
+
+// Sprites
+
+mask_index = spr_24SquareOriginless_Mask;
+
+sprWalk = spr_CapsuleJ2_Normal_Walk;
+sprHoverRise = spr_CapsuleJ2_Normal_Hover2;
+sprHoverFall = spr_CapsuleJ2_Normal_Hover1;
+sprHurt = spr_CapsuleJ2_Normal_Hurt;
+sprDashStart = spr_CapsuleJ2_Normal_DashStart;
+sprJetDash = spr_CapsuleJ2_Normal_JetDash;
+
+parJetSmoke = spr_Particle_CapsuleJ2Smoke;
+parJetFire = spr_Particle_CapsuleJ2Fire;
 
 image_speed = 0.6; // setting speed of the walking animation
 
+// Other variables
+
+palette_index = spr_CapsuleJ2_Normal_Palette_SpeedDemon;
+hp = 16;
+dmg = 1;
+ability = playerAbilities.jet;
+points = 200;
 has_landed = false;
 can_rocketdash = false;
+tracking_obj = obj_Player;
+v_range = 30; // the vertical range J2 looks for when trying to jetdash
+tracking_range = 60;
 
-hover_dir = 1;
+//DEBUG
 
-track_x = true;
-track_y = true;
+last_action_roll = 0;
+
+// Timers
 
 action_timer = 80; // used for the dashstart and jetdash actions, and the cooldown before another dash can be made
-
-tracking_range = 120;
-
-//hover_time = 60*9;
-
-h_accel = 0.08;
-h_maxspeed = 1.65;
-h_speed = 0;
-
-ascend_accel = 0.08;
-ascend_max = 1.25;
-grav = 0.12;
-fall_max = 2.85;
-
-v_speed = 0;
-
-spr_dir = image_xscale;
-
-// find player object
-tracking_obj = obj_Player;
-
-// find collision object (will need to update this to support all tiles in integration)
-coll_obj = obj_Wall;
-
-// jetdash variables
-v_range = 30; // the vertical range J2 looks for when trying to jetdash
-
-// jetflame variables
 jet_flametime = 0;
 
-paletteIndex = spr_CapsuleJ2_Normal_Palette_SpeedDemon;
+
+//// find collision object (will need to update this to support all tiles in integration)
+//coll_obj = obj_Wall;

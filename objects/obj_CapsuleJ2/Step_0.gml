@@ -1,215 +1,183 @@
-/// @description Main
+/// @description Enemy behaviors and animations
+// You can write your code in this editor
+//@description Main
 
-if (!global.pause)
+//Characters
+
+if (setupTimer == 0)
 {
-	current_tracking_obj = instance_find(tracking_obj,0);
-	
-	action_timer = clamp(action_timer-1,0,9999);
-	switch(attackNumber)
-	{
-		case enemyAttacks.capsuleJ2_hovering:
-		if (track_x)
-		{
-			dir_to_player = sign(current_tracking_obj.x - x);
-			if (dir_to_player != spr_dir && dir_to_player != 0)
-			{
-				spr_dir = dir_to_player;
-				if (h_speed < 2.25 && h_speed > 0)
-				{
-					h_speed = 2.25;
-				}
-				else if (h_speed > -2.25 && h_speed < 0)
-				{
-					h_speed = -2.25;
-				}
-				h_speed = -h_speed;
-			}
-			
-			if (image_xscale != spr_dir) image_xscale = spr_dir;
-			
-			if (distance_to_point(current_tracking_obj.x,current_tracking_obj.y) < tracking_range / 2)
-			{
-				h_speed=clamp(h_speed-(h_accel),0,h_maxspeed);
-			}
-			else if (distance_to_point(current_tracking_obj.x,current_tracking_obj.y) < tracking_range)
-			{
-				h_speed=clamp(h_speed-(h_accel),h_maxspeed / 2,h_maxspeed);
-			}
-			else
-			{
-				h_speed=clamp(h_speed+(h_accel),-h_maxspeed,h_maxspeed);
-			}
-		}
-		
-		if (track_y)
-		{
-			player_height = sign(y - (current_tracking_obj.y + 20));
-			
-			hover_dir = player_height;
-			
-			if (player_height >= 0)
-			{
-				v_speed = clamp(v_speed-ascend_accel,-ascend_max,fall_max);
-			}
-			else
-			{
-				v_speed=clamp(v_speed+grav,-ascend_max,fall_max);
-			}
-		}
-		
-		if (v_speed == fall_max) v_speed = -1.25;
-		
-		if (action_timer <= 0)
-		{
-			new_action_time = random_range(80,140);
-			action_roll = random_range(0,100);
-			new_action = enemyAttacks.capsuleJ2_hovering;
-			
-			if (action_roll > 85)
-			{
-				new_action = "walking";
-			}
-			
-			attackNumber = new_action;
-			action_timer = new_action_time;
-			
-			if (attackNumber == enemyAttacks.capsuleJ2_hovering) can_rocketdash = true;
-			
-			dir_to_player = sign(current_tracking_obj.x - x);
-			
-			if (dir_to_player != spr_dir && dir_to_player != 0)
-			{
-				spr_dir = dir_to_player;
-				h_speed = -h_speed;
-			}
-			
-			if (image_xscale != spr_dir) image_xscale = spr_dir;
-		}
-		
-		if (can_rocketdash)
-		{
-			if (distance_to_point(current_tracking_obj.x,y) < tracking_range)
-			{
-				if (tracking_obj.y < y && tracking_obj.y > y - v_range)
-				{
-					action_timer = 35;
-					attackNumber = enemyAttacks.capsuleJ2_dashStart;
-					can_rocketdash = false;
-				}
-			}
-		}
-		break;
-		
-		case enemyAttacks.capsuleJ2_dashStart:
-		h_speed = -1.05;
-		v_speed = -0.12;
-		
-		if (action_timer <= 0)
-		{
-			action_timer = 35 + 12;
-			h_speed = 4.85;
-			attackNumber = enemyAttacks.capsuleJ2_jetDash;
-		}
-		break;
-		
-		case enemyAttacks.capsuleJ2_jetDash:
-		if (action_timer <= 18)
-		{
-			h_speed = clamp(h_speed-0.85,0,5);
-		}
-		
-		v_speed = 0;
-		
-		if (action_timer <= 0)
-		{
-			action_timer = 80;
-			v_speed = 1.45;
-			attackNumber = enemyAttacks.capsuleJ2_hovering;
-			can_rocketdash = false;
-		}
-		break;
-		
-		case enemyAttacks.capsuleJ2_bounceBack:
-		v_speed=clamp(v_speed+grav,-ascend_max,fall_max);
-		break;
-		
-		default:
-		h_speed = 1;
-		if (!place_meeting(x,y + 8,coll_obj))
-		{
-			v_speed = clamp(v_speed + grav,-ascend_max,fall_max);
-		}
-		else
-		{
-			if (v_speed > 0) v_speed = 0;
-		}
-		
-		if (action_timer <= 0 && has_landed)
-		{
-			new_action_time = random_range(80,140);
-			action_roll = random_range(0,100);
-			new_action = enemyAttacks.capsuleJ2_hovering;
-			
-			if (action_roll > 70) new_action = "walking";
-			
-			attackNumber = new_action;
-			action_timer = new_action_time;
-			
-			dir_to_player = sign(current_tracking_obj.x - x);
-			
-			if (dir_to_player != spr_dir && dir_to_player != 0) spr_dir = dir_to_player;
-			
-			if (image_xscale != spr_dir) image_xscale = spr_dir;
-			
-			if (attackNumber == enemyAttacks.capsuleJ2_hovering)
-			{
-				v_speed = -1;
-				has_landed = false;
-			}
-		}
-		break;
-	}
-	
-	x += h_speed * spr_dir;	
-	y += v_speed;
+    switch (character)
+    {
+        //Normal
+
+        case 0:
+        sprWalk = spr_CapsuleJ2_Normal_Walk;
+        sprDashStart = spr_CapsuleJ2_Normal_DashStart;
+        sprHover1 = spr_CapsuleJ2_Normal_Hover1;
+        sprHover2 = spr_CapsuleJ2_Normal_Hover2;
+        sprJetDash = spr_CapsuleJ2_Normal_JetDash;
+        sprHurt = spr_CapsuleJ2_Normal_Hurt;
+        break;
+    }
 }
 
-//Animation
+//Event Inherited
 
-switch (attackNumber)
-{
-	case enemyAttacks.capsuleJ2_hovering:
-	sprite_index = spr_en_J2_hover2;
-	//if(hover_dir < 0){
-	if (v_speed >= 0)
-	{
-		sprite_index = spr_en_J2_hover1;
-	}
-	break;
+event_inherited();
+
+if((!global.cutscene) and (!global.pause) and (pausedInCutscenes)){
+	var playerObj = instance_find(tracking_obj,0);
 	
-	case enemyAttacks.capsuleJ2_dashStart:
-	sprite_index = spr_en_J2_dashstart;
-	break;
+	action_timer = clamp(action_timer-1,0,9999);
 	
-	case enemyAttacks.capsuleJ2_jetDash:
-	sprite_index = spr_en_J2_jetdash;
-	if(h_speed <= 1){
-		sprite_index = spr_en_J2_dashstart;
+	switch(current_action){
+		case enemyAttacks.capsuleJ2_hovering:			
+			// Horizontal Movement
+			dirX = sign(playerObj.x - x);
+			
+			if(distance_to_point(playerObj.x,playerObj.y) > tracking_range){
+				hsp = clamp(hsp+(hAccel*dirX),-hMax,hMax);
+			}else{
+				if(hsp > 0){
+					hsp = clamp(hsp-(hAccel*dirX),0,hMax);
+				}else if(hsp < 0){
+					hsp = clamp(hsp-(hAccel*dirX),-hMax,0);
+				}
+			}
+			
+			// Vertical Movement
+			var player_height = 0;
+			if(playerObj.grounded){
+				player_height = sign(y - (playerObj.y-20));
+			}else{
+				player_height = sign(y - (playerObj.y));
+			}
+			
+			if(player_height >= 0){
+				vsp=clamp(vsp-jumpSpeed,-ascendMax,gravLimitNormal);
+			}
+			
+			// Hovering up after falling for a bit
+			if(vsp == gravLimit){
+				vsp = -1.25;
+			}
+			if(action_timer <= 0){
+				// either jump, start hovering, or continue walking toward the player
+				var new_action_time = random_range(80,140);
+				var action_roll = random_range(0,100);
+				var new_action = enemyAttacks.capsuleJ2_hovering;
+				if(action_roll > 85){
+					new_action = enemyAttacks.capsuleJ2_walking;
+				}
+				last_action_roll = action_roll;
+				
+				current_action = new_action;
+				action_timer = new_action_time;
+				if(current_action == enemyAttacks.capsuleJ2_hovering){
+					can_rocketdash = true;
+				}
+			}
+			if(can_rocketdash){
+				if(distance_to_point(playerObj.x,y) < tracking_range){
+					if(tracking_obj.y < y/*+v_range*2*/ && tracking_obj.y > y-v_range/*/2*/){
+						action_timer = 35;
+						current_action = enemyAttacks.capsuleJ2_dashStart;
+						can_rocketdash = false;
+					}
+				}
+			}
+			
+			break;
+		case enemyAttacks.capsuleJ2_dashStart:
+			hsp = -1.05*dirX;
+			vsp = -0.12;
+			if(action_timer <= 0){
+				action_timer = 35+12;
+				hsp = 4.85*dirX;
+				current_action = enemyAttacks.capsuleJ2_jetDash;
+			}
+			break;
+		case enemyAttacks.capsuleJ2_jetDash:
+			if(action_timer <= 18){
+				if(dirX>0){
+					hsp = clamp(hsp-(0.85*dirX),0,5);
+				}else{
+					hsp = clamp(hsp-(0.85*dirX),-5,0);
+				}
+			}
+			vsp = 0;
+			if(action_timer <= 0){
+				action_timer = 80;
+				vsp = 1.45;
+				current_action = enemyAttacks.capsuleJ2_hovering;
+				can_rocketdash = false;
+			}
+			if(place_meeting(x+hsp,y,collisionX)){
+				hsp = -3*dirX;
+				current_action = enemyAttacks.capsuleJ2_bounceBack;
+			}
+			break;
+		case enemyAttacks.capsuleJ2_bounceBack:
+			vsp=clamp(vsp+gravNormal,-ascendMax,gravLimit);
+			if(place_meeting(x,y+1,collisionY)){
+				vsp = -grav;
+				current_action = enemyAttacks.capsuleJ2_hovering;
+			}
+			break;
+		default:
+			hsp = 1*dirX;
+			
+			if(action_timer <= 0){
+				// either jump, start hovering, or continue walking toward the player
+				var new_action_time = random_range(80,140);
+				var action_roll = random_range(0,100);
+				var new_action = enemyAttacks.capsuleJ2_hovering;
+				if(action_roll > 70){
+					new_action = enemyAttacks.capsuleJ2_walking;
+					dirX = sign(playerObj.x - x);
+				}
+				last_action_roll = action_roll;
+				
+				current_action = new_action;
+				action_timer = new_action_time;
+				if(current_action == enemyAttacks.capsuleJ2_hovering){
+					vsp = -jumpSpeed;
+				}
+			}
+			break;
 	}
-	break;
 	
-	case enemyAttacks.capsuleJ2_bounceBack:
-	sprite_index = spr_en_J2_hurt;
-	break;
-	
-	default:
-	if(has_landed)
-	{
-		sprite_index = spr_en_J2_walk;
+	//x += hsp*dirX;	
+	//y += vsp;
+	//}
+
+	// Animations handled here
+	switch(current_action){
+		case enemyAttacks.capsuleJ2_hovering:
+			sprite_index = sprHoverRise;
+			//if(hover_dir < 0){
+			if(vsp >= 0){
+				sprite_index = sprHoverFall;
+			}
+			break;
+		case enemyAttacks.capsuleJ2_dashStart:
+			sprite_index = sprDashStart;
+			break;
+		case enemyAttacks.capsuleJ2_jetDash:
+			sprite_index = sprJetDash;
+			if(hsp*dirX <= 1){
+				sprite_index = sprDashStart;
+			}
+			break;
+		case enemyAttacks.capsuleJ2_bounceBack:
+			sprite_index = sprHurt;
+			break;
+		default:
+			if(place_meeting(x,y+1,collisionY)){
+				sprite_index = sprWalk;
+			}else{
+				sprite_index = sprHoverRise;
+			}
+			break;
 	}
-	else
-	{
-		sprite_index = spr_en_J2_hover2;
-	}
-	break;
 }

@@ -41,6 +41,8 @@ function scr_Player_CancelAttack(argument0)
 				comboBuffer = 1;
 			}
 			invincible = false;
+			invincibleFlash = false;
+			invincibleFlashTimer = -1;
 			state = playerStates.normal;
 			break;
 			

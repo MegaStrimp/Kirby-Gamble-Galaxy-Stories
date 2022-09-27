@@ -28,7 +28,7 @@ grav = gravNormal;
 gravFloat = .075;
 gravFireDash = .05;
 gravLimitNormal = 5;
-gravLimitFloat = 1.6;
+gravLimitFloat = 0.8;
 gravLimitBeamAir = 3;
 gravLimitStone = 7;
 gravLimitFireDash = 1.25;
@@ -268,6 +268,7 @@ sprDeath = spr_Kirby_Normal_Death;
 
 //Upgrades
 
+cutterMotorCutterUpgrade = false;
 beamGoldenFlareUpgrade = false;
 mysticBeamVortexInAJarUpgrade = false;
 stoneRockCandyUpgrade = false;
@@ -417,6 +418,7 @@ invincible = false;
 invincibleFlash = false;
 inhaleSoundCont = false;
 ateHeavy = false;
+ateAbilityStar = -1;
 ateCappyShroom = false;
 swallow = false;
 cAbility = playerAbilities.none;
@@ -455,6 +457,7 @@ warpStarIndex = -1;
 downHeld = 0;
 hasInvinCandy = false;
 invinCandyMask = -1;
+mixAbilities = -1;
 
 //Inputs
 

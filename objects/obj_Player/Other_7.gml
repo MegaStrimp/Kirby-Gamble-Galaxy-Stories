@@ -155,6 +155,10 @@ if (((attackNumber == playerAttacks.cutterNormal) or (attackNumber == "cutterCha
 
 if (sprite_index == sprCutterAttack2) image_index = image_number - 1;
 
+//Final Cutter
+
+if ((sprite_index == sprCutterAttack4) or (sprite_index == sprCutterAttack5) or (sprite_index == sprCutterAttack6)) image_index = image_number - 1;
+
 //Sir Kibble Cutter Attack 1
 
 if (((attackNumber == "sirKibbleCutterNormal") or (attackNumber == "sirKibbleCutterChargeAttack")) and (sprite_index == sprCutterAttack1))
@@ -217,7 +221,7 @@ if (((attackNumber == playerAttacks.stoneNormal) or (attackNumber == playerAttac
 
 //Stone Up Attack
 
-if ((attackNumber == playerAttacks.stoneUp) and ((sprite_index == sprStoneAttack2) or (sprite_index == sprStoneAttack2Release))) image_index = image_number - 1;
+if ((attackNumber == playerAttacks.stoneUp) and ((sprite_index == sprStoneAttack2Ready) or (sprite_index == sprStoneAttack2) or (sprite_index == sprStoneAttack2Release))) image_index = image_number - 1;
 
 //Ufo Charge
 

@@ -25,6 +25,8 @@ ability = playerAbilities.ufo;
 points = 800;
 hasXCollision = false;
 hasYCollision = false;
+hasXKnockback = false;
+hasYKnockback = false;
 angle = 0;
 move = false;
 

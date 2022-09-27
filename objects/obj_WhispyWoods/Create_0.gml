@@ -12,6 +12,8 @@ gravLimitNormal = 5;
 #endregion
 
 #region Sprites
+sprTreeIdle = spr_WhispyWoods_Normal_TreeIdle;
+sprBark = spr_WhispyWoods_Normal_TreeBark;
 sprIdle = spr_WhispyWoods_Normal_Idle;
 sprBlink = spr_WhispyWoods_Normal_Blink;
 sprSpit = spr_WhispyWoods_Normal_Spit;
@@ -36,6 +38,7 @@ isBoss = true;
 healthbarIndex = 3;
 hasXKnockback = false;
 hasYKnockback = false;
+hurtable = false;
 
 phase = 0;
 faceSprite = sprIdle;
@@ -88,3 +91,8 @@ throwObjectTimerMax = 45;
 bigAirpuffTimer = -1;
 inhaleTimer = -1;
 #endregion
+
+collisionHitbox = instance_create_depth(x,y,depth,obj_Wall);
+collisionHitbox.owner = id;
+collisionHitbox.enemyCollisionHitbox = true;
+collisionHitbox.mask_index = sprTreeIdle;

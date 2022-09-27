@@ -881,6 +881,10 @@ function scr_Player_HatShadow(argument0,argument1)
 					hatShadowIndex = spr_Kirby_HatShadow_Stone_Modern_Attack1Ready;
 					break;
 					
+					case sprStoneAttack2Ready:
+					hatShadowIndex = spr_Kirby_HatShadow_Stone_Modern_Attack2Ready;
+					break;
+					
 					case sprStoneAttack2:
 					hatShadowIndex = spr_Kirby_HatShadow_Stone_Modern_Attack2;
 					break;

@@ -37,13 +37,14 @@ clampPositionY = true;
 offScreenTurning = true;
 collisionX = obj_ParentWall;
 collisionY = obj_ParentWall;
-hasXKnockback = false;
-hasYKnockback = false;
+hasXKnockback = true;
+hasYKnockback = true;
 deathOnBottom = true;
 objectOnDeath = false;
 objectOnDeathObj = obj_Projectile_ExplosionMask;
 groundFailsafe = true;
 attackCountMax = 3;
+projCount = 1;
 
 //Timers
 

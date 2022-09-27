@@ -5,7 +5,7 @@
 event_inherited();
 var projectilePointer;
 
-if (!global.pause)
+if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 {
 	scr_Object_Inhale(enemy);
 	

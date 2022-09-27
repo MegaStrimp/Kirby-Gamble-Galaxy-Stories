@@ -376,6 +376,13 @@ function scr_Maykr_GetFromInventory(argument0)
 		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
 		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
 		break;
+		
+		case maykrObjects.cerulean:
+		spawnedItemIndex = obj_Spawner_Cerulean;
+		spawnedSprite = spr_Cerulean_Normal_Idle;
+		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
+		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
+		break;
 		#endregion
 		
 		#region Environment
@@ -388,7 +395,7 @@ function scr_Maykr_GetFromInventory(argument0)
 		break;
 		
 		case maykrObjects.pointStarGreen:
-		spawnedItemIndex = obj_PointStar;
+		spawnedItemIndex = obj_PointStar_Green;
 		spawnedSprite = spr_PointStar_Green_Idle;
 		spawnedState = 1;
 		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
@@ -396,7 +403,7 @@ function scr_Maykr_GetFromInventory(argument0)
 		break;
 		
 		case maykrObjects.pointStarRed:
-		spawnedItemIndex = obj_PointStar;
+		spawnedItemIndex = obj_PointStar_Red;
 		spawnedSprite = spr_PointStar_Red_Idle;
 		spawnedState = 2;
 		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
@@ -404,7 +411,7 @@ function scr_Maykr_GetFromInventory(argument0)
 		break;
 		
 		case maykrObjects.pointStarBlue:
-		spawnedItemIndex = obj_PointStar;
+		spawnedItemIndex = obj_PointStar_Blue;
 		spawnedSprite = spr_PointStar_Blue_Idle;
 		spawnedState = 3;
 		spawnedXOffset = sprite_get_xoffset(spawnedSprite);

@@ -394,8 +394,10 @@ if ((!debugCamera) and (objectFollowing == -1))
 				
 					if (global.hpP1 != 0)
 					{
-						cameraX = lerp(cameraX,target.x - ((viewWidth / zoomFinal) / 2),spd) + ((offsetX + bossOffsetX + cinematicXOffset) / zoomFinal);
-						cameraY = lerp(cameraY,target.y - ((viewHeight / zoomFinal) / 2),spd) + ((offsetY + bossOffsetY + cinematicYOffset) / zoomFinal);
+						cameraTargetX = target.x;
+						if (target.finalCutterState != 3) cameraTargetY = target.y;
+						cameraX = lerp(cameraX,cameraTargetX - ((viewWidth / zoomFinal) / 2),spd) + ((offsetX + bossOffsetX + cinematicXOffset) / zoomFinal);
+						cameraY = lerp(cameraY,cameraTargetY - ((viewHeight / zoomFinal) / 2),spd) + ((offsetY + bossOffsetY + cinematicYOffset) / zoomFinal);
 						
 						with (obj_BigMovingWall)
 						{

@@ -62,12 +62,12 @@ enum playerStates
 	yoyoDash,
 	wheelNormal,
 	wingDash,
+	jetDash,
 	swordDash,
 	parasolDash,
 	jetHover,
 	jetJump,
 	jetCharge,
-	jetDash,
 	warpStar,
     death
 }
@@ -478,6 +478,7 @@ enum enemyAttacks
 {
 	mysticBlock_firebar,
 	mysticBlock_shield,
+	capsuleJ2_walking,
 	capsuleJ2_hovering,
 	capsuleJ2_dashStart,
 	capsuleJ2_jetDash,
@@ -760,7 +761,7 @@ enum talkingCharacter
 #endregion
 
 #region Global Variables
-global.versionNumber = "0.5.7";
+global.versionNumber = "0.5.8";
 
 global.globalTimer = 0;
 global.selectedSave = "Save1.ini";
@@ -958,6 +959,8 @@ global.storyModeUnlocked = false;
 
 #region Fonts
 global.bitmapKSSU = font_add_sprite_ext(spr_Hud_Dialogue_Font_Kssu,"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz .!",false,0);
+global.fontMorse = font_add_sprite_ext(spr_Hud_Dialogue_Font_Morse,".-/",false,0);
+global.fontNumbersGray = font_add_sprite_ext(spr_Hud_Numbers_Gray,"0123456789",false,0);
 global.fontDialogueDefaultKanji = font_add(working_directory + "ARIALUNI.TTF",12,false,false,32,127);
 global.fontMaykrBlue = font_add_sprite_ext(spr_Maykr_Font_Blue,"abcdefghijklmnopqrstuvwxyz0123456789.!?/()",false,0);
 global.fontMaykrRed = font_add_sprite_ext(spr_Maykr_Font_Red,"abcdefghijklmnopqrstuvwxyz0123456789.!?/()",false,0);
@@ -1070,8 +1073,6 @@ i += 1;
 subtitles[i] = "Kirb!";
 i += 1;
 subtitles[i] = "Borb!";
-i += 1;
-subtitles[i] = "Zwat's perfect running the True Arena again";
 i += 1;
 
 selectedSubtitle = irandom_range(0,array_length(subtitles) - 1);
