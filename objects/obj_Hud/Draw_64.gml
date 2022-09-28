@@ -277,10 +277,6 @@ draw_sprite_part_ext(spr_Hud_Healthbar_Kirby,0,0,0,healthbarWidth,healthbarHeigh
 
 // Draw P1 Healthbar Heal Fill
 
-if(keyboard_check(ord("K"))){
-	global.healthP1 = 1;
-}
-
 //if(healStart < healthBarWidth){
 //	if (audio_is_playing(snd_LowHp)) audio_stop_sound(snd_LowHp);
 //	audio_play_sound(snd_LowHp,0,false);
@@ -291,21 +287,6 @@ healStart = (sprite_get_width(spr_Hud_Healthbar_Kirby)*0.01)*((min(global.healP1
 //healthbarMaxWidth = sprite_get_width(spr_Hud_Healthbar_Kirby);
 healthbarHeight = sprite_get_height(spr_Hud_Healthbar_Kirby);
 
-//if(global.healP1Diff > 0){
-//	global.healP1Diff--;
-//	global.healP1Old++;
-//	if(global.healP1Diff < 0){
-//		global.healP1Diff=0;
-//		global.healP1Old=global.healthP1;
-//	}
-//}else if(global.healP1Diff < 0){
-//	global.healP1Diff++;
-//	global.healP1Old--;
-//	if(global.healP1Diff > 0){
-//		global.healP1Diff=0;
-//		global.healP1Old=global.healthP1;
-//	}
-//}
 if(global.healP1Mod != global.healthP1){
 	if(global.healP1Mod < global.healthP1){
 		global.healP1Mod++;
@@ -374,15 +355,15 @@ if (instance_number(obj_Player) > 1)
 	
 	if (!global.pause)
 	{
-		if (hudHpP2 < global.healthP2)
+		if (global.healP2Mod < global.healthP2)
 		{
 			if (hudHpP2Timer == -1) hudHpP2Timer = hudHpTimerMax;
 		}
-		else if (hudHpP2 > global.healthP2)
-		{
-			hudHpP2 = global.healthP2;
-		}
-		
+		//else if (hudHpP1 > global.healthP1)
+		//{
+		//	hudHpP1 = global.healthP1;
+		//}
+	
 		if (hudHpP2Timer > 0)
 		{
 			hudHpP2Timer -= 1;
@@ -442,6 +423,34 @@ healthbarMaxWidth = sprite_get_width(spr_Hud_Healthbar_Kirby);
 healthbarHeight = sprite_get_height(spr_Hud_Healthbar_Kirby);
 	
 draw_sprite_part_ext(spr_Hud_Healthbar_Kirby,0,0,0,healthbarWidth,healthbarHeight,hudX + 489 - (sprite_get_width(spr_Hud_Icon_Kirby) / 2) - sprite_get_width(spr_Hud_HealthbarBack_Kirby),hudY - 9,-1,1,image_blend,drawAlpha);
+
+//healWidth = (sprite_get_width(spr_Hud_Healthbar_Kirby)*0.01)*(((global.healthP2/global.healthP2Max)*100)-((global.healP2Mod/global.healthP2Max)*100));
+//healStart = (sprite_get_width(spr_Hud_Healthbar_Kirby)*0.01)*((min(global.healP2Mod,healthbarWidth)/global.healthP2Max)*100);
+healWidth = (sprite_get_width(spr_Hud_Healthbar_Kirby)*0.01)*(((global.healthP2/global.healthP2Max)*100)-((global.healP2Mod/global.healthP2Max)*100));
+healStart = (sprite_get_width(spr_Hud_Healthbar_Kirby)*0.01)*((min(global.healP2Mod,healthbarWidth)/global.healthP2Max)*100);
+healthbarHeight = sprite_get_height(spr_Hud_Healthbar_Kirby);
+
+if(global.healP2Mod != global.healthP2){
+	if(global.healP2Mod < global.healthP2){
+		global.healP2Mod++;
+		if(global.healP2Mod > global.healthP2){
+			global.healP2Mod = global.healthP2;
+		}		
+	}else if(global.healP2Mod > global.healthP2){
+		global.healP2Mod--;
+		if(global.healP2Mod < global.healthP2){
+			global.healP2Mod = global.healthP2;
+		}		
+	}
+}
+
+healBarColor = c_teal;
+if(global.healthP2 < global.healP2Mod){
+	healBarColor = c_red;
+}
+
+draw_sprite_part_ext(spr_Hud_HealthbarHeal_Kirby,0,healStart,0,sign(healWidth)*healWidth,healthbarHeight,(hudX + 489 - (sprite_get_width(spr_Hud_Icon_Kirby) / 2) - sprite_get_width(spr_Hud_HealthbarBack_Kirby))-healStart,hudY - 9,-1,1,healBarColor,drawAlpha);
+
 
 	if (global.shaders) pal_swap_reset();
 	

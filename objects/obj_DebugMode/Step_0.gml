@@ -5227,3 +5227,11 @@ else
 	}
 	#endregion
 }
+
+#region Lower HP to 1
+if(keyboard_check(ord("O"))){
+	global.healthP1 = 1;
+}if(keyboard_check(ord("P"))){
+	global.healthP2 = 1;
+}
+#endregion
