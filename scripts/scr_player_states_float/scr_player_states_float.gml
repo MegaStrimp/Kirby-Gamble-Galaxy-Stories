@@ -91,24 +91,30 @@ function scr_Player_States_Float()
 		
 		//Flap
 		
-		if ((!floatSpit) and (float) and (!hurt))
+		if (((!floatSpit) or ((floatSpit) and (hasMintLeaf))) and (float) and (!hurt))
 		{
 			if ((!global.cutscene) and (floatingTimer == -1) and ((keyJumpHold) or (keyUpHold)))
 			{
 				switch (playerCharacter)
 				{
 					default:
-					if (carriedItem == carriedItems.none)
+					if (!floatSpit)
 					{
-						sprite_index = sprFlap;
+						if (carriedItem == carriedItems.none)
+						{
+							sprite_index = sprFlap;
+						}
+						else
+						{
+							sprite_index = sprItemCarryLightFlap;
+						}
+						image_index = 0;
 					}
-					else
+					if (!hasMintLeaf)
 					{
-						sprite_index = sprItemCarryLightFlap;
+						if (audio_is_playing(snd_Float)) audio_stop_sound(snd_Float);
+						if (!audio_is_playing(floatSfx)) floatSfx = audio_play_sound(snd_Float,0,false);
 					}
-					image_index = 0;
-					if (audio_is_playing(snd_Float)) audio_stop_sound(snd_Float);
-					if (!audio_is_playing(floatSfx)) floatSfx = audio_play_sound(snd_Float,0,false);
 					floating = true;
 					if (jumpLimit) vsp = -jumpspeedFloat;
 					floatingTimer = 10;
@@ -133,6 +139,42 @@ function scr_Player_States_Float()
 			}
 		}
 		
+		//Mint Leaf Attack
+		
+		if (hasMintLeaf)
+		{
+			if ((!hurt) and (float))
+			{
+				if (mintLeafAttackTimer > 0)
+				{
+					mintLeafAttackTimer -= 1;
+				}
+				else
+				{
+					if (audio_is_playing(floatSfx)) audio_stop_sound(snd_Float);
+					var projAirPuff = instance_create_depth(x + ((sprite_get_width(sprFloatSpit) / 2) * dir),y + vsp,depth - 1,obj_AirPuff);
+					projAirPuff.owner = id;
+					projAirPuff.dmg = 10;
+					projAirPuff.dirX = dir;
+					projAirPuff.image_xscale = projAirPuff.dirX;
+					projAirPuff.hsp = ((airPuffSpd * dir) + hsp);
+					projAirPuff.sprIdle = spr_AirPuff_Normal_Idle;
+					projAirPuff.sprDestroy = spr_AirPuff_Normal_Destroy;
+					projAirPuff.sprite_index = projAirPuff.sprIdle;
+					projAirPuff.character = 0;
+					if (audio_is_playing(snd_AirPuff)) audio_stop_sound(snd_AirPuff);
+					audio_play_sound(snd_AirPuff,0,false);
+					image_index = 0;
+					floatSpit = true;
+					mintLeafAttackTimer = mintLeafAttackTimerMax;
+				}
+			}
+		}
+		else
+		{
+			mintLeafAttackTimer = -1;
+		}
+		
 		//Door
 		
 		if ((!global.cutscene) and (canEnter) and (position_meeting(x,y,obj_Door)) and (keyUpHold) and (!attack))
@@ -146,40 +188,43 @@ function scr_Player_States_Float()
 		
 		//Air Puff
 		
-		switch (playerCharacter)
+		if (!hasMintLeaf)
 		{
-			default:
-			if ((!global.cutscene) and ((grounded) or (enterDoor) or ((place_meeting(x,y,obj_AntiFloat))) or (keyAttackPressed)) and ((!floatSpit) and (sprite_index != sprFloatReady) and (sprite_index != sprItemCarryLightFloatReady)))
+			switch (playerCharacter)
 			{
-				if (audio_is_playing(floatSfx)) audio_stop_sound(snd_Float);
-				var projAirPuff = instance_create_depth(x + ((sprite_get_width(sprFloatSpit) / 2) * dir),y + vsp,depth - 1,obj_AirPuff);
-				projAirPuff.owner = id;
-				projAirPuff.dmg = 10;
-				projAirPuff.dirX = dir;
-				projAirPuff.image_xscale = projAirPuff.dirX;
-				projAirPuff.hsp = ((airPuffSpd * dir) + hsp);
-				projAirPuff.sprIdle = spr_AirPuff_Normal_Idle;
-				projAirPuff.sprDestroy = spr_AirPuff_Normal_Destroy;
-				projAirPuff.sprite_index = projAirPuff.sprIdle;
-				projAirPuff.character = 0;
-				if (audio_is_playing(snd_AirPuff)) audio_stop_sound(snd_AirPuff);
-				audio_play_sound(snd_AirPuff,0,false);
-				image_index = 0;
-				floatingTimer = -1;
-				floating = false;
-				float = false;
-				floatSpit = true;
+				default:
+				if ((!global.cutscene) and ((grounded) or (enterDoor) or ((place_meeting(x,y,obj_AntiFloat))) or (keyAttackPressed)) and ((!floatSpit) and (sprite_index != sprFloatReady) and (sprite_index != sprItemCarryLightFloatReady)))
+				{
+					if (audio_is_playing(floatSfx)) audio_stop_sound(snd_Float);
+					var projAirPuff = instance_create_depth(x + ((sprite_get_width(sprFloatSpit) / 2) * dir),y + vsp,depth - 1,obj_AirPuff);
+					projAirPuff.owner = id;
+					projAirPuff.dmg = 10;
+					projAirPuff.dirX = dir;
+					projAirPuff.image_xscale = projAirPuff.dirX;
+					projAirPuff.hsp = ((airPuffSpd * dir) + hsp);
+					projAirPuff.sprIdle = spr_AirPuff_Normal_Idle;
+					projAirPuff.sprDestroy = spr_AirPuff_Normal_Destroy;
+					projAirPuff.sprite_index = projAirPuff.sprIdle;
+					projAirPuff.character = 0;
+					if (audio_is_playing(snd_AirPuff)) audio_stop_sound(snd_AirPuff);
+					audio_play_sound(snd_AirPuff,0,false);
+					image_index = 0;
+					floatingTimer = -1;
+					floating = false;
+					float = false;
+					floatSpit = true;
+				}
+				break;
+				
+				case playerCharacters.gooey:
+				if ((grounded) or (place_meeting(x,y,obj_AntiFloat)))
+				{
+					jumpspeed = jumpspeedNormal;
+					state = playerStates.normal;
+				}
+				if ((keyDownHold) and (sign(vsp) == -1)) vsp = 0;
+				break;
 			}
-			break;
-			
-			case playerCharacters.gooey:
-			if ((grounded) or (place_meeting(x,y,obj_AntiFloat)))
-			{
-				jumpspeed = jumpspeedNormal;
-				state = playerStates.normal;
-			}
-			if ((keyDownHold) and (sign(vsp) == -1)) vsp = 0;
-			break;
 		}
 		
 		//Animation
@@ -215,6 +260,23 @@ function scr_Player_States_Float()
 			else if (hurt)
 			{
 				sprite_index = sprFloatHurt;
+			}
+			else if (hasMintLeaf)
+			{
+				if (carriedItem == carriedItems.none)
+				{
+					if (floatSpit)
+					{
+						sprite_index = sprFloatSpit;
+					}
+				}
+				else
+				{
+					if (floatSpit)
+					{
+						sprite_index = sprItemCarryLightFloatSpit;
+					}
+				}
 			}
 			break;
 			

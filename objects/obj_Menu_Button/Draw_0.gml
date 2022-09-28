@@ -117,6 +117,10 @@ switch (state)
 		if (global.cutterMotorCutterUpgradeEquipped) active = spr_Menu_Upgrades_Check;
 		break;
 		
+		case "Propeller Wing":
+		if (global.cutterPropellerWingUpgradeEquipped) active = spr_Menu_Upgrades_Check;
+		break;
+		
 		case "Golden Flare":
 		if (global.beamGoldenFlareUpgradeEquipped) active = spr_Menu_Upgrades_Check;
 		break;

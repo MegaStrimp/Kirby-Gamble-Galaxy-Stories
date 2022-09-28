@@ -57,6 +57,7 @@ yLimit2Final = 0;
 bossDeath = false;
 cameraTargetX = cameraX;
 cameraTargetY = cameraY;
+waterfallIndex = 0;
 
 //Timers
 

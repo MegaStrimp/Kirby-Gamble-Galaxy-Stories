@@ -377,6 +377,14 @@ function scr_Maykr_GetFromInventory(argument0)
 		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
 		break;
 		
+		case maykrObjects.plasmaWisp:
+		spawnedItemIndex = obj_Spawner_PlasmaWisp;
+		spawnedSprite = spr_PlasmaWisp_Normal_Idle;
+		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
+		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
+		break;
+		#endregion
+		
 		case maykrObjects.cerulean:
 		spawnedItemIndex = obj_Spawner_Cerulean;
 		spawnedSprite = spr_Cerulean_Normal_Idle;

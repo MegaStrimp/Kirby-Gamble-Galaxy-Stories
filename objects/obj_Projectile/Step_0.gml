@@ -67,7 +67,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 				{
 					if (audio_is_playing(snd_AbilityStarBounce)) audio_stop_sound(snd_AbilityStarBounce);
 					audio_play_sound(snd_AbilityStarBounce,0,false);
-					if (destroyableByProjectile) instance_destroy();
+					instance_destroy();
 					var reflection = instance_create_depth(x,y,depth,obj_Projectile_MirrorReflection);
 					reflection.enemy = other.enemy;
 					reflection.target = owner;

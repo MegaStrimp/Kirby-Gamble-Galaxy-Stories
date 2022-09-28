@@ -627,6 +627,60 @@ if (layer_exists("Background_Parallax2"))
 	if ((sprite_get_height(backgroundSprite) * backgroundYScale) <= room_height) layer_y("Background_Parallax2",lerp(0,room_height - (sprite_get_height(backgroundSprite) * backgroundYScale),_ypos));
 }
 
+if (layer_exists("Background_Parallax3"))
+{
+	var backgroundSprite = layer_background_get_sprite(layer_background_get_id("Background_Parallax3"));
+	var backgroundXScale = layer_background_get_xscale(layer_background_get_id("Background_Parallax3"));
+	var backgroundYScale = layer_background_get_yscale(layer_background_get_id("Background_Parallax3"));
+	
+	if ((sprite_get_width(backgroundSprite) * backgroundXScale) <= room_width) layer_x("Background_Parallax3",lerp(0,room_width - (sprite_get_width(backgroundSprite) * backgroundXScale),_xpos));
+	if ((sprite_get_height(backgroundSprite) * backgroundYScale) <= room_height) layer_y("Background_Parallax3",lerp(0,room_height - (sprite_get_height(backgroundSprite) * backgroundYScale),_ypos));
+}
+
+if (layer_exists("GreenGreens1_Layer1"))
+{
+	var backgroundSprite = layer_background_get_sprite(layer_background_get_id("GreenGreens1_Layer1"));
+	var backgroundXScale = layer_background_get_xscale(layer_background_get_id("GreenGreens1_Layer1"));
+	var backgroundYScale = layer_background_get_yscale(layer_background_get_id("GreenGreens1_Layer1"));
+	
+	if ((sprite_get_width(backgroundSprite) * backgroundXScale) <= room_width) layer_x("GreenGreens1_Layer1",lerp(0,room_width - (sprite_get_width(backgroundSprite) * backgroundXScale),_xpos));
+	if ((sprite_get_height(backgroundSprite) * backgroundYScale) <= room_height) layer_y("GreenGreens1_Layer1",lerp(0,room_height - (sprite_get_height(backgroundSprite) * backgroundYScale),_ypos));
+}
+
+if (layer_exists("GreenGreens1_Layer2"))
+{
+	var backgroundSprite = layer_background_get_sprite(layer_background_get_id("GreenGreens1_Layer2"));
+	var backgroundXScale = layer_background_get_xscale(layer_background_get_id("GreenGreens1_Layer2"));
+	var backgroundYScale = layer_background_get_yscale(layer_background_get_id("GreenGreens1_Layer2"));
+	
+	if ((sprite_get_width(backgroundSprite) * backgroundXScale) <= room_width) layer_x("GreenGreens1_Layer2",lerp(0,room_width - (sprite_get_width(backgroundSprite) * (backgroundXScale * .93)),_xpos));
+	if ((sprite_get_height(backgroundSprite) * backgroundYScale) <= room_height) layer_y("GreenGreens1_Layer2",lerp(0,room_height - (sprite_get_height(backgroundSprite) * (backgroundYScale * .98)),_ypos));
+}
+
+if (layer_exists("GreenGreens1_Layer3"))
+{
+	var backgroundSprite = layer_background_get_sprite(layer_background_get_id("GreenGreens1_Layer3"));
+	var backgroundXScale = layer_background_get_xscale(layer_background_get_id("GreenGreens1_Layer3"));
+	var backgroundYScale = layer_background_get_yscale(layer_background_get_id("GreenGreens1_Layer3"));
+	
+	if ((sprite_get_width(backgroundSprite) * backgroundXScale) <= room_width) layer_x("GreenGreens1_Layer3",lerp(0,room_width - (sprite_get_width(backgroundSprite) * backgroundXScale),_xpos));
+	if ((sprite_get_height(backgroundSprite) * backgroundYScale) <= room_height) layer_y("GreenGreens1_Layer3",lerp(0,room_height - (sprite_get_height(backgroundSprite) * backgroundYScale),_ypos));
+}
+
+if (layer_exists("GreenGreens_Waterfall"))
+{
+	var bgId = layer_background_get_id("GreenGreens_Waterfall");
+	waterfallIndex += sprite_get_speed(bg_GreenGreens1_Waterfall) / 60;
+	if (waterfallIndex >= sprite_get_number(bg_GreenGreens1_Waterfall)) waterfallIndex -= sprite_get_number(bg_GreenGreens1_Waterfall) - 1;
+	layer_background_index(bgId,waterfallIndex);
+	var backgroundSprite = layer_background_get_sprite(bgId);
+	var backgroundXScale = layer_background_get_xscale(bgId);
+	var backgroundYScale = layer_background_get_yscale(bgId);
+	
+	if ((sprite_get_width(backgroundSprite) * backgroundXScale) <= room_width) layer_x("GreenGreens_Waterfall",lerp(0,room_width - (sprite_get_width(backgroundSprite) * (backgroundXScale * .93)),_xpos));
+	if ((sprite_get_height(backgroundSprite) * backgroundYScale) <= room_height) layer_y("GreenGreens_Waterfall",lerp(0,room_height - (sprite_get_height(backgroundSprite) * (backgroundYScale * .98)),_ypos));
+}
+
 if (layer_exists("Background_VParallax1"))
 {
 	var backgroundSprite = layer_background_get_sprite(layer_background_get_id("Background_VParallax1"));

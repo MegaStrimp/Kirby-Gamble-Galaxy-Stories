@@ -1,5 +1,5 @@
 ///@description Wall Bounce Logic
-
+/*
 switch(attackNumber)
 {
 	case enemyAttacks.capsuleJ2_bounceBack:

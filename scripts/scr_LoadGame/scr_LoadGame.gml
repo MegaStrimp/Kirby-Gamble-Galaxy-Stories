@@ -139,6 +139,7 @@ function scr_LoadGame(argument0)
 	global.omegaMatterFamiliarExp = ini_read_real("unlocks","omegaMatterFamiliarExp",0);
 	
 	global.cutterMotorCutterUpgradeUnlocked = ini_read_real("unlocks","cutterMotorCutterUpgradeUnlocked",false);
+	global.cutterPropellerWingUpgradeUnlocked = ini_read_real("unlocks","cutterPropellerWingUpgradeUnlocked",false);
 	global.beamGoldenFlareUpgradeUnlocked = ini_read_real("unlocks","beamGoldenFlareUpgradeUnlocked",false);
 	global.mysticBeamVortexInAJarUpgradeUnlocked = ini_read_real("unlocks","mysticBeamVortexInAJarUpgradeUnlocked",false);
 	global.stoneRockCandyUpgradeUnlocked = ini_read_real("unlocks","stoneRockCandyUpgradeUnlocked",false);
@@ -339,6 +340,7 @@ function scr_LoadGame(argument0)
 	global.hatPaletteSleepKSSUP2 = ini_read_real("playerCustomization","hatPaletteSleepKSSUP2",abilityHatPaints.sleep_kssu_bubblyGreen);
 	global.hatPaletteScanKSSUP2 = ini_read_real("playerCustomization","hatPaletteScanKSSUP2",abilityHatPaints.scan_kssu_metallicRed);
 	
+	global.cutterPropellerWingUpgradeEquipped = ini_read_real("playerCustomization","cutterPropellerWingUpgradeEquipped",false);
 	global.cutterMotorCutterUpgradeEquipped = ini_read_real("playerCustomization","cutterMotorCutterUpgradeEquipped",false);
 	global.beamGoldenFlareUpgradeEquipped = ini_read_real("playerCustomization","beamGoldenFlareUpgradeEquipped",false);
 	global.mysticBeamVortexInAJarUpgradeEquipped = ini_read_real("playerCustomization","mysticBeamVortexInAJarUpgradeEquipped",false);

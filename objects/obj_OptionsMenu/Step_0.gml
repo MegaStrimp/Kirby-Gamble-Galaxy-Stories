@@ -474,11 +474,11 @@ if (!global.pause)
 		
 		if (subSelection < 0)
 		{
-			subSelection += 4;
+			subSelection += 5;
 		}
-		if (subSelection > 3)
+		if (subSelection > 4)
 		{
-			subSelection -= 4;
+			subSelection -= 5;
 		}
 		
 		switch (subSelection)
@@ -511,6 +511,15 @@ if (!global.pause)
 			break;
 			
 			case 3:
+			if ((keyJumpPressed) or (keyLeftPressed) or (keyRightPressed))
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				global.enemyHealthbars = !global.enemyHealthbars;
+			}
+			break;
+			
+			case 4:
 			if ((keyJumpPressed) or (keyLeftPressed) or (keyRightPressed))
 			{
 				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);

@@ -635,7 +635,7 @@ function scr_Player_States_Slide()
 						}
 					}
 					
-					if (carriedItem != carriedItems.none)
+					if ((carriedItem != carriedItems.none) or (playerAbility == playerAbilities.sword) or (playerAbility == playerAbilities.parasol) or (playerAbility == playerAbilities.hammer))
 					{
 						if (carriedItemState == carriedItemStates.light)
 						{

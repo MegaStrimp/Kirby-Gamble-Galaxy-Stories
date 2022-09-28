@@ -757,7 +757,7 @@ enum talkingCharacter
 #endregion
 
 #region Global Variables
-global.versionNumber = "0.5.8";
+global.versionNumber = "0.6.0";
 
 global.globalTimer = 0;
 global.selectedSave = "Save1.ini";
@@ -783,7 +783,7 @@ global.goldenTomato = false;
 global.stageNumber = 0;
 global.debug = true;
 //global.debug = false;
-show_debug_overlay(global.debug);
+//show_debug_overlay(global.debug);
 global.pause = false;
 global.cutscene = false;
 global.tutorial = false;
@@ -816,6 +816,7 @@ global.canSave = false;
 global.inStage = false;
 for (var i = 0; i < 4; i++) global.stageCollectibleTreasures[i] = -1;
 global.hasInvinCandy = false;
+global.hasMintLeaf = false;
 
 #region Ability Kill Targets
 global.cutterAbilityKillsTarget = 10;
@@ -907,6 +908,10 @@ global.invinCandyTimerP1 = -1;
 global.invinCandyTimerP1Max = 1800;
 global.invinCandyTimerP2 = -1;
 global.invinCandyTimerP2Max = 1800;
+global.mintLeafTimerP1 = -1;
+global.mintLeafTimerP1Max = 900;
+global.mintLeafTimerP2 = -1;
+global.mintLeafTimerP2Max = 900;
 
 controllerPressedResetTimer = -1;
 #endregion
@@ -944,6 +949,7 @@ global.storyModeUnlocked = false;
 global.bitmapKSSU = font_add_sprite_ext(spr_Hud_Dialogue_Font_Kssu,"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz .!",false,0);
 global.fontMorse = font_add_sprite_ext(spr_Hud_Dialogue_Font_Morse,".-/",false,0);
 global.fontNumbersGray = font_add_sprite_ext(spr_Hud_Numbers_Gray,"0123456789",false,0);
+global.fontHitNumbers = font_add_sprite_ext(spr_Hud_HitNumbers,"0123456789",false,0);
 global.fontDialogueDefaultKanji = font_add(working_directory + "ARIALUNI.TTF",12,false,false,32,127);
 global.fontMaykrBlue = font_add_sprite_ext(spr_Maykr_Font_Blue,"abcdefghijklmnopqrstuvwxyz0123456789.!?/()",false,0);
 global.fontMaykrRed = font_add_sprite_ext(spr_Maykr_Font_Red,"abcdefghijklmnopqrstuvwxyz0123456789.!?/()",false,0);

@@ -119,7 +119,10 @@ strPressAnyKey = str("Options.Press Any Key");
 strExtraTutorials = str("Options.Extra Tutorials");
 strAutoSwallow = str("Options.Auto Swallow");
 strMusicIntro = str("Options.Music Intro");
-strHitNumbers = str("Options.Music Intro");
+//strEnemyHealthbar = str("Options.Enemy Healthbar");
+//strHitNumbers = str("Options.Hit Numbers");
+strEnemyHealthbars = "Enemy Healthbars";
+strHitNumbers = "Hit Numbers";
 #endregion
 
 }

@@ -534,9 +534,9 @@ function scr_Player_States_Normal()
 						if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 						{
 							if (place_meeting(x + (16 * dir),y,obj_Enemy)) grabEnemy = instance_place(x + (16 * dir),y,obj_Enemy);
-							if (grabEnemy != -1)
+							if (((grabEnemy != -1) and (finalCutterState == 0)) or ((comboBuffer <= 0) and (finalCutterReadInput)))
 							{
-								if ((comboBuffer <= 0) && (finalCutterReadInput || finalCutterState == 0) && state == playerStates.normal)
+								if ((comboBuffer <= 0) && (finalCutterReadInput || finalCutterState == 0))
 								{
 									if (audio_is_playing(snd_Slash)) audio_stop_sound(snd_Slash);
 									audio_play_sound(snd_Slash,0,false);
@@ -592,7 +592,7 @@ function scr_Player_States_Normal()
 								image_index = 0;
 				                state = playerStates.cutterDrop;
 							}
-							else if ((keyUpHold) and (cutterMotorCutterUpgrade))
+							else if ((keyUpHold) and (cutterPropellerWingUpgrade))
 							{
 								if ((comboBuffer <= 0) && (finalCutterReadInput || finalCutterState == 0) && state == playerStates.normal && keyUpHold)
 								{
@@ -813,7 +813,7 @@ function scr_Player_States_Normal()
 								projectile.owner = id;
 								projectile.abilityType = playerAbilities.cutter;
 								projectile.paletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
-								projectile.dmg = 20;
+								projectile.dmg = 123;
 								projectile.sprite_index = projectile.sprCharge;
 								projectile.decelMax = projectile.decelMax * 1.2;
 								projectile.hsp = dir * projectile.decelMax;
@@ -1635,7 +1635,7 @@ function scr_Player_States_Normal()
 								{
 									mysticBeamCharge.character = 0;
 								}
-								mysticBeamCharge.dmg = 20 + (mysticBeamChargeEx * 5);
+								mysticBeamCharge.dmg = floor(20 + (mysticBeamChargeEx * 5));
 								mysticBeamCharge.hsp = (2 + (mysticBeamChargeEx / .5)) * dir;
 								mysticBeamCharge.dirX = dir;
 								mysticBeamCharge.image_xscale = mysticBeamCharge.dirX;
@@ -3895,7 +3895,7 @@ function scr_Player_States_Normal()
 					
 					var idlesprite = sprIdle;
 					var idleblinksprite = sprIdleBlink;
-					if (carriedItem != carriedItems.none)
+					if ((carriedItem != carriedItems.none) or (playerAbility == playerAbilities.sword) or (playerAbility == playerAbilities.parasol) or (playerAbility == playerAbilities.hammer))
 					{
 						if (carriedItemState == carriedItemStates.light)
 						{
@@ -3922,7 +3922,7 @@ function scr_Player_States_Normal()
 								{
 									idlesprite = sprIdleNormalSlopeL;
 									idleblinksprite = sprIdleNormalSlopeLBlink;
-									if (carriedItem != carriedItems.none)
+									if ((carriedItem != carriedItems.none) or (playerAbility == playerAbilities.sword) or (playerAbility == playerAbilities.parasol) or (playerAbility == playerAbilities.hammer))
 									{
 										if (carriedItemState == carriedItemStates.light)
 										{
@@ -3941,7 +3941,7 @@ function scr_Player_States_Normal()
 								{
 									idlesprite = sprIdleNormalSlopeR;
 									idleblinksprite = sprIdleNormalSlopeRBlink;
-									if (carriedItem != carriedItems.none)
+									if ((carriedItem != carriedItems.none) or (playerAbility == playerAbilities.sword) or (playerAbility == playerAbilities.parasol) or (playerAbility == playerAbilities.hammer))
 									{
 										if (carriedItemState == carriedItemStates.light)
 										{
@@ -3963,7 +3963,7 @@ function scr_Player_States_Normal()
 								{
 									idlesprite = sprIdleNormalSlopeR;
 									idleblinksprite = sprIdleNormalSlopeRBlink;
-									if (carriedItem != carriedItems.none)
+									if ((carriedItem != carriedItems.none) or (playerAbility == playerAbilities.sword) or (playerAbility == playerAbilities.parasol) or (playerAbility == playerAbilities.hammer))
 									{
 										if (carriedItemState == carriedItemStates.light)
 										{
@@ -3982,7 +3982,7 @@ function scr_Player_States_Normal()
 								{
 									idlesprite = sprIdleNormalSlopeL;
 									idleblinksprite = sprIdleNormalSlopeLBlink;
-									if (carriedItem != carriedItems.none)
+									if ((carriedItem != carriedItems.none) or (playerAbility == playerAbilities.sword) or (playerAbility == playerAbilities.parasol) or (playerAbility == playerAbilities.hammer))
 									{
 										if (carriedItemState == carriedItemStates.light)
 										{
@@ -4007,7 +4007,7 @@ function scr_Player_States_Normal()
 								{
 									idlesprite = sprIdleNormalSlopeR;
 									idleblinksprite = sprIdleNormalSlopeRBlink;
-									if (carriedItem != carriedItems.none)
+									if ((carriedItem != carriedItems.none) or (playerAbility == playerAbilities.sword) or (playerAbility == playerAbilities.parasol) or (playerAbility == playerAbilities.hammer))
 									{
 										if (carriedItemState == carriedItemStates.light)
 										{
@@ -4026,7 +4026,7 @@ function scr_Player_States_Normal()
 								{
 									idlesprite = sprIdleNormalSlopeL;
 									idleblinksprite = sprIdleNormalSlopeLBlink;
-									if (carriedItem != carriedItems.none)
+									if ((carriedItem != carriedItems.none) or (playerAbility == playerAbilities.sword) or (playerAbility == playerAbilities.parasol) or (playerAbility == playerAbilities.hammer))
 									{
 										if (carriedItemState == carriedItemStates.light)
 										{
@@ -4048,7 +4048,7 @@ function scr_Player_States_Normal()
 								{
 									idlesprite = sprIdleNormalSlopeL;
 									idleblinksprite = sprIdleNormalSlopeLBlink;
-									if (carriedItem != carriedItems.none)
+									if ((carriedItem != carriedItems.none) or (playerAbility == playerAbilities.sword) or (playerAbility == playerAbilities.parasol) or (playerAbility == playerAbilities.hammer))
 									{
 										if (carriedItemState == carriedItemStates.light)
 										{
@@ -4067,7 +4067,7 @@ function scr_Player_States_Normal()
 								{
 									idlesprite = sprIdleNormalSlopeR;
 									idleblinksprite = sprIdleNormalSlopeRBlink;
-									if (carriedItem != carriedItems.none)
+									if ((carriedItem != carriedItems.none) or (playerAbility == playerAbilities.sword) or (playerAbility == playerAbilities.parasol) or (playerAbility == playerAbilities.hammer))
 									{
 										if (carriedItemState == carriedItemStates.light)
 										{
@@ -4092,7 +4092,7 @@ function scr_Player_States_Normal()
 								{
 									idlesprite = sprIdleSteepSlopeR;
 									idleblinksprite = sprIdleSteepSlopeRBlink;
-									if (carriedItem != carriedItems.none)
+									if ((carriedItem != carriedItems.none) or (playerAbility == playerAbilities.sword) or (playerAbility == playerAbilities.parasol) or (playerAbility == playerAbilities.hammer))
 									{
 										if (carriedItemState == carriedItemStates.light)
 										{
@@ -4111,7 +4111,7 @@ function scr_Player_States_Normal()
 								{
 									idlesprite = sprIdleSteepSlopeL;
 									idleblinksprite = sprIdleSteepSlopeLBlink;
-									if (carriedItem != carriedItems.none)
+									if ((carriedItem != carriedItems.none) or (playerAbility == playerAbilities.sword) or (playerAbility == playerAbilities.parasol) or (playerAbility == playerAbilities.hammer))
 									{
 										if (carriedItemState == carriedItemStates.light)
 										{
@@ -4133,7 +4133,7 @@ function scr_Player_States_Normal()
 								{
 									idlesprite = sprIdleSteepSlopeL;
 									idleblinksprite = sprIdleSteepSlopeLBlink;
-									if (carriedItem != carriedItems.none)
+									if ((carriedItem != carriedItems.none) or (playerAbility == playerAbilities.sword) or (playerAbility == playerAbilities.parasol) or (playerAbility == playerAbilities.hammer))
 									{
 										if (carriedItemState == carriedItemStates.light)
 										{
@@ -4152,7 +4152,7 @@ function scr_Player_States_Normal()
 								{
 									idlesprite = sprIdleSteepSlopeR;
 									idleblinksprite = sprIdleSteepSlopeRBlink;
-									if (carriedItem != carriedItems.none)
+									if ((carriedItem != carriedItems.none) or (playerAbility == playerAbilities.sword) or (playerAbility == playerAbilities.parasol) or (playerAbility == playerAbilities.hammer))
 									{
 										if (carriedItemState == carriedItemStates.light)
 										{

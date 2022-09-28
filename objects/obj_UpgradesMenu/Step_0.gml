@@ -38,6 +38,17 @@ if (!global.pause)
 			}
 			break;
 			
+			case "Propeller Wing":
+			if (global.cutterPropellerWingUpgradeEquipped)
+			{
+				global.cutterPropellerWingUpgradeEquipped = false;
+			}
+			else
+			{
+				global.cutterPropellerWingUpgradeEquipped = true;
+			}
+			break;
+			
 			case "Golden Flare":
 			if (global.beamGoldenFlareUpgradeEquipped)
 			{
