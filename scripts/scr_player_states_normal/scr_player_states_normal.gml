@@ -592,7 +592,7 @@ function scr_Player_States_Normal()
 								image_index = 0;
 				                state = playerStates.cutterDrop;
 							}
-							else if ((keyUpHold) and (cutterPropellerWingUpgrade))
+							else if ((keyUpHold && downInputBufferTimer > 0) and (cutterPropellerWingUpgrade))
 							{
 								if ((comboBuffer <= 0) && (finalCutterReadInput || finalCutterState == 0) && state == playerStates.normal && keyUpHold)
 								{
