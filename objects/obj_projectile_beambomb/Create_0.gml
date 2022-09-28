@@ -26,6 +26,7 @@ damageType = damageTypes.mysticBeam;
 character = 0;
 explode = false;
 didExplode = false;
+button_released = false;
 
 //Timers
 

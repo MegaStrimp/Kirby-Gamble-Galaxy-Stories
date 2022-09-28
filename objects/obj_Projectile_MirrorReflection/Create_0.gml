@@ -21,5 +21,6 @@ destroyableByWall = false;
 destroyableByEnemy = true;
 destroyableByObject = false;
 hurtsProjectile = false;
+canBeReflected = false;
 damageType = damageTypes.mirror;
 target = id;

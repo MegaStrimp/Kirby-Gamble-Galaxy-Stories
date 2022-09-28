@@ -23,6 +23,7 @@ hp = 16;
 dmg = 1;
 ability = playerAbilities.ufo;
 points = 800;
+hasGravity = false;
 hasXCollision = false;
 hasYCollision = false;
 hasXKnockback = false;

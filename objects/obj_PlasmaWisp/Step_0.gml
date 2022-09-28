@@ -25,7 +25,13 @@ event_inherited();
 
 if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 {
+	//Get Inhaled
+	
 	if (!parasol) scr_Object_Inhale(enemy);
+	
+	//Hurt Player
+	
+	scr_Enemy_HurtsPlayer(dmg);
 	/////// Always interrupt to the hurt attackState if you get hurt
 	if (hurt) attackState= 2
 	

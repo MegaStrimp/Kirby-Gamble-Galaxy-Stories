@@ -157,8 +157,8 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 				proj.destroyableByWall = false;
 				proj.destroyableByEnemy = false;
 				proj.destroyableByObject = false;
-				proj.hsp = lengthdir_x(3,attackDir - (45 * dirX));
-				proj.vsp = lengthdir_y(3,attackDir - (45 * dirX));
+				proj.hsp = lengthdir_x(3,attackDir - ((45 * dirX) * i));
+				proj.vsp = lengthdir_y(3,attackDir - ((45 * dirX) * i));
 			}
 			hsp = 0;
 			attackTimer = attackTimerMin;

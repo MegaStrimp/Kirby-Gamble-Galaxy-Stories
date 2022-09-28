@@ -42,12 +42,18 @@ var gamePaused = 1;
 if ((instance_exists(obj_Pause_Control)) and (obj_Pause_Control.gamePaused)) gamePaused = .5;
 
 global.hasInvinCandy = false;
+global.hasMintLeaf = false;
 with (obj_Player)
 {
 	if (hasInvinCandy)
 	{
 		global.hasInvinCandy = true;
 		if (!audio_is_playing(mus_InvincibilityCandy)) scr_PlayMusic(false,false,mus_InvincibilityCandy,0,true);
+	}
+	
+	if (hasMintLeaf)
+	{
+		global.hasMintLeaf = true;
 	}
 }
 

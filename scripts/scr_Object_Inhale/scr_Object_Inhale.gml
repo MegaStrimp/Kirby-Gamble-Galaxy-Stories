@@ -28,6 +28,7 @@ function scr_Object_Inhale(argument0)
 				var shroom = instance_create_depth(x - 1,y - 9,depth - 1,obj_CappyShroom);
 				shroom.owner = id;
 				shroom.sprite_index = sprShroom;
+				shroom.paletteIndex = paletteIndex;
 				thrown = false;
 				attack = false;
 				attackStopTimer = -1;
@@ -87,6 +88,10 @@ function scr_Object_Inhale(argument0)
 					
 					case obj_InvincibilityCandy:
 					eatMe.inhaleType = 5;
+					break;
+					
+					case obj_MintLeaf:
+					eatMe.inhaleType = 6;
 					break;
 				}
 				

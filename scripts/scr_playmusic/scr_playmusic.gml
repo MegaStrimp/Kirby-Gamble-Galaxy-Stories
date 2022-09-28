@@ -107,8 +107,8 @@ function scr_PlayMusic(argument0,argument1,argument2,argument3,argument4)
 			global.musicIntroComposer = "Light MetaS";
 			break;
 			
-			case mus_Cellphone: //
-			global.musicIntroTitle = "Cellphone";
+			case mus_Cellphone:
+			global.musicIntroTitle = "You Have A Call";
 			global.musicIntroComposer = "Tater-Tot Tunes";
 			break;
 			
@@ -130,6 +130,11 @@ function scr_PlayMusic(argument0,argument1,argument2,argument3,argument4)
 			case mus_InvincibilityCandy:
 			global.musicIntroTitle = "Invincibility";
 			global.musicIntroComposer = "Rhey";
+			break;
+			
+			case mus_NuclearSpelunky:
+			global.musicIntroTitle = "Nuclear Spelunky";
+			global.musicIntroComposer = "Tucker Hux Murray";
 			break;
 		}
 		

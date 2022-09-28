@@ -44,6 +44,10 @@ switch (upgradeTitle[selection])
 	if (global.cutterMotorCutterUpgradeEquipped) activeText = "Active";
 	break;
 	
+	case "Propeller Wing":
+	if (global.cutterPropellerWingUpgradeEquipped) activeText = "Active";
+	break;
+	
 	case "Golden Flare":
 	if (global.beamGoldenFlareUpgradeEquipped) activeText = "Active";
 	break;
@@ -97,5 +101,5 @@ switch (upgradeTitle[selection])
 	break;
 }
 scr_Draw_Text_Color_Outline(room_width / 2,192,upgradeTitle[selection] + " - " + activeText,-1,-1,col1,col2,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
-scr_Draw_Text_Color_Outline(room_width / 2,222,text,-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+scr_Draw_Text_Color_Outline(room_width / 2,222,text,-1,350,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 draw_set_halign(fa_left);

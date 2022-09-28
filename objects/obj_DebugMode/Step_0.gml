@@ -1247,6 +1247,21 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		break;
 		#endregion
 		
+		#region Mint Leaf
+		case debugObject.mintLeaf:
+		debugSprite = spr_MintLeaf;
+		debugSpriteSelectedMax = 0;
+		debugIndex = 0;
+		debugStateSelectedMax = 0;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var debugObj = instance_create_layer(x,y,"Environment",obj_MintLeaf);
+			debugObj.image_xscale = debugXScale;
+			debugObj.image_yscale = debugYScale;
+		}
+		break;
+		#endregion
+		
 		#region 1-Up
 		case debugObject.oneUp:
 		debugSprite = spr_1Up;
@@ -5080,6 +5095,59 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			debugObj.sprite_index = sprIdle;
 			debugObj.image_xscale = debugXScale;
 			debugObj.image_yscale = debugYScale;
+		}
+		break;
+		#endregion
+		
+		#region Plasma Wisp
+		case debugObject.plasmaWisp:
+		debugSpriteSelectedMax = 0;
+		switch (debugSpriteSelected)
+		{
+			#region Normal
+			case 0:
+			var sprIdle = spr_PlasmaWisp_Normal_Idle;
+			var sprCharge = spr_PlasmaWisp_Normal_Charge;
+			var sprAttack = spr_PlasmaWisp_Normal_Shoot;
+			var sprAttackBasic = spr_PlasmaWisp_Normal_AttackBasic;
+			var sprAttackRecharge = spr_PlasmaWisp_Normal_AttackRecharge;
+			var sprHurt = spr_PlasmaWisp_Normal_Hurt;
+			debugPaletteNumberMax = 0;
+			switch (debugPaletteNumber)
+			{
+				case 0:
+				debugPaletteIndex = spr_PlasmaWisp_Normal_Palette_Plasma;
+				break;
+				
+				default:
+				debugPaletteIndex = spr_PlasmaWisp_Normal_Palette_Plasma;
+				break;
+			}
+			break;
+			#endregion
+		}
+		debugSprite = sprIdle;
+		debugIndex = 0;
+		debugStateSelectedMax = 0;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var debugObj = instance_create_layer(x,y,"Enemies",obj_PlasmaWisp);
+			debugObj.character = debugSpriteSelected;
+			debugObj.sprIdle = sprIdle;
+			debugObj.sprCharge = sprCharge;
+			debugObj.sprAttack = sprAttack;
+			debugObj.sprAttackBasic = sprAttackBasic;
+			debugObj.sprAttackRecharge = sprAttackRecharge;
+			debugObj.sprHurt = sprHurt;
+			debugObj.sprite_index = sprIdle;
+			debugObj.paletteIndex = debugPaletteIndex;
+			debugObj.image_xscale = debugXScale;
+			debugObj.dirX = debugXScale;
+			debugObj.walkDirX = debugXScale;
+			debugObj.image_yscale = debugYScale;
+			debugObj.dirY = debugYScale;
+			debugObj.walkDirY = debugYScale;
+			debugObj.state = debugStateSelected;
 		}
 		break;
 		#endregion

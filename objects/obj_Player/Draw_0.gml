@@ -50,7 +50,7 @@ if (death)
 	}
 }
 
-if (carriedItem != carriedItems.none)
+if ((carriedItem != carriedItems.none) or (playerAbility == playerAbilities.sword) or (playerAbility == playerAbilities.parasol) or (playerAbility == playerAbilities.hammer))
 {
 	var handIndex = scr_Player_Hand(playerCharacter);
 	if ((global.shaders) and (((sprite_index != sprStoneAttack1Common) and (sprite_index != sprStoneAttack1Uncommon) and (sprite_index != sprStoneAttack1Rare)) or (((sprite_index = spr_Kirby_Normal_Stone_Attack1_Common1) or (sprite_index = spr_Kirby_Normal_Stone_Attack1_Common2)) and (image_index = 0)) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common1) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common2))) pal_swap_set(paletteIndex,paletteFlash,false);
@@ -214,11 +214,10 @@ if ((playerIsHelper) and (helperTimer != -1))
 }
 
 //Debug Text
-
 /*
 draw_set_color(c_black);
-draw_text(x,y - 12,string(global.hatPaletteBeamKSSUP1));
-draw_text(x,y - 24,string(abilityHatPaints.beam_kssu_bitcrushed));*/
+draw_text(x,y - 12,"att - " + string(keyAttackHold));
+draw_text(x,y - 24,"jump - " + string(keyJumpHold));
 //draw_text(x,y - 24,string(finalCutterState));
 //draw_text(x,y - 24,string(fireDashDir));
 //draw_text(x+20,y - 24,string(attackTimer));

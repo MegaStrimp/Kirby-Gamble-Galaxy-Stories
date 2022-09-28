@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_Projectile_StoneFistMask",
   "spriteId": {
-    "name": "spr_24Square_Mask",
-    "path": "sprites/spr_24Square_Mask/spr_24Square_Mask.yy",
+    "name": "spr_StoneFist_Mask",
+    "path": "sprites/spr_StoneFist_Mask/spr_StoneFist_Mask.yy",
   },
   "solid": false,
   "visible": false,
