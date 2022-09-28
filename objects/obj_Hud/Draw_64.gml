@@ -283,10 +283,7 @@ draw_sprite_part_ext(spr_Hud_Healthbar_Kirby,0,0,0,healthbarWidth,healthbarHeigh
 //}
 
 healWidth = (sprite_get_width(spr_Hud_Healthbar_Kirby)*0.01)*(((global.healP1Mod-global.healthP1)/global.healthP1Max)*100);
-//healStart = (sprite_get_width(spr_Hud_Healthbar_Kirby)*0.01)*((min(global.healP1Mod,healthbarWidth)/global.healthP1Max)*100);
-//healStart = (sprite_get_width(spr_Hud_Healthbar_Kirby)*0.01)*((min(healthbarWidth-healWidth,healthbarWidth)/global.healthP1Max)*100);
 healStart = min(healthbarWidth+(healWidth*sign(global.healP1Mod)),healthbarWidth);
-//healthbarMaxWidth = sprite_get_width(spr_Hud_Healthbar_Kirby);
 healthbarHeight = sprite_get_height(spr_Hud_Healthbar_Kirby);
 
 healBarColor = c_teal;
@@ -310,8 +307,8 @@ if(global.healP1Mod != global.healthP1){
 	
 draw_sprite_part_ext(spr_Hud_HealthbarHeal_Kirby,0,healStart,0,sign(healWidth)*healWidth,healthbarHeight,(hudX + 25)+healStart,hudY - 9,1,1,healBarColor,drawAlpha);
 
-draw_text(hudX + 25,hudY - 32,string(sign(healWidth)*healWidth));
-draw_text(hudX + 25,hudY - 52,string(healWidth)+"/"+string(healthbarWidth));
+//draw_text(hudX + 25,hudY - 32,string(sign(healWidth)*healWidth));
+//draw_text(hudX + 25,hudY - 52,string(healWidth)+"/"+string(healthbarWidth));
 
 if (global.shaders) pal_swap_reset();
 
@@ -429,7 +426,9 @@ draw_sprite_part_ext(spr_Hud_Healthbar_Kirby,0,0,0,healthbarWidth,healthbarHeigh
 //healWidth = (sprite_get_width(spr_Hud_Healthbar_Kirby)*0.01)*(((global.healthP2/global.healthP2Max)*100)-((global.healP2Mod/global.healthP2Max)*100));
 //healStart = (sprite_get_width(spr_Hud_Healthbar_Kirby)*0.01)*((min(global.healP2Mod,healthbarWidth)/global.healthP2Max)*100);
 healWidth = (sprite_get_width(spr_Hud_Healthbar_Kirby)*0.01)*(((global.healthP2/global.healthP2Max)*100)-((global.healP2Mod/global.healthP2Max)*100));
-healStart = (sprite_get_width(spr_Hud_Healthbar_Kirby)*0.01)*((min(global.healP2Mod,healthbarWidth)/global.healthP2Max)*100);
+//healStart = (sprite_get_width(spr_Hud_Healthbar_Kirby)*0.01)*((min(global.healP2Mod,healthbarWidth)/global.healthP2Max)*100);
+//healWidth = (sprite_get_width(spr_Hud_Healthbar_Kirby)*0.01)*(((global.healP1Mod-global.healthP1)/global.healthP1Max)*100);
+healStart = min(healthbarWidth+(healWidth*sign(global.healP2Mod)),healthbarWidth);
 healthbarHeight = sprite_get_height(spr_Hud_Healthbar_Kirby);
 
 if(global.healP2Mod != global.healthP2){
