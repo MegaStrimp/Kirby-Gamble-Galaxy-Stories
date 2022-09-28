@@ -29,11 +29,7 @@ function scr_Enemy_HurtsPlayer(argument0)
 			
 			//Main
 			
-			if (collidedPlayer.state = playerStates.float)
-			{
-				
-			}
-			else
+			if (collidedPlayer.state != playerStates.float)
 			{
 				collidedPlayer.sprite_index = collidedPlayer.sprHurt;
 				collidedPlayer.image_index = irandom_range(0,collidedPlayer.image_number);
