@@ -13,8 +13,8 @@ if (setupTimer == 0)
         case 0:
         sprWalk = spr_CapsuleJ2_Normal_Walk;
         sprDashStart = spr_CapsuleJ2_Normal_DashStart;
-        sprHover1 = spr_CapsuleJ2_Normal_Hover1;
-        sprHover2 = spr_CapsuleJ2_Normal_Hover2;
+		sprHoverRise = spr_CapsuleJ2_Normal_Hover2;
+		sprHoverFall = spr_CapsuleJ2_Normal_Hover1;
         sprJetDash = spr_CapsuleJ2_Normal_JetDash;
         sprHurt = spr_CapsuleJ2_Normal_Hurt;
         break;
@@ -25,7 +25,16 @@ if (setupTimer == 0)
 
 event_inherited();
 
-if((!global.cutscene) and (!global.pause) and (pausedInCutscenes)){
+if((!global.cutscene) and (!global.pause) and (pausedInCutscenes))
+{
+	//Get Inhaled
+	
+	if (!parasol) scr_Object_Inhale(enemy);
+	
+	//Hurt Player
+	
+	scr_Enemy_HurtsPlayer(dmg);
+	
 	var playerObj = instance_find(tracking_obj,0);
 	
 	action_timer = clamp(action_timer-1,0,9999);
@@ -151,7 +160,11 @@ if((!global.cutscene) and (!global.pause) and (pausedInCutscenes)){
 	//y += vsp;
 	//}
 
-	// Animations handled here
+	//Animation
+	
+	image_speed = 1;
+	jet_flametime++;
+	
 	switch(current_action){
 		case enemyAttacks.capsuleJ2_hovering:
 			sprite_index = sprHoverRise;
@@ -180,4 +193,8 @@ if((!global.cutscene) and (!global.pause) and (pausedInCutscenes)){
 			}
 			break;
 	}
+}
+else
+{
+	image_speed = 0;
 }

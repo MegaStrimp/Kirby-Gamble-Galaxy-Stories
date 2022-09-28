@@ -13,7 +13,7 @@ spdMax = 2;
 //Other Variables
 
 sprHurt = -1;
-points = 10;
+points = 2000;
 ability = playerAbilities.none;
 enemy = false;
 heavy = false;

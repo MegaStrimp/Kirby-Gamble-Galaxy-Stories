@@ -87,8 +87,23 @@ if ((sprite_index == sprFlap) or (sprite_index == sprItemCarryLightFlap))
 if ((floatSpit) and ((sprite_index == sprFloatSpit) or (sprite_index == sprItemCarryLightFloatSpit)))
 {
 	floatSpit = false;
-	jumpspeed = jumpspeedNormal;
-	state = playerStates.normal;
+	if (!hasMintLeaf)
+	{
+		jumpspeed = jumpspeedNormal;
+		state = playerStates.normal;
+	}
+	else
+	{
+		if (carriedItem == carriedItems.none)
+		{
+			sprite_index = sprFloat;
+		}
+		else
+		{
+			sprite_index = sprItemCarryLightFloat;
+		}
+		image_index = 0;
+	}
 }
 
 //Inhale Ready

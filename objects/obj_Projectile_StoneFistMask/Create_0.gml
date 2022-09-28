@@ -18,5 +18,3 @@ canBeReflected = false;
 state = 0;
 owner = id;
 enemy = false;
-xPos = 0;
-yPos = 0;
