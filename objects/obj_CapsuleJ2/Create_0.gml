@@ -5,11 +5,7 @@ event_inherited();
 
 randomize();
 
-//active = false; // whether or not the enemy is active. Turns true when the player gets close (ie, J2 appears in the camera view relative to the player)
-
-//current_action = "hovering"; // possible actions: "hovering", "dashstart", "jetdash" (other strings use the default walking case)
 current_action = enemyAttacks.capsuleJ2_hovering; 
-//current_action = "dashstart";
 
 // Physics
 

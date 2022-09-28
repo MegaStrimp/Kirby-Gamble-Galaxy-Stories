@@ -20,6 +20,7 @@ destroyOutsideView = false;
 canBeReflected = false;
 state = 0;
 owner = id;
+abilityType = damageTypes.mirror;
 damageType = damageTypes.mirror;
 enemy = false;
 character = 0;

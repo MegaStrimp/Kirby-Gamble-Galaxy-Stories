@@ -11,14 +11,24 @@ goBack = false;
 //Upgrades
 
 var i = 0;
-
+/*
 upgradeTitle[i] = "Motor Cutter";
 upgradeDescription[i] = "Buffs Cutter Ability";
 upgradeUnlocked[i] = global.cutterMotorCutterUpgradeUnlocked;
 upgradeUnlockMethod[i] = "???";
 upgradeColor[i] = make_color_rgb(255,255,102);
 upgradeStar[i] = spr_AbilityStar_Cutter;
-upgradeItem[i] = spr_Menu_Upgrades_GoldenFlare;
+upgradeItem[i] = spr_Menu_Upgrades_MotorCutter;
+upgradeNumber[i] = i;
+i += 1;
+*/
+upgradeTitle[i] = "Propeller Wing";
+upgradeDescription[i] = "[Up + Attack] to execute a weaker Final Cutter!";
+upgradeUnlocked[i] = global.cutterPropellerWingUpgradeUnlocked;
+upgradeUnlockMethod[i] = "???";
+upgradeColor[i] = make_color_rgb(255,255,102);
+upgradeStar[i] = spr_AbilityStar_Cutter;
+upgradeItem[i] = spr_Menu_Upgrades_PropellerWing;
 upgradeNumber[i] = i;
 i += 1;
 

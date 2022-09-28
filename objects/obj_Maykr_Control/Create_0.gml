@@ -118,6 +118,7 @@ enum maykrObjects
 	flamer,
 	chuckie,
 	walky,
+	plasmaWisp,
 	cerulean,
 	enemiesEnd,
 	
@@ -159,7 +160,7 @@ enum maykrWindows
 
 #region Backgrounds
 maykrBackgroundList = ds_list_create();
-ds_list_add(maykrBackgroundList,bg_GreenGreens1);
+ds_list_add(maykrBackgroundList,bg_GreenGreens1_Full);
 ds_list_add(maykrBackgroundList,bg_GreenGreens2);
 ds_list_add(maykrBackgroundList,bg_BattleshipHalberd_Sky);
 ds_list_add(maykrBackgroundList,bg_AsteroidFields_Sky);

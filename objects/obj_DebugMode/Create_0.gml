@@ -54,6 +54,7 @@ enum debugObject
 	pepBrew,
 	maximTomato,
 	invinciblityCandy,
+	mintLeaf,
 	oneUp,
 	backgroundEnvironment,
 	fallingAsteroid,
@@ -113,6 +114,7 @@ enum debugObject
 	chuckie,
 	walky,
 	mysticBlock,
+	plasmaWisp,
 	cerulean,
 	
 	IMSICKOFTHISGUY,

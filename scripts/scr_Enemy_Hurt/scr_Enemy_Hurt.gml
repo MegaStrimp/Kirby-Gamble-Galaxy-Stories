@@ -26,15 +26,226 @@ function scr_Enemy_Hurt(argument0,argument1)
 		{
 			targetObj.hurtTimer = targetObj.hurtTimerMax;
 		}
-		if ((targetObj.canGetHealthbar) and ((!targetObj.isMiniBoss) or (!targetObj.isBoss))) global.healthbarMarkedEnemy = targetObj.id;
+		if ((global.enemyHealthbars) and (targetObj.canGetHealthbar) and ((!targetObj.isMiniBoss) or (!targetObj.isBoss))) global.healthbarMarkedEnemy = targetObj.id;
 		targetObj.hp -= hurtSource.dmg;
+		
+		#region Hit Numbers
 		if (global.hitNumbers)
 		{
 			var hitNumber = instance_create_depth(hurtSource.x,hurtSource.y,-900,obj_HitNumbers);
 			hitNumber.number = hurtSource.dmg;
 			hitNumber.hsp = random_range(-1,1);
 			hitNumber.vsp = -2;
+			
+			switch (hurtSource.abilityType)
+			{
+				case playerAbilities.cutter:
+				hitNumber.splitAmount = 2;
+				break;
+	
+				case playerAbilities.beam:
+				hitNumber.shake = 1;
+				hitNumber.flashColor[0] = make_color_rgb(255,255,255);
+				hitNumber.flashColor[1] = make_color_rgb(255,160,100);
+				hitNumber.flashTimerMax = 3;
+				hitNumber.flashTimer = hitNumber.flashTimerMax;
+				break;
+	
+				case playerAbilities.mysticBeam:
+				hitNumber.shake = 1;
+				hitNumber.flashColor[0] = make_color_rgb(255,255,255);
+				hitNumber.flashColor[1] = make_color_rgb(210,130,250);
+				hitNumber.flashTimerMax = 3;
+				hitNumber.flashTimer = hitNumber.flashTimerMax;
+				break;
+	
+				case playerAbilities.stone:
+				hitNumber.shake = 2;
+				break;
+	
+				case playerAbilities.ufo:
+				hitNumber.shake = 1;
+				hitNumber.flashColor[0] = make_color_rgb(255,255,255);
+				hitNumber.flashColor[1] = make_color_rgb(255,145,240);
+				hitNumber.flashTimerMax = 3;
+				hitNumber.flashTimer = hitNumber.flashTimerMax;
+				break;
+	
+				case playerAbilities.mirror:
+				hitNumber.canChangeColor = true;
+				hitNumber.splitAmount = 2;
+				hitNumber.redTarget = 130;
+				hitNumber.greenTarget = 175;
+				hitNumber.blueTarget = 240;
+				break;
+	
+				case playerAbilities.ninja:
+				hitNumber.canChangeColor = true;
+				hitNumber.splitAmount = 2;
+				hitNumber.redTarget = 75;
+				hitNumber.greenTarget = 75;
+				hitNumber.blueTarget = 75;
+				break;
+	
+				case playerAbilities.bomb:
+				hitNumber.shake = 1;
+				hitNumber.flashColor[0] = make_color_rgb(255,255,255);
+				hitNumber.flashColor[1] = make_color_rgb(150,150,150);
+				hitNumber.flashTimerMax = 3;
+				hitNumber.flashTimer = hitNumber.flashTimerMax;
+				break;
+	
+				case playerAbilities.fire:
+				hitNumber.canChangeColor = true;
+				hitNumber.redTarget = 255;
+				hitNumber.greenTarget = 80;
+				hitNumber.blueTarget = 80;
+				break;
+	
+				case playerAbilities.mysticFire:
+				hitNumber.canChangeColor = true;
+				hitNumber.redTarget = 200;
+				hitNumber.greenTarget = 100;
+				hitNumber.blueTarget = 255;
+				break;
+	
+				case playerAbilities.ice:
+				hitNumber.flashColor[0] = make_color_rgb(255,255,255);
+				hitNumber.flashColor[1] = make_color_rgb(120,255,255);
+				hitNumber.flashTimerMax = 3;
+				hitNumber.flashTimer = hitNumber.flashTimerMax;
+				break;
+	
+				case playerAbilities.spark:
+				hitNumber.flashColor[0] = make_color_rgb(255,255,255);
+				hitNumber.flashColor[1] = make_color_rgb(170,255,135);
+				hitNumber.flashTimerMax = 3;
+				hitNumber.flashTimer = hitNumber.flashTimerMax;
+				break;
+	
+				case playerAbilities.yoyo:
+				hitNumber.angleSpd = 4;
+				break;
+	
+				case playerAbilities.wheel:
+				hitNumber.shake = 1;
+				hitNumber.angleSpd = 4;
+				break;
+	
+				case playerAbilities.artist:
+				hitNumber.flashColor[0] = make_color_rgb(255,255,255);
+				hitNumber.flashColor[1] = make_color_rgb(255,100,100);
+				hitNumber.flashColor[2] = make_color_rgb(255,226,102);
+				hitNumber.flashColor[3] = make_color_rgb(102,255,211);
+				hitNumber.flashTimerMax = 1;
+				hitNumber.flashTimer = hitNumber.flashTimerMax;
+				break;
+	
+				case playerAbilities.fighter:
+				hitNumber.shake = 1;
+				hitNumber.canChangeColor = true;
+				hitNumber.redTarget = 255;
+				hitNumber.greenTarget = 140;
+				hitNumber.blueTarget = 140;
+				break;
+	
+				case playerAbilities.suplex:
+				hitNumber.shake = 1;
+				hitNumber.angleSpd = 4;
+				break;
+	
+				case playerAbilities.wing:
+				hitNumber.hasGravity = false;
+				break;
+	
+				case playerAbilities.jet:
+				hitNumber.shake = 1;
+				hitNumber.canChangeColor = true;
+				hitNumber.redTarget = 74;
+				hitNumber.greenTarget = 186;
+				hitNumber.blueTarget = 255;
+				break;
+	
+				case playerAbilities.sword:
+				hitNumber.splitAmount = 2;
+				break;
+	
+				case playerAbilities.parasol:
+				hitNumber.hasGravity = false;
+				break;
+	
+				case playerAbilities.hammer:
+				hitNumber.shake = 2;
+				break;
+	
+				case playerAbilities.bell:
+				hitNumber.shake = 1;
+				hitNumber.flashColor[0] = make_color_rgb(255,255,255);
+				hitNumber.flashColor[1] = make_color_rgb(255,255,140);
+				hitNumber.flashTimerMax = 3;
+				hitNumber.flashTimer = hitNumber.flashTimerMax;
+				break;
+	
+				case playerAbilities.water:
+				hitNumber.canChangeColor = true;
+				hitNumber.redTarget = 110;
+				hitNumber.greenTarget = 200;
+				hitNumber.blueTarget = 255;
+				break;
+	
+				case playerAbilities.sleep:
+				hitNumber.canChangeColor = true;
+				hitNumber.redTarget = 245;
+				hitNumber.greenTarget = 158;
+				hitNumber.blueTarget = 255;
+				break;
+	
+				case playerAbilities.scan:
+				hitNumber.flashColor[0] = make_color_rgb(255,255,255);
+				hitNumber.flashColor[1] = make_color_rgb(0,180,20);
+				hitNumber.flashTimerMax = 3;
+				hitNumber.flashTimer = hitNumber.flashTimerMax;
+				break;
+	
+				case playerAbilities.crash:
+				hitNumber.shake = 3;
+				hitNumber.clampY = true;
+				break;
+	
+				case playerAbilities.mic:
+				hitNumber.shake = 3;
+				hitNumber.clampY = true;
+				break;
+	
+				case playerAbilities.chef:
+				hitNumber.shake = 3;
+				hitNumber.clampY = true;
+				break;
+	
+				case playerAbilities.ultraSword:
+				hitNumber.shake = 3;
+				hitNumber.clampY = true;
+				hitNumber.flashColor[0] = make_color_rgb(255,255,255);
+				hitNumber.flashColor[1] = make_color_rgb(255,100,100);
+				hitNumber.flashColor[2] = make_color_rgb(255,226,102);
+				hitNumber.flashColor[3] = make_color_rgb(102,255,211);
+				hitNumber.flashTimerMax = 1;
+				break;
+	
+				case playerAbilities.cosmicBlade:
+				hitNumber.shake = 2;
+				hitNumber.flashColor[0] = make_color_rgb(255,255,255);
+				hitNumber.flashColor[1] = make_color_rgb(235,193,242);
+				hitNumber.flashColor[2] = make_color_rgb(227,128,242);
+				hitNumber.flashColor[3] = make_color_rgb(217,58,242);
+				hitNumber.flashColor[4] = make_color_rgb(227,128,242);
+				hitNumber.flashColor[5] = make_color_rgb(235,193,242);
+				hitNumber.flashTimerMax = 1;
+				break;
+			}
 		}
+		#endregion
+		
 		if (targetObj.hp <= 0)
 		{
 			switch (hurtSource.abilityType)

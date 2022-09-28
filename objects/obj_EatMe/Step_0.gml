@@ -185,6 +185,28 @@ if (!global.pause)
 				audio_play_sound(snd_1Up,0,false);
 				global.playerLives += 1;
 			}
+			else if (inhaleType == 5)
+			{
+				if (owner.player == 0)
+				{
+					global.invinCandyTimerP1 = global.invinCandyTimerP1Max;
+				}
+				else
+				{
+					global.invinCandyTimerP2 = global.invinCandyTimerP2Max;
+				}
+			}
+			else if (inhaleType == 6)
+			{
+				if (owner.player == 0)
+				{
+					global.mintLeafTimerP1 = global.mintLeafTimerP1Max;
+				}
+				else
+				{
+					global.mintLeafTimerP2 = global.mintLeafTimerP2Max;
+				}
+			}
 		    instance_destroy();
 		}
 	}

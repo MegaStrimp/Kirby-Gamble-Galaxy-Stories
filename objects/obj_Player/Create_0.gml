@@ -269,6 +269,7 @@ sprDeath = spr_Kirby_Normal_Death;
 //Upgrades
 
 cutterMotorCutterUpgrade = false;
+cutterPropellerWingUpgrade = false;
 beamGoldenFlareUpgrade = false;
 mysticBeamVortexInAJarUpgrade = false;
 stoneRockCandyUpgrade = false;
@@ -333,6 +334,7 @@ duckJumpCharge = 0;
 duckJumpChargeMax = 45;
 duckSlide = false;
 scale = 1;
+targetScale = 1;
 scaleExX = 0;
 scaleExY = 0;
 scaleExSpd = .1;
@@ -455,6 +457,7 @@ warpStarIndex = -1;
 downHeld = 0;
 hasInvinCandy = false;
 invinCandyMask = -1;
+hasMintLeaf = false;
 mixAbilities = -1;
 
 //Inputs
@@ -479,6 +482,10 @@ invincibleFlashTimer = -1;
 invincibleFlashTimerMax = 2;
 invinCandyParticleTimer = -1;
 invinCandyParticleTimerMax = 5;
+mintLeafParticleTimer = -1;
+mintLeafParticleTimerMax = 15;
+mintLeafAttackTimer = -1;
+mintLeafAttackTimerMax = 20;
 jumpLimitTimer = -1;
 jumpLimitTimerMax = 15;
 hspLimitTimer = -1;

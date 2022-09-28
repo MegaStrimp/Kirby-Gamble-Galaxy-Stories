@@ -29,7 +29,7 @@ sprBossText = spr_Healthbar_Boss_Text_WhispyWoods;
 #endregion
 
 #region Other Variables
-hp = 550;
+hp = 700;
 dmg = 1;
 points = 200;
 canShakeX = false;

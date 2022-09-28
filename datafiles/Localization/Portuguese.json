@@ -5,14 +5,14 @@
         {
             "Title": "Kirby",
             
-            "Description": "Vindo da brisa primaverial, é o Kirby! Sugue inimigos e copie seus poderes. Uma galáxia se estende além dos seus sonhos mais loucos, então é hora de seguir em frente!"
+            "Description": "Vindo da brisa primaveril, é o Kirby! Sugue inimigos e copie seus poderes. Uma galáxia se estende além dos seus sonhos mais loucos, então é hora de seguir em frente!"
         },
         
         "Gamble":
         {
             "Title": "Gamble",
             
-            "Description": "Esse novo amigo do espaço sideral veio a Popstar para pedir a Kirby uma mãozinha para derrotar o Dobrador de Fluxo Cósmico! Gamble usa dados, cartas, roletas e energia mágica para derrotar o inimigo. Dobre-os!"
+            "Description": "Esse novo amigo do espaço sideral veio ao planeta Pop para pedir a Kirby uma mãozinha para derrotar o Dobrador de Fluxo Cósmico! Gamble usa dados, cartas, roletas e energia mágica para derrotar o inimigo. Dobre-os!"
         },
         
         "Meta Knight":
@@ -26,7 +26,7 @@
         {
             "Title": "Ajudante",
             
-            "Description": "Pessoas de todo o mundo se uniram para ajudar Kirby em sua aventura! Jogue com uma infinidade de criaturas de toda a Galáxia Gamble, dos atarracados Waddle Dees aos invencíveis Goldos!"
+            "Description": "Pessoas de todo o mundo se uniram para ajudar Kirby em sua aventura! Jogue com uma infinidade de criaturas de toda a Galáxia Gamble, dos atarracados Waddle Dees aos invencíveis Espinhaldos!"
         },
         
         "Gooey":
@@ -45,9 +45,9 @@
         
         "Keeby":
         {
-            "Title": "Keeby",
+            "Title": "Kiiby",
             
-            "Description": "Apesar de não ser tão aventureiro quanto seu rival amistoso, Keeby parecia ansioso para juntar-se a ele em sua missão! Será que ele conseguir tirar uma folga se sua carreira de golfe?"
+            "Description": "Apesar de não ser tão aventureiro quanto seu rival amistoso, Kiiby parecia ansioso para juntar-se a ele em sua missão! Será que ele vai conseguir tirar uma folga de sua carreira de golfe?"
         }
     },
 	
@@ -55,217 +55,217 @@
     {
         "Cutter":
         {
-            "Title": "",
+            "Title": "Gume",
             
-            "Description": ""
+            "Description": "Empunhe um bumerangue afiado para cortar e atravessar os inimigos!"
         },
 		
 		"Beam":
         {
-            "Title": "",
+            "Title": "Raio",
             
-            "Description": ""
+            "Description": "Invoque raios de eletricidade e agite-os por aí. Carregue para atirar à distância!"
         },
 		
 		"Mystic Beam":
         {
-            "Title": "",
+            "Title": "Raio Místico",
             
-            "Description": ""
+            "Description": "O poder do fluxo transformou o nosso Raio no Raio Místico! O escudo de raio também funciona como um ataque!"
         },
 		
 		"Stone":
         {
-            "Title": "",
+            "Title": "Pedra",
             
-            "Description": ""
+            "Description": "Transforme-se em uma pedra e torne-se impenetrável! Mas o que são essas estátuas estranhas?"
         },
 		
 		"Ufo":
         {
-            "Title": "",
+            "Title": "OVNI",
             
-            "Description": ""
+            "Description": "Transforme-se em uma nave alienígena e atire em inimigos com lasers, pew pew!"
         },
 		
 		"Mirror":
         {
-            "Title": "",
+            "Title": "Espelho",
             
-            "Description": ""
+            "Description": "Use o poder de reflexos para mandar ataques de inimigos de volta a eles!"
         },
 		
 		"Ninja":
         {
-            "Title": "",
+            "Title": "Ninja",
             
-            "Description": ""
+            "Description": "Torne-se um assassino das sombras e ataque sorrateiramente!"
         },
 		
 		"Bomb":
         {
-            "Title": "",
+            "Title": "Bomba",
             
-            "Description": ""
+            "Description": "Pegue uma bomba e lance ela, mas não espere por muito tempo!"
         },
 		
 		"Fire":
         {
-            "Title": "",
+            "Title": "Fogo",
             
-            "Description": ""
+            "Description": "Queime a competição com labaredas poderosas, aii!"
         },
 		
 		"Mystic Fire":
         {
-            "Title": "",
+            "Title": "Fogo Místico",
             
-            "Description": ""
+            "Description": "O poder do fluxo fez o seu Fogo ficar mais forte! Não precisa mais mirar, então bote seus inimigos pra queimar!"
         },
 		
 		"Ice":
         {
-            "Title": "",
+            "Title": "Gelo",
             
-            "Description": ""
+            "Description": "Patine por aí e congele adversários com seu sopro congelante!"
         },
 		
 		"Spark":
         {
-            "Title": "",
+            "Title": "Faísca",
             
-            "Description": ""
+            "Description": "Aperte rapidamente as setas direcionais para carregar eletricidade e eletrocutar inimigos!"
         },
 		
 		"Yoyo":
         {
-            "Title": "",
+            "Title": "Iôiô",
             
-            "Description": ""
+            "Description": "Entre em ação e agite um ioiô com poder estiloso!"
         },
 		
 		"Wheel":
         {
-            "Title": "",
+            "Title": "Roda",
             
-            "Description": ""
+            "Description": "Acelere por multidões de inimigos ao mesmo tempo que é quase invencível, vrum vrum!"
         },
 		
 		"Artist":
         {
-            "Title": "",
+            "Title": "Artista",
             
-            "Description": ""
+            "Description": "Bata em inimigos com seu pincel ou pinte um exército de desenhos para lutar com você!"
         },
 		
 		"Fighter":
         {
-            "Title": "",
+            "Title": "Lutador",
             
-            "Description": ""
+            "Description": "Torne-se um mestre das artes marciais e nocauteie seus oponentes. Ka-pow!"
         },
 		
 		"Suplex":
         {
-            "Title": "",
+            "Title": "Combate",
             
-            "Description": ""
+            "Description": "Canalize o espírito da luta-livre agarrando inimigos e jogando eles por aí!"
         },
 		
 		"Wing":
         {
-            "Title": "",
+            "Title": "Asas",
             
-            "Description": ""
+            "Description": "Voe pelos céus graciosamente. Acelere por inimigos ou mande rajadas de penas contra eles!"
         },
 		
 		"Jet":
         {
-            "Title": "",
+            "Title": "Jato",
             
-            "Description": ""
+            "Description": "Carregue o motor para avançar em velocidades supersônicas!"
         },
 		
 		"Sword":
         {
-            "Title": "",
+            "Title": "Espada",
             
-            "Description": ""
+            "Description": "Empunhe uma lâmina afiada para fatiar e perfurar todo tipo de coisa!"
         },
 		
 		"Parasol":
         {
-            "Title": "",
+            "Title": "Sombrinha",
             
-            "Description": ""
+            "Description": "Proteja-se de objetos em queda, bata em inimigos e até mesmo caia lentamente!"
         },
 		
 		"Hammer":
         {
-            "Title": "",
+            "Title": "Martelo",
             
-            "Description": ""
+            "Description": "Esmague inimigos com golpes extremamente poderosos de um martelo, ai!"
         },
 		
 		"Bell":
         {
-            "Title": "",
+            "Title": "Sinos",
             
-            "Description": ""
+            "Description": "Blim blim! Empunhe esses dois instrumentos barulhentos para compor uma música destrutiva!"
         },
 		
 		"Water":
         {
-            "Title": "",
+            "Title": "Água",
             
-            "Description": ""
+            "Description": "Dobre a água à sua vontade para lavar inimigos. Tá dando onda!"
         },
 		
 		"Sleep":
         {
-            "Title": "",
+            "Title": "Sono",
             
-            "Description": ""
+            "Description": "Uaaaah! Mais cinco minutos... zzzzzzzzzzz..."
         },
 		
 		"Scan":
         {
-            "Title": "",
+            "Title": "Scanner",
             
-            "Description": ""
+            "Description": "Use um headset avançado para escanear e copiar as habilidades de inimigos!"
         },
 		
 		"Crash":
         {
-            "Title": "",
+            "Title": "Explosão",
             
-            "Description": ""
+            "Description": "Limpe a tela inteira com uma única explosão poderosa!"
         },
 		
 		"Mic":
         {
-            "Title": "",
+            "Title": "Microfone",
             
-            "Description": ""
+            "Description": "Use a sua poderosa habilidade de canto para derrotar todos os inimigos ao seu redor! CHESTO!"
         },
 		
 		"Chef":
         {
-            "Title": "",
+            "Title": "Chef",
             
             "Description": ""
         },
 		
 		"Ultra Sword":
         {
-            "Title": "",
+            "Title": "Ultraespada",
             
-            "Description": ""
+            "Description": "Esta espada enorme pode devastar inimigos e seu terreno com puro poder destrutivo! Fatie e pique!"
         },
 		
 		"Cosmic Blade":
         {
-            "Title": "",
+            "Title": "Lâmina Cósmica",
             
             "Description": ""
         }
@@ -275,282 +275,282 @@
     {
         "Waddle Dee":
         {
-            "Title": "",
+            "Title": "Waddle Dee",
             
-            "Description": ""
+            "Description": "Os moradores mais comuns de Popstar. Muitos escolheram trabalhar para o Rei Dedede, alguns até escolhendo empunhar lanças ou sombrinhas."
         },
         
         "Waddle Doo":
         {
-            "Title": "",
+            "Title": "Waddle Doo",
             
-            "Description": ""
+            "Description": "Essas criaturas são conhecidas por atirar um raio de seu único olho."
         },
         
         "Bronto Burt":
         {
-            "Title": "",
+            "Title": "Brontopiu",
             
-            "Description": ""
+            "Description": "Um inimigo voador que sobe aos céus sempre que alguém chega perto, e às vezes vai tentar bater em você."
         },
         
         "Twizzy":
         {
-            "Title": "",
+            "Title": "Piupiu",
             
-            "Description": ""
+            "Description": "Um bebê Cocorico, nunca visto longe de sua mãe. Eles são conhecidos por bater nos outros por diversão."
         },
         
         "Tookey":
         {
-            "Title": "",
+            "Title": "Cocorico",
             
-            "Description": ""
+            "Description": "A variante adulta do Piupiu que sempre é encontrada perto de seus pintinhos. Ela vai bater em qualquer um que chegar perto de seus bebês."
         },
         
         "Sir Kibble":
         {
-            "Title": "",
+            "Title": "Sr. Kibble",
             
-            "Description": ""
+            "Description": "Um cavaleiro que usa um bumerangue laminado. Ao canalizar sua energia, ele pode lançar uma lâmina maior."
         },
         
         "Gordo":
         {
-            "Title": "",
+            "Title": "Espinhaldo",
             
-            "Description": ""
+            "Description": "Uma bola de espinhos invencível, ai! Pode quebrar estrelas de habilidade se elas tocarem ele."
         },
         
         "Blood Gordo":
         {
-            "Title": "",
+            "Title": "Espinhaldo Sangrento",
             
-            "Description": ""
+            "Description": "Uma variante muito raivosa do clássico Espinhaldo. Os chifres dessa versão perfuram o ar, e seu metal brilha como um sol vermelho."
         },
         
         "Shotzo":
         {
-            "Title": "",
+            "Title": "Canhozo",
             
-            "Description": ""
+            "Description": "Esses canhões são característicos dos arsenais do Halberd e do Castelo Dedede. Eles ou atiram uma vez ou atiram 3 em uma rajada circular."
         },
         
         "Mystic Doo":
         {
-            "Title": "",
+            "Title": "Doo Místico",
             
-            "Description": ""
+            "Description": "Um Waddle Doo distorcido pelo poder do Fluxo. Usando seu novo poder, ele pode criar uma barreira de raio, que também pode ser lançada para frente"
         },
         
         "Bouncy":
         {
-            "Title": "",
+            "Title": "Quica",
             
-            "Description": ""
+            "Description": "Um amiguinho tão simpático! As Quicas saltam para cima e para baixo. Uma vida simples, mas feliz. Suas carinhas parecem familiar..."
         },
         
-        "Mr. Boogie":
+        "Mr Boogie":
         {
-            "Title": "",
+            "Title": "Sr. Boogie",
             
-            "Description": ""
+            "Description": "É um meleca com vida que parece andar sem rumo, mas na realidade está procurando alguns lenços de papel."
         },
         
         "Search":
         {
-            "Title": "",
+            "Title": "Bombusca",
             
-            "Description": ""
+            "Description": "Uma pequena bomba com uma cara. Se você chegar muito perto, ela vai detonar, então fique longe."
         },
         
         "Hive Drone":
         {
-            "Title": "",
+            "Title": "Drone Colmeia",
             
-            "Description": ""
+            "Description": "Um robô de mineração, construído com o único propósito de coletar Alexandrum, um mineral misterioso."
         },
         
         "Wapod":
         {
-            "Title": "",
+            "Title": "Wapot",
             
-            "Description": ""
+            "Description": "Esses fantasmas se parecem muito com Waddle Dees. Deve ser só coincidência. Eles saem de potes como gênios engraçados, e voam para cima, para cima, e para longe!"
         },
         
         "Flamebelch":
         {
-            "Title": "",
+            "Title": "Expelchama",
             
-            "Description": ""
+            "Description": "Uma vela velha trazida à vida pelo fluxo. Tem uma aversão por refrigerantes, porque eles fazem com que ela tenha soluços graves."
         },
         
         "Cappy":
         {
-            "Title": "",
+            "Title": "Cappy",
             
-            "Description": ""
+            "Description": "Um dos moradores nativos do planeta Pop, essas criaturas tímidas vão atirar seus chapéus de cogumelo para o ar quando se aproximar, e entrarão em pânico se seu chapéu for roubado."
         },
         
         "Broom Hatter":
         {
-            "Title": "",
+            "Title": "Bruxassoura",
             
-            "Description": ""
+            "Description": "Esses carinhas têm um objetivo; limpar tudo o que puderem. Isso faz eles terem um mau hábito de atropelar as pessoas por acidente. Apesar de sua aparência de bruxa, eles têm boas intenções."
         },
         
         "Coconut":
         {
-            "Title": "",
+            "Title": "Coco",
             
-            "Description": ""
+            "Description": "Esses frutos de palmeiras são cheios de explosivos para espalhar suas sementes de dentro, mas só caem quando você corre por baixo deles, então tome cuidado!"
         },
         
         "Noddy":
         {
-            "Title": "",
+            "Title": "Noddy",
             
-            "Description": ""
+            "Description": "Um inimigo que prefere dormir em vez de lutar, mais comumente encontrado perto da Fonte dos Sonhos."
         },
         
         "Blado":
         {
-            "Title": "",
+            "Title": "Lâmino",
             
-            "Description": ""
+            "Description": "Shing! Esse sujeito zangado rola pelo chão, rápido como um carro de corrida, tentando cortar seus inimigos. Essa criatura foi concebida pela mente de um misterioso pintor, e se parece um pouco com um Espinhaldo."
         },
         
         "Scarfy":
         {
-            "Title": "",
+            "Title": "Scarfy",
             
-            "Description": ""
+            "Description": "Esse inimigo enganador parece fofo à primeira vista, mas se você provocar ele, ele vai ficar raivoso e vai explodir depois de alguns segundos. Não pode ser engolido."
         },
         
         "Rocky":
         {
-            "Title": "",
+            "Title": "Rochinha",
             
-            "Description": ""
+            "Description": "Um pedregulho com vida que tenta esmagar ameaças com seu corpo. Dá a habilidade Pedra quando engolido."
         },
         
         "Grizzo":
         {
-            "Title": "",
+            "Title": "Grizzo",
             
-            "Description": ""
+            "Description": "Um grande urso que vive em florestas densas. Ele pode usar suas garras para agarrar inimigos e arranhar eles, geralmente quando provocado."
         },
         
         "Jungle Bomb":
         {
-            "Title": "",
+            "Title": "Bomba da Selva",
             
-            "Description": ""
+            "Description": "Uma pequena muda de abacaxi. Bombas da Selva vão cuspir até 3 bombas em ameaças."
         },
         
         "Glunk":
         {
-            "Title": "",
+            "Title": "Anemon",
             
-            "Description": ""
+            "Description": "Uma planta aquática que periodicamente dispara água pela boca, até 5 projéteis de cada vez."
         },
         
         "Kabu":
         {
-            "Title": "",
+            "Title": "Kabu",
             
-            "Description": ""
+            "Description": "Essas estátuas antigas giram pela terra, batendo em quem tiver a infelicidade de estar em seu caminho."
         },
         
         "Burning Leo":
         {
-            "Title": "",
+            "Title": "Léo Flamejante",
             
-            "Description": ""
+            "Description": "Uma criatura de cabeça quente capaz de muitos ataques de fogo, como atirar uma bola flamejante."
         },
         
         "Tomatoo":
         {
-            "Title": "",
+            "Title": "Tomatee",
             
-            "Description": ""
+            "Description": "Uma criatura que se parece muito com um suculento legume vermelho. Ou será que é uma fruta? Será para sempre um mistério."
         },
         
         "'Onion'":
         {
-            "Title": "",
+            "Title": "'Cebola'",
             
-            "Description": ""
+            "Description": "Cebola, ao contrário de seu nome, é uma criatura que parece uma cenoura nativa de jardins de ovos. Ele gosta de se esconder no solo e atacar as pessoas que passam."
         },
         
         "Anemonee":
         {
-            "Title": "",
+            "Title": "Anêmonal",
             
-            "Description": ""
+            "Description": "Uma criatura aquática com longos tentáculos saindo de sua cabeça. Ele dança para frente e para trás nas ondas dos oceanos onde residem."
         },
         
         "Gim":
         {
-            "Title": "",
+            "Title": "Gim",
             
-            "Description": ""
+            "Description": "Gim é um fanático por todas as coisas relacionadas a ioiôs, e é um mestre deles. Há rumores de que sua coleção tem mais de 50 ioiôs diferentes!"
         },
         
-        "Poppy Bros Jr.":
+        "Poppy Bros Jr":
         {
-            "Title": "",
+            "Title": "Bomby Bros. Jr.",
             
-            "Description": ""
+            "Description": "Um garoto arteiro que ama explosivos. Ninguém sabe de onde ele tira todas essas bombas."
         },
         
         "Bobo":
         {
-            "Title": "",
+            "Title": "Bubo",
             
-            "Description": ""
+            "Description": "Uma criatura que parece ser uma bola de fogo ambulante. Mais quente do que um Cabeça Quente, mas não parece pensar muito."
         },
         
         "Foley":
         {
-            "Title": "",
+            "Title": "Granado",
             
-            "Description": ""
+            "Description": "Não subestime esse cara por sua aparência fofa. Essa criatura pode voar e explodir do nada. Ele vai cair do céu como um ataque aéreo para explodir, então tome cuidado!"
         },
         
         "Nidoo":
         {
-            "Title": "",
+            "Title": "Tapor",
             
-            "Description": ""
+            "Description": "Isso não é uma porta! Se você tentar passar por essas portas falsas, elas vão pular e tentarão te esmagar!"
         },
         
         "Como":
         {
-            "Title": "",
+            "Title": "Racno",
             
-            "Description": ""
+            "Description": "Nativos da Terra da Grama, esses aracnídeos ficam pendurados em árvores, esperando que alguém esbarre neles. Isso raramente acontece. Dizem que existe uma variante dessa espécie que pode andar sobre duas pernas..."
         }
         ,
         "Cairn":
         {
-            "Title": "",
+            "Title": "Moledro",
             
-            "Description": ""
+            "Description": "Uma pilha de pedras fofas. Camaradas muito pulantes. Boing!"
         },
         
         "Bomber":
         {
-            "Title": "",
+            "Title": "Bombo",
             
-            "Description": ""
+            "Description": "Um inimigo extremamente perigoso. Ele vai saltar de parapeitos e vai liberar uma grande explosão, que vai te machucar bastante."
         },
         
         "Simirror":
         {
-            "Title": "",
+            "Title": "Sespelho",
             
-            "Description": ""
+            "Description": "Um mago poderoso, que usa magia de espelhos. Ele pode criar clones de si mesmo, teleportar, e muito mais!"
         }
     },
     
@@ -558,289 +558,289 @@
     {
         "Friendly Pink":
         {
-            "Title": "",
+            "Title": "Rosa Amigável",
             
-            "Description": ""
+            "Description": "Padrão do Kirby!"
         },
 		
 		"Yellow":
         {
-            "Title": "",
+            "Title": "Amarelo",
             
-            "Description": ""
+            "Description": "Amarelo como um limão, bem azedo!"
         },
 		
 		"Red":
         {
-            "Title": "",
+            "Title": "Vermelho",
             
-            "Description": ""
+            "Description": "Lembra um morango maduro, yum!"
         },
 		
 		"Green":
         {
-            "Title": "",
+            "Title": "Verde",
             
-            "Description": ""
+            "Description": "Não se preocupe, não é doente!"
         },
 		
 		"Dreamy Blueberry":
         {
-            "Title": "",
+            "Title": "Mirtilo Sonhador",
             
-            "Description": ""
+            "Description": "Como um mirtilo gostoso!"
         },
 		
 		"Carbon":
         {
-            "Title": "",
+            "Title": "Carbono",
             
-            "Description": ""
+            "Description": "Afiado como um lápis!"
         },
 		
 		"Cherry":
         {
-            "Title": "",
+            "Title": "Cereja",
             
-            "Description": ""
+            "Description": "Não coma os caroços!"
         },
 		
 		"Deep Fried Kirb":
         {
-            "Title": "",
+            "Title": "Kirb Frito",
             
-            "Description": ""
+            "Description": "Até os meus olhos estão fritos!"
         },
 		
 		"Emerald":
         {
-            "Title": "",
+            "Title": "Esmeralda",
             
-            "Description": ""
+            "Description": "Parece valioso!"
         },
 		
 		"GameKirb":
         {
-            "Title": "",
+            "Title": "GameKirb",
             
-            "Description": ""
+            "Description": "É aquele visual clássico e portátil!"
         },
 		
 		"Haunting Purple":
         {
-            "Title": "",
+            "Title": "Roxo Assustador",
             
-            "Description": ""
+            "Description": "BUU!!"
         },
 		
 		"Invis Sprinkle":
         {
-            "Title": "",
+            "Title": "Borrifada Invis",
             
-            "Description": ""
+            "Description": "Para onde é que foram?"
         },
 		
 		"Monochrome Kirb":
         {
-            "Title": "",
+            "Title": "Kirb Monocromático",
             
-            "Description": ""
+            "Description": "Retorno à Terra dos Sonhos!"
         },
 		
 		"Yolk Temple":
         {
-            "Title": "",
+            "Title": "Templo Gema",
             
-            "Description": ""
+            "Description": "Cores do próspero planeta ovo!"
         },
 		
 		"Plump Tomato":
         {
-            "Title": "",
+            "Title": "Tomate Gorducho",
             
-            "Description": ""
+            "Description": "Vermelho e maduro para ser colheito!"
         },
 		
 		"Waddle Waddle":
         {
-            "Title": "",
+            "Title": "Waddle Waddle",
             
-            "Description": ""
+            "Description": "Wanya wanya?"
         },
 		
 		"Mystic":
         {
-            "Title": "",
+            "Title": "Místico",
             
-            "Description": ""
+            "Description": "Acompanhado de um fluxo maldoso!"
         },
 		
 		"Shadow of the Mirror":
         {
-            "Title": "",
+            "Title": "Sombra do Espelho",
             
-            "Description": ""
+            "Description": "Reflexo arteiro!"
         },
 		
 		"Delirious":
         {
-            "Title": "",
+            "Title": "Delirante",
             
-            "Description": ""
+            "Description": "Só uma memória moribunda."
         },
 		
 		"Greenjolt":
         {
-            "Title": "",
+            "Title": "Verdejolt",
             
-            "Description": ""
+            "Description": "Verde do Gamejolt!"
         },
 		
 		"Butter Knife":
         {
-            "Title": "",
+            "Title": "Faca de Manteiga",
             
-            "Description": ""
+            "Description": "Combina bem com uma torrada."
         },
 		
 		"Blurple":
         {
-            "Title": "",
+            "Title": "Azoxo",
             
-            "Description": ""
+            "Description": "A mistura de azul e roxo característica do Discord."
         },
 		
 		"Beam":
         {
-            "Title": "",
+            "Title": "Raio",
             
-            "Description": ""
+            "Description": "O laranja vivo de um chicote de raio!"
         },
 		
 		"Stone":
         {
-            "Title": "",
+            "Title": "Pedra",
             
-            "Description": ""
+            "Description": "Você vai precisar de um banho depois de se sujar todo!"
         },
 		
 		"Mirror":
         {
-            "Title": "",
+            "Title": "Espelho",
             
-            "Description": ""
+            "Description": "O reflexo normal!"
         },
 		
 		"Ninja":
         {
-            "Title": "",
+            "Title": "Ninja",
             
-            "Description": ""
+            "Description": "Silencioso, mas matador!"
         },
 		
 		"Fire":
         {
-            "Title": "",
+            "Title": "Fogo",
             
-            "Description": ""
+            "Description": "Não se queime nisso!"
         },
 		
 		"Ice":
         {
-            "Title": "",
+            "Title": "Gelo",
             
-            "Description": ""
+            "Description": "Brrrr... tá tão frio!"
         },
 		
 		"Plasma":
         {
-            "Title": "",
+            "Title": "Plasma",
             
-            "Description": ""
+            "Description": "BZZZZZZRT!"
         },
 		
 		"Unearthly Hand":
         {
-            "Title": "",
+            "Title": "Mão Sobrenatural",
             
-            "Description": ""
+            "Description": "O padrão do Gamble!"
         },
 		
 		"So Meta":
         {
-            "Title": "",
+            "Title": "Tão Meta",
             
-            "Description": ""
+            "Description": "O padrão do Meta Knight, Luta comigo!"
         },
 		
 		"Gooey Blue":
         {
-            "Title": "",
+            "Title": "Azul Gooey",
             
-            "Description": ""
+            "Description": "Slurp!"
         },
 		
 		"Egg Brown":
         {
-            "Title": "",
+            "Title": "Marrom Ovo",
             
-            "Description": ""
+            "Description": "Uma delícia de chocolate!"
         },
 		
 		"Telltale Keeby":
         {
-            "Title": "",
+            "Title": "Kiiby Denunciador",
             
-            "Description": ""
+            "Description": "O padrão do Kiiby, Já é hora do golfe?"
         },
 		
 		"Royal Yarn":
         {
-            "Title": "",
+            "Title": "Fio Real",
             
-            "Description": ""
+            "Description": "O padrão do Príncipe Pompom, Parece... calças?"
         },
 		
 		"Smiley White":
         {
-            "Title": "",
+            "Title": "Branco Risonho",
             
-            "Description": ""
+            "Description": "..."
         },
 		
 		"Edd":
         {
-            "Title": "",
+            "Title": "Edd",
             
-            "Description": ""
+            "Description": "Subhumano!"
         },
 		
 		"Musician's Light":
         {
-            "Title": "",
+            "Title": "Luz do Músico",
             
-            "Description": ""
+            "Description": "Um salve ao LightMetaS!"
         },
 		
 		"Aege":
         {
             "Title": "Aege",
             
-            "Description": ""
+            "Description": "De 'Kirby Battle Blitz'"
         },
 		
 		"Stray":
         {
             "Title": "Stray",
             
-            "Description": ""
+            "Description": "De 'Kirby Battle Blitz'"
         },
 		
 		"Glitch":
         {
             "Title": "Glitch",
             
-            "Description": ""
+            "Description": "De 'Kirby Battle Blitz'"
         }
     },
 	
@@ -848,12 +848,12 @@
 	{
 		"Marx Soul":
         {
-            "Title": ""
+            "Title": "Alma de Marx"
         },
 		
 		"Snowman":
         {
-            "Title": ""
+            "Title": "Boneco de Neve"
         }
 	},
 	
@@ -861,307 +861,307 @@
 	{
 		"Slicing Gold":
         {
-            "Title": ""
+            "Title": "Dourado Fatiador"
         },
 		
 		"Blood Blade":
         {
-            "Title": ""
+            "Title": "Lâmina Sangrenta"
         },
 		
 		"Bitcrushed":
         {
-            "Title": ""
+            "Title": "Oito Bits"
         },
 		
 		"Mallard Green":
         {
-            "Title": ""
+            "Title": "Verde-real"
         },
 		
 		"Black Swedish":
         {
-            "Title": ""
+            "Title": "Preto Sueco"
         },
 		
 		"Flux Nostalgia":
         {
-            "Title": ""
+            "Title": "Fluxo Nostálgico"
         },
 		
 		"Sparkling Beam":
         {
-            "Title": ""
+            "Title": "Raio Brilhante"
         },
 		
 		"Jester Spirit":
         {
-            "Title": ""
+            "Title": "Espírito de Bobo da Corte"
         },
 		
 		"Summer Fruits":
         {
-            "Title": ""
+            "Title": "Frutas do Verão"
         },
 		
 		"Nasty Flux":
         {
-            "Title": ""
+            "Title": "Fluxo Desagradável"
         },
 		
 		"Mage Rose":
         {
-            "Title": ""
+            "Title": "Rosa Mago"
         },
 		
 		"Rocky Road":
         {
-            "Title": ""
+            "Title": "Rota Rochosa"
         },
 		
 		"Molten Rock":
         {
-            "Title": ""
+            "Title": "Rocha Derretida"
         },
 		
 		"Crying Cobblestone":
         {
-            "Title": ""
+            "Title": "Paralelepípedo Chorão"
         },
 		
 		"Jester Reflection":
         {
-            "Title": ""
+            "Title": "Reflexo do Bobo da Corte"
         },
 		
 		"Beta Block":
         {
-            "Title": ""
+            "Title": "Bloco Beta"
         },
 		
 		"Stealthy Maroon":
         {
-            "Title": ""
+            "Title": "Vinho Sorrateiro"
         },
 		
 		"Sliver-Lined Warrior":
         {
-            "Title": ""
+            "Title": "Guerreiro Prateado"
         },
 		
 		"Viridian Ambush":
         {
-            "Title": ""
+            "Title": "Emboscada Viridiana"
         },
 		
 		"Explosive B":
         {
-            "Title": ""
+            "Title": "Explosivo B"
         },
 		
 		"Blooming Poppy":
         {
-            "Title": ""
+            "Title": "Bomby Florescente"
         },
 		
 		"Outbursting Conspiracy":
         {
-            "Title": ""
+            "Title": "Conspiração Explosiva"
         },
 		
 		"Dragon's Castle":
         {
-            "Title": ""
+            "Title": "Castelo do Dragão"
         },
 		
 		"Scorching Scarlet":
         {
-            "Title": ""
+            "Title": "Escarlate Escaldante"
         },
 		
 		"Blazing Blue":
         {
-            "Title": ""
+            "Title": "Azul Ardente"
         },
 		
 		"Scarlet Rose":
         {
-            "Title": ""
+            "Title": "Rosa Escarlate"
         },
 		
 		"Frosted Shard":
         {
-            "Title": ""
+            "Title": "Fragmento Fosco"
         },
 		
 		"Frosty Obsidian":
         {
-            "Title": ""
+            "Title": "Obsidiana Gelada"
         },
 		
 		"Chilly":
         {
-            "Title": ""
+            "Title": "Chilly"
         },
 		
 		"Chocolate Mousse":
         {
-            "Title": ""
+            "Title": "Mousse de Chocolate"
         },
 		
 		"Electro Marine":
         {
-            "Title": ""
+            "Title": "Electro Marinha"
         },
 		
 		"Spinning Violet":
         {
-            "Title": ""
+            "Title": "Violeta Giratório"
         },
 		
 		"Rushing Red":
         {
-            "Title": ""
+            "Title": "Vermelho Veloz"
         },
 		
 		"Muffler Blue":
         {
-            "Title": ""
+            "Title": "Azul Amortecedor"
         },
 		
 		"Dapper Painter":
         {
-            "Title": ""
+            "Title": "Pintor Elegante"
         },
 		
 		"Crimson Champion":
         {
-            "Title": ""
+            "Title": "Campeão Carmesim"
         },
 		
 		"Blue Banner":
         {
-            "Title": ""
+            "Title": "Anúncio Azul"
         },
 		
 		"Rainbow Flight":
         {
-            "Title": ""
+            "Title": "Voo Arco-Íris"
         },
 		
 		"Pekin Breeze":
         {
-            "Title": ""
+            "Title": "Brisa Pequim"
         },
 		
 		"Speed Machine":
         {
-            "Title": ""
+            "Title": "Máquina Veloz"
         },
 		
 		"Speedy Scarlet":
         {
-            "Title": ""
+            "Title": "Escarlate Extrarrápido"
         },
 		
 		"Lavender-01":
         {
-            "Title": ""
+            "Title": "Lavanda-01"
         },
 		
 		"Slicing Green":
         {
-            "Title": ""
+            "Title": "Verde Fatiador"
         },
 		
 		"Thundering Cloud":
         {
-            "Title": ""
+            "Title": "Nuvem Trovejante"
         },
 		
 		"Lazy Red":
         {
-            "Title": ""
+            "Title": "Vermelho Preguiçoso"
         },
 		
 		"Wagasa Dee":
         {
-            "Title": ""
+            "Title": "Wagasa Dee"
         },
 		
 		"Crushing Brown":
         {
-            "Title": ""
+            "Title": "Marrom Esmagador"
         },
 		
 		"Construction Work":
         {
-            "Title": ""
+            "Title": "Obra de Construção"
         },
 		
 		"Dazzling Default":
         {
-            "Title": ""
+            "Title": "Padrão Deslumbrante"
         },
 		
 		"Presto Purple":
         {
-            "Title": ""
+            "Title": "Roxo Rítmico"
         },
 		
 		"Tempo Teal":
         {
-            "Title": ""
+            "Title": "Verde-Água Agudo"
         },
 		
 		"Ringing Rose":
         {
-            "Title": ""
+            "Title": "Rosa Ruidoso"
         },
 		
 		"Candescent Copper":
         {
-            "Title": ""
+            "Title": "Cobre Candescente"
         },
 		
 		"Shining Silver":
         {
-            "Title": ""
+            "Title": "Prata Prateado"
         },
 		
 		"Polished Plant":
         {
-            "Title": ""
+            "Title": "Planta Polida"
         },
 		
 		"Illuminated Ivory":
         {
-            "Title": ""
+            "Title": "Marfim Iluminado"
         },
 		
 		"Bubbly Green":
         {
-            "Title": ""
+            "Title": "Verde Borbulhante"
         },
 		
 		"Noddy Peach":
         {
-            "Title": ""
+            "Title": "Pêssego Noddy"
         },
 		
 		"Royal Purple":
         {
-            "Title": ""
+            "Title": "Roxo Real"
         },
 		
 		"Metallic Red":
         {
-            "Title": ""
+            "Title": "Vermelho Metálico"
         },
 		
 		"Military Green":
         {
-            "Title": ""
+            "Title": "Verde Militar"
         }
 	},
 	
@@ -1169,35 +1169,35 @@
     {
 		"Gamble":
         {
-			"Description": ""
+			"Description": "O misterioso companheiro de Kirby! Ele quer ajudar a parar a ameaça que se aproxima."
         },
 		
 		"Happy Pea":
         {
-            "Title": "",
+            "Title": "Ervilha Feliz",
 			
-			"Description": ""
+			"Description": "Uma planta veio ajudar?! Ele pode fazer inimigos ficarem longe de Kirby!"
         },
 		
 		"Epic Jar":
         {
-            "Title": "",
+            "Title": "Jarro Épico",
 			
-			"Description": ""
+			"Description": "Este cientista traz suas invenções para ajudar a explodir inimigos próximos!"
         },
 		
 		"Krackle":
         {
-            "Title": "",
+            "Title": "Krackle",
 			
-			"Description": ""
+			"Description": "Esta pequena nuvem quer ajudar a perseguir a ameaça violeta!"
         },
 		
 		"Omega Matter":
         {
-            "Title": "",
+            "Title": "Matéria Omega",
 			
-			"Description": ""
+			"Description": "Olá eu sou o Subsandwich"
         }
 	},
     
@@ -1230,9 +1230,9 @@
     
     "Options":
     {
-        "True": "Ativado",
+        "True": "Ativado(a)",
         
-        "False": "Desativado",
+        "False": "Desativado(a)",
         
         "Display": "Exibição",
         
@@ -1268,236 +1268,236 @@
         
         "Select": "Selecionar",
         
-        "Press Any Key": "",
+        "Press Any Key": "Aperte Qualquer Tecla",
         
-        "Extra Tutorials": "",
+        "Extra Tutorials": "Tutoriais Extras",
         
-        "Auto Swallow": "",
+        "Auto Swallow": "Engolir Automaticamente",
         
-        "Music Intro": "",
+        "Music Intro": "Introdução de Músicas",
         
-        "Default": ""
+        "Default": "Padrão"
     },
     
     "Customize Sub-Menus":
     {
         "Skins":
         {
-            "Title": ""
+            "Title": "Skins"
         },
         
         "Spray Paints":
         {
-            "Title": ""
+            "Title": "Sprays de Tinta"
         },
         
         "Hat Skins":
         {
-            "Title": ""
+            "Title": "Skins de Chapéu"
         },
         
         "Hat Paints":
         {
-            "Title": ""
+            "Title": "Tintas de Chapéu"
         },
         
         "Familiars":
         {
-            "Title": ""
+            "Title": "Familiares"
         }
     },
     
     "Unlock Methods":
     {
-        "Default": "",
+        "Default": "Padrão",
 		
-		"Beat Stage Missions": "",
+		"Beat Stage Missions": "Complete Missões de Fases",
 		
-		"Tomatoo Catch 3 Stars": "",
+		"Tomatoo Catch 3 Stars": "Pega Tomatee 3 Estrelas",
 		
-		"Fill 10 Bestiary": "",
+		"Fill 10 Bestiary": "Preencha 10 registros no Bestiário",
 		
-		"Fill 20 Bestiary": "",
+		"Fill 20 Bestiary": "Preencha 20 registros no Bestiário",
 		
-		"Fill 50 Bestiary": "",
+		"Fill 50 Bestiary": "Preencha 50 registros no Bestiário",
 		
-		"Unlock 5 Familiars": "",
+		"Unlock 5 Familiars": "Destranque 5 Familiares",
 		
-		"Log Into Gamejolt": "",
+		"Log Into Gamejolt": "Faça login no Gamejolt",
 		
-		"Log Into Discord": "",
+		"Log Into Discord": "Faça login no Discord",
 		
-		"Beam Gold Medal": "",
+		"Beam Gold Medal": "Medalha de Ouro de Raio",
 		
-		"Stone Gold Medal": "",
+		"Stone Gold Medal": "Medalha de Ouro de Pedra",
 		
-		"Mirror Gold Medal": "",
+		"Mirror Gold Medal": "Medalha de Ouro de Espelho",
 		
-		"Ninja Gold Medal": "",
+		"Ninja Gold Medal": "Medalha de Ouro de Ninja",
 		
-		"Fire Gold Medal": "",
+		"Fire Gold Medal": "Medalha de Ouro de Fogo",
 		
-		"Ice Gold Medal": "",
+		"Ice Gold Medal": "Medalha de Ouro de Gelo",
 		
-		"Spark Gold Medal": "",
+		"Spark Gold Medal": "Medalha de Ouro de Faísca",
 		
-		"Unlock Gamble": "",
+		"Unlock Gamble": "Destranque Gamble",
 		
-		"Unlock Meta Knight": "",
+		"Unlock Meta Knight": "Destranque Meta Knight",
 		
-		"Unlock Gooey": "",
+		"Unlock Gooey": "Destranque Gooey",
 		
-		"Unlock Magolor": "",
+		"Unlock Magolor": "Destranque Magolor",
 		
-		"Unlock Keeby": "",
+		"Unlock Keeby": "Destranque Kiiby",
 		
-		"Unlock Prince Fluff": "",
+		"Unlock Prince Fluff": "Destranque Príncipe Pompom",
 		
-		"Secret": ""
+		"Secret": "Segredo"
     },
 	
 	"Shop General":
     {
-		"Buy": "",
+		"Buy": "COMPRAR",
 		
-		"Talk": "",
+		"Talk": "CONVERSAR",
 		
-		"Leave": "",
+		"Leave": "SAIR",
 		
-		"Next": "",
+		"Next": "PRÓXIMO",
 		
-		"Back": ""
+		"Back": "VOLTAR"
 	},
 	
 	"Magolor Shop":
     {
 		"First Time Entrance":
         {
-            "1": ""
+            "1": "E aí! Já faz um tempo que você veio aqui na Lor, né? Bem, se você tem grana, eu tenho umas coisas que eu tô vendendo!"
         },
 		
 		"Entrance":
         {
-            "1": "",
+            "1": "Bem-vindos de volta!",
 			
-			"2": "",
+			"2": "Bom ver vocês inteiros.",
 			
-			"3": "",
+			"3": "E aí!",
 			
-			"4": "",
+			"4": "Bom ver vocês de novo!",
 			
-			"5": "",
+			"5": "Como anda sua aventura?",
 			
-			"6": ""
+			"6": "Você tá parecendo um pouco acabado, chapa, por que não compra um pouco de comida?"
         },
 		
 		"Entrance New Items":
         {
-            "1": "",
+            "1": "Encontrei umas coisas malucas no compartimento de carga!",
 			
-			"2": ""
+			"2": "Fiz uma viagem para outra dimensão enquanto você estava fora e encontrei algumas coisas que talvez goste!"
         },
 		
 		"Buy Dialogue":
         {
-            "1": "",
+            "1": "Eu vejo você espiando as minhas sobras, essas também estão à venda!",
 			
-			"2": "",
+			"2": "Eu tenho todo o tipo de coisas úteis!",
 			
-			"3": "",
+			"3": "Tenho certeza de que tenho algo que você vai achar útil!",
 			
-			"4": ""
+			"4": "Fique à vontade para olhar ao redor e ver o que eu tenho."
         },
 		
 		"Purchase Item":
         {
-            "1": "",
+            "1": "Obrigado pela grana!",
 			
-			"2": "",
+			"2": "Doce, doce, dinheiro.",
 			
-			"3": "",
+			"3": "Eu poderia dar à Lor uma nova pintura com isso!",
 			
-			"4": "",
+			"4": "Isso deve manter as luzes acesas!",
 			
-			"5": ""
+			"5": "Finalmente, eu posso comprar aquela escova de cabelo que eu queria!"
         },
 		
 		"Not Enough Money":
         {
-            "1": "",
+            "1": "Eu sei que você me salvou e tudo isso, mas você ainda tem que pagar!",
 			
-			"2": "",
+			"2": "Não vai dar, camarada.",
 			
-			"3": "",
+			"3": "Eu não estou aqui para negociar preços.",
 			
-			"4": "",
+			"4": "Você não tá tentando sacanear o seu chapa, hein?",
 			
-			"5": ""
+			"5": "Não tente me enganar para que eu te dê coisas grátis!"
         },
 		
 		"Talk Dialogue":
         {
-            "1": "",
+            "1": "Eu tenho muitas histórias pra contar!",
 			
-			"2": "",
+			"2": "O que você quer saber?",
 			
-			"3": ""
+			"3": "No que você está pensando?"
         },
 		
 		"Talk Options":
         {
-            "1": "",
+            "1": "Por que você tava no Jardim Ovos?",
 			
-			"2": "",
+			"2": "Você tá bem?",
 			
-			"3": "",
+			"3": "Você tem cabelo?",
 			
-			"4": ""
+			"4": "Eu posso ver?"
         },
 		
 		"Why Were You At Egg Garden":
         {
-			"1": "",
+			"1": "Bem, eu decidi que precisava dar uma pausa cuidando do parque de diversões lá no planeta Pop.",
 			
-			"2": "",
+			"2": "Não é fácil tomar conta daquele lugar, sabe!",
 			
-			"3": ""
+			"3": "Eu trouxe um amigo comigo também, mas eu acho que ele se envolveu no conflito com aquele homem suspeito…"
         },
 		
 		"Are You Okay":
         {
-			"1": "",
+			"1": "Confesso que tô um pouco abalado com aquele encontro com aquele homem.",
 			
-			"2": "",
+			"2": "Aquela magia que ele usou em mim, algo sobre ela é estranho.",
 			
-			"3": ""
+			"3": "Ainda bem que você me fez voltar a ter juízo! Nem sei o que teria acontecido se você não tivesse feito isso."
         },
 		
 		"You Have Hair":
         {
-			"1": "",
+			"1": "Claro que eu tenho! Eu deixo ele embaixo do meu capuz porque ele me atrapalha.",
 			
-			"2": "",
+			"2": "Eu não gostaria que meu lindo cabelo ficasse preso enquanto eu conserto a Lor!",
 			
-			"3": ""
+			"3": "Seria um desastre!"
         },
 		
 		"Can I See It":
         {
-            "1": ""
+            "1": "Não."
         },
 		
 		"Leave Shop":
         {
-            "1": "",
+            "1": "Se cuida!",
 			
-			"2": "",
+			"2": "Vocês são sempre bem-vindos aqui!",
 			
-			"3": "",
+			"3": "Boa sorte!",
 			
-			"4": "",
+			"4": "Até logo!",
 			
-			"5": ""
+			"5": "Até a próxima!"
         }
 	},
 	
@@ -1509,7 +1509,7 @@
     {
         "Tomatoo Catch":
         {
-            "Title": ""
+            "Title": "Pega Tomatee"
         }
 	},
 	
@@ -1521,20 +1521,20 @@
     {
 		"Treasure":
         {
-            "1": "",
+            "1": "Você encontrou um tesouro!",
 			
-			"2": ""
-        }
+			"2": "Vá ao [Menu de Coleções] para ver os seus colecionáveis e tesouros!"
+        },
 		
 		"Anti Float":
         {
-            "1 - Kirby": "",
+            "1 - Kirby": "Tome cuidado, Kirby!",
 			
-			"2": "",
+			"2": "Estou sentindo um espaço sem ar aqui.",
 			
-			"3 - Default": "",
+			"3 - Default": "Eu não sei se isso afetaria você ou não, mas só por precaução.",
 			
-			"3 - Kirby": ""
+			"3 - Kirby": "Pode ser que você não consiga flutuar se entrar nessa área. Vai ter que confiar em suas habilidades de pulo."
         }
 	}
 }

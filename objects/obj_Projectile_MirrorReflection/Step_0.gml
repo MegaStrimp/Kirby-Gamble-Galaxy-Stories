@@ -12,6 +12,8 @@ if (setupTimer == 0)
 		sprIdle = spr_Projectile_MirrorReflection_Normal_Idle;
 		break;
 	}
+	
+	while (place_meeting(x,y + 1,obj_Wall)) y -= 1;
 }
 
 if (((pausable) and (!global.pause)) or (!pausable))
@@ -48,5 +50,6 @@ if (((pausable) and (!global.pause)) or (!pausable))
 }
 else
 {
+	speed = 0;
 	image_speed = 0;
 }

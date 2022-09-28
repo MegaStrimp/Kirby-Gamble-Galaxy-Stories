@@ -95,6 +95,7 @@ function scr_DebugSave()
 	global.omegaMatterFamiliarUnlocked = true;
 	
 	global.cutterMotorCutterUpgradeUnlocked = true;
+	global.cutterPropellerWingUpgradeUnlocked = true;
 	global.beamGoldenFlareUpgradeUnlocked = true;
 	global.mysticBeamVortexInAJarUpgradeUnlocked = true;
 	global.stoneRockCandyUpgradeUnlocked = true;

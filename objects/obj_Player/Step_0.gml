@@ -114,9 +114,16 @@ if (!global.pause)
 		downHeld = 10;
 	}
 	
-	//In Background
+	//Depth & Scale Changer
 	
-	scale = lerp(scale,1 - (inBackground / 2),.02);
+	if (place_meeting(x,y,obj_DepthChanger))
+	{
+		var collidedDepthChanger = instance_place(x,y,obj_DepthChanger);
+		if (collidedDepthChanger.targetScale != -1) targetScale = collidedDepthChanger.targetScale;
+		if (collidedDepthChanger.targetDepth != -1) depth = collidedDepthChanger.targetDepth;
+	}
+	
+	scale = lerp(scale,targetScale,.02);
 	
 	if (inBackground)
 	{
@@ -897,6 +904,19 @@ if (!global.pause)
 			invincibleFlashTimer = -1;
 			global.invinCandyTimerP1 = -1;
 		}
+		
+		//Mint Leaf Timer P1
+		
+		if (global.mintLeafTimerP1 > 0)
+		{
+			global.mintLeafTimerP1 -= 1;
+		}
+		else if (global.mintLeafTimerP1 == 0)
+		{
+			invincibleFlash = false;
+			invincibleFlashTimer = -1;
+			global.mintLeafTimerP1 = -1;
+		}
 	}
 	else
 	{
@@ -911,6 +931,19 @@ if (!global.pause)
 			invincibleFlash = false;
 			invincibleFlashTimer = -1;
 			global.invinCandyTimerP2 = -1;
+		}
+		
+		//Mint Leaf Timer P2
+		
+		if (global.mintLeafTimerP2 > 0)
+		{
+			global.mintLeafTimerP2 -= 1;
+		}
+		else if (global.mintLeafTimerP2 == 0)
+		{
+			invincibleFlash = false;
+			invincibleFlashTimer = -1;
+			global.mintLeafTimerP2 = -1;
 		}
 	}
 	
@@ -939,6 +972,33 @@ if (!global.pause)
 	else
 	{
 		invinCandyParticleTimer = -1;
+	}
+	
+	//Mint Leaf Particle Timer
+	
+	if (hasMintLeaf)
+	{
+		if (mintLeafParticleTimer > 0)
+		{
+			mintLeafParticleTimer -= 1;
+		}
+		else if (mintLeafParticleTimer == 0)
+		{
+			var par = instance_create_depth(x + (irandom_range(12,-12)),y - 8 + (irandom_range(12,-12)),depth - 1,obj_Particle);
+	        par.sprite_index = spr_Particle_ShrinkingStar3;
+	        par.direction = irandom_range(0,359);
+			var angle = 90 - par.direction;
+			if (angle > 360) angle -= 360;
+			if (angle < 0) angle += 360;
+	        par.image_angle = angle;
+	        par.spdBuiltIn = irandom_range(2,3);
+			par.destroyAfterAnimation = true;
+		    mintLeafParticleTimer = -1;
+		}
+	}
+	else
+	{
+		mintLeafParticleTimer = -1;
 	}
 	
 	//Jump Limit Timer
@@ -1467,11 +1527,9 @@ if (!global.pause)
 		stoneFistReleaseTimer = stoneFistReleaseTimerMax;
 		sprite_index = sprStoneAttack2;
 		image_index = 0;
-		stoneFistMaskProj = instance_create_depth(x + (10 * dir),y - 7,depth - 1,obj_Projectile_StoneFistMask);
+		stoneFistMaskProj = instance_create_depth(x,y,depth - 1,obj_Projectile_StoneFistMask);
 		stoneFistMaskProj.dmg = 40;
 		stoneFistMaskProj.dirX = dir;
-		stoneFistMaskProj.xPos = 12;
-		stoneFistMaskProj.yPos = -10;
 		stoneFistMaskProj.enemy = false;
 		stoneFistMaskProj.owner = id;
 		stoneFistMaskProj.abilityType = playerAbilities.stone;
@@ -1592,11 +1650,13 @@ if (!global.pause)
 		projectile.owner = id;
 		projectile.abilityType = playerAbilities.fire;
 		projectile.imageSpeed = 1 - (fireMagicCharcoalUpgrade / 4);
-		projectile.dmg = 6;
+		projectile.dmg = 3;
 		projectile.sprite_index = projectile.sprIdle;
 		projectile.dirX = dir;
 		projectile.image_xscale = projectile.dirX;
 		projectile.enemy = false;
+		projectile.destroyableByEnemy = false;
+		projectile.destroyableByObject = false;
 		projectile.hsp = 2 * dir;
         if ((!global.cutscene) and (keyUpHold))
         {
@@ -1904,7 +1964,7 @@ else if (characterSetupTimer == 0)
 		gravFloat = .075;
 		gravFireDash = .05;
 		gravLimitNormal = 5;
-		gravLimitFloat = 2.3;
+		gravLimitFloat = 1.2;
 		gravLimitBeamAir = 3;
 		gravLimitStone = 7;
 		gravLimitFireDash = 1.25;
@@ -2160,7 +2220,7 @@ else if (characterSetupTimer == 0)
 		gravFloat = .075;
 		gravFireDash = .05;
 		gravLimitNormal = 5;
-		gravLimitFloat = 2.3;
+		gravLimitFloat = 1.2;
 		gravLimitBeamAir = 3;
 		gravLimitStone = 7;
 		gravLimitFireDash = 1.25;
@@ -2238,7 +2298,7 @@ else if (characterSetupTimer == 0)
 		gravFloat = .05;
 		gravFireDash = .05;
 		gravLimitNormal = 5;
-		gravLimitFloat = 1.5;
+		gravLimitFloat = 1.2;
 		gravLimitBeamAir = 3;
 		gravLimitStone = 7;
 		gravLimitFireDash = 1.25;
@@ -3391,6 +3451,7 @@ if (upgradeSetupTimer > 0)
 else if (upgradeSetupTimer == 0)
 {
 	cutterMotorCutterUpgrade = global.cutterMotorCutterUpgradeEquipped;
+	cutterPropellerWingUpgrade = global.cutterPropellerWingUpgradeEquipped;
 	beamGoldenFlareUpgrade = global.beamGoldenFlareUpgradeEquipped;
 	mysticBeamVortexInAJarUpgrade = global.mysticBeamVortexInAJarUpgradeEquipped;
 	stoneRockCandyUpgrade = global.stoneRockCandyUpgradeEquipped;
