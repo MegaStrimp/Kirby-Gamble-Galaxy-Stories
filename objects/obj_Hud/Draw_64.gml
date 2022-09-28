@@ -282,10 +282,17 @@ draw_sprite_part_ext(spr_Hud_Healthbar_Kirby,0,0,0,healthbarWidth,healthbarHeigh
 //	audio_play_sound(snd_LowHp,0,false);
 //}
 
-healWidth = (sprite_get_width(spr_Hud_Healthbar_Kirby)*0.01)*(((global.healthP1/global.healthP1Max)*100)-((global.healP1Mod/global.healthP1Max)*100));
-healStart = (sprite_get_width(spr_Hud_Healthbar_Kirby)*0.01)*((min(global.healP1Mod,healthbarWidth)/global.healthP1Max)*100);
+healWidth = (sprite_get_width(spr_Hud_Healthbar_Kirby)*0.01)*(((global.healP1Mod-global.healthP1)/global.healthP1Max)*100);
+//healStart = (sprite_get_width(spr_Hud_Healthbar_Kirby)*0.01)*((min(global.healP1Mod,healthbarWidth)/global.healthP1Max)*100);
+//healStart = (sprite_get_width(spr_Hud_Healthbar_Kirby)*0.01)*((min(healthbarWidth-healWidth,healthbarWidth)/global.healthP1Max)*100);
+healStart = min(healthbarWidth+(healWidth*sign(global.healP1Mod)),healthbarWidth);
 //healthbarMaxWidth = sprite_get_width(spr_Hud_Healthbar_Kirby);
 healthbarHeight = sprite_get_height(spr_Hud_Healthbar_Kirby);
+
+healBarColor = c_teal;
+if(global.healthP1 < global.healP1Mod){
+	healBarColor = c_red;
+}
 
 if(global.healP1Mod != global.healthP1){
 	if(global.healP1Mod < global.healthP1){
@@ -300,16 +307,11 @@ if(global.healP1Mod != global.healthP1){
 		}		
 	}
 }
-
-healBarColor = c_teal;
-if(global.healthP1 < global.healP1Mod){
-	healBarColor = c_red;
-}
 	
 draw_sprite_part_ext(spr_Hud_HealthbarHeal_Kirby,0,healStart,0,sign(healWidth)*healWidth,healthbarHeight,(hudX + 25)+healStart,hudY - 9,1,1,healBarColor,drawAlpha);
 
 draw_text(hudX + 25,hudY - 32,string(sign(healWidth)*healWidth));
-draw_text(hudX + 25,hudY - 52,string(global.healP1Mod)+"/"+string(global.healthP1));
+draw_text(hudX + 25,hudY - 52,string(healWidth)+"/"+string(healthbarWidth));
 
 if (global.shaders) pal_swap_reset();
 
