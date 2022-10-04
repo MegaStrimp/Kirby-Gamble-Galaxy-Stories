@@ -76,15 +76,45 @@ if (!global.pause)
 	bodyX = x;
 	bodyY = y;
 	
+	if(hsp == 0){
+		stepDir = 1;
+	}
+	if(movingFoot == 0){
+		footFrontHeight += stepSpeed*stepDir;
+		if(footFrontHeight < stepHeight && hsp != 0){
+			footFrontHeight = stepHeight;
+			stepDir = 1;
+		}else if(footFrontHeight > 0){
+			footFrontHeight = 0;
+			stepDir = -1;
+			movingFoot = 1;
+		}	
+	}else{
+		footBackHeight += stepSpeed*stepDir;
+		if(footBackHeight < stepHeight && hsp != 0){
+			footBackHeight = stepHeight;
+			stepDir = 1;
+		}else if(footBackHeight > 0){
+			footBackHeight = 0;
+			stepDir = -1;
+			movingFoot = 0;
+		}
+	}
+	
 	footFrontX = x + (-10 * dirX);
-	footFrontY += vsp;
+	footFrontY = y + footFrontYOffset + footFrontHeight;
 	footFrontIndex = sprFoot;
+	if(footFrontHeight < 0){
+		footFrontIndex = sprFootAngled;
+	}
 	if (vsp == 0)
 	{
 		if (place_meeting(footFrontX,footFrontY + 14,obj_ParentWall))
 		{
 			var collidedWall = instance_place(footFrontX,footFrontY + 14,obj_ParentWall);
-			footFrontY = collidedWall.bbox_top - 13;
+			if(footFrontHeight >= 0){
+				footFrontY = collidedWall.bbox_top - 13;
+			}
 		}
 		else
 		{
@@ -93,14 +123,19 @@ if (!global.pause)
 	}
 	
 	footBackX = x + (-8 * dirX);
-	footBackY += vsp;
+	footBackY = y + footFrontYOffset + footBackHeight;
 	footBackIndex = sprFoot;
+	if(footBackHeight < 0){
+		footBackIndex = sprFootAngled;
+	}
 	if (vsp == 0)
 	{
 		if (place_meeting(footBackX,footBackY + 17,obj_ParentWall))
 		{
 			var collidedWall = instance_place(footBackX,footBackY + 17,obj_ParentWall);
-			footBackY = collidedWall.bbox_top - 16;
+			if(footBackHeight >= 0){
+				footBackY = collidedWall.bbox_top - 16;
+			}
 		}
 		else
 		{

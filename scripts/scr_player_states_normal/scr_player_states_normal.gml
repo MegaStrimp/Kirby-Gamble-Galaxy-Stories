@@ -3115,6 +3115,7 @@ function scr_Player_States_Normal()
 								if(run && !grounded){
 									attackNumber = playerAttacks.jetDash;
 								}else{
+									attack = true;
 									attackNumber = playerAttacks.jetCharge;
 								    attackable = false;
 									// need to set the state as well to jetCharge
@@ -3122,20 +3123,91 @@ function scr_Player_States_Normal()
 									image_index = 0;
 								}
 							}
-							if(attackNumber == playerAttacks.jetCharge){
-								attackTimer = 99;
-								if(keyAttackReleased){
-									attackNumber = playerAttacks.jetDash;
+						if (attackNumber == playerAttacks.jetCharge)
+						{
+							//state = playerStates.jetCharge;
+							image_index = 0;
+							if (jetCharge == jetChargeMax - 1)
+							{
+								if (audio_is_playing(snd_Charge_Ready)) audio_stop_sound(snd_Charge_Ready);
+								audio_play_sound(snd_Charge_Ready,0,false);
+								var particle = instance_create_depth(x,y - 15,depth - 1,obj_Particle);
+								particle.sprite_index = spr_Particle_Flash1;
+								particle.scale = 1.5;
+								particle.destroyAfterAnimation = true;
+							}
+							jetCharge += 1;
+							if (jetCharge >= 6)
+							{
+								if (jetCharge == 6)
+								{
+									sprite_index = sprCutterCharge;
+									image_index = 0;
+								}
+								if ((!audio_is_playing(snd_Charge_Intro)) and (!audio_is_playing(snd_Charge_Loop)))
+								{
+									if (chargeSfxState == "intro")
+									{
+									    chargeSfx = audio_play_sound(snd_Charge_Intro,0,false);
+									    chargeSfxState = "loop";
+									}
+									else
+									{
+									    chargeSfx = audio_play_sound(snd_Charge_Loop,0,false);
+									}
 								}
 							}
+						
+							if (keyRightHold)
+							{
+								dir = 1;
+							}
+							if (keyLeftHold)
+							{
+								dir = -1;
+							}
+						
+							if (jetCharge < jetChargeMax)
+							{
+								if ((!global.cutscene) and (keyAttackReleased))
+								{
+									jetCharge = 0;
+									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
+									chargeSfxState = "intro";
+									invincibleFlash = false;
+									invincibleFlashTimer = -1;
+									attack = true;
+									attackNumber = playerAttacks.jetDash;
+									//sprite_index = sprCutterAttack1;
+								    //image_index = 0;
+								}
+							}
+							else
+							{
+								if (invincibleFlashTimer == -1) invincibleFlashTimer = invincibleFlashTimerMax;
+								if ((!global.cutscene) and (keyAttackReleased))
+								{
+									//jetCharge = 0;
+									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
+									chargeSfxState = "intro";
+									invincibleFlash = false;
+									invincibleFlashTimer = -1;
+									attack = true;
+									attackNumber = playerAttacks.jetDash;
+									//sprite_index = sprCutterAttack1;
+								    //image_index = 0;
+								}
+							}
+						}
+							//if(attackNumber == playerAttacks.jetCharge){
+							//	attackTimer = 99;
+							//	if(keyAttackReleased){
+							//		attackNumber = playerAttacks.jetDash;
+							//	}
+							//}
 							if(attackNumber = playerAttacks.jetDash){
 								invincible = true;
 								vsp = 0;
-								
-								fireDashHsp = (movespeedJetAirDashBoostSmall) * dir;
-								if(jetDashAir <= 0){
-									fireDashHsp = fireDashHsp*0.75;
-								}
 								
 								//run = false;
 					            attack = true;
@@ -3150,7 +3222,27 @@ function scr_Player_States_Normal()
 								}else{
 									jetDashAir--;
 								}
-					            attackTimer = 25;
+								
+								var jetDashTime = 25;
+								if(jetCharge >= jetChargeMax){
+									jetDashTime = 30
+								}
+					            attackTimer = jetDashTime;
+								
+								if(attackTimer == jetDashTime){
+									if(jetCharge < jetChargeMax){
+										fireDashHsp = (movespeedJetBoost) * dir;
+									}else{
+										fireDashHsp = (movespeedJetAirDashBoost) * dir;
+									}
+								
+									if(jetDashAir <= 0){
+										fireDashHsp = fireDashHsp*0.75;
+									}
+								
+									jetCharge = 0;
+								}
+								
 								if(jetDashAir == 1){
 									attackTimer = 20;
 								//}else if(jetDashAir <= 0){
