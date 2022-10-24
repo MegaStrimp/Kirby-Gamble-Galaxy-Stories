@@ -24,6 +24,13 @@ enum gamemodes
 	samuraiKirby
 }
 
+enum seasons
+{
+	none,
+	halloween,
+	christmas
+}
+
 enum languages
 {
 	english,
@@ -57,6 +64,8 @@ enum playerStates
 	beamGrab,
 	mysticBeamGrab,
 	mirrorDash,
+	ninjaDash,
+	ninjaDrop,
 	fireDash,
 	iceGrab,
 	yoyoDash,
@@ -188,6 +197,8 @@ enum playerAttacks
 	ninjaNormal,
 	ninjaHoldCharge,
 	ninjaSlash,
+	ninjaDash,
+	ninjaDrop,
 	
 	bombReady,
 	bombNormal,
@@ -227,6 +238,8 @@ enum playerAttacks
 	
 	swordNormal,
 	swordDash,
+	swordCombo,
+	swordBarrage,
 	
 	parasolDash,
 	
@@ -673,6 +686,7 @@ enum stringAttributes
 	enemy_sirKibble,
 	enemy_gordo,
 	enemy_bloodGordo,
+	enemy_ghostGordo,
 	enemy_shotzo,
 	enemy_mysticDoo,
 	enemy_bouncy,
@@ -756,10 +770,37 @@ enum talkingCharacter
 }
 #endregion
 
-#region Global Variables
-global.versionNumber = "0.6.0";
+#region Particles
+global.particles = part_system_create();
 
-global.globalTimer = 0;
+#region Confetti
+global.partTypeConfetti = part_type_create();
+part_type_sprite(global.partTypeConfetti, spr_Confetti, false, false, true);
+part_type_size(global.partTypeConfetti, 0.1, 0.2, 0, 0);
+part_type_speed(global.partTypeConfetti, 5, 6, -0.3, 0);
+part_type_direction(global.partTypeConfetti, 0, 360, 0, 30);
+part_type_gravity(global.partTypeConfetti, 0.3, 270);
+part_type_orientation(global.partTypeConfetti, 0, 360, 0, 30, 0);
+part_type_life(global.partTypeConfetti, 20, 40);
+#endregion
+
+#region Colorful Stars
+global.partTypeColorfulStars = part_type_create();
+part_type_sprite(global.partTypeColorfulStars, spr_ColorfulStars, false, false, true);
+part_type_size(global.partTypeColorfulStars, 0.8, 1.2, 0, 0);
+part_type_speed(global.partTypeColorfulStars, 6, 7, -0.2, 0);
+part_type_direction(global.partTypeColorfulStars, 25, 155, 5, 0);
+part_type_gravity(global.partTypeColorfulStars, 0.4, 270);
+part_type_orientation(global.partTypeColorfulStars, 0, 360, 0, 30, 0);
+part_type_life(global.partTypeColorfulStars, 30, 40);
+#endregion
+#endregion
+
+#region Global Variables
+global.versionNumber = "0.7.0";
+
+global.season = seasons.none;
+global.season = seasons.halloween;
 global.selectedSave = "Save1.ini";
 global.hpMax = 5;
 global.hpP1 = global.hpMax;
@@ -783,9 +824,10 @@ global.goldenTomato = false;
 global.stageNumber = 0;
 global.debug = true;
 //global.debug = false;
-//show_debug_overlay(global.debug);
+show_debug_overlay(global.debug);
 global.pause = false;
 global.cutscene = false;
+global.cutsceneTargetRoom = rm_Setup;
 global.tutorial = false;
 global.shaders = false;
 if (shader_is_compiled(shd_pal_swapper)) global.shaders = true;
@@ -817,6 +859,10 @@ global.inStage = false;
 for (var i = 0; i < 4; i++) global.stageCollectibleTreasures[i] = -1;
 global.hasInvinCandy = false;
 global.hasMintLeaf = false;
+
+global.demoBeatGreenGreens = false;
+global.demoBeatBattleshipHalberd = false;
+global.demoBeatAsteroidFields = false;
 
 #region Ability Kill Targets
 global.cutterAbilityKillsTarget = 10;
@@ -903,6 +949,15 @@ global.discordSmallImage = "teamgamble_icon";
 global.discordSmallImageText = "Team Gamble";
 #endregion
 
+#region Seasons
+#region Halloween
+if ((current_month == 10) and ((current_day >= 25) and (current_day <= 31)))
+{
+	global.season = seasons.halloween;
+}
+#endregion
+#endregion
+
 #region Timers
 global.invinCandyTimerP1 = -1;
 global.invinCandyTimerP1Max = 1800;
@@ -975,6 +1030,8 @@ subtitles[i] = "Try Revenge of Dream Land!";
 i += 1;
 subtitles[i] = "Try Kirby's Dream Land Plus!";
 i += 1;
+subtitles[i] = "Try Kirby's Eternal Paradise!";
+i += 1;
 subtitles[i] = "Hehahohahe!";
 i += 1;
 subtitles[i] = "It's the name you should know!";
@@ -994,6 +1051,8 @@ i += 1;
 subtitles[i] = "Special Thanks to Galaxamy!";
 i += 1;
 subtitles[i] = "Special Thanks to Jake Mario!";
+i += 1;
+subtitles[i] = "Special Thanks to Alex Auger!";
 i += 1;
 subtitles[i] = "Ceci n'est pas une starting message!";
 i += 1;
@@ -1062,6 +1121,46 @@ i += 1;
 subtitles[i] = "Kirb!";
 i += 1;
 subtitles[i] = "Borb!";
+i += 1;
+subtitles[i] = "Hello I Am Subsandwich!";
+i += 1;
+subtitles[i] = "Hail Hydra!";
+i += 1;
+subtitles[i] = "Bro Thinks He's Subsandwich!";
+i += 1;
+subtitles[i] = "Like Ok Jacob!";
+i += 1;
+subtitles[i] = "Malicious!";
+i += 1;
+subtitles[i] = "Ok AND!";
+i += 1;
+subtitles[i] = "No One Will Get It LOL!";
+i += 1;
+subtitles[i] = "NO ONE WILL!";
+i += 1;
+subtitles[i] = "The Travelling Vaudeville Villain!";
+i += 1;
+subtitles[i] = "YIPPEEEE!";
+i += 1;
+subtitles[i] = "Earthly Woods!";
+i += 1;
+subtitles[i] = "Right Foot Creep!";
+i += 1;
+subtitles[i] = "Cash Rules Everything Around Me!";
+i += 1;
+subtitles[i] = "And Here We Are!";
+i += 1;
+subtitles[i] = "Dollar Dollar Bill Y'all!";
+i += 1;
+subtitles[i] = "We Need Food!";
+i += 1;
+subtitles[i] = "Wen- what now?";
+i += 1;
+subtitles[i] = "MEGA STRIMP?!";
+i += 1;
+subtitles[i] = "Obscure Kirby!";
+i += 1;
+subtitles[i] = "HUH WHO SAID THAT!";
 i += 1;
 
 selectedSubtitle = irandom_range(0,array_length(subtitles) - 1);

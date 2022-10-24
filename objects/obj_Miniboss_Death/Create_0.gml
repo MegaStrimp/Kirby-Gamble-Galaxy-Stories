@@ -24,6 +24,6 @@ invincible = true;
 
 //Timers
 
-invincibleTimer = 10;
+invincibleTimer = 15;
 destroyTimerMax = 420;
 destroyTimer = destroyTimerMax;

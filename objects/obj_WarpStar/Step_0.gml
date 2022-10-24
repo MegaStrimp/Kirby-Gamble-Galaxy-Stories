@@ -51,6 +51,7 @@ if (!global.pause)
 				other.image_angle = 0;
 				dir = 1;
 				warpStarIndex = other;
+				attackTimer = -1;
 				state = playerStates.warpStar;
 				
 			}

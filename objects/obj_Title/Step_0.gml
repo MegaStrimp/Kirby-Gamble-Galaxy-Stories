@@ -19,8 +19,27 @@ if (!global.pause)
 			
 			//Shine Movement
 			
-			xx += hsp;
-			if (xx >= (sprite_get_width(sprite_index) * (4 * image_xscale))) xx -= (sprite_get_width(sprite_index) * (4 * image_xscale));
+			if (shineTimer == -1) xx += hsp;
+			if (xx >= (sprite_get_width(sprite_index) * (4 * image_xscale)))
+			{
+				xx -= (sprite_get_width(sprite_index) * (4 * image_xscale));
+				shineTimer = shineTimerMax;
+			}
+			
+			#region Gradient Alpha
+			gradientAlpha += .005 * gradientAlphaDir;
+			if (gradientAlpha <= .5)
+			{
+				gradientAlpha = .5;
+				gradientAlphaDir = 1;
+			}
+			
+			if (gradientAlpha >= 1)
+			{
+				gradientAlpha = 1;
+				gradientAlphaDir = -1;
+			}
+			#endregion
 			
 			//Konami Code
 			
@@ -150,7 +169,18 @@ if (!global.pause)
 			}
 		}
 		
-		#region Timer
+		#region Shine Timer
+		if (shineTimer > 0)
+		{
+			shineTimer -= 1;
+		}
+		else if (shineTimer == 0)
+		{
+			shineTimer = -1;
+		}
+		#endregion
+		
+		#region Intro State Timer
 		if (introStateTimer > 0)
 		{
 			introStateTimer -= 1;
@@ -165,6 +195,7 @@ if (!global.pause)
 				audio_play_sound(snd_TitleStar,0,false);
 				var par = instance_create_depth(-50,135,-999,obj_Particle);
 				par.sprite_index = spr_TitleStar;
+				if (global.season == seasons.halloween) par.sprite_index = spr_TitleStar_Halloween;
 				par.hsp = 8;
 				par.scale = 1.5;
 				par.hasAfterimage = true;

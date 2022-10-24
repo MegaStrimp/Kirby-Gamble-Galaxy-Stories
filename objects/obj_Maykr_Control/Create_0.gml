@@ -80,6 +80,7 @@ enum maykrObjects
 	sirKibble,
 	gordo,
 	bloodGordo,
+	ghostGordo,
 	shotzo,
 	mysticDoo,
 	bouncy,

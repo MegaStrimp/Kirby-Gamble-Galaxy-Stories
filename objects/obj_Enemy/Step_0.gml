@@ -119,10 +119,26 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			{
 				if (audio_is_playing(snd_MinibossDeath)) audio_stop_sound(snd_MinibossDeath);
 				audio_play_sound(snd_MinibossDeath,0,false);
+				
+				var parNum = irandom_range(10,15);
+				for (var i = 0; i < parNum; i++)
+				{
+					var par = instance_create_depth(x + irandom_range((-sprite_get_width(sprite_index) / 2),(sprite_get_width(sprite_index) / 2)),y - irandom_range(0,sprite_get_height(sprite_index) / 1.5),depth - 1,obj_Particle);
+					par.sprite_index = spr_ColorfulStars;
+					par.image_index = irandom_range(0,sprite_get_number(spr_ColorfulStars) - 1);
+					par.hsp = random_range(-4,4);
+					par.vsp = random_range(-5,-3);
+					par.angleSpd = par.hsp * 3;
+					par.hasGravity = true;
+					par.invisTimer = 100;
+					par.destroyTimer = 120;
+				}
+				
 				var deathObj = instance_create_depth(x,y - 12,depth,obj_Miniboss_Death);
 				deathObj.hsp = 2 * projectileHitKnockbackDir;
 				deathObj.vsp = -6;
 				deathObj.ownerIndex = object_index;
+				deathObj.paletteIndex = paletteIndex;
 				deathObj.points = points;
 				deathObj.ability = ability;
 				deathObj.dirX = dirX;
@@ -390,6 +406,10 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			
 			case obj_BloodGordo:
 			global.bestiaryEnemiesBloodGordoUnlocked = true;
+			break;
+			
+			case obj_GhostGordo:
+			global.bestiaryEnemiesGhostGordoUnlocked = true;
 			break;
 			
 			case obj_Shotzo:

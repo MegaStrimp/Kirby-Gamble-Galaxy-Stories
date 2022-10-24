@@ -15,6 +15,8 @@ alphaTarget = 0;
 state = 0;
 strimpAnim = 0;
 
+//alarm[0] = 60;
+
 //Timers
 
 stateTimer = 20;

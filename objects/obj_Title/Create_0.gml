@@ -10,6 +10,7 @@ hsp = 10;
 x = room_width / 2;
 y = room_height / 2.5;
 sprite_index = spr_Logo;
+if (global.season = seasons.halloween) sprite_index = spr_Logo_Halloween;
 image_xscale = .2;
 image_yscale = .2;
 page = 0;
@@ -20,9 +21,13 @@ cameraY = 0;
 canBeInteracted = false;
 introState = 0;
 blackAlphaVal = 1;
+gradientAlpha = .5;
+gradientAlphaDir = 1;
 
 //Timers
 
+shineTimer = 0;
+shineTimerMax = 90;
 introStateTimer = 30;
 
 //Save Files

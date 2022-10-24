@@ -10,7 +10,7 @@ randomize();
 
 //Physics
 
-movespeed = 3;
+movespeed = 2;
 
 //Sprites
 
@@ -20,9 +20,19 @@ sprIdle = spr_Flamer_Normal_Idle;
 sprReady = spr_Flamer_Normal_Ready;
 sprAttack = spr_Flamer_Normal_Attack;
 sprHurt = spr_Flamer_Normal_Hurt;
+sprAttackReady = spr_Flamer_Normal_Attack;
+
+
+attackAlarm = room_speed/12;//if the enemy is in line with the player during the attack state for this amount of time, wind back and attack
+windupAlarm = room_speed/4;
+
+
+
+
+
 
 //Other Variables
-
+viewRange = 64;
 paletteIndex = spr_Flamer_Normal_Palette_FieryRed;
 hp = 12;
 dmg = 1;

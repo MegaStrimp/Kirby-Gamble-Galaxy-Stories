@@ -660,7 +660,7 @@ function scr_Customize_Paints()
 	{
 		#region Aege
 		sprayPaintTitle[i] = str("Spray Paints.Aege.Title");
-		sprayPaintDescription[i] = str("Spray Paints.aege.Description");
+		sprayPaintDescription[i] = str("Spray Paints.Aege.Description");
 		sprayPaintUnlocked[i] = true;
 		sprayPaintUnlockMethod[i] = "???";
 		sprayPaintValue[i] = playerSprayPaints.aege;

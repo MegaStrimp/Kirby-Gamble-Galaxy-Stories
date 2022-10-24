@@ -511,6 +511,18 @@ switch (state)
 	scr_Player_States_MirrorDash();
 	break;
 	
+	//Ninja Dash
+	
+    case (playerStates.ninjaDash):
+	scr_Player_States_NinjaDash();
+	break;
+	
+	//Ninja Drop
+	
+    case (playerStates.ninjaDrop):
+	scr_Player_States_NinjaDrop();
+	break;
+	
 	//Fire Dash
 	
     case (playerStates.fireDash):

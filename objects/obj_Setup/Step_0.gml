@@ -2,7 +2,6 @@
 
 //Variables
 
-global.globalTimer += 1;
 if (global.gamemode == gamemodes.maykr)
 {
 	//window_set_cursor(cr_none);

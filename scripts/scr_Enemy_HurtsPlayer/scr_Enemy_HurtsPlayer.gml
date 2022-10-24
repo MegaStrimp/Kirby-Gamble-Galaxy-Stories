@@ -285,10 +285,16 @@ function scr_Enemy_HurtsPlayer(argument0)
 			}
 			if ((global.enemyHealthbars) and (!isMiniBoss) and (!isBoss)) global.healthbarMarkedEnemy = id;
 			hp -= collidedPlayer.dmg;
-			var hitNumber = instance_create_depth(collidedPlayer.x,collidedPlayer.y,-900,obj_HitNumbers);
-			hitNumber.number = collidedPlayer.dmg;
-			hitNumber.hsp = random_range(-1,1);
-			hitNumber.vsp = -2;
+			invincible = true;
+			invincibleTimer = invincibleTimerMax;
+			invincibleFlashTimer = invincibleFlashTimerMax;
+			if (global.hitNumbers)
+			{
+				var hitNumber = instance_create_depth(collidedPlayer.x,collidedPlayer.y,-900,obj_HitNumbers);
+				hitNumber.number = collidedPlayer.dmg;
+				hitNumber.hsp = random_range(-1,1);
+				hitNumber.vsp = -2;
+			}
 			shakeX = 2;
 			shakeY = 2;
 			direction = point_direction(x,y,x,y) + irandom_range(150,210);

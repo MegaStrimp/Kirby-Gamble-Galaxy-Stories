@@ -13,6 +13,11 @@ else if (setupTimer == 0)
 		sprIdle = spr_FallingAsteroid_Normal_Idle;
 		sprDebris = spr_FallingAsteroid_Normal_Debris;
 		break;
+		
+		case 1:
+		sprIdle = spr_FallingAsteroid_AsteroidFields_Idle;
+		sprDebris = spr_FallingAsteroid_AsteroidFields_Debris;
+		break;
 	}
 	setupTimer = -1;
 }
@@ -23,6 +28,10 @@ if (!global.pause)
 	#region Movement
 	x += lengthdir_x(spd,angle);
 	y += lengthdir_y(spd,angle);
+	#endregion
+	
+	#region Image Angle
+	image_angle += 2;
 	#endregion
 	
 	#region Destroy

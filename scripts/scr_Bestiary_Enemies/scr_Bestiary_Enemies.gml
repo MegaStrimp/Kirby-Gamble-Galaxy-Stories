@@ -176,7 +176,7 @@ function scr_Bestiary_Enemies()
 	#region Blood Gordo
 	entries[i][h] = "Enemy"; //Type
 	h += 1;
-	entries[i][h] = "Blood  Gordo"; //Name
+	entries[i][h] = "Blood Gordo"; //Name
 	h += 1;
 	entries[i][h] = str("Enemies.Blood Gordo.Title"); //Display Name
 	h += 1;
@@ -189,6 +189,30 @@ function scr_Bestiary_Enemies()
 	entries[i][h] = playerAbilities.none; //Ability
 	h += 1;
 	entries[i][h] = global.bestiaryEnemiesBloodGordoUnlocked; //Unlocked
+	h += 1;
+	entries[i][h] = 0; //Offset
+	h += 1;
+	entries[i][h] = 0; //Offset Lerp
+	#endregion
+	i += 1;
+	h = 0;
+	
+	#region Ghost Gordo
+	entries[i][h] = "Enemy"; //Type
+	h += 1;
+	entries[i][h] = "Ghost Gordo"; //Name
+	h += 1;
+	entries[i][h] = str("Enemies.Blood Gordo.Title"); //Display Name
+	h += 1;
+	entries[i][h] = str("Enemies.Blood Gordo.Description"); //Description
+	h += 1;
+	entries[i][h] = spr_BloodGordo_Normal_Idle; //Portrait Sprite
+	h += 1;
+	entries[i][h] = 2; //Portrait Scale
+	h += 1;
+	entries[i][h] = playerAbilities.none; //Ability
+	h += 1;
+	entries[i][h] = global.bestiaryEnemiesGhostGordoUnlocked; //Unlocked
 	h += 1;
 	entries[i][h] = 0; //Offset
 	h += 1;

@@ -6,7 +6,11 @@ grav = gravNormal;
 gravLimitNormal = 5;
 gravLimit = gravLimitNormal;
 hsp = 0;
+hspCollision = 0;
+hspFinal = 0;
 vsp = 0;
+vspCollision = 0;
+vspFinal = 0;
 movespeed = 1;
 jumpspeed = 5;
 #endregion

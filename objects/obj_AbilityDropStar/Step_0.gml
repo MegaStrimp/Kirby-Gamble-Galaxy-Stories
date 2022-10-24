@@ -35,7 +35,7 @@ if (!global.pause)
 		}
 	}
 	
-	if ((place_meeting(x,y,obj_Spike)) or (place_meeting(x,y,obj_Gordo)) or (place_meeting(x,y,obj_BloodGordo))) destroy = true;
+	if ((place_meeting(x,y,obj_Spike)) or (place_meeting(x,y,obj_Gordo)) or (place_meeting(x,y,obj_BloodGordo)) or (place_meeting(x,y,obj_GhostGordo))) destroy = true;
 	
 	//Scale
 	

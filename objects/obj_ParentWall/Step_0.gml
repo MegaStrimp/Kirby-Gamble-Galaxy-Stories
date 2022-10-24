@@ -149,6 +149,28 @@ if (object)
 {
 	if (!invincible)
 	{
+		with (obj_Chuckie)
+		{
+			if (place_meeting(x,y,other))
+			{
+				if (other.damageType == damageTypes.none)
+				{
+					other.hp -= 1;
+				}
+			}
+		}
+		
+		with (obj_WarpStar)
+		{
+			if (place_meeting(x,y,other))
+			{
+				if (other.damageType == damageTypes.none)
+				{
+					other.hp -= 10;
+				}
+			}
+		}
+		
 		with (obj_Projectile)
 		{
 			if (place_meeting(x,y,other))

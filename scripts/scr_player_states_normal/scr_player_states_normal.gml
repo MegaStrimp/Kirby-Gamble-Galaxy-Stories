@@ -813,7 +813,7 @@ function scr_Player_States_Normal()
 								projectile.owner = id;
 								projectile.abilityType = playerAbilities.cutter;
 								projectile.paletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
-								projectile.dmg = 123;
+								projectile.dmg = 20;
 								projectile.sprite_index = projectile.sprCharge;
 								projectile.decelMax = projectile.decelMax * 1.2;
 								projectile.hsp = dir * projectile.decelMax;
@@ -1992,6 +1992,7 @@ function scr_Player_States_Normal()
 											}
 											projMirror.spriteIndex = sprMirrorAttack3;
 											projMirror.paletteIndex = paletteIndex;
+											if ((playerCharacter == playerCharacters.kirby) and (global.coloredAbilitiesKeycard) and (global.cheatColoredAbilitiesEquipped)) projMirror.paletteIndex = spr_Kirby_Normal_Palette_Mirror;
 											projMirror.hatIndex = scr_Player_AbilityHat(playerAbility,playerCharacter);
 											projMirror.hatShadowIndex = scr_Player_HatShadow(playerAbility,playerCharacter);
 											projMirror.hatPaletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
@@ -2098,10 +2099,42 @@ function scr_Player_States_Normal()
 						case playerAbilities.ninja:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
-							attack = true;
-							attackNumber = playerAttacks.ninjaHoldCharge;
-							sprite_index = sprNinjaCharge;
-							image_index = 0;
+							if ((run) and (vsp == 0) and (hsp != 0))
+							{
+								attack = true;
+								attackNumber = playerAttacks.ninjaDash;
+								sprite_index = sprCutterAttack2;
+						        image_index = 0;
+				                cutterCatch = false;
+								hspLimit = false;
+								hsp = movespeedRun * 1.3;
+							}
+							else if (keyDownHold)
+							{
+								if (audio_is_playing(snd_Slash)) audio_stop_sound(snd_Slash);
+								audio_play_sound(snd_Slash,0,false);
+								var cutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_NinjaDropMask);
+								cutterMaskProj.owner = id;
+								cutterMaskProj.abilityType = playerAbilities.ninja;
+								cutterMaskProj.dmg = 18;
+								cutterMaskProj.image_xscale = image_xscale;
+								cutterMaskProj.image_yscale = image_yscale;
+								invincible = true;
+								attack = true;
+								attackNumber = playerAttacks.ninjaDrop;
+								hsp = 4.5 * dir;
+								vsp = 4.5;
+								sprite_index = sprCutterAttack3;
+								image_index = 0;
+				                state = playerStates.ninjaDrop;
+							}
+							else
+							{
+								attack = true;
+								attackNumber = playerAttacks.ninjaHoldCharge;
+								sprite_index = sprNinjaCharge;
+								image_index = 0;
+							}
 					    }
 					
 						if (attackNumber == playerAttacks.ninjaHoldCharge)
@@ -2162,12 +2195,34 @@ function scr_Player_States_Normal()
 								projectile.owner = id;
 								projectile.abilityType = playerAbilities.ninja;
 								projectile.dmg = 25;
-								projectile.hsp = dir * 4;
-								projectile.vsp = 2;
 								projectile.dirX = dir;
 								projectile.image_xscale = projectile.dirX;
 								projectile.enemy = false;
 								attackable = false;
+							}
+						}
+						
+						if (attackNumber == playerAttacks.ninjaDash)
+						{
+							if (attackable)
+							{
+				                hsp = movespeedSlide * dir;
+								run = false;
+				                attack = true;
+								attackable = false;
+				                attackTimer = 45;
+				                state = playerStates.ninjaDash;
+								if (audio_is_playing(snd_CutterDash)) audio_stop_sound(snd_CutterDash);
+								slideSfx = audio_play_sound(snd_CutterDash,0,false);
+								ninjaDashMaskProj = instance_create_depth(x + (14 * dir),y - 12,depth - 1,obj_Projectile_NinjaDashMask);
+								ninjaDashMaskProj.owner = id;
+								ninjaDashMaskProj.abilityType = playerAbilities.ninja;
+								ninjaDashMaskProj.dmg = 18;
+								ninjaDashMaskProj.hsp = 4 * dir;
+								ninjaDashMaskProj.vsp = 2;
+								ninjaDashMaskProj.dirX = dir;
+								ninjaDashMaskProj.image_xscale = image_xscale;
+								ninjaDashMaskProj.image_yscale = image_yscale;
 							}
 						}
 						break;
@@ -2798,7 +2853,7 @@ function scr_Player_States_Normal()
 						}
 						break;
 						#endregion
-						
+						/*
 						#region Sword
 						case playerAbilities.sword:
 					    if ((!global.cutscene) and (keyAttackHold) and (!hurt) and (!attack) and (cutterAirThrown))
@@ -3008,6 +3063,103 @@ function scr_Player_States_Normal()
 								attackTimer = 0;
 							}
 						}
+						break;
+						#endregion
+						*/
+						
+						#region Sword
+						case playerAbilities.sword: //AKA: -S- fucks around and finds out
+							///////////////////////attackTimer Specifics
+							///Stop an attack if attacktimer reaches 0
+							
+							if attackTimer<=0 {attack=false attackable=true; state=playerStates.normal }
+							
+							///Decreasng it
+							attackTimer--; 
+							
+							///i like the part when Kirby says Dash attack and Dash Attacks all over the enemies
+							if ((!global.cutscene) and (keyAttackPressed) and (grounded) and(run) and (!hurt) and (!attack)){
+								
+								attack = true;
+								attackNumber = playerAttacks.swordDash;
+								sprite_index = sprSwordAttack2;
+						        image_index = 0;
+								attackTimer=60
+								hsp = dir * movespeedRun * 1.3;
+								
+							///////////////////////Main Slash Activation
+							}else if ((!global.cutscene) and (keyAttackPressed) and (grounded) and(!run) and (!hurt) and (!attack)){
+								attackNumber=playerAttacks.swordNormal
+								attackTimer=2
+								
+								///////////////////////////////////ComboJump 
+							} else if ((!global.cutscene) and (keyAttackPressed) and (grounded) and(!run) and (!hurt) and (attack) and (attackNumber=playerAttacks.swordNormal)){ //Combo 1
+								attackTimer = 60;
+								attackNumber= playerAttacks.swordCombo
+								if (audio_is_playing(snd_NinjaSlash)) audio_stop_sound(snd_NinjaSlash);
+								audio_play_sound(snd_NinjaSlash,0,false);
+								var projectile = instance_create_depth(x + (14 * dir),y - 12,depth - 1,obj_Projectile_SwordSlash);
+								projectile.owner = id;
+								projectile.abilityType = playerAbilities.sword;
+								projectile.destroyTimerMax =20
+								projectile.dmg = 15;
+								projectile.dirX = dir;
+								projectile.image_xscale = projectile.dirX;
+								projectile.enemy = false;
+								projectile.destroyTimer =20
+								attackable = false;
+								sprite_index=sprSwordAttack2
+								grounded=0
+								vsp=-3
+								attack=true
+								///////////////////////////////////Barrage 
+							} else if ((!global.cutscene) and (keyAttackPressed) and (grounded) and(!run) and (!hurt)  and (attackNumber=playerAttacks.swordCombo)){
+								attack=true
+								attackTimer = 60;
+								attackNumber=playerAttacks.swordBarrage
+							}
+							//////////////////////Main Slash Attack
+							if attackNumber=playerAttacks.swordNormal && attackTimer=0 && attackable{
+								sprite_index=sprSwordAttack1
+								attackTimer = 30;
+								if (audio_is_playing(snd_NinjaSlash)) audio_stop_sound(snd_NinjaSlash);
+								audio_play_sound(snd_NinjaSlash,0,false);
+								var projectile = instance_create_depth(x + (14 * dir),y - 12,depth - 1,obj_Projectile_SwordSlash);
+								projectile.owner = id;
+								projectile.abilityType = playerAbilities.sword;
+								projectile.destroyTimerMax =20
+								projectile.dmg = 15;
+								projectile.dirX = dir;
+								projectile.image_xscale = projectile.dirX;
+								projectile.enemy = false;
+								projectile.destroyTimer =20
+								attackable = false;
+								attack=true;
+							}
+							if attackNumber=playerAttacks.swordNormal && attackTimer>0 {hsp*=0.9}
+							if attackNumber=playerAttacks.swordCombo && !grounded {hsp*=0.9}
+							if attackNumber=playerAttacks.swordBarrage && attackTimer>0 {
+								
+								hsp*=0.9
+								if attackTimer div 10 && attackTimer<=50{
+									if (audio_is_playing(snd_Spark1)) audio_stop_sound(snd_Spark1);
+									audio_play_sound(snd_Spark1,0,false);
+									var projectile = instance_create_depth(x,y-8,depth - 1,obj_Projectile_PlasmaWisp);
+									projectile.owner = id;
+									projectile.abilityType = playerAbilities.sword;
+									projectile.sprite_index = spr_Projectile_Spark_Normal_None;
+									projectile.mask_index = projectile.sprite_index;
+									projectile.hurtsPlayer=0
+									projectile.enemy = false;
+									projectile.dirX = dir;
+									projectile.image_xscale = dir;
+									projectile.image_yscale=0.2
+									projectile.hspeed = dir * 6;
+									projectile.vspeed = -0.5+random(1);
+									//projectile.hspeed-=abs(projectile.vspeed)
+									projectile.destroyTimer =20;
+								}
+							}
 						break;
 						#endregion
 						
@@ -3660,7 +3812,7 @@ function scr_Player_States_Normal()
 				parJump.spdBuiltIn = 6;
 				parJump.fricSpd = .6;
 				parJump.direction = 90 + (20 * dir);
-				if (carriedItem == carriedItems.none) fallRoll = true;
+				if ((carriedItem == carriedItems.none) and (playerAbility != playerAbilities.sword) and (playerAbility != playerAbilities.parasol) and (playerAbility != playerAbilities.hammer)) fallRoll = true;
 				sprite_index = sprJump;
 				image_index = 0;
 				vsp = -jumpspeed;
@@ -3733,7 +3885,7 @@ function scr_Player_States_Normal()
 				parJump.spdBuiltIn = 6;
 				parJump.fricSpd = .6;
 				parJump.direction = 90 + (20 * dir);
-				if (carriedItem == carriedItems.none) fallRoll = true;
+				if ((carriedItem == carriedItems.none) and (playerAbility != playerAbilities.sword) and (playerAbility != playerAbilities.parasol) and (playerAbility != playerAbilities.hammer)) fallRoll = true;
 				sprite_index = sprJump;
 				image_index = 0;
 				vsp = -jumpspeed;
@@ -4225,7 +4377,7 @@ function scr_Player_States_Normal()
 					}
 					else
 					{
-						if (carriedItem == carriedItems.none)
+						if ((carriedItem == carriedItems.none) and (playerAbility != playerAbilities.sword) and (playerAbility != playerAbilities.parasol) and (playerAbility != playerAbilities.hammer))
 						{
 							sprite_index = sprWalk;
 						}
@@ -4336,7 +4488,7 @@ function scr_Player_States_Normal()
 			}
 		}
 		
-		if (hurt) sprite_index = sprHurt;
+		if ((hurt) and (playerAbility != playerAbilities.ufo)) sprite_index = sprHurt;
 		
 		//Walk Duck
 		

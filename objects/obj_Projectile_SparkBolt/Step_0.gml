@@ -22,9 +22,16 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		if (createObject)
 		{
 			var yDir = 1;
-			if (owner.attackNumber == playerAttacks.sparkUp) yDir = -1;
+			var pillarDmg = 16;
+			if (owner.attackNumber == playerAttacks.sparkUp)
+			{
+				yDir = -1;
+				pillarDmg = 14;
+			}
 			obj = instance_create_depth(x,owner.y - 4 + (14 * yDir),depth,obj_Projectile_SparkPillar);
 			obj.owner = owner;
+			obj.abilityType = playerAbilities.spark;
+			obj.dmg = pillarDmg;
 			obj.image_yscale = yDir;
 			obj.dirY = yDir;
 			createObject = false;

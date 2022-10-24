@@ -278,6 +278,11 @@ else if (activeState == 1)
 		spawnedStateMax = 3;
 		break;
 		
+		case obj_GhostGordo:
+		spawnedName = "Ghost Gordo";
+		spawnedStateMax = 3;
+		break;
+		
 		case obj_Shotzo:
 		spawnedName = "Shotzo";
 		spawnedStateMax = 1;

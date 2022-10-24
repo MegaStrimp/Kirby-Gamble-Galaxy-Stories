@@ -671,7 +671,7 @@ if (layer_exists("GreenGreens_Waterfall"))
 {
 	var bgId = layer_background_get_id("GreenGreens_Waterfall");
 	waterfallIndex += sprite_get_speed(bg_GreenGreens1_Waterfall) / 60;
-	if (waterfallIndex >= sprite_get_number(bg_GreenGreens1_Waterfall)) waterfallIndex -= sprite_get_number(bg_GreenGreens1_Waterfall) - 1;
+	if (waterfallIndex >= sprite_get_number(bg_GreenGreens1_Waterfall)) waterfallIndex -= sprite_get_number(bg_GreenGreens1_Waterfall);
 	layer_background_index(bgId,waterfallIndex);
 	var backgroundSprite = layer_background_get_sprite(bgId);
 	var backgroundXScale = layer_background_get_xscale(bgId);

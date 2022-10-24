@@ -162,6 +162,7 @@ function scr_SaveGame(argument0)
 	ini_write_real("unlocks","bestiaryEnemiesSirKibbleUnlocked",global.bestiaryEnemiesSirKibbleUnlocked);
 	ini_write_real("unlocks","bestiaryEnemiesGordoUnlocked",global.bestiaryEnemiesGordoUnlocked);
 	ini_write_real("unlocks","bestiaryEnemiesBloodGordoUnlocked",global.bestiaryEnemiesBloodGordoUnlocked);
+	ini_write_real("unlocks","bestiaryEnemiesGhostGordoUnlocked",global.bestiaryEnemiesGhostGordoUnlocked);
 	ini_write_real("unlocks","bestiaryEnemiesShotzoUnlocked",global.bestiaryEnemiesShotzoUnlocked);
 	ini_write_real("unlocks","bestiaryEnemiesMysticDooUnlocked",global.bestiaryEnemiesMysticDooUnlocked);
 	ini_write_real("unlocks","bestiaryEnemiesBouncyUnlocked",global.bestiaryEnemiesBouncyUnlocked);
@@ -355,6 +356,8 @@ function scr_SaveGame(argument0)
 	ini_write_real("playerCustomization","sparkBrightPluggUpgradeEquipped",global.sparkBrightPluggUpgradeEquipped);
 	ini_write_real("playerCustomization","waterEggSoilUpgradeEquipped",global.waterEggSoilUpgradeEquipped);
 	
+	ini_write_real("cheats","cheatColoredAbilitiesEquipped",global.cheatColoredAbilitiesEquipped);
+	
 	ini_write_real("extraTutorials","exTut_Treasure",global.exTut_Treasure);
 	ini_write_real("extraTutorials","exTut_AntiFloat",global.exTut_AntiFloat);
 	
@@ -363,5 +366,7 @@ function scr_SaveGame(argument0)
 	ini_write_real("doNotEdit","KBB0",global.kirbyBattleBlitzCrossoverKeycard);
 	ini_write_real("doNotEdit","KDLP0",global.kirbysDreamLandPlusCrossoverKeycard);
 	ini_write_real("doNotEdit","DC0",global.dreamCrafterCrossoverKeycard);
+	
+	ini_write_real("doNotEdit","CA0",global.coloredAbilitiesKeycard);
 	ini_close();
 }

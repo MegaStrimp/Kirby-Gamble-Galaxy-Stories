@@ -78,7 +78,7 @@ if (!global.pause)
 		{
 			global.familiarP1 = familiars.gamble;
 			var fade = instance_create_depth(x,y,-999,obj_Fade);
-			fade.targetRoom = rm_AsteroidFields1;
+			fade.targetRoom = rm_AsteroidFieldsNew1;
 			select = false;
 		}
 		break;

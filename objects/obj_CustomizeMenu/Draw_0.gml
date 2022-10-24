@@ -601,11 +601,11 @@ switch (page)
 		case playerAbilities.ninja:
 		switch (abilityHatSkinValue[subSelection][selection])
 		{
-			case abilityHatSkins.mirror_kssu:
+			case abilityHatSkins.ninja_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Ninja_KSSU_Idle;
 			break;
 			
-			case abilityHatSkins.mirror_modern:
+			case abilityHatSkins.ninja_modern:
 			hatSprite = spr_Kirby_AbilityHat_Ninja_Modern_Idle;
 			break;
 		}

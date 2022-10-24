@@ -10,7 +10,7 @@ draw_sprite(spr_Menu_Saves_Medals_Empty,0,4 + hudOffset,5);
 
 draw_set_color(c_black);
 draw_set_alpha(.75);
-draw_roundrect((room_width / 2) - 72,36,(room_width / 2) + 72,36 + 9 + (array_length(languageIndex) * 18),false);
+draw_roundrect((room_width / 2) - 72,36,(room_width / 2) + 72,36 + 9 + (array_length(languageArray) * 18),false);
 draw_set_alpha(1);
 
 //Draw Text
