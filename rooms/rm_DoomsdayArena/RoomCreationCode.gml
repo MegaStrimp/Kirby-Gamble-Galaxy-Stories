@@ -9,7 +9,6 @@ global.discordLargeImage = "ggs_icon";
 
 global.stageNumber = 0;
 global.roomCheckpoint = room;
-global.isHub = true;
 
 //Music
 audio_stop_all();

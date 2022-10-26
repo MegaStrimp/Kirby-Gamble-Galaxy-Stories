@@ -45,4 +45,17 @@ switch (healthbarIndex)
 	draw_sprite(spr_Healthbar_Boss_Border,0,90,4);
 	break;
 	#endregion
+	
+	#region Doomsday
+	case 4:
+	bossHbHp = max(bossHbHp,0);
+	if (!global.pause) healthbarBackHp = lerp(healthbarBackHp,bossHbHp,.025);
+	
+	if (sprBossText != -1) draw_sprite(sprBossText,0,194,13);
+	draw_sprite(spr_Healthbar_Doomsday_Bg,0,187,31);
+	draw_sprite_part(spr_Healthbar_Doomsday_InnerBack,0,0,0,sprite_get_width(spr_Healthbar_Doomsday_InnerBack) * (healthbarBackHp / hpMax),sprite_get_height(spr_Healthbar_Doomsday_InnerBack),187,31);
+	draw_sprite_part(spr_Healthbar_Doomsday_InnerFront,0,0,0,sprite_get_width(spr_Healthbar_Doomsday_InnerFront) * (bossHbHp / hpMax),sprite_get_height(spr_Healthbar_Doomsday_InnerFront),187,31);
+	draw_sprite(spr_Healthbar_Doomsday_Border,0,133,4);
+	break;
+	#endregion
 }

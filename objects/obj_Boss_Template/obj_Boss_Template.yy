@@ -2,10 +2,7 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_Boss_Template",
-  "spriteId": {
-    "name": "spr_WhispyWoods_Normal_TreeIdle",
-    "path": "sprites/spr_WhispyWoods_Normal_TreeIdle/spr_WhispyWoods_Normal_TreeIdle.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,

@@ -147,6 +147,7 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			projBeam.destroyableByWall = false;
 			projBeam.destroyableByEnemy = false;
 			projBeam.destroyableByObject = false;
+			projBeam.destroyableByProjectile = true;
 			projBeam.destroyOutsideRoom = true;
 			currentBeams += 1;
 			

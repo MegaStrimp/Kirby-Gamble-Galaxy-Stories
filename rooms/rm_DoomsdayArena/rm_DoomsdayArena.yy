@@ -22,7 +22,9 @@
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"DoomsdayIntro","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_132C539F","properties":[],"isDnd":false,"objectId":{"name":"obj_DoomsdayIntro","path":"objects/obj_DoomsdayIntro/obj_DoomsdayIntro.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":0.0,},
       ],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":6,"gridY":6,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
-    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Enemies","instances":[],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":6,"gridY":6,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
+    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Enemies","instances":[
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7CC4299","properties":[],"isDnd":false,"objectId":{"name":"obj_Boss_Doomsday","path":"objects/obj_Boss_Doomsday/obj_Boss_Doomsday.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":-1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":384.0,"y":150.0,},
+      ],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":6,"gridY":6,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Environment","instances":[],"visible":true,"depth":300,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":6,"gridY":6,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles","tilesetId":{"name":"ts_Kitchen","path":"tilesets/ts_Kitchen/ts_Kitchen.yy",},"x":0,"y":0,"tiles":{"TileDataFormat":1,"SerialiseWidth":20,"SerialiseHeight":12,"TileCompressedData":[
 -240,0,],},"visible":true,"depth":400,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":24,"gridY":24,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
@@ -57,7 +59,7 @@
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","spriteId":{"name":"bg_Doomsday","path":"sprites/bg_Doomsday/bg_Doomsday.yy",},"colour":4294967295,"x":0,"y":0,"htiled":false,"vtiled":false,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":0.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"visible":true,"depth":1200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":24,"gridY":24,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
   ],
   "inheritLayers": false,
-  "creationCodeFile": "${project_dir}/rooms/rm_HeavenArena/RoomCreationCode.gml",
+  "creationCodeFile": "${project_dir}/rooms/rm_DoomsdayArena/RoomCreationCode.gml",
   "inheritCode": false,
   "instanceCreationOrder": [
     {"name":"inst_3C2D1402_1","path":"rooms/rm_DoomsdayArena/rm_DoomsdayArena.yy",},
@@ -82,6 +84,7 @@
     {"name":"inst_68A4C920_1","path":"rooms/rm_DoomsdayArena/rm_DoomsdayArena.yy",},
     {"name":"inst_2E0676AD_1","path":"rooms/rm_DoomsdayArena/rm_DoomsdayArena.yy",},
     {"name":"inst_132C539F","path":"rooms/rm_DoomsdayArena/rm_DoomsdayArena.yy",},
+    {"name":"inst_7CC4299","path":"rooms/rm_DoomsdayArena/rm_DoomsdayArena.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

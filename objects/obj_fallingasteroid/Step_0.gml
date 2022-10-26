@@ -11,11 +11,13 @@ else if (setupTimer == 0)
 	{
 		case 0:
 		sprIdle = spr_FallingAsteroid_Normal_Idle;
+		sprFire = spr_FallingAsteroid_AsteroidFields_Fire;
 		sprDebris = spr_FallingAsteroid_Normal_Debris;
 		break;
 		
 		case 1:
 		sprIdle = spr_FallingAsteroid_AsteroidFields_Idle;
+		sprFire = spr_FallingAsteroid_AsteroidFields_Fire;
 		sprDebris = spr_FallingAsteroid_AsteroidFields_Debris;
 		break;
 	}
@@ -61,11 +63,11 @@ if (!global.pause)
 		
 		with (obj_FragileWall) if (distance_to_object(other) <= 12) hp = 0;
 		
-		for (var i = 0; i < 4; i++)
+		for (var i = 0; i < 6; i++)
 		{
 			var par = instance_create_depth(x + irandom_range(-24,24),y - irandom_range(-24,24),depth - 1,obj_Particle);
 			par.sprite_index = sprDebris;
-			par.image_index = i;
+			par.image_index = irandom_range(0,sprite_get_number(sprDebris));
 			par.hsp = (random_range(.1,.75) * choose(-1,1));
 			par.vsp = -2;
 			par.angleSpd = random_range(.5,1.5) * 3;

@@ -69,6 +69,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Flux",
-    "path": "folders/Sprites/Hud/Healthbars/Flux.yy",
+    "path": "folders/Sprites/Hud/Healthbars/Boss/Flux.yy",
   },
 }

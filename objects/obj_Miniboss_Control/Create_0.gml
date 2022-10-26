@@ -8,7 +8,7 @@ vsp = 0;
 #region Spawn Variables
 spawnX = 0;
 spawnY = 0;
-spawnBoss = obj_PoppyBrosSr;
+spawnBoss = obj_MiniBoss_PoppyBrosSr;
 spawnRange = 200;
 #endregion
 

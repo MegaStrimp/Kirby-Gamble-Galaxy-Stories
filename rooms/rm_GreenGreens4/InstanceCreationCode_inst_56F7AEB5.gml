@@ -2,4 +2,4 @@
 
 spawnX = 140;
 spawnY = -48;
-spawnBoss = obj_PoppyBrosSr;
+spawnBoss = obj_MiniBoss_PoppyBrosSr;

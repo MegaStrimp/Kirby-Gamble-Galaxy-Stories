@@ -1,4 +1,4 @@
 ///@description Creation Code
 
-spawnBoss = obj_Wizzkid;
+spawnBoss = obj_MiniBoss_Wizzkid;
 spawnRange = 224;

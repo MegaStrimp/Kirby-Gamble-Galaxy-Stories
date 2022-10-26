@@ -80,7 +80,6 @@ enum maykrObjects
 	sirKibble,
 	gordo,
 	bloodGordo,
-	ghostGordo,
 	shotzo,
 	mysticDoo,
 	bouncy,
@@ -124,6 +123,7 @@ enum maykrObjects
 	enemiesEnd,
 	
 	como,
+	ghostGordo,
 	
 	itemsStart,
 	pointStarYellow,

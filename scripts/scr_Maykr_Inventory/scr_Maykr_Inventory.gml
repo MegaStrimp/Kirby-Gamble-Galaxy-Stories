@@ -101,11 +101,11 @@ function scr_Maykr_Inventory(argument0,argument1)
 			maykrSprXOffset[i] = sprite_get_xoffset(maykrSpr[i]);
 			maykrSprYOffset[i] = sprite_get_yoffset(maykrSpr[i]);
 			i += 1;
-			maykrInventory[i] = maykrObjects.ghostGordo;
+			/*maykrInventory[i] = maykrObjects.ghostGordo;
 			maykrSpr[i] = spr_GhostGordo_Normal_Idle;
 			maykrSprXOffset[i] = sprite_get_xoffset(maykrSpr[i]);
 			maykrSprYOffset[i] = sprite_get_yoffset(maykrSpr[i]);
-			i += 1;
+			i += 1;*/
 			maykrInventory[i] = maykrObjects.shotzo;
 			maykrSpr[i] = spr_Shotzo_Normal_Idle;
 			maykrSprXOffset[i] = sprite_get_xoffset(maykrSpr[i]);
