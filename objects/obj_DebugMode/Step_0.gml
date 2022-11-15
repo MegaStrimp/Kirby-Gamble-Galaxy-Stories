@@ -4847,6 +4847,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var sprIdle = spr_Ufo_Normal_Idle;
 			var sprWalk = spr_Ufo_Normal_Walk;
 			var sprHurt = spr_Ufo_Normal_Hurt;
+			var sprBeam = spr_Ufo_Normal_Beam;
 			debugPaletteNumberMax = 0;
 			switch (debugPaletteNumber)
 			{
@@ -4871,6 +4872,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprWalk = sprWalk;
 			debugObj.sprHurt = sprHurt;
+			debugObj.sprBeam = sprBeam;
 			debugObj.sprite_index = sprIdle;
 			debugObj.paletteIndex = debugPaletteIndex;
 			debugObj.image_xscale = debugXScale;

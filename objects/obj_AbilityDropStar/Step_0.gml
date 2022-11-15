@@ -253,6 +253,7 @@ if (!global.pause)
 	image_yscale = scale;
 	
 	image_speed = 1 * dir;
+	image_angle += (2 + (isClassicStar * 3)) * dir;
 }
 else
 {

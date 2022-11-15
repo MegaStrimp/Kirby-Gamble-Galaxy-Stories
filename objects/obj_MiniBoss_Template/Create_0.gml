@@ -50,6 +50,7 @@ healthbarIndex = 2;
 hasXKnockback = false;
 hasYKnockback = false;
 hasDeathKnockback = false;
+starColors = [0,1,2,3,4,5,6,7];
 
 slideTargetX = -1;
 attack = false;

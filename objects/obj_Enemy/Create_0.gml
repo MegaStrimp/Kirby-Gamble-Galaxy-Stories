@@ -99,6 +99,7 @@ hasDeathParticles = true;
 canGetHealthbar = true;
 healthbarBackHp = 0;
 healthbarIndex = 0;
+hbActive = true;
 groundFailsafe = true;
 sprHurt = -1;
 sprBossIcon = -1;
@@ -116,6 +117,7 @@ fellDown = false;
 hurtImageIndex = 0;
 collisionHitbox = -1;
 pausedInCutscenes = true;
+starColors = [0,1,2,3,4,5,6,7];
 
 //Timers
 

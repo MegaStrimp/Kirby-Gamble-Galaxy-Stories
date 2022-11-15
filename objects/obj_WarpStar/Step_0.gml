@@ -31,6 +31,8 @@ else if (setupTimer == 0)
 
 if (!global.pause)
 {
+	path_speed = pathSpd;
+	
 	//Activate
 	
 	if (!active)
@@ -56,16 +58,46 @@ if (!global.pause)
 				
 			}
 		}
-		if (active) path_start(warpStarPath,6,path_action_stop,true);
+		if (active) path_start(warpStarPath,pathSpd,path_action_stop,true);
 	}
 	else
 	{
-		if ((!instance_exists(obj_Fade)) and (path_position == 1))
+		var path_angle = point_direction(x,y,xprevious,yprevious);
+		
+		//image_angle = path_angle;
+		
+		if (path_position == 1)
 		{
-			if (audio_is_playing(snd_Enter)) audio_stop_sound(snd_Enter);
-			audio_play_sound(snd_Enter,0,false);
-			var fade = instance_create_depth(x,y,-999,obj_Fade);
-			fade.targetRoom = targetRoom;
+			switch (state)
+			{
+				case warpStarStates.goToRoom:
+				if (!instance_exists(obj_Fade))
+				{
+					if (audio_is_playing(snd_Enter)) audio_stop_sound(snd_Enter);
+					audio_play_sound(snd_Enter,0,false);
+					var fade = instance_create_depth(x,y,-999,obj_Fade);
+					fade.targetRoom = targetRoom;
+				}
+				break;
+				
+				case warpStarStates.crash:
+				with (obj_Player)
+				{
+					if (audio_is_playing(snd_WarpStar1)) audio_stop_sound(snd_WarpStar1);
+					if (audio_is_playing(snd_WarpStar2)) audio_stop_sound(snd_WarpStar2);
+					if (audio_is_playing(snd_Explosion1)) audio_stop_sound(snd_Explosion1);
+					audio_play_sound(snd_Explosion1,0,false);
+					instance_destroy(other);
+					dir = 1;
+					warpStarIndex = -1;
+					invincible = false;
+					vsp = -3;
+					jumpLimit = false;
+					jumpLimitTimer = jumpLimitTimerMax;
+					state = playerStates.normal;
+				}
+				break;
+			}
 		}
 		
 		if (particleTimer == -1) particleTimer = particleTimerMax;
@@ -81,7 +113,8 @@ if (!global.pause)
 	{
 		var par = instance_create_depth(x + irandom_range(-10,10),y + irandom_range(-10,10),depth + 1,obj_Particle);
 		par.sprite_index = sprTrail;
-		par.direction = irandom_range(-10,10) - path_orientation;
+		par.direction = path_angle + irandom_range(-10,10);
+		par.scale = random_range(1,2);
 		par.spdBuiltIn = irandom_range(3,6);
 		par.destroyAfterAnimation = true;
 		particleTimer = -1;
@@ -95,6 +128,8 @@ if (!global.pause)
 }
 else
 {
+	path_speed = 0;
+	
 	image_speed = 0;
 }
 

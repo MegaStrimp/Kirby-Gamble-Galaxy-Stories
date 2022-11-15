@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "spr_Doomsday_Normal_Body_Normal",
   "bboxMode": 0,
-  "collisionKind": 1,
+  "collisionKind": 0,
   "type": 0,
   "origin": 4,
   "preMultiplyAlpha": false,

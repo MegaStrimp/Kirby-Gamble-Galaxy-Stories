@@ -12,6 +12,16 @@ if (!global.pause)
 		if (image_alpha <= 0) instance_destroy();
 	}
 	
+	//Movement
+	
+	switch (movement)
+	{
+		case "random":
+		hsp = scr_Friction(hsp,.05);
+		vsp = scr_Friction(vsp,.05);
+		break;
+	}
+	
 	//Position
 	
 	x += hsp;

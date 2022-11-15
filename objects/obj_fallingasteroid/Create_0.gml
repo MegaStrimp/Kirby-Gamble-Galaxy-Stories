@@ -20,6 +20,8 @@ character = 1;
 dirX = 1;
 dmg = 60;
 fireIndex = 0;
+image_xscale = 1.25;
+image_yscale = 1.25;
 #endregion
 
 #region Timers

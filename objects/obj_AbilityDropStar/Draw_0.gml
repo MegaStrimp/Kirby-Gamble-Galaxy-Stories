@@ -2,7 +2,7 @@
 
 //Aura
 
-if ((!isBubble) and (hasAura)) draw_sprite(spr_Particle_Aura1,0,x,y);
+//if ((!isBubble) and (hasAura)) draw_sprite(spr_Particle_Aura1,0,x,y);
 
 //Draw Self
 

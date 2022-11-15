@@ -158,5 +158,7 @@ function scr_DebugSave()
 	
 	global.coloredAbilitiesKeycard = true;
 	
-	global.cheatColoredAbilitiesEquipped = true;
+	global.demoBeatGreenGreens = true;
+	global.demoBeatBattleshipHalberd = true;
+	global.demoBeatAsteroidFields = true;
 }

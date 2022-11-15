@@ -30,6 +30,7 @@ if (sprite_index == sprReady)
 		}
 		break;
 	}
+	
 	if (attackDir >= 360) attackDir -= 360;
 	if (audio_is_playing(snd_CutterEnemy)) audio_stop_sound(snd_CutterEnemy);
 	audio_play_sound(snd_CutterEnemy,0,false);

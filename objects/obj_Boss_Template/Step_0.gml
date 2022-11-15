@@ -1,5 +1,18 @@
 ///@description Main
 
+#region Characters
+if (setupTimer == 0)
+{
+	switch (character)
+	{
+		#region Normal
+		case 0:
+		break;
+		#endregion
+	}
+}
+#endregion
+
 #region Death
 if (death)
 {
@@ -53,7 +66,45 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 	}
 	#endregion
 	
+	#region Healthbar
+	if (hbActive)
+	{
+		if (hbSetup)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			bossHbHp += hp / 60;
+			if (bossHbHp >= hp)
+			{
+				bossHbHp = hp;
+				hbSetup = false;
+			}
+		}
+		else
+		{
+			bossHbHp = hp;
+		}
+	}
+	#endregion
+	
 	#region Timers
+	#region Spawn State Timer
+	if (spawnStateTimer > 0)
+	{
+		spawnStateTimer -= 1;
+	}
+	else if (spawnStateTimer == 0)
+	{
+		spawnState += 1;
+		switch (spawnState)
+		{
+			case 0:
+			break;
+		}
+		spawnStateTimer = -1;
+	}
+	#endregion
+	
 	#region Phase Change Timer
 	if (phaseChangeTimer > 0)
 	{
@@ -64,8 +115,10 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 		switch (phase)
 		{
 			case 0:
+			global.cutscene = false;
+			spawnState = 0;
 			attackChooseTimer = attackChooseTimerMax;
-			bossHbHp = hp;
+			hbActive = true;
 			break;
 		}
 		phaseChangeTimer = -1;

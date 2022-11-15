@@ -31,6 +31,9 @@ if (global.season = seasons.halloween)
 {
 	layer_background_sprite(layer_background_get_id("Background_Parallax1"),bg_AsteroidFields_Sky_Halloween);
 	tilemap_tileset(layer_tilemap_get_id(layer_get_id("tileAsteroidFieldsFront")),ts_AsteroidFields_Halloween);
+	tilemap_tileset(layer_tilemap_get_id(layer_get_id("tileAsteroidFieldsCrack")),ts_AsteroidFields_Crack_Halloween);
+	tilemap_tileset(layer_tilemap_get_id(layer_get_id("tileAsteroidFieldsCrack3D1")),ts_AsteroidFields_Crack_Halloween);
+	tilemap_tileset(layer_tilemap_get_id(layer_get_id("tileAsteroidFieldsCrack3D2")),ts_AsteroidFields_Crack_Halloween);
 	tilemap_tileset(layer_tilemap_get_id(layer_get_id("tileAsteroidFieldsSlopes")),ts_AsteroidFields_Halloween);
 	tilemap_tileset(layer_tilemap_get_id(layer_get_id("tileAsteroidFields")),ts_AsteroidFields_Halloween);
 	tilemap_tileset(layer_tilemap_get_id(layer_get_id("tileAsteroidFields3D1")),ts_AsteroidFields_Halloween);

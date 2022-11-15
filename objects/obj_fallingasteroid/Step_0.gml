@@ -33,7 +33,7 @@ if (!global.pause)
 	#endregion
 	
 	#region Image Angle
-	image_angle += 2;
+	image_angle += 5;
 	#endregion
 	
 	#region Destroy
@@ -87,7 +87,11 @@ if (!global.pause)
 	
 	#region Animation
 	image_speed = 1;
+	
 	sprite_index = sprIdle;
+	
+	fireIndex += sprite_get_speed(sprFire) / 60;
+	if (fireIndex >= sprite_get_number(sprFire)) fireIndex -= sprite_get_number(sprFire);
 	#endregion
 }
 else

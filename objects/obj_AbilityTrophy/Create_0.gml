@@ -14,6 +14,7 @@ spdMax = 2;
 
 mask_index = spr_AbilityTrophy_Mask;
 sprIdle = spr_AbilityTrophy_Normal_Idle;
+sprBubble = spr_AbilityTrophy_Normal_Bubble;
 sprItem = spr_AbilityStar_Normal;
 
 //Other Variables
@@ -41,4 +42,7 @@ imageAlpha = 1;
 
 setupTimer = 0;
 auraTimerMax = 2;
+auraTimerMax = -1;
 auraTimer = auraTimerMax;
+abilityTrophyTimer = -1;
+abilityTrophyTimerMax = 30;

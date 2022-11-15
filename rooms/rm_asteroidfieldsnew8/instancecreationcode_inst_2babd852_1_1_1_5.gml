@@ -1,4 +1,4 @@
 ///@description Creation Code
 
 sprite_index = spr_Door_AsteroidFields;
-targetRoom = rm_AsteroidFieldsNew9;
+targetRoom = rm_AsteroidFields3;

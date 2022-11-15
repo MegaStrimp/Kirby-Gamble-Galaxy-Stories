@@ -76,7 +76,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sword Mask",
-    "path": "folders/Sprites/Projectiles/Sword Mask.yy",
+    "name": "Sword",
+    "path": "folders/Sprites/Projectiles/Sword.yy",
   },
 }

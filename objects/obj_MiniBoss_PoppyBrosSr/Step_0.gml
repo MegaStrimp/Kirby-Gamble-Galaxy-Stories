@@ -43,7 +43,11 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 		if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 		audio_play_sound(snd_BossHealth,0,false);
 		bossHbHp += hp / 60;
-		if (bossHbHp >= hp) hbSetup = false;
+		if (bossHbHp >= hp)
+		{
+			bossHbHp = hp;
+			hbSetup = false;
+		}
 	}
 	else
 	{

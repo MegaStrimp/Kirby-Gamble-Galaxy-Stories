@@ -8,13 +8,13 @@ randomize();
 spawnCount = 0;
 spawnCountMax = -1;
 minDistance = -1;
-randomizer = 10;
-timerRandomizer = 60;
-spd = 5;
-angle = 240;
+randomizer = 4;
+timerRandomizer = 0;
+spd = 2;
+angle = 270;
 #endregion
 
 #region Timers
-spawnTimerMax = 300;
+spawnTimerMax = 240;
 spawnTimer = spawnTimerMax;
 #endregion

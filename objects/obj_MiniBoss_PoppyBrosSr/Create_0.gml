@@ -44,6 +44,7 @@ healthbarIndex = 1;
 hasXKnockback = false;
 hasYKnockback = false;
 hasDeathKnockback = false;
+starColors = [2,5,7];
 
 attack = false;
 attackNumber = -1;

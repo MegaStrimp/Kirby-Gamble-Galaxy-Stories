@@ -35,7 +35,7 @@ function scr_Player_States_Normal()
 		}
 		
 		var attackDisableMovement = false;
-		if ((attack) and ((attackNumber != playerAttacks.ufoBeam) and (attackNumber != playerAttacks.ufoCharge) and (attackNumber != playerAttacks.ufoLaser) and (attackNumber != playerAttacks.cutterAir) and (attackNumber != playerAttacks.fireAerial))) attackDisableMovement = true;
+		if ((attack) and ((attackNumber != playerAttacks.ufoBeam) and (attackNumber != playerAttacks.ufoCharge) and (attackNumber != playerAttacks.ufoLaser) and (attackNumber != playerAttacks.cutterAir) and (attackNumber != playerAttacks.fireAerial) and (attackNumber != playerAttacks.swordAir) and (attackNumber != playerAttacks.swordAirDash))) attackDisableMovement = true;
 		
 		var attackDisableDir = false;
 		if ((attackNumber == playerAttacks.ufoBeam) or (attackNumber == playerAttacks.cutterAir) or (attackNumber == playerAttacks.fireAerial) or (attackNumber == playerAttacks.fireWheel && !grounded) or (attackNumber == playerAttacks.fireNormal)) attackDisableDir = true;
@@ -3072,59 +3072,115 @@ function scr_Player_States_Normal()
 							///////////////////////attackTimer Specifics
 							///Stop an attack if attacktimer reaches 0
 							
-							if attackTimer<=0 {attack=false attackable=true; state=playerStates.normal }
+							if attackTimer<=0 {attack=false attackable=true; state=playerStates.normal   }
 							
 							///Decreasng it
 							attackTimer--; 
 							
-							///i like the part when Kirby says Dash attack and Dash Attacks all over the enemies
-							if ((!global.cutscene) and (keyAttackPressed) and (grounded) and(run) and (!hurt) and (!attack)){
+							
+							if !global.cutscene && keyAttackPressed{
+								if !grounded{ //All of the aerial shit
+									
+									{ //this is where the Falling part of the Rising Slash will go
+									
+									}if ((run) and (!hurt) and (!attack)){ //Speen
+											sprite_index=sprSwordAttackAirDash
+											attackTimer =2000;
+											attackNumber=playerAttacks.swordAirDash
+											if (audio_is_playing(snd_NinjaSlash)) audio_stop_sound(snd_NinjaSlash);
+											audio_play_sound(snd_NinjaSlash,0,false);
+											var projectile = instance_create_depth(x + (14 * dir),y - 12,depth - 1,obj_Projectile_SwordMask);
+											projectile.owner = id;
+											projectile.abilityType = playerAbilities.sword;
+											projectile.destroyTimerMax =2000
+											projectile.dmg = 15;
+											projectile.dirX = dir;
+											projectile.image_xscale = projectile.dirX;
+											projectile.enemy = false;
+											projectile.deleteTimer =2000
+											projectile.groundedDestroy=true;
+											projectile.sprite_index=projectile.sprSpin
+											attackable = false;
+											attack=true;
+									
+									///////////////////////The regular Aerial Attack
+									}else if ((!run) and (!hurt) and (!attack)){
+										attackNumber=playerAttacks.swordAir
+										attackTimer=2
+										sprite_index=sprSwordAttackAir
+										attackable=true
+									}
 								
-								attack = true;
-								attackNumber = playerAttacks.swordDash;
-								sprite_index = sprSwordAttack2;
-						        image_index = 0;
-								attackTimer=60
-								hsp = dir * movespeedRun * 1.3;
 								
-							///////////////////////Main Slash Activation
-							}else if ((!global.cutscene) and (keyAttackPressed) and (grounded) and(!run) and (!hurt) and (!attack)){
-								attackNumber=playerAttacks.swordNormal
-								attackTimer=2
+								}else{ //all of the grounded shit
+									///i like the part when Kirby says Dash attack and Dash Attacks all over the enemies
+									if ((run) and (!hurt) and (!attack)){
 								
-								///////////////////////////////////ComboJump 
-							} else if ((!global.cutscene) and (keyAttackPressed) and (grounded) and(!run) and (!hurt) and (attack) and (attackNumber=playerAttacks.swordNormal)){ //Combo 1
-								attackTimer = 60;
-								attackNumber= playerAttacks.swordCombo
-								if (audio_is_playing(snd_NinjaSlash)) audio_stop_sound(snd_NinjaSlash);
-								audio_play_sound(snd_NinjaSlash,0,false);
-								var projectile = instance_create_depth(x + (14 * dir),y - 12,depth - 1,obj_Projectile_SwordSlash);
-								projectile.owner = id;
-								projectile.abilityType = playerAbilities.sword;
-								projectile.destroyTimerMax =20
-								projectile.dmg = 15;
-								projectile.dirX = dir;
-								projectile.image_xscale = projectile.dirX;
-								projectile.enemy = false;
-								projectile.destroyTimer =20
-								attackable = false;
-								sprite_index=sprSwordAttack2
-								grounded=0
-								vsp=-3
-								attack=true
-								///////////////////////////////////Barrage 
-							} else if ((!global.cutscene) and (keyAttackPressed) and (grounded) and(!run) and (!hurt)  and (attackNumber=playerAttacks.swordCombo)){
-								attack=true
-								attackTimer = 60;
-								attackNumber=playerAttacks.swordBarrage
+										attack = true;
+										attackNumber = playerAttacks.swordDash;
+								
+										state = playerStates.swordDash;
+										sprite_index = sprSwordAttackDash;
+								        image_index = 0;
+										attackTimer=80
+										hspLimitTimer=60
+										hspLimit = false;
+										if (audio_is_playing(snd_Fire3)) audio_stop_sound(snd_Fire3);
+						                slideSfx = audio_play_sound(snd_Fire3,0,false);
+										var projectile = instance_create_depth(x + (14 * dir),y - 12,depth - 1,obj_Projectile_SwordMask);
+										projectile.owner = id;
+										projectile.abilityType = playerAbilities.sword;
+										projectile.destroyTimerMax =20
+										projectile.dmg = 15;
+										projectile.dirX = dir;
+										projectile.image_xscale = projectile.dirX;
+										projectile.enemy = false;
+										projectile.deleteTimer =0
+										projectile.sprite_index=projectile.sprDash;
+										
+										
+								
+									///////////////////////Main Slash Activation
+									}else if ((!run) and (!hurt) and (!attack)){
+										attackNumber=playerAttacks.swordNormal
+										attackTimer=2
+										sprite_index=sprSwordAttack1
+										///////////////////////////////////ComboJump 
+									} else if ((!run) and (!hurt) and (attack) and (attackNumber=playerAttacks.swordNormal)){ //Combo 1
+										attackTimer = 60;
+										attackNumber= playerAttacks.swordCombo
+										if (audio_is_playing(snd_NinjaSlash)) audio_stop_sound(snd_NinjaSlash);
+										audio_play_sound(snd_NinjaSlash,0,false);
+										var projectile = instance_create_depth(x + (14 * dir),y - 12,depth - 1,obj_Projectile_SwordMask);
+										projectile.owner = id;
+										projectile.abilityType = playerAbilities.sword;
+										projectile.destroyTimerMax =20
+										projectile.dmg = 15;
+										projectile.dirX = dir;
+										projectile.image_xscale = projectile.dirX;
+										projectile.enemy = false;
+										projectile.deleteTimer =20
+										projectile.sprite_index=projectile.sprCombo
+										attackable = false;
+										sprite_index=sprSwordAttackCombo
+										grounded=0
+										vsp=-3
+										attack=true
+										///////////////////////////////////Barrage 
+									} else if ((!run) and (!hurt)  and (attackNumber=playerAttacks.swordCombo)){
+										attack=true
+										attackTimer = 60;
+										attackNumber=playerAttacks.swordBarrage
+									}
+								}
 							}
 							//////////////////////Main Slash Attack
-							if attackNumber=playerAttacks.swordNormal && attackTimer=0 && attackable{
+							if attackNumber=playerAttacks.swordNormal && attackTimer==0 && attackable{
 								sprite_index=sprSwordAttack1
 								attackTimer = 30;
 								if (audio_is_playing(snd_NinjaSlash)) audio_stop_sound(snd_NinjaSlash);
 								audio_play_sound(snd_NinjaSlash,0,false);
-								var projectile = instance_create_depth(x + (14 * dir),y - 12,depth - 1,obj_Projectile_SwordSlash);
+								var projectile = instance_create_depth(x + (14 * dir),y - 12,depth - 1,obj_Projectile_SwordMask);
 								projectile.owner = id;
 								projectile.abilityType = playerAbilities.sword;
 								projectile.destroyTimerMax =20
@@ -3132,16 +3188,39 @@ function scr_Player_States_Normal()
 								projectile.dirX = dir;
 								projectile.image_xscale = projectile.dirX;
 								projectile.enemy = false;
-								projectile.destroyTimer =20
+								projectile.deleteTimer =20
+								projectile.sprite=attackNumber;
 								attackable = false;
 								attack=true;
 							}
-							if attackNumber=playerAttacks.swordNormal && attackTimer>0 {hsp*=0.9}
-							if attackNumber=playerAttacks.swordCombo && !grounded {hsp*=0.9}
-							if attackNumber=playerAttacks.swordBarrage && attackTimer>0 {
+							/////////////////////Aerial Attack's things
+							if attackNumber=playerAttacks.swordAir && attackTimer==0 && attackable{
+								sprite_index=sprSwordAttackAir
+								attackTimer =2000;
+								if (audio_is_playing(snd_NinjaSlash)) audio_stop_sound(snd_NinjaSlash);
+								audio_play_sound(snd_NinjaSlash,0,false);
+								var projectile = instance_create_depth(x + (14 * dir),y - 12,depth - 1,obj_Projectile_SwordMask);
+								projectile.owner = id;
+								projectile.abilityType = playerAbilities.sword;
+								projectile.destroyTimerMax =2000
+								projectile.dmg = 15;
+								projectile.dirX = dir;
+								projectile.image_xscale = projectile.dirX;
+								projectile.enemy = false;
+								projectile.deleteTimer =2000
+								projectile.groundedDestroy=true;
+								projectile.sprite_index=projectile.sprAir;
+								attackable = false;
+								attack=true;
+							} 
+							if attackNumber==playerAttacks.swordAir && grounded {attackTimer=0 attackNumber=playerAbilities.none} else if attackNumber==playerAttacks.swordAir {sprite_index=sprSwordAttackAir }
+							if attackNumber==playerAttacks.swordNormal && attackTimer>0 {hsp*=0.9}
+							if attackNumber==playerAttacks.swordCombo && !grounded {hsp*=0.9  if vsp>0 sprite_index=sprSwordAttackBarrageAir}
+							if attackNumber==playerAttacks.swordBarrage && attackTimer>0 {
 								
 								hsp*=0.9
 								if attackTimer div 10 && attackTimer<=50{
+									sprite_index=sprSwordAttackBarrage
 									if (audio_is_playing(snd_Spark1)) audio_stop_sound(snd_Spark1);
 									audio_play_sound(snd_Spark1,0,false);
 									var projectile = instance_create_depth(x,y-8,depth - 1,obj_Projectile_PlasmaWisp);
@@ -3159,7 +3238,10 @@ function scr_Player_States_Normal()
 									//projectile.hspeed-=abs(projectile.vspeed)
 									projectile.destroyTimer =20;
 								}
-							}
+								
+								
+							}	
+							
 						break;
 						#endregion
 						
@@ -4063,7 +4145,7 @@ function scr_Player_States_Normal()
 					if (sparkMaxCharge) idlesprite = sprSparkMaxCharge;
 					
 					var collidedWall = instance_place(x,y + 1,obj_ParentWall);
-					if ((playerCharacter == playerCharacters.kirby) and (collidedWall.slope))
+					if ((playerCharacter == playerCharacters.kirby) and (instance_exists(collidedWall)) and (collidedWall.slope))
 					{
 						switch (collidedWall.slopeType)
 						{

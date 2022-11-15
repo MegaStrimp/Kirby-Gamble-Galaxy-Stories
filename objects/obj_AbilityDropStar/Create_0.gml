@@ -32,6 +32,8 @@ player = id;
 isBubble = false;
 invincible = false;
 doesJump = false;
+mask_index = spr_24Square_Mask;
+isClassicStar = false;
 
 //Ground Failsafe
 
