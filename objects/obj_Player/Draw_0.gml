@@ -225,4 +225,4 @@ draw_text(x,y - 24,string(abilityHatPaints.beam_kssu_bitcrushed));*/
 //draw_text(x,y - 34,string(image_speed));
 //draw_text(x,y - 34,"State:"+string(state));
 //draw_text(x,y - 54,"Down Held:"+string(downHeld));
-draw_text(x,y - 54,"Health:"+string(global.healthP1));
+//draw_text(x,y - 54,"Health:"+string(global.healthP1));
