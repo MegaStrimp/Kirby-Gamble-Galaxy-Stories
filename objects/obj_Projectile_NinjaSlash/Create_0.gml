@@ -27,7 +27,12 @@ destroyOutsideView = false;
 canBeReflected = false;
 owner = id;
 enemy = false;
+didHitEnemy = false;
+shockCount = 0;
+shockCountMax = 3;
 
 //Timers
 
 destroyTimer = 8;
+shockTimer = -1;
+shockTimerMax = 12;

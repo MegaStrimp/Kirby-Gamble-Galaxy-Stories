@@ -1302,13 +1302,20 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		
 		#region Falling Asteroid
 		case debugObject.fallingAsteroid:
-		debugSpriteSelectedMax = 0;
+		debugSpriteSelectedMax = 1;
 		switch (debugSpriteSelected)
 		{
 			#region Normal
 			case 0:
 			var sprIdle = spr_FallingAsteroid_Normal_Idle;
 			var sprDebris = spr_FallingAsteroid_Normal_Debris;
+			break;
+			#endregion
+			
+			#region Asteroid Fields
+			case 1:
+			var sprIdle = spr_FallingAsteroid_AsteroidFields_Idle;
+			var sprDebris = spr_FallingAsteroid_AsteroidFields_Debris;
 			break;
 			#endregion
 		}
@@ -1808,7 +1815,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		
 		#region Waddle Doo
 		case debugObject.waddleDoo:
-		debugSpriteSelectedMax = 0;
+		debugSpriteSelectedMax = 1;
 		switch (debugSpriteSelected)
 		{
 			#region Normal
@@ -1932,6 +1939,36 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 				
 				default:
 				debugPaletteIndex = spr_WaddleDoo_Normal_Palette_WaddleWaddle;
+				break;
+			}
+			break;
+			#endregion
+			
+			#region Bandit
+			case 1:
+			var sprIdle = spr_WaddleDoo_Bandit_Idle;
+			var sprWalk = spr_WaddleDoo_Bandit_Walk;
+			var sprRunTurn = spr_WaddleDoo_Bandit_RunTurn;
+			var sprDuck = spr_WaddleDoo_Bandit_Duck;
+			var sprSlide = spr_WaddleDoo_Bandit_Slide;
+			var sprJump = spr_WaddleDoo_Bandit_Jump;
+			var sprFall = spr_WaddleDoo_Bandit_Fall;
+			var sprSwing = spr_WaddleDoo_Bandit_Swing;
+			var sprClimbUp = spr_WaddleDoo_Bandit_ClimbUp;
+			var sprClimbDown = spr_WaddleDoo_Bandit_ClimbDown;
+			var sprCharge = spr_WaddleDoo_Bandit_Charge;
+			var sprAttack = spr_WaddleDoo_Bandit_Attack;
+			var sprHurt = spr_WaddleDoo_Bandit_Hurt;
+			var sprDeath = spr_WaddleDoo_Bandit_Death;
+			debugPaletteNumberMax = 0;
+			switch (debugPaletteNumber)
+			{
+				case 0:
+				debugPaletteIndex = spr_WaddleDoo_Bandit_Palette_GreenThief;
+				break;
+				
+				default:
+				debugPaletteIndex = spr_WaddleDoo_Bandit_Palette_GreenThief;
 				break;
 			}
 			break;
@@ -3722,7 +3759,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var sprFall = spr_Tomatoo_Normal_Fall;
 			var sprHeavyDuck = spr_Tomatoo_Normal_HeavyDuck;
 			var sprHurt = spr_Tomatoo_Normal_Hurt;
-			debugPaletteNumberMax = 0;
+			debugPaletteNumberMax = 1;
 			switch (debugPaletteNumber)
 			{
 				case 0:
@@ -3868,7 +3905,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var sprThrow = spr_PoppyBrosJr_Normal_Throw;
 			var sprHand = spr_PoppyBrosJr_Normal_Hand;
 			var sprHurt = spr_PoppyBrosJr_Normal_Hurt;
-			debugPaletteNumberMax = 0;
+			debugPaletteNumberMax = 6;
 			switch (debugPaletteNumber)
 			{
 				case 0:
@@ -3998,7 +4035,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var sprHurtIdle = spr_Foley_Normal_Hurt_Idle;
 			var sprHurtAttack = spr_Foley_Normal_Hurt_Attack;
 			var sprLeaf = spr_Foley_Normal_Leaf;
-			debugPaletteNumberMax = 0;
+			debugPaletteNumberMax = 1;
 			switch (debugPaletteNumber)
 			{
 				case 0:
@@ -4153,7 +4190,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var sprMiddle = spr_Cairn_Normal_Middle;
 			var sprBottom = spr_Cairn_Normal_Bottom;
 			var sprHurt = spr_Cairn_Normal_Hurt;
-			debugPaletteNumberMax = 0;
+			debugPaletteNumberMax = 1;
 			switch (debugPaletteNumber)
 			{
 				case 0:
@@ -4764,7 +4801,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			case 0:
 			var sprIdle = spr_Kookler_Normal_Idle;
 			var sprHurt = spr_Kookler_Normal_Hurt;
-			debugPaletteNumberMax = 0;
+			debugPaletteNumberMax = 1;
 			switch (debugPaletteNumber)
 			{
 				case 0:
@@ -4814,6 +4851,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var sprIdle = spr_Ufo_Normal_Idle;
 			var sprWalk = spr_Ufo_Normal_Walk;
 			var sprHurt = spr_Ufo_Normal_Hurt;
+			var sprBeam = spr_Ufo_Normal_Beam;
 			debugPaletteNumberMax = 0;
 			switch (debugPaletteNumber)
 			{
@@ -4838,6 +4876,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprWalk = sprWalk;
 			debugObj.sprHurt = sprHurt;
+			debugObj.sprBeam = sprBeam;
 			debugObj.sprite_index = sprIdle;
 			debugObj.paletteIndex = debugPaletteIndex;
 			debugObj.image_xscale = debugXScale;

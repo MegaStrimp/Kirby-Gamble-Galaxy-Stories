@@ -29,7 +29,7 @@ if (!global.pause)
 	switch (movementState)
 	{
 		case "halberd1":
-		if ((vsp == 0) and (place_meeting(x,y - 1,obj_Player))) vsp = -3;
+		if ((vsp == 0) and (place_meeting(x,y - 1,obj_Player))) vsp = -1;
 		if (y <= 338)
 		{
 			vsp = 0;

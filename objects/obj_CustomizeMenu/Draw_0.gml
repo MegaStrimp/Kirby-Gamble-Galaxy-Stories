@@ -170,7 +170,7 @@ switch (page)
 			col2 = c_yellow;
 			selectedOffset = 36;
 		}
-		if (selectedOffset != 0) draw_sprite_ext(spr_AbilityDropStar_Normal,starIndex,28 + characterSkinOffsetLerp[subSelection][i],textY + 7 + (36 * i),1,1,image_angle,image_blend,textAlpha);
+		if (selectedOffset != 0) draw_sprite_ext(spr_AbilityStar_Retro,starIndex,28 + characterSkinOffsetLerp[subSelection][i],textY + 7 + (36 * i),1,1,image_angle,image_blend,textAlpha);
 		if (textAlpha != 0) scr_Draw_Text_Color_Outline(14 + selectedOffset + characterSkinOffsetLerp[subSelection][i],textY + (36 * i),characterSkinTitle[subSelection][i],-1,-1,col1,col2,textAlpha,c_black,c_black,textAlpha,2,5,image_xscale,image_yscale,image_angle);
 	}
 	break;
@@ -385,7 +385,7 @@ switch (page)
 			col2 = c_yellow;
 			selectedOffset = 36;
 		}
-		if (selectedOffset != 0) draw_sprite_ext(spr_AbilityDropStar_Normal,starIndex,28 + sprayPaintOffsetLerp[i],textY + 7 + (36 * i),1,1,image_angle,image_blend,textAlpha);
+		if (selectedOffset != 0) draw_sprite_ext(spr_AbilityStar_Retro,starIndex,28 + sprayPaintOffsetLerp[i],textY + 7 + (36 * i),1,1,image_angle,image_blend,textAlpha);
 		if (textAlpha != 0) scr_Draw_Text_Color_Outline(14 + selectedOffset + sprayPaintOffsetLerp[i],textY + (36 * i),sprayPaintTitle[i],-1,-1,col1,col2,textAlpha,c_black,c_black,textAlpha,2,5,image_xscale,image_yscale,image_angle);
 	}
 	break;
@@ -601,11 +601,11 @@ switch (page)
 		case playerAbilities.ninja:
 		switch (abilityHatSkinValue[subSelection][selection])
 		{
-			case abilityHatSkins.mirror_kssu:
+			case abilityHatSkins.ninja_kssu:
 			hatSprite = spr_Kirby_AbilityHat_Ninja_KSSU_Idle;
 			break;
 			
-			case abilityHatSkins.mirror_modern:
+			case abilityHatSkins.ninja_modern:
 			hatSprite = spr_Kirby_AbilityHat_Ninja_Modern_Idle;
 			break;
 		}
@@ -800,7 +800,7 @@ switch (page)
 			col2 = c_yellow;
 			selectedOffset = 36;
 		}
-		if (selectedOffset != 0) draw_sprite_ext(spr_AbilityDropStar_Normal,starIndex,28 + abilityHatSkinOffsetLerp[subSelection][i],textY + 7 + (36 * i),1,1,image_angle,image_blend,textAlpha);
+		if (selectedOffset != 0) draw_sprite_ext(spr_AbilityStar_Retro,starIndex,28 + abilityHatSkinOffsetLerp[subSelection][i],textY + 7 + (36 * i),1,1,image_angle,image_blend,textAlpha);
 		if (textAlpha != 0) scr_Draw_Text_Color_Outline(14 + selectedOffset + abilityHatSkinOffsetLerp[subSelection][i],textY + (36 * i),abilityHatSkinTitle[subSelection][i],-1,-1,col1,col2,textAlpha,c_black,c_black,textAlpha,2,5,image_xscale,image_yscale,image_angle);
 	}
 	break;
@@ -1080,7 +1080,7 @@ switch (page)
 			col2 = c_yellow;
 			selectedOffset = 36;
 		}
-		if (selectedOffset != 0) draw_sprite_ext(spr_AbilityDropStar_Normal,starIndex,28 + abilityHatPaintOffsetLerp[subSelection][selectedSkin][i],textY + 7 + (36 * i),1,1,image_angle,image_blend,textAlpha);
+		if (selectedOffset != 0) draw_sprite_ext(spr_AbilityStar_Retro,starIndex,28 + abilityHatPaintOffsetLerp[subSelection][selectedSkin][i],textY + 7 + (36 * i),1,1,image_angle,image_blend,textAlpha);
 		if (textAlpha != 0) scr_Draw_Text_Color_Outline(14 + selectedOffset + abilityHatPaintOffsetLerp[subSelection][selectedSkin][i],textY + (36 * i),abilityHatPaintTitle[subSelection][selectedSkin][i],-1,-1,col1,col2,textAlpha,c_black,c_black,textAlpha,2,5,image_xscale,image_yscale,image_angle);
 	}
 	break;
@@ -1168,7 +1168,7 @@ switch (page)
 			col2 = c_yellow;
 			selectedOffset = 36;
 		}
-		if (selectedOffset != 0) draw_sprite_ext(spr_AbilityDropStar_Normal,starIndex,28 + familiarOffsetLerp[i],textY + 7 + (36 * i),1,1,image_angle,image_blend,textAlpha);
+		if (selectedOffset != 0) draw_sprite_ext(spr_AbilityStar_Retro,starIndex,28 + familiarOffsetLerp[i],textY + 7 + (36 * i),1,1,image_angle,image_blend,textAlpha);
 		if (textAlpha != 0) scr_Draw_Text_Color_Outline(14 + selectedOffset + familiarOffsetLerp[i],textY + (36 * i),familiarTitle[i],-1,-1,col1,col2,textAlpha,c_black,c_black,textAlpha,2,5,image_xscale,image_yscale,image_angle);
 	}
 	break;

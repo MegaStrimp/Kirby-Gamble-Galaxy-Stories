@@ -12,7 +12,7 @@ if (!global.pause)
 		var nearestPlayer = -1;
 		if (instance_exists(obj_Player)) nearestPlayer = instance_nearest(x,y,obj_Player);
 		
-		if ((minDistance == -1) or ((nearestPlayer != -1) and (distance_to_object(nearestPlayer) <= minDistance)))
+		if ((minDistance == -1) or ((nearestPlayer != -1) and ((abs(x - nearestPlayer.x)) <= minDistance)))
 		{
 			var fallingAsteroid = instance_create_depth(x + irandom_range(-randomizer,randomizer),y,depth,obj_FallingAsteroid);
 			fallingAsteroid.spd = spd;

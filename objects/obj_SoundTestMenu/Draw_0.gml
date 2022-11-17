@@ -101,7 +101,7 @@ switch (page)
 			col2 = c_yellow;
 			selectedOffset = 36;
 		}
-		if (selectedOffset != 0) draw_sprite_ext(spr_AbilityDropStar_Normal,starIndex,28 + soundOffsetLerp[soundCategory][i],textY + 7 + (36 * i),1,1,image_angle,image_blend,textAlpha);
+		if (selectedOffset != 0) draw_sprite_ext(spr_AbilityStar_Retro,starIndex,28 + soundOffsetLerp[soundCategory][i],textY + 7 + (36 * i),1,1,image_angle,image_blend,textAlpha);
 		if (textAlpha != 0) scr_Draw_Text_Color_Outline(14 + selectedOffset + soundOffsetLerp[soundCategory][i],textY + (36 * i),title,-1,-1,col1,col2,textAlpha,c_black,c_black,textAlpha,2,5,image_xscale,image_yscale,image_angle);
 	}
 	break;

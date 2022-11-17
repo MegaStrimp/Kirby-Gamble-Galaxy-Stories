@@ -34,17 +34,45 @@ if (!global.pause)
 		{
 			if ((!instance_exists(obj_Fade)) and (mouse_check_button_pressed(mb_left)) and (position_meeting(mouse_x,mouse_y,self)))
 			{
-				if (owner.selection == index)
+				switch (index)
 				{
-					if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
-					audio_play_sound(snd_ButtonYes,0,false);
-					owner.select = true;
-				}
-				else
-				{
-					if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
-					audio_play_sound(snd_BossHealth,0,false);
-					owner.selection = index;
+					default:
+					if (owner.selection == index)
+					{
+						if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+						audio_play_sound(snd_ButtonYes,0,false);
+						owner.select = true;
+					}
+					else
+					{
+						if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+						audio_play_sound(snd_BossHealth,0,false);
+						owner.selection = index;
+					}
+					break;
+					
+					case "doomsday":
+					if (owner.selection == index)
+					{
+						if (owner.doomsdayActive)
+						{
+							if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+							audio_play_sound(snd_ButtonYes,0,false);
+							owner.select = true;
+						}
+						else
+						{
+							if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+							audio_play_sound(snd_ButtonNo,0,false);
+						}
+					}
+					else
+					{
+						if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+						audio_play_sound(snd_BossHealth,0,false);
+						owner.selection = index;
+					}
+					break;
 				}
 			}
 		}

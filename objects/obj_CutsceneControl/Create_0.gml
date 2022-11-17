@@ -19,6 +19,7 @@ stateExTimer = -1;
 
 enum cutscenes
 {
+	story_BewareTheBeast,
 	story_Intro,
 	story_MeetingGamble,
 	story_MeetingMetaKnight,

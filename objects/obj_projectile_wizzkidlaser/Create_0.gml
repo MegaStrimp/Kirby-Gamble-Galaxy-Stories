@@ -19,8 +19,17 @@ sprParticle = spr_Wizzkid_Normal_LaserProjParticle;
 damageType = damageTypes.mysticBeam;
 setScale = false;
 character = 0;
+destroyableByWall = false;
+destroyableByPlayer = false;
+destroyableByEnemy = false;
+destroyableByObject = false;
+destroyableByProjectile = false;
+destroyOutsideView = false;
+destroyOutsideRoom = false;
 imageIndex = 0;
-laserWidth = 480;
+laserWidth = 750;
+vertical = false;
+hasRecoilStar = true;
 
 //Timers
 

@@ -69,6 +69,11 @@ if (!global.pause)
 							proj.hurtsEnemy = true;
 							proj.hurtsPlayer = false;
 						}
+						if (object_index == obj_Projectile_DoomsdayBomb)
+						{
+							proj.explosionIndex = 1;
+							proj.showHitbox = false;
+						}
 						if (object_index == obj_Projectile_Bomb)
 						{
 							if (audio_is_playing(snd_BombExplode)) audio_stop_sound(snd_BombExplode);

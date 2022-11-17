@@ -69,6 +69,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Mini Boss",
-    "path": "folders/Sprites/Hud/Healthbars/Mini Boss.yy",
+    "path": "folders/Sprites/Hud/Healthbars/Boss/Mini Boss.yy",
   },
 }

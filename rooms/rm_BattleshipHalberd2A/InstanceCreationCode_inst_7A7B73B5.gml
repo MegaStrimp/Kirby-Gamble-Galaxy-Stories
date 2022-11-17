@@ -1,3 +1,3 @@
 ///@description Creation Code
 
-ability = playerAbilities.beam;
+ability = playerAbilities.yoyo;

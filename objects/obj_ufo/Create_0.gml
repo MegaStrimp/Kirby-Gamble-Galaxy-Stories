@@ -15,6 +15,7 @@ mask_index = spr_24Square_Mask;
 sprIdle = spr_Ufo_Normal_Idle;
 sprWalk = spr_Ufo_Normal_Walk;
 sprHurt = spr_Ufo_Normal_Hurt;
+sprBeam = spr_Ufo_Normal_Beam;
 
 //Other Variables
 
@@ -30,6 +31,8 @@ hasXKnockback = false;
 hasYKnockback = false;
 angle = 0;
 move = false;
+carriedItem = obj_InvincibilityCandy;
+carriedItemYOffset = 22;
 
 //Timers
 

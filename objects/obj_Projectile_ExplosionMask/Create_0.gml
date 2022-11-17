@@ -19,6 +19,8 @@ owner = id;
 enemy = false;
 abilityType = damageTypes.bomb;
 damageType = damageTypes.bomb;
+explosionIndex = 0;
+showHitbox = true;
 
 //Timers
 

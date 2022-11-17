@@ -68,6 +68,7 @@ enum debugObject
 	sirKibble,
 	gordo,
 	bloodGordo,
+	ghostGordo,
 	waddleBlock,
 	shotzo,
 	mysticDoo,

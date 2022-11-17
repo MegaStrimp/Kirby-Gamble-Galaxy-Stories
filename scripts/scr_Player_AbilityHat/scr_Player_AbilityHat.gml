@@ -4985,8 +4985,28 @@ function scr_Player_AbilityHat(argument0,argument1)
 					abilityHatIndex = spr_Kirby_AbilityHat_Sword_KSSU_Attack1;
 					break;
 					
-					case sprSwordAttack2:
-					abilityHatIndex = spr_Kirby_AbilityHat_Sword_KSSU_Attack2;
+					case sprSwordAttackDash:
+					abilityHatIndex = spr_Kirby_AbilityHat_Sword_KSSU_AttackDash;
+					break;
+					
+					case sprSwordAttackAir:
+					abilityHatIndex = spr_Kirby_AbilityHat_Sword_KSSU_AttackAir;
+					break;
+					
+					case sprSwordAttackAirDash:
+					abilityHatIndex = spr_Kirby_AbilityHat_Sword_KSSU_AttackDash;
+					break;
+					
+					case sprSwordAttackCombo:
+					abilityHatIndex = spr_Kirby_AbilityHat_Sword_KSSU_Attack1;
+					break;
+					
+					case sprSwordAttackBarrageAir:
+					abilityHatIndex = spr_Kirby_AbilityHat_Sword_KSSU_Attack1;
+					break;
+					
+					case sprSwordAttackBarrage:
+					abilityHatIndex = spr_Kirby_AbilityHat_Sword_KSSU_Attack1;
 					break;
 					
 					default:

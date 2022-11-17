@@ -145,6 +145,12 @@ if (!global.pause)
 					}
 				}
 				
+				if (amongUs)
+				{
+					if (audio_is_playing(snd_AmongUs)) audio_stop_sound(snd_AmongUs);
+					audio_play_sound(snd_AmongUs,0,false);
+				}
+				
 				if (owner.player == 0)
 				{
 					global.hpP1 += 1;

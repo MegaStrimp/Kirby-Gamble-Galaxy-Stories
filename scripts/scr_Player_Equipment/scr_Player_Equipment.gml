@@ -354,7 +354,7 @@ function scr_Player_Equipment(argument0,argument1)
 					equipmentIndex = spr_Kirby_Equipment_Sword_KSSU_Attack1;
 					break;
 					
-					case sprSwordAttack2:
+					case sprSwordAttackDash:
 					equipmentIndex = spr_Kirby_Equipment_Sword_KSSU_Attack2;
 					break;
 				}

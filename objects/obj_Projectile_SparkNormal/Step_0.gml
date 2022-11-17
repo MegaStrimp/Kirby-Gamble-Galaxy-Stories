@@ -66,6 +66,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	//Animation
 	
+	starAngle = random_range(0,359);
 	image_speed = 1;
 	image_alpha = random_range(.6,.85);
 }

@@ -3982,7 +3982,7 @@ function scr_Player_HatShadow(argument0,argument1)
 					hatShadowIndex = spr_Kirby_HatShadow_Sword_KSSU_Attack1;
 					break;
 					
-					case sprSwordAttack2:
+					case sprSwordAttackDash:
 					hatShadowIndex = spr_Kirby_HatShadow_Sword_KSSU_Attack2;
 					break;
 					

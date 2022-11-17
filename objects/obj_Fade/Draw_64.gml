@@ -22,8 +22,15 @@ switch (state)
 			case "restart":
 			game_restart();
 			break;
+			
+			case "doomsday":
+			break;
+			
+			case -1:
+			break;
 		}
-	    fade = -1;
+		delay += 1;
+	    if (delay >= delayMax) fade = -1;
 	}
 	
 	//Destroy
@@ -40,6 +47,19 @@ switch (state)
 	draw_set_color(color);
 	draw_set_alpha(alpha);
 	draw_rectangle(0,0,camera_get_view_width(gameView),camera_get_view_height(gameView),0);
+	switch (targetRoom)
+	{
+		case "doomsday":
+		draw_set_font(fnt_AlienSolidBig);
+		draw_set_color(c_black);
+		draw_set_halign(fa_center);
+		draw_set_valign(fa_middle);
+		draw_text(240,135,"DOOMSDAY");
+		draw_set_valign(fa_top);
+		draw_set_halign(fa_left);
+		draw_set_color(c_white);
+		break;
+	}
 	draw_set_alpha(1);
 	break;
 	
