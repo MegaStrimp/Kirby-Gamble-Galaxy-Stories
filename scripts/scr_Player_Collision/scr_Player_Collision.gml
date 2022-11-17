@@ -235,7 +235,7 @@ function scr_Player_Collision(argument0)
 	y = clamp(y,clampYMin,clampYMax);
 	
 	hasMiniboss = false;
-	with (obj_Miniboss_Control) if (active) other.hasMiniboss = true;
+	with (obj_Miniboss_Control) if ((active) or (spawnTimer != -1)) other.hasMiniboss = true;
 	
 	//Death On Bottom
 	
@@ -445,7 +445,7 @@ function scr_Player_Collision(playerMechs.none)
 	y = clamp(y,0,room_height + 24);
 	
 	hasMiniboss = false;
-	with (obj_Miniboss_Control) if (active) other.hasMiniboss = true;
+	with (obj_Miniboss_Control) if ((active) or (spawnTimer != -1)) other.hasMiniboss = true;
 	if (hasMiniboss)
 	{
 		x = clamp(x,(obj_Camera.cameraX) + (sprite_get_width(mask_index) / 2),(obj_Camera.cameraX + obj_Camera.viewWidth) - (sprite_get_width(mask_index) / 2));

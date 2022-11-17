@@ -125,6 +125,85 @@ if (!global.pause)
 	{
 		switch (state)
 		{
+			#region Beware The Beast
+			case cutscenes.story_BewareTheBeast:
+			switch (stateEx)
+			{
+				case 0:
+				if (stateExTimer == -1) stateExTimer = 90;
+				break;
+				
+				case 1:
+				var array = 0;
+				var dialogue = instance_create_depth(0,0,-998,obj_Dialogue);
+				dialogue.owner = id;
+				dialogue.changeOwnerState = true;
+				dialogue.hasResetTimer = true;
+				dialogue.textSpeed = 25;
+				var text = "After all this time.";
+				scr_Dialogue(dialogue,array,text,-1,-1,-1,snd_TextMatch);
+				dialogue.resetTimerMax[array] = 210;
+				dialogue.resetTimer = dialogue.resetTimerMax[array];
+				array += 1;
+				text = "My day has come.";
+				scr_Dialogue(dialogue,array,text,-1,-1,-1,snd_TextMatch);
+				dialogue.resetTimerMax[array] = 210;
+				array += 1;
+				text = "Years of waiting for an answer within a void of visions.";
+				scr_Dialogue(dialogue,array,text,-1,-1,-1,snd_TextMatch);
+				dialogue.resetTimerMax[array] = 210;
+				break;
+				
+				case 2:
+				stateExTimer = 120;
+				break;
+				
+				case 3:
+				var array = 0;
+				var dialogue = instance_create_depth(0,0,-998,obj_Dialogue);
+				dialogue.owner = id;
+				dialogue.changeOwnerState = true;
+				dialogue.hasResetTimer = true;
+				dialogue.textSpeed = 25;
+				dialogue.targetRoom = rm_Title;
+				var text = "I am finally free.";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_TealDiamond,spr_Hud_Dialogue_Portrait_ShadowMatch_Normal,snd_TextMatch);
+				dialogue.resetTimerMax[array] = 210;
+				dialogue.resetTimer = dialogue.resetTimerMax[array];
+				array += 1;
+				text = "They thought they could prevent their salvation.";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_TealDiamond,spr_Hud_Dialogue_Portrait_ShadowMatch_Normal,snd_TextMatch);
+				dialogue.resetTimerMax[array] = 210;
+				array += 1;
+				text = "I'll show them all...";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_TealDiamond,spr_Hud_Dialogue_Portrait_ShadowMatch_Normal,snd_TextMatch);
+				dialogue.resetTimerMax[array] = 210;
+				array += 1;
+				text = "I'll show them all what I truly am.";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_TealDiamond,spr_Hud_Dialogue_Portrait_ShadowMatch_Normal,snd_TextMatch);
+				dialogue.resetTimerMax[array] = 210;
+				array += 1;
+				text = "With this newfound power, nothing will stop me now.";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_TealDiamond,spr_Hud_Dialogue_Portrait_ShadowMatch_Normal,snd_TextMatch);
+				dialogue.resetTimerMax[array] = 210;
+				array += 1;
+				text = "The Gear Cube Project is well underway, already.";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_TealDiamond,spr_Hud_Dialogue_Portrait_ShadowMatch_Normal,snd_TextMatch);
+				dialogue.resetTimerMax[array] = 210;
+				array += 1;
+				text = "It couldn't hope to be stopped.";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_TealDiamond,spr_Hud_Dialogue_Portrait_ShadowMatch_Normal,snd_TextMatch);
+				dialogue.resetTimerMax[array] = 210;
+				array += 1;
+				text = "I'm coming to find you, Gamble.";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_TealDiamond,spr_Hud_Dialogue_Portrait_ShadowMatch_Normal,snd_TextMatch);
+				dialogue.resetTimerMax[array] = 210;
+				destroy = true;
+				break;
+			}
+			break;
+			#endregion
+			
 			#region Intro
 			case cutscenes.story_Intro:
 			switch (stateEx)

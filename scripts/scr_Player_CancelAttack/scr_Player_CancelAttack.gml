@@ -88,6 +88,7 @@ function scr_Player_CancelAttack(argument0)
 			
 			case playerAttacks.stoneNormal:
 			case playerAttacks.gooeyStoneNormal:
+			if (instance_exists(stoneMaskProj)) instance_destroy(stoneMaskProj);
 			grav = gravNormal;
 			gravLimit = gravLimitNormal;
 			stoneParticleCount = 0;
@@ -100,6 +101,8 @@ function scr_Player_CancelAttack(argument0)
 			case playerAttacks.stoneUp:
 			if ((!stoneFistReady) and (instance_exists(stoneFistMaskProj))) instance_destroy(stoneFistMaskProj);
 			stoneFistReady = true;
+			stoneFistReadyTimer = -1;
+			stoneFistReleaseTimer = -1;
 			break;
 			
 			/*
@@ -108,6 +111,18 @@ function scr_Player_CancelAttack(argument0)
 			case attackNumber == playerAttacks.mirrorDown:
 	        state = playerStates.normal;
 			break;*/
+			
+			case playerAttacks.ninjaDash:
+			if (audio_is_playing(slideSfx)) audio_stop_sound(slideSfx);
+	        if (instance_exists(ninjaDashMaskProj)) instance_destroy(ninjaDashMaskProj);
+			state = playerStates.normal;
+			hspLimit = true;
+			break;
+			
+			case playerAttacks.ninjaDrop:
+	        invincible = false;
+	        state = playerStates.normal;
+			break;
 			
 			case playerAttacks.fireDash:
 			case playerAttacks.gooeyFireDash:
@@ -142,6 +157,7 @@ function scr_Player_CancelAttack(argument0)
 			case playerAttacks.yoyoDash:
 			if (audio_is_playing(yoyoDashSfx)) audio_stop_sound(yoyoDashSfx);
 	        if (instance_exists(yoyoDashMaskProj)) instance_destroy(yoyoDashMaskProj);
+			invincible = false;
 			state = playerStates.normal;
 			break;
 			
@@ -162,8 +178,8 @@ function scr_Player_CancelAttack(argument0)
 			
 			case playerAttacks.swordDash:
 			if (audio_is_playing(slideSfx)) audio_stop_sound(slideSfx);
-	        if (instance_exists(swordDashMaskProj)) instance_destroy(swordDashMaskProj);
 			state = playerStates.normal;
+			hspLimit = true;
 			break;
 			
 			case playerAttacks.parasolDash:

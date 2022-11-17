@@ -118,6 +118,7 @@ function scr_DebugSave()
 	global.bestiaryEnemiesSirKibbleUnlocked = true;
 	global.bestiaryEnemiesGordoUnlocked = true;
 	global.bestiaryEnemiesBloodGordoUnlocked = true;
+	global.bestiaryEnemiesGhostGordoUnlocked = true;
 	global.bestiaryEnemiesShotzoUnlocked = true;
 	global.bestiaryEnemiesMysticDooUnlocked = true;
 	global.bestiaryEnemiesBouncyUnlocked = true;
@@ -154,4 +155,10 @@ function scr_DebugSave()
 	global.kirbyBattleBlitzCrossoverKeycard = true;
 	global.kirbysDreamLandPlusCrossoverKeycard = true;
 	global.dreamCrafterCrossoverKeycard = true;
+	
+	global.coloredAbilitiesKeycard = true;
+	
+	global.demoBeatGreenGreens = true;
+	global.demoBeatBattleshipHalberd = true;
+	global.demoBeatAsteroidFields = true;
 }

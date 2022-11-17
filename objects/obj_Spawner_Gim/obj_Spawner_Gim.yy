@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_Spawner_Gim",
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_Gim_Normal_Idle",
+    "path": "sprites/spr_Gim_Normal_Idle/spr_Gim_Normal_Idle.yy",
+  },
   "solid": false,
   "visible": false,
   "managed": true,

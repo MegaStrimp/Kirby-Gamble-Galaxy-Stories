@@ -50,7 +50,7 @@ if (!global.pause)
 		case 2:
 		xx = 440;
 		yy = 120;
-		targetRoom = rm_AsteroidFields1;
+		targetRoom = rm_AsteroidFieldsNew1;
 		text = spr_Menu_StageSelect_Text_AsteroidFields;
 		planet = spr_Menu_StageSelect_Planet_Default;
 		break;

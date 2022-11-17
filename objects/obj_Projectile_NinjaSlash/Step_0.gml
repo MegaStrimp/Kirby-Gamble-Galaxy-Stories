@@ -16,6 +16,14 @@ if (setupTimer == 0)
 
 if (((pausable) and (!global.pause)) or (!pausable))
 {
+	//Hit Enemy
+	
+	if ((!didHitEnemy) and (place_meeting(x,y,obj_Enemy)))
+	{
+		didHitEnemy = true;
+		shockTimer = shockTimerMax;
+	}
+	
 	//Event Inherited
 	
 	event_inherited();
@@ -34,17 +42,6 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		instance_destroy();
 	}
 	
-	//Position
-	
-	xx += hsp;
-	yy += vsp;
-	
-	if (yy >= 12)
-	{
-		xx = 0;
-		yy = 0;
-	}
-	
 	//Destroy Timer
 	
 	if (destroyTimer > 0)
@@ -55,6 +52,22 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	{
 		instance_destroy();
 		destroyTimer = -1;
+	}
+	
+	//Shock Timer
+	
+	if (shockTimer > 0)
+	{
+		shockTimer -= 1;
+	}
+	else if (shockTimer == 0)
+	{
+		var shockCancel = false;
+		if (!shockCancel)
+		{
+			shockTimer = shockTimerMax;
+		}
+		if ((shockCount >= shockCountMax) or (shockCancel)) shockTimer = -1;
 	}
 	
 	//Animation

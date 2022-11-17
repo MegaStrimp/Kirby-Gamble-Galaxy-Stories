@@ -366,8 +366,8 @@ function scr_Maykr_GetFromInventory(argument0)
 		case maykrObjects.chuckie:
 		spawnedItemIndex = obj_ChuckieBox;
 		spawnedSprite = spr_Chuckie_Box;
-		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
-		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
+		spawnedXOffset = sprite_get_xoffset(spawnedSprite) - 1;
+		spawnedYOffset = sprite_get_yoffset(spawnedSprite) - 1;
 		break;
 		
 		case maykrObjects.walky:
@@ -383,7 +383,6 @@ function scr_Maykr_GetFromInventory(argument0)
 		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
 		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
 		break;
-		#endregion
 		
 		case maykrObjects.cerulean:
 		spawnedItemIndex = obj_Spawner_Cerulean;

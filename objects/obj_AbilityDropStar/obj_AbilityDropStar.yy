@@ -2,10 +2,7 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_AbilityDropStar",
-  "spriteId": {
-    "name": "spr_AbilityDropStar_Normal",
-    "path": "sprites/spr_AbilityDropStar_Normal/spr_AbilityDropStar_Normal.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,

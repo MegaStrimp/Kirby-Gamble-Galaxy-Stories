@@ -149,6 +149,28 @@ if (object)
 {
 	if (!invincible)
 	{
+		with (obj_Chuckie)
+		{
+			if (place_meeting(x,y,other))
+			{
+				if (other.damageType == damageTypes.none)
+				{
+					other.hp -= 1;
+				}
+			}
+		}
+		
+		with (obj_WarpStar)
+		{
+			if (place_meeting(x,y,other))
+			{
+				if (other.damageType == damageTypes.none)
+				{
+					other.hp -= 10;
+				}
+			}
+		}
+		
 		with (obj_Projectile)
 		{
 			if (place_meeting(x,y,other))
@@ -200,6 +222,11 @@ if (object)
 								proj.enemy = false;
 								proj.hurtsEnemy = true;
 								proj.hurtsPlayer = false;
+							}
+							if (object_index == obj_Projectile_DoomsdayBomb)
+							{
+								proj.explosionIndex = 1;
+								proj.showHitbox = false;
 							}
 							if (object_index == obj_Projectile_Bomb)
 							{
@@ -289,6 +316,11 @@ else if (!platform)
 								proj.hurtsEnemy = true;
 								proj.hurtsPlayer = false;
 							}
+							if (object_index == obj_Projectile_DoomsdayBomb)
+							{
+								proj.explosionIndex = 1;
+								proj.showHitbox = false;
+							}
 							if (object_index == obj_Projectile_Bomb)
 							{
 								if (audio_is_playing(snd_BombExplode)) audio_stop_sound(snd_BombExplode);
@@ -357,6 +389,11 @@ else if (!platform)
 								proj.enemy = false;
 								proj.hurtsEnemy = true;
 								proj.hurtsPlayer = false;
+							}
+							if (object_index == obj_Projectile_DoomsdayBomb)
+							{
+								proj.explosionIndex = 1;
+								proj.showHitbox = false;
 							}
 							if (object_index == obj_Projectile_Bomb)
 							{

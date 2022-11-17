@@ -252,8 +252,18 @@ sprYoyoAttack2Release = spr_Kirby_Normal_Yoyo_Attack2Release;
 sprWingAttack1 = spr_Kirby_Normal_Wing_Attack1;
 sprWingAttack2Ready = spr_Kirby_Normal_Wing_Attack2Ready;
 sprWingAttack2 = spr_Kirby_Normal_Wing_Attack2;
+//SWORD
 sprSwordAttack1 = spr_Kirby_Normal_Sword_Attack1;
-sprSwordAttack2 = spr_Kirby_Normal_Sword_Attack2;
+sprSwordAttackDash = spr_Kirby_Normal_Sword_Dash;
+sprSwordAttackAir = spr_Kirby_Normal_Sword_AttackAir;
+sprSwordAttackAirDash = spr_Kirby_Normal_Sword_Spin;
+sprSwordAttackCombo = spr_Kirby_Normal_Sword_Combo;
+sprSwordAttackBarrageAir = spr_Kirby_Normal_Sword_BarrageAir;
+sprSwordAttackBarrage = spr_Kirby_Normal_Sword_Barrage;
+
+//YOYO
+sprSwordAttack1 = spr_Kirby_Normal_Sword_Attack1;
+sprSwordAttack2 = spr_Kirby_Normal_Sword_Dash;
 sprYoyoAttack2Ready = spr_Kirby_Normal_Yoyo_Attack2Ready;
 sprYoyoAttack2 = spr_Kirby_Normal_Yoyo_Attack2;
 sprYoyoAttack2Release = spr_Kirby_Normal_Yoyo_Attack2Release;

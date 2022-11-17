@@ -530,12 +530,19 @@ if ((attack) and (sprite_index == sprWingAttack2Ready))
 if (sprite_index == sprSwordAttack1)
 {
 	image_index = image_number - 1;
-	attackTimer = 0;
 }
 
 //Sword Attack 2
 
-if (sprite_index == sprSwordAttack2) image_index = image_number - 1;
+if (sprite_index == sprSwordAttackDash) image_index = image_number - 2;
+
+
+//Sword Attack Air
+
+if (sprite_index == sprSwordAttackAir)
+{
+	image_index = image_number - 1;
+}
 
 //Sleep Ready
 

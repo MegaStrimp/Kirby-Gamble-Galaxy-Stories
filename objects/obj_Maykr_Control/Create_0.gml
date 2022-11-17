@@ -123,6 +123,7 @@ enum maykrObjects
 	enemiesEnd,
 	
 	como,
+	ghostGordo,
 	
 	itemsStart,
 	pointStarYellow,

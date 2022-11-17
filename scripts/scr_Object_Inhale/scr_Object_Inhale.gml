@@ -72,6 +72,7 @@ function scr_Object_Inhale(argument0)
 					case obj_Food:
 					eatMe.inhaleType = 1;
 					if ((image_index == 41) or (image_index == 42)) eatMe.cannedFood = true;
+					if (sprite_index == spr_Food_AmongUs) eatMe.amongUs = true;
 					break;
 					
 					case obj_PepBrew:

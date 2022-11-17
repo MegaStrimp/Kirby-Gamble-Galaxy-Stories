@@ -10,16 +10,16 @@ if (parasol)
 }
 else
 {
-	if (hurt)
-	{
-		gravLimit = 4;
-		grav = .2;
-	}
-	else
-	{
+	//if (hurt)
+	//{
+		//gravLimit = 4;
+		//grav = .2;
+	//}
+	//else
+	//{
 		gravLimit = gravLimitNormal;
 		grav = gravNormal;
-	}
+	//}
 }
 
 if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
@@ -119,10 +119,27 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			{
 				if (audio_is_playing(snd_MinibossDeath)) audio_stop_sound(snd_MinibossDeath);
 				audio_play_sound(snd_MinibossDeath,0,false);
+				
+				var parNum = irandom_range(15,20);
+				for (var i = 0; i < parNum; i++)
+				{
+					var par = instance_create_depth(x + irandom_range((-sprite_get_width(sprite_index) / 2),(sprite_get_width(sprite_index) / 2)),y - irandom_range(0,sprite_get_height(sprite_index) / 1.5),depth - 1,obj_Particle);
+					par.sprite_index = choose(spr_ColorfulStars1,spr_ColorfulStars2,spr_ColorfulStars3,spr_ColorfulStars4);
+					var starColorsSelected = irandom_range(0,array_length(starColors) - 1);
+					par.image_index = starColors[starColorsSelected];
+					par.hsp = random_range(-4,4);
+					par.vsp = random_range(-5,-3);
+					par.angleSpd = par.hsp * 3;
+					par.hasGravity = true;
+					par.invisTimer = 100;
+					par.destroyTimer = 120;
+				}
+				
 				var deathObj = instance_create_depth(x,y - 12,depth,obj_Miniboss_Death);
 				deathObj.hsp = 2 * projectileHitKnockbackDir;
 				deathObj.vsp = -6;
 				deathObj.ownerIndex = object_index;
+				deathObj.paletteIndex = paletteIndex;
 				deathObj.points = points;
 				deathObj.ability = ability;
 				deathObj.dirX = dirX;
@@ -255,103 +272,107 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			switch (abilityDropStar.ability)
 			{
 				case playerAbilities.cutter:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Cutter;
+				abilityDropStar.sprite_index = spr_AbilityStar_Cutter;
 				break;
 				
 				case playerAbilities.beam:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Beam;
+				abilityDropStar.sprite_index = spr_AbilityStar_Beam;
 				break;
 				
 				case playerAbilities.mysticBeam:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_MysticBeam;
+				abilityDropStar.sprite_index = spr_AbilityStar_MysticBeam;
 				break;
 				
 				case playerAbilities.stone:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Stone;
+				abilityDropStar.sprite_index = spr_AbilityStar_Stone;
 				break;
 				
 				case playerAbilities.ufo:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Ufo;
+				abilityDropStar.sprite_index = spr_AbilityStar_Ufo;
 				break;
 				
 				case playerAbilities.mirror:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Mirror;
+				abilityDropStar.sprite_index = spr_AbilityStar_Mirror;
 				break;
 				
 				case playerAbilities.ninja:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Ninja;
+				abilityDropStar.sprite_index = spr_AbilityStar_Ninja;
 				break;
 				
 				case playerAbilities.bomb:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Bomb;
+				abilityDropStar.sprite_index = spr_AbilityStar_Bomb;
 				break;
 				
 				case playerAbilities.fire:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Fire;
+				abilityDropStar.sprite_index = spr_AbilityStar_Fire;
 				break;
 				
 				case playerAbilities.mysticFire:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_MysticFire;
+				abilityDropStar.sprite_index = spr_AbilityStar_MysticFire;
 				break;
 				
 				case playerAbilities.ice:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Ice;
+				abilityDropStar.sprite_index = spr_AbilityStar_Ice;
 				break;
 				
 				case playerAbilities.spark:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Spark;
+				abilityDropStar.sprite_index = spr_AbilityStar_Spark;
 				break;
 				
 				case playerAbilities.yoyo:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Yoyo;
+				abilityDropStar.sprite_index = spr_AbilityStar_Yoyo;
 				break;
 				
 				case playerAbilities.wheel:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Wheel;
+				abilityDropStar.sprite_index = spr_AbilityStar_Wheel;
 				break;
 				
 				case playerAbilities.artist:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Artist;
+				abilityDropStar.sprite_index = spr_AbilityStar_Artist;
 				break;
 				
 				case playerAbilities.fighter:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Fighter;
+				abilityDropStar.sprite_index = spr_AbilityStar_Fighter;
 				break;
 				
 				case playerAbilities.suplex:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Suplex;
+				abilityDropStar.sprite_index = spr_AbilityStar_Suplex;
 				break;
 				
 				case playerAbilities.wing:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Wing;
+				abilityDropStar.sprite_index = spr_AbilityStar_Wing;
 				break;
 				
 				case playerAbilities.jet:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Jet;
+				abilityDropStar.sprite_index = spr_AbilityStar_Jet;
 				break;
 				
 				case playerAbilities.sword:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Sword;
+				abilityDropStar.sprite_index = spr_AbilityStar_Sword;
 				break;
 				
 				case playerAbilities.parasol:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Parasol;
+				abilityDropStar.sprite_index = spr_AbilityStar_Parasol;
 				break;
 				
 				case playerAbilities.hammer:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Hammer;
+				abilityDropStar.sprite_index = spr_AbilityStar_Hammer;
 				break;
 				
 				case playerAbilities.bell:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Bell;
+				abilityDropStar.sprite_index = spr_AbilityStar_Bell;
 				break;
 				
 				case playerAbilities.water:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Water;
+				abilityDropStar.sprite_index = spr_AbilityStar_Water;
+				break;
+				
+				case playerAbilities.sleep:
+				abilityDropStar.sprite_index = spr_AbilityStar_Sleep;
 				break;
 				
 				default:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Normal;
+				abilityDropStar.sprite_index = spr_AbilityStar_Normal;
 				break;
 			}
 			while (place_meeting(abilityDropStar.x,abilityDropStar.y + 1,obj_ParentWall)) abilityDropStar.y -= 1;
@@ -390,6 +411,10 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			
 			case obj_BloodGordo:
 			global.bestiaryEnemiesBloodGordoUnlocked = true;
+			break;
+			
+			case obj_GhostGordo:
+			global.bestiaryEnemiesGhostGordoUnlocked = true;
 			break;
 			
 			case obj_Shotzo:
@@ -826,6 +851,11 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 							proj.enemy = enemy;
 							proj.hurtsEnemy = !enemy;
 							proj.hurtsPlayer = enemy;
+							if (object_index == obj_Projectile_DoomsdayBomb)
+							{
+								proj.explosionIndex = 1;
+								proj.showHitbox = false;
+							}
 							if (object_index == obj_Projectile_Bomb)
 							{
 								if (audio_is_playing(snd_BombExplode)) audio_stop_sound(snd_BombExplode);
@@ -900,6 +930,11 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 								proj.enemy = false;
 								proj.hurtsEnemy = true;
 								proj.hurtsPlayer = false;
+							}
+							if (object_index == obj_Projectile_DoomsdayBomb)
+							{
+								proj.explosionIndex = 1;
+								proj.showHitbox = false;
 							}
 							if (object_index == obj_Projectile_Bomb)
 							{

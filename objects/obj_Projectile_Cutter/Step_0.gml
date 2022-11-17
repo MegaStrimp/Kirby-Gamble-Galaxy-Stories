@@ -32,13 +32,16 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	if ((charge) and (place_meeting(x + hsp,y,obj_Wall)))
 	{
 		var collidedWall = instance_place(x + hsp,y,obj_Wall);
-		if ((collidedWall.object) and ((collidedWall.object_index != obj_AbilityBlock) or (collidedWall.damageType == damageTypes.cutter))) collidedWall.hp -= 1;
-		if (collidedWall.hp != 0)
+		if (!collidedWall.enemyCollisionHitbox)
 		{
-			if (collided >= 4) instance_destroy();
-			collided += 1;
-			dirX *= -1;
-			hsp = decelMax * dirX;
+			if ((collidedWall.object) and ((collidedWall.object_index != obj_AbilityBlock) or (collidedWall.damageType == damageTypes.cutter))) collidedWall.hp -= 1;
+			if (collidedWall.hp != 0)
+			{
+				if (collided >= 4) instance_destroy();
+				collided += 1;
+				dirX *= -1;
+				hsp = decelMax * dirX;
+			}
 		}
 	}
 	

@@ -61,7 +61,7 @@ if ((!active) and (((pausable) and (!global.pause)) or (!pausable)))
 				}
 				break;
 				
-				case obj_PoppyBrosSr:
+				case obj_MiniBoss_PoppyBrosSr:
 				xOffset = owner.handX;
 				yOffset = owner.handY;
 				break;

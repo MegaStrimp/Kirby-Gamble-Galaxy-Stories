@@ -520,6 +520,18 @@ switch (state)
 	scr_Player_States_MirrorDash();
 	break;
 	
+	//Ninja Dash
+	
+    case (playerStates.ninjaDash):
+	scr_Player_States_NinjaDash();
+	break;
+	
+	//Ninja Drop
+	
+    case (playerStates.ninjaDrop):
+	scr_Player_States_NinjaDrop();
+	break;
+	
 	//Fire Dash
 	
     case (playerStates.fireDash):
@@ -617,103 +629,108 @@ if (keySelectPressed)
 			switch (abilityDropStar.ability)
 			{
 				case playerAbilities.cutter:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Cutter;
+				abilityDropStar.sprite_index = spr_AbilityStar_Cutter;
 				break;
 			
 				case playerAbilities.beam:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Beam;
+				abilityDropStar.sprite_index = spr_AbilityStar_Beam;
 				break;
 			
 				case playerAbilities.mysticBeam:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_MysticBeam;
+				abilityDropStar.sprite_index = spr_AbilityStar_MysticBeam;
 				break;
 			
 				case playerAbilities.stone:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Stone;
+				abilityDropStar.sprite_index = spr_AbilityStar_Stone;
 				break;
 			
 				case playerAbilities.ufo:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Ufo;
+				abilityDropStar.sprite_index = spr_AbilityStar_Ufo;
 				break;
 			
 				case playerAbilities.mirror:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Mirror;
+				abilityDropStar.sprite_index = spr_AbilityStar_Mirror;
 				break;
 			
 				case playerAbilities.ninja:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Ninja;
+				abilityDropStar.sprite_index = spr_AbilityStar_Ninja;
 				break;
 			
 				case playerAbilities.bomb:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Bomb;
+				abilityDropStar.sprite_index = spr_AbilityStar_Bomb;
 				break;
 			
 				case playerAbilities.fire:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Fire;
+				abilityDropStar.sprite_index = spr_AbilityStar_Fire;
 				break;
 			
 				case playerAbilities.mysticFire:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_MysticFire;
+				abilityDropStar.sprite_index = spr_AbilityStar_MysticFire;
 				break;
 			
 				case playerAbilities.ice:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Ice;
+				abilityDropStar.sprite_index = spr_AbilityStar_Ice;
 				break;
 			
 				case playerAbilities.spark:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Spark;
+				abilityDropStar.sprite_index = spr_AbilityStar_Spark;
 				break;
 			
 				case playerAbilities.yoyo:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Yoyo;
+				abilityDropStar.sprite_index = spr_AbilityStar_Yoyo;
 				break;
 			
 				case playerAbilities.wheel:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Wheel;
+				abilityDropStar.sprite_index = spr_AbilityStar_Wheel;
 				break;
 			
 				case playerAbilities.artist:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Artist;
+				abilityDropStar.sprite_index = spr_AbilityStar_Artist;
 				break;
 			
 				case playerAbilities.fighter:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Fighter;
+				abilityDropStar.sprite_index = spr_AbilityStar_Fighter;
 				break;
 			
 				case playerAbilities.suplex:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Suplex;
+				abilityDropStar.sprite_index = spr_AbilityStar_Suplex;
 				break;
 			
 				case playerAbilities.wing:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Wing;
+				abilityDropStar.sprite_index = spr_AbilityStar_Wing;
 				break;
 			
 				case playerAbilities.jet:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Jet;
+				abilityDropStar.sprite_index = spr_AbilityStar_Jet;
 				break;
 			
 				case playerAbilities.sword:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Sword;
+				abilityDropStar.sprite_index = spr_AbilityStar_Sword;
 				break;
 			
 				case playerAbilities.parasol:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Parasol;
+				abilityDropStar.sprite_index = spr_AbilityStar_Parasol;
 				break;
 			
 				case playerAbilities.hammer:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Hammer;
+				abilityDropStar.sprite_index = spr_AbilityStar_Hammer;
 				break;
 			
 				case playerAbilities.bell:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Bell;
+				abilityDropStar.sprite_index = spr_AbilityStar_Bell;
 				break;
 			
 				case playerAbilities.water:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Water;
+				abilityDropStar.sprite_index = spr_AbilityStar_Water;
+				break;
+				break;
+			
+				case playerAbilities.sleep:
+				abilityDropStar.sprite_index = spr_AbilityStar_Sleep;
 				break;
 			
 				default:
-				abilityDropStar.sprite_index = spr_AbilityDropStar_Normal;
+				abilityDropStar.sprite_index = spr_AbilityStar_Normal;
 				break;
 			}
 			scr_Player_CancelAbility(id);
@@ -1528,7 +1545,7 @@ if (!global.pause)
 		sprite_index = sprStoneAttack2;
 		image_index = 0;
 		stoneFistMaskProj = instance_create_depth(x,y,depth - 1,obj_Projectile_StoneFistMask);
-		stoneFistMaskProj.dmg = 40;
+		stoneFistMaskProj.dmg = 20;
 		stoneFistMaskProj.dirX = dir;
 		stoneFistMaskProj.enemy = false;
 		stoneFistMaskProj.owner = id;
@@ -2187,7 +2204,14 @@ else if (characterSetupTimer == 0)
 		sprWingAttack2Ready = spr_Kirby_Normal_Wing_Attack2Ready;
 		sprWingAttack2 = spr_Kirby_Normal_Wing_Attack2;
 		sprSwordAttack1 = spr_Kirby_Normal_Sword_Attack1;
-		sprSwordAttack2 = spr_Kirby_Normal_Sword_Attack2;
+		sprSwordAttackDash = spr_Kirby_Normal_Sword_Dash;
+		sprSwordAttackAir = spr_Kirby_Normal_Sword_AttackAir;
+		sprSwordAttackAirDash = spr_Kirby_Normal_Sword_Spin;
+		sprSwordAttackCombo = spr_Kirby_Normal_Sword_Combo;
+		sprSwordAttackBarrageAir = spr_Kirby_Normal_Sword_BarrageAir;
+		sprSwordAttackBarrage = spr_Kirby_Normal_Sword_Barrage;
+		sprSwordAttack1 = spr_Kirby_Normal_Sword_Attack1;
+		sprSwordAttack2 = spr_Kirby_Normal_Sword_Dash;
 		sprParasolAttack2Ready = spr_Kirby_Normal_Parasol_Attack2Ready;
 		sprParasolAttack2 = spr_Kirby_Normal_Parasol_Attack2;
 		sprParasolAttack2Release = spr_Kirby_Normal_Parasol_Attack2Release;

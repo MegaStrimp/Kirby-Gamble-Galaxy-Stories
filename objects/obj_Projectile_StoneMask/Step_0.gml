@@ -22,14 +22,17 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	//Stop Damaging
 	
-	if ((!enemy) and ((sign(owner.hsp > .5)) and (sign(owner.vsp > .5))))
+	if (!enemy)
 	{
-		hurtsObject = true;
-		hurtsEnemy = true;
-	}
-	else
-	{
-		hurtsObject = false;
-		hurtsEnemy = false;
+		if ((sign(owner.hsp < .5)) and (sign(owner.vsp < .5)))
+		{
+			hurtsObject = false;
+			hurtsEnemy = false;
+		}
+		else
+		{
+			hurtsObject = true;
+			hurtsEnemy = true;
+		}
 	}
 }

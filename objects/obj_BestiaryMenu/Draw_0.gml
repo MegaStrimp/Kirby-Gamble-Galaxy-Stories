@@ -53,7 +53,7 @@ for (var i = loopStart; i < loopStart + 9; i++)
 			col2 = c_yellow;
 			selectedOffset = 31;
 		}
-		if (selectedOffset != 0) draw_sprite_ext(spr_AbilityDropStar_Normal,starIndex,31 + selectedEntries[i][9],32 + 7 + (20 * num),1,1,image_angle,image_blend,image_alpha);
+		if (selectedOffset != 0) draw_sprite_ext(spr_AbilityStar_Retro,starIndex,31 + selectedEntries[i][9],32 + 7 + (20 * num),1,1,image_angle,image_blend,image_alpha);
 		scr_Draw_Text_Color_Outline(17 + selectedOffset + selectedEntries[i][9],32 + (20 * num),text,-1,-1,col1,col2,image_alpha,c_black,c_black,image_alpha,2,5,image_xscale,image_yscale,image_angle);
 	}
 	num += 1;

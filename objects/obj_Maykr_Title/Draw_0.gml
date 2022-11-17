@@ -8,16 +8,6 @@ var triWidth = sprite_get_width(spr_Maykr_Triangle);
 draw_sprite_ext(bg_MaykrTitle_Stars,0,0,0,.5,.5,image_angle,image_blend,starsAlpha);
 #endregion
 
-#region Text
-if (startTrigger >= 1)
-{
-	draw_set_font(fnt_DialogueDefault);
-	draw_set_halign(fa_center);
-	scr_Draw_Text_Color_Outline(room_width / 2,245,"MegaStrimp & Team Gamble",-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
-	draw_set_halign(fa_left);
-}
-#endregion
-
 #region Triangles
 xx += .2;
 if (xx >= triWidth) xx -= triWidth;
@@ -25,6 +15,16 @@ for (var i = 0; i < 3; i++)
 {
 	draw_sprite(spr_Maykr_Triangle,0,480 - triWidth - (triWidth * i) + xx,0 - ((1 - startLerp) * 18));
 	draw_sprite_ext(spr_Maykr_Triangle,0,0 + (triWidth * i) - xx,270 + ((1 - startLerp) * 18),1,-1,image_angle,image_blend,image_alpha);
+}
+#endregion
+
+#region Text
+if (startTrigger >= 1)
+{
+	draw_set_font(fnt_DialogueDefault);
+	draw_set_halign(fa_center);
+	scr_Draw_Text_Color_Outline(room_width / 2,245,"MegaStrimp & Team Gamble",-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	draw_set_halign(fa_left);
 }
 #endregion
 
