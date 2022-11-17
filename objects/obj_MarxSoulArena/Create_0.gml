@@ -9,7 +9,7 @@ secondphase = false;
 
 // Background
 
-sprBG = spr_marxsoul_bg;
+sprBG = bg_MarxSoulArena;
 sprBGPal = spr_MarxSoul_Palette_BG;
 
 bgX = 0;
@@ -43,9 +43,9 @@ rowSpeed[1] = 3;
 rowSpeed[2] = 2;
 rowSpeed[3] = 1;
 
-// Background
-sprBG = spr_marxsoul_bg;
-sprPal = spr_MarxSoul_Palette_BG;
+//// Background
+//sprBG = spr_marxsoul_bg;
+//sprPal = spr_MarxSoul_Palette_BG;
 
 //tileRowPrefObj = obj_MarxSoulGround_TileRow;
 
