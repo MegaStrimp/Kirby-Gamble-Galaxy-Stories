@@ -1605,6 +1605,7 @@
     {"id":{"name":"spr_Gooey_Normal_Idle","path":"sprites/spr_Gooey_Normal_Idle/spr_Gooey_Normal_Idle.yy",},"order":10,},
     {"id":{"name":"spr_Gooey_Normal_Jump","path":"sprites/spr_Gooey_Normal_Jump/spr_Gooey_Normal_Jump.yy",},"order":11,},
     {"id":{"name":"spr_Gooey_Normal_Roll","path":"sprites/spr_Gooey_Normal_Roll/spr_Gooey_Normal_Roll.yy",},"order":12,},
+    {"id":{"name":"spr_Hud_HealthbarHeal_Kirby","path":"sprites/spr_Hud_HealthbarHeal_Kirby/spr_Hud_HealthbarHeal_Kirby.yy",},"order":8,},
     {"id":{"name":"spr_Gooey_Normal_RollDuck","path":"sprites/spr_Gooey_Normal_RollDuck/spr_Gooey_Normal_RollDuck.yy",},"order":13,},
     {"id":{"name":"spr_Gooey_Normal_RollDuckReady","path":"sprites/spr_Gooey_Normal_RollDuckReady/spr_Gooey_Normal_RollDuckReady.yy",},"order":14,},
     {"id":{"name":"spr_Gooey_Normal_Run","path":"sprites/spr_Gooey_Normal_Run/spr_Gooey_Normal_Run.yy",},"order":15,},
