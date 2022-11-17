@@ -17,8 +17,9 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 48,
-  "height": 49,
+  "DynamicTexturePage": false,
+  "width": 64,
+  "height": 64,
   "textureGroupId": {
     "name": "Enemies",
     "path": "texturegroups/Enemies",

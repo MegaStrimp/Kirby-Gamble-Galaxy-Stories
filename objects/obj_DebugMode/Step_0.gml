@@ -5299,7 +5299,7 @@ else
 #region Lower HP to 1
 if(keyboard_check_pressed(ord("O"))){
 	global.healthP1 -= 10;
-}if(keyboard_check(ord("P"))){
-	global.healthP2 = 1;
+}if(keyboard_check_pressed(ord("P"))){
+	global.healthP2 -= 20;
 }
 #endregion
