@@ -2,8 +2,8 @@
 
 //Other Variables
 
-hudHpP1 = global.hpP1;
-hudHpP2 = global.hpP2;
+hudHpP1 = global.healthP1;
+hudHpP2 = global.healthP2;
 flashP1 = false;
 flashP2 = false;
 starsPosX = camera_get_view_x(gameView) + 1;

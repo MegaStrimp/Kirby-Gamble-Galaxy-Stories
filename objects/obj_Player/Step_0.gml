@@ -50,7 +50,7 @@ if ((clampToView) and (!death))
 
 //Death
 
-if ((((player == 0) and (global.hpP1 == 0)) or ((player == 1) and (global.hpP2 == 0))) and (!death))
+if ((((player == 0) and (global.healthP1 == 0)) or ((player == 1) and (global.healthP2 == 0))) and (!death))
 {
 	if (global.goldenTomato)
 	{
@@ -62,8 +62,10 @@ if ((((player == 0) and (global.hpP1 == 0)) or ((player == 1) and (global.hpP2 =
 			particle.sprite_index = spr_Particle_Flash1;
 			particle.destroyAfterAnimation = true;
 		}
-		global.hpP1 = global.hpMax;
-		global.hpP2 = global.hpMax;
+		//global.hpP1 = global.hpMax;
+		//global.hpP2 = global.hpMax;
+		global.healthP1 = global.healthMax;
+		global.healthP2 = global.healthMax;
 		global.goldenTomato = false;
 	}
 	else
@@ -111,6 +113,9 @@ if (!global.pause)
 
     if ((keyDownHold) and (downHeld < 1000)) downHeld += 1;
     if (keyDownReleased || attack || /*state == 5 || */hsp != 0) downHeld = 0;
+	if(playerAbility == playerAbilities.ufo){
+		downHeld = 10;
+	}
 	
 	//Depth & Scale Changer
 	
@@ -444,6 +449,12 @@ switch (state)
 	
     case (playerStates.float):
 	scr_Player_States_Float();
+	break;
+	
+	//Jet Hover
+	
+    case (playerStates.jetHover):
+	scr_Player_States_JetHover();
 	break;
 	
 	//Climb
@@ -798,6 +809,9 @@ if (!global.pause)
 
 global.hpP1 = clamp(global.hpP1,0,global.hpMax);
 global.hpP2 = clamp(global.hpP2,0,global.hpMax);
+
+global.healthP1 = clamp(global.healthP1,0,global.healthP1Max);
+global.healthP2 = clamp(global.healthP2,0,global.healthP2Max);
 
 //Scale
 
@@ -3677,6 +3691,12 @@ if(grounded){
 	fireDashUp = 2;
 	jetDashAir = 3;
 }
+
+////Fast Fall
+//if(keyDownPressed && downInputBufferTimer > 0){
+//	vsp = gravLimit;
+//	fallHop = true;
+//}
 
 //Input Buffers (for motion input attacks)
 if(keyDownHold){

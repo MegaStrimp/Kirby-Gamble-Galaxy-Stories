@@ -74,6 +74,9 @@ enum playerStates
 	jetDash,
 	swordDash,
 	parasolDash,
+	jetHover,
+	jetJump,
+	jetCharge,
 	warpStar,
     death
 }
@@ -233,9 +236,6 @@ enum playerAttacks
 	wingNormal,
 	wingDash,
 	
-	jetCharge,
-	jetDash,
-	
 	swordNormal,
 	swordDash,
 	swordCombo,
@@ -252,6 +252,10 @@ enum playerAttacks
 	sleepNormal,
 	
 	scanNormal,
+	
+	jetCharge,
+	jetDash,
+	jetJump,
 	
 	gooeyStoneNormal,
 	gooeyFireDash
@@ -818,9 +822,22 @@ global.versionNumber = "0.7.0";
 global.season = seasons.none;
 global.season = seasons.halloween;
 global.selectedSave = "Save1.ini";
+//old hp system
 global.hpMax = 5;
 global.hpP1 = global.hpMax;
 global.hpP2 = global.hpMax;
+//new healthbar system
+global.healthP1Max = 45;
+global.healthP2Max = 45;
+global.healthP1 = global.healthP1Max;
+global.healthP2 = global.healthP2Max;
+global.undershotValP1 = 5; // if the player's health is higher than this value when they take a hit and the attack is not marked as a "finishing blow", the player will survive with this much health.
+global.undershotValP2 = 5;
+global.healP1Mod = global.healthP1;
+global.healP2Mod = global.healthP2;
+//global.healP1End = global.healthP1;
+//global.healP2End = global.healthP2;
+///////////////////////////
 global.skylandsHpMax = 5;
 global.skylandsHpP1 = global.skylandsHpMax;
 global.skylandsHpP2 = global.skylandsHpMax;

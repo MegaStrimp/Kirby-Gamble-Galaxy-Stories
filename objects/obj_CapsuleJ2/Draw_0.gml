@@ -4,6 +4,8 @@
 stored_sprite = sprite_index;
 stored_subimg = image_index;
 
+jet_flametime++;
+
 switch(current_action){
 	case enemyAttacks.capsuleJ2_hovering:
 		if(jet_flametime >= 4){

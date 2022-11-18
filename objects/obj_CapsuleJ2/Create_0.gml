@@ -1,10 +1,7 @@
-///@description Initialize Variables
-
-//Event Inherited
+/// @description Initialization
+// You can write your code in this editor
 
 event_inherited();
-
-//Randomize
 
 randomize();
 
