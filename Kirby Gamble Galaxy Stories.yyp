@@ -5438,6 +5438,8 @@
     {"roomId":{"name":"rm_Startup","path":"rooms/rm_Startup/rm_Startup.yy",},},
     {"roomId":{"name":"rm_Title","path":"rooms/rm_Title/rm_Title.yy",},},
     {"roomId":{"name":"rm_MainMenu","path":"rooms/rm_MainMenu/rm_MainMenu.yy",},},
+    {"roomId":{"name":"rm_Debug_StageSelect","path":"rooms/rm_Debug_StageSelect/rm_Debug_StageSelect.yy",},},
+    {"roomId":{"name":"rm_MarxSoulTest","path":"rooms/rm_MarxSoulTest/rm_MarxSoulTest.yy",},},
     {"roomId":{"name":"rm_AsteroidFields_Gamble","path":"rooms/rm_AsteroidFields_Gamble/rm_AsteroidFields_Gamble.yy",},},
     {"roomId":{"name":"rm_AsteroidFields3A","path":"rooms/rm_AsteroidFields3A/rm_AsteroidFields3A.yy",},},
     {"roomId":{"name":"rm_AsteroidFields5","path":"rooms/rm_AsteroidFields5/rm_AsteroidFields5.yy",},},
