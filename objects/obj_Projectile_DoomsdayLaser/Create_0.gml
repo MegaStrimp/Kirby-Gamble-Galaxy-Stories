@@ -19,4 +19,4 @@ owner = id;
 
 destroyTimer = -1;
 recoilStarTimer = 0;
-recoilStarTimerMax = 30;
+recoilStarTimerMax = 60;

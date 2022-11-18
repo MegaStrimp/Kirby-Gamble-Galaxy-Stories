@@ -13,6 +13,8 @@ if (death)
 		fade.fadeTimer = 60;
 	}
 	
+	path_end();
+	visible = false;
 	attackNumber = -1;
 	attackChooseTimer = -1;
 }
@@ -39,6 +41,7 @@ if (setupTimer == 0)
 		sprSpawnBombEye = spr_Doomsday_Normal_SpawnBombEye;
 		sprAfterimage = spr_Doomsday_Normal_Afterimage;
 		sprBomb = spr_Doomsday_Normal_Bomb;
+		sprStar = spr_Doomsday_Normal_StarProjectile;
 		break;
 		#endregion
 	}
@@ -78,6 +81,13 @@ if ((!global.pause) and (((!global.cutscene) or ((global.cutscene) and (phase ==
 		
 		if (spawnState >= 2)
 		{
+			//if ((current_time % 2) == 0)
+			//{
+				var par = instance_create_depth(x + irandom_range(-20,20),y + irandom_range(-20,20),depth,obj_Particle);
+				par.sprite_index = spr_Particle_BlackSmoke;
+				par.vsp = -1.5;
+				par.destroyTimer = 15;
+			//}
 			if ((spawnEyeFlashIndex < sprite_get_number(sprEyeFlash) - 1)) spawnEyeFlashIndex += sprite_get_speed(sprEyeFlash) / 60;
 			with (obj_Camera)
 			{
@@ -109,6 +119,37 @@ if ((!global.pause) and (((!global.cutscene) or ((global.cutscene) and (phase ==
 			else
 			{
 				speed = 0;
+			}
+			break;
+			
+			case enemyAttacks.doomsday_circle:
+			if (attackState == 2)
+			{
+				if (point_distance(x,y,teleportTargetX,teleportTargetY) > spdTeleport)
+				{
+					move_towards_point(teleportTargetX,teleportTargetY,spdTeleport);
+				}
+				else
+				{
+					speed = 0;
+				}
+			}
+			else if (attackState == 3)
+			{
+				if ((current_time % 20) == 0)
+				{
+					if (audio_is_playing(snd_Spit)) audio_stop_sound(snd_Spit);
+					audio_play_sound(snd_Spit,0,false);
+					
+					var star = instance_create_depth(eyeX,eyeY,depth - 1,obj_Projectile_DoomsdayStar);
+					star.sprite_index = sprStar;
+					star.enemy = true;
+					star.destroyableByPlayer = true;
+					star.destroyableByEnemy = false;
+					star.hurtsObject = false;
+					star.hurtsEnemy = false;
+					star.hurtsPlayer = true;
+				}
 			}
 			break;
 			
@@ -158,6 +199,16 @@ if ((!global.pause) and (((!global.cutscene) or ((global.cutscene) and (phase ==
 				{
 					speed = 0;
 				}
+			}
+			else if (attackState == 3)
+			{
+				//if ((current_time % 2) == 0)
+				//{
+					var par = instance_create_depth(x + irandom_range(-20,20),y + irandom_range(-20,20),depth,obj_Particle);
+					par.sprite_index = spr_Particle_BlackSmoke;
+					par.vsp = -1.5;
+					par.destroyTimer = 15;
+				//}
 			}
 			break;
 		}
@@ -330,7 +381,7 @@ if ((!global.pause) and (((!global.cutscene) or ((global.cutscene) and (phase ==
 			attackNumber = choose
 			(
 				enemyAttacks.doomsday_teleport,
-				//enemyAttacks.doomsday_star,
+				enemyAttacks.doomsday_star,
 				//enemyAttacks.doomsday_circle,
 				enemyAttacks.doomsday_bomb,
 				enemyAttacks.doomsday_laser
@@ -349,6 +400,11 @@ if ((!global.pause) and (((!global.cutscene) or ((global.cutscene) and (phase ==
 			case enemyAttacks.doomsday_star:
 			teleportCountMax = irandom_range(3,5);
 			teleportAttackTimer = 0;
+			break;
+			
+			case enemyAttacks.doomsday_circle:
+			attackRng += 1;
+			circleAttackTimer = 0;
 			break;
 			
 			case enemyAttacks.doomsday_bomb:
@@ -376,6 +432,25 @@ if ((!global.pause) and (((!global.cutscene) or ((global.cutscene) and (phase ==
 		{
 			case 0:
 			attackState += 1;
+			if (attackNumber == enemyAttacks.doomsday_star)
+			{
+				if (audio_is_playing(snd_Spit)) audio_stop_sound(snd_Spit);
+				audio_play_sound(snd_Spit,0,false);
+				
+				var nearestPlayer = -1;
+				if (instance_exists(obj_Player)) nearestPlayer = instance_nearest(x,y,obj_Player);
+				
+				var star = instance_create_depth(eyeX,eyeY,depth - 1,obj_Projectile_DoomsdayStar);
+				star.sprite_index = sprStar;
+				if (nearestPlayer != -1) star.targetDir = point_direction(x,y,nearestPlayer.x,nearestPlayer.y);
+				star.enemy = true;
+				star.destroyableByPlayer = true;
+				star.destroyableByEnemy = false;
+				star.destroyableByWall = false;
+				star.hurtsObject = false;
+				star.hurtsEnemy = false;
+				star.hurtsPlayer = true;
+			}
 			teleportTargetChooseX = camera_get_view_x(gameView) + irandom_range(30,450);
 			teleportTargetChooseY = camera_get_view_y(gameView) + irandom_range(60,160);
 			var par = instance_create_depth(teleportTargetChooseX,teleportTargetChooseY,depth,obj_Particle);
@@ -403,6 +478,48 @@ if ((!global.pause) and (((!global.cutscene) or ((global.cutscene) and (phase ==
 			{
 				teleportAttackTimer = 45;
 			}
+			break;
+		}
+	}
+	#endregion
+	
+	#region Circle Attack Timer
+	if (circleAttackTimer > 0)
+	{
+		circleAttackTimer -= 1;
+	}
+	else if (circleAttackTimer == 0)
+	{
+		switch (attackState)
+		{
+			case 0:
+			attackState += 1;
+			teleportTargetChooseX = 240;
+			teleportTargetChooseY = 100;
+			var par = instance_create_depth(teleportTargetChooseX,teleportTargetChooseY,depth,obj_Particle);
+			par.sprite_index = sprEyeFlash;
+			par.image_speed = 1;
+			par.destroyAfterAnimation = true;
+			circleAttackTimer = 30;
+			break;
+			
+			case 1:
+			attackState += 1;
+			teleportTargetX = teleportTargetChooseX;
+			teleportTargetY = teleportTargetChooseY;
+			circleAttackTimer = 60;
+			break;
+			
+			case 2:
+			path_start(pth_Boss_Doomsday_Circle,5,path_action_restart,0);
+			circleAttackTimer = 120;
+			break;
+			
+			case 3:
+			path_end();
+			attackState = 0;
+			attackChooseTimer = attackChooseTimerMax;
+			circleAttackTimer = -1;
 			break;
 		}
 	}
@@ -498,16 +615,16 @@ if ((!global.pause) and (((!global.cutscene) or ((global.cutscene) and (phase ==
 			
 			case 3:
 			attackState += 1;
-			var bomb = instance_create_depth(eyeX,eyeY,depth - 1,obj_Projectile_DoomsdayLaser);
-			bomb.owner = id;
-			bomb.enemy = true;
-			bomb.hurtsObject = false;
-			bomb.hurtsEnemy = false;
-			bomb.hurtsPlayer = true;
-			bomb.destroyTimer = 110;
-			hsp = 2.5 * -attackDir;
+			var laser = instance_create_depth(eyeX,eyeY,depth - 1,obj_Projectile_DoomsdayLaser);
+			laser.owner = id;
+			laser.enemy = true;
+			laser.hurtsObject = false;
+			laser.hurtsEnemy = false;
+			laser.hurtsPlayer = true;
+			hsp = 1.5 * -attackDir;
 			currentEyeSprite = sprEyeLaser;
-			laserAttackTimer = 180;
+			laserAttackTimer = 230;
+			laser.destroyTimer = laserAttackTimer;
 			break;
 			
 			case 4:
@@ -519,7 +636,6 @@ if ((!global.pause) and (((!global.cutscene) or ((global.cutscene) and (phase ==
 			
 			case 5:
 			attackState = 0;
-			bombThrown = false;
 			attackChooseTimer = attackChooseTimerMax;
 			laserAttackTimer = -1;
 			break;

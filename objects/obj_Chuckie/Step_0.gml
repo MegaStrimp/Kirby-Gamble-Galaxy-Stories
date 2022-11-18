@@ -58,6 +58,10 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 		audio_play_sound(snd_Chuckie_Bounce,0,false);
 	}
 	
+	//Animation
+	
+	image_speed = dirY;
+	
 	//Particle Timer
 	
 	if (particleTimer > 0)

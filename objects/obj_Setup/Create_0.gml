@@ -814,7 +814,6 @@ part_type_life(global.partTypeColorfulStars, 30, 40);
 
 #region Global Variables
 global.versionNumber = "0.7.0";
-global.versionNumber = "0.6.4";
 
 global.season = seasons.none;
 global.season = seasons.halloween;
@@ -1002,7 +1001,7 @@ if (saveCheck == "kssu")
 
 scr_LoadGame(global.selectedSave);
 //if ((!global.debug) and (global.canSave)) scr_SaveGame(global.selectedSave);
-if (global.debug) scr_DebugSave();
+//if (global.debug) scr_DebugSave();
 
 scr_LoadConfig("config.ini");
 window_set_fullscreen(global.fullscreen);

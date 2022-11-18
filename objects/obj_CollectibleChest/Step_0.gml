@@ -38,6 +38,13 @@ switch (subState)
 	}
 	#endregion
 	
+	#region Movement
+	vsp += (accel * walkDirY);
+	if ((abs(vsp) >= jumpspeed)) walkDirY *= -1;
+	
+	yy += vsp;
+	#endregion
+	
 	#region Collect
 	with (obj_Player)
 	{
@@ -62,6 +69,21 @@ switch (subState)
 		yy += 1 * moveDir;
 		if (abs(yy) == yyMax) moveDir *= -1;
 		moveTimer = moveTimerMax;
+	}
+	#endregion
+	
+	#region Shine Timer
+	if (shineTimer > 0)
+	{
+		shineTimer -= 1;
+	}
+	else if (shineTimer == 0)
+	{
+		var particle = instance_create_depth(x + irandom_range(-(sprite_get_width(sprite_index) / 2),(sprite_get_width(sprite_index) / 2)),y + irandom_range(-(sprite_get_height(sprite_index) / 2),(sprite_get_height(sprite_index) / 2)),depth - 1,obj_Particle);
+		particle.sprite_index = spr_Particle_SmallSparkle_White;
+		particle.vsp = .5;
+		particle.destroyAfterAnimation = true;
+		shineTimer = shineTimerMax;
 	}
 	#endregion
 	break;

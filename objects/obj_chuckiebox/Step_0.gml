@@ -24,6 +24,7 @@ if (((!global.pause) and !((global.cutscene) and (pausedInCutscenes))) and (!scr
 		chuckie.owner = id;
 		chuckie.image_angle = image_angle;
 		chuckie.followedPath = followedPath;
+		chuckie.dirY = sign(image_yscale);
 		chuckie.character = character;
 		chuckie.sprIdle = sprIdle;
 		chuckie.sprNeck = sprNeck;

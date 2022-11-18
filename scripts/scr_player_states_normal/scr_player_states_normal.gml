@@ -558,6 +558,7 @@ function scr_Player_States_Normal()
 							cutterMaskProj.image_xscale = image_xscale;
 							cutterMaskProj.image_yscale = image_yscale;
 							invincible = true;
+							invincibleFlashTimer = invincibleFlashTimerMax;
 							attack = true;
 							attackNumber = playerAttacks.cutterAir;
 							sprite_index = sprCutterAttack3;
@@ -573,7 +574,8 @@ function scr_Player_States_Normal()
 						        image_index = 0;
 				                cutterCatch = false;
 								hspLimit = false;
-								hsp = movespeedRun * 1.3;
+								invincible = true;
+								hsp = movespeedRun * 2;
 							}
 							else if (keyDownHold)
 							{
@@ -4042,13 +4044,13 @@ function scr_Player_States_Normal()
 		{
 		    if ((!instance_exists(obj_Fade)) and (!hurt))
 		    {
-				enterDoor = true;
+				enteredDoor = instance_place(x,y,obj_Door);
 		    }
 		}
 		
-		if (enterDoor)
+		if (enteredDoor != -1)
 		{
-			var nearbyDoor = instance_position(x,y,obj_Door);
+			var nearbyDoor = enteredDoor;
 			switch (nearbyDoor.state)
 			{
 				case "goToRoom":
@@ -4071,7 +4073,7 @@ function scr_Player_States_Normal()
 				}
 				break;
 			}
-			enterDoor = false;
+			enteredDoor = -1;
 		}
 		
 		//Grab Item

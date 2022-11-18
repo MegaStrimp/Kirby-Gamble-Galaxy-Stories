@@ -20,11 +20,15 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	event_inherited();
 	
+	//Get Inhaled
+	
+	scr_Object_Inhale(false);
+	
 	//Position
 	
 	if (active)
 	{
-		spd += .1;
+		spd += .05;
 		hsp = lengthdir_x(spd,targetDir);
 		vsp = lengthdir_y(spd,targetDir);
 	}
@@ -40,7 +44,8 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	}
 	else if (activeTimer == 0)
 	{
-		instance_destroy();
+		point_direction(x,y,obj_Player.x,obj_Player.y);
+		active = true;
 		activeTimer = -1;
 	}
 	

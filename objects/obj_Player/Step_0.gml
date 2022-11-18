@@ -14,6 +14,7 @@ if (player == 1) playerIsHelper = global.isHelperP2;
 var playerFamiliar = global.familiarP1;
 if (player == 1) playerFamiliar = global.familiarP2;
 
+invincibleFlash = false;
 grounded = false;
 if (place_meeting(x,y + 1,obj_ParentWall))
 {
@@ -881,6 +882,7 @@ if (!global.pause)
 	
 	//Invincible Flash Timer
 	
+	if ((invincible) and (invincibleFlashTimer == -1)) invincibleFlashTimer = invincibleFlashTimerMax;
 	if (invincibleFlashTimer > 0)
 	{
 		invincibleFlashTimer -= 1;
@@ -895,7 +897,7 @@ if (!global.pause)
 		{
 			invincibleFlash = true;
 		}
-		invincibleFlashTimer = invincibleFlashTimerMax;
+		invincibleFlashTimer = -1;
 	}
 	
 	if (player == 0)

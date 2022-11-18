@@ -5,6 +5,14 @@ if (!global.pause)
 	if (!active)
 	{
 		//Activate
+		
+		with (obj_Player)
+		{
+			if (distance_to_object(other) <= other.activateRange)
+			{
+				other.active = true;
+			}
+		}
 	}
 	else
 	{
@@ -267,6 +275,10 @@ if (!global.pause)
 			}
 		}
 	}
+	
+	//Animation
+	
+	image_alpha = lerp(image_alpha,active,.05);
 }
 
 //Debug Delete

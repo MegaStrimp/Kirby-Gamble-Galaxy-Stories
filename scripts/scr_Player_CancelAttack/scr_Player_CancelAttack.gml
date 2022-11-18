@@ -20,6 +20,7 @@ function scr_Player_CancelAttack(argument0)
 	        if (instance_exists(cutterDashMaskProj)) instance_destroy(cutterDashMaskProj);
 			state = playerStates.normal;
 			hspLimit = true;
+	        invincible = false;
 			break;
 			
 			case playerAttacks.cutterAir:

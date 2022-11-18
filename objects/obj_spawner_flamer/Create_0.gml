@@ -1,6 +1,5 @@
 ///@description Initialize Variables
-instance_create_depth(x,y,depth,obj_Flamer);
-instance_destroy();
+
 //Physics
 
 decel = .05;

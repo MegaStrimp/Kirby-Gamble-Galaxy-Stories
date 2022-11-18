@@ -182,7 +182,7 @@ function scr_Player_States_Float()
 		    if ((!instance_exists(obj_Fade)) and (!hurt))
 		    {
 				vsp = 0;
-				enterDoor = true;
+				enteredDoor = instance_place(x,y,obj_Door);
 		    }
 		}
 		
@@ -193,7 +193,7 @@ function scr_Player_States_Float()
 			switch (playerCharacter)
 			{
 				default:
-				if ((!global.cutscene) and ((grounded) or (enterDoor) or ((place_meeting(x,y,obj_AntiFloat))) or (keyAttackPressed)) and ((!floatSpit) and (sprite_index != sprFloatReady) and (sprite_index != sprItemCarryLightFloatReady)))
+				if ((!global.cutscene) and ((grounded) or (enteredDoor != -1) or ((place_meeting(x,y,obj_AntiFloat))) or (keyAttackPressed)) and ((!floatSpit) and (sprite_index != sprFloatReady) and (sprite_index != sprItemCarryLightFloatReady)))
 				{
 					if (audio_is_playing(floatSfx)) audio_stop_sound(snd_Float);
 					var projAirPuff = instance_create_depth(x + ((sprite_get_width(sprFloatSpit) / 2) * dir),y + vsp,depth - 1,obj_AirPuff);
@@ -297,7 +297,7 @@ function scr_Player_States_Float()
 		{
 		    if ((!instance_exists(obj_Fade)) and (hurt = false))
 		    {
-		        var nearbyDoor = instance_place(x,y,obj_Door);
+		        var nearbyDoor = enteredDoor;
 		        fade = instance_create_depth(x,y,-999,obj_Fade);
 				fade.targetRoom = nearbyDoor.targetRoom;
 		        hsp = 0;

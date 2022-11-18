@@ -23,6 +23,7 @@ sprSpawnEye = spr_Doomsday_Normal_SpawnEye;
 sprSpawnBombEye = spr_Doomsday_Normal_SpawnBombEye;
 sprAfterimage = spr_Doomsday_Normal_Afterimage;
 sprBomb = spr_Doomsday_Normal_Bomb;
+sprStar = spr_Doomsday_Normal_StarProjectile;
 
 sprBossIcon = -1;
 sprBossText = spr_Healthbar_Boss_Text_Doomsday;
@@ -80,7 +81,7 @@ afterimageTimer = -1;
 afterimageTimerMax = 10;
 teleportAttackTimer = -1;
 starAttackTimer = -1;
-circlettackTimer = -1;
+circleAttackTimer = -1;
 bombAttackTimer = -1;
 laserAttackTimer = -1;
 #endregion

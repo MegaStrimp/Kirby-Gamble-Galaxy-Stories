@@ -8,7 +8,7 @@ event_inherited();
 
 hsp = 0;
 vsp = 0;
-jumpspeed = 1;
+jumpspeed = 2;
 decel = .35;
 decelMax = 8.25;
 
