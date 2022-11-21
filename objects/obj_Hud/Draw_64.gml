@@ -579,8 +579,8 @@ starsPosY = 44 + (hasTreasure * 28);
 	
 	//Golden Tomato
 	
-	goldenTomatoPosX = 13;
-	goldenTomatoPosY = 63;
+	goldenTomatoPosX = 15;
+	goldenTomatoPosY = 70;
 	
 	if (global.goldenTomato) draw_sprite_ext(spr_GoldenTomato,0,goldenTomatoPosX,goldenTomatoPosY,1,1,image_angle,image_blend,.75 * drawAlpha);
 	

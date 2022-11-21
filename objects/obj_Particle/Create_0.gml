@@ -14,6 +14,8 @@ grav = .15;
 gravLimit = 2;
 piTurnSpd = 0;
 xx = x;
+scaleSpd = 0;
+alphaSpd = 0;
 
 //Other Variables
 

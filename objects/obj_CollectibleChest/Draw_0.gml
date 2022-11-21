@@ -4,7 +4,7 @@ switch (subState)
 {
 	#region Overworld
 	case 0:
-	var shineScale = 1 - random_range(-.1,.1);
+	if (!global.pause) shineScale = 1 - random_range(-.1,.1);
 	#region Draw Shine
 	draw_sprite_ext(sprShine,0,x,y + yy - 4,image_xscale * shineScale,image_yscale * shineScale,image_angle,image_blend,image_alpha);
 	#endregion
@@ -51,7 +51,7 @@ switch (subState)
 	draw_set_alpha(1);
 	#endregion
 	
-	var shineScale = random_range(-.1,.1);
+	if (!global.pause) shineScale = 1 - random_range(-.1,.1);
 	#region Draw Shine
 	draw_sprite_ext(sprShine,0,x,y - 4,image_xscale * shineScale,image_yscale * shineScale,image_angle,image_blend,image_alpha);
 	#endregion

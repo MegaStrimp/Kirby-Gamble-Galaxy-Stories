@@ -151,6 +151,12 @@ if (!global.pause)
 					audio_play_sound(snd_AmongUs,0,false);
 				}
 				
+				if (fishTaco)
+				{
+					if (audio_is_playing(snd_FishTaco)) audio_stop_sound(snd_FishTaco);
+					audio_play_sound(snd_FishTaco,0,false);
+				}
+				
 				if (owner.player == 0)
 				{
 					global.hpP1 += 1;

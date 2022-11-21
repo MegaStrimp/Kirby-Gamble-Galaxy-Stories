@@ -21,6 +21,10 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		shakeY = 2;
 	}
 	
+	//Animation
+	
+	image_speed = 1;
+	
 	//Destroy Timer
 	
 	if (destroyTimer > 0)
@@ -81,4 +85,8 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		}
 	    recoilStarTimer = recoilStarTimerMax;
 	}
+}
+else
+{
+	image_speed = 0;
 }

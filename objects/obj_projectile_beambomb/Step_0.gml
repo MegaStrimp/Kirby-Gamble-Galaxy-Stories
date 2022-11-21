@@ -12,6 +12,7 @@ if (setupTimer == 0)
 		sprVortexReady = spr_Projectile_BeamBomb_Normal_VortexReady;
 		sprVortex = spr_Projectile_BeamBomb_Normal_Vortex;
 		sprExplosion = spr_Projectile_BeamBomb_Normal_Explosion;
+		sprSonar = spr_Projectile_BeamBomb_Normal_Sonar;
 		break;
 	}
 }
@@ -73,8 +74,30 @@ if (((pausable) and (!global.pause)) or (!pausable))
 			par.hsp = 1 * -dirX;
 			par.vsp = random_range(-.2,.2);
 			par.destroyAfterAnimation = true;
+			particleTimer = 10;
 		}
-		particleTimer = 10;
+	}
+	#endregion
+	
+	#region Sonar Timer
+	if (sonarTimer > 0)
+	{
+		sonarTimer -= 1;
+	}
+	else if (sonarTimer == 0)
+	{
+		if (!didExplode)
+		{
+			var par = instance_create_depth(x,y,depth,obj_Particle);
+			par.sprite_index = sprSonar;
+			par.hsp = hsp;
+			par.scale = .2;
+			par.image_xscale = par.scale;
+			par.image_yscale = par.scale;
+			par.scaleSpd = .1;
+			par.alphaSpd = -.05;
+			sonarTimer = sonarTimerMax;
+		}
 	}
 	#endregion
 								

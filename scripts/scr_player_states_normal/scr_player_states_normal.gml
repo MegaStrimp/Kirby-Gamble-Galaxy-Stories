@@ -193,6 +193,7 @@ function scr_Player_States_Normal()
 				var ultiDecel = decel;
 				if (runTurn) ultiDecel = decel * 2;
 				if (attackNumber == playerAttacks.fireWheel) ultiDecel = decelSlide;
+				if (attackNumber == playerAttacks.beamDash) ultiDecel = decel - .02;
 				if (attackNumber == playerAttacks.beamAir) ultiDecel = decel - .05;
 				if (hsp >= ultiDecel) hsp -= ultiDecel;
 				if (hsp <= -ultiDecel) hsp += ultiDecel;
@@ -260,7 +261,7 @@ function scr_Player_States_Normal()
 		{
 			//Fast Fall
 			
-			if ((keyDownPressed) and (downInputBufferTimer > 0))
+			if ((!canUfoFloat) and (playerAbility != playerAbilities.ufo) and (keyDownPressed) and (downInputBufferTimer > 0))
 			{
 			    vsp = gravLimit;
 			    //fallHop = true;
@@ -1592,7 +1593,6 @@ function scr_Player_States_Normal()
 								beamBombProj.abilityType = playerAbilities.mysticBeam;
 								beamBombProj.dmg = 42;
 								beamBombProj.hsp = 2 * dir;
-								beamBombProj.dirX = dir;
 								beamBombProj.destroyableByWall = false;
 								beamBombProj.destroyableByEnemy = false;
 								beamBombProj.destroyableByObject = false;

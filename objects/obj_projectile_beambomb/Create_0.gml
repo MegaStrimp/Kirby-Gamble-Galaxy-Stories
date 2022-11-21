@@ -19,6 +19,7 @@ vsp = 0;
 sprVortexReady = spr_Projectile_BeamBomb_Normal_VortexReady;
 sprVortex = spr_Projectile_BeamBomb_Normal_Vortex;
 sprExplosion = spr_Projectile_BeamBomb_Normal_Explosion;
+sprSonar = spr_Projectile_BeamBomb_Normal_Sonar;
 
 //Other Variables
 
@@ -30,3 +31,5 @@ didExplode = false;
 //Timers
 
 particleTimer = 10;
+sonarTimerMax = 40;
+sonarTimer = sonarTimerMax;

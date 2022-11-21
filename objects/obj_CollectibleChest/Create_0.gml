@@ -25,6 +25,7 @@ effectAngle = 0;
 textureX = 0;
 textureY = 0;
 walkDirY = -1;
+shineScale = 1;
 #endregion
 
 #region Timers

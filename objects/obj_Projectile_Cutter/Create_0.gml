@@ -9,8 +9,8 @@ event_inherited();
 hsp = 0;
 vsp = 0;
 jumpspeed = 2;
-decel = .35;
-decelMax = 8.25;
+decel = .5;
+decelMax = 10;
 
 //Sprites
 

@@ -26,9 +26,7 @@ points = 500;
 hasXKnockback = true;
 hasYKnockback = true;
 hasDeathKnockback = false;
-objectOnDeath = true;
-objectOnDeathObj = obj_Projectile_ExplosionMask;
-hasDeathParticles = false;
+
 charge = false;
 scaleExTemp = 0;
 scaleExTempSpd = .01;

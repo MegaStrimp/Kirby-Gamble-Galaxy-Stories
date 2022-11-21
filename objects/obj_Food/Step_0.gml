@@ -44,6 +44,11 @@ if (!global.pause)
 			if (audio_is_playing(snd_AmongUs)) audio_stop_sound(snd_AmongUs);
 			audio_play_sound(snd_AmongUs,0,false);
 			break;
+			
+			case spr_Food_FishTaco:
+			if (audio_is_playing(snd_FishTaco)) audio_stop_sound(snd_FishTaco);
+			audio_play_sound(snd_FishTaco,0,false);
+			break;
 		}
 		
 		var collidedPlayer = instance_place(x,y,obj_Player);

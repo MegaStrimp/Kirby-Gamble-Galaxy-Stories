@@ -1210,7 +1210,7 @@ if (!global.pause)
 				par.hasPiTurn = true;
 				par.piTurnSpd = 4 + (hsp * dir);
 				par.angle = i / 4 * 2 * pi;
-				par.destroyTimer = 10;
+				par.destroyTimer = 15;
 			}
 		    beamDashAttackTimer = -1;
 		}

@@ -47,7 +47,7 @@ collisionY = obj_ParentWall;
 hasXKnockback = true;
 hasYKnockback = true;
 deathOnBottom = true;
-objectOnDeath = true;
+objectOnDeath = false;
 objectOnDeathObj = obj_Projectile_ExplosionMask;
 groundFailsafe = true;
 

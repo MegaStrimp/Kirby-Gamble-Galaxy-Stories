@@ -26,6 +26,8 @@ if (!global.pause)
 	itemAnim += itemAnimSpd;
 	if (itemAnim > sprite_get_number(sprItem)) itemAnim -= sprite_get_number(sprItem);
 	
+	if (abilityTrophyTimer == -1) itemScale = lerp(itemScale,1,.1);
+	
 	//Give Ability
 	
 	imageAlpha = 1;
@@ -287,6 +289,7 @@ if (!global.pause)
 	}
 	else if (abilityTrophyTimer == 0)
 	{
+		itemScale = .2;
 	    abilityTrophyTimer = -1;
 	}
 	

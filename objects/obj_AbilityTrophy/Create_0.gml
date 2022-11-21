@@ -37,6 +37,7 @@ itemYOffsetSpd = .075;
 itemYOffsetMax = 2;
 itemYOffsetDir = 1;
 imageAlpha = 1;
+itemScale = 1;
 
 //Timers
 
