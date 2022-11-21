@@ -28,7 +28,7 @@ grav = gravNormal;
 gravFloat = .075;
 gravFireDash = .05;
 gravLimitNormal = 5;
-gravLimitFloat = 1.2;
+gravLimitFloat = 0.8;
 gravLimitBeamAir = 3;
 gravLimitStone = 7;
 gravLimitFireDash = 1.25;
@@ -296,11 +296,13 @@ waterEggSoilUpgrade = false;
 
 //Other Variables
 
-if ((global.hpP1 == 0) or (global.hpP2 == 0))
+if ((global.healthP1 == 0) or (global.healthP2 == 0))
 {
 	if (global.pause) global.pause = false;
-	global.hpP1 = global.hpMax;
-	global.hpP2 = global.hpMax;
+	global.healthP1 = global.healthP1Max;
+	global.healthP2 = global.healthP2Max;
+	global.healP1Mod = global.healthP1;
+	global.healP2Mod = global.healthP2;
 }
 player = 0;
 playerCharacter = 0;
@@ -580,6 +582,8 @@ jetDashAir = 3;
 finalCutterEndlag = 12;
 downInputBuffer = 15;
 downInputBufferTimer = 0;
+jetHoverAccel = 0.7;
+jetHoverMax = 3.5;
 //////////////////
 
 //Create Objects
