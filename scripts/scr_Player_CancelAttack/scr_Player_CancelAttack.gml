@@ -13,6 +13,8 @@ function scr_Player_CancelAttack(argument0)
 		var playerCharacter = global.characterP1;
 		if (player == 1) playerCharacter = global.characterP2;
 		
+		image_index = 0;
+		
 		switch (attackNumber)
 		{
 			case playerAttacks.cutterDash:

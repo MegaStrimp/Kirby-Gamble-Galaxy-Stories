@@ -62,10 +62,10 @@ if ((((player == 0) and (global.healthP1 == 0)) or ((player == 1) and (global.he
 			particle.sprite_index = spr_Particle_Flash1;
 			particle.destroyAfterAnimation = true;
 		}
-		//global.hpP1 = global.hpMax;
-		//global.hpP2 = global.hpMax;
-		global.healthP1 = global.healthMax;
-		global.healthP2 = global.healthMax;
+		//global.healthP1 = global.hpMax;
+		//global.healthP2 = global.hpMax;
+		global.healthP1 = global.healthP1Max;
+		global.healthP2 = global.healthP2Max;
 		global.goldenTomato = false;
 	}
 	else
@@ -807,8 +807,8 @@ if (!global.pause)
 
 //Hp Clamp
 
-global.hpP1 = clamp(global.hpP1,0,global.hpMax);
-global.hpP2 = clamp(global.hpP2,0,global.hpMax);
+//global.healthP1 = clamp(global.healthP1,0,global.hpMax);
+//global.healthP2 = clamp(global.healthP2,0,global.hpMax);
 
 global.healthP1 = clamp(global.healthP1,0,global.healthP1Max);
 global.healthP2 = clamp(global.healthP2,0,global.healthP2Max);
@@ -2765,7 +2765,7 @@ else if (characterSetupTimer == 0)
 			sprFall = spr_WaddleDoo_Normal_Fall;
 			sprSquish = spr_WaddleDoo_Normal_Idle;
 			sprDuck = spr_WaddleDoo_Normal_Duck;
-			sprDuck = spr_WaddleDoo_Normal_Slide;
+			sprSlide = spr_WaddleDoo_Normal_Slide;
 			sprEnter = spr_WaddleDoo_Normal_Walk;
 			sprClimbUp = spr_WaddleDoo_Normal_ClimbUp;
 			sprClimbDown = spr_WaddleDoo_Normal_ClimbDown;
@@ -3699,6 +3699,9 @@ if(grounded){
 //}
 
 //Input Buffers (for motion input attacks)
+runBuffer += 1;
+runBuffer = clamp(runBuffer,0,10000);
+
 if(keyDownHold){
 	downInputBufferTimer = downInputBuffer;
 }else{

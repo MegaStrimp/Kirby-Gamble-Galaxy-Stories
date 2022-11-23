@@ -99,8 +99,8 @@ if (global.halberdEscape)
 	halberdEscapeTimer = clamp(halberdEscapeTimer,0,9999);
 	if (halberdEscapeTimer == 0)
 	{
-		global.hpP1 = 0;
-		global.hpP2 = 0;
+		global.healthP1 = 0;
+		global.healthP2 = 0;
 	}
 	
 	draw_sprite_ext(spr_Hud_TimerNumbers,floor(halberdEscapeTimer / 1000),timerX + 4,timerY + 2,1,1,image_angle,image_blend,drawAlpha);

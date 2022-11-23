@@ -227,6 +227,30 @@ function scr_Player_States_Float()
 			}
 		}
 		
+		//Cancel Float Spit
+		
+		if ((floatSpit) and (hurt) and ((sprite_index == sprFloatSpit) or (sprite_index == sprItemCarryLightFloatSpit)))
+		{
+			floatSpit = false;
+			if (!hasMintLeaf)
+			{
+				jumpspeed = jumpspeedNormal;
+				state = playerStates.normal;
+			}
+			else
+			{
+				if (carriedItem == carriedItems.none)
+				{
+					sprite_index = sprFloat;
+				}
+				else
+				{
+					sprite_index = sprItemCarryLightFloat;
+				}
+				image_index = 0;
+			}
+		}
+		
 		//Animation
 		
 		switch (playerCharacter)

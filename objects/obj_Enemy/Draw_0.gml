@@ -9,7 +9,17 @@ drawShakeX = irandom_range(-shakeX,shakeX);
 drawShakeY = irandom_range(-shakeY,shakeY);
 
 drawPaletteFlash = paletteFlash;
-if ((hurt) and (invincibleFlash)) drawPaletteFlash = 3;
+if ((hurt) and (invincibleFlash))
+{
+	if (death)
+	{
+		drawPaletteFlash = 3;
+	}
+	else
+	{
+		drawPaletteFlash = 2;
+	}
+}
 
 if (global.shaders) pal_swap_set(paletteIndex,drawPaletteFlash,false);
 draw_sprite_ext(sprite_index,image_index,x + ((canShakeX) * drawShakeX),y + ((canShakeY) * drawShakeY),image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle,image_blend,image_alpha);

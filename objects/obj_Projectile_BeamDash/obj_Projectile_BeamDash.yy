@@ -7,7 +7,7 @@
     "path": "sprites/spr_Kirby_BeamDash/spr_Kirby_BeamDash.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,

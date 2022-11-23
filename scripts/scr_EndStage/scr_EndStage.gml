@@ -7,6 +7,6 @@ function scr_EndStage()
 	global.invinCandyTimerP1 = -1;
 	global.invinCandyTimerP2 = -1;
 	
-	global.hpP1 = global.hpMax;
-	global.hpP2 = global.hpMax;
+	global.healthP1 = global.healthP1Max;
+	global.healthP2 = global.healthP2Max;
 }

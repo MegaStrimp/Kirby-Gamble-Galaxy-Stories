@@ -1,4 +1,4 @@
-///@description Inputs
+///@description Execute Attack - Beam Normal
 
 function scr_Player_ExecuteAttack_BeamNormal()
 {
@@ -7,6 +7,7 @@ function scr_Player_ExecuteAttack_BeamNormal()
 	attackable = false;
 	attack = true;
 	attackNumber = playerAttacks.beamNormal;
+	vsp = 1;
 	sprite_index = sprBeamAttack1;
 	image_index = 0;
 	attackTimer = 35;

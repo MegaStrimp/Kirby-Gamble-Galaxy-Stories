@@ -18,6 +18,13 @@ if (mouse_check_button_pressed(mb_middle))
 }
 #endregion
 
+#region Spawner Mode
+if ((keyboard_check(vk_alt)) and (keyboard_check_pressed(ord("S"))))
+{
+	spawnerMode = !spawnerMode;
+}
+#endregion
+
 #region Change Room
 if (keyboard_check_pressed(vk_multiply)) room_restart();
 if ((room != room_last) and (keyboard_check_pressed(vk_subtract))) room_goto_next();
@@ -1232,6 +1239,21 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		break;
 		#endregion
 		
+		#region Golden Tomato
+		case debugObject.goldenTomato:
+		debugSprite = spr_GoldenTomato;
+		debugSpriteSelectedMax = 0;
+		debugIndex = 0;
+		debugStateSelectedMax = 0;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var debugObj = instance_create_layer(x,y,"Environment",obj_GoldenTomato);
+			debugObj.image_xscale = debugXScale;
+			debugObj.image_yscale = debugYScale;
+		}
+		break;
+		#endregion
+		
 		#region Invinciblity Candy
 		case debugObject.invinciblityCandy:
 		debugSprite = spr_InvincibilityCandy;
@@ -1789,7 +1811,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 2;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_WaddleDee);
+			var spawnedObj = obj_WaddleDee;
+			if (spawnerMode) spawnedObj = obj_Spawner_WaddleDee;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprWalk = sprWalk;
@@ -1979,7 +2003,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 2;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_WaddleDoo);
+			var spawnedObj = obj_WaddleDoo;
+			if (spawnerMode) spawnedObj = obj_Spawner_WaddleDoo;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprWalk = sprWalk;
@@ -2098,7 +2124,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 3;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_BrontoBurt);
+			var spawnedObj = obj_BrontoBurt;
+			if (spawnerMode) spawnedObj = obj_Spawner_BrontoBurt;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprReady = sprReady;
@@ -2173,7 +2201,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 2;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Twizzy);
+			var spawnedObj = obj_Twizzy;
+			if (spawnerMode) spawnedObj = obj_Spawner_Twizzy;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprFly = sprFly;
@@ -2224,7 +2254,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 2;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Tookey);
+			var spawnedObj = obj_Tookey;
+			if (spawnerMode) spawnedObj = obj_Spawner_Tookey;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprFly = sprFly;
@@ -2303,7 +2335,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 1;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_SirKibble);
+			var spawnedObj = obj_SirKibble;
+			if (spawnerMode) spawnedObj = obj_Spawner_SirKibble;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprWalk = sprWalk;
@@ -2389,7 +2423,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 3;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Gordo);
+			var spawnedObj = obj_Gordo;
+			if (spawnerMode) spawnedObj = obj_Spawner_Gordo;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprHurt = sprHurt;
@@ -2434,7 +2470,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 3;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_BloodGordo);
+			var spawnedObj = obj_BloodGordo;
+			if (spawnerMode) spawnedObj = obj_Spawner_BloodGordo;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprHurt = sprHurt;
@@ -2475,7 +2513,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 0;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Environment",obj_WaddleBlock);
+			var spawnedObj = obj_WaddleBlock;
+			//if (spawnerMode) spawnedObj = obj_Spawner_WaddleBlock;
+			var debugObj = instance_create_layer(x,y,"Environment",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.topWallSprite = topWallSprite;
@@ -2514,7 +2554,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 1;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Shotzo);
+			var spawnedObj = obj_Shotzo;
+			if (spawnerMode) spawnedObj = obj_Spawner_Shotzo;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprHurt = sprHurt;
@@ -2595,7 +2637,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 1;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_MysticDoo);
+			var spawnedObj = obj_MysticDoo;
+			if (spawnerMode) spawnedObj = obj_Spawner_MysticDoo;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprFloatUp = sprFloatUp;
@@ -2726,7 +2770,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 0;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Bouncy);
+			var spawnedObj = obj_Bouncy;
+			if (spawnerMode) spawnedObj = obj_Spawner_Bouncy;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprJump = sprJump;
@@ -2778,7 +2824,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 1;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_MrBoogie);
+			var spawnedObj = obj_MrBoogie;
+			//if (spawnerMode) spawnedObj = obj_Spawner_MrBoogie;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprWalk = sprWalk;
@@ -2829,7 +2877,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 0;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Search);
+			var spawnedObj = obj_Search;
+			if (spawnerMode) spawnedObj = obj_Spawner_Search;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprCharge = sprCharge;
@@ -2878,7 +2928,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 0;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_HiveDrone);
+			var spawnedObj = obj_HiveDrone;
+			//if (spawnerMode) spawnedObj = obj_Spawner_HiveDrone;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprAttack = sprAttack;
@@ -2933,7 +2985,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 0;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Wapod);
+			var spawnedObj = obj_Wapod;
+			if (spawnerMode) spawnedObj = obj_Spawner_Wapod;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprPot = sprPot;
 			debugObj.sprHurt = sprHurt;
@@ -2975,7 +3029,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 1;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Flamebelch);
+			var spawnedObj = obj_Flamebelch;
+			//if (spawnerMode) spawnedObj = obj_Spawner_Flamebelch;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprWalk = sprWalk;
@@ -3065,7 +3121,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 1;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Cappy);
+			var spawnedObj = obj_Cappy;
+			if (spawnerMode) spawnedObj = obj_Spawner_Cappy;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdleL = sprIdleL;
 			debugObj.sprIdleR = sprIdleR;
@@ -3115,7 +3173,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 1;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_BroomHatter);
+			var spawnedObj = obj_BroomHatter;
+			if (spawnerMode) spawnedObj = obj_Spawner_BroomHatter;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprWalk = sprWalk;
@@ -3162,7 +3222,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 0;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Coconut);
+			var spawnedObj = obj_Coconut;
+			if (spawnerMode) spawnedObj = obj_Spawner_Coconut;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprHurt = sprHurt;
@@ -3209,7 +3271,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 1;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Noddy);
+			var spawnedObj = obj_Noddy;
+			if (spawnerMode) spawnedObj = obj_Spawner_Noddy;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprWalk = sprWalk;
@@ -3256,7 +3320,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 3;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Blado);
+			var spawnedObj = obj_Blado;
+			if (spawnerMode) spawnedObj = obj_Spawner_Blado;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprHurt = sprHurt;
@@ -3302,7 +3368,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 1;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Scarfy);
+			var spawnedObj = obj_Scarfy;
+			if (spawnerMode) spawnedObj = obj_Spawner_Scarfy;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprCalmIdle = sprCalmIdle;
 			debugObj.sprCalmFly = sprCalmFly;
@@ -3376,7 +3444,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 2;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Rocky);
+			var spawnedObj = obj_Rocky;
+			if (spawnerMode) spawnedObj = obj_Spawner_Rocky;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprWalk = sprWalk;
@@ -3456,7 +3526,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 1;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Grizzo);
+			var spawnedObj = obj_Grizzo;
+			if (spawnerMode) spawnedObj = obj_Spawner_Grizzo;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprWalk = sprWalk;
@@ -3513,7 +3585,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 2;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_JungleBomb);
+			var spawnedObj = obj_JungleBomb;
+			if (spawnerMode) spawnedObj = obj_Spawner_JungleBomb;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprWalk = sprWalk;
@@ -3581,7 +3655,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 1;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Glunk);
+			var spawnedObj = obj_Glunk;
+			if (spawnerMode) spawnedObj = obj_Spawner_Glunk;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprHurt = sprHurt;
@@ -3645,7 +3721,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 1;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Kabu);
+			var spawnedObj = obj_Kabu;
+			if (spawnerMode) spawnedObj = obj_Spawner_Kabu;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprWalk = sprWalk;
@@ -3723,7 +3801,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 1;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_BurningLeo);
+			var spawnedObj = obj_BurningLeo;
+			if (spawnerMode) spawnedObj = obj_Spawner_BurningLeo;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprWalk = sprWalk;
@@ -3782,7 +3862,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 0;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Tomatoo);
+			var spawnedObj = obj_Tomatoo;
+			if (spawnerMode) spawnedObj = obj_Spawner_Tomatoo;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprDuck = sprDuck;
@@ -3831,7 +3913,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 1;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Onion);
+			var spawnedObj = obj_Onion;
+			if (spawnerMode) spawnedObj = obj_Spawner_Onion;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprHurt = sprHurt;
@@ -3876,7 +3960,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 1;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Anemonee);
+			var spawnedObj = obj_Anemonee;
+			if (spawnerMode) spawnedObj = obj_Spawner_Anemonee;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprHurt = sprHurt;
@@ -3948,7 +4034,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 0;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_PoppyBrosJr);
+			var spawnedObj = obj_PoppyBrosJr;
+			if (spawnerMode) spawnedObj = obj_Spawner_PoppyBrosJr;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprThrowReady = sprThrowReady;
@@ -3999,7 +4087,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 1;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Bobo);
+			var spawnedObj = obj_Bobo;
+			if (spawnerMode) spawnedObj = obj_Spawner_Bobo;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprWalk = sprWalk;
@@ -4058,7 +4148,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 1;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Foley);
+			var spawnedObj = obj_Foley;
+			if (spawnerMode) spawnedObj = obj_Spawner_Foley;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdleNormal = sprIdleNormal;
 			debugObj.sprIdleExplodeReady = sprIdleExplodeReady;
@@ -4113,7 +4205,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 0;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Nidoo);
+			var spawnedObj = obj_Nidoo;
+			if (spawnerMode) spawnedObj = obj_Spawner_Nidoo;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprReady = sprReady;
 			debugObj.sprShake = sprShake;
@@ -4160,7 +4254,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 0;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Como);
+			var spawnedObj = obj_Como;
+			if (spawnerMode) spawnedObj = obj_Spawner_Como;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprFall = sprFall;
@@ -4213,7 +4309,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 1;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Cairn);
+			var spawnedObj = obj_Cairn;
+			if (spawnerMode) spawnedObj = obj_Spawner_Cairn;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprTop = sprTop;
 			debugObj.sprMiddle = sprMiddle;
@@ -4263,7 +4361,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 0;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Bomber);
+			var spawnedObj = obj_Bomber;
+			if (spawnerMode) spawnedObj = obj_Spawner_Bomber;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprWalk = sprWalk;
@@ -4317,7 +4417,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 0;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Simirror);
+			var spawnedObj = obj_Simirror;
+			if (spawnerMode) spawnedObj = obj_Spawner_Simirror;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprWalk = sprWalk;
@@ -4385,7 +4487,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 0;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Gim);
+			var spawnedObj = obj_Gim;
+			if (spawnerMode) spawnedObj = obj_Spawner_Gim;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprWalk = sprWalk;
@@ -4455,7 +4559,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 1;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Hothead);
+			var spawnedObj = obj_Hothead;
+			if (spawnerMode) spawnedObj = obj_Spawner_Hothead;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprWalk = sprWalk;
@@ -4509,7 +4615,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 1;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Sparky);
+			var spawnedObj = obj_Sparky;
+			if (spawnerMode) spawnedObj = obj_Spawner_Sparky;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprWalk = sprWalk;
@@ -4571,7 +4679,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 1;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Yolky);
+			var spawnedObj = obj_Yolky;
+			if (spawnerMode) spawnedObj = obj_Spawner_Yolky;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprShoot = sprShoot;
@@ -4647,7 +4757,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 0;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Wheelie);
+			var spawnedObj = obj_Wheelie;
+			if (spawnerMode) spawnedObj = obj_Spawner_Wheelie;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprDecel1 = sprDecel1;
@@ -4709,7 +4821,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 2;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_LaserBall);
+			var spawnedObj = obj_LaserBall;
+			if (spawnerMode) spawnedObj = obj_Spawner_LaserBall;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprFace = sprFace;
@@ -4772,7 +4886,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 2;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Juckle);
+			var spawnedObj = obj_Juckle;
+			if (spawnerMode) spawnedObj = obj_Spawner_Juckle;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprReady = sprReady;
@@ -4824,7 +4940,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 1;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Kookler);
+			var spawnedObj = obj_Kookler;
+			//if (spawnerMode) spawnedObj = obj_Spawner_Kookler;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprHurt = sprHurt;
@@ -4871,7 +4989,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 1;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Ufo);
+			var spawnedObj = obj_Ufo;
+			if (spawnerMode) spawnedObj = obj_Spawner_Ufo;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprWalk = sprWalk;
@@ -4920,7 +5040,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 0;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_BouncySis);
+			var spawnedObj = obj_BouncySis;
+			if (spawnerMode) spawnedObj = obj_Spawner_BouncySis;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprJump = sprJump;
@@ -4981,7 +5103,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 0;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Flamer);
+			var spawnedObj = obj_Flamer;
+			if (spawnerMode) spawnedObj = obj_Spawner_Flamer;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprReady = sprReady;
@@ -5030,7 +5154,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 0;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_ChuckieBox);
+			var spawnedObj = obj_ChuckieBox;
+			//if (spawnerMode) spawnedObj = obj_Spawner_ChuckieBox;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprReady = sprReady;
@@ -5079,7 +5205,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 0;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Walky);
+			var spawnedObj = obj_Walky;
+			if (spawnerMode) spawnedObj = obj_Spawner_Walky;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprWalk = sprWalk;
@@ -5170,7 +5298,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 0;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_PlasmaWisp);
+			var spawnedObj = obj_PlasmaWisp;
+			if (spawnerMode) spawnedObj = obj_Spawner_PlasmaWisp;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprCharge = sprCharge;
@@ -5221,7 +5351,9 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 1;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var debugObj = instance_create_layer(x,y,"Enemies",obj_Cerulean);
+			var spawnedObj = obj_Cerulean;
+			if (spawnerMode) spawnedObj = obj_Spawner_Cerulean;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprAttackReady = sprAttackReady;

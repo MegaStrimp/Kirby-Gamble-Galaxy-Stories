@@ -392,7 +392,7 @@ if ((!debugCamera) and (objectFollowing == -1))
 				{
 					target = obj_Player;
 				
-					if (global.hpP1 != 0)
+					if (global.healthP1 != 0)
 					{
 						cameraTargetX = target.x;
 						if (target.finalCutterState != 3) cameraTargetY = target.y;

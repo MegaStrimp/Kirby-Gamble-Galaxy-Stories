@@ -48,6 +48,7 @@ function scr_Player_States_Carry()
 					if (audio_is_playing(snd_DashBegin)) audio_stop_sound(snd_DashBegin);
 					audio_play_sound(snd_DashBegin,0,false);
 					runParticleTimer = 0;
+					runBuffer = 0;
 					run = true;
 				}
 		    }

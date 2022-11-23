@@ -206,11 +206,11 @@ function scr_Player_Collision(argument0)
 			{
 				if (player == 0)
 				{
-					global.hpP1 = 0;
+					global.healthP1 = 0;
 				}
 				else
 				{
-					global.hpP2 = 0;
+					global.healthP2 = 0;
 				}
 			}
 		}
@@ -239,9 +239,9 @@ function scr_Player_Collision(argument0)
 	
 	//Death On Bottom
 	
-	if ((global.hpP1 != 0) and (y >= (obj_Camera.cameraY + ((obj_Camera.viewHeight + 24) / obj_Camera.zoomFinal))))
+	if ((global.healthP1 != 0) and (y >= (obj_Camera.cameraY + ((obj_Camera.viewHeight + 24) / obj_Camera.zoomFinal))))
 	{
-		global.hpP1 = 0;
+		global.healthP1 = 0;
 	}
 }
 
@@ -429,11 +429,11 @@ function scr_Player_Collision(playerMechs.none)
 			{
 				if (player == 0)
 				{
-					global.hpP1 = 0;
+					global.healthP1 = 0;
 				}
 				else
 				{
-					global.hpP2 = 0;
+					global.healthP2 = 0;
 				}
 			}
 		}
@@ -454,5 +454,5 @@ function scr_Player_Collision(playerMechs.none)
 	
 	//Death On Bottom
 	
-	if ((global.hpP1 != 0) and (y >= room_height + 24)) global.hpP1 = 0;
+	if ((global.healthP1 != 0) and (y >= room_height + 24)) global.healthP1 = 0;
 }

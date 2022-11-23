@@ -2,11 +2,7 @@
 
 //Physics
 
-decel = .05;
-movespeed = 1.5;
-jumpspeed = 4;
-gravNormal = .7;
-gravLimitNormal = 7;
+movespeed = 2;
 
 //Other Variables
 

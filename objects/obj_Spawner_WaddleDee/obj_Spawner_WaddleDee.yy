@@ -11,7 +11,10 @@
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_Spawner",
+    "path": "objects/obj_Spawner/obj_Spawner.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

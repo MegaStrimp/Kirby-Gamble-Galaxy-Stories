@@ -21,6 +21,7 @@ paletteIndex = spr_Chuckie_Normal_Palette_BlueSphere;
 xAngle = 12;
 yAngle = 0;
 followedPath = pth_Enemy_Chuckie;
+chuckieCount = 1;
 #endregion
 
 #region Timers

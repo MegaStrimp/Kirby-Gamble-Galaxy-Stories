@@ -18,8 +18,8 @@ function scr_Enemy_HurtsPlayer(argument0)
 		{
 			//Variables
 			
-			//var playerHp = global.hpP1;
-			//if (collidedPlayer.player == 1) playerHp = global.hpP2;
+			//var playerHp = global.healthP1;
+			//if (collidedPlayer.player == 1) playerHp = global.healthP2;
 			
 			var playerHp = global.healthP1;
 			if (collidedPlayer.player == 1) playerHp = global.healthP2;
@@ -55,7 +55,7 @@ function scr_Enemy_HurtsPlayer(argument0)
 			var oldHealthP2 = global.healthP2;
 			if (collidedPlayer.player == 0)
 			{
-				//global.hpP1 -= dmg;	
+				//global.healthP1 -= dmg;	
 				global.healP1Mod = global.healthP1;			
 				global.healthP1 -= dmg;
 				if(global.healthP1 <= 0 && oldHealthP1 > global.undershotValP1){ // Undershot check, will need to add a check for if attack is a "finishing blow", in which case it will ignore undershot
@@ -64,7 +64,7 @@ function scr_Enemy_HurtsPlayer(argument0)
 			}
 			else
 			{
-				//global.hpP2 -= dmg;
+				//global.healthP2 -= dmg;
 				global.healP2Mod = global.healthP2;
 				global.healthP2 -= dmg;
 				if(global.healthP2 <= 0 && oldHealthP2 > global.undershotValP2){

@@ -28,7 +28,6 @@ switch (rng)
 	sprite_index = spr_Food_FishTaco;
 	break;
 }
-sprite_index = spr_Food_FishTaco;
 sprHurt = -1;
 points = 10;
 ability = playerAbilities.none;

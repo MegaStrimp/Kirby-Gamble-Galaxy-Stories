@@ -86,7 +86,7 @@
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background_Parallax1","spriteId":{"name":"bg_AsteroidFields_Sky","path":"sprites/bg_AsteroidFields_Sky/bg_AsteroidFields_Sky.yy",},"colour":4294967295,"x":0,"y":0,"htiled":false,"vtiled":false,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":15.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"visible":true,"depth":2000,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":24,"gridY":24,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
   ],
   "inheritLayers": false,
-  "creationCodeFile": "${project_dir}/rooms/rm_AsteroidFieldsNew3A/RoomCreationCode.gml",
+  "creationCodeFile": "${project_dir}/rooms/rm_AsteroidFields3A/RoomCreationCode.gml",
   "inheritCode": false,
   "instanceCreationOrder": [
     {"name":"inst_A59FDFA_3","path":"rooms/rm_AsteroidFields3A/rm_AsteroidFields3A.yy",},

@@ -35,10 +35,35 @@ function scr_Player_States_Normal()
 		}
 		
 		var attackDisableMovement = false;
-		if ((attack) and ((attackNumber != playerAttacks.ufoBeam) and (attackNumber != playerAttacks.ufoCharge) and (attackNumber != playerAttacks.ufoLaser) and (attackNumber != playerAttacks.cutterAir) and (attackNumber != playerAttacks.fireAerial) and (attackNumber != playerAttacks.swordAir) and (attackNumber != playerAttacks.swordAirDash))) attackDisableMovement = true;
+		if ((attack)
+		and ((attackNumber != playerAttacks.ufoBeam)
+		and (attackNumber != playerAttacks.ufoCharge)
+		and (attackNumber != playerAttacks.ufoLaser)
+		and (attackNumber != playerAttacks.cutterAir)
+		and (attackNumber != playerAttacks.fireAerial)
+		and (attackNumber != playerAttacks.swordAir)
+		and (attackNumber != playerAttacks.swordAirDash))
+		) attackDisableMovement = true;
+		
+		var attackDisableAnimation = true;
+		if (
+		(attackNumber == playerAttacks.slideJump)
+		) attackDisableAnimation = false;
 		
 		var attackDisableDir = false;
-		if ((attackNumber == playerAttacks.ufoBeam) or (attackNumber == playerAttacks.cutterAir) or (attackNumber == playerAttacks.fireAerial) or (attackNumber == playerAttacks.fireWheel && !grounded) or (attackNumber == playerAttacks.fireNormal)) attackDisableDir = true;
+		if (
+		(attackNumber == playerAttacks.ufoBeam)
+		or (attackNumber == playerAttacks.cutterAir)
+		or (attackNumber == playerAttacks.fireAerial)
+		or (attackNumber == playerAttacks.fireWheel && !grounded)
+		or (attackNumber == playerAttacks.fireNormal)
+		) attackDisableDir = true;
+		
+		var attackHasGravLerp = false;
+		if (
+		(attackNumber == playerAttacks.beamNormal)
+		or (attackNumber == playerAttacks.beamUp)
+		) attackHasGravLerp = true;
 		
 		didJump = false;
 		#endregion
@@ -77,6 +102,7 @@ function scr_Player_States_Normal()
 						{
 							runParticleTimer = 0;
 						}
+						runBuffer = 0;
 						run = true;
 					}
 			    }
@@ -204,7 +230,7 @@ function scr_Player_States_Normal()
 		
 		var blockGap = false;
 		if ((run) and (hsp != 0) and (vsp == 0) and (!place_meeting(x,y + 1,obj_ParentWall)) and (!place_meeting(x + hsp,y,obj_ParentWall)) and (place_meeting(x + (hsp + (2 * sign(hsp))),y + 1,obj_ParentWall))) blockGap = true;
-		if ((hasGravity) and (!blockGap) and (playerAbility != playerAbilities.ufo))
+		if ((hasGravity) and (!attackHasGravLerp) and (!blockGap) and (playerAbility != playerAbilities.ufo))
 		{
 			var gravOffset = 0;
 			if (attackNumber == playerAttacks.beamAir) gravOffset = .05;
@@ -217,6 +243,11 @@ function scr_Player_States_Normal()
 				vsp = gravLimit - (gravOffset * 5);
 				if (((playerCharacter == playerCharacters.kirby) or (playerCharacter == playerCharacters.gooey)) and (fallHopCounter < fallHopCounterMax)) fallHopCounter += 1;
 			}
+		}
+		
+		if (attackHasGravLerp)
+		{
+			vsp = lerp(vsp,0,.1);
 		}
 		
 		if ((!global.cutscene) and (!canUfoFloat) and (playerAbility != playerAbilities.ufo) and (vsp < 0) and (!keyJumpHold))
@@ -513,18 +544,7 @@ function scr_Player_States_Normal()
 						case playerAbilities.none:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt))
 					    {
-							if (!hurt)
-							{
-							    var inhaleMask = instance_create_depth(x + (3 * dir),y - 2,depth - 1,obj_InhaleMask);
-								inhaleMask.image_xscale = image_xscale;
-								inhaleMask.owner = id;
-							}
-							walkDuck = false;
-							walkDuckTimer = -1;
-					        run = false;
-					        image_index = 0;
-							inhaling = false;
-					        state = playerStates.inhale;
+							scr_Player_ExecuteAttack(playerAttacks.inhale);
 					    }
 						break;
 						#endregion
@@ -567,7 +587,7 @@ function scr_Player_States_Normal()
 						}
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
-							if ((run) and (vsp == 0) and (hsp != 0))
+							if ((run) and (runBuffer < 60) and (vsp == 0) and (hsp != 0))
 							{
 								attack = true;
 								attackNumber = playerAttacks.cutterDash;
@@ -910,13 +930,14 @@ function scr_Player_States_Normal()
 									if (audio_is_playing(snd_Beam)) audio_stop_sound(snd_Beam);
 									sndBeam = audio_play_sound(snd_Beam,0,false);
 									attack = true;
+									vsp = 1;
 									attackNumber = playerAttacks.beamUp;
 									sprite_index = sprBeamAttack4;
 								    image_index = 0;
 								}
 								else
 								{
-									if (run)
+									if ((run) and (runBuffer < 60))
 									{
 										if (grounded)
 										{
@@ -924,6 +945,8 @@ function scr_Player_States_Normal()
 											if (audio_is_playing(snd_BeamDash)) audio_stop_sound(snd_BeamDash);
 											sndBeam = audio_play_sound(snd_BeamDash,0,false);
 											attack = true;
+											invincible = true;
+											invincibleTimer = 15;
 											attackNumber = playerAttacks.beamDash;
 											beamDashAttackTimer = 0;
 											sprite_index = sprBeamAttack3;
@@ -1257,7 +1280,7 @@ function scr_Player_States_Normal()
 						
 							if (!attack)
 							{
-								if (run)
+								if ((run) and (runBuffer < 60))
 								{
 									if (grounded)
 									{
@@ -2101,7 +2124,7 @@ function scr_Player_States_Normal()
 						case playerAbilities.ninja:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
-							if ((run) and (vsp == 0) and (hsp != 0))
+							if ((run) and (runBuffer < 60) and (vsp == 0) and (hsp != 0))
 							{
 								attack = true;
 								attackNumber = playerAttacks.ninjaDash;
@@ -2352,7 +2375,7 @@ function scr_Player_States_Normal()
 							}
 							if ((keyAttackPressed) and (!attack))
 							{
-								if ((run) and (hsp != 0) and (!(keyDownHold && !grounded)))
+								if ((run) and (runBuffer < 60) and (hsp != 0) and (!(keyDownHold && !grounded)))
 								{
 									invincible = true;
 									vsp = 0;
@@ -2708,7 +2731,7 @@ function scr_Player_States_Normal()
 					    {
 							if (keyAttackPressed)
 							{
-								if ((run) and (hsp != 0))
+								if ((run) and (runBuffer < 60) and (hsp != 0))
 								{
 									invincible = true;
 									vsp = 0;
@@ -3085,7 +3108,7 @@ function scr_Player_States_Normal()
 									
 									{ //this is where the Falling part of the Rising Slash will go
 									
-									}if ((run) and (!hurt) and (!attack)){ //Speen
+									}if ((run) and (runBuffer < 60) and (!hurt) and (!attack)){ //Speen
 											sprite_index=sprSwordAttackAirDash
 											attackTimer =2000;
 											attackNumber=playerAttacks.swordAirDash
@@ -3253,7 +3276,7 @@ function scr_Player_States_Normal()
 					    {
 							if (keyAttackPressed)
 							{
-								if ((run) and (hsp != 0))
+								if ((run) and (runBuffer < 60) and (hsp != 0))
 								{
 									invincible = true;
 									vsp = 0;
@@ -3477,7 +3500,7 @@ function scr_Player_States_Normal()
 							sprite_index = sprStoneAttack1Ready;
 							image_index = 0;
 						}
-						else if ((run) and (hsp != 0))
+						else if ((run) and (runBuffer < 60) and (hsp != 0))
 						{
 							invincible = true;
 							vsp = 0;
@@ -3704,6 +3727,7 @@ function scr_Player_States_Normal()
 							if (invincibleFlashTimer == -1) invincibleFlashTimer = invincibleFlashTimerMax;
 							if ((!global.cutscene) and (keyAttackReleased))
 							{
+								
 								cutterCharge = 0;
 								if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
 								chargeSfxState = "intro";
@@ -3743,15 +3767,14 @@ function scr_Player_States_Normal()
 					{
 						if ((round(image_index) == 2) and (attackable))
 						{
-							if (audio_is_playing(snd_Cutter)) audio_stop_sound(snd_Cutter);
-							audio_play_sound(snd_Cutter,0,false);
-						    var projectile = instance_create_depth(x,y - 10,depth,obj_Projectile_Cutter);
+							if (audio_is_playing(snd_CutterCharge)) audio_stop_sound(snd_CutterCharge);
+							audio_play_sound(snd_CutterCharge,0,false);
+						    var projectile = instance_create_depth(x,y - 8,depth,obj_Projectile_Cutter);
 							projectile.owner = id;
+							projectile.abilityType = playerAbilities.cutter;
 							projectile.paletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
 							projectile.dmg = 20;
-							projectile.character = 1;
-							projectile.sprite_index = spr_Projectile_Cutter_Enemy;
-							projectile.paletteIndex = paletteIndex;
+							projectile.sprite_index = projectile.sprCharge;
 							projectile.decelMax = projectile.decelMax * 1.2;
 							projectile.hsp = dir * projectile.decelMax;
 							projectile.dirX = dir;
@@ -3761,7 +3784,8 @@ function scr_Player_States_Normal()
 							projectile.destroyableByObject = false;
 							projectile.destroyableByProjectile = false;
 							projectile.player = player;
-							projectile.image_blend = c_red;
+							projectile.angleSpd = -30;
+							projectile.charge = true;
 							attackable = false;
 						}
 					}
@@ -3782,132 +3806,7 @@ function scr_Player_States_Normal()
 		
 		if ((!global.cutscene) and (canJump) and (playerAbility != playerAbilities.ufo) and (((!canMultiJump) and (grounded)) or ((canMultiJump) and (multiJumpCounter < multiJumpLimit))) and (!wallAbove) and (keyJumpPressed) and (!attack))
 		{
-			if ((canMultiJump) and (multiJumpLimit != -1)) multiJumpCounter += 1;
-			
-			switch (playerCharacter)
-			{
-				case playerCharacters.gamble:
-				if (audio_is_playing(snd_Jump)) audio_stop_sound(snd_Jump);
-				audio_play_sound(snd_Jump,0,false);
-				var parJump = instance_create_depth(x - (7 * dir),y + 5,depth + 1,obj_Particle);
-				parJump.sprite_index = spr_Particle_Jump;
-				parJump.destroyAfterAnimation = true;
-				parJump.spdBuiltIn = 6;
-				parJump.fricSpd = .6;
-				parJump.direction = 90 + (20 * dir);
-				vsp = -jumpspeed;
-				break;
-				
-				case playerCharacters.waddleDee:
-				var jumpSound = choose(snd_WaddleDee1,snd_WaddleDee6,snd_WaddleDee7,snd_WaddleDee8,snd_WaddleDee9,snd_WaddleDee10,snd_WaddleDee11);
-				audio_play_sound(jumpSound,0,false);
-				if (audio_is_playing(snd_Jump)) audio_stop_sound(snd_Jump);
-				audio_play_sound(snd_Jump,0,false);
-				var parJump = instance_create_depth(x - (7 * dir),y + 5,depth + 1,obj_Particle);
-				parJump.sprite_index = spr_Particle_Jump;
-				parJump.destroyAfterAnimation = true;
-				parJump.spdBuiltIn = 6;
-				parJump.fricSpd = .6;
-				parJump.direction = 90 + (20 * dir);
-				sprite_index = sprJump;
-				image_index = 0;
-				vsp = -jumpspeed;
-				break;
-				
-				case playerCharacters.waddleDoo:
-				if (audio_is_playing(snd_Jump)) audio_stop_sound(snd_Jump);
-				audio_play_sound(snd_Jump,0,false);
-				var parJump = instance_create_depth(x - (7 * dir),y + 5,depth + 1,obj_Particle);
-				parJump.sprite_index = spr_Particle_Jump;
-				parJump.destroyAfterAnimation = true;
-				parJump.spdBuiltIn = 6;
-				parJump.fricSpd = .6;
-				parJump.direction = 90 + (20 * dir);
-				sprite_index = sprJump;
-				image_index = 0;
-				vsp = -jumpspeed;
-				break;
-				
-				case playerCharacters.brontoBurt:
-				if (audio_is_playing(snd_WingFlap)) audio_stop_sound(snd_WingFlap);
-				audio_play_sound(snd_WingFlap,0,false);
-				var parJump = instance_create_depth(x - (7 * dir),y + 5,depth + 1,obj_Particle);
-				parJump.sprite_index = spr_Particle_Jump;
-				parJump.destroyAfterAnimation = true;
-				parJump.spdBuiltIn = 6;
-				parJump.fricSpd = .6;
-				parJump.direction = 90 + (20 * dir);
-				sprite_index = sprJump;
-				image_index = 0;
-				vsp = -jumpspeed;
-				break;
-				
-				case playerCharacters.twizzy:
-				if (audio_is_playing(snd_WingFlap)) audio_stop_sound(snd_WingFlap);
-				audio_play_sound(snd_WingFlap,0,false);
-				var parJump = instance_create_depth(x - (7 * dir),y + 5,depth + 1,obj_Particle);
-				parJump.sprite_index = spr_Particle_Jump;
-				parJump.destroyAfterAnimation = true;
-				parJump.spdBuiltIn = 6;
-				parJump.fricSpd = .6;
-				parJump.direction = 90 + (20 * dir);
-				sprite_index = sprJump;
-				image_index = 0;
-				vsp = -jumpspeed;
-				break;
-				
-				case playerCharacters.tookey:
-				if (audio_is_playing(snd_WingFlap)) audio_stop_sound(snd_WingFlap);
-				audio_play_sound(snd_WingFlap,0,false);
-				var parJump = instance_create_depth(x - (7 * dir),y + 5,depth + 1,obj_Particle);
-				parJump.sprite_index = spr_Particle_Jump;
-				parJump.destroyAfterAnimation = true;
-				parJump.spdBuiltIn = 6;
-				parJump.fricSpd = .6;
-				parJump.direction = 90 + (20 * dir);
-				sprite_index = sprJump;
-				image_index = 0;
-				vsp = -jumpspeed;
-				break;
-				
-				case playerCharacters.sirKibble:
-				if (audio_is_playing(snd_Jump)) audio_stop_sound(snd_Jump);
-				audio_play_sound(snd_Jump,0,false);
-				var parJump = instance_create_depth(x - (7 * dir),y + 5,depth + 1,obj_Particle);
-				parJump.sprite_index = spr_Particle_Jump;
-				parJump.destroyAfterAnimation = true;
-				parJump.spdBuiltIn = 6;
-				parJump.fricSpd = .6;
-				parJump.direction = 90 + (20 * dir);
-				sprite_index = sprJump;
-				image_index = 0;
-				vsp = -jumpspeed;
-				break;
-				
-				case playerCharacters.bouncy:
-				if (audio_is_playing(snd_Jump)) audio_stop_sound(snd_Jump);
-				audio_play_sound(snd_Jump,0,false);
-				sprite_index = sprJump;
-				image_index = 0;
-				vsp = -jumpspeed;
-				break;
-				
-				default:
-				if (audio_is_playing(snd_Jump)) audio_stop_sound(snd_Jump);
-				audio_play_sound(snd_Jump,0,false);
-				var parJump = instance_create_depth(x - (7 * dir),y + 5,depth + 1,obj_Particle);
-				parJump.sprite_index = spr_Particle_Jump;
-				parJump.destroyAfterAnimation = true;
-				parJump.spdBuiltIn = 6;
-				parJump.fricSpd = .6;
-				parJump.direction = 90 + (20 * dir);
-				if ((carriedItem == carriedItems.none) and (playerAbility != playerAbilities.sword) and (playerAbility != playerAbilities.parasol) and (playerAbility != playerAbilities.hammer)) fallRoll = true;
-				sprite_index = sprJump;
-				image_index = 0;
-				vsp = -jumpspeed;
-				didJump = true;
-				break;
-			}
+			scr_Player_ExecuteJump();
 		}
 		
 		//Jump Limit Flash
@@ -4043,7 +3942,7 @@ function scr_Player_States_Normal()
 					hurt = false;
 					jumpspeed = jumpspeedFloat;
 					vsp = -jumpspeed;
-					float = true;
+					float = false;
 					image_index = 0;
 					state = playerStates.float;
 					break;
@@ -4143,7 +4042,7 @@ function scr_Player_States_Normal()
 			image_speed = 1 + (runImageSpeedIncrease * run) + heavyItemCarrySpd;
 		}
 		
-		if ((!canUfoFloat) and (playerAbility != playerAbilities.ufo) and (!attack) and (!hurt) and (!iceKick))
+		if ((!canUfoFloat) and (playerAbility != playerAbilities.ufo) and !((attack) and (attackDisableAnimation)) and (!hurt) and (!iceKick))
 		{
 			if ((grounded) and (vsp == 0))
 			{
@@ -4577,7 +4476,7 @@ function scr_Player_States_Normal()
 		{
 			if (playerAbility == playerAbilities.ufo)
 			{
-				if (!attack)
+				if !((attack) and (attackDisableAnimation))
 				{
 					if ((vsp > 0) or (hsp != 0))
 					{

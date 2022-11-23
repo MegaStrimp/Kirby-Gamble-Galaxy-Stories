@@ -16,6 +16,7 @@ decelMax = 10;
 
 sprIdle = spr_Projectile_Cutter_Player;
 sprCharge = spr_Projectile_CutterCharge_Normal;
+sprDestroy = spr_Projectile_Cutter_Destroy;
 
 //Other Variables
 

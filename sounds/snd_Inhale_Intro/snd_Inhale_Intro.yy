@@ -14,8 +14,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_inhale_intro.wav",
-  "duration": 0.863991,
+  "soundFile": "snd_Inhale_Intro.wav",
+  "duration": 0.792608,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",

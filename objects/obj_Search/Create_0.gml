@@ -25,7 +25,6 @@ ability = playerAbilities.crash;
 points = 500;
 hasXKnockback = true;
 hasYKnockback = true;
-hasDeathKnockback = false;
 
 charge = false;
 scaleExTemp = 0;

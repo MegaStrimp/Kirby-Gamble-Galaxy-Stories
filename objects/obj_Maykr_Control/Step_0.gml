@@ -1129,8 +1129,8 @@ if (!active)
 				bottomHudOffset = (50 * !bottomHudVisible) - (96 * bottomHudOpen);
 				
 				global.pause = false;
-				global.hpP1 = global.hpMax;
-				global.hpP2 = global.hpMax;
+				global.healthP1 = global.hpMax;
+				global.healthP2 = global.hpMax;
 				
 				with (obj_Particle) instance_destroy();
 				with (obj_Maykr_Spawner) activeState = 0;

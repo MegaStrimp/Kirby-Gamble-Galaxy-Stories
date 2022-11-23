@@ -156,6 +156,8 @@ enum playerAbilities
 enum playerAttacks
 {
 	none,
+	slideJump,
+	inhale,
 	
     keyNormal,
 	
@@ -817,15 +819,14 @@ part_type_life(global.partTypeColorfulStars, 30, 40);
 #endregion
 
 #region Global Variables
-global.versionNumber = "0.7.0";
+global.versionNumber = "0.8.0";
 
 global.season = seasons.none;
-global.season = seasons.halloween;
 global.selectedSave = "Save1.ini";
 //old hp system
 global.hpMax = 5;
-global.hpP1 = global.hpMax;
-global.hpP2 = global.hpMax;
+//global.healthP1 = global.hpMax;
+//global.healthP2 = global.hpMax;
 //new healthbar system
 global.healthP1Max = 45;
 global.healthP2Max = 45;
