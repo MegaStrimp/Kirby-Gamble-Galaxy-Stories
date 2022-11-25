@@ -1,5 +1,15 @@
 ///@description Initialize Variables
 
+//Other
+hurtDefault = function(argument0)
+{
+	image_speed = 1;
+	sprite_index = sprHurt;
+	hspDummy = 0;
+	vspDummy = 0;
+	return true;
+} // this is a basic function that passes true and allows the hurt func to go through
+
 //Randomize
 
 randomize();
@@ -118,6 +128,11 @@ hurtImageIndex = 0;
 collisionHitbox = -1;
 pausedInCutscenes = true;
 starColors = [0,1,2,3,4,5,6,7];
+childPause = false;
+hurtFunction = hurtDefault;
+hurtType = 0;
+collidingHitbox = 0; // use for practical purposes. clear after enemy recovers
+backupFlags = 0
 
 //Timers
 
@@ -134,3 +149,13 @@ invincibleFlashTimer = -1;
 invincibleFlashTimerMax = 2;
 shineEffectTimer = -1;
 shineEffectTimerMax = 6;
+
+// Enums
+enum BFLAGS
+{
+	BF_GRAV = 0,
+	BF_INVUL,
+	BF_XCOLL,
+	BF_YCOLL,
+	BF_DESPAWN
+};

@@ -4,6 +4,8 @@
 
 hsp = 0;
 vsp = 0;
+strength = 3.5;
+angle = 45;
 
 //Other Variables
 
@@ -62,7 +64,29 @@ inhaleYOffset = 0;
 sprHurt = -1;
 points = 0;
 ability = playerAbilities.none;
+isStunned = false;
+lock_x = 0;
+lock_y = 0;
 
+//Structs
+
+hitStop = {
+	affectSrc : false,
+	affectMe  : false,
+	affectTar : true,
+	len : 7,	// this variable overrides the computation used by the strength var to decide
+	shakeStr : 20	// also overrides shake computation
+}
+
+//Other
+
+enum hurt_type {
+	HURT_AIR = 0,
+	HURT_GROUNDED,
+	HURT_GRAB,
+	HURT_NOCOLL // used when enemy's getting knocked out amazing mirror style
+};
 //Timers
 
 setupTimer = 0;
+stunTimer = 0;

@@ -10,19 +10,20 @@ if (parasol)
 }
 else
 {
-	//if (hurt)
-	//{
-		//gravLimit = 4;
-		//grav = .2;
-	//}
-	//else
-	//{
+	if (hurt)
+	{
+		gravLimit = 5;
+		grav = .2;
+	}
+	else
+	{
 		gravLimit = gravLimitNormal;
 		grav = gravNormal;
-	//}
+	}
 }
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+var parentPause = (!global.pause) and !((global.cutscene) and (pausedInCutscenes));
+if (parentPause and (hurtStopTimer < 1))
 {
 	//Destroy Outside View
 	
@@ -577,8 +578,8 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 				}
 			}
 		}
-		scr_Enemy_Collision();
 	}
+	scr_Enemy_Collision();
 	
 	//Bumpers
 	
@@ -756,18 +757,11 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
             hurt = false;
         }
 		hurtTimer = -1;
-	}
-	
-	//Hurt Stop Timer
-	
-	if (hurtStopTimer > 0)
-	{
-		hurtStopTimer -= 1;
-	}
-	else if (hurtStopTimer == 0)
-	{
-		speed = 8;
-		hurtStopTimer = -1;
+		
+		hasGravity = (backupFlags >> BFLAGS.BF_GRAV) & 1;
+		hasXCollision = (backupFlags >> BFLAGS.BF_XCOLL) & 1;
+		hasYCollision = (backupFlags >> BFLAGS.BF_YCOLL) & 1;
+		destroyOutsideView = (backupFlags >> BFLAGS.BF_DESPAWN) & 1;
 	}
 	
 	//Invincible Timer
@@ -1071,5 +1065,21 @@ if (global.debug)
 	if ((position_meeting(mouse_x,mouse_y,id)) and (mouse_check_button(mb_right)))
 	{
 		instance_destroy();
+	}
+}
+
+childPause = (parentPause and (!hurt) and (hurtStopTimer < 1));
+
+//Hurt Stop Timer
+if (parentPause)
+{
+	if (hurtStopTimer > 0)
+	{
+		show_debug_message("Counting hitstop");
+		hurtStopTimer -= 1;
+	}
+	else if (hurtStopTimer == 0)
+	{
+		hurtStopTimer = -1;
 	}
 }

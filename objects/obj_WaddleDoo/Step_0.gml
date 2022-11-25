@@ -70,7 +70,7 @@ if ((attackState == 2) and (attack))
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (childPause)
 {
 	//Get Inhaled
 	
