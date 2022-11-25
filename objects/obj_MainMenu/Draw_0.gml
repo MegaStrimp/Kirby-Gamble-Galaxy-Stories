@@ -6,15 +6,15 @@ var selectedFile = 0;
 
 switch (global.selectedSave)
 {
-	case "Save1.ini":
+	case "SaveSlot1.ini":
 	selectedFile = 0;
 	break;
 	
-	case "Save2.ini":
+	case "SaveSlot2.ini":
 	selectedFile = 1;
 	break;
 	
-	case "Save3.ini":
+	case "SaveSlot3.ini":
 	selectedFile = 2;
 	break;
 }

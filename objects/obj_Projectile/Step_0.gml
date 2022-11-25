@@ -34,6 +34,11 @@ if (((pausable) and (!global.pause)) or (!pausable))
 			if (objectOnHit)
 			{
 				var obj = instance_create_depth(x,y,depth,objectOnHitObj);
+				if (isBoss)
+				{
+					obj.isBoss = isBoss;
+					obj.owner = owner;
+				}
 				if (objectOnHitDmg != -1) obj.dmg = objectOnHitDmg;
 				if (objectOnHitObj == obj_Projectile_ExplosionMask)
 				{

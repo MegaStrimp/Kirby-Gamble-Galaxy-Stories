@@ -1,5 +1,6 @@
 ///@description Main
 
+with (obj_Player) invincible = true;
 #region Fade Timer
 if (fadeTimer > 0)
 {

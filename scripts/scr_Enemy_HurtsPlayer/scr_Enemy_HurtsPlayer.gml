@@ -105,7 +105,7 @@ function scr_Enemy_HurtsPlayer(argument0)
 					}
 				}
 				if ((collidedPlayer.state == playerStates.cutterDash) or (collidedPlayer.state == playerStates.mirrorDash) or (collidedPlayer.state == playerStates.fireDash) or (collidedPlayer.state == playerStates.wingDash) or (collidedPlayer.state == playerStates.swordDash)) collidedPlayer.state = playerStates.normal;
-				var abilityDropStar = instance_create_depth(round(x),round(y - 6),depth + 1,obj_AbilityDropStar);
+				var abilityDropStar = instance_create_depth(round(collidedPlayer.x),round(collidedPlayer.y - 6),depth + 1,obj_AbilityDropStar);
 				abilityDropStar.owner = collidedPlayer;
 				abilityDropStar.hsp = -collidedPlayer.dir * 1.5;
 				abilityDropStar.vsp = -abilityDropStar.jumpspeed;

@@ -98,6 +98,7 @@ else if (spawnTimer == 0)
 	spawnedEnemy.objectOnDeath = objectOnDeath;
 	spawnedEnemy.objectOnDeathObj = objectOnDeathObj;
 	spawnedEnemy.groundFailsafe = groundFailsafe;
+	spawnedEnemy.joy = joy;
 	spawnedEnemy.jumpTimerMax = jumpTimerMax;
 	spawnedEnemy.jumpTimer = jumpTimer;
 	spawnTimer = -1;

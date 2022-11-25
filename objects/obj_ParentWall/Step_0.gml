@@ -208,6 +208,11 @@ if (object)
 					if (objectOnHit)
 					{
 						var proj = instance_create_depth(x,y,depth,objectOnHitObj);
+						if (isBoss)
+						{
+							proj.isBoss = isBoss;
+							proj.owner = owner;
+						}
 						if (objectOnHitDmg != -1) proj.dmg = objectOnHitDmg;
 						if (objectOnHitObj == obj_Projectile_ExplosionMask)
 						{
@@ -301,6 +306,11 @@ else if (!platform)
 					if (objectOnHit)
 					{
 						var proj = instance_create_depth(x,y,depth,objectOnHitObj);
+						if (isBoss)
+						{
+							proj.isBoss = isBoss;
+							proj.owner = owner;
+						}
 						if (objectOnHitDmg != -1) proj.dmg = objectOnHitDmg;
 						if (objectOnHitObj == obj_Projectile_ExplosionMask)
 						{
@@ -375,6 +385,11 @@ else if (!platform)
 					if (objectOnHit)
 					{
 						var proj = instance_create_depth(x,y,depth,objectOnHitObj);
+						if (isBoss)
+						{
+							proj.isBoss = isBoss;
+							proj.owner = owner;
+						}
 						if (objectOnHitDmg != -1) proj.dmg = objectOnHitDmg;
 						if (objectOnHitObj == obj_Projectile_ExplosionMask)
 						{

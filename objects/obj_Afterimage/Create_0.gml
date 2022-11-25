@@ -11,6 +11,7 @@ paletteIndex = -1;
 lowerAlphaToDestroy = false;
 owner = -1;
 movement = -1;
+destroyAfterAnimation = false;
 
 //Timers
 

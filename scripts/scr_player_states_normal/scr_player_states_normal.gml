@@ -937,7 +937,7 @@ function scr_Player_States_Normal()
 								}
 								else
 								{
-									if ((run) and (runBuffer < 60))
+									if (run)
 									{
 										if (grounded)
 										{
@@ -1280,7 +1280,7 @@ function scr_Player_States_Normal()
 						
 							if (!attack)
 							{
-								if ((run) and (runBuffer < 60))
+								if (run)
 								{
 									if (grounded)
 									{
@@ -1583,6 +1583,9 @@ function scr_Player_States_Normal()
 									projBeam.character = 2;
 									projBeam.sprIdle = spr_Projectile_MysticBeam_Normal;
 									projBeam.isMystic = true;
+									projBeam.trailSpr = spr_Projectile_MysticBeam_Normal_Trail;
+									projBeam.trailTimer = 0;
+									projBeam.destroyTimer = -1;
 								}
 								canMysticBeamShield = false;
 								attackable = false;

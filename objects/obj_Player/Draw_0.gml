@@ -51,6 +51,14 @@ if ((playerCharacter == playerCharacters.kirby) and (global.coloredAbilitiesKeyc
 		case playerAbilities.suplex:
 		paletteIndexFinal = spr_Kirby_Normal_Palette_Stone;
 		break;
+		
+		case playerAbilities.mysticCutter:
+		case playerAbilities.mysticBeam:
+		case playerAbilities.mysticBeam2:
+		case playerAbilities.mysticFire:
+		case playerAbilities.mysticIce:
+		paletteIndexFinal = spr_Kirby_Normal_Palette_Mystic;
+		break;
 	}
 }
 

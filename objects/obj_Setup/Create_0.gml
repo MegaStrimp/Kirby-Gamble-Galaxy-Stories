@@ -819,10 +819,10 @@ part_type_life(global.partTypeColorfulStars, 30, 40);
 #endregion
 
 #region Global Variables
-global.versionNumber = "0.8.0";
+global.versionNumber = "0.7.1";
 
 global.season = seasons.none;
-global.selectedSave = "Save1.ini";
+global.selectedSave = "SaveSlot1.ini";
 //old hp system
 global.hpMax = 5;
 //global.healthP1 = global.hpMax;
@@ -1017,7 +1017,12 @@ if (saveCheck == "kssu")
 	if (file_exists("Save3.ini")) file_delete("Save2.ini");
 }*/
 
+file_delete("Save1.ini");
+file_delete("Save2.ini");
+file_delete("Save3.ini");
+
 scr_LoadGame(global.selectedSave);
+
 //if ((!global.debug) and (global.canSave)) scr_SaveGame(global.selectedSave);
 //if (global.debug) scr_DebugSave();
 

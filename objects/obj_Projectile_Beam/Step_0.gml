@@ -375,8 +375,9 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	else if (trailTimer == 0)
 	{
 		var par = instance_create_depth(x,y,depth + 1,obj_Afterimage);
-		par.sprite_index = spr_Projectile_MysticBeam_Air_Trail;
+		par.sprite_index = trailSpr;
 		par.destroyAfterAnimation = true;
+		par.destroyTimer = -1;
 		trailTimer = trailTimerMax;
 	}
 	

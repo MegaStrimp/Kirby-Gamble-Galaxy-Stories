@@ -634,6 +634,7 @@ if ((gamePaused) and (visible))
 		        pauseFade.fade = 1;
 				var fadeTrans = instance_create_depth(0,0,depth - 1,obj_Fade);
 				pauseFade.alphaSpd = .02;
+				scr_EndStage();
 				var demo = false;
 				demo = true;
 				if (demo)

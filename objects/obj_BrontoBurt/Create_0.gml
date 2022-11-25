@@ -38,6 +38,7 @@ clampPositionY = false;
 offScreenTurning = false;
 triggerRange = 48;
 state1Trigger = false;
+joy = choose(false,true);
 
 //Timers
 
