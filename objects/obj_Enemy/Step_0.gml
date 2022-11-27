@@ -741,27 +741,36 @@ if (parentPause and (hurtStopTimer < 1))
 	}
 	
 	//Hurt Timer
-	
-	if (hurtTimer > 0)
+	switch (hurtRecover)
 	{
-		hurtTimer -= 1;
-	}
-	else if (hurtTimer == 0)
-	{
-		if (hp < 1)
-        {
-            death = true;
-        }
-        else if (hp > 0)
-        {
-            hurt = false;
-        }
-		hurtTimer = -1;
+		case 0:
+		if (hurt and hsp == 0)
+		{
+			decideLife();
+			restoreBackupFlag(id);
+		}
+		break;
 		
-		hasGravity = (backupFlags >> BFLAGS.BF_GRAV) & 1;
-		hasXCollision = (backupFlags >> BFLAGS.BF_XCOLL) & 1;
-		hasYCollision = (backupFlags >> BFLAGS.BF_YCOLL) & 1;
-		destroyOutsideView = (backupFlags >> BFLAGS.BF_DESPAWN) & 1;
+		case 1:
+		if (place_meeting(x,y + 1,collisionY))
+		{
+			decideLife();
+			restoreBackupFlag(id);
+		}
+		break;
+		
+		case 2:
+		if (hurtTimer > 0)
+		{
+			hurtTimer -= 1;
+		}
+		else if (hurtTimer == 0)
+		{
+			hurtTimer = -1;
+			decideLife();
+			restoreBackupFlag(id);
+		}
+		break;
 	}
 	
 	//Invincible Timer
@@ -973,6 +982,7 @@ if (parentPause and (hurtStopTimer < 1))
 				hurt = true;
 				if (sprHurt != -1) hurtImageIndex = irandom_range(0,sprite_get_number(sprHurt) - 1);
 				hurtTimer = hurtTimerMax;
+				hurtRecover = 1;
 				invincible = true;
 				invincibleTimer = invincibleTimerMax;
 				invincibleFlashTimer = invincibleFlashTimerMax;

@@ -40,15 +40,17 @@ function scr_Enemy_Hurt(argument0,argument1)
 		{
 			targetObj.bubbleX = x;
 			targetObj.bubbleY = y;
-			targetObj.hurtTimer = ((targetObj.hurtStopTimerMax + 5) * (!targetObj.instaDeath));
-			if ((targetObj.hasDeathKnockback) and (!targetObj.isBoss) and (targetObj.isMiniBoss) and (targetObj.takenDamageType != damageTypes.ice)) targetObj.hurtStopTimer = targetObj.hurtStopTimerMax;
+			targetObj.hurtTimer = ((targetObj.hurtStopTimerMax + 5) * (!targetObj.instaDeath));	
+			// ((targetObj.hasDeathKnockback) and (!targetObj.isBoss) and (targetObj.isMiniBoss) and (targetObj.takenDamageType != damageTypes.ice)) targetObj.hurtStopTimer = targetObj.hurtStopTimerMax;
 			targetObj.shake = 1;
 			if (instance_exists(obj_Camera)) obj_Camera.shake = 3;
 		}
+		
 		else
 		{
 			targetObj.hurtTimer = targetObj.hurtTimerMax;
 		}
+		
 		if ((global.enemyHealthbars) and (targetObj.canGetHealthbar) and ((!targetObj.isMiniBoss) or (!targetObj.isBoss))) global.healthbarMarkedEnemy = targetObj.id;
 		targetObj.hp -= hurtSource.dmg;
 		
@@ -271,6 +273,8 @@ function scr_Enemy_Hurt(argument0,argument1)
 		
 		if (targetObj.hp <= 0)
 		{
+			targetObj.hurtRecover = 2;
+			
 			switch (hurtSource.abilityType)
 			{
 				case playerAbilities.cutter:
@@ -406,11 +410,16 @@ function scr_Enemy_Hurt(argument0,argument1)
 		targetObj.backupFlags |= (targetObj.hasXCollision << BFLAGS.BF_XCOLL);
 		targetObj.backupFlags |= (targetObj.hasYCollision << BFLAGS.BF_YCOLL);
 		targetObj.backupFlags |= (targetObj.destroyOutsideView << BFLAGS.BF_DESPAWN);
+		targetObj.collidingHitbox = hurtSource;
+		targetObj.hurtFlags = hurtSource.hurtFlags;
 		
-		targetObj.hasGravity = true;
-		targetObj.hasXCollision = true;
-		targetObj.hasXCollision = true;
-		targetObj.destroyOutsideView = false;		
+		if (!targetObj.isBoss)
+		{
+			targetObj.hasGravity = true;
+			targetObj.hasXCollision = true;
+			targetObj.hasYCollision = true;
+			targetObj.destroyOutsideView = false;
+		}
 		
 		if (!(targetObj.isMiniBoss or targetObj.isBoss)) scr_HurtKnockback(targetObj,hurtSource);
 		if (hurtSource.hsp == 0)

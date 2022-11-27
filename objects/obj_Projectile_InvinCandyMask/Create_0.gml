@@ -14,3 +14,6 @@ canBeReflected = false;
 state = 0;
 owner = id;
 enemy = false;
+
+hitStop.length = 0;
+hitStop.affectTar = false;

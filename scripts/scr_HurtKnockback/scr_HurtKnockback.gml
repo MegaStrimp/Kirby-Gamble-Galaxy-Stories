@@ -6,9 +6,9 @@
 function scr_HurtKnockback(argument0,argument1)
 {
 	show_debug_message("Start Knockback!")
-	if (argument1.object_index == obj_Player)
+	if (argument1.object_index != obj_Projectile)
 	{
-		HurtKnockback_Old(argument0, argument1);
+		HurtKnockback_Old(argument0, argument1); // just in case
 		return;
 	}
 	//holy shit why is this NOT WORKING
@@ -43,10 +43,21 @@ function scr_HurtKnockback(argument0,argument1)
 function HurtKnockback_Old(knockbackTarget, knockbackSource)
 {
 	show_debug_message("Old Knockback!");
+	var isKirby = (knockbackSource.object_index == obj_Player);
+	
+	var newHsp = 3;
+	if (isKirby)
+	{
+		if (knockbackSource.player == 0 and global.invinCandyTimerP1 > 0) newHsp = 6;
+		if (knockbackSource.player == 1 and global.invinCandyTimerP2 > 0) newHsp = 6;
+		knockbackTarget.hurtStopTimer = -1
+	}
+	var newVsp = -3;
+	
 	if (knockbackTarget.hasYKnockback)
 	{
 		if (knockbackSource.y > knockbackTarget.bbox_top - 4) knockbackTarget.vsp = -.5;
-		knockbackTarget.vsp = -3;
+		knockbackTarget.vsp = newVsp;
 	}
 	
 	//Horizontal Knockback
@@ -57,16 +68,17 @@ function HurtKnockback_Old(knockbackTarget, knockbackSource)
 		{
 			if (knockbackTarget.x >= knockbackSource.x)
 			{
-				knockbackTarget.hsp = 3;
+				knockbackTarget.hsp = newHsp;
 			}
 			else
 			{
-				knockbackTarget.hsp = -3;
+				knockbackTarget.hsp = -newHsp;
 			}
 		}
 		else
 		{
 			knockbackTarget.projectileHitKnockbackDir = -sign(knockbackSource.hsp);
+			knockbackTarget.hsp = newHsp * sign(knockbackSource.hsp);
 		}
 	}
 	return;

@@ -43,6 +43,7 @@ imageSpeed = 1;
 particleCount = 0;
 canTurnX = true;
 canTurnY = true;
+hurtRecover = 2;
 
 //Timers
 
@@ -54,3 +55,21 @@ canTurnXTimer = -1;
 canTurnXTimerMax = 15;
 canTurnYTimer = -1;
 canTurnYTimerMax = 15;
+
+// Other
+
+function ScarfyHurt(hurtSource)
+{
+	sprite_index = sprHurt;
+	
+	if (!attack)
+	{
+		hp = 16 + (hurtSource.dmg / 4);
+		attack = true;
+		imageSpeed = 0.5; // it's hack time
+	}
+	
+	return true;
+}
+
+hurtFunction = ScarfyHurt;

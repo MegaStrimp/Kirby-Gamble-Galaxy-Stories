@@ -36,7 +36,7 @@ else
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (childPause)
 {
 	//Get Inhaled
 	
@@ -122,10 +122,9 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 		case 0:
 		case 1:
 		//Follow Player
-		
-		if (instance_exists(obj_Player))
+		var nearestPlayer = instance_nearest(x,y,obj_Player);
+		if (instance_exists(nearestPlayer))
 		{
-			var nearestPlayer = instance_nearest(x,y,obj_Player);
 			if (nearestPlayer.x < x)
 			{
 				dirX = -1;
@@ -166,11 +165,16 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			hsp = clamp(hsp,-movespeed,movespeed);
 			vsp = clamp(vsp,-jumpspeed,jumpspeed);
 			
-			var nearestPlayer = instance_nearest(x,y,obj_Player);
 			var newDirX = 1;
-			if (nearestPlayer.x < x) newDirX = -1;
 			var newDirY = 1;
-			if (nearestPlayer.y < y) newDirY = -1;
+			
+			if (instance_exists(obj_Player))
+			{
+				var nearestPlayer = instance_nearest(x,y,obj_Player);
+				
+				if (nearestPlayer.x < x) newDirX = -1;	
+				if (nearestPlayer.y < y) newDirY = -1;
+			}
 			
 			if ((newDirX != walkDirX) and (canTurnX))
 			{
