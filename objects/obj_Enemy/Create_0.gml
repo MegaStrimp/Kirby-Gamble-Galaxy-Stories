@@ -135,7 +135,8 @@ hurtFunction = hurtDefault;
 hurtFlags = 0;
 collidingHitbox = 0; // use for practical purposes. clear after enemy recovers
 backupFlags = 0
-hurtRecover = 1; 
+hurtRecover = 1;
+shakeDividend = 0;
 // when 0, slides and then recovers. when 1, recovers when landing, when 2, uses normal hurt timer
 // will be automatically set to 0 if the projectile's angle is 0
 

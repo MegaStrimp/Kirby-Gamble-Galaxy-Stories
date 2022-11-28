@@ -14,6 +14,54 @@ function scr_Enemy_HurtsPlayer(argument0)
 	if ((place_meeting(x,y,obj_Player)) and (((stopWhenHurt) and (!hurt)) or (!stopWhenHurt)) and (!global.cutscene))
 	{
 		collidedPlayer = instance_place(x,y,obj_Player);
+		//Hurt Enemy
+		
+		if ((hurtable) and (!isBoss) and (!invincible) and (collidedPlayer.attackNumber != playerAttacks.stoneNormal))
+		{
+			if (audio_is_playing(snd_EnemyHurt)) audio_stop_sound(snd_EnemyHurt);
+			audio_play_sound(snd_EnemyHurt,0,false);
+			takenDamageType = damageTypes.none;
+			var hitDmg = collidedPlayer.dmg;
+			if (collidedPlayer.hasInvinCandy)
+			{
+				hitDmg = 100;
+				hurtFlags |= hurt_type.HURT_NOCOLL;
+			}
+			
+			if (hitDmg >= hp)
+			{
+				hurtTimer = hurtStopTimerMax + 5;
+			    shake = 1;
+			    if (instance_exists(obj_Camera)) obj_Camera.shake = 3;
+			}
+			else
+			{
+				hurtTimer = hurtTimerMax;
+			}
+			if ((global.enemyHealthbars) and (!isMiniBoss) and (!isBoss)) global.healthbarMarkedEnemy = id;
+			hurtStopTimer = 6;
+			hp -= hitDmg;
+			invincible = true;
+			invincibleTimer = invincibleTimerMax;
+			invincibleFlashTimer = invincibleFlashTimerMax;
+			if (global.hitNumbers)
+			{
+				var hitNumber = instance_create_depth(collidedPlayer.x,collidedPlayer.y,-900,obj_HitNumbers);
+				hitNumber.number = hitDmg;
+				hitNumber.hsp = random_range(-1,1);
+				hitNumber.vsp = -2;
+			}
+			shakeX = 2;
+			shakeY = 2;
+			shakeDividend = (shakeX / 6);
+			direction = point_direction(x,y,x,y) + irandom_range(150,210);
+			hurt = true;
+			if (isMystic) fluxOverlayAlpha = .8;
+			
+			scr_Enemy_HurtCollSetup(id);
+			scr_HurtKnockback(self,collidedPlayer);
+		}
+		
 		if ((collidedPlayer.canGetHurt) and (!collidedPlayer.invincible) and (!collidedPlayer.hasInvinCandy))
 		{
 			//Variables
@@ -285,53 +333,6 @@ function scr_Enemy_HurtsPlayer(argument0)
 					if (collidedPlayer.state == playerStates.slide) collidedPlayer.hsp = -(collidedPlayer.movespeed * 2);
 				}
 			}
-		}
-		
-		//Hurt Enemy
-		
-		if ((hurtable) and (!isBoss) and (!invincible) and (collidedPlayer.attackNumber != playerAttacks.stoneNormal))
-		{
-			if (audio_is_playing(snd_EnemyHurt)) audio_stop_sound(snd_EnemyHurt);
-			audio_play_sound(snd_EnemyHurt,0,false);
-			takenDamageType = damageTypes.none;
-			var hitDmg = collidedPlayer.dmg;
-			if (collidedPlayer.hasInvinCandy)
-			{
-				hitDmg = 100;
-				hurtFlags |= hurt_type.HURT_NOCOLL;
-			}
-			
-			if (hitDmg >= hp)
-			{
-				hurtTimer = hurtStopTimerMax + 5;
-				if ((hasDeathKnockback) and (takenDamageType != damageTypes.ice)) hurtStopTimer = hurtStopTimerMax;
-			    shake = 1;
-			    if (instance_exists(obj_Camera)) obj_Camera.shake = 3;
-			}
-			else
-			{
-				hurtTimer = hurtTimerMax;
-			}
-			if ((global.enemyHealthbars) and (!isMiniBoss) and (!isBoss)) global.healthbarMarkedEnemy = id;
-			hp -= hitDmg;
-			invincible = true;
-			invincibleTimer = invincibleTimerMax;
-			invincibleFlashTimer = invincibleFlashTimerMax;
-			if (global.hitNumbers)
-			{
-				var hitNumber = instance_create_depth(collidedPlayer.x,collidedPlayer.y,-900,obj_HitNumbers);
-				hitNumber.number = hitDmg;
-				hitNumber.hsp = random_range(-1,1);
-				hitNumber.vsp = -2;
-			}
-			shakeX = 2;
-			shakeY = 2;
-			direction = point_direction(x,y,x,y) + irandom_range(150,210);
-			hurt = true;
-			if (isMystic) fluxOverlayAlpha = .8;
-			
-			scr_Enemy_HurtCollSetup(id);
-			scr_HurtKnockback(self,collidedPlayer);
 		}
 	}
 }

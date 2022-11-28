@@ -59,7 +59,7 @@ if (isMystic)
 
 if (shakeX > 0)
 {
-	shakeX -= (sign(shakeX)) / 10;
+	shakeX -= shakeDividend;
 }
 else
 {

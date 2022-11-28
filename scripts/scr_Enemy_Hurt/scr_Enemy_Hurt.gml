@@ -23,9 +23,9 @@ function scr_Enemy_Hurt(argument0,argument1)
 			
 			targetObj.hurtStopTimer = hurtLength;
 			
-			if (hitShake == 0)
+			if (hitShake == -1)
 			{
-				hitShake = 30 + (hurtLength / 2);
+				hitShake = 6;
 			}
 			
 			hurtSource.stunTimer = 0;
@@ -34,6 +34,7 @@ function scr_Enemy_Hurt(argument0,argument1)
 			hurtSource.isStunned = true;
 			targetObj.shakeX = hitShake;
 			targetObj.shakeY = hitShake;
+			targetObj.shakeDividend = (hitShake / hurtLength);
 		}
 		
 		if (hurtSource.dmg >= targetObj.hp)
@@ -402,10 +403,6 @@ function scr_Enemy_Hurt(argument0,argument1)
 				break;
 			}
 		}
-		targetObj.shakeX = 2;
-		targetObj.shakeY = 2;
-		targetObj.direction = point_direction(targetObj.x,targetObj.y,x,y) + irandom_range(150,210);
-
 		targetObj.collidingHitbox = hurtSource;
 		targetObj.hurtFlags = hurtSource.hurtFlags;
 		

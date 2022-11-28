@@ -77,7 +77,7 @@ hitStop = {
 	affectMe  : false,
 	affectTar : true,
 	len : 8,	// this variable overrides the computation used by the strength var to decide
-	shakeStr : 20	// also overrides shake computation
+	shakeStr : 6	// also overrides shake computation
 }
 
 //Other

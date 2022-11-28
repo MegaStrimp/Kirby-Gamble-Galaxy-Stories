@@ -17,10 +17,12 @@ function scr_HurtKnockback(argument0,argument1)
 	
 	var knockbackTarget = argument0;
 	var knockbackSource = argument1;
+	var knockstr = knockbackSource.strength;
+	if (knockbackTarget.hp <= 0) knockstr = knockstr * 1.5;
 	
 	if (knockbackTarget.hasYKnockback)
 	{
-		knockbackTarget.vsp = -(sin((knockbackSource.angle / 180) * pi) * knockbackSource.strength);
+		knockbackTarget.vsp = -(sin((knockbackSource.angle / 180) * pi) * knockstr);
 	}
 	
 	if (knockbackTarget.hasXKnockback)
@@ -35,7 +37,7 @@ function scr_HurtKnockback(argument0,argument1)
 		}
 		
 		
-		knockbackTarget.hsp = cos((knockbackSource.angle / 180) * pi) * knockbackSource.strength * neg;
+		knockbackTarget.hsp = cos((knockbackSource.angle / 180) * pi) * knockstr * neg;
 	}
 	return;
 }
@@ -52,8 +54,8 @@ function HurtKnockback_Old(knockbackTarget, knockbackSource)
 		{
 			newHsp = 6;
 			knockbackTarget.hurtRecover = 2;
+			
 		}
-		knockbackTarget.hurtStopTimer = -1
 	}
 	var newVsp = -3;
 	
@@ -80,9 +82,9 @@ function HurtKnockback_Old(knockbackTarget, knockbackSource)
 		}
 		else
 		{
-			knockbackTarget.projectileHitKnockbackDir = -sign(knockbackSource.hsp);
 			knockbackTarget.hsp = newHsp * sign(knockbackSource.hsp);
 		}
+		knockbackTarget.projectileHitKnockbackDir = -sign(knockbackSource.hsp);
 	}
 	return;
 	//fuck you strimp
