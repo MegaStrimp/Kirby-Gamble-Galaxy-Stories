@@ -295,7 +295,12 @@ function scr_Enemy_HurtsPlayer(argument0)
 			audio_play_sound(snd_EnemyHurt,0,false);
 			takenDamageType = damageTypes.none;
 			var hitDmg = collidedPlayer.dmg;
-			if (collidedPlayer.hasInvinCandy) hitDmg = 100;
+			if (collidedPlayer.hasInvinCandy)
+			{
+				hitDmg = 100;
+				hurtFlags |= hurt_type.HURT_NOCOLL;
+			}
+			
 			if (hitDmg >= hp)
 			{
 				hurtTimer = hurtStopTimerMax + 5;
@@ -324,6 +329,8 @@ function scr_Enemy_HurtsPlayer(argument0)
 			direction = point_direction(x,y,x,y) + irandom_range(150,210);
 			hurt = true;
 			if (isMystic) fluxOverlayAlpha = .8;
+			
+			scr_Enemy_HurtCollSetup(id);
 			scr_HurtKnockback(self,collidedPlayer);
 		}
 	}

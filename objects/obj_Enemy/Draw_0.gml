@@ -5,8 +5,11 @@
 paletteFlash = 1;
 if (invincibleFlash) paletteFlash = 2;
 
-drawShakeX = irandom_range(-shakeX,shakeX);
-drawShakeY = irandom_range(-shakeY,shakeY);
+//drawShakeX = irandom_range(-shakeX,shakeX);
+//drawShakeY = irandom_range(-shakeY,shakeY);
+drawShakeX = cos(irandom_range(0, 360) / 180 * pi) * shakeX;
+drawShakeY = sin(irandom_range(0, 360) / 180 * pi) * shakeX;
+// trying something new here
 
 drawPaletteFlash = paletteFlash;
 if ((hurt) and (invincibleFlash))
@@ -22,7 +25,7 @@ if ((hurt) and (invincibleFlash))
 }
 
 if (global.shaders) pal_swap_set(paletteIndex,drawPaletteFlash,false);
-draw_sprite_ext(sprite_index,image_index,x + ((canShakeX) * drawShakeX),y + ((canShakeY) * drawShakeY),image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle,image_blend,image_alpha);
+if (sprite_exists(sprite_index)) draw_sprite_ext(sprite_index,image_index,x + ((canShakeX) * drawShakeX),y + ((canShakeY) * drawShakeY),image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle,image_blend,image_alpha);
 if (global.shaders) pal_swap_reset();
 
 //Flux Overlay

@@ -90,6 +90,7 @@ throwObjectTimer = -1;
 throwObjectTimerMax = 45;
 bigAirpuffTimer = -1;
 inhaleTimer = -1;
+
 #endregion
 
 collisionHitbox = instance_create_depth(x,y,depth,obj_Wall);

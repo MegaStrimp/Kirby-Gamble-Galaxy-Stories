@@ -25,7 +25,7 @@ function scr_Enemy_Hurt(argument0,argument1)
 			
 			if (hitShake == 0)
 			{
-				hitShake = hurtLength * 2.2;
+				hitShake = 30 + (hurtLength / 2);
 			}
 			
 			hurtSource.stunTimer = 0;
@@ -406,20 +406,10 @@ function scr_Enemy_Hurt(argument0,argument1)
 		targetObj.shakeY = 2;
 		targetObj.direction = point_direction(targetObj.x,targetObj.y,x,y) + irandom_range(150,210);
 
-		targetObj.backupFlags |= (targetObj.hasGravity << BFLAGS.BF_GRAV);
-		targetObj.backupFlags |= (targetObj.hasXCollision << BFLAGS.BF_XCOLL);
-		targetObj.backupFlags |= (targetObj.hasYCollision << BFLAGS.BF_YCOLL);
-		targetObj.backupFlags |= (targetObj.destroyOutsideView << BFLAGS.BF_DESPAWN);
 		targetObj.collidingHitbox = hurtSource;
 		targetObj.hurtFlags = hurtSource.hurtFlags;
 		
-		if (!targetObj.isBoss)
-		{
-			targetObj.hasGravity = true;
-			targetObj.hasXCollision = true;
-			targetObj.hasYCollision = true;
-			targetObj.destroyOutsideView = false;
-		}
+		scr_Enemy_HurtCollSetup(argument0);
 		
 		if (!(targetObj.isMiniBoss or targetObj.isBoss)) scr_HurtKnockback(targetObj,hurtSource);
 		if (hurtSource.hsp == 0)
@@ -486,5 +476,21 @@ function scr_Enemy_Hurt(argument0,argument1)
 			particle.destroyAfterAnimation = true;
 			break;
 		}
+	}
+}
+
+function scr_Enemy_HurtCollSetup(targetObj)
+{
+	var ignoreCollHurt = (targetObj.hurt) and (targetObj.hurtFlags & hurt_type.HURT_NOCOLL);
+	show_debug_message(string(ignoreCollHurt))
+	
+	if (!targetObj.isBoss)
+	{
+		var hasColl = !ignoreCollHurt;
+			
+		targetObj.hasGravity = true;
+		targetObj.hasXCollision = hasColl;
+		targetObj.hasYCollision = hasColl;
+		targetObj.destroyOutsideView = false;
 	}
 }

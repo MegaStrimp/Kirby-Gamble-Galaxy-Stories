@@ -581,7 +581,7 @@ if (childPause)
 		}
 	}
 }
-else
+else if (!childPause and !hurt)
 {
 	image_speed = 0;
 	shakeX = 0;

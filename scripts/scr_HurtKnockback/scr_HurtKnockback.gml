@@ -48,8 +48,11 @@ function HurtKnockback_Old(knockbackTarget, knockbackSource)
 	var newHsp = 3;
 	if (isKirby)
 	{
-		if (knockbackSource.player == 0 and global.invinCandyTimerP1 > 0) newHsp = 6;
-		if (knockbackSource.player == 1 and global.invinCandyTimerP2 > 0) newHsp = 6;
+		if (knockbackSource.hasInvinCandy)
+		{
+			newHsp = 6;
+			knockbackTarget.hurtRecover = 2;
+		}
 		knockbackTarget.hurtStopTimer = -1
 	}
 	var newVsp = -3;
@@ -82,6 +85,5 @@ function HurtKnockback_Old(knockbackTarget, knockbackSource)
 		}
 	}
 	return;
-	
 	//fuck you strimp
 }

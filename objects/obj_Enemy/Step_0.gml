@@ -752,7 +752,7 @@ if (parentPause and (hurtStopTimer < 1))
 		break;
 		
 		case 1:
-		if (place_meeting(x,y + 1,collisionY))
+		if (hurt and place_meeting(x,y + 1,collisionY))
 		{
 			decideLife();
 			restoreBackupFlag(id);
@@ -1053,6 +1053,11 @@ if (setupTimer > 0)
 }
 else if (setupTimer == 0)
 {
+	backupFlags |= (hasGravity << BFLAGS.BF_GRAV);
+	backupFlags |= (hasXCollision << BFLAGS.BF_XCOLL);
+	backupFlags |= (hasYCollision << BFLAGS.BF_YCOLL);
+	backupFlags |= (destroyOutsideView << BFLAGS.BF_DESPAWN);
+	
 	if (parasol)
 	{
 		parasolObject = instance_create_depth(x + (parasolX * dirX),y - (sprite_get_height(sprite_index) / 2) + parasolY,depth + 1,obj_EnemyParasol);

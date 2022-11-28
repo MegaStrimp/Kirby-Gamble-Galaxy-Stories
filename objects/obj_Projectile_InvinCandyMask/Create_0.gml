@@ -14,6 +14,7 @@ canBeReflected = false;
 state = 0;
 owner = id;
 enemy = false;
+hurtFlags = hurt_type.HURT_NOCOLL;
 
 hitStop.length = 0;
 hitStop.affectTar = false;
