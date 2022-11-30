@@ -208,6 +208,48 @@ if (!global.pause)
 		}
 		break;
 		
+		case "gallery":
+		mask_index = sprite_index;
+		if (instance_exists(obj_GalleryMenu))
+		{
+			if ((!instance_exists(obj_Fade)) and (mouse_check_button_pressed(mb_left)) and (position_meeting(mouse_x,mouse_y,self)))
+			{
+				if (((index == "vol1") or (index == "vol2") or (index == "vol3") or (index == "volS")) and (obj_GalleryMenu.page == 0))
+				{
+					if (obj_GalleryMenu.selection == index)
+					{
+						if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+						audio_play_sound(snd_ButtonYes,0,false);
+						obj_GalleryMenu.select = true;
+					}
+					else
+					{
+						if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+						audio_play_sound(snd_BossHealth,0,false);
+						obj_GalleryMenu.selection = index;
+					}
+				}
+				else if (obj_GalleryMenu.page == 1)
+				{
+					if (index == "arrowPrev")
+					{
+						with (obj_GalleryMenu)
+						{
+							if ((keyLeftPressed) and (artworkSelection != 0)) artworkSelection -= 1;
+						}
+					}
+					else if (index == "arrowNext")
+					{
+						with (obj_GalleryMenu)
+						{
+							if ((keyRightPressed) and (artworkSelection < artworkMax - 1)) artworkSelection += 1;
+						}
+					}
+				}
+			}
+		}
+		break;
+		
 		case "maykrTitle":
 		mask_index = sprite_index;
 		if (instance_exists(obj_Maykr_Title))

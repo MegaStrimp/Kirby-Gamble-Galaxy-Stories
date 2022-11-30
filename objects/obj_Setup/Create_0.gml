@@ -819,7 +819,7 @@ part_type_life(global.partTypeColorfulStars, 30, 40);
 #endregion
 
 #region Global Variables
-global.versionNumber = "0.7.1";
+global.versionNumber = "0.7.2";
 
 global.season = seasons.none;
 global.selectedSave = "SaveSlot1.ini";

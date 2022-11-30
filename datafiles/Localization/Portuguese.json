@@ -1536,5 +1536,14 @@
 			
 			"3 - Kirby": "Pode ser que você não consiga flutuar se entrar nessa área. Vai ter que confiar em suas habilidades de pulo."
         }
+	},
+	
+	"Delete Save Menu":
+    {
+		"1": "",
+		
+		"2": "",
+		
+		"3": ""
 	}
 }

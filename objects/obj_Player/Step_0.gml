@@ -2855,6 +2855,12 @@ else if (characterSetupTimer == 0)
 			pal[i] = spr_BrontoBurt_Normal_Palette_UraniumGreen;
 			i += 1;
 			pal[i] = spr_BrontoBurt_Normal_Palette_UraniumPurple;
+			i += 1;
+			pal[i] = spr_BrontoBurt_Normal_Palette_Cosmic;
+			i += 1;
+			pal[i] = spr_BrontoBurt_Normal_Palette_Avalanche;
+			i += 1;
+			pal[i] = spr_BrontoBurt_Normal_Palette_CreamyPink;
 			#endregion
 			
 			#region Sprites

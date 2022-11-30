@@ -2047,7 +2047,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var sprFly = spr_BrontoBurt_Normal_Fly;
 			var sprHurtGround = spr_BrontoBurt_Normal_HurtGround;
 			var sprHurtFly = spr_BrontoBurt_Normal_HurtFly;
-			debugPaletteNumberMax = 9;
+			debugPaletteNumberMax = 12;
 			switch (debugPaletteNumber)
 			{
 				case 0:
@@ -2088,6 +2088,18 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 				
 				case 9:
 				debugPaletteIndex = spr_BrontoBurt_Normal_Palette_UraniumPurple;
+				break;
+				
+				case 10:
+				debugPaletteIndex = spr_BrontoBurt_Normal_Palette_Cosmic;
+				break;
+				
+				case 11:
+				debugPaletteIndex = spr_BrontoBurt_Normal_Palette_Avalanche;
+				break;
+				
+				case 12:
+				debugPaletteIndex = spr_BrontoBurt_Normal_Palette_CreamyPink;
 				break;
 				
 				default:

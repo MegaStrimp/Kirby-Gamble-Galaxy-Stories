@@ -1536,5 +1536,14 @@
 			
 			"3 - Kirby": "Potresti non essere in grado di volare se entri in quell'area. Devi basarti sulle tue abilità di salto!"
         }
+	},
+	
+	"Delete Save Menu":
+    {
+		"1": "",
+		
+		"2": "",
+		
+		"3": ""
 	}
 }

@@ -1532,5 +1532,14 @@
 			
 			"3 - Kirby": "You may be unable to float if you enter that area. Have to rely on your jumping skills."
         }
+	},
+	
+	"Delete Save Menu":
+    {
+		"1": "",
+		
+		"2": "",
+		
+		"3": ""
 	}
 }

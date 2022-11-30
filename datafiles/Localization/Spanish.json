@@ -1520,5 +1520,14 @@
 
         "3 - Kirby": "No sé si eso te afectará o no, pero por si acaso."
       }
+	},
+	
+	"Delete Save Menu":
+    {
+		"1": "",
+		
+		"2": "",
+		
+		"3": ""
 	}
 }

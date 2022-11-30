@@ -261,8 +261,8 @@ if (!global.pause)
 		{
 			if ((keyJumpPressed) or (keyStartPressed))
 			{
-				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
-				audio_play_sound(snd_ButtonYes,0,false);
+				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+				audio_play_sound(snd_ButtonNo,0,false);
 				select = true;
 			}
 		}
