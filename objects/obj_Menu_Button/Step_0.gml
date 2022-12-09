@@ -235,15 +235,60 @@ if (!global.pause)
 					{
 						with (obj_GalleryMenu)
 						{
-							if ((keyLeftPressed) and (artworkSelection != 0)) artworkSelection -= 1;
+							if (artworkSelection != 0) artworkSelection -= 1;
 						}
 					}
 					else if (index == "arrowNext")
 					{
 						with (obj_GalleryMenu)
 						{
-							if ((keyRightPressed) and (artworkSelection < artworkMax - 1)) artworkSelection += 1;
+							if (artworkSelection < artworkMax - 1) artworkSelection += 1;
 						}
+					}
+				}
+			}
+		}
+		break;
+		
+		case "keycardMenu":
+		mask_index = sprite_index;
+		if (instance_exists(owner))
+		{
+			if (index == "upload")
+			{
+				if ((!instance_exists(obj_Fade)) and (mouse_check_button_pressed(mb_left)) and (position_meeting(mouse_x,mouse_y,self)))
+				{
+					if (owner.selection == index)
+					{
+						if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+						audio_play_sound(snd_ButtonYes,0,false);
+						owner.select = true;
+					}
+					else
+					{
+						if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+						audio_play_sound(snd_BossHealth,0,false);
+						owner.selection = index;
+					}
+				}
+			}
+			else if (index == "arrowPrev")
+			{
+				if ((!instance_exists(obj_Fade)) and (mouse_check_button_pressed(mb_left)) and (position_meeting(mouse_x,mouse_y,self)))
+				{
+					with (owner)
+					{
+						if (page != 0) page -= 1;
+					}
+				}
+			}
+			else if (index == "arrowNext")
+			{
+				if ((!instance_exists(obj_Fade)) and (mouse_check_button_pressed(mb_left)) and (position_meeting(mouse_x,mouse_y,self)))
+				{
+					with (owner)
+					{
+						if (page < pageMax) page += 1;
 					}
 				}
 			}

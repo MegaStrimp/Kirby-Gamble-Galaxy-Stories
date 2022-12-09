@@ -367,8 +367,10 @@ function scr_LoadGame(argument0)
 	global.kirbyBattleBlitzCrossoverKeycard = ini_read_real("doNotEdit","KBB0",false);
 	global.kirbysDreamLandPlusCrossoverKeycard = ini_read_real("doNotEdit","KDLP0",false);
 	global.dreamCrafterCrossoverKeycard = ini_read_real("doNotEdit","DC0",false);
+	global.eternalParadiseCrossoverKeycard = ini_read_real("doNotEdit","EP0",false);
 	
-	global.coloredAbilitiesKeycard = ini_read_real("doNotEdit","CA0",false);
+	global.abilitySpraysKeycard = ini_read_real("doNotEdit","AS0",false);
+	global.permaHalloweenKeycard = ini_read_real("doNotEdit","PH0",false);
 	
 	ini_close();
 	

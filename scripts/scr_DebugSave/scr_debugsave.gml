@@ -155,8 +155,10 @@ function scr_DebugSave()
 	global.kirbyBattleBlitzCrossoverKeycard = true;
 	global.kirbysDreamLandPlusCrossoverKeycard = true;
 	global.dreamCrafterCrossoverKeycard = true;
+	global.eternalParadiseCrossoverKeycard = true;
 	
-	global.coloredAbilitiesKeycard = true;
+	global.abilitySpraysKeycard = true;
+	global.permaHalloweenKeycard = true;
 	
 	global.demoBeatGreenGreens = true;
 	global.demoBeatBattleshipHalberd = true;

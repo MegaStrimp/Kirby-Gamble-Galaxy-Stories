@@ -16,7 +16,7 @@ var drawShakeY = irandom_range(-shakeY,shakeY);
 
 var paletteIndexFinal = paletteIndex;
 
-if ((playerCharacter == playerCharacters.kirby) and (global.coloredAbilitiesKeycard) and (global.cheatColoredAbilitiesEquipped))
+if ((playerCharacter == playerCharacters.kirby) and (global.abilitySpraysKeycard) and (global.cheatColoredAbilitiesEquipped))
 {
 	switch (playerAbility)
 	{

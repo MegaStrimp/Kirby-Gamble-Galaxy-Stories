@@ -23,6 +23,7 @@ var button = instance_create_depth(0,270,depth - 1,obj_Menu_Button);
 button.owner = id;
 button.sprite_index = spr_Menu_StageSelect_Hud_Back3;
 button.state = "back";
+button.canChangeImageIndex = true;
 
 var button = instance_create_depth(480,38,depth - 1,obj_Menu_Button);
 button.owner = id;
@@ -58,7 +59,7 @@ button.owner = id;
 button.sprite_index = spr_Menu_Gallery_Arrow;
 button.image_index = 0;
 button.state = "gallery";
-button.index = "arrowBack";
+button.index = "arrowPrev";
 var button = instance_create_depth(370,140,depth - 1,obj_Menu_Button);
 button.owner = id;
 button.sprite_index = spr_Menu_Gallery_Arrow;

@@ -40,4 +40,3 @@ draw_sprite(spr_Menu_Gallery_Curtain,curtainIndex,0,0);
 
 hudOffset = lerp(hudOffset,0,.1);
 draw_sprite(spr_Menu_MainMenu_Hud_Gallery,0,0 + hudOffset,0);
-draw_sprite(spr_Menu_Saves_Medals_Empty,0,4 + hudOffset,5);

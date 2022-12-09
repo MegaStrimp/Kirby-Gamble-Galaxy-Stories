@@ -2020,7 +2020,7 @@ function scr_Player_States_Normal()
 											}
 											projMirror.spriteIndex = sprMirrorAttack3;
 											projMirror.paletteIndex = paletteIndex;
-											if ((playerCharacter == playerCharacters.kirby) and (global.coloredAbilitiesKeycard) and (global.cheatColoredAbilitiesEquipped)) projMirror.paletteIndex = spr_Kirby_Normal_Palette_Mirror;
+											if ((playerCharacter == playerCharacters.kirby) and (global.abilitySpraysKeycard) and (global.cheatColoredAbilitiesEquipped)) projMirror.paletteIndex = spr_Kirby_Normal_Palette_Mirror;
 											projMirror.hatIndex = scr_Player_AbilityHat(playerAbility,playerCharacter);
 											projMirror.hatShadowIndex = scr_Player_HatShadow(playerAbility,playerCharacter);
 											projMirror.hatPaletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);

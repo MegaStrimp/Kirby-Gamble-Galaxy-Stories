@@ -366,7 +366,9 @@ function scr_SaveGame(argument0)
 	ini_write_real("doNotEdit","KBB0",global.kirbyBattleBlitzCrossoverKeycard);
 	ini_write_real("doNotEdit","KDLP0",global.kirbysDreamLandPlusCrossoverKeycard);
 	ini_write_real("doNotEdit","DC0",global.dreamCrafterCrossoverKeycard);
+	ini_write_real("doNotEdit","EP0",global.eternalParadiseCrossoverKeycard);
 	
-	ini_write_real("doNotEdit","CA0",global.coloredAbilitiesKeycard);
+	ini_write_real("doNotEdit","AS0",global.abilitySpraysKeycard);
+	ini_write_real("doNotEdit","PH0",global.permaHalloweenKeycard);
 	ini_close();
 }

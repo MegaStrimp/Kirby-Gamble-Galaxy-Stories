@@ -714,4 +714,3 @@ gpu_set_blendmode(bm_normal);
 
 cellphoneTitleOffset = lerp(cellphoneTitleOffset,-250 + (cellphoneTitleActive * 250),.1);
 draw_sprite(spr_Menu_MainMenu_Hud_Cellphone,0,0 + 0 + cellphoneTitleOffset,0 + 0);
-draw_sprite(spr_Menu_Saves_Medals_Empty,0,0 + 4 + cellphoneTitleOffset,0 + 5);
