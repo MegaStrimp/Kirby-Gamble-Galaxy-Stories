@@ -3940,7 +3940,11 @@ function scr_Player_States_Normal()
 					//add code that makes the player use jet jump instead if jetCHarge >= 120
 					break;
 					
-					default:
+					case playerAbilities.ufo:
+					// UFO catch trigger goes here
+					break;
+					
+					default: // here is the culprit
 					attackTimer = 0;
 					hurt = false;
 					jumpspeed = jumpspeedFloat;
