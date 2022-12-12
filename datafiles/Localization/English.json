@@ -218,14 +218,21 @@
         {
             "Title": "Water",
             
-            "Description": "Bend water to your will to power wash enemies. surfs up!"
+            "Description": "Bend water to your will to power wash enemies. Surf's up!"
         },
 		
 		"Hi-Jump":
         {
             "Title": "Hi-Jump",
             
-            "Description": ""
+            "Description": "Leap into the air with a Hi-Jump! Zoom back down with an unstoppable Rocket Dive!"
+        },
+		
+		"Gear":
+        {
+            "Title": "Gear",
+            
+            "Description": "Throw wrenches at your enemies and make wacky constructions. Sentry up!"
         },
 		
 		"Sleep":

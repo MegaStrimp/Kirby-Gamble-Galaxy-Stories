@@ -390,6 +390,22 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 						
+						if ((global.hiJumpAbilityKills >= global.hiJumpAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.hiJump) != -1))
+						{
+							mixRosterAbility[i] = playerAbilities.water;
+							mixRosterText[i] = spr_Hud_AbilityText_Water;
+							mixRosterIcon[i] = spr_Hud_Icon_Water;
+							i += 1;
+						}
+						
+						if ((global.gearAbilityKillsTarget >= global.waterAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.gear) != -1))
+						{
+							mixRosterAbility[i] = playerAbilities.gear;
+							mixRosterText[i] = spr_Hud_AbilityText_Gear;
+							mixRosterIcon[i] = spr_Hud_Icon_Gear;
+							i += 1;
+						}
+						
 						if ((global.sleepAbilityKills >= global.sleepAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.sleep) != -1))
 						{
 							mixRosterAbility[i] = playerAbilities.sleep;

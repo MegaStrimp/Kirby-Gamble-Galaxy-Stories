@@ -14,8 +14,18 @@ if (!global.pause)
 			case "upload":
 			if (keyUpPressed) selection = "back";
 			if (keyDownPressed) selection = "back";
-			if ((keyLeftPressed) and (page != 0)) page -= 1;
-			if ((keyRightPressed) and (page < pageMax)) page += 1;
+			if ((keyLeftPressed) and (page != 0))
+			{
+				if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+				audio_play_sound(snd_ButtonChange,0,false);
+				page -= 1;
+			}
+			if ((keyRightPressed) and (page < pageMax))
+			{
+				if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+				audio_play_sound(snd_ButtonChange,0,false);
+				page += 1;
+			}
 			
 			if (!instance_exists(obj_Fade))
 			{
@@ -72,8 +82,18 @@ if (!global.pause)
 			case "back":
 			if (keyUpPressed) selection = "upload";
 			if (keyDownPressed) selection = "upload";
-			if ((keyLeftPressed) and (page != 0)) page -= 1;
-			if ((keyRightPressed) and (page < pageMax)) page += 1;
+			if ((keyLeftPressed) and (page != 0))
+			{
+				if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+				audio_play_sound(snd_ButtonChange,0,false);
+				page -= 1;
+			}
+			if ((keyRightPressed) and (page < pageMax))
+			{
+				if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+				audio_play_sound(snd_ButtonChange,0,false);
+				page += 1;
+			}
 			
 			if (!instance_exists(obj_Fade))
 			{
@@ -110,8 +130,18 @@ if (!global.pause)
 		break;
 		
 		default:
-		if ((keyLeftPressed) and (page != 0)) page -= 1;
-		if ((keyRightPressed) and (page < pageMax)) page += 1;
+		if ((keyLeftPressed) and (page != 0))
+		{
+			if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+			audio_play_sound(snd_ButtonChange,0,false);
+			page -= 1;
+		}
+		if ((keyRightPressed) and (page < pageMax))
+		{
+			if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+			audio_play_sound(snd_ButtonChange,0,false);
+			page += 1;
+		}
 		break;
 	}
 	

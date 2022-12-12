@@ -26,6 +26,8 @@ function scr_DebugSave()
 	global.hammerAbilityKills = 1000;
 	global.bellAbilityKills = 1000;
 	global.waterAbilityKills = 1000;
+	global.hiJumpAbilityKills = 1000;
+	global.gearAbilityKills = 1000;
 	global.sleepAbilityKills = 1000;
 	global.scanAbilityKills = 1000;
 	global.crashAbilityKills = 1000;

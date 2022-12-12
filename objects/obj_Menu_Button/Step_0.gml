@@ -235,14 +235,61 @@ if (!global.pause)
 					{
 						with (obj_GalleryMenu)
 						{
-							if (artworkSelection != 0) artworkSelection -= 1;
+							if (artworkSelection != 0)
+							{
+								if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+								audio_play_sound(snd_ButtonChange,0,false);
+								artworkSelection -= 1;
+							}
 						}
 					}
 					else if (index == "arrowNext")
 					{
 						with (obj_GalleryMenu)
 						{
-							if (artworkSelection < artworkMax - 1) artworkSelection += 1;
+							if (artworkSelection < artworkMax - 1)
+							{
+								if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+								audio_play_sound(snd_ButtonChange,0,false);
+								artworkSelection += 1;
+							}
+						}
+					}
+				}
+			}
+		}
+		break;
+		
+		case "trophies":
+		mask_index = sprite_index;
+		if (instance_exists(owner))
+		{
+			if (index == "arrowPrev")
+			{
+				if ((!instance_exists(obj_Fade)) and (mouse_check_button_pressed(mb_left)) and (position_meeting(mouse_x,mouse_y,self)))
+				{
+					with (owner)
+					{
+						if (page != 0)
+						{
+							if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+							audio_play_sound(snd_ButtonChange,0,false);
+							page -= 1;
+						}
+					}
+				}
+			}
+			else if (index == "arrowNext")
+			{
+				if ((!instance_exists(obj_Fade)) and (mouse_check_button_pressed(mb_left)) and (position_meeting(mouse_x,mouse_y,self)))
+				{
+					with (owner)
+					{
+						if (page < pageMax)
+						{
+							if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+							audio_play_sound(snd_ButtonChange,0,false);
+							page += 1;
 						}
 					}
 				}
@@ -278,7 +325,12 @@ if (!global.pause)
 				{
 					with (owner)
 					{
-						if (page != 0) page -= 1;
+						if (page != 0)
+						{
+							if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+							audio_play_sound(snd_ButtonChange,0,false);
+							page -= 1;
+						}
 					}
 				}
 			}
@@ -288,7 +340,12 @@ if (!global.pause)
 				{
 					with (owner)
 					{
-						if (page < pageMax) page += 1;
+						if (page < pageMax)
+						{
+							if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+							audio_play_sound(snd_ButtonChange,0,false);
+							page += 1;
+						}
 					}
 				}
 			}

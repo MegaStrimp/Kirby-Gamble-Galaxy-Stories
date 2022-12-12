@@ -143,6 +143,8 @@ enum playerAbilities
 	hammer,
 	bell,
 	water,
+	hiJump,
+	gear,
 	sleep,
 	scan,
 	crash,
@@ -923,6 +925,8 @@ global.parasolAbilityKillsTarget = 10;
 global.hammerAbilityKillsTarget = 10;
 global.bellAbilityKillsTarget = 10;
 global.waterAbilityKillsTarget = 10;
+global.hiJumpAbilityKillsTarget = 10;
+global.gearAbilityKillsTarget = 10;
 global.sleepAbilityKillsTarget = 10;
 global.scanAbilityKillsTarget = 10;
 global.crashAbilityKillsTarget = 10;

@@ -138,6 +138,20 @@ switch (state)
 	}
 	break;
 	
+	case "trophies":
+	if (instance_exists(owner))
+	{
+		if (index == "arrowPrev")
+		{
+			if (owner.page != 0) draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+		}
+		else if (index == "arrowNext")
+		{
+			if (owner.page < owner.pageMax) draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+		}
+	}
+	break;
+	
 	case "keycardMenu":
 	if (instance_exists(owner))
 	{

@@ -39,6 +39,8 @@ function scr_SaveGame(argument0)
 	ini_write_real("stats","hammerAbilityKills",global.hammerAbilityKills);
 	ini_write_real("stats","bellAbilityKills",global.bellAbilityKills);
 	ini_write_real("stats","waterAbilityKills",global.waterAbilityKills);
+	ini_write_real("stats","hiJumpAbilityKills",global.hiJumpAbilityKills);
+	ini_write_real("stats","gearAbilityKills",global.gearAbilityKills);
 	ini_write_real("stats","sleepAbilityKills",global.sleepAbilityKills);
 	ini_write_real("stats","crashAbilityKills",global.crashAbilityKills);
 	ini_write_real("stats","micAbilityKills",global.micAbilityKills);

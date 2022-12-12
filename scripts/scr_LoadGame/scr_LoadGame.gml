@@ -38,6 +38,8 @@ function scr_LoadGame(argument0)
 	global.hammerAbilityKills = ini_read_real("stats","hammerAbilityKills",0);
 	global.bellAbilityKills = ini_read_real("stats","bellAbilityKills",0);
 	global.waterAbilityKills = ini_read_real("stats","waterAbilityKills",0);
+	global.hiJumpAbilityKills = ini_read_real("stats","hiJumpAbilityKills",0);
+	global.gearAbilityKills = ini_read_real("stats","gearAbilityKills",0);
 	global.sleepAbilityKills = ini_read_real("stats","sleepAbilityKills",0);
 	global.scanAbilityKills = ini_read_real("stats","scanAbilityKills",0);
 	global.crashAbilityKills = ini_read_real("stats","crashAbilityKills",0);

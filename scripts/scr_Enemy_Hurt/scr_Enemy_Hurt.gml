@@ -346,6 +346,14 @@ function scr_Enemy_Hurt(argument0,argument1)
 				global.waterAbilityKills += 1;
 				break;
 	
+				case playerAbilities.hiJump:
+				global.hiJumpAbilityKills += 1;
+				break;
+	
+				case playerAbilities.gear:
+				global.gearAbilityKills += 1;
+				break;
+	
 				case playerAbilities.sleep:
 				global.sleepAbilityKills += 1;
 				break;

@@ -167,6 +167,14 @@ function scr_Hud_AbilityIcon(argument0,argument1)
 		iconIndex = spr_Hud_Icon_Water;
 		break;
 		
+		case playerAbilities.hiJump:
+		iconIndex = spr_Hud_Icon_HiJump;
+		break;
+		
+		case playerAbilities.gear:
+		iconIndex = spr_Hud_Icon_Gear;
+		break;
+		
 		case playerAbilities.sleep:
 		iconIndex = spr_Hud_Icon_Sleep;
 		break;

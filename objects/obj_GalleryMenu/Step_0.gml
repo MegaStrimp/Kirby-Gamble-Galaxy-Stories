@@ -169,8 +169,18 @@ if (!global.pause)
 			case "artwork":
 			if (keyUpPressed) selection = "download";
 			if (keyDownPressed) selection = "download";
-			if ((keyLeftPressed) and (artworkSelection != 0)) artworkSelection -= 1;
-			if ((keyRightPressed) and (artworkSelection < artworkMax - 1)) artworkSelection += 1;
+			if ((keyLeftPressed) and (artworkSelection != 0))
+			{
+				if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+				audio_play_sound(snd_ButtonChange,0,false);
+				artworkSelection -= 1;
+			}
+			if ((keyRightPressed) and (artworkSelection < artworkMax - 1))
+			{
+				if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+				audio_play_sound(snd_ButtonChange,0,false);
+				artworkSelection += 1;
+			}
 			
 			if (!instance_exists(obj_Fade))
 			{

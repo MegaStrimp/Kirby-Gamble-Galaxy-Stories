@@ -905,7 +905,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		
 		#region Ability Trophy
 		case debugObject.abilityTrophy:
-		debugStateSelectedMax = 13;
+		debugStateSelectedMax = 26;
 		switch (debugStateSelected)
 		{
 			#region Cutter
@@ -922,143 +922,171 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			break;
 			#endregion
 			
-			#region Stone
+			#region Mystic Beam
 			case 3:
+			debugSprite = spr_AbilityStar_MysticBeam;
+			var ability = playerAbilities.mysticBeam;
+			break;
+			#endregion
+			
+			#region Stone
+			case 4:
 			debugSprite = spr_AbilityStar_Stone;
 			var ability = playerAbilities.stone;
 			break;
 			#endregion
 			
 			#region Ufo
-			case 4:
+			case 5:
 			debugSprite = spr_AbilityStar_Ufo;
 			var ability = playerAbilities.ufo;
 			break;
 			#endregion
 			
 			#region Mirror
-			case 5:
+			case 6:
 			debugSprite = spr_AbilityStar_Mirror;
 			var ability = playerAbilities.mirror;
 			break;
 			#endregion
 			
 			#region Ninja
-			case 6:
+			case 7:
 			debugSprite = spr_AbilityStar_Ninja;
 			var ability = playerAbilities.ninja;
 			break;
 			#endregion
 			
 			#region Bomb
-			case 7:
+			case 8:
 			debugSprite = spr_AbilityStar_Bomb;
 			var ability = playerAbilities.bomb;
 			break;
 			#endregion
 			
 			#region Fire
-			case 8:
+			case 9:
 			debugSprite = spr_AbilityStar_Fire;
 			var ability = playerAbilities.fire;
 			break;
 			#endregion
 			
+			#region Mystic Fire
+			case 10:
+			debugSprite = spr_AbilityStar_MysticFire;
+			var ability = playerAbilities.mysticFire;
+			break;
+			#endregion
+			
 			#region Ice
-			case 9:
+			case 11:
 			debugSprite = spr_AbilityStar_Ice;
 			var ability = playerAbilities.ice;
 			break;
 			#endregion
 			
 			#region Spark
-			case 10:
+			case 12:
 			debugSprite = spr_AbilityStar_Spark;
 			var ability = playerAbilities.spark;
 			break;
 			#endregion
 			
 			#region Yoyo
-			case 11:
+			case 13:
 			debugSprite = spr_AbilityStar_Yoyo;
 			var ability = playerAbilities.yoyo;
 			break;
 			#endregion
 			
 			#region Wheel
-			case 12:
+			case 14:
 			debugSprite = spr_AbilityStar_Wheel;
 			var ability = playerAbilities.wheel;
 			break;
 			#endregion
 			
 			#region Artist
-			case 13:
+			case 15:
 			debugSprite = spr_AbilityStar_Artist;
 			var ability = playerAbilities.artist;
 			break;
 			#endregion
 			
 			#region Fighter
-			case 14:
+			case 16:
 			debugSprite = spr_AbilityStar_Fighter;
 			var ability = playerAbilities.fighter;
 			break;
 			#endregion
 			
 			#region Suplex
-			case 15:
+			case 17:
 			debugSprite = spr_AbilityStar_Suplex;
 			var ability = playerAbilities.suplex;
 			break;
 			#endregion
 			
 			#region Wing
-			case 16:
+			case 18:
 			debugSprite = spr_AbilityStar_Wing;
 			var ability = playerAbilities.wing;
 			break;
 			#endregion
 			
 			#region Jet
-			case 17:
+			case 19:
 			debugSprite = spr_AbilityStar_Jet;
 			var ability = playerAbilities.jet;
 			break;
 			#endregion
 			
 			#region Sword
-			case 18:
+			case 20:
 			debugSprite = spr_AbilityStar_Sword;
 			var ability = playerAbilities.sword;
 			break;
 			#endregion
 			
 			#region Parasol
-			case 19:
+			case 21:
 			debugSprite = spr_AbilityStar_Parasol;
 			var ability = playerAbilities.parasol;
 			break;
 			#endregion
 			
 			#region Hammer
-			case 20:
+			case 22:
 			debugSprite = spr_AbilityStar_Hammer;
 			var ability = playerAbilities.hammer;
 			break;
 			#endregion
 			
 			#region Bell
-			case 21:
+			case 23:
 			debugSprite = spr_AbilityStar_Bell;
 			var ability = playerAbilities.bell;
 			break;
 			#endregion
 			
 			#region Water
-			case 22:
+			case 24:
 			debugSprite = spr_AbilityStar_Water;
 			var ability = playerAbilities.water;
+			break;
+			#endregion
+			
+			#region Hi-Jump
+			case 25:
+			debugSprite = spr_AbilityStar_HiJump;
+			var ability = playerAbilities.hiJump;
+			break;
+			#endregion
+			
+			#region Gear
+			case 26:
+			debugSprite = spr_AbilityStar_Gear;
+			var ability = playerAbilities.gear;
 			break;
 			#endregion
 			
