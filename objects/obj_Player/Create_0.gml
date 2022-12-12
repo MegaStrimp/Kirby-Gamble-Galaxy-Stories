@@ -72,6 +72,7 @@ decelParasolDash = .1;
 decelFloat = .025;
 climbSpeed = 2.5;
 jetCharge = 0;
+jetChargeMax = 45;
 gravJetDash = 0.25;
 gravLimitJetDash = 0.65;
 

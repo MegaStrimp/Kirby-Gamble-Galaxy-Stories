@@ -3385,9 +3385,81 @@ function scr_Player_States_Normal()
 								}
 							}
 							if(attackNumber == playerAttacks.jetCharge){
-								attackTimer = 99;
-								if(keyAttackReleased){
-									attackNumber = playerAttacks.jetDash;
+								//attackTimer = 99;
+								//if(keyAttackReleased){
+								//	attackNumber = playerAttacks.jetDash;
+								//}
+								image_index = 0;
+								if (jetCharge == jetChargeMax - 1)
+								{
+									if (audio_is_playing(snd_Charge_Ready)) audio_stop_sound(snd_Charge_Ready);
+									audio_play_sound(snd_Charge_Ready,0,false);
+									var particle = instance_create_depth(x,y - 15,depth - 1,obj_Particle);
+									particle.sprite_index = spr_Particle_Flash1;
+									particle.scale = 1.5;
+									particle.destroyAfterAnimation = true;
+								}
+								jetCharge += 1;
+								if (jetCharge >= 6)
+								{
+									//if (jetCharge == 6)
+									{
+										sprite_index = sprCutterCharge; // change this later
+										image_index = 0;
+									}
+									if ((!audio_is_playing(snd_Charge_Intro)) and (!audio_is_playing(snd_Charge_Loop)))
+									{
+										if (chargeSfxState == "intro")
+										{
+										    chargeSfx = audio_play_sound(snd_Charge_Intro,0,false);
+										    chargeSfxState = "loop";
+										}
+										else
+										{
+										    chargeSfx = audio_play_sound(snd_Charge_Loop,0,false);
+										}
+									}
+								}
+						
+								if (keyRightHold)
+								{
+									dir = 1;
+								}
+								if (keyLeftHold)
+								{
+									dir = -1;
+								}
+						
+								if (jetCharge < jetChargeMax)
+								{
+									if ((!global.cutscene) and (keyAttackReleased))
+									{
+										jetCharge = 0;
+										if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
+										chargeSfxState = "intro";
+										invincibleFlash = false;
+										invincibleFlashTimer = -1;
+										attack = true;
+										attackNumber = playerAttacks.jetDash;
+										//sprite_index = sprCutterAttack1;
+									    image_index = 0;
+									}
+								}
+								else
+								{
+									if (invincibleFlashTimer == -1) invincibleFlashTimer = invincibleFlashTimerMax;
+									if ((!global.cutscene) and (keyAttackReleased))
+									{
+										cutterCharge = 0;
+										if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
+										chargeSfxState = "intro";
+										invincibleFlash = false;
+										invincibleFlashTimer = -1;
+										attack = true;
+										attackNumber = playerAttacks.jetDash;
+										//sprite_index = sprCutterAttack1;
+									    image_index = 0;
+									}
 								}
 							}
 							if(attackNumber = playerAttacks.jetDash){
@@ -3402,6 +3474,7 @@ function scr_Player_States_Normal()
 								//run = false;
 					            attack = true;
 								attackNumber = playerAttacks.jetDash;
+								jetCharge = 0;
 								fireDashDir = 0;
 								if (keyUpHold and jetDashAir > 1){
 									fireDashDir = -1;
@@ -3438,7 +3511,7 @@ function scr_Player_States_Normal()
 								par.paletteIndex = 1;
 								par.destroyAfterAnimation = true;
 							}
-						}	
+						}
 						break;
 						#endregion
 					

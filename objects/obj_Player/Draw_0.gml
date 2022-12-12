@@ -266,8 +266,9 @@ if ((playerIsHelper) and (helperTimer != -1))
 draw_set_color(c_black);
 draw_text(x,y - 12,"att - " + string(keyAttackHold));
 draw_text(x,y - 24,"jump - " + string(keyJumpHold));
+*/
 //draw_text(x,y - 24,string(finalCutterState));
-//draw_text(x,y - 24,string(fireDashDir));
+//draw_text(x,y - 24,string(jetCharge));
 //draw_text(x+20,y - 24,string(attackTimer));
 //draw_text(x,y - 34,string(image_speed));
 //draw_text(x,y - 34,"State:"+string(state));
