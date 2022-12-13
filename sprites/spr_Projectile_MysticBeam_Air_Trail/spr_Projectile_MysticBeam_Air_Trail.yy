@@ -37,7 +37,7 @@
     "name": "spr_Projectile_MysticBeam_Air_Trail",
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 33.0,
+    "playbackSpeed": 42.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

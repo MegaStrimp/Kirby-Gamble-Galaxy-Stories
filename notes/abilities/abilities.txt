@@ -22,6 +22,8 @@ parasol
 hammer
 bell
 water
+hiJump
+gear
 sleep
 scan
 crash

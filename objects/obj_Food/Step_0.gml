@@ -26,24 +26,43 @@ if (!global.pause)
 	{
 		if (audio_is_playing(snd_FoodItem)) audio_stop_sound(snd_FoodItem);
 		audio_play_sound(snd_FoodItem,0,false);
-		if ((image_index == 41) or (image_index == 42))
+		switch (sprite_index)
 		{
-			var rng = irandom_range(0,99);
-			if (rng == 0)
+			case obj_Food:
+			if ((image_index == 41) or (image_index == 42))
 			{
-				if (audio_is_playing(snd_CannedFood)) audio_stop_sound(snd_CannedFood);
-				audio_play_sound(snd_CannedFood,0,false);
+				var rng = irandom_range(0,99);
+				if (rng == 0)
+				{
+					if (audio_is_playing(snd_CannedFood)) audio_stop_sound(snd_CannedFood);
+					audio_play_sound(snd_CannedFood,0,false);
+				}
 			}
+			break;
+			
+			case spr_Food_AmongUs:
+			if (audio_is_playing(snd_AmongUs)) audio_stop_sound(snd_AmongUs);
+			audio_play_sound(snd_AmongUs,0,false);
+			break;
+			
+			case spr_Food_FishTaco:
+			if (audio_is_playing(snd_FishTaco)) audio_stop_sound(snd_FishTaco);
+			audio_play_sound(snd_FishTaco,0,false);
+			break;
 		}
 		
 		var collidedPlayer = instance_place(x,y,obj_Player);
 		if (collidedPlayer.player == 0)
 		{
-			global.hpP1 += 1;
+			//global.healP1Mod = global.healthP1;
+			global.healthP1 += round(global.healthP1Max*0.1);
+			//global.healP1Diff += global.healthP1Max*0.1;
 		}
 		else
 		{
-			global.hpP2 += 1;
+			//global.healP2Mod = global.healthP2;
+			global.healthP2 += round(global.healthP2Max*0.1);
+			//global.healP2Diff += global.healthP2Max*0.1;
 		}
 		global.points += points;
 		instance_destroy();

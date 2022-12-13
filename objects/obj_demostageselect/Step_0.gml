@@ -35,6 +35,7 @@ if (!global.pause)
 		if (keyUpPressed) selection = "back";
 		if (keyDownPressed) selection = "back";
 		if (keyLeftPressed) selection = "asteroidFields";
+		if ((global.season == seasons.halloween) and (keyLeftPressed)) selection = "doomsday";
 		if (keyRightPressed) selection = "asteroidFields";
 		
 		if (!instance_exists(obj_Fade))
@@ -63,6 +64,7 @@ if (!global.pause)
 		if (keyDownPressed) selection = "options";
 		if (keyLeftPressed) selection = "greenGreens";
 		if (keyRightPressed) selection = "greenGreens";
+		if ((global.season == seasons.halloween) and (keyRightPressed)) selection = "doomsday";
 		
 		if (!instance_exists(obj_Fade))
 		{
@@ -87,7 +89,9 @@ if (!global.pause)
 		#region Gamble Maykr
 		case "gambleMaykr":
 		if (keyUpPressed) selection = "asteroidFields";
+		if ((global.season == seasons.halloween) and (keyUpPressed)) selection = "doomsday";
 		if (keyDownPressed) selection = "asteroidFields";
+		if ((global.season == seasons.halloween) and (keyDownPressed)) selection = "doomsday";
 		if (keyLeftPressed) selection = "credits";
 		if (keyRightPressed) selection = "back";
 		
@@ -105,6 +109,40 @@ if (!global.pause)
 		{
 			var fade = instance_create_depth(x,y,-999,obj_Fade);
 			fade.targetRoom = rm_MaykrTitle;
+			select = false;
+		}
+		break;
+		#endregion
+		
+		#region Doomsday
+		case "doomsday":
+		if (keyUpPressed) selection = "gambleMaykr";
+		if (keyDownPressed) selection = "gambleMaykr";
+		if (keyLeftPressed) selection = "asteroidFields";
+		if (keyRightPressed) selection = "greenGreens";
+		
+		if (!instance_exists(obj_Fade))
+		{
+			if ((keyJumpPressed) or (keyStartPressed))
+			{
+				if (doomsdayActive)
+				{
+					if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+					audio_play_sound(snd_ButtonYes,0,false);
+					select = true;
+				}
+				else
+				{
+					if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+					audio_play_sound(snd_ButtonNo,0,false);
+				}
+			}
+		}
+		
+		if (select)
+		{
+			var fade = instance_create_depth(x,y,-999,obj_Fade);
+			fade.targetRoom = rm_DoomsdayArena;
 			select = false;
 		}
 		break;
@@ -223,8 +261,8 @@ if (!global.pause)
 		{
 			if ((keyJumpPressed) or (keyStartPressed))
 			{
-				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
-				audio_play_sound(snd_ButtonYes,0,false);
+				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+				audio_play_sound(snd_ButtonNo,0,false);
 				select = true;
 			}
 		}

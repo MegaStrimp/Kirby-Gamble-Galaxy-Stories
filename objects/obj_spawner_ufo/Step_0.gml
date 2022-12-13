@@ -43,6 +43,7 @@ else if (spawnTimer == 0)
 		spawnedEnemy.sprIdle = spr_Ufo_Normal_Idle;
 		spawnedEnemy.sprWalk = spr_Ufo_Normal_Walk;
 		spawnedEnemy.sprHurt = spr_Ufo_Normal_Hurt;
+		spawnedEnemy.sprBeam = spr_Ufo_Normal_Beam;
 		break;
 	}
 	spawnedEnemy.sprite_index = spawnedEnemy.sprIdle;

@@ -266,6 +266,11 @@ if (((pausable) and (!global.pause)) or (!pausable))
 			var particle = instance_create_depth(x,y,depth,obj_DeathParticles);
 			particle.state = "explosion1";
 			var obj = instance_create_depth(x,y,depth,objectOnHitObj);
+			if (isBoss)
+			{
+				obj.isBoss = isBoss;
+				obj.owner = owner;
+			}
 			obj.dmg = 0;
 			if (objectOnHitObj == obj_Projectile_ExplosionMask)
 			{
@@ -306,6 +311,11 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		if (audio_is_playing(snd_BombExplode)) audio_stop_sound(snd_BombExplode);
 		audio_play_sound(snd_BombExplode,0,false);
 		var obj = instance_create_depth(x,y,depth,objectOnHitObj);
+		if (isBoss)
+		{
+			obj.isBoss = isBoss;
+			obj.owner = owner;
+		}
 		if (objectOnHitDmg != -1) obj.dmg = objectOnHitDmg;
 		if (objectOnHitObj == obj_Projectile_ExplosionMask)
 		{

@@ -1129,8 +1129,8 @@ if (!active)
 				bottomHudOffset = (50 * !bottomHudVisible) - (96 * bottomHudOpen);
 				
 				global.pause = false;
-				global.hpP1 = global.hpMax;
-				global.hpP2 = global.hpMax;
+				global.healthP1 = global.hpMax;
+				global.healthP2 = global.hpMax;
 				
 				with (obj_Particle) instance_destroy();
 				with (obj_Maykr_Spawner) activeState = 0;
@@ -1718,11 +1718,13 @@ else
 		instance_activate_all();
 		if (instance_exists(obj_Hud)) instance_destroy(obj_Hud);
 		with (obj_Particle) instance_destroy();
+		with (obj_HitNumbers) instance_destroy();
 		with (obj_Projectile) instance_destroy();
 		with (obj_PointStar) instance_destroy();
 		with (obj_PopFlowerStar) instance_destroy();
 		with (obj_Food) instance_destroy();
 		with (obj_Butterfly) instance_destroy();
+		with (obj_EatMe) instance_destroy();
 		
 		if (instance_exists(obj_Camera)) obj_Camera.freezeFrameTimer = -1;
 		with (obj_Maykr_Spawner)

@@ -22,6 +22,7 @@ debugYScale = 1;
 debugPaletteIndex = -1;
 debugPaletteNumber = 0;
 debugPaletteNumberMax = 1;
+spawnerMode = false;
 
 //Enums
 
@@ -53,6 +54,7 @@ enum debugObject
 	cuttableGrass,
 	pepBrew,
 	maximTomato,
+	goldenTomato,
 	invinciblityCandy,
 	mintLeaf,
 	oneUp,
@@ -68,6 +70,7 @@ enum debugObject
 	sirKibble,
 	gordo,
 	bloodGordo,
+	ghostGordo,
 	waddleBlock,
 	shotzo,
 	mysticDoo,

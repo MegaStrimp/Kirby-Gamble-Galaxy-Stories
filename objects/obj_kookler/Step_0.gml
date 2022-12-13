@@ -24,7 +24,7 @@ if (setupTimer == 0)
 		followedPath = pth_Enemy_Kookler_Circle;
 		break;
 	}
-	path_start(followedPath,spd * walkDirX,path_action_restart,0);
+	path = path_start(followedPath,spd * walkDirX,path_action_restart,0);
 }
 
 //Event Inherited
@@ -41,7 +41,7 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 	
 	//Movement
 	
-	pathsp = spd * walkDirX;
+	path_speed = spd * walkDirX;
 
 	//Animation
 	
@@ -58,7 +58,7 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 }
 else
 {
-	pathsp = 0;
+	path_speed = 0;
 	image_speed = 0;
 	shakeX = 0;
 	shakeY = 0;

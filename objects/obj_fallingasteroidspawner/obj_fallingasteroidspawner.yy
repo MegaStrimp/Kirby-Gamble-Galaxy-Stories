@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_FallingAsteroidSpawner",
   "spriteId": {
-    "name": "spr_FallingAsteroid_Normal_Idle",
-    "path": "sprites/spr_FallingAsteroid_Normal_Idle/spr_FallingAsteroid_Normal_Idle.yy",
+    "name": "spr_FallingAsteroid_AsteroidFields_Idle",
+    "path": "sprites/spr_FallingAsteroid_AsteroidFields_Idle/spr_FallingAsteroid_AsteroidFields_Idle.yy",
   },
   "solid": false,
   "visible": true,

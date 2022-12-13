@@ -634,6 +634,7 @@ if ((gamePaused) and (visible))
 		        pauseFade.fade = 1;
 				var fadeTrans = instance_create_depth(0,0,depth - 1,obj_Fade);
 				pauseFade.alphaSpd = .02;
+				scr_EndStage();
 				var demo = false;
 				demo = true;
 				if (demo)
@@ -713,4 +714,3 @@ gpu_set_blendmode(bm_normal);
 
 cellphoneTitleOffset = lerp(cellphoneTitleOffset,-250 + (cellphoneTitleActive * 250),.1);
 draw_sprite(spr_Menu_MainMenu_Hud_Cellphone,0,0 + 0 + cellphoneTitleOffset,0 + 0);
-draw_sprite(spr_Menu_Saves_Medals_Empty,0,0 + 4 + cellphoneTitleOffset,0 + 5);

@@ -67,6 +67,11 @@ function scr_Maykr_ObjectAttributes(argument0,argument1)
 		hasDirectionButton = true;
 		break;
 		
+		case maykrObjects.ghostGordo:
+		hasOptionsButton = true;
+		hasDirectionButton = true;
+		break;
+		
 		case maykrObjects.shotzo:
 		hasOptionsButton = true;
 		hasDirectionButton = true;

@@ -7,8 +7,6 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	if (instance_exists(owner))
 	{
 		x = owner.x;
-		y = owner.y - 4 + (14 * dirY)
-		image_xscale = owner.image_xscale;
-		image_yscale = owner.image_yscale;
+		y = owner.y - 4 + (14 * dirY);
 	}
 }

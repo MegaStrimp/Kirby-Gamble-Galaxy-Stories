@@ -24,7 +24,7 @@ function scr_Player_States_Carry()
 			grounded = true;
 		}
 		
-		if ((hurt) or (!place_meeting(x,y,obj_Door))) enterDoor = false;
+		if ((hurt) or (!place_meeting(x,y,obj_Door))) enteredDoor = -1;
 		
 		//Run
 		
@@ -48,6 +48,7 @@ function scr_Player_States_Carry()
 					if (audio_is_playing(snd_DashBegin)) audio_stop_sound(snd_DashBegin);
 					audio_play_sound(snd_DashBegin,0,false);
 					runParticleTimer = 0;
+					runBuffer = 0;
 					run = true;
 				}
 		    }
@@ -126,7 +127,7 @@ function scr_Player_States_Carry()
 		
 		if (!hurt)
 		{
-		    if ((!global.cutscene) and ((enterDoor) or (keyAttackPressed)) and (!inhaleEnd) and (!spit))
+		    if ((!global.cutscene) and ((enteredDoor != -1) or (keyAttackPressed)) and (!inhaleEnd) and (!spit))
 		    {
 				audio_play_sound(snd_Spit,0,false);
 				for (var i = 0; i < 2; i++)
@@ -389,6 +390,22 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 						
+						if ((global.hiJumpAbilityKills >= global.hiJumpAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.hiJump) != -1))
+						{
+							mixRosterAbility[i] = playerAbilities.water;
+							mixRosterText[i] = spr_Hud_AbilityText_Water;
+							mixRosterIcon[i] = spr_Hud_Icon_Water;
+							i += 1;
+						}
+						
+						if ((global.gearAbilityKillsTarget >= global.waterAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.gear) != -1))
+						{
+							mixRosterAbility[i] = playerAbilities.gear;
+							mixRosterText[i] = spr_Hud_AbilityText_Gear;
+							mixRosterIcon[i] = spr_Hud_Icon_Gear;
+							i += 1;
+						}
+						
 						if ((global.sleepAbilityKills >= global.sleepAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.sleep) != -1))
 						{
 							mixRosterAbility[i] = playerAbilities.sleep;
@@ -490,7 +507,7 @@ function scr_Player_States_Carry()
 		    if ((!instance_exists(obj_Fade)) and (!hurt))
 		    {
 				hsp = 0;
-				enterDoor = true;
+				enteredDoor = instance_place(x,y,obj_Door);
 		    }
 		}
 		

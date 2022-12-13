@@ -878,5 +878,14 @@
             "3 - Default": "Je ne sais pas si ça va t'affecter ou non, mais on ne sait jamais.",
             "3 - Kirby": "Il se pourrait que tu ne puisses pas voler si tu entres dans cette zone. Il faudra compter sur tes talents de saut."
         }
-    }
+    },
+	
+	"Delete Save Menu":
+    {
+		"1": "",
+		
+		"2": "",
+		
+		"3": ""
+	}
 }

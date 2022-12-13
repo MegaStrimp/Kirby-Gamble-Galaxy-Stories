@@ -9,6 +9,7 @@ randomize();
 vsp = 0;
 accel = .01;
 jumpspeed = .3;
+pathSpd = 6;
 
 //Sprites
 
@@ -37,4 +38,4 @@ walkDirY = 1;
 
 setupTimer = 0;
 particleTimer = -1;
-particleTimerMax = 3;
+particleTimerMax = 2;

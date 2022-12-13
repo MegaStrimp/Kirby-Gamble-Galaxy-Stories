@@ -119,6 +119,8 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 					projBeam.particleTimer = -1;
 					projBeam.character = 3;
 					projBeam.sprIdle = spr_Projectile_MysticBeam_Enemy;
+					projBeam.trailSpr = spr_Projectile_MysticBeam_Enemy_Trail;
+					projBeam.trailTimer = 0;
 					projBeam.destroyTimer = 120;
 				}
 				break;
@@ -147,6 +149,7 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			projBeam.destroyableByWall = false;
 			projBeam.destroyableByEnemy = false;
 			projBeam.destroyableByObject = false;
+			projBeam.destroyableByProjectile = true;
 			projBeam.destroyOutsideRoom = true;
 			currentBeams += 1;
 			

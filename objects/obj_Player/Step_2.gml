@@ -22,6 +22,7 @@ if ((state = playerStates.warpStar) and (instance_exists(warpStarIndex)))
 			x = warpStarIndex.x - 1;
 			y = warpStarIndex.y - 2;
 		}
+		image_angle = warpStarIndex.image_angle;
 		break;
 	}
 }

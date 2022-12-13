@@ -997,7 +997,7 @@
             "Description": ""
         },
         
-        "Mr. Boogie":
+        "Mr Boogie":
         {
             "Title": "",
             
@@ -1144,7 +1144,7 @@
             "Description": ""
         },
         
-        "Poppy Bros Jr.":
+        "Poppy Bros Jr":
         {
             "Title": "",
             
@@ -1524,7 +1524,7 @@
             "1": "",
 			
 			"2": ""
-        }
+        },
 		
 		"Anti Float":
         {
@@ -1536,5 +1536,14 @@
 			
 			"3 - Kirby": ""
         }
+	},
+	
+	"Delete Save Menu":
+    {
+		"1": "",
+		
+		"2": "",
+		
+		"3": ""
 	}
 }

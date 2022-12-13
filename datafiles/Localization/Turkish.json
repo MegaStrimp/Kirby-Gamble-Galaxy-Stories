@@ -1532,5 +1532,14 @@
 			
 			"3 - Kirby": "Sana etki eder mi bilmiyorum, yinede dikkat et."
         }
+	},
+	
+	"Delete Save Menu":
+    {
+		"1": "Kaydını silmek istiyor musun?",
+		
+		"2": "Tüm eşyaların, bonusların, yaptığın herşey yok olacak. Gerçekten bunların hepsini silmek istiyor musun?",
+		
+		"3": "Kaydını gerçekten silmek istediğini bir kez daha onayla."
 	}
 }

@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Marx Soul",
-    "path": "folders/Sprites/Bosses/KSS/Marx Soul.yy",
+    "name": "Arena",
+    "path": "folders/Sprites/Bosses/KSSU/Marx Soul/Arena.yy",
   },
 }

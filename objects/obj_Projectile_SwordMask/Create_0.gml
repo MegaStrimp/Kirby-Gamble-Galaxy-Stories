@@ -10,7 +10,11 @@ event_inherited();
 
 //Sprites
 
-sprIdle = spr_Projectile_SwordMask1;
+sprNormal = spr_Projectile_SwordMask1;
+sprDash = spr_Projectile_SwordMask2;
+sprAir = spr_Projectile_SwordMaskAir;
+sprSpin = spr_Projectile_SwordMaskSpin;
+sprCombo = spr_Projectile_SwordMask1;
 
 //Other Variables
 
@@ -22,3 +26,10 @@ destroyOutsideView = false;
 canBeReflected = false;
 owner = id;
 enemy = false;
+
+groundedDestroy=false;
+
+sprite=playerAttacks.swordNormal;
+
+
+deleteTimer=0;

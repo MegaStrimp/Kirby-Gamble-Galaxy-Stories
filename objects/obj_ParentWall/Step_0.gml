@@ -149,6 +149,28 @@ if (object)
 {
 	if (!invincible)
 	{
+		with (obj_Chuckie)
+		{
+			if (place_meeting(x,y,other))
+			{
+				if (other.damageType == damageTypes.none)
+				{
+					other.hp -= 1;
+				}
+			}
+		}
+		
+		with (obj_WarpStar)
+		{
+			if (place_meeting(x,y,other))
+			{
+				if (other.damageType == damageTypes.none)
+				{
+					other.hp -= 10;
+				}
+			}
+		}
+		
 		with (obj_Projectile)
 		{
 			if (place_meeting(x,y,other))
@@ -186,6 +208,11 @@ if (object)
 					if (objectOnHit)
 					{
 						var proj = instance_create_depth(x,y,depth,objectOnHitObj);
+						if (isBoss)
+						{
+							proj.isBoss = isBoss;
+							proj.owner = owner;
+						}
 						if (objectOnHitDmg != -1) proj.dmg = objectOnHitDmg;
 						if (objectOnHitObj == obj_Projectile_ExplosionMask)
 						{
@@ -200,6 +227,11 @@ if (object)
 								proj.enemy = false;
 								proj.hurtsEnemy = true;
 								proj.hurtsPlayer = false;
+							}
+							if (object_index == obj_Projectile_DoomsdayBomb)
+							{
+								proj.explosionIndex = 1;
+								proj.showHitbox = false;
 							}
 							if (object_index == obj_Projectile_Bomb)
 							{
@@ -274,6 +306,11 @@ else if (!platform)
 					if (objectOnHit)
 					{
 						var proj = instance_create_depth(x,y,depth,objectOnHitObj);
+						if (isBoss)
+						{
+							proj.isBoss = isBoss;
+							proj.owner = owner;
+						}
 						if (objectOnHitDmg != -1) proj.dmg = objectOnHitDmg;
 						if (objectOnHitObj == obj_Projectile_ExplosionMask)
 						{
@@ -288,6 +325,11 @@ else if (!platform)
 								proj.enemy = false;
 								proj.hurtsEnemy = true;
 								proj.hurtsPlayer = false;
+							}
+							if (object_index == obj_Projectile_DoomsdayBomb)
+							{
+								proj.explosionIndex = 1;
+								proj.showHitbox = false;
 							}
 							if (object_index == obj_Projectile_Bomb)
 							{
@@ -343,6 +385,11 @@ else if (!platform)
 					if (objectOnHit)
 					{
 						var proj = instance_create_depth(x,y,depth,objectOnHitObj);
+						if (isBoss)
+						{
+							proj.isBoss = isBoss;
+							proj.owner = owner;
+						}
 						if (objectOnHitDmg != -1) proj.dmg = objectOnHitDmg;
 						if (objectOnHitObj == obj_Projectile_ExplosionMask)
 						{
@@ -357,6 +404,11 @@ else if (!platform)
 								proj.enemy = false;
 								proj.hurtsEnemy = true;
 								proj.hurtsPlayer = false;
+							}
+							if (object_index == obj_Projectile_DoomsdayBomb)
+							{
+								proj.explosionIndex = 1;
+								proj.showHitbox = false;
 							}
 							if (object_index == obj_Projectile_Bomb)
 							{

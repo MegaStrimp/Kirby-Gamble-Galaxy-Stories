@@ -10,6 +10,12 @@ goBack = false;
 spawnButtons = true;
 select = false;
 
+//Text
+
+text[0] = str("Delete Save Menu.1");
+text[1] = str("Delete Save Menu.2");
+text[2] = str("Delete Save Menu.3");
+
 //Spawn Buttons
 
 var button = instance_create_depth(480,270,depth,obj_Menu_Button);

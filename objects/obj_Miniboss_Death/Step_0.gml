@@ -58,7 +58,7 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 	
 	switch (ownerIndex)
 	{
-		case obj_PoppyBrosSr:
+		case obj_MiniBoss_PoppyBrosSr:
 		mask_index = spr_PoppyBrosSr_Normal_Death;
 		if (place_meeting(x,y + 1,collisionY))
 		{
@@ -70,7 +70,7 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 		}
 		break;
 		
-		case obj_Wizzkid:
+		case obj_MiniBoss_Wizzkid:
 		mask_index = spr_Wizzkid_Normal_DeathGround;
 		if (place_meeting(x,y + 1,collisionY))
 		{

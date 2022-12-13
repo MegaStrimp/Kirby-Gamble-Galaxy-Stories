@@ -1,4 +1,5 @@
 ///@description Play Music
+///@param {real} setMusicPlaying Set Music Playing
 ///@param {real} pause Stop existing music
 ///@param {real} soundid Which music to play.
 ///@param {real} priority Music priority.
@@ -107,6 +108,11 @@ function scr_PlayMusic(argument0,argument1,argument2,argument3,argument4)
 			global.musicIntroComposer = "Light MetaS";
 			break;
 			
+			case mus_BossDoomsday:
+			global.musicIntroTitle = "Doomsday";
+			global.musicIntroComposer = "Juan but The Don";
+			break;
+			
 			case mus_Cellphone:
 			global.musicIntroTitle = "You Have A Call";
 			global.musicIntroComposer = "Tater-Tot Tunes";
@@ -200,6 +206,13 @@ function scr_PlayMusic(argument0,argument1,argument2,argument3,argument4)
 			global.musicIntroColorBg = make_color_rgb(1,90,102);
 			global.musicIntroColorLight = make_color_rgb(9,206,255);
 			global.musicIntroColorDark = make_color_rgb(2,173,194);
+			global.musicIntroColorComposer = make_color_rgb(255,255,255);
+			break;
+			
+			case "Juan but The Don":
+			global.musicIntroColorBg = make_color_rgb(184,7,3);
+			global.musicIntroColorLight = make_color_rgb(243,103,10);
+			global.musicIntroColorDark = make_color_rgb(170,72,6);
 			global.musicIntroColorComposer = make_color_rgb(255,255,255);
 			break;
 		}

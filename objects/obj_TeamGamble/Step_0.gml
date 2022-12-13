@@ -2,6 +2,13 @@
 
 if (!global.pause)
 {
+	//Debug Save
+	
+	if ((global.debug) and (keyboard_check_pressed(ord("L"))))
+	{
+		scr_DebugSave();
+	}
+	
 	//Alpha
 	
 	alpha = lerp(alpha,alphaTarget,.05);

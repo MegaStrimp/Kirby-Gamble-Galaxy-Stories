@@ -12,6 +12,9 @@ buttonState = 0;
 starState = 0;
 completed = false;
 buttonAnim = 0;
+active = false;
+activateRange = 180;
+image_alpha = 0;
 
 //Timers
 

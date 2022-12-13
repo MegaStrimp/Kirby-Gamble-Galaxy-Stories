@@ -1,5 +1,13 @@
 ///@description Draw
 
+//Spawner Mode
+
+image_blend = c_white;
+if (spawnerMode)
+{
+	image_blend = c_yellow;
+}
+
 //Set Alpha
 
 if (debugAlphaTimer > 0)

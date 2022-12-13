@@ -42,7 +42,7 @@ if (!global.pause)
 						par.image_index = i;
 						par.hsp = (random_range(.1,.75) * parDir);
 						par.vsp = -2;
-						par.angleSpd = hsp * 3;
+						par.angleSpd = par.hsp * 3;
 						par.stopRotationAfterCollision = true;
 						par.hasGravity = true;
 						par.collisionX = obj_Wall;

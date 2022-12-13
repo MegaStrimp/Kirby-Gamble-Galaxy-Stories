@@ -11,7 +11,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	text_speed = room_speed / textSpeed;
 	if (text_length <= 0)
 	{
-	   text_length = string_length(text[array]);
+		text_length = string_length(text[array]);
 	}
 	
 	if ((!hasResetTimer) and ((keyJumpPressed) or (keyStartPressed)))
@@ -35,14 +35,25 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	   cooldown--;
 	   if (cooldown <= 0)
 	   {
-	       index++;
-	       text_displayed = string_copy(text[array],1,index);
-	       cooldown = text_speed;
-	       if (typewriter)
-		   {
-			   if ((soundPlaying != -1) and (audio_is_playing(soundPlaying))) audio_stop_sound(soundPlaying);
-			   if (textSound[array] != -1) soundPlaying = audio_play_sound(textSound[array],0,false);
-		   }
+			index++;
+		   
+			/*modifier = "";
+	        if (string_char_at(text[array],index) == "@")
+	        {
+	            index += 1;
+	            modifier += string(string_char_at(text[array],index));
+	            index += 1;
+	            modifier += string(string_char_at(text[array],index));
+	            index += 1;
+	        }*/
+			
+			text_displayed = string_copy(text[array],1,index);
+			cooldown = text_speed;
+			if (typewriter)
+			{
+				if ((soundPlaying != -1) and (audio_is_playing(soundPlaying))) audio_stop_sound(soundPlaying);
+				if (textSound[array] != -1) soundPlaying = audio_play_sound(textSound[array],0,false);
+			}
 	   }
 	}
 	
@@ -59,7 +70,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		if (array_length(text) == array) destroyTimer = 0;
 	}
 	
-	if (hasResetTimer)
+	if ((hasResetTimer) and (array < array_length(text)) and (index >= string_length(text[array])))
 	{
 		//Reset Timer
 		
@@ -70,7 +81,8 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		else if (resetTimer == 0)
 		{
 			resetArray = true;
-		    resetTimer = resetTimerMax[array];
+			resetTimer = -1;
+			if (array + 1 < array_length(resetTimerMax)) resetTimer = resetTimerMax[array + 1];
 		}
 	}
 	

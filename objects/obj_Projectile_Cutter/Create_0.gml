@@ -8,14 +8,15 @@ event_inherited();
 
 hsp = 0;
 vsp = 0;
-jumpspeed = 1;
-decel = .35;
-decelMax = 8.25;
+jumpspeed = 2;
+decel = .5;
+decelMax = 10;
 
 //Sprites
 
 sprIdle = spr_Projectile_Cutter_Player;
 sprCharge = spr_Projectile_CutterCharge_Normal;
+sprDestroy = spr_Projectile_Cutter_Destroy;
 
 //Other Variables
 

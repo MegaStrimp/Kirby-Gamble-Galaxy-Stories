@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_FallingAsteroid",
   "spriteId": {
-    "name": "spr_FallingAsteroid_Normal_Idle",
-    "path": "sprites/spr_FallingAsteroid_Normal_Idle/spr_FallingAsteroid_Normal_Idle.yy",
+    "name": "spr_FallingAsteroid_AsteroidFields_Idle",
+    "path": "sprites/spr_FallingAsteroid_AsteroidFields_Idle/spr_FallingAsteroid_AsteroidFields_Idle.yy",
   },
   "solid": false,
   "visible": true,
@@ -27,6 +27,7 @@
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],

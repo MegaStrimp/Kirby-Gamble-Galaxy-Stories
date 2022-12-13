@@ -145,13 +145,25 @@ if (!global.pause)
 					}
 				}
 				
+				if (amongUs)
+				{
+					if (audio_is_playing(snd_AmongUs)) audio_stop_sound(snd_AmongUs);
+					audio_play_sound(snd_AmongUs,0,false);
+				}
+				
+				if (fishTaco)
+				{
+					if (audio_is_playing(snd_FishTaco)) audio_stop_sound(snd_FishTaco);
+					audio_play_sound(snd_FishTaco,0,false);
+				}
+				
 				if (owner.player == 0)
 				{
-					global.hpP1 += 1;
+					global.healthP1 += round(global.healthP1Max*0.1);
 				}
 				else
 				{
-					global.hpP2 += 1;
+					global.healthP2 += round(global.healthP2Max*0.1);
 				}
 			}
 			else if (inhaleType == 2)
@@ -161,11 +173,11 @@ if (!global.pause)
 				
 				if (owner.player == 0)
 				{
-					global.hpP1 += 2;
+					global.healthP1 += round(global.healthP1Max*0.5);
 				}
 				else
 				{
-					global.hpP2 += 2;
+					global.healthP2 += round(global.healthP2Max*0.5);
 				}
 			}
 			else if (inhaleType == 3)
@@ -173,11 +185,11 @@ if (!global.pause)
 				audio_play_sound(snd_Select,0,false);
 				if (owner.player == 0)
 				{
-					global.hpP1 += global.hpMax;
+					global.healthP1 += global.healthP1Max;
 				}
 				else
 				{
-					global.hpP2 += global.hpMax;
+					global.healthP1 += global.healthP1Max;
 				}
 			}
 			else if (inhaleType == 4)

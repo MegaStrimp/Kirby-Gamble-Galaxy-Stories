@@ -11,14 +11,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 219,
+  "bbox_right": 239,
   "bbox_top": 0,
   "bbox_bottom": 34,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "DynamicTexturePage": false,
-  "width": 220,
+  "width": 240,
   "height": 35,
   "textureGroupId": {
     "name": "Menu",
@@ -28,7 +28,7 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8bedd8eb-fc08-4985-bc37-4683f0d164c0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8dc059ff-9ad1-41a4-89dd-aac82ab0d666",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -45,7 +45,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"0182becd-8a92-4662-af37-6569762d48da","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8bedd8eb-fc08-4985-bc37-4683f0d164c0","path":"sprites/spr_Menu_MainMenu_Hud_Gallery/spr_Menu_MainMenu_Hud_Gallery.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e52a98e9-b3e5-4277-9bab-7798d70ea4f2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8dc059ff-9ad1-41a4-89dd-aac82ab0d666","path":"sprites/spr_Menu_MainMenu_Hud_Gallery/spr_Menu_MainMenu_Hud_Gallery.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,

@@ -206,11 +206,11 @@ function scr_Player_Collision(argument0)
 			{
 				if (player == 0)
 				{
-					global.hpP1 = 0;
+					global.healthP1 = 0;
 				}
 				else
 				{
-					global.hpP2 = 0;
+					global.healthP2 = 0;
 				}
 			}
 		}
@@ -235,13 +235,13 @@ function scr_Player_Collision(argument0)
 	y = clamp(y,clampYMin,clampYMax);
 	
 	hasMiniboss = false;
-	with (obj_Miniboss_Control) if (active) other.hasMiniboss = true;
+	with (obj_Miniboss_Control) if ((active) or (spawnTimer != -1)) other.hasMiniboss = true;
 	
 	//Death On Bottom
 	
-	if ((global.hpP1 != 0) and (y >= (obj_Camera.cameraY + ((obj_Camera.viewHeight + 24) / obj_Camera.zoomFinal))))
+	if ((global.healthP1 != 0) and (y >= (obj_Camera.cameraY + ((obj_Camera.viewHeight + 24) / obj_Camera.zoomFinal))))
 	{
-		global.hpP1 = 0;
+		global.healthP1 = 0;
 	}
 }
 
@@ -429,11 +429,11 @@ function scr_Player_Collision(playerMechs.none)
 			{
 				if (player == 0)
 				{
-					global.hpP1 = 0;
+					global.healthP1 = 0;
 				}
 				else
 				{
-					global.hpP2 = 0;
+					global.healthP2 = 0;
 				}
 			}
 		}
@@ -445,7 +445,7 @@ function scr_Player_Collision(playerMechs.none)
 	y = clamp(y,0,room_height + 24);
 	
 	hasMiniboss = false;
-	with (obj_Miniboss_Control) if (active) other.hasMiniboss = true;
+	with (obj_Miniboss_Control) if ((active) or (spawnTimer != -1)) other.hasMiniboss = true;
 	if (hasMiniboss)
 	{
 		x = clamp(x,(obj_Camera.cameraX) + (sprite_get_width(mask_index) / 2),(obj_Camera.cameraX + obj_Camera.viewWidth) - (sprite_get_width(mask_index) / 2));
@@ -454,5 +454,5 @@ function scr_Player_Collision(playerMechs.none)
 	
 	//Death On Bottom
 	
-	if ((global.hpP1 != 0) and (y >= room_height + 24)) global.hpP1 = 0;
+	if ((global.healthP1 != 0) and (y >= room_height + 24)) global.healthP1 = 0;
 }

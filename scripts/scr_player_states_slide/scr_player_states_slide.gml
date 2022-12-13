@@ -20,10 +20,7 @@ function scr_Player_States_Slide()
 		}
 		else
 		{
-			duckJumpCharge = 0;
-			duckSlide = false;
-			duck = false;
-			state = playerStates.normal;
+			scr_Player_CancelSlide();
 			vsp = gravLimitNormal;
 		}
 		
@@ -711,6 +708,7 @@ function scr_Player_States_Slide()
 		        hsp = movespeedSlide * dir;
 		        duckSlide = true;
 		        duck = false;
+				canSlideJump = false;
 				duckJumpCharge = 0;
 		    }
 			
@@ -780,10 +778,7 @@ function scr_Player_States_Slide()
 					jumpLimit = false;
 					jumpLimitTimer = (jumpLimitTimerMax * 2);
 				}
-				duckJumpCharge = 0;
-			    duckSlide = false;
-			    duck = false;
-			    state = playerStates.normal;
+				scr_Player_CancelSlide();
 			}
 		}
 		
@@ -814,6 +809,7 @@ function scr_Player_States_Slide()
 			{
 				sprite_index = sprFall;
 			}
+			
 		    if (hsp == 0)
 		    {
 				if (audio_is_playing(slideSfx)) audio_stop_sound(slideSfx);
@@ -822,6 +818,35 @@ function scr_Player_States_Slide()
 		        duck = true;
 		        duckSlide = false;
 		    }
+			
+			if ((playerCharacter == playerCharacters.kirby) and (keyJumpPressed) and (canSlideJump))
+			{
+				var parSquish = instance_create_depth(x,y + 6,depth + 1,obj_Particle);
+				parSquish.sprite_index = spr_Particle_SmallStar;
+				parSquish.destroyTimer = 30;
+				parSquish.spdBuiltIn = 6;
+				parSquish.fricSpd = .6;
+				parSquish.direction = 270 - (dir * 45);
+				parSquish.dir = -dir;
+				attack = true;
+				attackNumber = playerAttacks.slideJump;
+				hspLimit = false;
+				hspLimitTimer = 30;
+				jumpLimit = false;
+				jumpLimitTimer = 30;
+				attackTimer = 30;
+				hsp = dir * (movespeedSlide * .85);
+				scr_Player_CancelSlide();
+				scr_Player_ExecuteJump();
+			}
+			
+			if ((keyAttackPressed) and (playerCharacter == playerCharacters.kirby) and (playerAbility == playerAbilities.none))
+			{
+				hsp = movespeedNormal * dir;
+				scr_Player_CancelSlide();
+				scr_Player_ExecuteAttack(playerAttacks.inhale);
+			}
+			canSlideJump = true;
 		}
 		
 		//Animation

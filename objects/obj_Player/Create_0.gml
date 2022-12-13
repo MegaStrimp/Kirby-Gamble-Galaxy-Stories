@@ -53,10 +53,10 @@ movespeedSlide = 5;
 movespeedFloat = 1.9;
 movespeedCarry = 2;
 movespeedBurst = 7;
-movespeedJetKick = 5;
+movespeedJetKick = 7;
 movespeedJetBoost = 7;
-//movespeedJetAirBoostSmall = 7;
-movespeedJetAirDashBoost = 9;
+movespeedJetAirBoostSmall = 7;
+movespeedJetAirDashBoostSmall = 7;
 movespeedWheel = 6;
 movespeed = movespeedNormal;
 ufoFloatSpd = 2;
@@ -72,7 +72,7 @@ decelParasolDash = .1;
 decelFloat = .025;
 climbSpeed = 2.5;
 jetCharge = 0;
-jetChargeMax = 60;
+jetChargeMax = 45;
 gravJetDash = 0.25;
 gravLimitJetDash = 0.65;
 
@@ -253,8 +253,18 @@ sprYoyoAttack2Release = spr_Kirby_Normal_Yoyo_Attack2Release;
 sprWingAttack1 = spr_Kirby_Normal_Wing_Attack1;
 sprWingAttack2Ready = spr_Kirby_Normal_Wing_Attack2Ready;
 sprWingAttack2 = spr_Kirby_Normal_Wing_Attack2;
+//SWORD
 sprSwordAttack1 = spr_Kirby_Normal_Sword_Attack1;
-sprSwordAttack2 = spr_Kirby_Normal_Sword_Attack2;
+sprSwordAttackDash = spr_Kirby_Normal_Sword_Dash;
+sprSwordAttackAir = spr_Kirby_Normal_Sword_AttackAir;
+sprSwordAttackAirDash = spr_Kirby_Normal_Sword_Spin;
+sprSwordAttackCombo = spr_Kirby_Normal_Sword_Combo;
+sprSwordAttackBarrageAir = spr_Kirby_Normal_Sword_BarrageAir;
+sprSwordAttackBarrage = spr_Kirby_Normal_Sword_Barrage;
+
+//YOYO
+sprSwordAttack1 = spr_Kirby_Normal_Sword_Attack1;
+sprSwordAttack2 = spr_Kirby_Normal_Sword_Dash;
 sprYoyoAttack2Ready = spr_Kirby_Normal_Yoyo_Attack2Ready;
 sprYoyoAttack2 = spr_Kirby_Normal_Yoyo_Attack2;
 sprYoyoAttack2Release = spr_Kirby_Normal_Yoyo_Attack2Release;
@@ -287,11 +297,13 @@ waterEggSoilUpgrade = false;
 
 //Other Variables
 
-if ((global.hpP1 == 0) or (global.hpP2 == 0))
+if ((global.healthP1 == 0) or (global.healthP2 == 0))
 {
 	if (global.pause) global.pause = false;
-	global.hpP1 = global.hpMax;
-	global.hpP2 = global.hpMax;
+	global.healthP1 = global.healthP1Max;
+	global.healthP2 = global.healthP2Max;
+	global.healP1Mod = global.healthP1;
+	global.healP2Mod = global.healthP2;
 }
 player = 0;
 playerCharacter = 0;
@@ -326,6 +338,7 @@ runParticleNum = 0;
 runCancelTimer = -1;
 runImageSpeedIncrease = 0;
 runTurn = false;
+runBuffer = 0;
 walkDuck = false;
 walkSquish = false;
 fallRoll = false;
@@ -334,6 +347,7 @@ duck = false;
 duckJumpCharge = 0;
 duckJumpChargeMax = 45;
 duckSlide = false;
+canSlideJump = false;
 scale = 1;
 targetScale = 1;
 scaleExX = 0;
@@ -446,7 +460,7 @@ fallHopCounterMax = 10;
 carriedItem = carriedItems.none;
 carriedItemIndex = -1;
 carriedItemState = carriedItemStates.none;
-enterDoor = false;
+enteredDoor = -1;
 gooeyScaleDir = 1;
 gooeyScaleOffset = 0;
 canGrab = true;

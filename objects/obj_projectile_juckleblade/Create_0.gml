@@ -20,6 +20,7 @@ sprIdle = spr_Projectile_JuckleBlade_Normal_Idle;
 
 //Other Variables
 
+destroyableByProjectile = true;
 damageType = damageTypes.cutter;
 character = 0;
 

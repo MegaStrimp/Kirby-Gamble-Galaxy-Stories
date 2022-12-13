@@ -138,7 +138,7 @@ if (!global.pause)
 			break;
 			
 			case "Explosive Powder":
-			if (global.bombExplosivePowderUpgradeUnlocked)
+			if (global.bombExplosivePowderUpgradeEquipped)
 			{
 				global.bombExplosivePowderUpgradeEquipped = false;
 			}

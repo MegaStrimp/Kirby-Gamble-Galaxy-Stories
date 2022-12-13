@@ -2,15 +2,28 @@
 
 if ((!pausable) and (!global.pause)) pausable = true;
 
-//Scale
-
-image_xscale = scale * dir;
-image_yscale = scale * dirY;
-
 //Follow Object
 
 if (((pausable) and (!global.pause)) or (!pausable))
 {
+	//Scale
+	
+	if (scaleSpd != 0)
+	{
+		scale += scaleSpd;
+	}
+	
+	image_xscale = scale * dir;
+	image_yscale = scale * dirY;
+	
+	//Alpha
+	
+	if (alphaSpd != 0)
+	{
+		image_alpha += alphaSpd;
+		if (image_alpha <= 0) instance_destroy();
+	}
+	
 	if ((followObject) and (followedObject != id))
 	{
 		if (instance_exists(followedObject))

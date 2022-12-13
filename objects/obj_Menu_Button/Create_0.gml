@@ -12,3 +12,4 @@ owner = -1;
 followCamera = false;
 imageIndex = 0;
 canChangeImageIndex = false;
+xOffset = 0;

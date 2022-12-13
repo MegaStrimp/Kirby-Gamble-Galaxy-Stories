@@ -11,15 +11,15 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 21,
+  "bbox_right": 19,
   "bbox_top": 0,
-  "bbox_bottom": 23,
+  "bbox_bottom": 26,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "DynamicTexturePage": false,
-  "width": 22,
-  "height": 24,
+  "width": 20,
+  "height": 27,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -28,7 +28,7 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f0b44a2d-ec3e-4f9d-9992-d44697d460d8",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2a286563-3c12-4e70-8dbc-b31b4f57215c",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -45,7 +45,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"0c5c3682-3a39-4e80-b5ee-bbd391be7f61","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f0b44a2d-ec3e-4f9d-9992-d44697d460d8","path":"sprites/spr_InvincibilityCandy/spr_InvincibilityCandy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"21bedbc0-85b8-4e54-accc-f66fef6b4dca","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2a286563-3c12-4e70-8dbc-b31b4f57215c","path":"sprites/spr_InvincibilityCandy/spr_InvincibilityCandy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,8 +58,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 11,
-    "yorigin": 16,
+    "xorigin": 10,
+    "yorigin": 19,
     "eventToFunction": {},
     "eventStubScript": null,
   },

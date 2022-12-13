@@ -218,7 +218,21 @@
         {
             "Title": "Water",
             
-            "Description": "Bend water to your will to power wash enemies. surfs up!"
+            "Description": "Bend water to your will to power wash enemies. Surf's up!"
+        },
+		
+		"Hi-Jump":
+        {
+            "Title": "Hi-Jump",
+            
+            "Description": "Leap into the air with a Hi-Jump! Zoom back down with an unstoppable Rocket Dive!"
+        },
+		
+		"Gear":
+        {
+            "Title": "Gear",
+            
+            "Description": "Throw wrenches at your enemies and make wacky constructions. Sentry up!"
         },
 		
 		"Sleep":
@@ -1352,6 +1366,495 @@
 		"Secret": "Secret"
     },
 	
+	"Trophies":
+	{
+		"Beat Green Greens":
+		{
+			"Title": "Unearthly Hand",
+			
+			"Description": "Rescued a new friend.",
+			
+			"Unlock Method": "Progress through Chapter 1."
+		},
+		
+		"Complete Green Greens":
+		{
+			"Title": "Green Greens Master",
+			
+			"Description": "Collected everything in Green Greens.",
+			
+			"Unlock Method": "Collect everything in a stage."
+		},
+		
+		"Beat Battleship Halberd":
+		{
+			"Title": "Space Invaders",
+			
+			"Description": "We are in space!",
+			
+			"Unlock Method": "Progress through Chapter 1."
+		},
+		
+		"Complete Battleship Halberd":
+		{
+			"Title": "Battleship Halberd Master",
+			
+			"Description": "Collected everything in Battleship Halberd.",
+			
+			"Unlock Method": "Collect everything in a stage."
+		},
+		
+		"Beat Asteroid Fields":
+		{
+			"Title": "Panic at the Belt",
+			
+			"Description": "Traversed through an ancient battlefield.",
+			
+			"Unlock Method": "Progress through Chapter 1."
+		},
+		
+		"Complete Asteroid Fields":
+		{
+			"Title": "Asteroid Fields Master",
+			
+			"Description": "Collected everything in Asteroid Fields.",
+			
+			"Unlock Method": "Collect everything in a stage."
+		},
+		
+		"Beat Yolk Yard":
+		{
+			"Title": "Crowned Vineyard",
+			
+			"Description": "Found a way inside the mysterious temple.",
+			
+			"Unlock Method": "Progress through Chapter 1."
+		},
+		
+		"Complete Yolk Yard":
+		{
+			"Title": "Yolk Yard Master",
+			
+			"Description": "Collected everything in Yolk Yard.",
+			
+			"Unlock Method": "Collect everything in a stage."
+		},
+		
+		"Beat Grand Temple Avgo":
+		{
+			"Title": "The Temple Stirs",
+			
+			"Description": "Found where Lor Starcutter has landed.",
+			
+			"Unlock Method": "Progress through Chapter 1."
+		},
+		
+		"Complete Grand Temple Avgo":
+		{
+			"Title": "Grand Temple Avgo Master",
+			
+			"Description": "Collected everything in Grand Temple Avgo.",
+			
+			"Unlock Method": "Collect everything in a stage."
+		},
+		
+		"Beat Floral Yolk Caves":
+		{
+			"Title": "Petals of Sorrow",
+			
+			"Description": "Defeated the reanimated guardian.",
+			
+			"Unlock Method": "Progress through Chapter 1."
+		},
+		
+		"Complete Floral Yolk Caves":
+		{
+			"Title": "Floral Yolk Caves Master",
+			
+			"Description": "Collected everything in Floral Yolk Caves.",
+			
+			"Unlock Method": "Collect everything in a stage."
+		},
+		
+		"Beat Storm the Fortress":
+		{
+			"Title": "True Lightyears",
+			
+			"Description": "Infiltrated the Fluxbender's base of operations.",
+			
+			"Unlock Method": "Progress through Chapter 1."
+		},
+		
+		"Complete Storm the Fortress":
+		{
+			"Title": "Storm the Fortress Master",
+			
+			"Description": "Collected everything in Storm the Fortress.",
+			
+			"Unlock Method": "Collect everything in a stage."
+		},
+		
+		"Beat Central Lab":
+		{
+			"Title": "Slice and Dice",
+			
+			"Description": "Cut our way through a roboboss.",
+			
+			"Unlock Method": "Progress through Chapter 1."
+		},
+		
+		"Complete Central Lab":
+		{
+			"Title": "Central Lab Master",
+			
+			"Description": "Collected everything in Central Lab.",
+			
+			"Unlock Method": "Collect everything in a stage."
+		},
+		
+		"Beat Path to the Nasty Machine":
+		{
+			"Title": "Infraflux",
+			
+			"Description": "Found the source of Gear Cube's power.",
+			
+			"Unlock Method": "Progress through Chapter 1."
+		},
+		
+		"Complete Path to the Nasty Machine":
+		{
+			"Title": "Path to the Nasty Machine Master",
+			
+			"Description": "Collected everything in Path to the Nasty Machine.",
+			
+			"Unlock Method": "Collect everything in a stage."
+		},
+		
+		"Beat Sandshell Beach":
+		{
+			"Title": "Summer Breeze",
+			
+			"Description": "Relaxed at the beach.",
+			
+			"Unlock Method": "Progress through Chapter 1."
+		},
+		
+		"Complete Sandshell Beach":
+		{
+			"Title": "Sandshell Beach Master",
+			
+			"Description": "Collected everything in Sandshell Beach.",
+			
+			"Unlock Method": "Collect everything in a stage."
+		},
+		
+		"Beat Up The Straw":
+		{
+			"Title": "Ideal Transportation",
+			
+			"Description": "Found a way into Aquatia's core",
+			
+			"Unlock Method": "Progress through Chapter 1."
+		},
+		
+		"Complete Up The Straw":
+		{
+			"Title": "Up The Straw Master",
+			
+			"Description": "Collected everything in Up The Straw.",
+			
+			"Unlock Method": "Collect everything in a stage."
+		},
+		
+		"Beat Sacred Aquatia":
+		{
+			"Title": "Open Sesame",
+			
+			"Description": "Passed the trials of Aquatia's paradise.",
+			
+			"Unlock Method": "Progress through Chapter 1."
+		},
+		
+		"Complete Sacred Aquatia":
+		{
+			"Title": "Sacred Aquatia Master",
+			
+			"Description": "Collected everything in Sacred Aquatia.",
+			
+			"Unlock Method": "Collect everything in a stage."
+		},
+		
+		"Beat Cosmic Palace":
+		{
+			"Title": "Final Weapon",
+			
+			"Description": "Acquired the weapon to kill deities.",
+			
+			"Unlock Method": "Progress through Chapter 1."
+		},
+		
+		"Complete Cosmic Palace":
+		{
+			"Title": "Cosmic Palace Master",
+			
+			"Description": "Collected everything in Cosmic Palace.",
+			
+			"Unlock Method": "Collect everything in a stage."
+		},
+		
+		"Beat Chapter 1":
+		{
+			"Title": "Lunacy...",
+			
+			"Description": "Tables have turned.",
+			
+			"Unlock Method": "Beat the first Chapter."
+		},
+		
+		"Complete Chapter 1":
+		{
+			"Title": "Lunar Master",
+			
+			"Description": "Collected everything in Chapter 1.",
+			
+			"Unlock Method": "Collect everything in the first Chapter."
+		},
+		
+		"Master Cutter Ability":
+		{
+			"Title": "Master Cutter Ability",
+			
+			"Description": "Mastered Cutter Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Cutter Ability."
+		},
+		
+		"Master Beam Ability":
+		{
+			"Title": "Master Beam Ability",
+			
+			"Description": "Mastered Beam Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Beam Ability."
+		},
+		
+		"Master Mystic Beam Ability":
+		{
+			"Title": "Master Mystic Beam Ability",
+			
+			"Description": "Mastered Mystic Beam Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Mystic Beam Ability."
+		},
+		
+		"Master Stone Ability":
+		{
+			"Title": "Master Stone Ability",
+			
+			"Description": "Mastered Stone Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Stone Ability."
+		},
+		
+		"Master UFO Ability":
+		{
+			"Title": "Master UFO Ability",
+			
+			"Description": "Mastered UFO Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with UFO Ability."
+		},
+		
+		"Master Mirror Ability":
+		{
+			"Title": "Master Mirror Ability",
+			
+			"Description": "Mastered Mirror Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Mirror Ability."
+		},
+		
+		"Master Ninja Ability":
+		{
+			"Title": "Master Ninja Ability",
+			
+			"Description": "Mastered Ninja Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Ninja Ability."
+		},
+		
+		"Master Bomb Ability":
+		{
+			"Title": "Master Bomb Ability",
+			
+			"Description": "Mastered Bomb Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Bomb Ability."
+		},
+		
+		"Master Fire Ability":
+		{
+			"Title": "Master Fire Ability",
+			
+			"Description": "Mastered Fire Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Fire Ability."
+		},
+		
+		"Master Mystic Fire Ability":
+		{
+			"Title": "Master Mystic Fire Ability",
+			
+			"Description": "Mastered Mystic Fire Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Mystic Fire Ability."
+		},
+		
+		"Master Ice Ability":
+		{
+			"Title": "Master Ice Ability",
+			
+			"Description": "Mastered Ice Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Ice Ability."
+		},
+		
+		"Master Spark Ability":
+		{
+			"Title": "Master Spark Ability",
+			
+			"Description": "Mastered Spark Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Spark Ability."
+		},
+		
+		"Master Yoyo Ability":
+		{
+			"Title": "Master Yoyo Ability",
+			
+			"Description": "Mastered Yoyo Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Yoyo Ability."
+		},
+		
+		"Master Wheel Ability":
+		{
+			"Title": "Master Wheel Ability",
+			
+			"Description": "Mastered Wheel Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Wheel Ability."
+		},
+		
+		"Master Artist Ability":
+		{
+			"Title": "Master Artist Ability",
+			
+			"Description": "Mastered Artist Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Artist Ability."
+		},
+		
+		"Master Fighter Ability":
+		{
+			"Title": "Master Fighter Ability",
+			
+			"Description": "Mastered Fighter Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Fighter Ability."
+		},
+		
+		"Master Suplex Ability":
+		{
+			"Title": "Master Suplex Ability",
+			
+			"Description": "Mastered Suplex Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Suplex Ability."
+		},
+		
+		"Master Wing Ability":
+		{
+			"Title": "Master Wing Ability",
+			
+			"Description": "Mastered Wing Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Wing Ability."
+		},
+		
+		"Master Jet Ability":
+		{
+			"Title": "Master Jet Ability",
+			
+			"Description": "Mastered Jet Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Jet Ability."
+		},
+		
+		"Master Sword Ability":
+		{
+			"Title": "Master Sword Ability",
+			
+			"Description": "Mastered Sword Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Sword Ability."
+		},
+		
+		"Master Parasol Ability":
+		{
+			"Title": "Master Parasol Ability",
+			
+			"Description": "Mastered Parasol Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Parasol Ability."
+		},
+		
+		"Master Hammer Ability":
+		{
+			"Title": "Master Hammer Ability",
+			
+			"Description": "Mastered Hammer Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Hammer Ability."
+		},
+		
+		"Master Bell Ability":
+		{
+			"Title": "Master Bell Ability",
+			
+			"Description": "Mastered Bell Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Bell Ability."
+		},
+		
+		"Master Water Ability":
+		{
+			"Title": "Master Water Ability",
+			
+			"Description": "Mastered Water Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Water Ability."
+		},
+		
+		"Master Hi-Jump Ability":
+		{
+			"Title": "Master Hi-Jump Ability",
+			
+			"Description": "Mastered Hi-Jump Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Hi-Jump Ability."
+		},
+		
+		"Master Gear Ability":
+		{
+			"Title": "Master Gear Ability",
+			
+			"Description": "Mastered Gear Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Gear Ability."
+		}
+	},
+	
 	"Shop General":
     {
 		"Buy": "BUY",
@@ -1532,5 +2035,14 @@
 			
 			"3 - Kirby": "You may be unable to float if you enter that area. Have to rely on your jumping skills."
         }
+	},
+	
+	"Delete Save Menu":
+    {
+		"1": "Do you want to delete your save?",
+		
+		"2": "All stats, bonuses, progress... poof! Gone. Are you sure you want to delete all of that?",
+		
+		"3": "Confirm one more time that you absolutely want to delete your save."
 	}
 }

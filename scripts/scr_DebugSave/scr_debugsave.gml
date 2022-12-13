@@ -26,6 +26,8 @@ function scr_DebugSave()
 	global.hammerAbilityKills = 1000;
 	global.bellAbilityKills = 1000;
 	global.waterAbilityKills = 1000;
+	global.hiJumpAbilityKills = 1000;
+	global.gearAbilityKills = 1000;
 	global.sleepAbilityKills = 1000;
 	global.scanAbilityKills = 1000;
 	global.crashAbilityKills = 1000;
@@ -118,6 +120,7 @@ function scr_DebugSave()
 	global.bestiaryEnemiesSirKibbleUnlocked = true;
 	global.bestiaryEnemiesGordoUnlocked = true;
 	global.bestiaryEnemiesBloodGordoUnlocked = true;
+	global.bestiaryEnemiesGhostGordoUnlocked = true;
 	global.bestiaryEnemiesShotzoUnlocked = true;
 	global.bestiaryEnemiesMysticDooUnlocked = true;
 	global.bestiaryEnemiesBouncyUnlocked = true;
@@ -154,4 +157,12 @@ function scr_DebugSave()
 	global.kirbyBattleBlitzCrossoverKeycard = true;
 	global.kirbysDreamLandPlusCrossoverKeycard = true;
 	global.dreamCrafterCrossoverKeycard = true;
+	global.eternalParadiseCrossoverKeycard = true;
+	
+	global.abilitySpraysKeycard = true;
+	global.permaHalloweenKeycard = true;
+	
+	global.demoBeatGreenGreens = true;
+	global.demoBeatBattleshipHalberd = true;
+	global.demoBeatAsteroidFields = true;
 }

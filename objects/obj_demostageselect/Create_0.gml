@@ -6,6 +6,7 @@ hudOffset = -250;
 selection = "asteroidFields";
 select = false;
 goBack = false;
+doomsdayActive = ((global.demoBeatGreenGreens) and (global.demoBeatAsteroidFields))
 
 //Exit Maykr
 
@@ -34,6 +35,15 @@ button.owner = id;
 button.sprite_index = spr_Menu_MainMenu_Button_Demo_GambleMaykr;
 button.state = "mainMenu";
 button.index = "gambleMaykr";
+if (global.season == seasons.halloween)
+{
+	var button = instance_create_depth(224,48,depth,obj_Menu_Button);
+	button.owner = id;
+	button.sprite_index = spr_Menu_MainMenu_Button_Demo_Doomsday;
+	if (doomsdayActive) button.sprite_index = spr_Menu_MainMenu_Button_Demo_DoomsdayActive;
+	button.state = "mainMenu";
+	button.index = "doomsday";
+}
 var button = instance_create_depth(13,244,depth,obj_Menu_Button);
 button.owner = id;
 button.sprite_index = spr_Menu_MainMenu_Button_OptionsDemo;

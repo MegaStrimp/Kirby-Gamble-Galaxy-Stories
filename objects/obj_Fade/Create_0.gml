@@ -12,3 +12,5 @@ state1Width = 2;
 state1Height = 0;
 color = c_black;
 skipCutscene = false;
+delay = 0;
+delayMax = 0;

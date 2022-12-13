@@ -29,7 +29,7 @@ else if (spawnTimer == 0)
 	spawnedEnemy.spawner = id;
 	spawnedEnemy.spawnerRange = (spawnerRange * 2);
 	spawnedEnemy.paletteIndex = paletteIndex;
-	spawnedEnemy.accel = accel;
+	spawnedEnemy.decel = decel;
 	spawnedEnemy.movespeed = movespeed;
 	spawnedEnemy.character = character;
 	switch (character)

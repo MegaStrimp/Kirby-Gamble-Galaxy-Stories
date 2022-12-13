@@ -24,3 +24,4 @@ points = 400;
 hasXCollision = false;
 hasYCollision = false;
 followedPath = pth_Enemy_Kookler_Circle;
+path = -1;

@@ -4,9 +4,9 @@ if (((pausable) and (!global.pause)) or (!pausable))
 {
 	//Follow Owner
 	
-	if (instance_exists(owner))
+	/*if (instance_exists(owner))
 	{
 		x = owner.x;
 		y = owner.y;
-	}
+	}*/
 }

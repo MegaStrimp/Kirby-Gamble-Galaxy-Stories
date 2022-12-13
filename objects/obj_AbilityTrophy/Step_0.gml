@@ -26,6 +26,8 @@ if (!global.pause)
 	itemAnim += itemAnimSpd;
 	if (itemAnim > sprite_get_number(sprItem)) itemAnim -= sprite_get_number(sprItem);
 	
+	if (abilityTrophyTimer == -1) itemScale = lerp(itemScale,1,.1);
+	
 	//Give Ability
 	
 	imageAlpha = 1;
@@ -43,8 +45,9 @@ if (!global.pause)
 			var playerAbility = global.abilityP2;
 			var playerCharacter = global.characterP2;
 		}
-		if ((collidedPlayer.abilityTrophyTimer == -1) and (playerCharacter == playerCharacters.kirby) and (ability != playerAbility))
+		if ((abilityTrophyTimer == -1) and (collidedPlayer.abilityTrophyTimer == -1) and (playerCharacter == playerCharacters.kirby) and (ability != playerAbility))
 		{
+			abilityTrophyTimer = abilityTrophyTimerMax;
 			collidedPlayer.abilityTrophyTimer = collidedPlayer.abilityTrophyTimerMax;
 			if (ability != playerAbilities.none) collidedPlayer.blackAlphaBox = true;
 			collidedPlayer.swallowActionTimer = 0;
@@ -187,7 +190,6 @@ if (!global.pause)
 			case playerAbilities.fire:
 			sprItem = spr_AbilityStar_Fire;
 			break;
-			break;
 			
 			case playerAbilities.mysticFire:
 			sprItem = spr_AbilityStar_MysticFire;
@@ -249,6 +251,10 @@ if (!global.pause)
 			sprItem = spr_AbilityStar_Water;
 			break;
 			
+			case playerAbilities.sleep:
+			sprItem = spr_AbilityStar_Sleep;
+			break;
+			
 			default:
 			sprItem = spr_AbilityStar_Normal;
 			break;
@@ -273,6 +279,18 @@ if (!global.pause)
 			hasAura = true;
 		}
 		auraTimer = auraTimerMax;
+	}
+	
+	//Ability Trophy Timer
+	
+	if (abilityTrophyTimer > 0)
+	{
+		abilityTrophyTimer -= 1;
+	}
+	else if (abilityTrophyTimer == 0)
+	{
+		itemScale = .2;
+	    abilityTrophyTimer = -1;
 	}
 	
 	//Animation

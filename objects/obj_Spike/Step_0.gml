@@ -54,6 +54,11 @@ if (!global.pause)
 				if (objectOnHit)
 				{
 					var proj = instance_create_depth(x,y,depth,objectOnHitObj);
+					if (isBoss)
+					{
+						proj.isBoss = isBoss;
+						proj.owner = owner;
+					}
 					if (objectOnHitDmg != -1) proj.dmg = objectOnHitDmg;
 					if (objectOnHitObj == obj_Projectile_ExplosionMask)
 					{
@@ -68,6 +73,11 @@ if (!global.pause)
 							proj.enemy = false;
 							proj.hurtsEnemy = true;
 							proj.hurtsPlayer = false;
+						}
+						if (object_index == obj_Projectile_DoomsdayBomb)
+						{
+							proj.explosionIndex = 1;
+							proj.showHitbox = false;
 						}
 						if (object_index == obj_Projectile_Bomb)
 						{

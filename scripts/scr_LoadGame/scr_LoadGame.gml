@@ -38,6 +38,8 @@ function scr_LoadGame(argument0)
 	global.hammerAbilityKills = ini_read_real("stats","hammerAbilityKills",0);
 	global.bellAbilityKills = ini_read_real("stats","bellAbilityKills",0);
 	global.waterAbilityKills = ini_read_real("stats","waterAbilityKills",0);
+	global.hiJumpAbilityKills = ini_read_real("stats","hiJumpAbilityKills",0);
+	global.gearAbilityKills = ini_read_real("stats","gearAbilityKills",0);
 	global.sleepAbilityKills = ini_read_real("stats","sleepAbilityKills",0);
 	global.scanAbilityKills = ini_read_real("stats","scanAbilityKills",0);
 	global.crashAbilityKills = ini_read_real("stats","crashAbilityKills",0);
@@ -162,6 +164,7 @@ function scr_LoadGame(argument0)
 	global.bestiaryEnemiesSirKibbleUnlocked = ini_read_real("unlocks","bestiaryEnemiesSirKibbleUnlocked",false);
 	global.bestiaryEnemiesGordoUnlocked = ini_read_real("unlocks","bestiaryEnemiesGordoUnlocked",false);
 	global.bestiaryEnemiesBloodGordoUnlocked = ini_read_real("unlocks","bestiaryEnemiesBloodGordoUnlocked",false);
+	global.bestiaryEnemiesGhostGordoUnlocked = ini_read_real("unlocks","bestiaryEnemiesGhostGordoUnlocked",false);
 	global.bestiaryEnemiesShotzoUnlocked = ini_read_real("unlocks","bestiaryEnemiesShotzoUnlocked",false);
 	global.bestiaryEnemiesMysticDooUnlocked = ini_read_real("unlocks","bestiaryEnemiesMysticDooUnlocked",false);
 	global.bestiaryEnemiesBouncyUnlocked = ini_read_real("unlocks","bestiaryEnemiesBouncyUnlocked",false);
@@ -356,6 +359,8 @@ function scr_LoadGame(argument0)
 	global.sparkBrightPluggUpgradeEquipped = ini_read_real("playerCustomization","sparkBrightPluggUpgradeEquipped",false);
 	global.waterEggSoilUpgradeEquipped = ini_read_real("playerCustomization","waterEggSoilUpgradeEquipped",false);
 	
+	global.cheatColoredAbilitiesEquipped = ini_read_real("cheats","cheatColoredAbilitiesEquipped",false);
+	
 	global.exTut_Treasure = ini_read_real("extraTutorials","exTut_Treasure",false);
 	global.exTut_AntiFloat = ini_read_real("extraTutorials","exTut_AntiFloat",false);
 	
@@ -364,6 +369,10 @@ function scr_LoadGame(argument0)
 	global.kirbyBattleBlitzCrossoverKeycard = ini_read_real("doNotEdit","KBB0",false);
 	global.kirbysDreamLandPlusCrossoverKeycard = ini_read_real("doNotEdit","KDLP0",false);
 	global.dreamCrafterCrossoverKeycard = ini_read_real("doNotEdit","DC0",false);
+	global.eternalParadiseCrossoverKeycard = ini_read_real("doNotEdit","EP0",false);
+	
+	global.abilitySpraysKeycard = ini_read_real("doNotEdit","AS0",false);
+	global.permaHalloweenKeycard = ini_read_real("doNotEdit","PH0",false);
 	
 	ini_close();
 	

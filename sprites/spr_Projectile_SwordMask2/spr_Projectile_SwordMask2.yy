@@ -30,8 +30,8 @@
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a4214e6e-69ae-40fe-b54e-1fe2f377a169",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0d1d1fe4-655d-4a79-be22-00a4b3af1d29",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"77c2f76e-02be-4c3c-a3a1-234e512c7ef9",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"02701afb-4903-466c-ac70-642a4141917e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f834704b-e6f5-4743-ad41-51777ab6b703",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"19bc30bf-1389-4e77-94d5-53d1489d0b24",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -50,8 +50,8 @@
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"b1355433-f857-4ee5-a8d0-3d514759e835","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a4214e6e-69ae-40fe-b54e-1fe2f377a169","path":"sprites/spr_Projectile_SwordMask2/spr_Projectile_SwordMask2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a2efa3ee-a349-4b56-874d-4eaf8ecca4f3","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0d1d1fe4-655d-4a79-be22-00a4b3af1d29","path":"sprites/spr_Projectile_SwordMask2/spr_Projectile_SwordMask2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"bd261602-05ad-46d3-b1b3-90a039c6801c","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"77c2f76e-02be-4c3c-a3a1-234e512c7ef9","path":"sprites/spr_Projectile_SwordMask2/spr_Projectile_SwordMask2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"88a63594-b052-42d5-897a-3bd4c43ba329","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"02701afb-4903-466c-ac70-642a4141917e","path":"sprites/spr_Projectile_SwordMask2/spr_Projectile_SwordMask2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9751b61d-46f6-4294-aaac-ddb710486b58","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f834704b-e6f5-4743-ad41-51777ab6b703","path":"sprites/spr_Projectile_SwordMask2/spr_Projectile_SwordMask2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0e30a706-5ce2-46ca-b1dc-721bfc28546c","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"19bc30bf-1389-4e77-94d5-53d1489d0b24","path":"sprites/spr_Projectile_SwordMask2/spr_Projectile_SwordMask2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
@@ -64,8 +64,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 4,
-    "yorigin": 20,
+    "xorigin": 6,
+    "yorigin": 22,
     "eventToFunction": {},
     "eventStubScript": null,
   },
@@ -74,7 +74,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sword Mask",
-    "path": "folders/Sprites/Projectiles/Sword Mask.yy",
+    "name": "Sword",
+    "path": "folders/Sprites/Projectiles/Sword.yy",
   },
 }

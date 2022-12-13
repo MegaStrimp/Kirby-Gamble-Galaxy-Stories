@@ -105,6 +105,77 @@ switch (state)
 	draw_sprite_ext(sprite_index,selected,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
 	break;
 	
+	case "gallery":
+	if (instance_exists(obj_GalleryMenu))
+	{
+		if (((index == "vol1") or (index == "vol2") or (index == "vol3") or (index == "volS")) and (obj_GalleryMenu.page == 0))
+		{
+			var selected = 0;
+			var page = 0;
+			if (obj_GalleryMenu.page == 0)
+			{
+				if (obj_GalleryMenu.selection == index) selected = 1;
+			}
+			else
+			{
+				page = 1;
+			}
+			
+			xOffset = lerp(xOffset,(100 * !selected) + (200 * page),.2);
+			draw_sprite_ext(sprite_index,image_index,x + xOffset,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+		}
+		else if (obj_GalleryMenu.page == 1)
+		{
+			if (index == "arrowPrev")
+			{
+				if (obj_GalleryMenu.artworkSelection != 0) draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+			}
+			else if (index == "arrowNext")
+			{
+				if (obj_GalleryMenu.artworkSelection < obj_GalleryMenu.artworkMax - 1) draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+			}
+		}
+	}
+	break;
+	
+	case "trophies":
+	if (instance_exists(owner))
+	{
+		if (index == "arrowPrev")
+		{
+			if (owner.page != 0) draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+		}
+		else if (index == "arrowNext")
+		{
+			if (owner.page < owner.pageMax) draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+		}
+	}
+	break;
+	
+	case "keycardMenu":
+	if (instance_exists(owner))
+	{
+		if (index == "upload")
+		{
+			var selected = 0;
+			if (owner.selection == index) selected = 1;
+			
+			draw_sprite_ext(sprite_index,selected,x - owner.xx,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+		}
+		else
+		{
+			if (index == "arrowPrev")
+			{
+				if (owner.page != 0) draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+			}
+			else if (index == "arrowNext")
+			{
+				if (owner.page < owner.pageMax) draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+			}
+		}
+	}
+	break;
+	
 	case "upgrades":
 	draw_sprite(sprStar,1,x,y);
 	var selected = 0;

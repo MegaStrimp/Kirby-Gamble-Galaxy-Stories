@@ -21,3 +21,5 @@ rotateSpd = 0;
 paletteIndex = -1;
 squadType = -1;
 cannedFood = false;
+amongUs = false;
+fishTaco = false;
