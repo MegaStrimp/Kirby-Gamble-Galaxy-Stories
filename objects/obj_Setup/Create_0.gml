@@ -515,6 +515,10 @@ enum enemyAttacks
 	wizzkid_jump,
 	wizzkid_laser,
 	
+	grandwheelie_projectile,
+	grandwheelie_slam,
+	grandwheelie_tornado,
+	
 	whispyWoods_airpuff,
 	whispyWoods_spike,
 	whispyWoods_throwObject,

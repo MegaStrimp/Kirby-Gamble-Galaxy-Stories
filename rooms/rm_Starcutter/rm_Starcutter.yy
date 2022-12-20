@@ -19,6 +19,7 @@
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Player","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3C2D1402","properties":[],"isDnd":false,"objectId":{"name":"obj_Player","path":"objects/obj_Player/obj_Player.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":642.0,"y":372.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7254A1A6","properties":[],"isDnd":false,"objectId":{"name":"obj_CollectibleChest","path":"objects/obj_CollectibleChest/obj_CollectibleChest.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":552.0,"y":354.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_828C674","properties":[],"isDnd":false,"objectId":{"name":"obj_MiniBoss_GrandWheelie","path":"objects/obj_MiniBoss_GrandWheelie/obj_MiniBoss_GrandWheelie.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":882.0,"y":378.0,},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":6,"gridY":6,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Enemies","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_617E2BDA","properties":[],"isDnd":false,"objectId":{"name":"obj_LovelyBody","path":"objects/obj_LovelyBody/obj_LovelyBody.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":240.0,"y":360.0,},
@@ -145,6 +146,7 @@
     {"name":"inst_15B1CB08","path":"rooms/rm_Starcutter/rm_Starcutter.yy",},
     {"name":"inst_617E2BDA","path":"rooms/rm_Starcutter/rm_Starcutter.yy",},
     {"name":"inst_7254A1A6","path":"rooms/rm_Starcutter/rm_Starcutter.yy",},
+    {"name":"inst_828C674","path":"rooms/rm_Starcutter/rm_Starcutter.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
