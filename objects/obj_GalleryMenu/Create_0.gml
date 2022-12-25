@@ -32,6 +32,7 @@ button.image_index = 0;
 button.state = "gallery";
 button.index = "vol1";
 //button.xOffset = 100;
+/*
 var button = instance_create_depth(480,97,depth - 1,obj_Menu_Button);
 button.owner = id;
 button.sprite_index = spr_Menu_Gallery_Volumes;
@@ -46,6 +47,7 @@ button.image_index = 2;
 button.state = "gallery";
 button.index = "vol3";
 button.xOffset = 100;
+*/
 var button = instance_create_depth(480,215,depth - 1,obj_Menu_Button);
 button.owner = id;
 button.sprite_index = spr_Menu_Gallery_Volumes;
@@ -53,6 +55,13 @@ button.image_index = 3;
 button.state = "gallery";
 button.index = "volS";
 button.xOffset = 100;
+
+var button = instance_create_depth(420,210,depth - 1,obj_Menu_Button);
+button.owner = id;
+button.sprite_index = spr_Menu_Gallery_Download;
+button.image_index = 0;
+button.state = "gallery";
+button.index = "download";
 
 var button = instance_create_depth(110,140,depth - 1,obj_Menu_Button);
 button.owner = id;

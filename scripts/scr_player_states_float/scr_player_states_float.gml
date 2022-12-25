@@ -10,8 +10,28 @@ function scr_Player_States_Float()
 		fallRoll = false;
 		run = false;
 		
-		var playerCharacter = global.characterP1;
-		if (player == 1) playerCharacter = global.characterP2;
+		switch (player)
+		{
+			case 0:
+			var playerAbility = global.abilityP1;
+			var playerCharacter = global.characterP1;
+			break;
+			
+			case 1:
+			var playerAbility = global.abilityP2;
+			var playerCharacter = global.characterP2;
+			break;
+			
+			case 2:
+			var playerAbility = global.abilityP3;
+			var playerCharacter = global.characterP3;
+			break;
+			
+			case 3:
+			var playerAbility = global.abilityP4;
+			var playerCharacter = global.characterP4;
+			break;
+		}
 		
 		//Movement
 		

@@ -18,17 +18,32 @@ function scr_Enemy_HurtsPlayer(argument0)
 		{
 			//Variables
 			
-			//var playerHp = global.healthP1;
-			//if (collidedPlayer.player == 1) playerHp = global.healthP2;
-			
-			var playerHp = global.healthP1;
-			if (collidedPlayer.player == 1) playerHp = global.healthP2;
-			
-			var playerCharacter = global.characterP1;
-			if (collidedPlayer.player == 1) playerCharacter = global.characterP2;
-			
-			var playerAbility = global.abilityP1;
-			if (collidedPlayer.player == 1) playerAbility = global.abilityP2;
+			switch (collidedPlayer.player)
+			{
+				case 0:
+				var playerHp = global.healthP1;
+				var playerAbility = global.abilityP1;
+				var playerCharacter = global.characterP1;
+				break;
+				
+				case 1:
+				var playerHp = global.healthP2;
+				var playerAbility = global.abilityP2;
+				var playerCharacter = global.characterP2;
+				break;
+				
+				case 2:
+				var playerHp = global.healthP3;
+				var playerAbility = global.abilityP3;
+				var playerCharacter = global.characterP3;
+				break;
+				
+				case 3:
+				var playerHp = global.healthP4;
+				var playerAbility = global.abilityP4;
+				var playerCharacter = global.characterP4;
+				break;
+			}
 			
 			//Main
 			
@@ -53,49 +68,101 @@ function scr_Enemy_HurtsPlayer(argument0)
 			collidedPlayer.invincibleFlashTimer = collidedPlayer.invincibleFlashTimerMax;
 			var oldHealthP1 = global.healthP1;
 			var oldHealthP2 = global.healthP2;
-			if (collidedPlayer.player == 0)
+			var oldHealthP3 = global.healthP3;
+			var oldHealthP4 = global.healthP4;
+			
+			switch (collidedPlayer.player)
 			{
-				//global.healthP1 -= dmg;	
+				case 0:
 				global.healP1Mod = global.healthP1;			
 				global.healthP1 -= dmg;
-				if(global.healthP1 <= 0 && oldHealthP1 > global.undershotValP1){ // Undershot check, will need to add a check for if attack is a "finishing blow", in which case it will ignore undershot
+				if (global.healthP1 <= 0 && oldHealthP1 > global.undershotValP1){ // Undershot check, will need to add a check for if attack is a "finishing blow", in which case it will ignore undershot
 					global.healthP1 = global.undershotValP1;
 				}
-			}
-			else
-			{
-				//global.healthP2 -= dmg;
-				global.healP2Mod = global.healthP2;
+				
+				if (global.healthP1 <= (.2 * global.healthP1Max))
+				{
+					if (audio_is_playing(snd_LowHp)) audio_stop_sound(snd_LowHp);
+					if(oldHealthP1 > (0.2*global.healthP1Max)){
+						audio_play_sound(snd_LowHp,0,false);
+					}
+					if (instance_exists(obj_Hud))
+					{
+						obj_Hud.flashP1Timer = obj_Hud.flashTimerMax;
+						obj_Hud.flashStopP1Timer = obj_Hud.flashStopTimerMax;
+					}
+				}
+				break;
+				
+				case 1:
+				global.healP2Mod = global.healthP2;			
 				global.healthP2 -= dmg;
-				if(global.healthP2 <= 0 && oldHealthP2 > global.undershotValP2){
+				if (global.healthP2 <= 0 && oldHealthP2 > global.undershotValP2){ // Undershot check, will need to add a check for if attack is a "finishing blow", in which case it will ignore undershot
 					global.healthP2 = global.undershotValP2;
 				}
-			}
-			if ((collidedPlayer.player == 0) and (global.healthP1 <= (0.2*global.healthP1Max)))
-			{
-				if (audio_is_playing(snd_LowHp)) audio_stop_sound(snd_LowHp);
-				if(oldHealthP1 > (0.2*global.healthP1Max)){
-					audio_play_sound(snd_LowHp,0,false);
-				}
-				if (instance_exists(obj_Hud))
+				
+				if (global.healthP2 <= (.2 * global.healthP2Max))
 				{
-					obj_Hud.flashP1Timer = obj_Hud.flashTimerMax;
-					obj_Hud.flashStopP1Timer = obj_Hud.flashStopTimerMax;
+					if (audio_is_playing(snd_LowHp)) audio_stop_sound(snd_LowHp);
+					if(oldHealthP2 > (0.2*global.healthP2Max)){
+						audio_play_sound(snd_LowHp,0,false);
+					}
+					if (instance_exists(obj_Hud))
+					{
+						obj_Hud.flashP2Timer = obj_Hud.flashTimerMax;
+						obj_Hud.flashStopP2Timer = obj_Hud.flashStopTimerMax;
+					}
 				}
-			}
-			if ((collidedPlayer.player == 1) and (global.healthP2 <= (0.2*global.healthP2Max)))
-			{
-				if (audio_is_playing(snd_LowHp)) audio_stop_sound(snd_LowHp);
-				if(oldHealthP2 > (0.2*global.healthP2Max)){
-					audio_play_sound(snd_LowHp,0,false);
+				break;
+				
+				case 2:
+				global.healP3Mod = global.healthP3;			
+				global.healthP3 -= dmg;
+				if (global.healthP3 <= 0 && oldHealthP3 > global.undershotValP3){ // Undershot check, will need to add a check for if attack is a "finishing blow", in which case it will ignore undershot
+					global.healthP3 = global.undershotValP3;
 				}
-				if (instance_exists(obj_Hud))
+				
+				if (global.healthP3 <= (.2 * global.healthP3Max))
 				{
-					obj_Hud.flashP2Timer = obj_Hud.flashTimerMax;
-					obj_Hud.flashStopP2Timer = obj_Hud.flashStopTimerMax;
+					if (audio_is_playing(snd_LowHp)) audio_stop_sound(snd_LowHp);
+					if(oldHealthP3 > (0.2*global.healthP3Max)){
+						audio_play_sound(snd_LowHp,0,false);
+					}
+					if (instance_exists(obj_Hud))
+					{
+						obj_Hud.flashP3Timer = obj_Hud.flashTimerMax;
+						obj_Hud.flashStopP3Timer = obj_Hud.flashStopTimerMax;
+					}
 				}
+				break;
+				
+				case 3:
+				global.healP4Mod = global.healthP4;			
+				global.healthP4 -= dmg;
+				if (global.healthP4 <= 0 && oldHealthP4 > global.undershotValP4){ // Undershot check, will need to add a check for if attack is a "finishing blow", in which case it will ignore undershot
+					global.healthP4 = global.undershotValP4;
+				}
+				
+				if (global.healthP4 <= (.2 * global.healthP4Max))
+				{
+					if (audio_is_playing(snd_LowHp)) audio_stop_sound(snd_LowHp);
+					if(oldHealthP4 > (0.2*global.healthP4Max)){
+						audio_play_sound(snd_LowHp,0,false);
+					}
+					if (instance_exists(obj_Hud))
+					{
+						obj_Hud.flashP4Timer = obj_Hud.flashTimerMax;
+						obj_Hud.flashStopP4Timer = obj_Hud.flashStopTimerMax;
+					}
+				}
+				break;
 			}
-			if ((dmg > 0) and (((collidedPlayer.player == 0) and (global.abilityP1 != playerAbilities.none) and (global.healthP1 > 0) and ((object_index == obj_Spike) or (global.healthP1 % 2 != 0))) or ((collidedPlayer.player == 1) and (global.abilityP2 != playerAbilities.none) and (global.healthP2 > 0) and ((object_index == obj_Spike) or (global.healthP2 % 2 != 0)))))
+			
+			if ((dmg > 0) and
+			(((collidedPlayer.player == 0) and (global.abilityP1 != playerAbilities.none) and (global.healthP1 > 0) and ((object_index == obj_Spike) or (global.healthP1 % 2 != 0)))
+			or ((collidedPlayer.player == 1) and (global.abilityP2 != playerAbilities.none) and (global.healthP2 > 0) and ((object_index == obj_Spike) or (global.healthP2 % 2 != 0)))
+			or ((collidedPlayer.player == 2) and (global.abilityP3 != playerAbilities.none) and (global.healthP3 > 0) and ((object_index == obj_Spike) or (global.healthP3 % 2 != 0)))
+			or ((collidedPlayer.player == 3) and (global.abilityP4 != playerAbilities.none) and (global.healthP4 > 0) and ((object_index == obj_Spike) or (global.healthP4 % 2 != 0)))))
 			{
 			    if (instance_exists(obj_AbilityDropStar))
 				{
@@ -219,13 +286,23 @@ function scr_Enemy_HurtsPlayer(argument0)
 					abilityDropStar.sprite_index = spr_AbilityStar_Normal;
 					break;
 				}
-				if (collidedPlayer.player == 0)
+				switch (collidedPlayer.player)
 				{
+					case 0:
 					global.abilityP1 = playerAbilities.none;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					global.abilityP2 = playerAbilities.none;
+					break;
+					
+					case 2:
+					global.abilityP3 = playerAbilities.none;
+					break;
+					
+					case 3:
+					global.abilityP4 = playerAbilities.none;
+					break;
 				}
 			}
 			

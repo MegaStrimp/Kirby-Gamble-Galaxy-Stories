@@ -6,9 +6,12 @@ hudOffset = -250;
 page = 0;
 pageMax = 1;
 selection = "upload";
+//keycardSelection = 0;
 select = false;
 goBack = false;
 xx = 0;
+
+//scr_Keycards();
 
 var button = instance_create_depth(0,270,depth - 1,obj_Menu_Button);
 button.owner = id;

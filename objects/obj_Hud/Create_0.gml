@@ -4,8 +4,12 @@
 
 hudHpP1 = global.healthP1;
 hudHpP2 = global.healthP2;
+hudHpP3 = global.healthP3;
+hudHpP4 = global.healthP4;
 flashP1 = false;
 flashP2 = false;
+flashP3 = false;
+flashP4 = false;
 starsPosX = camera_get_view_x(gameView) + 1;
 starsPosY = camera_get_view_y(gameView) + 26;
 halberdEscapeTimer = 9999;
@@ -32,12 +36,18 @@ bossDeathColor = c_white;
 
 hudHpP1Timer = -1;
 hudHpP2Timer = -1;
+hudHpP3Timer = -1;
+hudHpP4Timer = -1;
 hudHpTimerMax = 4;
 flashP1Timer = -1;
 flashP2Timer = -1;
+flashP3Timer = -1;
+flashP4Timer = -1;
 flashTimerMax = 2;
 flashStopP1Timer = -1;
 flashStopP2Timer = -1;
+flashStopP3Timer = -1;
+flashStopP4Timer = -1;
 flashStopTimerMax = 35;
 notifTimer = -1;
 mixTimer = -1;

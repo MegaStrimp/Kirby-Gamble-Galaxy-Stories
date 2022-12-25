@@ -27,17 +27,24 @@ if (!global.pause)
 		if (audio_is_playing(snd_FoodItem)) audio_stop_sound(snd_FoodItem);
 		audio_play_sound(snd_FoodItem,0,false);
 		var collidedPlayer = instance_place(x,y,obj_Player);
-		if (collidedPlayer.player == 0)
+		
+		switch (collidedPlayer.player)
 		{
-			//global.healP1Mod = global.healthP1;
-			global.healthP1 += round(global.healthP1Max*0.5);
-			//global.healP1Diff += global.healthP1Max*0.5;
-		}
-		else
-		{
-			//global.healP2Mod = global.healthP2;
-			global.healthP2 += round(global.healthP2Max*0.5);
-			//global.healP2Diff += global.healthP2Max*0.5;
+			case 0:
+			global.healthP1 += round(global.healthP1Max * .5);
+			break;
+			
+			case 1:
+			global.healthP2 += round(global.healthP2Max * .5);
+			break;
+			
+			case 2:
+			global.healthP3 += round(global.healthP3Max * .5);
+			break;
+			
+			case 3:
+			global.healthP4 += round(global.healthP4Max * .5);
+			break;
 		}
 		global.points += points;
 		instance_destroy();

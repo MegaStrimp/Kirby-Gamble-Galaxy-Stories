@@ -2,6 +2,7 @@
 
 switch (state)
 {
+	#region Save Slot
 	case "saveSlot":
 	var selected = 0;
 	var fileColor = -1;
@@ -41,7 +42,9 @@ switch (state)
 		draw_sprite(spr_Menu_MainMenu_Badge_Empty,0,4 + 22,4 + 48);
 	}
 	break;
+	#endregion
 	
+	#region Back
 	case "back":
 	if (canChangeImageIndex)
 	{
@@ -54,13 +57,17 @@ switch (state)
 		draw_self();
 	}
 	break;
+	#endregion
 	
+	#region Main Menu
 	case "mainMenu":
 	var selected = 0;
 	if ((instance_exists(owner)) and (owner.selection == index)) selected = 1;
 	draw_sprite(sprite_index,selected,x,y);
 	break;
+	#endregion
 	
+	#region Options
 	case "options":
 	switch (index)
 	{
@@ -82,19 +89,25 @@ switch (state)
 	}
 	draw_sprite(sprite_index,selected,x,y);
 	break;
+	#endregion
 	
+	#region Delete Save
 	case "deleteSave":
 	var selected = 0;
 	if ((instance_exists(obj_DeleteSave)) and (obj_DeleteSave.selection == number)) selected = 1;
 	draw_sprite(sprite_index,selected,x,y);
 	break;
+	#endregion
 	
+	#region Collection
 	case "collection":
 	var selected = 0;
 	if ((instance_exists(obj_CollectionMenu)) and (obj_CollectionMenu.selection == index)) selected = 1;
 	draw_sprite(sprite_index,selected,x,y);
 	break;
+	#endregion
 	
+	#region Cheats
 	case "cheats":
 	var selected = 0;
 	if (instance_exists(obj_CheatsMenu))
@@ -104,7 +117,9 @@ switch (state)
 	}
 	draw_sprite_ext(sprite_index,selected,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
 	break;
+	#endregion
 	
+	#region Gallery
 	case "gallery":
 	if (instance_exists(obj_GalleryMenu))
 	{
@@ -126,7 +141,37 @@ switch (state)
 		}
 		else if (obj_GalleryMenu.page == 1)
 		{
-			if (index == "arrowPrev")
+			if (index == "download")
+			{
+				image_index = 0;
+				with (obj_GalleryMenu)
+				{
+					if (selection == "download")
+					{
+						if (artworkArray[# artworkSelection,3])
+						{
+							other.image_index = 3;
+						}
+						else
+						{
+							other.image_index = 1;
+						}
+					}
+					else
+					{
+						if (artworkArray[# artworkSelection,3])
+						{
+							other.image_index = 2;
+						}
+						else
+						{
+							other.image_index = 0;
+						}
+					}
+				}
+				draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+			}
+			else if (index == "arrowPrev")
 			{
 				if (obj_GalleryMenu.artworkSelection != 0) draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
 			}
@@ -137,7 +182,9 @@ switch (state)
 		}
 	}
 	break;
+	#endregion
 	
+	#region Trophies
 	case "trophies":
 	if (instance_exists(owner))
 	{
@@ -151,7 +198,9 @@ switch (state)
 		}
 	}
 	break;
+	#endregion
 	
+	#region Keycard Menu
 	case "keycardMenu":
 	if (instance_exists(owner))
 	{
@@ -175,7 +224,9 @@ switch (state)
 		}
 	}
 	break;
+	#endregion
 	
+	#region Upgrades
 	case "upgrades":
 	draw_sprite(sprStar,1,x,y);
 	var selected = 0;
@@ -247,7 +298,9 @@ switch (state)
 	draw_sprite(sprItem,0,x,y);
 	draw_sprite(active,0,x + 20,y + 20);
 	break;
+	#endregion
 	
+	#region Maykr Title
 	case "maykrTitle":
 	if (obj_Maykr_Title.windowIndex == -1)
 	{
@@ -277,8 +330,11 @@ switch (state)
 		}
 	}
 	break;
+	#endregion
 	
+	#region Default
 	default:
 	draw_self();
 	break;
+	#endregion
 }

@@ -6,8 +6,24 @@ function scr_Player_Collision(argument0)
 	
 	var playerMech = argument0;
 	
-	var playerAbility = global.abilityP1;
-	if (player == 1) playerAbility = global.abilityP2;
+	switch (player)
+	{
+		case 0:
+		var playerAbility = global.abilityP1;
+		break;
+		
+		case 1:
+		var playerAbility = global.abilityP2;
+		break;
+		
+		case 2:
+		var playerAbility = global.abilityP3;
+		break;
+		
+		case 3:
+		var playerAbility = global.abilityP4;
+		break;
+	}
 	//hspCollision = 0;
 	//vspCollision = 0;
 	
@@ -204,13 +220,23 @@ function scr_Player_Collision(argument0)
 		{
 			if (collidingWall.hp > 0)
 			{
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					global.healthP1 = 0;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					global.healthP2 = 0;
+					break;
+					
+					case 2:
+					global.healthP3 = 0;
+					break;
+					
+					case 3:
+					global.healthP4 = 0;
+					break;
 				}
 			}
 		}

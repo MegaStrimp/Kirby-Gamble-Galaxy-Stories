@@ -832,12 +832,20 @@ global.hpMax = 5;
 //new healthbar system
 global.healthP1Max = 45;
 global.healthP2Max = 45;
+global.healthP3Max = 45;
+global.healthP4Max = 45;
 global.healthP1 = global.healthP1Max;
 global.healthP2 = global.healthP2Max;
+global.healthP3 = global.healthP3Max;
+global.healthP4 = global.healthP4Max;
 global.undershotValP1 = 5; // if the player's health is higher than this value when they take a hit and the attack is not marked as a "finishing blow", the player will survive with this much health.
 global.undershotValP2 = 5;
+global.undershotValP3 = 5;
+global.undershotValP4 = 5;
 global.healP1Mod = global.healthP1;
 global.healP2Mod = global.healthP2;
+global.healP3Mod = global.healthP3;
+global.healP4Mod = global.healthP4;
 //global.healP1End = global.healthP1;
 //global.healP2End = global.healthP2;
 ///////////////////////////
@@ -847,10 +855,16 @@ global.skylandsHpP2 = global.skylandsHpMax;
 global.skylandsLives = 2;
 global.sprayPaintP1 = spr_Kirby_Normal_Palette_FriendlyPink;
 global.sprayPaintP2 = spr_Kirby_Normal_Palette_Yellow;
+global.sprayPaintP3 = spr_Kirby_Normal_Palette_Red;
+global.sprayPaintP4 = spr_Kirby_Normal_Palette_Green;
 global.abilityP1 = playerAbilities.none;
 global.abilityP2 = playerAbilities.none;
+global.abilityP3 = playerAbilities.none;
+global.abilityP4 = playerAbilities.none;
 global.familiarP1 = familiars.gamble;
 global.familiarP2 = familiars.gamble;
+global.familiarP3 = familiars.gamble;
+global.familiarP4 = familiars.gamble;
 global.roomPrevious = rm_Setup;
 global.roomNext = rm_Starcutter;
 global.roomCheckpoint = rm_Setup;
@@ -868,7 +882,8 @@ global.tutorial = false;
 global.shaders = false;
 if (shader_is_compiled(shd_pal_swapper)) global.shaders = true;
 global.chapterIntro = "1_1";
-global.hasCoop = false;
+global.hasCoop = 0;
+global.hasCoop = 3;
 global.muted = false;
 global.healthbarMarkedEnemy = -1;
 global.musicPlaying = -1;
@@ -939,6 +954,8 @@ global.cosmicBladeAbilityKillsTarget = 10;
 #region Controller Setup
 global.playerGamepad[0] = -1;
 global.playerGamepad[1] = -1;
+global.playerGamepad[2] = -1;
+global.playerGamepad[3] = -1;
 
 for (var i = 0; i < gamepad_get_device_count(); i++)
 {
@@ -956,9 +973,23 @@ for (var i = 0; i < gamepad_get_device_count(); i++)
 	        global.playerGamepad[1] = i;
 	    }
 	}
+	else if (global.playerGamepad[2] == -1)
+	{
+		if gamepad_is_connected(i)
+	    {
+	        global.playerGamepad[2] = i;
+	    }
+	}
+	else if (global.playerGamepad[3] == -1)
+	{
+		if gamepad_is_connected(i)
+	    {
+	        global.playerGamepad[3] = i;
+	    }
+	}
 }
 
-for (var i = 0; i < 2; i++)
+for (var i = 0; i < 4; i++)
 {
     global.stickLeftPressed[i] = false;
     global.stickRightPressed[i] = false;
@@ -1001,10 +1032,18 @@ global.invinCandyTimerP1 = -1;
 global.invinCandyTimerP1Max = 1800;
 global.invinCandyTimerP2 = -1;
 global.invinCandyTimerP2Max = 1800;
+global.invinCandyTimerP3 = -1;
+global.invinCandyTimerP3Max = 1800;
+global.invinCandyTimerP4 = -1;
+global.invinCandyTimerP4Max = 1800;
 global.mintLeafTimerP1 = -1;
 global.mintLeafTimerP1Max = 900;
 global.mintLeafTimerP2 = -1;
 global.mintLeafTimerP2Max = 900;
+global.mintLeafTimerP3 = -1;
+global.mintLeafTimerP3Max = 900;
+global.mintLeafTimerP4 = -1;
+global.mintLeafTimerP4Max = 900;
 
 controllerPressedResetTimer = -1;
 #endregion
@@ -2140,6 +2179,8 @@ i += 1;
 subtitles[i] = "What was he cooking?";
 i += 1;
 subtitles[i] = "True";
+i += 1;
+subtitles[i] = "Like a Subsandwich on a hand dish!";
 
 selectedSubtitle = irandom_range(0,array_length(subtitles) - 1);
 selectedSubtitle = subtitles[selectedSubtitle];

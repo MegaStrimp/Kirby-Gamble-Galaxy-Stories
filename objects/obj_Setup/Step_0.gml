@@ -100,7 +100,7 @@ if (global.gameTimeMinutes >= 60)
 #region Controllers
 var controllerSensitivity = .9;
 
-for (var i = 0; i < 2; i++)
+for (var i = 0; i < 4; i++)
 {
     if (!global.stickLeftHeld[i] && gamepad_axis_value(global.playerGamepad[i],gp_axislh) <= -controllerSensitivity)
     {
@@ -169,7 +169,7 @@ if (controllerPressedResetTimer > 0)
 }
 else if (controllerPressedResetTimer == 0)
 {
-	for (var i = 0; i < 2; i++)
+	for (var i = 0; i < 4; i++)
 	{
 	    global.stickLeftPressed[i] = false;
 	    global.stickRightPressed[i] = false;

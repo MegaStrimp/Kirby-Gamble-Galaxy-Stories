@@ -52,17 +52,23 @@ if (!global.pause)
 		}
 		
 		var collidedPlayer = instance_place(x,y,obj_Player);
-		if (collidedPlayer.player == 0)
+		switch (collidedPlayer.player)
 		{
-			//global.healP1Mod = global.healthP1;
-			global.healthP1 += round(global.healthP1Max*0.1);
-			//global.healP1Diff += global.healthP1Max*0.1;
-		}
-		else
-		{
-			//global.healP2Mod = global.healthP2;
-			global.healthP2 += round(global.healthP2Max*0.1);
-			//global.healP2Diff += global.healthP2Max*0.1;
+			case 0:
+			global.healthP1 += round(global.healthP1Max * .1);
+			break;
+			
+			case 1:
+			global.healthP2 += round(global.healthP2Max * .1);
+			break;
+			
+			case 2:
+			global.healthP3 += round(global.healthP3Max * .1);
+			break;
+			
+			case 3:
+			global.healthP4 += round(global.healthP4Max * .1);
+			break;
 		}
 		global.points += points;
 		instance_destroy();

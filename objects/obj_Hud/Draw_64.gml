@@ -9,11 +9,8 @@ var characterP2 = global.characterP2;
 var paletteP1 = global.sprayPaintP1;
 var paletteP2 = global.sprayPaintP2;
 var musicIntroX = 326;
-var musicIntroY = 215 - (45 * global.hasCoop);
+var musicIntroY = 215 - (48 * (global.hasCoop >= 2));
 hasTreasure = global.inStage;
-
-//if (global.isHelperP1) paletteP1 = spr_Hud_Palette_Helper;
-//if (global.isHelperP2) paletteP2 = spr_Hud_Palette_Helper;
 
 var hbackground = spr_Hud_Healthbar_Background_Kirby;
 
@@ -101,6 +98,8 @@ if (global.halberdEscape)
 	{
 		global.healthP1 = 0;
 		global.healthP2 = 0;
+		global.healthP3 = 0;
+		global.healthP4 = 0;
 	}
 	
 	draw_sprite_ext(spr_Hud_TimerNumbers,floor(halberdEscapeTimer / 1000),timerX + 4,timerY + 2,1,1,image_angle,image_blend,drawAlpha);
@@ -468,7 +467,7 @@ if (instance_number(obj_Player) > 1)
 
 global.playerLives = clamp(global.playerLives,0,999);
 var livesBg = spr_Hud_Lives_Background1;
-if (global.hasCoop) livesBg = spr_Hud_Lives_Background2;
+if (global.hasCoop > 0) livesBg = spr_Hud_Lives_Background2;
 var livesPosX = 16;
 var livesPosY = 18 + (hasTreasure * 28);
 starsPosX = 17;
@@ -595,14 +594,25 @@ if (mixTimer > 0)
 else if (mixTimer == 0)
 {
 	global.pause = false;
-	if (global.mixActive == 0)
+	switch (global.mixActive)
 	{
+		case 0:
 		global.abilityP1 = mixRosterAbility[mixIndex];
-	}
-	else
-	{
+		break;
+		
+		case 1:
 		global.abilityP2 = mixRosterAbility[mixIndex];
+		break;
+		
+		case 2:
+		global.abilityP3 = mixRosterAbility[mixIndex];
+		break;
+		
+		case 3:
+		global.abilityP4 = mixRosterAbility[mixIndex];
+		break;
 	}
+	
 	global.mixActive = -1;
 	with (obj_Player) blackAlphaBox = false;
 	mixIndexTimer = -1;

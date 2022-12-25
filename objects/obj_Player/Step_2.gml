@@ -2,8 +2,24 @@
 
 //Variables
 
-var playerCharacter = global.characterP1;
-if (player == 1) playerCharacter = global.characterP2;
+switch (player)
+{
+	case 0:
+	var playerCharacter = global.characterP1;
+	break;
+	
+	case 1:
+	var playerCharacter = global.characterP2;
+	break;
+	
+	case 2:
+	var playerCharacter = global.characterP3;
+	break;
+	
+	case 3:
+	var playerCharacter = global.characterP4;
+	break;
+}
 
 //Warp Star
 

@@ -34,6 +34,24 @@ function scr_SaveConfig(argument0)
 	ini_write_real("controls","keyStart2",global.finalKeyStart[1]);
 	ini_write_real("controls","keySelect2",global.finalKeySelect[1]);
 	
+	ini_write_real("controls","keyLeft3",global.finalKeyLeft[2]);
+	ini_write_real("controls","keyRight3",global.finalKeyRight[2]);
+	ini_write_real("controls","keyUp3",global.finalKeyUp[2]);
+	ini_write_real("controls","keyDown3",global.finalKeyDown[2]);
+	ini_write_real("controls","keyJump3",global.finalKeyJump[2]);
+	ini_write_real("controls","keyAttack3",global.finalKeyAttack[2]);
+	ini_write_real("controls","keyStart3",global.finalKeyStart[2]);
+	ini_write_real("controls","keySelect3",global.finalKeySelect[2]);
+	
+	ini_write_real("controls","keyLeft4",global.finalKeyLeft[3]);
+	ini_write_real("controls","keyRight4",global.finalKeyRight[3]);
+	ini_write_real("controls","keyUp4",global.finalKeyUp[3]);
+	ini_write_real("controls","keyDown4",global.finalKeyDown[3]);
+	ini_write_real("controls","keyJump4",global.finalKeyJump[3]);
+	ini_write_real("controls","keyAttack4",global.finalKeyAttack[3]);
+	ini_write_real("controls","keyStart4",global.finalKeyStart[3]);
+	ini_write_real("controls","keySelect4",global.finalKeySelect[3]);
+	
 	ini_write_string("misc","versionNumber",global.versionNumber);
 	ini_write_real("misc","firstTimeBooting",global.firstTimeBooting);
 	ini_close();

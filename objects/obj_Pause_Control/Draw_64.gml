@@ -19,14 +19,31 @@ if ((gamePaused) and (visible))
     }
 	
 	var i = 0;
-	var pauseCharacter = global.characterP1;
-	var pauseAbility = global.abilityP1;
-	var isHelper = global.isHelperP1;
-	if (player == 1)
+	switch (player)
 	{
+		case 0:
+		var pauseCharacter = global.characterP1;
+		var pauseAbility = global.abilityP1;
+		var isHelper = global.isHelperP1;
+		break;
+		
+		case 1:
 		var pauseCharacter = global.characterP2;
 		var pauseAbility = global.abilityP2;
 		var isHelper = global.isHelperP2;
+		break;
+		
+		case 2:
+		var pauseCharacter = global.characterP3;
+		var pauseAbility = global.abilityP3;
+		var isHelper = global.isHelperP3;
+		break;
+		
+		case 3:
+		var pauseCharacter = global.characterP4;
+		var pauseAbility = global.abilityP4;
+		var isHelper = global.isHelperP4;
+		break;
 	}
 	
 	if (global.gamemode != gamemodes.maykr)
@@ -636,7 +653,7 @@ if ((gamePaused) and (visible))
 				pauseFade.alphaSpd = .02;
 				scr_EndStage();
 				var demo = false;
-				demo = true;
+				//demo = true;
 				if (demo)
 				{
 					fadeTrans.targetRoom = rm_StageSelect_Demo;

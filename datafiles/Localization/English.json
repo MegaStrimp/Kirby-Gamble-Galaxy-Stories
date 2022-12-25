@@ -1337,19 +1337,19 @@
 		
 		"Log Into Discord": "Log Into Discord",
 		
-		"Beam Gold Medal": "Beam Gold Medal",
+		"Beam Gold Medal": "Get a Gold Medal on Beam Ability Challenge",
 		
-		"Stone Gold Medal": "Stone Gold Medal",
+		"Stone Gold Medal": "Get a Gold Medal on Stone Ability Challenge",
 		
-		"Mirror Gold Medal": "Mirror Gold Medal",
+		"Mirror Gold Medal": "Get a Gold Medal on Mirror Ability Challenge",
 		
-		"Ninja Gold Medal": "Ninja Gold Medal",
+		"Ninja Gold Medal": "Get a Gold Medal on Ninja Ability Challenge",
 		
-		"Fire Gold Medal": "Fire Gold Medal",
+		"Fire Gold Medal": "Get a Gold Medal on Fire Ability Challenge",
 		
-		"Ice Gold Medal": "Ice Gold Medal",
+		"Ice Gold Medal": "Get a Gold Medal on Ice Ability Challenge",
 		
-		"Spark Gold Medal": "Spark Gold Medal",
+		"Spark Gold Medal": "Get a Gold Medal on Spark Ability Challenge",
 		
 		"Unlock Gamble": "Unlock Gamble",
 		
@@ -1656,13 +1656,13 @@
 			"Unlock Method": "Get a certain amount of kills with Stone Ability."
 		},
 		
-		"Master UFO Ability":
+		"Master Ufo Ability":
 		{
-			"Title": "Master UFO Ability",
+			"Title": "Master Ufo Ability",
 			
-			"Description": "Mastered UFO Ability.",
+			"Description": "Mastered Ufo Ability.",
 			
-			"Unlock Method": "Get a certain amount of kills with UFO Ability."
+			"Unlock Method": "Get a certain amount of kills with Ufo Ability."
 		},
 		
 		"Master Mirror Ability":
@@ -1852,6 +1852,60 @@
 			"Description": "Mastered Gear Ability.",
 			
 			"Unlock Method": "Get a certain amount of kills with Gear Ability."
+		},
+		
+		"Master Sleep Ability":
+		{
+			"Title": "Master Sleep Ability",
+			
+			"Description": "Mastered Sleep Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Sleep Ability."
+		},
+		
+		"Master Scan Ability":
+		{
+			"Title": "Master Scan Ability",
+			
+			"Description": "Mastered Scan Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Scan Ability."
+		},
+		
+		"Master Crash Ability":
+		{
+			"Title": "Master Crash Ability",
+			
+			"Description": "Mastered Crash Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Crash Ability."
+		},
+		
+		"Master Mic Ability":
+		{
+			"Title": "Master Mic Ability",
+			
+			"Description": "Mastered Mic Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Mic Ability."
+		},
+		
+		"Master Chef Ability":
+		{
+			"Title": "Master Chef Ability",
+			
+			"Description": "Mastered Chef Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Chef Ability."
+		},
+		
+		"Master Ultra Sword Ability":
+		{
+			"Title": "Master Ultra Sword Ability",
+			
+			"Description": "Mastered Ultra Sword Ability.",
+			
+			"Unlock Method": "Get a certain amount of kills with Ultra Sword Ability."
 		}
 	},
 	

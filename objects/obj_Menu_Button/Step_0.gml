@@ -6,6 +6,7 @@ if (!global.pause)
 	
 	switch (state)
 	{
+		#region Save Slot
 		case "saveSlot":
 		mask_index = sprite_index;
 		if (instance_exists(obj_Title))
@@ -27,7 +28,9 @@ if (!global.pause)
 			}
 		}
 		break;
+		#endregion
 		
+		#region Main Menu
 		case "mainMenu":
 		mask_index = sprite_index;
 		if (instance_exists(owner))
@@ -77,7 +80,9 @@ if (!global.pause)
 			}
 		}
 		break;
+		#endregion
 		
+		#region Options
 		case "options":
 		mask_index = sprite_index;
 		if (instance_exists(obj_OptionsMenu))
@@ -118,7 +123,9 @@ if (!global.pause)
 			}
 		}
 		break;
+		#endregion
 		
+		#region Delete Save
 		case "deleteSave":
 		mask_index = sprite_index;
 		x = lerp(x,(room_width / 2) - 31,.05);
@@ -141,7 +148,9 @@ if (!global.pause)
 			}
 		}
 		break;
+		#endregion
 		
+		#region Collection
 		case "collection":
 		mask_index = sprite_index;
 		if (instance_exists(obj_CollectionMenu))
@@ -163,7 +172,9 @@ if (!global.pause)
 			}
 		}
 		break;
+		#endregion
 		
+		#region Cheats
 		case "cheats":
 		mask_index = sprite_index;
 		if (instance_exists(obj_CheatsMenu))
@@ -185,7 +196,9 @@ if (!global.pause)
 			}
 		}
 		break;
+		#endregion
 		
+		#region Upgrades
 		case "upgrades":
 		mask_index = spr_Menu_Upgrades_Box;
 		if (instance_exists(obj_UpgradesMenu))
@@ -207,14 +220,16 @@ if (!global.pause)
 			}
 		}
 		break;
+		#endregion
 		
+		#region Gallery
 		case "gallery":
 		mask_index = sprite_index;
 		if (instance_exists(obj_GalleryMenu))
 		{
 			if ((!instance_exists(obj_Fade)) and (mouse_check_button_pressed(mb_left)) and (position_meeting(mouse_x,mouse_y,self)))
 			{
-				if (((index == "vol1") or (index == "vol2") or (index == "vol3") or (index == "volS")) and (obj_GalleryMenu.page == 0))
+				if ((((index == "vol1") or (index == "vol2") or (index == "vol3") or (index == "volS")) and (obj_GalleryMenu.page == 0)) or ((index == "download") and (obj_GalleryMenu.page == 1)))
 				{
 					if (obj_GalleryMenu.selection == index)
 					{
@@ -259,7 +274,9 @@ if (!global.pause)
 			}
 		}
 		break;
+		#endregion
 		
+		#region Trophies
 		case "trophies":
 		mask_index = sprite_index;
 		if (instance_exists(owner))
@@ -296,7 +313,9 @@ if (!global.pause)
 			}
 		}
 		break;
+		#endregion
 		
+		#region Keycard Menu
 		case "keycardMenu":
 		mask_index = sprite_index;
 		if (instance_exists(owner))
@@ -351,7 +370,9 @@ if (!global.pause)
 			}
 		}
 		break;
+		#endregion
 		
+		#region Maykr Title
 		case "maykrTitle":
 		mask_index = sprite_index;
 		if (instance_exists(obj_Maykr_Title))
@@ -386,7 +407,9 @@ if (!global.pause)
 			}
 		}
 		break;
+		#endregion
 		
+		#region Back
 		case "back":
 		var canGoBack = true;
 		if ((owner.object_index = obj_OptionsMenu) and (owner.paused)) canGoBack = false;
@@ -397,5 +420,6 @@ if (!global.pause)
 			owner.goBack = true;
 		}
 		break;
+		#endregion
 	}
 }

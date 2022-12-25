@@ -2,14 +2,32 @@
 
 //Variables
 
-var playerAbility = global.abilityP1;
-if (player == 1) playerAbility = global.abilityP2;
-
-var playerCharacter = global.characterP1;
-if (player == 1) playerCharacter = global.characterP2;
-
-var playerIsHelper = global.isHelperP1;
-if (player == 1) playerIsHelper = global.isHelperP2;
+switch (player)
+{
+	case 0:
+	var playerAbility = global.abilityP1;
+	var playerCharacter = global.characterP1;
+	var playerIsHelper = global.isHelperP1;
+	break;
+	
+	case 1:
+	var playerAbility = global.abilityP2;
+	var playerCharacter = global.characterP2;
+	var playerIsHelper = global.isHelperP2;
+	break;
+	
+	case 2:
+	var playerAbility = global.abilityP3;
+	var playerCharacter = global.characterP3;
+	var playerIsHelper = global.isHelperP3;
+	break;
+	
+	case 3:
+	var playerAbility = global.abilityP4;
+	var playerCharacter = global.characterP4;
+	var playerIsHelper = global.isHelperP4;
+	break;
+}
 
 var drawShakeX = irandom_range(-shakeX,shakeX);
 var drawShakeY = irandom_range(-shakeY,shakeY);
@@ -264,9 +282,8 @@ if ((playerIsHelper) and (helperTimer != -1))
 //Debug Text
 /*
 draw_set_color(c_black);
-draw_text(x,y - 12,"att - " + string(keyAttackHold));
-draw_text(x,y - 24,"jump - " + string(keyJumpHold));
-//draw_text(x,y - 24,string(finalCutterState));
+draw_text(x - 12,y - 12,string(idleAnimation));
+draw_text(x - 12,y - 24,string(idleAnimationTimer));
 //draw_text(x,y - 24,string(fireDashDir));
 //draw_text(x+20,y - 24,string(attackTimer));
 //draw_text(x,y - 34,string(image_speed));

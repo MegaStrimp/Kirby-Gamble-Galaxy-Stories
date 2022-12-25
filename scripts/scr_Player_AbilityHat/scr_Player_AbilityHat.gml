@@ -14,13 +14,23 @@ function scr_Player_AbilityHat(argument0,argument1)
 		switch (abilityToCheck)
 		{
 			case playerAbilities.cutter:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeCutterP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeCutterP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeCutterP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeCutterP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
@@ -232,13 +242,23 @@ function scr_Player_AbilityHat(argument0,argument1)
 			break;
 			
 			case playerAbilities.beam:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeBeamP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeBeamP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeBeamP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeBeamP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
@@ -643,13 +663,23 @@ function scr_Player_AbilityHat(argument0,argument1)
 			
 			case playerAbilities.mysticBeam:
 			case playerAbilities.mysticBeam2:
-			if (player == 0)
+			switch (player)
 			{
-				var altHatToCheck = global.hatTypeMysticBeamP1;
-			}
-			else
-			{
-				var altHatToCheck = global.hatTypeMysticBeamP2;
+				case 0:
+				var altHatToCheck = global.hatTypeBeamP1;
+				break;
+				
+				case 1:
+				var altHatToCheck = global.hatTypeBeamP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeBeamP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeBeamP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
@@ -865,13 +895,23 @@ function scr_Player_AbilityHat(argument0,argument1)
 			break;
 			
 			case playerAbilities.stone:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeStoneP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeStoneP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeStoneP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeStoneP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
@@ -1251,13 +1291,23 @@ function scr_Player_AbilityHat(argument0,argument1)
 			break;
 			
 			case playerAbilities.ufo:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeUfoP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeUfoP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeUfoP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeUfoP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
@@ -1314,13 +1364,23 @@ function scr_Player_AbilityHat(argument0,argument1)
 			break;
 			
 			case playerAbilities.mirror:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeMirrorP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeMirrorP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeMirrorP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeMirrorP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
@@ -1708,13 +1768,23 @@ function scr_Player_AbilityHat(argument0,argument1)
 			break;
 			
 			case playerAbilities.ninja:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeNinjaP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeNinjaP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeNinjaP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeNinjaP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
@@ -2086,13 +2156,23 @@ function scr_Player_AbilityHat(argument0,argument1)
 			break;
 			
 			case playerAbilities.bomb:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeBombP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeBombP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeBombP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeBombP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
@@ -2516,13 +2596,23 @@ function scr_Player_AbilityHat(argument0,argument1)
 			break;
 			
 			case playerAbilities.fire:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeFireP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeFireP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeFireP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeFireP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
@@ -2714,13 +2804,23 @@ function scr_Player_AbilityHat(argument0,argument1)
 			break;
 			
 			case playerAbilities.mysticFire:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeFireP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeFireP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeFireP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeFireP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
@@ -2892,13 +2992,23 @@ function scr_Player_AbilityHat(argument0,argument1)
 			break;
 			
 			case playerAbilities.ice:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeIceP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeIceP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeIceP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeIceP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
@@ -3274,13 +3384,23 @@ function scr_Player_AbilityHat(argument0,argument1)
 			break;
 			
 			case playerAbilities.spark:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeSparkP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeSparkP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeSparkP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeSparkP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
@@ -3492,13 +3612,23 @@ function scr_Player_AbilityHat(argument0,argument1)
 			break;
 			
 			case playerAbilities.yoyo:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeYoyoP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeYoyoP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeYoyoP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeYoyoP4;
+				break;
 			}
 				
 			switch (altHatToCheck)
@@ -3690,13 +3820,23 @@ function scr_Player_AbilityHat(argument0,argument1)
 			break;
 			
 			case playerAbilities.wheel:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeWheelP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeWheelP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeWheelP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeWheelP4;
+				break;
 			}
 				
 			switch (altHatToCheck)
@@ -3876,13 +4016,23 @@ function scr_Player_AbilityHat(argument0,argument1)
 			break;
 			
 			case playerAbilities.artist:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeArtistP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeArtistP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeArtistP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeArtistP4;
+				break;
 			}
 				
 			switch (altHatToCheck)
@@ -4120,13 +4270,23 @@ function scr_Player_AbilityHat(argument0,argument1)
 			break;
 			
 			case playerAbilities.fighter:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeFighterP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeFighterP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeFighterP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeFighterP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
@@ -4302,13 +4462,23 @@ function scr_Player_AbilityHat(argument0,argument1)
 			break;
 			
 			case playerAbilities.suplex:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeSuplexP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeSuplexP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeSuplexP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeSuplexP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
@@ -4484,13 +4654,23 @@ function scr_Player_AbilityHat(argument0,argument1)
 			break;
 			
 			case playerAbilities.wing:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeWingP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeWingP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeWingP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeWingP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
@@ -4654,13 +4834,23 @@ function scr_Player_AbilityHat(argument0,argument1)
 			break;
 			
 			case playerAbilities.jet:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeJetP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeJetP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeJetP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeJetP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
@@ -4812,13 +5002,23 @@ function scr_Player_AbilityHat(argument0,argument1)
 			break;
 			
 			case playerAbilities.sword:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeSwordP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeSwordP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeSwordP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeSwordP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
@@ -5022,13 +5222,23 @@ function scr_Player_AbilityHat(argument0,argument1)
 			break;
 			
 			case playerAbilities.hammer:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeHammerP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeHammerP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeHammerP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeHammerP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
@@ -5204,13 +5414,23 @@ function scr_Player_AbilityHat(argument0,argument1)
 			break;
 			
 			case playerAbilities.bell:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeBellP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeBellP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeBellP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeBellP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
@@ -5394,13 +5614,23 @@ function scr_Player_AbilityHat(argument0,argument1)
 			break;
 			
 			case playerAbilities.water:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeWaterP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeWaterP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeWaterP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeWaterP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
@@ -5437,13 +5667,23 @@ function scr_Player_AbilityHat(argument0,argument1)
 			break;
 			
 			case playerAbilities.sleep:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeSleepP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeSleepP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeSleepP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeSleepP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
@@ -5476,13 +5716,23 @@ function scr_Player_AbilityHat(argument0,argument1)
 			break;
 			
 			case playerAbilities.scan:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeScanP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeScanP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeScanP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeScanP4;
+				break;
 			}
 			
 			switch (altHatToCheck)

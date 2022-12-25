@@ -6,9 +6,6 @@ if (!global.pause)
 	
 	if ((keyUpPressed) or (keyDownPressed) or (keyLeftPressed) or (keyRightPressed)) audio_play_sound(snd_BossHealth,0,false);
 	
-	switch (page)
-	{
-		case 0:
 		switch (selection)
 		{
 			case "upload":
@@ -127,9 +124,7 @@ if (!global.pause)
 			fade.targetRoom = rm_Collection;
 			goBack = false;
 		}
-		break;
 		
-		default:
 		if ((keyLeftPressed) and (page != 0))
 		{
 			if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
@@ -142,8 +137,6 @@ if (!global.pause)
 			audio_play_sound(snd_ButtonChange,0,false);
 			page += 1;
 		}
-		break;
-	}
 	
 	//Camera
 	

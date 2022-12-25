@@ -6,11 +6,28 @@ function scr_Player_States_Carry()
 	{
 		//Variables
 		
-		var playerCharacter = global.characterP1;
-		if (player == 1) playerCharacter = global.characterP2;
-		
-		var playerAbility = global.abilityP1;
-		if (player == 1) playerAbility = global.abilityP2;
+		switch (player)
+		{
+			case 0:
+			var playerAbility = global.abilityP1;
+			var playerCharacter = global.characterP1;
+			break;
+			
+			case 1:
+			var playerAbility = global.abilityP2;
+			var playerCharacter = global.characterP2;
+			break;
+			
+			case 2:
+			var playerAbility = global.abilityP3;
+			var playerCharacter = global.characterP3;
+			break;
+			
+			case 3:
+			var playerAbility = global.abilityP4;
+			var playerCharacter = global.characterP4;
+			break;
+		}
 		
 		var grounded = false;
 		if (place_meeting(x,y + 1,obj_ParentWall))
@@ -456,14 +473,25 @@ function scr_Player_States_Carry()
 				if (global.mixActive == -1)
 				{
 					if (ateAbilityStar != -1) cAbility = ateAbilityStar;
-					if (player == 0)
+					switch (player)
 					{
+						case 0:
 						global.abilityP1 = cAbility;
-					}
-					else
-					{
+						break;
+						
+						case 1:
 						global.abilityP2 = cAbility;
+						break;
+						
+						case 2:
+						global.abilityP3 = cAbility;
+						break;
+						
+						case 3:
+						global.abilityP4 = cAbility;
+						break;
 					}
+					
 					if (cAbility != playerAbilities.none)
 					{
 						for (var i = 0; i < 2; i++)

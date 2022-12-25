@@ -34,7 +34,7 @@ function scr_Gallery_Artwork_Vol1()
 	artworkArray[# i,0] = spr_Menu_Gallery_Artwork_DerpyrootMysticBeam;
 	artworkArray[# i,1] = "Mystic Beam";
 	artworkArray[# i,2] = "Derpyroot";
-	artworkArray[# i,3] = true;
+	artworkArray[# i,3] = false;
 	artworkArray[# i,4] = "Test";
 	artworkArray[# i,5] = (140 / max(sprite_get_width(artworkArray[# i,0]),sprite_get_height(artworkArray[# i,0])));
 	artworkArray[# i,6] = spr_Menu_Gallery_Frame;

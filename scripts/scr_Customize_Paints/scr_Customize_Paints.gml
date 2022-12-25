@@ -488,7 +488,7 @@ function scr_Customize_Paints()
 	sprayPaintTitle[i] = str("Spray Paints.Plasma.Title");
 	sprayPaintDescription[i] = str("Spray Paints.Plasma.Description");
 	sprayPaintUnlocked[i] = global.plasmaSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = str("Unlock Methods.Plasma Gold Medal");
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Spark Gold Medal");
 	sprayPaintValue[i] = playerSprayPaints.plasma;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Plasma;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Plasma;

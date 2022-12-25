@@ -27,6 +27,8 @@ switch (page)
 	case "playerSelect":
 	player1OffsetLerp = lerp(player1OffsetLerp,player1Offset * 8,.25);
 	player2OffsetLerp = lerp(player2OffsetLerp,player2Offset * 8,.25);
+	player3OffsetLerp = lerp(player3OffsetLerp,player3Offset * 8,.25);
+	player4OffsetLerp = lerp(player4OffsetLerp,player4Offset * 8,.25);
 	
 	draw_set_color(c_black);
 	draw_set_alpha(.75);
@@ -42,10 +44,20 @@ switch (page)
 		case 1:
 		draw_sprite(spr_Menu_Options_CursorArrow,0,8,103);
 		break;
+		
+		case 2:
+		draw_sprite(spr_Menu_Options_CursorArrow,0,8,141);
+		break;
+		
+		case 3:
+		draw_sprite(spr_Menu_Options_CursorArrow,0,8,177);
+		break;
 	}
 	
 	scr_Draw_Text_Color_Outline(26 + player1OffsetLerp,75,"P1",-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 	scr_Draw_Text_Color_Outline(26 + player2OffsetLerp,111,"P2",-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	scr_Draw_Text_Color_Outline(26 + player3OffsetLerp,147,"P3",-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	scr_Draw_Text_Color_Outline(26 + player4OffsetLerp,183,"P4",-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 	break;
 	#endregion
 	
@@ -231,16 +243,48 @@ switch (page)
 	scr_Draw_Text_Color_Outline(301,222,text,-1,350,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 	draw_set_halign(fa_left);
 	
-	var playerPaint = global.sprayPaintKirbyP1;
-	if (selectedPlayer == 1) playerPaint = global.sprayPaintKirbyP2;
+	switch (selectedPlayer)
+	{
+		case 0:
+		var playerPaint = global.sprayPaintKirbyP1;
+		break;
+		
+		case 1:
+		var playerPaint = global.sprayPaintKirbyP2;
+		break;
+		
+		case 2:
+		var playerPaint = global.sprayPaintKirbyP3;
+		break;
+		
+		case 3:
+		var playerPaint = global.sprayPaintKirbyP4;
+		break;
+	}
 	var characterSprite = -1;
 	var characterPaint = -1;
 	
 	switch (selectedOwner)
 	{
 		case playerCharacters.kirby:
-		playerPaint = global.sprayPaintKirbyP1;
-		if (selectedPlayer == 1) playerPaint = global.sprayPaintKirbyP2;
+		switch (selectedPlayer)
+		{
+			case 0:
+			var playerPaint = global.sprayPaintKirbyP1;
+			break;
+			
+			case 1:
+			var playerPaint = global.sprayPaintKirbyP2;
+			break;
+			
+			case 2:
+			var playerPaint = global.sprayPaintKirbyP3;
+			break;
+			
+			case 3:
+			var playerPaint = global.sprayPaintKirbyP4;
+			break;
+		}
 		
 		switch (sprayPaintValue[selection])
 		{
@@ -264,8 +308,24 @@ switch (page)
 		break;
 		
 		case playerCharacters.gamble:
-		playerPaint = global.sprayPaintGambleP1;
-		if (selectedPlayer == 1) playerPaint = global.sprayPaintGambleP2;
+		switch (selectedPlayer)
+		{
+			case 0:
+			var playerPaint = global.sprayPaintGambleP1;
+			break;
+			
+			case 1:
+			var playerPaint = global.sprayPaintGambleP2;
+			break;
+			
+			case 2:
+			var playerPaint = global.sprayPaintGambleP3;
+			break;
+			
+			case 3:
+			var playerPaint = global.sprayPaintGambleP4;
+			break;
+		}
 		
 		switch (sprayPaintTitle[selection])
 		{
@@ -277,8 +337,24 @@ switch (page)
 		break;
 		
 		case playerCharacters.metaKnight:
-		playerPaint = global.sprayPaintMetaKnightP1;
-		if (selectedPlayer == 1) playerPaint = global.sprayPaintMetaKnightP2;
+		switch (selectedPlayer)
+		{
+			case 0:
+			var playerPaint = global.sprayPaintMetaKnightP1;
+			break;
+			
+			case 1:
+			var playerPaint = global.sprayPaintMetaKnightP2;
+			break;
+			
+			case 2:
+			var playerPaint = global.sprayPaintMetaKnightP3;
+			break;
+			
+			case 3:
+			var playerPaint = global.sprayPaintMetaKnightP4;
+			break;
+		}
 		
 		switch (sprayPaintTitle[selection])
 		{
@@ -290,33 +366,36 @@ switch (page)
 		break;
 		
 		case playerCharacters.gooey:
-		playerPaint = global.sprayPaintGooeyP1;
-		
-		switch (global.skinGooeyP1)
+		switch (selectedPlayer)
 		{
-			default:
-			switch (sprayPaintTitle[selection])
+			case 0:
+			playerPaint = global.sprayPaintGooeyP1;
+			
+			switch (global.skinGooeyP1)
 			{
 				default:
-				characterSprite = spr_Menu_Collection_Customize_Gooey_Normal;
-				characterPaint = sprayPaintGooeyNormal[selection];
+				switch (sprayPaintTitle[selection])
+				{
+					default:
+					characterSprite = spr_Menu_Collection_Customize_Gooey_Normal;
+					characterPaint = sprayPaintGooeyNormal[selection];
+					break;
+				}
+				break;
+				
+				case "pipis":
+				switch (sprayPaintTitle[selection])
+				{
+					default:
+					characterSprite = spr_Menu_Collection_Customize_Gooey_Pipis;
+					characterPaint = sprayPaintGooeyPipis[selection];
+					break;
+				}
 				break;
 			}
 			break;
 			
-			case "pipis":
-			switch (sprayPaintTitle[selection])
-			{
-				default:
-				characterSprite = spr_Menu_Collection_Customize_Gooey_Pipis;
-				characterPaint = sprayPaintGooeyPipis[selection];
-				break;
-			}
-			break;
-		}
-		
-		if (selectedPlayer == 1)
-		{
+			case 1:
 			playerPaint = global.sprayPaintGooeyP2;
 			
 			switch (global.skinGooeyP2)
@@ -341,12 +420,83 @@ switch (page)
 				}
 				break;
 			}
+			break;
+			
+			case 2:
+			playerPaint = global.sprayPaintGooeyP3;
+			
+			switch (global.skinGooeyP3)
+			{
+				default:
+				switch (sprayPaintTitle[selection])
+				{
+					default:
+					characterSprite = spr_Menu_Collection_Customize_Gooey_Normal;
+					characterPaint = sprayPaintGooeyNormal[selection];
+					break;
+				}
+				break;
+				
+				case "pipis":
+				switch (sprayPaintTitle[selection])
+				{
+					default:
+					characterSprite = spr_Menu_Collection_Customize_Gooey_Pipis;
+					characterPaint = sprayPaintGooeyPipis[selection];
+					break;
+				}
+				break;
+			}
+			break;
+			
+			case 3:
+			playerPaint = global.sprayPaintGooeyP4;
+			
+			switch (global.skinGooeyP4)
+			{
+				default:
+				switch (sprayPaintTitle[selection])
+				{
+					default:
+					characterSprite = spr_Menu_Collection_Customize_Gooey_Normal;
+					characterPaint = sprayPaintGooeyNormal[selection];
+					break;
+				}
+				break;
+				
+				case "pipis":
+				switch (sprayPaintTitle[selection])
+				{
+					default:
+					characterSprite = spr_Menu_Collection_Customize_Gooey_Pipis;
+					characterPaint = sprayPaintGooeyPipis[selection];
+					break;
+				}
+				break;
+			}
+			break;
 		}
 		break;
 		
 		case playerCharacters.magolor:
-		playerPaint = global.sprayPaintMagolorP1;
-		if (selectedPlayer == 1) playerPaint = global.sprayPaintMagolorP2;
+		switch (selectedPlayer)
+		{
+			case 0:
+			var playerPaint = global.sprayPaintMagolorP1;
+			break;
+			
+			case 1:
+			var playerPaint = global.sprayPaintMagolorP2;
+			break;
+			
+			case 2:
+			var playerPaint = global.sprayPaintMagolorP3;
+			break;
+			
+			case 3:
+			var playerPaint = global.sprayPaintMagolorP4;
+			break;
+		}
 		
 		switch (sprayPaintTitle[selection])
 		{
@@ -505,7 +655,7 @@ switch (page)
 		break;
 	}
 	
-	if (hatSprite != -1) draw_sprite_ext(hatSprite,0,242,110,3,3,image_angle,image_blend,image_alpha);
+	if (hatSprite != -1) draw_sprite_ext(hatSprite,0,242,110,2,2,image_angle,image_blend,image_alpha);
 	
 	draw_sprite(spr_Menu_Options_CursorArrow,0,0,141);
 	
@@ -1138,8 +1288,24 @@ switch (page)
 	scr_Draw_Text_Color_Outline(301,222,text,-1,350,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 	draw_set_halign(fa_left);
 	
-	var playerfamiliar = global.familiarP1;
-	if (selectedPlayer == 1) playerfamiliar = global.familiarP2;
+	switch (selectedPlayer)
+	{
+		case 0:
+		var playerfamiliar = global.familiarP1;
+		break;
+		
+		case 1:
+		var playerfamiliar = global.familiarP2;
+		break;
+		
+		case 2:
+		var playerfamiliar = global.familiarP3;
+		break;
+		
+		case 3:
+		var playerfamiliar = global.familiarP4;
+		break;
+	}
 	
 	if ((global.shaders) and (familiarPaint[selection][selectedPaint] != -1)) pal_swap_set(familiarPaint[selection][selectedPaint],1,false);
 	if (familiarSprite[selection] != -1) draw_sprite(familiarSprite[selection],0,242,140);

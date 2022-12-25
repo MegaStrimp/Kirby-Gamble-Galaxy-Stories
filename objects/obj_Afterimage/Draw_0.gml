@@ -7,11 +7,29 @@ if (instance_exists(owner))
 	switch (owner.object_index)
 	{
 		case obj_Player:
-		var playerAbility = global.abilityP1;
-		if (owner.player == 1) playerAbility = global.abilityP2;
-	
-		var playerCharacter = global.characterP1;
-		if (owner.player == 1) playerCharacter = global.characterP2;
+		
+		switch (owner.player)
+		{
+			case 0:
+			var playerAbility = global.abilityP1;
+			var playerCharacter = global.characterP1;
+			break;
+			
+			case 1:
+			var playerAbility = global.abilityP2;
+			var playerCharacter = global.characterP2;
+			break;
+			
+			case 2:
+			var playerAbility = global.abilityP3;
+			var playerCharacter = global.characterP3;
+			break;
+			
+			case 3:
+			var playerAbility = global.abilityP4;
+			var playerCharacter = global.characterP4;
+			break;
+		}
 		
 		var drawShakeX = irandom_range(-owner.shakeX,owner.shakeX);
 		var drawShakeY = irandom_range(-owner.shakeY,owner.shakeY);

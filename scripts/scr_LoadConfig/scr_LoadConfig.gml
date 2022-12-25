@@ -33,6 +33,24 @@ function scr_LoadConfig(argument0)
 	global.finalKeyStart[1] = ini_read_real("controls","keyStart2",vk_enter);
 	global.finalKeySelect[1] = ini_read_real("controls","keySelect2",vk_backspace);
 	
+	global.finalKeyLeft[2] = ini_read_real("controls","keyLeft3",ord("A"));
+	global.finalKeyRight[2] = ini_read_real("controls","keyRight3",ord("D"));
+	global.finalKeyUp[2] = ini_read_real("controls","keyUp3",ord("W"));
+	global.finalKeyDown[2] = ini_read_real("controls","keyDown3",ord("S"));
+	global.finalKeyJump[2] = ini_read_real("controls","keyJump3",ord("K"));
+	global.finalKeyAttack[2] = ini_read_real("controls","keyAttack3",ord("L"));
+	global.finalKeyStart[2] = ini_read_real("controls","keyStart3",vk_enter);
+	global.finalKeySelect[2] = ini_read_real("controls","keySelect3",vk_backspace);
+	
+	global.finalKeyLeft[3] = ini_read_real("controls","keyLeft4",ord("A"));
+	global.finalKeyRight[3] = ini_read_real("controls","keyRight4",ord("D"));
+	global.finalKeyUp[3] = ini_read_real("controls","keyUp4",ord("W"));
+	global.finalKeyDown[3] = ini_read_real("controls","keyDown4",ord("S"));
+	global.finalKeyJump[3] = ini_read_real("controls","keyJump4",ord("K"));
+	global.finalKeyAttack[3] = ini_read_real("controls","keyAttack4",ord("L"));
+	global.finalKeyStart[3] = ini_read_real("controls","keyStart4",vk_enter);
+	global.finalKeySelect[3] = ini_read_real("controls","keySelect4",vk_backspace);
+	
 	global.firstTimeBooting = ini_read_real("misc","firstTimeBooting",true);
 	ini_close();
 }

@@ -133,7 +133,7 @@ if (!global.pause)
 				codeState = 0;
 				
 				var demo = false;
-				demo = true;
+				//demo = true;
 				if (demo)
 				{
 					if (!instance_exists(obj_Fade))

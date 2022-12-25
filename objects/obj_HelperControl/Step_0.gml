@@ -62,8 +62,24 @@ else if (setupTimer == 0)
 
 if (instance_exists(owner))
 {
-	var isHelper = global.isHelperP1;
-	if (owner.player == 1) isHelper = global.isHelperP2;
+	switch (owner.player)
+	{
+		case 0:
+		var isHelper = global.isHelperP1;
+		break;
+		
+		case 1:
+		var isHelper = global.isHelperP2;
+		break;
+		
+		case 2:
+		var isHelper = global.isHelperP3;
+		break;
+		
+		case 3:
+		var isHelper = global.isHelperP4;
+		break;
+	}
 	
 	if (!isHelper) instance_destroy();
 }
@@ -98,13 +114,23 @@ if (keySelectPressed)
 	global.pause = false;
 	owner.helperTimer = floor(owner.helperTimerMax / 2);
 	owner.blackAlphaBox = false;
-	if (owner.player == 0)
+	switch (owner.player)
 	{
+		case 0:
 		global.isHelperP1 = false;
-	}
-	else
-	{
+		break;
+		
+		case 1:
 		global.isHelperP2 = false;
+		break;
+		
+		case 2:
+		global.isHelperP3 = false;
+		break;
+		
+		case 3:
+		global.isHelperP4 = false;
+		break;
 	}
 	owner.characterSetupTimer = 0;
 	instance_destroy();
@@ -137,15 +163,27 @@ if (keyStartPressed)
 	}
 	owner.helperTimer = owner.helperTimerMax;
 	owner.blackAlphaBox = false;
-	if (owner.player == 0)
+	switch (owner.player)
 	{
+		case 0:
 		global.characterP1 = helperName[selection];
 		global.isHelperP1 = false;
-	}
-	else
-	{
+		break;
+		
+		case 1:
 		global.characterP2 = helperName[selection];
 		global.isHelperP2 = false;
+		break;
+		
+		case 2:
+		global.characterP3 = helperName[selection];
+		global.isHelperP3 = false;
+		break;
+		
+		case 3:
+		global.characterP4 = helperName[selection];
+		global.isHelperP4 = false;
+		break;
 	}
 	owner.characterSetupTimer = 0;
 	if (instance_exists(obj_Pause_Control)) obj_Pause_Control.pauseDelay = 1;

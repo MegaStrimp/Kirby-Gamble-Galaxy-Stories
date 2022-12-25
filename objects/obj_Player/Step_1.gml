@@ -2,15 +2,27 @@
 
 //Invincibility Candy & Mint Leaf
 
-if (player == 0)
+switch (player)
 {
+	case 0:
 	hasInvinCandy = (global.invinCandyTimerP1 != -1);
 	hasMintLeaf = (global.mintLeafTimerP1 != -1);
-}
-else
-{
+	break;
+	
+	case 1:
 	hasInvinCandy = (global.invinCandyTimerP2 != -1);
 	hasMintLeaf = (global.mintLeafTimerP2 != -1);
+	break;
+	
+	case 2:
+	hasInvinCandy = (global.invinCandyTimerP3 != -1);
+	hasMintLeaf = (global.mintLeafTimerP3 != -1);
+	break;
+	
+	case 3:
+	hasInvinCandy = (global.invinCandyTimerP4 != -1);
+	hasMintLeaf = (global.mintLeafTimerP4 != -1);
+	break;
 }
 
 if (hasInvinCandy)

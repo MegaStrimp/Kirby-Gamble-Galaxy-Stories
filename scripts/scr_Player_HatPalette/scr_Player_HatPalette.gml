@@ -14,25 +14,45 @@ function scr_Player_HatPalette(argument0,argument1)
 		switch (abilityToCheck)
 		{
 			case playerAbilities.cutter:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeCutterP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeCutterP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeCutterP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeCutterP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
 			{
 				case abilityHatSkins.cutter_kssu:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteCutterKSSUP1;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					var paletteIndexToCheck = global.hatPaletteCutterKSSUP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteCutterKSSUP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteCutterKSSUP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -62,25 +82,45 @@ function scr_Player_HatPalette(argument0,argument1)
 			break;
 			
 			case playerAbilities.beam:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeBeamP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeBeamP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeBeamP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeBeamP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
 			{
 				case abilityHatSkins.beam_kssu:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteBeamKSSUP1;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					var paletteIndexToCheck = global.hatPaletteBeamKSSUP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteBeamKSSUP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteBeamKSSUP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -100,13 +140,23 @@ function scr_Player_HatPalette(argument0,argument1)
 				break;
 				
 				case abilityHatSkins.beam_marxSoul:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteBeamMarxSoulP1;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					var paletteIndexToCheck = global.hatPaletteBeamMarxSoulP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteBeamMarxSoulP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteBeamMarxSoulP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -128,25 +178,45 @@ function scr_Player_HatPalette(argument0,argument1)
 			break;
 			
 			case playerAbilities.mysticBeam:
-			if (player == 0)
+			switch (player)
 			{
-				var altHatToCheck = global.hatTypeMysticBeamP1;
-			}
-			else
-			{
-				var altHatToCheck = global.hatTypeMysticBeamP2;
+				case 0:
+				var altHatToCheck = global.hatTypeBeamP1;
+				break;
+				
+				case 1:
+				var altHatToCheck = global.hatTypeBeamP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeBeamP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeBeamP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
 			{
 				case abilityHatSkins.mysticBeam_ggs:
-				if (player == 0)
+				switch (player)
 				{
-					var paletteIndexToCheck = global.hatPaletteMysticBeamGGSP1;
-				}
-				else
-				{
-					var paletteIndexToCheck = global.hatPaletteMysticBeamGGSP2;
+					case 0:
+					var paletteIndexToCheck = global.hatPaletteBeamKSSUP1;
+					break;
+					
+					case 1:
+					var paletteIndexToCheck = global.hatPaletteBeamKSSUP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteBeamKSSUP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteBeamKSSUP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -164,25 +234,45 @@ function scr_Player_HatPalette(argument0,argument1)
 			break;
 			
 			case playerAbilities.stone:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeStoneP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeStoneP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeStoneP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeStoneP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
 			{
 				case abilityHatSkins.stone_kssu:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteStoneKSSUP1;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					var paletteIndexToCheck = global.hatPaletteStoneKSSUP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteStoneKSSUP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteStoneKSSUP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -198,13 +288,23 @@ function scr_Player_HatPalette(argument0,argument1)
 				break;
 				
 				case abilityHatSkins.stone_modern:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteStoneModernP1;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					var paletteIndexToCheck = global.hatPaletteStoneModernP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteStoneModernP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteStoneModernP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -230,25 +330,45 @@ function scr_Player_HatPalette(argument0,argument1)
 			break;
 			
 			/*case playerAbilities.ufo:
-			if (player == 0)
+			switch (player)
 			{
-				var altHatToCheck = global.hatTypeBeamP1;
-			}
-			else
-			{
-				var altHatToCheck = global.hatTypeBeamP2;
+				case 0:
+				var altHatToCheck = global.hatTypeUfoP1;
+				break;
+				
+				case 1:
+				var altHatToCheck = global.hatTypeUfoP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeUfoP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeUfoP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
 			{
 				case abilityHatSkins.ufo_modern:
-				if (player == 0)
+				switch (player)
 				{
-					var paletteIndexToCheck = global.hatPaletteBeamKSSUP1;
-				}
-				else
-				{
-					var paletteIndexToCheck = global.hatPaletteBeamKSSUP2;
+					case 0:
+					var paletteIndexToCheck = global.hatPaletteUfoModernP1;
+					break;
+					
+					case 1:
+					var paletteIndexToCheck = global.hatPaletteUfoModernP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteUfoModernP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteUfoModernP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -262,25 +382,45 @@ function scr_Player_HatPalette(argument0,argument1)
 			break;*/
 			
 			case playerAbilities.mirror:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeMirrorP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeMirrorP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeMirrorP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeMirrorP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
 			{
 				case abilityHatSkins.mirror_kssu:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteMirrorKSSUP1;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					var paletteIndexToCheck = global.hatPaletteMirrorKSSUP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteMirrorKSSUP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteMirrorKSSUP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -300,13 +440,23 @@ function scr_Player_HatPalette(argument0,argument1)
 				break;
 				
 				case abilityHatSkins.mirror_modern:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteMirrorModernP1;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					var paletteIndexToCheck = global.hatPaletteMirrorModernP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteMirrorModernP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteMirrorModernP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -328,25 +478,45 @@ function scr_Player_HatPalette(argument0,argument1)
 			break;
 			
 			case playerAbilities.ninja:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeNinjaP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeNinjaP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeNinjaP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeNinjaP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
 			{
 				case abilityHatSkins.ninja_kssu:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteNinjaKSSUP1;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					var paletteIndexToCheck = global.hatPaletteNinjaKSSUP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteNinjaKSSUP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteNinjaKSSUP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -366,13 +536,23 @@ function scr_Player_HatPalette(argument0,argument1)
 				break;
 				
 				case abilityHatSkins.ninja_modern:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteNinjaModernP1;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					var paletteIndexToCheck = global.hatPaletteNinjaModernP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteNinjaModernP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteNinjaModernP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -394,25 +574,45 @@ function scr_Player_HatPalette(argument0,argument1)
 			break;
 			
 			case playerAbilities.bomb:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeBombP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeBombP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeBombP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeBombP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
 			{
 				case abilityHatSkins.bomb_kssu:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteBombKSSUP1;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					var paletteIndexToCheck = global.hatPaletteBombKSSUP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteBombKSSUP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteBombKSSUP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -432,13 +632,23 @@ function scr_Player_HatPalette(argument0,argument1)
 				break;
 				
 				case abilityHatSkins.bomb_modern:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteBombModernP1;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					var paletteIndexToCheck = global.hatPaletteBombModernP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteBombModernP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteBombModernP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -464,25 +674,45 @@ function scr_Player_HatPalette(argument0,argument1)
 			break;
 			
 			case playerAbilities.fire:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeFireP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeFireP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeFireP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeFireP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
 			{
 				case abilityHatSkins.fire_kssu:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteFireKSSUP1;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					var paletteIndexToCheck = global.hatPaletteFireKSSUP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteFireKSSUP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteFireKSSUP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -512,25 +742,45 @@ function scr_Player_HatPalette(argument0,argument1)
 			break;
 			
 			case playerAbilities.mysticFire:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeFireP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeFireP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeFireP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeFireP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
 			{
 				case abilityHatSkins.mysticFire_ggs:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteFireKSSUP1;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					var paletteIndexToCheck = global.hatPaletteFireKSSUP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteFireKSSUP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteFireKSSUP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -544,25 +794,45 @@ function scr_Player_HatPalette(argument0,argument1)
 			break;
 			
 			case playerAbilities.ice:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeIceP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeIceP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeIceP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeIceP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
 			{
 				case abilityHatSkins.ice_kssu:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteIceKSSUP1;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					var paletteIndexToCheck = global.hatPaletteIceKSSUP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteIceKSSUP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteIceKSSUP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -586,13 +856,23 @@ function scr_Player_HatPalette(argument0,argument1)
 				break;
 				
 				case abilityHatSkins.ice_snowman:
-				if (player == 0)
+				switch (player)
 				{
-					var paletteIndexToCheck = global.hatPaletteIceKSSUP1;
-				}
-				else
-				{
-					var paletteIndexToCheck = global.hatPaletteIceKSSUP2;
+					case 0:
+					var paletteIndexToCheck = global.hatPaletteIceSnowmanP1;
+					break;
+					
+					case 1:
+					var paletteIndexToCheck = global.hatPaletteIceSnowmanP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteIceSnowmanP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteIceSnowmanP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -614,25 +894,45 @@ function scr_Player_HatPalette(argument0,argument1)
 			break;
 			
 			case playerAbilities.spark:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeSparkP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeSparkP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeSparkP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeSparkP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
 			{
 				case abilityHatSkins.spark_kssu:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteSparkKSSUP1;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					var paletteIndexToCheck = global.hatPaletteSparkKSSUP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteSparkKSSUP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteSparkKSSUP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -650,25 +950,45 @@ function scr_Player_HatPalette(argument0,argument1)
 			break;
 			
 			case playerAbilities.yoyo:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeYoyoP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeYoyoP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeYoyoP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeYoyoP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
 			{
 				case abilityHatSkins.yoyo_kssu:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteYoyoKSSUP1;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					var paletteIndexToCheck = global.hatPaletteYoyoKSSUP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteYoyoKSSUP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteYoyoKSSUP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -686,25 +1006,45 @@ function scr_Player_HatPalette(argument0,argument1)
 			break;
 			
 			case playerAbilities.wheel:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeWheelP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeWheelP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeWheelP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeWheelP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
 			{
 				case abilityHatSkins.wheel_kssu:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteWheelKSSUP1;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					var paletteIndexToCheck = global.hatPaletteWheelKSSUP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteWheelKSSUP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteWheelKSSUP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -730,25 +1070,45 @@ function scr_Player_HatPalette(argument0,argument1)
 			break;
 			
 			case playerAbilities.artist:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeArtistP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeArtistP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeArtistP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeArtistP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
 			{
 				case abilityHatSkins.artist_kssu:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteArtistKSSUP1;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					var paletteIndexToCheck = global.hatPaletteArtistKSSUP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteArtistKSSUP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteArtistKSSUP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -764,13 +1124,23 @@ function scr_Player_HatPalette(argument0,argument1)
 				break;
 				
 				case abilityHatSkins.artist_modern:
-				if (player == 0)
+				switch (player)
 				{
-					var paletteIndexToCheck = global.hatPaletteArtistModernP1;
-				}
-				else
-				{
-					var paletteIndexToCheck = global.hatPaletteArtistModernP2;
+					case 0:
+					var paletteIndexToCheck = global.hatPaletteArtistKSSUP1;
+					break;
+					
+					case 1:
+					var paletteIndexToCheck = global.hatPaletteArtistKSSUP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteArtistKSSUP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteArtistKSSUP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -784,25 +1154,45 @@ function scr_Player_HatPalette(argument0,argument1)
 			break;
 			
 			case playerAbilities.fighter:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeFighterP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeFighterP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeFighterP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeFighterP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
 			{
 				case abilityHatSkins.fighter_kssu:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteFighterKSSUP1;
-				}
-				else
-				{
-					var paletteIndexToCheck = global.hatPaletteFighterKSSUP2;
+					break;
+					
+					case 1:
+					var paletteIndexToCheck = global.hatPaletteKFighterSSUP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteFighterKSSUP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteFighterKSSUP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -820,25 +1210,45 @@ function scr_Player_HatPalette(argument0,argument1)
 			break;
 			
 			case playerAbilities.suplex:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeSuplexP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeSuplexP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeSuplexP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeSuplexP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
 			{
 				case abilityHatSkins.suplex_kssu:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteSuplexKSSUP1;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					var paletteIndexToCheck = global.hatPaletteSuplexKSSUP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteSuplexKSSUP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteSuplexKSSUP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -856,25 +1266,45 @@ function scr_Player_HatPalette(argument0,argument1)
 			break;
 			
 			case playerAbilities.wing:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeWingP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeWingP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeWingP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeWingP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
 			{
 				case abilityHatSkins.wing_kssu:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteWingKSSUP1;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					var paletteIndexToCheck = global.hatPaletteWingKSSUP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteWingKSSUP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteWingKSSUP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -896,25 +1326,45 @@ function scr_Player_HatPalette(argument0,argument1)
 			break;
 			
 			case playerAbilities.jet:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeJetP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeJetP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeJetP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeJetP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
 			{
 				case abilityHatSkins.jet_kssu:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteJetKSSUP1;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					var paletteIndexToCheck = global.hatPaletteJetKSSUP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteJetKSSUP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteJetKSSUP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -940,25 +1390,45 @@ function scr_Player_HatPalette(argument0,argument1)
 			break;
 			
 			case playerAbilities.sword:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeSwordP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeSwordP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeSwordP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeSwordP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
 			{
 				case abilityHatSkins.sword_kssu:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteSwordKSSUP1;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					var paletteIndexToCheck = global.hatPaletteSwordKSSUP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteSwordKSSUP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteSwordKSSUP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -984,25 +1454,45 @@ function scr_Player_HatPalette(argument0,argument1)
 			break;
 			
 			case playerAbilities.parasol:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeParasolP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeParasolP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeParasolP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeParasolP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
 			{
 				case abilityHatSkins.parasol_kssu:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteParasolKSSUP1;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					var paletteIndexToCheck = global.hatPaletteParasolKSSUP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteParasolKSSUP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteParasolKSSUP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -1024,25 +1514,45 @@ function scr_Player_HatPalette(argument0,argument1)
 			break;
 			
 			case playerAbilities.hammer:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeHammerP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeHammerP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeHammerP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeHammerP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
 			{
 				case abilityHatSkins.hammer_kssu:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteHammerKSSUP1;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					var paletteIndexToCheck = global.hatPaletteHammerKSSUP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteHammerKSSUP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteHammerKSSUP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -1068,25 +1578,45 @@ function scr_Player_HatPalette(argument0,argument1)
 			break;
 			
 			case playerAbilities.bell:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeBellP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeBellP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeBellP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeBellP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
 			{
 				case abilityHatSkins.bell_modern:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteBellModernP1;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					var paletteIndexToCheck = global.hatPaletteBellModernP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteBellModern3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteBellModernP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -1132,25 +1662,45 @@ function scr_Player_HatPalette(argument0,argument1)
 			break;
 			
 			case playerAbilities.sleep:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeSleepP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeSleepP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeSleepP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeSleepP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
 			{
 				case abilityHatSkins.sleep_kssu:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteSleepKSSUP1;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					var paletteIndexToCheck = global.hatPaletteSleepKSSUP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteSleepKSSUP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteSleepKSSUP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)
@@ -1176,25 +1726,45 @@ function scr_Player_HatPalette(argument0,argument1)
 			break;
 			
 			case playerAbilities.scan:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeScanP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeScanP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeScanP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeScanP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
 			{
 				case abilityHatSkins.scan_kssu:
-				if (player == 0)
+				switch (player)
 				{
+					case 0:
 					var paletteIndexToCheck = global.hatPaletteScanKSSUP1;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					var paletteIndexToCheck = global.hatPaletteScanKSSUP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteScanKSSUP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteScanKSSUP4;
+					break;
 				}
 				
 				switch (paletteIndexToCheck)

@@ -123,7 +123,7 @@ if (!global.pause)
 	
 	//Animation
 	
-	if (global.hasCoop)
+	if (global.hasCoop > 0)
 	{
 		image_index = 1;
 	}
@@ -136,15 +136,15 @@ if (!global.pause)
 	
 	if ((!instance_exists(obj_Fade)) and (keySelectPressed))
 	{
-		if (global.hasCoop)
+		if (global.hasCoop > 0)
 		{
-			global.hasCoop = false;
+			global.hasCoop = 0;
 			if (audio_is_playing(snd_1Up)) audio_stop_sound(snd_1Up);
 			audio_play_sound(snd_ButtonNo,0,false);
 		}
 		else
 		{
-			global.hasCoop = true;
+			global.hasCoop = 1;
 			if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 			audio_play_sound(snd_1Up,0,false);
 		}

@@ -2,7 +2,14 @@
 
 //Destroy
 
-if ((!instance_exists(owner)) or (((owner.player == 0) and (global.characterP1 == playerCharacters.gamble)) or ((owner.player == 1) and (global.characterP2 == playerCharacters.gamble)))) instance_destroy();
+if ((!instance_exists(owner))
+or (((owner.player == 0) and (global.characterP1 == playerCharacters.gamble))
+or ((owner.player == 1) and (global.characterP2 == playerCharacters.gamble))
+or ((owner.player == 2) and (global.characterP3 == playerCharacters.gamble))
+or ((owner.player == 3) and (global.characterP4 == playerCharacters.gamble))))
+{
+	instance_destroy();
+}
 
 if (!global.pause)
 {

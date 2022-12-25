@@ -330,7 +330,11 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		par.destroyTimer = 1;
 		if (instance_exists(owner))
 		{
-			if ((!enemy) and (!isMystic) and (((player == 0) and (global.hatTypeBeamP1 == abilityHatSkins.beam_marxSoul)) or ((player == 1) and (global.hatTypeBeamP2 == abilityHatSkins.beam_marxSoul))))
+			if ((!enemy) and (!isMystic) and
+			(((player == 0) and (global.hatTypeBeamP1 == abilityHatSkins.beam_marxSoul))
+			or ((player == 1) and (global.hatTypeBeamP2 == abilityHatSkins.beam_marxSoul))
+			or ((player == 2) and (global.hatTypeBeamP3 == abilityHatSkins.beam_marxSoul))
+			or ((player == 3) and (global.hatTypeBeamP4 == abilityHatSkins.beam_marxSoul))))
 			{
 				par.sprite_index = spr_Particle_MarxDiamonds;
 				par.image_alpha = .5;

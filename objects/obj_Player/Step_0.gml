@@ -2,17 +2,36 @@
 
 //Variables
 
-var playerAbility = global.abilityP1;
-if (player == 1) playerAbility = global.abilityP2;
-
-var playerCharacter = global.characterP1;
-if (player == 1) playerCharacter = global.characterP2;
-
-var playerIsHelper = global.isHelperP1;
-if (player == 1) playerIsHelper = global.isHelperP2;
-
-var playerFamiliar = global.familiarP1;
-if (player == 1) playerFamiliar = global.familiarP2;
+switch (player)
+{
+	case 0:
+	var playerAbility = global.abilityP1;
+	var playerCharacter = global.characterP1;
+	var playerIsHelper = global.isHelperP1;
+	var playerFamiliar = global.familiarP1;
+	break;
+	
+	case 1:
+	var playerAbility = global.abilityP2;
+	var playerCharacter = global.characterP2;
+	var playerIsHelper = global.isHelperP2;
+	var playerFamiliar = global.familiarP2;
+	break;
+	
+	case 2:
+	var playerAbility = global.abilityP3;
+	var playerCharacter = global.characterP3;
+	var playerIsHelper = global.isHelperP3;
+	var playerFamiliar = global.familiarP3;
+	break;
+	
+	case 3:
+	var playerAbility = global.abilityP4;
+	var playerCharacter = global.characterP4;
+	var playerIsHelper = global.isHelperP4;
+	var playerFamiliar = global.familiarP4;
+	break;
+}
 
 invincibleFlash = false;
 grounded = false;
@@ -50,7 +69,11 @@ if ((clampToView) and (!death))
 
 //Death
 
-if ((((player == 0) and (global.healthP1 == 0)) or ((player == 1) and (global.healthP2 == 0))) and (!death))
+if ((((player == 0) and (global.healthP1 == 0))
+or ((player == 1) and (global.healthP2 == 0))
+or ((player == 2) and (global.healthP3 == 0))
+or ((player == 3) and (global.healthP4 == 0)))
+and (!death))
 {
 	if (global.goldenTomato)
 	{
@@ -66,6 +89,8 @@ if ((((player == 0) and (global.healthP1 == 0)) or ((player == 1) and (global.he
 		//global.healthP2 = global.hpMax;
 		global.healthP1 = global.healthP1Max;
 		global.healthP2 = global.healthP2Max;
+		global.healthP3 = global.healthP3Max;
+		global.healthP4 = global.healthP4Max;
 		global.goldenTomato = false;
 	}
 	else
@@ -603,7 +628,12 @@ if (keySelectPressed)
 	switch (playerCharacter)
 	{
 		case playerCharacters.kirby:
-		if ((!global.pause) and (!global.cutscene) and (((player == 0) and (global.abilityP1 != playerAbilities.none)) or ((player == 1) and (global.abilityP2 != playerAbilities.none))) and (!attack))
+		if ((!global.pause) and (!global.cutscene) and
+		(((player == 0) and (global.abilityP1 != playerAbilities.none))
+		or ((player == 1) and (global.abilityP2 != playerAbilities.none))
+		or ((player == 2) and (global.abilityP3 != playerAbilities.none))
+		or ((player == 3) and (global.abilityP4 != playerAbilities.none)))
+		and (!attack))
 		{
 			audio_play_sound(snd_AbilityDrop,0,false);
 			if (instance_exists(obj_AbilityDropStar))
@@ -619,15 +649,27 @@ if (keySelectPressed)
 			abilityDropStar.vsp = -abilityDropStar.jumpspeed;
 			abilityDropStar.dir = -image_xscale;
 			abilityDropStar.player = player;
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				abilityDropStar.ability = global.abilityP1;
 				global.abilityP1 = playerAbilities.none;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				abilityDropStar.ability = global.abilityP2;
 				global.abilityP2 = playerAbilities.none;
+				break;
+				
+				case 2:
+				abilityDropStar.ability = global.abilityP3;
+				global.abilityP3 = playerAbilities.none;
+				break;
+				
+				case 3:
+				abilityDropStar.ability = global.abilityP4;
+				global.abilityP4 = playerAbilities.none;
+				break;
 			}
 			switch (abilityDropStar.ability)
 			{
@@ -812,6 +854,8 @@ if (!global.pause)
 
 global.healthP1 = clamp(global.healthP1,0,global.healthP1Max);
 global.healthP2 = clamp(global.healthP2,0,global.healthP2Max);
+global.healthP3 = clamp(global.healthP3,0,global.healthP3Max);
+global.healthP4 = clamp(global.healthP4,0,global.healthP4Max);
 
 //Scale
 
@@ -914,9 +958,10 @@ if (!global.pause)
 		invincibleFlashTimer = -1;
 	}
 	
-	if (player == 0)
+	switch (player)
 	{
-		//Invin Candy Timer P1
+		case 0:
+		//Invin Candy Timer
 		
 		if (global.invinCandyTimerP1 > 0)
 		{
@@ -929,7 +974,7 @@ if (!global.pause)
 			global.invinCandyTimerP1 = -1;
 		}
 		
-		//Mint Leaf Timer P1
+		//Mint Leaf Timer
 		
 		if (global.mintLeafTimerP1 > 0)
 		{
@@ -941,10 +986,10 @@ if (!global.pause)
 			invincibleFlashTimer = -1;
 			global.mintLeafTimerP1 = -1;
 		}
-	}
-	else
-	{
-		//Invin Candy Timer P2
+		break;
+		
+		case 1:
+		//Invin Candy Timer
 		
 		if (global.invinCandyTimerP2 > 0)
 		{
@@ -957,7 +1002,7 @@ if (!global.pause)
 			global.invinCandyTimerP2 = -1;
 		}
 		
-		//Mint Leaf Timer P2
+		//Mint Leaf Timer
 		
 		if (global.mintLeafTimerP2 > 0)
 		{
@@ -969,6 +1014,63 @@ if (!global.pause)
 			invincibleFlashTimer = -1;
 			global.mintLeafTimerP2 = -1;
 		}
+		break;
+		
+		case 2:
+		//Invin Candy Timer
+		
+		if (global.invinCandyTimerP3 > 0)
+		{
+			global.invinCandyTimerP3 -= 1;
+		}
+		else if (global.invinCandyTimerP3 == 0)
+		{
+			invincibleFlash = false;
+			invincibleFlashTimer = -1;
+			global.invinCandyTimerP3 = -1;
+		}
+		
+		//Mint Leaf Timer
+		
+		if (global.mintLeafTimerP3 > 0)
+		{
+			global.mintLeafTimerP3 -= 1;
+		}
+		else if (global.mintLeafTimerP3 == 0)
+		{
+			invincibleFlash = false;
+			invincibleFlashTimer = -1;
+			global.mintLeafTimerP3 = -1;
+		}
+		break;
+		
+		case 3:
+		//Invin Candy Timer
+		
+		if (global.invinCandyTimerP4 > 0)
+		{
+			global.invinCandyTimerP4 -= 1;
+		}
+		else if (global.invinCandyTimerP4 == 0)
+		{
+			invincibleFlash = false;
+			invincibleFlashTimer = -1;
+			global.invinCandyTimerP4 = -1;
+		}
+		
+		//Mint Leaf Timer
+		
+		if (global.mintLeafTimerP4 > 0)
+		{
+			global.mintLeafTimerP4 -= 1;
+		}
+		else if (global.mintLeafTimerP4 == 0)
+		{
+			invincibleFlash = false;
+			invincibleFlashTimer = -1;
+			global.mintLeafTimerP4 = -1;
+		}
+		break;
 	}
 	
 	//Invincibility Candy Particle Timer
@@ -1923,24 +2025,27 @@ else if (setupTimer == 0)
 		followerObject.owner = id;
 		followerObject.character = playerFamiliar;
 	}
-	if ((global.hasCoop) and (instance_number(obj_Player) == 1))
-	{
-		var xx = x;
-		if (!place_meeting(x - 24,y,obj_ParentWall))
+		if ((global.hasCoop > 0) and (instance_number(obj_Player) == 1))
 		{
-			xx = x - 24;
-		}
-		else if (!place_meeting(x + 24,y,obj_ParentWall))
+		for (var i = 0; i < global.hasCoop; i++)
 		{
-			xx = x + 24;
-		}
-		else
-		{
-			xx = x;
-		}
+			var xx = x;
+			if (!place_meeting(x - 24,y,obj_ParentWall))
+			{
+				xx = x - 24;
+			}
+			else if (!place_meeting(x + 24,y,obj_ParentWall))
+			{
+				xx = x + 24;
+			}
+			else
+			{
+				xx = x;
+			}
 			
-		var secondPlayer = instance_create_depth(xx,y,depth,obj_Player);
-		secondPlayer.player = 1;
+			var newPlayer = instance_create_depth(xx,y,depth,obj_Player);
+			newPlayer.player = i + 1;
+		}
 		player = 0;
 	}
 	setupTimer = -1;
@@ -1954,32 +2059,57 @@ if (characterSetupTimer > 0)
 }
 else if (characterSetupTimer == 0)
 {
-	if (player == 0)
+	switch (player)
 	{
+		case 0:
 		var sprayPaint = global.sprayPaintP1;
+		var selectedCharacter = global.characterP1;
 		global.isHelperP1 = false;
-	}
-	else
-	{
+		break;
+		
+		case 1:
 		var sprayPaint = global.sprayPaintP2;
+		var selectedCharacter = global.characterP2;
 		global.isHelperP2 = false;
+		break;
+		
+		case 2:
+		var sprayPaint = global.sprayPaintP3;
+		var selectedCharacter = global.characterP3;
+		global.isHelperP3 = false;
+		break;
+		
+		case 3:
+		var sprayPaint = global.sprayPaintP4;
+		var selectedCharacter = global.characterP4;
+		global.isHelperP4 = false;
+		break;
 	}
-	var selectedCharacter = global.characterP1;
-	if (player == 1) selectedCharacter = global.characterP2;
 	
 	switch (selectedCharacter)
 	{
 		case playerCharacters.kirby:
-		var skin = global.skinKirbyP1;
-		if (player == 1) skin = global.skinKirbyP2;
-		
-		if (player == 0)
+		switch (player)
 		{
+			case 0:
+			var skin = global.skinKirbyP1;
 			global.sprayPaintP1 = scr_Player_SprayPaint(global.sprayPaintKirbyP1,playerCharacters.kirby,skin);
-		}
-		else
-		{
+			break;
+			
+			case 1:
+			var skin = global.skinKirbyP2;
 			global.sprayPaintP2 = scr_Player_SprayPaint(global.sprayPaintKirbyP2,playerCharacters.kirby,skin);
+			break;
+			
+			case 2:
+			var skin = global.skinKirbyP3;
+			global.sprayPaintP3 = scr_Player_SprayPaint(global.sprayPaintKirbyP3,playerCharacters.kirby,skin);
+			break;
+			
+			case 3:
+			var skin = global.skinKirbyP4;
+			global.sprayPaintP4 = scr_Player_SprayPaint(global.sprayPaintKirbyP4,playerCharacters.kirby,skin);
+			break;
 		}
 		
 		gravNormal = .23;
@@ -2233,16 +2363,27 @@ else if (characterSetupTimer == 0)
 		break;
 		
 		case playerCharacters.gamble:
-		var skin = global.skinGambleP1;
-		if (player == 1) skin = global.skinGambleP2;
-		
-		if (player == 0)
+		switch (player)
 		{
+			case 0:
+			var skin = global.skinGambleP1;
 			global.sprayPaintP1 = scr_Player_SprayPaint(global.sprayPaintGambleP1,playerCharacters.gamble,skin);
-		}
-		else
-		{
+			break;
+			
+			case 1:
+			var skin = global.skinGambleP2;
 			global.sprayPaintP2 = scr_Player_SprayPaint(global.sprayPaintGambleP2,playerCharacters.gamble,skin);
+			break;
+			
+			case 2:
+			var skin = global.skinGambleP3;
+			global.sprayPaintP3 = scr_Player_SprayPaint(global.sprayPaintGambleP3,playerCharacters.gamble,skin);
+			break;
+			
+			case 3:
+			var skin = global.skinGambleP4;
+			global.sprayPaintP4 = scr_Player_SprayPaint(global.sprayPaintGambleP4,playerCharacters.gamble,skin);
+			break;
 		}
 		
 		gravNormal = .23;
@@ -2310,16 +2451,27 @@ else if (characterSetupTimer == 0)
 		break;
 		
 		case playerCharacters.gooey:
-		var skin = global.skinGooeyP1;
-		if (player == 1) skin = global.skinGooeyP2;
-		
-		if (player == 0)
+		switch (player)
 		{
+			case 0:
+			var skin = global.skinGooeyP1;
 			global.sprayPaintP1 = scr_Player_SprayPaint(global.sprayPaintGooeyP1,playerCharacters.gooey,skin);
-		}
-		else
-		{
+			break;
+			
+			case 1:
+			var skin = global.skinGooeyP2;
 			global.sprayPaintP2 = scr_Player_SprayPaint(global.sprayPaintGooeyP2,playerCharacters.gooey,skin);
+			break;
+			
+			case 2:
+			var skin = global.skinGooeyP3;
+			global.sprayPaintP3 = scr_Player_SprayPaint(global.sprayPaintGooeyP3,playerCharacters.gooey,skin);
+			break;
+			
+			case 3:
+			var skin = global.skinGooeyP4;
+			global.sprayPaintP4 = scr_Player_SprayPaint(global.sprayPaintGooeyP4,playerCharacters.gooey,skin);
+			break;
 		}
 		
 		#region Physics
@@ -2646,15 +2798,27 @@ else if (characterSetupTimer == 0)
 			break;
 		}
 		
-		if (player == 0)
+		switch (player)
 		{
+			case 0:
 			global.sprayPaintP1 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP1 = true;
-		}
-		else
-		{
+			break;
+			
+			case 1:
 			global.sprayPaintP2 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP2 = true;
+			break;
+			
+			case 2:
+			global.sprayPaintP3 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP3 = true;
+			break;
+			
+			case 3:
+			global.sprayPaintP4 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP4 = true;
+			break;
 		}
 		break;
 		
@@ -2776,15 +2940,27 @@ else if (characterSetupTimer == 0)
 			break;
 		}
 		
-		if (player == 0)
+		switch (player)
 		{
+			case 0:
 			global.sprayPaintP1 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP1 = true;
-		}
-		else
-		{
+			break;
+			
+			case 1:
 			global.sprayPaintP2 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP2 = true;
+			break;
+			
+			case 2:
+			global.sprayPaintP3 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP3 = true;
+			break;
+			
+			case 3:
+			global.sprayPaintP4 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP4 = true;
+			break;
 		}
 		break;
 		
@@ -2900,15 +3076,28 @@ else if (characterSetupTimer == 0)
 			#endregion
 			break;
 		}
-		if (player == 0)
+		
+		switch (player)
 		{
+			case 0:
 			global.sprayPaintP1 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP1 = true;
-		}
-		else
-		{
+			break;
+			
+			case 1:
 			global.sprayPaintP2 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP2 = true;
+			break;
+			
+			case 2:
+			global.sprayPaintP3 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP3 = true;
+			break;
+			
+			case 3:
+			global.sprayPaintP4 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP4 = true;
+			break;
 		}
 		break;
 		
@@ -2990,15 +3179,27 @@ else if (characterSetupTimer == 0)
 			break;
 		}
 		
-		if (player == 0)
+		switch (player)
 		{
+			case 0:
 			global.sprayPaintP1 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP1 = true;
-		}
-		else
-		{
+			break;
+			
+			case 1:
 			global.sprayPaintP2 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP2 = true;
+			break;
+			
+			case 2:
+			global.sprayPaintP3 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP3 = true;
+			break;
+			
+			case 3:
+			global.sprayPaintP4 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP4 = true;
+			break;
 		}
 		break;
 		
@@ -3070,15 +3271,27 @@ else if (characterSetupTimer == 0)
 			break;
 		}
 		
-		if (player == 0)
+		switch (player)
 		{
+			case 0:
 			global.sprayPaintP1 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP1 = true;
-		}
-		else
-		{
+			break;
+			
+			case 1:
 			global.sprayPaintP2 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP2 = true;
+			break;
+			
+			case 2:
+			global.sprayPaintP3 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP3 = true;
+			break;
+			
+			case 3:
+			global.sprayPaintP4 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP4 = true;
+			break;
 		}
 		break;
 		
@@ -3166,15 +3379,27 @@ else if (characterSetupTimer == 0)
 			break;
 		}
 		
-		if (player == 0)
+		switch (player)
 		{
+			case 0:
 			global.sprayPaintP1 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP1 = true;
-		}
-		else
-		{
+			break;
+			
+			case 1:
 			global.sprayPaintP2 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP2 = true;
+			break;
+			
+			case 2:
+			global.sprayPaintP3 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP3 = true;
+			break;
+			
+			case 3:
+			global.sprayPaintP4 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP4 = true;
+			break;
 		}
 		break;
 		
@@ -3290,15 +3515,27 @@ else if (characterSetupTimer == 0)
 			break;
 		}
 		
-		if (player == 0)
+		switch (player)
 		{
+			case 0:
 			global.sprayPaintP1 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP1 = true;
-		}
-		else
-		{
+			break;
+			
+			case 1:
 			global.sprayPaintP2 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP2 = true;
+			break;
+			
+			case 2:
+			global.sprayPaintP3 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP3 = true;
+			break;
+			
+			case 3:
+			global.sprayPaintP4 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP4 = true;
+			break;
 		}
 		break;
 		
@@ -3381,15 +3618,27 @@ else if (characterSetupTimer == 0)
 			break;
 		}
 		
-		if (player == 0)
+		switch (player)
 		{
+			case 0:
 			global.sprayPaintP1 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP1 = true;
-		}
-		else
-		{
+			break;
+			
+			case 1:
 			global.sprayPaintP2 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP2 = true;
+			break;
+			
+			case 2:
+			global.sprayPaintP3 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP3 = true;
+			break;
+			
+			case 3:
+			global.sprayPaintP4 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP4 = true;
+			break;
 		}
 		break;
 		
@@ -3454,26 +3703,48 @@ else if (characterSetupTimer == 0)
 			break;
 		}
 		
-		if (player == 0)
+		switch (player)
 		{
+			case 0:
 			global.sprayPaintP1 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP1 = true;
-		}
-		else
-		{
+			break;
+			
+			case 1:
 			global.sprayPaintP2 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP2 = true;
+			break;
+			
+			case 2:
+			global.sprayPaintP3 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP3 = true;
+			break;
+			
+			case 3:
+			global.sprayPaintP4 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP4 = true;
+			break;
 		}
 		break;
 	}
 	
-	if (player == 0)
+	switch (player)
 	{
+		case 0:
 		paletteIndex = global.sprayPaintP1;
-	}
-	else
-	{
+		break;
+		
+		case 1:
 		paletteIndex = global.sprayPaintP2;
+		break;
+		
+		case 2:
+		paletteIndex = global.sprayPaintP3;
+		break;
+		
+		case 3:
+		paletteIndex = global.sprayPaintP4;
+		break;
 	}
 	
 	characterSetupTimer = -1;
@@ -3642,13 +3913,23 @@ if (scanTimer > 0)
 else if (scanTimer == 0)
 {
 	if (instance_exists(scanProjectile)) instance_destroy(scanProjectile);
-	if (player == 0)
+	switch (player)
 	{
+		case 0:
 		global.abilityP1 = cAbility;
-	}
-	else
-	{
+		break;
+		
+		case 1:
 		global.abilityP2 = cAbility;
+		break;
+		
+		case 2:
+		global.abilityP3 = cAbility;
+		break;
+		
+		case 3:
+		global.abilityP4 = cAbility;
+		break;
 	}
 	if (cAbility != playerAbilities.none)
 	{
@@ -3698,7 +3979,7 @@ if(grounded){
 	jetDashAir = 3;
 }
 
-////Fast Fall
+//Fast Fall
 //if(keyDownPressed && downInputBufferTimer > 0){
 //	vsp = gravLimit;
 //	fallHop = true;

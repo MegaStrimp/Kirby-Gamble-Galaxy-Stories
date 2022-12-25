@@ -13,7 +13,8 @@ if (!global.pause)
 		{
 			case "vol1":
 			if (keyUpPressed) selection = "volS";
-			if (keyDownPressed) selection = "vol2";
+			//if (keyDownPressed) selection = "vol2";
+			if (keyDownPressed) selection = "volS";
 			if (keyLeftPressed) selection = "back";
 			if (keyRightPressed) selection = "back";
 			
@@ -93,7 +94,8 @@ if (!global.pause)
 			break;
 			
 			case "volS":
-			if (keyUpPressed) selection = "vol3";
+			//if (keyUpPressed) selection = "vol3";
+			if (keyUpPressed) selection = "vol1";
 			if (keyDownPressed) selection = "vol1";
 			if (keyLeftPressed) selection = "back";
 			if (keyRightPressed) selection = "back";
@@ -167,8 +169,8 @@ if (!global.pause)
 		switch (selection)
 		{
 			case "artwork":
-			if (keyUpPressed) selection = "download";
-			if (keyDownPressed) selection = "download";
+			if (keyUpPressed) selection = "back";
+			if (keyDownPressed) selection = "back";
 			if ((keyLeftPressed) and (artworkSelection != 0))
 			{
 				if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
@@ -199,6 +201,66 @@ if (!global.pause)
 				bgSprite = spr_Menu_Gallery_Bg_Green;
 				scr_Gallery_Artwork_Vol1();
 				page = 1;
+				select = false;
+			}
+			break;
+			
+			case "download":
+			if (keyUpPressed) selection = "artwork";
+			if (keyDownPressed) selection = "artwork";
+			if (keyLeftPressed) selection = "back";
+			if (keyRightPressed) selection = "back";
+			
+			if (!instance_exists(obj_Fade))
+			{
+				if ((keyJumpPressed) or (keyStartPressed))
+				{
+					if (artworkArray[# artworkSelection,3])
+					{
+						if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+						audio_play_sound(snd_ButtonYes,0,false);
+						select = true;
+					}
+					else
+					{
+						if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+						audio_play_sound(snd_ButtonNo,0,false);
+					}
+				}
+			}
+			
+			if (select)
+			{
+				var fileName = get_save_filename("artwork|*.png", artworkArray[# artworkSelection,1]);
+				var sprCustom = sprite_duplicate(artworkArray[# artworkSelection,0]);
+				sprite_save(sprCustom,0,fileName);
+				sprite_delete(sprCustom);
+				select = false;
+			}
+			break;
+			
+			case "back":
+			if (keyUpPressed) selection = "artwork";
+			if (keyDownPressed) selection = "artwork";
+			if (keyLeftPressed) selection = "download";
+			if (keyRightPressed) selection = "download";
+			
+			if (!instance_exists(obj_Fade))
+			{
+				if ((keyJumpPressed) or (keyStartPressed))
+				{
+					if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+					audio_play_sound(snd_ButtonNo,0,false);
+					select = true;
+				}
+			}
+			
+			if (select)
+			{
+				artworkX = 240;
+				artworkSelection = 0;
+				selection = selectedVol;
+				page = 0;
 				select = false;
 			}
 			break;

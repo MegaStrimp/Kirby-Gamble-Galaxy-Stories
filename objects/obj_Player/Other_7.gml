@@ -2,11 +2,28 @@
 
 //Variables
 
-var playerAbility = global.abilityP1;
-if (player == 1) playerAbility = global.abilityP2;
-
-var playerCharacter = global.characterP1;
-if (player == 1) playerCharacter = global.characterP2;
+switch (player)
+{
+	case 0:
+	var playerAbility = global.abilityP1;
+	var playerCharacter = global.characterP1;
+	break;
+	
+	case 1:
+	var playerAbility = global.abilityP2;
+	var playerCharacter = global.characterP2;
+	break;
+	
+	case 2:
+	var playerAbility = global.abilityP3;
+	var playerCharacter = global.characterP3;
+	break;
+	
+	case 3:
+	var playerAbility = global.abilityP4;
+	var playerCharacter = global.characterP4;
+	break;
+}
 
 //Idle Animation
 
@@ -134,7 +151,10 @@ if (sprite_index == sprSpit)
 
 if (((sprite_index == sprSwallow) or (sprite_index == sprHardSwallow)) and (state == playerStates.swallow))
 {
-	if (((player == 0) and (global.abilityP1 == playerAbilities.none)) or ((player == 1) and (global.abilityP2 == playerAbilities.none)))
+	if (((player == 0) and (global.abilityP1 == playerAbilities.none))
+	or ((player == 1) and (global.abilityP2 == playerAbilities.none))
+	or ((player == 2) and (global.abilityP3 == playerAbilities.none))
+	or ((player == 3) and (global.abilityP4 == playerAbilities.none)))
 	{
 		global.pause = false;
 		image_index = image_number - 1;
@@ -150,7 +170,10 @@ if (((sprite_index == sprSwallow) or (sprite_index == sprHardSwallow)) and (stat
 
 if ((sprite_index == sprAbilityChange) and (state == playerStates.swallow))
 {
-	if (((player == 0) and (global.abilityP1 != playerAbilities.none)) or ((player == 1) and (global.abilityP2 != playerAbilities.none)))
+	if (((player == 0) and (global.abilityP1 != playerAbilities.none))
+	or ((player == 1) and (global.abilityP2 != playerAbilities.none))
+	or ((player == 2) and (global.abilityP3 != playerAbilities.none))
+	or ((player == 3) and (global.abilityP4 != playerAbilities.none)))
 	{
 		image_index = image_number - 1;
 		image_speed = 0;
@@ -296,7 +319,6 @@ if ((attackNumber == playerAttacks.bombDash) and (sprite_index == sprBombAttack3
 
 if (sprite_index == sprFireAttackRelease1)
 {
-	iceReady = false;
 	sprite_index = sprFireAttackRelease2;
 	image_index = 0;
 }

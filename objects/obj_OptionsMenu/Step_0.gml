@@ -85,7 +85,7 @@ if (!global.pause)
 			scr_SaveConfig("config.ini");
 			var fade = instance_create_depth(x,y,-999,obj_Fade);
 			var demo = false;
-			demo = true;
+			//demo = true;
 			if (demo)
 			{
 				fade.targetRoom = rm_StageSelect_Demo;

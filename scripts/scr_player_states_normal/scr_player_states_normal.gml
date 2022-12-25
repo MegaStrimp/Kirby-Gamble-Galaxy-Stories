@@ -5,14 +5,32 @@ function scr_Player_States_Normal()
 	if (!global.pause)
 	{
 		#region Variables
-		var playerCharacter = global.characterP1;
-		if (player == 1) playerCharacter = global.characterP2;
-		
-		var playerAbility = global.abilityP1;
-		if (player == 1) playerAbility = global.abilityP2;
-		
-		var playerSprayPaint = global.sprayPaintP1;
-		if (player == 1) playerSprayPaint = global.sprayPaintP2;
+		switch (player)
+		{
+			case 0:
+			var playerAbility = global.abilityP1;
+			var playerCharacter = global.characterP1;
+			var playerSprayPaint = global.sprayPaintP1;
+			break;
+			
+			case 1:
+			var playerAbility = global.abilityP2;
+			var playerCharacter = global.characterP2;
+			var playerSprayPaint = global.sprayPaintP2;
+			break;
+			
+			case 2:
+			var playerAbility = global.abilityP3;
+			var playerCharacter = global.characterP3;
+			var playerSprayPaint = global.sprayPaintP3;
+			break;
+			
+			case 3:
+			var playerAbility = global.abilityP4;
+			var playerCharacter = global.characterP4;
+			var playerSprayPaint = global.sprayPaintP4;
+			break;
+		}
 		
 		var collidingWall = -1;
 		var grounded = false;
@@ -937,7 +955,7 @@ function scr_Player_States_Normal()
 								}
 								else
 								{
-									if (run)
+									if ((run) and (runBuffer < 60))
 									{
 										if (grounded)
 										{
@@ -1169,7 +1187,13 @@ function scr_Player_States_Normal()
 								attackTimer = 20;
 								if (audio_is_playing(snd_BeamCharge)) audio_stop_sound(snd_BeamCharge);
 								audio_play_sound(snd_BeamCharge,0,false);
-								if (((player == 0) and (global.hatTypeBeamP1 == abilityHatSkins.beam_marxSoul)) or ((player == 1) and (global.hatTypeBeamP2 == abilityHatSkins.beam_marxSoul))) audio_play_sound(snd_BeamChargeMarxAlt,0,false);
+								if (((player == 0) and (global.hatTypeBeamP1 == abilityHatSkins.beam_marxSoul))
+								or ((player == 1) and (global.hatTypeBeamP2 == abilityHatSkins.beam_marxSoul))
+								or ((player == 2) and (global.hatTypeBeamP3 == abilityHatSkins.beam_marxSoul))
+								or ((player == 3) and (global.hatTypeBeamP4 == abilityHatSkins.beam_marxSoul)))
+								{
+									audio_play_sound(snd_BeamChargeMarxAlt,0,false);
+								}
 							    var projectile = instance_create_depth(x + (6 * dir),y - 2,depth,obj_Projectile_BeamCharge);
 								projectile.owner = id;
 								projectile.abilityType = playerAbilities.beam;
@@ -3373,21 +3397,100 @@ function scr_Player_States_Normal()
 							//		state = playerStates.normal;
 							//	}
 							//}
-							if(keyAttackPressed && attackable && !attack){
-								if(run && !grounded){
+							if (keyAttackPressed && attackable && !attack)
+							{
+								if (run && !grounded)
+								{
 									attackNumber = playerAttacks.jetDash;
-								}else{
+								}
+								else
+								{
 									attackNumber = playerAttacks.jetCharge;
+									attack = true;
 								    attackable = false;
 									// need to set the state as well to jetCharge
 									sprite_index = sprSleepReady;
 									image_index = 0;
 								}
 							}
-							if(attackNumber == playerAttacks.jetCharge){
-								attackTimer = 99;
-								if(keyAttackReleased){
-									attackNumber = playerAttacks.jetDash;
+							
+							if(attackNumber == playerAttacks.jetCharge)
+							{
+							//attackTimer = 99;
+								//if(keyAttackReleased){
+								//	attackNumber = playerAttacks.jetDash;
+								//}
+								image_index = 0;
+								if (jetCharge == jetChargeMax - 1)
+								{
+									if (audio_is_playing(snd_Charge_Ready)) audio_stop_sound(snd_Charge_Ready);
+									audio_play_sound(snd_Charge_Ready,0,false);
+									var particle = instance_create_depth(x,y - 15,depth - 1,obj_Particle);
+									particle.sprite_index = spr_Particle_Flash1;
+									particle.scale = 1.5;
+									particle.destroyAfterAnimation = true;
+								}
+								jetCharge += 1;
+								if (jetCharge >= 6)
+								{
+									//if (jetCharge == 6)
+									{
+										sprite_index = sprCutterCharge; // change this later
+										image_index = 0;
+									}
+									if ((!audio_is_playing(snd_Charge_Intro)) and (!audio_is_playing(snd_Charge_Loop)))
+									{
+										if (chargeSfxState == "intro")
+										{
+										    chargeSfx = audio_play_sound(snd_Charge_Intro,0,false);
+										    chargeSfxState = "loop";
+										}
+										else
+										{
+										    chargeSfx = audio_play_sound(snd_Charge_Loop,0,false);
+										}
+									}
+								}
+
+								if (keyRightHold)
+								{
+									dir = 1;
+								}
+								if (keyLeftHold)
+								{
+									dir = -1;
+								}
+
+								if (jetCharge < jetChargeMax)
+								{
+									if ((!global.cutscene) and (keyAttackReleased))
+									{
+										jetCharge = 0;
+										if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
+										chargeSfxState = "intro";
+										invincibleFlash = false;
+										invincibleFlashTimer = -1;
+										attack = true;
+										attackNumber = playerAttacks.jetDash;
+										//sprite_index = sprCutterAttack1;
+									    image_index = 0;
+									}
+								}
+								else
+								{
+									if (invincibleFlashTimer == -1) invincibleFlashTimer = invincibleFlashTimerMax;
+									if ((!global.cutscene) and (keyAttackReleased))
+									{
+										jetCharge = 0;
+										if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
+										chargeSfxState = "intro";
+										invincibleFlash = false;
+										invincibleFlashTimer = -1;
+										attack = true;
+										attackNumber = playerAttacks.jetDash;
+										//sprite_index = sprCutterAttack1;
+									    image_index = 0;
+									}
 								}
 							}
 							if(attackNumber = playerAttacks.jetDash){
@@ -3403,13 +3506,18 @@ function scr_Player_States_Normal()
 					            attack = true;
 								attackNumber = playerAttacks.jetDash;
 								fireDashDir = 0;
-								if (keyUpHold and jetDashAir > 1){
+								if (keyUpHold and jetDashAir > 1)
+								{
 									fireDashDir = -1;
 									jetDashAir--;
-								}else if (keyDownHold or jetDashAir <= 0){
+								}
+								else if (keyDownHold or jetDashAir <= 0)
+								{
 									fireDashDir = 1;
 									jetDashAir--;
-								}else{
+								}
+								else
+								{
 									jetDashAir--;
 								}
 					            attackTimer = 25;
@@ -3419,7 +3527,6 @@ function scr_Player_States_Normal()
 								//	attackTimer = 16;
 								}
 								attackable = false;
-					            fireReleaseTimer = 35;
 					            state = playerStates.jetDash;
 								if (audio_is_playing(snd_Fire3)) audio_stop_sound(snd_Fire3);
 				                audio_play_sound(snd_Fire3,0,false);
@@ -3924,7 +4031,8 @@ function scr_Player_States_Normal()
 			switch (playerCharacter)
 			{
 				case playerCharacters.kirby:
-				switch(playerAbility){
+				switch(playerAbility)
+				{
 					case playerAbilities.jet:
 					attackTimer = 0;
 					hurt = false;
@@ -3938,6 +4046,9 @@ function scr_Player_States_Normal()
 					image_index = 0;
 					state = playerStates.jetHover;
 					//add code that makes the player use jet jump instead if jetCHarge >= 120
+					break;
+					
+					case playerAbilities.ufo:
 					break;
 					
 					default:
@@ -4053,7 +4164,7 @@ function scr_Player_States_Normal()
 				{
 					if (!idleAnimation)
 					{
-						if ((idleAnimationTimer < idleAnimationTimerMax) and ((carriedItemIndex != -1) and !((carriedItemIndex.object_index == obj_Projectile_Bomb) and (carriedItemIndex.selfExplodeTimer != -1) and (carriedItemIndex.selfExplodeTimer <= 90))))
+						if ((idleAnimationTimer < idleAnimationTimerMax) and !((carriedItemIndex.object_index == obj_Projectile_Bomb) and (carriedItemIndex.selfExplodeTimer <= 90)))
 						{
 							idleAnimationTimer += 1;
 						}
@@ -4344,7 +4455,7 @@ function scr_Player_States_Normal()
 						}
 					}
 					
-					if ((idleAnimation) and (!sparkMaxCharge) and ((carriedItemIndex != -1) and !((carriedItemIndex.object_index == obj_Projectile_Bomb) and (carriedItemIndex.selfExplodeTimer != -1) and (carriedItemIndex.selfExplodeTimer <= 90))))
+					if ((idleAnimation) and (!sparkMaxCharge) and (!((carriedItemIndex.object_index == obj_Projectile_Bomb) and (carriedItemIndex.selfExplodeTimer <= 90))))
 					{
 						switch (playerCharacter)
 						{
@@ -4357,7 +4468,7 @@ function scr_Player_States_Normal()
 							break;
 						}
 					}
-					else if ((carriedItemIndex != -1) and (carriedItemIndex.object_index == obj_Projectile_Bomb) and (carriedItemIndex.selfExplodeTimer != -1) and (carriedItemIndex.selfExplodeTimer <= 90))
+					else if ((carriedItemIndex != -1) and (carriedItemIndex.object_index == obj_Projectile_Bomb) and (carriedItemIndex.selfExplodeTimer <= 90))
 					{
 						sprite_index = sprItemCarryHeavyWalk;
 					}

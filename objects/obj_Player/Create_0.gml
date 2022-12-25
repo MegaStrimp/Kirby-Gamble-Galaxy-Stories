@@ -71,7 +71,6 @@ decelSwordDash = .1;
 decelParasolDash = .1;
 decelFloat = .025;
 climbSpeed = 2.5;
-jetCharge = 0;
 gravJetDash = 0.25;
 gravLimitJetDash = 0.65;
 
@@ -296,13 +295,17 @@ waterEggSoilUpgrade = false;
 
 //Other Variables
 
-if ((global.healthP1 == 0) or (global.healthP2 == 0))
+if ((global.healthP1 == 0) or (global.healthP2 == 0) or (global.healthP3 == 0) or (global.healthP4 == 0))
 {
 	if (global.pause) global.pause = false;
 	global.healthP1 = global.healthP1Max;
 	global.healthP2 = global.healthP2Max;
+	global.healthP3 = global.healthP3Max;
+	global.healthP4 = global.healthP4Max;
 	global.healP1Mod = global.healthP1;
 	global.healP2Mod = global.healthP2;
+	global.healP3Mod = global.healthP3;
+	global.healP4Mod = global.healthP4;
 }
 player = 0;
 playerCharacter = 0;
@@ -422,6 +425,8 @@ wheelReady = true;
 wheelTurn = false;
 wheelCrash = false;
 wingFeatherPos = 0;
+jetCharge = 0;
+jetChargeMax = 45;
 waterWalkHatAnim = 0;
 micFlash = false;
 isSleeping = false;

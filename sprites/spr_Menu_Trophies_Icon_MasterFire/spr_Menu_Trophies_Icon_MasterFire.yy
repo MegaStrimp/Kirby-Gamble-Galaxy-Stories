@@ -29,7 +29,7 @@
   "gridY": 0,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4cf49e56-041d-40dd-91a5-9af22fd779ab",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cd5b6dce-ee85-467f-8e54-2b7dc29592bc",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6e4cf8c9-8281-4a63-850a-71400a7bdbf0",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -47,7 +47,7 @@
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"64eb4a16-b30d-4f17-87ea-d2c09e06241d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4cf49e56-041d-40dd-91a5-9af22fd779ab","path":"sprites/spr_Menu_Trophies_Icon_MasterFire/spr_Menu_Trophies_Icon_MasterFire.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"672300f2-c2da-428b-9a77-6fa7233bb1ee","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cd5b6dce-ee85-467f-8e54-2b7dc29592bc","path":"sprites/spr_Menu_Trophies_Icon_MasterFire/spr_Menu_Trophies_Icon_MasterFire.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c50345e8-d702-47bd-91d0-4f794fcbe362","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6e4cf8c9-8281-4a63-850a-71400a7bdbf0","path":"sprites/spr_Menu_Trophies_Icon_MasterFire/spr_Menu_Trophies_Icon_MasterFire.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
