@@ -34,6 +34,7 @@ invincible = false;
 doesJump = false;
 mask_index = spr_24Square_Mask;
 isClassicStar = false;
+destroyableWithAirpuff = false;
 
 //Ground Failsafe
 

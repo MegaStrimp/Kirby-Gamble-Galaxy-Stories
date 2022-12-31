@@ -1,3 +1,3 @@
 ///@description Creation Code
 
-ability = playerAbilities.yoyo;
+number = 1;

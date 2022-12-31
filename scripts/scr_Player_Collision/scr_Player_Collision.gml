@@ -31,6 +31,8 @@ function scr_Player_Collision(argument0)
 	//if ((sign(vspCollision != 0)) and (sign(vsp) != sign(vspCollision))) vsp = 0;
 	hspFinal = hsp + hspCollision;
 	vspFinal = vsp + vspCollision;
+	hspFinal = hsp;
+	vspFinal = vsp;
 	
 	//Slopes
 	
@@ -265,10 +267,31 @@ function scr_Player_Collision(argument0)
 	
 	//Death On Bottom
 	
-	if ((global.healthP1 != 0) and (y >= (obj_Camera.cameraY + ((obj_Camera.viewHeight + 24) / obj_Camera.zoomFinal))))
+	if (y >= room_height + 24)
+	{
+		switch (player)
+		{
+			case 0:
+			if (global.healthP1 != 0) global.healthP1 = 0;
+			break;
+			
+			case 1:
+			if (global.healthP2 != 0) global.healthP2 = 0;
+			break;
+			
+			case 2:
+			if (global.healthP3 != 0) global.healthP3 = 0;
+			break;
+			
+			case 3:
+			if (global.healthP4 != 0) global.healthP4 = 0;
+			break;
+		}
+	}
+	/*if ((global.healthP1 != 0) and (y >= (obj_Camera.cameraY + ((obj_Camera.viewHeight + 24) / obj_Camera.zoomFinal))))
 	{
 		global.healthP1 = 0;
-	}
+	}*/
 }
 
 /* OLD

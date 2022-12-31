@@ -1,3 +1,3 @@
 ///@description Creation Code
 
-number = 1;
+number = 2;

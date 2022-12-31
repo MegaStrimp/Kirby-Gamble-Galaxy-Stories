@@ -1,10 +1,10 @@
 {
   "resourceType": "GMTileSet",
   "resourceVersion": "1.0",
-  "name": "ts_BattleshipHalberd",
+  "name": "ts_BattleshipHalberd_Purple",
   "spriteId": {
-    "name": "tile_BattleshipHalberd",
-    "path": "sprites/tile_BattleshipHalberd/tile_BattleshipHalberd.yy",
+    "name": "tile_BattleshipHalberd_Purple",
+    "path": "sprites/tile_BattleshipHalberd_Purple/tile_BattleshipHalberd_Purple.yy",
   },
   "tileWidth": 24,
   "tileHeight": 24,

@@ -22,16 +22,19 @@ if (!global.pause)
 	
 	//Destroy
 	
-	with (obj_AirPuff)
+	if (destroyableWithAirpuff)
 	{
-		if (place_meeting(x,y,other))
+		with (obj_AirPuff)
 		{
-			other.destroy = true;
-			var par = instance_create_depth(x,y,depth,obj_Particle);
-			par.sprite_index = sprDestroy;
-			par.dir = dirX;
-			par.destroyAfterAnimation = true;
-			instance_destroy();
+			if (place_meeting(x,y,other))
+			{
+				other.destroy = true;
+				var par = instance_create_depth(x,y,depth,obj_Particle);
+				par.sprite_index = sprDestroy;
+				par.dir = dirX;
+				par.destroyAfterAnimation = true;
+				instance_destroy();
+			}
 		}
 	}
 	

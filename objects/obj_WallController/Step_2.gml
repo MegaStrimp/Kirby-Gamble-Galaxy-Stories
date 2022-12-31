@@ -4,12 +4,6 @@ if (!global.pause)
 {
 	//Wall Movement
 	
-	with (obj_ParentWall)
-	{
-		x += hsp;
-		y += vsp;
-	}
-	
 	with (obj_Player)
 	{
 		hspCollision = 0;
@@ -31,6 +25,9 @@ if (!global.pause)
 			var movingWall = instance_place(x + sign(hsp),y,obj_ParentWall);
 			if (movingWall.hsp != 0) hspCollision = movingWall.hsp;
 		}
+		
+		x += hspCollision;
+		y += vspCollision;
 	}
 	
 	with (obj_Enemy)
@@ -71,5 +68,11 @@ if (!global.pause)
 			var movingWall = instance_place(x + sign(hsp),y,obj_ParentWall);
 			if ((movingWall.hsp != 0) and (!place_meeting(x + hsp,y,obj_ParentWall))) x += movingWall.hsp;
 		}
+	}
+	
+	with (obj_ParentWall)
+	{
+		x += hsp;
+		y += vsp;
 	}
 }

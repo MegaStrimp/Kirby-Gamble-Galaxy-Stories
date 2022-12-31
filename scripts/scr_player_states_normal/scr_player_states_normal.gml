@@ -83,6 +83,10 @@ function scr_Player_States_Normal()
 		or (attackNumber == playerAttacks.beamUp)
 		) attackHasGravLerp = true;
 		
+		var canDashAttack = false;
+		//if (runBuffer < 60) canDashAttack = true;
+		if ((keyLeftHold) or (keyRightHold)) canDashAttack = true;
+		
 		didJump = false;
 		#endregion
 		
@@ -270,11 +274,11 @@ function scr_Player_States_Normal()
 		
 		if ((!global.cutscene) and (!canUfoFloat) and (playerAbility != playerAbilities.ufo) and (vsp < 0) and (!keyJumpHold))
 		{
-			var jumpLimitValue = -jumpspeed / 4;
+			var jumpLimitValue = -jumpspeed / 4 + (vspCollision / 2);
 			switch (playerCharacter)
 			{
 				case playerCharacters.bouncy:
-				jumpLimitValue = -jumpspeed / 2;
+				jumpLimitValue = -jumpspeed / 2 + (vspCollision / 2);
 				break;
 			}
 		    if ((hasJumpLimit) and (jumpLimit)) vsp = max(vsp,jumpLimitValue);
@@ -605,7 +609,7 @@ function scr_Player_States_Normal()
 						}
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
-							if ((run) and (runBuffer < 60) and (vsp == 0) and (hsp != 0))
+							if ((run) and (canDashAttack) and (vsp == 0) and (hsp != 0))
 							{
 								attack = true;
 								attackNumber = playerAttacks.cutterDash;
@@ -955,7 +959,7 @@ function scr_Player_States_Normal()
 								}
 								else
 								{
-									if ((run) and (runBuffer < 60))
+									if ((run) and (canDashAttack))
 									{
 										if (grounded)
 										{
@@ -2151,7 +2155,7 @@ function scr_Player_States_Normal()
 						case playerAbilities.ninja:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
-							if ((run) and (runBuffer < 60) and (vsp == 0) and (hsp != 0))
+							if ((run) and (canDashAttack) and (vsp == 0) and (hsp != 0))
 							{
 								attack = true;
 								attackNumber = playerAttacks.ninjaDash;
@@ -2402,7 +2406,7 @@ function scr_Player_States_Normal()
 							}
 							if ((keyAttackPressed) and (!attack))
 							{
-								if ((run) and (runBuffer < 60) and (hsp != 0) and (!(keyDownHold && !grounded)))
+								if ((run) and (canDashAttack) and (hsp != 0) and (!(keyDownHold && !grounded)))
 								{
 									invincible = true;
 									vsp = 0;
@@ -2758,7 +2762,7 @@ function scr_Player_States_Normal()
 					    {
 							if (keyAttackPressed)
 							{
-								if ((run) and (runBuffer < 60) and (hsp != 0))
+								if ((run) and (canDashAttack) and (hsp != 0))
 								{
 									invincible = true;
 									vsp = 0;
@@ -3135,7 +3139,7 @@ function scr_Player_States_Normal()
 									
 									{ //this is where the Falling part of the Rising Slash will go
 									
-									}if ((run) and (runBuffer < 60) and (!hurt) and (!attack)){ //Speen
+									}if ((run) and (canDashAttack) and (!hurt) and (!attack)){ //Speen
 											sprite_index=sprSwordAttackAirDash
 											attackTimer =2000;
 											attackNumber=playerAttacks.swordAirDash
@@ -3303,7 +3307,7 @@ function scr_Player_States_Normal()
 					    {
 							if (keyAttackPressed)
 							{
-								if ((run) and (runBuffer < 60) and (hsp != 0))
+								if ((run) and (canDashAttack) and (hsp != 0))
 								{
 									invincible = true;
 									vsp = 0;
@@ -3610,7 +3614,7 @@ function scr_Player_States_Normal()
 							sprite_index = sprStoneAttack1Ready;
 							image_index = 0;
 						}
-						else if ((run) and (runBuffer < 60) and (hsp != 0))
+						else if ((run) and (canDashAttack) and (hsp != 0))
 						{
 							invincible = true;
 							vsp = 0;

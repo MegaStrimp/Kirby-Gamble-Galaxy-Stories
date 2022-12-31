@@ -93,6 +93,7 @@ if (!global.pause)
 	{
 		var fade = instance_create_depth(x,y,-999,obj_Fade);
 		fade.targetRoom = rm_Title;
+		fade.targetRoom = room_next(room);
 		fade.alphaSpd = .05;
 		transitionTimer = -1;
 	}

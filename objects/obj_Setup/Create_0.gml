@@ -821,7 +821,7 @@ part_type_life(global.partTypeColorfulStars, 30, 40);
 #endregion
 
 #region Global Variables
-global.versionNumber = "0.7.2";
+global.versionNumber = "0.7.3";
 
 global.season = seasons.none;
 global.selectedSave = "SaveSlot1.ini";
@@ -883,7 +883,6 @@ global.shaders = false;
 if (shader_is_compiled(shd_pal_swapper)) global.shaders = true;
 global.chapterIntro = "1_1";
 global.hasCoop = 0;
-global.hasCoop = 3;
 global.muted = false;
 global.healthbarMarkedEnemy = -1;
 global.musicPlaying = -1;

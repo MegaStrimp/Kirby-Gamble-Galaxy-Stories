@@ -25,10 +25,10 @@ switch (state)
 		}
 	}
 	
-	draw_sprite(sprite_index,selected,x,y);
+	draw_sprite(sprite_index,selected,x,y + obj_Title.cameraY);
 	
-	draw_sprite(spr_Menu_Saves_Text,fileColor,x + 20,y + 14);
-	draw_sprite(spr_Menu_Saves_Numbers,(fileColor * 3) + number,x + 79,y + 16);
+	draw_sprite(spr_Menu_Saves_Text,fileColor,x + 20,y + 14 + obj_Title.cameraY);
+	draw_sprite(spr_Menu_Saves_Numbers,(fileColor * 3) + number,x + 79,y + 16 + obj_Title.cameraY);
 	if (fileColor == 0)
 	{
 		draw_set_font(fnt_AlienSolid);
