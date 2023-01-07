@@ -1276,7 +1276,9 @@
         
         "Music Intro": "Titolo della musica",
         
-        "Default": "Default"
+        "Default": "Default",
+        
+        "Reset": ""
     },
     
     "Customize Sub-Menus":

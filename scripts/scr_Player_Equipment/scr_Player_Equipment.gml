@@ -467,6 +467,7 @@ function scr_Player_Equipment(argument0,argument1)
 					case sprIdleSteepSlopeLBlink:
 					case sprIdleSteepSlopeR:
 					case sprIdleSteepSlopeRBlink:
+					case sprItemCarryLightIdle:
 					case sprItemCarryLightIdleNormalSlopeL:
 					case sprItemCarryLightIdleNormalSlopeLBlink:
 					case sprItemCarryLightIdleNormalSlopeR:
@@ -659,6 +660,7 @@ function scr_Player_Equipment(argument0,argument1)
 					case sprIdleSteepSlopeLBlink:
 					case sprIdleSteepSlopeR:
 					case sprIdleSteepSlopeRBlink:
+					case sprItemCarryLightIdle:
 					case sprItemCarryLightIdleNormalSlopeL:
 					case sprItemCarryLightIdleNormalSlopeLBlink:
 					case sprItemCarryLightIdleNormalSlopeR:

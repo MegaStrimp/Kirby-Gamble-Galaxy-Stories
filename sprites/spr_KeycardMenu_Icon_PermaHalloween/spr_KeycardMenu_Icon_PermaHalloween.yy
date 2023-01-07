@@ -29,7 +29,9 @@
   "gridY": 0,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dda2b1e5-95e5-4a5b-a010-fbd5916a729f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5802ec94-c217-437a-a706-329f4e438fc5",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"098e5650-0c7a-47e6-bb29-da954cb74289",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"416f203f-f348-41ae-8e6e-23cea705ff21",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -41,13 +43,15 @@
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 2.0,
+    "length": 4.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"bf6e2437-74fb-40df-8dd3-2bbb3abc30f8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dda2b1e5-95e5-4a5b-a010-fbd5916a729f","path":"sprites/spr_KeycardMenu_Icon_PermaHalloween/spr_KeycardMenu_Icon_PermaHalloween.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"10f1d978-e68e-4e3d-88c6-914be6c8f84b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"098e5650-0c7a-47e6-bb29-da954cb74289","path":"sprites/spr_KeycardMenu_Icon_PermaHalloween/spr_KeycardMenu_Icon_PermaHalloween.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"fd914065-f0f7-4a72-8626-dd03e3c25bd2","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5802ec94-c217-437a-a706-329f4e438fc5","path":"sprites/spr_KeycardMenu_Icon_PermaHalloween/spr_KeycardMenu_Icon_PermaHalloween.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"10f1d978-e68e-4e3d-88c6-914be6c8f84b","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"098e5650-0c7a-47e6-bb29-da954cb74289","path":"sprites/spr_KeycardMenu_Icon_PermaHalloween/spr_KeycardMenu_Icon_PermaHalloween.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c8d72191-0ae4-4625-ab98-13d1eb50d8f4","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"416f203f-f348-41ae-8e6e-23cea705ff21","path":"sprites/spr_KeycardMenu_Icon_PermaHalloween/spr_KeycardMenu_Icon_PermaHalloween.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,

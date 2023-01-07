@@ -18,7 +18,8 @@ gambleY = 0;
 subAlpha = .5;
 subAlphaDir = 1;
 
-//alarm[0] = 60;
+var hasAntiPiracy = irandom_range(0,9999999);
+if (hasAntiPiracy == 0) alarm[0] = 60;
 
 //Timers
 

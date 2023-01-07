@@ -11,7 +11,10 @@ function scr_SaveGame(argument0)
 	ini_write_real("stats","pointStars",global.pointStars);
 	ini_write_real("stats","points",global.points);
 	ini_write_real("stats","lives",global.playerLives);
-	ini_write_real("stats","goldenTomato",global.goldenTomato);
+	ini_write_real("stats","goldenTomatoAmountP1",global.goldenTomatoAmountP1);
+	ini_write_real("stats","goldenTomatoAmountP2",global.goldenTomatoAmountP2);
+	ini_write_real("stats","goldenTomatoAmountP3",global.goldenTomatoAmountP3);
+	ini_write_real("stats","goldenTomatoAmountP4",global.goldenTomatoAmountP4);
 	ini_write_real("stats","abilityP1",global.abilityP1);
 	ini_write_real("stats","abilityP2",global.abilityP2);
 	ini_write_real("stats","abilityP3",global.abilityP3);
@@ -157,6 +160,16 @@ function scr_SaveGame(argument0)
 	ini_write_real("unlocks","iceEmptyConeUpgradeUnlocked",global.iceEmptyConeUpgradeUnlocked);
 	ini_write_real("unlocks","sparkBrightPluggUpgradeUnlocked",global.sparkBrightPluggUpgradeUnlocked);
 	ini_write_real("unlocks","waterEggSoilUpgradeUnlocked",global.waterEggSoilUpgradeUnlocked);
+	
+	ini_write_real("cheats","cheatLifelessUnlocked",global.cheatLifelessUnlocked);
+	ini_write_real("cheats","cheatStarstormUnlocked",global.cheatStarstormUnlocked);
+	ini_write_real("cheats","cheatFlipsideUnlocked",global.cheatFlipsideUnlocked);
+	ini_write_real("cheats","cheatGamerBoyUnlocked",global.cheatGamerBoyUnlocked);
+	ini_write_real("cheats","cheatEyeBleachUnlocked",global.cheatEyeBleachUnlocked);
+	ini_write_real("cheats","cheatAwaitingForTheNewMoonUnlocked",global.cheatAwaitingForTheNewMoonUnlocked);
+	ini_write_real("cheats","cheatGatherBattleUnlocked",global.cheatGatherBattleUnlocked);
+	ini_write_real("cheats","cheatFashionableUnlocked",global.cheatFashionableUnlocked);
+	ini_write_real("cheats","cheatStrimpsDinerUnlocked",global.cheatStrimpsDinerUnlocked);
 	
 	ini_write_real("unlocks","bestiaryEnemiesWaddleDeeUnlocked",global.bestiaryEnemiesWaddleDeeUnlocked);
 	ini_write_real("unlocks","bestiaryEnemiesWaddleDooUnlocked",global.bestiaryEnemiesWaddleDooUnlocked);
@@ -509,6 +522,15 @@ function scr_SaveGame(argument0)
 	ini_write_real("playerCustomization","sparkBrightPluggUpgradeEquipped",global.sparkBrightPluggUpgradeEquipped);
 	ini_write_real("playerCustomization","waterEggSoilUpgradeEquipped",global.waterEggSoilUpgradeEquipped);
 	
+	ini_write_real("cheats","cheatLifelessEquipped",global.cheatLifelessEquipped);
+	ini_write_real("cheats","cheatStarstormEquipped",global.cheatStarstormEquipped);
+	ini_write_real("cheats","cheatFlipsideEquipped",global.cheatFlipsideEquipped);
+	ini_write_real("cheats","cheatGamerBoyEquipped",global.cheatGamerBoyEquipped);
+	ini_write_real("cheats","cheatEyeBleachEquipped",global.cheatEyeBleachEquipped);
+	ini_write_real("cheats","cheatAwaitingForTheNewMoonEquipped",global.cheatAwaitingForTheNewMoonEquipped);
+	ini_write_real("cheats","cheatGatherBattleEquipped",global.cheatGatherBattleEquipped);
+	ini_write_real("cheats","cheatFashionableEquipped",global.cheatFashionableEquipped);
+	ini_write_real("cheats","cheatStrimpsDinerEquipped",global.cheatStrimpsDinerEquipped);
 	ini_write_real("cheats","cheatColoredAbilitiesEquipped",global.cheatColoredAbilitiesEquipped);
 	
 	ini_write_real("extraTutorials","exTut_Treasure",global.exTut_Treasure);
@@ -520,6 +542,7 @@ function scr_SaveGame(argument0)
 	ini_write_real("doNotEdit","KDLP0",global.kirbysDreamLandPlusCrossoverKeycard);
 	ini_write_real("doNotEdit","DC0",global.dreamCrafterCrossoverKeycard);
 	ini_write_real("doNotEdit","EP0",global.eternalParadiseCrossoverKeycard);
+	ini_write_real("doNotEdit","B0",global.bollCrossoverKeycard);
 	
 	ini_write_real("doNotEdit","AS0",global.abilitySpraysKeycard);
 	ini_write_real("doNotEdit","PH0",global.permaHalloweenKeycard);

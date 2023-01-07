@@ -404,8 +404,8 @@ if (!global.pause)
 		
 		if (select)
 		{
-			//var fade = instance_create_depth(x,y,-999,obj_Fade);
-			//fade.targetRoom = rm_Setup;
+			var fade = instance_create_depth(x,y,-999,obj_Fade);
+			fade.targetRoom = rm_GamblionTitle;
 			select = false;
 		}
 		break;
@@ -516,7 +516,7 @@ if (!global.pause)
 		}
 		if (keyDownPressed) selection = "collection";
 		if (keyLeftPressed) selection = "deleteSave";
-		if (keyRightPressed) selection = "gamejolt";
+		if (keyRightPressed) selection = "keycards";
 		
 		if (!instance_exists(obj_Fade))
 		{
@@ -535,7 +535,7 @@ if (!global.pause)
 		}
 		break;
 		
-		case "gamejolt":
+		case "keycards":
 		if (keyUpPressed)
 		{
 			if (global.extraModeUnlocked)
@@ -563,8 +563,8 @@ if (!global.pause)
 		
 		if (select)
 		{
-			//var fade = instance_create_depth(x,y,-999,obj_Fade);
-			//fade.targetRoom = rm_StageSelect;
+			var fade = instance_create_depth(x,y,-999,obj_Fade);
+			fade.targetRoom = rm_KeycardMenu;
 			select = false;
 		}
 		break;
@@ -582,7 +582,7 @@ if (!global.pause)
 			}
 		}
 		if (keyDownPressed) selection = "storyMode";
-		if (keyLeftPressed) selection = "gamejolt";
+		if (keyLeftPressed) selection = "keycards";
 		if (keyRightPressed) selection = "deleteSave";
 		
 		if (!instance_exists(obj_Fade))
@@ -597,8 +597,8 @@ if (!global.pause)
 		
 		if (select)
 		{
-			//var fade = instance_create_depth(x,y,-999,obj_Fade);
-			//fade.targetRoom = rm_StageSelect;
+			var fade = instance_create_depth(x,y,-999,obj_Fade);
+			fade.targetRoom = rm_Credits;
 			select = false;
 		}
 		break;

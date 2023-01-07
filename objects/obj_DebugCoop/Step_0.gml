@@ -34,6 +34,11 @@ if (!global.pause)
 		if ((keyJumpPressed) or (keyStartPressed))
 		{
 			global.hasCoop = selection;
+			global.hasP1 = (global.hasCoop >= 0);
+			global.hasP2 = (global.hasCoop >= 1);
+			global.hasP3 = (global.hasCoop >= 2);
+			global.hasP4 = (global.hasCoop >= 3);
+			
 			var fade = instance_create_depth(x,y,-999,obj_Fade);
 			fade.targetRoom = room_next(room);
 		}

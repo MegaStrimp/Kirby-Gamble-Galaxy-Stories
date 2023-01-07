@@ -6,6 +6,21 @@ if (!global.pause)
 	
 	scr_Player_Inputs(0);
 	
+	#region Gradient Alpha
+	gradientAlpha += .005 * gradientAlphaDir;
+	if (gradientAlpha <= .5)
+	{
+		gradientAlpha = .5;
+		gradientAlphaDir = 1;
+	}
+	
+	if (gradientAlpha >= 1)
+	{
+		gradientAlpha = 1;
+		gradientAlphaDir = -1;
+	}
+	#endregion
+	
 	switch (page)
 	{
 		case 0:
@@ -25,21 +40,6 @@ if (!global.pause)
 				xx -= (sprite_get_width(sprite_index) * (4 * image_xscale));
 				shineTimer = shineTimerMax;
 			}
-			
-			#region Gradient Alpha
-			gradientAlpha += .005 * gradientAlphaDir;
-			if (gradientAlpha <= .5)
-			{
-				gradientAlpha = .5;
-				gradientAlphaDir = 1;
-			}
-			
-			if (gradientAlpha >= 1)
-			{
-				gradientAlpha = 1;
-				gradientAlphaDir = -1;
-			}
-			#endregion
 			
 			//Konami Code
 			

@@ -6,6 +6,8 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 	
 	if ((!active) and ((distance_to_object(obj_Player)) <= spawnRange))
 	{
+		if (audio_is_playing(snd_MinibossSpawn1)) audio_stop_sound(snd_MinibossSpawn1);
+		audio_play_sound(snd_MinibossSpawn1,0,false);
 		active = true;
 		global.stageMusicIsPlaying = false;
 		scr_PlayMusic(false,false,mus_MiniBoss,0,true);
@@ -42,6 +44,8 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 	}
 	else if (spawnTimer == 0)
 	{
+		if (audio_is_playing(snd_MinibossSpawn2)) audio_stop_sound(snd_MinibossSpawn2);
+		audio_play_sound(snd_MinibossSpawn2,0,false);
 		instance_create_depth(x + spawnX,y + spawnY,depth,spawnBoss);
 		particleTimer = -1;
 		spawnTimer = -1;

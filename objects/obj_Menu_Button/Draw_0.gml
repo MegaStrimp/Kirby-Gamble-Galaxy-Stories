@@ -221,6 +221,33 @@ switch (state)
 			{
 				if (owner.page < owner.pageMax) draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
 			}
+			else
+			{
+				if (owner.keycardArray[# index,1])
+				{
+					if (owner.keycardSelection == index)
+					{
+						image_index = 1;
+					}
+					else
+					{
+						image_index = 0;
+					}
+				}
+				else
+				{
+					if (owner.keycardSelection == index)
+					{
+						image_index = 3;
+					}
+					else
+					{
+						image_index = 2;
+					}
+				}
+				
+				draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+			}
 		}
 	}
 	break;
@@ -306,6 +333,38 @@ switch (state)
 	{
 		draw_self();
 		if (obj_Maykr_Title.selection == index)
+		{
+			switch (index)
+			{
+				case 0:
+				imageIndex += sprite_get_speed(spr_Maykr_Title_PlaySelected) / 60;
+				if (imageIndex >= 9) imageIndex -= 9;
+				draw_sprite(spr_Maykr_Title_PlaySelected,imageIndex,x + 8,y + 7);
+				break;
+				
+				case 1:
+				imageIndex += sprite_get_speed(spr_Maykr_Title_BuildSelected) / 60;
+				if (imageIndex >= 9) imageIndex -= 9;
+				draw_sprite(spr_Maykr_Title_BuildSelected,imageIndex,x - 8,y + 7);
+				break;
+				
+				case 2:
+				imageIndex += sprite_get_speed(spr_Maykr_Title_ExitSelected) / 60;
+				if (imageIndex >= 9) imageIndex -= 9;
+				draw_sprite(spr_Maykr_Title_ExitSelected,imageIndex,x + 8,y + 7);
+				break;
+			}
+		}
+	}
+	break;
+	#endregion
+	
+	#region Gamblion Title
+	case "gamblionTitle":
+	if (obj_Gamblion_Title.windowIndex == -1)
+	{
+		draw_self();
+		if (obj_Gamblion_Title.selection == index)
 		{
 			switch (index)
 			{

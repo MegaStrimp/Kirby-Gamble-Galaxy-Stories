@@ -8,6 +8,7 @@ event_inherited();
 sprBox = spr_Chuckie_Box;
 sprBoxOpen = spr_Chuckie_BoxOpen;
 sprBoxClose = spr_Chuckie_BoxClose;
+sprBoxDead = spr_Chuckie_Box_Dead;
 sprIdle = spr_Chuckie_Idle;
 sprNeck = spr_Chuckie_Neck;
 sprHurt = spr_Chuckie_Hurt;

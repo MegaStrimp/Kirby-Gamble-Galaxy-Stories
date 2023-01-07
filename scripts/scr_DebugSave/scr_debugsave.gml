@@ -112,6 +112,16 @@ function scr_DebugSave()
 	global.sparkBrightPluggUpgradeUnlocked = true;
 	global.waterEggSoilUpgradeUnlocked = true;
 	
+	global.cheatLifelessUnlocked = true;
+	global.cheatStarstormUnlocked = true;
+	global.cheatFlipsideUnlocked = true;
+	global.cheatGamerBoyUnlocked = true;
+	global.cheatEyeBleachUnlocked = true;
+	global.cheatAwaitingForTheNewMoonUnlocked = true;
+	global.cheatGatherBattleUnlocked = true;
+	global.cheatFashionableUnlocked = true;
+	global.cheatStrimpsDinerUnlocked = true;
+	
 	global.bestiaryEnemiesWaddleDeeUnlocked = true;
 	global.bestiaryEnemiesWaddleDooUnlocked = true;
 	global.bestiaryEnemiesBrontoBurtUnlocked = true;
@@ -158,6 +168,7 @@ function scr_DebugSave()
 	global.kirbysDreamLandPlusCrossoverKeycard = true;
 	global.dreamCrafterCrossoverKeycard = true;
 	global.eternalParadiseCrossoverKeycard = true;
+	global.bollCrossoverKeycard = true;
 	
 	global.abilitySpraysKeycard = true;
 	global.permaHalloweenKeycard = true;

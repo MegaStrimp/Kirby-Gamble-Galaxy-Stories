@@ -16,17 +16,7 @@ if (destroyTimer > 0)
 }
 else if (destroyTimer == 0)
 {
-	var targetRoom = rm_Setup;
-	switch (global.chapterIntro)
-	{
-		case "1_1":
-		targetRoom = rm_GreenGreens1;
-		break;
-		
-		default:
-		targetRoom = rm_Setup;
-		break;
-	}
+	var targetRoom = global.roomNext;
 	
 	var fade = instance_create_depth(x,y,-999,obj_Fade);
 	fade.targetRoom = targetRoom;

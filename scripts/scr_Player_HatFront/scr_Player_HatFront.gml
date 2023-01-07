@@ -298,6 +298,7 @@ function scr_Player_HatFront(argument0,argument1)
 					case sprIdleSteepSlopeLBlink:
 					case sprIdleSteepSlopeR:
 					case sprIdleSteepSlopeRBlink:
+					case sprItemCarryLightIdle:
 					case sprItemCarryLightIdleNormalSlopeL:
 					case sprItemCarryLightIdleNormalSlopeLBlink:
 					case sprItemCarryLightIdleNormalSlopeR:

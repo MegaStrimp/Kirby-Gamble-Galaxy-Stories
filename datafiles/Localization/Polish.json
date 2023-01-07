@@ -1276,7 +1276,9 @@
         
         "Music Intro": "Interfejs Muzyczny",
         
-        "Default": "Podstawowe"
+        "Default": "Podstawowe",
+        
+        "Reset": ""
     },
     
     "Customize Sub-Menus":

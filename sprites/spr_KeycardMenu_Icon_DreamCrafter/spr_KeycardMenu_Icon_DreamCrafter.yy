@@ -29,7 +29,9 @@
   "gridY": 0,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"efe0d51f-9a42-4741-895a-3dd8dbf233fe",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b6a45385-a310-467c-905b-3cd7136e2200",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ec054f06-f739-4b81-b854-ba16047fa125",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6fb0b924-c272-4c5b-8297-f29170acc4db",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -41,13 +43,15 @@
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 2.0,
+    "length": 4.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"d94615d0-d5eb-4819-8b4f-4a66e6614553","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"efe0d51f-9a42-4741-895a-3dd8dbf233fe","path":"sprites/spr_KeycardMenu_Icon_DreamCrafter/spr_KeycardMenu_Icon_DreamCrafter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"57d9845d-2997-4daf-9506-9ddcc874389f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ec054f06-f739-4b81-b854-ba16047fa125","path":"sprites/spr_KeycardMenu_Icon_DreamCrafter/spr_KeycardMenu_Icon_DreamCrafter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"49ef61bf-74fb-4fc1-95f4-739432d0d951","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b6a45385-a310-467c-905b-3cd7136e2200","path":"sprites/spr_KeycardMenu_Icon_DreamCrafter/spr_KeycardMenu_Icon_DreamCrafter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"57d9845d-2997-4daf-9506-9ddcc874389f","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ec054f06-f739-4b81-b854-ba16047fa125","path":"sprites/spr_KeycardMenu_Icon_DreamCrafter/spr_KeycardMenu_Icon_DreamCrafter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d389d65b-ca26-4e4b-a214-aa04df215f31","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6fb0b924-c272-4c5b-8297-f29170acc4db","path":"sprites/spr_KeycardMenu_Icon_DreamCrafter/spr_KeycardMenu_Icon_DreamCrafter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,

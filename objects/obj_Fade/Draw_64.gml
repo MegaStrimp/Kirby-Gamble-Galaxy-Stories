@@ -64,7 +64,6 @@ switch (state)
 	break;
 	
 	case 1:
-	
 	if ((fade == 1) and (state1Width >= (camera_get_view_width(gameView) / 2) + 10))
 	{
 		global.roomPrevious = room;

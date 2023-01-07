@@ -82,7 +82,7 @@ if ((playerCharacter == playerCharacters.kirby) and (global.abilitySpraysKeycard
 
 //Black Alpha Box
 
-if ((player == 0) and ((blackAlphaBox) or (global.tutorial)))
+if ((blackAlphaBox) or (global.tutorial))
 {
 	draw_set_alpha(.25);
 	draw_set_color(c_black);
@@ -103,7 +103,12 @@ if (micFlash)
 //Draw Self
 
 var paletteFlash = 1;
-if (invincibleFlash) paletteFlash = 2;
+if (invincibleFlash)
+{
+	paletteFlash = 2;
+	
+	if ((cAbility != playerAbilities.none) and (state = playerStates.carry) and (!spit)) paletteFlash = 4;
+}
 if (death)
 {
 	if (state == playerStates.death)

@@ -10,6 +10,7 @@ hudOffset = -250;
 selection = 0;
 subSelection = 0;
 page = "main";
+controlsPage = -1;
 textAlpha = 0;
 goBack = false;
 textY = 147 - (selection * 36);
@@ -51,8 +52,8 @@ menuValue[i] = "Other";
 menuOffset[i] = 0;
 menuOffsetLerp[i] = 0;
 i += 1;
-menuTitle[i] = str("Options.Default");
-menuValue[i] = "Default";
+menuTitle[i] = str("Options.Reset");
+menuValue[i] = "Reset";
 menuOffset[i] = 0;
 menuOffsetLerp[i] = 0;
 #endregion
@@ -134,4 +135,10 @@ var button = instance_create_depth(480,0,depth - 1,obj_Menu_Button);
 button.owner = id;
 button.sprite_index = spr_Menu_StageSelect_Hud_Back2;
 button.state = "back";
+
+var button = instance_create_depth(259,8,depth - 1,obj_Menu_Button);
+button.owner = id;
+button.sprite_index = spr_Maykr_TopHud_Reset;
+button.state = "options";
+button.index = "reset";
 #endregion

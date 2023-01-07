@@ -736,7 +736,8 @@
         "Extra Tutorials": "Tutoriels supplémentaires",
         "Auto Swallow": "Aval'tout automatique",
         "Music Intro": "Détail de musique",
-        "Default": "Par défaut"
+        "Default": "Par défaut",
+        "Reset": ""
     },
     "Customize Sub-Menus": {
         "Skins": {

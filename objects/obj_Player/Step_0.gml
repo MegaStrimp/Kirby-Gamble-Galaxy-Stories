@@ -33,7 +33,7 @@ switch (player)
 	break;
 }
 
-invincibleFlash = false;
+//invincibleFlash = false;
 grounded = false;
 if (place_meeting(x,y + 1,obj_ParentWall))
 {
@@ -53,6 +53,18 @@ if (place_meeting(x,y - 1,obj_Wall))
 	if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + collidingWall.vsp + 20 + vspFinal)))) wallAbove = true;
 }
 
+var canFlash = false;
+if (invincible)
+{
+	invincibleFlashTimerMax = 2;
+	canFlash = true;
+}
+if ((cAbility != playerAbilities.none) and (state = playerStates.carry) and (!spit))
+{
+	invincibleFlashTimerMax = 4;
+	canFlash = true;
+}
+
 scr_Player_Inputs(player);
 
 //Clamp To View
@@ -69,29 +81,62 @@ if ((clampToView) and (!death))
 
 //Death
 
+var goldenTomatoAmountPointer = global.goldenTomatoAmountP1;
+switch (player)
+{
+	case 1:
+	goldenTomatoAmountPointer = global.goldenTomatoAmountP2;
+	break;
+	
+	case 2:
+	goldenTomatoAmountPointer = global.goldenTomatoAmountP3;
+	break;
+	
+	case 3:
+	goldenTomatoAmountPointer = global.goldenTomatoAmountP4;
+	break;
+}
+
 if ((((player == 0) and (global.healthP1 == 0))
 or ((player == 1) and (global.healthP2 == 0))
 or ((player == 2) and (global.healthP3 == 0))
 or ((player == 3) and (global.healthP4 == 0)))
 and (!death))
 {
-	if (global.goldenTomato)
+	if (goldenTomatoAmountPointer > 0)
 	{
 		if (audio_is_playing(snd_Charge_Ready)) audio_stop_sound(snd_Charge_Ready);
 		audio_play_sound(snd_Charge_Ready,0,false);
 		if (instance_exists(obj_Hud))
 		{
-			var particle = instance_create_depth(obj_Hud.goldenTomatoPosX,obj_Hud.goldenTomatoPosY,obj_Hud.depth - 1,obj_Particle);
+			var particle = instance_create_depth(x,y,depth - 1,obj_Particle);
 			particle.sprite_index = spr_Particle_Flash1;
 			particle.destroyAfterAnimation = true;
 		}
 		//global.healthP1 = global.hpMax;
 		//global.healthP2 = global.hpMax;
-		global.healthP1 = global.healthP1Max;
-		global.healthP2 = global.healthP2Max;
-		global.healthP3 = global.healthP3Max;
-		global.healthP4 = global.healthP4Max;
-		global.goldenTomato = false;
+		switch (player)
+		{
+			case 0:
+			global.healthP1 = global.healthP1Max;
+			global.goldenTomatoAmountP1 -= 1;
+			break;
+			
+			case 1:
+			global.healthP2 = global.healthP2Max;
+			global.goldenTomatoAmountP2 -= 1;
+			break;
+			
+			case 2:
+			global.healthP3 = global.healthP3Max;
+			global.goldenTomatoAmountP3 -= 1;
+			break;
+			
+			case 3:
+			global.healthP4 = global.healthP4Max;
+			global.goldenTomatoAmountP4 -= 1;
+			break;
+		}
 	}
 	else
 	{
@@ -867,7 +912,7 @@ else
 {
 	image_xscale = scale * dir;
 }
-image_yscale = scale;
+image_yscale = scale * (-global.cheatFlipsideEquipped);
 
 //Masks
 
@@ -940,7 +985,16 @@ if (!global.pause)
 	
 	//Invincible Flash Timer
 	
-	if ((invincible) and (invincibleFlashTimer == -1)) invincibleFlashTimer = invincibleFlashTimerMax;
+	if (canFlash)
+	{
+		if (invincibleFlashTimer == -1) invincibleFlashTimer = invincibleFlashTimerMax;
+	}
+	else
+	{
+		invincibleFlash = false;
+		invincibleFlashTimer = -1;
+	}
+	
 	if (invincibleFlashTimer > 0)
 	{
 		invincibleFlashTimer -= 1;
@@ -3747,6 +3801,23 @@ else if (characterSetupTimer == 0)
 		break;
 	}
 	
+	if (global.cheatAwaitingForTheNewMoonEquipped)
+	{
+		gravNormal = gravNormal / 4;
+		gravStone = gravStone / 4;
+		gravWheel = gravWheel / 4;
+		grav = grav / 4;
+		gravFloat = gravFloat / 2;
+		gravFireDash = gravFireDash / 2;
+		gravLimitNormal = gravLimitNormal / 2;
+		gravLimitFloat = gravLimitFloat / 2;
+		gravLimitBeamAir = gravLimitBeamAir / 2;
+		gravLimitStone = gravLimitStone / 2;
+		gravLimitFireDash = gravLimitFireDash / 2;
+		gravLimitWheel = gravLimitWheel / 2;
+		gravLimit = gravLimit / 2;
+	}
+	
 	characterSetupTimer = -1;
 }
 
@@ -3865,7 +3936,7 @@ else if (deathRestartTimer == 0)
 		fadeTrans.targetRoom = global.roomCheckpoint;
 		fadeTrans.alphaSpd = 0.02;
 		fadeTrans.pausable = false;
-		global.playerLives -= 1;
+		if (!global.cheatLifelessEquipped) global.playerLives -= 1;
 		if (global.playerLives < 0)
 		{
 			var jellyChance = irandom_range(0,199);

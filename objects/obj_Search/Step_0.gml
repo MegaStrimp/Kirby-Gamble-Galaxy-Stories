@@ -34,6 +34,8 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 	
 	if ((!charge) and ((instance_exists(obj_Player)) and (distance_to_object(obj_Player) < 90)))
 	{
+		if (audio_is_playing(snd_SearchesActive)) audio_stop_sound(snd_SearchesActive);
+		audio_play_sound(snd_SearchesActive,0,false);
 		charge = true;
 		explodeTimer = explodeTimerMax;
 	}
@@ -85,8 +87,8 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 		hasDeathParticles = false;
 		hasDeathKnockback = false;
 		
-		if (audio_is_playing(snd_Explosion1)) audio_stop_sound(snd_Explosion1);
-		audio_play_sound(snd_Explosion1,0,false);
+		if (audio_is_playing(snd_SearchesExplode)) audio_stop_sound(snd_SearchesExplode);
+		audio_play_sound(snd_SearchesExplode,0,false);
 		
 		var par = instance_create_depth(x,y,depth,obj_Projectile_ExplosionMask);
 		par.owner = id;

@@ -6,7 +6,7 @@ event_inherited();
 
 //Sprites
 
-sprDoor = spr_Door_Normal;
+sprDoor = spr_Door_Nidoo;
 sprReady = spr_Nidoo_Normal_Ready;
 sprShake = spr_Nidoo_Normal_Shake;
 sprRelease = spr_Nidoo_Normal_Release;
@@ -27,6 +27,7 @@ drawText = "";
 particleDir = 1;
 parIndex = 0;
 parIndexSpd = .25;
+crashSoundPlayed = false;
 
 //Timers
 

@@ -29,7 +29,9 @@
   "gridY": 0,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"86ba3c3c-5ea9-4639-a838-635f9b86b144",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7a2e42b9-d6ea-4deb-a3ec-39da3a0d3770",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"125bb8ca-267d-42f2-afdc-4f43fb36b997",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"da0991d5-e7a5-4e6e-94ef-7c4a1bbdf160",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -41,13 +43,15 @@
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 2.0,
+    "length": 4.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"f51a2323-9ddb-4fb9-85fa-24d95da7b5af","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"86ba3c3c-5ea9-4639-a838-635f9b86b144","path":"sprites/spr_KeycardMenu_Icon_EternalParadise/spr_KeycardMenu_Icon_EternalParadise.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"d9c877f0-95a5-4be5-bd3c-94e7b81066c2","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"125bb8ca-267d-42f2-afdc-4f43fb36b997","path":"sprites/spr_KeycardMenu_Icon_EternalParadise/spr_KeycardMenu_Icon_EternalParadise.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0d07b68b-ddf0-475b-b95e-9d1ef14d1bdb","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7a2e42b9-d6ea-4deb-a3ec-39da3a0d3770","path":"sprites/spr_KeycardMenu_Icon_EternalParadise/spr_KeycardMenu_Icon_EternalParadise.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d9c877f0-95a5-4be5-bd3c-94e7b81066c2","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"125bb8ca-267d-42f2-afdc-4f43fb36b997","path":"sprites/spr_KeycardMenu_Icon_EternalParadise/spr_KeycardMenu_Icon_EternalParadise.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6b52b03d-14d6-4624-bdc5-25165837b8aa","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"da0991d5-e7a5-4e6e-94ef-7c4a1bbdf160","path":"sprites/spr_KeycardMenu_Icon_EternalParadise/spr_KeycardMenu_Icon_EternalParadise.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,

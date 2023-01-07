@@ -10,7 +10,10 @@ function scr_LoadGame(argument0)
 	global.pointStars = ini_read_real("stats","pointStars",0);
 	global.points = ini_read_real("stats","points",0);
 	global.playerLives = ini_read_real("stats","lives",3);
-	global.goldenTomato = ini_read_real("stats","goldenTomato",false);
+	global.goldenTomatoAmountP1 = ini_read_real("stats","goldenTomatoAmountP1",0);
+	global.goldenTomatoAmountP2 = ini_read_real("stats","goldenTomatoAmountP2",0);
+	global.goldenTomatoAmountP3 = ini_read_real("stats","goldenTomatoAmountP3",0);
+	global.goldenTomatoAmountP4 = ini_read_real("stats","goldenTomatoAmountP4",0);
 	global.abilityP1 = ini_read_real("stats","abilityP1",playerAbilities.none);
 	global.abilityP2 = ini_read_real("stats","abilityP2",playerAbilities.none);
 	global.abilityP3 = ini_read_real("stats","abilityP3",playerAbilities.none);
@@ -157,6 +160,16 @@ function scr_LoadGame(argument0)
 	global.iceEmptyConeUpgradeUnlocked = ini_read_real("unlocks","iceEmptyConeUpgradeUnlocked",false);
 	global.sparkBrightPluggUpgradeUnlocked = ini_read_real("unlocks","sparkBrightPluggUpgradeUnlocked",false);
 	global.waterEggSoilUpgradeUnlocked = ini_read_real("unlocks","waterEggSoilUpgradeUnlocked",false);
+	
+	global.cheatLifelessUnlocked = ini_read_real("cheats","cheatLifelessUnlocked",false);
+	global.cheatStarstormUnlocked = ini_read_real("cheats","cheatStarstormUnlocked",false);
+	global.cheatFlipsideUnlocked = ini_read_real("cheats","cheatFlipsideUnlocked",false);
+	global.cheatGamerBoyUnlocked = ini_read_real("cheats","cheatGamerBoyUnlocked",false);
+	global.cheatEyeBleachUnlocked = ini_read_real("cheats","cheatEyeBleachUnlocked",false);
+	global.cheatAwaitingForTheNewMoonUnlocked = ini_read_real("cheats","cheatAwaitingForTheNewMoonUnlocked",false);
+	global.cheatGatherBattleUnlocked = ini_read_real("cheats","cheatGatherBattleUnlocked",false);
+	global.cheatFashionableUnlocked = ini_read_real("cheats","cheatFashionableUnlocked",false);
+	global.cheatStrimpsDinerUnlocked = ini_read_real("cheats","cheatStrimpsDinerUnlocked",false);
 	
 	global.bestiaryEnemiesWaddleDeeUnlocked = ini_read_real("unlocks","bestiaryEnemiesWaddleDeeUnlocked",false);
 	global.bestiaryEnemiesWaddleDooUnlocked = ini_read_real("unlocks","bestiaryEnemiesWaddleDooUnlocked",false);
@@ -512,6 +525,15 @@ function scr_LoadGame(argument0)
 	global.sparkBrightPluggUpgradeEquipped = ini_read_real("playerCustomization","sparkBrightPluggUpgradeEquipped",false);
 	global.waterEggSoilUpgradeEquipped = ini_read_real("playerCustomization","waterEggSoilUpgradeEquipped",false);
 	
+	global.cheatLifelessEquipped = ini_read_real("cheats","cheatLifelessEquipped",false);
+	global.cheatStarstormEquipped = ini_read_real("cheats","cheatStarstormEquipped",false);
+	global.cheatFlipsideEquipped = ini_read_real("cheats","cheatFlipsideEquipped",false);
+	global.cheatGamerBoyEquipped = ini_read_real("cheats","cheatGamerBoyEquipped",false);
+	global.cheatEyeBleachEquipped = ini_read_real("cheats","cheatEyeBleachEquipped",false);
+	global.cheatAwaitingForTheNewMoonEquipped = ini_read_real("cheats","cheatAwaitingForTheNewMoonEquipped",false);
+	global.cheatGatherBattleEquipped = ini_read_real("cheats","cheatGatherBattleEquipped",false);
+	global.cheatFashionableEquipped = ini_read_real("cheats","cheatFashionableEquipped",false);
+	global.cheatStrimpsDinerEquipped = ini_read_real("cheats","cheatStrimpsDinerEquipped",false);
 	global.cheatColoredAbilitiesEquipped = ini_read_real("cheats","cheatColoredAbilitiesEquipped",false);
 	
 	global.exTut_Treasure = ini_read_real("extraTutorials","exTut_Treasure",false);
@@ -523,6 +545,7 @@ function scr_LoadGame(argument0)
 	global.kirbysDreamLandPlusCrossoverKeycard = ini_read_real("doNotEdit","KDLP0",false);
 	global.dreamCrafterCrossoverKeycard = ini_read_real("doNotEdit","DC0",false);
 	global.eternalParadiseCrossoverKeycard = ini_read_real("doNotEdit","EP0",false);
+	global.bollCrossoverKeycard = ini_read_real("doNotEdit","B0",false);
 	
 	global.abilitySpraysKeycard = ini_read_real("doNotEdit","AS0",false);
 	global.permaHalloweenKeycard = ini_read_real("doNotEdit","PH0",false);

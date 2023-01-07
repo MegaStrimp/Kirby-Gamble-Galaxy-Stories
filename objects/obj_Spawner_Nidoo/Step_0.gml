@@ -35,7 +35,7 @@ else if (spawnTimer == 0)
 		//Normal
 		
 		case 0:
-		spawnedEnemy.sprDoor = spr_Door_Normal;
+		spawnedEnemy.sprDoor = spr_Door_Nidoo;
 		spawnedEnemy.sprReady = spr_Nidoo_Normal_Ready;
 		spawnedEnemy.sprShake = spr_Nidoo_Normal_Shake;
 		spawnedEnemy.sprRelease = spr_Nidoo_Normal_Release;

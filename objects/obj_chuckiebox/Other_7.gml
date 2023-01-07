@@ -7,6 +7,13 @@ if (sprite_index == sprBoxOpen)
 
 if (sprite_index == sprBoxClose)
 {
-	sprite_index = sprBox;
+	if (chuckieCount <= 0)
+	{
+		sprite_index = sprBoxDead;
+	}
+	else
+	{
+		sprite_index = sprBox;
+	}
 	image_index = 0;
 }

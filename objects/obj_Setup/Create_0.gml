@@ -562,7 +562,7 @@ enum progression
 	chapter1End
 }
 
-enum stringAttributes
+/*enum stringAttributes
 {
 	title,
 	secretTitle,
@@ -783,7 +783,7 @@ enum stringAttributes
 	options_musicIntro,
 	options_default,
 	optionsEnd
-}
+}*/
 
 enum talkingCharacter
 {
@@ -821,68 +821,95 @@ part_type_life(global.partTypeColorfulStars, 30, 40);
 #endregion
 
 #region Global Variables
-global.versionNumber = "0.7.3";
-
+#region Meta/Files
+global.versionNumber = "0.7.4";
 global.season = seasons.none;
 global.selectedSave = "SaveSlot1.ini";
-//old hp system
-global.hpMax = 5;
-//global.healthP1 = global.hpMax;
-//global.healthP2 = global.hpMax;
-//new healthbar system
+#endregion
+
+#region Player
+global.hpMax = 5; //Old
+
 global.healthP1Max = 45;
 global.healthP2Max = 45;
 global.healthP3Max = 45;
 global.healthP4Max = 45;
+
 global.healthP1 = global.healthP1Max;
 global.healthP2 = global.healthP2Max;
 global.healthP3 = global.healthP3Max;
 global.healthP4 = global.healthP4Max;
+
 global.undershotValP1 = 5; // if the player's health is higher than this value when they take a hit and the attack is not marked as a "finishing blow", the player will survive with this much health.
 global.undershotValP2 = 5;
 global.undershotValP3 = 5;
 global.undershotValP4 = 5;
+
 global.healP1Mod = global.healthP1;
 global.healP2Mod = global.healthP2;
 global.healP3Mod = global.healthP3;
 global.healP4Mod = global.healthP4;
-//global.healP1End = global.healthP1;
-//global.healP2End = global.healthP2;
-///////////////////////////
-global.skylandsHpMax = 5;
-global.skylandsHpP1 = global.skylandsHpMax;
-global.skylandsHpP2 = global.skylandsHpMax;
-global.skylandsLives = 2;
+
+
 global.sprayPaintP1 = spr_Kirby_Normal_Palette_FriendlyPink;
 global.sprayPaintP2 = spr_Kirby_Normal_Palette_Yellow;
 global.sprayPaintP3 = spr_Kirby_Normal_Palette_Red;
 global.sprayPaintP4 = spr_Kirby_Normal_Palette_Green;
-global.abilityP1 = playerAbilities.none;
-global.abilityP2 = playerAbilities.none;
-global.abilityP3 = playerAbilities.none;
-global.abilityP4 = playerAbilities.none;
+
 global.familiarP1 = familiars.gamble;
 global.familiarP2 = familiars.gamble;
 global.familiarP3 = familiars.gamble;
 global.familiarP4 = familiars.gamble;
+
+global.abilityP1 = playerAbilities.none;
+global.abilityP2 = playerAbilities.none;
+global.abilityP3 = playerAbilities.none;
+global.abilityP4 = playerAbilities.none;
+#endregion
+
+#region 
+#endregion
+
+#region Skylands
+global.skylandsHpMax = 5;
+global.skylandsHpP1 = global.skylandsHpMax;
+global.skylandsHpP2 = global.skylandsHpMax;
+global.skylandsLives = 2;
+#endregion
+
+//old hp system
+//global.healthP1 = global.hpMax;
+//global.healthP2 = global.hpMax;
+//new healthbar system
+//global.healP1End = global.healthP1;
+//global.healP2End = global.healthP2;
+///////////////////////////
+
 global.roomPrevious = rm_Setup;
 global.roomNext = rm_Starcutter;
 global.roomCheckpoint = rm_Setup;
 global.pause = false;
 global.pointStars = 0;
-global.goldenTomato = false;
+
+global.goldenTomatoAmountMax = 2;
+
 global.stageNumber = 0;
 global.debug = true;
 //global.debug = false;
 show_debug_overlay(global.debug);
 global.pause = false;
 global.cutscene = false;
-global.cutsceneTargetRoom = rm_Setup;
 global.tutorial = false;
 global.shaders = false;
 if (shader_is_compiled(shd_pal_swapper)) global.shaders = true;
 global.chapterIntro = "1_1";
+
 global.hasCoop = 0;
+global.hasP1 = true;
+global.hasP2 = false;
+global.hasP3 = false;
+global.hasP4 = false;
+
 global.muted = false;
 global.healthbarMarkedEnemy = -1;
 global.musicPlaying = -1;
@@ -910,9 +937,11 @@ for (var i = 0; i < 4; i++) global.stageCollectibleTreasures[i] = -1;
 global.hasInvinCandy = false;
 global.hasMintLeaf = false;
 
+#region Demo
 global.demoBeatGreenGreens = false;
 global.demoBeatBattleshipHalberd = false;
 global.demoBeatAsteroidFields = false;
+#endregion
 
 #region Ability Kill Targets
 global.cutterAbilityKillsTarget = 10;
@@ -1362,8 +1391,6 @@ i += 1;
 subtitles[i] = "Kirby Battle Royale never actually existed!";
 i += 1;
 subtitles[i] = "NANI?";
-i += 1;
-subtitles[i] = "Omni Kirby!";
 i += 1;
 subtitles[i] = "Kirby. That’s it!";
 i += 1;
@@ -1913,7 +1940,7 @@ subtitles[i] = "Father Is Looking at You!";
 i += 1;
 subtitles[i] = "Red Butterflies...Happy Nightmares!";
 i += 1;
-subtitles[i] = "RR-RA-RASPUTIN...";
+subtitles[i] = "RA-RA-RASPUTIN...";
 i += 1;
 subtitles[i] = "Carl Wuz Here!";
 i += 1;

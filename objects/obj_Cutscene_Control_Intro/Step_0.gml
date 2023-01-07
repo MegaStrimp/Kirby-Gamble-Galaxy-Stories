@@ -10,6 +10,7 @@ if (!global.pause)
 	
 	if ((!instance_exists(obj_Fade)) and (keyStartPressed))
 	{
+		global.roomNext = rm_GreenGreens1;
 		var fade = instance_create_depth(0,0,-999,obj_Fade);
 		fade.alphaSpd = .01;
 		fade.targetRoom = rm_ChapterIntro;
@@ -26,6 +27,7 @@ if (!global.pause)
 	{
 		if (!instance_exists(obj_Fade))
 		{
+			global.roomNext = rm_GreenGreens1;
 			var fade = instance_create_depth(0,0,-999,obj_Fade);
 			fade.alphaSpd = .01;
 			fade.targetRoom = rm_ChapterIntro;

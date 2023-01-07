@@ -119,6 +119,13 @@ if (!global.pause)
 						obj_OptionsMenu.selection = number;
 					}
 					break;
+					
+					case "reset":
+					with (owner)
+					{
+						scr_OptionsMenu_Reset();
+					}
+					break;
 				}
 			}
 		}
@@ -368,6 +375,15 @@ if (!global.pause)
 					}
 				}
 			}
+			else
+			{
+				if ((!instance_exists(obj_Fade)) and (mouse_check_button_pressed(mb_left)) and (position_meeting(mouse_x,mouse_y,self)))
+				{
+					if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+					audio_play_sound(snd_BossHealth,0,false);
+					owner.keycardSelection = index;
+				}
+			}
 		}
 		break;
 		#endregion
@@ -403,6 +419,43 @@ if (!global.pause)
 				
 				case 1:
 				x = 333 + ((1 - obj_Maykr_Title.buttonLerp) * 305)
+				break;
+			}
+		}
+		break;
+		#endregion
+		
+		#region Gamblion Title
+		case "gamblionTitle":
+		mask_index = sprite_index;
+		if (instance_exists(obj_Gamblion_Title))
+		{
+			if ((!instance_exists(obj_Fade)) and (mouse_check_button_pressed(mb_left)) and (position_meeting(mouse_x,mouse_y,self)))
+			{
+				if (obj_Gamblion_Title.selection == index)
+				{
+					if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+					audio_play_sound(snd_ButtonYes,0,false);
+					obj_Gamblion_Title.select = true;
+				}
+				else
+				{
+					imageIndex = 0;
+					if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+					audio_play_sound(snd_BossHealth,0,false);
+					obj_Gamblion_Title.selection = index;
+				}
+			}
+			
+			switch (index)
+			{
+				case 0:
+				case 2:
+				x = 147 - ((1 - obj_Gamblion_Title.buttonLerp) * 305);
+				break;
+				
+				case 1:
+				x = 333 + ((1 - obj_Gamblion_Title.buttonLerp) * 305)
 				break;
 			}
 		}

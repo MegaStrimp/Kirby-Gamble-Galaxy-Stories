@@ -4240,7 +4240,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			break;
 			#endregion
 		}
-		debugSprite = sprRelease;
+		debugSprite = sprReady;
 		debugIndex = 0;
 		debugStateSelectedMax = 0;
 		if (mouse_check_button_pressed(mb_left))
@@ -5171,10 +5171,13 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		{
 			#region Normal
 			case 0:
-			var sprIdle = spr_Chuckie_Box;
-			var sprReady = spr_Flamer_Normal_Ready;
-			var sprAttack = spr_Flamer_Normal_Attack;
-			var sprHurt = spr_Flamer_Normal_Hurt;
+			var sprBox = spr_Chuckie_Box;
+			var sprBoxOpen = spr_Chuckie_BoxOpen;
+			var sprBoxClose = spr_Chuckie_BoxClose;
+			var sprBoxDead = spr_Chuckie_Box_Dead;
+			var sprIdle = spr_Chuckie_Idle;
+			var sprHurt = spr_Chuckie_Hurt;
+			var sprNeck = spr_Chuckie_Neck;
 			debugPaletteNumberMax = 0;
 			switch (debugPaletteNumber)
 			{
@@ -5198,10 +5201,13 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			//if (spawnerMode) spawnedObj = obj_Spawner_ChuckieBox;
 			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
+			debugObj.sprBox = sprBox;
+			debugObj.sprBoxOpen = sprBoxOpen;
+			debugObj.sprBoxClose = sprBoxClose;
+			debugObj.sprBoxDead = sprBoxDead;
 			debugObj.sprIdle = sprIdle;
-			debugObj.sprReady = sprReady;
-			debugObj.sprAttack = sprAttack;
 			debugObj.sprHurt = sprHurt;
+			debugObj.sprNeck = sprNeck;
 			debugObj.sprite_index = sprIdle;
 			debugObj.paletteIndex = debugPaletteIndex;
 			debugObj.image_xscale = debugXScale;
@@ -5508,9 +5514,11 @@ else
 }
 
 #region Lower HP to 1
+/*
 if(keyboard_check_pressed(ord("O"))){
 	global.healthP1 -= 10;
 }if(keyboard_check_pressed(ord("P"))){
 	global.healthP2 -= 20;
 }
+*/
 #endregion

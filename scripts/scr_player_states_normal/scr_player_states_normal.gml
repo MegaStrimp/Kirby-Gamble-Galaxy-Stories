@@ -352,7 +352,7 @@ function scr_Player_States_Normal()
 						grabObj.abilityType = playerAbilities.bomb;
 						grabObj.dirX = grabEnemy.dirX;
 						grabObj.dmg = -1;
-						grabObj.active = true;
+						grabObj.active = false;
 						grabObj.particleTimer = grabObj.particleTimerMax;
 						grabObj.destroyTimer = 30;
 						var grabSpr = grabEnemy.sprHurt;
