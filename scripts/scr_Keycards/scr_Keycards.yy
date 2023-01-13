@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "Keycards",
-    "path": "folders/Scripts/Arrays/Keycards.yy",
+    "path": "folders/Scripts/Menus/Keycards.yy",
   },
 }

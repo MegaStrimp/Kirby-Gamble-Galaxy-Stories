@@ -188,17 +188,29 @@ if (!global.pause)
 		{
 			if ((!instance_exists(obj_Fade)) and (mouse_check_button_pressed(mb_left)) and (position_meeting(mouse_x,mouse_y,self)))
 			{
-				if (obj_CheatsMenu.selection == number)
+				if (index == "arrowPrev")
 				{
-					if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
-					audio_play_sound(snd_ButtonYes,0,false);
-					obj_CheatsMenu.select = true;
+					with (obj_CheatsMenu)
+					{
+						if (discSelection != 0)
+						{
+							if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+							audio_play_sound(snd_ButtonChange,0,false);
+							discSelection -= 1;
+						}
+					}
 				}
-				else
+				else if (index == "arrowNext")
 				{
-					if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
-					audio_play_sound(snd_BossHealth,0,false);
-					obj_CheatsMenu.selection = number;
+					with (obj_CheatsMenu)
+					{
+						if (discSelection < cheatsMax - 1)
+						{
+							if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+							audio_play_sound(snd_ButtonChange,0,false);
+							discSelection += 1;
+						}
+					}
 				}
 			}
 		}
@@ -465,7 +477,17 @@ if (!global.pause)
 		#region Back
 		case "back":
 		var canGoBack = true;
-		if ((owner.object_index = obj_OptionsMenu) and (owner.paused)) canGoBack = false;
+		if ((owner.object_index == obj_OptionsMenu) and (owner.paused)) canGoBack = false;
+		if ((owner.object_index == obj_GalleryMenu) and (owner.artworkZoom))
+		{
+			if ((mouse_check_button_pressed(mb_left)) and (position_meeting(mouse_x,mouse_y,self)))
+			{
+				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+				audio_play_sound(snd_ButtonNo,0,false);
+				owner.artworkZoom = false;
+			}
+			canGoBack = false;
+		}
 		if ((canGoBack) and (!instance_exists(obj_Fade)) and (mouse_check_button_pressed(mb_left)) and (position_meeting(mouse_x,mouse_y,self)))
 		{
 			if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);

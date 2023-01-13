@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "Trophies",
-    "path": "folders/Scripts/Arrays/Trophies.yy",
+    "path": "folders/Scripts/Menus/Trophies.yy",
   },
 }

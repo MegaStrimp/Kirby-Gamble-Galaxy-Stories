@@ -33,6 +33,8 @@ if (!global.pause)
 		
 		if ((keyJumpPressed) or (keyStartPressed))
 		{
+			if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+			audio_play_sound(snd_ButtonYes,0,false);
 			global.hasCoop = selection;
 			global.hasP1 = (global.hasCoop >= 0);
 			global.hasP2 = (global.hasCoop >= 1);

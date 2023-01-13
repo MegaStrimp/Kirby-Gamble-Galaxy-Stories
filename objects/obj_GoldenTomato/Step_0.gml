@@ -62,6 +62,7 @@ if (!global.pause)
 			var particle = instance_create_depth(x,y,depth,obj_Particle);
 			particle.sprite_index = spr_Particle_Sparkle1;
 			particle.destroyAfterAnimation = true;
+			destroy = true;
 			//flashTimer = flashTimerMax;
 			//followTarget = true;
 		}
@@ -70,7 +71,6 @@ if (!global.pause)
 	if (destroy)
 	{
 		global.points += points;
-		global.goldenTomato = true;
 		instance_destroy();
 	}
 	

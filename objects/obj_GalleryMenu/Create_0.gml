@@ -6,6 +6,7 @@ hudOffset = -250;
 page = 0;
 curtainIndex = 0;
 artworkZoom = false;
+artworkZoomAlpha = 0;
 selectedVol = 0;
 artworkIndex = 0;
 artworkArray = -1;

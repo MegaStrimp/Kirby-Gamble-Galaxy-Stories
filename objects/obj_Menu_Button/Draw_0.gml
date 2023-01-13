@@ -34,27 +34,29 @@ switch (state)
 		draw_set_font(fnt_AlienSolid);
 		draw_set_color(c_white);
 		draw_set_halign(fa_center);
-		scr_Draw_Text_Color_Outline(x + 55,y + 60,"CREATE",-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,1,1,image_angle);
+		scr_Draw_Text_Color_Outline(x + 55,y + 60 + obj_Title.cameraY,"CREATE",-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,1,1,image_angle);
 		draw_set_halign(fa_left);
 	}
 	else
 	{
-		draw_sprite(spr_Menu_MainMenu_Badge_Empty,0,4 + 22,4 + 48);
+		draw_sprite(spr_Menu_MainMenu_Badge_Empty,0,4 + 22,4 + 48 + obj_Title.cameraY);
 	}
 	break;
 	#endregion
 	
 	#region Back
 	case "back":
+	var buttonAlpha = 1;
+	if ((owner.object_index == obj_GalleryMenu) and (owner.artworkZoom)) buttonAlpha = .3;
 	if (canChangeImageIndex)
 	{
 		var selected = 0;
 		if ((instance_exists(owner)) and (owner.selection == state)) selected = 1;
-		draw_sprite(sprite_index,selected,x,y);
+		draw_sprite_ext(sprite_index,selected,x,y,image_xscale,image_yscale,image_angle,image_blend,buttonAlpha);
 	}
 	else
 	{
-		draw_self();
+		draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,buttonAlpha);
 	}
 	break;
 	#endregion
@@ -109,19 +111,20 @@ switch (state)
 	
 	#region Cheats
 	case "cheats":
-	var selected = 0;
-	if (instance_exists(obj_CheatsMenu))
+	if (index == "arrowPrev")
 	{
-		if (obj_CheatsMenu.selection == number) selected = 1;
-		y = ystart - 20 + (obj_CheatsMenu.itemYOffset * selected);
+		if (obj_CheatsMenu.discSelection != 0) draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
 	}
-	draw_sprite_ext(sprite_index,selected,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+	else if (index == "arrowNext")
+	{
+		if (obj_CheatsMenu.discSelection < obj_CheatsMenu.cheatsMax - 1) draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+	}
 	break;
 	#endregion
 	
 	#region Gallery
 	case "gallery":
-	if (instance_exists(obj_GalleryMenu))
+	if ((instance_exists(obj_GalleryMenu)) and (!owner.artworkZoom))
 	{
 		if (((index == "vol1") or (index == "vol2") or (index == "vol3") or (index == "volS")) and (obj_GalleryMenu.page == 0))
 		{

@@ -911,6 +911,8 @@ global.hasP3 = false;
 global.hasP4 = false;
 
 global.muted = false;
+global.closingvol = 1;
+
 global.healthbarMarkedEnemy = -1;
 global.musicPlaying = -1;
 global.gambleMaykrMenu = "Collision";

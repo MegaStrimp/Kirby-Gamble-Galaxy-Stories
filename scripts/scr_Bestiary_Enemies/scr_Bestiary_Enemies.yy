@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "Bestiary",
-    "path": "folders/Scripts/Arrays/Bestiary.yy",
+    "path": "folders/Scripts/Menus/Bestiary.yy",
   },
 }

@@ -29,8 +29,8 @@ for (var i = 0; i < 3; i++)
 #endregion
 
 #region Logo
-draw_sprite_ext(spr_Gamblion_Logo,0,240,-34 + ((startLerp) * 84),1,1,image_angle,image_blend,startLerp);
 draw_sprite_ext(spr_Gamblion_Title_LogoBg,0,240,50,1,1,image_angle,image_blend,startLerp);
+draw_sprite_ext(spr_Gamblion_Logo,0,240,-34 + ((startLerp) * 84),1,1,image_angle,image_blend,startLerp);
 #endregion
 
 #region Windows

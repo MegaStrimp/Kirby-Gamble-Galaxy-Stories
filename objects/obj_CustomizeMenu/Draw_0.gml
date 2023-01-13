@@ -119,7 +119,7 @@ switch (page)
 	draw_set_alpha(1);
 	
 	if ((global.shaders) and (characterIcon[selection] == spr_Hud_Icon_Kirby)) pal_swap_set(spr_Hud_Palette_Healthbar_Kirby,1,false);
-	if (characterIcon[selection] != -1) draw_sprite_ext(characterIcon[selection],0,242,110,1,1,image_angle,image_blend,image_alpha);
+	if (characterIcon[selection] != -1) draw_sprite_ext(characterIcon[selection],0,242 - 24,110 - 24,2,2,image_angle,image_blend,image_alpha);
 	if ((global.shaders) and (characterIcon[selection] == spr_Hud_Icon_Kirby)) pal_swap_reset();
 	
 	draw_sprite(spr_Menu_Options_CursorArrow,0,8,141);
@@ -199,7 +199,7 @@ switch (page)
 	draw_set_alpha(1);
 	
 	if ((global.shaders) and (characterIcon[selection] == spr_Hud_Icon_Kirby)) pal_swap_set(spr_Hud_Palette_Healthbar_Kirby,1,false);
-	if (characterIcon[selection] != -1) draw_sprite_ext(characterIcon[selection],0,242,110,1,1,image_angle,image_blend,image_alpha);
+	if (characterIcon[selection] != -1) draw_sprite_ext(characterIcon[selection],0,242 - 24,110 - 24,2,2,image_angle,image_blend,image_alpha);
 	if ((global.shaders) and (characterIcon[selection] == spr_Hud_Icon_Kirby)) pal_swap_reset();
 	
 	draw_sprite(spr_Menu_Options_CursorArrow,0,8,141);

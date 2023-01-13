@@ -1,0 +1,3 @@
+* I've commented out some Cheats in the Cheats List. Activate them when they're ready
+* Always check the version number global variable
+* I've also commented out some spoilery gallery artwork that can't be unlocked yet

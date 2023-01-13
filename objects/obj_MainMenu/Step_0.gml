@@ -205,21 +205,7 @@ if (!global.pause)
 		break;
 		
 		case "options":
-		if (keyUpPressed)
-		{
-			if (global.samuraiKirbyUnlocked)
-			{
-				selection = "samuraiKirby";
-			}
-			else if (global.bitcrushedUnlocked)
-			{
-				selection = "bitcrushed";
-			}
-			else
-			{
-				selection = "options";
-			}
-		}
+		if (keyUpPressed) selection = "back";
 		if (keyDownPressed)
 		{
 			if (global.bitcrushedUnlocked)
@@ -232,7 +218,7 @@ if (!global.pause)
 			}
 			else
 			{
-				selection = "options";
+				selection = "back";
 			}
 		}
 		if (keyLeftPressed) selection = "collection";
@@ -420,7 +406,7 @@ if (!global.pause)
 			}
 			else
 			{
-				selection = "options";
+				selection = "back";
 			}
 		}
 		if (keyLeftPressed)
@@ -463,7 +449,7 @@ if (!global.pause)
 			}
 			else
 			{
-				selection = "options";
+				selection = "back";
 			}
 		}
 		if (keyDownPressed) selection = "options";
@@ -515,7 +501,7 @@ if (!global.pause)
 			}
 		}
 		if (keyDownPressed) selection = "collection";
-		if (keyLeftPressed) selection = "deleteSave";
+		if (keyLeftPressed) selection = "back";
 		if (keyRightPressed) selection = "keycards";
 		
 		if (!instance_exists(obj_Fade))
@@ -617,7 +603,7 @@ if (!global.pause)
 		}
 		if (keyDownPressed) selection = "storyMode";
 		if (keyLeftPressed) selection = "credits";
-		if (keyRightPressed) selection = "discord";
+		if (keyRightPressed) selection = "back";
 		
 		if (!instance_exists(obj_Fade))
 		{
@@ -633,6 +619,45 @@ if (!global.pause)
 		{
 			var fade = instance_create_depth(x,y,-999,obj_Fade);
 			fade.targetRoom = rm_DeleteSave;
+			select = false;
+		}
+		break;
+		
+		case "back":
+		if (keyUpPressed)
+		{
+			if (global.bitcrushedUnlocked)
+			{
+				selection = "bitcrushed";
+			}
+			else if (global.samuraiKirbyUnlocked)
+			{
+				selection = "samuraiKirby";
+			}
+			else
+			{
+				selection = "back";
+			}
+		}
+		if (keyDownPressed) selection = "options";
+		if (keyLeftPressed) selection = "deleteSave";
+		if (keyRightPressed) selection = "discord";
+			
+		if (!instance_exists(obj_Fade))
+		{
+			if ((keyJumpPressed) or (keyStartPressed))
+			{
+				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+				audio_play_sound(snd_ButtonNo,0,false);
+				select = true;
+			}
+		}
+			
+		if (select)
+		{
+			var fade = instance_create_depth(x,y,-999,obj_Fade);
+			fade.targetRoom = rm_Title;
+			fade.alphaSpd = .02;
 			select = false;
 		}
 		break;

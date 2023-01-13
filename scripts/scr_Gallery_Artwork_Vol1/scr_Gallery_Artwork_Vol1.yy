@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "Gallery",
-    "path": "folders/Scripts/Arrays/Gallery.yy",
+    "path": "folders/Scripts/Menus/Gallery.yy",
   },
 }

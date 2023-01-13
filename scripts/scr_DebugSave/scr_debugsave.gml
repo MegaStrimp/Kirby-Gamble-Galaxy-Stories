@@ -2,6 +2,40 @@
 
 function scr_DebugSave()
 {
+	global.cutterAbilityObtained = true;
+	global.beamAbilityObtained = true;
+	global.mysticBeamAbilityObtained = true;
+	global.stoneAbilityObtained = true;
+	global.ufoAbilityObtained = true;
+	global.mirrorAbilityObtained = true;
+	global.ninjaAbilityObtained = true;
+	global.bombAbilityObtained = true;
+	global.fireAbilityObtained = true;
+	global.mysticFireAbilityObtained = true;
+	global.iceAbilityObtained = true;
+	global.sparkAbilityObtained = true;
+	global.yoyoAbilityObtained = true;
+	global.wheelAbilityObtained = true;
+	global.artistAbilityObtained = true;
+	global.fighterAbilityObtained = true;
+	global.suplexAbilityObtained = true;
+	global.wingAbilityObtained = true;
+	global.jetAbilityObtained = true;
+	global.swordAbilityObtained = true;
+	global.parasolAbilityObtained = true;
+	global.hammerAbilityObtained = true;
+	global.bellAbilityObtained = true;
+	global.waterAbilityObtained = true;
+	global.hiJumpAbilityObtained = true;
+	global.gearAbilityObtained = true;
+	global.sleepAbilityObtained = true;
+	global.scanAbilityObtained = true;
+	global.crashAbilityObtained = true;
+	global.micAbilityObtained = true;
+	global.chefAbilityObtained = true;
+	global.ultraSwordAbilityObtained = true;
+	global.cosmicBladeAbilityObtained = true;
+	
 	global.cutterAbilityKills = 1000;
 	global.beamAbilityKills = 1000;
 	global.mysticBeamAbilityKills = 1000;
@@ -35,6 +69,22 @@ function scr_DebugSave()
 	global.chefAbilityKills = 1000;
 	global.ultraSwordAbilityKills = 1000;
 	global.cosmicBladeAbilityKills = 1000;
+	
+	global.beatGreenGreens = true;
+	global.beatBattleshipHalberd = true;
+	global.beatAsteroidFields = true;
+	global.beatYolkYard = true;
+	global.beatGrandTempleAvgo = true;
+	global.beatFloralYolkCaves = true;
+	global.beatStormTheFortress = true;
+	global.beatCentralLab = true;
+	global.beatPathToTheNastyMachine = true;
+	global.beatSandshellBeach = true;
+	global.beatUpTheStraw = true;
+	global.beatSacredAquatia = true;
+	global.beatCosmicPalace = true;
+	global.beatPopstarMoon = true;
+	global.beatChapter1 = true;
 	
 	global.extraModeUnlocked = true;
 	global.skylandsUnlocked = true;

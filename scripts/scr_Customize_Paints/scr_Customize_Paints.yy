@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "Customize",
-    "path": "folders/Scripts/Arrays/Customize.yy",
+    "path": "folders/Scripts/Menus/Customize.yy",
   },
 }

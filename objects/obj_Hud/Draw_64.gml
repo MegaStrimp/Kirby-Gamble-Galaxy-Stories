@@ -404,13 +404,13 @@ for (var i = 0; i < 4; i++)
 		draw_sprite_part_ext(spr_Hud_Healthbar_Kirby,flashPointer,0,0,healthbarWidthPointer,healthbarHeightPointer,40 + sep,248,1,1,image_blend,drawAlpha);
 		
 		if (healthbarWidthPointer >= 1) draw_sprite_part_ext(spr_Hud_HealthbarCorner_Kirby,flashPointer,0,0,4,7,40 + sep,248,1,1,image_blend,drawAlpha);
-		if (healthbarWidthPointer > 3) draw_sprite_part_ext(spr_Hud_HealthbarCorner_Kirby,flashPointer,0,0,4,min(7,healthbarWidthPointer),40 + sep + (healthbarWidthPointer - 3),248,1,1,image_blend,drawAlpha);
+		if (healthbarWidthPointer >= sprite_get_width(spr_Hud_Healthbar_Kirby)) draw_sprite_part_ext(spr_Hud_HealthbarCorner_Kirby,flashPointer,0,0,4,min(7,healthbarWidthPointer),40 + sep + (healthbarWidthPointer - 3),248,1,1,image_blend,drawAlpha);
 		
 		draw_sprite_part_ext(spr_Hud_HealthbarHeal_Kirby,0,healStartPointer,0,sign(healWidthPointer) * healWidthPointer,healthbarHeightPointer,40 + healStartPointer,248,1,1,healBarColorPointer,drawAlpha);
 		#endregion
 		
 		#region Border
-		draw_sprite_ext(spr_Hud_PlayerHealthbarBorder,0,11 + sep,228,1,1,image_angle,image_blend,drawAlpha);
+		draw_sprite_ext(spr_Hud_PlayerHealthbarBorder,i,11 + sep,228,1,1,image_angle,image_blend,drawAlpha);
 		#endregion
 		
 		#region Icon
@@ -453,12 +453,12 @@ global.playerLives = clamp(global.playerLives,0,999);
 var livesBg = spr_Hud_Lives_Background1;
 if (global.hasCoop > 0) livesBg = spr_Hud_Lives_Background2;
 var livesPosX = 16;
-var livesPosY = 18 + (hasTreasure * 28);
-var playerAmount = 0;
+var livesPosY = 13 + (hasTreasure * 28);
+var playerAmount = -1;
 #endregion
 
 #region Background
-draw_sprite_ext(livesBg,0,livesPosX - 13,livesPosY - 3,1,1,image_angle,image_blend,drawAlpha);
+draw_sprite_ext(livesBg,0,livesPosX - 12,livesPosY - 2,1,1,image_angle,image_blend,drawAlpha);
 #endregion
 
 for (var i = 3; i >= 0; i--)
@@ -499,29 +499,24 @@ for (var i = 3; i >= 0; i--)
 		if ((characterPointer == playerCharacters.kirby) and (palettePointer == spr_Kirby_Normal_Palette_FriendlyPink)) palettePointer = spr_Hud_Palette_Lives_Kirby;
 		
 		var icon = spr_Hud_Lives_Icon_Kirby;
-		var iconShadow = spr_Hud_Lives_Icon_Kirby_Shadow;
 		
 		switch (characterPointer)
 		{
 			case playerCharacters.kirby:
-			var icon = spr_Hud_Lives_Icon_Kirby;
-			var iconShadow = spr_Hud_Lives_Icon_Kirby_Shadow;
+			icon = spr_Hud_Lives_Icon_Kirby;
 			break;
 			
 			case playerCharacters.gamble:
-			var icon = spr_Hud_Lives_Icon_Gamble;
-			var iconShadow = spr_Hud_Lives_Icon_Gamble_Shadow;
+			icon = spr_Hud_Lives_Icon_Gamble;
 			break;
 			
 			case playerCharacters.gooey:
-			var icon = spr_Hud_Lives_Icon_Gooey;
-			var iconShadow = spr_Hud_Lives_Icon_Gooey_Shadow;
+			icon = spr_Hud_Lives_Icon_Gooey;
 			break;
 		}
 		
 		if (global.shaders) pal_swap_set(palettePointer,1,false);
 		draw_sprite_ext(icon,0,livesPosX + sep,livesPosY,1,1,image_angle,image_blend,drawAlpha);
-		draw_sprite_ext(iconShadow,0,livesPosX + sep,livesPosY,1,1,image_angle,image_blend,drawAlpha);
 		if (global.shaders) pal_swap_reset();
 	}
 	#endregion
@@ -534,9 +529,9 @@ if (global.cheatLifelessEquipped)
 }
 else
 {
-	draw_sprite_ext(spr_Hud_Numbers,floor(global.playerLives / 100),livesPosX + 14 + (8 * playerAmount),livesPosY - 10,1,1,image_angle,image_blend,drawAlpha);
-	draw_sprite_ext(spr_Hud_Numbers,(global.playerLives - ((floor(global.playerLives / 100) * 100))) / 10,livesPosX + 29 + (8 * playerAmount),livesPosY - 10,1,1,image_angle,image_blend,drawAlpha);
-	draw_sprite_ext(spr_Hud_Numbers,global.playerLives - (floor(global.playerLives / 10) * 10),livesPosX + 44 + (8 * playerAmount),livesPosY - 10,1,1,image_angle,image_blend,drawAlpha);
+	draw_sprite_ext(spr_Hud_Numbers,floor(global.playerLives / 100),livesPosX + 14 + (8 * playerAmount),livesPosY - 8,1,1,image_angle,image_blend,drawAlpha);
+	draw_sprite_ext(spr_Hud_Numbers,(global.playerLives - ((floor(global.playerLives / 100) * 100))) / 10,livesPosX + 29 + (8 * playerAmount),livesPosY - 8,1,1,image_angle,image_blend,drawAlpha);
+	draw_sprite_ext(spr_Hud_Numbers,global.playerLives - (floor(global.playerLives / 10) * 10),livesPosX + 42 + (8 * playerAmount),livesPosY - 8,1,1,image_angle,image_blend,drawAlpha);
 }
 #endregion
 #endregion
@@ -545,18 +540,18 @@ else
 #region Variables
 global.pointStars = clamp(global.pointStars,0,999);
 starsPosX = 17;
-starsPosY = 44 + (hasTreasure * 28);
+starsPosY = 39 + (hasTreasure * 28);
 #endregion
 
 #region Icons
-draw_sprite_ext(spr_Hud_PointStars_Background,0,starsPosX - 14,starsPosY - 5,1,1,image_angle,image_blend,drawAlpha);
+draw_sprite_ext(spr_Hud_PointStars_Background,0,starsPosX - 13,starsPosY - 4,1,1,image_angle,image_blend,drawAlpha);
 draw_sprite_ext(spr_Hud_PointStars_Icon,0,starsPosX,starsPosY,1,1,image_angle,image_blend,drawAlpha);
 #endregion
 
 #region Numbers
-draw_sprite_ext(spr_Hud_Numbers,floor(global.pointStars / 100),starsPosX + 13,starsPosY - 10,1,1,image_angle,image_blend,drawAlpha);
-draw_sprite_ext(spr_Hud_Numbers,(global.pointStars - ((floor(global.pointStars / 100) * 100))) / 10,starsPosX + 28,starsPosY - 10,1,1,image_angle,image_blend,drawAlpha);
-draw_sprite_ext(spr_Hud_Numbers,global.pointStars - (floor(global.pointStars / 10) * 10),starsPosX + 43,starsPosY - 10,1,1,image_angle,image_blend,drawAlpha);
+draw_sprite_ext(spr_Hud_Numbers,floor(global.pointStars / 100),starsPosX + 12,starsPosY - 10,1,1,image_angle,image_blend,drawAlpha);
+draw_sprite_ext(spr_Hud_Numbers,(global.pointStars - ((floor(global.pointStars / 100) * 100))) / 10,starsPosX + 27,starsPosY - 10,1,1,image_angle,image_blend,drawAlpha);
+draw_sprite_ext(spr_Hud_Numbers,global.pointStars - (floor(global.pointStars / 10) * 10),starsPosX + 42,starsPosY - 10,1,1,image_angle,image_blend,drawAlpha);
 #endregion
 #endregion
 

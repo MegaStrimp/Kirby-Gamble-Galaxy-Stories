@@ -912,7 +912,10 @@ else
 {
 	image_xscale = scale * dir;
 }
-image_yscale = scale * (-global.cheatFlipsideEquipped);
+
+var hasFlipside = 1;
+if (global.cheatFlipsideEquipped) hasFlipside = -1
+image_yscale = scale * (hasFlipside);
 
 //Masks
 
@@ -4008,6 +4011,140 @@ else if (scanTimer == 0)
 		swallowActionTimer = 0;
 		global.pause = true;
 		if (instance_exists(obj_Camera)) obj_Camera.freezeFrameTimer = -1;
+	}
+	switch (cAbility)
+	{
+		case playerAbilities.cutter:
+		global.cutterAbilityObtained = true;
+		break;
+	
+		case playerAbilities.beam:
+		global.beamAbilityObtained = true;
+		break;
+	
+		case playerAbilities.mysticBeam:
+		global.mysticBeamAbilityObtained = true;
+		break;
+	
+		case playerAbilities.stone:
+		global.stoneAbilityObtained = true;
+		break;
+	
+		case playerAbilities.ufo:
+		global.ufoAbilityObtained = true;
+		break;
+	
+		case playerAbilities.mirror:
+		global.mirrorAbilityObtained = true;
+		break;
+	
+		case playerAbilities.ninja:
+		global.ninjaAbilityObtained = true;
+		break;
+	
+		case playerAbilities.bomb:
+		global.bombAbilityObtained = true;
+		break;
+	
+		case playerAbilities.fire:
+		global.fireAbilityObtained = true;
+		break;
+	
+		case playerAbilities.mysticFire:
+		global.mysticFireAbilityObtained = true;
+		break;
+	
+		case playerAbilities.ice:
+		global.iceAbilityObtained = true;
+		break;
+	
+		case playerAbilities.spark:
+		global.sparkAbilityObtained = true;
+		break;
+	
+		case playerAbilities.yoyo:
+		global.yoyoAbilityObtained = true;
+		break;
+	
+		case playerAbilities.wheel:
+		global.wheelAbilityObtained = true;
+		break;
+	
+		case playerAbilities.artist:
+		global.artistAbilityObtained = true;
+		break;
+	
+		case playerAbilities.fighter:
+		global.fighterAbilityObtained = true;
+		break;
+	
+		case playerAbilities.suplex:
+		global.suplexAbilityObtained = true;
+		break;
+	
+		case playerAbilities.wing:
+		global.wingAbilityObtained = true;
+		break;
+	
+		case playerAbilities.jet:
+		global.jetAbilityObtained = true;
+		break;
+	
+		case playerAbilities.sword:
+		global.swordAbilityObtained = true;
+		break;
+	
+		case playerAbilities.parasol:
+		global.parasolAbilityObtained = true;
+		break;
+	
+		case playerAbilities.hammer:
+		global.hammerAbilityObtained = true;
+		break;
+	
+		case playerAbilities.bell:
+		global.bellAbilityObtained = true;
+		break;
+	
+		case playerAbilities.water:
+		global.waterAbilityObtained = true;
+		break;
+	
+		case playerAbilities.hiJump:
+		global.hiJumpAbilityObtained = true;
+		break;
+	
+		case playerAbilities.gear:
+		global.gearAbilityObtained = true;
+		break;
+	
+		case playerAbilities.sleep:
+		global.sleepAbilityObtained = true;
+		break;
+	
+		case playerAbilities.scan:
+		global.scanAbilityObtained = true;
+		break;
+	
+		case playerAbilities.crash:
+		global.crashAbilityObtained = true;
+		break;
+	
+		case playerAbilities.mic:
+		global.micAbilityObtained = true;
+		break;
+	
+		case playerAbilities.chef:
+		global.chefAbilityObtained = true;
+		break;
+	
+		case playerAbilities.ultraSword:
+		global.ultraSwordAbilityObtained = true;
+		break;
+	
+		case playerAbilities.cosmicBlade:
+		global.cosmicBladeAbilityObtained = true;
+		break;
 	}
 	if (audio_is_playing(snd_Swallow)) audio_stop_sound(snd_Swallow);
 	audio_play_sound(snd_Swallow,0,false);

@@ -1911,6 +1911,106 @@
 		}
 	},
 	
+	"Cheats":
+    {
+		"Lifeless":
+		{
+			"Title": "Lifeless",
+			
+			"Description": "No need to worry, you can try again forever!",
+			
+			"Unlock Method": "Max out your lives."
+		},
+		
+		"Starstorm":
+		{
+			"Title": "Starstorm",
+			
+			"Description": "Stars everywhere!",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Flipside":
+		{
+			"Title": "Flipside",
+			
+			"Description": "Turn me around!",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Gamer Boy":
+		{
+			"Title": "Gamer Boy",
+			
+			"Description": "For the classic look you desire!",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Eye Bleach":
+		{
+			"Title": "Eye Bleach",
+			
+			"Description": "For the classic look you dread!",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Awaiting for the New Moon":
+		{
+			"Title": "Awaiting for the New Moon",
+			
+			"Description": "Do you believe in gravity?",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Gather Battle":
+		{
+			"Title": "Gather Battle",
+			
+			"Description": "No cheating!",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Fashionable":
+		{
+			"Title": "Fashionable",
+			
+			"Description": "Can't choose a makeup...",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Strimp's Diner":
+		{
+			"Title": "Strimp's Diner",
+			
+			"Description": "Mega Death",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Colored Abilities":
+		{
+			"Title": "Colored Abilities",
+			
+			"Description": "Abilities will make you colorful!",
+			
+			"Unlock Method": "???"
+		},
+		
+		"Attributes":
+		{
+			"Cosmetic": "Cosmetic",
+			
+			"Game Changer": "Game Changer"
+		}
+	},
+	
 	"Shop General":
     {
 		"Buy": "BUY",

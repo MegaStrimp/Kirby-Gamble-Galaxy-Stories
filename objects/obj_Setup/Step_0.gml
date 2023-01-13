@@ -71,13 +71,13 @@ for (var i = 0; audio_exists(i); i++)
 		var fadeMultiplier = 1;
 		var audioName = audio_get_name(i);
 		if ((audioName == audio_get_name(global.musicPlaying)) and (audioName != "mus_MiniBoss") and (audioName != "mus_InvincibilityCandy")) fadeMultiplier = global.musicFade;
-		var musicVolume = global.musicVolume * gamePaused * fadeMultiplier;
+		var musicVolume = global.musicVolume * gamePaused * fadeMultiplier * global.closingvol;
 		if (global.muted) musicVolume = 0;
         audio_sound_gain(i,musicVolume,0);
 	}
     else if (soundString == "snd")
 	{
-		var soundVolume = global.soundVolume;
+		var soundVolume = global.soundVolume * global.closingvol;
 		if (global.muted) soundVolume = 0;
         audio_sound_gain(i,soundVolume,0);
 	}

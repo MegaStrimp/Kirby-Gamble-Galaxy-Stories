@@ -28,6 +28,11 @@ if (setupTimer == 0)
 		#endregion
 	}
 	sprAura = sprAura1Idle;
+	
+	if (state == 1)
+	{
+		offScreenTurning = false;
+	}
 }
 #endregion
 

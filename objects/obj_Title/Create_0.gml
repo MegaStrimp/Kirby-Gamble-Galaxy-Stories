@@ -23,6 +23,8 @@ introState = 0;
 blackAlphaVal = 1;
 gradientAlpha = .5;
 gradientAlphaDir = 1;
+gameclosing = false;
+closingk = 0;
 
 //Timers
 

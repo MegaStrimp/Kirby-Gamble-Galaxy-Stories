@@ -49,3 +49,14 @@ draw_sprite(spr_Menu_Gallery_Curtain,curtainIndex,0,0);
 
 hudOffset = lerp(hudOffset,0,.1);
 draw_sprite(spr_Menu_MainMenu_Hud_Gallery,0,0 + hudOffset,0);
+
+//Draw Zoomed Artwork
+
+artworkZoomAlpha = lerp(artworkZoomAlpha,artworkZoom,.25);
+if (artworkZoomAlpha > 0)
+{
+	draw_set_alpha(artworkZoomAlpha);
+	draw_rectangle(camera_get_view_x(gameView),camera_get_view_y(gameView),camera_get_view_x(gameView) + camera_get_view_width(gameView),camera_get_view_y(gameView) + camera_get_view_height(gameView),false);
+	draw_sprite_ext(artworkArray[# artworkSelection,0],0,240,135,artworkArray[# artworkSelection,5] * 1.9,artworkArray[# artworkSelection,5] * 1.9,image_angle,image_blend,image_alpha);
+	draw_set_alpha(1);
+}
