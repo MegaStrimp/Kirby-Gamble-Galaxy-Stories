@@ -13,13 +13,13 @@
   "bbox_left": 0,
   "bbox_right": 215,
   "bbox_top": 16,
-  "bbox_bottom": 263,
+  "bbox_bottom": 575,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "DynamicTexturePage": false,
   "width": 216,
-  "height": 264,
+  "height": 576,
   "textureGroupId": {
     "name": "Halberd",
     "path": "texturegroups/Halberd",
@@ -28,7 +28,7 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"89848009-9f15-4e0f-863e-637421ced378",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f10d9b8e-d0f5-4458-917a-7b47d57bc43d",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -45,7 +45,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"b3a92f22-437b-4a4e-94d6-4a761ae31ce3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"89848009-9f15-4e0f-863e-637421ced378","path":"sprites/tile_BattleshipHalberd_Purple/tile_BattleshipHalberd_Purple.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9d457a46-3a74-4290-a263-0af0fc2ad881","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f10d9b8e-d0f5-4458-917a-7b47d57bc43d","path":"sprites/tile_BattleshipHalberd_Purple/tile_BattleshipHalberd_Purple.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
@@ -64,7 +64,7 @@
     "eventStubScript": null,
   },
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9b2866fd-b167-4cae-9582-237048a470cc","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"dc993b68-6ba3-4209-969f-8c3f4ae62f30","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {

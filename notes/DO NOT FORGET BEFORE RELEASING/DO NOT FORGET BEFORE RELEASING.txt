@@ -1,3 +1,7 @@
 * I've commented out some Cheats in the Cheats List. Activate them when they're ready
 * Always check the version number global variable
 * I've also commented out some spoilery gallery artwork that can't be unlocked yet
+* Bandit Dee palette index is set to spr_WaddleDee_Alien_Palette_Graylien for now
+* Waddle Dee skin slide sprites are set to the base skin
+
+* Add every Dream Friend to Character Select Step Event & Character Select array scripts. Do the latter for Spray Paints as well

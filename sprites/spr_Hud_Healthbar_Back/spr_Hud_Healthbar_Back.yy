@@ -29,6 +29,9 @@
   "gridY": 0,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7f37e9f4-a628-48a5-9884-bb9dbbfd0d54",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7e58bf5b-798b-490d-86b0-27580bb075db",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"76ddbfab-acf9-45e1-be2e-96dc65d2fb66",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"002ed1e0-f47b-4124-bd33-06e0fb493231",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -40,12 +43,15 @@
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 1.0,
+    "length": 4.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"90f65f1f-85ba-46b9-baa7-f0448b19e78c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7f37e9f4-a628-48a5-9884-bb9dbbfd0d54","path":"sprites/spr_Hud_Healthbar_Back/spr_Hud_Healthbar_Back.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"97676a24-71fa-4ec3-a667-20faed73f7c8","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7e58bf5b-798b-490d-86b0-27580bb075db","path":"sprites/spr_Hud_Healthbar_Back/spr_Hud_Healthbar_Back.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"831c2de6-e7ce-4c22-be1f-2c9f6bb7ba95","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"76ddbfab-acf9-45e1-be2e-96dc65d2fb66","path":"sprites/spr_Hud_Healthbar_Back/spr_Hud_Healthbar_Back.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6fb48dba-f659-4e1b-9c0b-8d8805d14a76","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"002ed1e0-f47b-4124-bd33-06e0fb493231","path":"sprites/spr_Hud_Healthbar_Back/spr_Hud_Healthbar_Back.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,

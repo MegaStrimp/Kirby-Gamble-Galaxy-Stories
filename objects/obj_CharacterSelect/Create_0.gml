@@ -1,46 +1,41 @@
 ///@description Initialize Variables
 
-//Other Variables
+#region Other Variables
+xx = 0;
 
-characterP1 = playerCharacters.kirby;
-characterP2 = playerCharacters.kirby;
-selectionP1 = 0;
-selectionP2 = 0;
-/*for (var i = 0; i < 2; i++)
-{
-	var char = 0;
-	var switchChar = global.characterP1;
-	var helper = global.isHelperP1;
-	if (i == 1)
-	{
-		switchChar = global.characterP2;
-		helper = global.isHelperP2;
-	}
-	char = switchChar;
-	if (helper) char = playerCharacters.waddleDee;
-	
-	if (i == 0)
-	{
-		selectionP1 = char;
-	}
-	else
-	{
-		selectionP2 = char;
-	}
-}*/
-rotP1 = 0;
-rotP2 = 0;
-hudWidthMax = 108;
-hudHeightMax = 45;
-hudWidthP1 = hudWidthMax;
-hudHeightP1 = hudHeightMax;
-hudWidthP2 = hudWidthMax;
-hudHeightP2 = hudHeightMax;
-hudYOffsetP1 = 0;
-hudYOffsetP2 = 0;
-arrayLength = 0;
-selectedP1 = false;
-selectedP2 = false;
+readyP1 = true;
+readyP2 = true;
+readyP3 = true;
+readyP4 = true;
+
+characterSelectionP1 = 0;
+characterSelectionP2 = 0;
+characterSelectionP3 = 0;
+characterSelectionP4 = 0;
+
+paletteSelectionP1 = 0;
+paletteSelectionP2 = 0;
+paletteSelectionP3 = 0;
+paletteSelectionP4 = 0;
+
+subSelectionP1 = 0;
+subSelectionP2 = 0;
+subSelectionP3 = 0;
+subSelectionP4 = 0;
+
+clockTicks = true;
+#endregion
+
+#region Arrays
+stagesArray = -1;
+scr_CharacterSelectMenu_Stages();
+
+charactersArray = -1;
+scr_CharacterSelectMenu_Characters();
+
+spraysArray = -1;
+scr_CharacterSelectMenu_Sprays();
+#endregion
 
 //Characters
 
@@ -107,7 +102,7 @@ if (global.keebyUnlocked)
 
 arrayLength = array_length(characterIndex);
 
-//Timers
-
-roomChangeTimer = -1;
-roomChangeTimerMax = 60;
+#region Timers
+roomChangeTimerMax = 180;
+roomChangeTimer = roomChangeTimerMax;
+#endregion

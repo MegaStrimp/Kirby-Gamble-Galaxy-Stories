@@ -274,6 +274,14 @@ if (!global.pause)
 			sprItem = spr_AbilityStar_Water;
 			break;
 			
+			case playerAbilities.gear:
+			sprItem = spr_AbilityStar_Gear;
+			break;
+			
+			case playerAbilities.hiJump:
+			sprItem = spr_AbilityStar_HiJump;
+			break;
+			
 			case playerAbilities.sleep:
 			sprItem = spr_AbilityStar_Sleep;
 			break;

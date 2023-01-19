@@ -1368,6 +1368,94 @@
 		"Secret": "Secret"
     },
 	
+	"Stages":
+	{
+		"Green Greens":
+		{
+			"Title": "Green Greens"
+		},
+		
+		"Battleship Halberd":
+		{
+			"Title": "Battleship Halberd"
+		},
+		
+		"Asteroid Fields":
+		{
+			"Title": "Asteroid Fields"
+		},
+		
+		"Egg Garden":
+		{
+			"Title": "Egg Garden"
+		},
+		
+		"Yolk Yard":
+		{
+			"Title": "Yolk Yard"
+		},
+		
+		"Grand Temple Avgo":
+		{
+			"Title": "Grand Temple Avgo"
+		},
+		
+		"Floral Yolk Caves":
+		{
+			"Title": "Floral Yolk Caves"
+		},
+		
+		"Gear Cube":
+		{
+			"Title": "Gear Cube"
+		},
+		
+		"Storm The Fortress":
+		{
+			"Title": "Storm The Fortress"
+		},
+		
+		"Central Lab":
+		{
+			"Title": "Central Lab"
+		},
+		
+		"Path To The Nasty Machine":
+		{
+			"Title": "Path To The Nasty Machine"
+		},
+		
+		"Aquatia":
+		{
+			"Title": "Aquatia"
+		},
+		
+		"Sandshell Beach":
+		{
+			"Title": "Sandshell Beach"
+		},
+		
+		"Up The Straw":
+		{
+			"Title": "Up The Straw"
+		},
+		
+		"Sacred Aquatia":
+		{
+			"Title": "Sacred Aquatia"
+		},
+		
+		"Cosmic Palace":
+		{
+			"Title": "Cosmic Palace"
+		},
+		
+		"Popstar Moon":
+		{
+			"Title": "Popstar Moon"
+		}
+	},
+	
 	"Trophies":
 	{
 		"Beat Green Greens":

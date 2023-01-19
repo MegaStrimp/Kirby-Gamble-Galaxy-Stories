@@ -15,18 +15,19 @@ function scr_CheatsMenu_Cheats()
 	9 - Alpha
 	10 - Equipped
 	11 - Attribute (0 - Cosmetic, 1 - Game Changer, 2 - Hard)
+	12 - Angle
 	*/
 	
 	if (ds_exists(cheatsArray,ds_type_grid)) ds_grid_destroy(cheatsArray);
 	
-	cheatsArray = ds_grid_create(10,12);
+	cheatsArray = ds_grid_create(10,13);
 	ds_grid_clear(cheatsArray,-1);
 	
 	var i = 0;
 	
 	#region Lifeless
 	cheatsArray[# i,0] = cheats.lifeless;
-	cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc;
+	cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc_Lifeless;
 	cheatsArray[# i,2] = str("Cheats.Lifeless.Title");
 	cheatsArray[# i,3] = str("Cheats.Lifeless.Description");
 	cheatsArray[# i,4] = global.cheatLifelessUnlocked;
@@ -37,12 +38,13 @@ function scr_CheatsMenu_Cheats()
 	cheatsArray[# i,9] = 1;
 	cheatsArray[# i,10] = global.cheatLifelessEquipped;
 	cheatsArray[# i,11] = 1;
+	cheatsArray[# i,12] = 0;
 	i += 1;
 	#endregion
 	
 	/*#region Starstorm
 	cheatsArray[# i,0] = cheats.starstorm;
-	cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc;
+	cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc_Default;
 	cheatsArray[# i,2] = str("Cheats.Starstorm.Title");
 	cheatsArray[# i,3] = str("Cheats.Starstorm.Description");
 	cheatsArray[# i,4] = global.cheatStarstormUnlocked;
@@ -53,12 +55,14 @@ function scr_CheatsMenu_Cheats()
 	cheatsArray[# i,9] = 1;
 	cheatsArray[# i,10] = global.cheatStarstormEquipped;
 	cheatsArray[# i,11] = 1;
+	cheatsArray[# i,12] = 0;
 	i += 1;
 	#endregion*/
 	
 	#region Flipside
 	cheatsArray[# i,0] = cheats.flipside;
-	cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc;
+	cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc_Default;
+	cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc_Template;
 	cheatsArray[# i,2] = str("Cheats.Flipside.Title");
 	cheatsArray[# i,3] = str("Cheats.Flipside.Description");
 	cheatsArray[# i,4] = global.cheatFlipsideUnlocked;
@@ -69,12 +73,13 @@ function scr_CheatsMenu_Cheats()
 	cheatsArray[# i,9] = 1;
 	cheatsArray[# i,10] = global.cheatFlipsideEquipped;
 	cheatsArray[# i,11] = 0;
+	cheatsArray[# i,12] = 0;
 	i += 1;
 	#endregion
 	
 	/*#region Gamer Boy
 	cheatsArray[# i,0] = cheats.gamerBoy;
-	cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc;
+	cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc_Default;
 	cheatsArray[# i,2] = str("Cheats.Gamer Boy.Title");
 	cheatsArray[# i,3] = str("Cheats.Gamer Boy.Description");
 	cheatsArray[# i,4] = global.cheatGamerBoyUnlocked;
@@ -85,12 +90,13 @@ function scr_CheatsMenu_Cheats()
 	cheatsArray[# i,9] = 1;
 	cheatsArray[# i,10] = global.cheatGamerBoyEquipped;
 	cheatsArray[# i,11] = 0;
+	cheatsArray[# i,12] = 0;
 	i += 1;
 	#endregion*/
 	
 	/*#region Eye Bleach
 	cheatsArray[# i,0] = cheats.eyeBleach;
-	cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc;
+	cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc_Default;
 	cheatsArray[# i,2] = str("Cheats.Eye Bleach.Title");
 	cheatsArray[# i,3] = str("Cheats.Eye Bleach.Description");
 	cheatsArray[# i,4] = global.cheatEyeBleachUnlocked;
@@ -101,12 +107,13 @@ function scr_CheatsMenu_Cheats()
 	cheatsArray[# i,9] = 1;
 	cheatsArray[# i,10] = global.cheatEyeBleachEquipped;
 	cheatsArray[# i,11] = 0;
+	cheatsArray[# i,12] = 0;
 	i += 1;
 	#endregion*/
 	
 	#region Awaiting for the New Moon
 	cheatsArray[# i,0] = cheats.awaitingForTheNewMoon;
-	cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc;
+	cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc_AwaitingForTheNewMoon;
 	cheatsArray[# i,2] = str("Cheats.Awaiting for the New Moon.Title");
 	cheatsArray[# i,3] = str("Cheats.Awaiting for the New Moon.Description");
 	cheatsArray[# i,4] = global.cheatAwaitingForTheNewMoonUnlocked;
@@ -117,12 +124,13 @@ function scr_CheatsMenu_Cheats()
 	cheatsArray[# i,9] = 1;
 	cheatsArray[# i,10] = global.cheatAwaitingForTheNewMoonEquipped;
 	cheatsArray[# i,11] = 1;
+	cheatsArray[# i,12] = 0;
 	i += 1;
 	#endregion
 	
 	/*#region Gather Battle
 	cheatsArray[# i,0] = cheats.gatherBattle;
-	cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc;
+	cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc_Default;
 	cheatsArray[# i,2] = str("Cheats.Gather Battle.Title");
 	cheatsArray[# i,3] = str("Cheats.Gather Battle.Description");
 	cheatsArray[# i,4] = global.cheatGatherBattleUnlocked;
@@ -133,12 +141,13 @@ function scr_CheatsMenu_Cheats()
 	cheatsArray[# i,9] = 1;
 	cheatsArray[# i,10] = global.cheatGatherBattleEquipped;
 	cheatsArray[# i,11] = 1;
+	cheatsArray[# i,12] = 0;
 	i += 1;
 	#endregion*/
 	
 	/*#region Fashionable
 	cheatsArray[# i,0] = cheats.fashionable;
-	cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc;
+	cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc_Default;
 	cheatsArray[# i,2] = str("Cheats.Fashionable.Title");
 	cheatsArray[# i,3] = str("Cheats.Fashionable.Description");
 	cheatsArray[# i,4] = global.cheatFashionableUnlocked;
@@ -149,12 +158,13 @@ function scr_CheatsMenu_Cheats()
 	cheatsArray[# i,9] = 1;
 	cheatsArray[# i,10] = global.cheatFashionableEquipped;
 	cheatsArray[# i,11] = 0;
+	cheatsArray[# i,12] = 0;
 	i += 1;
 	#endregion*/
 	
 	/*#region Strimp's Diner
 	cheatsArray[# i,0] = cheats.strimpsDiner;
-	cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc;
+	cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc_Default;
 	cheatsArray[# i,2] = str("Cheats.Strimp's Diner.Title");
 	cheatsArray[# i,3] = str("Cheats.Strimp's Diner.Description");
 	cheatsArray[# i,4] = global.cheatStrimpsDinerUnlocked;
@@ -165,12 +175,13 @@ function scr_CheatsMenu_Cheats()
 	cheatsArray[# i,9] = 1;
 	cheatsArray[# i,10] = global.cheatStrimpsDinerEquipped;
 	cheatsArray[# i,11] = 2;
+	cheatsArray[# i,12] = 0;
 	i += 1;
 	#endregion
 	
 	/*#region Colored Abilities
 	cheatsArray[# i,0] = cheats.coloredAbilities;
-	cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc;
+	cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc_Default;
 	cheatsArray[# i,2] = str("Cheats.Colored Abilities.Title");
 	cheatsArray[# i,3] = str("Cheats.Colored Abilities.Description");
 	cheatsArray[# i,4] = global.abilitySpraysKeycard;
@@ -181,6 +192,7 @@ function scr_CheatsMenu_Cheats()
 	cheatsArray[# i,9] = 1;
 	cheatsArray[# i,10] = global.cheatColoredAbilitiesEquipped;
 	cheatsArray[# i,11] = 0;
+	cheatsArray[# i,12] = 0;
 	i += 1;
 	#endregion*/
 	

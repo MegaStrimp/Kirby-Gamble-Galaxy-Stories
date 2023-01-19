@@ -54,7 +54,10 @@ function scr_Player_States_Slide()
 			    if (keyLeftHold) dir = -1;
 			    if (keyRightHold) dir = 1;
 			}
-		    hsp = 0;
+			if (hsp >= decel) hsp -= decel;
+		    if (hsp <= -decel) hsp += decel;
+			if ((hsp > -decel) and (hsp < decel)) hsp = 0;
+		    //hsp = 0;
 			
 			//Abilities
 		

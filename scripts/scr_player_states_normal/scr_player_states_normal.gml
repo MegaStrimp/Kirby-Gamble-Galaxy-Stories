@@ -159,12 +159,6 @@ function scr_Player_States_Normal()
 		{
 		    movespeed = movespeedNormal;
 		}
-		
-		if ((runTurn) and (hsp == 0))
-		{
-			//run = false;
-			runTurn = false;
-		}
 		#endregion
 		
 		//Movement
@@ -179,13 +173,14 @@ function scr_Player_States_Normal()
 					{
 						hsp += accel;
 						if ((!runTurn) and (!attackDisableDir)) dir = 1;
-						if ((canRunTurn) and (carriedItem == carriedItems.none) and (grounded) and (run) and (playerAbility != playerAbilities.mirror) and (sign(hsp) != 0) and (sign(hsp) != sign(dir)))
+						if ((canRunTurn) and (carriedItem == carriedItems.none) and (grounded) and (run) and (!runTurn) and (playerAbility != playerAbilities.mirror) and (hsp != 0) and (sign(hsp) != sign(dir)))
 						{
 							if (audio_is_playing(snd_DashBegin)) audio_stop_sound(snd_DashBegin);
 							audio_play_sound(snd_DashBegin,0,false);
 							if ((!runTurn) and (!attackDisableDir)) dir = -1;
 							runParticleNum = 0;
 							runParticleTimer = 0;
+							runTurnCancelTimer = runTurnCancelTimerMax;
 							runTurn = true;
 						}
 					}
@@ -196,13 +191,14 @@ function scr_Player_States_Normal()
 					{
 						hsp -= accel;
 						if ((!runTurn) and (!attackDisableDir)) dir = -1;
-						if ((canRunTurn) and (carriedItem == carriedItems.none) and (grounded) and (run) and (playerAbility != playerAbilities.mirror) and (sign(hsp) != 0) and (sign(hsp) != sign(dir)))
+						if ((canRunTurn) and (carriedItem == carriedItems.none) and (grounded) and (run) and (!runTurn) and (playerAbility != playerAbilities.mirror) and (hsp != 0) and (sign(hsp) != sign(dir)))
 						{
 							if (audio_is_playing(snd_DashBegin)) audio_stop_sound(snd_DashBegin);
 							audio_play_sound(snd_DashBegin,0,false);
 							if ((!runTurn) and (!attackDisableDir)) dir = 1;
 							runParticleNum = 0;
 							runParticleTimer = 0;
+							runTurnCancelTimer = runTurnCancelTimerMax;
 							runTurn = true;
 						}
 					}
@@ -239,7 +235,7 @@ function scr_Player_States_Normal()
 			if ((((keyLeftHold) and (keyRightHold)) or ((!keyLeftHold) and (!keyRightHold))) or (attackDisableMovement) or (runTurn) or (global.cutscene))
 			{
 				var ultiDecel = decel;
-				if (runTurn) ultiDecel = decel * 2;
+				if (runTurn) ultiDecel = decel * 3;
 				if (attackNumber == playerAttacks.fireWheel) ultiDecel = decelSlide;
 				if (attackNumber == playerAttacks.beamDash) ultiDecel = decel - .02;
 				if (attackNumber == playerAttacks.beamAir) ultiDecel = decel - .05;
@@ -1209,8 +1205,8 @@ function scr_Player_States_Normal()
 								projectile.enemy = false;
 								if (beamGoldenFlareUpgrade)
 								{
-									projectile.character = 6;
-									projectile.sprite_index = spr_Projectile_Beam_Gold;
+									projectile.character = 1;
+									projectile.sprite_index = spr_Projectile_BeamCharge_Gold_Form1;
 									projectile.upgradeProjTimer = projectile.upgradeProjTimerMax;
 								}
 								attackable = false;
@@ -2338,7 +2334,7 @@ function scr_Player_States_Normal()
 					    {
 							if ((keyAttackHold) and ((!attack) or (attackNumber == playerAttacks.fireAerial)))
 							{
-								if((place_meeting(x + 1,y,obj_ParentWall) && keyRightHold || place_meeting(x - 1,y,obj_ParentWall) && keyLeftHold) and attackTimer > 0){
+								if((place_meeting(x + 1,y,obj_ParentWall) and (!instance_place(x + 1,y,obj_ParentWall).slope) and keyRightHold || place_meeting(x - 1,y,obj_ParentWall)  and (!instance_place(x - 1,y,obj_ParentWall).slope) and keyLeftHold) and attackTimer > 0){
 									attackNumber = playerAttacks.fireWheelClimb;
 									//y -= 5;
 									vsp = -5;
@@ -2414,10 +2410,18 @@ function scr_Player_States_Normal()
 									//run = false;
 					                attack = true;
 									attackNumber = playerAttacks.fireDash;
-									fireDashDir = 1;
-									if (keyUpHold and fireDashUp > 0){
-										fireDashDir = -1;
-										fireDashUp--;
+									fireDashDir = 0;
+									if (fireDashUp > 0)
+									{
+										if (keyUpHold)
+										{
+											fireDashDir = -1;
+											fireDashUp--;
+										}
+									}
+									else
+									{
+										fireDashDir = 1;
 									}
 									attackable = false;
 					                fireReleaseTimer = 35;

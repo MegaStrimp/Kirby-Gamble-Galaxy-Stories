@@ -103,7 +103,7 @@ or ((player == 2) and (global.healthP3 == 0))
 or ((player == 3) and (global.healthP4 == 0)))
 and (!death))
 {
-	if (goldenTomatoAmountPointer > 0)
+	if ((goldenTomatoAmountPointer > 0) and (!tomatolessDeath))
 	{
 		if (audio_is_playing(snd_Charge_Ready)) audio_stop_sound(snd_Charge_Ready);
 		audio_play_sound(snd_Charge_Ready,0,false);
@@ -1291,6 +1291,19 @@ if (!global.pause)
 	    }
 	}
 	
+	//Run Turn Cancel Timer
+	
+	if (runTurnCancelTimer > 0)
+	{
+		runTurnCancelTimer -= 1;
+	}
+	else if (runTurnCancelTimer == 0)
+	{
+		runTurn = false;
+		hsp *= -dir;
+	    runTurnCancelTimer = -1;
+	}
+	
 	//Ability Trophy Timer
 	
 	if (abilityTrophyTimer > 0)
@@ -1835,24 +1848,26 @@ if (!global.pause)
 		projectile.imageSpeed = 1 - (fireMagicCharcoalUpgrade / 4);
 		projectile.dmg = 3;
 		projectile.sprite_index = projectile.sprIdle;
-		projectile.dirX = dir;
-		projectile.image_xscale = projectile.dirX;
+		//projectile.dirX = dir;
+		//projectile.image_xscale = projectile.dirX;
 		projectile.enemy = false;
 		projectile.destroyableByEnemy = false;
 		projectile.destroyableByObject = false;
-		projectile.hsp = 2 * dir;
+		projectile.hsp = 2.5 * dir;
         if ((!global.cutscene) and (keyUpHold))
         {
-            projectile.vsp = random_range(-.5,0) - .75;
+            projectile.vsp = random_range(-.75,.75) - .75;
         }
         else if ((!global.cutscene) and (keyDownHold))
         {
-            projectile.vsp = random_range(0,.5) + .75;
+            projectile.vsp = random_range(-.75,.75) + .75;
         }
         else
         {
-            projectile.vsp = random_range(-.5,.5);
+            projectile.vsp = random_range(-.75,.75);
         }
+		projectile.imageAngle = point_direction(0,0,projectile.hsp,projectile.vsp);
+		projectile.image_angle = projectile.imageAngle;
 		projectile.paletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
 	    fireNormalAttackTimer = -1;
 	}
@@ -2089,11 +2104,11 @@ else if (setupTimer == 0)
 			var xx = x;
 			if (!place_meeting(x - 24,y,obj_ParentWall))
 			{
-				xx = x - 24;
+				xx = x - (24 * (i + 1));
 			}
 			else if (!place_meeting(x + 24,y,obj_ParentWall))
 			{
-				xx = x + 24;
+				xx = x + (24 * (i + 1));
 			}
 			else
 			{
@@ -2181,7 +2196,7 @@ else if (characterSetupTimer == 0)
 		gravLimitFireDash = 1.25;
 		gravLimit = gravLimitNormal;
 		jumpspeedNormal = 6;
-		jumpspeedFloat = 1.8;
+		jumpspeedFloat = 2;
 		jumpspeedWheel = 8;
 		jumpspeed = jumpspeedNormal;
 		movespeedNormal = 1.7;
@@ -2192,7 +2207,7 @@ else if (characterSetupTimer == 0)
 		movespeedBurst = 7;
 		movespeed = movespeedNormal;
 		ufoFloatSpd = 2;
-		accel = .2;
+		accel = .3;
 		accelFloat = .1;
 		decel = .075;
 		decelSlide = .125;
@@ -2851,6 +2866,32 @@ else if (characterSetupTimer == 0)
 			sprClimbDown = spr_WaddleDee_Alien_ClimbDown;
 			sprHurt = spr_WaddleDee_Alien_Hurt;
 			sprDeath = spr_WaddleDee_Alien_Hurt;
+			#endregion
+			break;
+			
+			case "bandit":
+			#region Palettes
+			var pal;
+			var i = 0;
+			pal[i] = spr_WaddleDee_Alien_Palette_Graylien;
+			#endregion
+			
+			#region Sprites
+			maskIndex = spr_16Square_Mask;
+			sprIdle = spr_WaddleDee_Bandit_Idle;
+			sprWalk = spr_WaddleDee_Bandit_Walk;
+			sprRun = spr_WaddleDee_Bandit_Run;
+			sprJump = spr_WaddleDee_Bandit_Jump;
+			sprFall = spr_WaddleDee_Bandit_Fall;
+			sprSquish = spr_WaddleDee_Bandit_Idle;
+			sprDuck = spr_WaddleDee_Bandit_Duck;
+			sprSlide = spr_WaddleDee_Bandit_Slide;
+			sprSlideEnd = spr_WaddleDee_Bandit_Slide;
+			sprEnter = spr_WaddleDee_Bandit_Walk;
+			sprClimbUp = spr_WaddleDee_Bandit_ClimbUp;
+			sprClimbDown = spr_WaddleDee_Bandit_ClimbDown;
+			sprHurt = spr_WaddleDee_Bandit_Hurt;
+			sprDeath = spr_WaddleDee_Bandit_Hurt;
 			#endregion
 			break;
 		}
@@ -3889,7 +3930,24 @@ else if (deathTimer == 0)
 	par.fricSpd = .4;
 	par.direction = 90;
 	par.pausable = false;
-	global.abilityP1 = playerAbilities.none;
+	switch (player)
+	{
+		case 0:
+		global.abilityP1 = playerAbilities.none;
+		break;
+		
+		case 1:
+		global.abilityP2 = playerAbilities.none;
+		break;
+		
+		case 2:
+		global.abilityP3 = playerAbilities.none;
+		break;
+		
+		case 3:
+		global.abilityP4 = playerAbilities.none;
+		break;
+	}
 	var musDeath = mus_Death1;
 	if ((global.playerLives <= 0) and (global.gamemode != gamemodes.maykr)) musDeath = mus_Death2;
 	audio_play_sound(musDeath,0,false);

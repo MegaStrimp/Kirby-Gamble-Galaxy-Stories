@@ -1,5 +1,9 @@
 ///@description Main
 
+#region Debug Overlay
+show_debug_overlay(global.debugOverlay);
+#endregion
+
 //Variables
 
 if (global.gamemode == gamemodes.maykr)

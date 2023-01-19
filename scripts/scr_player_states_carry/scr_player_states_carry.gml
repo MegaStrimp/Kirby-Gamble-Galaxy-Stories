@@ -415,7 +415,7 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 						
-						if ((global.gearAbilityKillsTarget >= global.waterAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.gear) != -1))
+						if ((global.gearAbilityKills >= global.gearAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.gear) != -1))
 						{
 							mixRosterAbility[i] = playerAbilities.gear;
 							mixRosterText[i] = spr_Hud_AbilityText_Gear;

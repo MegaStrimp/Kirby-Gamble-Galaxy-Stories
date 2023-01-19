@@ -67,8 +67,7 @@ draw_rectangle(cutsceneLineX,270 - 23,530 - cutsceneLineOffset,270,false);
 draw_sprite_ext(spr_Hud_CutsceneStar,0,cutsceneLineX - 12,270,1,1,360 - cutsceneStarAngle,image_blend,1);
 #endregion
 
-//Halberd Escape
-
+#region Halberd Escape
 if (global.halberdEscape)
 {
 	#region Draw Overlay
@@ -84,7 +83,7 @@ if (global.halberdEscape)
 	
 	draw_sprite_ext(spr_Hud_Timer,0,timerX,timerY,1,1,image_angle,image_blend,drawAlpha);
 	
-	halberdEscapeTimer -= 1;
+	if (!global.pause) halberdEscapeTimer -= 1;
 	halberdEscapeTimer = clamp(halberdEscapeTimer,0,9999);
 	if (halberdEscapeTimer == 0)
 	{
@@ -100,6 +99,7 @@ if (global.halberdEscape)
 	draw_sprite_ext(spr_Hud_TimerNumbers,halberdEscapeTimer - (floor(halberdEscapeTimer / 10) * 10),timerX + 49,timerY + 2,1,1,image_angle,image_blend,drawAlpha);
 	#endregion
 }
+#endregion
 
 #region Alpha
 drawAlpha = lerp(drawAlpha,!global.cutscene,.1);
@@ -230,7 +230,7 @@ for (var i = 0; i < 4; i++)
 	if (hasCoopPointer)
 	{
 		#region Healthbar Back
-		draw_sprite_ext(spr_Hud_Healthbar_Back,0,40 + sep,248,1,1,image_angle,image_blend,drawAlpha);
+		draw_sprite_ext(spr_Hud_Healthbar_Back,i,40 + sep,248,1,1,image_angle,image_blend,drawAlpha);
 		#endregion
 		
 		#region Healthbar
@@ -403,10 +403,10 @@ for (var i = 0; i < 4; i++)
 		
 		draw_sprite_part_ext(spr_Hud_Healthbar_Kirby,flashPointer,0,0,healthbarWidthPointer,healthbarHeightPointer,40 + sep,248,1,1,image_blend,drawAlpha);
 		
-		if (healthbarWidthPointer >= 1) draw_sprite_part_ext(spr_Hud_HealthbarCorner_Kirby,flashPointer,0,0,4,7,40 + sep,248,1,1,image_blend,drawAlpha);
-		if (healthbarWidthPointer >= sprite_get_width(spr_Hud_Healthbar_Kirby)) draw_sprite_part_ext(spr_Hud_HealthbarCorner_Kirby,flashPointer,0,0,4,min(7,healthbarWidthPointer),40 + sep + (healthbarWidthPointer - 3),248,1,1,image_blend,drawAlpha);
+		//if (healthbarWidthPointer >= 1) draw_sprite_part_ext(spr_Hud_HealthbarCorner_Kirby,flashPointer,0,0,4,7,40 + sep,248,1,1,image_blend,drawAlpha);
+		//if (healthbarWidthPointer >= sprite_get_width(spr_Hud_Healthbar_Kirby)) draw_sprite_part_ext(spr_Hud_HealthbarCorner_Kirby,flashPointer,0,0,4,min(7,healthbarWidthPointer),40 + sep + (healthbarWidthPointer - 3),248,1,1,image_blend,drawAlpha);
 		
-		draw_sprite_part_ext(spr_Hud_HealthbarHeal_Kirby,0,healStartPointer,0,sign(healWidthPointer) * healWidthPointer,healthbarHeightPointer,40 + healStartPointer,248,1,1,healBarColorPointer,drawAlpha);
+		draw_sprite_part_ext(spr_Hud_HealthbarHeal_Kirby,0,healStartPointer,0,sign(healWidthPointer) * healWidthPointer,healthbarHeightPointer,40 + healStartPointer + sep,248,1,1,healBarColorPointer,drawAlpha);
 		#endregion
 		
 		#region Border

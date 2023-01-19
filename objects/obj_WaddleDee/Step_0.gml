@@ -69,6 +69,22 @@ if (setupTimer == 0)
 		sprClimbDown = spr_WaddleDee_Alien_ClimbDown;
 		sprHurt = spr_WaddleDee_Alien_Hurt;
 		break;
+		
+		//Bandit
+		
+		case 4:
+		sprIdle = spr_WaddleDee_Bandit_Idle;
+		sprWalk = spr_WaddleDee_Bandit_Walk;
+		sprRun = spr_WaddleDee_Bandit_Run;
+		sprDuck = spr_WaddleDee_Bandit_Duck;
+		sprJump = spr_WaddleDee_Bandit_Jump;
+		sprFall = spr_WaddleDee_Bandit_Fall;
+		sprSwing = spr_WaddleDee_Bandit_Swing;
+		sprParasol = spr_WaddleDee_Bandit_Parasol;
+		sprClimbUp = spr_WaddleDee_Bandit_ClimbUp;
+		sprClimbDown = spr_WaddleDee_Bandit_ClimbDown;
+		sprHurt = spr_WaddleDee_Bandit_Hurt;
+		break;
 	}
 }
 #endregion

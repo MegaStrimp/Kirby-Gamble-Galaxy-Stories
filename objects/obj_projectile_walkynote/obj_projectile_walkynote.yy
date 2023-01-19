@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_Projectile_WalkyNote",
   "spriteId": {
-    "name": "spr_Projectile_WalkyNote_Normal_Idle",
-    "path": "sprites/spr_Projectile_WalkyNote_Normal_Idle/spr_Projectile_WalkyNote_Normal_Idle.yy",
+    "name": "spr_Projectile_WalkyNote_Normal_Red",
+    "path": "sprites/spr_Projectile_WalkyNote_Normal_Red/spr_Projectile_WalkyNote_Normal_Red.yy",
   },
   "solid": false,
   "visible": true,

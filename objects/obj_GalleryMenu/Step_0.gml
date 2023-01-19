@@ -4,7 +4,7 @@ if (!global.pause)
 {
 	scr_Player_Inputs(0);
 	
-	if (!artworkZoom)
+	if ((!artworkZoom) and (artworkZoomAlpha < .05))
 	{
 		switch (page)
 		{

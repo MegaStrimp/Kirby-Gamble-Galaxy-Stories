@@ -222,6 +222,7 @@ function scr_Player_Collision(argument0)
 		{
 			if (collidingWall.hp > 0)
 			{
+				tomatolessDeath = true;
 				switch (player)
 				{
 					case 0:
@@ -269,6 +270,7 @@ function scr_Player_Collision(argument0)
 	
 	if (y >= room_height + 24)
 	{
+		tomatolessDeath = true;
 		switch (player)
 		{
 			case 0:

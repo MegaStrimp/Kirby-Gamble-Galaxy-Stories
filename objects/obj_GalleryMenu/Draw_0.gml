@@ -33,7 +33,7 @@ if (page == 1)
 			}
 			else
 			{
-				scr_Draw_Text_Color_Outline(artworkX + (260 * i),120,artworkArray[# i,4],-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+				scr_Draw_Text_Color_Outline(artworkX + (260 * i),120,artworkArray[# i,4],-1,160,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 			}
 			draw_set_halign(fa_left);
 			draw_set_valign(fa_top);
@@ -52,11 +52,11 @@ draw_sprite(spr_Menu_MainMenu_Hud_Gallery,0,0 + hudOffset,0);
 
 //Draw Zoomed Artwork
 
-artworkZoomAlpha = lerp(artworkZoomAlpha,artworkZoom,.25);
+artworkZoomAlpha = lerp(artworkZoomAlpha,artworkZoom,.5);
 if (artworkZoomAlpha > 0)
 {
 	draw_set_alpha(artworkZoomAlpha);
 	draw_rectangle(camera_get_view_x(gameView),camera_get_view_y(gameView),camera_get_view_x(gameView) + camera_get_view_width(gameView),camera_get_view_y(gameView) + camera_get_view_height(gameView),false);
-	draw_sprite_ext(artworkArray[# artworkSelection,0],0,240,135,artworkArray[# artworkSelection,5] * 1.9,artworkArray[# artworkSelection,5] * 1.9,image_angle,image_blend,image_alpha);
+	draw_sprite_ext(artworkArray[# artworkSelection,0],0,240,135,artworkArray[# artworkSelection,5] * 1.9,artworkArray[# artworkSelection,5] * 1.9,image_angle,image_blend,artworkZoomAlpha);
 	draw_set_alpha(1);
 }

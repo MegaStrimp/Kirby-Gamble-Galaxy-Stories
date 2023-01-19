@@ -56,7 +56,7 @@ if (global.buildType == buildTypes.android)
 }
 
 #region Debug Room Names
-if (global.debug)
+if (global.debugOverlay)
 {
 	var roomName = string(room_get_name(room));
 	switch (room)

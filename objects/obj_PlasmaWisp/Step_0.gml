@@ -123,7 +123,7 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			projectile.dirX = dirX;
 			projectile.image_xscale = dirX;
 			projectile.image_yscale=0.2
-			projectile.hspeed = dirX * 6;
+			projectile.hsp = dirX * 6;
 			projectile.destroyTimer = 20;
 			projectile.setupExplode=1
 			projectile.setupTimer=10

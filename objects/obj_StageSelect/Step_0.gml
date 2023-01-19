@@ -121,35 +121,6 @@ if (!global.pause)
 	x = lerp(x,xx,spd);
 	y = lerp(y,yy,spd);
 	
-	//Animation
-	
-	if (global.hasCoop > 0)
-	{
-		image_index = 1;
-	}
-	else
-	{
-		image_index = 0;
-	}
-	
-	//Select Coop
-	
-	if ((!instance_exists(obj_Fade)) and (keySelectPressed))
-	{
-		if (global.hasCoop > 0)
-		{
-			global.hasCoop = 0;
-			if (audio_is_playing(snd_1Up)) audio_stop_sound(snd_1Up);
-			audio_play_sound(snd_ButtonNo,0,false);
-		}
-		else
-		{
-			global.hasCoop = 1;
-			if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
-			audio_play_sound(snd_1Up,0,false);
-		}
-	}
-	
 	//Go Back
 	
 	if (!instance_exists(obj_Fade))

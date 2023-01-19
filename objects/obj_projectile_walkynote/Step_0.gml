@@ -7,7 +7,7 @@ if (setupTimer == 0)
 	{
 		#region Normal
 		case 0:
-		sprIdle = spr_Projectile_WalkyNote_Normal_Idle;
+		sprIdle = choose(spr_Projectile_WalkyNote_Normal_Red,spr_Projectile_WalkyNote_Normal_Green,spr_Projectile_WalkyNote_Normal_Blue);
 		break;
 		#endregion
 	}

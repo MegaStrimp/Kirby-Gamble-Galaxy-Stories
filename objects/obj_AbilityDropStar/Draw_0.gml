@@ -10,7 +10,7 @@ draw_self();
 
 //Bubble
 
-if (isBubble) draw_sprite_ext(spr_AbilityBubble,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+if (isBubble) draw_sprite_ext(spr_AbilityBubble,image_index,x,y,image_xscale,image_yscale,0,image_blend,image_alpha);
 
 //Debug
 

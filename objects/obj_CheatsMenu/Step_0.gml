@@ -30,7 +30,7 @@ if (!global.pause)
 		
 		if (!instance_exists(obj_Fade))
 		{
-			if ((keyJumpPressed) or (keyStartPressed))
+			if ((keyJumpPressed) or (keyStartPressed) or ((mouse_check_button_pressed(mb_left)) and ((point_in_rectangle(mouse_x,mouse_y,100,59,400,150)))))
 			{
 				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 				audio_play_sound(snd_ButtonYes,0,false);
@@ -40,7 +40,7 @@ if (!global.pause)
 		
 		if (select)
 		{
-			switch (discSelection)
+			switch (cheatsArray[# discSelection,0])
 			{
 				case cheats.lifeless:
 				global.cheatLifelessEquipped = !global.cheatLifelessEquipped;
@@ -105,6 +105,7 @@ if (!global.pause)
 		
 		if (select)
 		{
+			if ((!global.debug) and (global.canSave)) scr_SaveGame(global.selectedSave);
 			var fade = instance_create_depth(x,y,-999,obj_Fade);
 			fade.targetRoom = rm_Collection;
 			select = false;
@@ -133,8 +134,8 @@ if (!global.pause)
 	#endregion
 	
 	#region Disc Animation
-	var discSpd = sprite_get_speed(spr_Menu_Collection_Cheats_Disc) / 60;
+	var discSpd = sprite_get_speed(spr_Menu_Collection_Cheats_Shine) / 60;
 	discIndex += discSpd;
-	if (discIndex > 2) discIndex -= 2;
+	if (discIndex >= 2) discIndex -= 2;
 	#endregion
 }

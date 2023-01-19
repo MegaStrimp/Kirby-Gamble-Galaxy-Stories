@@ -286,12 +286,14 @@ if ((playerIsHelper) and (helperTimer != -1))
 
 //Debug Text
 /*
-draw_set_color(c_black);
-draw_text(x - 12,y - 12,string(idleAnimation));
-draw_text(x - 12,y - 24,string(idleAnimationTimer));
-//draw_text(x,y - 24,string(fireDashDir));
-//draw_text(x+20,y - 24,string(attackTimer));
-//draw_text(x,y - 34,string(image_speed));
-//draw_text(x,y - 34,"State:"+string(state));
-//draw_text(x,y - 54,"Down Held:"+string(downHeld));
-//draw_text(x,y - 54,"Health:"+string(global.healthP1));
+if (global.debugOverlay)
+{
+	draw_set_color(c_black);
+	draw_text(x - 12,y - 12,"runturn - " + string(runTurn));
+	//draw_text(x,y - 24,string(fireDashDir));
+	//draw_text(x+20,y - 24,string(attackTimer));
+	//draw_text(x,y - 34,string(image_speed));
+	//draw_text(x,y - 34,"State:"+string(state));
+	//draw_text(x,y - 54,"Down Held:"+string(downHeld));
+	//draw_text(x,y - 54,"Health:"+string(global.healthP1));
+}

@@ -867,7 +867,24 @@ global.abilityP3 = playerAbilities.none;
 global.abilityP4 = playerAbilities.none;
 #endregion
 
-#region 
+#region Stages
+enum stages
+{
+	greenGreens,
+	battleshipHalberd,
+	asteroidFields,
+	yolkYard,
+	grandTempleAvgo,
+	floralYolkCaves,
+	stormTheFortress,
+	centralLab,
+	pathToTheNastyMachine,
+	sandshellBeach,
+	upTheStraw,
+	sacredAquatia,
+	cosmicPalace,
+	popstarMoon
+}
 #endregion
 
 #region Skylands
@@ -885,6 +902,8 @@ global.skylandsLives = 2;
 //global.healP2End = global.healthP2;
 ///////////////////////////
 
+global.currentStage = stages.greenGreens;
+global.currentStage = stages.yolkYard;
 global.roomPrevious = rm_Setup;
 global.roomNext = rm_Starcutter;
 global.roomCheckpoint = rm_Setup;
@@ -896,7 +915,7 @@ global.goldenTomatoAmountMax = 2;
 global.stageNumber = 0;
 global.debug = true;
 //global.debug = false;
-show_debug_overlay(global.debug);
+global.debugOverlay = global.debug;
 global.pause = false;
 global.cutscene = false;
 global.tutorial = false;
@@ -1117,7 +1136,12 @@ global.bitmapKSSU = font_add_sprite_ext(spr_Hud_Dialogue_Font_Kssu,"ABCDEFGHIJKL
 global.fontMorse = font_add_sprite_ext(spr_Hud_Dialogue_Font_Morse,".-/",false,0);
 global.fontNumbersGray = font_add_sprite_ext(spr_Hud_Numbers_Gray,"0123456789",false,0);
 global.fontHitNumbers = font_add_sprite_ext(spr_Hud_HitNumbers,"0123456789",false,0);
+
 global.fontDialogueDefaultKanji = font_add(working_directory + "ARIALUNI.TTF",12,false,false,32,127);
+global.fontCharacterSelectLargeKanji = font_add(working_directory + "ARIALUNI.TTF",22,false,false,32,127);
+global.fontCharacterSelectMediumKanji = font_add(working_directory + "ARIALUNI.TTF",14,false,false,32,127);
+global.fontCharacterSelectSmallKanji = font_add(working_directory + "ARIALUNI.TTF",9,false,false,32,127);
+
 global.fontMaykrBlue = font_add_sprite_ext(spr_Maykr_Font_Blue,"abcdefghijklmnopqrstuvwxyz0123456789.!?/()",false,0);
 global.fontMaykrRed = font_add_sprite_ext(spr_Maykr_Font_Red,"abcdefghijklmnopqrstuvwxyz0123456789.!?/()",false,0);
 global.fontMaykrWhite = font_add_sprite_ext(spr_Maykr_Font_White,"abcdefghijklmnopqrstuvwxyz0123456789.!?/()",false,0);

@@ -4,6 +4,10 @@
 if (!keyboard_check(vk_shift)) move_snap(6,6);
 #endregion
 
+#region Debug Overlay
+if ((keyboard_check(vk_shift)) and (keyboard_check_pressed(ord("D")))) global.debugOverlay = !global.debugOverlay;
+#endregion
+
 #region Visible
 if (mouse_check_button_pressed(mb_middle))
 {
@@ -1607,7 +1611,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		
 		#region Waddle Dee
 		case debugObject.waddleDee:
-		debugSpriteSelectedMax = 3;
+		debugSpriteSelectedMax = 4;
 		switch (debugSpriteSelected)
 		{
 			#region Normal
@@ -1615,6 +1619,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var sprIdle = spr_WaddleDee_Normal_Idle;
 			var sprWalk = spr_WaddleDee_Normal_Walk;
 			var sprDuck = spr_WaddleDee_Normal_Duck;
+			var sprSlide = spr_WaddleDee_Normal_Slide;
 			var sprJump = spr_WaddleDee_Normal_Jump;
 			var sprFall = spr_WaddleDee_Normal_Fall;
 			var sprSwing = spr_WaddleDee_Normal_Swing;
@@ -1764,6 +1769,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var sprIdle = spr_WaddleDee_Egg_Idle;
 			var sprWalk = spr_WaddleDee_Egg_Walk;
 			var sprDuck = spr_WaddleDee_Egg_Duck;
+			var sprSlide = spr_WaddleDee_Normal_Slide;
 			var sprJump = spr_WaddleDee_Egg_Jump;
 			var sprFall = spr_WaddleDee_Egg_Fall;
 			var sprSwing = spr_WaddleDee_Egg_Swing;
@@ -1789,6 +1795,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var sprIdle = spr_WaddleDee_Gold_Idle;
 			var sprWalk = spr_WaddleDee_Gold_Walk;
 			var sprDuck = spr_WaddleDee_Gold_Duck;
+			var sprSlide = spr_WaddleDee_Normal_Slide;
 			var sprJump = spr_WaddleDee_Gold_Jump;
 			var sprFall = spr_WaddleDee_Gold_Fall;
 			var sprSwing = spr_WaddleDee_Gold_Swing;
@@ -1814,12 +1821,39 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var sprIdle = spr_WaddleDee_Alien_Idle;
 			var sprWalk = spr_WaddleDee_Alien_Walk;
 			var sprDuck = spr_WaddleDee_Alien_Duck;
+			var sprSlide = spr_WaddleDee_Normal_Slide;
 			var sprJump = spr_WaddleDee_Alien_Jump;
 			var sprFall = spr_WaddleDee_Alien_Fall;
 			var sprSwing = spr_WaddleDee_Alien_Swing;
 			var sprClimbUp = spr_WaddleDee_Alien_ClimbUp;
 			var sprClimbDown = spr_WaddleDee_Alien_ClimbDown;
 			var sprHurt = spr_WaddleDee_Alien_Hurt;
+			debugPaletteNumberMax = 0;
+			switch (debugPaletteNumber)
+			{
+				case 0:
+				debugPaletteIndex = spr_WaddleDee_Alien_Palette_Graylien;
+				break;
+				
+				default:
+				debugPaletteIndex = spr_WaddleDee_Alien_Palette_Graylien;
+				break;
+			}
+			break;
+			#endregion
+			
+			#region Bandit
+			case 4:
+			var sprIdle = spr_WaddleDee_Bandit_Idle;
+			var sprWalk = spr_WaddleDee_Bandit_Walk;
+			var sprDuck = spr_WaddleDee_Bandit_Duck;
+			var sprSlide = spr_WaddleDee_Bandit_Slide;
+			var sprJump = spr_WaddleDee_Bandit_Jump;
+			var sprFall = spr_WaddleDee_Bandit_Fall;
+			var sprSwing = spr_WaddleDee_Bandit_Swing;
+			var sprClimbUp = spr_WaddleDee_Bandit_ClimbUp;
+			var sprClimbDown = spr_WaddleDee_Bandit_ClimbDown;
+			var sprHurt = spr_WaddleDee_Bandit_Hurt;
 			debugPaletteNumberMax = 0;
 			switch (debugPaletteNumber)
 			{
@@ -1846,6 +1880,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprWalk = sprWalk;
 			debugObj.sprDuck = sprDuck;
+			debugObj.sprSlide = sprSlide;
 			debugObj.sprJump = sprJump;
 			debugObj.sprFall = sprFall;
 			debugObj.sprSwing = sprSwing;
@@ -5192,7 +5227,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			break;
 			#endregion
 		}
-		debugSprite = sprIdle;
+		debugSprite = sprBox;
 		debugIndex = 0;
 		debugStateSelectedMax = 0;
 		if (mouse_check_button_pressed(mb_left))

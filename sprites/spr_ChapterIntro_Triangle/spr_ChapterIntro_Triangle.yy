@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Misc",
-    "path": "folders/Sprites/Subgames/Maykr/Misc.yy",
+    "name": "Character Select",
+    "path": "folders/Sprites/Menu/Character Select.yy",
   },
 }
