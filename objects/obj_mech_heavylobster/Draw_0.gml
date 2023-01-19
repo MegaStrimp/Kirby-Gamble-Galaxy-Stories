@@ -31,3 +31,6 @@ draw_sprite_ext(footFrontIndex,0,footFrontX,footFrontY,image_xscale,image_yscale
 #region Front Claw
 draw_sprite_ext(sprClaw,0,clawFrontX,clawFrontY,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
 #endregion
+
+draw_text(x,y-60,string(footFrontHeight)+"/"+string(footFrontY));
+draw_text(x,y-90,string(movingFoot));

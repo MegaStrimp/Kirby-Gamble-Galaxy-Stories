@@ -3423,8 +3423,8 @@ function scr_Player_States_Normal()
 							}
 							
 							if(attackNumber == playerAttacks.jetCharge)
-							{
-							//attackTimer = 99;
+								{
+								//attackTimer = 99;
 								//if(keyAttackReleased){
 								//	attackNumber = playerAttacks.jetDash;
 								//}
@@ -3459,7 +3459,6 @@ function scr_Player_States_Normal()
 										}
 									}
 								}
-
 								if (keyRightHold)
 								{
 									dir = 1;
@@ -3468,7 +3467,6 @@ function scr_Player_States_Normal()
 								{
 									dir = -1;
 								}
-
 								if (jetCharge < jetChargeMax)
 								{
 									if ((!global.cutscene) and (keyAttackReleased))
@@ -3513,6 +3511,7 @@ function scr_Player_States_Normal()
 								//run = false;
 					            attack = true;
 								attackNumber = playerAttacks.jetDash;
+								jetCharge = 0;
 								fireDashDir = 0;
 								if (keyUpHold and jetDashAir > 1)
 								{
@@ -3553,7 +3552,7 @@ function scr_Player_States_Normal()
 								par.paletteIndex = 1;
 								par.destroyAfterAnimation = true;
 							}
-						}	
+						}
 						break;
 						#endregion
 					
@@ -4057,9 +4056,10 @@ function scr_Player_States_Normal()
 					break;
 					
 					case playerAbilities.ufo:
+					// UFO catch trigger goes here
 					break;
 					
-					default:
+					default: // here is the culprit
 					attackTimer = 0;
 					hurt = false;
 					jumpspeed = jumpspeedFloat;

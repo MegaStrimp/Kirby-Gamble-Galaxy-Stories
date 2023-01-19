@@ -13,6 +13,15 @@ vspCollision = 0;
 vspFinal = 0;
 movespeed = 1;
 jumpspeed = 5;
+
+movingFoot = 0; // Determines which foot is currently moving. Switches when a foot touches the ground. 0 is front foot, 1 is back foot.
+footFrontHeight = 0;
+footBackHeight = 0;
+stepDir = -1; // -1 goes up, 1 goes down
+stepSpeed = 0.25;
+stepHeight = -9;
+frontStepDist = 0;
+backStepDist = 1;
 #endregion
 
 #region Sprites
