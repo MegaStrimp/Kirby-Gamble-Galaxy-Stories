@@ -2233,6 +2233,8 @@ i += 1;
 subtitles[i] = "True";
 i += 1;
 subtitles[i] = "Like a Subsandwich on a hand dish!";
+i += 1;
+subtitles[i] = "Zwat's perfect running the True Arena again ...";
 
 selectedSubtitle = irandom_range(0,array_length(subtitles) - 1);
 selectedSubtitle = subtitles[selectedSubtitle];
@@ -2288,6 +2290,10 @@ switch (windowGen[0])
 	case 8:
 	if (global.princeFluffUnlocked) windowCaption[0] = "Fluff";
 	break;
+	
+	case 9:
+	windowCaption[0] = "Zwataketa";
+	break;
 }
 switch (windowGen[1])
 {
@@ -2306,6 +2312,13 @@ switch (windowGen[3])
 	case 0:
 	windowCaption[3] = "Subsandwich";
 	break;
+}
+if(windowCaption[0] == "Zwataketa"){
+	if(random_range(0,4) >= 3){
+		windowCaption[0] = "Zwataketa's";
+		windowCaption[1] = "Gambling";
+		windowCaption[2] = "Addiction";
+	}
 }
 window_set_caption(windowCaption[0] + " " + windowCaption[1] + " " + windowCaption[2] + " " + windowCaption[3] + " - " + global.versionNumber + " - " + selectedSubtitle);
 #endregion

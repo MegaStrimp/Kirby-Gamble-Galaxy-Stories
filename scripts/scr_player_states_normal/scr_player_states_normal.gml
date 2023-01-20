@@ -3389,22 +3389,7 @@ function scr_Player_States_Normal()
 						
 						#region Jet
 						case playerAbilities.jet:
-						//canFloat = false;
 						if((!global.cutscene) and (!hurt)){
-							//if(state == playerStates.float){
-							//	if(jetCharge >= 120){
-							//		// rocket jump
-							//	}else{
-							//		state = playerStates.jetHover;
-							//	}
-							//}
-							//if(state == playerStates.jetHover){
-							//	// accelerate upward, and release a hitbox below Kirby
-							//	vsp = clamp(vsp-jetHoverAccel,-jetHoverMax,2);
-							//	if(!keyJumpHold){
-							//		state = playerStates.normal;
-							//	}
-							//}
 							if (keyAttackPressed && attackable && !attack)
 							{
 								if (run && !grounded)
