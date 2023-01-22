@@ -40,12 +40,12 @@ collisionX = obj_ParentWall;
 collisionY = obj_ParentWall;
 hasXKnockback = true;
 hasYKnockback = true;
-hasDeathKnockback = false;
+hasDeathKnockback = true;
 deathOnBottom = true;
-objectOnDeath = true;
+objectOnDeath = false;
 objectOnDeathObj = obj_Projectile_ExplosionMask;
 groundFailsafe = true;
-hasDeathParticles = false;
+hasDeathParticles = true;
 jumpCountMax = 7;
 playerOffset = 48;
 

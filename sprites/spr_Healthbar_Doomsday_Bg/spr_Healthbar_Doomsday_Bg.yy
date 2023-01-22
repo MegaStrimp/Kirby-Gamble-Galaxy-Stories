@@ -69,6 +69,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Doomsday",
-    "path": "folders/Sprites/Hud/Healthbars/Boss/Doomsday.yy",
+    "path": "folders/Sprites/Hud/Healthbars/Doomsday.yy",
   },
 }

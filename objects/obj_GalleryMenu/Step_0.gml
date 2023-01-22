@@ -166,11 +166,18 @@ if (!global.pause)
 				goBack = false;
 			}
 			break;
-		
+			
 			case 1:
+			if ((selection != "artwork") and (mouse_check_button_pressed(mb_left)) and ((point_in_rectangle(mouse_x,mouse_y,149,38,331,190))))
+			{
+				selection = "artwork";
+			}
+			
 			switch (selection)
 			{
 				case "artwork":
+				if ((keyUpPressed) or (keyDownPressed)) audio_play_sound(snd_BossHealth,0,false);
+				
 				if (keyUpPressed) selection = "back";
 				if (keyDownPressed) selection = "back";
 				if ((keyLeftPressed) and (artworkSelection != 0))
@@ -188,7 +195,7 @@ if (!global.pause)
 			
 				if (!instance_exists(obj_Fade))
 				{
-					if ((keyJumpPressed) or (keyStartPressed))
+					if ((keyJumpPressed) or (keyStartPressed) or ((mouse_check_button_pressed(mb_left)) and ((point_in_rectangle(mouse_x,mouse_y,149,38,331,190)))))
 					{
 						if (artworkArray[# artworkSelection,3])
 						{
@@ -212,6 +219,8 @@ if (!global.pause)
 				break;
 			
 				case "download":
+				if ((keyUpPressed) or (keyDownPressed) or (keyLeftPressed) or (keyRightPressed)) audio_play_sound(snd_BossHealth,0,false);
+				
 				if (keyUpPressed) selection = "artwork";
 				if (keyDownPressed) selection = "artwork";
 				if (keyLeftPressed) selection = "back";
@@ -246,6 +255,8 @@ if (!global.pause)
 				break;
 			
 				case "back":
+				if ((keyUpPressed) or (keyDownPressed) or (keyLeftPressed) or (keyRightPressed)) audio_play_sound(snd_BossHealth,0,false);
+				
 				if (keyUpPressed) selection = "artwork";
 				if (keyDownPressed) selection = "artwork";
 				if (keyLeftPressed) selection = "download";

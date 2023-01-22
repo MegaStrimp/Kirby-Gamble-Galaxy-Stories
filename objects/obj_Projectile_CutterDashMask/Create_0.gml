@@ -15,5 +15,6 @@ canBeReflected = false;
 setScale = false;
 state = 0;
 enemy = false;
+isDirectHit = true;
 dmgMax = 1;
 dmgMin = 1;

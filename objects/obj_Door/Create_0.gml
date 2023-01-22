@@ -10,6 +10,8 @@ sprStar = spr_Particle_BigStar_Yellow;
 
 state = "goToRoom";
 targetRoom = rm_Setup;
+targetRoomGlobal = -1;
+changeStageTo = -1;
 doorVisible = true;
 locked = false;
 unlocked = false;

@@ -121,7 +121,7 @@ function scr_Player_ExecuteJump()
 		vsp = -jumpspeed + (vspCollision / 2);
 		if (attackNumber == playerAttacks.slideJump)
 		{
-			vsp = -(jumpspeed * .6) + (vspCollision / 2);
+			vsp = -(jumpspeed * .7) + (vspCollision / 2);
 		}
 		else
 		{

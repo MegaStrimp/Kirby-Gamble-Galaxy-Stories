@@ -62,6 +62,7 @@ inhaleYOffset = 0;
 sprHurt = -1;
 points = 0;
 ability = playerAbilities.none;
+isDirectHit = false;
 
 //Timers
 

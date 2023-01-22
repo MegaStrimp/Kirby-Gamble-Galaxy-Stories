@@ -19,7 +19,9 @@
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Player","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7F745EB2","properties":[],"isDnd":false,"objectId":{"name":"obj_Player","path":"objects/obj_Player/obj_Player.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":18.0,"y":168.0,},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":6,"gridY":6,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
-    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Enemies","instances":[],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":6,"gridY":6,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
+    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Enemies","instances":[
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_446C631","properties":[],"isDnd":false,"objectId":{"name":"obj_Boss_BowserImpostor","path":"objects/obj_Boss_BowserImpostor/obj_Boss_BowserImpostor.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":-2.0,"scaleY":2.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":390.0,"y":160.0,},
+      ],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":6,"gridY":6,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Environment","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_EA48C44","properties":[],"isDnd":false,"objectId":{"name":"obj_SMB_BowserChain","path":"objects/obj_SMB_BowserChain/obj_SMB_BowserChain.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":432.0,"y":160.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_BE6F3C0","properties":[],"isDnd":false,"objectId":{"name":"obj_SMB_BowserAxe","path":"objects/obj_SMB_BowserAxe/obj_SMB_BowserAxe.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":448.0,"y":144.0,},
@@ -110,7 +112,7 @@
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","spriteId":null,"colour":4278190080,"x":0,"y":0,"htiled":false,"vtiled":false,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":15.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"visible":true,"depth":500,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":24,"gridY":24,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
   ],
   "inheritLayers": false,
-  "creationCodeFile": "",
+  "creationCodeFile": "${project_dir}/rooms/rm_SMB_BowserImpostor/RoomCreationCode.gml",
   "inheritCode": false,
   "instanceCreationOrder": [
     {"name":"inst_633817AB","path":"rooms/rm_SMB_BowserImpostor/rm_SMB_BowserImpostor.yy",},
@@ -194,6 +196,7 @@
     {"name":"inst_EA48C44","path":"rooms/rm_SMB_BowserImpostor/rm_SMB_BowserImpostor.yy",},
     {"name":"inst_BE6F3C0","path":"rooms/rm_SMB_BowserImpostor/rm_SMB_BowserImpostor.yy",},
     {"name":"inst_7F745EB2","path":"rooms/rm_SMB_BowserImpostor/rm_SMB_BowserImpostor.yy",},
+    {"name":"inst_446C631","path":"rooms/rm_SMB_BowserImpostor/rm_SMB_BowserImpostor.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

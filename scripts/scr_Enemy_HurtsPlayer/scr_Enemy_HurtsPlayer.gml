@@ -14,7 +14,7 @@ function scr_Enemy_HurtsPlayer(argument0)
 	if ((place_meeting(x,y,obj_Player)) and (((stopWhenHurt) and (!hurt)) or (!stopWhenHurt)) and (!global.cutscene))
 	{
 		collidedPlayer = instance_place(x,y,obj_Player);
-		if ((collidedPlayer.canGetHurt) and (!collidedPlayer.invincible) and (!collidedPlayer.hasInvinCandy))
+		if ((collidedPlayer.canGetHurt) and (!collidedPlayer.invincible) and (!collidedPlayer.hasInvinCandy) and !((object_get_parent(object_index) == obj_Projectile) and (!isDirectHit) and (collidedPlayer.attackNumber == playerAttacks.slideJump)))
 		{
 			//Variables
 			

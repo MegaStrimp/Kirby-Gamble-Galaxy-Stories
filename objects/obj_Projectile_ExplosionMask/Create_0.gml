@@ -17,6 +17,7 @@ destroyOutsideView = false;
 state = 0;
 owner = id;
 enemy = false;
+isDirectHit = true;
 abilityType = damageTypes.bomb;
 damageType = damageTypes.bomb;
 explosionIndex = 0;

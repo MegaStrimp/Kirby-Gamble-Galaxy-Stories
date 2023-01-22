@@ -179,7 +179,7 @@ if (!global.pause)
 		
 		if (goBack)
 		{
-			if ((!global.debug) and (global.canSave)) scr_SaveGame(global.selectedSave);
+			if (global.canSave) scr_SaveGame(global.selectedSave);
 			var fade = instance_create_depth(x,y,-999,obj_Fade);
 			fade.targetRoom = rm_Collection;
 			goBack = false;

@@ -841,6 +841,10 @@ function scr_Player_States_Slide()
 			
 			if ((playerCharacter == playerCharacters.kirby) and (keyJumpPressed) and (canSlideJump))
 			{
+				var dirNew = dir;
+				if (keyLeftHold) dirNew = -1;
+				if (keyRightHold) dirNew = 1;
+				dir = dirNew;
 				var parSquish = instance_create_depth(x,y + 6,depth + 1,obj_Particle);
 				parSquish.sprite_index = spr_Particle_SmallStar;
 				parSquish.destroyTimer = 30;
@@ -851,11 +855,11 @@ function scr_Player_States_Slide()
 				attack = true;
 				attackNumber = playerAttacks.slideJump;
 				hspLimit = false;
-				hspLimitTimer = 30;
+				hspLimitTimer = 45;
 				jumpLimit = false;
-				jumpLimitTimer = 30;
-				attackTimer = 30;
-				hsp = dir * (movespeedSlide * .85);
+				jumpLimitTimer = 45;
+				attackTimer = 45;
+				hsp = dir * movespeedSlide;
 				scr_Player_CancelSlide();
 				scr_Player_ExecuteJump();
 			}

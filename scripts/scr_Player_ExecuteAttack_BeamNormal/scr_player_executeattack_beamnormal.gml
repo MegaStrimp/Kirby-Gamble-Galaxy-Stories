@@ -78,5 +78,21 @@ function scr_Player_ExecuteAttack_BeamNormal()
 			projBeam.character = 6;
 			projBeam.sprite_index = spr_Projectile_Beam_Gold;
 		}
+		if (((player == 0) and (global.hatTypeBeamP1 == abilityHatSkins.beam_marxSoul))
+		or ((player == 1) and (global.hatTypeBeamP2 == abilityHatSkins.beam_marxSoul))
+		or ((player == 2) and (global.hatTypeBeamP3 == abilityHatSkins.beam_marxSoul))
+		or ((player == 3) and (global.hatTypeBeamP4 == abilityHatSkins.beam_marxSoul)))
+		{
+			if (i % 2)
+			{
+				projBeam.character = 9;
+				projBeam.sprite_index = spr_Projectile_Beam_MarxSoul1;
+			}
+			else
+			{
+				projBeam.character = 10;
+				projBeam.sprite_index = spr_Projectile_Beam_MarxSoul2;
+			}
+		}
 	}
 }

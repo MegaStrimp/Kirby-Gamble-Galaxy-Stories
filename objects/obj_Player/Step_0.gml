@@ -54,7 +54,7 @@ if (place_meeting(x,y - 1,obj_Wall))
 }
 
 var canFlash = false;
-if (invincible)
+if ((invincible) or (attackNumber == playerAttacks.slideJump))
 {
 	invincibleFlashTimerMax = 2;
 	canFlash = true;
@@ -369,13 +369,21 @@ if (!global.pause)
 				{
 					finalForce *= 1.25;
 					drawOffsetForce = 16;
-					if (audio_is_playing(snd_BigJump)) audio_stop_sound(snd_BigJump);
-					audio_play_sound(snd_BigJump,0,false);
+					if (audio_is_playing(snd_Cloud_Superjump)) audio_stop_sound(snd_Cloud_Superjump);
+					audio_play_sound(snd_Cloud_Superjump,0,false);
 				}
 				else
 				{
-					if (audio_is_playing(snd_Jump)) audio_stop_sound(snd_Jump);
-					audio_play_sound(snd_Jump,0,false);
+					if (collidedSpring.object_index == obj_BouncyCloudHigh)
+					{
+						if (audio_is_playing(snd_Cloud_Superjump)) audio_stop_sound(snd_Cloud_Superjump);
+						audio_play_sound(snd_Cloud_Superjump,0,false);
+					}
+					else if (collidedSpring.object_index == obj_BouncyCloudHigh)
+					{
+						if (audio_is_playing(snd_Cloud_Bounce)) audio_stop_sound(snd_Cloud_Bounce);
+						audio_play_sound(snd_Cloud_Bounce,0,false);
+					}
 				}
 			
 				if ((collidedSpring.object_index == obj_BouncyCloud) or (collidedSpring.object_index == obj_BouncyCloudHigh))
@@ -1370,6 +1378,23 @@ if (!global.pause)
 				projBeam.character = 6;
 				projBeam.sprite_index = spr_Projectile_Beam_Gold;
 			}
+			if (((player == 0) and (global.hatTypeBeamP1 == abilityHatSkins.beam_marxSoul))
+			or ((player == 1) and (global.hatTypeBeamP2 == abilityHatSkins.beam_marxSoul))
+			or ((player == 2) and (global.hatTypeBeamP3 == abilityHatSkins.beam_marxSoul))
+			or ((player == 3) and (global.hatTypeBeamP4 == abilityHatSkins.beam_marxSoul)))
+			{
+				var rng = choose(0,1);
+				if (rng)
+				{
+					projBeam.character = 9;
+					projBeam.sprite_index = spr_Projectile_Beam_MarxSoul1;
+				}
+				else
+				{
+					projBeam.character = 10;
+					projBeam.sprite_index = spr_Projectile_Beam_MarxSoul2;
+				}
+			}
 			if (beamAttack2FirstHit) beamAttack2FirstHit = false;
 		    beamAttack2Timer = -1;
 		}
@@ -1431,6 +1456,23 @@ if (!global.pause)
 			{
 				projBeam.character = 6;
 				projBeam.sprite_index = spr_Projectile_Beam_Gold;
+			}
+			if (((player == 0) and (global.hatTypeBeamP1 == abilityHatSkins.beam_marxSoul))
+			or ((player == 1) and (global.hatTypeBeamP2 == abilityHatSkins.beam_marxSoul))
+			or ((player == 2) and (global.hatTypeBeamP3 == abilityHatSkins.beam_marxSoul))
+			or ((player == 3) and (global.hatTypeBeamP4 == abilityHatSkins.beam_marxSoul)))
+			{
+				var rng = choose(0,1);
+				if (rng)
+				{
+					projBeam.character = 9;
+					projBeam.sprite_index = spr_Projectile_Beam_MarxSoul1;
+				}
+				else
+				{
+					projBeam.character = 10;
+					projBeam.sprite_index = spr_Projectile_Beam_MarxSoul2;
+				}
 			}
 		    beamGrabTimer = beamGrabTimerMax - beamGoldenFlareUpgrade;
 		}
@@ -2097,22 +2139,36 @@ else if (setupTimer == 0)
 		followerObject.owner = id;
 		followerObject.character = playerFamiliar;
 	}
-		if ((global.hasCoop > 0) and (instance_number(obj_Player) == 1))
-		{
+	
+	if ((global.hasCoop > 0) and (instance_number(obj_Player) == 1))
+	{
 		for (var i = 0; i < global.hasCoop; i++)
 		{
+			var hasCoopPointer = global.hasP1;
+			switch (i)
+			{
+				case 1:
+				hasCoopPointer = global.hasP2;
+				break;
+				
+				case 2:
+				hasCoopPointer = global.hasP3;
+				break;
+				
+				case 3:
+				hasCoopPointer = global.hasP4;
+				break;
+			}
+			
 			var xx = x;
-			if (!place_meeting(x - 24,y,obj_ParentWall))
+			var targetXOffset = (24 * (i + 1));
+			if (!place_meeting(x - targetXOffset,y,obj_ParentWall))
 			{
-				xx = x - (24 * (i + 1));
+				xx = x - targetXOffset;
 			}
-			else if (!place_meeting(x + 24,y,obj_ParentWall))
+			else if (!place_meeting(x + targetXOffset,y,obj_ParentWall))
 			{
-				xx = x + (24 * (i + 1));
-			}
-			else
-			{
-				xx = x;
+				xx = x + targetXOffset;
 			}
 			
 			var newPlayer = instance_create_depth(xx,y,depth,obj_Player);

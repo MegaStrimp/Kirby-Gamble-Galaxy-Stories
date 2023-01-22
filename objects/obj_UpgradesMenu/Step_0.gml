@@ -2,199 +2,151 @@
 
 if (!global.pause)
 {
-	//Inputs
-	
+	#region Inputs
 	scr_Player_Inputs(0);
+	#endregion
 	
-	if ((keyUpPressed) or (keyDownPressed) or (keyLeftPressed) or (keyRightPressed)) audio_play_sound(snd_BossHealth,0,false);
+	#region Sound
+	if ((keyUpPressed) or (keyDownPressed)) audio_play_sound(snd_BossHealth,0,false);
+	#endregion
 	
-	if (keyUpPressed) selection -= maxPerLine;
-	if (keyDownPressed) selection += maxPerLine;
-	if (keyLeftPressed) selection -= 1;
-	if (keyRightPressed) selection += 1;
-	
-	if (selection > maxButtons - 1) selection -= maxButtons;
-	if (selection < 0) selection += maxButtons;
-	
-	if ((keyJumpPressed) or (keyStartPressed))
+	if ((selection != "upgrades") and (mouse_check_button_pressed(mb_left)) and ((point_in_rectangle(mouse_x,mouse_y,210,84,270,164))))
 	{
-		if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
-		audio_play_sound(snd_ButtonYes,0,false);
-		select = true;
+		selection = "upgrades";
 	}
 	
-	if (select)
+	switch (selection)
 	{
-		switch (upgradeTitle[selection])
+		case "upgrades":
+		if (keyUpPressed) selection = "back";
+		if (keyDownPressed) selection = "back";
+		if ((keyLeftPressed) and (upgradeSelection != 0))
 		{
-			case "Motor Cutter":
-			if (global.cutterMotorCutterUpgradeEquipped)
-			{
-				global.cutterMotorCutterUpgradeEquipped = false;
-			}
-			else
-			{
-				global.cutterMotorCutterUpgradeEquipped = true;
-			}
-			break;
-			
-			case "Propeller Wing":
-			if (global.cutterPropellerWingUpgradeEquipped)
-			{
-				global.cutterPropellerWingUpgradeEquipped = false;
-			}
-			else
-			{
-				global.cutterPropellerWingUpgradeEquipped = true;
-			}
-			break;
-			
-			case "Golden Flare":
-			if (global.beamGoldenFlareUpgradeEquipped)
-			{
-				global.beamGoldenFlareUpgradeEquipped = false;
-			}
-			else
-			{
-				global.beamGoldenFlareUpgradeEquipped = true;
-			}
-			break;
-			
-			case "Vortex In A Jar":
-			if (global.mysticBeamVortexInAJarUpgradeEquipped)
-			{
-				global.mysticBeamVortexInAJarUpgradeEquipped = false;
-			}
-			else
-			{
-				global.mysticBeamVortexInAJarUpgradeEquipped = true;
-			}
-			break;
-			
-			case "Rock Candy":
-			if (global.stoneRockCandyUpgradeEquipped)
-			{
-				global.stoneRockCandyUpgradeEquipped = false;
-			}
-			else
-			{
-				global.stoneRockCandyUpgradeEquipped = true;
-			}
-			break;
-			
-			case "Combo Cobalt":
-			if (global.stoneComboCobaltUpgradeEquipped)
-			{
-				global.stoneComboCobaltUpgradeEquipped = false;
-			}
-			else
-			{
-				global.stoneComboCobaltUpgradeEquipped = true;
-			}
-			break;
-			
-			case "Multi Bomb":
-			if (global.bombMultiBombUpgradeEquipped)
-			{
-				global.bombMultiBombUpgradeEquipped = false;
-			}
-			else
-			{
-				global.bombMultiBombUpgradeEquipped = true;
-			}
-			break;
-			
-			case "Eye Bomb":
-			if (global.bombEyeBombUpgradeEquipped)
-			{
-				global.bombEyeBombUpgradeEquipped = false;
-			}
-			else
-			{
-				global.bombEyeBombUpgradeEquipped = true;
-			}
-			break;
-			
-			case "Smart Bomb":
-			if (global.bombSmartBombUpgradeEquipped)
-			{
-				global.bombSmartBombUpgradeEquipped = false;
-			}
-			else
-			{
-				global.bombSmartBombUpgradeEquipped = true;
-			}
-			break;
-			
-			case "Magma Bomb":
-			if (global.bombMagmaBombUpgradeEquipped)
-			{
-				global.bombMagmaBombUpgradeEquipped = false;
-			}
-			else
-			{
-				global.bombMagmaBombUpgradeEquipped = true;
-			}
-			break;
-			
-			case "Explosive Powder":
-			if (global.bombExplosivePowderUpgradeEquipped)
-			{
-				global.bombExplosivePowderUpgradeEquipped = false;
-			}
-			else
-			{
-				global.bombExplosivePowderUpgradeEquipped = true;
-			}
-			break;
-			
-			case "Magic Charcoal":
-			if (global.fireMagicCharcoalUpgradeEquipped)
-			{
-				global.fireMagicCharcoalUpgradeEquipped = false;
-			}
-			else
-			{
-				global.fireMagicCharcoalUpgradeEquipped = true;
-			}
-			break;
-			
-			case "Empty Cone":
-			if (global.iceEmptyConeUpgradeEquipped)
-			{
-				global.iceEmptyConeUpgradeEquipped = false;
-			}
-			else
-			{
-				global.iceEmptyConeUpgradeEquipped = true;
-			}
-			break;
-			
-			case "Bright Plugg":
-			if (global.sparkBrightPluggUpgradeEquipped)
-			{
-				global.sparkBrightPluggUpgradeEquipped = false;
-			}
-			else
-			{
-				global.sparkBrightPluggUpgradeEquipped = true;
-			}
-			break;
-			
-			case "Egg Soil":
-			if (global.waterEggSoilUpgradeEquipped)
-			{
-				global.waterEggSoilUpgradeEquipped = false;
-			}
-			else
-			{
-				global.waterEggSoilUpgradeEquipped = true;
-			}
-			break;
+			if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+			audio_play_sound(snd_ButtonChange,0,false);
+			upgradeSelection -= 1;
 		}
-		select = false;
+		if ((keyRightPressed) and (upgradeSelection < upgradesMax - 1))
+		{
+			if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+			audio_play_sound(snd_ButtonChange,0,false);
+			upgradeSelection += 1;
+		}
+		
+		if (!instance_exists(obj_Fade))
+		{
+			if ((keyJumpPressed) or (keyStartPressed) or ((mouse_check_button_pressed(mb_left)) and ((point_in_rectangle(mouse_x,mouse_y,186,74,294,182)))))
+			{
+				if (upgradesArray[# upgradeSelection,4])
+				{
+					if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+					audio_play_sound(snd_ButtonYes,0,false);
+					select = true;
+				}
+				else
+				{
+					if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+					audio_play_sound(snd_ButtonNo,0,false);
+				}
+			}
+		}
+		
+		if (select)
+		{
+			switch (upgradesArray[# upgradeSelection,0])
+			{
+				case abilityUpgrades.motorCutter:
+				global.cutterMotorCutterUpgradeEquipped = !global.cutterMotorCutterUpgradeEquipped;
+				break;
+				
+				case abilityUpgrades.propellerWing:
+				global.cutterPropellerWingUpgradeEquipped = !global.cutterPropellerWingUpgradeEquipped;
+				break;
+				
+				case abilityUpgrades.goldenFlare:
+				global.beamGoldenFlareUpgradeEquipped = !global.beamGoldenFlareUpgradeEquipped;
+				break;
+				
+				case abilityUpgrades.vortexInAJar:
+				global.mysticBeamVortexInAJarUpgradeEquipped = !global.mysticBeamVortexInAJarUpgradeEquipped;
+				break;
+				
+				case abilityUpgrades.rockCandy:
+				global.stoneRockCandyUpgradeEquipped = !global.stoneRockCandyUpgradeEquipped;
+				break;
+				
+				case abilityUpgrades.comboCobalt:
+				global.stoneComboCobaltUpgradeEquipped = !global.stoneComboCobaltUpgradeEquipped;
+				break;
+				
+				case abilityUpgrades.multiBomb:
+				global.bombMultiBombUpgradeEquipped = !global.bombMultiBombUpgradeEquipped;
+				break;
+				
+				case abilityUpgrades.eyeBomb:
+				global.bombEyeBombUpgradeEquipped = !global.bombEyeBombUpgradeEquipped;
+				break;
+				
+				case abilityUpgrades.smartBomb:
+				global.bombSmartBombUpgradeEquipped = !global.bombSmartBombUpgradeEquipped;
+				break;
+				
+				case abilityUpgrades.magmaBomb:
+				global.bombMagmaBombUpgradeEquipped = !global.bombMagmaBombUpgradeEquipped;
+				break;
+				
+				case abilityUpgrades.explosivePowder:
+				global.bombExplosivePowderUpgradeEquipped = !global.bombExplosivePowderUpgradeEquipped;
+				break;
+				
+				case abilityUpgrades.magicCharcoal:
+				global.fireMagicCharcoalUpgradeEquipped = !global.fireMagicCharcoalUpgradeEquipped;
+				break;
+				
+				case abilityUpgrades.emptyCone:
+				global.iceEmptyConeUpgradeEquipped = !global.iceEmptyConeUpgradeEquipped;
+				break;
+				
+				case abilityUpgrades.brightPlugg:
+				global.sparkBrightPluggUpgradeEquipped = !global.sparkBrightPluggUpgradeEquipped;
+				break;
+				
+				case abilityUpgrades.eggSoil:
+				global.waterEggSoilUpgradeEquipped = !global.waterEggSoilUpgradeEquipped;
+				break;
+			}
+			upgradesArray[# upgradeSelection,10] = !upgradesArray[# upgradeSelection,10];
+			select = false;
+		}
+		break;
+		
+		case "back":
+		if (keyUpPressed) selection = "upgrades";
+		if (keyDownPressed) selection = "upgrades";
+		if (keyLeftPressed) selection = "back";
+		if (keyRightPressed) selection = "back";
+		
+		if (!instance_exists(obj_Fade))
+		{
+			if ((keyJumpPressed) or (keyStartPressed))
+			{
+				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+				audio_play_sound(snd_ButtonNo,0,false);
+				select = true;
+			}
+		}
+		
+		if (select)
+		{
+			if (global.canSave) scr_SaveGame(global.selectedSave);
+			var fade = instance_create_depth(x,y,-999,obj_Fade);
+			fade.targetRoom = rm_Collection;
+			select = false;
+		}
+		break;
 	}
 	
+	#region Go Back
 	if (!instance_exists(obj_Fade))
 	{
 		if (keyAttackPressed)
@@ -207,9 +159,10 @@ if (!global.pause)
 	
 	if (goBack)
 	{
-		if ((!global.debug) and (global.canSave)) scr_SaveGame(global.selectedSave);
+		if (global.canSave) scr_SaveGame(global.selectedSave);
 		var fade = instance_create_depth(x,y,-999,obj_Fade);
 		fade.targetRoom = rm_Collection;
 		goBack = false;
 	}
+	#endregion
 }

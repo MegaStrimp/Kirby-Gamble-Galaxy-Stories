@@ -766,6 +766,14 @@
         "Unlock 5 Familiars": "Débloque 5 familiers",
         "Log Into Gamejolt": "Connecte-toi à Gamejolt",
         "Log Into Discord": "Connecte-toi à Discord",
+		
+		"Obtain Mystic Beam": "",
+		
+		"Master Mystic Beam": "",
+		
+		"Obtain Mystic Fire": "",
+		
+		"Master Mystic Fire": "",
         "Beam Gold Medal": "Médaille d'or Rayon",
         "Stone Gold Medal": "Médaille d'or Rocher",
         "Mirror Gold Medal": "Médaille d'or Miroir",
@@ -773,6 +781,34 @@
         "Fire Gold Medal": "Médaille d'or Feu",
         "Ice Gold Medal": "Médaille d'or Glace",
         "Spark Gold Medal": "Médaille d'or Étincelle",
+		
+		"Beat Green Greens": "",
+		
+		"Beat Battleship Halberd": "",
+		
+		"Beat Asteroid Fields": "",
+		
+		"Beat Yolk Yard": "",
+		
+		"Beat Grand Temple Avgo": "",
+		
+		"Beat Floral Yolk Caves": "",
+		
+		"Beat Storm The Fortress": "",
+		
+		"Beat Central Lab": "",
+		
+		"Beat Path To The Nasty Machine": "",
+		
+		"Beat Sandshell Beach": "",
+		
+		"Beat Up The Straw": "",
+		
+		"Beat Sacred Aquatia": "",
+		
+		"Beat Cosmic Palace": "",
+		
+		"Beat Chapter 1": "",
         "Unlock Gamble": "Débloque Gamble",
         "Unlock Meta Knight": "Débloque Meta Knight",
         "Unlock Gooey": "Débloque Gooey",
@@ -1510,6 +1546,144 @@
 			"Cosmetic": "",
 			
 			"Game Changer": ""
+		}
+	},
+	
+	"Upgrades":
+    {
+		"Motor Cutter":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Propeller Wing":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Golden Flare":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Vortex In A Jar":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Rock Candy":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Combo Cobalt":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Multi Bomb":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Eye Bomb":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Smart Bomb":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Magma Bomb":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Explosive Powder":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Magic Charcoal":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Empty Cone":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Bright Plugg":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Egg Soil":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
 		}
 	},
     "Shop General": {

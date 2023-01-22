@@ -60,6 +60,8 @@ function scr_Object_Inhale(argument0)
 			    eatMe.ability = ability;
 				eatMe.dir = sign(inhaleMask.owner.image_xscale);
 				eatMe.owner = inhaleMask.owner;
+				eatMe.image_xscale = image_xscale;
+				eatMe.image_yscale = image_yscale;
 				if (object_get_parent(object_index) == obj_Enemy) eatMe.squadType = squadType;
 				if (variable_instance_exists(id,"paletteIndex")) eatMe.paletteIndex = paletteIndex;
 				switch (object_index)

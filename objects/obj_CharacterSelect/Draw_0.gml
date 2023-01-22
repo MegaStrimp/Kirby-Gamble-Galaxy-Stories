@@ -56,9 +56,9 @@ else if ((global.language == languages.chinese) or (global.language == languages
 
 draw_set_halign(fa_center);
 draw_set_font(fontMedium);
-scr_Draw_Text_Color_Outline(240,30,string_upper(stagesArray[# global.currentStage,1]),-1,-1,stagesArray[# i,3],stagesArray[# i,4],1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+scr_Draw_Text_Color_Outline(240,30,string_upper(stagesArray[# global.currentStage,1]),-1,-1,stagesArray[# global.currentStage,3],stagesArray[# global.currentStage,4],1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 draw_set_font(fontLarge);
-scr_Draw_Text_Color_Outline(240,55,stagesArray[# global.currentStage,2],-1,-1,stagesArray[# i,5],stagesArray[# i,6],1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+scr_Draw_Text_Color_Outline(240,55,stagesArray[# global.currentStage,2],-1,-1,stagesArray[# global.currentStage,5],stagesArray[# global.currentStage,6],1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 draw_set_halign(fa_left);
 #endregion
 

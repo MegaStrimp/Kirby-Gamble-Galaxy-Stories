@@ -126,7 +126,7 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Super Mario Bros",
-    "path": "folders/Rooms/Subgames/Gamblion/Super Mario Bros.yy",
+    "name": "Kirby's Dream Land 1",
+    "path": "folders/Rooms/Subgames/Gamblion/Kirby's Dream Land 1.yy",
   },
 }

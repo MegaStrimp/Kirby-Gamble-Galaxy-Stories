@@ -1329,6 +1329,14 @@
 		
 		"Log Into Discord": "",
 		
+		"Obtain Mystic Beam": "",
+		
+		"Master Mystic Beam": "",
+		
+		"Obtain Mystic Fire": "",
+		
+		"Master Mystic Fire": "",
+		
 		"Beam Gold Medal": "",
 		
 		"Stone Gold Medal": "",
@@ -1342,6 +1350,34 @@
 		"Ice Gold Medal": "",
 		
 		"Spark Gold Medal": "",
+		
+		"Beat Green Greens": "",
+		
+		"Beat Battleship Halberd": "",
+		
+		"Beat Asteroid Fields": "",
+		
+		"Beat Yolk Yard": "",
+		
+		"Beat Grand Temple Avgo": "",
+		
+		"Beat Floral Yolk Caves": "",
+		
+		"Beat Storm The Fortress": "",
+		
+		"Beat Central Lab": "",
+		
+		"Beat Path To The Nasty Machine": "",
+		
+		"Beat Sandshell Beach": "",
+		
+		"Beat Up The Straw": "",
+		
+		"Beat Sacred Aquatia": "",
+		
+		"Beat Cosmic Palace": "",
+		
+		"Beat Chapter 1": "",
 		
 		"Unlock Gamble": "",
 		
@@ -2086,6 +2122,144 @@
 			"Cosmetic": "",
 			
 			"Game Changer": ""
+		}
+	},
+	
+	"Upgrades":
+    {
+		"Motor Cutter":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Propeller Wing":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Golden Flare":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Vortex In A Jar":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Rock Candy":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Combo Cobalt":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Multi Bomb":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Eye Bomb":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Smart Bomb":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Magma Bomb":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Explosive Powder":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Magic Charcoal":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Empty Cone":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Bright Plugg":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Egg Soil":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
 		}
 	},
 	

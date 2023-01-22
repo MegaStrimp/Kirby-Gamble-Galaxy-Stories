@@ -15,7 +15,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_FishTaco.mp3",
-  "duration": 2.063673,
+  "duration": 0.813,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",

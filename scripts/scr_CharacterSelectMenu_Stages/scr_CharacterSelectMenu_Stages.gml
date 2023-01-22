@@ -25,8 +25,8 @@ function scr_CharacterSelectMenu_Stages()
 	stagesArray[# i,2] = str("Stages.Green Greens.Title");
 	stagesArray[# i,3] = make_color_rgb(255,255,255);
 	stagesArray[# i,4] = make_color_rgb(255,255,255);
-	stagesArray[# i,5] = make_color_rgb(255,255,255);
-	stagesArray[# i,6] = make_color_rgb(255,255,255);
+	stagesArray[# i,5] = make_color_rgb(0,130,15);
+	stagesArray[# i,6] = make_color_rgb(0,211,24);
 	i += 1;
 	#endregion
 	
@@ -36,8 +36,8 @@ function scr_CharacterSelectMenu_Stages()
 	stagesArray[# i,2] = str("Stages.Battleship Halberd.Title");
 	stagesArray[# i,3] = make_color_rgb(255,255,255);
 	stagesArray[# i,4] = make_color_rgb(255,255,255);
-	stagesArray[# i,5] = make_color_rgb(255,255,255);
-	stagesArray[# i,6] = make_color_rgb(255,255,255);
+	stagesArray[# i,5] = make_color_rgb(255,106,0);
+	stagesArray[# i,6] = make_color_rgb(165,66,0);
 	i += 1;
 	#endregion
 	
@@ -47,8 +47,8 @@ function scr_CharacterSelectMenu_Stages()
 	stagesArray[# i,2] = str("Stages.Asteroid Fields.Title");
 	stagesArray[# i,3] = make_color_rgb(255,255,255);
 	stagesArray[# i,4] = make_color_rgb(255,255,255);
-	stagesArray[# i,5] = make_color_rgb(255,255,255);
-	stagesArray[# i,6] = make_color_rgb(255,255,255);
+	stagesArray[# i,5] = make_color_rgb(0,38,255);
+	stagesArray[# i,6] = make_color_rgb(0,18,122);
 	i += 1;
 	#endregion
 	

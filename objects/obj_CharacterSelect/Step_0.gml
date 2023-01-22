@@ -2,14 +2,29 @@
 
 #region Variables
 clockTicks = ((readyP1) and (readyP2) and (readyP3) and (readyP4));
+
+if (clockTicks)
+{
+	if (audio_is_paused(snd_ClockTick)) audio_resume_sound(snd_ClockTick);
+}
+else
+{
+	if (!audio_is_paused(snd_ClockTick)) audio_pause_sound(snd_ClockTick);
+}
+#endregion
+
+#region Play Sound
+if (!soundPlayed)
+{
+	audio_play_sound(snd_ClockTick,0,true);
+	soundPlayed = true;
+}
 #endregion
 
 #region Select
 for (var i = 0; i < 4; i++)
 {
 	#region Variables
-	var sep = (118 * i);
-	
 	var hasCoopPointer = global.hasP1;
 	var palettePointer = global.sprayPaintP1;
 	var characterPointer = global.characterP1;

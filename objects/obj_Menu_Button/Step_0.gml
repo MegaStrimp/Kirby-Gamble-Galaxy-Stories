@@ -142,8 +142,6 @@ if (!global.pause)
 			{
 				if (obj_DeleteSave.selection == number)
 				{
-					if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
-					audio_play_sound(snd_ButtonYes,0,false);
 					obj_DeleteSave.select = true;
 				}
 				else
@@ -219,22 +217,34 @@ if (!global.pause)
 		
 		#region Upgrades
 		case "upgrades":
-		mask_index = spr_Menu_Upgrades_Box;
+		mask_index = sprite_index;
 		if (instance_exists(obj_UpgradesMenu))
 		{
-			if ((mouse_check_button_pressed(mb_left)) and (position_meeting(mouse_x,mouse_y,self)))
+			if ((!instance_exists(obj_Fade)) and (mouse_check_button_pressed(mb_left)) and (position_meeting(mouse_x,mouse_y,self)))
 			{
-				if (obj_UpgradesMenu.selection == number)
+				if (index == "arrowPrev")
 				{
-					if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
-					audio_play_sound(snd_ButtonYes,0,false);
-					obj_UpgradesMenu.select = true;
+					with (obj_UpgradesMenu)
+					{
+						if (upgradeSelection != 0)
+						{
+							if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+							audio_play_sound(snd_ButtonChange,0,false);
+							upgradeSelection -= 1;
+						}
+					}
 				}
-				else
+				else if (index == "arrowNext")
 				{
-					if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
-					audio_play_sound(snd_BossHealth,0,false);
-					obj_UpgradesMenu.selection = number;
+					with (obj_UpgradesMenu)
+					{
+						if (upgradeSelection < upgradesMax - 1)
+						{
+							if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+							audio_play_sound(snd_ButtonChange,0,false);
+							upgradeSelection += 1;
+						}
+					}
 				}
 			}
 		}
@@ -252,9 +262,26 @@ if (!global.pause)
 				{
 					if (obj_GalleryMenu.selection == index)
 					{
-						if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
-						audio_play_sound(snd_ButtonYes,0,false);
-						obj_GalleryMenu.select = true;
+						if (index == "download")
+						{
+							if (obj_GalleryMenu.artworkArray[# obj_GalleryMenu.artworkSelection,3])
+							{
+								if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+								audio_play_sound(snd_ButtonYes,0,false);
+								obj_GalleryMenu.select = true;
+							}
+							else
+							{
+								if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+								audio_play_sound(snd_ButtonNo,0,false);
+							}
+						}
+						else
+						{
+							if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+							audio_play_sound(snd_ButtonYes,0,false);
+							obj_GalleryMenu.select = true;
+						}
 					}
 					else
 					{

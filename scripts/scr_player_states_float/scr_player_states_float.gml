@@ -335,22 +335,6 @@ function scr_Player_States_Float()
 			floatSpit = false;
 		}
 		
-		//Door
-		/*
-		if ((!global.cutscene) and (position_meeting(x,y,obj_Door)) and (keyUpPressed))
-		{
-		    if ((!instance_exists(obj_Fade)) and (hurt = false))
-		    {
-		        var nearbyDoor = enteredDoor;
-		        fade = instance_create_depth(x,y,-999,obj_Fade);
-				fade.targetRoom = nearbyDoor.targetRoom;
-		        hsp = 0;
-		        vsp = 0;
-		        image_index = 0;
-		        state = playerStates.enter;
-		    }
-		}*/
-		
 		//Collision
 		
 		scr_Player_Collision(playerMechs.none);

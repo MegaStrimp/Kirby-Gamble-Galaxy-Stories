@@ -4,6 +4,10 @@ function scr_Player_States_Swallow()
 {
 	if (global.mixActive == -1)
 	{
+		//Variables
+		
+		invincibleFlash = false;
+		
 		//Ability Switch
 	
 		switch (player)
@@ -40,7 +44,6 @@ function scr_Player_States_Swallow()
 				sprite_index = sprSwallow;
 			}
 			sucked = 0;
-			invincibleFlash = false;
 		}
 		else
 		{

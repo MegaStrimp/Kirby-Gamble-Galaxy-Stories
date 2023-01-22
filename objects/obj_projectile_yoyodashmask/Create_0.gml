@@ -15,5 +15,6 @@ canBeReflected = false;
 state = 0;
 owner = id;
 enemy = false;
+isDirectHit = true;
 dmgMin = 1;
 dmgMax = 1;

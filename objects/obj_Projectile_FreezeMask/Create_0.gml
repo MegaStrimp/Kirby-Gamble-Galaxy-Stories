@@ -19,6 +19,7 @@ damageType = 3;
 state = 0;
 owner = id;
 enemy = false;
+isDirectHit = true;
 character = 0;
 
 //Timers

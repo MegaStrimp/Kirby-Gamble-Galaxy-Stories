@@ -81,6 +81,8 @@ function scr_Player_States_Normal()
 		if (
 		(attackNumber == playerAttacks.beamNormal)
 		or (attackNumber == playerAttacks.beamUp)
+		or (attackNumber == playerAttacks.sparkUp)
+		or (attackNumber == playerAttacks.sparkDown)
 		) attackHasGravLerp = true;
 		
 		var canDashAttack = false;
@@ -94,8 +96,19 @@ function scr_Player_States_Normal()
 		if (wallAbove) fallHop = false;
 		#endregion
 		
+		#region Disable Slide Jump
+		if (((grounded) or (hurt)) and (attackNumber == playerAttacks.slideJump))
+		{
+			hspLimit = false;
+			hspLimitTimer = 0;
+			jumpLimit = false;
+			jumpLimitTimer = 0;
+			attackTimer = 0;
+		}
+		#endregion
+		
 		#region Run
-		if ((canRun) and (playerAbility != playerAbilities.ufo))
+		if ((canRun) and (playerAbility != playerAbilities.ufo) and (playerAbility != playerAbilities.sleep))
 		{
 			if (runDoubleTap > -1) runDoubleTap -= 1;
 			if ((!global.cutscene) and (!runTurn) and ((keyLeftPressed) or (keyRightPressed)))
@@ -265,7 +278,13 @@ function scr_Player_States_Normal()
 		
 		if (attackHasGravLerp)
 		{
-			vsp = lerp(vsp,0,.1);
+			var attackHasGravLerpValue = .1;
+			if (
+			(attackNumber == playerAttacks.sparkUp)
+			or (attackNumber == playerAttacks.sparkDown) 
+			) attackHasGravLerpValue = .2;
+			
+			vsp = lerp(vsp,0,attackHasGravLerpValue);
 		}
 		
 		if ((!global.cutscene) and (!canUfoFloat) and (playerAbility != playerAbilities.ufo) and (vsp < 0) and (!keyJumpHold))
@@ -1172,6 +1191,22 @@ function scr_Player_States_Normal()
 										projBeam.character = 6;
 										projBeam.sprite_index = spr_Projectile_Beam_Gold;
 									}
+									if (((player == 0) and (global.hatTypeBeamP1 == abilityHatSkins.beam_marxSoul))
+									or ((player == 1) and (global.hatTypeBeamP2 == abilityHatSkins.beam_marxSoul))
+									or ((player == 2) and (global.hatTypeBeamP3 == abilityHatSkins.beam_marxSoul))
+									or ((player == 3) and (global.hatTypeBeamP4 == abilityHatSkins.beam_marxSoul)))
+									{
+										if (i % 2)
+										{
+											projBeam.character = 9;
+											projBeam.sprite_index = spr_Projectile_Beam_MarxSoul1;
+										}
+										else
+										{
+											projBeam.character = 10;
+											projBeam.sprite_index = spr_Projectile_Beam_MarxSoul2;
+										}
+									}
 								}
 								attackable = false;
 							}
@@ -2035,12 +2070,13 @@ function scr_Player_States_Normal()
 											{
 												if (hsp > 0)
 												{
-													projMirror.jumpAngle = 45;
+													projMirror.jumpAngle = point_direction(0,0,hsp,vsp);
 												}
 												else if (hsp < 0)
 												{
-													projMirror.jumpAngle = 45 + 90;
+													projMirror.jumpAngle = point_direction(0,0,-hsp,-vsp);
 												}
+												projMirror.jumpAngle = point_direction(0,0,-hsp,-vsp);
 											}
 											projMirror.spriteIndex = sprMirrorAttack3;
 											projMirror.paletteIndex = paletteIndex;
@@ -2643,6 +2679,7 @@ function scr_Player_States_Normal()
 								attackNumber = playerAttacks.sparkUp;
 								sprite_index = sprSparkAttack3;
 								image_index = 0;
+								vsp = -2;
 								attackTimer = 30;
 							}
 							else if ((!place_meeting(x,y + 1,obj_ParentWall)) and (keyDownHold))
@@ -2751,12 +2788,6 @@ function scr_Player_States_Normal()
 							else if (keyAttackReleased) attackTimer = 10;
 						}
 						break;
-						
-						if ((attackNumber == playerAttacks.sparkUp) or (attackNumber == playerAttacks.sparkDown))
-						{
-							hsp = 0;
-							vsp = 0;
-						}
 						break;
 						#endregion
 						
@@ -3753,8 +3784,12 @@ function scr_Player_States_Normal()
 								projBeam.hasLimit = false;
 								projBeam.character = 1;
 								projBeam.sprite_index = spr_Projectile_Beam_Enemy;
+								projBeam.pulseTarget = 1;
+								projBeam.imageIndex = projBeam.image_index;
 								projBeam.particleTimer = -1;
 								projBeam.destroyTimer = 60;
+								projBeam.pulseTimerMax = 2;
+								projBeam.pulseTimer = projBeam.pulseTimerMax;
 							}
 							attackable = false;
 						}
@@ -4115,6 +4150,8 @@ function scr_Player_States_Normal()
 					audio_play_sound(snd_Enter,0,false);
 					var fade = instance_create_depth(x,y,-999,obj_Fade);
 					fade.targetRoom = nearbyDoor.targetRoom;
+					if (nearbyDoor.changeStageTo != -1) global.currentStage = nearbyDoor.changeStageTo;
+					if (nearbyDoor.targetRoomGlobal != -1) global.roomNext = nearbyDoor.targetRoomGlobal;
 					hsp = 0;
 					vsp = 0;
 					image_index = 0;
@@ -4568,7 +4605,7 @@ function scr_Player_States_Normal()
 							sprite_index = sprJump;
 						}
 					}
-					else
+					else if (vsp >= 0)
 					{
 						if (fallRoll)
 						{

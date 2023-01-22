@@ -1114,21 +1114,6 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		break;
 		#endregion
 		
-		#region Food
-		case debugObject.food:
-		debugSprite = spr_Food;
-		debugSpriteSelectedMax = 0;
-		debugIndex = 0;
-		debugStateSelectedMax = 0;
-		if (mouse_check_button_pressed(mb_left))
-		{
-			var debugObj = instance_create_layer(x,y,"Environment",obj_Food);
-			debugObj.image_xscale = debugXScale;
-			debugObj.image_yscale = debugYScale;
-		}
-		break;
-		#endregion
-		
 		#region Item Chest
 		case debugObject.itemChest:
 		debugSpriteSelectedMax = 0;
@@ -1235,6 +1220,21 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			debugObj.sprTop = sprTop;
 			debugObj.sprBottom = sprBottom;
 			debugObj.sprite_index = sprIdle;
+			debugObj.image_xscale = debugXScale;
+			debugObj.image_yscale = debugYScale;
+		}
+		break;
+		#endregion
+		
+		#region Food
+		case debugObject.food:
+		debugSprite = spr_Food;
+		debugSpriteSelectedMax = 0;
+		debugIndex = 0;
+		debugStateSelectedMax = 0;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var debugObj = instance_create_layer(x,y,"Environment",obj_Food);
 			debugObj.image_xscale = debugXScale;
 			debugObj.image_yscale = debugYScale;
 		}
@@ -5217,11 +5217,11 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			switch (debugPaletteNumber)
 			{
 				case 0:
-				debugPaletteIndex = spr_Flamer_Normal_Palette_FieryRed;
+				debugPaletteIndex = spr_Chuckie_Normal_Palette_BlueSphere;
 				break;
 				
 				default:
-				debugPaletteIndex = spr_Flamer_Normal_Palette_FieryRed;
+				debugPaletteIndex = spr_Chuckie_Normal_Palette_BlueSphere;
 				break;
 			}
 			break;
@@ -5243,7 +5243,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprHurt = sprHurt;
 			debugObj.sprNeck = sprNeck;
-			debugObj.sprite_index = sprIdle;
+			debugObj.sprite_index = sprBox;
 			debugObj.paletteIndex = debugPaletteIndex;
 			debugObj.image_xscale = debugXScale;
 			debugObj.dirX = debugXScale;
@@ -5440,6 +5440,63 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			debugObj.sprAttackReady = sprAttackReady;
 			debugObj.sprAttackRelease = sprAttackRelease;
 			debugObj.sprHurt = sprHurt;
+			debugObj.sprite_index = sprIdle;
+			debugObj.paletteIndex = debugPaletteIndex;
+			debugObj.image_xscale = debugXScale;
+			debugObj.dirX = debugXScale;
+			debugObj.walkDirX = debugXScale;
+			debugObj.image_yscale = debugYScale;
+			debugObj.dirY = debugYScale;
+			debugObj.walkDirY = debugYScale;
+			debugObj.state = debugStateSelected;
+		}
+		break;
+		#endregion
+		
+		#region Wizzer
+		case debugObject.wizzer:
+		debugSpriteSelectedMax = 0;
+		switch (debugSpriteSelected)
+		{
+			#region Normal
+			case 0:
+			var sprIdle = spr_Wizzer_Normal_Idle;
+			var sprOpen = spr_Wizzer_Normal_Open;
+			var sprClose = spr_Wizzer_Normal_Close;
+			var sprReady = spr_Wizzer_Normal_Ready;
+			var sprAttack = spr_Wizzer_Normal_Attack;
+			var sprHurtNormal = spr_Wizzer_Normal_HurtNormal;
+			var sprHurtInhale = spr_Wizzer_Normal_HurtInhale;
+			debugPaletteNumberMax = 0;
+			switch (debugPaletteNumber)
+			{
+				case 0:
+				debugPaletteIndex = spr_Wizzer_Normal_Palette_NavyShell;
+				break;
+				
+				default:
+				debugPaletteIndex = spr_Wizzer_Normal_Palette_NavyShell;
+				break;
+			}
+			break;
+			#endregion
+		}
+		debugSprite = sprIdle;
+		debugIndex = 0;
+		debugStateSelectedMax = 0;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var spawnedObj = obj_Wizzer;
+			//if (spawnerMode) spawnedObj = obj_Spawner_Wizzer;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
+			debugObj.character = debugSpriteSelected;
+			debugObj.sprIdle = sprIdle;
+			debugObj.sprOpen = sprOpen;
+			debugObj.sprClose = sprClose;
+			debugObj.sprReady = sprReady;
+			debugObj.sprAttack = sprAttack;
+			debugObj.sprHurtNormal = sprHurtNormal;
+			debugObj.sprHurtInhale = sprHurtInhale;
 			debugObj.sprite_index = sprIdle;
 			debugObj.paletteIndex = debugPaletteIndex;
 			debugObj.image_xscale = debugXScale;

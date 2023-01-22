@@ -566,8 +566,12 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 					projBeam.hasLimit = false;
 					projBeam.character = 1;
 					projBeam.sprite_index = spr_Projectile_Beam_Enemy;
+					projBeam.pulseTarget = 1;
+					projBeam.imageIndex = projBeam.image_index;
 					projBeam.particleTimer = -1;
 					projBeam.destroyTimer = 60;
+					projBeam.pulseTimerMax = 2;
+					projBeam.pulseTimer = projBeam.pulseTimerMax;
 				}
 				break;
 				

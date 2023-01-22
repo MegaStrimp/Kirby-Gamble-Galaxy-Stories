@@ -24,6 +24,7 @@ subSelectionP3 = 0;
 subSelectionP4 = 0;
 
 clockTicks = true;
+soundPlayed = false;
 #endregion
 
 #region Arrays

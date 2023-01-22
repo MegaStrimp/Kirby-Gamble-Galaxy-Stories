@@ -12,6 +12,7 @@ gravLimit = 3;
 number = 0;
 destroy = false;
 shake = 0;
+shakeFinal = 0;
 canChangeColor = false;
 redTarget = 255;
 greenTarget = 255;

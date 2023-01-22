@@ -447,115 +447,117 @@ for (var i = 0; i < 4; i++)
 }
 #endregion
 
-#region Lives
-#region Variables
-global.playerLives = clamp(global.playerLives,0,999);
-var livesBg = spr_Hud_Lives_Background1;
-if (global.hasCoop > 0) livesBg = spr_Hud_Lives_Background2;
-var livesPosX = 16;
-var livesPosY = 13 + (hasTreasure * 28);
-var playerAmount = -1;
-#endregion
-
-#region Background
-draw_sprite_ext(livesBg,0,livesPosX - 12,livesPosY - 2,1,1,image_angle,image_blend,drawAlpha);
-#endregion
-
-for (var i = 3; i >= 0; i--)
+if (global.gamemode != gamemodes.gamblion)
 {
-	#region Pointers
-	var sep = (8 * i);
-	
-	var hasCoopPointer = global.hasP1;
-	var palettePointer = global.sprayPaintP1;
-	var characterPointer = global.characterP1;
-	switch (i)
-	{
-		case 1:
-		hasCoopPointer = global.hasP2;
-		palettePointer = global.sprayPaintP2;
-		characterPointer = global.characterP2;
-		break;
-		
-		case 2:
-		hasCoopPointer = global.hasP3;
-		palettePointer = global.sprayPaintP3;
-		characterPointer = global.characterP3;
-		break;
-		
-		case 3:
-		hasCoopPointer = global.hasP4;
-		palettePointer = global.sprayPaintP4;
-		characterPointer = global.characterP4;
-		break;
-	}
+	#region Lives
+	#region Variables
+	global.playerLives = clamp(global.playerLives,0,999);
+	var livesBg = spr_Hud_Lives_Background1;
+	if (global.hasCoop > 0) livesBg = spr_Hud_Lives_Background2;
+	var livesPosX = 16;
+	var livesPosY = 13 + (hasTreasure * 28);
+	var playerAmount = -1;
 	#endregion
-	
-	#region Icons
-	if (hasCoopPointer)
+
+	#region Background
+	draw_sprite_ext(livesBg,0,livesPosX - 12,livesPosY - 2,1,1,image_angle,image_blend,drawAlpha);
+	#endregion
+
+	for (var i = 3; i >= 0; i--)
 	{
-		playerAmount += 1;
-		
-		if ((characterPointer == playerCharacters.kirby) and (palettePointer == spr_Kirby_Normal_Palette_FriendlyPink)) palettePointer = spr_Hud_Palette_Lives_Kirby;
-		
-		var icon = spr_Hud_Lives_Icon_Kirby;
-		
-		switch (characterPointer)
+		#region Pointers
+		var sep = (10 * i);
+	
+		var hasCoopPointer = global.hasP1;
+		var palettePointer = global.sprayPaintP1;
+		var characterPointer = global.characterP1;
+		switch (i)
 		{
-			case playerCharacters.kirby:
-			icon = spr_Hud_Lives_Icon_Kirby;
+			case 1:
+			hasCoopPointer = global.hasP2;
+			palettePointer = global.sprayPaintP2;
+			characterPointer = global.characterP2;
 			break;
-			
-			case playerCharacters.gamble:
-			icon = spr_Hud_Lives_Icon_Gamble;
+		
+			case 2:
+			hasCoopPointer = global.hasP3;
+			palettePointer = global.sprayPaintP3;
+			characterPointer = global.characterP3;
 			break;
-			
-			case playerCharacters.gooey:
-			icon = spr_Hud_Lives_Icon_Gooey;
+		
+			case 3:
+			hasCoopPointer = global.hasP4;
+			palettePointer = global.sprayPaintP4;
+			characterPointer = global.characterP4;
 			break;
 		}
+		#endregion
+	
+		#region Icons
+		if (hasCoopPointer)
+		{
+			playerAmount += 1;
 		
-		if (global.shaders) pal_swap_set(palettePointer,1,false);
-		draw_sprite_ext(icon,0,livesPosX + sep,livesPosY,1,1,image_angle,image_blend,drawAlpha);
-		if (global.shaders) pal_swap_reset();
+			if ((characterPointer == playerCharacters.kirby) and (palettePointer == spr_Kirby_Normal_Palette_FriendlyPink)) palettePointer = spr_Hud_Palette_Lives_Kirby;
+		
+			var icon = spr_Hud_Lives_Icon_Kirby;
+		
+			switch (characterPointer)
+			{
+				case playerCharacters.kirby:
+				icon = spr_Hud_Lives_Icon_Kirby;
+				break;
+			
+				case playerCharacters.gamble:
+				icon = spr_Hud_Lives_Icon_Gamble;
+				break;
+			
+				case playerCharacters.gooey:
+				icon = spr_Hud_Lives_Icon_Gooey;
+				break;
+			}
+		
+			if (global.shaders) pal_swap_set(palettePointer,1,false);
+			draw_sprite_ext(icon,0,livesPosX + sep,livesPosY,1,1,image_angle,image_blend,drawAlpha);
+			if (global.shaders) pal_swap_reset();
+		}
+		#endregion
+	}
+
+	#region Numbers
+	if (global.cheatLifelessEquipped)
+	{
+		draw_sprite_ext(spr_Hud_Infinite,0,livesPosX + 23 + (8 * playerAmount),livesPosY - 6,1,1,image_angle,image_blend,drawAlpha);
+	}
+	else
+	{
+		draw_sprite_ext(spr_Hud_Numbers,floor(global.playerLives / 100),livesPosX + 14 + (10 * playerAmount),livesPosY - 8,1,1,image_angle,image_blend,drawAlpha);
+		draw_sprite_ext(spr_Hud_Numbers,(global.playerLives - ((floor(global.playerLives / 100) * 100))) / 10,livesPosX + 29 + (10 * playerAmount),livesPosY - 8,1,1,image_angle,image_blend,drawAlpha);
+		draw_sprite_ext(spr_Hud_Numbers,global.playerLives - (floor(global.playerLives / 10) * 10),livesPosX + 42 + (10 * playerAmount),livesPosY - 8,1,1,image_angle,image_blend,drawAlpha);
 	}
 	#endregion
-}
+	#endregion
+	
+	#region Point Stars
+	#region Variables
+	global.pointStars = clamp(global.pointStars,0,999);
+	starsPosX = 17;
+	starsPosY = 39 + (hasTreasure * 28);
+	#endregion
 
-#region Numbers
-if (global.cheatLifelessEquipped)
-{
-	draw_sprite_ext(spr_Hud_Infinite,0,livesPosX + 14 + (8 * playerAmount),livesPosY - 10,1,1,image_angle,image_blend,drawAlpha);
-}
-else
-{
-	draw_sprite_ext(spr_Hud_Numbers,floor(global.playerLives / 100),livesPosX + 14 + (8 * playerAmount),livesPosY - 8,1,1,image_angle,image_blend,drawAlpha);
-	draw_sprite_ext(spr_Hud_Numbers,(global.playerLives - ((floor(global.playerLives / 100) * 100))) / 10,livesPosX + 29 + (8 * playerAmount),livesPosY - 8,1,1,image_angle,image_blend,drawAlpha);
-	draw_sprite_ext(spr_Hud_Numbers,global.playerLives - (floor(global.playerLives / 10) * 10),livesPosX + 42 + (8 * playerAmount),livesPosY - 8,1,1,image_angle,image_blend,drawAlpha);
-}
-#endregion
-#endregion
+	#region Icons
+	draw_sprite_ext(spr_Hud_PointStars_Background,0,starsPosX - 13,starsPosY - 4,1,1,image_angle,image_blend,drawAlpha);
+	draw_sprite_ext(spr_Hud_PointStars_Icon,0,starsPosX,starsPosY,1,1,image_angle,image_blend,drawAlpha);
+	#endregion
 
-#region Point Stars
-#region Variables
-global.pointStars = clamp(global.pointStars,0,999);
-starsPosX = 17;
-starsPosY = 39 + (hasTreasure * 28);
-#endregion
+	#region Numbers
+	draw_sprite_ext(spr_Hud_Numbers,floor(global.pointStars / 100),starsPosX + 12,starsPosY - 10,1,1,image_angle,image_blend,drawAlpha);
+	draw_sprite_ext(spr_Hud_Numbers,(global.pointStars - ((floor(global.pointStars / 100) * 100))) / 10,starsPosX + 27,starsPosY - 10,1,1,image_angle,image_blend,drawAlpha);
+	draw_sprite_ext(spr_Hud_Numbers,global.pointStars - (floor(global.pointStars / 10) * 10),starsPosX + 42,starsPosY - 10,1,1,image_angle,image_blend,drawAlpha);
+	#endregion
+	#endregion
 
-#region Icons
-draw_sprite_ext(spr_Hud_PointStars_Background,0,starsPosX - 13,starsPosY - 4,1,1,image_angle,image_blend,drawAlpha);
-draw_sprite_ext(spr_Hud_PointStars_Icon,0,starsPosX,starsPosY,1,1,image_angle,image_blend,drawAlpha);
-#endregion
-
-#region Numbers
-draw_sprite_ext(spr_Hud_Numbers,floor(global.pointStars / 100),starsPosX + 12,starsPosY - 10,1,1,image_angle,image_blend,drawAlpha);
-draw_sprite_ext(spr_Hud_Numbers,(global.pointStars - ((floor(global.pointStars / 100) * 100))) / 10,starsPosX + 27,starsPosY - 10,1,1,image_angle,image_blend,drawAlpha);
-draw_sprite_ext(spr_Hud_Numbers,global.pointStars - (floor(global.pointStars / 10) * 10),starsPosX + 42,starsPosY - 10,1,1,image_angle,image_blend,drawAlpha);
-#endregion
-#endregion
-
-#region Points
+	#region Points
 /*
 var pointsSep = "";
 
@@ -570,6 +572,7 @@ global.points = clamp(global.points,0,999999);
 draw_text(hudX + 25,hudY + 10,pointsSep + string(global.points));
 */
 #endregion
+}
 
 #region Draw Boss Death Overlay
 if (hasBossDeathOverlay)

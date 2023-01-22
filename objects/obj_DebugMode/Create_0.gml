@@ -47,11 +47,11 @@ enum debugObject
 	spike,
 	pointStar,
 	abilityTrophy,
-	food,
 	itemChest,
 	key,
 	keyGate,
 	cuttableGrass,
+	food,
 	pepBrew,
 	maximTomato,
 	goldenTomato,
@@ -119,6 +119,7 @@ enum debugObject
 	mysticBlock,
 	plasmaWisp,
 	cerulean,
+	wizzer,
 	
 	IMSICKOFTHISGUY,
 	

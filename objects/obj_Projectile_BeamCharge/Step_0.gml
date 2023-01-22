@@ -66,10 +66,10 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		par.destroyTimer = 1;
 		if (instance_exists(owner))
 		{
-			if (((owner.player == 0) and (global.hatTypeBeamP1 == abilityHatSkins.beam_marxSoul))
+			if ((abilityType = playerAbilities.beam) and (((owner.player == 0) and (global.hatTypeBeamP1 == abilityHatSkins.beam_marxSoul))
 			or ((owner.player == 1) and (global.hatTypeBeamP2 == abilityHatSkins.beam_marxSoul))
 			or ((owner.player == 2) and (global.hatTypeBeamP3 == abilityHatSkins.beam_marxSoul))
-			or ((owner.player == 3) and (global.hatTypeBeamP4 == abilityHatSkins.beam_marxSoul)))
+			or ((owner.player == 3) and (global.hatTypeBeamP4 == abilityHatSkins.beam_marxSoul))))
 			{
 				par.sprite_index = spr_Particle_MarxDiamonds;
 				par.image_alpha = .5;

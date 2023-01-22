@@ -55,11 +55,11 @@ if (((pausable) and (!global.pause)) or (!pausable))
 				{
 		            if (keyUpHold)
 		            {
-		                other.angleSpd = -5;
+		                other.angleSpd = 5;
 		            }
 		            if (keyDownHold)
 		            {
-		                other.angleSpd = 5;
+		                other.angleSpd = -5;
 		            }
 	            }
 			}

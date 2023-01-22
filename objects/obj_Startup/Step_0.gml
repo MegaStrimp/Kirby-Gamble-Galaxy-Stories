@@ -6,6 +6,7 @@ if (!global.pause)
 	
 	if ((global.debug) and (keyboard_check_pressed(ord("L"))))
 	{
+		global.canSave = false;
 		scr_DebugSave();
 	}
 	

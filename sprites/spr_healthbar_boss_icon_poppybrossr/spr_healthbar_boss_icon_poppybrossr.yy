@@ -69,6 +69,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Icons",
-    "path": "folders/Sprites/Hud/Healthbars/Boss/Icons.yy",
+    "path": "folders/Sprites/Hud/Healthbars/Icons.yy",
   },
 }
