@@ -27,12 +27,12 @@ sprHurtInhale = spr_Wizzer_Normal_HurtInhale;
 //Other Variables
 
 paletteIndex = spr_Wizzer_Normal_Palette_NavyShell;
-hp = 12;
+hp = 6;
 dmg = 1;
 hasXKnockback = false;
 hasYKnockback = false;
 ability = playerAbilities.beam;
-points = 890;
+points = 300;
 shellAnimation = false;
 attackState = 0;
 

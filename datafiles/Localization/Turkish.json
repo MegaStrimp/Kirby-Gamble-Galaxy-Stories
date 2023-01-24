@@ -2123,6 +2123,15 @@
 	
 	"Upgrades":
     {
+		"Heroic Shield":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
 		"Motor Cutter":
 		{
 			"Title": "",
@@ -2177,7 +2186,25 @@
 			"Unlock Method": "TBD"
 		},
 		
-		"Multi Bomb":
+		"Psychic Pebble":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Cow Doll":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Light Shells":
 		{
 			"Title": "",
 			
@@ -2195,7 +2222,7 @@
 			"Unlock Method": "TBD"
 		},
 		
-		"Smart Bomb":
+		"Sticky Bomb":
 		{
 			"Title": "",
 			
@@ -2205,6 +2232,15 @@
 		},
 		
 		"Magma Bomb":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Ice Bomb":
 		{
 			"Title": "",
 			
@@ -2241,6 +2277,15 @@
 		},
 		
 		"Bright Plugg":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Waddle Brella":
 		{
 			"Title": "",
 			

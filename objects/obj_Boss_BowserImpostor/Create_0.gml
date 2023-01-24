@@ -25,7 +25,7 @@ sprDeath = spr_SMB_BowserImpostor_Death;
 #endregion
 
 #region Other Variables
-hp = 400;
+hp = 300;
 dmg = 1;
 points = 1000;
 scale = 2;

@@ -83,7 +83,7 @@ function scr_Player_States_Slide()
 							grabObj.dmg = -1;
 							grabObj.active = false;
 							grabObj.particleTimer = grabObj.particleTimerMax;
-							if (!bombSmartBombUpgrade) grabObj.destroyTimer = 30;
+							if (!bombStickyBombUpgrade) grabObj.destroyTimer = 30;
 							var grabSpr = grabEnemy.sprHurt;
 							if ((grabSpr = -1) or (grabSpr = -1))
 							{
@@ -362,7 +362,7 @@ function scr_Player_States_Slide()
 								carriedItemIndex.owner = id;
 								carriedItemIndex.abilityType = playerAbilities.bomb;
 								carriedItemIndex.player = player;
-								carriedItemIndex.hasRemoteDetonation = bombSmartBombUpgrade;
+								carriedItemIndex.hasRemoteDetonation = bombStickyBombUpgrade;
 								carriedItemIndex.hasHoming = bombEyeBombUpgrade;
 								carriedItemIndex.hasMagma = bombMagmaBombUpgrade;
 								carriedItemIndex.active = false;
@@ -380,7 +380,7 @@ function scr_Player_States_Slide()
 								carriedItemIndex.hurtsPlayer = false;
 								carriedItemIndex.hurtsProjectile = false;
 								carriedItemIndex.image_xscale = carriedItemIndex.dirX;
-								if (!bombMultiBombUpgrade) carriedItemIndex.selfExplodeTimer = carriedItemIndex.selfExplodeTimerMax;
+								if (!bombLightShellsUpgrade) carriedItemIndex.selfExplodeTimer = carriedItemIndex.selfExplodeTimerMax;
 								if (((player == 0) and (global.hatTypeBombP1 == abilityHatSkins.bomb_modern)) or ((player == 1) and (global.hatTypeBombP2 == abilityHatSkins.bomb_modern))) 
 								{
 									carriedItemIndex.character = 1;

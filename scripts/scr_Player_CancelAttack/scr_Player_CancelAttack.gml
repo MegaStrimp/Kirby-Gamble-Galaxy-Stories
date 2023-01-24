@@ -144,6 +144,10 @@ function scr_Player_CancelAttack(argument0)
 	        state = playerStates.normal;
 			break;
 			
+			case playerAttacks.fireNormal:
+			fireNormalAttackTimer = -1;
+			break;
+			
 			case playerAttacks.fireDash:
 			case playerAttacks.gooeyFireDash:
 			case playerAttacks.jetDash:

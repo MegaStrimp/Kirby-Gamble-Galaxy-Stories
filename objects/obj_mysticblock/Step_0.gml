@@ -23,6 +23,7 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 	#endregion
 	
 	#region Attack Timer
+	if !((stopOutsideScreen) and (scr_OutsideView()))
 	if (attackTimer > 0)
 	{
 		attackTimer -= 1;

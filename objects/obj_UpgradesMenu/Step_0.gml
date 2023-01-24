@@ -79,16 +79,16 @@ if (!global.pause)
 				global.stoneComboCobaltUpgradeEquipped = !global.stoneComboCobaltUpgradeEquipped;
 				break;
 				
-				case abilityUpgrades.multiBomb:
-				global.bombMultiBombUpgradeEquipped = !global.bombMultiBombUpgradeEquipped;
+				case abilityUpgrades.lightShells:
+				global.bombLightShellsUpgradeEquipped = !global.bombLightShellsUpgradeEquipped;
 				break;
 				
 				case abilityUpgrades.eyeBomb:
 				global.bombEyeBombUpgradeEquipped = !global.bombEyeBombUpgradeEquipped;
 				break;
 				
-				case abilityUpgrades.smartBomb:
-				global.bombSmartBombUpgradeEquipped = !global.bombSmartBombUpgradeEquipped;
+				case abilityUpgrades.stickyBomb:
+				global.bombStickyBombUpgradeEquipped = !global.bombStickyBombUpgradeEquipped;
 				break;
 				
 				case abilityUpgrades.magmaBomb:

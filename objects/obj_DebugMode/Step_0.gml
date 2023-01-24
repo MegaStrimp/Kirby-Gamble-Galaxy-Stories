@@ -5467,11 +5467,31 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var sprAttack = spr_Wizzer_Normal_Attack;
 			var sprHurtNormal = spr_Wizzer_Normal_HurtNormal;
 			var sprHurtInhale = spr_Wizzer_Normal_HurtInhale;
-			debugPaletteNumberMax = 0;
+			debugPaletteNumberMax = 5;
 			switch (debugPaletteNumber)
 			{
 				case 0:
 				debugPaletteIndex = spr_Wizzer_Normal_Palette_NavyShell;
+				break;
+				
+				case 1:
+				debugPaletteIndex = spr_Wizzer_Normal_Palette_SeaweedGreen;
+				break;
+				
+				case 2:
+				debugPaletteIndex = spr_Wizzer_Normal_Palette_TropicOrange;
+				break;
+				
+				case 3:
+				debugPaletteIndex = spr_Wizzer_Normal_Palette_MermaidPink;
+				break;
+				
+				case 4:
+				debugPaletteIndex = spr_Wizzer_Normal_Palette_DeepPurple;
+				break;
+				
+				case 5:
+				debugPaletteIndex = spr_Wizzer_Normal_Palette_SweetCream;
 				break;
 				
 				default:

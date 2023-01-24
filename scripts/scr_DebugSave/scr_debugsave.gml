@@ -152,14 +152,18 @@ function scr_DebugSave()
 	global.mysticBeamVortexInAJarUpgradeUnlocked = true;
 	global.stoneRockCandyUpgradeUnlocked = true;
 	global.stoneComboCobaltUpgradeUnlocked = true;
-	global.bombMultiBombUpgradeUnlocked = true;
+	global.stonePsychicPebbleUpgradeUnlocked = true;
+	global.ufoCowDollUpgradeUnlocked = true;
+	global.bombLightShellsUpgradeUnlocked = true;
 	global.bombEyeBombUpgradeUnlocked = true;
-	global.bombSmartBombUpgradeUnlocked = true;
+	global.bombStickyBombUpgradeUnlocked = true;
 	global.bombMagmaBombUpgradeUnlocked = true;
+	global.bombIceBombUpgradeUnlocked = true;
 	global.bombExplosivePowderUpgradeUnlocked = true;
 	global.fireMagicCharcoalUpgradeUnlocked = true;
 	global.iceEmptyConeUpgradeUnlocked = true;
 	global.sparkBrightPluggUpgradeUnlocked = true;
+	global.parasolWaddleBrellaUpgradeUnlocked = true;
 	global.waterEggSoilUpgradeUnlocked = true;
 	
 	global.cheatLifelessUnlocked = true;

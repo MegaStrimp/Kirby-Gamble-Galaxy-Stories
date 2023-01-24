@@ -184,14 +184,18 @@ function scr_SaveGame(argument0)
 	ini_write_real("unlocks","mysticBeamVortexInAJarUpgradeUnlocked",global.mysticBeamVortexInAJarUpgradeUnlocked);
 	ini_write_real("unlocks","stoneRockCandyUpgradeUnlocked",global.stoneRockCandyUpgradeUnlocked);
 	ini_write_real("unlocks","stoneComboCobaltUpgradeUnlocked",global.stoneComboCobaltUpgradeUnlocked);
-	ini_write_real("unlocks","bombMultiBombUpgradeUnlocked",global.bombMultiBombUpgradeUnlocked);
+	ini_write_real("unlocks","stonePsychicPebbleUpgradeUnlocked",global.stonePsychicPebbleUpgradeUnlocked);
+	ini_write_real("unlocks","ufoCowDollUpgradeUnlocked",global.ufoCowDollUpgradeUnlocked);
+	ini_write_real("unlocks","bombLightShellsUpgradeUnlocked",global.bombLightShellsUpgradeUnlocked);
 	ini_write_real("unlocks","bombEyeBombUpgradeUnlocked",global.bombEyeBombUpgradeUnlocked);
-	ini_write_real("unlocks","bombSmartBombUpgradeUnlocked",global.bombSmartBombUpgradeUnlocked);
+	ini_write_real("unlocks","bombStickyBombUpgradeUnlocked",global.bombStickyBombUpgradeUnlocked);
 	ini_write_real("unlocks","bombMagmaBombUpgradeUnlocked",global.bombMagmaBombUpgradeUnlocked);
+	ini_write_real("unlocks","bombIceBombUpgradeUnlocked",global.bombIceBombUpgradeUnlocked);
 	ini_write_real("unlocks","bombExplosivePowderUpgradeUnlocked",global.bombExplosivePowderUpgradeUnlocked);
 	ini_write_real("unlocks","fireMagicCharcoalUpgradeUnlocked",global.fireMagicCharcoalUpgradeUnlocked);
 	ini_write_real("unlocks","iceEmptyConeUpgradeUnlocked",global.iceEmptyConeUpgradeUnlocked);
 	ini_write_real("unlocks","sparkBrightPluggUpgradeUnlocked",global.sparkBrightPluggUpgradeUnlocked);
+	ini_write_real("unlocks","parasolWaddleBrellaUpgradeUnlocked",global.parasolWaddleBrellaUpgradeUnlocked);
 	ini_write_real("unlocks","waterEggSoilUpgradeUnlocked",global.waterEggSoilUpgradeUnlocked);
 	
 	ini_write_real("cheats","cheatLifelessUnlocked",global.cheatLifelessUnlocked);
@@ -545,14 +549,18 @@ function scr_SaveGame(argument0)
 	ini_write_real("playerCustomization","mysticBeamVortexInAJarUpgradeEquipped",global.mysticBeamVortexInAJarUpgradeEquipped);
 	ini_write_real("playerCustomization","stoneRockCandyUpgradeEquipped",global.stoneRockCandyUpgradeEquipped);
 	ini_write_real("playerCustomization","stoneComboCobaltUpgradeEquipped",global.stoneComboCobaltUpgradeEquipped);
-	ini_write_real("playerCustomization","bombMultiBombUpgradeEquipped",global.bombMultiBombUpgradeEquipped);
+	ini_write_real("playerCustomization","stonePsychicPebbleUpgradeEquipped",global.stonePsychicPebbleUpgradeEquipped);
+	ini_write_real("playerCustomization","ufoCowDollUpgradeEquipped",global.ufoCowDollUpgradeEquipped);
+	ini_write_real("playerCustomization","bombLightShellsUpgradeEquipped",global.bombLightShellsUpgradeEquipped);
 	ini_write_real("playerCustomization","bombEyeBombUpgradeEquipped",global.bombEyeBombUpgradeEquipped);
-	ini_write_real("playerCustomization","bombSmartBombUpgradeEquipped",global.bombSmartBombUpgradeEquipped);
+	ini_write_real("playerCustomization","bombStickyBombUpgradeEquipped",global.bombStickyBombUpgradeEquipped);
 	ini_write_real("playerCustomization","bombMagmaBombUpgradeEquipped",global.bombMagmaBombUpgradeEquipped);
+	ini_write_real("playerCustomization","bombIceBombUpgradeEquipped",global.bombIceBombUpgradeEquipped);
 	ini_write_real("playerCustomization","bombExplosivePowderUpgradeEquipped",global.bombExplosivePowderUpgradeEquipped);
 	ini_write_real("playerCustomization","fireMagicCharcoalUpgradeEquipped",global.fireMagicCharcoalUpgradeEquipped);
 	ini_write_real("playerCustomization","iceEmptyConeUpgradeEquipped",global.iceEmptyConeUpgradeEquipped);
 	ini_write_real("playerCustomization","sparkBrightPluggUpgradeEquipped",global.sparkBrightPluggUpgradeEquipped);
+	ini_write_real("playerCustomization","parasolWaddleBrellaUpgradeEquipped",global.parasolWaddleBrellaUpgradeEquipped);
 	ini_write_real("playerCustomization","waterEggSoilUpgradeEquipped",global.waterEggSoilUpgradeEquipped);
 	
 	ini_write_real("cheats","cheatLifelessEquipped",global.cheatLifelessEquipped);

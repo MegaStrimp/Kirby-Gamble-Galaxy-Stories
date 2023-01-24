@@ -20,14 +20,18 @@ enum abilityUpgrades
 	vortexInAJar,
 	rockCandy,
 	comboCobalt,
-	multiBomb,
+	psychicPebble,
+	cowDoll,
+	lightShells,
 	eyeBomb,
-	smartBomb,
+	stickyBomb,
 	magmaBomb,
+	iceBomb,
 	explosivePowder,
 	magicCharcoal,
 	emptyCone,
 	brightPlugg,
+	waddleBrella,
 	eggSoil
 }
 #endregion

@@ -44,7 +44,7 @@ if (global.musicIntro)
 	draw_set_color(global.musicIntroColorDark);
 	draw_rectangle(musicIntroX + 7,musicIntroY + 33,musicIntroX + 145,musicIntroY + 36,false);
 	draw_set_color(global.musicIntroColorLight);
-	draw_text(musicIntroX + 6,musicIntroY + 14,string(global.musicIntroTitle));
+	draw_text_ext(musicIntroX + 6,musicIntroY + 14,string(global.musicIntroTitle),-1,140);
 	draw_rectangle(musicIntroX + 7,musicIntroY + 33,musicIntroX + (145 * (1 - (musicIntroTimer / musicIntroTimerMax))),musicIntroY + 36,false);
 	
 	draw_set_alpha(1);

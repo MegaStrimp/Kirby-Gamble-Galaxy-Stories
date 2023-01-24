@@ -46,12 +46,15 @@ shakeY = 0;
 drawShakeX = 0;
 drawShakeY = 0;
 paletteIndex = -1;
+flashIndex = 1;
 
 //Timers
 
 setupTimer = 0;
 explodeTimer = -1;
 explodeTimerMax = 5;
+flashTimer = -1;
+flashTimerMax = 2;
 invincibleTimer = -1;
 invincibleTimerMax = 15;
 movementTimer = -1;

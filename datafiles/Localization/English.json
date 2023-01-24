@@ -2137,6 +2137,15 @@
 	
 	"Upgrades":
     {
+		"Heroic Shield":
+		{
+			"Title": "Heroic Shield",
+			
+			"Description": "Gives a shield while guarding!",
+			
+			"Unlock Method": "TBD"
+		},
+		
 		"Motor Cutter":
 		{
 			"Title": "Motor Cutter",
@@ -2191,9 +2200,27 @@
 			"Unlock Method": "TBD"
 		},
 		
-		"Multi Bomb":
+		"Psychic Pebble":
 		{
-			"Title": "Multi Bomb",
+			"Title": "Psychic Pebble",
+			
+			"Description": "Buffs Stone Ability",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Cow Doll":
+		{
+			"Title": "Cow Doll",
+			
+			"Description": "Buffs Ufo Ability",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Light Shells":
+		{
+			"Title": "Light Shells",
 			
 			"Description": "Buffs Bomb Ability",
 			
@@ -2209,9 +2236,9 @@
 			"Unlock Method": "TBD"
 		},
 		
-		"Smart Bomb":
+		"Sticky Bomb":
 		{
-			"Title": "Smart Bomb",
+			"Title": "Sticky Bomb",
 			
 			"Description": "Buffs Bomb Ability",
 			
@@ -2221,6 +2248,15 @@
 		"Magma Bomb":
 		{
 			"Title": "Magma Bomb",
+			
+			"Description": "Buffs Bomb Ability",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Ice Bomb":
+		{
+			"Title": "Ice Bomb",
 			
 			"Description": "Buffs Bomb Ability",
 			
@@ -2259,6 +2295,15 @@
 			"Title": "Bright Plugg",
 			
 			"Description": "Buffs Spark Ability",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Waddle Brella":
+		{
+			"Title": "Waddle Brella",
+			
+			"Description": "Buffs Parasol Ability",
 			
 			"Unlock Method": "TBD"
 		},

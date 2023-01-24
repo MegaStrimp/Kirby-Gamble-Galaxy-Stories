@@ -54,6 +54,7 @@ groundFailsafe = true;
 aim = 0;
 dir = 0;
 shootCountMax = 3;
+stopOutsideScreen = true;
 
 //Timers
 

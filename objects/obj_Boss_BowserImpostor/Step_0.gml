@@ -214,6 +214,7 @@ if ((!global.pause) and (((!global.cutscene) or ((global.cutscene) and (phase ==
 			attackState = 0;
 			if (fireCount >= fireCountMax)
 			{
+				fireCount = 0;
 				fireCountMax = irandom_range(1,3);
 				fireTimer = fireTimerMax;
 			}

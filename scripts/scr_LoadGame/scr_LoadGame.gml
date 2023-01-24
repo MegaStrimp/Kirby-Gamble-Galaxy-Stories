@@ -185,14 +185,18 @@ function scr_LoadGame(argument0)
 	global.mysticBeamVortexInAJarUpgradeUnlocked = ini_read_real("unlocks","mysticBeamVortexInAJarUpgradeUnlocked",false);
 	global.stoneRockCandyUpgradeUnlocked = ini_read_real("unlocks","stoneRockCandyUpgradeUnlocked",false);
 	global.stoneComboCobaltUpgradeUnlocked = ini_read_real("unlocks","stoneComboCobaltUpgradeUnlocked",false);
-	global.bombMultiBombUpgradeUnlocked = ini_read_real("unlocks","bombMultiBombUpgradeUnlocked",false);
+	global.stonePsychicPebbleUpgradeUnlocked = ini_read_real("unlocks","stonePsychicPebbleUpgradeUnlocked",false);
+	global.ufoCowDollUpgradeUnlocked = ini_read_real("unlocks","ufoCowDollUpgradeUnlocked",false);
+	global.bombLightShellsUpgradeUnlocked = ini_read_real("unlocks","bombLightShellsUpgradeUnlocked",false);
 	global.bombEyeBombUpgradeUnlocked = ini_read_real("unlocks","bombEyeBombUpgradeUnlocked",false);
-	global.bombSmartBombUpgradeUnlocked = ini_read_real("unlocks","bombSmartBombUpgradeUnlocked",false);
+	global.bombStickyBombUpgradeUnlocked = ini_read_real("unlocks","bombStickyBombUpgradeUnlocked",false);
 	global.bombMagmaBombUpgradeUnlocked = ini_read_real("unlocks","bombMagmaBombUpgradeUnlocked",false);
+	global.bombIceBombUpgradeUnlocked = ini_read_real("unlocks","bombIceBombUpgradeUnlocked",false);
 	global.bombExplosivePowderUpgradeUnlocked = ini_read_real("unlocks","bombExplosivePowderUpgradeUnlocked",false);
 	global.fireMagicCharcoalUpgradeUnlocked = ini_read_real("unlocks","fireMagicCharcoalUpgradeUnlocked",false);
 	global.iceEmptyConeUpgradeUnlocked = ini_read_real("unlocks","iceEmptyConeUpgradeUnlocked",false);
 	global.sparkBrightPluggUpgradeUnlocked = ini_read_real("unlocks","sparkBrightPluggUpgradeUnlocked",false);
+	global.parasolWaddleBrellaUpgradeUnlocked = ini_read_real("unlocks","parasolWaddleBrellaUpgradeUnlocked",false);
 	global.waterEggSoilUpgradeUnlocked = ini_read_real("unlocks","waterEggSoilUpgradeUnlocked",false);
 	
 	global.cheatLifelessUnlocked = ini_read_real("cheats","cheatLifelessUnlocked",false);
@@ -549,14 +553,18 @@ function scr_LoadGame(argument0)
 	global.mysticBeamVortexInAJarUpgradeEquipped = ini_read_real("playerCustomization","mysticBeamVortexInAJarUpgradeEquipped",false);
 	global.stoneRockCandyUpgradeEquipped = ini_read_real("playerCustomization","stoneRockCandyUpgradeEquipped",false);
 	global.stoneComboCobaltUpgradeEquipped = ini_read_real("playerCustomization","stoneComboCobaltUpgradeEquipped",false);
-	global.bombMultiBombUpgradeEquipped = ini_read_real("playerCustomization","bombMultiBombUpgradeEquipped",false);
+	global.stonePsychicPebbleUpgradeEquipped = ini_read_real("playerCustomization","stonePsychicPebbleUpgradeEquipped",false);
+	global.ufoCowDollUpgradeEquipped = ini_read_real("playerCustomization","ufoCowDollUpgradeEquipped",false);
+	global.bombLightShellsUpgradeEquipped = ini_read_real("playerCustomization","bombLightShellsUpgradeEquipped",false);
 	global.bombEyeBombUpgradeEquipped = ini_read_real("playerCustomization","bombEyeBombUpgradeEquipped",false);
-	global.bombSmartBombUpgradeEquipped = ini_read_real("playerCustomization","bombSmartBombUpgradeEquipped",false);
+	global.bombStickyBombUpgradeEquipped = ini_read_real("playerCustomization","bombStickyBombUpgradeEquipped",false);
 	global.bombMagmaBombUpgradeEquipped = ini_read_real("playerCustomization","bombMagmaBombUpgradeEquipped",false);
+	global.bombIceBombUpgradeEquipped = ini_read_real("playerCustomization","bombIceBombUpgradeEquipped",false);
 	global.bombExplosivePowderUpgradeEquipped = ini_read_real("playerCustomization","bombExplosivePowderUpgradeEquipped",false);
 	global.fireMagicCharcoalUpgradeEquipped = ini_read_real("playerCustomization","fireMagicCharcoalUpgradeEquipped",false);
 	global.iceEmptyConeUpgradeEquipped = ini_read_real("playerCustomization","iceEmptyConeUpgradeEquipped",false);
 	global.sparkBrightPluggUpgradeEquipped = ini_read_real("playerCustomization","sparkBrightPluggUpgradeEquipped",false);
+	global.parasolWaddleBrellaUpgradeEquipped = ini_read_real("playerCustomization","parasolWaddleBrellaUpgradeEquipped",false);
 	global.waterEggSoilUpgradeEquipped = ini_read_real("playerCustomization","waterEggSoilUpgradeEquipped",false);
 	
 	global.cheatLifelessEquipped = ini_read_real("cheats","cheatLifelessEquipped",false);

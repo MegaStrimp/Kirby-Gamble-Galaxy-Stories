@@ -431,7 +431,7 @@ function scr_Player_States_Normal()
 						carriedItemIndex.hsp = lengthdir_x(6,bdir);
 						carriedItemIndex.vsp = lengthdir_y(6,bdir);
 						carriedItemIndex.angleSpd = carriedItemIndex.hsp * 4;
-						if (bombMultiBombUpgrade)
+						if (bombLightShellsUpgrade)
 						{
 							var bombCount = irandom_range(1,2);
 							for (var i = 0; i < bombCount; i++)
@@ -440,7 +440,7 @@ function scr_Player_States_Normal()
 								bomb.owner = id;
 								bomb.abilityType = playerAbilities.bomb;
 								bomb.player = player;
-								bomb.hasRemoteDetonation = bombSmartBombUpgrade;
+								bomb.hasRemoteDetonation = bombStickyBombUpgrade;
 								bomb.hasHoming = bombEyeBombUpgrade;
 								bomb.hasMagma = bombMagmaBombUpgrade;
 								bomb.active = true;
@@ -2335,7 +2335,7 @@ function scr_Player_States_Normal()
 							carriedItemIndex.owner = id;
 							carriedItemIndex.abilityType = playerAbilities.bomb;
 							carriedItemIndex.player = player;
-							carriedItemIndex.hasRemoteDetonation = bombSmartBombUpgrade;
+							carriedItemIndex.hasRemoteDetonation = bombStickyBombUpgrade;
 							carriedItemIndex.hasHoming = bombEyeBombUpgrade;
 							carriedItemIndex.hasMagma = bombMagmaBombUpgrade;
 							carriedItemIndex.active = false;
@@ -2353,7 +2353,7 @@ function scr_Player_States_Normal()
 							carriedItemIndex.hurtsPlayer = false;
 							carriedItemIndex.hurtsProjectile = false;
 							carriedItemIndex.image_xscale = carriedItemIndex.dirX;
-							if (!bombSmartBombUpgrade) carriedItemIndex.selfExplodeTimer = carriedItemIndex.selfExplodeTimerMax;
+							if (!bombStickyBombUpgrade) carriedItemIndex.selfExplodeTimer = carriedItemIndex.selfExplodeTimerMax;
 							if (((player == 0) and (global.hatTypeBombP1 == abilityHatSkins.bomb_modern)) or ((player == 1) and (global.hatTypeBombP2 == abilityHatSkins.bomb_modern))) 
 							{
 								carriedItemIndex.character = 1;

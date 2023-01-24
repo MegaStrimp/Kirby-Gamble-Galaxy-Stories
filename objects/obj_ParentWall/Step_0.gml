@@ -129,6 +129,25 @@ if (!global.pause)
 		}
 		explodeTimer = -1;
 	}
+	
+	//Flash Timer
+	
+	if (flashTimer > 0)
+	{
+		flashTimer -= 1;
+	}
+	else if (flashTimer == 0)
+	{
+		if (flashIndex == 1)
+		{
+			flashIndex = 2;
+		}
+		else
+		{
+			flashIndex = 1;
+		}
+		flashTimer = -1;
+	}
 }
 
 //Hurt

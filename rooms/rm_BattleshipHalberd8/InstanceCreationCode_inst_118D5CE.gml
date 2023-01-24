@@ -1,4 +1,4 @@
 ///@description Creation Code
 
 sprite_index = spr_Door_BattleshipHalberd;
-targetRoom = rm_StageSelect;
+targetRoom = rm_BattleshipHalberd9;

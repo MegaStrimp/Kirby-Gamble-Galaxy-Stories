@@ -103,21 +103,24 @@ if (micFlash)
 //Draw Self
 
 var paletteFlash = 1;
-if (invincibleFlash)
+if (((sprite_index != sprStoneAttack1Common) and (sprite_index != sprStoneAttack1Uncommon) and (sprite_index != sprStoneAttack1Rare)) or (((sprite_index = spr_Kirby_Normal_Stone_Attack1_Common1) or (sprite_index = spr_Kirby_Normal_Stone_Attack1_Common2)) and (image_index = 0)) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common1) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common2))
 {
-	paletteFlash = 2;
-	
-	if ((cAbility != playerAbilities.none) and (state = playerStates.carry) and (!spit)) paletteFlash = 4;
-}
-if (death)
-{
-	if (state == playerStates.death)
-	{
-		paletteFlash = 1;
-	}
-	else
+	if (invincibleFlash)
 	{
 		paletteFlash = 2;
+	
+		if ((cAbility != playerAbilities.none) and (state = playerStates.carry) and (!spit)) paletteFlash = 4;
+	}
+	if (death)
+	{
+		if (state == playerStates.death)
+		{
+			paletteFlash = 1;
+		}
+		else
+		{
+			paletteFlash = 2;
+		}
 	}
 }
 

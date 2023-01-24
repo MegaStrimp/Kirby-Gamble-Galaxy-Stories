@@ -20,6 +20,7 @@ sprDestroy = spr_Projectile_Cutter_Destroy;
 
 //Other Variables
 
+destroyableByObject = false;
 destroyableByProjectile = true;
 damageType = damageTypes.cutter;
 enemy = false;

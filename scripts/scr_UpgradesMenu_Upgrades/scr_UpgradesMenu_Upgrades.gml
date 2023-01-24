@@ -25,7 +25,7 @@ function scr_UpgradesMenu_Upgrades()
 	
 	var i = 0;
 	
-	/*#region Motor Cutter
+	#region Motor Cutter
 	upgradesArray[# i,0] = abilityUpgrades.motorCutter;
 	upgradesArray[# i,1] = spr_Menu_Upgrades_MotorCutter;
 	upgradesArray[# i,2] = str("Upgrades.Motor Cutter.Title");
@@ -40,7 +40,7 @@ function scr_UpgradesMenu_Upgrades()
 	upgradesArray[# i,11] = make_color_rgb(255,255,102);
 	upgradesArray[# i,12] = spr_AbilityStar_Cutter;
 	i += 1;
-	#endregion*/
+	#endregion
 	
 	#region Propeller Wing
 	upgradesArray[# i,0] = abilityUpgrades.propellerWing;
@@ -127,18 +127,52 @@ function scr_UpgradesMenu_Upgrades()
 	i += 1;
 	#endregion
 	
-	#region Multi Bomb
-	upgradesArray[# i,0] = abilityUpgrades.multiBomb;
-	upgradesArray[# i,1] = spr_Menu_Upgrades_MultiBomb;
-	upgradesArray[# i,2] = str("Upgrades.Multi Bomb.Title");
-	upgradesArray[# i,3] = str("Upgrades.Multi Bomb.Description");
-	upgradesArray[# i,4] = global.bombMultiBombUpgradeUnlocked;
-	upgradesArray[# i,5] = str("Upgrades.Multi Bomb.Unlock Method");
+	#region Psychic Pebble
+	upgradesArray[# i,0] = abilityUpgrades.psychicPebble;
+	upgradesArray[# i,1] = spr_Menu_Upgrades_PsychicPebble;
+	upgradesArray[# i,2] = str("Upgrades.Psychic Pebble.Title");
+	upgradesArray[# i,3] = str("Upgrades.Psychic Pebble.Description");
+	upgradesArray[# i,4] = global.stonePsychicPebbleUpgradeUnlocked;
+	upgradesArray[# i,5] = str("Upgrades.Psychic Pebble.Unlock Method");
 	upgradesArray[# i,6] = 240 + ((i - upgradeSelection) * 82);
 	upgradesArray[# i,7] = 0;
 	upgradesArray[# i,8] = 1;
 	upgradesArray[# i,9] = 1;
-	upgradesArray[# i,10] = global.bombMultiBombUpgradeEquipped;
+	upgradesArray[# i,10] = global.stonePsychicPebbleUpgradeEquipped;
+	upgradesArray[# i,11] = make_color_rgb(216,136,104);
+	upgradesArray[# i,12] = spr_AbilityStar_Stone;
+	i += 1;
+	#endregion
+	
+	#region Cow Doll
+	upgradesArray[# i,0] = abilityUpgrades.cowDoll;
+	upgradesArray[# i,1] = spr_Menu_Upgrades_CowDoll;
+	upgradesArray[# i,2] = str("Upgrades.Cow Doll.Title");
+	upgradesArray[# i,3] = str("Upgrades.Cow Doll.Description");
+	upgradesArray[# i,4] = global.stoneCowDollUpgradeUnlocked;
+	upgradesArray[# i,5] = str("Upgrades.Cow Doll.Unlock Method");
+	upgradesArray[# i,6] = 240 + ((i - upgradeSelection) * 82);
+	upgradesArray[# i,7] = 0;
+	upgradesArray[# i,8] = 1;
+	upgradesArray[# i,9] = 1;
+	upgradesArray[# i,10] = global.stoneCowDollUpgradeEquipped;
+	upgradesArray[# i,11] = make_color_rgb(255,104,177);
+	upgradesArray[# i,12] = spr_AbilityStar_Ufo;
+	i += 1;
+	#endregion
+	
+	#region Light Shells
+	upgradesArray[# i,0] = abilityUpgrades.lightShells;
+	upgradesArray[# i,1] = spr_Menu_Upgrades_LightShells;
+	upgradesArray[# i,2] = str("Upgrades.Light Shells.Title");
+	upgradesArray[# i,3] = str("Upgrades.Light Shells.Description");
+	upgradesArray[# i,4] = global.bombLightShellsUpgradeUnlocked;
+	upgradesArray[# i,5] = str("Upgrades.Light Shells.Unlock Method");
+	upgradesArray[# i,6] = 240 + ((i - upgradeSelection) * 82);
+	upgradesArray[# i,7] = 0;
+	upgradesArray[# i,8] = 1;
+	upgradesArray[# i,9] = 1;
+	upgradesArray[# i,10] = global.bombLightShellsUpgradeEquipped;
 	upgradesArray[# i,11] = make_color_rgb(134,107,125);
 	upgradesArray[# i,12] = spr_AbilityStar_Bomb;
 	i += 1;
@@ -161,18 +195,18 @@ function scr_UpgradesMenu_Upgrades()
 	i += 1;
 	#endregion
 	
-	#region Smart Bomb
-	upgradesArray[# i,0] = abilityUpgrades.smartBomb;
-	upgradesArray[# i,1] = spr_Menu_Upgrades_SmartBomb;
-	upgradesArray[# i,2] = str("Upgrades.Smart Bomb.Title");
-	upgradesArray[# i,3] = str("Upgrades.Smart Bomb.Description");
-	upgradesArray[# i,4] = global.bombSmartBombUpgradeUnlocked;
-	upgradesArray[# i,5] = str("Upgrades.Smart Bomb.Unlock Method");
+	#region Sticky Bomb
+	upgradesArray[# i,0] = abilityUpgrades.stickyBomb;
+	upgradesArray[# i,1] = spr_Menu_Upgrades_StickyBomb;
+	upgradesArray[# i,2] = str("Upgrades.Sticky Bomb.Title");
+	upgradesArray[# i,3] = str("Upgrades.Sticky Bomb.Description");
+	upgradesArray[# i,4] = global.bombStickyBombUpgradeUnlocked;
+	upgradesArray[# i,5] = str("Upgrades.Sticky Bomb.Unlock Method");
 	upgradesArray[# i,6] = 240 + ((i - upgradeSelection) * 82);
 	upgradesArray[# i,7] = 0;
 	upgradesArray[# i,8] = 1;
 	upgradesArray[# i,9] = 1;
-	upgradesArray[# i,10] = global.bombSmartBombUpgradeEquipped;
+	upgradesArray[# i,10] = global.bombStickyBombUpgradeEquipped;
 	upgradesArray[# i,11] = make_color_rgb(134,107,125);
 	upgradesArray[# i,12] = spr_AbilityStar_Bomb;
 	i += 1;
@@ -190,6 +224,23 @@ function scr_UpgradesMenu_Upgrades()
 	upgradesArray[# i,8] = 1;
 	upgradesArray[# i,9] = 1;
 	upgradesArray[# i,10] = global.bombMagmaBombUpgradeEquipped;
+	upgradesArray[# i,11] = make_color_rgb(134,107,125);
+	upgradesArray[# i,12] = spr_AbilityStar_Bomb;
+	i += 1;
+	#endregion
+	
+	#region Ice Bomb
+	upgradesArray[# i,0] = abilityUpgrades.iceBomb;
+	upgradesArray[# i,1] = spr_Menu_Upgrades_IceBomb;
+	upgradesArray[# i,2] = str("Upgrades.Ice Bomb.Title");
+	upgradesArray[# i,3] = str("Upgrades.Ice Bomb.Description");
+	upgradesArray[# i,4] = global.bombIceBombUpgradeUnlocked;
+	upgradesArray[# i,5] = str("Upgrades.Ice Bomb.Unlock Method");
+	upgradesArray[# i,6] = 240 + ((i - upgradeSelection) * 82);
+	upgradesArray[# i,7] = 0;
+	upgradesArray[# i,8] = 1;
+	upgradesArray[# i,9] = 1;
+	upgradesArray[# i,10] = global.bombIceBombUpgradeEquipped;
 	upgradesArray[# i,11] = make_color_rgb(134,107,125);
 	upgradesArray[# i,12] = spr_AbilityStar_Bomb;
 	i += 1;
@@ -260,6 +311,23 @@ function scr_UpgradesMenu_Upgrades()
 	upgradesArray[# i,10] = global.sparkBrightPluggUpgradeEquipped;
 	upgradesArray[# i,11] = make_color_rgb(176,248,104);
 	upgradesArray[# i,12] = spr_AbilityStar_Spark;
+	i += 1;
+	#endregion
+	
+	#region Waddle Brella
+	upgradesArray[# i,0] = abilityUpgrades.waddleBrella;
+	upgradesArray[# i,1] = spr_Menu_Upgrades_WaddleBrella;
+	upgradesArray[# i,2] = str("Upgrades.Waddle Brella.Title");
+	upgradesArray[# i,3] = str("Upgrades.Waddle Brella.Description");
+	upgradesArray[# i,4] = global.parasolWaddleBrellaUpgradeUnlocked;
+	upgradesArray[# i,5] = str("Upgrades.Waddle Brella.Unlock Method");
+	upgradesArray[# i,6] = 240 + ((i - upgradeSelection) * 82);
+	upgradesArray[# i,7] = 0;
+	upgradesArray[# i,8] = 1;
+	upgradesArray[# i,9] = 1;
+	upgradesArray[# i,10] = global.parasolWaddleBrellaUpgradeEquipped;
+	upgradesArray[# i,11] = make_color_rgb(255,58,58);
+	upgradesArray[# i,12] = spr_AbilityStar_Parasol;
 	i += 1;
 	#endregion
 	

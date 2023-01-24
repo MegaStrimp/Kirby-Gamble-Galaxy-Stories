@@ -2712,7 +2712,7 @@ else if (characterSetupTimer == 0)
 		break;
 		
 		case playerCharacters.waddleDee:
-		var skin = choose("normal","normal","normal","normal","normal","normal","egg","egg","egg","gold");
+		var skin = choose("normal","normal","normal","normal","normal","normal","egg","egg","egg","gold","bandit","bandit","bandit");
 		
 		#region Physics
 		gravNormal = .2;
@@ -2977,7 +2977,7 @@ else if (characterSetupTimer == 0)
 		break;
 		
 		case playerCharacters.waddleDoo:
-		var skin = choose("normal");
+		var skin = choose("normal","bandit");
 		
 		#region Physics
 		gravNormal = .2;
@@ -3084,12 +3084,41 @@ else if (characterSetupTimer == 0)
 			sprSquish = spr_WaddleDoo_Normal_Idle;
 			sprDuck = spr_WaddleDoo_Normal_Duck;
 			sprSlide = spr_WaddleDoo_Normal_Slide;
+			sprSlideEnd = spr_WaddleDoo_Normal_Slide;
 			sprEnter = spr_WaddleDoo_Normal_Walk;
 			sprClimbUp = spr_WaddleDoo_Normal_ClimbUp;
 			sprClimbDown = spr_WaddleDoo_Normal_ClimbDown;
 			sprHurt = spr_WaddleDoo_Normal_Hurt;
 			sprDeath = spr_WaddleDoo_Normal_Death;
 			sprBeamAttack1 = spr_WaddleDoo_Normal_Attack;
+			#endregion
+			break;
+			
+			case "bandit":
+			#region Palettes
+			var pal;
+			var i = 0;
+			pal[i] = spr_WaddleDoo_Bandit_Palette_GreenThief;
+			#endregion
+		
+			#region Sprites
+			maskIndex = spr_16Square_Mask;
+			sprIdle = spr_WaddleDoo_Bandit_Idle;
+			sprWalk = spr_WaddleDoo_Bandit_Walk;
+			sprRun = spr_WaddleDoo_Bandit_Walk;
+			sprRunTurn = spr_WaddleDoo_Bandit_RunTurn;
+			sprJump = spr_WaddleDoo_Bandit_Jump;
+			sprFall = spr_WaddleDoo_Bandit_Fall;
+			sprSquish = spr_WaddleDoo_Bandit_Idle;
+			sprDuck = spr_WaddleDoo_Bandit_Duck;
+			sprSlide = spr_WaddleDoo_Bandit_Slide;
+			sprSlideEnd = spr_WaddleDoo_Bandit_Slide;
+			sprEnter = spr_WaddleDoo_Bandit_Walk;
+			sprClimbUp = spr_WaddleDoo_Bandit_ClimbUp;
+			sprClimbDown = spr_WaddleDoo_Bandit_ClimbDown;
+			sprHurt = spr_WaddleDoo_Bandit_Hurt;
+			sprDeath = spr_WaddleDoo_Bandit_Death;
+			sprBeamAttack1 = spr_WaddleDoo_Bandit_Attack;
 			#endregion
 			break;
 		}
@@ -3935,9 +3964,9 @@ else if (upgradeSetupTimer == 0)
 	mysticBeamVortexInAJarUpgrade = global.mysticBeamVortexInAJarUpgradeEquipped;
 	stoneRockCandyUpgrade = global.stoneRockCandyUpgradeEquipped;
 	stoneComboCobaltUpgrade = global.stoneComboCobaltUpgradeEquipped;
-	bombMultiBombUpgrade = global.bombMultiBombUpgradeEquipped;
+	bombLightShellsUpgrade = global.bombLightShellsUpgradeEquipped;
 	bombEyeBombUpgrade = global.bombEyeBombUpgradeEquipped;
-	bombSmartBombUpgrade = global.bombSmartBombUpgradeEquipped;
+	bombStickyBombUpgrade = global.bombStickyBombUpgradeEquipped;
 	bombMagmaBombUpgrade = global.bombMagmaBombUpgradeEquipped;
 	bombExplosivePowderUpgrade = global.bombExplosivePowderUpgradeEquipped;
 	fireMagicCharcoalUpgrade = global.fireMagicCharcoalUpgradeEquipped;
