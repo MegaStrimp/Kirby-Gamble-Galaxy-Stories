@@ -357,9 +357,9 @@
             "Description": "Una caccoletta senziente che cammina a zonzo, anche se a dire il vero un obiettivo non gli manca."
         },
         
-        "Search":
+        "Searches":
         {
-            "Title": "Search",
+            "Title": "Searches",
             
             "Description": "Una piccola bomba che esplode se ti avvicini troppo ad essa, attento!"
         },
@@ -1393,6 +1393,44 @@
 		
 		"Secret": "Segreto"
     },
+	
+	"Acts":
+	{
+		"C1A1":
+		{
+			"Index": "",
+			
+			"Title": ""
+		},
+		
+		"C1A2":
+		{
+			"Index": "",
+			
+			"Title": ""
+		},
+		
+		"C1A3":
+		{
+			"Index": "",
+			
+			"Title": ""
+		},
+		
+		"C1A4":
+		{
+			"Index": "",
+			
+			"Title": ""
+		},
+		
+		"C1A5":
+		{
+			"Index": "",
+			
+			"Title": ""
+		}
+	},
 	
 	"Stages":
 	{

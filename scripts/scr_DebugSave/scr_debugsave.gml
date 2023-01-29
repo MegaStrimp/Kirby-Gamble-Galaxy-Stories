@@ -189,7 +189,7 @@ function scr_DebugSave()
 	global.bestiaryEnemiesMysticDooUnlocked = true;
 	global.bestiaryEnemiesBouncyUnlocked = true;
 	global.bestiaryEnemiesMrBoogieUnlocked = true;
-	global.bestiaryEnemiesSearchUnlocked = true;
+	global.bestiaryEnemiesSearchesUnlocked = true;
 	global.bestiaryEnemiesHiveDroneUnlocked = true;
 	global.bestiaryEnemiesWapodUnlocked = true;
 	global.bestiaryEnemiesFlamebelchUnlocked = true;

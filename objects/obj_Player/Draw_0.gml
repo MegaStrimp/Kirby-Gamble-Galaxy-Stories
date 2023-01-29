@@ -94,10 +94,11 @@ if ((blackAlphaBox) or (global.tutorial))
 
 if (micFlash)
 {
-	draw_set_alpha(.75);
+	draw_set_alpha(.5);
 	draw_set_color(c_orange);
 	draw_rectangle(camera_get_view_x(gameView),camera_get_view_y(gameView),camera_get_view_x(gameView) + camera_get_view_width(gameView),camera_get_view_y(gameView) + camera_get_view_height(gameView),0);
 	draw_set_alpha(1);
+	draw_set_color(c_white);
 }
 
 //Draw Self
@@ -109,7 +110,11 @@ if (((sprite_index != sprStoneAttack1Common) and (sprite_index != sprStoneAttack
 	{
 		paletteFlash = 2;
 	
-		if ((cAbility != playerAbilities.none) and (state = playerStates.carry) and (!spit)) paletteFlash = 4;
+		if (
+		((cAbility != playerAbilities.none) and (state = playerStates.carry) and (!spit))
+		or ((playerAbility == playerAbilities.crash) and (!attack))
+		or ((playerAbility == playerAbilities.mic) and (!attack))
+		) paletteFlash = 4;
 	}
 	if (death)
 	{
@@ -293,8 +298,8 @@ if (global.debugOverlay)
 {
 	draw_set_color(c_black);
 	var i = 0;
-	draw_text(x - 12,y - (12 * (i + 1)),"hsp - " + string(hsp));
+	draw_text(x - 12,y - (12 * (i + 1)),"dialogye - " + string(obj_Camera.shakeX));
 	i += 1;
-	draw_text(x - 12,y - (12 * (i + 1)),"dir - " + string(dir));
+	draw_text(x - 12,y - (12 * (i + 1)),"dir - " + string(obj_Camera.shakeY));
 	i += 1;
 }

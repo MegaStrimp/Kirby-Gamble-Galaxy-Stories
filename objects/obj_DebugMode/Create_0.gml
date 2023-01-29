@@ -76,7 +76,7 @@ enum debugObject
 	mysticDoo,
 	bouncy,
 	mrBoogie,
-	search,
+	searches,
 	hiveDrone,
 	wapod,
 	flamebelch,

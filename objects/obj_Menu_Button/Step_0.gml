@@ -337,6 +337,7 @@ if (!global.pause)
 						{
 							if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
 							audio_play_sound(snd_ButtonChange,0,false);
+							trophySelection -= 12;
 							page -= 1;
 						}
 					}
@@ -352,6 +353,7 @@ if (!global.pause)
 						{
 							if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
 							audio_play_sound(snd_ButtonChange,0,false);
+							trophySelection += 12;
 							page += 1;
 						}
 					}

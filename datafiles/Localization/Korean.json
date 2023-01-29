@@ -353,9 +353,9 @@
             "Description": "It's a sentient booger that seems to walk aimlessly, but in reality it’s looking for some tissues."
         },
         
-        "Search":
+        "Searches":
         {
-            "Title": "Search",
+            "Title": "Searches",
             
             "Description": "A small bomb with a face. If you get too close, it'll detonate, so steer clear."
         },
@@ -1389,6 +1389,44 @@
 		
 		"Secret": "Secret"
     },
+	
+	"Acts":
+	{
+		"C1A1":
+		{
+			"Index": "",
+			
+			"Title": ""
+		},
+		
+		"C1A2":
+		{
+			"Index": "",
+			
+			"Title": ""
+		},
+		
+		"C1A3":
+		{
+			"Index": "",
+			
+			"Title": ""
+		},
+		
+		"C1A4":
+		{
+			"Index": "",
+			
+			"Title": ""
+		},
+		
+		"C1A5":
+		{
+			"Index": "",
+			
+			"Title": ""
+		}
+	},
 	
 	"Stages":
 	{

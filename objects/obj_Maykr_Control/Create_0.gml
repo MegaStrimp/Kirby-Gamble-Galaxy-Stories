@@ -85,7 +85,7 @@ enum maykrObjects
 	shotzo,
 	mysticDoo,
 	bouncy,
-	search,
+	searches,
 	wapod,
 	cappy,
 	coconut,

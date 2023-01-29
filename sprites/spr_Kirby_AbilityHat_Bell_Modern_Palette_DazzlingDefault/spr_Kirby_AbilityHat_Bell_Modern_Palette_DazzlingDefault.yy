@@ -21,8 +21,8 @@
   "width": 4,
   "height": 19,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "Characters",
+    "path": "texturegroups/Characters",
   },
   "swatchColours": null,
   "gridX": 0,

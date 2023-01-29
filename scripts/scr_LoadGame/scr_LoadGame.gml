@@ -222,7 +222,7 @@ function scr_LoadGame(argument0)
 	global.bestiaryEnemiesMysticDooUnlocked = ini_read_real("unlocks","bestiaryEnemiesMysticDooUnlocked",false);
 	global.bestiaryEnemiesBouncyUnlocked = ini_read_real("unlocks","bestiaryEnemiesBouncyUnlocked",false);
 	global.bestiaryEnemiesMrBoogieUnlocked = ini_read_real("unlocks","bestiaryEnemiesMrBoogieUnlocked",false);
-	global.bestiaryEnemiesSearchUnlocked = ini_read_real("unlocks","bestiaryEnemiesSearchUnlocked",false);
+	global.bestiaryEnemiesSearchesUnlocked = ini_read_real("unlocks","bestiaryEnemiesSearchesUnlocked",false);
 	global.bestiaryEnemiesHiveDroneUnlocked = ini_read_real("unlocks","bestiaryEnemiesHiveDroneUnlocked",false);
 	global.bestiaryEnemiesWapodUnlocked = ini_read_real("unlocks","bestiaryEnemiesWapodUnlocked",false);
 	global.bestiaryEnemiesFlamebelchUnlocked = ini_read_real("unlocks","bestiaryEnemiesFlamebelchUnlocked",false);
@@ -340,6 +340,8 @@ function scr_LoadGame(argument0)
 	global.hatTypeWaterP1 = ini_read_real("playerCustomization","hatTypeWaterP1",abilityHatSkins.water_modern);
 	global.hatTypeSleepP1 = ini_read_real("playerCustomization","hatTypeSleepP1",abilityHatSkins.sleep_kssu);
 	global.hatTypeScanP1 = ini_read_real("playerCustomization","hatTypeScanP1",abilityHatSkins.scan_kssu);
+	global.hatTypeCrashP1 = ini_read_real("playerCustomization","hatTypeCrashP1",abilityHatSkins.crash_kssu);
+	global.hatTypeMicP1 = ini_read_real("playerCustomization","hatTypeMicP1",abilityHatSkins.mic_kssu);
 	
 	global.hatTypeCutterP2 = ini_read_real("playerCustomization","hatTypeCutterP2",abilityHatSkins.cutter_kssu);
 	global.hatTypeBeamP2 = ini_read_real("playerCustomization","hatTypeBeamP2",abilityHatSkins.beam_kssu);
@@ -366,6 +368,8 @@ function scr_LoadGame(argument0)
 	global.hatTypeWaterP2 = ini_read_real("playerCustomization","hatTypeWaterP2",abilityHatSkins.water_modern);
 	global.hatTypeSleepP2 = ini_read_real("playerCustomization","hatTypeSleepP2",abilityHatSkins.sleep_kssu);
 	global.hatTypeScanP2 = ini_read_real("playerCustomization","hatTypeScanP2",abilityHatSkins.scan_kssu);
+	global.hatTypeCrashP2 = ini_read_real("playerCustomization","hatTypeCrashP2",abilityHatSkins.crash_kssu);
+	global.hatTypeMicP2 = ini_read_real("playerCustomization","hatTypeMicP2",abilityHatSkins.mic_kssu);
 	
 	global.hatTypeCutterP3 = ini_read_real("playerCustomization","hatTypeCutterP3",abilityHatSkins.cutter_kssu);
 	global.hatTypeBeamP3 = ini_read_real("playerCustomization","hatTypeBeamP3",abilityHatSkins.beam_kssu);
@@ -392,6 +396,8 @@ function scr_LoadGame(argument0)
 	global.hatTypeWaterP3 = ini_read_real("playerCustomization","hatTypeWaterP3",abilityHatSkins.water_modern);
 	global.hatTypeSleepP3 = ini_read_real("playerCustomization","hatTypeSleepP3",abilityHatSkins.sleep_kssu);
 	global.hatTypeScanP3 = ini_read_real("playerCustomization","hatTypeScanP3",abilityHatSkins.scan_kssu);
+	global.hatTypeCrashP3 = ini_read_real("playerCustomization","hatTypeCrashP3",abilityHatSkins.crash_kssu);
+	global.hatTypeMicP3 = ini_read_real("playerCustomization","hatTypeMicP3",abilityHatSkins.mic_kssu);
 	
 	global.hatTypeCutterP4 = ini_read_real("playerCustomization","hatTypeCutterP4",abilityHatSkins.cutter_kssu);
 	global.hatTypeBeamP4 = ini_read_real("playerCustomization","hatTypeBeamP4",abilityHatSkins.beam_kssu);
@@ -418,6 +424,8 @@ function scr_LoadGame(argument0)
 	global.hatTypeWaterP4 = ini_read_real("playerCustomization","hatTypeWaterP4",abilityHatSkins.water_modern);
 	global.hatTypeSleepP4 = ini_read_real("playerCustomization","hatTypeSleepP4",abilityHatSkins.sleep_kssu);
 	global.hatTypeScanP4 = ini_read_real("playerCustomization","hatTypeScanP4",abilityHatSkins.scan_kssu);
+	global.hatTypeCrashP4 = ini_read_real("playerCustomization","hatTypeCrashP4",abilityHatSkins.crash_kssu);
+	global.hatTypeMicP4 = ini_read_real("playerCustomization","hatTypeMicP4",abilityHatSkins.mic_kssu);
 	
 	global.hatPaletteCutterKSSUP1 = ini_read_real("playerCustomization","hatPaletteCutterKSSUP1",abilityHatPaints.cutter_kssu_slicingGold);
 	global.hatPaletteBeamKSSUP1 = ini_read_real("playerCustomization","hatPaletteBeamKSSUP1",abilityHatPaints.beam_kssu_sparklingBeam);
@@ -450,6 +458,8 @@ function scr_LoadGame(argument0)
 	global.hatPaletteBellModernP1 = ini_read_real("playerCustomization","hatPaletteBellModernP1",abilityHatPaints.bell_modern_dazzlingDefault);
 	global.hatPaletteSleepKSSUP1 = ini_read_real("playerCustomization","hatPaletteSleepKSSUP1",abilityHatPaints.sleep_kssu_bubblyGreen);
 	global.hatPaletteScanKSSUP1 = ini_read_real("playerCustomization","hatPaletteScanKSSUP1",abilityHatPaints.scan_kssu_metallicRed);
+	global.hatPaletteCrashKSSUP1 = ini_read_real("playerCustomization","hatPaletteCrashKSSUP1",abilityHatPaints.crash_kssu_none);
+	global.hatPaletteMicKSSUP1 = ini_read_real("playerCustomization","hatPaletteMicKSSUP1",abilityHatPaints.mic_kssu_loudMike);
 	
 	global.hatPaletteCutterKSSUP2 = ini_read_real("playerCustomization","hatPaletteCutterKSSUP2",abilityHatPaints.cutter_kssu_slicingGold);
 	global.hatPaletteBeamKSSUP2 = ini_read_real("playerCustomization","hatPaletteBeamKSSUP2",abilityHatPaints.beam_kssu_sparklingBeam);
@@ -482,6 +492,8 @@ function scr_LoadGame(argument0)
 	global.hatPaletteBellModernP2 = ini_read_real("playerCustomization","hatPaletteBellModernP2",abilityHatPaints.bell_modern_dazzlingDefault);
 	global.hatPaletteSleepKSSUP2 = ini_read_real("playerCustomization","hatPaletteSleepKSSUP2",abilityHatPaints.sleep_kssu_bubblyGreen);
 	global.hatPaletteScanKSSUP2 = ini_read_real("playerCustomization","hatPaletteScanKSSUP2",abilityHatPaints.scan_kssu_metallicRed);
+	global.hatPaletteCrashKSSUP2 = ini_read_real("playerCustomization","hatPaletteCrashKSSUP2",abilityHatPaints.crash_kssu_none);
+	global.hatPaletteMicKSSUP2 = ini_read_real("playerCustomization","hatPaletteMicKSSUP2",abilityHatPaints.mic_kssu_loudMike);
 	
 	global.hatPaletteCutterKSSUP3 = ini_read_real("playerCustomization","hatPaletteCutterKSSUP3",abilityHatPaints.cutter_kssu_slicingGold);
 	global.hatPaletteBeamKSSUP3 = ini_read_real("playerCustomization","hatPaletteBeamKSSUP3",abilityHatPaints.beam_kssu_sparklingBeam);
@@ -514,6 +526,8 @@ function scr_LoadGame(argument0)
 	global.hatPaletteBellModernP3 = ini_read_real("playerCustomization","hatPaletteBellModernP3",abilityHatPaints.bell_modern_dazzlingDefault);
 	global.hatPaletteSleepKSSUP3 = ini_read_real("playerCustomization","hatPaletteSleepKSSUP3",abilityHatPaints.sleep_kssu_bubblyGreen);
 	global.hatPaletteScanKSSUP3 = ini_read_real("playerCustomization","hatPaletteScanKSSUP3",abilityHatPaints.scan_kssu_metallicRed);
+	global.hatPaletteCrashKSSUP3 = ini_read_real("playerCustomization","hatPaletteCrashKSSUP3",abilityHatPaints.crash_kssu_none);
+	global.hatPaletteMicKSSUP3 = ini_read_real("playerCustomization","hatPaletteMicKSSUP3",abilityHatPaints.mic_kssu_loudMike);
 	
 	global.hatPaletteCutterKSSUP4 = ini_read_real("playerCustomization","hatPaletteCutterKSSUP4",abilityHatPaints.cutter_kssu_slicingGold);
 	global.hatPaletteBeamKSSUP4 = ini_read_real("playerCustomization","hatPaletteBeamKSSUP4",abilityHatPaints.beam_kssu_sparklingBeam);
@@ -546,6 +560,8 @@ function scr_LoadGame(argument0)
 	global.hatPaletteBellModernP4 = ini_read_real("playerCustomization","hatPaletteBellModernP4",abilityHatPaints.bell_modern_dazzlingDefault);
 	global.hatPaletteSleepKSSUP4 = ini_read_real("playerCustomization","hatPaletteSleepKSSUP4",abilityHatPaints.sleep_kssu_bubblyGreen);
 	global.hatPaletteScanKSSUP4 = ini_read_real("playerCustomization","hatPaletteScanKSSUP4",abilityHatPaints.scan_kssu_metallicRed);
+	global.hatPaletteCrashKSSUP4 = ini_read_real("playerCustomization","hatPaletteCrashKSSUP4",abilityHatPaints.crash_kssu_none);
+	global.hatPaletteMicKSSUP4 = ini_read_real("playerCustomization","hatPaletteMicKSSUP4",abilityHatPaints.mic_kssu_loudMike);
 	
 	global.cutterPropellerWingUpgradeEquipped = ini_read_real("playerCustomization","cutterPropellerWingUpgradeEquipped",false);
 	global.cutterMotorCutterUpgradeEquipped = ini_read_real("playerCustomization","cutterMotorCutterUpgradeEquipped",false);

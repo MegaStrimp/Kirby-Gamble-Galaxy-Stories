@@ -350,7 +350,7 @@
         {
             "Title": "Mystic Doo",
             
-            "Description": "A Waddle Doo warped by the power of Flux. By utilizing its new power it can create a beam barrier, which can also be launched forward"
+            "Description": "A Waddle Doo warped by the power of Flux. By utilizing its new power it can create a beam barrier, which can also be launched forward."
         },
         
         "Bouncy":
@@ -367,9 +367,9 @@
             "Description": "It's a sentient booger that seems to walk aimlessly, but in reality it’s looking for some tissues."
         },
         
-        "Search":
+        "Searches":
         {
-            "Title": "Search",
+            "Title": "Searches",
             
             "Description": "A small bomb with a face. If you get too close, it'll detonate, so steer clear."
         },
@@ -1403,6 +1403,44 @@
 		
 		"Secret": "Secret"
     },
+	
+	"Acts":
+	{
+		"C1A1":
+		{
+			"Index": "Chapter 1 - Act 1",
+			
+			"Title": "Finding Gamble"
+		},
+		
+		"C1A2":
+		{
+			"Index": "Chapter 1 - Act 2",
+			
+			"Title": "Descend of the Friends"
+		},
+		
+		"C1A3":
+		{
+			"Index": "Chapter 1 - Act 3",
+			
+			"Title": "Enter Fluxbender"
+		},
+		
+		"C1A4":
+		{
+			"Index": "Chapter 1 - Act 4",
+			
+			"Title": "Cosmic Hunt"
+		},
+		
+		"C1A5":
+		{
+			"Index": "Chapter 1 - Act 5",
+			
+			"Title": "Riding the Worm"
+		}
+	},
 	
 	"Stages":
 	{

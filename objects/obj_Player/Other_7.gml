@@ -182,7 +182,7 @@ if ((sprite_index == sprAbilityChange) and (state == playerStates.swallow))
 
 //Cutter Attack 1
 
-if (((attackNumber == playerAttacks.cutterNormal) or (attackNumber == "cutterChargeAttack")) and (sprite_index == sprCutterAttack1))
+if (((attackNumber == playerAttacks.cutterNormal) or (attackNumber == playerAttacks.cutterChargeAttack)) and (sprite_index == sprCutterAttack1))
 {
 	attack = false;
 	attackable = true;
@@ -616,6 +616,81 @@ if ((attack) and (sprite_index == sprScanReady))
 	scanProjectile.enemy = false;
 	scanProjectile.paletteIndex = paletteIndex;
 	sprite_index = sprScan;
+	image_index = 0;
+}
+
+//Mic Attack 1 End
+
+if ((attack) and (sprite_index == sprMicAttack1End))
+{
+	image_index = image_number - 1;
+}
+
+//Mic Attack 1
+
+if ((attack) and (sprite_index == sprMicAttack1))
+{
+	image_index = 0;
+}
+
+//Mic Attack Ready 1
+
+if ((attack) and (sprite_index == sprMicAttack1Ready))
+{
+	if (audio_is_playing(snd_Mic1)) audio_stop_sound(snd_Mic1);
+	audio_play_sound(snd_Mic1,0,false);
+	canMicFlash = true;
+	sprite_index = sprMicAttack1;
+	image_index = 0;
+}
+
+//Mic Attack 2 End
+
+if ((attack) and (sprite_index == sprMicAttack2End))
+{
+	image_index = image_number - 1;
+}
+
+//Mic Attack 2
+
+if ((attack) and (sprite_index == sprMicAttack2))
+{
+	image_index = 0;
+}
+
+//Mic Attack Ready 2
+
+if ((attack) and (sprite_index == sprMicAttack2Ready))
+{
+	if (audio_is_playing(snd_Mic2)) audio_stop_sound(snd_Mic2);
+	audio_play_sound(snd_Mic2,0,false);
+	canMicFlash = true;
+	sprite_index = sprMicAttack2;
+	image_index = 0;
+}
+
+//Mic Attack 3 End
+
+if ((attack) and (sprite_index == sprMicAttack3End))
+{
+	image_index = image_number - 1;
+}
+
+//Mic Attack 3
+
+if ((attack) and (sprite_index == sprMicAttack3))
+{
+	image_index = 0;
+}
+
+//Mic Attack Ready 3
+
+if ((attack) and (sprite_index == sprMicAttack3Ready))
+{
+	if (audio_is_playing(snd_Mic3)) audio_stop_sound(snd_Mic3);
+	audio_play_sound(snd_Mic3,0,false);
+	canMicFlash = true;
+	sprite_index = sprMicAttack3;
 	image_index = 0;
 }
 

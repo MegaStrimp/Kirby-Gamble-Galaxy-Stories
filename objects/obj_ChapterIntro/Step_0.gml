@@ -1,20 +1,29 @@
 ///@description Main
 
-//Inputs
-
+#region Inputs
 scr_Player_Inputs(0);
+#endregion
 
-//Press Enter
-
-if ((!instance_exists(obj_Fade)) and (keyStartPressed)) destroyTimer = 0;
-
-//Destroy Timer
-
-if (destroyTimer > 0)
+#region Play Sound
+if (!soundPlayed)
 {
-	destroyTimer -= 1;
+	var sound = actsArray[# global.chapterIntro,7];
+	if (audio_is_playing(sound)) audio_stop_sound(sound);
+	audio_play_sound(sound,0,false);
+	soundPlayed = true;
 }
-else if (destroyTimer == 0)
+#endregion
+
+#region Skip
+if ((roomChangeTimer != -1) and (keyStartPressed)) roomChangeTimer = 0;
+#endregion
+
+#region Room Change Timer
+if (roomChangeTimer > 0)
+{
+	roomChangeTimer -= 1;
+}
+else if (roomChangeTimer == 0)
 {
 	var targetRoom = global.roomNext;
 	
@@ -23,5 +32,6 @@ else if (destroyTimer == 0)
 	fade.alpha = 1;
 	fade.state = 1;
 	fade.color = c_white;
-	destroyTimer = -1;
+	roomChangeTimer = -1;
 }
+#endregion

@@ -1784,6 +1784,58 @@ function scr_Player_HatPalette(argument0,argument1)
 				break;
 			}
 			break;
+			
+			case playerAbilities.mic:
+			switch (player)
+			{
+				case 0:
+				var altHatToCheck = global.hatTypeMicP1;
+				break;
+				
+				case 1:
+				var altHatToCheck = global.hatTypeMicP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeMicP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeMicP4;
+				break;
+			}
+			
+			switch (altHatToCheck)
+			{
+				case abilityHatSkins.mic_kssu:
+				switch (player)
+				{
+					case 0:
+					var paletteIndexToCheck = global.hatPaletteMicKSSUP1;
+					break;
+					
+					case 1:
+					var paletteIndexToCheck = global.hatPaletteMicKSSUP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteMicKSSUP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteMicKSSUP4;
+					break;
+				}
+				
+				switch (paletteIndexToCheck)
+				{
+					case abilityHatPaints.mic_kssu_loudMike:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Mic_KSSU_Palette_LoudMike;
+					break;
+				}
+				break;
+			}
+			break;
 		}
 		break;
 	}

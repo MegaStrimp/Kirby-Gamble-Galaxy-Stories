@@ -15,6 +15,11 @@ else
 	window_set_cursor(cr_default);
 }
 
+with (obj_Dialogue)
+{
+	global.dialogueFlowing = dialogueFlowing;
+}
+
 //Debug Mode
 
 if ((global.debug) and (global.gamemode != gamemodes.maykr))

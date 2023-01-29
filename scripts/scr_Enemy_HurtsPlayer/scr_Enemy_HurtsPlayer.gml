@@ -282,6 +282,10 @@ function scr_Enemy_HurtsPlayer(argument0)
 					abilityDropStar.sprite_index = spr_AbilityStar_Sleep;
 					break;
 					
+					case playerAbilities.mic:
+					abilityDropStar.sprite_index = spr_AbilityStar_Mic;
+					break;
+					
 					default:
 					abilityDropStar.sprite_index = spr_AbilityStar_Normal;
 					break;
@@ -290,18 +294,26 @@ function scr_Enemy_HurtsPlayer(argument0)
 				{
 					case 0:
 					global.abilityP1 = playerAbilities.none;
+					abilityDropStar.micCount = global.micCountP1;
+					global.micCountP1 = 0;
 					break;
 					
 					case 1:
 					global.abilityP2 = playerAbilities.none;
+					abilityDropStar.micCount = global.micCountP2;
+					global.micCountP2 = 0;
 					break;
 					
 					case 2:
 					global.abilityP3 = playerAbilities.none;
+					abilityDropStar.micCount = global.micCountP3;
+					global.micCountP3 = 0;
 					break;
 					
 					case 3:
 					global.abilityP4 = playerAbilities.none;
+					abilityDropStar.micCount = global.micCountP4;
+					global.micCountP4 = 0;
 					break;
 				}
 			}
@@ -373,12 +385,16 @@ function scr_Enemy_HurtsPlayer(argument0)
 			takenDamageType = damageTypes.none;
 			var hitDmg = collidedPlayer.dmg;
 			if (collidedPlayer.hasInvinCandy) hitDmg = 100;
-			if (hitDmg >= hp)
+			if (hitDmg >= (hp + 50))
 			{
 				hurtTimer = hurtStopTimerMax + 5;
 				if ((hasDeathKnockback) and (takenDamageType != damageTypes.ice)) hurtStopTimer = hurtStopTimerMax;
 			    shake = 1;
-			    if (instance_exists(obj_Camera)) obj_Camera.shake = 3;
+				with (obj_Camera)
+				{
+					shakeX = 3;
+					shakeY = 3;
+				}
 			}
 			else
 			{

@@ -21,8 +21,8 @@
   "width": 25,
   "height": 19,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "Enemies",
+    "path": "texturegroups/Enemies",
   },
   "swatchColours": null,
   "gridX": 0,

@@ -4721,6 +4721,59 @@ function scr_Player_HatShadow(argument0,argument1)
 				break;
 			}
 			break;
+			
+			case playerAbilities.mic:
+			switch (player)
+			{
+				case 0:
+				var altHatToCheck = global.hatTypeMicP1;
+				break;
+				
+				case 1:
+				var altHatToCheck = global.hatTypeMicP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeMicP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeMicP4;
+				break;
+			}
+			
+			switch (altHatToCheck)
+			{
+				case abilityHatSkins.mic_kssu:
+				switch (sprite_index)
+				{
+					case sprMicAttack2Ready:
+					hatShadowIndex = spr_Kirby_HatShadow_Mic_KSSU_Attack2Ready;
+					break;
+					
+					case sprMicAttack2:
+					hatShadowIndex = spr_Kirby_HatShadow_Mic_KSSU_Attack2;
+					break;
+					
+					case sprMicAttack2End:
+					hatShadowIndex = spr_Kirby_HatShadow_Mic_KSSU_Attack2End;
+					break;
+					
+					case sprMicAttack3Ready:
+					hatShadowIndex = spr_Kirby_HatShadow_Mic_KSSU_Attack3Ready;
+					break;
+					
+					case sprMicAttack3:
+					hatShadowIndex = spr_Kirby_HatShadow_Mic_KSSU_Attack3;
+					break;
+					
+					case sprMicAttack3End:
+					hatShadowIndex = spr_Kirby_HatShadow_Mic_KSSU_Attack3End;
+					break;
+				}
+				break;
+			}
+			break;
 		}
 		break;
 	}

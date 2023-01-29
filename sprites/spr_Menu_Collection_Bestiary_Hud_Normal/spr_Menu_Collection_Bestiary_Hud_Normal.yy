@@ -10,10 +10,10 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 1,
-  "bbox_right": 479,
-  "bbox_top": 2,
-  "bbox_bottom": 266,
+  "bbox_left": 4,
+  "bbox_right": 475,
+  "bbox_top": 27,
+  "bbox_bottom": 265,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -28,7 +28,7 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0ae136ab-baa6-4a6b-a564-ec29bc72b991",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ea0b3fff-436f-4f5d-9208-b65297353b52",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -45,7 +45,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"34083fa9-83e4-4a16-baab-9ebb55fb158a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0ae136ab-baa6-4a6b-a564-ec29bc72b991","path":"sprites/spr_Menu_Collection_Bestiary_Hud_Normal/spr_Menu_Collection_Bestiary_Hud_Normal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e5ca7d5c-3440-4e4a-af29-4be1fe9f0f5a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ea0b3fff-436f-4f5d-9208-b65297353b52","path":"sprites/spr_Menu_Collection_Bestiary_Hud_Normal/spr_Menu_Collection_Bestiary_Hud_Normal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,

@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "spr_Menu_StageSelect_Hud_Back3",
   "bboxMode": 0,
-  "collisionKind": 1,
+  "collisionKind": 0,
   "type": 0,
   "origin": 6,
   "preMultiplyAlpha": false,

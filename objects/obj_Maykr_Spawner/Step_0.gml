@@ -298,8 +298,8 @@ else if (activeState == 1)
 		spawnedStateMax = 0;
 		break;
 		
-		case obj_Search:
-		spawnedName = "Search";
+		case obj_Searches:
+		spawnedName = "Searches";
 		spawnedStateMax = 0;
 		break;
 		

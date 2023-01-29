@@ -3,6 +3,8 @@
 
 function scr_SaveGame(argument0)
 {
+	if (file_exists(argument0)) file_delete(argument0);
+	
 	ini_open(argument0);
 	
 	ini_write_real("stats","gameTimeSeconds",global.gameTimeSeconds);
@@ -221,7 +223,7 @@ function scr_SaveGame(argument0)
 	ini_write_real("unlocks","bestiaryEnemiesMysticDooUnlocked",global.bestiaryEnemiesMysticDooUnlocked);
 	ini_write_real("unlocks","bestiaryEnemiesBouncyUnlocked",global.bestiaryEnemiesBouncyUnlocked);
 	ini_write_real("unlocks","bestiaryEnemiesMrBoogieUnlocked",global.bestiaryEnemiesMrBoogieUnlocked);
-	ini_write_real("unlocks","bestiaryEnemiesSearchUnlocked",global.bestiaryEnemiesSearchUnlocked);
+	ini_write_real("unlocks","bestiaryEnemiesSearchesUnlocked",global.bestiaryEnemiesSearchesUnlocked);
 	ini_write_real("unlocks","bestiaryEnemiesHiveDroneUnlocked",global.bestiaryEnemiesHiveDroneUnlocked);
 	ini_write_real("unlocks","bestiaryEnemiesWapodUnlocked",global.bestiaryEnemiesWapodUnlocked);
 	ini_write_real("unlocks","bestiaryEnemiesFlamebelchUnlocked",global.bestiaryEnemiesFlamebelchUnlocked);
@@ -339,6 +341,8 @@ function scr_SaveGame(argument0)
 	ini_write_real("playerCustomization","hatTypeWaterP1",global.hatTypeWaterP1);
 	ini_write_real("playerCustomization","hatTypeSleepP1",global.hatTypeSleepP1);
 	ini_write_real("playerCustomization","hatTypeScanP1",global.hatTypeScanP1);
+	ini_write_real("playerCustomization","hatTypeCrashP1",global.hatTypeCrashP1);
+	ini_write_real("playerCustomization","hatTypeMicP1",global.hatTypeMicP1);
 
 	ini_write_real("playerCustomization","hatTypeCutterP2",global.hatTypeCutterP2);
 	ini_write_real("playerCustomization","hatTypeBeamP2",global.hatTypeBeamP2);
@@ -365,6 +369,8 @@ function scr_SaveGame(argument0)
 	ini_write_real("playerCustomization","hatTypeWaterP2",global.hatTypeWaterP2);
 	ini_write_real("playerCustomization","hatTypeSleepP2",global.hatTypeSleepP2);
 	ini_write_real("playerCustomization","hatTypeScanP2",global.hatTypeScanP2);
+	ini_write_real("playerCustomization","hatTypeCrashP2",global.hatTypeCrashP2);
+	ini_write_real("playerCustomization","hatTypeMicP2",global.hatTypeMicP2);
 
 	ini_write_real("playerCustomization","hatTypeCutterP3",global.hatTypeCutterP3);
 	ini_write_real("playerCustomization","hatTypeBeamP3",global.hatTypeBeamP3);
@@ -391,6 +397,8 @@ function scr_SaveGame(argument0)
 	ini_write_real("playerCustomization","hatTypeWaterP3",global.hatTypeWaterP3);
 	ini_write_real("playerCustomization","hatTypeSleepP3",global.hatTypeSleepP3);
 	ini_write_real("playerCustomization","hatTypeScanP3",global.hatTypeScanP3);
+	ini_write_real("playerCustomization","hatTypeCrashP3",global.hatTypeCrashP3);
+	ini_write_real("playerCustomization","hatTypeMicP3",global.hatTypeMicP3);
 
 	ini_write_real("playerCustomization","hatTypeCutterP4",global.hatTypeCutterP4);
 	ini_write_real("playerCustomization","hatTypeBeamP4",global.hatTypeBeamP4);
@@ -417,6 +425,8 @@ function scr_SaveGame(argument0)
 	ini_write_real("playerCustomization","hatTypeWaterP4",global.hatTypeWaterP4);
 	ini_write_real("playerCustomization","hatTypeSleepP4",global.hatTypeSleepP4);
 	ini_write_real("playerCustomization","hatTypeScanP4",global.hatTypeScanP4);
+	ini_write_real("playerCustomization","hatTypeCrashP4",global.hatTypeCrashP4);
+	ini_write_real("playerCustomization","hatTypeMicP4",global.hatTypeMicP4);
 
 	ini_write_real("playerCustomization","hatPaletteCutterKSSUP1",global.hatPaletteCutterKSSUP1);
 	ini_write_real("playerCustomization","hatPaletteBeamKSSUP1",global.hatPaletteBeamKSSUP1);
@@ -449,6 +459,8 @@ function scr_SaveGame(argument0)
 	ini_write_real("playerCustomization","hatPaletteBellModernP1",global.hatPaletteBellModernP1);
 	ini_write_real("playerCustomization","hatPaletteSleepKSSUP1",global.hatPaletteSleepKSSUP1);
 	ini_write_real("playerCustomization","hatPaletteScanKSSUP1",global.hatPaletteScanKSSUP1);
+	ini_write_real("playerCustomization","hatPaletteCrashKSSUP1",global.hatPaletteCrashKSSUP1);
+	ini_write_real("playerCustomization","hatPaletteMicKSSUP1",global.hatPaletteMicKSSUP1);
 
 	ini_write_real("playerCustomization","hatPaletteCutterKSSUP2",global.hatPaletteCutterKSSUP2);
 	ini_write_real("playerCustomization","hatPaletteBeamKSSUP2",global.hatPaletteBeamKSSUP2);
@@ -480,6 +492,8 @@ function scr_SaveGame(argument0)
 	ini_write_real("playerCustomization","hatPaletteHammerKSSUP2",global.hatPaletteHammerKSSUP2);
 	ini_write_real("playerCustomization","hatPaletteBellModernP2",global.hatPaletteBellModernP2);
 	ini_write_real("playerCustomization","hatPaletteScanKSSUP2",global.hatPaletteScanKSSUP2);
+	ini_write_real("playerCustomization","hatPaletteCrashKSSUP2",global.hatPaletteCrashKSSUP2);
+	ini_write_real("playerCustomization","hatPaletteMicKSSUP2",global.hatPaletteMicKSSUP2);
 
 	ini_write_real("playerCustomization","hatPaletteCutterKSSUP3",global.hatPaletteCutterKSSUP3);
 	ini_write_real("playerCustomization","hatPaletteBeamKSSUP3",global.hatPaletteBeamKSSUP3);
@@ -511,6 +525,8 @@ function scr_SaveGame(argument0)
 	ini_write_real("playerCustomization","hatPaletteHammerKSSUP3",global.hatPaletteHammerKSSUP3);
 	ini_write_real("playerCustomization","hatPaletteBellModernP3",global.hatPaletteBellModernP3);
 	ini_write_real("playerCustomization","hatPaletteScanKSSUP3",global.hatPaletteScanKSSUP3);
+	ini_write_real("playerCustomization","hatPaletteCrashKSSUP3",global.hatPaletteCrashKSSUP3);
+	ini_write_real("playerCustomization","hatPaletteMicKSSUP3",global.hatPaletteMicKSSUP3);
 
 	ini_write_real("playerCustomization","hatPaletteCutterKSSUP4",global.hatPaletteCutterKSSUP4);
 	ini_write_real("playerCustomization","hatPaletteBeamKSSUP4",global.hatPaletteBeamKSSUP4);
@@ -542,6 +558,8 @@ function scr_SaveGame(argument0)
 	ini_write_real("playerCustomization","hatPaletteHammerKSSUP4",global.hatPaletteHammerKSSUP4);
 	ini_write_real("playerCustomization","hatPaletteBellModernP4",global.hatPaletteBellModernP4);
 	ini_write_real("playerCustomization","hatPaletteScanKSSUP4",global.hatPaletteScanKSSUP4);
+	ini_write_real("playerCustomization","hatPaletteCrashKSSUP4",global.hatPaletteCrashKSSUP4);
+	ini_write_real("playerCustomization","hatPaletteMicKSSUP4",global.hatPaletteMicKSSUP4);
 	
 	ini_write_real("playerCustomization","cutterMotorCutterUpgradeEquipped",global.cutterMotorCutterUpgradeEquipped);
 	ini_write_real("playerCustomization","cutterPropellerWingUpgradeEquipped",global.cutterPropellerWingUpgradeEquipped);

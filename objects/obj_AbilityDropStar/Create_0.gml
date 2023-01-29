@@ -35,6 +35,7 @@ doesJump = false;
 mask_index = spr_24Square_Mask;
 isClassicStar = false;
 destroyableWithAirpuff = false;
+micCount = 0;
 
 //Ground Failsafe
 

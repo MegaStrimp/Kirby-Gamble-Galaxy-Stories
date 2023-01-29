@@ -89,7 +89,7 @@ for (var i = 0; i < 4; i++)
 	var sep = (118 * i);
 	
 	var hasCoopPointer = global.hasP1;
-	var palettePointer = global.sprayPaintP1;
+	var palettePointer = scr_Player_SprayPaint(spraysArray[# paletteSelectionP1,0],charactersArray[# characterSelectionP1,0],0);
 	var paletteSelectionPointer = paletteSelectionP1;
 	var characterPointer = global.characterP1;
 	var characterSelectionPointer = characterSelectionP1;
@@ -99,7 +99,7 @@ for (var i = 0; i < 4; i++)
 	{
 		case 1:
 		hasCoopPointer = global.hasP2;
-		palettePointer = global.sprayPaintP2;
+		palettePointer = scr_Player_SprayPaint(spraysArray[# paletteSelectionP2,0],charactersArray[# characterSelectionP2,0],0);
 		paletteSelectionPointer = paletteSelectionP2;
 		characterPointer = global.characterP2;
 		characterSelectionPointer = characterSelectionP2;
@@ -109,7 +109,7 @@ for (var i = 0; i < 4; i++)
 		
 		case 2:
 		hasCoopPointer = global.hasP3;
-		palettePointer = global.sprayPaintP3;
+		palettePointer = scr_Player_SprayPaint(spraysArray[# paletteSelectionP3,0],charactersArray[# characterSelectionP3,0],0);
 		paletteSelectionPointer = paletteSelectionP3;
 		characterPointer = global.characterP3;
 		characterSelectionPointer = characterSelectionP3;
@@ -119,7 +119,7 @@ for (var i = 0; i < 4; i++)
 		
 		case 3:
 		hasCoopPointer = global.hasP4;
-		palettePointer = global.sprayPaintP4;
+		palettePointer = scr_Player_SprayPaint(spraysArray[# paletteSelectionP4,0],charactersArray[# characterSelectionP4,0],0);
 		paletteSelectionPointer = paletteSelectionP4;
 		characterPointer = global.characterP4;
 		characterSelectionPointer = characterSelectionP4;
@@ -148,33 +148,57 @@ for (var i = 0; i < 4; i++)
 		else
 		{
 			if (global.shaders) pal_swap_set(palettePointer,1,false);
-			draw_sprite_ext(charactersArray[# characterSelectionPointer + 1,1],0,41 + sep,159 + 9,1,1,image_angle,image_blend,.5);
+			if ((characterSelectionPointer - 1) >= 0) draw_sprite_ext(charactersArray[# characterSelectionPointer - 1,1],0,41 + sep,159 - 9,1,1,image_angle,image_blend,.5);
+			if ((characterSelectionPointer + 1) < charactersMax) draw_sprite_ext(charactersArray[# characterSelectionPointer + 1,1],0,41 + sep,159 + 9,1,1,image_angle,image_blend,.5);
 			draw_sprite_ext(charactersArray[# characterSelectionPointer,1],0,41 + sep,159,1,1,image_angle,image_blend,image_alpha);
-			draw_sprite_ext(spr_CharacterSelect_SprayPaint,0,76 + sep,162,1,1,image_angle,image_blend,image_alpha);
 			if (global.shaders) pal_swap_reset();
+			if (charactersArray[# characterSelectionPointer,0] != playerCharacters.helper)
+			{
+				if ((paletteSelectionPointer - 1) >= 0)
+				{
+					if (global.shaders) pal_swap_set(scr_Player_SprayPaint(spraysArray[# paletteSelectionPointer - 1,0],playerCharacters.kirby,0),1,false);
+					draw_sprite_ext(spr_CharacterSelect_SprayPaint,0,76 + sep,162 - 9,1,1,image_angle,image_blend,.5);
+					if (global.shaders) pal_swap_reset();
+				}
+				if ((paletteSelectionPointer + 1) < spraysMax)
+				{
+					if (global.shaders) pal_swap_set(scr_Player_SprayPaint(spraysArray[# paletteSelectionPointer + 1,0],playerCharacters.kirby,0),1,false);
+					draw_sprite_ext(spr_CharacterSelect_SprayPaint,0,76 + sep,162 + 9,1,1,image_angle,image_blend,.5);
+					if (global.shaders) pal_swap_reset();
+				}
+				if (global.shaders) pal_swap_set(scr_Player_SprayPaint(spraysArray[# paletteSelectionPointer,0],playerCharacters.kirby,0),1,false);
+				draw_sprite_ext(spr_CharacterSelect_SprayPaint,0,76 + sep,162,1,1,image_angle,image_blend,image_alpha);
+				if (global.shaders) pal_swap_reset();
+			}
 			
 			switch (subSelectionPointer)
 			{
 				case 0:
 				draw_sprite_ext(spr_CharacterSelect_IconSelect,0,41 + sep,159,1,1,image_angle,image_blend,image_alpha);
 				
-				if (charactersMax > 1)
+				if (charactersArray[# characterSelectionPointer,0] != playerCharacters.helper)
 				{
-					if (characterSelectionPointer != 0) draw_sprite_ext(spr_CharacterSelect_Arrow,0,53 + sep,153,1,1,image_angle,image_blend,image_alpha);
-					if (characterSelectionPointer < charactersMax - 1) draw_sprite_ext(spr_CharacterSelect_Arrow,1,53 + sep,189,1,1,image_angle,image_blend,image_alpha);
+					if (charactersMax > 1)
+					{
+						if (characterSelectionPointer != 0) draw_sprite_ext(spr_CharacterSelect_Arrow,0,53 + sep,153,1,1,image_angle,image_blend,image_alpha);
+						if (characterSelectionPointer < charactersMax - 1) draw_sprite_ext(spr_CharacterSelect_Arrow,1,53 + sep,189,1,1,image_angle,image_blend,image_alpha);
+					}
+					draw_sprite_ext(spr_CharacterSelect_Arrow,2,72 + sep,171,1,1,image_angle,image_blend,image_alpha);
 				}
-				draw_sprite_ext(spr_CharacterSelect_Arrow,2,72 + sep,171,1,1,image_angle,image_blend,image_alpha);
 				break;
 				
 				case 1:
-				draw_sprite_ext(spr_CharacterSelect_SprayPaintSelect,0,76 + sep,162,1,1,image_angle,image_blend,image_alpha);
-				
-				if (spraysMax > 1)
+				if (charactersArray[# characterSelectionPointer,0] != playerCharacters.helper)
 				{
-					if (paletteSelectionPointer != 0) draw_sprite_ext(spr_CharacterSelect_Arrow,0,76 + sep,156,1,1,image_angle,image_blend,image_alpha);
-					if (paletteSelectionPointer < spraysMax - 1) draw_sprite_ext(spr_CharacterSelect_Arrow,1,76 + sep,186,1,1,image_angle,image_blend,image_alpha);
+					draw_sprite_ext(spr_CharacterSelect_SprayPaintSelect,0,76 + sep,162,1,1,image_angle,image_blend,image_alpha);
+					
+					if (spraysMax > 1)
+					{
+						if (paletteSelectionPointer != 0) draw_sprite_ext(spr_CharacterSelect_Arrow,0,81 + sep,156,1,1,image_angle,image_blend,image_alpha);
+						if (paletteSelectionPointer < spraysMax - 1) draw_sprite_ext(spr_CharacterSelect_Arrow,1,81 + sep,186,1,1,image_angle,image_blend,image_alpha);
+					}
+					draw_sprite_ext(spr_CharacterSelect_Arrow,3,68 + sep,171,1,1,image_angle,image_blend,image_alpha);
 				}
-				draw_sprite_ext(spr_CharacterSelect_Arrow,3,68 + sep,171,1,1,image_angle,image_blend,image_alpha);
 				break;
 			}
 		}

@@ -1626,7 +1626,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var sprClimbUp = spr_WaddleDee_Normal_ClimbUp;
 			var sprClimbDown = spr_WaddleDee_Normal_ClimbDown;
 			var sprHurt = spr_WaddleDee_Normal_Hurt;
-			debugPaletteNumberMax = 31;
+			debugPaletteNumberMax = 35;
 			switch (debugPaletteNumber)
 			{
 				case 0:
@@ -1755,6 +1755,22 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 				
 				case 31:
 				debugPaletteIndex = spr_WaddleDee_Normal_Palette_ExtremeContrast;
+				break;
+				
+				case 32:
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_NPCOrange1;
+				break;
+				
+				case 33:
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_NPCOrange2;
+				break;
+				
+				case 34:
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_NPCOrange3;
+				break;
+				
+				case 35:
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_NPCOrange4;
 				break;
 				
 				default:
@@ -2923,25 +2939,25 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		break;
 		#endregion
 		
-		#region Search
-		case debugObject.search:
+		#region Searches
+		case debugObject.searches:
 		debugSpriteSelectedMax = 0;
 		switch (debugSpriteSelected)
 		{
 			#region Normal
 			case 0:
-			var sprIdle = spr_Search_Normal_Idle;
-			var sprCharge = spr_Search_Normal_Charge;
-			var sprHurt = spr_Search_Normal_Hurt;
+			var sprIdle = spr_Searches_Normal_Idle;
+			var sprCharge = spr_Searches_Normal_Charge;
+			var sprHurt = spr_Searches_Normal_Hurt;
 			debugPaletteNumberMax = 0;
 			switch (debugPaletteNumber)
 			{
 				case 0:
-				debugPaletteIndex = spr_Search_Normal_Palette_BombshellGray;
+				debugPaletteIndex = spr_Searches_Normal_Palette_BombshellGray;
 				break;
 				
 				default:
-				debugPaletteIndex = spr_Search_Normal_Palette_BombshellGray;
+				debugPaletteIndex = spr_Searches_Normal_Palette_BombshellGray;
 				break;
 			}
 			break;
@@ -2952,8 +2968,8 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 0;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var spawnedObj = obj_Search;
-			if (spawnerMode) spawnedObj = obj_Spawner_Search;
+			var spawnedObj = obj_Searches;
+			if (spawnerMode) spawnedObj = obj_Spawner_Searches;
 			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;

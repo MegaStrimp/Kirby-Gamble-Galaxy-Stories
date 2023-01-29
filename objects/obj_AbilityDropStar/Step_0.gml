@@ -149,6 +149,24 @@ if (!global.pause)
 						canScan = false;
 						particleTimer = particleTimerMax;
 						owner.cAbility = other.ability;
+						switch (owner.player)
+						{
+							case 0:
+							global.micCountP1 = other.micCount;
+							break;
+							
+							case 1:
+							global.micCountP2 = other.micCount;
+							break;
+							
+							case 2:
+							global.micCountP3 = other.micCount;
+							break;
+							
+							case 3:
+							global.micCountP4 = other.micCount;
+							break;
+						}
 						owner.scanTimer = owner.scanTimerMax;
 						var par = instance_create_depth(other.x,other.y,other.depth - 1,obj_Particle);
 						par.sprite_index = spr_Particle_Scan1;

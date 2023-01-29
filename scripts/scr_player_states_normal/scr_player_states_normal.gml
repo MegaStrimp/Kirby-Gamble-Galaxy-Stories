@@ -835,7 +835,7 @@ function scr_Player_States_Normal()
 									invincibleFlash = false;
 									invincibleFlashTimer = -1;
 									attack = true;
-									attackNumber = "cutterChargeAttack";
+									attackNumber = playerAttacks.cutterChargeAttack;
 									sprite_index = sprCutterAttack1;
 								    image_index = 0;
 								}
@@ -858,12 +858,14 @@ function scr_Player_States_Normal()
 								projectile.dirX = dir;
 								projectile.image_xscale = projectile.dirX;
 								projectile.enemy = false;
+								projectile.destroyableByEnemy = false;
+								projectile.destroyableByObject = false;
 								projectile.player = player;
 								attackable = false;
 							}
 						}
 					
-						if (attackNumber == "cutterChargeAttack")
+						if (attackNumber == playerAttacks.cutterChargeAttack)
 						{
 							if ((round(image_index) == (image_number - 1)) and (attackable))
 							{
@@ -3070,7 +3072,7 @@ function scr_Player_States_Normal()
 									invincibleFlash = false;
 									invincibleFlashTimer = -1;
 									attack = true;
-									attackNumber = "cutterChargeAttack";
+									attackNumber = playerAttacks.cutterChargeAttack;
 									sprite_index = sprCutterAttack1;
 								    image_index = 0;
 								}
@@ -3096,7 +3098,7 @@ function scr_Player_States_Normal()
 							}
 						}
 					
-						if (attackNumber == "cutterChargeAttack")
+						if (attackNumber == playerAttacks.cutterChargeAttack)
 						{
 							if ((round(image_index) == (image_number - 1)) and (attackable))
 							{
@@ -3413,6 +3415,96 @@ function scr_Player_States_Normal()
 					        attackNumber = playerAttacks.scanNormal;
 					        attackable = false;
 							sprite_index = sprScanReady;
+							image_index = 0;
+					    }
+						break;
+						#endregion
+						
+						#region Mic
+						case playerAbilities.mic:
+					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (attackable))
+					    {
+							global.pause = true;
+					        attack = true;
+					        attackNumber = playerAttacks.micNormal;
+					        attackable = false;
+							micTimer = micTimerMax;
+							attackTimer = micTimerMax;
+							invincibleFlash = false;
+							switch (player)
+							{
+								case 0:
+								global.micCountP1 += 1;
+								switch (global.micCountP1)
+								{
+									case 1:
+									sprite_index = sprMicAttack1Ready;
+									break;
+									
+									case 2:
+									sprite_index = sprMicAttack2Ready;
+									break;
+									
+									case 3:
+									sprite_index = sprMicAttack3Ready;
+									break;
+								}
+								break;
+								
+								case 1:
+								global.micCountP2 += 1;
+								switch (global.micCountP2)
+								{
+									case 1:
+									sprite_index = sprMicAttack1Ready;
+									break;
+									
+									case 2:
+									sprite_index = sprMicAttack2Ready;
+									break;
+									
+									case 3:
+									sprite_index = sprMicAttack3Ready;
+									break;
+								}
+								break;
+								
+								case 2:
+								global.micCountP3 += 1;
+								switch (global.micCountP3)
+								{
+									case 1:
+									sprite_index = sprMicAttack1Ready;
+									break;
+									
+									case 2:
+									sprite_index = sprMicAttack2Ready;
+									break;
+									
+									case 3:
+									sprite_index = sprMicAttack3Ready;
+									break;
+								}
+								break;
+								
+								case 3:
+								global.micCountP4 += 1;
+								switch (global.micCountP4)
+								{
+									case 1:
+									sprite_index = sprMicAttack1Ready;
+									break;
+									
+									case 2:
+									sprite_index = sprMicAttack2Ready;
+									break;
+									
+									case 3:
+									sprite_index = sprMicAttack3Ready;
+									break;
+								}
+								break;
+							}
 							image_index = 0;
 					    }
 						break;
@@ -3911,6 +4003,8 @@ function scr_Player_States_Normal()
 							projectile.dirX = dir;
 							projectile.image_xscale = projectile.dirX;
 							projectile.enemy = false;
+							projectile.destroyableByEnemy = false;
+							projectile.destroyableByObject = false;
 							projectile.player = player;
 							attackable = false;
 						}
@@ -4843,5 +4937,10 @@ function scr_Player_States_Normal()
 	{
 		image_speed = 0;
 		shake = 0;
+	}
+	
+	if (attackNumber == playerAttacks.micNormal)
+	{
+		image_speed = 1;
 	}
 }

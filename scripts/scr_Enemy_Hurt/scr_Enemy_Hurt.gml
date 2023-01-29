@@ -13,14 +13,18 @@ function scr_Enemy_Hurt(argument0,argument1)
 		audio_play_sound(snd_EnemyHurt,0,false);
 		targetObj.takenDamageType = hurtSource.damageType;
 		targetObj.takenIsFamiliar = hurtSource.isFamiliar;
-		if (hurtSource.dmg >= targetObj.hp)
+		if (hurtSource.dmg >= (targetObj.hp + 50))
 		{
 			targetObj.bubbleX = x;
 			targetObj.bubbleY = y;
 			targetObj.hurtTimer = ((targetObj.hurtStopTimerMax + 5) * (!targetObj.instaDeath));
 			if ((targetObj.hasDeathKnockback) and (!targetObj.isBoss) and (targetObj.isMiniBoss) and (targetObj.takenDamageType != damageTypes.ice)) targetObj.hurtStopTimer = targetObj.hurtStopTimerMax;
 			targetObj.shake = 1;
-			if (instance_exists(obj_Camera)) obj_Camera.shake = 3;
+			with (obj_Camera)
+			{
+				shakeX = 3;
+				shakeY = 3;
+			}
 		}
 		else
 		{
@@ -32,7 +36,7 @@ function scr_Enemy_Hurt(argument0,argument1)
 		#region Hit Numbers
 		if (global.hitNumbers)
 		{
-			var hitNumber = instance_create_depth(hurtSource.x,hurtSource.y,-900,obj_HitNumbers);
+			var hitNumber = instance_create_depth(targetObj.x,targetObj.y,-900,obj_HitNumbers);
 			hitNumber.number = hurtSource.dmg;
 			hitNumber.hsp = random_range(-1,1);
 			hitNumber.vsp = -2;
@@ -213,6 +217,10 @@ function scr_Enemy_Hurt(argument0,argument1)
 				break;
 	
 				case playerAbilities.mic:
+				hitNumber.canChangeColor = true;
+				hitNumber.redTarget = 125;
+				hitNumber.greenTarget = 75;
+				hitNumber.blueTarget = 215;
 				hitNumber.shake = 3;
 				hitNumber.clampY = true;
 				break;

@@ -166,6 +166,7 @@ enum playerAttacks
 	
 	cutterNormal,
 	cutterCharge,
+	cutterChargeAttack,
 	cutterDash,
 	cutterAir,
 	cutterDrop,
@@ -257,6 +258,8 @@ enum playerAttacks
 	sleepNormal,
 	
 	scanNormal,
+	
+	micNormal,
 	
 	jetCharge,
 	jetDash,
@@ -352,7 +355,9 @@ enum abilityHatSkins
 	bell_modern,
 	water_modern,
 	sleep_kssu,
-	scan_kssu
+	scan_kssu,
+	crash_kssu,
+	mic_kssu
 }
 
 enum abilityHatPaints
@@ -456,7 +461,9 @@ enum abilityHatPaints
 	sleep_kssu_bitcrushed,
 	scan_kssu_metallicRed,
 	scan_kssu_bitcrushed,
-	scan_kssu_militaryGreen
+	scan_kssu_militaryGreen,
+	crash_kssu_none,
+	mic_kssu_loudMike
 }
 
 enum damageTypes
@@ -570,6 +577,63 @@ enum talkingCharacter
 	metaKnight,
 	match
 }
+
+enum kirbyTitles
+{
+	dreamLand1,
+	adventure,
+	dreamCourse,
+	dreamLand2,
+	superStar,
+	dreamLand3,
+	crystalShards,
+	nightmareInDreamLand,
+	airRide,
+	amazingMirror,
+	canvasCurse,
+	squeakSquad,
+	superStarUltra,
+	epicYarn,
+	massAttack,
+	returnToDreamLand,
+	tripleDeluxe,
+	rainbowCurse,
+	planetRobobot,
+	starAllies,
+	forgottenLand,
+	gambleGalaxyStories
+}
+
+#region Acts
+enum acts
+{
+	C1A1,
+	C1A2,
+	C1A3,
+	C1A4,
+	C1A5
+}
+#endregion
+
+#region Stages
+enum stages
+{
+	greenGreens,
+	battleshipHalberd,
+	asteroidFields,
+	yolkYard,
+	grandTempleAvgo,
+	floralYolkCaves,
+	stormTheFortress,
+	centralLab,
+	pathToTheNastyMachine,
+	sandshellBeach,
+	upTheStraw,
+	sacredAquatia,
+	cosmicPalace,
+	popstarMoon
+}
+#endregion
 #endregion
 
 #region Particles
@@ -628,7 +692,6 @@ global.healP2Mod = global.healthP2;
 global.healP3Mod = global.healthP3;
 global.healP4Mod = global.healthP4;
 
-
 global.sprayPaintP1 = spr_Kirby_Normal_Palette_FriendlyPink;
 global.sprayPaintP2 = spr_Kirby_Normal_Palette_Yellow;
 global.sprayPaintP3 = spr_Kirby_Normal_Palette_Red;
@@ -643,26 +706,11 @@ global.abilityP1 = playerAbilities.none;
 global.abilityP2 = playerAbilities.none;
 global.abilityP3 = playerAbilities.none;
 global.abilityP4 = playerAbilities.none;
-#endregion
 
-#region Stages
-enum stages
-{
-	greenGreens,
-	battleshipHalberd,
-	asteroidFields,
-	yolkYard,
-	grandTempleAvgo,
-	floralYolkCaves,
-	stormTheFortress,
-	centralLab,
-	pathToTheNastyMachine,
-	sandshellBeach,
-	upTheStraw,
-	sacredAquatia,
-	cosmicPalace,
-	popstarMoon
-}
+global.micCountP1 = 0;
+global.micCountP2 = 0;
+global.micCountP3 = 0;
+global.micCountP4 = 0;
 #endregion
 
 #region Skylands
@@ -690,16 +738,18 @@ global.pointStars = 0;
 
 global.goldenTomatoAmountMax = 2;
 
-global.stageNumber = 0;
+global.stageNumber = stages.greenGreens;
 global.debug = true;
 //global.debug = false;
 global.debugOverlay = global.debug;
 global.pause = false;
 global.cutscene = false;
 global.tutorial = false;
+global.currentNPC = -1;
+global.dialogueFlowing = false;
 global.shaders = false;
 if (shader_is_compiled(shd_pal_swapper)) global.shaders = true;
-global.chapterIntro = "1_1";
+global.chapterIntro = acts.C1A1;
 
 global.hasCoop = 0;
 global.hasP1 = true;
@@ -923,6 +973,8 @@ global.fontCharacterSelectSmallKanji = font_add(working_directory + "ARIALUNI.TT
 global.fontMaykrBlue = font_add_sprite_ext(spr_Maykr_Font_Blue,"abcdefghijklmnopqrstuvwxyz0123456789.!?/()",false,0);
 global.fontMaykrRed = font_add_sprite_ext(spr_Maykr_Font_Red,"abcdefghijklmnopqrstuvwxyz0123456789.!?/()",false,0);
 global.fontMaykrWhite = font_add_sprite_ext(spr_Maykr_Font_White,"abcdefghijklmnopqrstuvwxyz0123456789.!?/()",false,0);
+
+global.fontBestiary = font_add_sprite_ext(spr_Menu_Collection_Bestiary_Font,"abcdefghijklmnopqrstuvwxyz.!?," + chr(34) + "'()/" + chr(92) + ":;#-0123456789",true,1);
 #endregion
 
 #region Subtitiles
@@ -1468,7 +1520,7 @@ subtitles[i] = "Does it look like I need your power?";
 i += 1;
 subtitles[i] = "You have not yet seen the wrath of the water!";
 i += 1;
-subtitles[i] = "Not everything needs to be dark";
+subtitles[i] = "Not everything need to be dark";
 i += 1;
 subtitles[i] = "Blood? What is that? Can we drink it?";
 i += 1;
@@ -1950,7 +2002,7 @@ subtitles[i] = "Ew, why are you reading me? Gross...";
 i += 1;
 subtitles[i] = "The Community™";
 i += 1;
-subtitles[i] = "Pyra and Myhtra are actually pretty balanced.";
+subtitles[i] = "Pyra and Mythra are actually pretty balanced.";
 i += 1;
 subtitles[i] = "Remember: Always save your progress!";
 i += 1;
@@ -2024,10 +2076,10 @@ windowCaption[2] = "Galaxy";
 windowCaption[3] = "Stories";
 
 var windowGen = -1;
-windowGen[0] = irandom_range(0,149);
-windowGen[1] = irandom_range(0,149);
-windowGen[2] = irandom_range(0,149);
-windowGen[3] = irandom_range(0,149);
+windowGen[0] = irandom_range(0,14900);
+windowGen[1] = irandom_range(0,14900);
+windowGen[2] = irandom_range(0,14900);
+windowGen[3] = irandom_range(0,14900);
 
 switch (windowGen[0])
 {

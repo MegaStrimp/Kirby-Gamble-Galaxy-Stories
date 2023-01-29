@@ -18,7 +18,7 @@ sprHurt = -1;
 
 //Other Variables
 
-paletteIndex = spr_Search_Normal_Palette_BombshellGray;
+paletteIndex = spr_Searches_Normal_Palette_BombshellGray;
 hp = 99999;
 dmg = 1;
 points = 500;

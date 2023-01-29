@@ -87,7 +87,7 @@ function scr_Maykr_ObjectAttributes(argument0,argument1)
 		hasDirectionButton = true;
 		break;
 		
-		case maykrObjects.search:
+		case maykrObjects.searches:
 		hasOptionsButton = true;
 		hasDirectionButton = true;
 		break;

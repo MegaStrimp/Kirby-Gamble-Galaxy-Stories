@@ -371,6 +371,10 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 				abilityDropStar.sprite_index = spr_AbilityStar_Sleep;
 				break;
 				
+				case playerAbilities.mic:
+				abilityDropStar.sprite_index = spr_AbilityStar_Mic;
+				break;
+				
 				default:
 				abilityDropStar.sprite_index = spr_AbilityStar_Normal;
 				break;
@@ -433,8 +437,8 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			global.bestiaryEnemiesMrBoogieUnlocked = true;
 			break;
 			
-			case obj_Search:
-			global.bestiaryEnemiesSearchUnlocked = true;
+			case obj_Searches:
+			global.bestiaryEnemiesSearchesUnlocked = true;
 			break;
 			
 			case obj_HiveDrone:

@@ -5812,6 +5812,79 @@ function scr_Player_AbilityHat(argument0,argument1)
 			}
 			break;
 			
+			case playerAbilities.mic:
+			switch (player)
+			{
+				case 0:
+				var altHatToCheck = global.hatTypeMicP1;
+				break;
+				
+				case 1:
+				var altHatToCheck = global.hatTypeMicP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeMicP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeMicP4;
+				break;
+			}
+			
+			switch (altHatToCheck)
+			{
+				case abilityHatSkins.mic_kssu:
+				switch (sprite_index)
+				{
+					case sprMicAttack1Ready:
+					abilityHatIndex = spr_Kirby_AbilityHat_Mic_KSSU_Attack1Ready;
+					break;
+					
+					case sprMicAttack1:
+					abilityHatIndex = spr_Kirby_AbilityHat_Mic_KSSU_Attack1;
+					break;
+					
+					case sprMicAttack1End:
+					abilityHatIndex = spr_Kirby_AbilityHat_Mic_KSSU_Attack1End;
+					break;
+					
+					case sprMicAttack2Ready:
+					abilityHatIndex = spr_Kirby_AbilityHat_Mic_KSSU_Attack2Ready;
+					break;
+					
+					case sprMicAttack2:
+					abilityHatIndex = spr_Kirby_AbilityHat_Mic_KSSU_Attack2;
+					break;
+					
+					case sprMicAttack2End:
+					abilityHatIndex = spr_Kirby_AbilityHat_Mic_KSSU_Attack2End;
+					break;
+					
+					case sprMicAttack3Ready:
+					abilityHatIndex = spr_Kirby_AbilityHat_Mic_KSSU_Attack3Ready;
+					break;
+					
+					case sprMicAttack3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Mic_KSSU_Attack3;
+					break;
+					
+					case sprMicAttack3End:
+					abilityHatIndex = spr_Kirby_AbilityHat_Mic_KSSU_Attack3End;
+					break;
+					
+					default:
+					abilityHatIndex = -1;
+					break;
+				}
+				break;
+				
+				default:
+				abilityHatIndex = -1;
+				break;
+			}
+			break;
+			
 			default:
 			abilityHatIndex = -1;
 			break;

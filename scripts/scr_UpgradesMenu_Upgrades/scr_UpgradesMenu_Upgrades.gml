@@ -149,7 +149,7 @@ function scr_UpgradesMenu_Upgrades()
 	upgradesArray[# i,1] = spr_Menu_Upgrades_CowDoll;
 	upgradesArray[# i,2] = str("Upgrades.Cow Doll.Title");
 	upgradesArray[# i,3] = str("Upgrades.Cow Doll.Description");
-	upgradesArray[# i,4] = global.stoneCowDollUpgradeUnlocked;
+	upgradesArray[# i,4] = global.ufoCowDollUpgradeUnlocked;
 	upgradesArray[# i,5] = str("Upgrades.Cow Doll.Unlock Method");
 	upgradesArray[# i,6] = 240 + ((i - upgradeSelection) * 82);
 	upgradesArray[# i,7] = 0;

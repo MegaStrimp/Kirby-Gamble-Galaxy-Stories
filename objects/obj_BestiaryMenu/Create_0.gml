@@ -1,34 +1,50 @@
 ///@description Initialize Variables
 
-//Other Variables
-
-enemySelection = 0;
+#region Other Variables
+hudOffset = -250;
+selection = "bestiary";
+bestiarySelection = 0;
+skinSelected = 0;
+colorSelected = 0;
+animSelected = 0;
+animIndex = 0;
+page = 0;
+select = false;
 goBack = false;
-arrayLength = 0;
-starIndex = 0;
-loopStart = 0;
+textureX = 0;
+textureY = 0;
+windowActive = false;
+#endregion
 
-/*
-	0 - Type
-	1 - Name
-	2 - Description
-	3 - Portrait Sprite
-	4 - Portrait Scale
-	5 - Ability
-	6 - Unlocked
-	7 - Offset
-	8 - Offset Lerp
-*/
+#region Arrays
+bestiaryArray = -1;
+bestiaryCosmeticsArray = -1;
+bestiaryAnimationsArray = -1;
+scr_BestiaryMenu_Enemies();
+#endregion
 
-//Enemies
+#region Enums
+enum bestiaryEnemies
+{
+	waddleDee,
+	waddleDoo,
+	brontoBurt,
+	twizzy,
+	tookey,
+	sirKibble,
+	gordo,
+	bloodGordo,
+	shotzo,
+	mysticDoo,
+	bouncy,
+	searches
+}
+#endregion
 
-scr_Bestiary_Enemies();
-
-selectedEntries = entries;
-
-//Spawn Buttons
-
-var button = instance_create_depth(0,270,depth - 1,obj_Menu_Button);
+#region Buttons
+var button = instance_create_depth(480,270,depth - 1,obj_Menu_Button);
 button.owner = id;
-button.sprite_index = spr_Menu_StageSelect_Hud_Back3;
+button.sprite_index = spr_Menu_StageSelect_Hud_Back1;
 button.state = "back";
+button.canChangeImageIndex = true;
+#endregion

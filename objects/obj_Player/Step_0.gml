@@ -9,6 +9,7 @@ switch (player)
 	var playerCharacter = global.characterP1;
 	var playerIsHelper = global.isHelperP1;
 	var playerFamiliar = global.familiarP1;
+	var micCount = global.micCountP1;
 	break;
 	
 	case 1:
@@ -16,6 +17,7 @@ switch (player)
 	var playerCharacter = global.characterP2;
 	var playerIsHelper = global.isHelperP2;
 	var playerFamiliar = global.familiarP2;
+	var micCount = global.micCountP2;
 	break;
 	
 	case 2:
@@ -23,6 +25,7 @@ switch (player)
 	var playerCharacter = global.characterP3;
 	var playerIsHelper = global.isHelperP3;
 	var playerFamiliar = global.familiarP3;
+	var micCount = global.micCountP3;
 	break;
 	
 	case 3:
@@ -30,6 +33,7 @@ switch (player)
 	var playerCharacter = global.characterP4;
 	var playerIsHelper = global.isHelperP4;
 	var playerFamiliar = global.familiarP4;
+	var micCount = global.micCountP4;
 	break;
 }
 
@@ -59,7 +63,12 @@ if ((invincible) or (attackNumber == playerAttacks.slideJump))
 	invincibleFlashTimerMax = 2;
 	canFlash = true;
 }
-if ((cAbility != playerAbilities.none) and (state = playerStates.carry) and (!spit))
+if (
+((cAbility != playerAbilities.none) and (state = playerStates.carry) and (!spit))
+or (playerAbility == playerAbilities.sleep)
+or ((playerAbility == playerAbilities.crash) and (!attack))
+or ((playerAbility == playerAbilities.mic) and (!attack))
+)
 {
 	invincibleFlashTimerMax = 4;
 	canFlash = true;
@@ -673,6 +682,23 @@ switch (state)
 	scr_Player_States_Death();
 	break;
 }
+	
+//Mic Flash
+
+if ((attackNumber == playerAttacks.micNormal) and (canMicFlash))
+{
+	with (obj_Camera)
+	{
+		shakeX = 2;
+		shakeY = 2;
+	}
+	if (micFlashTimer == -1) micFlashTimer = micFlashTimerMax;
+}
+else
+{
+	micFlash = false;
+	micFlashTimer = -1;
+}
 
 //Select Button
 
@@ -707,21 +733,29 @@ if (keySelectPressed)
 				case 0:
 				abilityDropStar.ability = global.abilityP1;
 				global.abilityP1 = playerAbilities.none;
+				abilityDropStar.micCount = global.micCountP1;
+				global.micCountP1 = 0;
 				break;
 				
 				case 1:
 				abilityDropStar.ability = global.abilityP2;
 				global.abilityP2 = playerAbilities.none;
+				abilityDropStar.micCount = global.micCountP2;
+				global.micCountP2 = 0;
 				break;
 				
 				case 2:
 				abilityDropStar.ability = global.abilityP3;
 				global.abilityP3 = playerAbilities.none;
+				abilityDropStar.micCount = global.micCountP3;
+				global.micCountP3 = 0;
 				break;
 				
 				case 3:
 				abilityDropStar.ability = global.abilityP4;
 				global.abilityP4 = playerAbilities.none;
+				abilityDropStar.micCount = global.micCountP4;
+				global.micCountP4 = 0;
 				break;
 			}
 			switch (abilityDropStar.ability)
@@ -821,10 +855,13 @@ if (keySelectPressed)
 				case playerAbilities.water:
 				abilityDropStar.sprite_index = spr_AbilityStar_Water;
 				break;
-				break;
 			
 				case playerAbilities.sleep:
 				abilityDropStar.sprite_index = spr_AbilityStar_Sleep;
+				break;
+			
+				case playerAbilities.mic:
+				abilityDropStar.sprite_index = spr_AbilityStar_Mic;
 				break;
 			
 				default:
@@ -2486,6 +2523,15 @@ else if (characterSetupTimer == 0)
 		sprScanReady = spr_Kirby_Normal_ScanReady;
 		sprScan = spr_Kirby_Normal_Scan;
 		sprScanEnd = spr_Kirby_Normal_ScanEnd;
+		sprMicAttack1Ready = spr_Kirby_Normal_Mic_Attack1Ready;
+		sprMicAttack1 = spr_Kirby_Normal_Mic_Attack1;
+		sprMicAttack1End = spr_Kirby_Normal_Mic_Attack1End;
+		sprMicAttack2Ready = spr_Kirby_Normal_Mic_Attack2Ready;
+		sprMicAttack2 = spr_Kirby_Normal_Mic_Attack2;
+		sprMicAttack2End = spr_Kirby_Normal_Mic_Attack2End;
+		sprMicAttack3Ready = spr_Kirby_Normal_Mic_Attack3Ready;
+		sprMicAttack3 = spr_Kirby_Normal_Mic_Attack3;
+		sprMicAttack3End = spr_Kirby_Normal_Mic_Attack3End;
 		sprHurt = spr_Kirby_Normal_Hurt;
 		sprDeath = spr_Kirby_Normal_Death;
 		break;
@@ -4299,6 +4345,94 @@ else if (scanTimer == 0)
 	state = playerStates.swallow;
 	attackTimer = 0;
 	scanTimer = -1;
+}
+
+//Mic Timer
+
+if (micTimer > 0)
+{
+	micTimer -= 1;
+	if (micTimer == 30)
+	{
+		canMicFlash = false;
+		if (sprite_index == sprMicAttack1)
+		{
+			sprite_index = sprMicAttack1End;
+			image_index = 0;
+		}
+		else if (sprite_index == sprMicAttack2)
+		{
+			sprite_index = sprMicAttack2End;
+			image_index = 0;
+		}
+		else if (sprite_index == sprMicAttack3)
+		{
+			sprite_index = sprMicAttack3End;
+			image_index = 0;
+		}
+	}
+}
+else if (micTimer == 0)
+{
+	global.pause = false;
+	image_index = 0;
+	state = playerStates.normal;
+	attackTimer = 0;
+	
+	micProjectile = instance_create_depth(-100,-100,depth,obj_Projectile_MicShot);
+	micProjectile.owner = id;
+	micProjectile.abilityType = playerAbilities.mic;
+	switch (micCount)
+	{
+		case 1:
+		micProjectile.dmg = 40;
+		break;
+								
+		case 2:
+		micProjectile.dmg = 60;
+		break;
+								
+		case 3:
+		micProjectile.dmg = 80;
+		break;
+	}
+	micProjectile.enemy = false;
+	with (obj_Enemy)
+	{
+		if (!scr_OutsideView())
+		{
+			scr_Enemy_Hurt(id,other.micProjectile);
+		}
+	}
+	
+	if (micCount >= 3)
+	{
+		scr_Player_CancelAbility(id);
+		
+		switch (player)
+		{
+			case 0:
+			global.abilityP1 = playerAbilities.none;
+			global.micCountP1 = 0;
+			break;
+				
+			case 1:
+			global.abilityP2 = playerAbilities.none;
+			global.micCountP2 = 0;
+			break;
+				
+			case 2:
+			global.abilityP3 = playerAbilities.none;
+			global.micCountP3 = 0;
+			break;
+				
+			case 3:
+			global.abilityP4 = playerAbilities.none;
+			global.micCountP4 = 0;
+			break;
+		}
+	}
+	micTimer = -1;
 }
 
 //Mic Flash Timer

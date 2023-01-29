@@ -123,12 +123,12 @@ function scr_PlayMusic(argument0,argument1,argument2,argument3,argument4)
 			global.musicIntroComposer = "Tater-Tot Tunes";
 			break;
 			
-			case mus_ChapterIntro1_1: //
+			case mus_ChapterIntroC1A1: //
 			global.musicIntroTitle = "";
 			global.musicIntroComposer = "Strimp";
 			break;
 			
-			case mus_ChapterIntro1_2: //
+			case mus_ChapterIntroC1A2: //
 			global.musicIntroTitle = "";
 			global.musicIntroComposer = "Strimp";
 			break;

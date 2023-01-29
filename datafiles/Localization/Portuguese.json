@@ -357,7 +357,7 @@
             "Description": "É um meleca com vida que parece andar sem rumo, mas na realidade está procurando alguns lenços de papel."
         },
         
-        "Search":
+        "Searches":
         {
             "Title": "Bombusca",
             
@@ -1393,6 +1393,44 @@
 		
 		"Secret": "Segredo"
     },
+	
+	"Acts":
+	{
+		"C1A1":
+		{
+			"Index": "",
+			
+			"Title": ""
+		},
+		
+		"C1A2":
+		{
+			"Index": "",
+			
+			"Title": ""
+		},
+		
+		"C1A3":
+		{
+			"Index": "",
+			
+			"Title": ""
+		},
+		
+		"C1A4":
+		{
+			"Index": "",
+			
+			"Title": ""
+		},
+		
+		"C1A5":
+		{
+			"Index": "",
+			
+			"Title": ""
+		}
+	},
 	
 	"Stages":
 	{

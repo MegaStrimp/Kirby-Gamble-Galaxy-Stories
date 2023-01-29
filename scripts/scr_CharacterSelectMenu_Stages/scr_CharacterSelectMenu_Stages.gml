@@ -89,10 +89,10 @@ function scr_CharacterSelectMenu_Stages()
 	stagesArray[# i,0] = stages.stormTheFortress;
 	stagesArray[# i,1] = str("Stages.Gear Cube.Title");
 	stagesArray[# i,2] = str("Stages.Storm The Fortress.Title");
-	stagesArray[# i,3] = make_color_rgb(255,255,255);
-	stagesArray[# i,4] = make_color_rgb(255,255,255);
-	stagesArray[# i,5] = make_color_rgb(255,255,255);
-	stagesArray[# i,6] = make_color_rgb(255,255,255);
+	stagesArray[# i,3] = make_color_rgb(116,0,142);
+	stagesArray[# i,4] = make_color_rgb(154,0,188);
+	stagesArray[# i,5] = make_color_rgb(118,0,173);
+	stagesArray[# i,6] = make_color_rgb(174,0,255);
 	i += 1;
 	#endregion
 	
@@ -100,10 +100,10 @@ function scr_CharacterSelectMenu_Stages()
 	stagesArray[# i,0] = stages.centralLab;
 	stagesArray[# i,1] = str("Stages.Gear Cube.Title");
 	stagesArray[# i,2] = str("Stages.Central Lab.Title");
-	stagesArray[# i,3] = make_color_rgb(255,255,255);
-	stagesArray[# i,4] = make_color_rgb(255,255,255);
-	stagesArray[# i,5] = make_color_rgb(255,255,255);
-	stagesArray[# i,6] = make_color_rgb(255,255,255);
+	stagesArray[# i,3] = make_color_rgb(116,0,142);
+	stagesArray[# i,4] = make_color_rgb(154,0,188);
+	stagesArray[# i,5] = make_color_rgb(240,132,255);
+	stagesArray[# i,6] = make_color_rgb(250,173,255);
 	i += 1;
 	#endregion
 	
@@ -111,10 +111,10 @@ function scr_CharacterSelectMenu_Stages()
 	stagesArray[# i,0] = stages.pathToTheNastyMachine;
 	stagesArray[# i,1] = str("Stages.Gear Cube.Title");
 	stagesArray[# i,2] = str("Stages.Path To The Nasty Machine.Title");
-	stagesArray[# i,3] = make_color_rgb(255,255,255);
-	stagesArray[# i,4] = make_color_rgb(255,255,255);
-	stagesArray[# i,5] = make_color_rgb(255,255,255);
-	stagesArray[# i,6] = make_color_rgb(255,255,255);
+	stagesArray[# i,3] = make_color_rgb(116,0,142);
+	stagesArray[# i,4] = make_color_rgb(154,0,188);
+	stagesArray[# i,5] = make_color_rgb(118,0,85);
+	stagesArray[# i,6] = make_color_rgb(226,0,166);
 	i += 1;
 	#endregion
 	
@@ -122,10 +122,10 @@ function scr_CharacterSelectMenu_Stages()
 	stagesArray[# i,0] = stages.sandshellBeach;
 	stagesArray[# i,1] = str("Stages.Aquatia.Title");
 	stagesArray[# i,2] = str("Stages.Sandshell Beach.Title");
-	stagesArray[# i,3] = make_color_rgb(255,255,255);
-	stagesArray[# i,4] = make_color_rgb(255,255,255);
-	stagesArray[# i,5] = make_color_rgb(255,255,255);
-	stagesArray[# i,6] = make_color_rgb(255,255,255);
+	stagesArray[# i,3] = make_color_rgb(0,206,206);
+	stagesArray[# i,4] = make_color_rgb(214,255,255);
+	stagesArray[# i,5] = make_color_rgb(211,168,74);
+	stagesArray[# i,6] = make_color_rgb(255,202,89);
 	i += 1;
 	#endregion
 	
@@ -133,10 +133,10 @@ function scr_CharacterSelectMenu_Stages()
 	stagesArray[# i,0] = stages.upTheStraw;
 	stagesArray[# i,1] = str("Stages.Aquatia.Title");
 	stagesArray[# i,2] = str("Stages.Up The Straw.Title");
-	stagesArray[# i,3] = make_color_rgb(255,255,255);
-	stagesArray[# i,4] = make_color_rgb(255,255,255);
-	stagesArray[# i,5] = make_color_rgb(255,255,255);
-	stagesArray[# i,6] = make_color_rgb(255,255,255);
+	stagesArray[# i,3] = make_color_rgb(0,206,206);
+	stagesArray[# i,4] = make_color_rgb(214,255,255);
+	stagesArray[# i,5] = make_color_rgb(0,206,206);
+	stagesArray[# i,6] = make_color_rgb(0,255,255);
 	i += 1;
 	#endregion
 	
@@ -144,10 +144,10 @@ function scr_CharacterSelectMenu_Stages()
 	stagesArray[# i,0] = stages.sacredAquatia;
 	stagesArray[# i,1] = str("Stages.Aquatia.Title");
 	stagesArray[# i,2] = str("Stages.Sacred Aquatia.Title");
-	stagesArray[# i,3] = make_color_rgb(255,255,255);
-	stagesArray[# i,4] = make_color_rgb(255,255,255);
-	stagesArray[# i,5] = make_color_rgb(255,255,255);
-	stagesArray[# i,6] = make_color_rgb(255,255,255);
+	stagesArray[# i,3] = make_color_rgb(0,206,206);
+	stagesArray[# i,4] = make_color_rgb(214,255,255);
+	stagesArray[# i,5] = make_color_rgb(37,142,98);
+	stagesArray[# i,6] = make_color_rgb(56,216,149);
 	i += 1;
 	#endregion
 	
@@ -157,8 +157,8 @@ function scr_CharacterSelectMenu_Stages()
 	stagesArray[# i,2] = str("Stages.Cosmic Palace.Title");
 	stagesArray[# i,3] = make_color_rgb(255,255,255);
 	stagesArray[# i,4] = make_color_rgb(255,255,255);
-	stagesArray[# i,5] = make_color_rgb(255,255,255);
-	stagesArray[# i,6] = make_color_rgb(255,255,255);
+	stagesArray[# i,5] = make_color_rgb(211,155,143);
+	stagesArray[# i,6] = make_color_rgb(255,187,173);
 	i += 1;
 	#endregion
 	
@@ -168,8 +168,8 @@ function scr_CharacterSelectMenu_Stages()
 	stagesArray[# i,2] = str("Stages.Popstar Moon.Title");
 	stagesArray[# i,3] = make_color_rgb(255,255,255);
 	stagesArray[# i,4] = make_color_rgb(255,255,255);
-	stagesArray[# i,5] = make_color_rgb(255,255,255);
-	stagesArray[# i,6] = make_color_rgb(255,255,255);
+	stagesArray[# i,5] = make_color_rgb(158,123,181);
+	stagesArray[# i,6] = make_color_rgb(223,173,255);
 	i += 1;
 	#endregion
 	
