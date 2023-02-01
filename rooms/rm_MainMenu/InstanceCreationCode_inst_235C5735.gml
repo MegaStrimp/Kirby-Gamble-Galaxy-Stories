@@ -22,6 +22,14 @@ switch (global.roomPrevious)
 	selection = "options";
 	break;
 	
+	case rm_KeycardMenu:
+	selection = "keycards";
+	break;
+	
+	case rm_Credits:
+	selection = "credits";
+	break;
+	
 	case rm_DeleteSave:
 	selection = "deleteSave";
 	break;

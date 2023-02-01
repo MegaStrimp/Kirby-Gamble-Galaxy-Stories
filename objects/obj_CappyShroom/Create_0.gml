@@ -15,7 +15,7 @@ gravLimitNormal = 4;
 
 //Sprites
 
-sprHurt = -1;
+
 
 //Other Variables
 

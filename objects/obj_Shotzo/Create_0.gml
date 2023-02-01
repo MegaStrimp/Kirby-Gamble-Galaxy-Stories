@@ -38,6 +38,7 @@ shootCount = 0;
 shootCountMax = 3;
 targetImageIndex = aim;
 finalIndex = targetImageIndex;
+stopOutsideScreen = true;
 
 //Timers
 

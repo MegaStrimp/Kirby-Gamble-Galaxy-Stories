@@ -1129,8 +1129,10 @@ if (!active)
 				bottomHudOffset = (50 * !bottomHudVisible) - (96 * bottomHudOpen);
 				
 				global.pause = false;
-				global.healthP1 = global.hpMax;
-				global.healthP2 = global.hpMax;
+				global.healthP1 = global.healthP1Max;
+				global.healthP2 = global.healthP2Max;
+				global.healthP3 = global.healthP3Max;
+				global.healthP4 = global.healthP4Max;
 				
 				with (obj_Particle) instance_destroy();
 				with (obj_Maykr_Spawner) activeState = 0;
@@ -1671,7 +1673,7 @@ if (!active)
 						audio_play_sound(snd_ButtonYes,0,false);
 						windowIndex = -1;
 						global.pause = false;
-						if ((!global.debug) and (global.canSave)) scr_LoadGame(global.selectedSave);
+						if (global.canSave) scr_LoadGame(global.selectedSave);
 						var fade = instance_create_depth(x,y,-999,obj_Fade);
 						fade.targetRoom = rm_MaykrTitle;
 					}
@@ -1712,6 +1714,8 @@ else
 		global.pause = true;
 		global.abilityP1 = playerAbilities.none;
 		global.abilityP2 = playerAbilities.none;
+		global.abilityP3 = playerAbilities.none;
+		global.abilityP4 = playerAbilities.none;
 		
 		if (audio_is_playing(mus_Death1)) audio_stop_sound(mus_Death1);
 		

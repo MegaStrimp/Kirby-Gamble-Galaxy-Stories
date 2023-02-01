@@ -23,6 +23,7 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 	#endregion
 	
 	#region Attack Timer
+	if !((stopOutsideScreen) and (scr_OutsideView()))
 	if (attackTimer > 0)
 	{
 		attackTimer -= 1;
@@ -119,6 +120,8 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 					projBeam.particleTimer = -1;
 					projBeam.character = 3;
 					projBeam.sprIdle = spr_Projectile_MysticBeam_Enemy;
+					projBeam.trailSpr = spr_Projectile_MysticBeam_Enemy_Trail;
+					projBeam.trailTimer = 0;
 					projBeam.destroyTimer = 120;
 				}
 				break;

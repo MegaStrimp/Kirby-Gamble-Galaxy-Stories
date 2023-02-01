@@ -15,7 +15,7 @@ vsp = 0;
 
 //Sprites
 
-sprIdle = spr_Projectile_WalkyNote_Normal_Idle;
+sprIdle = spr_Projectile_WalkyNote_Normal_Red;
 
 //Other Variables
 

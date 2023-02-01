@@ -7,11 +7,28 @@ function scr_Player_CancelAttack(argument0)
 	
 	with (objectToCheck)
 	{
-		var playerAbility = global.abilityP1;
-		if (player == 1) playerAbility = global.abilityP2;
-		
-		var playerCharacter = global.characterP1;
-		if (player == 1) playerCharacter = global.characterP2;
+		switch (player)
+		{
+			case 0:
+			var playerAbility = global.abilityP1;
+			var playerCharacter = global.characterP1;
+			break;
+			
+			case 1:
+			var playerAbility = global.abilityP2;
+			var playerCharacter = global.characterP2;
+			break;
+			
+			case 2:
+			var playerAbility = global.abilityP3;
+			var playerCharacter = global.characterP3;
+			break;
+			
+			case 3:
+			var playerAbility = global.abilityP4;
+			var playerCharacter = global.characterP4;
+			break;
+		}
 		
 		image_index = 0;
 		
@@ -127,6 +144,10 @@ function scr_Player_CancelAttack(argument0)
 	        state = playerStates.normal;
 			break;
 			
+			case playerAttacks.fireNormal:
+			fireNormalAttackTimer = -1;
+			break;
+			
 			case playerAttacks.fireDash:
 			case playerAttacks.gooeyFireDash:
 			case playerAttacks.jetDash:
@@ -194,13 +215,23 @@ function scr_Player_CancelAttack(argument0)
 			case playerAttacks.sleepNormal:
 			isSleeping = false;
 			sleepEnd = false;
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				global.abilityP1 = playerAbilities.none;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				global.abilityP2 = playerAbilities.none;
+				break;
+				
+				case 2:
+				global.abilityP3 = playerAbilities.none;
+				break;
+				
+				case 3:
+				global.abilityP4 = playerAbilities.none;
+				break;
 			}
 			break;
 		}

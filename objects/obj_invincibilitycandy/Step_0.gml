@@ -27,13 +27,24 @@ if (!global.pause)
 		if (audio_is_playing(snd_FoodItem)) audio_stop_sound(snd_FoodItem);
 		audio_play_sound(snd_FoodItem,0,false);
 		var collidedPlayer = instance_place(x,y,obj_Player);
-		if (collidedPlayer.player == 0)
+		
+		switch (collidedPlayer.player)
 		{
+			case 0:
 			global.invinCandyTimerP1 = global.invinCandyTimerP1Max;
-		}
-		else
-		{
+			break;
+			
+			case 1:
 			global.invinCandyTimerP2 = global.invinCandyTimerP2Max;
+			break;
+			
+			case 2:
+			global.invinCandyTimerP3 = global.invinCandyTimerP3Max;
+			break;
+			
+			case 3:
+			global.invinCandyTimerP4 = global.invinCandyTimerP4Max;
+			break;
 		}
 		global.points += points;
 		instance_destroy();

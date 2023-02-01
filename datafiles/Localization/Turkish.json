@@ -353,9 +353,9 @@
             "Description": "Amaçsızca yürüyormuş gibi görünen bir sümük, ama aslında bir peçete arıyor."
         },
         
-        "Search":
+        "Searches":
         {
-            "Title": "Search",
+            "Title": "Searches",
             
             "Description": "Küçük, suratlı bir bomba. Yaklaşırsan patlayabilir, o yüzden uzak dur."
         },
@@ -1272,7 +1272,9 @@
         
         "Music Intro": "Müzik Başlangıcı",
         
-        "Default": "Varsayılan"
+        "Default": "Varsayılan",
+        
+        "Reset": "Varsayılan"
     },
     
     "Customize Sub-Menus":
@@ -1323,6 +1325,14 @@
 		
 		"Log Into Discord": "Discord'ta oturum aç",
 		
+		"Obtain Mystic Beam": "",
+		
+		"Master Mystic Beam": "",
+		
+		"Obtain Mystic Fire": "",
+		
+		"Master Mystic Fire": "",
+		
 		"Beam Gold Medal": "Işın Meydan Okumasında Altın Madalya al",
 		
 		"Stone Gold Medal": "Taş Meydan Okumasında Altın Madalya al",
@@ -1336,6 +1346,34 @@
 		"Ice Gold Medal": "Buz Meydan Okumasında Altın Madalya al",
 		
 		"Spark Gold Medal": "",
+		
+		"Beat Green Greens": "",
+		
+		"Beat Battleship Halberd": "",
+		
+		"Beat Asteroid Fields": "",
+		
+		"Beat Yolk Yard": "",
+		
+		"Beat Grand Temple Avgo": "",
+		
+		"Beat Floral Yolk Caves": "",
+		
+		"Beat Storm The Fortress": "",
+		
+		"Beat Central Lab": "",
+		
+		"Beat Path To The Nasty Machine": "",
+		
+		"Beat Sandshell Beach": "",
+		
+		"Beat Up The Straw": "",
+		
+		"Beat Sacred Aquatia": "",
+		
+		"Beat Cosmic Palace": "",
+		
+		"Beat Chapter 1": "",
 		
 		"Unlock Gamble": "Gamble'ı aç",
 		
@@ -1351,6 +1389,958 @@
 		
 		"Secret": ""
     },
+	
+	"Acts":
+	{
+		"C1A1":
+		{
+			"Index": "",
+			
+			"Title": ""
+		},
+		
+		"C1A2":
+		{
+			"Index": "",
+			
+			"Title": ""
+		},
+		
+		"C1A3":
+		{
+			"Index": "",
+			
+			"Title": ""
+		},
+		
+		"C1A4":
+		{
+			"Index": "",
+			
+			"Title": ""
+		},
+		
+		"C1A5":
+		{
+			"Index": "",
+			
+			"Title": ""
+		}
+	},
+	
+	"Stages":
+	{
+		"Green Greens":
+		{
+			"Title": ""
+		},
+		
+		"Battleship Halberd":
+		{
+			"Title": ""
+		},
+		
+		"Asteroid Fields":
+		{
+			"Title": ""
+		},
+		
+		"Egg Garden":
+		{
+			"Title": ""
+		},
+		
+		"Yolk Yard":
+		{
+			"Title": ""
+		},
+		
+		"Grand Temple Avgo":
+		{
+			"Title": ""
+		},
+		
+		"Floral Yolk Caves":
+		{
+			"Title": ""
+		},
+		
+		"Gear Cube":
+		{
+			"Title": ""
+		},
+		
+		"Storm The Fortress":
+		{
+			"Title": ""
+		},
+		
+		"Central Lab":
+		{
+			"Title": ""
+		},
+		
+		"Path To The Nasty Machine":
+		{
+			"Title": ""
+		},
+		
+		"Aquatia":
+		{
+			"Title": ""
+		},
+		
+		"Sandshell Beach":
+		{
+			"Title": ""
+		},
+		
+		"Up The Straw":
+		{
+			"Title": ""
+		},
+		
+		"Sacred Aquatia":
+		{
+			"Title": ""
+		},
+		
+		"Cosmic Palace":
+		{
+			"Title": ""
+		},
+		
+		"Popstar Moon":
+		{
+			"Title": ""
+		}
+	},
+	
+	"Trophies":
+	{
+		"Beat Green Greens":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Complete Green Greens":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Beat Battleship Halberd":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Complete Battleship Halberd":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Beat Asteroid Fields":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Complete Asteroid Fields":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Beat Yolk Yard":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Complete Yolk Yard":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Beat Grand Temple Avgo":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Complete Grand Temple Avgo":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Beat Floral Yolk Caves":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Complete Floral Yolk Caves":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Beat Storm the Fortress":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Complete Storm the Fortress":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Beat Central Lab":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Complete Central Lab":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Beat Path to the Nasty Machine":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Complete Path to the Nasty Machine":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Beat Sandshell Beach":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Complete Sandshell Beach":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Beat Up The Straw":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Complete Up The Straw":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Beat Sacred Aquatia":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Complete Sacred Aquatia":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Beat Cosmic Palace":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Complete Cosmic Palace":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Beat Chapter 1":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Complete Chapter 1":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Cutter Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Beam Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Mystic Beam Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Stone Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Ufo Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Mirror Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Ninja Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Bomb Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Fire Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Mystic Fire Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Ice Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Spark Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Yoyo Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Wheel Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Artist Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Fighter Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Suplex Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Wing Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Jet Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Sword Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Parasol Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Hammer Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Bell Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Water Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Hi-Jump Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Gear Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Sleep Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Scan Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Crash Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Mic Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Chef Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		},
+		
+		"Master Ultra Sword Ability":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": ""
+		}
+	},
+	
+	"Cheats":
+    {
+		"Lifeless":
+		{
+			"Title": "Hayatsız",
+			
+			"Description": "Hiçbir şeyden korkma, sonsuza kadar dirilebilirsin!",
+			
+			"Unlock Method": ""
+		},
+		
+		"Starstorm":
+		{
+			"Title": "Yıldız Fırtınası",
+			
+			"Description": "Her yerde yıldız var!",
+			
+			"Unlock Method": ""
+		},
+		
+		"Flipside":
+		{
+			"Title": "Temters",
+			
+			"Description": "Neden her şey ters?",
+			
+			"Unlock Method": ""
+		},
+		
+		"Gamer Boy":
+		{
+			"Title": "Game Boy Hayranı",
+			
+			"Description": "Özlediğimiz eski görüntü!",
+			
+			"Unlock Method": ""
+		},
+		
+		"Eye Bleach":
+		{
+			"Title": "Göz Kanaması",
+			
+			"Description": "Özlemediğimiz eski görüntü!",
+			
+			"Unlock Method": ""
+		},
+		
+		"Awaiting for the New Moon":
+		{
+			"Title": "Yeni Ay'ı Beklemek",
+			
+			"Description": "Yerçekimine inanır mısın?",
+			
+			"Unlock Method": ""
+		},
+		
+		"Gather Battle":
+		{
+			"Title": "Hayalet Avcısı",
+			
+			"Description": "Hile yapmak yasak!",
+			
+			"Unlock Method": ""
+		},
+		
+		"Fashionable":
+		{
+			"Title": "Çok Tarz",
+			
+			"Description": "Bugün ne giysem...",
+			
+			"Unlock Method": ""
+		},
+		
+		"Strimp's Diner":
+		{
+			"Title": "Strimp'in Lokantası",
+			
+			"Description": "Ölüm",
+			
+			"Unlock Method": ""
+		},
+		
+		"Colored Abilities":
+		{
+			"Title": "Renkli Özellikler",
+			
+			"Description": "Özellikler sana renk verecek!",
+			
+			"Unlock Method": "???"
+		},
+		
+		"Attributes":
+		{
+			"Cosmetic": "Kozmetik",
+			
+			"Game Changer": "Oyun Bozucu"
+		}
+	},
+	
+	"Upgrades":
+    {
+		"Heroic Shield":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Motor Cutter":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Propeller Wing":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Golden Flare":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Vortex In A Jar":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Rock Candy":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Combo Cobalt":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Psychic Pebble":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Cow Doll":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Light Shells":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Eye Bomb":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Sticky Bomb":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Magma Bomb":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Ice Bomb":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Explosive Powder":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Magic Charcoal":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Empty Cone":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Bright Plugg":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Waddle Brella":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Egg Soil":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		}
+	},
 	
 	"Shop General":
     {
@@ -1532,5 +2522,14 @@
 			
 			"3 - Kirby": "Sana etki eder mi bilmiyorum, yinede dikkat et."
         }
+	},
+	
+	"Delete Save Menu":
+    {
+		"1": "Kaydını silmek istiyor musun?",
+		
+		"2": "Tüm eşyaların, bonusların, yaptığın herşey yok olacak. Gerçekten bunların hepsini silmek istiyor musun?",
+		
+		"3": "Kaydını gerçekten silmek istediğini bir kez daha onayla."
 	}
 }

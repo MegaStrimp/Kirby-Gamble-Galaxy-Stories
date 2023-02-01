@@ -28,7 +28,14 @@ if (!global.pause)
 				with (obj_Player)
 				{
 					var isKirby = false;
-					if (((player == 0) and (global.characterP1 == playerCharacters.kirby)) or ((player == 1) and (global.characterP2 == playerCharacters.kirby))) isKirby = true;
+					if (((player == 0) and (global.characterP1 == playerCharacters.kirby))
+					or ((player == 1) and (global.characterP2 == playerCharacters.kirby))
+					or ((player == 2) and (global.characterP3 == playerCharacters.kirby))
+					or ((player == 3) and (global.characterP4 == playerCharacters.kirby)))
+					{
+						isKirby = true;
+					}
+					
 					if ((isKirby) and ((keyLeftPressed) or (keyRightPressed)))
 					{
 						other.starTimer = 0;
@@ -68,7 +75,13 @@ if (!global.pause)
 				with (obj_Player)
 				{
 					var isKirby = false;
-					if (((player == 0) and (global.characterP1 == playerCharacters.kirby)) or ((player == 1) and (global.characterP2 == playerCharacters.kirby))) isKirby = true;
+					if (((player == 0) and (global.characterP1 == playerCharacters.kirby))
+					or ((player == 1) and (global.characterP2 == playerCharacters.kirby))
+					or ((player == 2) and (global.characterP3 == playerCharacters.kirby))
+					or ((player == 3) and (global.characterP4 == playerCharacters.kirby)))
+					{
+						isKirby = true;
+					}
 					if ((isKirby) and (run))
 					{
 						other.starTimer = 0;
@@ -86,7 +99,14 @@ if (!global.pause)
 				with (obj_Player)
 				{
 					var isKirby = false;
-					if (((player == 0) and (global.characterP1 == playerCharacters.kirby)) or ((player == 1) and (global.characterP2 == playerCharacters.kirby))) isKirby = true;
+					if (((player == 0) and (global.characterP1 == playerCharacters.kirby))
+					or ((player == 1) and (global.characterP2 == playerCharacters.kirby))
+					or ((player == 2) and (global.characterP3 == playerCharacters.kirby))
+					or ((player == 3) and (global.characterP4 == playerCharacters.kirby)))
+					{
+						isKirby = true;
+					}
+					
 					if ((isKirby) and (didJump))
 					{
 						other.starTimer = 0;
@@ -104,7 +124,14 @@ if (!global.pause)
 				with (obj_Player)
 				{
 					var isKirby = false;
-					if (((player == 0) and (global.characterP1 == playerCharacters.kirby)) or ((player == 1) and (global.characterP2 == playerCharacters.kirby))) isKirby = true;
+					if (((player == 0) and (global.characterP1 == playerCharacters.kirby))
+					or ((player == 1) and (global.characterP2 == playerCharacters.kirby))
+					or ((player == 2) and (global.characterP3 == playerCharacters.kirby))
+					or ((player == 3) and (global.characterP4 == playerCharacters.kirby)))
+					{
+						isKirby = true;
+					}
+					
 					if ((isKirby) and (duck))
 					{
 						other.starTimer = 0;
@@ -144,7 +171,14 @@ if (!global.pause)
 				with (obj_Player)
 				{
 					var isKirby = false;
-					if (((player == 0) and (global.characterP1 == playerCharacters.kirby)) or ((player == 1) and (global.characterP2 == playerCharacters.kirby))) isKirby = true;
+					if (((player == 0) and (global.characterP1 == playerCharacters.kirby))
+					or ((player == 1) and (global.characterP2 == playerCharacters.kirby))
+					or ((player == 2) and (global.characterP3 == playerCharacters.kirby))
+					or ((player == 3) and (global.characterP4 == playerCharacters.kirby)))
+					{
+						isKirby = true;
+					}
+					
 					if ((isKirby) and (float))
 					{
 						other.starTimer = 0;
@@ -165,7 +199,14 @@ if (!global.pause)
 					with (obj_Player)
 					{
 						var isKirby = false;
-						if (((player == 0) and (global.characterP1 == playerCharacters.kirby)) or ((player == 1) and (global.characterP2 == playerCharacters.kirby))) isKirby = true;
+						if (((player == 0) and (global.characterP1 == playerCharacters.kirby))
+						or ((player == 1) and (global.characterP2 == playerCharacters.kirby))
+						or ((player == 2) and (global.characterP3 == playerCharacters.kirby))
+						or ((player == 3) and (global.characterP4 == playerCharacters.kirby)))
+						{
+							isKirby = true;
+						}
+						
 						if ((isKirby) and ((inhaling) or (state = playerStates.carry)))
 						{
 							other.substate = 1;
@@ -177,7 +218,14 @@ if (!global.pause)
 					with (obj_Player)
 					{
 						var isKirby = false;
-						if (((player == 0) and (global.characterP1 == playerCharacters.kirby)) or ((player == 1) and (global.characterP2 == playerCharacters.kirby))) isKirby = true;
+						if (((player == 0) and (global.characterP1 == playerCharacters.kirby))
+						or ((player == 1) and (global.characterP2 == playerCharacters.kirby))
+						or ((player == 2) and (global.characterP3 == playerCharacters.kirby))
+						or ((player == 3) and (global.characterP4 == playerCharacters.kirby)))
+						{
+							isKirby = true;
+						}
+						
 						if ((isKirby) and (spit))
 						{
 							other.starTimer = 0;
@@ -200,7 +248,14 @@ if (!global.pause)
 					with (obj_Player)
 					{
 						var isKirby = false;
-						if (((player == 0) and (global.characterP1 == playerCharacters.kirby)) or ((player == 1) and (global.characterP2 == playerCharacters.kirby))) isKirby = true;
+						if (((player == 0) and (global.characterP1 == playerCharacters.kirby))
+						or ((player == 1) and (global.characterP2 == playerCharacters.kirby))
+						or ((player == 2) and (global.characterP3 == playerCharacters.kirby))
+						or ((player == 3) and (global.characterP4 == playerCharacters.kirby)))
+						{
+							isKirby = true;
+						}
+						
 						if ((isKirby) and (inhaling))
 						{
 							other.substate = 1;
@@ -212,7 +267,14 @@ if (!global.pause)
 					with (obj_Player)
 					{
 						var isKirby = false;
-						if (((player == 0) and (global.characterP1 == playerCharacters.kirby)) or ((player == 1) and (global.characterP2 == playerCharacters.kirby))) isKirby = true;
+						if (((player == 0) and (global.characterP1 == playerCharacters.kirby))
+						or ((player == 1) and (global.characterP2 == playerCharacters.kirby))
+						or ((player == 2) and (global.characterP3 == playerCharacters.kirby))
+						or ((player == 3) and (global.characterP4 == playerCharacters.kirby)))
+						{
+							isKirby = true;
+						}
+						
 						if ((isKirby) and (swallow))
 						{
 							other.starTimer = 0;

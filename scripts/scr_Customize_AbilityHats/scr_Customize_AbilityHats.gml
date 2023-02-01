@@ -473,6 +473,36 @@ function scr_Customize_AbilityHats()
 	abilityHatPaintOffsetLerp[i][k][h] = 0;
 	#endregion
 	
+	/*#region Mystic Fire
+	i += 1;
+	abilityHatTitle[i] = str("Player Abilities.Mystic Fire.Title");
+	abilityHatValue[i] = playerAbilities.mysticBeam;
+	abilityHatUnlocked[i] = true;
+	abilityHatOffset[i] = 0;
+	abilityHatOffsetLerp[i] = 0;
+	
+	var k = 0;
+	abilityHatSkinTitle[i][k] = "GGS";
+	abilityHatSkinValue[i][k] = abilityHatSkins.mysticBeam_ggs;
+	abilityHatSkinUnlocked[i][k] = true;
+	abilityHatSkinOffset[i][k] = 0;
+	abilityHatSkinOffsetLerp[i][k] = 0;
+	var h = 0;
+	abilityHatPaintTitle[i][k][h] = str("Ability Hat Paints.Nasty Flux.Title");
+	abilityHatPaintValue[i][k][h] = abilityHatPaints.mysticBeam_ggs_nastyFlux;
+	abilityHatPaint[i][k][h] = spr_Kirby_AbilityHat_MysticBeam_GGS_Palette_NastyFlux;
+	abilityHatPaintUnlocked[i][k][h] = true;
+	abilityHatPaintOffset[i][k][h] = 0;
+	abilityHatPaintOffsetLerp[i][k][h] = 0;
+	h += 1;
+	abilityHatPaintTitle[i][k][h] = str("Ability Hat Paints.Mage Rose.Title");
+	abilityHatPaintValue[i][k][h] = abilityHatPaints.mysticBeam_ggs_mageRose;
+	abilityHatPaint[i][k][h] = spr_Kirby_AbilityHat_MysticBeam_GGS_Palette_MageRose;
+	abilityHatPaintUnlocked[i][k][h] = true;
+	abilityHatPaintOffset[i][k][h] = 0;
+	abilityHatPaintOffsetLerp[i][k][h] = 0;
+	#endregion*/
+	
 	#region Ice
 	i += 1;
 	abilityHatTitle[i] = str("Player Abilities.Ice.Title");

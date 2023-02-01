@@ -36,7 +36,7 @@ else
 
 event_inherited();
 
-if (childPause)
+if ((!childPause))
 {
 	//Get Inhaled
 	
@@ -122,9 +122,10 @@ if (childPause)
 		case 0:
 		case 1:
 		//Follow Player
-		var nearestPlayer = instance_nearest(x,y,obj_Player);
-		if (instance_exists(nearestPlayer))
+		
+		if (instance_exists(obj_Player))
 		{
+			var nearestPlayer = instance_nearest(x,y,obj_Player);
 			if (nearestPlayer.x < x)
 			{
 				dirX = -1;
@@ -165,16 +166,11 @@ if (childPause)
 			hsp = clamp(hsp,-movespeed,movespeed);
 			vsp = clamp(vsp,-jumpspeed,jumpspeed);
 			
+			var nearestPlayer = instance_nearest(x,y,obj_Player);
 			var newDirX = 1;
+			if (nearestPlayer.x < x) newDirX = -1;
 			var newDirY = 1;
-			
-			if (instance_exists(obj_Player))
-			{
-				var nearestPlayer = instance_nearest(x,y,obj_Player);
-				
-				if (nearestPlayer.x < x) newDirX = -1;	
-				if (nearestPlayer.y < y) newDirY = -1;
-			}
+			if (nearestPlayer.y < y) newDirY = -1;
 			
 			if ((newDirX != walkDirX) and (canTurnX))
 			{
@@ -316,9 +312,7 @@ if (childPause)
 		}
 	}
 }
-else if (!childPause and !hurt)
+else
 {
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

@@ -11,6 +11,7 @@ if (setupTimer == 0)
         sprBox = spr_Chuckie_Box;
 		sprBoxOpen = spr_Chuckie_BoxOpen;
 		sprBoxClose = spr_Chuckie_BoxClose;
+		sprBoxDead = spr_Chuckie_Box_Dead;
 		sprIdle = spr_Chuckie_Idle;
 		sprHurt = spr_Chuckie_Hurt;
 		sprNeck = spr_Chuckie_Neck;

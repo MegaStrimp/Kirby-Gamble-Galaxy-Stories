@@ -18,6 +18,11 @@ destroyableByWall = false;
 deathParticlesOnHit = false;
 deathParticlesOnHitNumber = choose("roundabout","doubleCross","cross","doubleHex");
 active = false;
+hurtsObject = active;
+hurtsEnemy = active;
+hurtsBoss = active;
+hurtsProjectile = active;
+destroyableByWall = active;
 
 //Timers
 

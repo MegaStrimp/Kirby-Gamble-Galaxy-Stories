@@ -69,6 +69,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Text",
-    "path": "folders/Sprites/Hud/Healthbars/Boss/Text.yy",
+    "path": "folders/Sprites/Hud/Healthbars/Text.yy",
   },
 }

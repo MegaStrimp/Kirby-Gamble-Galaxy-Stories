@@ -6,8 +6,24 @@ function scr_Player_Collision(argument0)
 	
 	var playerMech = argument0;
 	
-	var playerAbility = global.abilityP1;
-	if (player == 1) playerAbility = global.abilityP2;
+	switch (player)
+	{
+		case 0:
+		var playerAbility = global.abilityP1;
+		break;
+		
+		case 1:
+		var playerAbility = global.abilityP2;
+		break;
+		
+		case 2:
+		var playerAbility = global.abilityP3;
+		break;
+		
+		case 3:
+		var playerAbility = global.abilityP4;
+		break;
+	}
 	//hspCollision = 0;
 	//vspCollision = 0;
 	
@@ -15,6 +31,8 @@ function scr_Player_Collision(argument0)
 	//if ((sign(vspCollision != 0)) and (sign(vsp) != sign(vspCollision))) vsp = 0;
 	hspFinal = hsp + hspCollision;
 	vspFinal = vsp + vspCollision;
+	hspFinal = hsp;
+	vspFinal = vsp;
 	
 	//Slopes
 	
@@ -204,13 +222,24 @@ function scr_Player_Collision(argument0)
 		{
 			if (collidingWall.hp > 0)
 			{
-				if (player == 0)
+				tomatolessDeath = true;
+				switch (player)
 				{
+					case 0:
 					global.healthP1 = 0;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					global.healthP2 = 0;
+					break;
+					
+					case 2:
+					global.healthP3 = 0;
+					break;
+					
+					case 3:
+					global.healthP4 = 0;
+					break;
 				}
 			}
 		}
@@ -239,10 +268,32 @@ function scr_Player_Collision(argument0)
 	
 	//Death On Bottom
 	
-	if ((global.healthP1 != 0) and (y >= (obj_Camera.cameraY + ((obj_Camera.viewHeight + 24) / obj_Camera.zoomFinal))))
+	if (y >= room_height + 24)
+	{
+		tomatolessDeath = true;
+		switch (player)
+		{
+			case 0:
+			if (global.healthP1 != 0) global.healthP1 = 0;
+			break;
+			
+			case 1:
+			if (global.healthP2 != 0) global.healthP2 = 0;
+			break;
+			
+			case 2:
+			if (global.healthP3 != 0) global.healthP3 = 0;
+			break;
+			
+			case 3:
+			if (global.healthP4 != 0) global.healthP4 = 0;
+			break;
+		}
+	}
+	/*if ((global.healthP1 != 0) and (y >= (obj_Camera.cameraY + ((obj_Camera.viewHeight + 24) / obj_Camera.zoomFinal))))
 	{
 		global.healthP1 = 0;
-	}
+	}*/
 }
 
 /* OLD

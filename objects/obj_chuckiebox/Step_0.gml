@@ -14,6 +14,10 @@ if (((!global.pause) and !((global.cutscene) and (pausedInCutscenes))) and (!scr
 		if (attackTimer > 0)
 		{
 			attackTimer -= 1;
+			if (attackTimer <= 30)
+			{
+				if (flashTimer == -1) flashTimer = flashTimerMax;
+			}
 		}
 		else if (attackTimer == 0)
 		{

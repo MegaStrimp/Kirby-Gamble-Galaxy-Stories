@@ -50,10 +50,7 @@ function scr_Player_States_JetDash()
 		
 		image_speed = 1;
 		
-		if (fireReleaseTimer != -1)
-		{
-			sprite_index = sprFireAttack2;
-		}
+		sprite_index = sprFireAttack2;
 		
 		//Collision
 		

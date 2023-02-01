@@ -108,25 +108,33 @@ if (!global.pause)
 				obj_SquadControl.waveEnemyCount[obj_SquadControl.currentWave][squadType] += 1;
 			}
 			
-			if (owner.cAbility == playerAbilities.mix)
+			if (global.gamemode != gamemodes.gamblion)
 			{
-				ds_list_add(owner.mixAbilities,ability);
+				if (owner.cAbility == playerAbilities.mix)
+				{
+					ds_list_add(owner.mixAbilities,ability);
+				}
+			
+				if (ability != playerAbilities.none)
+				{
+					if ((owner.cAbility != playerAbilities.none) and (owner.ateAbilityStar == -1) and (owner.cAbility != ability))
+					{
+						if (owner.mixAbilities == -1) owner.mixAbilities = ds_list_create();
+						ds_list_add(owner.mixAbilities,owner.cAbility);
+						ds_list_add(owner.mixAbilities,ability);
+						owner.cAbility = playerAbilities.mix;
+					}
+					else
+					{
+						owner.cAbility = ability;
+					}
+				}
+			}
+			else
+			{
+				owner.cAbility = playerAbilities.none;
 			}
 			
-			if (ability != playerAbilities.none)
-			{
-				if ((owner.cAbility != playerAbilities.none) and (owner.ateAbilityStar == -1) and (owner.cAbility != ability))
-				{
-					if (owner.mixAbilities == -1) owner.mixAbilities = ds_list_create();
-					ds_list_add(owner.mixAbilities,owner.cAbility);
-					ds_list_add(owner.mixAbilities,ability);
-					owner.cAbility = playerAbilities.mix;
-				}
-				else
-				{
-					owner.cAbility = ability;
-				}
-			}
 			if (inhaleType == 0)
 			{
 				owner.sucked += 1;
@@ -157,13 +165,23 @@ if (!global.pause)
 					audio_play_sound(snd_FishTaco,0,false);
 				}
 				
-				if (owner.player == 0)
+				switch (owner.player)
 				{
-					global.healthP1 += round(global.healthP1Max*0.1);
-				}
-				else
-				{
-					global.healthP2 += round(global.healthP2Max*0.1);
+					case 0:
+					global.healthP1 += round(global.healthP1Max * .1);
+					break;
+					
+					case 1:
+					global.healthP2 += round(global.healthP2Max * .1);
+					break;
+					
+					case 2:
+					global.healthP3 += round(global.healthP3Max * .1);
+					break;
+					
+					case 3:
+					global.healthP4 += round(global.healthP4Max * .1);
+					break;
 				}
 			}
 			else if (inhaleType == 2)
@@ -171,25 +189,46 @@ if (!global.pause)
 				if (audio_is_playing(snd_FoodItem)) audio_stop_sound(snd_FoodItem);
 				audio_play_sound(snd_FoodItem,0,false);
 				
-				if (owner.player == 0)
+				switch (owner.player)
 				{
-					global.healthP1 += round(global.healthP1Max*0.5);
-				}
-				else
-				{
-					global.healthP2 += round(global.healthP2Max*0.5);
+					case 0:
+					global.healthP1 += round(global.healthP1Max * .5);
+					break;
+					
+					case 1:
+					global.healthP2 += round(global.healthP2Max * .5);
+					break;
+					
+					case 2:
+					global.healthP3 += round(global.healthP3Max * .5);
+					break;
+					
+					case 3:
+					global.healthP4 += round(global.healthP4Max * .5);
+					break;
 				}
 			}
 			else if (inhaleType == 3)
 			{
 				audio_play_sound(snd_Select,0,false);
-				if (owner.player == 0)
+				
+				switch (owner.player)
 				{
+					case 0:
 					global.healthP1 += global.healthP1Max;
-				}
-				else
-				{
-					global.healthP1 += global.healthP1Max;
+					break;
+					
+					case 1:
+					global.healthP2 += global.healthP2Max;
+					break;
+					
+					case 2:
+					global.healthP3 += global.healthP3Max;
+					break;
+					
+					case 3:
+					global.healthP4 += global.healthP4Max;
+					break;
 				}
 			}
 			else if (inhaleType == 4)
@@ -199,24 +238,44 @@ if (!global.pause)
 			}
 			else if (inhaleType == 5)
 			{
-				if (owner.player == 0)
+				switch (owner.player)
 				{
+					case 0:
 					global.invinCandyTimerP1 = global.invinCandyTimerP1Max;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					global.invinCandyTimerP2 = global.invinCandyTimerP2Max;
+					break;
+					
+					case 2:
+					global.invinCandyTimerP3 = global.invinCandyTimerP3Max;
+					break;
+					
+					case 3:
+					global.invinCandyTimerP4 = global.invinCandyTimerP4Max;
+					break;
 				}
 			}
 			else if (inhaleType == 6)
 			{
-				if (owner.player == 0)
+				switch (owner.player)
 				{
+					case 0:
 					global.mintLeafTimerP1 = global.mintLeafTimerP1Max;
-				}
-				else
-				{
+					break;
+					
+					case 1:
 					global.mintLeafTimerP2 = global.mintLeafTimerP2Max;
+					break;
+					
+					case 2:
+					global.mintLeafTimerP3 = global.mintLeafTimerP3Max;
+					break;
+					
+					case 3:
+					global.mintLeafTimerP4 = global.mintLeafTimerP4Max;
+					break;
 				}
 			}
 		    instance_destroy();

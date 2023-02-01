@@ -1,105 +1,92 @@
 ///@description Draw
 
-//Draw Hud
-
+#region Draw Hud
 hudOffset = lerp(hudOffset,0,.1);
 draw_sprite(spr_Menu_MainMenu_Hud_Upgrades,0,0 + hudOffset,0);
-draw_sprite(spr_Menu_Saves_Medals_Empty,0,4 + hudOffset,5);
+#endregion
 
-//Draw Text
+#region Draw Upgrades
+for (var i = 0; i < upgradesMax; i++)
+{
+	var upgradeYOffset = -42;
+	var upgradeScale = .6;
+	var upgradeAlpha = 0;
+	if (i == upgradeSelection)
+	{
+		upgradeYOffset = 0;
+		upgradeScale = 2;
+		upgradeAlpha = 1;
+	}
+	if ((i == upgradeSelection - 1) or (i == upgradeSelection + 1))
+	{
+		upgradeYOffset = -16;
+		upgradeScale = 1.4;
+		upgradeAlpha = .66;
+	}
+	if ((i == upgradeSelection - 2) or (i == upgradeSelection + 2))
+	{
+		upgradeYOffset = -32;
+		upgradeScale = .8;
+		upgradeAlpha = .45;
+	}
+	
+	if (!global.pause)
+	{
+		upgradesArray[# i,6] = lerp(upgradesArray[# i,6],240 + ((i - upgradeSelection) * 82),.25);
+		upgradesArray[# i,7] = lerp(upgradesArray[# i,7],upgradeYOffset,.25);
+		upgradesArray[# i,8] = lerp(upgradesArray[# i,8],upgradeScale,.25);
+		upgradesArray[# i,9] = lerp(upgradesArray[# i,9],upgradeAlpha,.25);
+	}
+	
+	if (upgradesArray[# i,9] != 0)
+	{
+		draw_sprite_ext(spr_AbilityTrophy_KSSU_Idle,!upgradesArray[# upgradeSelection,4],upgradesArray[# i,6],144 + upgradesArray[# i,7],upgradesArray[# i,8],upgradesArray[# i,8],image_angle,image_blend,upgradesArray[# i,9] + (.15 * !upgradesArray[# i,4]));
+		draw_sprite_ext(upgradesArray[# i,1],!upgradesArray[# upgradeSelection,4],upgradesArray[# i,6],144 + upgradesArray[# i,7] + (1 * upgradesArray[# i,8]),upgradesArray[# i,8],upgradesArray[# i,8],image_angle,image_blend,upgradesArray[# i,9] + (.15 * !upgradesArray[# i,4]));
+		if (upgradesArray[# i,10]) draw_sprite_ext(spr_Menu_Upgrades_Check,0,upgradesArray[# i,6] + 18,144 + upgradesArray[# i,7] + 2,upgradesArray[# i,8] * 2,upgradesArray[# i,8] * 2,image_angle,image_blend,upgradesArray[# i,9] + (.15 * !upgradesArray[# i,4]));
+	}
+}
+#endregion
 
+#region Draw Text Background
 draw_set_color(c_black);
 draw_set_alpha(.75);
-draw_roundrect(65,188,415,268,false);
+draw_roundrect(20,183,460,267,false);
 draw_set_alpha(1);
+#endregion
 
-draw_set_color(c_white);
+#region Draw Text
 if (global.language == languages.english)
 {
-	draw_set_font(fnt_DialogueDefault);
+	var fntDialogueDefault = fnt_DialogueDefault;
 }
 else if ((global.language == languages.chinese) or (global.language == languages.japanese))
 {
-	draw_set_font(global.fontDialogueDefaultKanji);
+	var fntDialogueDefault = global.fontDialogueDefaultKanji;
 }
 else
 {
-	draw_set_font(fnt_DialogueDefaultSpecial);
+	var fntDialogueDefault = fnt_DialogueDefaultSpecial;
 }
-
+draw_set_font(fntDialogueDefault);
 draw_set_halign(fa_center);
-var col1 = c_dkgray;
-var col2 = c_dkgray
-var text = upgradeUnlockMethod[selection];
-if (upgradeUnlocked[selection])
+var description = upgradesArray[# upgradeSelection,3];
+var titleColor1 = upgradesArray[# upgradeSelection,11];
+var titleColor2 = c_white;
+var descriptionColor1 = c_white;
+var descriptionColor3 = c_white;
+
+if (!upgradesArray[# upgradeSelection,4])
 {
-	col1 = upgradeColor[selection];
-	col2 = c_white;
-	text = upgradeDescription[selection];
+	description = upgradesArray[# upgradeSelection,5];
+	titleColor1 = c_dkgray;
+	titleColor2 = c_white;
+	descriptionColor1 = c_gray;
+	descriptionColor3 = c_white;
+	attributeText = "";
 }
-var activeText = "Disabled";
-switch (upgradeTitle[selection])
-{
-	case "Motor Cutter":
-	if (global.cutterMotorCutterUpgradeEquipped) activeText = "Active";
-	break;
-	
-	case "Propeller Wing":
-	if (global.cutterPropellerWingUpgradeEquipped) activeText = "Active";
-	break;
-	
-	case "Golden Flare":
-	if (global.beamGoldenFlareUpgradeEquipped) activeText = "Active";
-	break;
-	
-	case "Vortex In A Jar":
-	if (global.mysticBeamVortexInAJarUpgradeEquipped) activeText = "Active";
-	break;
-	
-	case "Rock Candy":
-	if (global.stoneRockCandyUpgradeEquipped) activeText = "Active";
-	break;
-	
-	case "Combo Cobalt":
-	if (global.stoneComboCobaltUpgradeEquipped) activeText = "Active";
-	break;
-	
-	case "Multi Bomb":
-	if (global.bombMultiBombUpgradeEquipped) activeText = "Active";
-	break;
-	
-	case "Eye Bomb":
-	if (global.bombEyeBombUpgradeEquipped) activeText = "Active";
-	break;
-	
-	case "Smart Bomb":
-	if (global.bombSmartBombUpgradeEquipped) activeText = "Active";
-	break;
-	
-	case "Magma Bomb":
-	if (global.bombMagmaBombUpgradeEquipped) activeText = "Active";
-	break;
-	
-	case "Explosive Powder":
-	if (global.bombExplosivePowderUpgradeEquipped) activeText = "Active";
-	break;
-	
-	case "Magic Charcoal":
-	if (global.fireMagicCharcoalUpgradeEquipped) activeText = "Active";
-	break;
-	
-	case "Empty Cone":
-	if (global.iceEmptyConeUpgradeEquipped) activeText = "Active";
-	break;
-	
-	case "Bright Plugg":
-	if (global.sparkBrightPluggUpgradeEquipped) activeText = "Active";
-	break;
-	
-	case "Egg Soil":
-	if (global.waterEggSoilUpgradeEquipped) activeText = "Active";
-	break;
-}
-scr_Draw_Text_Color_Outline(room_width / 2,192,upgradeTitle[selection] + " - " + activeText,-1,-1,col1,col2,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
-scr_Draw_Text_Color_Outline(room_width / 2,222,text,-1,350,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+scr_Draw_Text_Color_Outline(240,188,upgradesArray[# upgradeSelection,2],-1,-1,titleColor1,titleColor2,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+scr_Draw_Text_Color_Outline(240,219,description,-1,-1,descriptionColor1,descriptionColor3,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 draw_set_halign(fa_left);
+
+draw_sprite(upgradesArray[# upgradeSelection,12],0,441,205);
+#endregion

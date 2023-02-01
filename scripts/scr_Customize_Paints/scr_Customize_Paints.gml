@@ -335,7 +335,7 @@ function scr_Customize_Paints()
 	sprayPaintTitle[i] = str("Spray Paints.Greenjolt.Title");
 	sprayPaintDescription[i] = str("Spray Paints.Greenjolt.Description");
 	sprayPaintUnlocked[i] = global.greenjoltSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = str("Unlock Methods.Log Into Gamejolt");
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Beat Stage Missions");
 	sprayPaintValue[i] = playerSprayPaints.greenjolt;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_GreenJolt;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_GreenJolt;
@@ -352,7 +352,7 @@ function scr_Customize_Paints()
 	sprayPaintTitle[i] = str("Spray Paints.Butter Knife.Title");
 	sprayPaintDescription[i] = str("Spray Paints.Butter Knife.Description");
 	sprayPaintUnlocked[i] = global.butterKnifeSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = str("Unlock Methods.Log Into Gamejolt");
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Beat Stage Missions");
 	sprayPaintValue[i] = playerSprayPaints.butterKnife;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_ButterKnife;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_ButterKnife;
@@ -488,7 +488,7 @@ function scr_Customize_Paints()
 	sprayPaintTitle[i] = str("Spray Paints.Plasma.Title");
 	sprayPaintDescription[i] = str("Spray Paints.Plasma.Description");
 	sprayPaintUnlocked[i] = global.plasmaSprayPaintUnlocked;
-	sprayPaintUnlockMethod[i] = str("Unlock Methods.Plasma Gold Medal");
+	sprayPaintUnlockMethod[i] = str("Unlock Methods.Spark Gold Medal");
 	sprayPaintValue[i] = playerSprayPaints.plasma;
 	sprayPaintKirbyNormal[i] = spr_Kirby_Normal_Palette_Plasma;
 	sprayPaintGambleNormal[i] = spr_Kirby_Normal_Palette_Plasma;

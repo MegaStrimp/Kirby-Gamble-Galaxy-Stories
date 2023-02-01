@@ -11,14 +11,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 219,
+  "bbox_right": 239,
   "bbox_top": 0,
   "bbox_bottom": 34,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "DynamicTexturePage": false,
-  "width": 220,
+  "width": 240,
   "height": 35,
   "textureGroupId": {
     "name": "Menu",
@@ -28,7 +28,7 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8bedd8eb-fc08-4985-bc37-4683f0d164c0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"83d94b25-b5c0-4919-8169-3bde4a6b46bf",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -45,7 +45,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"f5cac56a-1788-41e4-b8d6-c126d9e216bb","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8bedd8eb-fc08-4985-bc37-4683f0d164c0","path":"sprites/spr_Menu_MainMenu_Hud_Stages/spr_Menu_MainMenu_Hud_Stages.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"404f4d38-5cb5-4e60-b9ad-35203044d73d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"83d94b25-b5c0-4919-8169-3bde4a6b46bf","path":"sprites/spr_Menu_MainMenu_Hud_Stages/spr_Menu_MainMenu_Hud_Stages.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,

@@ -247,15 +247,15 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			projectile.imageSpeed = 1;
 			projectile.dmg = 1;
 			projectile.sprite_index = projectile.sprIdle;
-			projectile.dirX = dirX;
-			projectile.image_xscale = projectile.dirX;
 			projectile.enemy = true;
 			projectile.destroyableByEnemy = false;
 			projectile.hurtsObject = false;
 			projectile.hurtsEnemy = false;
 			projectile.hurtsPlayer = true;
 			projectile.hsp = 2 * dirX;
-	        projectile.vsp = random_range(-.5,.5);
+	        projectile.vsp = random_range(-1.5,1.5);
+			projectile.imageAngle = point_direction(0,0,projectile.hsp,projectile.vsp);
+			projectile.image_angle = projectile.imageAngle;
 			fireTimer = fireTimerMax;
 		}
 	}

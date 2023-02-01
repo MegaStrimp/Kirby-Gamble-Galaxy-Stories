@@ -29,7 +29,7 @@ if (!global.pause)
 	switch (movementState)
 	{
 		case "halberd1":
-		if ((vsp == 0) and (place_meeting(x,y - 1,obj_Player))) vsp = -1;
+		if ((vsp == 0) and (place_meeting(x,y - 1,obj_Player))) vsp = -4;
 		if (y <= 338)
 		{
 			vsp = 0;
@@ -43,10 +43,10 @@ if (!global.pause)
 		{
 			if (abs(x - obj_Player.x) <= 120) vsp = -6;
 		}
-		if (y <= 336)
+		if (y <= 312)
 		{
 			movementTimer = 0;
-			y = 336;
+			y = 312;
 		}
 		break;
 		
@@ -55,10 +55,10 @@ if (!global.pause)
 		{
 			if (abs(x - obj_Player.x) <= 120) vsp = -6;
 		}
-		if (y <= 336)
+		if (y <= 312)
 		{
 			movementTimer = 0;
-			y = 336;
+			y = 312;
 		}
 		break;
 		
@@ -67,10 +67,10 @@ if (!global.pause)
 		{
 			if (abs(x - obj_Player.x) <= 120) vsp = -6;
 		}
-		if (y <= 312)
+		if (y <= 288)
 		{
 			movementTimer = 0;
-			y = 312;
+			y = 288;
 		}
 		break;
 		
@@ -79,10 +79,10 @@ if (!global.pause)
 		{
 			if (abs(x - obj_Player.x) <= 120) vsp = -6;
 		}
-		if (y <= 312)
+		if (y <= 288)
 		{
 			movementTimer = 0;
-			y = 312;
+			y = 288;
 		}
 		break;
 		
@@ -91,10 +91,10 @@ if (!global.pause)
 		{
 			if (abs(x - obj_Player.x) <= 120) vsp = -6;
 		}
-		if (y <= 240)
+		if (y <= 216)
 		{
 			movementTimer = 0;
-			y = 240;
+			y = 216;
 		}
 		break;
 		
@@ -103,10 +103,10 @@ if (!global.pause)
 		{
 			if (abs(x - obj_Player.x) <= 120) vsp = -6;
 		}
-		if (y <= 240)
+		if (y <= 216)
 		{
 			movementTimer = 0;
-			y = 240;
+			y = 216;
 		}
 		break;
 		
@@ -115,10 +115,10 @@ if (!global.pause)
 		{
 			if (abs(x - obj_Player.x) <= 120) vsp = -6;
 		}
-		if (y <= 216)
+		if (y <= 192)
 		{
 			movementTimer = 0;
-			y = 216;
+			y = 192;
 		}
 		break;
 		
@@ -127,10 +127,10 @@ if (!global.pause)
 		{
 			if (abs(x - obj_Player.x) <= 180) vsp = -6;
 		}
-		if (y <= 240)
+		if (y <= 216)
 		{
 			movementTimer = 0;
-			y = 240;
+			y = 216;
 		}
 		break;
 		
@@ -139,10 +139,22 @@ if (!global.pause)
 		{
 			if (abs(x - obj_Player.x) <= 180) vsp = -6;
 		}
-		if (y <= 216)
+		if (y <= 192)
 		{
 			movementTimer = 0;
-			y = 216;
+			y = 192;
+		}
+		break;
+		
+		case "halberd4-1":
+		if (instance_exists(obj_Player))
+		{
+			if (abs(x - obj_Player.x) <= 180) vsp = -6;
+		}
+		if (y <= 264)
+		{
+			movementTimer = 0;
+			y = 264;
 		}
 		break;
 		

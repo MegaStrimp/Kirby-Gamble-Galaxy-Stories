@@ -63,24 +63,9 @@ function scr_Enemy_Collision()
 			    y += (sign(vspFinal) / 10);
 			}
 			if (invincibleTimer == -1) hurtTimer = 0;
-			
-			if ((hurtFlags & hurt_type.HURT_GROUNDBOUNCE) and vsp > 0 and hurt)
-			{
-				vspFinal = -vspFinal * 0.4; //good bye spam tong
-				if (vspFinal > 0.4) vspFinal = 0;
-				vsp = vspFinal;
-			}
-			else if ((hurtFlags & hurt_type.HURT_WALLBOUNCE) and vsp < 0 and hurt)
-			{
-				vspFinal = -vspFinal;
-				vsp = vspFinal;
-			}
-			else
-			{
-				vsp = 0;
-				vspFinal = 0;
-				knockbackY = 0;
-			}
+			vsp = 0;
+			vspFinal = 0;
+			knockbackY = 0;
 		}
 	}
 	
@@ -95,7 +80,7 @@ function scr_Enemy_Collision()
 		}
 		else
 		{
-			if ((collidingWall.hp > 0) and (collidingWall.owner != id))
+			if ((collidingWall.hp > 0) and (collidingWall.owner != id) and (!collidingWall.platform))
 			{
 				death = true;
 			}

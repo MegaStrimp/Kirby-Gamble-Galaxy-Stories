@@ -14,6 +14,7 @@ hurtsEnemy = false;
 hurtsBoss = false;
 hurtsPlayer = true;
 enemy = true;
+isDirectHit = true;
 
 paletteIndex = spr_Projectile_Simirror_Normal_Palette_Pink;
 canBeReflected = false;

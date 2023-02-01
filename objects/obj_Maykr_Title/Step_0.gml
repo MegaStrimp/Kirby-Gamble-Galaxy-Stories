@@ -84,7 +84,7 @@ if (!global.pause)
 				case 2:
 				var fade = instance_create_depth(x,y,-999,obj_Fade);
 				var demo = false;
-				demo = true;
+				//demo = true;
 				if (demo)
 				{
 					fade.targetRoom = rm_StageSelect_Demo;

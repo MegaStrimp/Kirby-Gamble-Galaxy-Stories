@@ -1,77 +1,49 @@
 ///@description Draw
 
-//Draw Hud
+#region Draw Portrait Background
+var x1 = 151;
+var x2 = 329;
+var y1 = 34;
+var y2 = 147;
 
-draw_sprite(spr_Menu_MainMenu_Hud_Bestiary,0,240,0);
+textureY += .15;
+if (textureY >= 100) textureY -= 100;
+textureX += .15;
+if (textureX >= 100) textureX -= 100;
 
-var sprIcon = spr_Hud_Icon_Helper;
-if (selectedEntries[enemySelection][6] != playerAbilities.none) sprIcon = scr_Hud_AbilityIcon(selectedEntries[enemySelection][6],playerCharacters.kirby);
-if (sprIcon != -1) draw_sprite_ext(sprIcon,0,451,71,.55,.55,image_angle,image_blend,image_alpha);
-draw_sprite(spr_Menu_Collection_Bestiary_Hud_Normal,0,0,0);
+gpu_set_blendenable(false)
+gpu_set_colorwriteenable(false,false,false,true);
+draw_set_alpha(0);
+draw_rectangle(0,0,room_width,room_height,false);
 
-//Draw Portrait
+draw_set_alpha(1);
+draw_rectangle(x1,y1,x2,y2,false);
+gpu_set_blendenable(true);
+gpu_set_colorwriteenable(true,true,true,true);
 
-var sprite = spr_Menu_Collection_Bestiary_Locked;
-if (selectedEntries[enemySelection][7]) sprite = selectedEntries[enemySelection][4];
-draw_sprite_ext(sprite,0,240,100,selectedEntries[enemySelection][5],selectedEntries[enemySelection][5],image_angle,image_blend,image_alpha);
+gpu_set_blendmode_ext(bm_dest_alpha,bm_inv_dest_alpha);
+gpu_set_alphatestenable(true);
 
-//Draw Selection Bar
-
-draw_set_color(c_white);
-if (global.language == languages.english)
+for (var i = 0; i < floor((x2 - x1) / 100) + 2; i++)
 {
-	draw_set_font(fnt_DialogueDefault);
-}
-else if ((global.language == languages.chinese) or (global.language == languages.japanese))
-{
-	draw_set_font(global.fontDialogueDefaultKanji);
-}
-else
-{
-	draw_set_font(fnt_DialogueDefaultSpecial);
-}
-
-var num = 0;
-for (var i = loopStart; i < loopStart + 9; i++)
-{
-	if (i <= arrayLength)
+	for (var h = 0; h < floor((y2 - y1) / 100) + 2; h++)
 	{
-		var text = "???";
-		var col1 = c_dkgray;
-		var col2 = c_dkgray;
-		var selectedOffset = 0;
-		if (selectedEntries[i][7])
-		{
-			text = selectedEntries[i][2];
-			//col1 = familiarColor[i];
-			col1 = c_white;
-			col2 = c_white;
-		}
-		if (i == enemySelection)
-		{
-			col1 = c_yellow;
-			col2 = c_yellow;
-			selectedOffset = 31;
-		}
-		if (selectedOffset != 0) draw_sprite_ext(spr_AbilityStar_Retro,starIndex,31 + selectedEntries[i][9],32 + 7 + (20 * num),1,1,image_angle,image_blend,image_alpha);
-		scr_Draw_Text_Color_Outline(17 + selectedOffset + selectedEntries[i][9],32 + (20 * num),text,-1,-1,col1,col2,image_alpha,c_black,c_black,image_alpha,2,5,image_xscale,image_yscale,image_angle);
+		draw_sprite(bestiaryArray[# bestiarySelection,7],0,x1 + textureX + (100 * (i - 1)),x2 + textureY + (100 * (h - 3)));
 	}
-	num += 1;
 }
 
-//Draw Title
+gpu_set_alphatestenable(false);
+gpu_set_blendmode(bm_normal);
+#endregion
 
-draw_set_valign(fa_middle);
-var text = "???";
-if (selectedEntries[enemySelection][7]) text = selectedEntries[enemySelection][2];
-scr_Draw_Text_Color_Outline(340,54,text,-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
-draw_set_valign(fa_top);
+#region Draw Huds
+draw_sprite(spr_Menu_Collection_Bestiary_Hud_Normal,0,0,0);
+#endregion
 
-//Draw Description
-
+#region Draw Left Bar
 if (global.language == languages.english)
 {
-	draw_set_font(fnt_Small);
+	draw_set_font(global.fontBestiary);
 }
 else if ((global.language == languages.chinese) or (global.language == languages.japanese))
 {
@@ -82,4 +54,94 @@ else
 	draw_set_font(fnt_SmallSpecial);
 }
 
-if (selectedEntries[enemySelection][7]) scr_Draw_Text_Color_Outline(160,168,selectedEntries[enemySelection][3],19,300,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+for (var i = 0; i < min((bestiaryMax - (page * 12)),12); i++)
+{
+	var iFinal = i + (page * 12);
+	var col1 = c_black;
+	var col2 = c_black;
+	if (bestiarySelection == iFinal)
+	{
+		if (selection == "bestiary")
+		{
+			col1 = c_aqua;
+			col2 = c_aqua;
+		}
+		else
+		{
+			col1 = c_blue;
+			col2 = c_blue;
+		}
+	}
+	draw_text_color(25,65 + (16 * i),"#" + string(bestiaryArray[# iFinal,0]) + "-" + bestiaryArray[# iFinal,1],col1,col1,col2,col2,1);
+}
+#endregion
+
+#region Draw Middle & Right Bars
+#region Draw Sprite
+var sprite = bestiaryAnimationsArray[bestiaryArray[# bestiarySelection,9]][skinSelected][animSelected];
+var palette = bestiaryCosmeticsArray[bestiaryArray[# bestiarySelection,9]][skinSelected][colorSelected];
+var spriteScale = 2;
+
+if ((global.shaders) and (palette != -1)) pal_swap_set(palette,1,false);
+draw_sprite_ext(sprite,animIndex,240,130 - ((sprite_get_height(sprite) - sprite_get_yoffset(sprite)) * spriteScale),spriteScale,spriteScale,image_angle,image_blend,image_alpha);
+if ((global.shaders) and (palette != -1)) pal_swap_reset();
+#endregion
+
+#region Power Bar
+if (bestiaryArray[# bestiarySelection,6] != -1)
+{
+	draw_sprite(spr_Menu_Collection_Bestiary_Hud_PowerBar,bestiaryArray[# bestiarySelection,6],154,36);
+}
+#endregion
+
+#region Title & Description
+var col1 = c_white;
+var col2 = c_white;
+draw_set_valign(fa_middle);
+draw_text_color(344,64,bestiaryArray[# bestiarySelection,1],c_black,c_black,c_black,c_black,1);
+draw_text_color(344,63,bestiaryArray[# bestiarySelection,1],col1,col1,col2,col2,1);
+draw_set_valign(fa_top);
+draw_text_ext_color(152,168,bestiaryArray[# bestiarySelection,2],11,316,c_black,c_black,c_black,c_black,1);
+draw_text_ext_color(152,167,bestiaryArray[# bestiarySelection,2],11,316,col1,col1,col2,col2,1);
+#endregion
+
+#region Icons
+draw_sprite(bestiaryArray[# bestiarySelection,8],0,447,32);
+draw_sprite(bestiaryArray[# bestiarySelection,5],0,153,122);
+#endregion
+
+#region Skin Bar
+if (bestiaryArray[# bestiarySelection,10] > 0)
+{
+	draw_sprite(spr_Menu_Collection_Bestiary_Hud_SkinBar,0,346,84);
+	
+	draw_sprite(spr_Menu_Collection_Bestiary_Hud_UpButton,(selection == "skinBarUp"),464,86);
+	draw_sprite(spr_Menu_Collection_Bestiary_Hud_DownButton,(selection == "skinBarDown"),464,94);
+}
+#endregion
+
+#region Color Bar
+if (array_length(bestiaryCosmeticsArray[bestiaryArray[# bestiarySelection,9]][colorSelected]) > 1)
+{
+	draw_sprite(spr_Menu_Collection_Bestiary_Hud_ColorBar,0,346,107);
+	
+	draw_sprite(spr_Menu_Collection_Bestiary_Hud_UpButton,(selection == "colorBarUp"),464,109);
+	draw_sprite(spr_Menu_Collection_Bestiary_Hud_DownButton,(selection == "colorBarDown"),464,117);
+}
+#endregion
+
+#region Anim Bar
+if (array_length(bestiaryAnimationsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1)
+{
+	draw_sprite(spr_Menu_Collection_Bestiary_Hud_AnimBar,0,346,130);
+	
+	draw_sprite(spr_Menu_Collection_Bestiary_Hud_UpButton,(selection == "animBarUp"),464,132);
+	draw_sprite(spr_Menu_Collection_Bestiary_Hud_DownButton,(selection == "animBarDown"),464,140);
+}
+#endregion
+#endregion
+
+#region Draw Hud
+hudOffset = lerp(hudOffset,0,.1);
+draw_sprite(spr_Menu_MainMenu_Hud_Bestiary,0,0 + hudOffset,0);
+#endregion

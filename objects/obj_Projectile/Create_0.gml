@@ -64,11 +64,9 @@ inhaleYOffset = 0;
 sprHurt = -1;
 points = 0;
 ability = playerAbilities.none;
+isDirectHit = false;
+hitType = 0;
 isStunned = false;
-lock_x = 0;
-lock_y = 0;
-melee = false;
-hurtFlags = hurt_type.HURT_GROUNDBOUNCE;
 
 //Structs
 
@@ -76,20 +74,19 @@ hitStop = {
 	affectSrc : false,
 	affectMe  : false,
 	affectTar : true,
-	len : 8,	// this variable overrides the computation used by the strength var to decide
-	shakeStr : 6	// also overrides shake computation
-}
+	len : 7,	// this variable overrides the computation used by the strength var to decide
+	shakeStr : 7	// also overrides shake computation
+} //SIR YES SIR OORAH
 
 //Other
 
 enum hurt_type {
-	HURT_GRAB = 1, //THIS WILL ALWAYS TAKE PRECEDENCE OVER ALL OF THE OTHER FLAGS
-	HURT_NOCOLL = 2, // used when enemy's getting knocked out amazing mirror style
-	HURT_GROUNDBOUNCE = 4,
-	HURT_WALLBOUNCE = 8, // wall and ceiling
-	HURT_KILL = 16 // won't insta-kill if the enemy is alive
+	HURT_AIR = 0,
+	HURT_LAND,
+	HURT_GROUNDED,
+	HURT_GRAB,
+	HURT_NOCOLL // used when enemy's getting knocked out amazing mirror style
 };
-//Timers
 
 setupTimer = 0;
 stunTimer = 0;

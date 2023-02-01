@@ -18,6 +18,7 @@ canBeReflected = false;
 state = 0;
 owner = id;
 enemy = false;
+isDirectHit = true;
 
 //Timers
 

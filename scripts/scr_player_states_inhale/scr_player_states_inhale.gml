@@ -25,7 +25,7 @@ function scr_Player_States_Inhale()
 		
 		//Movement
 		
-		var ultiDecel = decel + .025;
+		var ultiDecel = decel;
 		if (hsp >= ultiDecel) hsp -= ultiDecel;
 		if (hsp <= -ultiDecel) hsp += ultiDecel;
 		if ((hsp > -ultiDecel) and (hsp < ultiDecel)) hsp = 0;

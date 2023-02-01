@@ -44,6 +44,8 @@ hasGravity = false;
 isUfo = false;
 straightBounce = false;
 jumpCount = 0;
+trailSpr = spr_Projectile_MysticBeam_Air_Trail;
+pulseTarget = 0;
 
 //Sprites
 

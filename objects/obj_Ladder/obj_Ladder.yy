@@ -30,7 +30,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Stage Elements",
-    "path": "folders/Objects/Gameplay/Stage Elements.yy",
+    "name": "Collision",
+    "path": "folders/Objects/Gameplay/Stage Elements/Collision.yy",
   },
 }

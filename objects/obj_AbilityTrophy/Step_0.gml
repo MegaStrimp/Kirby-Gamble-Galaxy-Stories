@@ -35,16 +35,29 @@ if (!global.pause)
 	if (place_meeting(x,y,obj_Player))
 	{
 		var collidedPlayer = instance_place(x,y,obj_Player);
-		if (collidedPlayer.player == 0)
+		switch (collidedPlayer.player)
 		{
+			case 0:
 			var playerAbility = global.abilityP1;
 			var playerCharacter = global.characterP1;
-		}
-		else
-		{
+			break;
+			
+			case 1:
 			var playerAbility = global.abilityP2;
 			var playerCharacter = global.characterP2;
+			break;
+			
+			case 2:
+			var playerAbility = global.abilityP3;
+			var playerCharacter = global.characterP3;
+			break;
+			
+			case 3:
+			var playerAbility = global.abilityP4;
+			var playerCharacter = global.characterP4;
+			break;
 		}
+		
 		if ((abilityTrophyTimer == -1) and (collidedPlayer.abilityTrophyTimer == -1) and (playerCharacter == playerCharacters.kirby) and (ability != playerAbility))
 		{
 			abilityTrophyTimer = abilityTrophyTimerMax;
@@ -71,13 +84,23 @@ if (!global.pause)
 			scr_Player_CancelAbility(collidedPlayer);
 			collidedPlayer.image_index = 0;
 			collidedPlayer.state = playerStates.swallow;
-			if (collidedPlayer.player == 0)
+			switch (collidedPlayer.player)
 			{
+				case 0:
 				global.abilityP1 = ability;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				global.abilityP2 = ability;
+				break;
+				
+				case 2:
+				global.abilityP3 = ability;
+				break;
+				
+				case 3:
+				global.abilityP4 = ability;
+				break;
 			}
 		}
 		else
@@ -251,8 +274,20 @@ if (!global.pause)
 			sprItem = spr_AbilityStar_Water;
 			break;
 			
+			case playerAbilities.gear:
+			sprItem = spr_AbilityStar_Gear;
+			break;
+			
+			case playerAbilities.hiJump:
+			sprItem = spr_AbilityStar_HiJump;
+			break;
+			
 			case playerAbilities.sleep:
 			sprItem = spr_AbilityStar_Sleep;
+			break;
+			
+			case playerAbilities.mic:
+			sprItem = spr_AbilityStar_Mic;
 			break;
 			
 			default:

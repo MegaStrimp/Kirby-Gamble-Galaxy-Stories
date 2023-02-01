@@ -1,5 +1,21 @@
 ///@description Initialize Variables
 
+//Functions 
+
+function func_ScarfyHurt(hurtSource)
+{
+	sprite_index = sprHurt;
+	
+	if (!attack)
+	{
+		hp = 16 + (hurtSource.dmg / 4);
+		attack = true;
+		imageSpeed = 0.5; // it's hack time
+	}
+	
+	return true;
+}
+
 //Event Inherited
 
 event_inherited();
@@ -11,6 +27,7 @@ movespeed = .75;
 jumpspeed = 1.5;
 gravNormal = .05;
 gravLimitNormal = 1.25;
+
 
 //Sprites
 
@@ -43,7 +60,6 @@ imageSpeed = 1;
 particleCount = 0;
 canTurnX = true;
 canTurnY = true;
-hurtRecover = 2;
 
 //Timers
 
@@ -56,20 +72,6 @@ canTurnXTimerMax = 15;
 canTurnYTimer = -1;
 canTurnYTimerMax = 15;
 
-// Other
+//other
 
-function ScarfyHurt(hurtSource)
-{
-	sprite_index = sprHurt;
-	
-	if (!attack)
-	{
-		hp = 16 + (hurtSource.dmg / 4);
-		attack = true;
-		imageSpeed = 0.5; // it's hack time
-	}
-	
-	return true;
-}
-
-hurtFunction = ScarfyHurt;
+hurtFunction = func_ScarfyHurt;

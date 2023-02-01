@@ -1,5 +1,9 @@
 ///@description Initialize Variables
 
+//Randomize
+
+randomize();
+
 //Physics
 
 accel = .05;
@@ -55,6 +59,7 @@ deathOnBottom = true;
 objectOnDeath = false;
 objectOnDeathObj = obj_Projectile_ExplosionMask;
 groundFailsafe = true;
+joy = choose(false,true);
 
 //Timers
 

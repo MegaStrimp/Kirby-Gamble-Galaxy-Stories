@@ -23,6 +23,8 @@ introState = 0;
 blackAlphaVal = 1;
 gradientAlpha = .5;
 gradientAlphaDir = 1;
+gameclosing = false;
+closingk = 0;
 
 //Timers
 
@@ -42,7 +44,7 @@ file1Color = 0;
 file2Color = 0;
 file3Color = 0;
 
-if (file_exists("Save1.ini"))
+if (file_exists("SaveSlot1.ini"))
 {
 	file1Color = 2;
 }
@@ -51,7 +53,7 @@ else
 	file1Color = 0;
 }
 
-if (file_exists("Save2.ini"))
+if (file_exists("SaveSlot2.ini"))
 {
 	file2Color = 2;
 }
@@ -60,7 +62,7 @@ else
 	file2Color = 0;
 }
 
-if (file_exists("Save3.ini"))
+if (file_exists("SaveSlot3.ini"))
 {
 	file3Color = 2;
 }

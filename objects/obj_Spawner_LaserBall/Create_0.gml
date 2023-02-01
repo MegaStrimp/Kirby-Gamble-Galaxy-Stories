@@ -2,9 +2,9 @@
 
 //Physics
 
-accel = .1;
-movespeed = 1.5;
-jumpspeed = 1.5;
+accel = .12;
+movespeed = 1.6;
+jumpspeed = 1.6;
 gravNormal = 0;
 gravLimitNormal = 0;
 
@@ -20,7 +20,7 @@ dmg = 1;
 ability = playerAbilities.beam;
 points = 200;
 hurtable = true;
-hasGravity = true;
+hasGravity = false;
 heavy = false;
 inhaleXOffset = 0;
 inhaleYOffset = 0;
@@ -33,8 +33,8 @@ dirY = 1;
 walkDirX = 1;
 walkDirY = 1;
 imageAngle = 0;
-hasXCollision = true;
-hasYCollision = true;
+hasXCollision = false;
+hasYCollision = false;
 clampPositionX = true;
 clampPositionY = true;
 offScreenTurning = true;
@@ -47,6 +47,7 @@ objectOnDeath = false;
 objectOnDeathObj = obj_Projectile_ExplosionMask;
 groundFailsafe = true;
 attackCountMax = 4;
+activateRange = 72;
 attackDir = 0;
 
 //Timers
@@ -59,4 +60,4 @@ auraTimer = auraTimerMax;
 canTurnXTimer = -1;
 canTurnXTimerMax = 45;
 canTurnYTimer = -1;
-canTurnYTimerMax = 90;
+canTurnYTimerMax = 60;

@@ -57,6 +57,22 @@ else if (spawnTimer == 0)
 		spawnedEnemy.sprAttack = spr_WaddleDoo_Normal_Attack;
 		spawnedEnemy.sprHurt = spr_WaddleDoo_Normal_Hurt;
 		break;
+		
+		//Bandit
+		
+		case 1:
+		spawnedEnemy.sprIdle = spr_WaddleDoo_Bandit_Idle;
+		spawnedEnemy.sprWalk = spr_WaddleDoo_Bandit_Walk;
+		spawnedEnemy.sprDuck = spr_WaddleDoo_Bandit_Duck;
+		spawnedEnemy.sprJump = spr_WaddleDoo_Bandit_Jump;
+		spawnedEnemy.sprFall = spr_WaddleDoo_Bandit_Fall;
+		spawnedEnemy.sprSwing = spr_WaddleDoo_Bandit_Swing;
+		spawnedEnemy.sprClimbUp = spr_WaddleDoo_Bandit_ClimbUp;
+		spawnedEnemy.sprClimbDown = spr_WaddleDoo_Bandit_ClimbDown;
+		spawnedEnemy.sprCharge = spr_WaddleDoo_Bandit_Charge;
+		spawnedEnemy.sprAttack = spr_WaddleDoo_Bandit_Attack;
+		spawnedEnemy.sprHurt = spr_WaddleDoo_Bandit_Hurt;
+		break;
 	}
 	spawnedEnemy.state = state;
 	spawnedEnemy.hp = hp;

@@ -1,16 +1,19 @@
 ///@description Initialize Variables
 
-//Other
-hurtDefault = function(argument0)
+// Other
+func_HurtDefault = function(argument0)
 {
-	if (isBoss) return true;
-	
 	image_speed = 1;
 	sprite_index = sprHurt;
 	hspDummy = 0;
 	vspDummy = 0;
 	return true;
 } // this is a basic function that passes true and allows the hurt func to go through
+
+func_HurtBossDefault = function(hurtSource)
+{
+	return true;
+}
 
 //Randomize
 
@@ -131,14 +134,11 @@ collisionHitbox = -1;
 pausedInCutscenes = true;
 starColors = [0,1,2,3,4,5,6,7];
 childPause = false;
-hurtFunction = hurtDefault;
-hurtFlags = 0;
-collidingHitbox = 0; // use for practical purposes. clear after enemy recovers
-backupFlags = 0
-hurtRecover = 1;
+hurtFunction = func_HurtDefault;
+hurtType = 0;
+collidingHitbox = -1; // use for practical purposes. clear after enemy recovers
+backupFlags = 0;
 shakeDividend = 0;
-// when 0, slides and then recovers. when 1, recovers when landing, when 2, uses normal hurt timer
-// will be automatically set to 0 if the projectile's angle is 0
 
 //Timers
 
@@ -165,23 +165,3 @@ enum BFLAGS
 	BF_YCOLL,
 	BF_DESPAWN
 };
-
-function restoreBackupFlag(targetObj)
-{
-	targetObj.hasGravity = (targetObj.backupFlags >> BFLAGS.BF_GRAV) & 1;
-	targetObj.hasXCollision = (targetObj.backupFlags >> BFLAGS.BF_XCOLL) & 1;
-	targetObj.hasYCollision = (targetObj.backupFlags >> BFLAGS.BF_YCOLL) & 1;
-	targetObj.destroyOutsideView = (targetObj.backupFlags >> BFLAGS.BF_DESPAWN) & 1;
-}
-
-function decideLife()
-{
-	if (hp < 1)
-	{
-		death = true;
-	}
-	else if (hp > 0)
-	{
-		hurt = false;
-	}
-}

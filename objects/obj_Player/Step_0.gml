@@ -2,19 +2,42 @@
 
 //Variables
 
-var playerAbility = global.abilityP1;
-if (player == 1) playerAbility = global.abilityP2;
+switch (player)
+{
+	case 0:
+	var playerAbility = global.abilityP1;
+	var playerCharacter = global.characterP1;
+	var playerIsHelper = global.isHelperP1;
+	var playerFamiliar = global.familiarP1;
+	var micCount = global.micCountP1;
+	break;
+	
+	case 1:
+	var playerAbility = global.abilityP2;
+	var playerCharacter = global.characterP2;
+	var playerIsHelper = global.isHelperP2;
+	var playerFamiliar = global.familiarP2;
+	var micCount = global.micCountP2;
+	break;
+	
+	case 2:
+	var playerAbility = global.abilityP3;
+	var playerCharacter = global.characterP3;
+	var playerIsHelper = global.isHelperP3;
+	var playerFamiliar = global.familiarP3;
+	var micCount = global.micCountP3;
+	break;
+	
+	case 3:
+	var playerAbility = global.abilityP4;
+	var playerCharacter = global.characterP4;
+	var playerIsHelper = global.isHelperP4;
+	var playerFamiliar = global.familiarP4;
+	var micCount = global.micCountP4;
+	break;
+}
 
-var playerCharacter = global.characterP1;
-if (player == 1) playerCharacter = global.characterP2;
-
-var playerIsHelper = global.isHelperP1;
-if (player == 1) playerIsHelper = global.isHelperP2;
-
-var playerFamiliar = global.familiarP1;
-if (player == 1) playerFamiliar = global.familiarP2;
-
-invincibleFlash = false;
+//invincibleFlash = false;
 grounded = false;
 if (place_meeting(x,y + 1,obj_ParentWall))
 {
@@ -34,6 +57,23 @@ if (place_meeting(x,y - 1,obj_Wall))
 	if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + collidingWall.vsp + 20 + vspFinal)))) wallAbove = true;
 }
 
+var canFlash = false;
+if ((invincible) or (attackNumber == playerAttacks.slideJump))
+{
+	invincibleFlashTimerMax = 2;
+	canFlash = true;
+}
+if (
+((cAbility != playerAbilities.none) and (state = playerStates.carry) and (!spit))
+or (playerAbility == playerAbilities.sleep)
+or ((playerAbility == playerAbilities.crash) and (!attack))
+or ((playerAbility == playerAbilities.mic) and (!attack))
+)
+{
+	invincibleFlashTimerMax = 4;
+	canFlash = true;
+}
+
 scr_Player_Inputs(player);
 
 //Clamp To View
@@ -50,23 +90,62 @@ if ((clampToView) and (!death))
 
 //Death
 
-if ((((player == 0) and (global.healthP1 == 0)) or ((player == 1) and (global.healthP2 == 0))) and (!death))
+var goldenTomatoAmountPointer = global.goldenTomatoAmountP1;
+switch (player)
 {
-	if (global.goldenTomato)
+	case 1:
+	goldenTomatoAmountPointer = global.goldenTomatoAmountP2;
+	break;
+	
+	case 2:
+	goldenTomatoAmountPointer = global.goldenTomatoAmountP3;
+	break;
+	
+	case 3:
+	goldenTomatoAmountPointer = global.goldenTomatoAmountP4;
+	break;
+}
+
+if ((((player == 0) and (global.healthP1 == 0))
+or ((player == 1) and (global.healthP2 == 0))
+or ((player == 2) and (global.healthP3 == 0))
+or ((player == 3) and (global.healthP4 == 0)))
+and (!death))
+{
+	if ((goldenTomatoAmountPointer > 0) and (!tomatolessDeath))
 	{
 		if (audio_is_playing(snd_Charge_Ready)) audio_stop_sound(snd_Charge_Ready);
 		audio_play_sound(snd_Charge_Ready,0,false);
 		if (instance_exists(obj_Hud))
 		{
-			var particle = instance_create_depth(obj_Hud.goldenTomatoPosX,obj_Hud.goldenTomatoPosY,obj_Hud.depth - 1,obj_Particle);
+			var particle = instance_create_depth(x,y,depth - 1,obj_Particle);
 			particle.sprite_index = spr_Particle_Flash1;
 			particle.destroyAfterAnimation = true;
 		}
 		//global.healthP1 = global.hpMax;
 		//global.healthP2 = global.hpMax;
-		global.healthP1 = global.healthP1Max;
-		global.healthP2 = global.healthP2Max;
-		global.goldenTomato = false;
+		switch (player)
+		{
+			case 0:
+			global.healthP1 = global.healthP1Max;
+			global.goldenTomatoAmountP1 -= 1;
+			break;
+			
+			case 1:
+			global.healthP2 = global.healthP2Max;
+			global.goldenTomatoAmountP2 -= 1;
+			break;
+			
+			case 2:
+			global.healthP3 = global.healthP3Max;
+			global.goldenTomatoAmountP3 -= 1;
+			break;
+			
+			case 3:
+			global.healthP4 = global.healthP4Max;
+			global.goldenTomatoAmountP4 -= 1;
+			break;
+		}
 	}
 	else
 	{
@@ -299,13 +378,21 @@ if (!global.pause)
 				{
 					finalForce *= 1.25;
 					drawOffsetForce = 16;
-					if (audio_is_playing(snd_BigJump)) audio_stop_sound(snd_BigJump);
-					audio_play_sound(snd_BigJump,0,false);
+					if (audio_is_playing(snd_Cloud_Superjump)) audio_stop_sound(snd_Cloud_Superjump);
+					audio_play_sound(snd_Cloud_Superjump,0,false);
 				}
 				else
 				{
-					if (audio_is_playing(snd_Jump)) audio_stop_sound(snd_Jump);
-					audio_play_sound(snd_Jump,0,false);
+					if (collidedSpring.object_index == obj_BouncyCloudHigh)
+					{
+						if (audio_is_playing(snd_Cloud_Superjump)) audio_stop_sound(snd_Cloud_Superjump);
+						audio_play_sound(snd_Cloud_Superjump,0,false);
+					}
+					else if (collidedSpring.object_index == obj_BouncyCloudHigh)
+					{
+						if (audio_is_playing(snd_Cloud_Bounce)) audio_stop_sound(snd_Cloud_Bounce);
+						audio_play_sound(snd_Cloud_Bounce,0,false);
+					}
 				}
 			
 				if ((collidedSpring.object_index == obj_BouncyCloud) or (collidedSpring.object_index == obj_BouncyCloudHigh))
@@ -595,6 +682,23 @@ switch (state)
 	scr_Player_States_Death();
 	break;
 }
+	
+//Mic Flash
+
+if ((attackNumber == playerAttacks.micNormal) and (canMicFlash))
+{
+	with (obj_Camera)
+	{
+		shakeX = 2;
+		shakeY = 2;
+	}
+	if (micFlashTimer == -1) micFlashTimer = micFlashTimerMax;
+}
+else
+{
+	micFlash = false;
+	micFlashTimer = -1;
+}
 
 //Select Button
 
@@ -603,7 +707,12 @@ if (keySelectPressed)
 	switch (playerCharacter)
 	{
 		case playerCharacters.kirby:
-		if ((!global.pause) and (!global.cutscene) and (((player == 0) and (global.abilityP1 != playerAbilities.none)) or ((player == 1) and (global.abilityP2 != playerAbilities.none))) and (!attack))
+		if ((!global.pause) and (!global.cutscene) and
+		(((player == 0) and (global.abilityP1 != playerAbilities.none))
+		or ((player == 1) and (global.abilityP2 != playerAbilities.none))
+		or ((player == 2) and (global.abilityP3 != playerAbilities.none))
+		or ((player == 3) and (global.abilityP4 != playerAbilities.none)))
+		and (!attack))
 		{
 			audio_play_sound(snd_AbilityDrop,0,false);
 			if (instance_exists(obj_AbilityDropStar))
@@ -619,15 +728,35 @@ if (keySelectPressed)
 			abilityDropStar.vsp = -abilityDropStar.jumpspeed;
 			abilityDropStar.dir = -image_xscale;
 			abilityDropStar.player = player;
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				abilityDropStar.ability = global.abilityP1;
 				global.abilityP1 = playerAbilities.none;
-			}
-			else
-			{
+				abilityDropStar.micCount = global.micCountP1;
+				global.micCountP1 = 0;
+				break;
+				
+				case 1:
 				abilityDropStar.ability = global.abilityP2;
 				global.abilityP2 = playerAbilities.none;
+				abilityDropStar.micCount = global.micCountP2;
+				global.micCountP2 = 0;
+				break;
+				
+				case 2:
+				abilityDropStar.ability = global.abilityP3;
+				global.abilityP3 = playerAbilities.none;
+				abilityDropStar.micCount = global.micCountP3;
+				global.micCountP3 = 0;
+				break;
+				
+				case 3:
+				abilityDropStar.ability = global.abilityP4;
+				global.abilityP4 = playerAbilities.none;
+				abilityDropStar.micCount = global.micCountP4;
+				global.micCountP4 = 0;
+				break;
 			}
 			switch (abilityDropStar.ability)
 			{
@@ -726,10 +855,13 @@ if (keySelectPressed)
 				case playerAbilities.water:
 				abilityDropStar.sprite_index = spr_AbilityStar_Water;
 				break;
-				break;
 			
 				case playerAbilities.sleep:
 				abilityDropStar.sprite_index = spr_AbilityStar_Sleep;
+				break;
+			
+				case playerAbilities.mic:
+				abilityDropStar.sprite_index = spr_AbilityStar_Mic;
 				break;
 			
 				default:
@@ -812,6 +944,8 @@ if (!global.pause)
 
 global.healthP1 = clamp(global.healthP1,0,global.healthP1Max);
 global.healthP2 = clamp(global.healthP2,0,global.healthP2Max);
+global.healthP3 = clamp(global.healthP3,0,global.healthP3Max);
+global.healthP4 = clamp(global.healthP4,0,global.healthP4Max);
 
 //Scale
 
@@ -823,7 +957,10 @@ else
 {
 	image_xscale = scale * dir;
 }
-image_yscale = scale;
+
+var hasFlipside = 1;
+if (global.cheatFlipsideEquipped) hasFlipside = -1
+image_yscale = scale * (hasFlipside);
 
 //Masks
 
@@ -896,7 +1033,16 @@ if (!global.pause)
 	
 	//Invincible Flash Timer
 	
-	if ((invincible) and (invincibleFlashTimer == -1)) invincibleFlashTimer = invincibleFlashTimerMax;
+	if (canFlash)
+	{
+		if (invincibleFlashTimer == -1) invincibleFlashTimer = invincibleFlashTimerMax;
+	}
+	else
+	{
+		invincibleFlash = false;
+		invincibleFlashTimer = -1;
+	}
+	
 	if (invincibleFlashTimer > 0)
 	{
 		invincibleFlashTimer -= 1;
@@ -914,9 +1060,10 @@ if (!global.pause)
 		invincibleFlashTimer = -1;
 	}
 	
-	if (player == 0)
+	switch (player)
 	{
-		//Invin Candy Timer P1
+		case 0:
+		//Invin Candy Timer
 		
 		if (global.invinCandyTimerP1 > 0)
 		{
@@ -929,7 +1076,7 @@ if (!global.pause)
 			global.invinCandyTimerP1 = -1;
 		}
 		
-		//Mint Leaf Timer P1
+		//Mint Leaf Timer
 		
 		if (global.mintLeafTimerP1 > 0)
 		{
@@ -941,10 +1088,10 @@ if (!global.pause)
 			invincibleFlashTimer = -1;
 			global.mintLeafTimerP1 = -1;
 		}
-	}
-	else
-	{
-		//Invin Candy Timer P2
+		break;
+		
+		case 1:
+		//Invin Candy Timer
 		
 		if (global.invinCandyTimerP2 > 0)
 		{
@@ -957,7 +1104,7 @@ if (!global.pause)
 			global.invinCandyTimerP2 = -1;
 		}
 		
-		//Mint Leaf Timer P2
+		//Mint Leaf Timer
 		
 		if (global.mintLeafTimerP2 > 0)
 		{
@@ -969,6 +1116,63 @@ if (!global.pause)
 			invincibleFlashTimer = -1;
 			global.mintLeafTimerP2 = -1;
 		}
+		break;
+		
+		case 2:
+		//Invin Candy Timer
+		
+		if (global.invinCandyTimerP3 > 0)
+		{
+			global.invinCandyTimerP3 -= 1;
+		}
+		else if (global.invinCandyTimerP3 == 0)
+		{
+			invincibleFlash = false;
+			invincibleFlashTimer = -1;
+			global.invinCandyTimerP3 = -1;
+		}
+		
+		//Mint Leaf Timer
+		
+		if (global.mintLeafTimerP3 > 0)
+		{
+			global.mintLeafTimerP3 -= 1;
+		}
+		else if (global.mintLeafTimerP3 == 0)
+		{
+			invincibleFlash = false;
+			invincibleFlashTimer = -1;
+			global.mintLeafTimerP3 = -1;
+		}
+		break;
+		
+		case 3:
+		//Invin Candy Timer
+		
+		if (global.invinCandyTimerP4 > 0)
+		{
+			global.invinCandyTimerP4 -= 1;
+		}
+		else if (global.invinCandyTimerP4 == 0)
+		{
+			invincibleFlash = false;
+			invincibleFlashTimer = -1;
+			global.invinCandyTimerP4 = -1;
+		}
+		
+		//Mint Leaf Timer
+		
+		if (global.mintLeafTimerP4 > 0)
+		{
+			global.mintLeafTimerP4 -= 1;
+		}
+		else if (global.mintLeafTimerP4 == 0)
+		{
+			invincibleFlash = false;
+			invincibleFlashTimer = -1;
+			global.mintLeafTimerP4 = -1;
+		}
+		break;
 	}
 	
 	//Invincibility Candy Particle Timer
@@ -1132,6 +1336,19 @@ if (!global.pause)
 	    }
 	}
 	
+	//Run Turn Cancel Timer
+	
+	if (runTurnCancelTimer > 0)
+	{
+		runTurnCancelTimer -= 1;
+	}
+	else if (runTurnCancelTimer == 0)
+	{
+		runTurn = false;
+		hsp *= -dir;
+	    runTurnCancelTimer = -1;
+	}
+	
 	//Ability Trophy Timer
 	
 	if (abilityTrophyTimer > 0)
@@ -1198,6 +1415,23 @@ if (!global.pause)
 				projBeam.character = 6;
 				projBeam.sprite_index = spr_Projectile_Beam_Gold;
 			}
+			if (((player == 0) and (global.hatTypeBeamP1 == abilityHatSkins.beam_marxSoul))
+			or ((player == 1) and (global.hatTypeBeamP2 == abilityHatSkins.beam_marxSoul))
+			or ((player == 2) and (global.hatTypeBeamP3 == abilityHatSkins.beam_marxSoul))
+			or ((player == 3) and (global.hatTypeBeamP4 == abilityHatSkins.beam_marxSoul)))
+			{
+				var rng = choose(0,1);
+				if (rng)
+				{
+					projBeam.character = 9;
+					projBeam.sprite_index = spr_Projectile_Beam_MarxSoul1;
+				}
+				else
+				{
+					projBeam.character = 10;
+					projBeam.sprite_index = spr_Projectile_Beam_MarxSoul2;
+				}
+			}
 			if (beamAttack2FirstHit) beamAttack2FirstHit = false;
 		    beamAttack2Timer = -1;
 		}
@@ -1259,6 +1493,23 @@ if (!global.pause)
 			{
 				projBeam.character = 6;
 				projBeam.sprite_index = spr_Projectile_Beam_Gold;
+			}
+			if (((player == 0) and (global.hatTypeBeamP1 == abilityHatSkins.beam_marxSoul))
+			or ((player == 1) and (global.hatTypeBeamP2 == abilityHatSkins.beam_marxSoul))
+			or ((player == 2) and (global.hatTypeBeamP3 == abilityHatSkins.beam_marxSoul))
+			or ((player == 3) and (global.hatTypeBeamP4 == abilityHatSkins.beam_marxSoul)))
+			{
+				var rng = choose(0,1);
+				if (rng)
+				{
+					projBeam.character = 9;
+					projBeam.sprite_index = spr_Projectile_Beam_MarxSoul1;
+				}
+				else
+				{
+					projBeam.character = 10;
+					projBeam.sprite_index = spr_Projectile_Beam_MarxSoul2;
+				}
 			}
 		    beamGrabTimer = beamGrabTimerMax - beamGoldenFlareUpgrade;
 		}
@@ -1676,24 +1927,26 @@ if (!global.pause)
 		projectile.imageSpeed = 1 - (fireMagicCharcoalUpgrade / 4);
 		projectile.dmg = 3;
 		projectile.sprite_index = projectile.sprIdle;
-		projectile.dirX = dir;
-		projectile.image_xscale = projectile.dirX;
+		//projectile.dirX = dir;
+		//projectile.image_xscale = projectile.dirX;
 		projectile.enemy = false;
 		projectile.destroyableByEnemy = false;
 		projectile.destroyableByObject = false;
-		projectile.hsp = 2 * dir;
+		projectile.hsp = 2.5 * dir;
         if ((!global.cutscene) and (keyUpHold))
         {
-            projectile.vsp = random_range(-.5,0) - .75;
+            projectile.vsp = random_range(-.75,.75) - .75;
         }
         else if ((!global.cutscene) and (keyDownHold))
         {
-            projectile.vsp = random_range(0,.5) + .75;
+            projectile.vsp = random_range(-.75,.75) + .75;
         }
         else
         {
-            projectile.vsp = random_range(-.5,.5);
+            projectile.vsp = random_range(-.75,.75);
         }
+		projectile.imageAngle = point_direction(0,0,projectile.hsp,projectile.vsp);
+		projectile.image_angle = projectile.imageAngle;
 		projectile.paletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
 	    fireNormalAttackTimer = -1;
 	}
@@ -1923,24 +2176,41 @@ else if (setupTimer == 0)
 		followerObject.owner = id;
 		followerObject.character = playerFamiliar;
 	}
-	if ((global.hasCoop) and (instance_number(obj_Player) == 1))
+	
+	if ((global.hasCoop > 0) and (instance_number(obj_Player) == 1))
 	{
-		var xx = x;
-		if (!place_meeting(x - 24,y,obj_ParentWall))
+		for (var i = 0; i < global.hasCoop; i++)
 		{
-			xx = x - 24;
-		}
-		else if (!place_meeting(x + 24,y,obj_ParentWall))
-		{
-			xx = x + 24;
-		}
-		else
-		{
-			xx = x;
-		}
+			var hasCoopPointer = global.hasP1;
+			switch (i)
+			{
+				case 1:
+				hasCoopPointer = global.hasP2;
+				break;
+				
+				case 2:
+				hasCoopPointer = global.hasP3;
+				break;
+				
+				case 3:
+				hasCoopPointer = global.hasP4;
+				break;
+			}
 			
-		var secondPlayer = instance_create_depth(xx,y,depth,obj_Player);
-		secondPlayer.player = 1;
+			var xx = x;
+			var targetXOffset = (24 * (i + 1));
+			if (!place_meeting(x - targetXOffset,y,obj_ParentWall))
+			{
+				xx = x - targetXOffset;
+			}
+			else if (!place_meeting(x + targetXOffset,y,obj_ParentWall))
+			{
+				xx = x + targetXOffset;
+			}
+			
+			var newPlayer = instance_create_depth(xx,y,depth,obj_Player);
+			newPlayer.player = i + 1;
+		}
 		player = 0;
 	}
 	setupTimer = -1;
@@ -1954,32 +2224,57 @@ if (characterSetupTimer > 0)
 }
 else if (characterSetupTimer == 0)
 {
-	if (player == 0)
+	switch (player)
 	{
+		case 0:
 		var sprayPaint = global.sprayPaintP1;
+		var selectedCharacter = global.characterP1;
 		global.isHelperP1 = false;
-	}
-	else
-	{
+		break;
+		
+		case 1:
 		var sprayPaint = global.sprayPaintP2;
+		var selectedCharacter = global.characterP2;
 		global.isHelperP2 = false;
+		break;
+		
+		case 2:
+		var sprayPaint = global.sprayPaintP3;
+		var selectedCharacter = global.characterP3;
+		global.isHelperP3 = false;
+		break;
+		
+		case 3:
+		var sprayPaint = global.sprayPaintP4;
+		var selectedCharacter = global.characterP4;
+		global.isHelperP4 = false;
+		break;
 	}
-	var selectedCharacter = global.characterP1;
-	if (player == 1) selectedCharacter = global.characterP2;
 	
 	switch (selectedCharacter)
 	{
 		case playerCharacters.kirby:
-		var skin = global.skinKirbyP1;
-		if (player == 1) skin = global.skinKirbyP2;
-		
-		if (player == 0)
+		switch (player)
 		{
+			case 0:
+			var skin = global.skinKirbyP1;
 			global.sprayPaintP1 = scr_Player_SprayPaint(global.sprayPaintKirbyP1,playerCharacters.kirby,skin);
-		}
-		else
-		{
+			break;
+			
+			case 1:
+			var skin = global.skinKirbyP2;
 			global.sprayPaintP2 = scr_Player_SprayPaint(global.sprayPaintKirbyP2,playerCharacters.kirby,skin);
+			break;
+			
+			case 2:
+			var skin = global.skinKirbyP3;
+			global.sprayPaintP3 = scr_Player_SprayPaint(global.sprayPaintKirbyP3,playerCharacters.kirby,skin);
+			break;
+			
+			case 3:
+			var skin = global.skinKirbyP4;
+			global.sprayPaintP4 = scr_Player_SprayPaint(global.sprayPaintKirbyP4,playerCharacters.kirby,skin);
+			break;
 		}
 		
 		gravNormal = .23;
@@ -1994,7 +2289,7 @@ else if (characterSetupTimer == 0)
 		gravLimitFireDash = 1.25;
 		gravLimit = gravLimitNormal;
 		jumpspeedNormal = 6;
-		jumpspeedFloat = 1.8;
+		jumpspeedFloat = 2;
 		jumpspeedWheel = 8;
 		jumpspeed = jumpspeedNormal;
 		movespeedNormal = 1.7;
@@ -2005,7 +2300,7 @@ else if (characterSetupTimer == 0)
 		movespeedBurst = 7;
 		movespeed = movespeedNormal;
 		ufoFloatSpd = 2;
-		accel = .2;
+		accel = .3;
 		accelFloat = .1;
 		decel = .075;
 		decelSlide = .125;
@@ -2228,21 +2523,41 @@ else if (characterSetupTimer == 0)
 		sprScanReady = spr_Kirby_Normal_ScanReady;
 		sprScan = spr_Kirby_Normal_Scan;
 		sprScanEnd = spr_Kirby_Normal_ScanEnd;
+		sprMicAttack1Ready = spr_Kirby_Normal_Mic_Attack1Ready;
+		sprMicAttack1 = spr_Kirby_Normal_Mic_Attack1;
+		sprMicAttack1End = spr_Kirby_Normal_Mic_Attack1End;
+		sprMicAttack2Ready = spr_Kirby_Normal_Mic_Attack2Ready;
+		sprMicAttack2 = spr_Kirby_Normal_Mic_Attack2;
+		sprMicAttack2End = spr_Kirby_Normal_Mic_Attack2End;
+		sprMicAttack3Ready = spr_Kirby_Normal_Mic_Attack3Ready;
+		sprMicAttack3 = spr_Kirby_Normal_Mic_Attack3;
+		sprMicAttack3End = spr_Kirby_Normal_Mic_Attack3End;
 		sprHurt = spr_Kirby_Normal_Hurt;
 		sprDeath = spr_Kirby_Normal_Death;
 		break;
 		
 		case playerCharacters.gamble:
-		var skin = global.skinGambleP1;
-		if (player == 1) skin = global.skinGambleP2;
-		
-		if (player == 0)
+		switch (player)
 		{
+			case 0:
+			var skin = global.skinGambleP1;
 			global.sprayPaintP1 = scr_Player_SprayPaint(global.sprayPaintGambleP1,playerCharacters.gamble,skin);
-		}
-		else
-		{
+			break;
+			
+			case 1:
+			var skin = global.skinGambleP2;
 			global.sprayPaintP2 = scr_Player_SprayPaint(global.sprayPaintGambleP2,playerCharacters.gamble,skin);
+			break;
+			
+			case 2:
+			var skin = global.skinGambleP3;
+			global.sprayPaintP3 = scr_Player_SprayPaint(global.sprayPaintGambleP3,playerCharacters.gamble,skin);
+			break;
+			
+			case 3:
+			var skin = global.skinGambleP4;
+			global.sprayPaintP4 = scr_Player_SprayPaint(global.sprayPaintGambleP4,playerCharacters.gamble,skin);
+			break;
 		}
 		
 		gravNormal = .23;
@@ -2310,16 +2625,27 @@ else if (characterSetupTimer == 0)
 		break;
 		
 		case playerCharacters.gooey:
-		var skin = global.skinGooeyP1;
-		if (player == 1) skin = global.skinGooeyP2;
-		
-		if (player == 0)
+		switch (player)
 		{
+			case 0:
+			var skin = global.skinGooeyP1;
 			global.sprayPaintP1 = scr_Player_SprayPaint(global.sprayPaintGooeyP1,playerCharacters.gooey,skin);
-		}
-		else
-		{
+			break;
+			
+			case 1:
+			var skin = global.skinGooeyP2;
 			global.sprayPaintP2 = scr_Player_SprayPaint(global.sprayPaintGooeyP2,playerCharacters.gooey,skin);
+			break;
+			
+			case 2:
+			var skin = global.skinGooeyP3;
+			global.sprayPaintP3 = scr_Player_SprayPaint(global.sprayPaintGooeyP3,playerCharacters.gooey,skin);
+			break;
+			
+			case 3:
+			var skin = global.skinGooeyP4;
+			global.sprayPaintP4 = scr_Player_SprayPaint(global.sprayPaintGooeyP4,playerCharacters.gooey,skin);
+			break;
 		}
 		
 		#region Physics
@@ -2432,7 +2758,7 @@ else if (characterSetupTimer == 0)
 		break;
 		
 		case playerCharacters.waddleDee:
-		var skin = choose("normal","normal","normal","normal","normal","normal","egg","egg","egg","gold");
+		var skin = choose("normal","normal","normal","normal","normal","normal","egg","egg","egg","gold","bandit","bandit","bandit");
 		
 		#region Physics
 		gravNormal = .2;
@@ -2644,22 +2970,60 @@ else if (characterSetupTimer == 0)
 			sprDeath = spr_WaddleDee_Alien_Hurt;
 			#endregion
 			break;
+			
+			case "bandit":
+			#region Palettes
+			var pal;
+			var i = 0;
+			pal[i] = spr_WaddleDee_Alien_Palette_Graylien;
+			#endregion
+			
+			#region Sprites
+			maskIndex = spr_16Square_Mask;
+			sprIdle = spr_WaddleDee_Bandit_Idle;
+			sprWalk = spr_WaddleDee_Bandit_Walk;
+			sprRun = spr_WaddleDee_Bandit_Run;
+			sprJump = spr_WaddleDee_Bandit_Jump;
+			sprFall = spr_WaddleDee_Bandit_Fall;
+			sprSquish = spr_WaddleDee_Bandit_Idle;
+			sprDuck = spr_WaddleDee_Bandit_Duck;
+			sprSlide = spr_WaddleDee_Bandit_Slide;
+			sprSlideEnd = spr_WaddleDee_Bandit_Slide;
+			sprEnter = spr_WaddleDee_Bandit_Walk;
+			sprClimbUp = spr_WaddleDee_Bandit_ClimbUp;
+			sprClimbDown = spr_WaddleDee_Bandit_ClimbDown;
+			sprHurt = spr_WaddleDee_Bandit_Hurt;
+			sprDeath = spr_WaddleDee_Bandit_Hurt;
+			#endregion
+			break;
 		}
 		
-		if (player == 0)
+		switch (player)
 		{
+			case 0:
 			global.sprayPaintP1 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP1 = true;
-		}
-		else
-		{
+			break;
+			
+			case 1:
 			global.sprayPaintP2 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP2 = true;
+			break;
+			
+			case 2:
+			global.sprayPaintP3 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP3 = true;
+			break;
+			
+			case 3:
+			global.sprayPaintP4 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP4 = true;
+			break;
 		}
 		break;
 		
 		case playerCharacters.waddleDoo:
-		var skin = choose("normal");
+		var skin = choose("normal","bandit");
 		
 		#region Physics
 		gravNormal = .2;
@@ -2766,6 +3130,7 @@ else if (characterSetupTimer == 0)
 			sprSquish = spr_WaddleDoo_Normal_Idle;
 			sprDuck = spr_WaddleDoo_Normal_Duck;
 			sprSlide = spr_WaddleDoo_Normal_Slide;
+			sprSlideEnd = spr_WaddleDoo_Normal_Slide;
 			sprEnter = spr_WaddleDoo_Normal_Walk;
 			sprClimbUp = spr_WaddleDoo_Normal_ClimbUp;
 			sprClimbDown = spr_WaddleDoo_Normal_ClimbDown;
@@ -2774,17 +3139,57 @@ else if (characterSetupTimer == 0)
 			sprBeamAttack1 = spr_WaddleDoo_Normal_Attack;
 			#endregion
 			break;
+			
+			case "bandit":
+			#region Palettes
+			var pal;
+			var i = 0;
+			pal[i] = spr_WaddleDoo_Bandit_Palette_GreenThief;
+			#endregion
+		
+			#region Sprites
+			maskIndex = spr_16Square_Mask;
+			sprIdle = spr_WaddleDoo_Bandit_Idle;
+			sprWalk = spr_WaddleDoo_Bandit_Walk;
+			sprRun = spr_WaddleDoo_Bandit_Walk;
+			sprRunTurn = spr_WaddleDoo_Bandit_RunTurn;
+			sprJump = spr_WaddleDoo_Bandit_Jump;
+			sprFall = spr_WaddleDoo_Bandit_Fall;
+			sprSquish = spr_WaddleDoo_Bandit_Idle;
+			sprDuck = spr_WaddleDoo_Bandit_Duck;
+			sprSlide = spr_WaddleDoo_Bandit_Slide;
+			sprSlideEnd = spr_WaddleDoo_Bandit_Slide;
+			sprEnter = spr_WaddleDoo_Bandit_Walk;
+			sprClimbUp = spr_WaddleDoo_Bandit_ClimbUp;
+			sprClimbDown = spr_WaddleDoo_Bandit_ClimbDown;
+			sprHurt = spr_WaddleDoo_Bandit_Hurt;
+			sprDeath = spr_WaddleDoo_Bandit_Death;
+			sprBeamAttack1 = spr_WaddleDoo_Bandit_Attack;
+			#endregion
+			break;
 		}
 		
-		if (player == 0)
+		switch (player)
 		{
+			case 0:
 			global.sprayPaintP1 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP1 = true;
-		}
-		else
-		{
+			break;
+			
+			case 1:
 			global.sprayPaintP2 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP2 = true;
+			break;
+			
+			case 2:
+			global.sprayPaintP3 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP3 = true;
+			break;
+			
+			case 3:
+			global.sprayPaintP4 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP4 = true;
+			break;
 		}
 		break;
 		
@@ -2855,6 +3260,12 @@ else if (characterSetupTimer == 0)
 			pal[i] = spr_BrontoBurt_Normal_Palette_UraniumGreen;
 			i += 1;
 			pal[i] = spr_BrontoBurt_Normal_Palette_UraniumPurple;
+			i += 1;
+			pal[i] = spr_BrontoBurt_Normal_Palette_Cosmic;
+			i += 1;
+			pal[i] = spr_BrontoBurt_Normal_Palette_Avalanche;
+			i += 1;
+			pal[i] = spr_BrontoBurt_Normal_Palette_CreamyPink;
 			#endregion
 			
 			#region Sprites
@@ -2894,15 +3305,28 @@ else if (characterSetupTimer == 0)
 			#endregion
 			break;
 		}
-		if (player == 0)
+		
+		switch (player)
 		{
+			case 0:
 			global.sprayPaintP1 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP1 = true;
-		}
-		else
-		{
+			break;
+			
+			case 1:
 			global.sprayPaintP2 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP2 = true;
+			break;
+			
+			case 2:
+			global.sprayPaintP3 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP3 = true;
+			break;
+			
+			case 3:
+			global.sprayPaintP4 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP4 = true;
+			break;
 		}
 		break;
 		
@@ -2984,15 +3408,27 @@ else if (characterSetupTimer == 0)
 			break;
 		}
 		
-		if (player == 0)
+		switch (player)
 		{
+			case 0:
 			global.sprayPaintP1 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP1 = true;
-		}
-		else
-		{
+			break;
+			
+			case 1:
 			global.sprayPaintP2 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP2 = true;
+			break;
+			
+			case 2:
+			global.sprayPaintP3 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP3 = true;
+			break;
+			
+			case 3:
+			global.sprayPaintP4 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP4 = true;
+			break;
 		}
 		break;
 		
@@ -3064,15 +3500,27 @@ else if (characterSetupTimer == 0)
 			break;
 		}
 		
-		if (player == 0)
+		switch (player)
 		{
+			case 0:
 			global.sprayPaintP1 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP1 = true;
-		}
-		else
-		{
+			break;
+			
+			case 1:
 			global.sprayPaintP2 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP2 = true;
+			break;
+			
+			case 2:
+			global.sprayPaintP3 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP3 = true;
+			break;
+			
+			case 3:
+			global.sprayPaintP4 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP4 = true;
+			break;
 		}
 		break;
 		
@@ -3160,15 +3608,27 @@ else if (characterSetupTimer == 0)
 			break;
 		}
 		
-		if (player == 0)
+		switch (player)
 		{
+			case 0:
 			global.sprayPaintP1 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP1 = true;
-		}
-		else
-		{
+			break;
+			
+			case 1:
 			global.sprayPaintP2 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP2 = true;
+			break;
+			
+			case 2:
+			global.sprayPaintP3 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP3 = true;
+			break;
+			
+			case 3:
+			global.sprayPaintP4 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP4 = true;
+			break;
 		}
 		break;
 		
@@ -3284,15 +3744,27 @@ else if (characterSetupTimer == 0)
 			break;
 		}
 		
-		if (player == 0)
+		switch (player)
 		{
+			case 0:
 			global.sprayPaintP1 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP1 = true;
-		}
-		else
-		{
+			break;
+			
+			case 1:
 			global.sprayPaintP2 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP2 = true;
+			break;
+			
+			case 2:
+			global.sprayPaintP3 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP3 = true;
+			break;
+			
+			case 3:
+			global.sprayPaintP4 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP4 = true;
+			break;
 		}
 		break;
 		
@@ -3375,15 +3847,27 @@ else if (characterSetupTimer == 0)
 			break;
 		}
 		
-		if (player == 0)
+		switch (player)
 		{
+			case 0:
 			global.sprayPaintP1 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP1 = true;
-		}
-		else
-		{
+			break;
+			
+			case 1:
 			global.sprayPaintP2 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP2 = true;
+			break;
+			
+			case 2:
+			global.sprayPaintP3 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP3 = true;
+			break;
+			
+			case 3:
+			global.sprayPaintP4 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP4 = true;
+			break;
 		}
 		break;
 		
@@ -3448,26 +3932,65 @@ else if (characterSetupTimer == 0)
 			break;
 		}
 		
-		if (player == 0)
+		switch (player)
 		{
+			case 0:
 			global.sprayPaintP1 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP1 = true;
-		}
-		else
-		{
+			break;
+			
+			case 1:
 			global.sprayPaintP2 = pal[irandom_range(0,array_length(pal) - 1)];
 			global.isHelperP2 = true;
+			break;
+			
+			case 2:
+			global.sprayPaintP3 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP3 = true;
+			break;
+			
+			case 3:
+			global.sprayPaintP4 = pal[irandom_range(0,array_length(pal) - 1)];
+			global.isHelperP4 = true;
+			break;
 		}
 		break;
 	}
 	
-	if (player == 0)
+	switch (player)
 	{
+		case 0:
 		paletteIndex = global.sprayPaintP1;
-	}
-	else
-	{
+		break;
+		
+		case 1:
 		paletteIndex = global.sprayPaintP2;
+		break;
+		
+		case 2:
+		paletteIndex = global.sprayPaintP3;
+		break;
+		
+		case 3:
+		paletteIndex = global.sprayPaintP4;
+		break;
+	}
+	
+	if (global.cheatAwaitingForTheNewMoonEquipped)
+	{
+		gravNormal = gravNormal / 4;
+		gravStone = gravStone / 4;
+		gravWheel = gravWheel / 4;
+		grav = grav / 4;
+		gravFloat = gravFloat / 2;
+		gravFireDash = gravFireDash / 2;
+		gravLimitNormal = gravLimitNormal / 2;
+		gravLimitFloat = gravLimitFloat / 2;
+		gravLimitBeamAir = gravLimitBeamAir / 2;
+		gravLimitStone = gravLimitStone / 2;
+		gravLimitFireDash = gravLimitFireDash / 2;
+		gravLimitWheel = gravLimitWheel / 2;
+		gravLimit = gravLimit / 2;
 	}
 	
 	characterSetupTimer = -1;
@@ -3487,9 +4010,9 @@ else if (upgradeSetupTimer == 0)
 	mysticBeamVortexInAJarUpgrade = global.mysticBeamVortexInAJarUpgradeEquipped;
 	stoneRockCandyUpgrade = global.stoneRockCandyUpgradeEquipped;
 	stoneComboCobaltUpgrade = global.stoneComboCobaltUpgradeEquipped;
-	bombMultiBombUpgrade = global.bombMultiBombUpgradeEquipped;
+	bombLightShellsUpgrade = global.bombLightShellsUpgradeEquipped;
 	bombEyeBombUpgrade = global.bombEyeBombUpgradeEquipped;
-	bombSmartBombUpgrade = global.bombSmartBombUpgradeEquipped;
+	bombStickyBombUpgrade = global.bombStickyBombUpgradeEquipped;
 	bombMagmaBombUpgrade = global.bombMagmaBombUpgradeEquipped;
 	bombExplosivePowderUpgrade = global.bombExplosivePowderUpgradeEquipped;
 	fireMagicCharcoalUpgrade = global.fireMagicCharcoalUpgradeEquipped;
@@ -3538,7 +4061,24 @@ else if (deathTimer == 0)
 	par.fricSpd = .4;
 	par.direction = 90;
 	par.pausable = false;
-	global.abilityP1 = playerAbilities.none;
+	switch (player)
+	{
+		case 0:
+		global.abilityP1 = playerAbilities.none;
+		break;
+		
+		case 1:
+		global.abilityP2 = playerAbilities.none;
+		break;
+		
+		case 2:
+		global.abilityP3 = playerAbilities.none;
+		break;
+		
+		case 3:
+		global.abilityP4 = playerAbilities.none;
+		break;
+	}
 	var musDeath = mus_Death1;
 	if ((global.playerLives <= 0) and (global.gamemode != gamemodes.maykr)) musDeath = mus_Death2;
 	audio_play_sound(musDeath,0,false);
@@ -3588,7 +4128,7 @@ else if (deathRestartTimer == 0)
 		fadeTrans.targetRoom = global.roomCheckpoint;
 		fadeTrans.alphaSpd = 0.02;
 		fadeTrans.pausable = false;
-		global.playerLives -= 1;
+		if (!global.cheatLifelessEquipped) global.playerLives -= 1;
 		if (global.playerLives < 0)
 		{
 			var jellyChance = irandom_range(0,199);
@@ -3636,13 +4176,23 @@ if (scanTimer > 0)
 else if (scanTimer == 0)
 {
 	if (instance_exists(scanProjectile)) instance_destroy(scanProjectile);
-	if (player == 0)
+	switch (player)
 	{
+		case 0:
 		global.abilityP1 = cAbility;
-	}
-	else
-	{
+		break;
+		
+		case 1:
 		global.abilityP2 = cAbility;
+		break;
+		
+		case 2:
+		global.abilityP3 = cAbility;
+		break;
+		
+		case 3:
+		global.abilityP4 = cAbility;
+		break;
 	}
 	if (cAbility != playerAbilities.none)
 	{
@@ -3650,6 +4200,140 @@ else if (scanTimer == 0)
 		swallowActionTimer = 0;
 		global.pause = true;
 		if (instance_exists(obj_Camera)) obj_Camera.freezeFrameTimer = -1;
+	}
+	switch (cAbility)
+	{
+		case playerAbilities.cutter:
+		global.cutterAbilityObtained = true;
+		break;
+	
+		case playerAbilities.beam:
+		global.beamAbilityObtained = true;
+		break;
+	
+		case playerAbilities.mysticBeam:
+		global.mysticBeamAbilityObtained = true;
+		break;
+	
+		case playerAbilities.stone:
+		global.stoneAbilityObtained = true;
+		break;
+	
+		case playerAbilities.ufo:
+		global.ufoAbilityObtained = true;
+		break;
+	
+		case playerAbilities.mirror:
+		global.mirrorAbilityObtained = true;
+		break;
+	
+		case playerAbilities.ninja:
+		global.ninjaAbilityObtained = true;
+		break;
+	
+		case playerAbilities.bomb:
+		global.bombAbilityObtained = true;
+		break;
+	
+		case playerAbilities.fire:
+		global.fireAbilityObtained = true;
+		break;
+	
+		case playerAbilities.mysticFire:
+		global.mysticFireAbilityObtained = true;
+		break;
+	
+		case playerAbilities.ice:
+		global.iceAbilityObtained = true;
+		break;
+	
+		case playerAbilities.spark:
+		global.sparkAbilityObtained = true;
+		break;
+	
+		case playerAbilities.yoyo:
+		global.yoyoAbilityObtained = true;
+		break;
+	
+		case playerAbilities.wheel:
+		global.wheelAbilityObtained = true;
+		break;
+	
+		case playerAbilities.artist:
+		global.artistAbilityObtained = true;
+		break;
+	
+		case playerAbilities.fighter:
+		global.fighterAbilityObtained = true;
+		break;
+	
+		case playerAbilities.suplex:
+		global.suplexAbilityObtained = true;
+		break;
+	
+		case playerAbilities.wing:
+		global.wingAbilityObtained = true;
+		break;
+	
+		case playerAbilities.jet:
+		global.jetAbilityObtained = true;
+		break;
+	
+		case playerAbilities.sword:
+		global.swordAbilityObtained = true;
+		break;
+	
+		case playerAbilities.parasol:
+		global.parasolAbilityObtained = true;
+		break;
+	
+		case playerAbilities.hammer:
+		global.hammerAbilityObtained = true;
+		break;
+	
+		case playerAbilities.bell:
+		global.bellAbilityObtained = true;
+		break;
+	
+		case playerAbilities.water:
+		global.waterAbilityObtained = true;
+		break;
+	
+		case playerAbilities.hiJump:
+		global.hiJumpAbilityObtained = true;
+		break;
+	
+		case playerAbilities.gear:
+		global.gearAbilityObtained = true;
+		break;
+	
+		case playerAbilities.sleep:
+		global.sleepAbilityObtained = true;
+		break;
+	
+		case playerAbilities.scan:
+		global.scanAbilityObtained = true;
+		break;
+	
+		case playerAbilities.crash:
+		global.crashAbilityObtained = true;
+		break;
+	
+		case playerAbilities.mic:
+		global.micAbilityObtained = true;
+		break;
+	
+		case playerAbilities.chef:
+		global.chefAbilityObtained = true;
+		break;
+	
+		case playerAbilities.ultraSword:
+		global.ultraSwordAbilityObtained = true;
+		break;
+	
+		case playerAbilities.cosmicBlade:
+		global.cosmicBladeAbilityObtained = true;
+		break;
 	}
 	if (audio_is_playing(snd_Swallow)) audio_stop_sound(snd_Swallow);
 	audio_play_sound(snd_Swallow,0,false);
@@ -3661,6 +4345,94 @@ else if (scanTimer == 0)
 	state = playerStates.swallow;
 	attackTimer = 0;
 	scanTimer = -1;
+}
+
+//Mic Timer
+
+if (micTimer > 0)
+{
+	micTimer -= 1;
+	if (micTimer == 30)
+	{
+		canMicFlash = false;
+		if (sprite_index == sprMicAttack1)
+		{
+			sprite_index = sprMicAttack1End;
+			image_index = 0;
+		}
+		else if (sprite_index == sprMicAttack2)
+		{
+			sprite_index = sprMicAttack2End;
+			image_index = 0;
+		}
+		else if (sprite_index == sprMicAttack3)
+		{
+			sprite_index = sprMicAttack3End;
+			image_index = 0;
+		}
+	}
+}
+else if (micTimer == 0)
+{
+	global.pause = false;
+	image_index = 0;
+	state = playerStates.normal;
+	attackTimer = 0;
+	
+	micProjectile = instance_create_depth(-100,-100,depth,obj_Projectile_MicShot);
+	micProjectile.owner = id;
+	micProjectile.abilityType = playerAbilities.mic;
+	switch (micCount)
+	{
+		case 1:
+		micProjectile.dmg = 40;
+		break;
+								
+		case 2:
+		micProjectile.dmg = 60;
+		break;
+								
+		case 3:
+		micProjectile.dmg = 80;
+		break;
+	}
+	micProjectile.enemy = false;
+	with (obj_Enemy)
+	{
+		if (!scr_OutsideView())
+		{
+			scr_Enemy_Hurt(id,other.micProjectile);
+		}
+	}
+	
+	if (micCount >= 3)
+	{
+		scr_Player_CancelAbility(id);
+		
+		switch (player)
+		{
+			case 0:
+			global.abilityP1 = playerAbilities.none;
+			global.micCountP1 = 0;
+			break;
+				
+			case 1:
+			global.abilityP2 = playerAbilities.none;
+			global.micCountP2 = 0;
+			break;
+				
+			case 2:
+			global.abilityP3 = playerAbilities.none;
+			global.micCountP3 = 0;
+			break;
+				
+			case 3:
+			global.abilityP4 = playerAbilities.none;
+			global.micCountP4 = 0;
+			break;
+		}
+	}
+	micTimer = -1;
 }
 
 //Mic Flash Timer
@@ -3692,7 +4464,7 @@ if(grounded){
 	jetDashAir = 3;
 }
 
-////Fast Fall
+//Fast Fall
 //if(keyDownPressed && downInputBufferTimer > 0){
 //	vsp = gravLimit;
 //	fallHop = true;

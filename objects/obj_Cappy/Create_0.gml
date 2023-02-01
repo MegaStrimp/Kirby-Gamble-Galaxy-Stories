@@ -1,5 +1,28 @@
 ///@description Initialize Variables
 
+//Functions
+
+function func_CappyHurt(argument0)
+{
+	image_speed = 1;
+	sprite_index = spr_Cappy_Normal_Hurt;
+	hspDummy = 0;
+	vspDummy = 0;
+	
+	if (!thrown and state)
+	{
+		shroom = instance_create_depth(x - 1,y - 8, depth, obj_CappyShroom);
+		shroom.vsp = -3;
+		shroom.hsp = 3;
+		shroom.owner = id;
+		shroom.sprite_index = spr_Cappy_Normal_Shroom;
+		shroom.paletteIndex = paletteIndex;
+		
+		state = 0;
+	}
+	
+	return true;
+} 
 //Event Inherited
 
 event_inherited();
@@ -47,3 +70,7 @@ attackStopTimer = -1;
 attackStopTimerMax = 300;
 attackTimer = -1;
 attackTimerMax = 90;
+
+//Other
+
+hurtFunction = func_CappyHurt;

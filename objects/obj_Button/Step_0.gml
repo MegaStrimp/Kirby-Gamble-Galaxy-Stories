@@ -77,6 +77,11 @@ if (!global.pause)
 				if (objectOnHit)
 				{
 					var proj = instance_create_depth(x,y,depth,objectOnHitObj);
+					if (isBoss)
+					{
+						proj.isBoss = isBoss;
+						proj.owner = owner;
+					}
 					if (objectOnHitDmg != -1) proj.dmg = objectOnHitDmg;
 					if (objectOnHitObj == obj_Projectile_ExplosionMask)
 					{
@@ -129,7 +134,12 @@ if (!global.pause)
 		}
 	}
 	
-	if ((!active) and (place_meeting(x,y,obj_Player))) activate = true;
+	if ((!active) and (place_meeting(x,y,obj_Player)))
+	{
+		if (audio_is_playing(snd_Switch)) audio_stop_sound(snd_Switch);
+		audio_play_sound(snd_Switch,0,false);
+		activate = true;
+	}
 	
 	if (activate)
 	{

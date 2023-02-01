@@ -14,13 +14,23 @@ function scr_Player_HatFront(argument0,argument1)
 		switch (abilityToCheck)
 		{
 			case playerAbilities.fire:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeFireP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeFireP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeFireP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeFireP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
@@ -45,13 +55,23 @@ function scr_Player_HatFront(argument0,argument1)
 			break;
 			
 			case playerAbilities.mysticFire:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeFireP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeFireP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeFireP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeFireP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
@@ -76,13 +96,23 @@ function scr_Player_HatFront(argument0,argument1)
 			break;
 			
 			case playerAbilities.spark:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeSparkP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeSparkP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeSparkP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeSparkP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
@@ -103,13 +133,23 @@ function scr_Player_HatFront(argument0,argument1)
 			break;
 			
 			case playerAbilities.wing:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeWingP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeWingP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeWingP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeWingP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
@@ -118,6 +158,16 @@ function scr_Player_HatFront(argument0,argument1)
 				switch (sprite_index)
 				{
 					case sprIdle:
+					case sprIdleBlink:
+					case sprIdleNormalSlopeL:
+					case sprIdleNormalSlopeLBlink:
+					case sprIdleNormalSlopeR:
+					case sprIdleNormalSlopeRBlink:
+					case sprIdleSteepSlopeL:
+					case sprIdleSteepSlopeLBlink:
+					case sprIdleSteepSlopeR:
+					case sprIdleSteepSlopeRBlink:
+					case sprItemCarryLightIdle:
 					case sprItemCarryLightIdleNormalSlopeL:
 					case sprItemCarryLightIdleNormalSlopeLBlink:
 					case sprItemCarryLightIdleNormalSlopeR:
@@ -224,13 +274,23 @@ function scr_Player_HatFront(argument0,argument1)
 			break;
 			
 			case playerAbilities.water:
-			if (player == 0)
+			switch (player)
 			{
+				case 0:
 				var altHatToCheck = global.hatTypeWaterP1;
-			}
-			else
-			{
+				break;
+				
+				case 1:
 				var altHatToCheck = global.hatTypeWaterP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeWaterP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeWaterP4;
+				break;
 			}
 			
 			switch (altHatToCheck)
@@ -248,6 +308,7 @@ function scr_Player_HatFront(argument0,argument1)
 					case sprIdleSteepSlopeLBlink:
 					case sprIdleSteepSlopeR:
 					case sprIdleSteepSlopeRBlink:
+					case sprItemCarryLightIdle:
 					case sprItemCarryLightIdleNormalSlopeL:
 					case sprItemCarryLightIdleNormalSlopeLBlink:
 					case sprItemCarryLightIdleNormalSlopeR:

@@ -2,125 +2,7 @@
 
 if (!global.pause)
 {
-	#region Name Tags
-	switch (global.characterP1)
-	{
-		case playerCharacters.kirby:
-		playerName[talkingCharacter.kirby] = "Kirby";
-		playerName[talkingCharacter.gamble] = "Puffball";
-		playerName[talkingCharacter.metaKnight] = "Kirby";
-		playerName[talkingCharacter.match] = "Kirby";
-		break;
-		
-		case playerCharacters.gamble:
-		playerName[talkingCharacter.kirby] = "Gamble";
-		playerName[talkingCharacter.gamble] = "Gamble";
-		playerName[talkingCharacter.metaKnight] = "Gamble";
-		playerName[talkingCharacter.match] = "Gamble";
-		break;
-		
-		case playerCharacters.metaKnight:
-		playerName[talkingCharacter.kirby] = "Meta Knight";
-		playerName[talkingCharacter.gamble] = "Meta Knight";
-		playerName[talkingCharacter.metaKnight] = "Meta Knight";
-		playerName[talkingCharacter.match] = "Meta Knight";
-		break;
-		
-		case playerCharacters.keeby:
-		playerName[talkingCharacter.kirby] = "";
-		playerName[talkingCharacter.gamble] = "";
-		playerName[talkingCharacter.metaKnight] = "";
-		playerName[talkingCharacter.match] = "";
-		break;
-		
-		case playerCharacters.gooey:
-		playerName[talkingCharacter.kirby] = "";
-		playerName[talkingCharacter.gamble] = "";
-		playerName[talkingCharacter.metaKnight] = "";
-		playerName[talkingCharacter.match] = "";
-		break;
-		
-		case playerCharacters.magolor:
-		playerName[talkingCharacter.kirby] = "";
-		playerName[talkingCharacter.gamble] = "";
-		playerName[talkingCharacter.metaKnight] = "";
-		playerName[talkingCharacter.match] = "";
-		break;
-		
-		case playerCharacters.waddleDee:
-		playerName[talkingCharacter.kirby] = "";
-		playerName[talkingCharacter.gamble] = "";
-		playerName[talkingCharacter.metaKnight] = "";
-		playerName[talkingCharacter.match] = "";
-		break;
-		
-		case playerCharacters.waddleDoo:
-		playerName[talkingCharacter.kirby] = "";
-		playerName[talkingCharacter.gamble] = "";
-		playerName[talkingCharacter.metaKnight] = "";
-		playerName[talkingCharacter.match] = "";
-		break;
-		
-		case playerCharacters.brontoBurt:
-		playerName[talkingCharacter.kirby] = "";
-		playerName[talkingCharacter.gamble] = "";
-		playerName[talkingCharacter.metaKnight] = "";
-		playerName[talkingCharacter.match] = "";
-		break;
-		
-		case playerCharacters.twizzy:
-		playerName[talkingCharacter.kirby] = "";
-		playerName[talkingCharacter.gamble] = "";
-		playerName[talkingCharacter.metaKnight] = "";
-		playerName[talkingCharacter.match] = "";
-		break;
-		
-		case playerCharacters.tookey:
-		playerName[talkingCharacter.kirby] = "";
-		playerName[talkingCharacter.gamble] = "";
-		playerName[talkingCharacter.metaKnight] = "";
-		playerName[talkingCharacter.match] = "";
-		break;
-		
-		case playerCharacters.sirKibble:
-		playerName[talkingCharacter.kirby] = "";
-		playerName[talkingCharacter.gamble] = "";
-		playerName[talkingCharacter.metaKnight] = "";
-		playerName[talkingCharacter.match] = "";
-		break;
-		
-		case playerCharacters.bouncy:
-		playerName[talkingCharacter.kirby] = "";
-		playerName[talkingCharacter.gamble] = "";
-		playerName[talkingCharacter.metaKnight] = "";
-		playerName[talkingCharacter.match] = "";
-		break;
-		
-		case playerCharacters.gordo:
-		playerName[talkingCharacter.kirby] = "";
-		playerName[talkingCharacter.gamble] = "";
-		playerName[talkingCharacter.metaKnight] = "";
-		playerName[talkingCharacter.match] = "";
-		break;
-		
-		case playerCharacters.bloodGordo:
-		playerName[talkingCharacter.kirby] = "";
-		playerName[talkingCharacter.gamble] = "";
-		playerName[talkingCharacter.metaKnight] = "";
-		playerName[talkingCharacter.match] = "";
-		break;
-		
-		case playerCharacters.mysticDoo:
-		playerName[talkingCharacter.kirby] = "";
-		playerName[talkingCharacter.gamble] = "";
-		playerName[talkingCharacter.metaKnight] = "";
-		playerName[talkingCharacter.match] = "";
-		break;
-	}
-	#endregion
-	
-	//States
-	
+	#region States
 	if (active)
 	{
 		switch (state)
@@ -474,12 +356,114 @@ long distances quickly?";
 			}
 			break;
 			#endregion
+			
+			#region NPC - Green Greens - Adult Dee
+			case cutscenes.npc_GreenGreens_AdultDee:
+			switch (stateEx)
+			{
+				case 0:
+				if (stateExTimer == -1) stateExTimer = 0;
+				break;
+				
+				case 1:
+				var array = 0;
+				var dialogue = instance_create_depth(0,0,-998,obj_Dialogue);
+				dialogue.owner = id;
+				dialogue.changeOwnerState = true;
+				var text = "Hey, have you seen that comet last night?";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_StarryChild,spr_Hud_Dialogue_Portrait_WaddleDee_Normal,snd_TextGamble);
+				array += 1;
+				text = "I think it went into Whispys Forest.";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_StarryChild,spr_Hud_Dialogue_Portrait_WaddleDee_Normal,snd_TextGamble);
+				array += 1;
+				text = "Be careful out there.";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_StarryChild,spr_Hud_Dialogue_Portrait_WaddleDee_Normal,snd_TextGamble);
+				break;
+				
+				case 2:
+				destroy = true;
+				break;
+			}
+			break;
+			#endregion
+			
+			#region NPC - Green Greens - Signmaster Dee
+			case cutscenes.npc_GreenGreens_SignmasterDee:
+			switch (stateEx)
+			{
+				case 0:
+				if (stateExTimer == -1) stateExTimer = 0;
+				break;
+				
+				case 1:
+				var array = 0;
+				var dialogue = instance_create_depth(0,0,-998,obj_Dialogue);
+				dialogue.owner = id;
+				dialogue.changeOwnerState = true;
+				var text = "K... Kirby! Is that really you!";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_StarryChild,spr_Hud_Dialogue_Portrait_WaddleDee_Normal,snd_TextGamble);
+				array += 1;
+				text = "I am such a big fan, remember the time when you saved me from Kracko?";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_StarryChild,spr_Hud_Dialogue_Portrait_WaddleDee_Normal,snd_TextGamble);
+				array += 1;
+				text = "You were so... brave and... powerful!";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_StarryChild,spr_Hud_Dialogue_Portrait_WaddleDee_Normal,snd_TextGamble);
+				array += 1;
+				text = "Ever since that day, I have been studying your great moves and abilities!";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_StarryChild,spr_Hud_Dialogue_Portrait_WaddleDee_Normal,snd_TextGamble);
+				array += 1;
+				text = "I have even built these signs for you!";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_StarryChild,spr_Hud_Dialogue_Portrait_WaddleDee_Normal,snd_TextGamble);
+				array += 1;
+				text = "Always happy to help... Thank you Kirby!";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_StarryChild,spr_Hud_Dialogue_Portrait_WaddleDee_Normal,snd_TextGamble);
+				break;
+				
+				case 2:
+				destroy = true;
+				break;
+			}
+			break;
+			#endregion
+			
+			#region NPC - Green Greens - Bebu Dee
+			case cutscenes.npc_GreenGreens_BebuDee:
+			switch (stateEx)
+			{
+				case 0:
+				if (stateExTimer == -1) stateExTimer = 0;
+				break;
+				
+				case 1:
+				var array = 0;
+				var dialogue = instance_create_depth(0,0,-998,obj_Dialogue);
+				dialogue.owner = id;
+				dialogue.changeOwnerState = true;
+				var text = "My mommy doesnt allow me to go to Whispys Forest...";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_StarryChild,spr_Hud_Dialogue_Portrait_WaddleDee_Normal,snd_TextGamble);
+				array += 1;
+				text = "But I am sooo curious about what happened.";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_StarryChild,spr_Hud_Dialogue_Portrait_WaddleDee_Normal,snd_TextGamble);
+				array += 1;
+				text = "At least I have these apples from the forest!";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_StarryChild,spr_Hud_Dialogue_Portrait_WaddleDee_Normal,snd_TextGamble);
+				array += 1;
+				text = "Mmm so yummy!";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_StarryChild,spr_Hud_Dialogue_Portrait_WaddleDee_Normal,snd_TextGamble);
+				break;
+				
+				case 2:
+				destroy = true;
+				break;
+			}
+			break;
+			#endregion
 		}
 		active = false;
 	}
+	#endregion
 	
-	//State Ex Timer
-	
+	#region State Ex Timer
 	if (stateExTimer > 0)
 	{
 		stateExTimer -= 1;
@@ -490,12 +474,13 @@ long distances quickly?";
 		active = true;
 	    stateExTimer = -1;
 	}
+	#endregion
 	
-	//Destroy
-	
+	#region Destroy
 	if (destroy)
 	{
 		if (stopsCutscene) global.cutscene = false;
 		instance_destroy();
 	}
+	#endregion
 }

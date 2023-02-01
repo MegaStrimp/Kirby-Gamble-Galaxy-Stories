@@ -83,7 +83,7 @@ if (!global.pause)
 		break;
 		
 		case "cheats":
-		if (keyUpPressed) selection = "stages";
+		if (keyUpPressed) selection = "back";
 		if (keyDownPressed) selection = "upgrades";
 		
 		if (!instance_exists(obj_Fade))
@@ -130,7 +130,7 @@ if (!global.pause)
 		
 		case "stages":
 		if (keyUpPressed) selection = "bestiary";
-		if (keyDownPressed) selection = "upgrades";
+		if (keyDownPressed) selection = "back";
 		if (keyLeftPressed) selection = "trophies";
 		if (keyRightPressed) selection = "trophies";
 		
@@ -155,7 +155,7 @@ if (!global.pause)
 		case "soundTest":
 		if (keyUpPressed) selection = "trophies";
 		if (keyDownPressed) selection = "customize";
-		if (keyLeftPressed) selection = "gallery";
+		if (keyLeftPressed) selection = "back";
 		if (keyRightPressed) selection = "cutscenes";
 		
 		if (!instance_exists(obj_Fade))
@@ -206,17 +206,15 @@ if (!global.pause)
 		if (keyUpPressed) selection = "trophies";
 		if (keyDownPressed) selection = "customize";
 		if (keyLeftPressed) selection = "cutscenes";
-		if (keyRightPressed) selection = "soundTest";
+		if (keyRightPressed) selection = "back";
 		
 		if (!instance_exists(obj_Fade))
 		{
 			if ((keyJumpPressed) or (keyStartPressed))
 			{
-				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
-				audio_play_sound(snd_ButtonNo,0,false);
-				/*if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 				audio_play_sound(snd_ButtonYes,0,false);
-				select = true;*/
+				select = true;
 			}
 		}
 		
@@ -224,6 +222,30 @@ if (!global.pause)
 		{
 			var fade = instance_create_depth(x,y,-999,obj_Fade);
 			fade.targetRoom = rm_Gallery;
+			select = false;
+		}
+		break;
+		
+		case "back":
+		if (keyUpPressed) selection = "stages";
+		if (keyDownPressed) selection = "cheats";
+		if (keyLeftPressed) selection = "gallery";
+		if (keyRightPressed) selection = "soundTest";
+			
+		if (!instance_exists(obj_Fade))
+		{
+			if ((keyJumpPressed) or (keyStartPressed))
+			{
+				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+				audio_play_sound(snd_ButtonNo,0,false);
+				select = true;
+			}
+		}
+			
+		if (select)
+		{
+			var fade = instance_create_depth(x,y,-999,obj_Fade);
+			fade.targetRoom = rm_MainMenu;
 			select = false;
 		}
 		break;

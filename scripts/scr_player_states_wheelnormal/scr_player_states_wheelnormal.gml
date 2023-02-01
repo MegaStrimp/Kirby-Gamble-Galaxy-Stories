@@ -105,11 +105,6 @@ function scr_Player_States_WheelNormal()
 		
 		image_speed = 1;
 		
-		if (fireReleaseTimer != -1)
-		{
-			sprite_index = sprFireAttack2;
-		}
-		
 		//Collision
 		
 		scr_Player_Collision(playerMechs.none);

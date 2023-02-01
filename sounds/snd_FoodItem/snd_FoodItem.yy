@@ -14,8 +14,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_fooditem.wav",
-  "duration": 0.14449,
+  "soundFile": "snd_FoodItem.wav",
+  "duration": 0.20898,
   "parent": {
     "name": "Objects",
     "path": "folders/Sounds/Sound Effects/Objects.yy",

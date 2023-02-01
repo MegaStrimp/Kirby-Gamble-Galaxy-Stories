@@ -23,4 +23,10 @@ starTimer = -1;
 
 //Destroy
 
-if ((global.characterP1 != playerCharacters.kirby) and ((!global.hasCoop) or ((global.hasCoop) and (global.characterP2 != playerCharacters.kirby)))) instance_destroy();
+if (((global.hasCoop == 0) and (global.characterP1 != playerCharacters.kirby))
+or ((global.hasCoop == 1) and (global.characterP1 != playerCharacters.kirby) and (global.characterP2 != playerCharacters.kirby))
+or ((global.hasCoop == 2) and (global.characterP1 != playerCharacters.kirby) and (global.characterP2 != playerCharacters.kirby) and (global.characterP3 != playerCharacters.kirby))
+or ((global.hasCoop == 3) and (global.characterP1 != playerCharacters.kirby) and (global.characterP2 != playerCharacters.kirby) and (global.characterP3 != playerCharacters.kirby) and (global.characterP4 != playerCharacters.kirby)))
+{
+	instance_destroy();
+}

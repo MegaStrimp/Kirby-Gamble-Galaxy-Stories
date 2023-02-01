@@ -20,6 +20,24 @@ function scr_Object_Inhale(argument0)
 				particle.destroyAfterAnimation = true;
 			}
 			inhaleMask.owner.ateAbilityStar = ability;
+			switch (inhaleMask.owner.player)
+			{
+				case 0:
+				global.micCountP1 = micCount;
+				break;
+				
+				case 1:
+				global.micCountP2 = micCount;
+				break;
+					
+				case 2:
+				global.micCountP3 = micCount;
+				break;
+					
+				case 3:
+				global.micCountP4 = micCount;
+				break;
+			}
 		}
 		if (object_index == obj_Cappy)
 		{
@@ -60,6 +78,10 @@ function scr_Object_Inhale(argument0)
 			    eatMe.ability = ability;
 				eatMe.dir = sign(inhaleMask.owner.image_xscale);
 				eatMe.owner = inhaleMask.owner;
+				eatMe.image_xscale = abs(image_xscale);
+				eatMe.image_yscale = abs(image_yscale);
+				eatMe.dirX = sign(image_xscale);
+				eatMe.dirY = sign(image_yscale);
 				if (object_get_parent(object_index) == obj_Enemy) eatMe.squadType = squadType;
 				if (variable_instance_exists(id,"paletteIndex")) eatMe.paletteIndex = paletteIndex;
 				switch (object_index)

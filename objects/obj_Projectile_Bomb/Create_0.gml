@@ -41,6 +41,7 @@ destroyAfterHurt = true;
 canBeInhaled = false;
 damageType = damageTypes.bomb;
 ability = playerAbilities.bomb;
+floorAng = 0;
 
 //Timers
 

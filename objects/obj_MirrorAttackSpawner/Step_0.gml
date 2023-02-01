@@ -27,7 +27,7 @@ if (!global.pause)
             mirrorKirby.image_xscale = dir;
 			mirrorKirby.spriteIndex = spriteIndex;
 			mirrorKirby.paletteIndex = paletteIndex;
-			if ((((owner.player == 0) and (global.characterP1 == playerCharacters.kirby)) or ((owner.player == 1) and (global.characterP2 == playerCharacters.kirby))) and (global.coloredAbilitiesKeycard) and (global.cheatColoredAbilitiesEquipped)) mirrorKirby.paletteIndex = spr_Kirby_Normal_Palette_Mirror;
+			if ((((owner.player == 0) and (global.characterP1 == playerCharacters.kirby)) or ((owner.player == 1) and (global.characterP2 == playerCharacters.kirby))) and (global.abilitySpraysKeycard) and (global.cheatColoredAbilitiesEquipped)) mirrorKirby.paletteIndex = spr_Kirby_Normal_Palette_Mirror;
 			mirrorKirby.hatIndex = hatIndex;
 			mirrorKirby.hatShadowIndex = hatShadowIndex;
 			mirrorKirby.hatPaletteIndex = hatPaletteIndex;
@@ -55,7 +55,11 @@ if (!global.pause)
             mirrorKirby.image_xscale = dir;
 			mirrorKirby.spriteIndex = spriteIndex;
 			mirrorKirby.paletteIndex = paletteIndex;
-			if ((((owner.player == 0) and (global.characterP1 == playerCharacters.kirby)) or ((owner.player == 1) and (global.characterP2 == playerCharacters.kirby))) and (global.coloredAbilitiesKeycard) and (global.cheatColoredAbilitiesEquipped)) mirrorKirby.paletteIndex = spr_Kirby_Normal_Palette_Mirror;
+			if ((((owner.player == 0) and (global.characterP1 == playerCharacters.kirby))
+			or ((owner.player == 1) and (global.characterP2 == playerCharacters.kirby))
+			or ((owner.player == 2) and (global.characterP3 == playerCharacters.kirby))
+			or ((owner.player == 3) and (global.characterP4 == playerCharacters.kirby)))
+			and (global.abilitySpraysKeycard) and (global.cheatColoredAbilitiesEquipped)) mirrorKirby.paletteIndex = spr_Kirby_Normal_Palette_Mirror;
 			mirrorKirby.hatIndex = hatIndex;
 			mirrorKirby.hatShadowIndex = hatShadowIndex;
 			mirrorKirby.hatPaletteIndex = hatPaletteIndex;

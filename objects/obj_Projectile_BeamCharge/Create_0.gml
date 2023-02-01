@@ -12,6 +12,8 @@ event_inherited();
 
 hsp = 0;
 vsp = 0;
+angle = 40;
+strength = 8.5;
 
 //Sprites
 
@@ -45,3 +47,6 @@ formChangeTimerMax = 4;
 formChangeTimer = formChangeTimerMax;
 upgradeProjTimer = -1;
 upgradeProjTimerMax = 7;
+
+hitStop.shakeStr = 7;
+hitStop.len = 15;

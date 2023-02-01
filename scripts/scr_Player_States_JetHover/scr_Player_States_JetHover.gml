@@ -10,9 +10,28 @@ function scr_Player_States_JetHover()
 		fallRoll = false;
 		run = false;
 		
-		var playerCharacter = global.characterP1;
-		if (player == 1) playerCharacter = global.characterP2;
-		
+		switch (player)
+		{
+			case 0:
+			var playerAbility = global.abilityP1;
+			var playerCharacter = global.characterP1;
+			break;
+			
+			case 1:
+			var playerAbility = global.abilityP2;
+			var playerCharacter = global.characterP2;
+			break;
+			
+			case 2:
+			var playerAbility = global.abilityP3;
+			var playerCharacter = global.characterP3;
+			break;
+			
+			case 3:
+			var playerAbility = global.abilityP4;
+			var playerCharacter = global.characterP4;
+			break;
+		}
 		
 		//Movement
 		
@@ -224,22 +243,6 @@ function scr_Player_States_JetHover()
 			float = false;
 			floatSpit = false;
 		}
-		
-		//Door
-		/*
-		if ((!global.cutscene) and (position_meeting(x,y,obj_Door)) and (keyUpPressed))
-		{
-			if ((!instance_exists(obj_Fade)) and (hurt = false))
-			{
-			    var nearbyDoor = instance_place(x,y,obj_Door);
-			    fade = instance_create_depth(x,y,-999,obj_Fade);
-				fade.targetRoom = nearbyDoor.targetRoom;
-			    hsp = 0;
-			    vsp = 0;
-			    image_index = 0;
-			    state = playerStates.enter;
-			}
-		}*/
 		
 		
 		//Collision

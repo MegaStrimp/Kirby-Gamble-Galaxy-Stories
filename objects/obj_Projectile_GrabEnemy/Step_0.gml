@@ -10,6 +10,12 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	hurtsProjectile = active;
 	destroyableByWall = active;
 	
+	if (!active)
+	{
+		shakeX = 1;
+		shakeY = 1;
+	}
+	
 	//Event Inherited
 	
 	event_inherited();

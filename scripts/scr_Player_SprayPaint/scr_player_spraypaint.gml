@@ -17,7 +17,7 @@ function scr_Player_SprayPaint(argument0,argument1,argument2)
 		switch (selectedSkin)
 		{
 			#region Normal
-			case "normal":
+			default:
 			switch (paintToCheck)
 			{
 				case playerSprayPaints.friendlyPink:
@@ -199,7 +199,7 @@ function scr_Player_SprayPaint(argument0,argument1,argument2)
 		switch (selectedSkin)
 		{
 			#region Normal
-			case "normal":
+			default:
 			switch (paintToCheck)
 			{
 				case playerSprayPaints.friendlyPink:
@@ -381,7 +381,7 @@ function scr_Player_SprayPaint(argument0,argument1,argument2)
 		switch (selectedSkin)
 		{
 			#region Normal
-			case "normal":
+			default:
 			switch (paintToCheck)
 			{
 				case playerSprayPaints.friendlyPink:
@@ -563,7 +563,7 @@ function scr_Player_SprayPaint(argument0,argument1,argument2)
 		switch (selectedSkin)
 		{
 			#region Normal
-			case "normal":
+			default:
 			switch (paintToCheck)
 			{
 				case playerSprayPaints.friendlyPink:
@@ -920,7 +920,7 @@ function scr_Player_SprayPaint(argument0,argument1,argument2)
 		switch (selectedSkin)
 		{
 			#region Normal
-			case "normal":
+			default:
 			switch (paintToCheck)
 			{
 				case playerSprayPaints.friendlyPink:

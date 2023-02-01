@@ -119,6 +119,10 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 		attackTimer = -1;
 		hasGravity = true;
 		
+		var nearestPlayer = instance_nearest(x,y,obj_Player);
+		dirX = 1;
+		if (nearestPlayer.x < x) dirX = -1;
+		
 		if (slideTimer == -1) slideTimer = slideTimerMax;
 		
 		image_speed = 1;
@@ -181,6 +185,8 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 					projBeam.destroyOutsideRoom = true;
 					projBeam.character = 3;
 					projBeam.sprIdle = spr_Projectile_MysticBeam_Enemy;
+					projBeam.trailSpr = spr_Projectile_MysticBeam_Enemy_Trail;
+					projBeam.trailTimer = 0;
 				}
 			}
 			else if (attackState == 1)

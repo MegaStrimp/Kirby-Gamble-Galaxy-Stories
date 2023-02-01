@@ -2,6 +2,40 @@
 
 function scr_DebugSave()
 {
+	global.cutterAbilityObtained = true;
+	global.beamAbilityObtained = true;
+	global.mysticBeamAbilityObtained = true;
+	global.stoneAbilityObtained = true;
+	global.ufoAbilityObtained = true;
+	global.mirrorAbilityObtained = true;
+	global.ninjaAbilityObtained = true;
+	global.bombAbilityObtained = true;
+	global.fireAbilityObtained = true;
+	global.mysticFireAbilityObtained = true;
+	global.iceAbilityObtained = true;
+	global.sparkAbilityObtained = true;
+	global.yoyoAbilityObtained = true;
+	global.wheelAbilityObtained = true;
+	global.artistAbilityObtained = true;
+	global.fighterAbilityObtained = true;
+	global.suplexAbilityObtained = true;
+	global.wingAbilityObtained = true;
+	global.jetAbilityObtained = true;
+	global.swordAbilityObtained = true;
+	global.parasolAbilityObtained = true;
+	global.hammerAbilityObtained = true;
+	global.bellAbilityObtained = true;
+	global.waterAbilityObtained = true;
+	global.hiJumpAbilityObtained = true;
+	global.gearAbilityObtained = true;
+	global.sleepAbilityObtained = true;
+	global.scanAbilityObtained = true;
+	global.crashAbilityObtained = true;
+	global.micAbilityObtained = true;
+	global.chefAbilityObtained = true;
+	global.ultraSwordAbilityObtained = true;
+	global.cosmicBladeAbilityObtained = true;
+	
 	global.cutterAbilityKills = 1000;
 	global.beamAbilityKills = 1000;
 	global.mysticBeamAbilityKills = 1000;
@@ -26,6 +60,8 @@ function scr_DebugSave()
 	global.hammerAbilityKills = 1000;
 	global.bellAbilityKills = 1000;
 	global.waterAbilityKills = 1000;
+	global.hiJumpAbilityKills = 1000;
+	global.gearAbilityKills = 1000;
 	global.sleepAbilityKills = 1000;
 	global.scanAbilityKills = 1000;
 	global.crashAbilityKills = 1000;
@@ -33,6 +69,22 @@ function scr_DebugSave()
 	global.chefAbilityKills = 1000;
 	global.ultraSwordAbilityKills = 1000;
 	global.cosmicBladeAbilityKills = 1000;
+	
+	global.beatGreenGreens = true;
+	global.beatBattleshipHalberd = true;
+	global.beatAsteroidFields = true;
+	global.beatYolkYard = true;
+	global.beatGrandTempleAvgo = true;
+	global.beatFloralYolkCaves = true;
+	global.beatStormTheFortress = true;
+	global.beatCentralLab = true;
+	global.beatPathToTheNastyMachine = true;
+	global.beatSandshellBeach = true;
+	global.beatUpTheStraw = true;
+	global.beatSacredAquatia = true;
+	global.beatCosmicPalace = true;
+	global.beatPopstarMoon = true;
+	global.beatChapter1 = true;
 	
 	global.extraModeUnlocked = true;
 	global.skylandsUnlocked = true;
@@ -100,15 +152,29 @@ function scr_DebugSave()
 	global.mysticBeamVortexInAJarUpgradeUnlocked = true;
 	global.stoneRockCandyUpgradeUnlocked = true;
 	global.stoneComboCobaltUpgradeUnlocked = true;
-	global.bombMultiBombUpgradeUnlocked = true;
+	global.stonePsychicPebbleUpgradeUnlocked = true;
+	global.ufoCowDollUpgradeUnlocked = true;
+	global.bombLightShellsUpgradeUnlocked = true;
 	global.bombEyeBombUpgradeUnlocked = true;
-	global.bombSmartBombUpgradeUnlocked = true;
+	global.bombStickyBombUpgradeUnlocked = true;
 	global.bombMagmaBombUpgradeUnlocked = true;
+	global.bombIceBombUpgradeUnlocked = true;
 	global.bombExplosivePowderUpgradeUnlocked = true;
 	global.fireMagicCharcoalUpgradeUnlocked = true;
 	global.iceEmptyConeUpgradeUnlocked = true;
 	global.sparkBrightPluggUpgradeUnlocked = true;
+	global.parasolWaddleBrellaUpgradeUnlocked = true;
 	global.waterEggSoilUpgradeUnlocked = true;
+	
+	global.cheatLifelessUnlocked = true;
+	global.cheatStarstormUnlocked = true;
+	global.cheatFlipsideUnlocked = true;
+	global.cheatGamerBoyUnlocked = true;
+	global.cheatEyeBleachUnlocked = true;
+	global.cheatAwaitingForTheNewMoonUnlocked = true;
+	global.cheatGatherBattleUnlocked = true;
+	global.cheatFashionableUnlocked = true;
+	global.cheatStrimpsDinerUnlocked = true;
 	
 	global.bestiaryEnemiesWaddleDeeUnlocked = true;
 	global.bestiaryEnemiesWaddleDooUnlocked = true;
@@ -123,7 +189,7 @@ function scr_DebugSave()
 	global.bestiaryEnemiesMysticDooUnlocked = true;
 	global.bestiaryEnemiesBouncyUnlocked = true;
 	global.bestiaryEnemiesMrBoogieUnlocked = true;
-	global.bestiaryEnemiesSearchUnlocked = true;
+	global.bestiaryEnemiesSearchesUnlocked = true;
 	global.bestiaryEnemiesHiveDroneUnlocked = true;
 	global.bestiaryEnemiesWapodUnlocked = true;
 	global.bestiaryEnemiesFlamebelchUnlocked = true;
@@ -155,8 +221,11 @@ function scr_DebugSave()
 	global.kirbyBattleBlitzCrossoverKeycard = true;
 	global.kirbysDreamLandPlusCrossoverKeycard = true;
 	global.dreamCrafterCrossoverKeycard = true;
+	global.eternalParadiseCrossoverKeycard = true;
+	global.bollCrossoverKeycard = true;
 	
-	global.coloredAbilitiesKeycard = true;
+	global.abilitySpraysKeycard = true;
+	global.permaHalloweenKeycard = true;
 	
 	global.demoBeatGreenGreens = true;
 	global.demoBeatBattleshipHalberd = true;

@@ -58,17 +58,13 @@ if (!global.pause)
 				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 				audio_play_sound(snd_ButtonYes,0,false);
 				subSelection = 0;
-				if (menuValue[selection] != "Default")
+				if (menuValue[selection] != "Reset")
 				{
 					page = menuValue[selection];
 				}
 				else
 				{
-					file_delete("config.ini");
-					scr_LoadConfig("config.ini");
-					global.fullscreen = window_get_fullscreen();
-					obj_Camera.windowSet = false;
-					setStrings = true;
+					scr_OptionsMenu_Reset();
 				}
 			}
 			
@@ -85,7 +81,7 @@ if (!global.pause)
 			scr_SaveConfig("config.ini");
 			var fade = instance_create_depth(x,y,-999,obj_Fade);
 			var demo = false;
-			demo = true;
+			//demo = true;
 			if (demo)
 			{
 				fade.targetRoom = rm_StageSelect_Demo;
@@ -275,119 +271,114 @@ if (!global.pause)
 				audio_play_sound(snd_BossHealth,0,false);
 				subSelection -= 1;
 			}
-			
-			if (keyLeftPressed)
+		}
+		
+		switch (controlsPage)
+		{
+			case -1:
+			if (subSelection < 0)
 			{
-				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
-				audio_play_sound(snd_BossHealth,0,false);
+				subSelection += 4;
+			}
+			if (subSelection > 3)
+			{
+				subSelection -= 4;
+			}
+			
+			if ((keyJumpPressed) or (keyStartPressed))
+			{
+				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+				audio_play_sound(snd_ButtonYes,0,false);
+				controlsPage = subSelection;
+				subSelection = 0;
+			}
+			
+			if ((keyAttackPressed) and (!paused))
+			{
+				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+				audio_play_sound(snd_ButtonNo,0,false);
+				goBack = true;
+			}
+			
+			if (goBack)
+			{
+				selection = 2;
+				page = "main";
+				goBack = false;
+			}
+			break;
+			
+			case 0:
+			case 1:
+			case 2:
+			case 3:
+			if (subSelection < 0)
+			{
+				subSelection += 8;
+			}
+			if (subSelection > 7)
+			{
 				subSelection -= 8;
 			}
 			
-			if (keyRightPressed)
+			if ((keyAttackPressed) and (!paused))
 			{
-				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
-				audio_play_sound(snd_BossHealth,0,false);
-				subSelection += 8;
+				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+				audio_play_sound(snd_ButtonNo,0,false);
+				goBack = true;
 			}
-		}
-		
-		if (subSelection < 0)
-		{
-			subSelection += 16;
-		}
-		if (subSelection > 15)
-		{
-			subSelection -= 16;
-		}
-		
-		if ((keyAttackPressed) and (!paused))
-		{
-			if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
-			audio_play_sound(snd_ButtonNo,0,false);
-			goBack = true;
-		}
-		
-		if (goBack)
-		{
-			selection = 2;
-			page = "main";
-			goBack = false;
-		}
-		
-		if ((paused) and (keyboard_check_pressed(vk_anykey)))
-		{
-			var pressedKey = keyboard_key;
-			paused = false;
-			switch (subSelection)
+			
+			if (goBack)
 			{
-				case 0:
-				global.finalKeyLeft[0] = pressedKey;
-				break;
-				
-				case 1:
-				global.finalKeyRight[0] = pressedKey;
-				break;
-				
-				case 2:
-				global.finalKeyUp[0] = pressedKey;
-				break;
-				
-				case 3:
-				global.finalKeyDown[0] = pressedKey;
-				break;
-				
-				case 4:
-				global.finalKeyJump[0] = pressedKey;
-				break;
-				
-				case 5:
-				global.finalKeyAttack[0] = pressedKey;
-				break;
-				
-				case 6:
-				global.finalKeyStart[0] = pressedKey;
-				break;
-				
-				case 7:
-				global.finalKeySelect[0] = pressedKey;
-				break;
-				
-				case 8:
-				global.finalKeyLeft[1] = pressedKey;
-				break;
-				
-				case 9:
-				global.finalKeyRight[1] = pressedKey;
-				break;
-				
-				case 10:
-				global.finalKeyUp[1] = pressedKey;
-				break;
-				
-				case 11:
-				global.finalKeyDown[1] = pressedKey;
-				break;
-				
-				case 12:
-				global.finalKeyJump[1] = pressedKey;
-				break;
-				
-				case 13:
-				global.finalKeyAttack[1] = pressedKey;
-				break;
-				
-				case 14:
-				global.finalKeyStart[1] = pressedKey;
-				break;
-				
-				case 15:
-				global.finalKeySelect[1] = pressedKey;
-				break;
+				subSelection = controlsPage;
+				controlsPage = -1;
+				goBack = false;
 			}
-		}
-		else
-		{
-			if (keyJumpPressed) paused = true;
+			
+			if ((paused) and (keyboard_check_pressed(vk_anykey)))
+			{
+				var pressedKey = keyboard_key;
+				paused = false;
+				switch (subSelection)
+				{
+					case 0:
+					global.finalKeyLeft[controlsPage] = pressedKey;
+					break;
+					
+					case 1:
+					global.finalKeyRight[controlsPage] = pressedKey;
+					break;
+					
+					case 2:
+					global.finalKeyUp[controlsPage] = pressedKey;
+					break;
+					
+					case 3:
+					global.finalKeyDown[controlsPage] = pressedKey;
+					break;
+					
+					case 4:
+					global.finalKeyJump[controlsPage] = pressedKey;
+					break;
+					
+					case 5:
+					global.finalKeyAttack[controlsPage] = pressedKey;
+					break;
+					
+					case 6:
+					global.finalKeyStart[controlsPage] = pressedKey;
+					break;
+					
+					case 7:
+					global.finalKeySelect[controlsPage] = pressedKey;
+					break;
+				}
+			}
+			else
+			{
+				if (keyJumpPressed) paused = true;
+			}
+			break;
 		}
 		break;
 		#endregion

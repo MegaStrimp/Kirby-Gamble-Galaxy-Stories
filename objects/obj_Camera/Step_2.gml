@@ -568,6 +568,11 @@ if (!global.pause)
 		halberdEscapeAngle = 0;
 	}
 }
+else
+{
+	sShakeX = irandom_range(-shakeX ,shakeX);
+	sShakeY = irandom_range(-shakeY,shakeY);
+}
 
 camera_set_view_pos(gameView,cameraX + sShakeX,cameraY + sShakeY);
 camera_set_view_angle(gameView,halberdEscapeAngle);

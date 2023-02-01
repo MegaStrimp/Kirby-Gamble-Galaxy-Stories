@@ -152,6 +152,14 @@ function scr_Hud_AbilityText(argument0,argument1)
 		textIndex = spr_Hud_AbilityText_Water;
 		break;
 		
+		case playerAbilities.hiJump:
+		textIndex = spr_Hud_AbilityText_HiJump;
+		break;
+		
+		case playerAbilities.gear:
+		textIndex = spr_Hud_AbilityText_Gear;
+		break;
+		
 		case playerAbilities.ultraSword:
 		textIndex = spr_Hud_AbilityText_UltraSword;
 		break;

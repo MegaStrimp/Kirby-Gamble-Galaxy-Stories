@@ -39,6 +39,7 @@ healthbarIndex = 3;
 hasXKnockback = false;
 hasYKnockback = false;
 hurtable = false;
+hurtFunction = func_HurtBossDefault;
 
 phase = 0;
 faceSprite = sprIdle;
@@ -90,7 +91,6 @@ throwObjectTimer = -1;
 throwObjectTimerMax = 45;
 bigAirpuffTimer = -1;
 inhaleTimer = -1;
-
 #endregion
 
 collisionHitbox = instance_create_depth(x,y,depth,obj_Wall);

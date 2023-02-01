@@ -1,10 +1,10 @@
 ///@description Main
 
 //Event Inherited
-
+sprHurt = sprite_index;
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	//Get Inhaled
 	

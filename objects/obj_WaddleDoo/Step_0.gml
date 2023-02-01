@@ -70,7 +70,7 @@ if ((attackState == 2) and (attack))
 
 event_inherited();
 
-if (childPause)
+if ((!childPause))
 {
 	//Get Inhaled
 	
@@ -566,8 +566,12 @@ if (childPause)
 					projBeam.hasLimit = false;
 					projBeam.character = 1;
 					projBeam.sprite_index = spr_Projectile_Beam_Enemy;
+					projBeam.pulseTarget = 1;
+					projBeam.imageIndex = projBeam.image_index;
 					projBeam.particleTimer = -1;
 					projBeam.destroyTimer = 60;
+					projBeam.pulseTimerMax = 2;
+					projBeam.pulseTimer = projBeam.pulseTimerMax;
 				}
 				break;
 				
@@ -581,9 +585,7 @@ if (childPause)
 		}
 	}
 }
-else if (!childPause and !hurt)
+else
 {
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

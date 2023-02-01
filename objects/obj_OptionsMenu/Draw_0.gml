@@ -4,7 +4,6 @@
 
 hudOffset = lerp(hudOffset,0,.1);
 draw_sprite(spr_Menu_MainMenu_Hud_Options,0,0 + hudOffset,0);
-draw_sprite(spr_Menu_Saves_Medals_Empty,0,4 + hudOffset,5);
 
 //Draw Pages
 
@@ -46,7 +45,7 @@ for (var i = 0; i < array_length(menuValue); i++)
 		col1 = c_dkgray;
 		col2 = c_dkgray;
 	}
-	if (menuValue[i] == "Default")
+	if (menuValue[i] == "Reset")
 	{
 		col1 = c_red;
 		col2 = c_red;
@@ -117,119 +116,101 @@ switch (page)
 	draw_roundrect(126,37,476,268,false);
 	draw_set_alpha(1);
 	
-	draw_sprite(spr_Menu_Options_CursorArrow,0,126 + (180 * ((subSelection - (subSelection % 8)) / 10)),54 + (24 * (subSelection % 8)));
+	draw_sprite(spr_Menu_Options_CursorArrow,0,126,54 + (24 * (subSelection)));
 	
-	var i = 0;
-	var col1 = c_white;
-	var col2 = c_white;
-	var alpha = .5;
-	if (subSelection == i) alpha = 1;
-	scr_Draw_Text_Color_Outline(140,60 + (24 * (i % 8)),"P1 " + strLeft + " - " + string(scr_CharToString(global.finalKeyLeft[0])),-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
-	
-	i += 1;
-	var col1 = c_white;
-	var col2 = c_white;
-	alpha = .5;
-	if (subSelection == i) alpha = 1;
-	scr_Draw_Text_Color_Outline(140,60 + (24 * (i % 8)),"P1 " + strRight + " - " + string(scr_CharToString(global.finalKeyRight[0])),-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
-	
-	i += 1;
-	var col1 = c_white;
-	var col2 = c_white;
-	alpha = .5;
-	if (subSelection == i) alpha = 1;
-	scr_Draw_Text_Color_Outline(140,60 + (24 * (i % 8)),"P1 " + strUp + " - " + string(scr_CharToString(global.finalKeyUp[0])),-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
-	
-	i += 1;
-	var col1 = c_white;
-	var col2 = c_white;
-	alpha = .5;
-	if (subSelection == i) alpha = 1;
-	scr_Draw_Text_Color_Outline(140,60 + (24 * (i % 8)),"P1 " + strDown + " - " + string(scr_CharToString(global.finalKeyDown[0])),-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
-	
-	i += 1;
-	var col1 = c_white;
-	var col2 = c_white;
-	alpha = .5;
-	if (subSelection == i) alpha = 1;
-	scr_Draw_Text_Color_Outline(140,60 + (24 * (i % 8)),"P1 " + strJump + "/A - " + string(scr_CharToString(global.finalKeyJump[0])),-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
-	
-	i += 1;
-	var col1 = c_white;
-	var col2 = c_white;
-	alpha = .5;
-	if (subSelection == i) alpha = 1;
-	scr_Draw_Text_Color_Outline(140,60 + (24 * (i % 8)),"P1 " + strAttack + "/B - " + string(scr_CharToString(global.finalKeyAttack[0])),-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
-	
-	i += 1;
-	var col1 = c_white;
-	var col2 = c_white;
-	alpha = .5;
-	if (subSelection == i) alpha = 1;
-	scr_Draw_Text_Color_Outline(140,60 + (24 * (i % 8)),"P1 " + strStart + " - " + string(scr_CharToString(global.finalKeyStart[0])),-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
-	
-	i += 1;
-	var col1 = c_white;
-	var col2 = c_white;
-	alpha = .5;
-	if (subSelection == i) alpha = 1;
-	scr_Draw_Text_Color_Outline(140,60 + (24 * (i % 8)),"P1 " + strSelect + " - " + string(scr_CharToString(global.finalKeySelect[0])),-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
-	
-	i += 1;
-	var col1 = c_white;
-	var col2 = c_white;
-	var alpha = .5;
-	if (subSelection == i) alpha = 1;
-	scr_Draw_Text_Color_Outline(320,60 + (24 * (i % 8)),"P2 " + strLeft + " - " + string(scr_CharToString(global.finalKeyLeft[1])),-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
-	
-	i += 1;
-	var col1 = c_white;
-	var col2 = c_white;
-	alpha = .5;
-	if (subSelection == i) alpha = 1;
-	scr_Draw_Text_Color_Outline(320,60 + (24 * (i % 8)),"P2 " + strRight + " - " + string(scr_CharToString(global.finalKeyRight[1])),-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
-	
-	i += 1;
-	var col1 = c_white;
-	var col2 = c_white;
-	alpha = .5;
-	if (subSelection == i) alpha = 1;
-	scr_Draw_Text_Color_Outline(320,60 + (24 * (i % 8)),"P2 " + strUp + " - " + string(scr_CharToString(global.finalKeyUp[1])),-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
-	
-	i += 1;
-	var col1 = c_white;
-	var col2 = c_white;
-	alpha = .5;
-	if (subSelection == i) alpha = 1;
-	scr_Draw_Text_Color_Outline(320,60 + (24 * (i % 8)),"P2 " + strDown + " - " + string(scr_CharToString(global.finalKeyDown[1])),-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
-	
-	i += 1;
-	var col1 = c_white;
-	var col2 = c_white;
-	alpha = .5;
-	if (subSelection == i) alpha = 1;
-	scr_Draw_Text_Color_Outline(320,60 + (24 * (i % 8)),"P2 " + strJump + "/A - " + string(scr_CharToString(global.finalKeyJump[1])),-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
-	
-	i += 1;
-	var col1 = c_white;
-	var col2 = c_white;
-	alpha = .5;
-	if (subSelection == i) alpha = 1;
-	scr_Draw_Text_Color_Outline(320,60 + (24 * (i % 8)),"P2 " + strAttack + "/B - " + string(scr_CharToString(global.finalKeyAttack[1])),-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
-	
-	i += 1;
-	var col1 = c_white;
-	var col2 = c_white;
-	alpha = .5;
-	if (subSelection == i) alpha = 1;
-	scr_Draw_Text_Color_Outline(320,60 + (24 * (i % 8)),"P2 " + strStart + " - " + string(scr_CharToString(global.finalKeyStart[1])),-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
-	
-	i += 1;
-	var col1 = c_white;
-	var col2 = c_white;
-	alpha = .5;
-	if (subSelection == i) alpha = 1;
-	scr_Draw_Text_Color_Outline(320,60 + (24 * (i % 8)),"P2 " + strSelect + " - " + string(scr_CharToString(global.finalKeySelect[1])),-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
+	switch (controlsPage)
+	{
+		case -1:
+		var i = 0;
+		var col1 = c_white;
+		var col2 = c_white;
+		var alpha = .5;
+		if (subSelection == i) alpha = 1;
+		scr_Draw_Text_Color_Outline(140,60 + (24 * (i % 8)),"P1",-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
+		
+		i += 1;
+		var col1 = c_white;
+		var col2 = c_white;
+		alpha = .5;
+		if (subSelection == i) alpha = 1;
+		scr_Draw_Text_Color_Outline(140,60 + (24 * (i % 8)),"P2",-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
+		
+		i += 1;
+		var col1 = c_white;
+		var col2 = c_white;
+		alpha = .5;
+		if (subSelection == i) alpha = 1;
+		scr_Draw_Text_Color_Outline(140,60 + (24 * (i % 8)),"P3",-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
+		
+		i += 1;
+		var col1 = c_white;
+		var col2 = c_white;
+		alpha = .5;
+		if (subSelection == i) alpha = 1;
+		scr_Draw_Text_Color_Outline(140,60 + (24 * (i % 8)),"P4",-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
+		break;
+		
+		case 0:
+		case 1:
+		case 2:
+		case 3:
+		var i = 0;
+		var col1 = c_white;
+		var col2 = c_white;
+		var alpha = .5;
+		if (subSelection == i) alpha = 1;
+		scr_Draw_Text_Color_Outline(140,60 + (24 * (i % 8)),"P" + string(controlsPage + 1) + " " + strLeft + " - " + string(scr_CharToString(global.finalKeyLeft[controlsPage])),-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
+		
+		i += 1;
+		var col1 = c_white;
+		var col2 = c_white;
+		alpha = .5;
+		if (subSelection == i) alpha = 1;
+		scr_Draw_Text_Color_Outline(140,60 + (24 * (i % 8)),"P" + string(controlsPage + 1) + " " + strRight + " - " + string(scr_CharToString(global.finalKeyRight[controlsPage])),-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
+		
+		i += 1;
+		var col1 = c_white;
+		var col2 = c_white;
+		alpha = .5;
+		if (subSelection == i) alpha = 1;
+		scr_Draw_Text_Color_Outline(140,60 + (24 * (i % 8)),"P" + string(controlsPage + 1) + " " + strUp + " - " + string(scr_CharToString(global.finalKeyUp[controlsPage])),-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
+		
+		i += 1;
+		var col1 = c_white;
+		var col2 = c_white;
+		alpha = .5;
+		if (subSelection == i) alpha = 1;
+		scr_Draw_Text_Color_Outline(140,60 + (24 * (i % 8)),"P" + string(controlsPage + 1) + " " + strDown + " - " + string(scr_CharToString(global.finalKeyDown[controlsPage])),-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
+		
+		i += 1;
+		var col1 = c_white;
+		var col2 = c_white;
+		alpha = .5;
+		if (subSelection == i) alpha = 1;
+		scr_Draw_Text_Color_Outline(140,60 + (24 * (i % 8)),"P" + string(controlsPage + 1) + " " + strJump + "/A - " + string(scr_CharToString(global.finalKeyJump[controlsPage])),-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
+		
+		i += 1;
+		var col1 = c_white;
+		var col2 = c_white;
+		alpha = .5;
+		if (subSelection == i) alpha = 1;
+		scr_Draw_Text_Color_Outline(140,60 + (24 * (i % 8)),"P" + string(controlsPage + 1) + " " + strAttack + "/B - " + string(scr_CharToString(global.finalKeyAttack[controlsPage])),-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
+		
+		i += 1;
+		var col1 = c_white;
+		var col2 = c_white;
+		alpha = .5;
+		if (subSelection == i) alpha = 1;
+		scr_Draw_Text_Color_Outline(140,60 + (24 * (i % 8)),"P" + string(controlsPage + 1) + " " + strStart + " - " + string(scr_CharToString(global.finalKeyStart[controlsPage])),-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
+		
+		i += 1;
+		var col1 = c_white;
+		var col2 = c_white;
+		alpha = .5;
+		if (subSelection == i) alpha = 1;
+		scr_Draw_Text_Color_Outline(140,60 + (24 * (i % 8)),"P" + string(controlsPage + 1) + " " + strSelect + " - " + string(scr_CharToString(global.finalKeySelect[controlsPage])),-1,-1,col1,col2,alpha,c_black,c_black,alpha,2,5,image_xscale,image_yscale,image_angle);
+		break;
+	}
 	break;
 	
 	case "Language":

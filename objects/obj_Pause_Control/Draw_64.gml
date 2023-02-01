@@ -19,14 +19,31 @@ if ((gamePaused) and (visible))
     }
 	
 	var i = 0;
-	var pauseCharacter = global.characterP1;
-	var pauseAbility = global.abilityP1;
-	var isHelper = global.isHelperP1;
-	if (player == 1)
+	switch (player)
 	{
+		case 0:
+		var pauseCharacter = global.characterP1;
+		var pauseAbility = global.abilityP1;
+		var isHelper = global.isHelperP1;
+		break;
+		
+		case 1:
 		var pauseCharacter = global.characterP2;
 		var pauseAbility = global.abilityP2;
 		var isHelper = global.isHelperP2;
+		break;
+		
+		case 2:
+		var pauseCharacter = global.characterP3;
+		var pauseAbility = global.abilityP3;
+		var isHelper = global.isHelperP3;
+		break;
+		
+		case 3:
+		var pauseCharacter = global.characterP4;
+		var pauseAbility = global.abilityP4;
+		var isHelper = global.isHelperP4;
+		break;
 	}
 	
 	if (global.gamemode != gamemodes.maykr)
@@ -628,14 +645,15 @@ if ((gamePaused) and (visible))
 			{
 				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 				audio_play_sound(snd_ButtonNo,0,false);
-				if ((!global.debug) and (global.canSave)) scr_SaveGame(global.selectedSave);
+				if (global.canSave) scr_SaveGame(global.selectedSave);
 				var pauseFade = instance_create_depth(x,y,depth - 1,obj_Pause_Fade);
 				pauseFade.alphaSpd = .02;
 		        pauseFade.fade = 1;
 				var fadeTrans = instance_create_depth(0,0,depth - 1,obj_Fade);
 				pauseFade.alphaSpd = .02;
+				scr_EndStage();
 				var demo = false;
-				demo = true;
+				//demo = true;
 				if (demo)
 				{
 					fadeTrans.targetRoom = rm_StageSelect_Demo;
@@ -713,4 +731,3 @@ gpu_set_blendmode(bm_normal);
 
 cellphoneTitleOffset = lerp(cellphoneTitleOffset,-250 + (cellphoneTitleActive * 250),.1);
 draw_sprite(spr_Menu_MainMenu_Hud_Cellphone,0,0 + 0 + cellphoneTitleOffset,0 + 0);
-draw_sprite(spr_Menu_Saves_Medals_Empty,0,0 + 4 + cellphoneTitleOffset,0 + 5);

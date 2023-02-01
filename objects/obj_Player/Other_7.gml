@@ -2,11 +2,28 @@
 
 //Variables
 
-var playerAbility = global.abilityP1;
-if (player == 1) playerAbility = global.abilityP2;
-
-var playerCharacter = global.characterP1;
-if (player == 1) playerCharacter = global.characterP2;
+switch (player)
+{
+	case 0:
+	var playerAbility = global.abilityP1;
+	var playerCharacter = global.characterP1;
+	break;
+	
+	case 1:
+	var playerAbility = global.abilityP2;
+	var playerCharacter = global.characterP2;
+	break;
+	
+	case 2:
+	var playerAbility = global.abilityP3;
+	var playerCharacter = global.characterP3;
+	break;
+	
+	case 3:
+	var playerAbility = global.abilityP4;
+	var playerCharacter = global.characterP4;
+	break;
+}
 
 //Idle Animation
 
@@ -134,7 +151,10 @@ if (sprite_index == sprSpit)
 
 if (((sprite_index == sprSwallow) or (sprite_index == sprHardSwallow)) and (state == playerStates.swallow))
 {
-	if (((player == 0) and (global.abilityP1 == playerAbilities.none)) or ((player == 1) and (global.abilityP2 == playerAbilities.none)))
+	if (((player == 0) and (global.abilityP1 == playerAbilities.none))
+	or ((player == 1) and (global.abilityP2 == playerAbilities.none))
+	or ((player == 2) and (global.abilityP3 == playerAbilities.none))
+	or ((player == 3) and (global.abilityP4 == playerAbilities.none)))
 	{
 		global.pause = false;
 		image_index = image_number - 1;
@@ -150,7 +170,10 @@ if (((sprite_index == sprSwallow) or (sprite_index == sprHardSwallow)) and (stat
 
 if ((sprite_index == sprAbilityChange) and (state == playerStates.swallow))
 {
-	if (((player == 0) and (global.abilityP1 != playerAbilities.none)) or ((player == 1) and (global.abilityP2 != playerAbilities.none)))
+	if (((player == 0) and (global.abilityP1 != playerAbilities.none))
+	or ((player == 1) and (global.abilityP2 != playerAbilities.none))
+	or ((player == 2) and (global.abilityP3 != playerAbilities.none))
+	or ((player == 3) and (global.abilityP4 != playerAbilities.none)))
 	{
 		image_index = image_number - 1;
 		image_speed = 0;
@@ -159,7 +182,7 @@ if ((sprite_index == sprAbilityChange) and (state == playerStates.swallow))
 
 //Cutter Attack 1
 
-if (((attackNumber == playerAttacks.cutterNormal) or (attackNumber == "cutterChargeAttack")) and (sprite_index == sprCutterAttack1))
+if (((attackNumber == playerAttacks.cutterNormal) or (attackNumber == playerAttacks.cutterChargeAttack)) and (sprite_index == sprCutterAttack1))
 {
 	attack = false;
 	attackable = true;
@@ -296,7 +319,6 @@ if ((attackNumber == playerAttacks.bombDash) and (sprite_index == sprBombAttack3
 
 if (sprite_index == sprFireAttackRelease1)
 {
-	iceReady = false;
 	sprite_index = sprFireAttackRelease2;
 	image_index = 0;
 }
@@ -594,6 +616,81 @@ if ((attack) and (sprite_index == sprScanReady))
 	scanProjectile.enemy = false;
 	scanProjectile.paletteIndex = paletteIndex;
 	sprite_index = sprScan;
+	image_index = 0;
+}
+
+//Mic Attack 1 End
+
+if ((attack) and (sprite_index == sprMicAttack1End))
+{
+	image_index = image_number - 1;
+}
+
+//Mic Attack 1
+
+if ((attack) and (sprite_index == sprMicAttack1))
+{
+	image_index = 0;
+}
+
+//Mic Attack Ready 1
+
+if ((attack) and (sprite_index == sprMicAttack1Ready))
+{
+	if (audio_is_playing(snd_Mic1)) audio_stop_sound(snd_Mic1);
+	audio_play_sound(snd_Mic1,0,false);
+	canMicFlash = true;
+	sprite_index = sprMicAttack1;
+	image_index = 0;
+}
+
+//Mic Attack 2 End
+
+if ((attack) and (sprite_index == sprMicAttack2End))
+{
+	image_index = image_number - 1;
+}
+
+//Mic Attack 2
+
+if ((attack) and (sprite_index == sprMicAttack2))
+{
+	image_index = 0;
+}
+
+//Mic Attack Ready 2
+
+if ((attack) and (sprite_index == sprMicAttack2Ready))
+{
+	if (audio_is_playing(snd_Mic2)) audio_stop_sound(snd_Mic2);
+	audio_play_sound(snd_Mic2,0,false);
+	canMicFlash = true;
+	sprite_index = sprMicAttack2;
+	image_index = 0;
+}
+
+//Mic Attack 3 End
+
+if ((attack) and (sprite_index == sprMicAttack3End))
+{
+	image_index = image_number - 1;
+}
+
+//Mic Attack 3
+
+if ((attack) and (sprite_index == sprMicAttack3))
+{
+	image_index = 0;
+}
+
+//Mic Attack Ready 3
+
+if ((attack) and (sprite_index == sprMicAttack3Ready))
+{
+	if (audio_is_playing(snd_Mic3)) audio_stop_sound(snd_Mic3);
+	audio_play_sound(snd_Mic3,0,false);
+	canMicFlash = true;
+	sprite_index = sprMicAttack3;
 	image_index = 0;
 }
 

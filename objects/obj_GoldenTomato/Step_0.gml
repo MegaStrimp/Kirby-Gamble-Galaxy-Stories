@@ -19,7 +19,37 @@ if (!global.pause)
 	{
 		if (audio_is_playing(snd_FoodItem)) audio_stop_sound(snd_FoodItem);
 		audio_play_sound(snd_FoodItem,0,false);
-		if (global.goldenTomato)
+		
+		var collidedPlayer = instance_place(x,y,obj_Player);
+		var goldenTomatoPointer = global.goldenTomatoAmountP1;
+		switch (collidedPlayer.player)
+		{
+			case 0:
+			var goldenTomatoPointer = global.goldenTomatoAmountP1;
+			global.healthP1 = global.healthP1Max;
+			if (goldenTomatoPointer < global.goldenTomatoAmountMax) global.goldenTomatoAmountP1 += 1;
+			break;
+			
+			case 1:
+			var goldenTomatoPointer = global.goldenTomatoAmountP2;
+			global.healthP2 = global.healthP2Max;
+			if (goldenTomatoPointer < global.goldenTomatoAmountMax) global.goldenTomatoAmountP2 += 1;
+			break;
+			
+			case 2:
+			var goldenTomatoPointer = global.goldenTomatoAmountP3;
+			global.healthP3 = global.healthP3Max;
+			if (goldenTomatoPointer < global.goldenTomatoAmountMax) global.goldenTomatoAmountP3 += 1;
+			break;
+			
+			case 3:
+			var goldenTomatoPointer = global.goldenTomatoAmountP4;
+			global.healthP4 = global.healthP4Max;
+			if (goldenTomatoPointer < global.goldenTomatoAmountMax) global.goldenTomatoAmountP4 += 1;
+			break;
+		}
+		
+		if (goldenTomatoPointer >= 2)
 		{
 			var particle = instance_create_depth(x,y,depth,obj_Particle);
 			particle.sprite_index = spr_Particle_Sparkle1;
@@ -29,15 +59,18 @@ if (!global.pause)
 		}
 		else
 		{
-			flashTimer = flashTimerMax;
-			followTarget = true;
+			var particle = instance_create_depth(x,y,depth,obj_Particle);
+			particle.sprite_index = spr_Particle_Sparkle1;
+			particle.destroyAfterAnimation = true;
+			destroy = true;
+			//flashTimer = flashTimerMax;
+			//followTarget = true;
 		}
 	}
 	
 	if (destroy)
 	{
 		global.points += points;
-		global.goldenTomato = true;
 		instance_destroy();
 	}
 	

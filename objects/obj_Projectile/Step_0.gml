@@ -2,7 +2,17 @@
 
 if ((!pausable) and (!global.pause)) pausable = true;
 
-if (((pausable) and (!global.pause)) or (!pausable))
+if (stunTimer < 1) 
+{
+	isStunned = false
+}
+else
+{
+	isStunned = true;
+	stunTimer = stunTimer - 1;
+}
+
+if (((pausable) and (!global.pause)) or (!pausable)) and (!isStunned)
 {
 	//Angle
 	
@@ -34,6 +44,11 @@ if (((pausable) and (!global.pause)) or (!pausable))
 			if (objectOnHit)
 			{
 				var obj = instance_create_depth(x,y,depth,objectOnHitObj);
+				if (isBoss)
+				{
+					obj.isBoss = isBoss;
+					obj.owner = owner;
+				}
 				if (objectOnHitDmg != -1) obj.dmg = objectOnHitDmg;
 				if (objectOnHitObj == obj_Projectile_ExplosionMask)
 				{

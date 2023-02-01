@@ -2,21 +2,39 @@
 
 //Variables
 
-var playerAbility = global.abilityP1;
-if (player == 1) playerAbility = global.abilityP2;
-
-var playerCharacter = global.characterP1;
-if (player == 1) playerCharacter = global.characterP2;
-
-var playerIsHelper = global.isHelperP1;
-if (player == 1) playerIsHelper = global.isHelperP2;
+switch (player)
+{
+	case 0:
+	var playerAbility = global.abilityP1;
+	var playerCharacter = global.characterP1;
+	var playerIsHelper = global.isHelperP1;
+	break;
+	
+	case 1:
+	var playerAbility = global.abilityP2;
+	var playerCharacter = global.characterP2;
+	var playerIsHelper = global.isHelperP2;
+	break;
+	
+	case 2:
+	var playerAbility = global.abilityP3;
+	var playerCharacter = global.characterP3;
+	var playerIsHelper = global.isHelperP3;
+	break;
+	
+	case 3:
+	var playerAbility = global.abilityP4;
+	var playerCharacter = global.characterP4;
+	var playerIsHelper = global.isHelperP4;
+	break;
+}
 
 var drawShakeX = irandom_range(-shakeX,shakeX);
 var drawShakeY = irandom_range(-shakeY,shakeY);
 
 var paletteIndexFinal = paletteIndex;
 
-if ((playerCharacter == playerCharacters.kirby) and (global.coloredAbilitiesKeycard) and (global.cheatColoredAbilitiesEquipped))
+if ((playerCharacter == playerCharacters.kirby) and (global.abilitySpraysKeycard) and (global.cheatColoredAbilitiesEquipped))
 {
 	switch (playerAbility)
 	{
@@ -51,12 +69,20 @@ if ((playerCharacter == playerCharacters.kirby) and (global.coloredAbilitiesKeyc
 		case playerAbilities.suplex:
 		paletteIndexFinal = spr_Kirby_Normal_Palette_Stone;
 		break;
+		
+		case playerAbilities.mysticCutter:
+		case playerAbilities.mysticBeam:
+		case playerAbilities.mysticBeam2:
+		case playerAbilities.mysticFire:
+		case playerAbilities.mysticIce:
+		paletteIndexFinal = spr_Kirby_Normal_Palette_Mystic;
+		break;
 	}
 }
 
 //Black Alpha Box
 
-if ((player == 0) and ((blackAlphaBox) or (global.tutorial)))
+if ((blackAlphaBox) or (global.tutorial))
 {
 	draw_set_alpha(.25);
 	draw_set_color(c_black);
@@ -68,25 +94,38 @@ if ((player == 0) and ((blackAlphaBox) or (global.tutorial)))
 
 if (micFlash)
 {
-	draw_set_alpha(.75);
+	draw_set_alpha(.5);
 	draw_set_color(c_orange);
 	draw_rectangle(camera_get_view_x(gameView),camera_get_view_y(gameView),camera_get_view_x(gameView) + camera_get_view_width(gameView),camera_get_view_y(gameView) + camera_get_view_height(gameView),0);
 	draw_set_alpha(1);
+	draw_set_color(c_white);
 }
 
 //Draw Self
 
 var paletteFlash = 1;
-if (invincibleFlash) paletteFlash = 2;
-if (death)
+if (((sprite_index != sprStoneAttack1Common) and (sprite_index != sprStoneAttack1Uncommon) and (sprite_index != sprStoneAttack1Rare)) or (((sprite_index = spr_Kirby_Normal_Stone_Attack1_Common1) or (sprite_index = spr_Kirby_Normal_Stone_Attack1_Common2)) and (image_index = 0)) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common1) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common2))
 {
-	if (state == playerStates.death)
-	{
-		paletteFlash = 1;
-	}
-	else
+	if (invincibleFlash)
 	{
 		paletteFlash = 2;
+	
+		if (
+		((cAbility != playerAbilities.none) and (state = playerStates.carry) and (!spit))
+		or ((playerAbility == playerAbilities.crash) and (!attack))
+		or ((playerAbility == playerAbilities.mic) and (!attack))
+		) paletteFlash = 4;
+	}
+	if (death)
+	{
+		if (state == playerStates.death)
+		{
+			paletteFlash = 1;
+		}
+		else
+		{
+			paletteFlash = 2;
+		}
 	}
 }
 
@@ -255,13 +294,12 @@ if ((playerIsHelper) and (helperTimer != -1))
 
 //Debug Text
 /*
-draw_set_color(c_black);
-draw_text(x,y - 12,"att - " + string(keyAttackHold));
-draw_text(x,y - 24,"jump - " + string(keyJumpHold));
-//draw_text(x,y - 24,string(finalCutterState));
-//draw_text(x,y - 24,string(fireDashDir));
-//draw_text(x+20,y - 24,string(attackTimer));
-//draw_text(x,y - 34,string(image_speed));
-//draw_text(x,y - 34,"State:"+string(state));
-//draw_text(x,y - 54,"Down Held:"+string(downHeld));
-//draw_text(x,y - 54,"Health:"+string(global.healthP1));
+if (global.debugOverlay)
+{
+	draw_set_color(c_black);
+	var i = 0;
+	draw_text(x - 12,y - (12 * (i + 1)),"dialogye - " + string(obj_Camera.shakeX));
+	i += 1;
+	draw_text(x - 12,y - (12 * (i + 1)),"dir - " + string(obj_Camera.shakeY));
+	i += 1;
+}

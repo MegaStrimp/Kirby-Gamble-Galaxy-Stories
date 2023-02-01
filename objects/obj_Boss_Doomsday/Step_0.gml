@@ -142,8 +142,10 @@ if ((!global.pause) and (((!global.cutscene) or ((global.cutscene) and (phase ==
 					audio_play_sound(snd_Spit,0,false);
 					
 					var star = instance_create_depth(eyeX,eyeY,depth - 1,obj_Projectile_DoomsdayStar);
+					star.owner = id;
 					star.sprite_index = sprStar;
 					star.enemy = true;
+					star.isBoss = true;
 					star.destroyableByPlayer = true;
 					star.destroyableByEnemy = false;
 					star.hurtsObject = false;
@@ -174,9 +176,11 @@ if ((!global.pause) and (((!global.cutscene) or ((global.cutscene) and (phase ==
 					{
 						bombThrown = true;
 						var bomb = instance_create_depth(eyeX,eyeY,depth - 1,obj_Projectile_DoomsdayBomb);
+						bomb.owner = id;
 						bomb.sprite_index = sprBomb;
 						bomb.dirX = dirX;
 						bomb.enemy = true;
+						bomb.isBoss = true;
 						bomb.destroyableByPlayer = true;
 						bomb.destroyableByEnemy = false;
 						bomb.hurtsObject = false;
@@ -441,9 +445,11 @@ if ((!global.pause) and (((!global.cutscene) or ((global.cutscene) and (phase ==
 				if (instance_exists(obj_Player)) nearestPlayer = instance_nearest(x,y,obj_Player);
 				
 				var star = instance_create_depth(eyeX,eyeY,depth - 1,obj_Projectile_DoomsdayStar);
+				star.owner = id;
 				star.sprite_index = sprStar;
 				if (nearestPlayer != -1) star.targetDir = point_direction(x,y,nearestPlayer.x,nearestPlayer.y);
 				star.enemy = true;
+				star.isBoss = true;
 				star.destroyableByPlayer = true;
 				star.destroyableByEnemy = false;
 				star.destroyableByWall = false;
@@ -618,6 +624,7 @@ if ((!global.pause) and (((!global.cutscene) or ((global.cutscene) and (phase ==
 			var laser = instance_create_depth(eyeX,eyeY,depth - 1,obj_Projectile_DoomsdayLaser);
 			laser.owner = id;
 			laser.enemy = true;
+			laser.isBoss = true;
 			laser.hurtsObject = false;
 			laser.hurtsEnemy = false;
 			laser.hurtsPlayer = true;

@@ -6,11 +6,28 @@ function scr_Player_States_Slide()
 	{
 		//Variables
 		
-		var playerCharacter = global.characterP1;
-		if (player == 1) playerCharacter = global.characterP2;
-		
-		var playerAbility = global.abilityP1;
-		if (player == 1) playerAbility = global.abilityP2;
+		switch (player)
+		{
+			case 0:
+			var playerAbility = global.abilityP1;
+			var playerCharacter = global.characterP1;
+			break;
+			
+			case 1:
+			var playerAbility = global.abilityP2;
+			var playerCharacter = global.characterP2;
+			break;
+			
+			case 2:
+			var playerAbility = global.abilityP3;
+			var playerCharacter = global.characterP3;
+			break;
+			
+			case 3:
+			var playerAbility = global.abilityP4;
+			var playerCharacter = global.characterP4;
+			break;
+		}
 		
 		//Gravity
 		
@@ -37,7 +54,10 @@ function scr_Player_States_Slide()
 			    if (keyLeftHold) dir = -1;
 			    if (keyRightHold) dir = 1;
 			}
-		    hsp = 0;
+			if (hsp >= decel) hsp -= decel;
+		    if (hsp <= -decel) hsp += decel;
+			if ((hsp > -decel) and (hsp < decel)) hsp = 0;
+		    //hsp = 0;
 			
 			//Abilities
 		
@@ -61,9 +81,9 @@ function scr_Player_States_Slide()
 							grabObj.abilityType = playerAbilities.bomb;
 							grabObj.dirX = grabEnemy.dirX;
 							grabObj.dmg = -1;
-							grabObj.active = true;
+							grabObj.active = false;
 							grabObj.particleTimer = grabObj.particleTimerMax;
-							if (!bombSmartBombUpgrade) grabObj.destroyTimer = 30;
+							if (!bombStickyBombUpgrade) grabObj.destroyTimer = 30;
 							var grabSpr = grabEnemy.sprHurt;
 							if ((grabSpr = -1) or (grabSpr = -1))
 							{
@@ -342,7 +362,7 @@ function scr_Player_States_Slide()
 								carriedItemIndex.owner = id;
 								carriedItemIndex.abilityType = playerAbilities.bomb;
 								carriedItemIndex.player = player;
-								carriedItemIndex.hasRemoteDetonation = bombSmartBombUpgrade;
+								carriedItemIndex.hasRemoteDetonation = bombStickyBombUpgrade;
 								carriedItemIndex.hasHoming = bombEyeBombUpgrade;
 								carriedItemIndex.hasMagma = bombMagmaBombUpgrade;
 								carriedItemIndex.active = false;
@@ -360,7 +380,7 @@ function scr_Player_States_Slide()
 								carriedItemIndex.hurtsPlayer = false;
 								carriedItemIndex.hurtsProjectile = false;
 								carriedItemIndex.image_xscale = carriedItemIndex.dirX;
-								if (!bombMultiBombUpgrade) carriedItemIndex.selfExplodeTimer = carriedItemIndex.selfExplodeTimerMax;
+								if (!bombLightShellsUpgrade) carriedItemIndex.selfExplodeTimer = carriedItemIndex.selfExplodeTimerMax;
 								if (((player == 0) and (global.hatTypeBombP1 == abilityHatSkins.bomb_modern)) or ((player == 1) and (global.hatTypeBombP2 == abilityHatSkins.bomb_modern))) 
 								{
 									carriedItemIndex.character = 1;
@@ -821,6 +841,10 @@ function scr_Player_States_Slide()
 			
 			if ((playerCharacter == playerCharacters.kirby) and (keyJumpPressed) and (canSlideJump))
 			{
+				var dirNew = dir;
+				if (keyLeftHold) dirNew = -1;
+				if (keyRightHold) dirNew = 1;
+				dir = dirNew;
 				var parSquish = instance_create_depth(x,y + 6,depth + 1,obj_Particle);
 				parSquish.sprite_index = spr_Particle_SmallStar;
 				parSquish.destroyTimer = 30;
@@ -831,11 +855,11 @@ function scr_Player_States_Slide()
 				attack = true;
 				attackNumber = playerAttacks.slideJump;
 				hspLimit = false;
-				hspLimitTimer = 30;
+				hspLimitTimer = 45;
 				jumpLimit = false;
-				jumpLimitTimer = 30;
-				attackTimer = 30;
-				hsp = dir * (movespeedSlide * .85);
+				jumpLimitTimer = 45;
+				attackTimer = 45;
+				hsp = dir * movespeedSlide;
 				scr_Player_CancelSlide();
 				scr_Player_ExecuteJump();
 			}

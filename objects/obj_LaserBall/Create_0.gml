@@ -10,9 +10,9 @@ randomize();
 
 //Physics
 
-accel = .1;
-movespeed = 1.5;
-jumpspeed = 1.5;
+accel = .12;
+movespeed = 1.6;
+jumpspeed = 1.6;
 gravNormal = 0;
 gravLimitNormal = 0;
 
@@ -57,6 +57,7 @@ attack = false;
 attackState = 0;
 attackCount = 0;
 attackCountMax = 4;
+activateRange = 72;
 active = false;
 attackDir = 0;
 
@@ -69,4 +70,4 @@ auraTimer = auraTimerMax;
 canTurnXTimer = -1;
 canTurnXTimerMax = 45;
 canTurnYTimer = -1;
-canTurnYTimerMax = 90;
+canTurnYTimerMax = 60;

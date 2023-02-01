@@ -53,6 +53,8 @@ loadedFile = -1;
 #region Global Variables
 global.abilityP1 = playerAbilities.none;
 global.abilityP2 = playerAbilities.none;
+global.abilityP3 = playerAbilities.none;
+global.abilityP4 = playerAbilities.none;
 #endregion
 
 #region Enums
@@ -83,7 +85,7 @@ enum maykrObjects
 	shotzo,
 	mysticDoo,
 	bouncy,
-	search,
+	searches,
 	wapod,
 	cappy,
 	coconut,

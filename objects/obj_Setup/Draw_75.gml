@@ -54,3 +54,23 @@ if (global.buildType == buildTypes.android)
 	draw_sprite_ext(bigButtonSpr,0,399,195,.25,.25,image_angle,image_blend,.4);
 	draw_sprite_ext(bLetterSpr,0,399,195,.25,.25,image_angle,image_blend,.4);
 }
+
+#region Debug Room Names
+if (global.debugOverlay)
+{
+	var roomName = string(room_get_name(room));
+	switch (room)
+	{
+		default:
+		break;
+	}
+	draw_set_font(fnt_Small);
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_bottom);
+	draw_set_color(c_dkgray);
+	draw_text(240,270,roomName);
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_top);
+	draw_set_color(c_white);
+}
+#endregion

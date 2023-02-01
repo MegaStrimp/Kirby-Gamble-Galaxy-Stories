@@ -11,15 +11,15 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 42,
+  "bbox_right": 19,
   "bbox_top": 0,
-  "bbox_bottom": 29,
+  "bbox_bottom": 16,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "DynamicTexturePage": false,
-  "width": 43,
-  "height": 30,
+  "width": 20,
+  "height": 17,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -28,7 +28,7 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"de8ef506-58d0-412c-a97a-eb46b6348a17",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8c9edd1f-099f-4b1e-bde9-fcd5a2e41aa5",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -45,7 +45,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"b2e996b6-a5aa-455b-b8c1-989877706a97","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"de8ef506-58d0-412c-a97a-eb46b6348a17","path":"sprites/spr_Healthbar_Boss_Icon_BowserImpostor/spr_Healthbar_Boss_Icon_BowserImpostor.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"40b242c8-d713-4958-a47e-b180bd914406","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8c9edd1f-099f-4b1e-bde9-fcd5a2e41aa5","path":"sprites/spr_Healthbar_Boss_Icon_BowserImpostor/spr_Healthbar_Boss_Icon_BowserImpostor.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
@@ -69,6 +69,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Icons",
-    "path": "folders/Sprites/Hud/Healthbars/Boss/Icons.yy",
+    "path": "folders/Sprites/Hud/Healthbars/Icons.yy",
   },
 }

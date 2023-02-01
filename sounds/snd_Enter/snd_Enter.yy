@@ -14,8 +14,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_enter.wav",
-  "duration": 0.626939,
+  "soundFile": "snd_Enter.wav",
+  "duration": 0.859125,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",

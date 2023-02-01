@@ -1,5 +1,13 @@
 ///@description Main
 
+//Lifeless Cheat
+
+if (global.cheatLifelessEquipped)
+{
+	instance_create_depth(x,y,depth,obj_GoldenTomato);
+	instance_destroy();
+}
+
 if (!global.pause)
 {
 	//Get Inhaled

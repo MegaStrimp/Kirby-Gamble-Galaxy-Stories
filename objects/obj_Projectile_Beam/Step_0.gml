@@ -57,6 +57,24 @@ else if (setupTimer == 0)
 		case 7:
 		sprIdle = spr_Projectile_MysticBeam_Air;
 		break;
+		
+		//Wizzer
+		
+		case 8:
+		sprIdle = spr_Projectile_Beam_Wizzer;
+		break;
+		
+		//Marx Soul 1
+		
+		case 9:
+		sprIdle = spr_Projectile_Beam_MarxSoul1;
+		break;
+		
+		//Marx Soul 2
+		
+		case 10:
+		sprIdle = spr_Projectile_Beam_MarxSoul2;
+		break;
 	}
 	orbitMaxFinal = orbitMax;
 	setupTimer = -1;
@@ -303,13 +321,13 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	}
 	else if (pulseTimer == 0)
 	{
-		if (image_index == 0)
+		if (image_index == pulseTarget)
 		{
 			image_index = imageIndex;
 		}
 		else
 		{
-			image_index = 0;
+			image_index = pulseTarget;
 		}
 		pulseTimer = pulseTimerMax;
 	}
@@ -330,7 +348,11 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		par.destroyTimer = 1;
 		if (instance_exists(owner))
 		{
-			if ((!enemy) and (!isMystic) and (((player == 0) and (global.hatTypeBeamP1 == abilityHatSkins.beam_marxSoul)) or ((player == 1) and (global.hatTypeBeamP2 == abilityHatSkins.beam_marxSoul))))
+			if ((!enemy) and (abilityType = playerAbilities.beam) and (!isMystic) and
+			(((player == 0) and (global.hatTypeBeamP1 == abilityHatSkins.beam_marxSoul))
+			or ((player == 1) and (global.hatTypeBeamP2 == abilityHatSkins.beam_marxSoul))
+			or ((player == 2) and (global.hatTypeBeamP3 == abilityHatSkins.beam_marxSoul))
+			or ((player == 3) and (global.hatTypeBeamP4 == abilityHatSkins.beam_marxSoul))))
 			{
 				par.sprite_index = spr_Particle_MarxDiamonds;
 				par.image_alpha = .5;
@@ -375,8 +397,9 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	else if (trailTimer == 0)
 	{
 		var par = instance_create_depth(x,y,depth + 1,obj_Afterimage);
-		par.sprite_index = spr_Projectile_MysticBeam_Air_Trail;
+		par.sprite_index = trailSpr;
 		par.destroyAfterAnimation = true;
+		par.destroyTimer = -1;
 		trailTimer = trailTimerMax;
 	}
 	

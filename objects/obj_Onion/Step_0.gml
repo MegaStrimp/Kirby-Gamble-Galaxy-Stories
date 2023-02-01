@@ -41,7 +41,7 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 {
 	//Variables
 	
-	nearestPlayer = -1;
+	var nearestPlayer = -1;
 	nearestPlayer = instance_nearest(x,y,obj_Player);
 	
 	//Get Inhaled
@@ -63,7 +63,24 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 	{
 		#region Normal
 		case 0:
-		if ((groundCooldown == 0) and ((place_meeting(x,y,collisionX)) or (place_meeting(x,y,collisionY)))) death = true;
+		if ((groundCooldown == 0) and ((place_meeting(x,y,obj_Player)) or (place_meeting(x,y,collisionX)) or (place_meeting(x,y,collisionY))))
+		{
+			if (audio_is_playing(snd_Explosion1)) audio_stop_sound(snd_Explosion1);
+			audio_play_sound(snd_Explosion1,0,false);
+			if (audio_is_playing(snd_Carrot)) audio_stop_sound(snd_Carrot);
+			audio_play_sound(snd_Carrot,0,false);
+			
+			var par = instance_create_depth(x,y,depth,obj_Projectile_ExplosionMask);
+			par.owner = id;
+			par.enemy = true;
+			
+			var explosion = instance_create_depth(x,y,depth,obj_DeathParticles);
+			explosion.state = "explosion1";
+			
+			hasDeathKnockback = false;
+			hasDeathParticles = false;
+			death = true;
+		}
 		
 		if (nearestPlayer != -1)
 		{

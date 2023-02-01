@@ -1,5 +1,9 @@
 ///@description Main
 
+#region Debug Overlay
+show_debug_overlay(global.debugOverlay);
+#endregion
+
 //Variables
 
 if (global.gamemode == gamemodes.maykr)
@@ -9,6 +13,11 @@ if (global.gamemode == gamemodes.maykr)
 else
 {
 	window_set_cursor(cr_default);
+}
+
+with (obj_Dialogue)
+{
+	global.dialogueFlowing = dialogueFlowing;
 }
 
 //Debug Mode
@@ -71,13 +80,13 @@ for (var i = 0; audio_exists(i); i++)
 		var fadeMultiplier = 1;
 		var audioName = audio_get_name(i);
 		if ((audioName == audio_get_name(global.musicPlaying)) and (audioName != "mus_MiniBoss") and (audioName != "mus_InvincibilityCandy")) fadeMultiplier = global.musicFade;
-		var musicVolume = global.musicVolume * gamePaused * fadeMultiplier;
+		var musicVolume = global.musicVolume * gamePaused * fadeMultiplier * global.closingvol;
 		if (global.muted) musicVolume = 0;
         audio_sound_gain(i,musicVolume,0);
 	}
     else if (soundString == "snd")
 	{
-		var soundVolume = global.soundVolume;
+		var soundVolume = global.soundVolume * global.closingvol;
 		if (global.muted) soundVolume = 0;
         audio_sound_gain(i,soundVolume,0);
 	}
@@ -100,7 +109,7 @@ if (global.gameTimeMinutes >= 60)
 #region Controllers
 var controllerSensitivity = .9;
 
-for (var i = 0; i < 2; i++)
+for (var i = 0; i < 4; i++)
 {
     if (!global.stickLeftHeld[i] && gamepad_axis_value(global.playerGamepad[i],gp_axislh) <= -controllerSensitivity)
     {
@@ -169,7 +178,7 @@ if (controllerPressedResetTimer > 0)
 }
 else if (controllerPressedResetTimer == 0)
 {
-	for (var i = 0; i < 2; i++)
+	for (var i = 0; i < 4; i++)
 	{
 	    global.stickLeftPressed[i] = false;
 	    global.stickRightPressed[i] = false;

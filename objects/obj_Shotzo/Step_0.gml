@@ -180,7 +180,7 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 	
 	//Attack Timer
 	
-	if ((!place_meeting(x,y,collisionX)) and (!place_meeting(x,y,collisionY)))
+	if (!((stopOutsideScreen) and (scr_OutsideView())) and (!place_meeting(x,y,collisionX)) and (!place_meeting(x,y,collisionY)))
 	{
 		if (attackTimer > 0)
 		{

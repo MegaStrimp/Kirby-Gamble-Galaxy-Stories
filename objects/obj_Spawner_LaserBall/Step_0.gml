@@ -94,6 +94,7 @@ else if (spawnTimer == 0)
 	spawnedEnemy.objectOnDeathObj = objectOnDeathObj;
 	spawnedEnemy.groundFailsafe = groundFailsafe;
 	spawnedEnemy.attackCountMax = attackCountMax;
+	spawnedEnemy.activateRange = activateRange;
 	spawnedEnemy.attackDir = attackDir;
 	spawnedEnemy.spawnTimer = spawnTimer;
 	spawnedEnemy.attackTimer = attackTimer;

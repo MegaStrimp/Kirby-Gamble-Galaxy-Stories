@@ -6,11 +6,28 @@ function scr_Player_States_Carry()
 	{
 		//Variables
 		
-		var playerCharacter = global.characterP1;
-		if (player == 1) playerCharacter = global.characterP2;
-		
-		var playerAbility = global.abilityP1;
-		if (player == 1) playerAbility = global.abilityP2;
+		switch (player)
+		{
+			case 0:
+			var playerAbility = global.abilityP1;
+			var playerCharacter = global.characterP1;
+			break;
+			
+			case 1:
+			var playerAbility = global.abilityP2;
+			var playerCharacter = global.characterP2;
+			break;
+			
+			case 2:
+			var playerAbility = global.abilityP3;
+			var playerCharacter = global.characterP3;
+			break;
+			
+			case 3:
+			var playerAbility = global.abilityP4;
+			var playerCharacter = global.characterP4;
+			break;
+		}
 		
 		var grounded = false;
 		if (place_meeting(x,y + 1,obj_ParentWall))
@@ -390,6 +407,22 @@ function scr_Player_States_Carry()
 							i += 1;
 						}
 						
+						if ((global.hiJumpAbilityKills >= global.hiJumpAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.hiJump) != -1))
+						{
+							mixRosterAbility[i] = playerAbilities.water;
+							mixRosterText[i] = spr_Hud_AbilityText_Water;
+							mixRosterIcon[i] = spr_Hud_Icon_Water;
+							i += 1;
+						}
+						
+						if ((global.gearAbilityKills >= global.gearAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.gear) != -1))
+						{
+							mixRosterAbility[i] = playerAbilities.gear;
+							mixRosterText[i] = spr_Hud_AbilityText_Gear;
+							mixRosterIcon[i] = spr_Hud_Icon_Gear;
+							i += 1;
+						}
+						
 						if ((global.sleepAbilityKills >= global.sleepAbilityKillsTarget) or (ds_list_find_index(other.mixAbilities,playerAbilities.sleep) != -1))
 						{
 							mixRosterAbility[i] = playerAbilities.sleep;
@@ -440,13 +473,157 @@ function scr_Player_States_Carry()
 				if (global.mixActive == -1)
 				{
 					if (ateAbilityStar != -1) cAbility = ateAbilityStar;
-					if (player == 0)
+					switch (player)
 					{
+						case 0:
 						global.abilityP1 = cAbility;
-					}
-					else
-					{
+						break;
+						
+						case 1:
 						global.abilityP2 = cAbility;
+						break;
+						
+						case 2:
+						global.abilityP3 = cAbility;
+						break;
+						
+						case 3:
+						global.abilityP4 = cAbility;
+						break;
+					}
+					switch (cAbility)
+					{
+						case playerAbilities.cutter:
+						global.cutterAbilityObtained = true;
+						break;
+	
+						case playerAbilities.beam:
+						global.beamAbilityObtained = true;
+						break;
+	
+						case playerAbilities.mysticBeam:
+						global.mysticBeamAbilityObtained = true;
+						break;
+	
+						case playerAbilities.stone:
+						global.stoneAbilityObtained = true;
+						break;
+	
+						case playerAbilities.ufo:
+						global.ufoAbilityObtained = true;
+						break;
+	
+						case playerAbilities.mirror:
+						global.mirrorAbilityObtained = true;
+						break;
+	
+						case playerAbilities.ninja:
+						global.ninjaAbilityObtained = true;
+						break;
+	
+						case playerAbilities.bomb:
+						global.bombAbilityObtained = true;
+						break;
+	
+						case playerAbilities.fire:
+						global.fireAbilityObtained = true;
+						break;
+	
+						case playerAbilities.mysticFire:
+						global.mysticFireAbilityObtained = true;
+						break;
+	
+						case playerAbilities.ice:
+						global.iceAbilityObtained = true;
+						break;
+	
+						case playerAbilities.spark:
+						global.sparkAbilityObtained = true;
+						break;
+	
+						case playerAbilities.yoyo:
+						global.yoyoAbilityObtained = true;
+						break;
+	
+						case playerAbilities.wheel:
+						global.wheelAbilityObtained = true;
+						break;
+	
+						case playerAbilities.artist:
+						global.artistAbilityObtained = true;
+						break;
+	
+						case playerAbilities.fighter:
+						global.fighterAbilityObtained = true;
+						break;
+	
+						case playerAbilities.suplex:
+						global.suplexAbilityObtained = true;
+						break;
+	
+						case playerAbilities.wing:
+						global.wingAbilityObtained = true;
+						break;
+	
+						case playerAbilities.jet:
+						global.jetAbilityObtained = true;
+						break;
+	
+						case playerAbilities.sword:
+						global.swordAbilityObtained = true;
+						break;
+	
+						case playerAbilities.parasol:
+						global.parasolAbilityObtained = true;
+						break;
+	
+						case playerAbilities.hammer:
+						global.hammerAbilityObtained = true;
+						break;
+	
+						case playerAbilities.bell:
+						global.bellAbilityObtained = true;
+						break;
+	
+						case playerAbilities.water:
+						global.waterAbilityObtained = true;
+						break;
+	
+						case playerAbilities.hiJump:
+						global.hiJumpAbilityObtained = true;
+						break;
+	
+						case playerAbilities.gear:
+						global.gearAbilityObtained = true;
+						break;
+	
+						case playerAbilities.sleep:
+						global.sleepAbilityObtained = true;
+						break;
+	
+						case playerAbilities.scan:
+						global.scanAbilityObtained = true;
+						break;
+	
+						case playerAbilities.crash:
+						global.crashAbilityObtained = true;
+						break;
+	
+						case playerAbilities.mic:
+						global.micAbilityObtained = true;
+						break;
+	
+						case playerAbilities.chef:
+						global.chefAbilityObtained = true;
+						break;
+	
+						case playerAbilities.ultraSword:
+						global.ultraSwordAbilityObtained = true;
+						break;
+	
+						case playerAbilities.cosmicBlade:
+						global.cosmicBladeAbilityObtained = true;
+						break;
 					}
 					if (cAbility != playerAbilities.none)
 					{

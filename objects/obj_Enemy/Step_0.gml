@@ -372,6 +372,10 @@ if (parentPause and (hurtStopTimer < 1))
 				abilityDropStar.sprite_index = spr_AbilityStar_Sleep;
 				break;
 				
+				case playerAbilities.mic:
+				abilityDropStar.sprite_index = spr_AbilityStar_Mic;
+				break;
+				
 				default:
 				abilityDropStar.sprite_index = spr_AbilityStar_Normal;
 				break;
@@ -434,8 +438,8 @@ if (parentPause and (hurtStopTimer < 1))
 			global.bestiaryEnemiesMrBoogieUnlocked = true;
 			break;
 			
-			case obj_Search:
-			global.bestiaryEnemiesSearchUnlocked = true;
+			case obj_Searches:
+			global.bestiaryEnemiesSearchesUnlocked = true;
 			break;
 			
 			case obj_HiveDrone:
@@ -563,22 +567,6 @@ if (parentPause and (hurtStopTimer < 1))
 	
 	//Collision
 	
-	if (hp > 0)
-	{
-		if ((setupTimer == 0) and (groundFailsafe))
-		{
-			with (obj_ParentWall)
-			{
-				if (owner != other.id)
-				{
-					while (place_meeting(x,y,other))
-					{
-						other.y -= 1;
-					}
-				}
-			}
-		}
-	}
 	scr_Enemy_Collision();
 	
 	//Bumpers
@@ -741,36 +729,29 @@ if (parentPause and (hurtStopTimer < 1))
 	}
 	
 	//Hurt Timer
-	switch (hurtRecover)
+	
+	if (hurtTimer > 0)
 	{
-		case 0:
-		if (hurt and hsp == 0)
-		{
-			decideLife();
-			restoreBackupFlag(id);
-		}
-		break;
+		hurtTimer -= 1;
+	}
+	else if (hurtTimer == 0)
+	{
+		if (hp < 1)
+        {
+            death = true;
+        }
+        else if (hp > 0)
+        {
+            hurt = false;
+        }
+		hurtTimer = -1;
+		hasGravity = (backupFlags >> BFLAGS.BF_GRAV) & 1;
+		hasXCollision = (backupFlags >> BFLAGS.BF_XCOLL) & 1;
+		hasYCollision = (backupFlags >> BFLAGS.BF_YCOLL) & 1;
+		destroyOutsideView = (backupFlags >> BFLAGS.BF_DESPAWN) & 1;
 		
-		case 1:
-		if (hurt and place_meeting(x,y + 1,collisionY))
-		{
-			decideLife();
-			restoreBackupFlag(id);
-		}
-		break;
-		
-		case 2:
-		if (hurtTimer > 0)
-		{
-			hurtTimer -= 1;
-		}
-		else if (hurtTimer == 0)
-		{
-			hurtTimer = -1;
-			decideLife();
-			restoreBackupFlag(id);
-		}
-		break;
+		shakeX = 0;
+		shakeY = 0;
 	}
 	
 	//Invincible Timer
@@ -848,6 +829,11 @@ if (parentPause and (hurtStopTimer < 1))
 					if (objectOnHit)
 					{
 						var proj = instance_create_depth(x,y,depth,objectOnHitObj);
+						if (isBoss)
+						{
+							proj.isBoss = isBoss;
+							proj.owner = owner;
+						}
 						if (objectOnHitDmg != -1) proj.dmg = objectOnHitDmg;
 						if (objectOnHitObj == obj_Projectile_ExplosionMask)
 						{
@@ -919,6 +905,11 @@ if (parentPause and (hurtStopTimer < 1))
 					if (objectOnHit)
 					{
 						var proj = instance_create_depth(x,y,depth,objectOnHitObj);
+						if (isBoss)
+						{
+							proj.isBoss = isBoss;
+							proj.owner = owner;
+						}
 						if (objectOnHitDmg != -1) proj.dmg = objectOnHitDmg;
 						if (objectOnHitObj == obj_Projectile_ExplosionMask)
 						{
@@ -982,7 +973,6 @@ if (parentPause and (hurtStopTimer < 1))
 				hurt = true;
 				if (sprHurt != -1) hurtImageIndex = irandom_range(0,sprite_get_number(sprHurt) - 1);
 				hurtTimer = hurtTimerMax;
-				hurtRecover = 1;
 				invincible = true;
 				invincibleTimer = invincibleTimerMax;
 				invincibleFlashTimer = invincibleFlashTimerMax;
@@ -1053,11 +1043,6 @@ if (setupTimer > 0)
 }
 else if (setupTimer == 0)
 {
-	backupFlags |= (hasGravity << BFLAGS.BF_GRAV);
-	backupFlags |= (hasXCollision << BFLAGS.BF_XCOLL);
-	backupFlags |= (hasYCollision << BFLAGS.BF_YCOLL);
-	backupFlags |= (destroyOutsideView << BFLAGS.BF_DESPAWN);
-	
 	if (parasol)
 	{
 		parasolObject = instance_create_depth(x + (parasolX * dirX),y - (sprite_get_height(sprite_index) / 2) + parasolY,depth + 1,obj_EnemyParasol);
@@ -1083,9 +1068,9 @@ if (global.debug)
 	}
 }
 
-childPause = (parentPause and (!hurt) and (hurtStopTimer < 1));
+childPause = (global.pause or hurt or (global.cutscene and pausedInCutscenes)) or (hurtStopTimer > 0);
 
-//Hurt Stop Timer
+	//Hurt Stop Timer
 if (parentPause)
 {
 	if (hurtStopTimer > 0)
@@ -1096,5 +1081,6 @@ if (parentPause)
 	else if (hurtStopTimer == 0)
 	{
 		hurtStopTimer = -1;
+
 	}
 }

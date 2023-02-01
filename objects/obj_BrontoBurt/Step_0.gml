@@ -9,10 +9,20 @@ if (setupTimer == 0)
 		//Normal
 		
 		case 0:
-		sprIdle = spr_BrontoBurt_Normal_Idle;
-		sprReady = spr_BrontoBurt_Normal_Ready;
-		sprWalk = spr_BrontoBurt_Normal_Walk;
-		sprFly = spr_BrontoBurt_Normal_Fly;
+		if (!joy)
+		{
+			sprIdle = spr_BrontoBurt_Normal_Idle;
+			sprReady = spr_BrontoBurt_Normal_Ready;
+			sprWalk = spr_BrontoBurt_Normal_Walk;
+			sprFly = spr_BrontoBurt_Normal_Fly;
+		}
+		else
+		{
+			sprIdle = spr_BrontoBurt_Normal_Idle_Joy;
+			sprReady = spr_BrontoBurt_Normal_Ready_Joy;
+			sprWalk = spr_BrontoBurt_Normal_Walk_Joy;
+			sprFly = spr_BrontoBurt_Normal_Fly_Joy;
+		}
 		sprHurtGround = spr_BrontoBurt_Normal_HurtGround;
 		sprHurtFly = spr_BrontoBurt_Normal_HurtFly;
 		break;
@@ -45,7 +55,7 @@ else
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if ((!childPause))
 {
 	//Get Inhaled
 	

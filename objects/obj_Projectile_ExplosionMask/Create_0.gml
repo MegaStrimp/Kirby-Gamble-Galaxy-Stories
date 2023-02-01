@@ -4,6 +4,10 @@
 
 event_inherited();
 
+//Physics
+angle = 60;
+strength = 4.3;
+
 //Other Variables
 
 destroyableByWall = false;
@@ -17,6 +21,7 @@ destroyOutsideView = false;
 state = 0;
 owner = id;
 enemy = false;
+isDirectHit = true;
 abilityType = damageTypes.bomb;
 damageType = damageTypes.bomb;
 explosionIndex = 0;

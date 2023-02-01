@@ -1,14 +1,12 @@
 ///@description Draw
 
-#region Variables
-var triWidth = sprite_get_width(spr_Maykr_Triangle);
-#endregion
-
 #region Background
 draw_sprite_ext(bg_MaykrTitle_Stars,0,0,0,.5,.5,image_angle,image_blend,starsAlpha);
 #endregion
 
 #region Triangles
+var triWidth = sprite_get_width(spr_Maykr_Triangle);
+
 xx += .2;
 if (xx >= triWidth) xx -= triWidth;
 for (var i = 0; i < 3; i++)

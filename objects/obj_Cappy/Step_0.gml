@@ -12,7 +12,7 @@ if (setupTimer == 0)
 		sprIdleL = spr_Cappy_Normal_IdleL;
 		sprIdleR = spr_Cappy_Normal_IdleR;
 		sprShroomIdle = spr_Cappy_Normal_ShroomIdle;
-		sprHurtCapless = spr_Cappy_Normal_Hurt;
+		sprHurt = spr_Cappy_Normal_Hurt;
 		sprShroom = spr_Cappy_Normal_Shroom;
 		break;
 		
@@ -22,30 +22,18 @@ if (setupTimer == 0)
 		sprIdleL = spr_Cappy_Robo_IdleL;
 		sprIdleR = spr_Cappy_Robo_IdleR;
 		sprShroomIdle = spr_Cappy_Robo_ShroomIdle;
-		sprHurtCapless = spr_Cappy_Robo_Hurt;
+		sprHurt = spr_Cappy_Robo_Hurt;
 		sprShroom = spr_Cappy_Robo_Shroom;
 		break;
 	}
-	sprHurt = sprHurtCapless;
 	if (state == 1) attackStopTimer = attackStopTimerMax;
-}
-
-//Hurt Sprite
-
-if (thrown)
-{
-	sprHurt = sprHurtCapless;
-}
-else
-{
-	sprHurt = -1;
 }
 
 //Event Inherited
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if ((!childPause))
 {
 	if (!parasol) scr_Object_Inhale(enemy);
 	
@@ -231,6 +219,4 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 else
 {
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

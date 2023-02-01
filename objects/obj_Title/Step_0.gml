@@ -6,17 +6,51 @@ if (!global.pause)
 	
 	scr_Player_Inputs(0);
 	
+	//Variables
+	
+	cameraY = lerp(cameraY,210 * (introState > 3),.002);
+	blackAlphaVal = lerp(blackAlphaVal,!(introState > 1),.02);
+	y = ystart + cameraY;
+	
+	#region Gradient Alpha
+	gradientAlpha += .005 * gradientAlphaDir;
+	if (gradientAlpha <= .5)
+	{
+		gradientAlpha = .5;
+		gradientAlphaDir = 1;
+	}
+	
+	if (gradientAlpha >= 1)
+	{
+		gradientAlpha = 1;
+		gradientAlphaDir = -1;
+	}
+	#endregion
+	
+	#region Game Closing
+	if (gameclosing)
+	{
+	    global.closingvol=max(0,global.closingvol*0.9)
+	    if (global.closingvol<=0.025) game_end()
+
+	    closingk=!closingk
+	    if (closingk) {
+	        //window_set_region_scale(1,1)
+	        window_set_size(480 * global.windowSize,ceil((270 * global.windowSize) * sqr(global.closingvol)))
+	        window_center()
+	    }
+
+	    draw_clear(merge_color(0,$ffffff,1-global.closingvol))
+	    window_set_color(merge_color(0,$ffffff,1-global.closingvol))
+	    //screen_refresh()
+	}
+	#endregion
+	
 	switch (page)
 	{
 		case 0:
-		if (canBeInteracted)
+		if ((canBeInteracted) and (!gameclosing))
 		{
-			//Variables
-			
-			cameraY = lerp(cameraY,210 * (introState > 3),.002);
-			blackAlphaVal = lerp(blackAlphaVal,!(introState > 1),.02);
-			y = ystart + cameraY;
-			
 			//Shine Movement
 			
 			if (shineTimer == -1) xx += hsp;
@@ -25,21 +59,6 @@ if (!global.pause)
 				xx -= (sprite_get_width(sprite_index) * (4 * image_xscale));
 				shineTimer = shineTimerMax;
 			}
-			
-			#region Gradient Alpha
-			gradientAlpha += .005 * gradientAlphaDir;
-			if (gradientAlpha <= .5)
-			{
-				gradientAlpha = .5;
-				gradientAlphaDir = 1;
-			}
-			
-			if (gradientAlpha >= 1)
-			{
-				gradientAlpha = 1;
-				gradientAlphaDir = -1;
-			}
-			#endregion
 			
 			//Konami Code
 			
@@ -133,14 +152,14 @@ if (!global.pause)
 				codeState = 0;
 				
 				var demo = false;
-				demo = true;
+				//demo = true;
 				if (demo)
 				{
 					if (!instance_exists(obj_Fade))
 					{
 						if (audio_is_playing(snd_Enter)) audio_stop_sound(snd_Enter);
 						audio_play_sound(snd_Enter,0,false);
-						if ((!global.debug) and (global.canSave)) scr_LoadGame(global.selectedSave);
+						if (global.canSave) scr_LoadGame(global.selectedSave);
 						var fade = instance_create_depth(x,y,-999,obj_Fade);
 						fade.targetRoom = rm_StageSelect_Demo;
 						fade.alpha = 1;
@@ -230,7 +249,17 @@ if (!global.pause)
 		
 		//End The Game
 		
-		if (keyboard_check_pressed(vk_escape)) game_end();
+		if (keyboard_check_pressed(vk_escape))
+		{
+			if ((global.buildType == buildTypes.windows) and (!global.fullscreen))
+			{
+				gameclosing = true;
+			}
+			else
+			{
+				game_end();
+			}
+		}
 		break;
 		
 		case 1:
@@ -284,7 +313,7 @@ if (!global.pause)
 				global.selectedSave = "Save3.ini";
 				break;
 			}
-			if ((!global.debug) and (global.canSave)) scr_LoadGame(global.selectedSave);
+			if (global.canSave) scr_LoadGame(global.selectedSave);
 			var fade = instance_create_depth(x,y,-999,obj_Fade);
 			fade.targetRoom = rm_MainMenu;
 			fade.alpha = 1;

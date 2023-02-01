@@ -57,7 +57,7 @@ switch (page)
 	draw_set_font(fnt_AlienSolid);
 	draw_set_color(c_white);
 	draw_set_halign(fa_center);
-	scr_Draw_Text_Color_Outline(room_width / 2,4,"Choose A Save",-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,1,1,image_angle);
+	scr_Draw_Text_Color_Outline(room_width / 2,4 + cameraY,"Choose A Save",-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,1,1,image_angle);
 	draw_set_halign(fa_left);
 	break;
 }

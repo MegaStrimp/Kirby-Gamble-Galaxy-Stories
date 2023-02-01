@@ -17,3 +17,4 @@ destroyOutsideView = false;
 canBeReflected = false;
 owner = id;
 enemy = false;
+isDirectHit = true;

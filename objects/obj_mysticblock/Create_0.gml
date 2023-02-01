@@ -20,6 +20,7 @@ attackState = 0;
 attackNumber = -1;
 nearestPlayer = -1;
 paletteIndex = spr_MysticBlock_Normal_Palette_MysticPurple;
+stopOutsideScreen = true;
 
 //Sprites
 

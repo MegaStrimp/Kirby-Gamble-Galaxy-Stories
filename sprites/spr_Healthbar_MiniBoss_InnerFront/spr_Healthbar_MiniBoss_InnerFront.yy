@@ -11,15 +11,15 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 134,
+  "bbox_right": 133,
   "bbox_top": 0,
-  "bbox_bottom": 12,
+  "bbox_bottom": 6,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "DynamicTexturePage": false,
-  "width": 135,
-  "height": 13,
+  "width": 134,
+  "height": 7,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -28,7 +28,7 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"309fee98-839f-47cb-b43f-193bd6b5bf62",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"252b12fe-ed82-4c2b-a37c-637ab970169d",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -45,7 +45,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"7048b6c3-93a2-4542-ae75-eeba3546713e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"309fee98-839f-47cb-b43f-193bd6b5bf62","path":"sprites/spr_Healthbar_MiniBoss_InnerFront/spr_Healthbar_MiniBoss_InnerFront.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"3bdc322e-5e23-4d39-a912-517a9eaaa5e2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"252b12fe-ed82-4c2b-a37c-637ab970169d","path":"sprites/spr_Healthbar_MiniBoss_InnerFront/spr_Healthbar_MiniBoss_InnerFront.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
@@ -69,6 +69,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Mini Boss",
-    "path": "folders/Sprites/Hud/Healthbars/Boss/Mini Boss.yy",
+    "path": "folders/Sprites/Hud/Healthbars/Mini Boss.yy",
   },
 }

@@ -1,11 +1,7 @@
 ///@description Draw
 
-#region Variables
-var triWidth = sprite_get_width(spr_Maykr_Triangle);
-#endregion
-
 #region Background
-draw_sprite_ext(bg_MaykrTitle_Stars,0,0,0,.5,.5,image_angle,image_blend,starsAlpha);
+draw_sprite_ext(bg_GamblionTitle_Stars,0,0,0,.5,.5,image_angle,image_blend,starsAlpha);
 #endregion
 
 #region Text
@@ -19,6 +15,8 @@ if (startTrigger >= 1)
 #endregion
 
 #region Triangles
+var triWidth = sprite_get_width(spr_Maykr_Triangle);
+
 xx += .2;
 if (xx >= triWidth) xx -= triWidth;
 for (var i = 0; i < 3; i++)
@@ -29,7 +27,8 @@ for (var i = 0; i < 3; i++)
 #endregion
 
 #region Logo
-draw_sprite_ext(spr_Maykr_Logo,0,92,-50 + ((startLerp) * 84),2,2,image_angle,image_blend,startLerp);
+draw_sprite_ext(spr_Gamblion_Title_LogoBg,0,240,50,1,1,image_angle,image_blend,startLerp);
+draw_sprite_ext(spr_Gamblion_Logo,0,240,-34 + ((startLerp) * 84),1,1,image_angle,image_blend,startLerp);
 #endregion
 
 #region Windows

@@ -21,7 +21,8 @@ enum gamemodes
 	
 	skylands,
 	maykr,
-	samuraiKirby
+	samuraiKirby,
+	gamblion
 }
 
 enum seasons
@@ -143,6 +144,8 @@ enum playerAbilities
 	hammer,
 	bell,
 	water,
+	hiJump,
+	gear,
 	sleep,
 	scan,
 	crash,
@@ -163,6 +166,7 @@ enum playerAttacks
 	
 	cutterNormal,
 	cutterCharge,
+	cutterChargeAttack,
 	cutterDash,
 	cutterAir,
 	cutterDrop,
@@ -254,6 +258,8 @@ enum playerAttacks
 	sleepNormal,
 	
 	scanNormal,
+	
+	micNormal,
 	
 	jetCharge,
 	jetDash,
@@ -349,7 +355,9 @@ enum abilityHatSkins
 	bell_modern,
 	water_modern,
 	sleep_kssu,
-	scan_kssu
+	scan_kssu,
+	crash_kssu,
+	mic_kssu
 }
 
 enum abilityHatPaints
@@ -453,7 +461,9 @@ enum abilityHatPaints
 	sleep_kssu_bitcrushed,
 	scan_kssu_metallicRed,
 	scan_kssu_bitcrushed,
-	scan_kssu_militaryGreen
+	scan_kssu_militaryGreen,
+	crash_kssu_none,
+	mic_kssu_loudMike
 }
 
 enum damageTypes
@@ -560,229 +570,6 @@ enum progression
 	chapter1End
 }
 
-enum stringAttributes
-{
-	title,
-	secretTitle,
-	description,
-	
-	language,
-	
-	playerCharactersStart,
-	playerCharacters_kirby,
-	playerCharacters_gamble,
-	playerCharacters_metaKnight,
-	playerCharacters_keeby,
-	playerCharacters_helper,
-	playerCharacters_gooey,
-	playerCharacters_magolor,
-	playerCharactersEnd,
-	
-	customizeSubMenusStart,
-	customizeSubMenus_skins,
-	customizeSubMenus_sprayPaints,
-	customizeSubMenus_hatSkins,
-	customizeSubMenus_hatPaints,
-	customizeSubMenus_familiars,
-	customizeSubMenusEnd,
-	
-	playerSprayPaintsStart,
-	playerSprayPaints_friendlyPink,
-	playerSprayPaints_yellow,
-	playerSprayPaints_red,
-	playerSprayPaints_green,
-	playerSprayPaints_dreamyBlueberry,
-	playerSprayPaints_carbon,
-	playerSprayPaints_cherry,
-	playerSprayPaints_deepFriedKirb,
-	playerSprayPaints_emerald,
-	playerSprayPaints_gameKirb,
-	playerSprayPaints_hauntingPurple,
-	playerSprayPaints_invisSprinkle,
-	playerSprayPaints_monochromeKirb,
-	playerSprayPaints_yolkTemple,
-	playerSprayPaints_plumpTomato,
-	playerSprayPaints_waddleWaddle,
-	playerSprayPaints_mystic,
-	playerSprayPaints_shadowOfTheMirror,
-	playerSprayPaints_delirious,
-	playerSprayPaints_greenjolt,
-	playerSprayPaints_butterKnife,
-	playerSprayPaints_blurple,
-	playerSprayPaints_beam,
-	playerSprayPaints_stone,
-	playerSprayPaints_mirror,
-	playerSprayPaints_ninja,
-	playerSprayPaints_fire,
-	playerSprayPaints_ice,
-	playerSprayPaints_plasma,
-	playerSprayPaints_unearthlyHand,
-	playerSprayPaints_soMeta,
-	playerSprayPaints_gooeyBlue,
-	playerSprayPaints_eggBrown,
-	playerSprayPaints_telltaleKeeby,
-	playerSprayPaints_royalYarn,
-	playerSprayPaints_smileyWhite,
-	playerSprayPaints_edd,
-	playerSprayPaints_musiciansLight,
-	playerSprayPaints_aege,
-	playerSprayPaints_stray,
-	playerSprayPaints_glitch,
-	playerSprayPaintsEnd,
-	
-	familiarsStart,
-	familiars_gamble,
-	familiars_happyPea,
-	familiars_epicJar,
-	familiars_krackle,
-	familiars_omegaMatter,
-	familiarsEnd,
-	
-	unlockMethodsStart,
-	unlockMethods_Default,
-	unlockMethods_beatStageMissions,
-	unlockMethods_tomatooCatch3Stars,
-	unlockMethods_fill10Bestiary,
-	unlockMethods_fill25Bestiary,
-	unlockMethods_fill50Bestiary,
-	unlockMethods_unlock5Familiars,
-	unlockMethods_logIntoGamejolt,
-	unlockMethods_logIntoDiscord,
-	unlockMethods_beamGoldMedal,
-	unlockMethods_stoneGoldMedal,
-	unlockMethods_mirrorGoldMedal,
-	unlockMethods_ninjaGoldMedal,
-	unlockMethods_fireGoldMedal,
-	unlockMethods_iceGoldMedal,
-	unlockMethods_sparkGoldMedal,
-	unlockMethods_unlockGamble,
-	unlockMethods_unlockMetaKnight,
-	unlockMethods_unlockGooey,
-	unlockMethods_unlockMagolor,
-	unlockMethods_unlockKeeby,
-	unlockMethods_unlockPrinceFluff,
-	unlockMethods_secret,
-	unlockMethodsEnd,
-	
-	playerAbilitiesStart,
-    playerAbilities_cutter,
-	playerAbilities_mysticCutter,
-    playerAbilities_beam,
-	playerAbilities_mysticBeam,
-	playerAbilities_stone,
-	playerAbilities_ufo,
-	playerAbilities_mirror,
-	playerAbilities_ninja,
-	playerAbilities_bomb,
-	playerAbilities_fire,
-	playerAbilities_mysticFire,
-	playerAbilities_ice,
-	playerAbilities_mysticIce,
-	playerAbilities_spark,
-	playerAbilities_yoyo,
-	playerAbilities_wheel,
-	playerAbilities_artist,
-	playerAbilities_fighter,
-	playerAbilities_suplex,
-	playerAbilities_wing,
-	playerAbilities_jet,
-	playerAbilities_sword,
-	playerAbilities_parasol,
-	playerAbilities_hammer,
-	playerAbilities_bell,
-	playerAbilities_water,
-	playerAbilities_sleep,
-	playerAbilities_scan,
-	playerAbilities_crash,
-	playerAbilities_mic,
-	playerAbilities_chef,
-	playerAbilities_ultraSword,
-	playerAbilitiesEnd,
-	
-	enemyStart,
-	enemy_waddleDee,
-	enemy_waddleDoo,
-	enemy_brontoBurt,
-	enemy_twizzy,
-	enemy_tookey,
-	enemy_sirKibble,
-	enemy_gordo,
-	enemy_bloodGordo,
-	enemy_ghostGordo,
-	enemy_shotzo,
-	enemy_mysticDoo,
-	enemy_bouncy,
-	enemy_mrBoogie,
-	enemy_search,
-	enemy_hiveDrone,
-	enemy_wapod,
-	enemy_flamebelch,
-	enemy_cappy,
-	enemy_broomHatter,
-	enemy_coconut,
-	enemy_noddy,
-	enemy_blado,
-	enemy_scarfy,
-	enemy_rocky,
-	enemy_grizzo,
-	enemy_jungleBomb,
-	enemy_glunk,
-	enemy_kabu,
-	enemy_burningLeo,
-	enemy_tomatoo,
-	enemy_onion,
-	enemy_anemonee,
-	enemy_gim,
-	enemy_poppyBrosJr,
-	enemy_bobo,
-	enemy_foley,
-	enemy_nidoo,
-	enemy_como,
-	enemy_cairn,
-	enemy_bomber,
-	enemy_simirror,
-	enemyEnd,
-	
-	shop_general,
-	shop_starcutter,
-	shop_gearCube,
-	shop_aquatia,
-	
-	shopString_buy,
-	shopString_talk,
-	shopString_leave,
-	shopString_next,
-	shopString_back,
-	shopString_question,
-	
-	optionsStart,
-	options_true,
-	options_false,
-	options_display,
-	options_audio,
-	options_controls,
-	options_language,
-	options_other,
-	options_fullscreen,
-	options_windowSize,
-	options_music,
-	options_soundEffects,
-	options_left,
-	options_right,
-	options_up,
-	options_down,
-	options_jump,
-	options_attack,
-	options_start,
-	options_select,
-	options_pressAnyKey,
-	options_extraTutorials,
-	options_autoSwallow,
-	options_musicIntro,
-	options_default,
-	optionsEnd
-}
-
 enum talkingCharacter
 {
 	kirby,
@@ -790,6 +577,63 @@ enum talkingCharacter
 	metaKnight,
 	match
 }
+
+enum kirbyTitles
+{
+	dreamLand1,
+	adventure,
+	dreamCourse,
+	dreamLand2,
+	superStar,
+	dreamLand3,
+	crystalShards,
+	nightmareInDreamLand,
+	airRide,
+	amazingMirror,
+	canvasCurse,
+	squeakSquad,
+	superStarUltra,
+	epicYarn,
+	massAttack,
+	returnToDreamLand,
+	tripleDeluxe,
+	rainbowCurse,
+	planetRobobot,
+	starAllies,
+	forgottenLand,
+	gambleGalaxyStories
+}
+
+#region Acts
+enum acts
+{
+	C1A1,
+	C1A2,
+	C1A3,
+	C1A4,
+	C1A5
+}
+#endregion
+
+#region Stages
+enum stages
+{
+	greenGreens,
+	battleshipHalberd,
+	asteroidFields,
+	yolkYard,
+	grandTempleAvgo,
+	floralYolkCaves,
+	stormTheFortress,
+	centralLab,
+	pathToTheNastyMachine,
+	sandshellBeach,
+	upTheStraw,
+	sacredAquatia,
+	cosmicPalace,
+	popstarMoon
+}
+#endregion
 #endregion
 
 #region Particles
@@ -819,55 +663,103 @@ part_type_life(global.partTypeColorfulStars, 30, 40);
 #endregion
 
 #region Global Variables
-global.versionNumber = "0.8.0";
-
+#region Meta/Files
+global.versionNumber = "0.7.4";
 global.season = seasons.none;
-global.selectedSave = "Save1.ini";
-//old hp system
-global.hpMax = 5;
-//global.healthP1 = global.hpMax;
-//global.healthP2 = global.hpMax;
-//new healthbar system
+global.selectedSave = "SaveSlot1.ini";
+#endregion
+
+#region Player
+global.hpMax = 5; //Old
+
 global.healthP1Max = 45;
 global.healthP2Max = 45;
+global.healthP3Max = 45;
+global.healthP4Max = 45;
+
 global.healthP1 = global.healthP1Max;
 global.healthP2 = global.healthP2Max;
+global.healthP3 = global.healthP3Max;
+global.healthP4 = global.healthP4Max;
+
 global.undershotValP1 = 5; // if the player's health is higher than this value when they take a hit and the attack is not marked as a "finishing blow", the player will survive with this much health.
 global.undershotValP2 = 5;
+global.undershotValP3 = 5;
+global.undershotValP4 = 5;
+
 global.healP1Mod = global.healthP1;
 global.healP2Mod = global.healthP2;
-//global.healP1End = global.healthP1;
-//global.healP2End = global.healthP2;
-///////////////////////////
+global.healP3Mod = global.healthP3;
+global.healP4Mod = global.healthP4;
+
+global.sprayPaintP1 = spr_Kirby_Normal_Palette_FriendlyPink;
+global.sprayPaintP2 = spr_Kirby_Normal_Palette_Yellow;
+global.sprayPaintP3 = spr_Kirby_Normal_Palette_Red;
+global.sprayPaintP4 = spr_Kirby_Normal_Palette_Green;
+
+global.familiarP1 = familiars.gamble;
+global.familiarP2 = familiars.gamble;
+global.familiarP3 = familiars.gamble;
+global.familiarP4 = familiars.gamble;
+
+global.abilityP1 = playerAbilities.none;
+global.abilityP2 = playerAbilities.none;
+global.abilityP3 = playerAbilities.none;
+global.abilityP4 = playerAbilities.none;
+
+global.micCountP1 = 0;
+global.micCountP2 = 0;
+global.micCountP3 = 0;
+global.micCountP4 = 0;
+#endregion
+
+#region Skylands
 global.skylandsHpMax = 5;
 global.skylandsHpP1 = global.skylandsHpMax;
 global.skylandsHpP2 = global.skylandsHpMax;
 global.skylandsLives = 2;
-global.sprayPaintP1 = spr_Kirby_Normal_Palette_FriendlyPink;
-global.sprayPaintP2 = spr_Kirby_Normal_Palette_Yellow;
-global.abilityP1 = playerAbilities.none;
-global.abilityP2 = playerAbilities.none;
-global.familiarP1 = familiars.gamble;
-global.familiarP2 = familiars.gamble;
+#endregion
+
+//old hp system
+//global.healthP1 = global.hpMax;
+//global.healthP2 = global.hpMax;
+//new healthbar system
+//global.healP1End = global.healthP1;
+//global.healP2End = global.healthP2;
+///////////////////////////
+
+global.currentStage = stages.greenGreens;
+global.currentStage = stages.yolkYard;
 global.roomPrevious = rm_Setup;
 global.roomNext = rm_Starcutter;
 global.roomCheckpoint = rm_Setup;
 global.pause = false;
 global.pointStars = 0;
-global.goldenTomato = false;
-global.stageNumber = 0;
+
+global.goldenTomatoAmountMax = 2;
+
+global.stageNumber = stages.greenGreens;
 global.debug = true;
 //global.debug = false;
-show_debug_overlay(global.debug);
+global.debugOverlay = global.debug;
 global.pause = false;
 global.cutscene = false;
-global.cutsceneTargetRoom = rm_Setup;
 global.tutorial = false;
+global.currentNPC = -1;
+global.dialogueFlowing = false;
 global.shaders = false;
 if (shader_is_compiled(shd_pal_swapper)) global.shaders = true;
-global.chapterIntro = "1_1";
-global.hasCoop = false;
+global.chapterIntro = acts.C1A1;
+
+global.hasCoop = 0;
+global.hasP1 = true;
+global.hasP2 = false;
+global.hasP3 = false;
+global.hasP4 = false;
+
 global.muted = false;
+global.closingvol = 1;
+
 global.healthbarMarkedEnemy = -1;
 global.musicPlaying = -1;
 global.gambleMaykrMenu = "Collision";
@@ -888,15 +780,17 @@ global.musicIntroColorLight = make_color_rgb(125,125,125);
 global.musicIntroColorDark = make_color_rgb(65,65,65);
 global.musicIntroColorComposer = make_color_rgb(255,255,255);
 global.mixActive = -1;
-global.canSave = false;
+global.canSave = true;
 global.inStage = false;
 for (var i = 0; i < 4; i++) global.stageCollectibleTreasures[i] = -1;
 global.hasInvinCandy = false;
 global.hasMintLeaf = false;
 
+#region Demo
 global.demoBeatGreenGreens = false;
 global.demoBeatBattleshipHalberd = false;
 global.demoBeatAsteroidFields = false;
+#endregion
 
 #region Ability Kill Targets
 global.cutterAbilityKillsTarget = 10;
@@ -923,6 +817,8 @@ global.parasolAbilityKillsTarget = 10;
 global.hammerAbilityKillsTarget = 10;
 global.bellAbilityKillsTarget = 10;
 global.waterAbilityKillsTarget = 10;
+global.hiJumpAbilityKillsTarget = 10;
+global.gearAbilityKillsTarget = 10;
 global.sleepAbilityKillsTarget = 10;
 global.scanAbilityKillsTarget = 10;
 global.crashAbilityKillsTarget = 10;
@@ -935,6 +831,8 @@ global.cosmicBladeAbilityKillsTarget = 10;
 #region Controller Setup
 global.playerGamepad[0] = -1;
 global.playerGamepad[1] = -1;
+global.playerGamepad[2] = -1;
+global.playerGamepad[3] = -1;
 
 for (var i = 0; i < gamepad_get_device_count(); i++)
 {
@@ -952,9 +850,23 @@ for (var i = 0; i < gamepad_get_device_count(); i++)
 	        global.playerGamepad[1] = i;
 	    }
 	}
+	else if (global.playerGamepad[2] == -1)
+	{
+		if gamepad_is_connected(i)
+	    {
+	        global.playerGamepad[2] = i;
+	    }
+	}
+	else if (global.playerGamepad[3] == -1)
+	{
+		if gamepad_is_connected(i)
+	    {
+	        global.playerGamepad[3] = i;
+	    }
+	}
 }
 
-for (var i = 0; i < 2; i++)
+for (var i = 0; i < 4; i++)
 {
     global.stickLeftPressed[i] = false;
     global.stickRightPressed[i] = false;
@@ -997,10 +909,18 @@ global.invinCandyTimerP1 = -1;
 global.invinCandyTimerP1Max = 1800;
 global.invinCandyTimerP2 = -1;
 global.invinCandyTimerP2Max = 1800;
+global.invinCandyTimerP3 = -1;
+global.invinCandyTimerP3Max = 1800;
+global.invinCandyTimerP4 = -1;
+global.invinCandyTimerP4Max = 1800;
 global.mintLeafTimerP1 = -1;
 global.mintLeafTimerP1Max = 900;
 global.mintLeafTimerP2 = -1;
 global.mintLeafTimerP2Max = 900;
+global.mintLeafTimerP3 = -1;
+global.mintLeafTimerP3Max = 900;
+global.mintLeafTimerP4 = -1;
+global.mintLeafTimerP4Max = 900;
 
 controllerPressedResetTimer = -1;
 #endregion
@@ -1017,8 +937,13 @@ if (saveCheck == "kssu")
 	if (file_exists("Save3.ini")) file_delete("Save2.ini");
 }*/
 
+file_delete("Save1.ini");
+file_delete("Save2.ini");
+file_delete("Save3.ini");
+
 scr_LoadGame(global.selectedSave);
-//if ((!global.debug) and (global.canSave)) scr_SaveGame(global.selectedSave);
+
+//if (global.canSave) scr_SaveGame(global.selectedSave);
 //if (global.debug) scr_DebugSave();
 
 scr_LoadConfig("config.ini");
@@ -1039,10 +964,17 @@ global.bitmapKSSU = font_add_sprite_ext(spr_Hud_Dialogue_Font_Kssu,"ABCDEFGHIJKL
 global.fontMorse = font_add_sprite_ext(spr_Hud_Dialogue_Font_Morse,".-/",false,0);
 global.fontNumbersGray = font_add_sprite_ext(spr_Hud_Numbers_Gray,"0123456789",false,0);
 global.fontHitNumbers = font_add_sprite_ext(spr_Hud_HitNumbers,"0123456789",false,0);
+
 global.fontDialogueDefaultKanji = font_add(working_directory + "ARIALUNI.TTF",12,false,false,32,127);
+global.fontCharacterSelectLargeKanji = font_add(working_directory + "ARIALUNI.TTF",22,false,false,32,127);
+global.fontCharacterSelectMediumKanji = font_add(working_directory + "ARIALUNI.TTF",14,false,false,32,127);
+global.fontCharacterSelectSmallKanji = font_add(working_directory + "ARIALUNI.TTF",9,false,false,32,127);
+
 global.fontMaykrBlue = font_add_sprite_ext(spr_Maykr_Font_Blue,"abcdefghijklmnopqrstuvwxyz0123456789.!?/()",false,0);
 global.fontMaykrRed = font_add_sprite_ext(spr_Maykr_Font_Red,"abcdefghijklmnopqrstuvwxyz0123456789.!?/()",false,0);
 global.fontMaykrWhite = font_add_sprite_ext(spr_Maykr_Font_White,"abcdefghijklmnopqrstuvwxyz0123456789.!?/()",false,0);
+
+global.fontBestiary = font_add_sprite_ext(spr_Menu_Collection_Bestiary_Font,"abcdefghijklmnopqrstuvwxyz.!?," + chr(34) + "'()/" + chr(92) + ":;#-0123456789",true,1);
 #endregion
 
 #region Subtitiles
@@ -1316,8 +1248,6 @@ subtitles[i] = "Kirby Battle Royale never actually existed!";
 i += 1;
 subtitles[i] = "NANI?";
 i += 1;
-subtitles[i] = "Omni Kirby!";
-i += 1;
 subtitles[i] = "Kirby. That’s it!";
 i += 1;
 subtitles[i] = "I am going to split up into three!";
@@ -1590,7 +1520,7 @@ subtitles[i] = "Does it look like I need your power?";
 i += 1;
 subtitles[i] = "You have not yet seen the wrath of the water!";
 i += 1;
-subtitles[i] = "Not everything needs to be dark";
+subtitles[i] = "Not everything need to be dark";
 i += 1;
 subtitles[i] = "Blood? What is that? Can we drink it?";
 i += 1;
@@ -1866,7 +1796,7 @@ subtitles[i] = "Father Is Looking at You!";
 i += 1;
 subtitles[i] = "Red Butterflies...Happy Nightmares!";
 i += 1;
-subtitles[i] = "RR-RA-RASPUTIN...";
+subtitles[i] = "RA-RA-RASPUTIN...";
 i += 1;
 subtitles[i] = "Carl Wuz Here!";
 i += 1;
@@ -2072,7 +2002,7 @@ subtitles[i] = "Ew, why are you reading me? Gross...";
 i += 1;
 subtitles[i] = "The Community™";
 i += 1;
-subtitles[i] = "Pyra and Myhtra are actually pretty balanced.";
+subtitles[i] = "Pyra and Mythra are actually pretty balanced.";
 i += 1;
 subtitles[i] = "Remember: Always save your progress!";
 i += 1;
@@ -2131,6 +2061,8 @@ i += 1;
 subtitles[i] = "What was he cooking?";
 i += 1;
 subtitles[i] = "True";
+i += 1;
+subtitles[i] = "Like a Subsandwich on a hand dish!";
 
 selectedSubtitle = irandom_range(0,array_length(subtitles) - 1);
 selectedSubtitle = subtitles[selectedSubtitle];
@@ -2144,10 +2076,10 @@ windowCaption[2] = "Galaxy";
 windowCaption[3] = "Stories";
 
 var windowGen = -1;
-windowGen[0] = irandom_range(0,149);
-windowGen[1] = irandom_range(0,149);
-windowGen[2] = irandom_range(0,149);
-windowGen[3] = irandom_range(0,149);
+windowGen[0] = irandom_range(0,14900);
+windowGen[1] = irandom_range(0,14900);
+windowGen[2] = irandom_range(0,14900);
+windowGen[3] = irandom_range(0,14900);
 
 switch (windowGen[0])
 {

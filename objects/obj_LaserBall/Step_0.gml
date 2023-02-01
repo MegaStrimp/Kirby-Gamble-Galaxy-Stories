@@ -28,6 +28,14 @@ if (setupTimer == 0)
 		#endregion
 	}
 	sprAura = sprAura1Idle;
+	
+	if (state == 1)
+	{
+		destroyOutsideView = true;
+		clampPositionX = false;
+		clampPositionY = false;
+		offScreenTurning = false;
+	}
 }
 #endregion
 
@@ -190,25 +198,36 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 		#region Move Upwards
 		case 1:
 		#region Movement
+		var nearestPlayer = instance_nearest(x,y,obj_Player);
+		var newDirX = 1;
+		if (nearestPlayer.x < x) newDirX = -1;
+		var newDirY = 1;
+		if (nearestPlayer.y < y) newDirY = -1;
+		
 		if (active)
 		{
 			if ((!attack) and (!hurt))
 			{
-			    vsp += accel * walkDirY;
+			    vsp -= accel * walkDirY;
 			}
 		}
 		else
 		{
-			if (distance_to_object(obj_Player) <= 72) active = true;
+			if (abs(nearestPlayer.x - x) <= activateRange) active = true;
 		}
 		vsp = clamp(vsp,-jumpspeed,jumpspeed);
 		#endregion
 		
 		#region Attack
-		if ((attackTimer == -1) and (!hurt)) attackTimer = attackTimerMax;
+		if ((active) and (attackTimer == -1) and (!hurt)) attackTimer = attackTimerMax;
 		#endregion
 		
 		#region Face
+		var nearestPlayer = instance_nearest(x,y,obj_Player);
+		var newDirX = 1;
+		if (nearestPlayer.x < x) newDirX = -1;
+		walkDirX = newDirX;
+		
 		faceX = lerp(faceX,walkDirX * 4,.1);
 		#endregion
 		
@@ -242,6 +261,11 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 		#endregion
 		
 		#region Face
+		var nearestPlayer = instance_nearest(x,y,obj_Player);
+		var newDirX = 1;
+		if (nearestPlayer.x < x) newDirX = -1;
+		walkDirX = newDirX;
+		
 		faceX = lerp(faceX,walkDirX * 4,.1);
 		#endregion
 		
@@ -287,6 +311,16 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 				break;
 				
 				case 1:
+				switch (state)
+				{
+					case 0:
+					attackCountMax = irandom_range(1,4);
+					break;
+					
+					case 1:
+					attackCountMax = 1;
+					break;
+				}
 				attackState = 2;
 				attackTimer = 0;
 				break;
@@ -303,22 +337,21 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 				{
 					attackCount += 1;
 					sprite_index = sprAttack;
-					if (audio_is_playing(snd_CutterEnemy)) audio_stop_sound(snd_CutterEnemy);
-					audio_play_sound(snd_CutterEnemy,0,false);
-					var projectile = instance_create_depth(x,y,depth - 1,obj_Projectile_JuckleBlade);
+					if (audio_is_playing(snd_Laser)) audio_stop_sound(snd_Laser);
+					audio_play_sound(snd_Laser,0,false);
+					var projectile = instance_create_depth(x,y,depth - 1,obj_Projectile_LaserBall);
 					projectile.paletteIndex = paletteIndex;
 					projectile.character = 0;
 					projectile.owner = id;
-					projectile.hsp = lengthdir_x(projectile.spd,attackDir);
-					projectile.vsp = lengthdir_y(projectile.spd,attackDir);
-					projectile.image_angle = attackDir;
+					projectile.dirX = walkDirX;
+					projectile.hsp = projectile.spd * projectile.dirX;
 					projectile.image_xscale = projectile.dirX;
 					projectile.enemy = true;
 					projectile.destroyableByEnemy = false;
 					projectile.hurtsObject = false;
 					projectile.hurtsEnemy = false;
 					projectile.hurtsPlayer = true;
-					attackTimer = 30;
+					attackTimer = 10;
 				}
 				break;
 			}
