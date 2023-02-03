@@ -288,6 +288,7 @@ sprDeath = spr_Kirby_Normal_Death;
 
 cutterMotorCutterUpgrade = false;
 cutterPropellerWingUpgrade = false;
+cutterSpectralCutterUpgrade = false;
 beamGoldenFlareUpgrade = false;
 mysticBeamVortexInAJarUpgrade = false;
 stoneRockCandyUpgrade = false;
@@ -484,6 +485,7 @@ collisionX = obj_Wall;
 collisionY = obj_Wall;
 inBackground = false;
 warpStarIndex = -1;
+mechIndex = -1;
 downHeld = 0;
 hasInvinCandy = false;
 invinCandyMask = -1;

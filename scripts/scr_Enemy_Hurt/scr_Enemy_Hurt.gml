@@ -405,7 +405,7 @@ function scr_Enemy_Hurt(argument0,argument1)
 		}
 		targetObj.hurt = true;
 		if (targetObj.sprHurt != -1) targetObj.hurtImageIndex = irandom_range(0,sprite_get_number(targetObj.sprHurt) - 1);
-		if (!hurtSource.destroyableByEnemy)
+		if ((!hurtSource.destroyableByEnemy) or ((targetObj.collisionHitbox != -1) and (hurtSource.destroyableByEnemy)))
 		{
 			targetObj.invincible = true;
 			targetObj.invincibleTimer = hitInvincibility;

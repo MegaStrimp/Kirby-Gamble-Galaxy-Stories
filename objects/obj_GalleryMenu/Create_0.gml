@@ -57,7 +57,7 @@ button.state = "gallery";
 button.index = "volS";
 button.xOffset = 100;
 
-var button = instance_create_depth(420,210,depth - 1,obj_Menu_Button);
+var button = instance_create_depth(372,212,depth - 1,obj_Menu_Button);
 button.owner = id;
 button.sprite_index = spr_Menu_Gallery_Download;
 button.image_index = 0;

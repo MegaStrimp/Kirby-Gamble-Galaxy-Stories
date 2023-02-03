@@ -94,7 +94,7 @@ for (var i = 0; audio_exists(i); i++)
 
 //Game Time
 
-global.gameTimeSeconds += 1;
+global.gameTimeSeconds += 1 / 60;
 if (global.gameTimeSeconds >= 60)
 {
 	global.gameTimeSeconds -= 60;

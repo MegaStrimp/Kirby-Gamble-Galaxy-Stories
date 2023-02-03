@@ -43,7 +43,7 @@ function scr_PlayMusic(argument0,argument1,argument2,argument3,argument4)
 			global.musicIntroComposer = "Light MetaS";
 			break;
 			
-			case mus_KazooFields: //
+			case mus_KazooFields:
 			global.musicIntroTitle = "Kazoo Fields (SECRET)";
 			global.musicIntroComposer = "Subsandwich";
 			break;

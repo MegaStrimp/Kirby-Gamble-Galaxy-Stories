@@ -6,9 +6,16 @@ if (!global.pause)
 	
 	if (instance_exists(owner))
 	{
-		x = owner.x;
-		y = owner.y;
-		image_xscale = owner.image_xscale;
-		image_yscale = owner.image_yscale;
+		x = owner.x + ownerXOffset;
+		y = owner.y + ownerYOffset;
+		var xScaleFinal = owner.image_xscale;
+		var yScaleFinal = owner.image_yscale;
+		if (ownerScale != -1)
+		{
+			xScaleFinal = ownerScale * sign(owner.image_xscale);
+			yScaleFinal = ownerScale * sign(owner.image_yscale);
+		}
+		image_xscale = xScaleFinal;
+		image_yscale = yScaleFinal;
 	}
 }

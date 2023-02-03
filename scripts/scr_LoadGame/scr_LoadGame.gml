@@ -163,7 +163,7 @@ function scr_LoadGame(argument0)
 	global.eddSprayPaintUnlocked = ini_read_real("unlocks","eddSprayPaintUnlocked",false);
 	global.musiciansLightSprayPaintUnlocked = ini_read_real("unlocks","musiciansLightSprayPaintUnlocked",false);
 	
-	global.gambleFamiliarUnlocked = ini_read_real("unlocks","gambleFamiliarUnlocked",true);
+	global.gambleFamiliarUnlocked = ini_read_real("unlocks","gambleFamiliarUnlocked",false);
 	global.gambleFamiliarLevel = ini_read_real("unlocks","gambleFamiliarLevel",1);
 	global.gambleFamiliarExp = ini_read_real("unlocks","gambleFamiliarExp",0);
 	global.happyPeaFamiliarUnlocked = ini_read_real("unlocks","happyPeaFamiliarUnlocked",false);
@@ -181,6 +181,7 @@ function scr_LoadGame(argument0)
 	
 	global.cutterMotorCutterUpgradeUnlocked = ini_read_real("unlocks","cutterMotorCutterUpgradeUnlocked",false);
 	global.cutterPropellerWingUpgradeUnlocked = ini_read_real("unlocks","cutterPropellerWingUpgradeUnlocked",false);
+	global.cutterSpectralCutterUpgradeUnlocked = ini_read_real("unlocks","cutterSpectralCutterUpgradeUnlocked",false);
 	global.beamGoldenFlareUpgradeUnlocked = ini_read_real("unlocks","beamGoldenFlareUpgradeUnlocked",false);
 	global.mysticBeamVortexInAJarUpgradeUnlocked = ini_read_real("unlocks","mysticBeamVortexInAJarUpgradeUnlocked",false);
 	global.stoneRockCandyUpgradeUnlocked = ini_read_real("unlocks","stoneRockCandyUpgradeUnlocked",false);
@@ -336,7 +337,7 @@ function scr_LoadGame(argument0)
 	global.hatTypeSwordP1 = ini_read_real("playerCustomization","hatTypeSwordP1",abilityHatSkins.sword_kssu);
 	global.hatTypeParasolP1 = ini_read_real("playerCustomization","hatTypeParasolP1",abilityHatSkins.parasol_kssu);
 	global.hatTypeHammerP1 = ini_read_real("playerCustomization","hatTypeHammerP1",abilityHatSkins.hammer_kssu);
-	global.hatTypeBellP1 = ini_read_real("playerCustomization","hatTypeBellP1",abilityHatSkins.water_modern);
+	global.hatTypeBellP1 = ini_read_real("playerCustomization","hatTypeBellP1",abilityHatSkins.bell_modern);
 	global.hatTypeWaterP1 = ini_read_real("playerCustomization","hatTypeWaterP1",abilityHatSkins.water_modern);
 	global.hatTypeSleepP1 = ini_read_real("playerCustomization","hatTypeSleepP1",abilityHatSkins.sleep_kssu);
 	global.hatTypeScanP1 = ini_read_real("playerCustomization","hatTypeScanP1",abilityHatSkins.scan_kssu);
@@ -352,7 +353,7 @@ function scr_LoadGame(argument0)
 	global.hatTypeNinjaP2 = ini_read_real("playerCustomization","hatTypeNinjaP2",abilityHatSkins.ninja_kssu);
 	global.hatTypeBombP2 = ini_read_real("playerCustomization","hatTypeBombP2",abilityHatSkins.bomb_kssu);
 	global.hatTypeFireP2 = ini_read_real("playerCustomization","hatTypeFireP2",abilityHatSkins.fire_kssu);
-	global.hatTypeIceP2 = ini_read_real("playerCustomization","hatTypeIceP2",abilityHatSkins.spark_kssu);
+	global.hatTypeIceP2 = ini_read_real("playerCustomization","hatTypeIceP2",abilityHatSkins.ice_kssu);
 	global.hatTypeSparkP2 = ini_read_real("playerCustomization","hatTypeSparkP2",abilityHatSkins.spark_kssu);
 	global.hatTypeYoyoP2 = ini_read_real("playerCustomization","hatTypeYoyoP2",abilityHatSkins.yoyo_kssu);
 	global.hatTypeWheelP2 = ini_read_real("playerCustomization","hatTypeWheelP2",abilityHatSkins.wheel_kssu);
@@ -380,7 +381,7 @@ function scr_LoadGame(argument0)
 	global.hatTypeNinjaP3 = ini_read_real("playerCustomization","hatTypeNinjaP3",abilityHatSkins.ninja_kssu);
 	global.hatTypeBombP3 = ini_read_real("playerCustomization","hatTypeBombP3",abilityHatSkins.bomb_kssu);
 	global.hatTypeFireP3 = ini_read_real("playerCustomization","hatTypeFireP3",abilityHatSkins.fire_kssu);
-	global.hatTypeIceP3 = ini_read_real("playerCustomization","hatTypeIceP3",abilityHatSkins.spark_kssu);
+	global.hatTypeIceP3 = ini_read_real("playerCustomization","hatTypeIceP3",abilityHatSkins.ice_kssu);
 	global.hatTypeSparkP3 = ini_read_real("playerCustomization","hatTypeSparkP3",abilityHatSkins.spark_kssu);
 	global.hatTypeYoyoP3 = ini_read_real("playerCustomization","hatTypeYoyoP3",abilityHatSkins.yoyo_kssu);
 	global.hatTypeWheelP3 = ini_read_real("playerCustomization","hatTypeWheelP3",abilityHatSkins.wheel_kssu);
@@ -408,7 +409,7 @@ function scr_LoadGame(argument0)
 	global.hatTypeNinjaP4 = ini_read_real("playerCustomization","hatTypeNinjaP4",abilityHatSkins.ninja_kssu);
 	global.hatTypeBombP4 = ini_read_real("playerCustomization","hatTypeBombP4",abilityHatSkins.bomb_kssu);
 	global.hatTypeFireP4 = ini_read_real("playerCustomization","hatTypeFireP4",abilityHatSkins.fire_kssu);
-	global.hatTypeIceP4 = ini_read_real("playerCustomization","hatTypeIceP4",abilityHatSkins.spark_kssu);
+	global.hatTypeIceP4 = ini_read_real("playerCustomization","hatTypeIceP4",abilityHatSkins.ice_kssu);
 	global.hatTypeSparkP4 = ini_read_real("playerCustomization","hatTypeSparkP4",abilityHatSkins.spark_kssu);
 	global.hatTypeYoyoP4 = ini_read_real("playerCustomization","hatTypeYoyoP4",abilityHatSkins.yoyo_kssu);
 	global.hatTypeWheelP4 = ini_read_real("playerCustomization","hatTypeWheelP4",abilityHatSkins.wheel_kssu);
@@ -565,6 +566,7 @@ function scr_LoadGame(argument0)
 	
 	global.cutterPropellerWingUpgradeEquipped = ini_read_real("playerCustomization","cutterPropellerWingUpgradeEquipped",false);
 	global.cutterMotorCutterUpgradeEquipped = ini_read_real("playerCustomization","cutterMotorCutterUpgradeEquipped",false);
+	global.cutterSpectralCutterUpgradeEquipped = ini_read_real("playerCustomization","cutterSpectralCutterUpgradeEquipped",false);
 	global.beamGoldenFlareUpgradeEquipped = ini_read_real("playerCustomization","beamGoldenFlareUpgradeEquipped",false);
 	global.mysticBeamVortexInAJarUpgradeEquipped = ini_read_real("playerCustomization","mysticBeamVortexInAJarUpgradeEquipped",false);
 	global.stoneRockCandyUpgradeEquipped = ini_read_real("playerCustomization","stoneRockCandyUpgradeEquipped",false);
@@ -606,7 +608,6 @@ function scr_LoadGame(argument0)
 	global.bollCrossoverKeycard = ini_read_real("doNotEdit","B0",false);
 	
 	global.abilitySpraysKeycard = ini_read_real("doNotEdit","AS0",false);
-	global.permaHalloweenKeycard = ini_read_real("doNotEdit","PH0",false);
 	
 	ini_close();
 	

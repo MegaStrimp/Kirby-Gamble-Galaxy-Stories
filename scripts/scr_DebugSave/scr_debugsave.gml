@@ -148,6 +148,7 @@ function scr_DebugSave()
 	
 	global.cutterMotorCutterUpgradeUnlocked = true;
 	global.cutterPropellerWingUpgradeUnlocked = true;
+	global.cutterSpectralCutterUpgradeUnlocked = true;
 	global.beamGoldenFlareUpgradeUnlocked = true;
 	global.mysticBeamVortexInAJarUpgradeUnlocked = true;
 	global.stoneRockCandyUpgradeUnlocked = true;
@@ -225,7 +226,6 @@ function scr_DebugSave()
 	global.bollCrossoverKeycard = true;
 	
 	global.abilitySpraysKeycard = true;
-	global.permaHalloweenKeycard = true;
 	
 	global.demoBeatGreenGreens = true;
 	global.demoBeatBattleshipHalberd = true;

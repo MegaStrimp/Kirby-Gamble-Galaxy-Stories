@@ -2,9 +2,12 @@
   "resourceType": "GMPath",
   "resourceVersion": "1.0",
   "name": "pth_Enemy_GimYo",
-  "kind": 1,
   "closed": true,
-  "precision": 4,
+  "kind": 1,
+  "parent": {
+    "name": "Enemy",
+    "path": "folders/Paths/Enemy.yy",
+  },
   "points": [
     {"speed":145.0,"x":0.0,"y":0.0,},
     {"speed":190.0,"x":14.0,"y":14.0,},
@@ -17,8 +20,5 @@
     {"speed":240.0,"x":4.7043457,"y":-5.9400787,},
     {"speed":100.0,"x":-78.09979,"y":9.5,},
   ],
-  "parent": {
-    "name": "Enemy",
-    "path": "folders/Paths/Enemy.yy",
-  },
+  "precision": 4,
 }

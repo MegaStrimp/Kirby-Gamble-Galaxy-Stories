@@ -252,6 +252,11 @@ function scr_Player_Collision(argument0)
 	var clampYMin = obj_Camera.cameraY;
 	var clampYMax = (obj_Camera.cameraY + ((obj_Camera.viewHeight + 24) / obj_Camera.zoomFinal));
 	
+	var clampXMin = 0;
+	var clampXMax = room_width;
+	var clampYMin = 0;
+	var clampYMax = room_height + 24;
+	
 	if (global.cutscene)
 	{
 		var clampXMin = 0;

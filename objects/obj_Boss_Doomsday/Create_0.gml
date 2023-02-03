@@ -67,8 +67,6 @@ eyeY = y;
 
 bombThrown = false;
 attackCircleDashFollowPath = false;
-
-spawnedDeathFade = false;
 #endregion
 
 #region Timers

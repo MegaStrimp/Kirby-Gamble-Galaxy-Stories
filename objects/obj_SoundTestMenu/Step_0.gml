@@ -2,170 +2,148 @@
 
 if (!global.pause)
 {
-	//Inputs
-	
 	scr_Player_Inputs(0);
 	
-	//Variables
-	
-	menuOffset = 0;
-	stageOffset = 0;
-	battleOffset = 0;
-	cutsceneOffset = 0;
-	subgameOffset = 0;
-	miscOffset = 0;
-	
-	//Star Animation
-	
-	starIndex += .2;
-	if (starIndex >= 4) starIndex -= 4;
-	
-	//Select
-	
-	if (keyDownPressed)
+	if (!instance_exists(obj_Fade))
 	{
-		if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
-		audio_play_sound(snd_BossHealth,0,false);
-		selection += 1;
-	}
-	
-	if (keyUpPressed)
-	{
-		if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
-		audio_play_sound(snd_BossHealth,0,false);
-		selection -= 1;
-	}
-	
-	switch (page)
-	{
-		case "categorySelect":
-		if (selection < 0) selection += 6;
-		if (selection > 5) selection -= 6;
-		
 		switch (selection)
 		{
-			case 0:
-			menuOffset = 1;
-			break;
-			
-			case 1:
-			stageOffset = 1;
-			break;
-			
-			case 2:
-			battleOffset = 1;
-			break;
-			
-			case 3:
-			cutsceneOffset = 1;
-			break;
-			
-			case 4:
-			subgameOffset = 1;
-			break;
-			
-			case 5:
-			miscOffset = 1;
-			break;
-		}
-		
-		if ((keyJumpPressed) or (keyStartPressed))
-		{
-			if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
-			audio_play_sound(snd_ButtonYes,0,false);
-			page = "music";
-			soundCategory = selection;
-			textY = 147 - (selection * 36);
-			selection = 0;
-		}
-		
-		if (!instance_exists(obj_Fade))
-		{
-			if (keyAttackPressed)
+			case "categories":
+			if (keyUpPressed)
 			{
-				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
-				audio_play_sound(snd_ButtonNo,0,false);
-				goBack = true;
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				selection = "back";
 			}
-		}
-		
-		if (goBack)
-		{
-			if (audio_is_playing(global.musicPlaying)) audio_stop_sound(global.musicPlaying);
-			global.musicPlaying = -1;
-			var fade = instance_create_depth(x,y,-999,obj_Fade);
-			fade.targetRoom = rm_Collection;
-			goBack = false;
-		}
-		break;
-		
-		case "music":
-		if (selection < 0)
-		{
-			selection += array_length(soundTitle[soundCategory]);
-			textY = 147 - ((selection - 2) * 36);
-		}
-		if (selection > array_length(soundTitle[soundCategory]) - 1)
-		{
-			selection -= array_length(soundTitle[soundCategory]);
-			textY = 147 - ((selection + 2) * 36);
-		}
-		
-		soundOffset[soundCategory][selection] = 1;
-		
-		if ((keyJumpPressed) or (keyStartPressed))
-		{
-			if (soundUnlocked[soundCategory][selection])
+			if (keyDownPressed)
 			{
-				if ((audio_is_playing(soundIndex[soundCategory][selection])) and (!audio_is_paused(global.musicPlaying)))
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				selection = "tracks";
+			}
+			if (keyLeftPressed)
+			{
+				if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+				audio_play_sound(snd_ButtonChange,0,false);
+				soundCategory -= 1;
+				if (soundCategory < 0) soundCategory += 6;
+			}
+			if (keyRightPressed)
+			{
+				if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+				audio_play_sound(snd_ButtonChange,0,false);
+				soundCategory += 1;
+				if (soundCategory >= 6) soundCategory -= 6;
+			}
+			
+			if ((keyJumpPressed) or (keyStartPressed) or ((mouse_check_button_pressed(mb_left)) and ((point_in_rectangle(mouse_x,mouse_y,176,184,312,216)))))
+			{
+				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+				audio_play_sound(snd_ButtonYes,0,false);
+				select = true;
+			}
+			
+			if (select)
+			{
+				selection = "tracks";
+				select = false;
+			}
+			break;
+			
+			case "tracks":
+			if (keyUpPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				selection = "categories";
+			}
+			if (keyDownPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				selection = "back";
+			}
+			if (keyLeftPressed)
+			{
+				if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+				audio_play_sound(snd_ButtonChange,0,false);
+				trackSelection -= 1;
+				if (trackSelection < 0) trackSelection += soundsMax;
+			}
+			if (keyRightPressed)
+			{
+				if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+				audio_play_sound(snd_ButtonChange,0,false);
+				trackSelection += 1;
+				if (trackSelection >= soundsMax) trackSelection -= soundsMax;
+			}
+			
+			if ((keyJumpPressed) or (keyStartPressed) or ((mouse_check_button_pressed(mb_left)) and ((point_in_rectangle(mouse_x,mouse_y,176,231,312,263)))))
+			{
+				select = true;
+			}
+			
+			if (select)
+			{
+				if (audio_is_playing(soundPlayed))
 				{
 					if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 					audio_play_sound(snd_ButtonNo,0,false);
-					audio_pause_sound(global.musicPlaying);
-				}
-				else if (audio_is_paused(global.musicPlaying))
-				{
-					if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
-					audio_play_sound(snd_ButtonYes,0,false);
-					audio_resume_sound(global.musicPlaying);
+					audio_stop_sound(soundPlayed);
 				}
 				else
 				{
 					if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 					audio_play_sound(snd_ButtonYes,0,false);
-					if (audio_is_playing(global.musicPlaying)) audio_stop_sound(global.musicPlaying);
-					scr_PlayMusic(true,false,soundIndex[soundCategory][selection],0,true);
+					soundPlayed = audio_play_sound(soundTestArray[# trackSelection,1],0,false);
 				}
+				select = false;
 			}
-			else
+			break;
+			
+			case "back":
+			if (keyUpPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				selection = "tracks";
+			}
+			if (keyDownPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				selection = "categories";
+			}
+			
+			if ((keyJumpPressed) or (keyStartPressed))
 			{
 				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 				audio_play_sound(snd_ButtonNo,0,false);
+				select = true;
 			}
-		}
-		
-		if (!instance_exists(obj_Fade))
-		{
-			if (keyAttackPressed)
+			
+			if (select)
 			{
-				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
-				audio_play_sound(snd_ButtonNo,0,false);
-				goBack = true;
+				var fade = instance_create_depth(x,y,-999,obj_Fade);
+				fade.targetRoom = rm_Collection;
+				page = 1;
+				select = false;
 			}
+			break;
 		}
 		
-		if (goBack)
+		if (keyAttackPressed)
 		{
-			menuOffset = 0;
-			stageOffset = 0;
-			battleOffset = 0;
-			cutsceneOffset = 0;
-			subgameOffset = 0;
-			miscOffset = 0;
-			textY = 147 - (selection * 36);
-			page = "categorySelect";
-			goBack = false;
+			if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+			audio_play_sound(snd_ButtonNo,0,false);
+			goBack = true;
 		}
-		break;
+	}
+	
+	if (goBack)
+	{
+		var fade = instance_create_depth(x,y,-999,obj_Fade);
+		fade.targetRoom = rm_Collection;
+		goBack = false;
 	}
 }

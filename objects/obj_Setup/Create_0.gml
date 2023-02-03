@@ -79,6 +79,7 @@ enum playerStates
 	jetJump,
 	jetCharge,
 	warpStar,
+	insideMech,
     death
 }
 
@@ -974,6 +975,9 @@ global.fontMaykrBlue = font_add_sprite_ext(spr_Maykr_Font_Blue,"abcdefghijklmnop
 global.fontMaykrRed = font_add_sprite_ext(spr_Maykr_Font_Red,"abcdefghijklmnopqrstuvwxyz0123456789.!?/()",false,0);
 global.fontMaykrWhite = font_add_sprite_ext(spr_Maykr_Font_White,"abcdefghijklmnopqrstuvwxyz0123456789.!?/()",false,0);
 
+global.fontGalleryBig = font_add_sprite_ext(spr_Menu_Gallery_FontBig,"abcdefghijklmnopqrstuvwxyz-",true,1);
+global.fontGallerySmall = font_add_sprite_ext(spr_Menu_Gallery_FontSmall,"abcdefghijklmnopqrstuvwxyz-",true,1);
+
 global.fontBestiary = font_add_sprite_ext(spr_Menu_Collection_Bestiary_Font,"abcdefghijklmnopqrstuvwxyz.!?," + chr(34) + "'()/" + chr(92) + ":;#-0123456789",true,1);
 #endregion
 
@@ -1378,7 +1382,7 @@ subtitles[i] = "Strange Horizon, Ready to go!";
 i += 1;
 subtitles[i] = "Go to your nearest shoe store and order a cheeseburger if this game offends you in any way";
 i += 1;
-subtitles[i] = "Buy Crypt of the Necrodancer";
+subtitles[i] = "Play Crypt of the Necrodancer";
 i += 1;
 subtitles[i] = "Nananana. Meta Knight";
 i += 1;

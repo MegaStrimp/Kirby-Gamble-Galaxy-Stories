@@ -3,10 +3,10 @@
 #region Death
 if (death)
 {
-	if (!spawnedDeathFade)
+	if (!deathFlag)
 	{
 		if (audio_is_playing(mus_SMB_Bowser)) audio_stop_sound(mus_SMB_Bowser);
-		spawnedDeathFade = true;
+		deathFlag = true;
 		instance_create_depth(x,y,depth,obj_Boss_BowserImpostor_Death);
 	}
 	
@@ -205,6 +205,7 @@ if ((!global.pause) and (((!global.cutscene) or ((global.cutscene) and (phase ==
 			projectile.vsp = targetVsp;
 			projectile.scale = 2;
 			projectile.image_xscale = projectile.dirX * projectile.scale;
+			projectile.image_yscale = projectile.scale;
 			projectile.enemy = true;
 			projectile.destroyableByEnemy = false;
 			projectile.hurtsObject = false;

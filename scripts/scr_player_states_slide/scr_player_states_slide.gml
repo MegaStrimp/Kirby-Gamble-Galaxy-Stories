@@ -325,7 +325,7 @@ function scr_Player_States_Slide()
 									var stoneEnd = instance_create_depth(x,y,depth - 1,obj_Projectile_StoneStop);
 									stoneEnd.owner = id;
 									stoneEnd.abilityType = playerAbilities.stone;
-									stoneEnd.dmg = 205
+									stoneEnd.dmg = 20;
 									stoneEnd.enemy = false;
 									vsp = -(jumpspeed / 3);
 									grav = gravNormal;
@@ -514,7 +514,7 @@ function scr_Player_States_Slide()
 								var stoneEnd = instance_create_depth(x,y,depth - 1,obj_Projectile_StoneStop);
 								stoneEnd.owner = id;
 								stoneEnd.abilityType = playerAbilities.stone;
-								stoneEnd.dmg = 205
+								stoneEnd.dmg = 20;
 								stoneEnd.enemy = false;
 								vsp = -(jumpspeed / 3);
 								grav = gravNormal;

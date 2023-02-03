@@ -33,6 +33,13 @@ if (setupTimer == 0)
 		sprIdle = spr_Projectile_Bomb_Fetus;
 		sprBig = spr_Projectile_Bomb_Fetus;
 		break;
+		
+		//DL1 Poppy
+		
+		case 4:
+		sprIdle = spr_DL1_PoppyBrosSr_Bomb;
+		sprBig = spr_DL1_PoppyBrosSr_Bomb;
+		break;
 	}
 	
 	if (hasHoming)

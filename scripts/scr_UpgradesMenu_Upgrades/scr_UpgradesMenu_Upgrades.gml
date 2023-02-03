@@ -59,6 +59,23 @@ function scr_UpgradesMenu_Upgrades()
 	i += 1;
 	#endregion
 	
+	#region Spectral Cutter
+	upgradesArray[# i,0] = abilityUpgrades.spectralCutter;
+	upgradesArray[# i,1] = spr_Menu_Upgrades_SpectralCutter;
+	upgradesArray[# i,2] = str("Upgrades.Spectral Cutter.Title");
+	upgradesArray[# i,3] = str("Upgrades.Spectral Cutter.Description");
+	upgradesArray[# i,4] = global.cutterSpectralCutterUpgradeUnlocked;
+	upgradesArray[# i,5] = str("Upgrades.Spectral Cutter.Unlock Method");
+	upgradesArray[# i,6] = 240 + ((i - upgradeSelection) * 82);
+	upgradesArray[# i,7] = 0;
+	upgradesArray[# i,8] = 1;
+	upgradesArray[# i,9] = 1;
+	upgradesArray[# i,10] = global.cutterSpectralCutterUpgradeEquipped;
+	upgradesArray[# i,11] = make_color_rgb(255,255,102);
+	upgradesArray[# i,12] = spr_AbilityStar_Cutter;
+	i += 1;
+	#endregion
+	
 	#region Golden Flare
 	upgradesArray[# i,0] = abilityUpgrades.goldenFlare;
 	upgradesArray[# i,1] = spr_Menu_Upgrades_GoldenFlare;
@@ -72,7 +89,7 @@ function scr_UpgradesMenu_Upgrades()
 	upgradesArray[# i,9] = 1;
 	upgradesArray[# i,10] = global.beamGoldenFlareUpgradeEquipped;
 	upgradesArray[# i,11] = make_color_rgb(248,216,96);
-	upgradesArray[# i,12] = spr_AbilityStar_Normal;
+	upgradesArray[# i,12] = spr_AbilityStar_Beam;
 	i += 1;
 	#endregion
 	
@@ -155,7 +172,7 @@ function scr_UpgradesMenu_Upgrades()
 	upgradesArray[# i,7] = 0;
 	upgradesArray[# i,8] = 1;
 	upgradesArray[# i,9] = 1;
-	upgradesArray[# i,10] = global.stoneCowDollUpgradeEquipped;
+	upgradesArray[# i,10] = global.ufoCowDollUpgradeEquipped;
 	upgradesArray[# i,11] = make_color_rgb(255,104,177);
 	upgradesArray[# i,12] = spr_AbilityStar_Ufo;
 	i += 1;

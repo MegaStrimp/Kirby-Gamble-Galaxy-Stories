@@ -7,6 +7,7 @@
 * Always compare player mask number to the base sprite number. If there's any missing, make masks of them
 * Always check scr_CharacterSelectMenu_Sprays as you add new sprays AND characters
 * Always check scr_CharacterSelectMenu_Characters as you add new characters
+* Always check scr_SaveGame requirements as you change scr_LoadGame values
 
 * Bandit Dee palette index is set to spr_WaddleDee_Alien_Palette_Graylien for now
 * Waddle Dee skin slide sprites are set to the base skin

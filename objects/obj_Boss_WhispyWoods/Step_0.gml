@@ -3,9 +3,9 @@
 #region Death
 if (death)
 {
-	if (!spawnedDeathFade)
+	if (!deathFlag)
 	{
-		spawnedDeathFade = true;
+		deathFlag = true;
 		global.demoBeatGreenGreens = true;
 		var fade = instance_create_depth(x,y,-999,obj_FadeTimer);
 		fade.alphaSpd = .005;

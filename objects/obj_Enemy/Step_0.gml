@@ -77,6 +77,11 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 		}
 	}
 	
+	if (gravMinLimit)
+	{
+		vsp = min(0,vsp);
+	}
+	
 	//Knockback
 	
 	if (knockbackX >= decel) knockbackX -= decel;
@@ -815,169 +820,172 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 	
 	//Hurt
 	
-	if ((!hurtable) and (collisionHitbox == -1))
+	if (collisionHitbox == -1)
 	{
-		with (obj_Projectile)
+		if (!hurtable)
 		{
-			if (place_meeting(x,y,other))
+			with (obj_Projectile)
 			{
-				if (hsp == 0)
+				if (place_meeting(x,y,other))
 				{
-					if (x < other.x) other.projectileHitKnockbackDir = -1;
-				}
-				else
-				{
-					other.projectileHitKnockbackDir = -sign(hsp);
-				}
-				if ((destroyableByEnemy) and (owner != other) and (!enemy))
-				{
-					if (particleOnHit)
+					if (hsp == 0)
 					{
-						var particle = instance_create_depth(x,y,depth,obj_Particle);
-						particle.sprite_index = particleOnHitSpr;
-						particle.dir = dirX;
-						particle.destroyAfterAnimation = true;
+						if (x < other.x) other.projectileHitKnockbackDir = -1;
 					}
-				
-					if (deathParticlesOnHit)
+					else
 					{
-						var particle = instance_create_depth(x,y,depth,obj_DeathParticles);
-						particle.state = deathParticlesOnHitNumber;
-						particle.dir = dirX;
+						other.projectileHitKnockbackDir = -sign(hsp);
 					}
-				
-					if (objectOnHit)
+					if ((destroyableByEnemy) and (owner != other) and (!enemy))
 					{
-						var proj = instance_create_depth(x,y,depth,objectOnHitObj);
-						if (isBoss)
+						if (particleOnHit)
 						{
-							proj.isBoss = isBoss;
-							proj.owner = owner;
+							var particle = instance_create_depth(x,y,depth,obj_Particle);
+							particle.sprite_index = particleOnHitSpr;
+							particle.dir = dirX;
+							particle.destroyAfterAnimation = true;
 						}
-						if (objectOnHitDmg != -1) proj.dmg = objectOnHitDmg;
-						if (objectOnHitObj == obj_Projectile_ExplosionMask)
+				
+						if (deathParticlesOnHit)
 						{
-							proj.enemy = enemy;
-							proj.hurtsEnemy = !enemy;
-							proj.hurtsPlayer = enemy;
-							if (object_index == obj_Projectile_DoomsdayBomb)
+							var particle = instance_create_depth(x,y,depth,obj_DeathParticles);
+							particle.state = deathParticlesOnHitNumber;
+							particle.dir = dirX;
+						}
+				
+						if (objectOnHit)
+						{
+							var proj = instance_create_depth(x,y,depth,objectOnHitObj);
+							if (isBoss)
 							{
-								proj.explosionIndex = 1;
-								proj.showHitbox = false;
+								proj.isBoss = isBoss;
+								proj.owner = owner;
 							}
-							if (object_index == obj_Projectile_Bomb)
+							if (objectOnHitDmg != -1) proj.dmg = objectOnHitDmg;
+							if (objectOnHitObj == obj_Projectile_ExplosionMask)
 							{
-								if (audio_is_playing(snd_BombExplode)) audio_stop_sound(snd_BombExplode);
-								audio_play_sound(snd_BombExplode,0,false);
-								if (hasMagma)
+								proj.enemy = enemy;
+								proj.hurtsEnemy = !enemy;
+								proj.hurtsPlayer = enemy;
+								if (object_index == obj_Projectile_DoomsdayBomb)
 								{
-									for (var i = 0; i < 3; i++)
+									proj.explosionIndex = 1;
+									proj.showHitbox = false;
+								}
+								if (object_index == obj_Projectile_Bomb)
+								{
+									if (audio_is_playing(snd_BombExplode)) audio_stop_sound(snd_BombExplode);
+									audio_play_sound(snd_BombExplode,0,false);
+									if (hasMagma)
 									{
-										proj = instance_create_depth(x + ((i - 1) * 15),y - 4,depth,obj_Projectile_SmallFire);
-										proj.owner = id;
-										proj.dmg = 8;
-										proj.enemy = false;
-										proj.destroyableByWall = false;
-										proj.destroyableByEnemy = false;
-										proj.destroyableByObject = false;
+										for (var i = 0; i < 3; i++)
+										{
+											proj = instance_create_depth(x + ((i - 1) * 15),y - 4,depth,obj_Projectile_SmallFire);
+											proj.owner = id;
+											proj.dmg = 8;
+											proj.enemy = false;
+											proj.destroyableByWall = false;
+											proj.destroyableByEnemy = false;
+											proj.destroyableByObject = false;
+										}
 									}
 								}
+								else
+								{
+									if (audio_is_playing(snd_Explosion1)) audio_stop_sound(snd_Explosion1);
+									audio_play_sound(snd_Explosion1,0,false);
+								}
+								var explosion = instance_create_depth(x,y,depth,obj_DeathParticles);
+								explosion.state = "explosion1";
 							}
-							else
-							{
-								if (audio_is_playing(snd_Explosion1)) audio_stop_sound(snd_Explosion1);
-								audio_play_sound(snd_Explosion1,0,false);
-							}
-							var explosion = instance_create_depth(x,y,depth,obj_DeathParticles);
-							explosion.state = "explosion1";
 						}
+						instance_destroy();
 					}
-					instance_destroy();
 				}
 			}
 		}
-	}
-	else if ((!invincible) and (hp > 0))
-	{
-		with (obj_Projectile)
+		else if ((!invincible) and (hp > 0))
 		{
-			if (place_meeting(x,y,other))
+			with (obj_Projectile)
 			{
-				scr_Enemy_Hurt(other,id);
-			
-				if ((destroyableByEnemy) and (owner != other) and (!enemy))
+				if (place_meeting(x,y,other))
 				{
-					if (particleOnHit)
+					scr_Enemy_Hurt(other,id);
+			
+					if ((destroyableByEnemy) and (owner != other) and (!enemy))
 					{
-						var particle = instance_create_depth(x,y,depth,obj_Particle);
-						particle.sprite_index = particleOnHitSpr;
-						particle.dir = dirX;
-						particle.destroyAfterAnimation = true;
-					}
-				
-					if (deathParticlesOnHit)
-					{
-						var particle = instance_create_depth(x,y,depth,obj_DeathParticles);
-						particle.state = deathParticlesOnHitNumber;
-						particle.dir = dirX;
-					}
-				
-					if (objectOnHit)
-					{
-						var proj = instance_create_depth(x,y,depth,objectOnHitObj);
-						if (isBoss)
+						if (particleOnHit)
 						{
-							proj.isBoss = isBoss;
-							proj.owner = owner;
+							var particle = instance_create_depth(x,y,depth,obj_Particle);
+							particle.sprite_index = particleOnHitSpr;
+							particle.dir = dirX;
+							particle.destroyAfterAnimation = true;
 						}
-						if (objectOnHitDmg != -1) proj.dmg = objectOnHitDmg;
-						if (objectOnHitObj == obj_Projectile_ExplosionMask)
+				
+						if (deathParticlesOnHit)
 						{
-							if (enemy)
+							var particle = instance_create_depth(x,y,depth,obj_DeathParticles);
+							particle.state = deathParticlesOnHitNumber;
+							particle.dir = dirX;
+						}
+				
+						if (objectOnHit)
+						{
+							var proj = instance_create_depth(x,y,depth,objectOnHitObj);
+							if (isBoss)
 							{
-								proj.enemy = true;
-								proj.hurtsEnemy = false;
-								proj.hurtsPlayer = true;
+								proj.isBoss = isBoss;
+								proj.owner = owner;
 							}
-							else
+							if (objectOnHitDmg != -1) proj.dmg = objectOnHitDmg;
+							if (objectOnHitObj == obj_Projectile_ExplosionMask)
 							{
-								proj.enemy = false;
-								proj.hurtsEnemy = true;
-								proj.hurtsPlayer = false;
-							}
-							if (object_index == obj_Projectile_DoomsdayBomb)
-							{
-								proj.explosionIndex = 1;
-								proj.showHitbox = false;
-							}
-							if (object_index == obj_Projectile_Bomb)
-							{
-								if (audio_is_playing(snd_BombExplode)) audio_stop_sound(snd_BombExplode);
-								audio_play_sound(snd_BombExplode,0,false);
-								if (hasMagma)
+								if (enemy)
 								{
-									for (var i = 0; i < 3; i++)
+									proj.enemy = true;
+									proj.hurtsEnemy = false;
+									proj.hurtsPlayer = true;
+								}
+								else
+								{
+									proj.enemy = false;
+									proj.hurtsEnemy = true;
+									proj.hurtsPlayer = false;
+								}
+								if (object_index == obj_Projectile_DoomsdayBomb)
+								{
+									proj.explosionIndex = 1;
+									proj.showHitbox = false;
+								}
+								if (object_index == obj_Projectile_Bomb)
+								{
+									if (audio_is_playing(snd_BombExplode)) audio_stop_sound(snd_BombExplode);
+									audio_play_sound(snd_BombExplode,0,false);
+									if (hasMagma)
 									{
-										proj = instance_create_depth(x + ((i - 1) * 15),y - 4,depth,obj_Projectile_SmallFire);
-										proj.owner = id;
-										proj.dmg = 8;
-										proj.enemy = false;
-										proj.destroyableByWall = false;
-										proj.destroyableByEnemy = false;
-										proj.destroyableByObject = false;
+										for (var i = 0; i < 3; i++)
+										{
+											proj = instance_create_depth(x + ((i - 1) * 15),y - 4,depth,obj_Projectile_SmallFire);
+											proj.owner = id;
+											proj.dmg = 8;
+											proj.enemy = false;
+											proj.destroyableByWall = false;
+											proj.destroyableByEnemy = false;
+											proj.destroyableByObject = false;
+										}
 									}
 								}
+								else
+								{
+									if (audio_is_playing(snd_Explosion1)) audio_stop_sound(snd_Explosion1);
+									audio_play_sound(snd_Explosion1,0,false);
+								}
+								var explosion = instance_create_depth(x,y,depth,obj_DeathParticles);
+								explosion.state = "explosion1";
 							}
-							else
-							{
-								if (audio_is_playing(snd_Explosion1)) audio_stop_sound(snd_Explosion1);
-								audio_play_sound(snd_Explosion1,0,false);
-							}
-							var explosion = instance_create_depth(x,y,depth,obj_DeathParticles);
-							explosion.state = "explosion1";
 						}
+						instance_destroy();
 					}
-					instance_destroy();
 				}
 			}
 		}

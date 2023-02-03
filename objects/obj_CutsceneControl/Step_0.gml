@@ -438,18 +438,19 @@ long distances quickly?";
 				var array = 0;
 				var dialogue = instance_create_depth(0,0,-998,obj_Dialogue);
 				dialogue.owner = id;
+				dialogue.paletteIndex = targetPalette;
 				dialogue.changeOwnerState = true;
 				var text = "My mommy doesnt allow me to go to Whispys Forest...";
-				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_StarryChild,spr_Hud_Dialogue_Portrait_WaddleDee_Normal,snd_TextGamble);
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_StarryChild,spr_Hud_Dialogue_Portrait_BebuDee_Normal,snd_TextGamble);
 				array += 1;
 				text = "But I am sooo curious about what happened.";
-				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_StarryChild,spr_Hud_Dialogue_Portrait_WaddleDee_Normal,snd_TextGamble);
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_StarryChild,spr_Hud_Dialogue_Portrait_BebuDee_Normal,snd_TextGamble);
 				array += 1;
 				text = "At least I have these apples from the forest!";
-				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_StarryChild,spr_Hud_Dialogue_Portrait_WaddleDee_Normal,snd_TextGamble);
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_StarryChild,spr_Hud_Dialogue_Portrait_BebuDee_Normal,snd_TextGamble);
 				array += 1;
 				text = "Mmm so yummy!";
-				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_StarryChild,spr_Hud_Dialogue_Portrait_WaddleDee_Normal,snd_TextGamble);
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_StarryChild,spr_Hud_Dialogue_Portrait_BebuDee_Normal,snd_TextGamble);
 				break;
 				
 				case 2:

@@ -27,7 +27,7 @@ button.image_index = 0;
 button.state = "keycardMenu";
 button.index = "upload";
 
-for (var i = 0; i < 7; i++)
+for (var i = 0; i < keycardsMax; i++)
 {
 	var button = instance_create_depth(keycardArray[# i,2],keycardArray[# i,3],depth - 1,obj_Menu_Button);
 	button.owner = id;

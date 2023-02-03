@@ -51,6 +51,7 @@ collisionX = -1;
 collisionY = -1;
 stopRotationAfterCollision = false;
 hasAfterimage = false;
+blendMode = bm_normal;
 
 //Timers
 

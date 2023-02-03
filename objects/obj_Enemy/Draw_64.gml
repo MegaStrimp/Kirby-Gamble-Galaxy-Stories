@@ -67,6 +67,9 @@ if (hbActive)
 		if (!global.pause) healthbarBackHp = lerp(healthbarBackHp,bossHbHp,.025);
 		
 		if (sprBossIcon != -1) draw_sprite(sprBossIcon,0,287,6);
+		if ((global.shaders) and (hbPalette != -1)) pal_swap_set(hbPalette,1,false);
+		draw_sprite_ext(sprite_index,image_index,x + ((canShakeX) * drawShakeX),y + ((canShakeY) * drawShakeY),image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle,image_blend,image_alpha);
+		if ((global.shaders) and (hbPalette != -1)) pal_swap_reset();
 		draw_sprite(spr_Healthbar_NESBoss_Bg,0,311,18);
 		draw_sprite_part(spr_Healthbar_NESBoss_InnerBack,0,0,0,sprite_get_width(spr_Healthbar_NESBoss_InnerBack) * (healthbarBackHp / hpMax),sprite_get_height(spr_Healthbar_NESBoss_InnerBack),311,18);
 		draw_sprite_part(spr_Healthbar_NESBoss_InnerFront,0,0,0,sprite_get_width(spr_Healthbar_NESBoss_InnerFront) * (bossHbHp / hpMax),sprite_get_height(spr_Healthbar_NESBoss_InnerFront),311,18);

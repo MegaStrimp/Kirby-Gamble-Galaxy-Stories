@@ -59,7 +59,12 @@ if (sprBackground[array] != -1)
 
 //Draw Portrait
 
-if (sprPortrait[array] != -1) draw_sprite(sprPortrait[array],0,dialogueX + 10,dialogueY - 10);
+if (sprPortrait[array] != -1)
+{
+	if ((global.shaders) and (paletteIndex != -1)) pal_swap_set(paletteIndex,1,false);
+	draw_sprite(sprPortrait[array],0,dialogueX + 10,dialogueY - 10);
+	if ((global.shaders) and (paletteIndex != -1)) pal_swap_reset();
+}
 
 //Draw Text
 

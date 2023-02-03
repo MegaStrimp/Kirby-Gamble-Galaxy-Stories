@@ -63,6 +63,10 @@ if (!global.pause)
 				global.cutterPropellerWingUpgradeEquipped = !global.cutterPropellerWingUpgradeEquipped;
 				break;
 				
+				case abilityUpgrades.spectralCutter:
+				global.cutterSpectralCutterUpgradeEquipped = !global.cutterSpectralCutterUpgradeEquipped;
+				break;
+				
 				case abilityUpgrades.goldenFlare:
 				global.beamGoldenFlareUpgradeEquipped = !global.beamGoldenFlareUpgradeEquipped;
 				break;
@@ -163,6 +167,23 @@ if (!global.pause)
 		var fade = instance_create_depth(x,y,-999,obj_Fade);
 		fade.targetRoom = rm_Collection;
 		goBack = false;
+	}
+	#endregion
+	
+	#region Particle Timer
+	if (particleTimer > 0)
+	{
+		particleTimer -= 1;
+	}
+	else if (particleTimer == 0)
+	{
+		var par = instance_create_depth(240 + random_range(-10,10),0 + random_range(0,10),depth + 1,obj_Particle);
+		par.sprite_index = spr_Particle_Lamp;
+		par.hsp = random_range(-.2,.2);
+		par.vsp = random_range(.2,1);
+		par.alphaSpd = random_range(-.035,-.008);
+		par.blendMode = bm_add;
+		particleTimer = particleTimerMax;
 	}
 	#endregion
 }

@@ -168,11 +168,6 @@ if (!global.pause)
 			break;
 			
 			case 1:
-			if ((selection != "artwork") and (mouse_check_button_pressed(mb_left)) and ((point_in_rectangle(mouse_x,mouse_y,149,38,331,190))))
-			{
-				selection = "artwork";
-			}
-			
 			switch (selection)
 			{
 				case "artwork":
@@ -282,14 +277,20 @@ if (!global.pause)
 				}
 				break;
 			}
-		
+			
+			if ((selection != "artwork") and (mouse_check_button_pressed(mb_left)) and ((point_in_rectangle(mouse_x,mouse_y,149,38,331,190))))
+			{
+				audio_play_sound(snd_BossHealth,0,false);
+				selection = "artwork";
+			}
+			
 			if (keyAttackPressed)
 			{
 				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 				audio_play_sound(snd_ButtonNo,0,false);
 				goBack = true;
 			}
-		
+			
 			if (goBack)
 			{
 				artworkX = 240;

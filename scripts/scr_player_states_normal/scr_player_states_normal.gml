@@ -858,9 +858,13 @@ function scr_Player_States_Normal()
 								projectile.dirX = dir;
 								projectile.image_xscale = projectile.dirX;
 								projectile.enemy = false;
-								projectile.destroyableByEnemy = false;
 								projectile.destroyableByObject = false;
 								projectile.player = player;
+								if (cutterSpectralCutterUpgrade)
+								{
+									projectile.destroyableByEnemy = false;
+									projectile.image_alpha = .5;
+								}
 								attackable = false;
 							}
 						}
@@ -888,6 +892,10 @@ function scr_Player_States_Normal()
 								projectile.player = player;
 								projectile.angleSpd = -30;
 								projectile.charge = true;
+								if (cutterSpectralCutterUpgrade)
+								{
+									projectile.image_alpha = .5;
+								}
 								attackable = false;
 							}
 						}
@@ -1847,7 +1855,7 @@ function scr_Player_States_Normal()
 								var stoneEnd = instance_create_depth(x,y,depth - 1,obj_Projectile_StoneStop);
 								stoneEnd.owner = id;
 								stoneEnd.abilityType = playerAbilities.stone;
-								stoneEnd.dmg = 205
+								stoneEnd.dmg = 20;
 								stoneEnd.enemy = false;
 								vsp = -(jumpspeed / 3);
 								grav = gravNormal;

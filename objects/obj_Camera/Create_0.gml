@@ -58,6 +58,8 @@ bossDeath = false;
 cameraTargetX = cameraX;
 cameraTargetY = cameraY;
 waterfallIndex = 0;
+gravMinLimit = false;
+gravMaxLimit = false;
 
 //Timers
 

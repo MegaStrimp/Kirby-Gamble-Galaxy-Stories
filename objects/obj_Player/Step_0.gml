@@ -150,7 +150,6 @@ and (!death))
 	else
 	{
 		audio_stop_all();
-		if (instance_exists(obj_Music)) instance_destroy(obj_Music);
 		audio_play_sound(snd_Hurt,0,false);
 		global.healthbarMarkedEnemy = -1;
 		death = true;
@@ -674,6 +673,12 @@ switch (state)
 	
     case (playerStates.warpStar):
 	scr_Player_States_WarpStar();
+	break;
+	
+	//Inside Mech
+	
+    case (playerStates.insideMech):
+	scr_Player_States_InsideMech();
 	break;
 	
 	//Death
@@ -4006,6 +4011,7 @@ else if (upgradeSetupTimer == 0)
 {
 	cutterMotorCutterUpgrade = global.cutterMotorCutterUpgradeEquipped;
 	cutterPropellerWingUpgrade = global.cutterPropellerWingUpgradeEquipped;
+	cutterSpectralCutterUpgrade = global.cutterSpectralCutterUpgradeEquipped;
 	beamGoldenFlareUpgrade = global.beamGoldenFlareUpgradeEquipped;
 	mysticBeamVortexInAJarUpgrade = global.mysticBeamVortexInAJarUpgradeEquipped;
 	stoneRockCandyUpgrade = global.stoneRockCandyUpgradeEquipped;

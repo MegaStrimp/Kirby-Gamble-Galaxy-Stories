@@ -16,6 +16,7 @@ enum abilityUpgrades
 {
 	motorCutter,
 	propellerWing,
+	spectralCutter,
 	goldenFlare,
 	vortexInAJar,
 	rockCandy,
@@ -34,6 +35,11 @@ enum abilityUpgrades
 	waddleBrella,
 	eggSoil
 }
+#endregion
+
+#region Timers
+particleTimerMax = 5;
+particleTimer = particleTimerMax;
 #endregion
 
 #region Buttons

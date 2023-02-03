@@ -79,11 +79,6 @@ if (!global.pause)
 					global.abilitySpraysKeycard = true;
 					keycardArray[# 5,1] = true;
 					break;
-					
-					case "55408":
-					global.permaHalloweenKeycard = true;
-					keycardArray[# 6,1] = true;
-					break;
 				}
 				scr_SaveGame(global.selectedSave);
 				file_text_close(file);
@@ -108,7 +103,7 @@ if (!global.pause)
 		}
 		if (keyRightPressed)
 		{
-			if (keycardSelection < keycardsMax)
+			if (keycardSelection < keycardsMax - 1)
 			{
 				keycardSelection += 1;
 			}

@@ -14,7 +14,7 @@ function scr_Gallery_Artwork_Vol1()
 	
 	if (ds_exists(artworkArray,ds_type_grid)) ds_grid_destroy(artworkArray);
 	
-	artworkArray = ds_grid_create(10,7);
+	artworkArray = ds_grid_create(99,7);
 	ds_grid_clear(artworkArray,-1);
 	
 	var i = 0;

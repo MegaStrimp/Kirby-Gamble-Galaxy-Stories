@@ -1,4 +1,4 @@
-///@description Wing Dash
+///@description Warp Star
 
 function scr_Player_States_WarpStar()
 {

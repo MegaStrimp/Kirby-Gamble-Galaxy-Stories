@@ -42,3 +42,17 @@ if ((state = playerStates.warpStar) and (instance_exists(warpStarIndex)))
 		break;
 	}
 }
+
+//Inside Mech
+
+if ((state = playerStates.insideMech) and (instance_exists(mechIndex)))
+{
+	switch (playerCharacter)
+	{
+		default:
+		x = mechIndex.x + 16 * mechIndex.dirX;
+		y = mechIndex.y - 36;
+		image_angle = mechIndex.image_angle;
+		break;
+	}
+}

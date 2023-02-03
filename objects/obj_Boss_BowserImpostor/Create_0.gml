@@ -12,8 +12,9 @@ gravLimitNormal = 5;
 #endregion
 
 #region Sprites
-sprBossIcon = spr_Healthbar_Boss_Icon_BowserImpostor;
-sprBossText = spr_Healthbar_Boss_Text_BowserImpostor;
+sprBossIcon = spr_Healthbar_Boss_Icon_SMB_BowserImpostor;
+sprBossText = spr_Healthbar_Boss_Text_SMB_BowserImpostor;
+hbPalette = spr_SMB_BowserImpostor_HBarPalette;
 
 mask_index = spr_SMB_BowserImpostor_Mask;
 
@@ -46,8 +47,6 @@ fireCountMax = 0;
 
 jumpCount = 0;
 jumpCountMax = 0;
-
-spawnedDeathFade = false;
 #endregion
 
 #region Timers

@@ -3,14 +3,14 @@
 #region Death
 if (death)
 {
-	if (!spawnedDeathFade)
+	if (!deathFlag)
 	{
 		if (audio_is_playing(mus_BossDoomsday)) audio_stop_sound(mus_BossDoomsday);
-		spawnedDeathFade = true;
 		var fade = instance_create_depth(x,y,-999,obj_FadeTimer);
 		fade.alphaSpd = .005;
 		fade.targetRoom = rm_Cutscene_BewareTheBeast;
 		fade.fadeTimer = 60;
+		deathFlag = true;
 	}
 	
 	path_end();

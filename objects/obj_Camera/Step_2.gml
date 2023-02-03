@@ -391,11 +391,15 @@ if ((!debugCamera) and (objectFollowing == -1))
 				if (instance_exists(obj_Player))
 				{
 					target = obj_Player;
+					with (target)
+					{
+						other.target = mechIndex;
+					}
 				
 					if (global.healthP1 != 0)
 					{
 						cameraTargetX = target.x;
-						if (target.finalCutterState != 3) cameraTargetY = target.y;
+						if !((target.object_index == obj_Player) and (target.finalCutterState == 3)) cameraTargetY = target.y;
 						cameraX = lerp(cameraX,cameraTargetX - ((viewWidth / zoomFinal) / 2),spd) + ((offsetX + bossOffsetX + cinematicXOffset) / zoomFinal);
 						cameraY = lerp(cameraY,cameraTargetY - ((viewHeight / zoomFinal) / 2),spd) + ((offsetY + bossOffsetY + cinematicYOffset) / zoomFinal);
 						
@@ -574,7 +578,20 @@ else
 	sShakeY = irandom_range(-shakeY,shakeY);
 }
 
-camera_set_view_pos(gameView,cameraX + sShakeX,cameraY + sShakeY);
+var cameraXFinal = cameraX + sShakeX;
+var cameraYFinal = cameraY + sShakeY;
+if (gravMinLimit)
+{
+	cameraXFinal = min(cameraXFinal,camera_get_view_x(gameView));
+	cameraYFinal = min(cameraYFinal,camera_get_view_y(gameView));
+}
+if (gravMaxLimit)
+{
+	cameraXFinal = max(cameraXFinal,camera_get_view_x(gameView));
+	cameraYFinal = max(cameraYFinal,camera_get_view_y(gameView));
+}
+
+camera_set_view_pos(gameView,cameraXFinal,cameraYFinal);
 camera_set_view_angle(gameView,halberdEscapeAngle);
 
 if (shakeX > 0)

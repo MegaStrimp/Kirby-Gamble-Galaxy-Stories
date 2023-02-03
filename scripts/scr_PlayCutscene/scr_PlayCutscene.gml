@@ -22,6 +22,7 @@ function scr_PlayCutscene(argument0)
 		case cutscenes.npc_GreenGreens_SignmasterDee:
 		global.cutscene = true;
 		cutsceneControl.stopsCutscene = true;
+		cutsceneControl.targetPalette = paletteIndex;
 		break;
 	}
 }

@@ -59,6 +59,7 @@ pausable = true;
 maxPixels = 411;
 modifier = "";
 dialogueFlowing = false;
+paletteIndex = -1;
 
 //Timers
 

@@ -31,6 +31,10 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		instance_destroy();
 	}
 	
+	//Animation
+	
+	image_speed = 1;
+	
 	//Sprite Timer
 	
 	if (spriteTimer > 0)
@@ -49,4 +53,8 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		}
 		spriteTimer = spriteTimerMax;
 	}
+}
+else
+{
+	image_speed = 0;
 }

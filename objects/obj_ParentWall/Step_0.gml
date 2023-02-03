@@ -380,11 +380,12 @@ else if (!platform)
 					instance_destroy();
 				}
 			}
-			else if ((!other.owner.invincible) and (other.owner.hp > 0))
+			else if ((other.owner.hurtable) and (!other.owner.invincible) and (other.owner.hp > 0))
 			{
 				scr_Enemy_Hurt(other.owner,id);
 			
-				if ((destroyableByEnemy) and (owner != other.owner) and (!other.owner.enemy))
+				//if ((destroyableByEnemy) and (owner != other.owner) and (!other.owner.enemy))
+				if (destroyableByEnemy)
 				{
 					if (particleOnHit)
 					{

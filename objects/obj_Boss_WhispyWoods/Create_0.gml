@@ -70,8 +70,6 @@ throwObjectCount = 0;
 bigAirpuffState = 0;
 
 inhaleState = 0;
-
-spawnedDeathFade = false;
 #endregion
 
 #region Timers
@@ -92,7 +90,9 @@ bigAirpuffTimer = -1;
 inhaleTimer = -1;
 #endregion
 
+#region Collision Hitbox
 collisionHitbox = instance_create_depth(x,y,depth,obj_Wall);
 collisionHitbox.owner = id;
 collisionHitbox.enemyCollisionHitbox = true;
 collisionHitbox.mask_index = sprTreeIdle;
+#endregion
