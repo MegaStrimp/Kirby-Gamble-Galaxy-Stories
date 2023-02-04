@@ -2926,6 +2926,7 @@ function scr_Player_States_Normal()
 								projectile.image_xscale = projectile.scale * projectile.dirX;
 								projectile.image_yscale = projectile.scale * projectile.dirY;
 								projectile.enemy = false;
+								projectile.paletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
 								attackable = false;
 							}
 						}
@@ -4128,7 +4129,7 @@ function scr_Player_States_Normal()
 				parJump.spdBuiltIn = 6;
 				parJump.fricSpd = .6;
 				parJump.direction = 90 + (20 * dir);
-				if ((carriedItem == carriedItems.none) and (playerAbility != playerAbilities.sword) and (playerAbility != playerAbilities.parasol) and (playerAbility != playerAbilities.hammer)) fallRoll = true;
+				if ((canFallRoll) and (carriedItem == carriedItems.none) and (playerAbility != playerAbilities.sword) and (playerAbility != playerAbilities.parasol) and (playerAbility != playerAbilities.hammer)) fallRoll = true;
 				sprite_index = sprJump;
 				image_index = 0;
 				vsp = -jumpspeed;

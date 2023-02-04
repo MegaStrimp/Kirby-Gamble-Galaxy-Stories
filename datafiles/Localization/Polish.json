@@ -914,6 +914,26 @@
             "Title": "Róża Czarodzieja"
         },
 		
+		"Blueberry":
+        {
+            "Title": ""
+        },
+		
+		"Sourlime":
+        {
+            "Title": ""
+        },
+		
+		"Mono":
+        {
+            "Title": ""
+        },
+		
+		"Bubblegum":
+        {
+            "Title": ""
+        },
+		
 		"Rocky Road":
         {
             "Title": "Kamienna Droga"
@@ -1054,6 +1074,16 @@
             "Title": "Bryza Pekińska"
         },
 		
+		"Dyna Blade":
+        {
+            "Title": ""
+        },
+		
+		"Nocturne Friend":
+        {
+            "Title": ""
+        },
+		
 		"Speed Machine":
         {
             "Title": "Maszyna Szybkości"
@@ -1087,6 +1117,11 @@
 		"Wagasa Dee":
         {
             "Title": "Parasol Dee"
+        },
+		
+		"Azure Bandanna":
+        {
+            "Title": ""
         },
 		
 		"Crushing Brown":

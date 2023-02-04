@@ -25,8 +25,19 @@ sprFoot = spr_HeavyLobster_Normal_Foot;
 sprFootAngled = spr_HeavyLobster_Normal_FootAngled;
 sprClaw = spr_HeavyLobster_Normal_Claw;
 sprClawAttack = spr_HeavyLobster_Normal_ClawAttack;
+sprEye = spr_HeavyLobster_Normal_Eye;
 
 mask_index = spr_HeavyLobster_Normal_Mask;
+#endregion
+
+#region Enums
+enum heavyLobsterStates
+{
+	normal,
+	duck,
+	dashAttack,
+	fireAttack
+}
 #endregion
 
 #region Other Variables
@@ -41,10 +52,13 @@ character = 0;
 scale = 1;
 dirX = 1;
 walkDirX = 1;
+owner = -1;
 player = 0;
-active = true;
+active = false;
 activeLerp = 0;
 attack = false;
+state = heavyLobsterStates.normal;
+eyeFlash = false;
 
 bodyX = x;
 bodyY = y;
@@ -78,6 +92,6 @@ clawBackY = y + 10;
 setupTimer = 0;
 footBackJumpTimer = -1;
 footBackJumpTimerMax = 3;
-footTurnTimerMax = 25;
+footTurnTimerMax = 20;
 footTurnTimer = footTurnTimerMax;
 #endregion

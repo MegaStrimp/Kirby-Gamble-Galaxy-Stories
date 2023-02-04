@@ -153,6 +153,34 @@ function scr_Customize_AbilityHats()
 	abilityHatPaintUnlocked[i][k][h] = true;
 	abilityHatPaintOffset[i][k][h] = 0;
 	abilityHatPaintOffsetLerp[i][k][h] = 0;
+	h += 1;
+	abilityHatPaintTitle[i][k][h] = str("Ability Hat Paints.Blueberry.Title");
+	abilityHatPaintValue[i][k][h] = abilityHatPaints.mysticBeam_ggs_blueberry;
+	abilityHatPaint[i][k][h] = spr_Kirby_AbilityHat_MysticBeam_GGS_Palette_Blueberry;
+	abilityHatPaintUnlocked[i][k][h] = true;
+	abilityHatPaintOffset[i][k][h] = 0;
+	abilityHatPaintOffsetLerp[i][k][h] = 0;
+	h += 1;
+	abilityHatPaintTitle[i][k][h] = str("Ability Hat Paints.Sourlime.Title");
+	abilityHatPaintValue[i][k][h] = abilityHatPaints.mysticBeam_ggs_sourlime;
+	abilityHatPaint[i][k][h] = spr_Kirby_AbilityHat_MysticBeam_GGS_Palette_Sourlime;
+	abilityHatPaintUnlocked[i][k][h] = true;
+	abilityHatPaintOffset[i][k][h] = 0;
+	abilityHatPaintOffsetLerp[i][k][h] = 0;
+	h += 1;
+	abilityHatPaintTitle[i][k][h] = str("Ability Hat Paints.Mono.Title");
+	abilityHatPaintValue[i][k][h] = abilityHatPaints.mysticBeam_ggs_mono;
+	abilityHatPaint[i][k][h] = spr_Kirby_AbilityHat_MysticBeam_GGS_Palette_Mono;
+	abilityHatPaintUnlocked[i][k][h] = true;
+	abilityHatPaintOffset[i][k][h] = 0;
+	abilityHatPaintOffsetLerp[i][k][h] = 0;
+	h += 1;
+	abilityHatPaintTitle[i][k][h] = str("Ability Hat Paints.Bubblegum.Title");
+	abilityHatPaintValue[i][k][h] = abilityHatPaints.mysticBeam_ggs_bubblegum;
+	abilityHatPaint[i][k][h] = spr_Kirby_AbilityHat_MysticBeam_GGS_Palette_Bubblegum;
+	abilityHatPaintUnlocked[i][k][h] = true;
+	abilityHatPaintOffset[i][k][h] = 0;
+	abilityHatPaintOffsetLerp[i][k][h] = 0;
 	#endregion
 	
 	#region Stone
@@ -804,6 +832,20 @@ function scr_Customize_AbilityHats()
 	abilityHatPaintUnlocked[i][k][h] = true;
 	abilityHatPaintOffset[i][k][h] = 0;
 	abilityHatPaintOffsetLerp[i][k][h] = 0;
+	h += 1;
+	abilityHatPaintTitle[i][k][h] = str("Ability Hat Paints.Dyna Blade.Title");
+	abilityHatPaintValue[i][k][h] = abilityHatPaints.wing_kssu_dynaBlade;
+	abilityHatPaint[i][k][h] = spr_Kirby_AbilityHat_Wing_KSSU_Palette_DynaBlade;
+	abilityHatPaintUnlocked[i][k][h] = true;
+	abilityHatPaintOffset[i][k][h] = 0;
+	abilityHatPaintOffsetLerp[i][k][h] = 0;
+	h += 1;
+	abilityHatPaintTitle[i][k][h] = str("Ability Hat Paints.Nocturne Friend.Title");
+	abilityHatPaintValue[i][k][h] = abilityHatPaints.wing_kssu_nocturneFriend;
+	abilityHatPaint[i][k][h] = spr_Kirby_AbilityHat_Wing_KSSU_Palette_NocturneFriend;
+	abilityHatPaintUnlocked[i][k][h] = true;
+	abilityHatPaintOffset[i][k][h] = 0;
+	abilityHatPaintOffsetLerp[i][k][h] = 0;
 	#endregion
 	
 	#region Jet
@@ -933,6 +975,13 @@ function scr_Customize_AbilityHats()
 	abilityHatPaintTitle[i][k][h] = str("Ability Hat Paints.Wagasa Dee.Title");
 	abilityHatPaintValue[i][k][h] = abilityHatPaints.parasol_kssu_wagasaDee;
 	abilityHatPaint[i][k][h] = spr_Kirby_AbilityHat_Parasol_KSSU_Palette_WagasaDee;
+	abilityHatPaintUnlocked[i][k][h] = true;
+	abilityHatPaintOffset[i][k][h] = 0;
+	abilityHatPaintOffsetLerp[i][k][h] = 0;
+	h += 1;
+	abilityHatPaintTitle[i][k][h] = str("Ability Hat Paints.Azure Bandanna.Title");
+	abilityHatPaintValue[i][k][h] = abilityHatPaints.parasol_kssu_azureBandanna;
+	abilityHatPaint[i][k][h] = spr_Kirby_AbilityHat_Parasol_KSSU_Palette_AzureBandanna;
 	abilityHatPaintUnlocked[i][k][h] = true;
 	abilityHatPaintOffset[i][k][h] = 0;
 	abilityHatPaintOffsetLerp[i][k][h] = 0;

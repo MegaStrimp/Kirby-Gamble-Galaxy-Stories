@@ -17,6 +17,7 @@ else if (setupTimer == 0)
 		sprFootAngled = spr_HeavyLobster_Normal_FootAngled;
 		sprClaw = spr_HeavyLobster_Normal_Claw;
 		sprClawAttack = spr_HeavyLobster_Normal_ClawAttack;
+		sprEye = spr_HeavyLobster_Normal_Eye;
 		
 		mask_index = spr_HeavyLobster_Normal_Mask;
 		break;

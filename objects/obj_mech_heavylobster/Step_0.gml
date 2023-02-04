@@ -65,31 +65,6 @@ if (!global.pause)
 	}
 	#endregion
 	
-	#region Movement
-	if ((!attack) and (active))
-	{
-		if (keyRightHold)
-		{
-			footTurnRecoil = true;
-			dirX = 1;
-			walkDirX = 1;
-			hsp = movespeed * walkDirX;
-		}
-		if (keyLeftHold)
-		{
-			footTurnRecoil = true;
-			dirX = -1;
-			walkDirX = -1;
-			hsp = movespeed * walkDirX;
-		}
-	}
-	
-	if ((attack) or (!active) or (((!keyRightHold) and (!keyLeftHold)) or ((keyRightHold) and (keyLeftHold))))
-	{
-		hsp = 0;
-	}
-	#endregion
-	
 	#region Gravity
 	if (vsp < gravLimit)
 	{
@@ -119,20 +94,122 @@ if (!global.pause)
 	}
 	#endregion
 	
-	#region Jump
-	if ((active) and (grounded) and (!wallAbove) and (keyJumpPressed))
+	#region Activate
+	if (!active)
 	{
-		footFrontVsp = -1.5;
-		footBackJumpTimer = footBackJumpTimerMax;
-		vsp -= jumpspeed;
+		with (obj_Player)
+		{
+			if ((place_meeting(x,y,other)) and (keyUpPressed))
+			{
+				other.active = true;
+				other.owner = id;
+				other.player = player;
+				mechIndex = other;
+				attackTimer = -1;
+				state = playerStates.insideMech;
+				
+			}
+		}
 	}
+	else
+	{
+		if (state == heavyLobsterStates.normal)
+		with (owner)
+		{
+			if (keySelectPressed)
+			{
+				other.owner = -1;
+				other.active = false;
+				dir = 1;
+				mechIndex = -1;
+				invincible = false;
+				vsp = -3;
+				jumpLimit = false;
+				jumpLimitTimer = jumpLimitTimerMax;
+				state = playerStates.normal;
+			}
+		}
+	}
+	#endregion
 	
-	footFrontXOffset = x + (-10 * dirX);
-	footBackXOffset = x + (-8 * dirX);
+	#region States
+	if (!active) state = heavyLobsterStates.normal;
+	
+	switch (state)
+	{
+		#region Normal
+		case heavyLobsterStates.normal:
+		#region Movement
+		if ((!attack) and (active))
+		{
+			if (keyRightHold)
+			{
+				footTurnRecoil = true;
+				dirX = 1;
+				walkDirX = 1;
+				hsp = movespeed * walkDirX;
+			}
+			if (keyLeftHold)
+			{
+				footTurnRecoil = true;
+				dirX = -1;
+				walkDirX = -1;
+				hsp = movespeed * walkDirX;
+			}
+		}
+		
+		if ((attack) or (!active) or (((!keyRightHold) and (!keyLeftHold)) or ((keyRightHold) and (keyLeftHold))))
+		{
+			hsp = 0;
+		}
+		#endregion
+		
+		#region Jump
+		if ((active) and (grounded) and (!wallAbove) and (keyJumpPressed))
+		{
+			footFrontVsp = -1.5;
+			footBackJumpTimer = footBackJumpTimerMax;
+			vsp -= jumpspeed;
+		}
+		
+		footFrontXOffset = x + (-10 * dirX);
+		footBackXOffset = x + (-8 * dirX);
+		#endregion
+		
+		#region Duck
+		if ((grounded) and (keyDownPressed))
+		{
+			state = heavyLobsterStates.duck;
+		}
+		#endregion
+		break;
+		#endregion
+		
+		#region Duck
+		case heavyLobsterStates.duck:
+		#region Back To Normal
+		if (keyDownReleased)
+		{
+			state = heavyLobsterStates.normal;
+		}
+		#endregion
+		break;
+		#endregion
+		
+		#region Dash Attack
+		case heavyLobsterStates.dashAttack:
+		break;
+		#endregion
+		
+		#region Fire Attack
+		case heavyLobsterStates.fireAttack:
+		break;
+		#endregion
+	}
 	#endregion
 	
 	#region Positions
-	activeLerp = lerp(activeLerp,!active,.2);
+	activeLerp = lerp(activeLerp,(!active) or (state == heavyLobsterStates.duck) or (state == heavyLobsterStates.dashAttack),.2);
 	
 	bodyX = x;
 	bodyY = lerp(bodyY,y + (activeLerp * 20),.2 + (!grounded * .2));
@@ -162,20 +239,15 @@ if (!global.pause)
 	
 	clawFrontXOffset = lerp(clawFrontXOffset,footTurn,.2);
 	clawFrontX = x + ((24 + (clawFrontXOffset * 6)) * dirX);
-	clawFrontY = lerp(clawFrontY,y + 19 + (activeLerp * 10),.2);
+	clawFrontY = lerp(clawFrontY,y + 19 + (activeLerp * 10),.2 + (!grounded * .2));
 	
 	clawBackXOffset = lerp(clawBackXOffset,!footTurn,.2);
 	clawBackX = x + ((24 + (clawBackXOffset * 6)) * dirX);
-	clawBackY = lerp(clawBackY,y + 10 + (activeLerp * 10),.2);
+	clawBackY = lerp(clawBackY,y + 10 + (activeLerp * 10),.2 + (!grounded * .2));
 	#endregion
 	
 	#region Horn Animation
 	if (hornIndex < sprite_get_number(sprHorns) - 1) hornIndex += sprite_get_speed(sprHorns) / 60;
-	#endregion
-	
-	#region Size
-	image_xscale = scale * dirX;
-	image_yscale = scale;
 	#endregion
 	
 	#region Foot Back Jump Timer
@@ -219,6 +291,11 @@ if (!global.pause)
 	
 	#region Collision
 	scr_Player_Collision(playerMechs.heavyLobster);
+	#endregion
+	
+	#region Size
+	image_xscale = scale * dirX;
+	image_yscale = scale;
 	#endregion
 	
 	#region Foot Vsp

@@ -415,19 +415,19 @@ function scr_Player_HatShadow(argument0,argument1)
 			switch (player)
 			{
 				case 0:
-				var altHatToCheck = global.hatTypeBeamP1;
+				var altHatToCheck = global.hatTypeMysticBeamP1;
 				break;
 				
 				case 1:
-				var altHatToCheck = global.hatTypeBeamP2;
+				var altHatToCheck = global.hatTypeMysticBeamP2;
 				break;
 				
 				case 2:
-				var altHatToCheck = global.hatTypeBeamP3;
+				var altHatToCheck = global.hatTypeMysticBeamP3;
 				break;
 				
 				case 3:
-				var altHatToCheck = global.hatTypeBeamP4;
+				var altHatToCheck = global.hatTypeMysticBeamP4;
 				break;
 			}
 			

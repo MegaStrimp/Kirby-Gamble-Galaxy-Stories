@@ -910,6 +910,26 @@
             "Title": "Gül Büyücüsü"
         },
 		
+		"Blueberry":
+        {
+            "Title": "Böğürtlen"
+        },
+		
+		"Sourlime":
+        {
+            "Title": "Ekşi Limon"
+        },
+		
+		"Mono":
+        {
+            "Title": "Mono"
+        },
+		
+		"Bubblegum":
+        {
+            "Title": "Sakız"
+        },
+		
 		"Rocky Road":
         {
             "Title": "Taşlı Yol"
@@ -1050,6 +1070,16 @@
             "Title": "Pekin Ördeği"
         },
 		
+		"Dyna Blade":
+        {
+            "Title": "Dyna Blade"
+        },
+		
+		"Nocturne Friend":
+        {
+            "Title": "Mor Arkadaş"
+        },
+		
 		"Speed Machine":
         {
             "Title": "Hız Makinesi"
@@ -1083,6 +1113,11 @@
 		"Wagasa Dee":
         {
             "Title": "Wagasa Dee"
+        },
+		
+		"Azure Bandanna":
+        {
+            "Title": "Mavi Bandana"
         },
 		
 		"Crushing Brown":

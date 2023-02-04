@@ -115,7 +115,7 @@ function scr_Player_ExecuteJump()
 		default:
 		if (audio_is_playing(snd_Jump)) audio_stop_sound(snd_Jump);
 		audio_play_sound(snd_Jump,0,false);
-		if ((carriedItem == carriedItems.none) and (playerAbility != playerAbilities.sword) and (playerAbility != playerAbilities.parasol) and (playerAbility != playerAbilities.hammer)) fallRoll = true;
+		if ((canFallRoll) and (carriedItem == carriedItems.none) and (playerAbility != playerAbilities.sword) and (playerAbility != playerAbilities.parasol) and (playerAbility != playerAbilities.hammer)) fallRoll = true;
 		sprite_index = sprJump;
 		image_index = 0;
 		vsp = -jumpspeed + (vspCollision / 2);

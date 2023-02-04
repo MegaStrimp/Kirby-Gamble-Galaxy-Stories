@@ -914,6 +914,26 @@
             "Title": "Rosa Mago"
         },
 		
+		"Blueberry":
+        {
+            "Title": ""
+        },
+		
+		"Sourlime":
+        {
+            "Title": ""
+        },
+		
+		"Mono":
+        {
+            "Title": ""
+        },
+		
+		"Bubblegum":
+        {
+            "Title": ""
+        },
+		
 		"Rocky Road":
         {
             "Title": "Rota Rochosa"
@@ -1054,6 +1074,16 @@
             "Title": "Brisa Pequim"
         },
 		
+		"Dyna Blade":
+        {
+            "Title": ""
+        },
+		
+		"Nocturne Friend":
+        {
+            "Title": ""
+        },
+		
 		"Speed Machine":
         {
             "Title": "Máquina Veloz"
@@ -1087,6 +1117,11 @@
 		"Wagasa Dee":
         {
             "Title": "Wagasa Dee"
+        },
+		
+		"Azure Bandanna":
+        {
+            "Title": ""
         },
 		
 		"Crushing Brown":

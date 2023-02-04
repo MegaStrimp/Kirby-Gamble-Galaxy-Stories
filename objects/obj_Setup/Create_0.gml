@@ -464,7 +464,14 @@ enum abilityHatPaints
 	scan_kssu_bitcrushed,
 	scan_kssu_militaryGreen,
 	crash_kssu_none,
-	mic_kssu_loudMike
+	mic_kssu_loudMike,
+	mysticBeam_ggs_blueberry,
+	mysticBeam_ggs_sourlime,
+	mysticBeam_ggs_mono,
+	mysticBeam_ggs_bubblegum,
+	parasol_kssu_azureBandanna,
+	wing_kssu_dynaBlade,
+	wing_kssu_nocturneFriend
 }
 
 enum damageTypes

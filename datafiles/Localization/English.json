@@ -924,6 +924,26 @@
             "Title": "Mage Rose"
         },
 		
+		"Blueberry":
+        {
+            "Title": "Blueberry"
+        },
+		
+		"Sourlime":
+        {
+            "Title": "Sourlime"
+        },
+		
+		"Mono":
+        {
+            "Title": "Mono"
+        },
+		
+		"Bubblegum":
+        {
+            "Title": "Bubblegum"
+        },
+		
 		"Rocky Road":
         {
             "Title": "Rocky Road"
@@ -1064,6 +1084,16 @@
             "Title": "Pekin Breeze"
         },
 		
+		"Dyna Blade":
+        {
+            "Title": "Dyna Blade"
+        },
+		
+		"Nocturne Friend":
+        {
+            "Title": "Nocturne Friend"
+        },
+		
 		"Speed Machine":
         {
             "Title": "Speed Machine"
@@ -1097,6 +1127,11 @@
 		"Wagasa Dee":
         {
             "Title": "Wagasa Dee"
+        },
+		
+		"Azure Bandanna":
+        {
+            "Title": "Azure Bandanna"
         },
 		
 		"Crushing Brown":

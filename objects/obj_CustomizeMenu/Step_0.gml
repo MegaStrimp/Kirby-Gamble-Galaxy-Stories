@@ -34,7 +34,7 @@ if (!global.pause)
 		{
 			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 			audio_play_sound(snd_BossHealth,0,false);
-			selection -= 5;
+			selection -= min(5,arrayLength);
 			textY = 147 - (selection * 36);
 			canAutoScrollTimer = canAutoScrollTimerMax;
 		}
@@ -43,7 +43,7 @@ if (!global.pause)
 		{
 			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 			audio_play_sound(snd_BossHealth,0,false);
-			selection += 5;
+			selection += min(5,arrayLength);
 			textY = 147 - (selection * 36);
 			canAutoScrollTimer = canAutoScrollTimerMax;
 		}
@@ -67,7 +67,7 @@ if (!global.pause)
 			{
 				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 				audio_play_sound(snd_BossHealth,0,false);
-				selection += (keyDownHold - keyUpHold) + ((keyRightHold - keyLeftHold) * 5);
+				selection += (keyDownHold - keyUpHold) + ((keyRightHold - keyLeftHold) * min(5,arrayLength));
 				textY = 147 - (selection * 36);
 				autoScrollTimer = autoScrollTimerMax;
 			}
@@ -2896,6 +2896,32 @@ if (!global.pause)
 							
 							case 3:
 							global.hatPaletteBeamMarxSoulP4 = playerHatPaint;
+							break;
+						}
+						break;
+					}
+					break;
+					
+					case playerAbilities.mysticBeam:
+					switch (playerHatSkin)
+					{
+						case abilityHatSkins.mysticBeam_ggs:
+						switch (selectedPlayer)
+						{
+							case 0:
+							global.hatPaletteMysticBeamGGSP1 = playerHatPaint;
+							break;
+							
+							case 1:
+							global.hatPaletteMysticBeamGGSP2 = playerHatPaint;
+							break;
+							
+							case 2:
+							global.hatPaletteMysticBeamGGSP3 = playerHatPaint;
+							break;
+							
+							case 3:
+							global.hatPaletteMysticBeamGGSP4 = playerHatPaint;
 							break;
 						}
 						break;

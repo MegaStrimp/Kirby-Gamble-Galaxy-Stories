@@ -525,6 +525,26 @@
         "Mage Rose": {
             "Title": "Rose mage"
         },
+		
+		"Blueberry":
+        {
+            "Title": ""
+        },
+		
+		"Sourlime":
+        {
+            "Title": ""
+        },
+		
+		"Mono":
+        {
+            "Title": ""
+        },
+		
+		"Bubblegum":
+        {
+            "Title": ""
+        },
         "Rocky Road": {
             "Title": "Route ardue"
         },
@@ -609,6 +629,16 @@
         "Pekin Breeze": {
             "Title": "Brise de Pékin"
         },
+		
+		"Dyna Blade":
+        {
+            "Title": ""
+        },
+		
+		"Nocturne Friend":
+        {
+            "Title": ""
+        },
         "Speed Machine": {
             "Title": "Machine de vitesse"
         },
@@ -629,6 +659,11 @@
         },
         "Wagasa Dee": {
             "Title": "Wagasa Dee"
+        },
+		
+		"Azure Bandanna":
+        {
+            "Title": ""
         },
         "Crushing Brown": {
             "Title": "Marron écrasant"

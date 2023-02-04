@@ -234,7 +234,9 @@ if ((hurt) and (invincibleFlash))
 var equipmentIndex = scr_Player_Equipment(playerAbility,playerCharacter);
 var equipmentDir = image_xscale;
 if (playerAbility == playerAbilities.ufo) equipmentDir = abs(image_xscale);
+if ((global.shaders) and (abilityHatPalette != -1)) pal_swap_set(abilityHatPalette,paletteFlash,false);
 if (equipmentIndex != -1) draw_sprite_ext(equipmentIndex,image_index,x + drawShakeX,y + drawShakeY,equipmentDir * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,image_alpha);
+if ((global.shaders) and (abilityHatPalette != -1)) pal_swap_reset();
 
 //Shake
 

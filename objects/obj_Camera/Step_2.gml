@@ -393,7 +393,7 @@ if ((!debugCamera) and (objectFollowing == -1))
 					target = obj_Player;
 					with (target)
 					{
-						other.target = mechIndex;
+						if ((instance_exists(mechIndex)) and (mechIndex != -1)) other.target = mechIndex;
 					}
 				
 					if (global.healthP1 != 0)

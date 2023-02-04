@@ -325,6 +325,8 @@ hatBackgroundImageIndexSpd = .25;
 hatFrontImageIndex = 0;
 hatFrontImageIndexSpd = .25;
 state = playerStates.normal;
+
+#region Attributes
 hasGravity = true;
 hasJumpLimit = true;
 canWalk = true;
@@ -332,9 +334,9 @@ canRun = true;
 canRunTurn = true;
 canJump = true;
 canMultiJump = false;
-multiJumpCounter = 0;
 multiJumpLimit = -1;
 canAutoJump = false;
+canFallRoll = true;
 canAttack = true;
 canDuck = true;
 canDuckHighJump = false;
@@ -344,11 +346,14 @@ canFloat = true;
 canEnter = true;
 canUfoFloat = false;
 canGetHurt = true;
+runImageSpeedIncrease = 0;
+#endregion
+
+multiJumpCounter = 0;
 run = false;
 runDoubleTap = 20;
 runParticleNum = 0;
 runCancelTimer = -1;
-runImageSpeedIncrease = 0;
 runTurn = false;
 runBuffer = 0;
 walkDuck = false;
