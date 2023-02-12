@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Menu",
-    "path": "folders/Objects/Gameplay/Menu.yy",
+    "name": "Main",
+    "path": "folders/Objects/Gameplay/Menu/Main.yy",
   },
   "parentObjectId": null,
   "persistent": false,

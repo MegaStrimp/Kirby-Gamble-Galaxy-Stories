@@ -3,6 +3,7 @@
 //Other Variables
 
 hudOffset = -250;
+menuIndex = 0;
 page = 0;
 curtainIndex = 0;
 artworkZoom = false;

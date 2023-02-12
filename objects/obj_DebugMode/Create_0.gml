@@ -70,7 +70,7 @@ enum debugObject
 	sirKibble,
 	gordo,
 	bloodGordo,
-	ghostGordo,
+	//ghostGordo,
 	waddleBlock,
 	shotzo,
 	mysticDoo,

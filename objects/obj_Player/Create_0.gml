@@ -20,7 +20,6 @@ instance_create_depth(x,y,-9999,obj_Dialogue);
 
 //Physics
 
-downHeld = 0;
 gravNormal = .23;
 gravStone = .7;
 gravWheel = .5;
@@ -171,6 +170,8 @@ sprHardSwallow = spr_Kirby_Normal_HardSwallow;
 sprAbilityChange = spr_Kirby_Normal_AbilityChange;
 sprWarpStar1 = spr_Kirby_Normal_WarpStar1;
 sprWarpStar2 = spr_Kirby_Normal_WarpStar2;
+sprWarpStar3 = spr_Kirby_Normal_WarpStar3;
+sprWarpStar4 = spr_Kirby_Normal_WarpStar4;
 sprGuard = spr_Kirby_Normal_Guard;
 sprGuardSlope = spr_Kirby_Normal_Guard_Slope;
 sprItemCarryThrow = spr_Kirby_Normal_ItemCarry_Throw;
@@ -492,6 +493,7 @@ inBackground = false;
 warpStarIndex = -1;
 mechIndex = -1;
 downHeld = 0;
+downHeldPlatformMax = 4;
 hasInvinCandy = false;
 invinCandyMask = -1;
 hasMintLeaf = false;

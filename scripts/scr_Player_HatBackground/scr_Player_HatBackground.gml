@@ -131,6 +131,14 @@ function scr_Player_HatBackground(argument0,argument1)
 					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_WarpStar1;
 					break;
 					
+					case sprWarpStar3:
+					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_WarpStar4;
+					break;
+					
 					case sprGuard:
 					hatBackgroundIndex = spr_Kirby_HatBackground_Fire_KSSU_Guard;
 					break;
@@ -388,6 +396,14 @@ function scr_Player_HatBackground(argument0,argument1)
 					
 					case sprWarpStar2:
 					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_WarpStar2;
+					break;
+					
+					case sprWarpStar3:
+					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					hatBackgroundIndex = spr_Kirby_HatBackground_Spark_KSSU_WarpStar4;
 					break;
 					
 					case sprGuard:

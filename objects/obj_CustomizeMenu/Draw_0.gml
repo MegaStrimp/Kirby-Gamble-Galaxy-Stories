@@ -2,7 +2,6 @@
 
 //Draw Hud
 
-hudOffset = lerp(hudOffset,0,.1);
 draw_sprite(spr_Menu_MainMenu_Hud_Customize,0,0 + hudOffset,0);
 
 //Draw Pages
@@ -98,11 +97,15 @@ switch (page)
 	}
 	
 	var sprayPaintCol = c_white;
+	var hatSkinCol = c_white;
+	var hatPaintCol = c_white;
 	if (!global.shaders) sprayPaintCol = c_dkgray;
+	if (abilityCount == 0) hatSkinCol = c_dkgray;
+	if ((!global.shaders) or (abilityCount == 0)) hatPaintCol = c_dkgray;
 	scr_Draw_Text_Color_Outline(26 + skinsOffsetLerp,75,strSkins,-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 	scr_Draw_Text_Color_Outline(26 + sprayPaintsOffsetLerp,111,strSprayPaints,-1,-1,sprayPaintCol,sprayPaintCol,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
-	scr_Draw_Text_Color_Outline(26 + hatSkinsOffsetLerp,147,strHatSkins,-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
-	scr_Draw_Text_Color_Outline(26 + hatPaintsOffsetLerp,183,strHatPaints,-1,-1,sprayPaintCol,sprayPaintCol,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	scr_Draw_Text_Color_Outline(26 + hatSkinsOffsetLerp,147,strHatSkins,-1,-1,hatSkinCol,hatSkinCol,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	scr_Draw_Text_Color_Outline(26 + hatPaintsOffsetLerp,183,strHatPaints,-1,-1,hatPaintCol,hatPaintCol,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 	scr_Draw_Text_Color_Outline(26 + familiarsOffsetLerp,219,strFamiliars,-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 	break;
 	#endregion

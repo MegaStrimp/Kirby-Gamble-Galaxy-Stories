@@ -87,7 +87,7 @@ if (!global.pause)
 				//demo = true;
 				if (demo)
 				{
-					fade.targetRoom = rm_StageSelect_Demo;
+					fade.targetRoom = rm_DemoStageSelect;
 				}
 				else
 				{

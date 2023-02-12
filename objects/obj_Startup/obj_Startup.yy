@@ -12,8 +12,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Menu",
-    "path": "folders/Objects/Gameplay/Menu.yy",
+    "name": "Setup",
+    "path": "folders/Objects/Gameplay/Menu/Setup.yy",
   },
   "parentObjectId": null,
   "persistent": false,

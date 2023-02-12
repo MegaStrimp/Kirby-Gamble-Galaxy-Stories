@@ -2,6 +2,10 @@
 
 if (!global.pause)
 {
+	#region Variables
+	hudOffset = lerp(hudOffset,0,.1);
+	#endregion
+	
 	#region Inputs
 	scr_Player_Inputs(0);
 	#endregion

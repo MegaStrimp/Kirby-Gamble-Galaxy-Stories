@@ -49,7 +49,7 @@ else if (stateTimer == 0)
 		global.pause = false;
 		var fade = instance_create_depth(x,y,-999,obj_Fade);
 		//fade.targetRoom = rm_StageSelect;
-		//fade.targetRoom = rm_StageSelect_Demo;
+		//fade.targetRoom = rm_DemoStageSelect;
 		fade.targetRoom = rm_MainMenu;
 		fade.pausable = false;
 		break;

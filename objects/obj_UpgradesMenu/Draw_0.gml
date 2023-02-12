@@ -8,7 +8,6 @@ draw_sprite(spr_Menu_Upgrades_Background_Light1,0,0,0);
 #endregion
 
 #region Draw Hud
-hudOffset = lerp(hudOffset,0,.1);
 draw_sprite(spr_Menu_MainMenu_Hud_Upgrades,0,0 + hudOffset,0);
 #endregion
 

@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Menu",
-    "path": "folders/Objects/Gameplay/Menu.yy",
+    "name": "Collection",
+    "path": "folders/Objects/Gameplay/Menu/Collection.yy",
   },
   "parentObjectId": null,
   "persistent": false,

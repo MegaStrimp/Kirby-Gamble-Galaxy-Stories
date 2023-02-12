@@ -2,7 +2,6 @@
 
 //Draw Hud
 
-hudOffset = lerp(hudOffset,0,.1);
 draw_sprite(spr_Menu_MainMenu_Hud_DeleteSave,0,0 + hudOffset,0);
 
 //Draw Text

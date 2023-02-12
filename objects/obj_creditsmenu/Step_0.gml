@@ -21,7 +21,7 @@ if (!global.pause)
 	if (goBack)
 	{
 		var fade = instance_create_depth(x,y,-999,obj_Fade);
-		//fade.targetRoom = rm_StageSelect_Demo;
+		//fade.targetRoom = rm_DemoStageSelect;
 		fade.targetRoom = rm_MainMenu;
 		fade.alphaSpd = .02;
 		goBack = false;

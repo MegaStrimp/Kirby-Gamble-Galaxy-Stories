@@ -253,6 +253,14 @@ function scr_Player_HatFront(argument0,argument1)
 					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_WarpStar2;
 					break;
 					
+					case sprWarpStar3:
+					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_WarpStar4;
+					break;
+					
 					case sprGuard:
 					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_Guard;
 					break;
@@ -343,6 +351,14 @@ function scr_Player_HatFront(argument0,argument1)
 					
 					case sprWarpStar2:
 					hatFrontIndex = spr_Kirby_HatFront_Water_Modern_WarpStar2;
+					break;
+					
+					case sprWarpStar3:
+					hatFrontIndex = spr_Kirby_HatFront_Water_Modern_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					hatFrontIndex = spr_Kirby_HatFront_Water_Modern_WarpStar4;
 					break;
 				}
 				break;

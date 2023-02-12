@@ -8,6 +8,7 @@ if (!global.pause)
 	
 	//Variables
 	
+	hudOffset = lerp(hudOffset,0,.1);
 	for (var i = 0; i < array_length(menuValue); i++) menuOffset[i] = 0;
 	
 	//Set Strings
@@ -84,7 +85,7 @@ if (!global.pause)
 			//demo = true;
 			if (demo)
 			{
-				fade.targetRoom = rm_StageSelect_Demo;
+				fade.targetRoom = rm_DemoStageSelect;
 			}
 			else
 			{
@@ -427,7 +428,7 @@ if (!global.pause)
 			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 			audio_play_sound(snd_BossHealth,0,false);
 			global.language = languageVal[subSelection];
-			obj_Polyglot.setLocale(languageArray[subSelection]);
+			obj_Polyglot.setLocale(global.languageArray[subSelection]);
 			setStrings = true;
 		}
 		

@@ -42,7 +42,7 @@ grounded = false;
 if (place_meeting(x,y + 1,obj_ParentWall))
 {
 	var collidingWall = instance_place(x,y + 1,obj_ParentWall);
-	if ((!collidingWall.platform) or ((collidingWall.platform) and (((!keyDownHold) and ((downHeld < 8) or (playerAbility != playerAbilities.ufo))) and !(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal) and (!place_meeting(x,y + vspFinal,obj_Wall))))) grounded = true;
+	if ((!collidingWall.platform) or ((collidingWall.platform) and (((!keyDownHold) and ((downHeld < downHeldPlatformMax) or (playerAbility != playerAbilities.ufo))) and !(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal) and (!place_meeting(x,y + vspFinal,obj_Wall))))) grounded = true;
 }
 else if (place_meeting(x,y + 1,obj_Spring))
 {

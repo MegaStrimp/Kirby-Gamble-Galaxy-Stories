@@ -178,6 +178,8 @@ function scr_Player_CharacterSetup_Kirby(argument0)
 		sprAbilityChange = spr_Kirby_Normal_AbilityChange;
 		sprWarpStar1 = spr_Kirby_Normal_WarpStar1;
 		sprWarpStar2 = spr_Kirby_Normal_WarpStar2;
+		sprWarpStar3 = spr_Kirby_Normal_WarpStar3;
+		sprWarpStar4 = spr_Kirby_Normal_WarpStar4;
 		sprGuard = spr_Kirby_Normal_Guard;
 		sprGuardSlope = spr_Kirby_Normal_Guard_Slope;
 		sprItemCarryThrow = spr_Kirby_Normal_ItemCarry_Throw;

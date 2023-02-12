@@ -10,9 +10,16 @@ if (setupTimer == 0)
 		
 		case 0:
 		sprIdle = spr_BloodGordo_Normal_Idle;
+		sprAngry = spr_BloodGordo_Normal_Angry;
+		sprCautious = spr_BloodGordo_Normal_Cautious;
+		sprSleep = spr_BloodGordo_Normal_Sleep;
+		sprTriggered = spr_BloodGordo_Normal_Triggered;
 		sprHurt = -1;
+		sprAura = spr_BloodGordo_Normal_Aura;
 		break;
 	}
+	
+	spd = spdMin;
 }
 
 //Event Inherited
@@ -29,105 +36,114 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 	
 	switch (state)
 	{
-		//Stay Still
+		//Stay In Circle
 		
 		case 0:
-		break;
+		//Movement
 		
-		//Horizontal Straight Movement
+		targetX = coreX;
+		targetY = coreY;
+		targetSet = false;
+		cautious = false;
 		
-		case 1:
-		scr_AI_HorizontalStraightMovement(false,true);
-		break;
-		
-		//Vertical Straight Movement
-		
-		case 2:
-		scr_AI_VerticalStraightMovement(false,true);
-		break;
-		
-		//Horizontal Straight Movement with Hops
-		
-		case 3:
-		if (place_meeting(x,y + 1,collisionY))
+		with (obj_Player)
 		{
-			imageAngle += (45 * dirX);
-			
-			for (var i = 0; i < 2; i++)
+			if (!other.targetSet)
 			{
-				var parDirection = 180 * i;
-				var parScaleDir = 1;
-				if ((parDirection > 90) and (parDirection <= 270))
+				if ((distance_to_point(other.x,other.y)) <= other.radius)
 				{
-					parScaleDir = -1;
+					if (other.retreated)
+					{
+						if (audio_is_playing(snd_Charge_Ready)) audio_stop_sound(snd_Charge_Ready);
+						audio_play_sound(snd_Charge_Ready,0,false);
+						var particle = instance_create_depth(,other.x,,other.y,,other.depth - 1,obj_Particle);
+						particle.sprite_index = spr_Particle_BloodGordo;
+						particle.destroyAfterAnimation = true;
+						other.triggered = true;
+					}
+					other.targetX = x;
+					other.targetY = y;
+					other.targetSet = true;
+					other.retreated = false;
 				}
-				var parSquish = instance_create_depth(x,y,depth + 1,obj_Particle);
-				parSquish.sprite_index = spr_Particle_SmallStar;
-				parSquish.destroyTimer = 30;
-				parSquish.spdBuiltIn = 6;
-				parSquish.fricSpd = .6;
-				parSquish.direction = parDirection;
-				parSquish.dir = parScaleDir;
+				else if ((distance_to_point(other.x,other.y)) <= other.radius + 24)
+				{
+					other.cautious = true;
+					other.retreated = true;
+				}
 			}
 		}
-		if ((place_meeting(x,y + 1,obj_Gordo)) or (place_meeting(x,y + 1,obj_BloodGordo)) or (place_meeting(x,y + 1,obj_Blado)))
+		
+		if (targetSet)
 		{
-			vsp = -jumpspeed;
+			spd = lerp(spd,spdMax,.01);
 		}
-		if ((place_meeting(x,y - 1,obj_Gordo)) or (place_meeting(x,y - 1,obj_BloodGordo)) or (place_meeting(x,y - 1,obj_Blado)))
+		else
 		{
-			vsp = 0;
+			spd = lerp(spd,spdMin,.5);
 		}
-		hasGravity = true;
-		scr_AI_HorizontalStraightMovement(true,true);
-		scr_AI_BunnyHop();
+		
+		var targetXLerp = lerp(x,targetX,spd);
+		var targetYLerp = lerp(y,targetY,spd);
+		
+		var dist = point_distance(coreX,coreY,targetXLerp,targetYLerp);
+		
+		if (dist <= radius)
+		{
+			x = targetXLerp;
+			y = targetYLerp;
+		}
+		else
+		{
+			dist -= radius;
+	
+			var _dir = point_direction(targetXLerp,targetYLerp,coreX,coreY);
+			
+			var _x = targetXLerp + lengthdir_x(dist,_dir);
+			var _y = targetYLerp + lengthdir_y(dist,_dir);
+			
+			_dir = point_direction(coreX,coreY,_x,_y);
+			x = coreX + lengthdir_x(radius,_dir);
+			y = coreY + lengthdir_y(radius,_dir);
+		}
+		
+		//Animation
+		
+		image_speed = 1;
+		
+		if (triggered)
+		{
+			sprite_index = sprTriggered;
+		}
+		else
+		{
+			if (targetSet)
+			{
+				sprite_index = sprAngry;
+			}
+			else
+			{
+				if (cautious)
+				{
+					//sprite_index = sprCautious;
+					sprite_index = sprAngry;
+				}
+				else
+				{
+					if (distance_to_point(coreX,coreY) <= 4)
+					{
+						//sprite_index = sprSleep;
+						sprite_index = sprIdle;
+					}
+					else
+					{
+						sprite_index = sprIdle;
+					}
+				}
+			}
+		}
 		break;
 	}
-	
-	//Gordo Collision
-	
-	if ((turnableX) and ((place_meeting(x + sign(hspFinal),y,obj_Gordo)) or (place_meeting(x + sign(hspFinal),y,obj_BloodGordo)) or (place_meeting(x + sign(hspFinal),y,obj_Blado))))
-	{
-		walkDirX *= -1;
-		turnableX = false;
-		turnableXTimer = turnableXTimerMax;
-	}
-	if ((turnableY) and ((place_meeting(x,y + sign(vspFinal),obj_Gordo)) or (place_meeting(x,y + sign(vspFinal),obj_BloodGordo)) or (place_meeting(x,y + sign(vspFinal),obj_Blado))))
-	{
-		walkDirY *= -1;
-		turnableY = false;
-		turnableYTimer = turnableYTimerMax;
-	}
-	
-	//Turnable X Timer
-	
-	if (turnableXTimer > 0)
-	{
-		turnableXTimer -= 1;
-	}
-	else if (turnableXTimer == 0)
-	{
-		turnableX = true;
-		turnableXTimer = -1;
-	}
-	
-	//Turnable Y Timer
-	
-	if (turnableYTimer > 0)
-	{
-		turnableYTimer -= 1;
-	}
-	else if (turnableYTimer == 0)
-	{
-		turnableY = true;
-		turnableYTimer = -1;
-	}
-	
-	//Animation
-	
-	image_speed = 1;
-	
-	sprite_index = sprIdle;
 }
 else
 {

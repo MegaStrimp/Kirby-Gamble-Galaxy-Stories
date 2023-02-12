@@ -1009,6 +1009,21 @@
             "Title": "Rosa Scarlatto"
         },
 		
+		"Nuclear Meltdown":
+        {
+            "Title": ""
+        },
+		
+		"Midnight Inferno":
+        {
+            "Title": ""
+        },
+		
+		"Hot Pink":
+        {
+            "Title": ""
+        },
+		
 		"Frosted Shard":
         {
             "Title": "Frammento Gelido"
@@ -1027,6 +1042,11 @@
 		"Chocolate Mousse":
         {
             "Title": "Mousse al Cioccolato"
+        },
+		
+		"Strawberry Cream":
+        {
+            "Title": ""
         },
 		
 		"Electro Marine":

@@ -700,6 +700,7 @@ function scr_Player_States_Slide()
 				{
 					if (duckJumpCharge == duckJumpChargeMax - 1)
 					{
+						if (audio_is_playing(snd_Charge_Ready)) audio_stop_sound(snd_Charge_Ready);
 						audio_play_sound(snd_Charge_Ready,0,false);
 						var particle = instance_create_depth(x,y - 4,depth - 1,obj_Particle);
 						particle.sprite_index = spr_Particle_Flash1;

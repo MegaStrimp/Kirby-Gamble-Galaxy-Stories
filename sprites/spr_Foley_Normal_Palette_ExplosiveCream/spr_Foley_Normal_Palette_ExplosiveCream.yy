@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_Foley_Normal_Palette_ExplosiveCream",
-  "bbox_bottom": 13,
+  "bbox_bottom": 14,
   "bbox_left": 0,
   "bbox_right": 3,
   "bbox_top": 0,
@@ -17,7 +17,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 14,
+  "height": 15,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b29f7ef8-0cec-4a80-b8e2-fdef78005a5e","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},

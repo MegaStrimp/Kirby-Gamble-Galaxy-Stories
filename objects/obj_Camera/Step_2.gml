@@ -565,7 +565,8 @@ if (!global.pause)
 	
 	if (global.halberdEscape)
 	{
-		if (halberdEscapeAngle < 5) halberdEscapeAngle += .1;
+		if (keyboard_check_pressed(ord("D"))) halberdEscapeAngle = 0;
+		if (halberdEscapeAngle < 2) halberdEscapeAngle += .02;
 	}
 	else
 	{

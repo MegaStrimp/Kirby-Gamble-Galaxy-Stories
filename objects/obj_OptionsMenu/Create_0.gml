@@ -66,22 +66,6 @@ for (var i = 0; i < languages.length; i++)
 	languageVal[i] = i;
 }
 
-languageArray =
-[
-	"English",
-    "Turkish",
-    "German",
-    "Italian",
-    "French",
-    "Polish",
-    "Chinese",
-    "Spanish",
-    "Japanese",
-    "Portuguese",
-    "Norwegian",
-    "Arabic"
-]
-
 languageIndex =
 [
 	"Languages.English",

@@ -471,7 +471,11 @@ enum abilityHatPaints
 	mysticBeam_ggs_bubblegum,
 	parasol_kssu_azureBandanna,
 	wing_kssu_dynaBlade,
-	wing_kssu_nocturneFriend
+	wing_kssu_nocturneFriend,
+	ice_snowman_strawberryCream,
+	fire_kssu_nuclearMeltdown,
+	fire_kssu_midnightInferno,
+	fire_kssu_hotPink
 }
 
 enum damageTypes
@@ -933,6 +937,24 @@ global.mintLeafTimerP4Max = 900;
 controllerPressedResetTimer = -1;
 #endregion
 
+#region Language Array
+global.languageArray =
+[
+	"English",
+    "Turkish",
+    "German",
+    "Italian",
+    "French",
+    "Polish",
+    "Chinese",
+    "Spanish",
+    "Japanese",
+    "Portuguese",
+    "Norwegian",
+    "Arabic"
+]
+#endregion
+
 #region Load Game
 /*ini_open("Save1.ini");
 var saveCheck = ini_read_real("playerCustomization","hatTypeBeamP1",abilityHatSkins.beam_kssu);
@@ -957,7 +979,6 @@ scr_LoadGame(global.selectedSave);
 scr_LoadConfig("config.ini");
 window_set_fullscreen(global.fullscreen);
 
-global.language = 0;
 //global.extraModeUnlocked = true;
 global.maykrUnlocked = true;
 global.storyModeUnlocked = false;
@@ -1605,7 +1626,7 @@ subtitles[i] = "Don't Hug Me, I'm Scared, Kirby!";
 i += 1;
 subtitles[i] = "DINKLEBERG, ITS ALL YOUR FAULT!";
 i += 1;
-subtitles[i] = "Actually...Sonic2006 is pretty good...";
+subtitles[i] = "Actually... Sonic 2006 is pretty good...";
 i += 1;
 subtitles[i] = "Knock, Knock. Who’s here? Taxes!";
 i += 1;

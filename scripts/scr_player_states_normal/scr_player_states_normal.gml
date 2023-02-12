@@ -37,7 +37,7 @@ function scr_Player_States_Normal()
 		if (place_meeting(x,y + 1,obj_ParentWall))
 		{
 			collidingWall = instance_place(x,y + 1,obj_ParentWall);
-			if ((!collidingWall.platform) or ((collidingWall.platform) and (((!keyDownHold) or ((downHeld < 8) and (playerAbility != playerAbilities.ufo))) and !(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal) and (!place_meeting(x,y + vspFinal,obj_Wall))))) grounded = true;
+			if ((!collidingWall.platform) or ((collidingWall.platform) and (((!keyDownHold) or ((downHeld < downHeldPlatformMax) and (playerAbility != playerAbilities.ufo))) and !(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal) and (!place_meeting(x,y + vspFinal,obj_Wall))))) grounded = true;
 		}
 		else if (place_meeting(x,y + 1,obj_Spring))
 		{

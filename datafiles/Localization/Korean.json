@@ -1005,6 +1005,21 @@
             "Title": "Scarlet Rose"
         },
 		
+		"Nuclear Meltdown":
+        {
+            "Title": ""
+        },
+		
+		"Midnight Inferno":
+        {
+            "Title": ""
+        },
+		
+		"Hot Pink":
+        {
+            "Title": ""
+        },
+		
 		"Frosted Shard":
         {
             "Title": "Frosted Shard"
@@ -1023,6 +1038,11 @@
 		"Chocolate Mousse":
         {
             "Title": "Chocolate Mousse"
+        },
+		
+		"Strawberry Cream":
+        {
+            "Title": ""
         },
 		
 		"Electro Marine":

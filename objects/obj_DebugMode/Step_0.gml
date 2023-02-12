@@ -2541,7 +2541,12 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			#region Normal
 			case 0:
 			var sprIdle = spr_BloodGordo_Normal_Idle;
+			var sprAngry = spr_BloodGordo_Normal_Angry;
+			var sprCautious = spr_BloodGordo_Normal_Cautious;
+			var sprSleep = spr_BloodGordo_Normal_Sleep;
+			var sprTriggered = spr_BloodGordo_Normal_Triggered;
 			var sprHurt = -1;
+			var sprAura = spr_BloodGordo_Normal_Aura;
 			debugPaletteNumberMax = 0;
 			switch (debugPaletteNumber)
 			{
@@ -2558,7 +2563,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		}
 		debugSprite = sprIdle;
 		debugIndex = 0;
-		debugStateSelectedMax = 3;
+		debugStateSelectedMax = 0;
 		if (mouse_check_button_pressed(mb_left))
 		{
 			var spawnedObj = obj_BloodGordo;
@@ -2566,7 +2571,12 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
+			debugObj.sprAngry = sprAngry;
+			debugObj.sprCautious = sprCautious;
+			debugObj.sprSleep = sprSleep;
+			debugObj.sprTriggered = sprTriggered;
 			debugObj.sprHurt = sprHurt;
+			debugObj.sprAura = sprAura;
 			debugObj.sprite_index = sprIdle;
 			debugObj.paletteIndex = debugPaletteIndex;
 			debugObj.image_xscale = debugXScale;

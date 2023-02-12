@@ -186,6 +186,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					abilityHatIndex = spr_Kirby_AbilityHat_Cutter_KSSU_WarpStar2;
 					break;
 					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Cutter_KSSU_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Cutter_KSSU_WarpStar4;
+					break;
+					
 					case sprGuard:
 					abilityHatIndex = spr_Kirby_AbilityHat_Cutter_KSSU_Guard;
 					break;
@@ -415,6 +423,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_WarpStar2;
 					break;
 					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_WarpStar4;
+					break;
+					
 					case sprGuard:
 					abilityHatIndex = spr_Kirby_AbilityHat_Beam_KSSU_Guard;
 					break;
@@ -610,6 +626,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					
 					case sprWarpStar2:
 					abilityHatIndex = spr_Kirby_AbilityHat_Beam_MarxSoul_WarpStar2;
+					break;
+					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Beam_MarxSoul_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Beam_MarxSoul_WarpStar4;
 					break;
 					
 					case sprGuard:
@@ -836,6 +860,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					
 					case sprWarpStar2:
 					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar2;
+					break;
+					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_WarpStar4;
 					break;
 					
 					case sprGuard:
@@ -1071,6 +1103,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					abilityHatIndex = spr_Kirby_AbilityHat_Stone_KSSU_WarpStar2;
 					break;
 					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Stone_KSSU_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Stone_KSSU_WarpStar4;
+					break;
+					
 					case sprGuard:
 					abilityHatIndex = spr_Kirby_AbilityHat_Stone_KSSU_Guard;
 					break;
@@ -1256,6 +1296,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					abilityHatIndex = spr_Kirby_AbilityHat_Stone_Modern_WarpStar2;
 					break;
 					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Stone_Modern_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Stone_Modern_WarpStar4;
+					break;
+					
 					case sprGuard:
 					abilityHatIndex = spr_Kirby_AbilityHat_Stone_Modern_Guard;
 					break;
@@ -1343,6 +1391,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					
 					case sprWarpStar2:
 					abilityHatIndex = spr_Kirby_AbilityHat_Ufo_Modern_WarpStar2;
+					break;
+					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ufo_Modern_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ufo_Modern_WarpStar4;
 					break;
 					
 					case sprUfoCharge:
@@ -1534,6 +1590,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					abilityHatIndex = spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar2;
 					break;
 					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Mirror_KSSU_WarpStar4;
+					break;
+					
 					case sprGuard:
 					abilityHatIndex = spr_Kirby_AbilityHat_Mirror_KSSU_Guard;
 					break;
@@ -1721,6 +1785,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					
 					case sprWarpStar2:
 					abilityHatIndex = spr_Kirby_AbilityHat_Mirror_Modern_WarpStar2;
+					break;
+					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Mirror_Modern_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Mirror_Modern_WarpStar4;
 					break;
 					
 					case sprGuard:
@@ -1948,6 +2020,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_KSSU_WarpStar2;
 					break;
 					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_KSSU_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_KSSU_WarpStar4;
+					break;
+					
 					case sprGuard:
 					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_KSSU_Guard;
 					break;
@@ -2127,6 +2207,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					
 					case sprWarpStar2:
 					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Modern_WarpStar2;
+					break;
+					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Modern_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Modern_WarpStar4;
 					break;
 					
 					case sprGuard:
@@ -2351,6 +2439,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					abilityHatIndex = spr_Kirby_AbilityHat_Bomb_KSSU_WarpStar2;
 					break;
 					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Bomb_KSSU_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Bomb_KSSU_WarpStar4;
+					break;
+					
 					case sprGuard:
 					abilityHatIndex = spr_Kirby_AbilityHat_Bomb_KSSU_Guard;
 					break;
@@ -2555,6 +2651,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					
 					case sprWarpStar2:
 					abilityHatIndex = spr_Kirby_AbilityHat_Bomb_Modern_WarpStar2;
+					break;
+					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Bomb_Modern_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Bomb_Modern_WarpStar4;
 					break;
 					
 					case sprGuard:
@@ -2766,6 +2870,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					abilityHatIndex = spr_Kirby_AbilityHat_Fire_KSSU_WarpStar2;
 					break;
 					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Fire_KSSU_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Fire_KSSU_WarpStar4;
+					break;
+					
 					case sprGuard:
 					abilityHatIndex = spr_Kirby_AbilityHat_Fire_KSSU_Guard;
 					break;
@@ -2975,6 +3087,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					abilityHatIndex = spr_Kirby_AbilityHat_Fire_KSSU_WarpStar2;
 					break;
 					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Fire_KSSU_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Fire_KSSU_WarpStar4;
+					break;
+					
 					case sprGuard:
 					abilityHatIndex = spr_Kirby_AbilityHat_Fire_KSSU_Guard;
 					break;
@@ -3176,6 +3296,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					abilityHatIndex = spr_Kirby_AbilityHat_Ice_KSSU_WarpStar2;
 					break;
 					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ice_KSSU_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ice_KSSU_WarpStar4;
+					break;
+					
 					case sprGuard:
 					abilityHatIndex = spr_Kirby_AbilityHat_Ice_KSSU_Guard;
 					break;
@@ -3373,6 +3501,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					abilityHatIndex = spr_Kirby_AbilityHat_Ice_Snowman_WarpStar2;
 					break;
 					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ice_Snowman_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ice_Snowman_WarpStar4;
+					break;
+					
 					case sprGuard:
 					abilityHatIndex = spr_Kirby_AbilityHat_Ice_Snowman_Guard;
 					break;
@@ -3556,6 +3692,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					
 					case sprWarpStar2:
 					abilityHatIndex = spr_Kirby_AbilityHat_Spark_KSSU_WarpStar2;
+					break;
+					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Spark_KSSU_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Spark_KSSU_WarpStar4;
 					break;
 					
 					case sprGuard:
@@ -3799,6 +3943,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					abilityHatIndex = spr_Kirby_AbilityHat_Yoyo_KSSU_WarpStar2;
 					break;
 					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Yoyo_KSSU_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Yoyo_KSSU_WarpStar4;
+					break;
+					
 					case sprGuard:
 					abilityHatIndex = spr_Kirby_AbilityHat_Yoyo_KSSU_Guard;
 					break;
@@ -4008,6 +4160,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					abilityHatIndex = spr_Kirby_AbilityHat_Wheel_KSSU_WarpStar2;
 					break;
 					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Wheel_KSSU_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Wheel_KSSU_WarpStar4;
+					break;
+					
 					case sprGuard:
 					abilityHatIndex = spr_Kirby_AbilityHat_Wheel_KSSU_Guard;
 					break;
@@ -4203,6 +4363,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					
 					case sprWarpStar2:
 					abilityHatIndex = spr_Kirby_AbilityHat_Artist_KSSU_WarpStar2;
+					break;
+					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Artist_KSSU_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Artist_KSSU_WarpStar4;
 					break;
 					
 					case sprGuard:
@@ -4457,6 +4625,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					abilityHatIndex = spr_Kirby_AbilityHat_Fighter_KSSU_WarpStar2;
 					break;
 					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Fighter_KSSU_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Fighter_KSSU_WarpStar4;
+					break;
+					
 					case sprGuard:
 					abilityHatIndex = spr_Kirby_AbilityHat_Fighter_KSSU_Guard;
 					break;
@@ -4650,6 +4826,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_WarpStar2;
 					break;
 					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_WarpStar4;
+					break;
+					
 					case sprGuard:
 					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_Guard;
 					break;
@@ -4817,6 +5001,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					
 					case sprWarpStar2:
 					abilityHatIndex = spr_Kirby_AbilityHat_Wing_KSSU_WarpStar2;
+					break;
+					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Wing_KSSU_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Wing_KSSU_WarpStar4;
 					break;
 					
 					case sprGuard:
@@ -4998,6 +5190,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					
 					case sprWarpStar2:
 					abilityHatIndex = spr_Kirby_AbilityHat_Jet_KSSU_WarpStar2;
+					break;
+					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Jet_KSSU_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Jet_KSSU_WarpStar4;
 					break;
 					
 					case sprGuard:
@@ -5191,6 +5391,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					
 					case sprWarpStar2:
 					abilityHatIndex = spr_Kirby_AbilityHat_Sword_KSSU_WarpStar2;
+					break;
+					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Sword_KSSU_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Sword_KSSU_WarpStar4;
 					break;
 					
 					case sprGuard:
@@ -5407,11 +5615,19 @@ function scr_Player_AbilityHat(argument0,argument1)
 					break;
 					
 					case sprWarpStar1:
-					abilityHatIndex = spr_Kirby_AbilityHat__KSSU_WarpStar1;
+					abilityHatIndex = spr_Kirby_AbilityHat_Hammer_KSSU_WarpStar1;
 					break;
 					
 					case sprWarpStar2:
-					abilityHatIndex = spr_Kirby_AbilityHat__KSSU_WarpStar2;
+					abilityHatIndex = spr_Kirby_AbilityHat_Hammer_KSSU_WarpStar2;
+					break;
+					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Hammer_KSSU_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Hammer_KSSU_WarpStar4;
 					break;
 					
 					case sprGuard:
@@ -5611,6 +5827,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					abilityHatIndex = spr_Kirby_AbilityHat_Bell_Modern_WarpStar2;
 					break;
 					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Bell_Modern_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Bell_Modern_WarpStar4;
+					break;
+					
 					case sprGuard:
 					abilityHatIndex = spr_Kirby_AbilityHat_Bell_Modern_Guard;
 					break;
@@ -5700,6 +5924,14 @@ function scr_Player_AbilityHat(argument0,argument1)
 					
 					case sprWarpStar2:
 					abilityHatIndex = spr_Kirby_HatShadow_Water_Modern_WarpStar2;
+					break;
+					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_HatShadow_Water_Modern_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_HatShadow_Water_Modern_WarpStar4;
 					break;
 					
 					default:

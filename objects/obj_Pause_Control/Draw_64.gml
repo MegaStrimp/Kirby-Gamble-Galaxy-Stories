@@ -656,7 +656,7 @@ if ((gamePaused) and (visible))
 				//demo = true;
 				if (demo)
 				{
-					fadeTrans.targetRoom = rm_StageSelect_Demo;
+					fadeTrans.targetRoom = rm_DemoStageSelect;
 				}
 				else
 				{

@@ -7,10 +7,10 @@ scr_Player_Inputs(player);
 if (!global.pause)
 {
 	#region Variables
-	var grounded = false;
+	grounded = false;
 	if (place_meeting(x,y + 1,obj_ParentWall))
 	{
-		var collidingWall = instance_place(x,y + 1,obj_ParentWall);
+		collidingWall = instance_place(x,y + 1,obj_ParentWall);
 		if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal)))) grounded = true;
 	}
 	else if (place_meeting(x,y + 1,obj_Spring))
@@ -19,15 +19,16 @@ if (!global.pause)
 		grounded = true;
 	}
 	
-	var wallAbove = false;
+	wallAbove = false;
+	wallAboveCollidingWall = -1;
 	if (place_meeting(x,y - 1,obj_Wall))
 	{
-		var collidingWall = instance_place(x,y - 1,obj_Wall);
-		if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + collidingWall.vsp + 20 + vspFinal)))) wallAbove = true;
+		wallAboveCollidingWall = instance_place(x,y - 1,obj_Wall);
+		if ((!wallAboveCollidingWall.platform) or ((wallAboveCollidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > wallAboveCollidingWall.y + wallAboveCollidingWall.vsp + 20 + vspFinal)))) wallAbove = true;
 	}
 	
-	var footFrontGrounded = false;
-	if (place_meeting(footFrontX,footFrontY - 27,obj_Wall))
+	footFrontGrounded = false;
+	if (place_meeting(bodyX,footFrontY - 27,obj_Wall))
 	{
 		footFrontGrounded = true;
 		if (footFrontVsp > .5)
@@ -45,8 +46,8 @@ if (!global.pause)
 		footFrontVsp = 0;
 	}
 	
-	var footBackGrounded = false;
-	if (place_meeting(footBackX,footBackY - 21,obj_Wall))
+	footBackGrounded = false;
+	if (place_meeting(bodyX,footBackY - 21,obj_Wall))
 	{
 		footBackGrounded = true;
 		if (footBackVsp > .5)
@@ -104,6 +105,12 @@ if (!global.pause)
 				other.active = true;
 				other.owner = id;
 				other.player = player;
+				other.footTurn = 0;
+				other.footTurnRecoil = false;
+				other.footFrontWalking = false;
+				other.footBackWalking = false;
+				other.footTurnTimer = 0;
+				visible = false;
 				mechIndex = other;
 				attackTimer = -1;
 				state = playerStates.insideMech;
@@ -120,6 +127,10 @@ if (!global.pause)
 			{
 				other.owner = -1;
 				other.active = false;
+				other.footFrontWalking = true;
+				other.footBackWalking = true;
+				other.footTurnTimer = -1;
+				visible = true;
 				dir = 1;
 				mechIndex = -1;
 				invincible = false;
@@ -139,60 +150,13 @@ if (!global.pause)
 	{
 		#region Normal
 		case heavyLobsterStates.normal:
-		#region Movement
-		if ((!attack) and (active))
-		{
-			if (keyRightHold)
-			{
-				footTurnRecoil = true;
-				dirX = 1;
-				walkDirX = 1;
-				hsp = movespeed * walkDirX;
-			}
-			if (keyLeftHold)
-			{
-				footTurnRecoil = true;
-				dirX = -1;
-				walkDirX = -1;
-				hsp = movespeed * walkDirX;
-			}
-		}
-		
-		if ((attack) or (!active) or (((!keyRightHold) and (!keyLeftHold)) or ((keyRightHold) and (keyLeftHold))))
-		{
-			hsp = 0;
-		}
-		#endregion
-		
-		#region Jump
-		if ((active) and (grounded) and (!wallAbove) and (keyJumpPressed))
-		{
-			footFrontVsp = -1.5;
-			footBackJumpTimer = footBackJumpTimerMax;
-			vsp -= jumpspeed;
-		}
-		
-		footFrontXOffset = x + (-10 * dirX);
-		footBackXOffset = x + (-8 * dirX);
-		#endregion
-		
-		#region Duck
-		if ((grounded) and (keyDownPressed))
-		{
-			state = heavyLobsterStates.duck;
-		}
-		#endregion
+		scr_Mechs_HeavyLobster_States_Normal();
 		break;
 		#endregion
 		
 		#region Duck
 		case heavyLobsterStates.duck:
-		#region Back To Normal
-		if (keyDownReleased)
-		{
-			state = heavyLobsterStates.normal;
-		}
-		#endregion
+		scr_Mechs_HeavyLobster_States_Duck();
 		break;
 		#endregion
 		

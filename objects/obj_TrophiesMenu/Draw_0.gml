@@ -48,5 +48,4 @@ if (trophyArray[# trophySelection,0] != -1)
 
 //Draw Hud
 
-hudOffset = lerp(hudOffset,0,.1);
 draw_sprite(spr_Menu_MainMenu_Hud_Trophies,0,0 + hudOffset,0);

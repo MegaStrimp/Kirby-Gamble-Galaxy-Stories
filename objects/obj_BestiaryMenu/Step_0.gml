@@ -2,6 +2,8 @@
 
 if (!global.pause)
 {
+	hudOffset = lerp(hudOffset,0,.1);
+	
 	scr_Player_Inputs(0);
 	
 	if (!instance_exists(obj_Fade))

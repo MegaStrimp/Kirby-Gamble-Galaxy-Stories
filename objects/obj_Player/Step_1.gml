@@ -228,6 +228,10 @@ else if (characterSetupTimer == 0)
 	}
 	#endregion
 	
+	#region Set Sprite Index
+	sprite_index = sprIdle;
+	#endregion
+	
 	characterSetupTimer = -1;
 }
 #endregion

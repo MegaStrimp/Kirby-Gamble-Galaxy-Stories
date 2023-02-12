@@ -6,18 +6,21 @@ event_inherited();
 
 //Physics
 
-accel = .02;
-movespeed = 1;
-jumpspeed = 4;
-gravNormal = .2;
-gravLimitNormal = 5;
+spd = .02;
+spdMin = .02;
+spdMax = .2;
 
 //Sprites
 
 mask_index = spr_16Square_Mask;
 
 sprIdle = spr_BloodGordo_Normal_Idle;
+sprAngry = spr_BloodGordo_Normal_Angry;
+sprCautious = spr_BloodGordo_Normal_Cautious;
+sprSleep = spr_BloodGordo_Normal_Sleep;
+sprTriggered = spr_BloodGordo_Normal_Triggered;
 sprHurt = -1;
+sprAura = spr_BloodGordo_Normal_Aura;
 
 //Other Variables
 
@@ -32,12 +35,8 @@ clampPositionY = false;
 offScreenTurning = true;
 hasXKnockback = false;
 hasYKnockback = false;
-turnableX = true;
-turnableY = true;
-
-//Timers
-
-turnableXTimer = -1;
-turnableXTimerMax = 4;
-turnableYTimer = -1;
-turnableYTimerMax = 4;
+triggered = false;
+retreated = true;
+coreX = xstart;
+coreY = ystart;
+radius = 62;

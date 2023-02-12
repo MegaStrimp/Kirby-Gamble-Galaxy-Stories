@@ -752,6 +752,18 @@ function scr_Player_HatPalette(argument0,argument1)
 					case abilityHatPaints.fire_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Fire_KSSU_Palette_Bitcrushed;
 					break;
+					
+					case abilityHatPaints.fire_kssu_nuclearMeltdown:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Fire_KSSU_Palette_NuclearMeltdown;
+					break;
+					
+					case abilityHatPaints.fire_kssu_midnightInferno:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Fire_KSSU_Palette_MidnightInferno;
+					break;
+					
+					case abilityHatPaints.fire_kssu_hotPink:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Fire_KSSU_Palette_HotPink;
+					break;
 				}
 				break;
 			}
@@ -903,6 +915,10 @@ function scr_Player_HatPalette(argument0,argument1)
 					
 					case abilityHatPaints.ice_snowman_chocolateMousse:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Ice_Snowman_Palette_ChocolateMousse;
+					break;
+					
+					case abilityHatPaints.ice_snowman_strawberryCream:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Ice_Snowman_Palette_StrawberryCream;
 					break;
 				}
 				break;

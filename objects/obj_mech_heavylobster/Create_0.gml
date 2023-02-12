@@ -57,6 +57,7 @@ player = 0;
 active = false;
 activeLerp = 0;
 attack = false;
+attackNumber = -1;
 state = heavyLobsterStates.normal;
 eyeFlash = false;
 
@@ -92,6 +93,6 @@ clawBackY = y + 10;
 setupTimer = 0;
 footBackJumpTimer = -1;
 footBackJumpTimerMax = 3;
+footTurnTimer = 0;
 footTurnTimerMax = 20;
-footTurnTimer = footTurnTimerMax;
 #endregion

@@ -51,6 +51,6 @@ function scr_LoadConfig(argument0)
 	global.finalKeyStart[3] = ini_read_real("controls","keyStart4",vk_enter);
 	global.finalKeySelect[3] = ini_read_real("controls","keySelect4",vk_backspace);
 	
-	global.firstTimeBooting = ini_read_real("misc","firstTimeBooting",true);
+	global.firstTimeSetup = ini_read_real("misc","firstTimeSetup",true);
 	ini_close();
 }

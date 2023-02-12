@@ -1005,6 +1005,21 @@
             "Title": "Kızıl Gül"
         },
 		
+		"Nuclear Meltdown":
+        {
+            "Title": "Nükleer Patlama"
+        },
+		
+		"Midnight Inferno":
+        {
+            "Title": "Gece Ateşi"
+        },
+		
+		"Hot Pink":
+        {
+            "Title": "Sıcak Pembe"
+        },
+		
 		"Frosted Shard":
         {
             "Title": "Buz Parçası"
@@ -1023,6 +1038,11 @@
 		"Chocolate Mousse":
         {
             "Title": "Çikolatalı Köpük"
+        },
+		
+		"Strawberry Cream":
+        {
+            "Title": "Çilekli Krema"
         },
 		
 		"Electro Marine":

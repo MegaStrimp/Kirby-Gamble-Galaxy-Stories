@@ -105,15 +105,32 @@ function scr_LoadGame(argument0)
 	global.beatPopstarMoon = ini_read_real("progression","beatPopstarMoon",false);
 	global.beatChapter1 = ini_read_real("progression","beatChapter1",false);
 	
+	global.customizeMenuFirstTime = ini_read_real("progression","customizeMenuFirstTime",false);
+	global.bestiaryMenuFirstTime = ini_read_real("progression","bestiaryMenuFirstTime",false);
+	global.upgradesMenuFirstTime = ini_read_real("progression","upgradesMenuFirstTime",false);
+	global.cheatsMenuFirstTime = ini_read_real("progression","cheatsMenuFirstTime",false);
+	global.trophiesMenuFirstTime = ini_read_real("progression","trophiesMenuFirstTime",false);
+	global.stagesMenuFirstTime = ini_read_real("progression","stagesMenuFirstTime",false);
+	global.soundTestMenuFirstTime = ini_read_real("progression","soundTestMenuFirstTime",false);
+	global.galleryMenuFirstTime = ini_read_real("progression","galleryMenuFirstTime",false);
+	
 	global.shopGearCubeFirstTime = ini_read_real("shop","shopGearCubeFirstTime",true);
 	global.shopGearCubeNewItem = ini_read_real("shop","shopGearCubeNewItem",false);
 	
+	global.collectionMenuUnlocked = ini_read_real("unlocks","collectionMenuUnlocked",false);
+	global.collectionMenuUnlockedFirstTime = ini_read_real("unlocks","collectionMenuUnlockedFirstTime",false);
 	global.extraModeUnlocked = ini_read_real("unlocks","extraModeUnlocked",false);
+	global.extraModeUnlockedFirstTime = ini_read_real("unlocks","extraModeUnlockedFirstTime",false);
 	global.maykrUnlocked = ini_read_real("unlocks","maykrUnlocked",false);
+	global.maykrUnlockedFirstTime = ini_read_real("unlocks","maykrUnlockedFirstTime",false);
 	global.skylandsUnlocked = ini_read_real("unlocks","skylandsUnlocked",false);
+	global.skylandsUnlockedFirstTime = ini_read_real("unlocks","skylandsUnlockedFirstTime",false);
 	global.gamblionUnlocked = ini_read_real("unlocks","gamblionUnlocked",false);
+	global.gamblionUnlockedFirstTime = ini_read_real("unlocks","gamblionUnlockedFirstTime",false);
 	global.bitcrushedUnlocked = ini_read_real("unlocks","bitcrushedUnlocked",false);
+	global.bitcrushedUnlockedFirstTime = ini_read_real("unlocks","bitcrushedUnlockedFirstTime",false);
 	global.samuraiKirbyUnlocked = ini_read_real("unlocks","samuraiKirbyUnlocked",false);
+	global.samuraiKirbyUnlockedFirstTime = ini_read_real("unlocks","samuraiKirbyUnlockedFirstTime",false);
 	
 	global.kirbyUnlocked = ini_read_real("unlocks","kirbyUnlocked",true);
 	global.gambleUnlocked = ini_read_real("unlocks","gambleUnlocked",false);
@@ -162,6 +179,235 @@ function scr_LoadGame(argument0)
 	global.smileyWhiteSprayPaintUnlocked = ini_read_real("unlocks","smileyWhiteSprayPaintUnlocked",false);
 	global.eddSprayPaintUnlocked = ini_read_real("unlocks","eddSprayPaintUnlocked",false);
 	global.musiciansLightSprayPaintUnlocked = ini_read_real("unlocks","musiciansLightSprayPaintUnlocked",false);
+	
+	#region Ability Hat Skins & Paints
+	#region Cutter
+	#region KSSU
+	global.hatPaletteCutterKSSUBloodBladeUnlocked = ini_read_real("unlocks","hatPaletteCutterKSSUBloodBladeUnlocked",false);
+	global.hatPaletteCutterKSSUBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteCutterKSSUBitcrushedUnlocked",false);
+	global.hatPaletteCutterKSSUMallardGreenUnlocked = ini_read_real("unlocks","hatPaletteCutterKSSUMallardGreenUnlocked",false);
+	global.hatPaletteCutterKSSUBlackSwedishUnlocked = ini_read_real("unlocks","hatPaletteCutterKSSUBlackSwedishUnlocked",false);
+	global.hatPaletteCutterKSSUFluxNostalgiaUnlocked = ini_read_real("unlocks","hatPaletteCutterKSSUFluxNostalgiaUnlocked",false);
+	#endregion
+	#endregion
+	
+	#region Beam
+	#region KSSU
+	global.hatPaletteBeamKSSUFluxNostalgiaUnlocked = ini_read_real("unlocks","hatPaletteBeamKSSUFluxNostalgiaUnlocked",false);
+	global.hatPaletteBeamKSSUBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteBeamKSSUBitcrushedUnlocked",false);
+	#endregion
+	
+	#region Marx Soul
+	global.hatTypeBeamMarxSoulUnlocked = ini_read_real("unlocks","hatTypeBeamMarxSoulUnlocked",false);
+	
+	global.hatPaletteBeamMarxSoulSummerFruitsUnlocked = ini_read_real("unlocks","hatPaletteBeamMarxSoulSummerFruitsUnlocked",false);
+	global.hatPaletteBeamMarxSoulBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteBeamMarxSoulBitcrushedUnlocked",false);
+	#endregion
+	#endregion
+	
+	#region Mystic Beam
+	#region GGS
+	global.hatPaletteMysticBeamGGSMageRoseUnlocked = ini_read_real("unlocks","hatPaletteMysticBeamGGSMageRoseUnlocked",false);
+	global.hatPaletteMysticBeamGGSBlueberryUnlocked = ini_read_real("unlocks","hatPaletteMysticBeamGGSBlueberryUnlocked",false);
+	global.hatPaletteMysticBeamGGSSourlimeUnlocked = ini_read_real("unlocks","hatPaletteMysticBeamGGSSourlimeUnlocked",false);
+	global.hatPaletteMysticBeamGGSMonoUnlocked = ini_read_real("unlocks","hatPaletteMysticBeamGGSMonoUnlocked",false);
+	global.hatPaletteMysticBeamGGSBubblegumUnlocked = ini_read_real("unlocks","hatPaletteMysticBeamGGSBubblegumUnlocked",false);
+	#endregion
+	#endregion
+	
+	#region Stone
+	global.hatTypeBeamModernUnlocked = ini_read_real("unlocks","hatTypeBeamModernUnlocked",false);
+	
+	#region KSSU
+	global.hatPaletteStoneKSSUBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteStoneKSSUBitcrushedUnlocked",false);
+	#endregion
+	
+	#region Modern
+	global.hatPaletteStoneModernMoltenRockUnlocked = ini_read_real("unlocks","hatPaletteStoneModernMoltenRockUnlocked",false);
+	global.hatPaletteStoneModernBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteStoneModernBitcrushedUnlocked",false);
+	global.hatPaletteStoneModernCryingCobblestoneUnlocked = ini_read_real("unlocks","hatPaletteStoneModernCryingCobblestoneUnlocked",false);
+	#endregion
+	#endregion
+	
+	#region Mirror
+	global.hatTypeMirrorModernUnlocked = ini_read_real("unlocks","hatTypeMirrorModernUnlocked",false);
+	
+	#region KSSU
+	global.hatPaletteMirrorKSSUBetaBlockUnlocked = ini_read_real("unlocks","hatPaletteMirrorKSSUBetaBlockUnlocked",false);
+	global.hatPaletteMirrorKSSUBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteMirrorKSSUBitcrushedUnlocked",false);
+	#endregion
+	
+	#region Modern
+	global.hatPaletteMirrorModernBetaBlockUnlocked = ini_read_real("unlocks","hatPaletteMirrorModernBetaBlockUnlocked",false);
+	global.hatPaletteMirrorModernBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteMirrorModernBitcrushedUnlocked",false);
+	#endregion
+	#endregion
+	
+	#region Ninja
+	global.hatTypeNinjaModernUnlocked = ini_read_real("unlocks","hatTypeNinjaModernUnlocked",false);
+	
+	#region KSSU
+	global.hatPaletteNinjaKSSUSilverLinedWarriorUnlocked = ini_read_real("unlocks","hatPaletteNinjaKSSUSilverLinedWarriorUnlocked",false);
+	global.hatPaletteNinjaKSSUBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteNinjaKSSUBitcrushedUnlocked",false);
+	#endregion
+	
+	#region Modern
+	global.hatPaletteNinjaModernBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteNinjaModernBitcrushedUnlocked",false);
+	global.hatPaletteNinjaModernViridianAmbushUnlocked = ini_read_real("unlocks","hatPaletteNinjaModernViridianAmbushUnlocked",false);
+	#endregion
+	#endregion
+	
+	#region Bomb
+	global.hatTypeBombModernUnlocked = ini_read_real("unlocks","hatTypeBombModernUnlocked",false);
+	
+	#region KSSU
+	global.hatPaletteBombKSSUBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteBombKSSUBitcrushedUnlocked",false);
+	global.hatPaletteBombKSSUBloomingPoppyUnlocked = ini_read_real("unlocks","hatPaletteBombKSSUBloomingPoppyUnlocked",false);
+	#endregion
+	
+	#region Modern
+	global.hatPaletteBombModernBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteBombModernBitcrushedUnlocked",false);
+	global.hatPaletteBombModernOutburstingConspiracyUnlocked = ini_read_real("unlocks","hatPaletteBombModernOutburstingConspiracyUnlocked",false);
+	global.hatPaletteBombModernDragonsCastleUnlocked = ini_read_real("unlocks","hatPaletteBombModernDragonsCastleUnlocked",false);
+	#endregion
+	#endregion
+	
+	#region Fire
+	#region KSSU
+	global.hatPaletteFireKSSUBlazingBlueUnlocked = ini_read_real("unlocks","hatPaletteFireKSSUBlazingBlueUnlocked",false);
+	global.hatPaletteFireKSSUFluxNostalgiaUnlocked = ini_read_real("unlocks","hatPaletteFireKSSUFluxNostalgiaUnlocked",false);
+	global.hatPaletteFireKSSUScarletRoseUnlocked = ini_read_real("unlocks","hatPaletteFireKSSUScarletRoseUnlocked",false);
+	global.hatPaletteFireKSSUBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteFireKSSUBitcrushedUnlocked",false);
+	global.hatPaletteFireKSSUNuclearMeltdownUnlocked = ini_read_real("unlocks","hatPaletteFireKSSUNuclearMeltdownUnlocked",false);
+	global.hatPaletteFireKSSUMidnightInfernoUnlocked = ini_read_real("unlocks","hatPaletteFireKSSUMidnightInfernoUnlocked",false);
+	global.hatPaletteFireKSSUHotPinkUnlocked = ini_read_real("unlocks","hatPaletteFireKSSUHotPinkUnlocked",false);
+	#endregion
+	#endregion
+	
+	#region Ice
+	global.hatTypeBombSnowmanUnlocked = ini_read_real("unlocks","hatTypeBombSnowmanUnlocked",false);
+	
+	#region KSSU
+	global.hatPaletteIceKSSUBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteIceKSSUBitcrushedUnlocked",false);
+	global.hatPaletteIceKSSUFrostyObsidianUnlocked = ini_read_real("unlocks","hatPaletteIceKSSUFrostyObsidianUnlocked",false);
+	global.hatPaletteIceKSSUFluxNostalgiaUnlocked = ini_read_real("unlocks","hatPaletteIceKSSUFluxNostalgiaUnlocked",false);
+	#endregion
+	
+	#region Snowman
+	global.hatPaletteIceSnowmanBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteIceSnowmanBitcrushedUnlocked",false);
+	global.hatPaletteIceSnowmanChocolateMousseUnlocked = ini_read_real("unlocks","hatPaletteIceSnowmanChocolateMousseUnlocked",false);
+	global.hatPaletteIceSnowmanStrawberryCreamUnlocked = ini_read_real("unlocks","hatPaletteIceSnowmanStrawberryCreamUnlocked",false);
+	#endregion
+	#endregion
+	
+	#region Spark
+	#region KSSU
+	global.hatPaletteSparkKSSUBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteSparkKSSUBitcrushedUnlocked",false);
+	#endregion
+	#endregion
+	
+	#region Yoyo
+	#region KSSU
+	global.hatPaletteYoyoKSSUBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteYoyoKSSUBitcrushedUnlocked",false);
+	#endregion
+	#endregion
+	
+	#region Wheel
+	#region KSSU
+	global.hatPaletteWheelKSSUBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteWheelKSSUBitcrushedUnlocked",false);
+	global.hatPaletteWheelKSSUMufflerBlueUnlocked = ini_read_real("unlocks","hatPaletteWheelKSSUMufflerBlueUnlocked",false);
+	global.hatPaletteWheelKSSUFluxNostalgiaUnlocked = ini_read_real("unlocks","hatPaletteWheelKSSUFluxNostalgiaUnlocked",false);
+	#endregion
+	#endregion
+	
+	#region Artist
+	#region KSSU
+	global.hatPaletteArtistKSSUBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteArtistKSSUBitcrushedUnlocked",false);
+	#endregion
+	#endregion
+	
+	#region Fighter
+	#region KSSU
+	global.hatPaletteFighterKSSUBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteFighterKSSUBitcrushedUnlocked",false);
+	#endregion
+	#endregion
+	
+	#region Suplex
+	#region KSSU
+	global.hatPaletteSuplexKSSUBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteSuplexKSSUBitcrushedUnlocked",false);
+	#endregion
+	#endregion
+	
+	#region Wing
+	#region KSSU
+	global.hatPaletteWingKSSUBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteWingKSSUBitcrushedUnlocked",false);
+	global.hatPaletteWingKSSUPekinBreezeUnlocked = ini_read_real("unlocks","hatPaletteWingKSSUPekinBreezeUnlocked",false);
+	global.hatPaletteWingKSSUDynaBladeUnlocked = ini_read_real("unlocks","hatPaletteWingKSSUDynaBladeUnlocked",false);
+	global.hatPaletteWingKSSUNocturneFriendUnlocked = ini_read_real("unlocks","hatPaletteWingKSSUNocturneFriendUnlocked",false);
+	#endregion
+	#endregion
+	
+	#region Jet
+	#region KSSU
+	global.hatPaletteJetKSSUSpeedyScarletUnlocked = ini_read_real("unlocks","hatPaletteJetKSSUSpeedyScarletUnlocked",false);
+	global.hatPaletteJetKSSUBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteJetKSSUBitcrushedUnlocked",false);
+	global.hatPaletteJetKSSULavender01Unlocked = ini_read_real("unlocks","hatPaletteJetKSSULavender01Unlocked",false);
+	global.hatPaletteJetKSSUFluxNostalgiaUnlocked = ini_read_real("unlocks","hatPaletteJetKSSUFluxNostalgiaUnlocked",false);
+	#endregion
+	#endregion
+	
+	#region Sword
+	#region KSSU
+	global.hatPaletteSwordKSSUThunderingCloudUnlocked = ini_read_real("unlocks","hatPaletteSwordKSSUThunderingCloudUnlocked",false);
+	global.hatPaletteSwordKSSUBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteSwordKSSUBitcrushedUnlocked",false);
+	global.hatPaletteSwordKSSUFluxNostalgiaUnlocked = ini_read_real("unlocks","hatPaletteSwordKSSUFluxNostalgiaUnlocked",false);
+	#endregion
+	#endregion
+	
+	#region Parasol
+	#region KSSU
+	global.hatPaletteParasolKSSUBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteParasolKSSUBitcrushedUnlocked",false);
+	global.hatPaletteParasolKSSUWagasaDeeUnlocked = ini_read_real("unlocks","hatPaletteParasolKSSUWagasaDeeUnlocked",false);
+	global.hatPaletteParasolKSSUAzureBandannaUnlocked = ini_read_real("unlocks","hatPaletteParasolKSSUAzureBandannaUnlocked",false);
+	#endregion
+	#endregion
+	
+	#region Hammer
+	#region KSSU
+	global.hatPaletteHammerKSSUConstructionWorkUnlocked = ini_read_real("unlocks","hatPaletteHammerKSSUConstructionWorkUnlocked",false);
+	global.hatPaletteHammerKSSUBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteHammerKSSUBitcrushedUnlocked",false);
+	global.hatPaletteHammerKSSUFluxNostalgiaUnlocked = ini_read_real("unlocks","hatPaletteHammerKSSUFluxNostalgiaUnlocked",false);
+	#endregion
+	#endregion
+	
+	#region Bell
+	#region Modern
+	global.hatPaletteBellModernPrestoPurpleUnlocked = ini_read_real("unlocks","hatPaletteBellModernPrestoPurpleUnlocked",false);
+	global.hatPaletteBellModernTempoTealUnlocked = ini_read_real("unlocks","hatPaletteBellModernTempoTealUnlocked",false);
+	global.hatPaletteBellModernRingingRoseUnlocked = ini_read_real("unlocks","hatPaletteBellModernRingingRoseUnlocked",false);
+	global.hatPaletteBellModernCandescentCopperUnlocked = ini_read_real("unlocks","hatPaletteBellModernCandescentCopperUnlocked",false);
+	global.hatPaletteBellModernShiningSilverUnlocked = ini_read_real("unlocks","hatPaletteBellModernShiningSilverUnlocked",false);
+	global.hatPaletteBellModernPolishedPlantUnlocked = ini_read_real("unlocks","hatPaletteBellModernPolishedPlantUnlocked",false);
+	global.hatPaletteBellModernIlluminatedIvoryUnlocked = ini_read_real("unlocks","hatPaletteBellModernIlluminatedIvoryUnlocked",false);
+	global.hatPaletteBellModernBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteBellModernBitcrushedUnlocked",false);
+	#endregion
+	#endregion
+	
+	#region Sleep
+	#region KSSU
+	global.hatPaletteSleepKSSUNoddyPeachUnlocked = ini_read_real("unlocks","hatPaletteSleepKSSUNoddyPeachUnlocked",false);
+	global.hatPaletteSleepKSSURoyalPurpleUnlocked = ini_read_real("unlocks","hatPaletteSleepKSSURoyalPurpleUnlocked",false);
+	global.hatPaletteSleepKSSUBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteSleepKSSUBitcrushedUnlocked",false);
+	#endregion
+	#endregion
+	
+	#region Scan
+	#region KSSU
+	global.hatPaletteScanKSSUBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteScanKSSUBitcrushedUnlocked",false);
+	global.hatPaletteScanKSSUMilitaryGreenUnlocked = ini_read_real("unlocks","hatPaletteScanKSSUMilitaryGreenUnlocked",false);
+	#endregion
+	#endregion
+	#endregion
 	
 	global.gambleFamiliarUnlocked = ini_read_real("unlocks","gambleFamiliarUnlocked",false);
 	global.gambleFamiliarLevel = ini_read_real("unlocks","gambleFamiliarLevel",1);

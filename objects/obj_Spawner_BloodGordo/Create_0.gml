@@ -2,16 +2,8 @@
 
 //Physics
 
-accel = .02;
-decel = .05;
-movespeed = 1;
-jumpspeed = 4;
-grav = 0;
-gravNormal = .2;
-gravParasol = .1;
-gravLimit = 0;
-gravLimitNormal = 5;
-gravLimitParasol = .5;
+spdMin = .02;
+spdMax = .2;
 
 //Other Variables
 
@@ -51,6 +43,7 @@ deathOnBottom = true;
 objectOnDeath = false;
 objectOnDeathObj = obj_Projectile_ExplosionMask;
 groundFailsafe = true;
+radius = 62;
 
 //Timers
 

@@ -3,6 +3,8 @@
 
 function scr_SaveConfig(argument0)
 {
+	if (file_exists(argument0)) file_delete(argument0);
+	
 	ini_open(argument0);
 	
 	ini_write_real("options","musicVolume",global.musicVolume);
@@ -53,6 +55,6 @@ function scr_SaveConfig(argument0)
 	ini_write_real("controls","keySelect4",global.finalKeySelect[3]);
 	
 	ini_write_string("misc","versionNumber",global.versionNumber);
-	ini_write_real("misc","firstTimeBooting",global.firstTimeBooting);
+	ini_write_real("misc","firstTimeSetup",global.firstTimeSetup);
 	ini_close();
 }

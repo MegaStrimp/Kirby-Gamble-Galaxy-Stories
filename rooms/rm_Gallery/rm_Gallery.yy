@@ -19,8 +19,8 @@
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Collision","depth":300,"effectEnabled":true,"effectType":null,"gridX":24,"gridY":24,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
   ],
   "parent": {
-    "name": "Menus",
-    "path": "folders/Rooms/Menus.yy",
+    "name": "Collection",
+    "path": "folders/Rooms/Menus/Collection.yy",
   },
   "parentRoom": null,
   "physicsSettings": {
