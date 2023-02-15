@@ -2551,6 +2551,7 @@
     {"id":{"name":"spr_Bumper_Normal","path":"sprites/spr_Bumper_Normal/spr_Bumper_Normal.yy",},"order":0,},
     {"id":{"name":"spr_Background_GreenGreens10_Halloween","path":"sprites/spr_Background_GreenGreens10_Halloween/spr_Background_GreenGreens10_Halloween.yy",},"order":19,},
     {"id":{"name":"spr_BurningLeo_Normal_Attack","path":"sprites/spr_BurningLeo_Normal_Attack/spr_BurningLeo_Normal_Attack.yy",},"order":0,},
+    {"id":{"name":"obj_ZoomController","path":"objects/obj_ZoomController/obj_ZoomController.yy",},"order":0,},
     {"id":{"name":"spr_Kirby_Normal_Mirror_Attack4_Mask","path":"sprites/spr_Kirby_Normal_Mirror_Attack4_Mask/spr_Kirby_Normal_Mirror_Attack4_Mask.yy",},"order":129,},
     {"id":{"name":"spr_BurningLeo_Normal_Charge","path":"sprites/spr_BurningLeo_Normal_Charge/spr_BurningLeo_Normal_Charge.yy",},"order":1,},
     {"id":{"name":"spr_Menu_Collection_Bestiary_Hud_PowerBar","path":"sprites/spr_Menu_Collection_Bestiary_Hud_PowerBar/spr_Menu_Collection_Bestiary_Hud_PowerBar.yy",},"order":2,},

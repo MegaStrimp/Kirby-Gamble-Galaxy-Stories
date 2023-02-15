@@ -331,7 +331,7 @@ function scr_Player_States_Normal()
 			
 			if ((!canUfoFloat) and (playerAbility != playerAbilities.ufo) and (keyDownPressed) and (downInputBufferTimer > 0))
 			{
-			    vsp = gravLimit;
+			    if (vsp < 0) vsp = 0;
 			    //fallHop = true;
 			}
 			

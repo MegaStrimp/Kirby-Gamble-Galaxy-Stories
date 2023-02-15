@@ -65,6 +65,6 @@ else if (setupTimer == 0)
 	setupTimer = -1;
 }
 
-//Destroy
-
+#region Destroy
 if ((enemyCollisionHitbox) and ((!instance_exists(owner)) or (owner.death))) instance_destroy();
+#endregion

@@ -74,10 +74,11 @@ window_set_size(viewWidth * scale,viewHeight * scale);
 
 //Resize Surface
 
-surface_resize(application_surface,viewWidth * scale,viewHeight * scale);
+surface_resize(application_surface,viewWidth * scale * 3,viewHeight * scale * 3);
 
 //Gui Size
 
+//display_set_gui_size(viewWidth * 4,viewHeight * 4);
 display_set_gui_size(viewWidth,viewHeight);
 
 //Window Center

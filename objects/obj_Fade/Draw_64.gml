@@ -46,7 +46,7 @@ switch (state)
 	
 	draw_set_color(color);
 	draw_set_alpha(alpha);
-	draw_rectangle(0,0,camera_get_view_width(gameView),camera_get_view_height(gameView),0);
+	draw_rectangle(0,0,480,270,0);
 	switch (targetRoom)
 	{
 		case "doomsday":
@@ -98,7 +98,7 @@ switch (state)
 	
 	draw_set_color(color);
 	draw_set_alpha(alpha);
-	draw_rectangle((camera_get_view_width(gameView) / 2) + state1Width,(camera_get_view_height(gameView) / 2) + state1Height,(camera_get_view_width(gameView) / 2) - state1Width,(camera_get_view_height(gameView) / 2) - state1Height,0);
+	draw_rectangle((240 / 2) + state1Width,(135 / 2) + state1Height,(240 / 2) - state1Width,(135 / 2) - state1Height,0);
 	draw_set_alpha(1);
 	break;
 }

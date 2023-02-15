@@ -91,8 +91,7 @@ if ((clampToView) and (!death))
 }
 #endregion
 
-//Death
-
+#region Death
 var goldenTomatoAmountPointer = global.goldenTomatoAmountP1;
 switch (player)
 {
@@ -167,52 +166,42 @@ and (!death))
 		deathTimer = deathTimerMax;
 	}
 }
+#endregion
 
 if (!global.pause)
 {
-	//Down Held
-
+	#region Down Held
     if ((keyDownHold) and (downHeld < 1000)) downHeld += 1;
     if (keyDownReleased || attack || /*state == 5 || */hsp != 0) downHeld = 0;
 	if (playerAbility == playerAbilities.ufo) downHeld = 10;
+	#endregion
 	
-	//Depth & Scale Changer
+	#region Character Based Variables & Functions
+	if ((playerCharacter != playerCharacters.gordo) and (playerCharacter != playerCharacters.bloodGordo)) imageAngle = 0;
+	#endregion
 	
-	if (place_meeting(x,y,obj_DepthChanger))
-	{
-		var collidedDepthChanger = instance_place(x,y,obj_DepthChanger);
-		if (collidedDepthChanger.targetScale != -1) targetScale = collidedDepthChanger.targetScale;
-		if (collidedDepthChanger.targetDepth != -1) depth = collidedDepthChanger.targetDepth;
-	}
-	
-	scale = lerp(scale,targetScale,.02);
-	
-	if (inBackground)
-	{
-		collisionX = obj_BackgroundWall;
-		collisionY = obj_BackgroundWall;
-	}
-	else
-	{
-		collisionX = obj_ParentWall;
-		collisionY = obj_ParentWall;
-	}
-	
-	//Abilities
-	
+	#region Ability Based Variables & Functions
 	switch (playerAbility)
 	{
 		case playerAbilities.bomb:
+		#region Bomb Down Attack Variable
 		if (state != playerStates.slide) bombDownReady = false;
+		#endregion
 		break;
 		
 		case playerAbilities.fire:
+		#region Fire Particles
 		var maxTimer = fireParticleTimerMax;
-		if ((attackNumber == playerAttacks.fireAerial) or (attackNumber == playerAttacks.fireWheel) or (attackNumber == playerAttacks.fireBack)) maxTimer = floor(fireParticleTimerMax / 2);
-		if (fireParticleTimer == -1) fireParticleTimer = fireParticleTimerMax;
+		if ((attackNumber == playerAttacks.fireAerial) or (attackNumber == playerAttacks.fireWheel) or (attackNumber == playerAttacks.fireBack))
+		{
+			maxTimer = floor(fireParticleTimerMax / 2);
+		}
+		if (fireParticleTimer == -1) fireParticleTimer = maxTimer;
+		#endregion
 		break;
 		
 		case playerAbilities.spark:
+		#region Spark Particles
 		var maxTimer = sparkParticleTimerMax - floor(sparkCharge);
 		if (sparkParticleTimer == -1) sparkParticleTimer = maxTimer;
 		
@@ -227,7 +216,9 @@ if (!global.pause)
 		{
 			sparkChargeDecel = sparkChargeDecelMax;
 		}
+		#endregion
 		
+		#region Spark Charge
 		if ((keyLeftPressed) or (keyRightPressed))
 		{
 			if (audio_is_playing(snd_SparkCharge)) audio_stop_sound(snd_SparkCharge);
@@ -249,54 +240,61 @@ if (!global.pause)
 			}
 			sparkMaxCharge = true;
 		}
+		#endregion
 		break;
 		
 		case playerAbilities.sword:
+		#region Set Carried Item
 		if (carriedItem == carriedItems.none) carriedItemState = carriedItemStates.light;
+		#endregion
 		break;
 		
 		case playerAbilities.parasol:
+		#region Set Carried Item
 		if (carriedItem == carriedItems.none) carriedItemState = carriedItemStates.light;
+		#endregion
 		break;
 		
 		case playerAbilities.hammer:
+		#region Set Carried Item
 		if (carriedItem == carriedItems.none) carriedItemState = carriedItemStates.light;
+		#endregion
 		break;
 		
 		case playerAbilities.water:
+		#region Water Hat Walk Animation Variable
 		if (sprite_index != sprWalk) waterWalkHatAnim = 0;
+		#endregion
 		break;
 	}
+	#endregion
 	
-	if ((playerCharacter != playerCharacters.gordo) and (playerCharacter != playerCharacters.bloodGordo)) imageAngle = 0;
-	
-	//State Based Variables
-	
+	#region State Based Variables & Functions
 	if (state != playerStates.normal)
 	{
 		fallHop = false;
 		fallHopCounter = 0;
 		iceKick = false;
 	}
+	#endregion
 	
-	//Bumpers
-	
+	#region Bumpers
 	if (place_meeting(x,y,obj_Bumper))
 	{
-		//Variables
-		
+		#region Variables
 		var collidedBumper = instance_place(x,y,obj_Bumper);
 		collidedBumper.hit = true;
 		collidedBumper.hitTimer = collidedBumper.hitTimerMax;
 		jumpLimit = false;
 		jumpLimitTimer = jumpLimitTimerMax + (collidedBumper.force - 6);
+		#endregion
 		
-		//Sound
-		
+		#region Play Sound
+		if (audio_is_playing(snd_Bumper)) audio_stop_sound(snd_Bumper);
 		audio_play_sound(snd_Bumper,0,false);
+		#endregion
 		
-		//Change State To Normal
-		
+		#region Change State To Normal
 		if ((state == playerStates.inhale) or (state == playerStates.climb) or (state == playerStates.slide))
 		{
 			inhaleSoundCont = false;
@@ -304,9 +302,9 @@ if (!global.pause)
 			if (audio_is_playing(snd_Inhale_Loop)) audio_stop_sound(snd_Inhale_Loop);
 			state = playerStates.normal;
 		}
+		#endregion
 		
-		//Vertical Knockback
-		
+		#region Vertical Knockback
 		if (y > ((collidedBumper.y + (sprite_get_height(collidedBumper.sprite_index) / 2 )) + 4))
 		{
 			vsp = collidedBumper.force;
@@ -319,9 +317,9 @@ if (!global.pause)
 		{
 			vsp = collidedBumper.force / 2;
 		}
+		#endregion
 		
-		//Horizontal Knockback
-	
+		#region Horizontal Knockback
 		if (x > ((collidedBumper.x + (sprite_get_width(collidedBumper.sprite_index) / 2 )) + 4))
 		{
 			hsp = collidedBumper.force;
@@ -330,7 +328,9 @@ if (!global.pause)
 		{
 			hsp = -collidedBumper.force;
 		}
+		#endregion
 	}
+	#endregion
 	
 	//Springs
 	
@@ -500,177 +500,176 @@ if (!global.pause)
 switch (state)
 {
 	#region Normal
-    case (playerStates.normal):
+    case playerStates.normal:
 	scr_Player_States_Normal();
 	break;
 	#endregion
 	
 	#region Slide
-    case (playerStates.slide):
+    case playerStates.slide:
 	scr_Player_States_Slide();
 	break;
 	#endregion
 	
 	#region Float
-    case (playerStates.float):
+    case playerStates.float:
 	scr_Player_States_Float();
 	break;
 	#endregion
 	
-	#region Jet Hover
-    case (playerStates.jetHover):
-	scr_Player_States_JetHover();
-	break;
-	#endregion
-	
 	#region Climb
-    case (playerStates.climb):
+    case playerStates.climb:
 	scr_Player_States_Climb();
 	break;
 	#endregion
 	
 	#region Enter
-    case (playerStates.enter):
+    case playerStates.enter:
 	scr_Player_States_Enter();
 	break;
 	#endregion
 	
 	#region Inhale
-    case (playerStates.inhale):
+    case playerStates.inhale:
 	scr_Player_States_Inhale();
 	break;
 	#endregion
 	
 	#region Carry
-    case (playerStates.carry):
+    case playerStates.cutterDrop:
 	scr_Player_States_Carry();
 	break;
 	#endregion
 	
 	#region Swallow
-    case (playerStates.swallow):
+    case playerStates.swallow:
 	scr_Player_States_Swallow();
 	break;
 	#endregion
 	
 	#region Cutter Dash
-    case (playerStates.cutterDash):
+    case playerStates.cutterDash:
 	scr_Player_States_CutterDash();
 	break;
 	#endregion
 	
 	#region Cutter Drop
-    case (playerStates.cutterDrop):
+    case playerStates.cutterDrop:
 	scr_Player_States_CutterDrop();
 	break;
 	#endregion
 	
-	#region Cleaving Cutter, Nonstop Cutter, and Final Cutter
-	case (playerStates.finalCutter):
+	#region Final Cutter
+	case playerStates.finalCutter:
 	scr_Player_States_FinalCutter();
 	break;
 	#endregion
 	
 	#region Beam Grab
-    case (playerStates.beamGrab):
+    case playerStates.beamGrab:
 	scr_Player_States_BeamGrab();
 	break;
 	#endregion
 	
 	#region Mystic Beam Grab
-    case (playerStates.mysticBeamGrab):
+    case playerStates.mysticBeamGrab:
 	scr_Player_States_MysticBeamGrab();
 	break;
 	#endregion
 	
 	#region Mirror Dash
-    case (playerStates.mirrorDash):
+    case playerStates.mirrorDash:
 	scr_Player_States_MirrorDash();
 	break;
 	#endregion
 	
 	#region Ninja Dash
-    case (playerStates.ninjaDash):
+    case playerStates.ninjaDash:
 	scr_Player_States_NinjaDash();
 	break;
 	#endregion
 	
 	#region Ninja Drop
-    case (playerStates.ninjaDrop):
+    case playerStates.ninjaDrop:
 	scr_Player_States_NinjaDrop();
 	break;
 	#endregion
 	
 	#region Fire Dash
-    case (playerStates.fireDash):
+    case playerStates.fireDash:
 	scr_Player_States_FireDash();
 	break;
 	#endregion
 	
 	#region Ice Grab
-    case (playerStates.iceGrab):
+    case playerStates.iceGrab:
 	scr_Player_States_IceGrab();
 	break;
 	#endregion
 	
 	#region Yoyo Dash
-    case (playerStates.yoyoDash):
+    case playerStates.yoyoDash:
 	scr_Player_States_YoyoDash();
 	break;
 	#endregion
 	
 	#region Wheel Normal
-    case (playerStates.wheelNormal):
+    case playerStates.wheelNormal:
 	scr_Player_States_WheelNormal();
 	break;
 	#endregion
 	
 	#region Wing Dash
-    case (playerStates.wingDash):
+    case playerStates.wingDash:
 	scr_Player_States_WingDash();
 	break;
 	#endregion
 	
 	#region Sword Dash
-    case (playerStates.swordDash):
+    case playerStates.swordDash:
 	scr_Player_States_SwordDash();
 	break;
 	#endregion
 	
 	#region Parasol Dash
-    case (playerStates.parasolDash):
+    case playerStates.parasolDash:
 	scr_Player_States_ParasolDash();
 	break;
 	#endregion
 	
+	#region Jet Hover
+    case playerStates.jetHover:
+	scr_Player_States_JetHover();
+	break;
+	#endregion
+	
 	#region Jet Dash
-    case (playerStates.jetDash):
+    case playerStates.jetDash:
 	scr_Player_States_JetDash();
 	break;
 	#endregion
 	
 	#region Warp Star
-    case (playerStates.warpStar):
+    case playerStates.warpStar:
 	scr_Player_States_WarpStar();
 	break;
 	#endregion
 	
 	#region Inside Mech
-    case (playerStates.insideMech):
+    case playerStates.insideMech:
 	scr_Player_States_InsideMech();
 	break;
 	#endregion
 	
 	#region Death
-    case (playerStates.death):
+    case playerStates.death:
 	scr_Player_States_Death();
 	break;
 	#endregion
 }
 #endregion
-	
-//Mic Flash
 
+#region Mic Flash
 if ((attackNumber == playerAttacks.micNormal) and (canMicFlash))
 {
 	with (obj_Camera)
@@ -685,6 +684,7 @@ else
 	micFlash = false;
 	micFlashTimer = -1;
 }
+#endregion
 
 //Select Button
 
@@ -923,18 +923,14 @@ if (!global.pause)
 	}
 }
 
-//Hp Clamp
-
-//global.healthP1 = clamp(global.healthP1,0,global.hpMax);
-//global.healthP2 = clamp(global.healthP2,0,global.hpMax);
-
+#region Hp Clamp
 global.healthP1 = clamp(global.healthP1,0,global.healthP1Max);
 global.healthP2 = clamp(global.healthP2,0,global.healthP2Max);
 global.healthP3 = clamp(global.healthP3,0,global.healthP3Max);
 global.healthP4 = clamp(global.healthP4,0,global.healthP4Max);
+#endregion
 
-//Scale
-
+#region Scale
 if ((attackNumber == playerAttacks.stoneNormal) or (attackNumber == playerAttacks.gooeyStoneNormal))
 {
 	image_xscale = scale;
@@ -947,15 +943,15 @@ else
 var hasFlipside = 1;
 if (global.cheatFlipsideEquipped) hasFlipside = -1
 image_yscale = scale * (hasFlipside);
+#endregion
 
-//Masks
-
+#region Masks
 mask_index = maskIndex;
-
 if (state == playerStates.slide)
 {
 	mask_index = spr_Kirby_DuckMask;
 }
+#endregion
 
 if (!global.pause)
 {

@@ -1,11 +1,24 @@
 ///@description End Step
 
-//Variables
+#region Zoom Controller
+zoomControllerZoom = 1;
+offsetX = 0;
+offsetY = 0;
+/*with (obj_ZoomController)
+{
+	other.zoomControllerZoom = zoom;
+	other.offsetX = offsetX;
+	other.offsetY = offsetY;
+}*/
+#endregion
 
+#region Zoom
 zoom = lerp(zoom,zoomTarget,.02);
-zoomFinal = zoom * hitZoom;
+zoomFinal = (zoom * hitZoom) * zoomControllerZoom;
 
 if (!global.pause) hitZoom = lerp(hitZoom,1,.05);
+#endregion
+
 
 var zoomMax = 100;
 if (room_width >= room_height)
@@ -16,11 +29,6 @@ else
 {
 	zoomMax = viewWidth / room_width;
 }
-
-//show_debug_message("zoom - " + string(zoomFinal));
-//show_debug_message("zoomMax - " + string(zoomMax));
-//zoomFinal = max(zoomFinal,zoomMax);
-//show_debug_message("zoomFinal - " + string(zoomFinal));
 
 //Camera View Size
 
@@ -51,292 +59,6 @@ switch (room)
 	#endregion
 	break;
 	#endregion
-	
-	#region Asteroid Fields 1
-	/*case rm_AsteroidFields1:
-	
-	#region xLimit1
-	if (cameraX >= 4080)
-	{
-		xLimit1 = 4080;
-	}
-	else
-	{
-		xLimit1 = 0;
-	}
-	#endregion
-	
-	#region yLimit1
-	if (cameraX < 1704)
-	{
-		yLimit1 = 1080;
-	}
-	else
-	{
-		yLimit1 = 0;
-	}
-	#endregion
-	
-	#region yLimit2
-	if ((cameraX > 2760 - viewWidth) and (cameraY <= 744 - viewHeight))
-	{
-		yLimit2 = room_height - 744;
-	}
-	else
-	{
-		yLimit2 = 0;
-	}
-	#endregion
-	break;
-	#endregion
-	
-	#region Asteroid Fields 5
-	c/*ase rm_AsteroidFields5:
-	
-	#region xLimit1
-	if (cameraX > 3456)
-	{
-		xLimit1 = 3456;
-	}
-	else
-	{
-		xLimit1 = 0;
-	}
-	#endregion
-	break;
-	*/#endregion
-	
-	#region Asteroid Fields 6
-	/*case rm_AsteroidFields6:
-	
-	#region xLimit1
-	if (cameraY < 192)
-	{
-		xLimit1 = 888;
-	}
-	else
-	{
-		xLimit1 = 0;
-	}
-	#endregion
-	
-	#region yLimit1
-	if (cameraX < 888)
-	{
-		yLimit1 = 192;
-	}
-	else
-	{
-		yLimit1 = 0;
-	}
-	#endregion
-	
-	#region yLimit2
-	if ((cameraX > 1176) and (cameraX < 1752 - viewWidth))
-	{
-		yLimit2 = room_height - 552;
-	}
-	else
-	{
-		yLimit2 = 0;
-	}
-	#endregion
-	break;
-	*/#endregion
-	
-	#region Asteroid Fields 7
-	/*case rm_AsteroidFields7:
-	
-	#region xLimit1
-	if (cameraY < 312)
-	{
-		xLimit1 = 1008;
-	}
-	else
-	{
-		xLimit1 = 0;
-	}
-	#endregion
-	
-	#region yLimit1
-	if (cameraX < 1008)
-	{
-		yLimit1 = 312;
-	}
-	else
-	{
-		yLimit1 = 0;
-	}
-	#endregion
-	break;
-	*/#endregion
-	
-	#region Asteroid Fields 5 OLD
-	/*case rm_AsteroidFields5:
-	#region xLimit1
-	if (cameraX < 576)
-	{
-		xLimit1 = 0;
-	}
-	else if (cameraX < 1800)
-	{
-		if (cameraY < 288)
-		{
-			xLimit1 = 576;
-		}
-		else
-		{
-			xLimit1 = 0;
-		}
-	}
-	else
-	{
-		if (cameraY >= 408 - viewHeight)
-		{
-			xLimit1 = 1800;
-		}
-		else
-		{
-			xLimit1 = 0;
-		}
-	}
-	#endregion
-	
-	#region xLimit2
-	if (cameraX <= 1104 - viewWidth)
-	{
-		if (cameraY >= 528 - viewHeight)
-		{
-			xLimit2 = room_width - 1104;
-		}
-		else
-		{
-			xLimit2 = 0;
-		}
-	}
-	else if (cameraX <= 1392 - viewWidth)
-	{
-		if (cameraY > 408 - viewHeight)
-		{
-			xLimit2 = room_width - 1392;
-		}
-		else
-		{
-			xLimit2 = 0;
-		}
-	}
-	else
-	{
-		xLimit2 = 0;
-	}
-	#endregion
-	
-	#region yLimit1
-	if (cameraX < 552)
-	{
-		yLimit1 = 288;
-	}
-	else
-	{
-		if (cameraY < 288)
-		{
-			yLimit1 = 72;
-		}
-		else
-		{
-			yLimit1 = 0;
-		}
-	}
-	#endregion
-	
-	#region yLimit2
-	if (cameraX < 1104 - viewWidth)
-	{
-		yLimit2 = room_height - 960;
-	}
-	else if (cameraX < 1392 - viewWidth)
-	{
-		if (cameraY < 528 - viewHeight)
-		{
-			yLimit2 = room_height - 528;
-		}
-	}
-	else if (cameraX < 1800)
-	{
-		if (cameraY < 408 - viewHeight)
-		{
-			yLimit2 = room_height - 408;
-		}
-	}
-	else
-	{
-		yLimit2 = 0;
-	}
-	#endregion
-	break;
-	*/#endregion
-	
-	#region Asteroid Fields 6 OLD
-	/*case rm_AsteroidFields6:
-	#region xLimit1
-	if (cameraX >= 888)
-	{
-		if (cameraY < 264)
-		{
-			xLimit1 = 888;
-		}
-		else
-		{
-			xLimit1 = 0;
-		}
-	}
-	else
-	{
-		xLimit1 = 0;
-	}
-	#endregion
-	
-	#region xLimit2
-	if (cameraX <= 1104 - viewWidth)
-	{
-		if (cameraY >= 696 - viewHeight)
-		{
-			xLimit2 = room_width - 1104;
-		}
-		else
-		{
-			xLimit2 = 0;
-		}
-	}
-	else
-	{
-		xLimit2 = 0;
-	}
-	#endregion
-	
-	#region yLimit1
-	if (cameraX < 888)
-	{
-		yLimit1 = 264;
-	}
-	else
-	{
-		yLimit1 = 0;
-	}
-	#endregion
-	
-	#region yLimit2
-	if (cameraX > 1104 - viewWidth)
-	{
-		yLimit2 = room_height - 696;
-	}
-	else
-	{
-		yLimit2 = 0;
-	}
-	#endregion
-	break;
-	*/#endregion
 }
 #endregion
 

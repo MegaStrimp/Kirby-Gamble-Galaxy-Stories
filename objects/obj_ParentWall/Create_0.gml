@@ -38,6 +38,7 @@ ownerYOffset = 0;
 hasTop = true;
 isTop = false;
 canExplode = false;
+topWall = -1;
 topWallSprite = -1;
 topWallMask = spr_24x4Originless_Mask;
 topWallOwner = id;

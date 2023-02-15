@@ -1,22 +1,8 @@
 ///@description Initialize Variables
 
-//Randomize
-
+#region Randomize
 randomize();
-
-/*
-for (var i = 0; i < 100; i++)
-{
-	var par = instance_create_depth(x + (i * 24),-24,depth + 1,obj_Particle);
-	par.sprite_index = spr_FallingLeaf_Normal_Idle;
-	par.direction = irandom_range(250,290);
-	par.image_blend = choose(c_green,c_yellow,c_lime);
-	par.image_speed = random_range(.75,1.25);
-	par.spdBuiltIn = random_range(1,3);
-	par.destroyAfterAnimation = false;
-}
-instance_create_depth(x,y,-9999,obj_Dialogue);
-*/
+#endregion
 
 //Physics
 
@@ -73,8 +59,7 @@ climbSpeed = 2.5;
 gravJetDash = 0.25;
 gravLimitJetDash = 0.65;
 
-//Sprites
-
+#region Sprites
 maskIndex = spr_16Square_Mask;
 paletteIndex = spr_Kirby_Normal_Palette_FriendlyPink;
 sprIdle = spr_Kirby_Normal_Idle;
@@ -284,9 +269,9 @@ sprMicAttack3 = spr_Kirby_Normal_Mic_Attack3;
 sprMicAttack3End = spr_Kirby_Normal_Mic_Attack3End;
 sprHurt = spr_Kirby_Normal_Hurt;
 sprDeath = spr_Kirby_Normal_Death;
+#endregion
 
-//Upgrades
-
+#region Upgrades
 cutterMotorCutterUpgrade = false;
 cutterPropellerWingUpgrade = false;
 cutterSpectralCutterUpgrade = false;
@@ -303,6 +288,7 @@ fireMagicCharcoalUpgrade = false;
 iceEmptyConeUpgrade = false;
 sparkBrightPluggUpgrade = false;
 waterEggSoilUpgrade = false;
+#endregion
 
 //Other Variables
 
@@ -503,8 +489,7 @@ mixAbilities = -1;
 
 scr_Player_Inputs(player);
 
-//Timers
-
+#region Timers
 setupTimer = 0;
 characterSetupTimer = 0;
 upgradeSetupTimer = 0;
@@ -607,6 +592,7 @@ deathRestartTimer = -1;
 deathRestartTimerMax = 210;
 bubblePosTimerMax = 20;
 bubblePosTimer = bubblePosTimerMax;
+#endregion
 
 //Zwat's testing grounds
 jetDashAir = 3;
@@ -617,7 +603,7 @@ jetHoverAccel = 0.7;
 jetHoverMax = 3.5;
 //////////////////
 
-//Create Objects
-
+#region Create Objects
 if (!instance_exists(obj_Pause_Control)) instance_create_depth(x,y,-1000,obj_Pause_Control);
 if (!instance_exists(obj_Hud)) instance_create_depth(x,y,-997,obj_Hud);
+#endregion

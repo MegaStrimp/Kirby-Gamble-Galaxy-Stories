@@ -30,7 +30,7 @@ function scr_Player_CancelAttack(argument0)
 			break;
 		}
 		
-		image_index = 0;
+		//image_index = 0;
 		
 		switch (attackNumber)
 		{

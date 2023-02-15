@@ -154,11 +154,7 @@ if (!global.pause)
 
 if (isTop)
 {
-	if (!instance_exists(topWallOwner))
-	{
-		instance_destroy();
-	}
-	else
+	if (instance_exists(topWallOwner))
 	{
 		if (hp <= 0) topWallOwner.hp = 0;
 	}

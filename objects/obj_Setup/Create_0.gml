@@ -682,8 +682,6 @@ global.selectedSave = "SaveSlot1.ini";
 #endregion
 
 #region Player
-global.hpMax = 5; //Old
-
 global.healthP1Max = 45;
 global.healthP2Max = 45;
 global.healthP3Max = 45;
@@ -731,14 +729,6 @@ global.skylandsHpP1 = global.skylandsHpMax;
 global.skylandsHpP2 = global.skylandsHpMax;
 global.skylandsLives = 2;
 #endregion
-
-//old hp system
-//global.healthP1 = global.hpMax;
-//global.healthP2 = global.hpMax;
-//new healthbar system
-//global.healP1End = global.healthP1;
-//global.healP2End = global.healthP2;
-///////////////////////////
 
 global.currentStage = stages.greenGreens;
 global.currentStage = stages.yolkYard;
