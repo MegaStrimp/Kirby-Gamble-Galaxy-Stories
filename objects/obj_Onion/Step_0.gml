@@ -10,6 +10,7 @@ if (setupTimer == 0)
 		
 		case 0:
 		sprIdle = spr_Onion_Normal_Idle;
+		sprThrow = spr_Onion_Normal_Throw;
 		sprHurt = -1;
 		break;
 	}

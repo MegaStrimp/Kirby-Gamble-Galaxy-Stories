@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_Kirby_Normal_Mirror_Dash_Mask",
-  "bbox_bottom": 29,
+  "bbox_bottom": 28,
   "bbox_left": 0,
   "bbox_right": 20,
   "bbox_top": 0,

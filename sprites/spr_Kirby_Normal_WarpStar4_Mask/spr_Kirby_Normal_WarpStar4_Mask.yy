@@ -4,7 +4,7 @@
   "name": "spr_Kirby_Normal_WarpStar4_Mask",
   "bbox_bottom": 20,
   "bbox_left": 0,
-  "bbox_right": 23,
+  "bbox_right": 22,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,

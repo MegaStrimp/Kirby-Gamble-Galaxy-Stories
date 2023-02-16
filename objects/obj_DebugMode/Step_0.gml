@@ -3994,12 +3994,61 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			#region Normal
 			case 0:
 			var sprIdle = spr_Onion_Normal_Idle;
+			var sprThrow = spr_Onion_Normal_Idle;
 			var sprHurt = -1;
-			debugPaletteNumberMax = 0;
+			debugPaletteNumberMax = 12;
 			switch (debugPaletteNumber)
 			{
 				case 0:
 				debugPaletteIndex = spr_Onion_Normal_Palette_OrangeCarrot;
+				break;
+				
+				case 1:
+				debugPaletteIndex = spr_Onion_Normal_Palette_BrightOrange;
+				break;
+				
+				case 2:
+				debugPaletteIndex = spr_Onion_Normal_Palette_DarkOrange;
+				break;
+				
+				case 3:
+				debugPaletteIndex = spr_Onion_Normal_Palette_LightOrange;
+				break;
+				
+				case 4:
+				debugPaletteIndex = spr_Onion_Normal_Palette_PaleOrange;
+				break;
+				
+				case 5:
+				debugPaletteIndex = spr_Onion_Normal_Palette_SaturatedOrange;
+				break;
+				
+				case 6:
+				debugPaletteIndex = spr_Onion_Normal_Palette_BloodCarrot;
+				break;
+				
+				case 7:
+				debugPaletteIndex = spr_Onion_Normal_Palette_ChilliPepper;
+				break;
+				
+				case 8:
+				debugPaletteIndex = spr_Onion_Normal_Palette_DarkPlum;
+				break;
+				
+				case 9:
+				debugPaletteIndex = spr_Onion_Normal_Palette_GoldenCarrot;
+				break;
+				
+				case 10:
+				debugPaletteIndex = spr_Onion_Normal_Palette_LightOnion;
+				break;
+				
+				case 11:
+				debugPaletteIndex = spr_Onion_Normal_Palette_NeonShroom;
+				break;
+				
+				case 12:
+				debugPaletteIndex = spr_Onion_Normal_Palette_RottenOnion;
 				break;
 				
 				default:
@@ -4019,6 +4068,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
+			debugObj.sprThrow = sprThrow;
 			debugObj.sprHurt = sprHurt;
 			debugObj.sprite_index = sprIdle;
 			debugObj.paletteIndex = debugPaletteIndex;

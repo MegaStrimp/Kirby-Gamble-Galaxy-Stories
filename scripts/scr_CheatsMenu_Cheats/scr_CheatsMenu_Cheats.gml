@@ -186,25 +186,28 @@ function scr_CheatsMenu_Cheats()
 	cheatsArray[# i,12] = 0;
 	cheatsArray[# i,13] = make_color_rgb(255,255,102);
 	i += 1;
-	#endregion
-	
-	/*#region Colored Abilities
-	cheatsArray[# i,0] = cheats.coloredAbilities;
-	cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc_Default;
-	cheatsArray[# i,2] = str("Cheats.Colored Abilities.Title");
-	cheatsArray[# i,3] = str("Cheats.Colored Abilities.Description");
-	cheatsArray[# i,4] = global.abilitySpraysKeycard;
-	cheatsArray[# i,5] = str("Cheats.Colored Abilities.Unlock Method");
-	cheatsArray[# i,6] = 240 + ((i - discSelection) * 100);
-	cheatsArray[# i,7] = 0;
-	cheatsArray[# i,8] = 1;
-	cheatsArray[# i,9] = 1;
-	cheatsArray[# i,10] = global.cheatColoredAbilitiesEquipped;
-	cheatsArray[# i,11] = 0;
-	cheatsArray[# i,12] = 0;
-	cheatsArray[# i,13] = make_color_rgb(255,255,102);
-	i += 1;
 	#endregion*/
+	
+	#region Colored Abilities
+	if (global.abilitySpraysKeycard)
+	{
+		cheatsArray[# i,0] = cheats.coloredAbilities;
+		cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc_Default;
+		cheatsArray[# i,2] = str("Cheats.Colored Abilities.Title");
+		cheatsArray[# i,3] = str("Cheats.Colored Abilities.Description");
+		cheatsArray[# i,4] = global.abilitySpraysKeycard;
+		cheatsArray[# i,5] = str("Cheats.Colored Abilities.Unlock Method");
+		cheatsArray[# i,6] = 240 + ((i - discSelection) * 100);
+		cheatsArray[# i,7] = 0;
+		cheatsArray[# i,8] = 1;
+		cheatsArray[# i,9] = 1;
+		cheatsArray[# i,10] = global.cheatColoredAbilitiesEquipped;
+		cheatsArray[# i,11] = 0;
+		cheatsArray[# i,12] = 0;
+		cheatsArray[# i,13] = make_color_rgb(255,255,102);
+		i += 1;
+	}
+	#endregion
 	
 	cheatsMax = i;
 }

@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_Onion_Normal_Palette_OrangeCarrot",
-  "bbox_bottom": 7,
+  "bbox_bottom": 11,
   "bbox_left": 0,
   "bbox_right": 3,
   "bbox_top": 0,
@@ -17,7 +17,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 8,
+  "height": 12,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f3151054-7432-4916-bc6d-b0880f152fc5","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},

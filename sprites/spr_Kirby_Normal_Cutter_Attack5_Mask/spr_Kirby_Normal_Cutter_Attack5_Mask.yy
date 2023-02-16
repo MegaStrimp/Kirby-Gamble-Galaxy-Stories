@@ -2,10 +2,10 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_Kirby_Normal_Cutter_Attack5_Mask",
-  "bbox_bottom": 23,
-  "bbox_left": 0,
-  "bbox_right": 23,
-  "bbox_top": 0,
+  "bbox_bottom": 22,
+  "bbox_left": 1,
+  "bbox_right": 22,
+  "bbox_top": 1,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -14,7 +14,7 @@
   "For3D": false,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9e09056c-1f68-4053-a18b-d1b0323765ff",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e3a60b57-29e3-47e5-a96d-538b10e1d2ea",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"397f96d3-9803-4120-a246-d0ec40ffdf2c",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -56,7 +56,7 @@
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9e09056c-1f68-4053-a18b-d1b0323765ff","path":"sprites/spr_Kirby_Normal_Cutter_Attack5_Mask/spr_Kirby_Normal_Cutter_Attack5_Mask.yy",},},},"Disabled":false,"id":"ca9a4ac0-ec1b-4891-a9a2-977ba4602a64","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e3a60b57-29e3-47e5-a96d-538b10e1d2ea","path":"sprites/spr_Kirby_Normal_Cutter_Attack5_Mask/spr_Kirby_Normal_Cutter_Attack5_Mask.yy",},},},"Disabled":false,"id":"78fb80a8-6321-45a0-8d24-f021a5ab901d","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"397f96d3-9803-4120-a246-d0ec40ffdf2c","path":"sprites/spr_Kirby_Normal_Cutter_Attack5_Mask/spr_Kirby_Normal_Cutter_Attack5_Mask.yy",},},},"Disabled":false,"id":"8143cb35-c432-4d53-9afb-9df27aa9c527","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "spr_Kirby_Normal_ItemCarry_Throw_Mask",
   "bbox_bottom": 39,
-  "bbox_left": 0,
+  "bbox_left": 1,
   "bbox_right": 40,
   "bbox_top": 0,
   "bboxMode": 0,
@@ -55,8 +55,8 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"51e723c1-3a98-47c0-90c5-cfdec63b5e6d","path":"sprites/spr_Kirby_Normal_ItemCarry_Throw_Mask/spr_Kirby_Normal_ItemCarry_Throw_Mask.yy",},},},"Disabled":false,"id":"abc9d9aa-d4ba-4d08-8c7d-9d2696f02469","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"2a0d3203-7ea6-4571-8793-41f8d08a5416","path":"sprites/spr_Kirby_Normal_ItemCarry_Throw_Mask/spr_Kirby_Normal_ItemCarry_Throw_Mask.yy",},},},"Disabled":false,"id":"f3b368aa-e523-439b-98b4-f9d2b1ceabde","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"51e723c1-3a98-47c0-90c5-cfdec63b5e6d","path":"sprites/spr_Kirby_Normal_ItemCarry_Throw_Mask/spr_Kirby_Normal_ItemCarry_Throw_Mask.yy",},},},"Disabled":false,"id":"2e3afb25-cf13-463a-b0dc-f7f660205513","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"2a0d3203-7ea6-4571-8793-41f8d08a5416","path":"sprites/spr_Kirby_Normal_ItemCarry_Throw_Mask/spr_Kirby_Normal_ItemCarry_Throw_Mask.yy",},},},"Disabled":false,"id":"f663de76-e709-45a2-92da-689b4a2cd27b","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

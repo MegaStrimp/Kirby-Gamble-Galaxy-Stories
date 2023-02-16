@@ -536,7 +536,7 @@ switch (state)
 	#endregion
 	
 	#region Carry
-    case playerStates.cutterDrop:
+    case playerStates.carry:
 	scr_Player_States_Carry();
 	break;
 	#endregion

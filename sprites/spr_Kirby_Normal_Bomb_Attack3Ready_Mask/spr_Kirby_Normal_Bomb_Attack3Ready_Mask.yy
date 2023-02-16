@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "spr_Kirby_Normal_Bomb_Attack3Ready_Mask",
   "bbox_bottom": 39,
-  "bbox_left": 0,
+  "bbox_left": 1,
   "bbox_right": 40,
   "bbox_top": 0,
   "bboxMode": 0,

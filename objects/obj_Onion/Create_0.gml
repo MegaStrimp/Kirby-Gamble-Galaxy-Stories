@@ -19,11 +19,12 @@ groundSpdMax = 1.5;
 mask_index = spr_Onion_Mask;
 
 sprIdle = spr_Onion_Normal_Idle;
+sprThrow = spr_Onion_Normal_Throw;
 sprHurt = -1;
 
 //Other Variables
 
-paletteIndex = spr_Onion_Normal_Palette_OrangeCarrot;
+paletteIndex = choose(spr_Onion_Normal_Palette_OrangeCarrot,spr_Onion_Normal_Palette_BrightOrange,spr_Onion_Normal_Palette_DarkOrange,spr_Onion_Normal_Palette_LightOrange,spr_Onion_Normal_Palette_PaleOrange,spr_Onion_Normal_Palette_SaturatedOrange);
 hp = 1;
 dmg = 1;
 points = 200;

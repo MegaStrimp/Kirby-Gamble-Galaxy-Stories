@@ -861,6 +861,10 @@ function scr_Player_States_Slide()
 				jumpLimitTimer = 45;
 				attackTimer = 45;
 				hsp = dir * movespeedSlide;
+				var par = instance_create_depth(x,y + 8,depth,obj_Particle);
+				par.sprite_index = spr_Particle_SlideHop;
+				par.dirX = dir;
+				par.destroyAfterAnimation = true;
 				scr_Player_CancelSlide();
 				scr_Player_ExecuteJump();
 			}
