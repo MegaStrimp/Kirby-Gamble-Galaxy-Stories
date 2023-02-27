@@ -19,10 +19,10 @@ sprHurt = spr_Searches_Normal_Hurt;
 //Other Variables
 
 paletteIndex = spr_Searches_Normal_Palette_BombshellGray;
-hp = 1;
-dmg = 1;
+hp = searches_Hp;
+dmg = baseEnemyContactDamage;
 ability = playerAbilities.crash;
-points = 500;
+points = searches_Points;
 hasXKnockback = true;
 hasYKnockback = true;
 

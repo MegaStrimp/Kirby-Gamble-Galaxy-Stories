@@ -22,9 +22,9 @@ sprHurt = -1;
 //Other Variables
 
 paletteIndex = spr_Gordo_Normal_Palette_ThornyBackside;
-hp = 1;
-dmg = 1;
-points = 100;
+hp = ghostGordo_Hp;
+dmg = ghostGordo_ContactDamage;
+points = ghostGordo_Points;
 hurtable = false;
 hasGravity = false;
 clampPositionX = false;

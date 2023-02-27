@@ -24,7 +24,7 @@ if (!global.pause)
 	
 	if (destroyableWithAirpuff)
 	{
-		with (obj_AirPuff)
+		with (obj_Projectile_AirPuff)
 		{
 			if (place_meeting(x,y,other))
 			{

@@ -22,9 +22,9 @@ sprHurt = -1;
 //Other Variables
 
 paletteIndex = spr_Blado_Normal_Palette_BrownBlades;
-hp = 1;
-dmg = 1;
-points = 100;
+hp = blado_Hp;
+dmg = blado_ContactDamage;
+points = blado_Points;
 hurtable = false;
 hasGravity = false;
 clampPositionX = false;

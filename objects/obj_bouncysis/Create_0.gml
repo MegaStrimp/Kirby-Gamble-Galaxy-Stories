@@ -28,9 +28,9 @@ sprHurt = spr_BouncySis_Normal_Hurt;
 //Other Variables
 
 paletteIndex = spr_BouncySis_Normal_Palette_GiganticPink;
-hp = 32;
-dmg = 1;
-points = 520;
+hp = bouncySis_Hp;
+dmg = baseEnemyContactDamage;
+points = bouncySis_Points;
 heavy = true;
 duck = false;
 jump = false;

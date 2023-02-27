@@ -27,9 +27,9 @@ sprHurt = sprHurtGround;
 //Other Variables
 
 paletteIndex = spr_BrontoBurt_Normal_Palette_ClassicalFlight;
-hp = 8;
-dmg = 1;
-points = 300;
+hp = brontoBurt_Hp;
+dmg = baseEnemyContactDamage;
+points = brontoBurt_Points;
 hasGravity = false;
 hasXCollision = false;
 hasYCollision = false;

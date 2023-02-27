@@ -28,9 +28,9 @@ sprHurtNormal = spr_BroomHatter_Normal_Hurt;
 //Other Variables
 
 paletteIndex = spr_BroomHatter_Normal_Palette_YellowBroom;
-hp = 16;
-dmg = 1;
-points = 200;
+hp = broomHatter_Hp;
+dmg = baseEnemyContactDamage;
+points = broomHatter_Points;
 particleReleased = true;
 turnCounter = 0;
 turnCounterMax = 2;

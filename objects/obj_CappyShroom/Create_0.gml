@@ -20,9 +20,9 @@ sprHurt = -1;
 //Other Variables
 
 paletteIndex = spr_Cappy_Normal_Palette_RedCap;
-hp = 1;
-dmg = 1;
-points = 200;
+hp = cappy_ShroomHp;
+dmg = baseEnemyContactDamage;
+points = cappy_ShroomPoints;
 
 //Timers
 

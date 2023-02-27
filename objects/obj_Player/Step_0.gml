@@ -38,25 +38,6 @@ switch (player)
 #endregion
 
 #region Variables
-grounded = false;
-if (place_meeting(x,y + 1,obj_ParentWall))
-{
-	var collidingWall = instance_place(x,y + 1,obj_ParentWall);
-	if ((!collidingWall.platform) or ((collidingWall.platform) and (((!keyDownHold) and ((downHeld < downHeldPlatformMax) or (playerAbility != playerAbilities.ufo))) and !(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal) and (!place_meeting(x,y + vspFinal,obj_Wall))))) grounded = true;
-}
-else if (place_meeting(x,y + 1,obj_Spring))
-{
-	//var collidingSpring = instance_place(x,y + 1,obj_Spring);
-	grounded = true;
-}
-
-wallAbove = false;
-if (place_meeting(x,y - 1,obj_Wall))
-{
-	var collidingWall = instance_place(x,y - 1,obj_Wall);
-	if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + collidingWall.vsp + 20 + vspFinal)))) wallAbove = true;
-}
-
 var canFlash = false;
 if ((invincible) or (attackNumber == playerAttacks.slideJump))
 {
@@ -73,10 +54,6 @@ or ((playerAbility == playerAbilities.mic) and (!attack))
 	invincibleFlashTimerMax = 4;
 	canFlash = true;
 }
-#endregion
-
-#region Inputs
-scr_Player_Inputs(player);
 #endregion
 
 #region Clamp To View
@@ -312,6 +289,7 @@ if (!global.pause)
 		if (y < ((collidedBumper.y + (sprite_get_height(collidedBumper.sprite_index) / 2 )) - 4))
 		{
 			vsp = -collidedBumper.force;
+			grounded = false;
 		}
 		if ((y < ((collidedBumper.y + (sprite_get_height(collidedBumper.sprite_index) / 2 )) + 4)) and (y > ((collidedBumper.y + (sprite_get_height(collidedBumper.sprite_index) / 2 )) - 4)))
 		{
@@ -421,6 +399,7 @@ if (!global.pause)
 				//Vertical Knockback
 			
 				vsp = -finalForce;
+				grounded = false;
 			}
 		}
 	}
@@ -492,6 +471,7 @@ if (!global.pause)
 			//Vertical Knockback
 			
 			vsp = -(collidedTrampoline.force / 3) - ((collidedTrampoline.force / collidedTrampoline.jumpCountMax) * collidedTrampoline.jumpCount);
+			grounded = false;
 		}
 	}
 }
@@ -667,6 +647,12 @@ switch (state)
 	break;
 	#endregion
 }
+#endregion
+
+#region Cancel Fall Roll If Attacking
+if ((attack)
+and (attackNumber != playerAttacks.slideJump)
+) fallRoll = false;
 #endregion
 
 #region Mic Flash
@@ -969,6 +955,7 @@ if (!global.pause)
 			sprite_index = sprRoll;
 			image_index = 3;
 			vsp = -3.5;
+			grounded = false;
 			jumpLimit = false;
 			jumpLimitTimer = jumpLimitTimerMax;
 		}
@@ -1243,7 +1230,7 @@ if (!global.pause)
 	}
 	else if (runParticleTimer == 0)
 	{
-		if (run)
+		if (isRunning)
 		{
 			if ((place_meeting(x,y + 1,obj_ParentWall)) and (abs(hsp) >= (movespeedRun * .25)))
 			{
@@ -1309,7 +1296,7 @@ if (!global.pause)
 	    {
 	        runCancelTimer = runCancelTimerMax;
 	        runCancelTimer = -1;
-	        run = false;
+	        isRunning = false;
 	        runDoubleTap = 0;
 	    }
 	    else
@@ -1377,6 +1364,7 @@ if (!global.pause)
 		else if (beamAttack2Timer == 0)
 		{
 			//vsp = -.15;
+			//grounded = false;
 			var projBeam = instance_create_depth(x + (15 * dir),y + 10,depth,obj_Projectile_Beam);
 			projBeam.imageSpeed = 1;
 			projBeam.owner = id;
@@ -1760,6 +1748,7 @@ if (!global.pause)
 			stonePar.dir = dir;
 			stonePar.hasPalette = true;
 			stonePar.paletteSpriteIndex = paletteIndex;
+			if ((playerCharacter == playerCharacters.kirby) and (global.abilitySpraysKeycard) and (global.cheatColoredAbilitiesEquipped)) stonePar.paletteSpriteIndex = spr_Kirby_Normal_Palette_Stone;
 			stonePar.paletteIndex = 1;
 			stonePar.destroyTimer = 7;
 		}
@@ -2209,6 +2198,7 @@ else if (deathTimer == 0)
 	deathParticleTimer = deathParticleTimerMax;
 	deathRestartTimer = deathRestartTimerMax;
 	vsp = -jumpspeedNormal * 1.25;
+	grounded = false;
 	state = playerStates.death;
     deathTimer = -1;
 }
@@ -2463,7 +2453,7 @@ else if (scanTimer == 0)
 	audio_play_sound(snd_Swallow,0,false);
 	hsp = 0;
 	vsp = 0;
-	run = false;
+	isRunning = false;
 	cAbility = playerAbilities.none;
 	image_index = 0;
 	state = playerStates.swallow;

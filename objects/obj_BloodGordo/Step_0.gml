@@ -56,7 +56,7 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 					{
 						if (audio_is_playing(snd_Charge_Ready)) audio_stop_sound(snd_Charge_Ready);
 						audio_play_sound(snd_Charge_Ready,0,false);
-						var particle = instance_create_depth(,other.x,,other.y,,other.depth - 1,obj_Particle);
+						var particle = instance_create_depth(other.x,other.y,other.depth - 1,obj_Particle);
 						particle.sprite_index = spr_Particle_BloodGordo;
 						particle.destroyAfterAnimation = true;
 						other.triggered = true;

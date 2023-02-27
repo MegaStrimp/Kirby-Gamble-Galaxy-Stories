@@ -44,6 +44,7 @@ function scr_Player_States_Climb()
 					image_speed = 1;
 					sprite_index = sprClimbUp;
 					vsp = -climbSpeed;
+					grounded = false;
 				}
 				else
 				{
@@ -54,6 +55,7 @@ function scr_Player_States_Climb()
 				image_speed = 1;
 				sprite_index = sprClimbUp;
 				vsp = -climbSpeed;
+				grounded = false;
 				
 				if ((!place_meeting(x,y,obj_Ladder)) or (!place_meeting(x,y - 8,obj_Ladder)))
 				{
@@ -88,6 +90,7 @@ function scr_Player_States_Climb()
 		{
 			if ((canFallRoll) and (carriedItem == carriedItems.none) and (playerAbility != playerAbilities.sword) and (playerAbility != playerAbilities.parasol) and (playerAbility != playerAbilities.hammer)) fallRoll = true;
 		    vsp = -jumpspeed;
+			grounded = false;
 		    audio_play_sound(snd_Jump,0,false);
 		    state = playerStates.normal;
 		}

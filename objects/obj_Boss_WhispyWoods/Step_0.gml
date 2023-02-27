@@ -236,7 +236,7 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 				if (audio_is_playing(snd_AirPuff)) audio_stop_sound(snd_AirPuff);
 				audio_play_sound(snd_AirPuff,0,false);
 				faceIndex = 2;
-				var proj = instance_create_depth(x + ((28 + 22) * dirX),y - 52,depth - 1,obj_AirPuff);
+				var proj = instance_create_depth(x + ((28 + 22) * dirX),y - 52,depth - 1,obj_Projectile_AirPuff);
 				proj.owner = id;
 				proj.enemy = true;
 				proj.destroyableByWall = true;
@@ -384,7 +384,7 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			bigAirpuffState = 2;
 			if (audio_is_playing(snd_AirPuff)) audio_stop_sound(snd_AirPuff);
 			audio_play_sound(snd_AirPuff,0,false);
-			var proj = instance_create_depth(x + ((28 + 22) * dirX),y - 52,depth - 1,obj_AirPuff);
+			var proj = instance_create_depth(x + ((28 + 22) * dirX),y - 52,depth - 1,obj_Projectile_AirPuff);
 			proj.owner = id;
 			proj.enemy = true;
 			proj.destroyableByWall = true;

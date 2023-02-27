@@ -267,5 +267,3 @@ if (!global.pause)
 	footBackY += footBackVsp + vsp;
 	#endregion
 }
-
-if (keyboard_check_pressed(ord("A"))) active = !active;

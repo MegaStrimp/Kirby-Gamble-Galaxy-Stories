@@ -30,10 +30,10 @@ sprCurrent = sprIdle;
 //Other Variables
 
 paletteIndex = spr_PlasmaWisp_Normal_Palette_Plasma;
-hp = 10;
-dmg = 1;
+hp = plasmaWisp_Hp;
+dmg = baseEnemyContactDamage;
 ability = playerAbilities.spark;
-points = 500;
+points = plasmaWisp_Points;
 hasGravity = false;
 hasXKnockback = false;
 hasYKnockback = false;

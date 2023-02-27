@@ -35,9 +35,9 @@ sprHurt = spr_WaddleDee_Normal_Hurt;
 //Other Variables
 
 paletteIndex = spr_WaddleDee_Normal_Palette_WaddleWaddle;
-hp = 12;
-dmg = 1;
-points = 200;
+hp = waddleDee_Hp;
+dmg = baseEnemyContactDamage;
+points = waddleDee_Points;
 parasolX = 4;
 parasolY = 3;
 duck = false;

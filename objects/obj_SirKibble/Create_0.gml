@@ -27,10 +27,10 @@ sprHurtAir = spr_SirKibble_Normal_HurtAir;
 //Other Variables
 
 paletteIndex = spr_SirKibble_Normal_Palette_Yellow;
-hp = 20;
-dmg = 1;
+hp = sirKibble_Hp;
+dmg = baseEnemyContactDamage;
 ability = playerAbilities.cutter;
-points = 400;
+points = sirKibble_Points;
 attack = false;
 attackState = 0;
 thrown = false;

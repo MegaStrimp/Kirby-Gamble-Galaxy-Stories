@@ -42,10 +42,10 @@ sprAura = sprAura1Idle;
 //Other Variables
 
 paletteIndex = spr_LaserBall_Normal_Palette_OrangeLaser;
-hp = 14;
-dmg = 1;
+hp = laserBall_Hp;
+dmg = baseEnemyContactDamage;
 ability = playerAbilities.beam;
-points = 200;
+points = laserBall_Points;
 hasGravity = false;
 hasXCollision = false;
 hasYCollision = false;
@@ -58,6 +58,7 @@ attackState = 0;
 attackCount = 0;
 attackCountMax = 4;
 activateRange = 72;
+moveAngleLimitMax = 2;
 active = false;
 attackDir = 0;
 

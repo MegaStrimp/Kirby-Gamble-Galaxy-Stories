@@ -31,10 +31,10 @@ sprHurt = spr_WaddleDoo_Normal_Hurt;
 //Other Variables
 
 paletteIndex = spr_WaddleDoo_Normal_Palette_WaddleWaddle;
-hp = 18;
-dmg = 1;
+hp = waddleDoo_Hp;
+dmg = baseEnemyContactDamage;
 ability = playerAbilities.beam;
-points = 300;
+points = waddleDoo_Points;
 parasolX = 5;
 parasolY = 3;
 duck = false;

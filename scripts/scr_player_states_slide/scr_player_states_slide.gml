@@ -262,6 +262,7 @@ function scr_Player_States_Slide()
 								state = playerStates.normal;
 								hsp = 0;
 								vsp = -jumpspeed / 2;
+								grounded = false;
 								jumpLimit = false;
 								jumpLimitTimer = 15;
 								invincible = true;
@@ -328,6 +329,7 @@ function scr_Player_States_Slide()
 									stoneEnd.dmg = 20;
 									stoneEnd.enemy = false;
 									vsp = -(jumpspeed / 3);
+									grounded = false;	
 									grav = gravNormal;
 									gravLimit = gravLimitNormal;
 									invincible = false;
@@ -451,6 +453,7 @@ function scr_Player_States_Slide()
 							state = playerStates.normal;
 							hsp = 0;
 							vsp = -jumpspeed / 2;
+							grounded = false;
 							jumpLimit = false;
 							jumpLimitTimer = 15;
 							invincible = true;
@@ -517,6 +520,7 @@ function scr_Player_States_Slide()
 								stoneEnd.dmg = 20;
 								stoneEnd.enemy = false;
 								vsp = -(jumpspeed / 3);
+								grounded = false;
 								grav = gravNormal;
 								gravLimit = gravLimitNormal;
 								invincible = false;
@@ -760,6 +764,7 @@ function scr_Player_States_Slide()
 						scaleExX = -.25;
 						scaleExY = .25;
 						vsp = -(jumpspeed * 1.25);
+						grounded = false;
 						break;
 						
 						case playerCharacters.waddleDoo:
@@ -776,6 +781,7 @@ function scr_Player_States_Slide()
 						scaleExX = -.25;
 						scaleExY = .25;
 						vsp = -(jumpspeed * 1.25);
+						grounded = false;
 						break;
 						
 						default:
@@ -790,6 +796,7 @@ function scr_Player_States_Slide()
 						sprite_index = sprJump;
 						image_index = 0;
 						vsp = -(jumpspeed * 1.25);
+						grounded = false;
 						break;
 					}
 					if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);

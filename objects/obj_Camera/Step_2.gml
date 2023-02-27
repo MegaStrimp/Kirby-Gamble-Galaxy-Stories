@@ -275,7 +275,7 @@ xLimit2Final = xLimit2;
 yLimit1Final = yLimit1;
 yLimit2Final = yLimit2;
 
-cameraX = clamp(cameraX,0 + xLimit1Final,room_width - xLimit2Final - (viewWidth / zoomFinal));
+cameraX = clamp(cameraX,0 + xLimit1Final - (109 * hasGigaHud),room_width - xLimit2Final + (109 * hasGigaHud) - (viewWidth / zoomFinal));
 cameraY = clamp(cameraY,0 + yLimit1Final,room_height - yLimit2Final - (viewHeight / zoomFinal));
 
 //Shake and Angle

@@ -24,9 +24,9 @@ sprHurt = -1;
 //Other Variables
 
 paletteIndex = spr_Yolky_Normal_Palette_SunnySideUp;
-hp = 16;
-dmg = 1;
-points = 300;
+hp = yolky_Hp;
+dmg = baseEnemyContactDamage;
+points = yolky_Points;
 animDir = 1;
 attack = false;
 attackCount = 0;

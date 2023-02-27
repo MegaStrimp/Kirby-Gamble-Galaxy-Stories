@@ -295,12 +295,12 @@ if ((playerIsHelper) and (helperTimer != -1))
 }
 
 //Debug Text
-/*
+
 if (global.debugOverlay)
 {
 	draw_set_color(c_black);
 	var i = 0;
-	draw_text(x - 12,y - (12 * (i + 1)),"dialogye - " + string(obj_Camera.shakeX));
+	draw_text(x - 12,y - (12 * (i + 1)),"dialogye - " + string(jumpCoyoteTimeBuffer));
 	i += 1;
 	draw_text(x - 12,y - (12 * (i + 1)),"dir - " + string(obj_Camera.shakeY));
 	i += 1;

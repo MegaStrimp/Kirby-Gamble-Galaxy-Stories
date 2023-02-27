@@ -1,7 +1,6 @@
 ///@description Draw GUI
 
-//Boss Healthbar
-
+#region Boss Healthbar
 if (hbActive)
 {
 	switch (healthbarIndex)
@@ -79,3 +78,4 @@ if (hbActive)
 		#endregion
 	}
 }
+		#endregion

@@ -25,9 +25,9 @@ sprAura = spr_BloodGordo_Normal_Aura;
 //Other Variables
 
 paletteIndex = spr_BloodGordo_Normal_Palette_BloodyThorns;
-hp = 1;
-dmg = 1;
-points = 100;
+hp = bloodGordo_Hp;
+dmg = bloodGordo_ContactDamage;
+points = bloodGordo_Points;
 hurtable = false;
 hasGravity = false;
 clampPositionX = false;

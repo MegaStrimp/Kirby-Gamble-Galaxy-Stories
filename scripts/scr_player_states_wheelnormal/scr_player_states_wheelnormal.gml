@@ -40,7 +40,11 @@ function scr_Player_States_WheelNormal()
 					audio_play_sound(snd_DashBegin,0,false);
 					jumpLimit = false;
 					jumpLimitTimer = 30;
-					if (grounded) vsp = -6;
+					if (grounded)
+					{
+						vsp = -6;
+						grounded = false;
+					}
 					hsp = 0;
 					wheelDir = 1;
 					runParticleNum = 0;
@@ -57,7 +61,11 @@ function scr_Player_States_WheelNormal()
 					audio_play_sound(snd_DashBegin,0,false);
 					jumpLimit = false;
 					jumpLimitTimer = 30;
-					if (grounded) vsp = -6;
+					if (grounded)
+					{
+						vsp = -6;
+						grounded = false;
+					}
 					hsp = 0;
 					wheelDir = -1;
 					runParticleNum = 0;
@@ -81,6 +89,7 @@ function scr_Player_States_WheelNormal()
 			sprite_index = sprJump;
 			image_index = 0;
 			vsp = -jumpspeedWheel;
+			grounded = false;
 		}
 		
 		//Crash
@@ -93,6 +102,7 @@ function scr_Player_States_WheelNormal()
 				jumpLimitTimer = 15;
 				hsp = (movespeedWheel / 2) * -dir;
 				vsp = -4;
+				grounded = false;
 				wheelCrash = true;
 			}
 		}

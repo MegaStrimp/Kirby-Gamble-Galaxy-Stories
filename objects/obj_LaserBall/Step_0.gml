@@ -343,6 +343,34 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 					projectile.paletteIndex = paletteIndex;
 					projectile.character = 0;
 					projectile.owner = id;
+					var projAngle = 0;
+					if (walkDirX == -1) projAngle = 1;
+					switch (projAngle)
+					{
+						case 0:
+						projectile.dirX = 1;
+						projectile.hsp = projectile.spd * 1;
+						break;
+						
+						case 1:
+						projectile.dirX = -1;
+						projectile.hsp = projectile.spd * -1;
+						break;
+						
+						case 2:
+						projectile.dirY = 1;
+						imageAngle = 270;
+						image_angle = 270;
+						projectile.vsp = projectile.spd * 1;
+						break;
+						
+						case 3:
+						projectile.dirY = -1;
+						imageAngle = 270;
+						image_angle = 270;
+						projectile.vsp = projectile.spd * -1;
+						break;
+					}
 					projectile.dirX = walkDirX;
 					projectile.hsp = projectile.spd * projectile.dirX;
 					projectile.image_xscale = projectile.dirX;
@@ -351,6 +379,12 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 					projectile.hurtsObject = false;
 					projectile.hurtsEnemy = false;
 					projectile.hurtsPlayer = true;
+					if (state == 2)
+					{
+						projectile.moveAngleActive = true;
+						projectile.moveAngleLimitMax = moveAngleLimitMax;
+						projectile.destroyTimer = floor(projectile.destroyTimer / 2);
+					}
 					attackTimer = 10;
 				}
 				break;

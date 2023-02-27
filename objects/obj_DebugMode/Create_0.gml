@@ -120,6 +120,7 @@ enum debugObject
 	plasmaWisp,
 	cerulean,
 	wizzer,
+	mopoo,
 	
 	IMSICKOFTHISGUY,
 	

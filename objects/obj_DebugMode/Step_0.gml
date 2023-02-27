@@ -4390,11 +4390,11 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			switch (debugPaletteNumber)
 			{
 				case 0:
-				debugPaletteIndex = spr_Blado_Normal_Palette_BrownBlades;
+				debugPaletteIndex = spr_Como_Normal_Palette_SpiderGold;
 				break;
 				
 				default:
-				debugPaletteIndex = spr_Blado_Normal_Palette_BrownBlades;
+				debugPaletteIndex = spr_Como_Normal_Palette_SpiderGold;
 				break;
 			}
 			break;
@@ -5594,6 +5594,81 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			debugObj.sprHurtNormal = sprHurtNormal;
 			debugObj.sprHurtInhale = sprHurtInhale;
 			debugObj.sprite_index = sprIdle;
+			debugObj.paletteIndex = debugPaletteIndex;
+			debugObj.image_xscale = debugXScale;
+			debugObj.dirX = debugXScale;
+			debugObj.walkDirX = debugXScale;
+			debugObj.image_yscale = debugYScale;
+			debugObj.dirY = debugYScale;
+			debugObj.walkDirY = debugYScale;
+			debugObj.state = debugStateSelected;
+		}
+		break;
+		#endregion
+		
+		#region Mopoo
+		case debugObject.mopoo:
+		debugSpriteSelectedMax = 0;
+		switch (debugSpriteSelected)
+		{
+			#region Normal
+			case 0:
+			var sprBody = spr_Mopoo_Normal_Body;
+			var sprHurt = spr_Mopoo_Normal_Hurt;
+			debugPaletteNumberMax = 7;
+			switch (debugPaletteNumber)
+			{
+				case 0:
+				debugPaletteIndex = spr_Mopoo_Normal_Palette_PuffyCloud;
+				break;
+				
+				case 1:
+				debugPaletteIndex = spr_Mopoo_Normal_Palette_Mint;
+				break;
+				
+				case 2:
+				debugPaletteIndex = spr_Mopoo_Normal_Palette_Strawberry;
+				break;
+				
+				case 3:
+				debugPaletteIndex = spr_Mopoo_Normal_Palette_Chocolate;
+				break;
+				
+				case 4:
+				debugPaletteIndex = spr_Mopoo_Normal_Palette_Dusk;
+				break;
+				
+				case 5:
+				debugPaletteIndex = spr_Mopoo_Normal_Palette_Frozen;
+				break;
+				
+				case 6:
+				debugPaletteIndex = spr_Mopoo_Normal_Palette_TooSpooky;
+				break;
+				
+				case 7:
+				debugPaletteIndex = spr_Mopoo_Normal_Palette_Cherry;
+				break;
+				
+				default:
+				debugPaletteIndex = spr_Mopoo_Normal_Palette_PuffyCloud;
+				break;
+			}
+			break;
+			#endregion
+		}
+		debugSprite = sprBody;
+		debugIndex = 0;
+		debugStateSelectedMax = 0;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var spawnedObj = obj_Mopoo;
+			//if (spawnerMode) spawnedObj = obj_Spawner_Mopoo;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
+			debugObj.character = debugSpriteSelected;
+			debugObj.sprBody = sprBody;
+			debugObj.sprHurt = sprHurt;
+			debugObj.sprite_index = sprBody;
 			debugObj.paletteIndex = debugPaletteIndex;
 			debugObj.image_xscale = debugXScale;
 			debugObj.dirX = debugXScale;

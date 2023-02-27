@@ -23,10 +23,10 @@ sprHurt = spr_Juckle_Normal_Hurt;
 //Other Variables
 
 paletteIndex = spr_Juckle_Normal_Palette_SpinningCutter;
-hp = 12;
-dmg = 1;
+hp = juckle_Hp;
+dmg = baseEnemyContactDamage;
 ability = playerAbilities.cutter;
-points = 400;
+points = juckle_Points;
 hasXKnockback = false;
 hasYKnockback = false;
 attack = false;

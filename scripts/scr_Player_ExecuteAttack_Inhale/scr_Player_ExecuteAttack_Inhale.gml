@@ -10,7 +10,7 @@ function scr_Player_ExecuteAttack_Inhale()
 	}
 	walkDuck = false;
 	walkDuckTimer = -1;
-	run = false;
+	isRunning = false;
 	image_index = 0;
 	inhaling = false;
 	state = playerStates.inhale;

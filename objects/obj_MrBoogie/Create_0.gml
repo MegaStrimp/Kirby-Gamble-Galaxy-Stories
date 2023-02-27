@@ -32,7 +32,7 @@ sprHurt = spr_MrBoogie_Normal_Hurt;
 
 paletteIndex = spr_MrBoogie_Normal_Palette_SlimyGreen;
 hp = 12;
-dmg = 1;
+dmg = baseEnemyContactDamage;
 points = 200;
 parasolX = 2;
 parasolY = 3;

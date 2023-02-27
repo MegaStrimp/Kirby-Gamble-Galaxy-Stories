@@ -17,9 +17,9 @@ sprHurt = spr_Chuckie_Hurt;
 //Other Variables
 
 paletteIndex = spr_Chuckie_Normal_Palette_BlueSphere;
-hp = 1;
-dmg = 1;
-points = 200;
+hp = chuckie_Hp;
+dmg = baseEnemyContactDamage;
+points = chuckie_Points;
 hasXCollision = false;
 hasYCollision = false;
 hasXKnockback = false;

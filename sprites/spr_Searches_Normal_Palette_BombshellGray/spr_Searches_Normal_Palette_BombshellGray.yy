@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_Searches_Normal_Palette_BombshellGray",
-  "bbox_bottom": 22,
+  "bbox_bottom": 30,
   "bbox_left": 0,
   "bbox_right": 3,
   "bbox_top": 0,
@@ -17,7 +17,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 23,
+  "height": 31,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d41d2e38-efc8-4df4-9e5a-fa57f0af4138","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},

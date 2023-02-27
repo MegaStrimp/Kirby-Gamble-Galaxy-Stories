@@ -37,10 +37,10 @@ image_speed = 0.6; // setting speed of the walking animation
 // Other variables
 
 palette_index = spr_CapsuleJ2_Normal_Palette_SpeedDemon;
-hp = 16;
-dmg = 1;
+hp = capsuleJ2_Hp;
+dmg = baseEnemyContactDamage;
 ability = playerAbilities.jet;
-points = 200;
+points = capsuleJ2_Points;
 has_landed = false;
 can_rocketdash = false;
 tracking_obj = obj_Player;

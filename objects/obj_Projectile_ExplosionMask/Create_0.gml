@@ -4,6 +4,11 @@
 
 event_inherited();
 
+//Physics
+
+angle = 60;
+strength = 4.3;
+
 //Other Variables
 
 destroyableByWall = false;

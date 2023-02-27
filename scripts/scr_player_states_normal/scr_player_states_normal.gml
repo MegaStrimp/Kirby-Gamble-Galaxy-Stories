@@ -32,26 +32,6 @@ function scr_Player_States_Normal()
 			break;
 		}
 		
-		var collidingWall = -1;
-		var grounded = false;
-		if (place_meeting(x,y + 1,obj_ParentWall))
-		{
-			collidingWall = instance_place(x,y + 1,obj_ParentWall);
-			if ((!collidingWall.platform) or ((collidingWall.platform) and (((!keyDownHold) or ((downHeld < downHeldPlatformMax) and (playerAbility != playerAbilities.ufo))) and !(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal) and (!place_meeting(x,y + vspFinal,obj_Wall))))) grounded = true;
-		}
-		else if (place_meeting(x,y + 1,obj_Spring))
-		{
-			//var collidingSpring = instance_place(x,y + 1,obj_Spring);
-			grounded = true;
-		}
-		
-		var wallAbove = false;
-		if (place_meeting(x,y - 1,obj_Wall))
-		{
-			var collidingWall = instance_place(x,y - 1,obj_Wall);
-			if ((!collidingWall.platform)/* or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + collidingWall.vsp + 20 + vspFinal)))*/) wallAbove = true;
-		}
-		
 		var attackDisableMovement = false;
 		if ((attack)
 		and ((attackNumber != playerAttacks.ufoBeam)
@@ -111,11 +91,44 @@ function scr_Player_States_Normal()
 		if ((canRun) and (playerAbility != playerAbilities.ufo) and (playerAbility != playerAbilities.sleep))
 		{
 			if (runDoubleTap > -1) runDoubleTap -= 1;
-			if ((!global.cutscene) and (!runTurn) and ((keyLeftPressed) or (keyRightPressed)))
+			if ((!global.cutscene) and (!runTurn))
 			{
-			    if (runDoubleTap > 0)
-			    {
-					if (!run)
+				if ((keyLeftPressed) or (keyRightPressed))
+				{
+				    if (runDoubleTap > 0)
+				    {
+						if (!isRunning)
+						{
+							if (!place_meeting(x,y + 1,obj_ParentWall))
+							{
+								var parJump = instance_create_depth(x,y,depth + 1,obj_Particle);
+								parJump.sprite_index = spr_Particle_Jump;
+								parJump.destroyAfterAnimation = true;
+								parJump.spdBuiltIn = 6;
+								parJump.fricSpd = .6;
+								parJump.direction = 180;
+								if (dir == -1) parJump.direction = 0;
+							}
+							if (audio_is_playing(snd_DashBegin)) audio_stop_sound(snd_DashBegin);
+							audio_play_sound(snd_DashBegin,0,false);
+							if (playerAbility == playerAbilities.mirror)
+							{
+								mirrorDashParticleTimer = 0;
+							}
+							else
+							{
+								runParticleTimer = 0;
+							}
+							runBuffer = 0;
+							isRunning = true;
+						}
+				    }
+				    runDoubleTap = 20;
+			    }
+				
+				if (abs(gamepad_axis_value(global.playerGamepad[player],gp_axislh)) == 1)
+				{
+					if (!isRunning)
 					{
 						if (!place_meeting(x,y + 1,obj_ParentWall))
 						{
@@ -138,14 +151,13 @@ function scr_Player_States_Normal()
 							runParticleTimer = 0;
 						}
 						runBuffer = 0;
-						run = true;
+						isRunning = true;
 					}
-			    }
-			    runDoubleTap = 20;
+				}
 			}
 		}
 		
-		if (run)
+		if (isRunning)
 		{
 		    movespeed = movespeedRun;
 		    if ((runCancelTimer == -1) and (grounded) and (((!keyLeftHold) and (!keyRightHold)) or ((keyLeftHold) and (keyRightHold))) or (global.cutscene)) runCancelTimer = 15;
@@ -186,7 +198,7 @@ function scr_Player_States_Normal()
 					{
 						hsp += accel;
 						if ((!runTurn) and (!attackDisableDir)) dir = 1;
-						if ((canRunTurn) and (carriedItem == carriedItems.none) and (grounded) and (run) and (!runTurn) and (playerAbility != playerAbilities.mirror) and (hsp != 0) and (sign(hsp) != sign(dir)))
+						if ((canRunTurn) and (carriedItem == carriedItems.none) and (grounded) and (isRunning) and (!runTurn) and (playerAbility != playerAbilities.mirror) and (hsp != 0) and (sign(hsp) != sign(dir)))
 						{
 							if (audio_is_playing(snd_DashBegin)) audio_stop_sound(snd_DashBegin);
 							audio_play_sound(snd_DashBegin,0,false);
@@ -204,7 +216,7 @@ function scr_Player_States_Normal()
 					{
 						hsp -= accel;
 						if ((!runTurn) and (!attackDisableDir)) dir = -1;
-						if ((canRunTurn) and (carriedItem == carriedItems.none) and (grounded) and (run) and (!runTurn) and (playerAbility != playerAbilities.mirror) and (hsp != 0) and (sign(hsp) != sign(dir)))
+						if ((canRunTurn) and (carriedItem == carriedItems.none) and (grounded) and (isRunning) and (!runTurn) and (playerAbility != playerAbilities.mirror) and (hsp != 0) and (sign(hsp) != sign(dir)))
 						{
 							if (audio_is_playing(snd_DashBegin)) audio_stop_sound(snd_DashBegin);
 							audio_play_sound(snd_DashBegin,0,false);
@@ -222,13 +234,30 @@ function scr_Player_States_Normal()
 			{
 				if (!global.cutscene)
 				{
-					if (keyUpHold)
+					var gamepadValX = gamepad_axis_value(global.playerGamepad[player],gp_axislh);
+					var gamepadValY = gamepad_axis_value(global.playerGamepad[player],gp_axislv);
+					var gamepadAngle = point_direction(0,0,gamepadValX,gamepadValY);
+					
+					if (global.playerGamepad[player] == -1)
 					{
-						if (!attackDisableMovement) vsp -= accel;
+						if (keyUpHold)
+						{
+							if (!attackDisableMovement)
+							{
+								vsp -= accel;
+								grounded = false;
+							}
+						}
+						if (keyDownHold)
+						{
+							if (!attackDisableMovement) vsp += accel;
+						}
 					}
-					if (keyDownHold)
+					else
 					{
-						if (!attackDisableMovement) vsp += accel;
+						var ufoDeadzone = .3;
+						if (abs(gamepadValX) >= ufoDeadzone) hsp = lengthdir_x(ufoFloatSpd,gamepadAngle) * abs(gamepadValX);
+						if (abs(gamepadValY) >= ufoDeadzone) vsp = lengthdir_y(ufoFloatSpd,gamepadAngle) * abs(gamepadValY);
 					}
 				}
 				
@@ -260,7 +289,7 @@ function scr_Player_States_Normal()
 		}
 		
 		var blockGap = false;
-		if ((run) and (hsp != 0) and (vsp == 0) and (!place_meeting(x,y + 1,obj_ParentWall)) and (!place_meeting(x + hsp,y,obj_ParentWall)) and (place_meeting(x + (hsp + (2 * sign(hsp))),y + 1,obj_ParentWall))) blockGap = true;
+		if ((isRunning) and (hsp != 0) and (vsp == 0) and (!place_meeting(x,y + 1,obj_ParentWall)) and (!place_meeting(x + hsp,y,obj_ParentWall)) and (place_meeting(x + (hsp + (2 * sign(hsp))),y + 1,obj_ParentWall))) blockGap = true;
 		if ((hasGravity) and (!attackHasGravLerp) and (!blockGap) and (playerAbility != playerAbilities.ufo))
 		{
 			var gravOffset = 0;
@@ -399,7 +428,7 @@ function scr_Player_States_Normal()
 					
 					if (!attack)
 					{
-						if (run)
+						if (isRunning)
 						{
 							attack = true;
 							attackNumber = playerAttacks.bombDash;
@@ -624,7 +653,7 @@ function scr_Player_States_Normal()
 						}
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
-							if ((run) and (canDashAttack) and (vsp == 0) and (hsp != 0))
+							if ((isRunning) and (canDashAttack) and (vsp == 0) and (hsp != 0))
 							{
 								attack = true;
 								attackNumber = playerAttacks.cutterDash;
@@ -905,7 +934,7 @@ function scr_Player_States_Normal()
 							if (attackable)
 							{
 				                hsp = movespeedSlide * dir;
-								run = false;
+								isRunning = false;
 				                attack = true;
 								attackable = false;
 				                attackTimer = 45;
@@ -984,7 +1013,7 @@ function scr_Player_States_Normal()
 								}
 								else
 								{
-									if ((run) and (canDashAttack))
+									if ((isRunning) and (canDashAttack))
 									{
 										if (grounded)
 										{
@@ -1012,6 +1041,7 @@ function scr_Player_States_Normal()
 											jumpLimit = false;
 											jumpLimitTimer = jumpLimitTimerMax;
 											vsp = -(jumpspeed / 2);
+											grounded = false;
 											beamAttack2Timer = 0;
 											sprite_index = sprBeamAttack2;
 											image_index = 0;
@@ -1349,7 +1379,7 @@ function scr_Player_States_Normal()
 						
 							if (!attack)
 							{
-								if (run)
+								if (isRunning)
 								{
 									if (grounded)
 									{
@@ -1371,6 +1401,7 @@ function scr_Player_States_Normal()
 										jumpLimit = false;
 										jumpLimitTimer = jumpLimitTimerMax;
 										vsp = -(jumpspeed / 2);
+										grounded = false;
 										mysticBeamAttack2Timer = 0;
 										sprite_index = sprBeamAttack2;
 									    image_index = 0;
@@ -1675,7 +1706,7 @@ function scr_Player_States_Normal()
 						{
 							if (attackable)
 							{
-								run = false;
+								isRunning = false;
 								var par = instance_create_depth(x + (16 * dir) + hsp,y - 9,depth - 1,obj_Particle);
 								par.sprite_index = spr_Particle_MysticBeamLaser;
 								par.dir = dir;
@@ -1772,11 +1803,12 @@ function scr_Player_States_Normal()
 								hsp = 0;
 								if (grounded)
 								{
-									if (run) hsp = (movespeedRun * 3) * dir;
+									if (isRunning) hsp = (movespeedRun * 3) * dir;
 								}
 								else
 								{
 									vsp = -jumpspeed / 2;
+									grounded = false;
 									jumpLimit = false;
 									jumpLimitTimer = 15;
 								}
@@ -1858,6 +1890,7 @@ function scr_Player_States_Normal()
 								stoneEnd.dmg = 20;
 								stoneEnd.enemy = false;
 								vsp = -(jumpspeed / 3);
+								grounded = false;
 								grav = gravNormal;
 								gravLimit = gravLimitNormal;
 								invincible = false;
@@ -2029,7 +2062,7 @@ function scr_Player_States_Normal()
 							{
 								if ((!keyUpHold) and (!keyDownHold))
 						        {
-									if (!run)
+									if (!isRunning)
 									{
 										if (keyAttackPressed)
 										{
@@ -2197,7 +2230,7 @@ function scr_Player_States_Normal()
 						case playerAbilities.ninja:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
-							if ((run) and (canDashAttack) and (vsp == 0) and (hsp != 0))
+							if ((isRunning) and (canDashAttack) and (vsp == 0) and (hsp != 0))
 							{
 								attack = true;
 								attackNumber = playerAttacks.ninjaDash;
@@ -2305,7 +2338,7 @@ function scr_Player_States_Normal()
 							if (attackable)
 							{
 				                hsp = movespeedSlide * dir;
-								run = false;
+								isRunning = false;
 				                attack = true;
 								attackable = false;
 				                attackTimer = 45;
@@ -2384,6 +2417,8 @@ function scr_Player_States_Normal()
 									attackNumber = playerAttacks.fireWheelClimb;
 									//y -= 5;
 									vsp = -5;
+									grounded = false;
+									grounded = false;
 								}
 								if ((!grounded) and (place_meeting(x,y + 16,obj_ParentWall) and attackTimer > 0))
 								{
@@ -2448,12 +2483,12 @@ function scr_Player_States_Normal()
 							}
 							if ((keyAttackPressed) and (!attack))
 							{
-								if ((run) and (canDashAttack) and (hsp != 0) and (!(keyDownHold && !grounded)))
+								if ((isRunning) and (canDashAttack) and (hsp != 0) and (!(keyDownHold && !grounded)))
 								{
 									invincible = true;
 									vsp = 0;
 									fireDashHsp = (movespeedBurst * ((fireMagicCharcoalUpgrade / 2) + 1)) * dir;
-									//run = false;
+									//isRunning = false;
 					                attack = true;
 									attackNumber = playerAttacks.fireDash;
 									fireDashDir = 0;
@@ -2599,6 +2634,7 @@ function scr_Player_States_Normal()
 						if(attackNumber == playerAttacks.fireWheel){
 							if(keyJumpPressed && grounded){
 								vsp = -5;
+								grounded = false;
 							}
 							if(vsp > 0 && grounded){
 								attackTimer = 0;
@@ -2607,6 +2643,7 @@ function scr_Player_States_Normal()
 								attackNumber = playerAttacks.fireWheelClimb;
 								//y -= 5;
 								vsp = -5;
+								grounded = false;
 							}
 						}
 						if(attackNumber == playerAttacks.fireWheelClimb){
@@ -2614,10 +2651,12 @@ function scr_Player_States_Normal()
 							hsp = 0;
 							if(!place_meeting(x + (1 * dir),y,obj_ParentWall) || place_meeting(x,y-1,obj_ParentWall) || grounded && vsp >= 0){
 								vsp = -5;
+								grounded = false;
 								attackTimer = 0;
 							}
 							if(place_meeting(x + 1,y,obj_ParentWall) && keyRightHold || place_meeting(x - 1,y,obj_ParentWall) && keyLeftHold){
 								vsp = -5;
+								grounded = false;
 							}
 							if(place_meeting(x + 1,y,obj_ParentWall) && !keyRightHold && keyLeftHold || place_meeting(x - 1,y,obj_ParentWall) && !keyLeftHold && keyRightHold){
 								attackNumber = playerAttacks.fireAerial;
@@ -2690,6 +2729,7 @@ function scr_Player_States_Normal()
 								sprite_index = sprSparkAttack3;
 								image_index = 0;
 								vsp = -2;
+								grounded = false;
 								attackTimer = 30;
 							}
 							else if ((!place_meeting(x,y + 1,obj_ParentWall)) and (keyDownHold))
@@ -2807,11 +2847,11 @@ function scr_Player_States_Normal()
 					    {
 							if (keyAttackPressed)
 							{
-								if ((run) and (canDashAttack) and (hsp != 0))
+								if ((isRunning) and (canDashAttack) and (hsp != 0))
 								{
 									invincible = true;
 									vsp = 0;
-									run = false;
+									isRunning = false;
 					                attack = true;
 									attackNumber = playerAttacks.yoyoDash;
 									attackable = false;
@@ -2852,7 +2892,7 @@ function scr_Player_States_Normal()
 						case playerAbilities.wing:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
-							if (run = true) and (hsp != 0)
+							if ((isRunning) and (hsp != 0))
 							{
 								attack = true;
 								sprite_index = sprWingAttack2Ready;
@@ -2936,7 +2976,7 @@ function scr_Player_States_Normal()
 							if (attackable)
 							{
 								wingDashParticleTimer = wingDashParticleTimerMax;
-								run = false;
+								isRunning = false;
 				                attack = true;
 								attackable = false;
 				                attackTimer = 35;
@@ -2975,7 +3015,7 @@ function scr_Player_States_Normal()
 						
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
-							if ((run) and (vsp == 0) and (hsp != 0))
+							if ((isRunning) and (vsp == 0) and (hsp != 0))
 							{
 								attack = true;
 								attackNumber = playerAttacks.swordDash;
@@ -3140,7 +3180,7 @@ function scr_Player_States_Normal()
 							if (attackable)
 							{
 				                hsp = (movespeedSlide * 1.25) * dir;
-								run = false;
+								isRunning = false;
 				                attack = true;
 								attackable = false;
 				                attackTimer = 45;
@@ -3185,7 +3225,7 @@ function scr_Player_States_Normal()
 									
 									{ //this is where the Falling part of the Rising Slash will go
 									
-									}if ((run) and (canDashAttack) and (!hurt) and (!attack)){ //Speen
+									}if ((isRunning) and (canDashAttack) and (!hurt) and (!attack)){ //Speen
 											sprite_index=sprSwordAttackAirDash
 											attackTimer =2000;
 											attackNumber=playerAttacks.swordAirDash
@@ -3206,7 +3246,7 @@ function scr_Player_States_Normal()
 											attack=true;
 									
 									///////////////////////The regular Aerial Attack
-									}else if ((!run) and (!hurt) and (!attack)){
+									}else if ((!isRunning) and (!hurt) and (!attack)){
 										attackNumber=playerAttacks.swordAir
 										attackTimer=2
 										sprite_index=sprSwordAttackAir
@@ -3216,7 +3256,7 @@ function scr_Player_States_Normal()
 								
 								}else{ //all of the grounded shit
 									///i like the part when Kirby says Dash attack and Dash Attacks all over the enemies
-									if ((run) and (!hurt) and (!attack)){
+									if ((isRunning) and (!hurt) and (!attack)){
 								
 										attack = true;
 										attackNumber = playerAttacks.swordDash;
@@ -3243,12 +3283,12 @@ function scr_Player_States_Normal()
 										
 								
 									///////////////////////Main Slash Activation
-									}else if ((!run) and (!hurt) and (!attack)){
+									}else if ((!isRunning) and (!hurt) and (!attack)){
 										attackNumber=playerAttacks.swordNormal
 										attackTimer=2
 										sprite_index=sprSwordAttack1
 										///////////////////////////////////ComboJump 
-									} else if ((!run) and (!hurt) and (attack) and (attackNumber=playerAttacks.swordNormal)){ //Combo 1
+									} else if ((!isRunning) and (!hurt) and (attack) and (attackNumber=playerAttacks.swordNormal)){ //Combo 1
 										attackTimer = 60;
 										attackNumber= playerAttacks.swordCombo
 										if (audio_is_playing(snd_NinjaSlash)) audio_stop_sound(snd_NinjaSlash);
@@ -3269,7 +3309,7 @@ function scr_Player_States_Normal()
 										vsp=-3
 										attack=true
 										///////////////////////////////////Barrage 
-									} else if ((!run) and (!hurt)  and (attackNumber=playerAttacks.swordCombo)){
+									} else if ((!isRunning) and (!hurt)  and (attackNumber=playerAttacks.swordCombo)){
 										attack=true
 										attackTimer = 60;
 										attackNumber=playerAttacks.swordBarrage
@@ -3353,11 +3393,11 @@ function scr_Player_States_Normal()
 					    {
 							if (keyAttackPressed)
 							{
-								if ((run) and (canDashAttack) and (hsp != 0))
+								if ((isRunning) and (canDashAttack) and (hsp != 0))
 								{
 									invincible = true;
 									vsp = 0;
-									run = false;
+									isRunning = false;
 					                attack = true;
 									attackNumber = playerAttacks.parasolDash;
 									attackable = false;
@@ -3539,7 +3579,7 @@ function scr_Player_States_Normal()
 							//}
 							if (keyAttackPressed && attackable && !attack)
 							{
-								if (run && !grounded)
+								if (isRunning && !grounded)
 								{
 									attackNumber = playerAttacks.jetDash;
 								}
@@ -3642,7 +3682,7 @@ function scr_Player_States_Normal()
 									fireDashHsp = fireDashHsp*0.75;
 								}
 								
-								//run = false;
+								//isRunning = false;
 					            attack = true;
 								attackNumber = playerAttacks.jetDash;
 								fireDashDir = 0;
@@ -3734,11 +3774,12 @@ function scr_Player_States_Normal()
 								
 							if (grounded)
 							{
-								if (run) hsp = (movespeedRun * 3) * dir;
+								if (isRunning) hsp = (movespeedRun * 3) * dir;
 							}
 							else
 							{
 								vsp = -jumpspeed / 2;
+								grounded = false;
 								jumpLimit = false;
 								jumpLimitTimer = 15;
 							}
@@ -3750,12 +3791,12 @@ function scr_Player_States_Normal()
 							sprite_index = sprStoneAttack1Ready;
 							image_index = 0;
 						}
-						else if ((run) and (canDashAttack) and (hsp != 0))
+						else if ((isRunning) and (canDashAttack) and (hsp != 0))
 						{
 							invincible = true;
 							vsp = 0;
 							fireDashHsp = (movespeedBurst * ((fireMagicCharcoalUpgrade / 2) + 1)) * dir;
-							run = false;
+							isRunning = false;
 					        attack = true;
 							attackNumber = playerAttacks.gooeyFireDash;
 							fireDashDir = 1;
@@ -3836,6 +3877,7 @@ function scr_Player_States_Normal()
 							stoneEnd.dmg = 20;
 							stoneEnd.enemy = false;
 							vsp = -(jumpspeed / 3);
+							grounded = false;
 							grav = gravNormal;
 							gravLimit = gravLimitNormal;
 							invincible = false;
@@ -4058,12 +4100,20 @@ function scr_Player_States_Normal()
 			iceKick = false;
 		}
 		
-		//Jump
+		#region Jump
+		if ((keyJumpPressed) and (!keyDownHold))
+		{
+			jumpInputBuffer = jumpInputBufferMax;
+		}
 		
-		if ((!global.cutscene) and (canJump) and (playerAbility != playerAbilities.ufo) and (((!canMultiJump) and (grounded)) or ((canMultiJump) and (multiJumpCounter < multiJumpLimit))) and (!wallAbove) and (keyJumpPressed) and (!attack))
+		if ((!global.cutscene) and (canJump) and (playerAbility != playerAbilities.ufo) and (((!canMultiJump) and (jumpCoyoteTimeBuffer > 0)) or ((canMultiJump) and (multiJumpCounter < multiJumpLimit))) and (!wallAbove) and (jumpInputBuffer > 0) and (!attack))
 		{
 			scr_Player_ExecuteJump();
+			hasJumped = 0;
+			grounded = false;
+			jumpInputBuffer = 0;
 		}
+		#endregion
 		
 		//Jump Limit Flash
 		
@@ -4089,6 +4139,7 @@ function scr_Player_States_Normal()
 					sprite_index = sprJump;
 					image_index = 0;
 					vsp = -jumpspeed;
+					grounded = false;
 				}
 				break;
 				
@@ -4104,6 +4155,7 @@ function scr_Player_States_Normal()
 				sprite_index = sprJump;
 				image_index = 0;
 				vsp = -jumpspeed;
+				grounded = false;
 				break;
 				
 				case playerCharacters.bloodGordo:
@@ -4118,6 +4170,7 @@ function scr_Player_States_Normal()
 				sprite_index = sprJump;
 				image_index = 0;
 				vsp = -jumpspeed;
+				grounded = false;
 				break;
 				
 				default:
@@ -4133,6 +4186,7 @@ function scr_Player_States_Normal()
 				sprite_index = sprJump;
 				image_index = 0;
 				vsp = -jumpspeed;
+				grounded = false;
 				break;
 			}
 		}
@@ -4145,7 +4199,7 @@ function scr_Player_States_Normal()
 			{
 				scr_Player_SpawnMirrorShield(playerAbility);
 				movespeed = movespeedNormal;
-				run = false;
+				isRunning = false;
 			    duck = true;
 			    slide = false;
 				duckSlide = false;
@@ -4172,7 +4226,7 @@ function scr_Player_States_Normal()
 		
 		//Float
 		
-		if ((!global.cutscene) and (canFloat) and ((carriedItem == carriedItems.none) and (carriedItemState != carriedItemStates.heavy)) and ((keyJumpPressed) and (!place_meeting(x,y,obj_AntiFloat)) and (!grounded)) and (!attack))
+		if ((!global.cutscene) and (canFloat) and ((carriedItem == carriedItems.none) and (carriedItemState != carriedItemStates.heavy)) and ((keyJumpPressed) and (!place_meeting(x,y - jumpInputBufferMax,obj_Wall)) and (!place_meeting(x,y,obj_AntiFloat)) and (jumpCoyoteTimeBuffer == 0)) and (!attack))
 		{
 			switch (playerCharacter)
 			{
@@ -4203,6 +4257,7 @@ function scr_Player_States_Normal()
 					jumpspeed = jumpspeedFloat;
 					vsp = -jumpspeed;
 					float = false;
+					grounded = false;
 					image_index = 0;
 					state = playerStates.float;
 					break;
@@ -4215,6 +4270,7 @@ function scr_Player_States_Normal()
 				jumpspeed = jumpspeedFloat;
 				vsp = -jumpspeed;
 				float = true;
+				grounded = false;
 				image_index = 0;
 				state = playerStates.float;
 				break;
@@ -4225,6 +4281,7 @@ function scr_Player_States_Normal()
 				jumpspeed = jumpspeedFloat;
 				vsp = -jumpspeed;
 				float = false;
+				grounded = false;
 				image_index = 0;
 				state = playerStates.float;
 				break;
@@ -4293,7 +4350,7 @@ function scr_Player_States_Normal()
 		var heavyItemCarry = false;
 		if (carriedItemState == carriedItemStates.heavy) heavyItemCarry = true;
 		var heavyItemCarrySpd = heavyItemCarry / 2;
-		if ((run) or ((carriedItemIndex != -1) and (carriedItemIndex.object_index == obj_Projectile_Bomb) and (carriedItemIndex.selfExplodeTimer != -1) and (carriedItemIndex.selfExplodeTimer <= 90))) heavyItemCarrySpd = heavyItemCarry / 1.5;
+		if ((isRunning) or ((carriedItemIndex != -1) and (carriedItemIndex.object_index == obj_Projectile_Bomb) and (carriedItemIndex.selfExplodeTimer != -1) and (carriedItemIndex.selfExplodeTimer <= 90))) heavyItemCarrySpd = heavyItemCarry / 1.5;
 		
 		if (fallHop)
 		{
@@ -4301,7 +4358,7 @@ function scr_Player_States_Normal()
 		}
 		else
 		{
-			image_speed = 1 + (runImageSpeedIncrease * run) + heavyItemCarrySpd;
+			image_speed = 1 + (runImageSpeedIncrease * isRunning) + heavyItemCarrySpd;
 		}
 		
 		if ((!canUfoFloat) and (playerAbility != playerAbilities.ufo) and !((attack) and (attackDisableAnimation)) and (!hurt) and (!iceKick))
@@ -4631,7 +4688,7 @@ function scr_Player_States_Normal()
 					idleAnimation = false;
 					idleAnimationTimer = 0;
 					idleAnimationTimerMax = 30;
-					if (run)
+					if (isRunning)
 					{
 						if (playerAbility == playerAbilities.mirror)
 						{

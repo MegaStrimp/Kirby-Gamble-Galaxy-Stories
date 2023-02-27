@@ -21,10 +21,11 @@ sprHurt = spr_Bomber_Normal_Hurt;
 
 paletteIndex = spr_Bomber_Normal_Palette_ExplodingSkull;
 
-hp = 14;
+hp = bomber_Hp;
+dmg = baseEnemyContactDamage;
 ability = playerAbilities.crash;
 stop = false;
-points = 100;
+points = bomber_Points;
 actionState = 0;
 startExplode = false;
 explosion = false;

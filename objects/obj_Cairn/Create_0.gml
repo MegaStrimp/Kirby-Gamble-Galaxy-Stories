@@ -27,10 +27,10 @@ paletteIndex = spr_Cairn_Normal_Palette_HeavyRock;
 //Other Variables
 
 state = 0;
-hp = 44;
-dmg = 1;
+hp = cairn_Hp;
+dmg = baseEnemyContactDamage;
 ability = playerAbilities.stone;
-points = 400;
+points = cairn_Points;
 attack = false;
 jump = false;
 jumpState = 0;

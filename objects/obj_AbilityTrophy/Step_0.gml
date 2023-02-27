@@ -68,7 +68,7 @@ if (!global.pause)
 			if (instance_exists(obj_Camera)) obj_Camera.freezeFrameTimer = -1;
 			collidedPlayer.hsp = 0;
 			collidedPlayer.vsp = 0;
-			collidedPlayer.run = false;
+			collidedPlayer.isRunning = false;
 			if (collidedPlayer.state = playerStates.float)
 			{
 				collidedPlayer.jumpspeed = collidedPlayer.jumpspeedNormal;

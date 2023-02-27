@@ -82,7 +82,7 @@ if (!global.pause)
 					{
 						isKirby = true;
 					}
-					if ((isKirby) and (run))
+					if ((isKirby) and (isRunning))
 					{
 						other.starTimer = 0;
 						other.completed = true;

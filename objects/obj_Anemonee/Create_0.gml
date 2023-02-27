@@ -23,6 +23,6 @@ sprHurt = spr_Anemonee_Normal_Hurt;
 //Other Variables
 
 paletteIndex = spr_Anemonee_Normal_Palette_VioletYarn;
-hp = 16;
-dmg = 1;
-points = 300;
+hp = anemonee_Hp;
+dmg = baseEnemyContactDamage;
+points = anemonee_Points;

@@ -29,10 +29,10 @@ sprFlame = spr_Bobo_Normal_Flame;
 //Other Variables
 
 paletteIndex = spr_Bobo_Normal_Palette_FunnyFlame;
-hp = 16;
-dmg = 1;
+hp = bobo_Hp;
+dmg = baseEnemyContactDamage;
 ability = playerAbilities.fire;
-points = 200;
+points = bobo_Points;
 parasolX = 2;
 parasolY = 3;
 flameIndex = 0;

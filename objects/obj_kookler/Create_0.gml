@@ -18,9 +18,9 @@ sprHurt = spr_Kookler_Normal_Hurt;
 //Other Variables
 
 paletteIndex = spr_Kookler_Normal_Palette_BlueSpin;
-hp = 12;
-dmg = 1;
-points = 400;
+hp = kookler_Hp;
+dmg = baseEnemyContactDamage;
+points = kookler_Points;
 hasXCollision = false;
 hasYCollision = false;
 followedPath = pth_Enemy_Kookler_Circle;

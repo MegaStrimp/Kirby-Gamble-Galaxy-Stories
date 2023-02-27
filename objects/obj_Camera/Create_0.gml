@@ -60,6 +60,7 @@ cameraTargetY = cameraY;
 waterfallIndex = 0;
 gravMinLimit = false;
 gravMaxLimit = false;
+hasGigaHud = false;
 
 //Timers
 

@@ -20,9 +20,9 @@ sprHurt = -1;
 //Other Variables
 
 paletteIndex = spr_Shotzo_Normal_Palette_SteelArmada;
-hp = 1;
-dmg = 1;
-points = 100;
+hp = shotzo_Hp;
+dmg = baseEnemyContactDamage;
+points = shotzo_Points;
 parasolY = -3;
 hurtable = false;
 clampPositionX = false;

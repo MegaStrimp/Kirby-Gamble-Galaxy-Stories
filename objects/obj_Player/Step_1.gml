@@ -1,5 +1,9 @@
 ///@description Begin Step
 
+#region Inputs
+scr_Player_Inputs(player);
+#endregion
+
 #region Pointers
 switch (player)
 {
@@ -23,6 +27,45 @@ switch (player)
 	var playerFamiliar = global.familiarP4;
 	break;
 }
+#endregion
+
+#region Variables
+var collidingWall = -1;
+
+grounded = false;
+jumpCoyoteTimeBuffer = max(0,jumpCoyoteTimeBuffer - 1);
+if (place_meeting(x,y + 1,obj_ParentWall))
+{
+	collidingWall = instance_place(x,y + 1,obj_ParentWall);
+	if ((!collidingWall.platform) or ((collidingWall.platform) and (((!keyDownHold) or ((downHeld < downHeldPlatformMax) and (playerAbility != playerAbilities.ufo))) and !(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal) and (!place_meeting(x,y + vspFinal,obj_Wall)))))
+	{
+		grounded = true;
+		jumpCoyoteTimeBuffer = jumpCoyoteTimeBufferMax;
+		if (canFallDuck)
+		{
+			fallDuckExec = true;
+		}
+		canFallDuck = false;
+	}
+}
+else if (place_meeting(x,y + 1,obj_Spring))
+{
+	//var collidingSpring = instance_place(x,y + 1,obj_Spring);
+	grounded = true;
+}
+else
+{
+	if (state == playerStates.normal) canFallDuck = true;
+}
+
+wallAbove = false;
+if (place_meeting(x,y - 1,obj_Wall))
+{
+	collidingWall = instance_place(x,y - 1,obj_Wall);
+	if ((!collidingWall.platform)/* or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + collidingWall.vsp + 20 + vspFinal)))*/) wallAbove = true;
+}
+
+jumpInputBuffer = max(0,jumpInputBuffer - 1);
 #endregion
 
 #region Setup Timer
@@ -318,6 +361,7 @@ if (hasMintLeaf)
 		hurt = false;
 		jumpspeed = jumpspeedFloat;
 		vsp = -jumpspeed;
+		grounded = false;
 		float = false;
 		image_index = 0;
 		state = playerStates.float;

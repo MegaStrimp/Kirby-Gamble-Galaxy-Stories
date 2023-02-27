@@ -29,18 +29,6 @@ function scr_Player_States_Carry()
 			break;
 		}
 		
-		var grounded = false;
-		if (place_meeting(x,y + 1,obj_ParentWall))
-		{
-			var collidingWall = instance_place(x,y + 1,obj_ParentWall);
-			if ((!collidingWall.platform) or ((collidingWall.platform) and (!(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal)) and (!place_meeting(x,y + 1,obj_Wall)))) grounded = true;
-		}
-		else if (place_meeting(x,y + 1,obj_Spring))
-		{
-			//var collidingSpring = instance_place(x,y + 1,obj_Spring);
-			grounded = true;
-		}
-		
 		if ((hurt) or (!place_meeting(x,y,obj_Door))) enteredDoor = -1;
 		
 		//Run
@@ -50,7 +38,7 @@ function scr_Player_States_Carry()
 		{
 		    if (runDoubleTap > 0)
 		    {
-		        if (!run)
+		        if (!isRunning)
 				{
 					if (!place_meeting(x,y + 1,obj_ParentWall))
 					{
@@ -66,13 +54,13 @@ function scr_Player_States_Carry()
 					audio_play_sound(snd_DashBegin,0,false);
 					runParticleTimer = 0;
 					runBuffer = 0;
-					run = true;
+					isRunning = true;
 				}
 		    }
 		    runDoubleTap = 20;
 		}
 		
-		if (run)
+		if (isRunning)
 		{
 		    movespeed = movespeedRun;
 			if (((runCancelTimer == -1) and (!inhaleEnd) and (!spit) and ((keyLeftReleased) or (keyRightReleased))) or (global.cutscene))
@@ -136,6 +124,7 @@ function scr_Player_States_Carry()
 			if ((!global.cutscene) and (keyJumpPressed) and (!inhaleEnd) and (!spit))
 			{
 				vsp = -jumpspeed;
+				grounded = false;
 				audio_play_sound(snd_Jump,0,false);
 			}
 		}
@@ -167,7 +156,7 @@ function scr_Player_States_Carry()
 					projSpitStar.state = "smallStar";
 					projSpitStar.destroyableByEnemy = true;
 					projSpitStar.destroyableByObject = true;
-					projSpitStar.dmg = 52 + (run * 8);
+					projSpitStar.dmg = 52 + (isRunning * 8);
 					projSpitStar.sprite_index = spr_SpitStar_Small;
 		        }
 		        else
@@ -175,7 +164,7 @@ function scr_Player_States_Carry()
 					projSpitStar.state = "bigStar";
 					projSpitStar.destroyableByEnemy = false;
 					projSpitStar.destroyableByObject = false;
-					projSpitStar.dmg = 60 + ((sucked - 2) * .5) + (run * 5);
+					projSpitStar.dmg = 60 + ((sucked - 2) * .5) + (isRunning * 5);
 					projSpitStar.hitInvincibility = projSpitStar.hitInvincibilityMax;
 					projSpitStar.sprite_index = spr_SpitStar_Big;
 		        }
@@ -650,7 +639,7 @@ function scr_Player_States_Carry()
 				audio_play_sound(snd_Swallow,0,false);
 				hsp = 0;
 				vsp = 0;
-				run = false;
+				isRunning = false;
 				swallow = true;
 			    cAbility = playerAbilities.none;
 				ateHeavy = false;
@@ -686,7 +675,7 @@ function scr_Player_States_Carry()
 			    }
 			    else
 			    {
-					if (!run)
+					if (!isRunning)
 					{
 						image_speed = 1;
 					}

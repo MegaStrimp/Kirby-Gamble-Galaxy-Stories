@@ -836,38 +836,6 @@ global.playerGamepad[1] = -1;
 global.playerGamepad[2] = -1;
 global.playerGamepad[3] = -1;
 
-for (var i = 0; i < gamepad_get_device_count(); i++)
-{
-	if (global.playerGamepad[0] == -1)
-	{
-		if gamepad_is_connected(i)
-	    {
-	        global.playerGamepad[0] = i;
-	    }
-	}
-	else if (global.playerGamepad[1] == -1)
-	{
-		if gamepad_is_connected(i)
-	    {
-	        global.playerGamepad[1] = i;
-	    }
-	}
-	else if (global.playerGamepad[2] == -1)
-	{
-		if gamepad_is_connected(i)
-	    {
-	        global.playerGamepad[2] = i;
-	    }
-	}
-	else if (global.playerGamepad[3] == -1)
-	{
-		if gamepad_is_connected(i)
-	    {
-	        global.playerGamepad[3] = i;
-	    }
-	}
-}
-
 for (var i = 0; i < 4; i++)
 {
     global.stickLeftPressed[i] = false;

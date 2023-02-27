@@ -25,9 +25,9 @@ sprHurt = -1;
 //Other Variables
 
 paletteIndex = choose(spr_Onion_Normal_Palette_OrangeCarrot,spr_Onion_Normal_Palette_BrightOrange,spr_Onion_Normal_Palette_DarkOrange,spr_Onion_Normal_Palette_LightOrange,spr_Onion_Normal_Palette_PaleOrange,spr_Onion_Normal_Palette_SaturatedOrange);
-hp = 1;
-dmg = 1;
-points = 200;
+hp = onion_Hp;
+dmg = baseEnemyContactDamage;
+points = onion_Points;
 clampPositionX = false;
 clampPositionY = false;
 hasGravity = false;

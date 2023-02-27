@@ -16,9 +16,9 @@ sprStar = spr_Particle_BigStar_Yellow;
 //Other Variables
 
 paletteIndex = spr_Nidoo_Normal_Palette_ShadowGate;
-hp = 1;
-dmg = 1;
-points = 100;
+hp = nidoo_Hp;
+dmg = baseEnemyContactDamage;
+points = nidoo_Points;
 hurtable = false;
 active = false;
 shakeCount = 0;

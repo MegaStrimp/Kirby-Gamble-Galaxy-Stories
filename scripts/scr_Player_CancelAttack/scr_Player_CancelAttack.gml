@@ -31,6 +31,7 @@ function scr_Player_CancelAttack(argument0)
 		}
 		
 		//image_index = 0;
+		//sprite_index = sprIdle;
 		
 		switch (attackNumber)
 		{

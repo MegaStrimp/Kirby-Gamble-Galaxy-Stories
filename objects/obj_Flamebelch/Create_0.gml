@@ -31,9 +31,9 @@ sprHurt = spr_Flamebelch_Normal_Hurt;
 //Other Variables
 
 paletteIndex = spr_MrBoogie_Normal_Palette_SlimyGreen;
-hp = 12;
-dmg = 1;
-points = 200;
+hp = flamebelch_Hp;
+dmg = baseEnemyContactDamage;
+points = flamebelch_Points;
 parasolX = 2;
 parasolY = 3;
 isMystic = true;

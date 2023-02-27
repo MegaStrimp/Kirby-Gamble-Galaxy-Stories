@@ -31,10 +31,10 @@ sprHandHoldAway = spr_GimHand_Normal_HoldAway;
 //Other Variables
 
 paletteIndex = spr_Gim_Normal_Palette_SpinningBrown;
-hp = 11;
-dmg = 1;
+hp = gim_Hp;
+dmg = baseEnemyContactDamage;
 ability = playerAbilities.yoyo;
-points = 500;
+points = gim_Points;
 jump = 3;
 walk = 4; //Took a little artistic liberty and made his walk variable go up to 4, since it meshed better with his walk cycle
 state = 1;

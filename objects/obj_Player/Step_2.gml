@@ -1,7 +1,6 @@
 ///@description End Step
 
-//Variables
-
+#region Pointers
 switch (player)
 {
 	case 0:
@@ -20,6 +19,12 @@ switch (player)
 	var playerCharacter = global.characterP4;
 	break;
 }
+#endregion
+
+#region Variables
+if (grounded) and (hasJumped == 1)  hasJumped = -1;
+if (hasJumped == 0) hasJumped = 1;
+#endregion
 
 //Warp Star
 

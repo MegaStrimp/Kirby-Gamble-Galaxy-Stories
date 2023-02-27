@@ -1,7 +1,6 @@
 ///@description Main
 
-//Variables
-
+#region Variables
 if (parasol)
 {
 	gravLimit = gravLimitParasol;
@@ -10,61 +9,30 @@ if (parasol)
 }
 else
 {
-	//if (hurt)
-	//{
-		//gravLimit = 4;
-		//grav = .2;
-	//}
-	//else
-	//{
+	/*if (hurt)
+	{
+		gravLimit = 5;
+		grav = .2;
+	}
+	else
+	{
 		gravLimit = gravLimitNormal;
 		grav = gravNormal;
-	//}
+	}*/
+	gravLimit = gravLimitNormal;
+	grav = gravNormal;
 }
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+var parentPause = ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)));
+#endregion
+
+if ((parentPause) and (hurtStopTimer < 1))
 {
-	//Destroy Outside View
+	#region Destroy Outside View
+	scr_Enemy_DestroyOutsideView();
+	#endregion
 	
-	checkEnemySpawners = true;
-	with (obj_Enemy) if ((id != other.id) and (spawner == other.spawner)) other.checkEnemySpawners = false;
-	
-	if ((destroyOutsideView) or (hasSpawner))
-	{
-		var x1 = camera_get_view_x(gameView) - spawnerRange;
-		var y1 = camera_get_view_y(gameView) - spawnerRange;
-		var x2 = camera_get_view_x(gameView) + camera_get_view_width(gameView) + spawnerRange;
-		var y2 = camera_get_view_y(gameView) + camera_get_view_height(gameView) + spawnerRange;
-		
-		if (!point_in_rectangle(x,y,x1,y1,x2,y2))
-		{
-			if ((checkEnemySpawners) and (hasSpawner)) spawner.spawn = true;
-			if (instance_exists(parasolObject)) instance_destroy(parasolObject);
-			instance_destroy();
-		}
-	}
-	
-	//Moving Walls
-	/*
-	if (place_meeting(x,y + 1,obj_ParentWall))
-	{
-		var movingWall = instance_place(x,y + 1,obj_ParentWall);
-		if (movingWall.hsp != 0) x += movingWall.hsp;
-		if (movingWall.vsp != 0) y += movingWall.vsp;
-	}
-	if (place_meeting(x,y - 1,obj_ParentWall))
-	{
-		var movingWall = instance_place(x,y - 1,obj_ParentWall);
-		if (movingWall.vsp != 0) y += movingWall.vsp;
-	}
-	if (place_meeting(x + sign(hspFinal),y,obj_ParentWall))
-	{
-		var movingWall = instance_place(x + sign(hspFinal),y,obj_ParentWall);
-		if (movingWall.hsp != 0) x += movingWall.hsp;
-	}
-	*/
-	//Gravity
-	
+	#region Gravity
 	if (hasGravity)
 	{
 		if (vsp < gravLimit)
@@ -81,9 +49,9 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 	{
 		vsp = min(0,vsp);
 	}
+	#endregion
 	
-	//Knockback
-	
+	#region Knockback
 	if (knockbackX >= decel) knockbackX -= decel;
 	if (knockbackX <= -decel) knockbackX += decel;
 	if ((knockbackX > -decel) and (knockbackX < decel)) knockbackX = 0;
@@ -91,6 +59,7 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 	if (knockbackY >= grav) knockbackY -= grav;
 	if (knockbackY <= -grav) knockbackY += grav;
 	if ((knockbackY > -grav) and (knockbackY < grav)) knockbackY = 0;
+	#endregion
 	
 	//Death
 	
@@ -561,16 +530,15 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 		if (!isBoss) instance_destroy();
 	}
 	
-	//Animation
-	
+	#region Animation
 	scaleExX = lerp(scaleExX,0,scaleExSpd);
 	scaleExY = lerp(scaleExY,0,scaleExSpd);
 	
 	image_xscale = scale * dirX;
 	image_yscale = scale * dirY;
+	#endregion
 	
-	//Collision
-	
+	#region Collision
 	if (hp > 0)
 	{
 		if ((setupTimer == 0) and (groundFailsafe))
@@ -588,9 +556,9 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 		}
 		scr_Enemy_Collision();
 	}
+	#endregion
 	
-	//Bumpers
-	
+	#region Bumpers
 	if (place_meeting(x,y,obj_Bumper) and ((hasXKnockback) or ((hasYKnockback))))
 	{
 		//Variables
@@ -636,9 +604,9 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			}
 		}
 	}
+	#endregion
 	
-	//Springs
-	
+	#region Springs
 	if (place_meeting(x,y + 1,obj_Spring))
 	{
 		if (sign(vsp + knockbackY) != -1)
@@ -687,9 +655,9 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			vsp = -finalForce;
 		}
 	}
+	#endregion
 	
-	//Trampolines
-	
+	#region Trampolines
 	if ((place_meeting(x,y - 1,obj_Trampoline)) and (hasYKnockback))
 	{
 		if (sign(vsp + knockbackY) == 1)
@@ -747,11 +715,12 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			knockbackY = -(collidedTrampoline.force / 3) - ((collidedTrampoline.force / collidedTrampoline.jumpCountMax) * collidedTrampoline.jumpCount);
 		}
 	}
+	#endregion
 	
-	//Hurt Timer
-	
+	#region Hurt Timer
 	if (hurtTimer > 0)
 	{
+		show_debug_message(1);
 		hurtTimer -= 1;
 	}
 	else if (hurtTimer == 0)
@@ -764,23 +733,18 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
         {
             hurt = false;
         }
+		hasGravity = (backupFlags >> BFLAGS.BF_GRAV) & 1;
+		hasXCollision = (backupFlags >> BFLAGS.BF_XCOLL) & 1;
+		hasYCollision = (backupFlags >> BFLAGS.BF_YCOLL) & 1;
+		destroyOutsideView = (backupFlags >> BFLAGS.BF_DESPAWN) & 1;
+		
+		shakeX = 0;
+		shakeY = 0;
 		hurtTimer = -1;
 	}
+	#endregion
 	
-	//Hurt Stop Timer
-	
-	if (hurtStopTimer > 0)
-	{
-		hurtStopTimer -= 1;
-	}
-	else if (hurtStopTimer == 0)
-	{
-		speed = 8;
-		hurtStopTimer = -1;
-	}
-	
-	//Invincible Timer
-	
+	#region Invincible Timer
 	if (invincibleTimer > 0)
 	{
 		invincibleTimer -= 1;
@@ -790,9 +754,9 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 		invincible = false;
 		invincibleTimer = -1;
 	}
+	#endregion
 	
-	//Invincible Flash Timer
-	
+	#region Invincible Flash Timer
 	if (invincible)
 	{
 		if (invincibleFlashTimer > 0)
@@ -817,9 +781,9 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 		invincibleFlash = false;
 		invincibleFlashTimer = -1;
 	}
+	#endregion
 	
-	//Hurt
-	
+	#region Hurt
 	if (collisionHitbox == -1)
 	{
 		if (!hurtable)
@@ -1008,9 +972,9 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			}
 		}
 	}
+	#endregion
 	
-	//Scan
-	
+	#region Scan
 	with (obj_Projectile)
 	{
 		if (place_meeting(x,y,other))
@@ -1047,9 +1011,9 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			}
 		}
 	}
+	#endregion
 	
-	//Shine Effect Timer
-	
+	#region Shine Effect Timer
 	if (shineEffectTimer > 0)
 	{
 		shineEffectTimer -= 1;
@@ -1061,10 +1025,29 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 		particle.destroyAfterAnimation = true;
 		shineEffectTimer = shineEffectTimerMax;
 	}
+	#endregion
 }
 
-//Setup Timer
+#region Set Child Pause
+childPause = (((global.pause) or (hurt) or ((global.cutscene) and (pausedInCutscenes))) or (hurtStopTimer > 0));
+#endregion
 
+#region Hurt Stop Timer
+if (parentPause)
+{
+	if (hurtStopTimer > 0)
+	{
+		hurtStopTimer -= 1;
+	}
+	else if (hurtStopTimer == 0)
+	{
+		show_debug_message("Counting hitstop");
+		hurtStopTimer = -1;
+	}
+}
+#endregion
+
+#region Setup Timer
 if (setupTimer > 0)
 {
 	setupTimer -= 1;
@@ -1085,9 +1068,9 @@ else if (setupTimer == 0)
 	if ((isMiniBoss) or (isBoss)) healthbarBackHp = bossHbHp;
 	setupTimer = -1;
 }
+#endregion
 
-//Debug Delete
-
+#region Debug Delete
 if (global.debug)
 {
 	if ((position_meeting(mouse_x,mouse_y,id)) and (mouse_check_button(mb_right)))
@@ -1095,3 +1078,4 @@ if (global.debug)
 		instance_destroy();
 	}
 }
+#endregion
