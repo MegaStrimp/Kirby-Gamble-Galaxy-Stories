@@ -1,9 +1,5 @@
 ///@description Room Creation Code
 
-//Randomize
-
-randomize();
-
 //Variables
 
 global.discordDetailText = "Asteroid Fields";

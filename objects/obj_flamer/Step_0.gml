@@ -1,22 +1,5 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_Flamer_Normal_Idle;
-		sprReady = spr_Flamer_Normal_Ready;
-		sprAttack = spr_Flamer_Normal_Attack;
-		sprHurt = spr_Flamer_Normal_Hurt;
-		break;
-	}
-}
-
 //Event Inherited
 
 event_inherited();
@@ -30,7 +13,7 @@ event_inherited();
 //move slowly to the player's x, move faster to the player's y, when matching player y, 
 //switch to flame state and charge at the player. Move through walls when doing this
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	//Get Inhaled
 	
@@ -282,6 +265,4 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 else
 {
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

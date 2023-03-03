@@ -4,10 +4,6 @@
 
 event_inherited();
 
-//Randomize
-
-randomize();
-
 #region Hurt Function
 function func_CappyHurt(argument0)
 {

@@ -41,21 +41,12 @@ if (place_meeting(x,y + 1,obj_ParentWall))
 	{
 		grounded = true;
 		jumpCoyoteTimeBuffer = jumpCoyoteTimeBufferMax;
-		if (canFallDuck)
-		{
-			fallDuckExec = true;
-		}
-		canFallDuck = false;
 	}
 }
 else if (place_meeting(x,y + 1,obj_Spring))
 {
 	//var collidingSpring = instance_place(x,y + 1,obj_Spring);
 	grounded = true;
-}
-else
-{
-	if (state == playerStates.normal) canFallDuck = true;
 }
 
 wallAbove = false;
@@ -342,7 +333,7 @@ if (hasInvinCandy)
 	{
 		invinCandyMask = instance_create_depth(x,y,depth,obj_Projectile_InvinCandyMask);
 		invinCandyMask.owner = id;
-		invinCandyMask.dmg = 50;
+		invinCandyMask.dmg = basePlayerInvinCandyContact_Damage;
 		invinCandyMask.image_xscale = image_xscale;
 		invinCandyMask.image_yscale = image_yscale;
 	}

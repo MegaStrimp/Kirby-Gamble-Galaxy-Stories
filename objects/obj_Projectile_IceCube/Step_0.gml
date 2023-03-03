@@ -1,20 +1,10 @@
 ///@description Main
 
-//Characters
+#region Event Inherited
+event_inherited();
+#endregion
 
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_Projectile_Ice_Normal;
-		break;
-	}
-}
-
-if (((pausable) and (!global.pause)) or (!pausable))
+if (!isPaused)
 {
 	//Variables
 	
@@ -93,10 +83,6 @@ if (((pausable) and (!global.pause)) or (!pausable))
 			if (collidedPlayer.x > x) hsp = -movespeed;
 		}
 	}
-	
-	//Event Inherited
-	
-	event_inherited();
 	
 	//Flash Timer
 	

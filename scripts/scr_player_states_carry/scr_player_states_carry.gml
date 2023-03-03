@@ -156,7 +156,8 @@ function scr_Player_States_Carry()
 					projSpitStar.state = "smallStar";
 					projSpitStar.destroyableByEnemy = true;
 					projSpitStar.destroyableByObject = true;
-					projSpitStar.dmg = 52 + (isRunning * 8);
+					projSpitStar.dmg = kirby_SpitStarNone_Damage + (isRunning * kirby_SpitStarNone_RunDamageMult);
+					scr_Attack_SetKnockback(projSpitStar,kirby_SpitStarNone_Strength,kirby_SpitStarNone_HitStopAffectSource,kirby_SpitStarNone_HitStopAffectPlayer,kirby_SpitStarNone_HitStopAffectTarget,kirby_SpitStarNone_HitStopLength,kirby_SpitStarNone_HitStopShakeStrength);
 					projSpitStar.sprite_index = spr_SpitStar_Small;
 		        }
 		        else
@@ -164,7 +165,8 @@ function scr_Player_States_Carry()
 					projSpitStar.state = "bigStar";
 					projSpitStar.destroyableByEnemy = false;
 					projSpitStar.destroyableByObject = false;
-					projSpitStar.dmg = 60 + ((sucked - 2) * .5) + (isRunning * 5);
+					projSpitStar.dmg = kirby_SpitStarBig_Damage + ((sucked - 2) * kirby_SpitStarBig_InhaleDamageMult) + (isRunning * kirby_SpitStarBig_RunDamageMult);
+					scr_Attack_SetKnockback(projSpitStar,kirby_SpitStarBig_Strength,kirby_SpitStarBig_HitStopAffectSource,kirby_SpitStarBig_HitStopAffectPlayer,kirby_SpitStarBig_HitStopAffectTarget,kirby_SpitStarBig_HitStopLength,kirby_SpitStarBig_HitStopShakeStrength);
 					projSpitStar.hitInvincibility = projSpitStar.hitInvincibilityMax;
 					projSpitStar.sprite_index = spr_SpitStar_Big;
 		        }

@@ -1,29 +1,10 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_Tomatoo_Normal_Idle;
-		sprDuck = spr_Tomatoo_Normal_Duck;
-		sprJump = spr_Tomatoo_Normal_Jump;
-		sprFall = spr_Tomatoo_Normal_Fall;
-		sprHeavyDuck = spr_Tomatoo_Normal_HeavyDuck;
-		sprHurt = spr_Tomatoo_Normal_Hurt;
-		break;
-	}
-}
-
 //Event Inherited
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	//Variables
 	

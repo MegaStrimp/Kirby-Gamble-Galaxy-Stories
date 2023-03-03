@@ -1,18 +1,5 @@
 ///@description Main
 
-#region Characters
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		#region Normal
-		case 0:
-		break;
-		#endregion
-	}
-}
-#endregion
-
 #region Death
 if (death)
 {
@@ -27,7 +14,7 @@ if (death)
 event_inherited();
 #endregion
 
-if ((!global.pause) and (((!global.cutscene) or ((global.cutscene) and (phase == 0))) and (pausedInCutscenes)))
+if ((!childPause) or ((global.cutscene) and (phase == 0)))
 {
 	#region Hurt Player
 	if (!death) scr_Enemy_HurtsPlayer(dmg);

@@ -1,25 +1,11 @@
 ///@description Main
 
-//Characters
+#region Event Inherited
+event_inherited();
+#endregion
 
-if (setupTimer == 0)
+if (!isPaused)
 {
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_SMB_BowserFire_Normal_Idle;
-		break;
-	}
-}
-
-if (((pausable) and (!global.pause)) or (!pausable))
-{
-	//Event Inherited
-	
-	event_inherited();
-	
 	//Get Inhaled
 	
 	scr_Object_Inhale(false);

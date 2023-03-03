@@ -1,9 +1,5 @@
 ///@description Initialize Variables
 
-#region Randomize
-randomize();
-#endregion
-
 #region Physics Variables
 hsp = 0;
 hspCarry = 0;

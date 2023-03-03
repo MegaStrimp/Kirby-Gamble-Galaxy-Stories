@@ -1,53 +1,32 @@
 ///@description Main
+	
+//Touch Wall
 
-//Characters
-
-if (setupTimer == 0)
+if ((charge) and (place_meeting(x + hsp,y,obj_Wall)))
 {
-	switch (character)
+	var collidedWall = instance_place(x + hsp,y,obj_Wall);
+	if (!collidedWall.enemyCollisionHitbox)
 	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_Projectile_Cutter_Player;
-		break;
-		
-		//Enemy
-		
-		case 1:
-		sprIdle = spr_Projectile_Cutter_Enemy;
-		break;
+		if ((collidedWall.object) and ((collidedWall.object_index != obj_AbilityBlock) or (collidedWall.damageType == damageTypes.cutter))) collidedWall.hp -= 1;
+		if (collidedWall.hp != 0)
+		{
+			if (collided >= 4) instance_destroy();
+			collided += 1;
+			dirX *= -1;
+			hsp = decelMax * dirX;
+		}
 	}
-	if (charge) trail = scr_create_trail_full(spr_Trail_Yellow, 0, 20, 0, 0.5, 1, 2, 4, 0.5, 0, 1, c_white,20,depth + 1);
 }
 
-if (((pausable) and (!global.pause)) or (!pausable))
+#region Event Inherited
+event_inherited();
+#endregion
+
+if (!isPaused)
 {
 	//Variables
 	
 	scr_Player_Inputs(player);
-	
-	//Touch Wall
-	
-	if ((charge) and (place_meeting(x + hsp,y,obj_Wall)))
-	{
-		var collidedWall = instance_place(x + hsp,y,obj_Wall);
-		if (!collidedWall.enemyCollisionHitbox)
-		{
-			if ((collidedWall.object) and ((collidedWall.object_index != obj_AbilityBlock) or (collidedWall.damageType == damageTypes.cutter))) collidedWall.hp -= 1;
-			if (collidedWall.hp != 0)
-			{
-				if (collided >= 4) instance_destroy();
-				collided += 1;
-				dirX *= -1;
-				hsp = decelMax * dirX;
-			}
-		}
-	}
-	
-	//Event Inherited
-	
-	event_inherited();
 	
 	//Angle
 	

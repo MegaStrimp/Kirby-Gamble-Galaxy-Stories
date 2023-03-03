@@ -1,6 +1,6 @@
 ///@description End Step
 
-if (((pausable) and (!global.pause)) or (!pausable))
+if (!isPaused)
 {
 	//Follow Owner
 	

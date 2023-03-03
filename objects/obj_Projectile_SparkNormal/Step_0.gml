@@ -1,6 +1,10 @@
 ///@description Main
 
-if (((pausable) and (!global.pause)) or (!pausable))
+#region Event Inherited
+event_inherited();
+#endregion
+
+if (!isPaused)
 {
 	//Destroy
 	
@@ -12,10 +16,6 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	{
 		if ((!enemy) and (owner.attackNumber != playerAttacks.sparkNormal)) instance_destroy();
 	}
-	
-	//Event Inherited
-	
-	event_inherited();
 	
 	//Sound
 	

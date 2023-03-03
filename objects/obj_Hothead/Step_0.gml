@@ -1,25 +1,5 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_Hothead_Normal_Idle;
-		sprWalk = spr_Hothead_Normal_Walk;
-		sprCharge = spr_Hothead_Normal_Charge;
-		sprAttack = spr_Hothead_Normal_Attack;
-		sprHurtGround = spr_Hothead_Normal_HurtGround;
-		sprHurtAir = spr_Hothead_Normal_HurtAir;
-		sprHurt = sprHurtGround;
-		break;
-	}
-}
-
 //Hurt Sprite
 
 if (place_meeting(x,y - 1,collisionY))
@@ -35,7 +15,7 @@ else
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	if (!parasol) scr_Object_Inhale(enemy);
 	
@@ -267,6 +247,4 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 else
 {
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

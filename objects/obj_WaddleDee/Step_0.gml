@@ -1,94 +1,5 @@
 ///@description Main
 
-#region Characters
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_WaddleDee_Normal_Idle;
-		sprWalk = spr_WaddleDee_Normal_Walk;
-		sprRun = spr_WaddleDee_Normal_Run;
-		sprDuck = spr_WaddleDee_Normal_Duck;
-		sprJump = spr_WaddleDee_Normal_Jump;
-		sprFall = spr_WaddleDee_Normal_Fall;
-		sprSwing = spr_WaddleDee_Normal_Swing;
-		sprParasol = spr_WaddleDee_Normal_Parasol;
-		sprClimbUp = spr_WaddleDee_Normal_ClimbUp;
-		sprClimbDown = spr_WaddleDee_Normal_ClimbDown;
-		sprHurt = spr_WaddleDee_Normal_Hurt;
-		break;
-		
-		//Egg
-		
-		case 1:
-		sprIdle = spr_WaddleDee_Egg_Idle;
-		sprWalk = spr_WaddleDee_Egg_Walk;
-		sprRun = spr_WaddleDee_Normal_Run;
-		sprDuck = spr_WaddleDee_Egg_Duck;
-		sprJump = spr_WaddleDee_Egg_Jump;
-		sprFall = spr_WaddleDee_Egg_Fall;
-		sprSwing = spr_WaddleDee_Egg_Swing;
-		sprParasol = spr_WaddleDee_Normal_Parasol;
-		sprClimbUp = spr_WaddleDee_Egg_ClimbUp;
-		sprClimbDown = spr_WaddleDee_Egg_ClimbDown;
-		sprHurt = spr_WaddleDee_Egg_Hurt;
-		break;
-		
-		//Gold
-		
-		case 2:
-		sprIdle = spr_WaddleDee_Gold_Idle;
-		sprWalk = spr_WaddleDee_Gold_Walk;
-		sprRun = spr_WaddleDee_Normal_Run;
-		sprDuck = spr_WaddleDee_Gold_Duck;
-		sprJump = spr_WaddleDee_Gold_Jump;
-		sprFall = spr_WaddleDee_Gold_Fall;
-		sprSwing = spr_WaddleDee_Gold_Swing;
-		sprParasol = spr_WaddleDee_Normal_Parasol;
-		sprClimbUp = spr_WaddleDee_Gold_ClimbUp;
-		sprClimbDown = spr_WaddleDee_Gold_ClimbDown;
-		sprHurt = spr_WaddleDee_Gold_Hurt;
-		shineEffectTimer = shineEffectTimerMax;
-		break;
-		
-		//Alien
-		
-		case 3:
-		sprIdle = spr_WaddleDee_Alien_Idle;
-		sprWalk = spr_WaddleDee_Alien_Walk;
-		sprRun = spr_WaddleDee_Normal_Run;
-		sprDuck = spr_WaddleDee_Alien_Duck;
-		sprJump = spr_WaddleDee_Alien_Jump;
-		sprFall = spr_WaddleDee_Alien_Fall;
-		sprSwing = spr_WaddleDee_Alien_Swing;
-		sprParasol = spr_WaddleDee_Normal_Parasol;
-		sprClimbUp = spr_WaddleDee_Alien_ClimbUp;
-		sprClimbDown = spr_WaddleDee_Alien_ClimbDown;
-		sprHurt = spr_WaddleDee_Alien_Hurt;
-		break;
-		
-		//Bandit
-		
-		case 4:
-		sprIdle = spr_WaddleDee_Bandit_Idle;
-		sprWalk = spr_WaddleDee_Bandit_Walk;
-		sprRun = spr_WaddleDee_Bandit_Run;
-		sprDuck = spr_WaddleDee_Bandit_Duck;
-		sprJump = spr_WaddleDee_Bandit_Jump;
-		sprFall = spr_WaddleDee_Bandit_Fall;
-		sprSwing = spr_WaddleDee_Bandit_Swing;
-		sprParasol = spr_WaddleDee_Bandit_Parasol;
-		sprClimbUp = spr_WaddleDee_Bandit_ClimbUp;
-		sprClimbDown = spr_WaddleDee_Bandit_ClimbDown;
-		sprHurt = spr_WaddleDee_Bandit_Hurt;
-		break;
-	}
-}
-#endregion
-
 #region Event Inherited
 event_inherited();
 #endregion
@@ -412,6 +323,126 @@ if (!childPause)
 		else if (sign(vsp) > 0)
 		{
 			sprite_index = sprClimbDown;
+		}
+		break;
+		
+		//Stand Still
+		
+		case 3:
+		jumpTimer = -1;
+		if ((!hurt) and (!attack) and (!duck) and (!walkDuck))
+		{
+			var nearestPlayer = instance_nearest(x,y,obj_Player);
+			if (nearestPlayer.x < x)
+			{
+				dirX = -1;
+			}
+			else
+			{
+				dirX = 1;
+			}
+		}
+		
+		if ((hurt) and (sprHurt != -1))
+		{
+			image_speed = 1;
+			sprite_index = sprHurt;
+		}
+		else
+		{
+			image_speed = 1;
+			
+			if (parasol)
+			{
+				if (movespeed != 0)
+				{
+					image_speed = 0;
+					
+					if (sign(dirX) == 1)
+					{
+						if (abs(hsp) < (movespeed / 1.25))
+						{
+							if (sign(walkDirX) == 1)
+							{
+								image_index = 0;
+							}
+							else
+							{
+								image_index = 2;
+							}
+						}
+						else
+						{
+							image_index = 1;
+						}
+					}
+					else
+					{
+						if (abs(hsp) < (movespeed / 1.25))
+						{
+							if (sign(walkDirX) == 1)
+							{
+								image_index = 2;
+							}
+							else
+							{
+								image_index = 0;
+							}
+						}
+						else
+						{
+							image_index = 1;
+						}
+					}
+				}
+				else
+				{
+					image_speed = 1;
+				}
+				
+				sprite_index = sprParasol;
+			}
+			else
+			{
+				if (abs(hsp) < (movespeed / 2))
+				{
+					image_speed = 0;
+				}
+				else
+				{
+					image_speed = 1;
+				}
+				
+				if (place_meeting(x,y + 1,collisionY))
+				{
+					if ((duck) or (walkDuck))
+					{
+						sprite_index = sprDuck;
+					}
+					else
+					{
+					    if (hsp == 0)
+						{
+							sprite_index = sprIdle;
+						}
+						else
+						{
+							sprite_index = sprWalk;
+						}
+					}
+				}
+				else
+				{
+				    if (vsp < 0)
+					{
+						sprite_index = sprJump;
+					}
+					else
+					{
+						sprite_index = sprFall;
+					}
+				}
+			}
 		}
 		break;
 	}

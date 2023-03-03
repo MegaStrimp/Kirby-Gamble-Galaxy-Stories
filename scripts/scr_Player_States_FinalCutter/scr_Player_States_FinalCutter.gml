@@ -119,7 +119,8 @@ function scr_Player_States_FinalCutter(){
 						finalCutterSlash.owner = id;
 						finalCutterSlash.abilityType = playerAbilities.cutter;
 						finalCutterSlash.paletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
-						finalCutterSlash.dmg = 32;
+						finalCutterSlash.dmg = kirby_CutterFinalCutterProjectile_Damage;
+						scr_Attack_SetKnockback(finalCutterSlash,kirby_CutterFinalCutterProjectile_Strength,kirby_CutterFinalCutterProjectile_HitStopAffectSource,kirby_CutterFinalCutterProjectile_HitStopAffectPlayer,kirby_CutterFinalCutterProjectile_HitStopAffectTarget,kirby_CutterFinalCutterProjectile_HitStopLength,kirby_CutterFinalCutterProjectile_HitStopShakeStrength);
 						finalCutterSlash.sprite_index = finalCutterSlash.sprIdle;
 						finalCutterSlash.hsp = dir * finalCutterSlash.decelMax;
 						finalCutterSlash.dirX = dir;

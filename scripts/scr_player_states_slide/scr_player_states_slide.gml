@@ -159,7 +159,8 @@ function scr_Player_States_Slide()
 									grabObj.owner = id;
 									grabObj.abilityType = playerAbilities.beam;
 									grabObj.dirX = grabEnemy.dirX;
-									grabObj.dmg = 60;
+									grabObj.dmg = kirby_BeamGrab_Damage;
+									scr_Attack_SetKnockback(grabObj,kirby_BeamGrab_Strength,kirby_BeamGrab_HitStopAffectSource,kirby_BeamGrab_HitStopAffectPlayer,kirby_BeamGrab_HitStopAffectTarget,kirby_BeamGrab_HitStopLength,kirby_BeamGrab_HitStopShakeStrength);
 									var grabSpr = grabEnemy.sprHurt;
 									if ((grabSpr = -1) or (grabSpr = -1))
 									{
@@ -196,7 +197,7 @@ function scr_Player_States_Slide()
 									grabObj.owner = id;
 									grabObj.abilityType = playerAbilities.mysticBeam;
 									grabObj.dirX = grabEnemy.dirX;
-									grabObj.dmg = 60;
+									grabObj.dmg = kirby_MysticBeamGrab_Damage;
 									var grabSpr = grabEnemy.sprHurt;
 									if ((grabSpr = -1) or (grabSpr = -1))
 									{
@@ -234,7 +235,8 @@ function scr_Player_States_Slide()
 										projBeam.owner = id;
 										projBeam.abilityType = playerAbilities.mysticBeam;
 										projBeam.player = player;
-										projBeam.dmg = 18;
+										projBeam.dmg = kirby_MysticBeamDown_Damage;
+										scr_Attack_SetKnockback(projBeam,kirby_MysticBeamDown_Strength,kirby_MysticBeamDown_HitStopAffectSource,kirby_MysticBeamDown_HitStopAffectPlayer,kirby_MysticBeamDown_HitStopAffectTarget,kirby_MysticBeamDown_HitStopLength,kirby_MysticBeamDown_HitStopShakeStrength);
 									    projBeam.dirX = projDir;
 									    projBeam.dir = projDir;
 										projBeam.hsp = projSpd;
@@ -326,7 +328,8 @@ function scr_Player_States_Slide()
 									var stoneEnd = instance_create_depth(x,y,depth - 1,obj_Projectile_StoneStop);
 									stoneEnd.owner = id;
 									stoneEnd.abilityType = playerAbilities.stone;
-									stoneEnd.dmg = 20;
+									stoneEnd.dmg = kirby_StoneNormalEnd_Damage;
+									scr_Attack_SetKnockback(stoneEnd,kirby_StoneNormalEnd_Strength,kirby_StoneNormalEnd_HitStopAffectSource,kirby_StoneNormalEnd_HitStopAffectPlayer,kirby_StoneNormalEnd_HitStopAffectTarget,kirby_StoneNormalEnd_HitStopLength,kirby_StoneNormalEnd_HitStopShakeStrength);
 									stoneEnd.enemy = false;
 									vsp = -(jumpspeed / 3);
 									grounded = false;	
@@ -434,7 +437,7 @@ function scr_Player_States_Slide()
 									sparkProj = instance_create_depth(x,y,depth + 1,obj_Projectile_SparkNormal);
 									sparkProj.owner = id;
 									sparkProj.abilityType = playerAbilities.spark;
-									sparkProj.dmg = 22;
+									sparkProj.dmg = kirby_SparkNormal_Damage;
 									sparkProj.enemy = false;
 									sparkProj.dirX = dir;
 								}
@@ -517,7 +520,8 @@ function scr_Player_States_Slide()
 								var stoneEnd = instance_create_depth(x,y,depth - 1,obj_Projectile_StoneStop);
 								stoneEnd.owner = id;
 								stoneEnd.abilityType = playerAbilities.stone;
-								stoneEnd.dmg = 20;
+								stoneEnd.dmg = kirby_StoneNormalEnd_Damage;
+								scr_Attack_SetKnockback(stoneEnd,kirby_StoneNormalEnd_Strength,kirby_StoneNormalEnd_HitStopAffectSource,kirby_StoneNormalEnd_HitStopAffectPlayer,kirby_StoneNormalEnd_HitStopAffectTarget,kirby_StoneNormalEnd_HitStopLength,kirby_StoneNormalEnd_HitStopShakeStrength);
 								stoneEnd.enemy = false;
 								vsp = -(jumpspeed / 3);
 								grounded = false;
@@ -727,7 +731,8 @@ function scr_Player_States_Slide()
 				slideSfx = audio_play_sound(snd_Slide,0,false);
 				slideMaskProj = instance_create_depth(x,y,depth,obj_Projectile_SlideMask);
 				slideMaskProj.owner = id;
-				slideMaskProj.dmg = dmg;
+				slideMaskProj.dmg = basePlayerSlide_Damage;
+				scr_Attack_SetKnockback(slideMaskProj,basePlayerSlide_Strength,basePlayerSlide_HitStopAffectSource,basePlayerSlide_HitStopAffectPlayer,basePlayerSlide_HitStopAffectTarget,basePlayerSlide_HitStopLength,basePlayerSlide_HitStopShakeStrength);
 				slideMaskProj.image_xscale = image_xscale;
 				slideMaskProj.image_yscale = image_yscale;
 		        hsp = movespeedSlide * dir;

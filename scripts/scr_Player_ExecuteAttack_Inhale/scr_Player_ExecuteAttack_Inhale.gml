@@ -4,7 +4,7 @@ function scr_Player_ExecuteAttack_Inhale()
 {
 	if (!hurt)
 	{
-		var inhaleMask = instance_create_depth(x + (3 * dir),y - 2,depth - 1,obj_InhaleMask);
+		var inhaleMask = instance_create_depth(x - (5 * dir),y - 4,depth - 1,obj_InhaleMask);
 		inhaleMask.image_xscale = image_xscale;
 		inhaleMask.owner = id;
 	}

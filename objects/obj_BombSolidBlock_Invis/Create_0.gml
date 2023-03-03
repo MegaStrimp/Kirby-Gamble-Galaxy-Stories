@@ -1,9 +1,5 @@
 ///@description Initialize Variables
 
-//Randomize
-
-randomize();
-
 //Sprites
 
 sprIdle = spr_BombSolidBlock_Normal_Idle;

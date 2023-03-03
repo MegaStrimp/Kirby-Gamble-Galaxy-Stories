@@ -1,45 +1,15 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_Projectile_BeamCharge_Flux;
-		particleTimerMax = 2;
-		break;
-		
-		//Vortex
-		
-		case 1:
-		sprIdle = spr_Projectile_BeamCharge_Vortex_Idle;
-		particleTimerMax = 4;
-		break;
-	}
-	dmgTemp = floor(dmg / 3);
-	if (supercharged)
-	{
-		particleTimer = particleTimerMax;
-		destroyableByWall = false;
-	}
-	scaleEx = scale * (1.25 + (.25 * supercharged));
-	scale = 0;
-}
-
 //Variables
 
 scr_Player_Inputs(player);
 
-if (((pausable) and (!global.pause)) or (!pausable))
+#region Event Inherited
+event_inherited();
+#endregion
+
+if (!isPaused)
 {
-	//Event Inherited
-	
-	event_inherited();
-	
 	//Rotate
 	
 	imageAngle -= 20;

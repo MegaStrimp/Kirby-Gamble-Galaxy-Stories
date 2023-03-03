@@ -1,9 +1,5 @@
 ///@description Initialize Variables
 
-#region Randomize
-randomize();
-#endregion
-
 #region Other Variables
 xx = 0;
 alpha = 0;

@@ -3,8 +3,6 @@
 
 event_inherited();
 
-randomize();
-
 current_action = enemyAttacks.capsuleJ2_hovering; 
 
 // Physics

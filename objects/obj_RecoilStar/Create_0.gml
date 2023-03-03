@@ -29,6 +29,7 @@ destroyOutsideView = false;
 owner = id;
 enemy = false;
 canBeInhaled = true;
+GAMEMAKERBUG = true;
 
 //Timers
 

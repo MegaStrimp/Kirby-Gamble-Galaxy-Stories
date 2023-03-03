@@ -641,7 +641,8 @@ function scr_Player_States_Normal()
 							var cutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_CutterDropMask);
 							cutterMaskProj.owner = id;
 							cutterMaskProj.abilityType = playerAbilities.cutter;
-							cutterMaskProj.dmg = 22;
+							cutterMaskProj.dmg = kirby_CutterAir_Damage;
+							scr_Attack_SetKnockback(cutterMaskProj,kirby_CutterAir_Strength,kirby_CutterAir_HitStopAffectSource,kirby_CutterAir_HitStopAffectPlayer,kirby_CutterAir_HitStopAffectTarget,kirby_CutterAir_HitStopLength,kirby_CutterAir_HitStopShakeStrength);
 							cutterMaskProj.image_xscale = image_xscale;
 							cutterMaskProj.image_yscale = image_yscale;
 							invincible = true;
@@ -671,7 +672,8 @@ function scr_Player_States_Normal()
 								var cutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_CutterDropMask);
 								cutterMaskProj.owner = id;
 								cutterMaskProj.abilityType = playerAbilities.cutter;
-								cutterMaskProj.dmg = 22;
+								cutterMaskProj.dmg = kirby_CutterDrop_Damage;
+								scr_Attack_SetKnockback(cutterMaskProj,kirby_CutterDrop_Strength,kirby_CutterDrop_HitStopAffectSource,kirby_CutterDrop_HitStopAffectPlayer,kirby_CutterDrop_HitStopAffectTarget,kirby_CutterDrop_HitStopLength,kirby_CutterDrop_HitStopShakeStrength);
 								cutterMaskProj.image_xscale = image_xscale;
 								cutterMaskProj.image_yscale = image_yscale;
 								invincible = true;
@@ -731,14 +733,16 @@ function scr_Player_States_Normal()
 									var cleavingCutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_CleavingCutterMask);
 									cleavingCutterMaskProj.owner = id;
 									cleavingCutterMaskProj.abilityType = playerAbilities.cutter;
-									cleavingCutterMaskProj.dmg = 6;
+									cleavingCutterMaskProj.dmg = kirby_CutterFinalCutter1_Damage;
+									scr_Attack_SetKnockback(cleavingCutterMaskProj,kirby_CutterFinalCutter1_Strength,kirby_CutterFinalCutter1_HitStopAffectSource,kirby_CutterFinalCutter1_HitStopAffectPlayer,kirby_CutterFinalCutter1_HitStopAffectTarget,kirby_CutterFinalCutter1_HitStopLength,kirby_CutterFinalCutter1_HitStopShakeStrength);
 									break;
 									
 									case 2: 
 									var nonstopCutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_NonstopCutterMask);
 									nonstopCutterMaskProj.owner = id;
 									nonstopCutterMaskProj.abilityType = playerAbilities.cutter;
-									nonstopCutterMaskProj.dmg = 6;
+									nonstopCutterMaskProj.dmg = kirby_CutterFinalCutter2_Damage;
+									scr_Attack_SetKnockback(nonstopCutterMaskProj,kirby_CutterFinalCutter2_Strength,kirby_CutterFinalCutter2_HitStopAffectSource,kirby_CutterFinalCutter2_HitStopAffectPlayer,kirby_CutterFinalCutter2_HitStopAffectTarget,kirby_CutterFinalCutter2_HitStopLength,kirby_CutterFinalCutter2_HitStopShakeStrength);
 									break;
 									
 									case 3: 
@@ -748,7 +752,8 @@ function scr_Player_States_Normal()
 										var finalCutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_FinalCutterRisingSlashMask);
 										finalCutterMaskProj.owner = id;
 										finalCutterMaskProj.abilityType = playerAbilities.cutter;
-										finalCutterMaskProj.dmg = 8; // make sure to create two additional hitboxes, one for the falling slash and one for the shockwave, both dealing 32 damage.		
+										finalCutterMaskProj.dmg = kirby_CutterFinalCutter3_Damage; // make sure to create two additional hitboxes, one for the falling slash and one for the shockwave, both dealing 32 damage.	
+										scr_Attack_SetKnockback(finalCutterMaskProj,kirby_CutterFinalCutter3_Strength,kirby_CutterFinalCutter3_HitStopAffectSource,kirby_CutterFinalCutter3_HitStopAffectPlayer,kirby_CutterFinalCutter3_HitStopAffectTarget,kirby_CutterFinalCutter3_HitStopLength,kirby_CutterFinalCutter3_HitStopShakeStrength);	
 									}
 									else if (attackTimer > 5)
 									{
@@ -756,7 +761,8 @@ function scr_Player_States_Normal()
 										var finalCutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_FinalCutterRisingSlashMask);
 										finalCutterMaskProj.owner = id;
 										finalCutterMaskProj.abilityType = playerAbilities.cutter;
-										finalCutterMaskProj.dmg = 32; // make sure to create two additional hitboxes, one for the falling slash and one for the shockwave, both dealing 32 damage.		
+										finalCutterMaskProj.dmg = kirby_CutterFinalCutter4_Damage; // make sure to create two additional hitboxes, one for the falling slash and one for the shockwave, both dealing 32 damage.	
+										scr_Attack_SetKnockback(finalCutterMaskProj,kirby_CutterFinalCutter4_Strength,kirby_CutterFinalCutter4_HitStopAffectSource,kirby_CutterFinalCutter4_HitStopAffectPlayer,kirby_CutterFinalCutter4_HitStopAffectTarget,kirby_CutterFinalCutter4_HitStopLength,kirby_CutterFinalCutter4_HitStopShakeStrength);	
 									}
 									break;
 									
@@ -881,7 +887,8 @@ function scr_Player_States_Normal()
 								projectile.owner = id;
 								projectile.abilityType = playerAbilities.cutter;
 								projectile.paletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
-								projectile.dmg = 12;
+								projectile.dmg = kirby_CutterNormal_Damage;
+								scr_Attack_SetKnockback(projectile,kirby_CutterNormal_Strength,kirby_CutterNormal_HitStopAffectSource,kirby_CutterNormal_HitStopAffectPlayer,kirby_CutterNormal_HitStopAffectTarget,kirby_CutterNormal_HitStopLength,kirby_CutterNormal_HitStopShakeStrength);
 								projectile.sprite_index = projectile.sprIdle;
 								projectile.hsp = dir * projectile.decelMax;
 								projectile.dirX = dir;
@@ -908,7 +915,8 @@ function scr_Player_States_Normal()
 								projectile.owner = id;
 								projectile.abilityType = playerAbilities.cutter;
 								projectile.paletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
-								projectile.dmg = 20;
+								projectile.dmg = kirby_CutterChargeAttack_Damage;
+								scr_Attack_SetKnockback(projectile,kirby_CutterChargeAttack_Strength,kirby_CutterChargeAttack_HitStopAffectSource,kirby_CutterChargeAttack_HitStopAffectPlayer,kirby_CutterChargeAttack_HitStopAffectTarget,kirby_CutterChargeAttack_HitStopLength,kirby_CutterChargeAttack_HitStopShakeStrength);
 								projectile.sprite_index = projectile.sprCharge;
 								projectile.decelMax = projectile.decelMax * 1.2;
 								projectile.hsp = dir * projectile.decelMax;
@@ -944,9 +952,9 @@ function scr_Player_States_Normal()
 								cutterDashMaskProj = instance_create_depth(x,y,depth,obj_Projectile_CutterDashMask);
 								cutterDashMaskProj.owner = id;
 								cutterDashMaskProj.abilityType = playerAbilities.cutter;
-								cutterDashMaskProj.dmg = 18;
-								cutterDashMaskProj.dmgMax = 18;
-								cutterDashMaskProj.dmgMin = 16;
+								cutterDashMaskProj.dmgMax = kirby_CutterDash_DamageMax;
+								cutterDashMaskProj.dmgMin = kirby_CutterDash_DamageMin;
+								scr_Attack_SetKnockback(cutterDashMaskProj,kirby_CutterDash_Strength,kirby_CutterDash_HitStopAffectSource,kirby_CutterDash_HitStopAffectPlayer,kirby_CutterDash_HitStopAffectTarget,kirby_CutterDash_HitStopLength,kirby_CutterDash_HitStopShakeStrength);
 								cutterDashMaskProj.image_xscale = image_xscale;
 								cutterDashMaskProj.image_yscale = image_yscale;
 							}
@@ -979,7 +987,8 @@ function scr_Player_States_Normal()
 									grabObj.owner = id;
 									grabObj.abilityType = playerAbilities.beam;
 									grabObj.dirX = grabEnemy.dirX;
-									grabObj.dmg = 60;
+									grabObj.dmg = kirby_BeamGrab_Damage;
+									scr_Attack_SetKnockback(grabObj,kirby_BeamGrab_Strength,kirby_BeamGrab_HitStopAffectSource,kirby_BeamGrab_HitStopAffectPlayer,kirby_BeamGrab_HitStopAffectTarget,kirby_BeamGrab_HitStopLength,kirby_BeamGrab_HitStopShakeStrength);
 									var grabSpr = grabEnemy.sprHurt;
 									if ((grabSpr = -1) or (grabSpr = -1))
 									{
@@ -1153,7 +1162,8 @@ function scr_Player_States_Normal()
 								var proj = instance_create_depth(x + (21 * dir),y - 7,depth - 1,obj_Projectile_BeamDash);
 								proj.owner = id;
 								proj.abilityType = playerAbilities.beam;
-								proj.dmg = 9;
+								proj.dmg = kirby_BeamDash_Damage;
+								scr_Attack_SetKnockback(proj,kirby_BeamDash_Strength,kirby_BeamDash_HitStopAffectSource,kirby_BeamDash_HitStopAffectPlayer,kirby_BeamDash_HitStopAffectTarget,kirby_BeamDash_HitStopLength,kirby_BeamDash_HitStopShakeStrength);
 								proj.enemy = false;
 								proj.dirX = dir;
 								proj.player = player;
@@ -1182,7 +1192,8 @@ function scr_Player_States_Normal()
 									projBeam.owner = id;
 									projBeam.abilityType = playerAbilities.beam;
 									projBeam.player = player;
-									projBeam.dmg = 12;
+									projBeam.dmg = kirby_BeamUp_Damage;
+									scr_Attack_SetKnockback(projBeam,kirby_BeamUp_Strength,kirby_BeamUp_HitStopAffectSource,kirby_BeamUp_HitStopAffectPlayer,kirby_BeamUp_HitStopAffectTarget,kirby_BeamUp_HitStopLength,kirby_BeamUp_HitStopShakeStrength);
 									switch (i)
 									{
 										case 0:
@@ -1273,7 +1284,8 @@ function scr_Player_States_Normal()
 								projectile.owner = id;
 								projectile.abilityType = playerAbilities.beam;
 								projectile.player = player;
-								projectile.dmg = 30;
+								projectile.dmg = kirby_BeamChargeAttack_Damage;
+								scr_Attack_SetKnockback(projectile,kirby_BeamChargeAttack_Strength,kirby_BeamChargeAttack_HitStopAffectSource,kirby_BeamChargeAttack_HitStopAffectPlayer,kirby_BeamChargeAttack_HitStopAffectTarget,kirby_BeamChargeAttack_HitStopLength,kirby_BeamChargeAttack_HitStopShakeStrength);
 								projectile.hsp = dir * 6.5;
 								projectile.dirX = dir;
 								projectile.image_xscale = projectile.dirX;
@@ -1357,7 +1369,8 @@ function scr_Player_States_Normal()
 									grabObj.owner = id;
 									grabObj.abilityType = playerAbilities.mysticBeam;
 									grabObj.dirX = grabEnemy.dirX;
-									grabObj.dmg = 60;
+									grabObj.dmg = kirby_MysticBeamGrab_Damage;
+									scr_Attack_SetKnockback(grabObj,kirby_MysticBeamGrab_Strength,kirby_MysticBeamGrab_HitStopAffectSource,kirby_MysticBeamGrab_HitStopAffectPlayer,kirby_MysticBeamGrab_HitStopAffectTarget,kirby_MysticBeamGrab_HitStopLength,kirby_MysticBeamGrab_HitStopShakeStrength);
 									var grabSpr = grabEnemy.sprHurt;
 									if ((grabSpr = -1) or (grabSpr = -1))
 									{
@@ -1441,7 +1454,8 @@ function scr_Player_States_Normal()
 														proj.image_angle = angle_difference(angle - 45,image_angle);
 														proj.owner = id;
 														proj.abilityType = playerAbilities.mysticBeam;
-														proj.dmg = 24;
+														proj.dmg = kirby_MysticBeamBarrierBreak_Damage;
+														scr_Attack_SetKnockback(proj,kirby_MysticBeamBarrierBreak_Strength,kirby_MysticBeamBarrierBreak_HitStopAffectSource,kirby_MysticBeamBarrierBreak_HitStopAffectPlayer,kirby_MysticBeamBarrierBreak_HitStopAffectTarget,kirby_MysticBeamBarrierBreak_HitStopLength,kirby_MysticBeamBarrierBreak_HitStopShakeStrength);
 														proj.destroyableByEnemy = false;
 														proj.destroyableByObject = false;
 														proj.destroyableByWall = false;
@@ -1566,7 +1580,8 @@ function scr_Player_States_Normal()
 												proj.image_angle = angle_difference(angle - 45,image_angle);
 												proj.owner = id;
 												proj.abilityType = playerAbilities.mysticBeam;
-												proj.dmg = 24;
+												proj.dmg = kirby_MysticBeamBarrierBreak_Damage;
+												scr_Attack_SetKnockback(proj,kirby_MysticBeamBarrierBreak_Strength,kirby_MysticBeamBarrierBreak_HitStopAffectSource,kirby_MysticBeamBarrierBreak_HitStopAffectPlayer,kirby_MysticBeamBarrierBreak_HitStopAffectTarget,kirby_MysticBeamBarrierBreak_HitStopLength,kirby_MysticBeamBarrierBreak_HitStopShakeStrength);
 												proj.destroyableByEnemy = false;
 												proj.destroyableByObject = false;
 												proj.destroyableByWall = false;
@@ -1666,7 +1681,8 @@ function scr_Player_States_Normal()
 									projBeam.jumpspeed = 0;
 								    projBeam.angle = (((360 / maxBeam) * i) * -dir);
 									projBeam.spd = 5 * dir;
-									projBeam.dmg = 6;
+									projBeam.dmg = kirby_MysticBeamNormal_Damage;
+									scr_Attack_SetKnockback(projBeam,kirby_MysticBeamNormal_Strength,kirby_MysticBeamNormal_HitStopAffectSource,kirby_MysticBeamNormal_HitStopAffectPlayer,kirby_MysticBeamNormal_HitStopAffectTarget,kirby_MysticBeamNormal_HitStopLength,kirby_MysticBeamNormal_HitStopShakeStrength);
 									projBeam.dir = dir;
 									projBeam.orbit = 0;
 									projBeam.orbitMax = 35;
@@ -1717,7 +1733,8 @@ function scr_Player_States_Normal()
 								beamBombProj = instance_create_depth(x + (17 * dir) + hsp,y - 9,depth + 1,obj_Projectile_BeamBomb);
 								beamBombProj.owner = id;
 								beamBombProj.abilityType = playerAbilities.mysticBeam;
-								beamBombProj.dmg = 42;
+								beamBombProj.dmg = kirby_MysticBeamDash_Damage;
+								scr_Attack_SetKnockback(beamBombProj,kirby_MysticBeamDash_Strength,kirby_MysticBeamDash_HitStopAffectSource,kirby_MysticBeamDash_HitStopAffectPlayer,kirby_MysticBeamDash_HitStopAffectTarget,kirby_MysticBeamDash_HitStopLength,kirby_MysticBeamDash_HitStopShakeStrength);
 								beamBombProj.hsp = 2 * dir;
 								beamBombProj.destroyableByWall = false;
 								beamBombProj.destroyableByEnemy = false;
@@ -1763,7 +1780,8 @@ function scr_Player_States_Normal()
 								{
 									mysticBeamCharge.character = 0;
 								}
-								mysticBeamCharge.dmg = floor(20 + (mysticBeamChargeEx * 5));
+								mysticBeamCharge.dmg = floor(kirby_MysticBeamChargeAttack_Damage + (mysticBeamChargeEx * kirby_MysticBeamChargeAttack_DamageMult));
+								scr_Attack_SetKnockback(mysticBeamCharge,kirby_MysticBeamChargeAttack_Strength,kirby_MysticBeamChargeAttack_HitStopAffectSource,kirby_MysticBeamChargeAttack_HitStopAffectPlayer,kirby_MysticBeamChargeAttack_HitStopAffectTarget,kirby_MysticBeamChargeAttack_HitStopLength,kirby_MysticBeamChargeAttack_HitStopShakeStrength);
 								mysticBeamCharge.hsp = (2 + (mysticBeamChargeEx / .5)) * dir;
 								mysticBeamCharge.dirX = dir;
 								mysticBeamCharge.image_xscale = mysticBeamCharge.dirX;
@@ -1887,7 +1905,8 @@ function scr_Player_States_Normal()
 								var stoneEnd = instance_create_depth(x,y,depth - 1,obj_Projectile_StoneStop);
 								stoneEnd.owner = id;
 								stoneEnd.abilityType = playerAbilities.stone;
-								stoneEnd.dmg = 20;
+								stoneEnd.dmg = kirby_StoneNormalEnd_Damage;
+								scr_Attack_SetKnockback(stoneEnd,kirby_StoneNormalEnd_Strength,kirby_StoneNormalEnd_HitStopAffectSource,kirby_StoneNormalEnd_HitStopAffectPlayer,kirby_StoneNormalEnd_HitStopAffectTarget,kirby_StoneNormalEnd_HitStopLength,kirby_StoneNormalEnd_HitStopShakeStrength);
 								stoneEnd.enemy = false;
 								vsp = -(jumpspeed / 3);
 								grounded = false;
@@ -2001,7 +2020,8 @@ function scr_Player_States_Normal()
 									projBeam.owner = id;
 									projBeam.abilityType = playerAbilities.ufo;
 									projBeam.player = player;
-									projBeam.dmg = 12;
+									projBeam.dmg = kirby_UfoBeam_Damage;
+									scr_Attack_SetKnockback(projBeam,kirby_UfoBeam_Strength,kirby_UfoBeam_HitStopAffectSource,kirby_UfoBeam_HitStopAffectPlayer,kirby_UfoBeam_HitStopAffectTarget,kirby_UfoBeam_HitStopLength,kirby_UfoBeam_HitStopShakeStrength);
 									switch (i)
 									{
 										case 0:
@@ -2077,7 +2097,8 @@ function scr_Player_States_Normal()
 											mirrorSlashProj = instance_create_depth(x,y,depth - 1,obj_Projectile_MirrorSlash);
 											mirrorSlashProj.owner = id;
 											mirrorSlashProj.abilityType = playerAbilities.mirror;
-											mirrorSlashProj.dmg = 22;
+											mirrorSlashProj.dmg = kirby_MirrorSlash_Damage;
+											scr_Attack_SetKnockback(mirrorSlashProj,kirby_MirrorSlash_Strength,kirby_MirrorSlash_HitStopAffectSource,kirby_MirrorSlash_HitStopAffectPlayer,kirby_MirrorSlash_HitStopAffectTarget,kirby_MirrorSlash_HitStopLength,kirby_MirrorSlash_HitStopShakeStrength);
 											mirrorSlashProj.enemy = false;
 											mirrorSlashProj.dirX = dir;
 											mirrorSlashProj.image_xscale = mirrorSlashProj.dirX;
@@ -2098,7 +2119,8 @@ function scr_Player_States_Normal()
 											projMirror.owner = id;
 											projMirror.abilityType = playerAbilities.mirror;
 											projMirror.player = player;
-											projMirror.dmg = 16;
+											projMirror.dmg = kirby_MirrorDash_Damage;
+											scr_Attack_SetKnockback(projMirror,kirby_MirrorDash_Strength,kirby_MirrorDash_HitStopAffectSource,kirby_MirrorDash_HitStopAffectPlayer,kirby_MirrorDash_HitStopAffectTarget,kirby_MirrorDash_HitStopLength,kirby_MirrorDash_HitStopShakeStrength);
 								            projMirror.dirX = 1;
 											projMirror.image_xscale = scale * dir;
 											projMirror.destroyableByWall = false;
@@ -2247,7 +2269,8 @@ function scr_Player_States_Normal()
 								var cutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_NinjaDropMask);
 								cutterMaskProj.owner = id;
 								cutterMaskProj.abilityType = playerAbilities.ninja;
-								cutterMaskProj.dmg = 18;
+								cutterMaskProj.dmg = kirby_NinjaDrop_Damage;
+								scr_Attack_SetKnockback(cutterMaskProj,kirby_NinjaDrop_Strength,kirby_NinjaDrop_HitStopAffectSource,kirby_NinjaDrop_HitStopAffectPlayer,kirby_NinjaDrop_HitStopAffectTarget,kirby_NinjaDrop_HitStopLength,kirby_NinjaDrop_HitStopShakeStrength);
 								cutterMaskProj.image_xscale = image_xscale;
 								cutterMaskProj.image_yscale = image_yscale;
 								invincible = true;
@@ -2306,7 +2329,8 @@ function scr_Player_States_Normal()
 							    var projectile = instance_create_depth(x + (8 * dir),y - 5 + (irandom_range(-3,3)),depth - 1,obj_Projectile_NinjaKunai);
 								projectile.owner = id;
 								projectile.abilityType = playerAbilities.ninja;
-								projectile.dmg = 7;
+								projectile.dmg = kirby_NinjaNormal_Damage;
+								scr_Attack_SetKnockback(projectile,kirby_NinjaNormal_Strength,kirby_NinjaNormal_HitStopAffectSource,kirby_NinjaNormal_HitStopAffectPlayer,kirby_NinjaNormal_HitStopAffectTarget,kirby_NinjaNormal_HitStopLength,kirby_NinjaNormal_HitStopShakeStrength);
 								projectile.hsp = dir * 7;
 								projectile.dirX = dir;
 								projectile.image_xscale = projectile.dirX;
@@ -2325,7 +2349,8 @@ function scr_Player_States_Normal()
 							    var projectile = instance_create_depth(x + (14 * dir),y - 12,depth - 1,obj_Projectile_NinjaSlash);
 								projectile.owner = id;
 								projectile.abilityType = playerAbilities.ninja;
-								projectile.dmg = 25;
+								projectile.dmg = kirby_NinjaSlash_Damage;
+								scr_Attack_SetKnockback(projectile,kirby_NinjaSlash_Strength,kirby_NinjaSlash_HitStopAffectSource,kirby_NinjaSlash_HitStopAffectPlayer,kirby_NinjaSlash_HitStopAffectTarget,kirby_NinjaSlash_HitStopLength,kirby_NinjaSlash_HitStopShakeStrength);
 								projectile.dirX = dir;
 								projectile.image_xscale = projectile.dirX;
 								projectile.enemy = false;
@@ -2348,7 +2373,8 @@ function scr_Player_States_Normal()
 								ninjaDashMaskProj = instance_create_depth(x + (14 * dir),y - 12,depth - 1,obj_Projectile_NinjaDashMask);
 								ninjaDashMaskProj.owner = id;
 								ninjaDashMaskProj.abilityType = playerAbilities.ninja;
-								ninjaDashMaskProj.dmg = 18;
+								ninjaDashMaskProj.dmg = kirby_NinjaDash_Damage;
+								scr_Attack_SetKnockback(ninjaDashMaskProj,kirby_NinjaDash_Strength,kirby_NinjaDash_HitStopAffectSource,kirby_NinjaDash_HitStopAffectPlayer,kirby_NinjaDash_HitStopAffectTarget,kirby_NinjaDash_HitStopLength,kirby_NinjaDash_HitStopShakeStrength);
 								ninjaDashMaskProj.hsp = 4 * dir;
 								ninjaDashMaskProj.vsp = 2;
 								ninjaDashMaskProj.dirX = dir;
@@ -2437,7 +2463,8 @@ function scr_Player_States_Normal()
 										fireMaskProj.owner = id;
 										fireMaskProj.abilityType = playerAbilities.fire;
 										fireMaskProj.sprite_index = sprFireAttack3;
-										fireMaskProj.dmg = 18;
+										fireMaskProj.dmg = kirby_FireWheel_Damage;
+										scr_Attack_SetKnockback(fireMaskProj,kirby_FireWheel_Strength,kirby_FireWheel_HitStopAffectSource,kirby_FireWheel_HitStopAffectPlayer,kirby_FireWheel_HitStopAffectTarget,kirby_FireWheel_HitStopLength,kirby_FireWheel_HitStopShakeStrength);
 										fireMaskProj.image_xscale = image_xscale;
 										fireMaskProj.image_yscale = image_yscale;
 										if (fireMagicCharcoalUpgrade)
@@ -2447,7 +2474,8 @@ function scr_Player_States_Normal()
 												var extra = instance_create_depth(x,y,depth + 1,obj_Projectile_FireExtra);
 												extra.owner = id;
 												extra.abilityType = playerAbilities.fire;
-												extra.dmg = 8;
+												extra.dmg = kirby_FireMagicCharcoalExtra_Damage;
+												scr_Attack_SetKnockback(extra,kirby_FireMagicCharcoalExtra_Strength,kirby_FireMagicCharcoalExtra_HitStopAffectSource,kirby_FireMagicCharcoalExtra_HitStopAffectPlayer,kirby_FireMagicCharcoalExtra_HitStopAffectTarget,kirby_FireMagicCharcoalExtra_HitStopLength,kirby_FireMagicCharcoalExtra_HitStopShakeStrength);
 												extra.paletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
 												switch (i)
 												{
@@ -2513,8 +2541,9 @@ function scr_Player_States_Normal()
 									fireDashMaskProj = instance_create_depth(x,y,depth,obj_Projectile_BurstMask);
 									fireDashMaskProj.owner = id;
 									fireDashMaskProj.abilityType = playerAbilities.fire;
-									fireDashMaskProj.dmgMin = 18;
-									fireDashMaskProj.dmgMax = 21;
+									fireDashMaskProj.dmgMin = kirby_FireDash_DamageMin;
+									fireDashMaskProj.dmgMax = kirby_FireDash_DamageMax;
+									scr_Attack_SetKnockback(fireDashMaskProj,kirby_FireDash_Strength,kirby_FireDash_HitStopAffectSource,kirby_FireDash_HitStopAffectPlayer,kirby_FireDash_HitStopAffectTarget,kirby_FireDash_HitStopLength,kirby_FireDash_HitStopShakeStrength);
 									fireDashMaskProj.image_xscale = image_xscale;
 									fireDashMaskProj.image_yscale = image_yscale;
 				                    var par = instance_create_depth(x + (dir * 10),y - 4,depth - 1,obj_Particle);
@@ -2542,7 +2571,8 @@ function scr_Player_States_Normal()
 										fireMaskProj.owner = id;
 										fireMaskProj.abilityType = playerAbilities.fire;
 										fireMaskProj.sprite_index = sprFireAttack3;
-										fireMaskProj.dmg = 16;
+										fireMaskProj.dmg = kirby_FireAerial_Damage;
+										scr_Attack_SetKnockback(fireMaskProj,kirby_FireAerial_Strength,kirby_FireAerial_HitStopAffectSource,kirby_FireAerial_HitStopAffectPlayer,kirby_FireAerial_HitStopAffectTarget,kirby_FireAerial_HitStopLength,kirby_FireAerial_HitStopShakeStrength);
 										fireMaskProj.image_xscale = image_xscale;
 										fireMaskProj.image_yscale = image_yscale;
 										if (fireMagicCharcoalUpgrade)
@@ -2552,7 +2582,8 @@ function scr_Player_States_Normal()
 												var extra = instance_create_depth(x,y,depth + 1,obj_Projectile_FireExtra);
 												extra.owner = id;
 												extra.abilityType = playerAbilities.fire;
-												extra.dmg = 8;
+												extra.dmg = kirby_FireMagicCharcoalExtra_Damage;
+												scr_Attack_SetKnockback(extra,kirby_FireMagicCharcoalExtra_Strength,kirby_FireMagicCharcoalExtra_HitStopAffectSource,kirby_FireMagicCharcoalExtra_HitStopAffectPlayer,kirby_FireMagicCharcoalExtra_HitStopAffectTarget,kirby_FireMagicCharcoalExtra_HitStopLength,kirby_FireMagicCharcoalExtra_HitStopShakeStrength);
 												extra.paletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
 												switch (i)
 												{
@@ -2609,7 +2640,8 @@ function scr_Player_States_Normal()
 								fireMaskProj.owner = id;
 								fireMaskProj.abilityType = playerAbilities.fire;
 								fireMaskProj.sprite_index = sprFireAttack4;
-								fireMaskProj.dmg = 40;
+								fireMaskProj.dmg = kirby_FireBack_Damage;
+								scr_Attack_SetKnockback(fireMaskProj,kirby_FireBack_Strength,kirby_FireBack_HitStopAffectSource,kirby_FireBack_HitStopAffectPlayer,kirby_FireBack_HitStopAffectTarget,kirby_FireBack_HitStopLength,kirby_FireBack_HitStopShakeStrength);
 								fireMaskProj.image_xscale = image_xscale;
 								fireMaskProj.image_yscale = image_yscale;
 								invincible = true;
@@ -2821,7 +2853,8 @@ function scr_Player_States_Normal()
 									sparkProj = instance_create_depth(x,y,depth + 1,obj_Projectile_SparkNormal);
 									sparkProj.owner = id;
 									sparkProj.abilityType = playerAbilities.spark;
-									sparkProj.dmg = 22;
+									sparkProj.dmg = kirby_SparkNormal_Damage;
+									scr_Attack_SetKnockback(sparkProj,kirby_SparkNormal_Strength,kirby_SparkNormal_HitStopAffectSource,kirby_SparkNormal_HitStopAffectPlayer,kirby_SparkNormal_HitStopAffectTarget,kirby_SparkNormal_HitStopLength,kirby_SparkNormal_HitStopShakeStrength);
 									sparkProj.enemy = false;
 									sparkProj.dirX = dir;
 								}
@@ -2862,8 +2895,9 @@ function scr_Player_States_Normal()
 									yoyoDashMaskProj = instance_create_depth(x,y,depth,obj_Projectile_YoyoDashMask);
 									yoyoDashMaskProj.owner = id;
 									yoyoDashMaskProj.abilityType = playerAbilities.yoyo;
-									yoyoDashMaskProj.dmgMin = 18;
-									yoyoDashMaskProj.dmgMax = 21;
+									yoyoDashMaskProj.dmgMin = kirby_YoyoDash_DamageMin;
+									yoyoDashMaskProj.dmgMax = kirby_YoyoDash_DamageMax;
+									scr_Attack_SetKnockback(yoyoDashMaskProj,kirby_YoyoDash_Strength,kirby_YoyoDash_HitStopAffectSource,kirby_YoyoDash_HitStopAffectPlayer,kirby_YoyoDash_HitStopAffectTarget,kirby_YoyoDash_HitStopLength,kirby_YoyoDash_HitStopShakeStrength);
 									yoyoDashMaskProj.image_xscale = image_xscale;
 									yoyoDashMaskProj.image_yscale = image_yscale;
 							    }
@@ -2961,7 +2995,8 @@ function scr_Player_States_Normal()
 									wingFeatherPos = 0;
 									break;
 								}
-								projectile.dmg = 6;
+								projectile.dmg = kirby_WingNormal_Damage;
+								scr_Attack_SetKnockback(projectile,kirby_WingNormal_Strength,kirby_WingNormal_HitStopAffectSource,kirby_WingNormal_HitStopAffectPlayer,kirby_WingNormal_HitStopAffectTarget,kirby_WingNormal_HitStopLength,kirby_WingNormal_HitStopShakeStrength);
 								projectile.dirX = dir;
 								projectile.image_xscale = projectile.scale * projectile.dirX;
 								projectile.image_yscale = projectile.scale * projectile.dirY;
@@ -2986,9 +3021,9 @@ function scr_Player_States_Normal()
 								wingMaskProj = instance_create_depth(x,y,depth,obj_Projectile_WingDashMask);
 								wingMaskProj.owner = id;
 								wingMaskProj.abilityType = playerAbilities.wing;
-								wingMaskProj.dmg = 18;
-								wingMaskProj.dmgMax = 18;
-								wingMaskProj.dmgMin = 16;
+								wingMaskProj.dmgMax = kirby_WingDash_DamageMax;
+								wingMaskProj.dmgMin = kirby_WingDash_DamageMin;
+								scr_Attack_SetKnockback(wingMaskProj,kirby_WingDash_Strength,kirby_WingDash_HitStopAffectSource,kirby_WingDash_HitStopAffectPlayer,kirby_WingDash_HitStopAffectTarget,kirby_WingDash_HitStopLength,kirby_WingDash_HitStopShakeStrength);
 								wingMaskProj.image_xscale = image_xscale;
 								wingMaskProj.image_yscale = image_yscale;
 							}
@@ -3235,7 +3270,8 @@ function scr_Player_States_Normal()
 											projectile.owner = id;
 											projectile.abilityType = playerAbilities.sword;
 											projectile.destroyTimerMax =2000
-											projectile.dmg = 15;
+											projectile.dmg = kirby_SwordAirDash_Damage;
+											scr_Attack_SetKnockback(projectile,kirby_SwordAirDash_Strength,kirby_SwordAirDash_HitStopAffectSource,kirby_SwordAirDash_HitStopAffectPlayer,kirby_SwordAirDash_HitStopAffectTarget,kirby_SwordAirDash_HitStopLength,kirby_SwordAirDash_HitStopShakeStrength);
 											projectile.dirX = dir;
 											projectile.image_xscale = projectile.dirX;
 											projectile.enemy = false;
@@ -3273,7 +3309,8 @@ function scr_Player_States_Normal()
 										projectile.owner = id;
 										projectile.abilityType = playerAbilities.sword;
 										projectile.destroyTimerMax =20
-										projectile.dmg = 15;
+										projectile.dmg = kirby_SwordDash_DamageMin;
+										scr_Attack_SetKnockback(projectile,kirby_SwordDash_Strength,kirby_SwordDash_HitStopAffectSource,kirby_SwordDash_HitStopAffectPlayer,kirby_SwordDash_HitStopAffectTarget,kirby_SwordDash_HitStopLength,kirby_SwordDash_HitStopShakeStrength);
 										projectile.dirX = dir;
 										projectile.image_xscale = projectile.dirX;
 										projectile.enemy = false;
@@ -3297,7 +3334,8 @@ function scr_Player_States_Normal()
 										projectile.owner = id;
 										projectile.abilityType = playerAbilities.sword;
 										projectile.destroyTimerMax =20
-										projectile.dmg = 15;
+										projectile.dmg = kirby_SwordCombo_Damage;
+										scr_Attack_SetKnockback(projectile,kirby_SwordCombo_Strength,kirby_SwordCombo_HitStopAffectSource,kirby_SwordCombo_HitStopAffectPlayer,kirby_SwordCombo_HitStopAffectTarget,kirby_SwordCombo_HitStopLength,kirby_SwordCombo_HitStopShakeStrength);
 										projectile.dirX = dir;
 										projectile.image_xscale = projectile.dirX;
 										projectile.enemy = false;
@@ -3326,7 +3364,8 @@ function scr_Player_States_Normal()
 								projectile.owner = id;
 								projectile.abilityType = playerAbilities.sword;
 								projectile.destroyTimerMax =20
-								projectile.dmg = 15;
+								projectile.dmg = kirby_SwordNormal_Damage;
+								scr_Attack_SetKnockback(projectile,kirby_SwordNormal_Strength,kirby_SwordNormal_HitStopAffectSource,kirby_SwordNormal_HitStopAffectPlayer,kirby_SwordNormal_HitStopAffectTarget,kirby_SwordNormal_HitStopLength,kirby_SwordNormal_HitStopShakeStrength);
 								projectile.dirX = dir;
 								projectile.image_xscale = projectile.dirX;
 								projectile.enemy = false;
@@ -3345,7 +3384,8 @@ function scr_Player_States_Normal()
 								projectile.owner = id;
 								projectile.abilityType = playerAbilities.sword;
 								projectile.destroyTimerMax =2000
-								projectile.dmg = 15;
+								projectile.dmg = kirby_SwordAir_Damage;
+								scr_Attack_SetKnockback(projectile,kirby_SwordAir_Strength,kirby_SwordAir_HitStopAffectSource,kirby_SwordAir_HitStopAffectPlayer,kirby_SwordAir_HitStopAffectTarget,kirby_SwordAir_HitStopLength,kirby_SwordAir_HitStopShakeStrength);
 								projectile.dirX = dir;
 								projectile.image_xscale = projectile.dirX;
 								projectile.enemy = false;
@@ -3408,8 +3448,9 @@ function scr_Player_States_Normal()
 									parasolDashMaskProj = instance_create_depth(x,y,depth,obj_Projectile_ParasolDashMask);
 									parasolDashMaskProj.owner = id;
 									parasolDashMaskProj.abilityType = playerAbilities.parasol;
-									parasolDashMaskProj.dmgMin = 18;
-									parasolDashMaskProj.dmgMax = 21;
+									parasolDashMaskProj.dmgMin = kirby_ParasolDash_DamageMin;
+									parasolDashMaskProj.dmgMax = kirby_ParasolDash_DamageMax;
+									scr_Attack_SetKnockback(parasolDashMaskProj,kirby_ParasolDash_Strength,kirby_ParasolDash_HitStopAffectSource,kirby_ParasolDash_HitStopAffectPlayer,kirby_ParasolDash_HitStopAffectTarget,kirby_ParasolDash_HitStopLength,kirby_ParasolDash_HitStopShakeStrength);
 									parasolDashMaskProj.image_xscale = image_xscale;
 									parasolDashMaskProj.image_yscale = image_yscale;
 							    }
@@ -3809,8 +3850,9 @@ function scr_Player_States_Normal()
 				            audio_play_sound(snd_Fire3,0,false);
 							fireDashMaskProj = instance_create_depth(x,y,depth,obj_Projectile_BurstMask);
 							fireDashMaskProj.owner = id;
-							fireDashMaskProj.dmgMin = 18;
-							fireDashMaskProj.dmgMax = 21;
+							fireDashMaskProj.dmgMin = gooey_FireDash_DamageMin;
+							fireDashMaskProj.dmgMax = gooey_FireDash_DamageMax;
+							scr_Attack_SetKnockback(fireDashMaskProj,gooey_FireDash_Strength,gooey_FireDash_HitStopAffectSource,gooey_FireDash_HitStopAffectPlayer,gooey_FireDash_HitStopAffectTarget,gooey_FireDash_HitStopLength,gooey_FireDash_HitStopShakeStrength);
 							fireDashMaskProj.image_xscale = image_xscale;
 							fireDashMaskProj.image_yscale = image_yscale;
 				            var par = instance_create_depth(x + (dir * 10),y - 4,depth - 1,obj_Particle);
@@ -3874,7 +3916,8 @@ function scr_Player_States_Normal()
 							audio_play_sound(snd_StoneRelease,0,false);
 							var stoneEnd = instance_create_depth(x,y,depth - 1,obj_Projectile_StoneStop);
 							stoneEnd.owner = id;
-							stoneEnd.dmg = 20;
+							stoneEnd.dmg = gooey_StoneNormalEnd_Damage;
+							scr_Attack_SetKnockback(stoneEnd,gooey_StoneNormalEnd_Strength,gooey_StoneNormalEnd_HitStopAffectSource,gooey_StoneNormalEnd_HitStopAffectPlayer,gooey_StoneNormalEnd_HitStopAffectTarget,gooey_StoneNormalEnd_HitStopLength,gooey_StoneNormalEnd_HitStopShakeStrength);
 							stoneEnd.enemy = false;
 							vsp = -(jumpspeed / 3);
 							grounded = false;

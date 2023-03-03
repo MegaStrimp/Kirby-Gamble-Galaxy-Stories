@@ -286,6 +286,10 @@ if (!global.pause)
 			sprItem = spr_AbilityStar_Sleep;
 			break;
 			
+			case playerAbilities.scan:
+			sprItem = spr_AbilityStar_Scan;
+			break;
+			
 			case playerAbilities.mic:
 			sprItem = spr_AbilityStar_Mic;
 			break;

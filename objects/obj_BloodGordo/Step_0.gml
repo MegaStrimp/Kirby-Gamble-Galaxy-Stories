@@ -1,32 +1,10 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_BloodGordo_Normal_Idle;
-		sprAngry = spr_BloodGordo_Normal_Angry;
-		sprCautious = spr_BloodGordo_Normal_Cautious;
-		sprSleep = spr_BloodGordo_Normal_Sleep;
-		sprTriggered = spr_BloodGordo_Normal_Triggered;
-		sprHurt = -1;
-		sprAura = spr_BloodGordo_Normal_Aura;
-		break;
-	}
-	
-	spd = spdMin;
-}
-
 //Event Inherited
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	//Hurt Player
 	
@@ -148,6 +126,4 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 else
 {
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

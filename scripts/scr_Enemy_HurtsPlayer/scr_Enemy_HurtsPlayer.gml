@@ -282,6 +282,10 @@ function scr_Enemy_HurtsPlayer(argument0)
 					abilityDropStar.sprite_index = spr_AbilityStar_Sleep;
 					break;
 					
+					case playerAbilities.scan:
+					abilityDropStar.sprite_index = spr_AbilityStar_Scan;
+					break;
+					
 					case playerAbilities.mic:
 					abilityDropStar.sprite_index = spr_AbilityStar_Mic;
 					break;
@@ -383,8 +387,8 @@ function scr_Enemy_HurtsPlayer(argument0)
 			if (audio_is_playing(snd_EnemyHurt)) audio_stop_sound(snd_EnemyHurt);
 			audio_play_sound(snd_EnemyHurt,0,false);
 			takenDamageType = damageTypes.none;
-			var hitDmg = collidedPlayer.dmg;
-			if (collidedPlayer.hasInvinCandy) hitDmg = 100;
+			var hitDmg = basePlayerContact_Damage;
+			if (collidedPlayer.hasInvinCandy) hitDmg = basePlayerInvinCandyContact_Damage;
 			if (hitDmg >= (hp + 50))
 			{
 				hurtTimer = hurtStopTimerMax + 5;

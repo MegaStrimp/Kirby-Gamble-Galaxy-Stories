@@ -12,7 +12,6 @@ jumpspeed = 2;
 decel = .5;
 decelMax = 10;
 angle = 75;
-strength = 3;
 
 //Sprites
 

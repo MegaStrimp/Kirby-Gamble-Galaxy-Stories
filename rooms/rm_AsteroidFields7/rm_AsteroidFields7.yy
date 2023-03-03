@@ -2,7 +2,7 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "rm_AsteroidFields7",
-  "creationCodeFile": "${project_dir}/rooms/rm_AsteroidFieldsNew7/RoomCreationCode.gml",
+  "creationCodeFile": "${project_dir}/rooms/rm_AsteroidFields7/RoomCreationCode.gml",
   "inheritCode": false,
   "inheritCreationOrder": false,
   "inheritLayers": false,

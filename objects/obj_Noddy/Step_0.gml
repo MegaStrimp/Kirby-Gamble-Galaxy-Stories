@@ -1,32 +1,10 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_Noddy_Normal_Idle;
-		sprWalk = spr_Noddy_Normal_Walk;
-		sprSleep = spr_Noddy_Normal_Sleep;
-		sprHurt = spr_Noddy_Normal_Hurt;
-		break;
-	}
-	if (state == 1)
-	{
-		sleepReadyTimer = -1;
-		sleepStopTimer = sleepStopTimerMax;
-	}
-}
-
 //Event Inherited
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	if (!parasol) scr_Object_Inhale(enemy);
 	
@@ -164,6 +142,4 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 else
 {
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

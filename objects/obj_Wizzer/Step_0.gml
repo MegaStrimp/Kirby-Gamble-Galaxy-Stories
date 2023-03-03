@@ -1,26 +1,5 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_Wizzer_Normal_Idle;
-		sprOpen = spr_Wizzer_Normal_Open;
-		sprClose = spr_Wizzer_Normal_Close;
-		sprReady = spr_Wizzer_Normal_Ready;
-		sprAttack = spr_Wizzer_Normal_Attack;
-		sprHurtNormal = spr_Wizzer_Normal_HurtNormal;
-		sprHurtInhale = spr_Wizzer_Normal_HurtInhale;
-		break;
-	}
-	sprHurt = sprHurtNormal;
-}
-
 //Invincibility
 
 hurtable = (attackState != 0);
@@ -29,7 +8,7 @@ hurtable = (attackState != 0);
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	//Get Inhaled
 	
@@ -163,6 +142,4 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 else
 {
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

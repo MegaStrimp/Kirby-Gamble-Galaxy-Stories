@@ -4,10 +4,6 @@
 event_inherited();
 #endregion
 
-#region Randomize
-randomize();
-#endregion
-
 #region Physics
 accel = .015;
 movespeed = .75;
@@ -37,6 +33,7 @@ dmg = 1;
 ability = playerAbilities.bomb;
 points = 2000;
 walkDirX = -1;
+hurtFunction = func_HurtBossDefault;
 hatIndex = 0;
 isMiniBoss = true;
 hbSetup = true;

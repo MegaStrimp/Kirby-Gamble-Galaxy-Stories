@@ -4,10 +4,6 @@
 event_inherited();
 #endregion
 
-#region Randomize
-randomize();
-#endregion
-
 #region Physics
 decel = .05;
 movespeed = 2;

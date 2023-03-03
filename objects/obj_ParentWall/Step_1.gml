@@ -19,6 +19,7 @@ else if (setupTimer == 0)
 		topWall.hsp = hsp;
 		topWall.vsp = vsp;
 		topWall.mask_index = topWallMask;
+		topWall.image_xscale = image_xscale;
 		//topWall.sprite_index = topWallMask;
 		topWall.damageType = damageType;
 		topWall.hasTop = false;

@@ -15,31 +15,6 @@ if (death)
 }
 #endregion
 
-#region Characters
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		#region Normal
-		case 0:
-		sprIdle = spr_SMB_BowserImpostor_Idle;
-		sprFire = spr_SMB_BowserImpostor_Fire;
-		sprHammerL = spr_SMB_BowserImpostor_HammerL;
-		sprHammerR = spr_SMB_BowserImpostor_HammerR;
-		sprDeath = spr_SMB_BowserImpostor_Death;
-		break;
-		#endregion
-	}
-	
-	if (phase == 0)
-	{
-		global.cutscene = true;
-		phaseChangeTimer = 240;
-		instance_create_depth(225,148,depth,obj_Mario_Death);
-	}
-}
-#endregion
-
 #region Death
 if (death)
 {
@@ -55,7 +30,7 @@ if (death)
 event_inherited();
 #endregion
 
-if ((!global.pause) and (((!global.cutscene) or ((global.cutscene) and (phase == 0))) and (pausedInCutscenes)))
+if ((!childPause) or ((global.cutscene) and (phase == 0)))
 {
 	#region Hurt Player
 	if (!death) scr_Enemy_HurtsPlayer(dmg);

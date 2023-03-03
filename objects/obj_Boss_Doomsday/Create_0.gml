@@ -42,6 +42,7 @@ hasYCollision = false;
 hasXKnockback = false;
 hasYKnockback = false;
 hurtable = false;
+hurtFunction = func_HurtBossDefault;
 phase = 0;
 spawnHealthbar = true;
 attackNumber = -1;

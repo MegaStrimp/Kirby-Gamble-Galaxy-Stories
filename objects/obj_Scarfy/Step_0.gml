@@ -1,26 +1,5 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprCalmIdle = spr_Scarfy_Normal_CalmIdle;
-		sprCalmFly = spr_Scarfy_Normal_CalmFly;
-		sprCalmHurt = spr_Scarfy_Normal_CalmHurt;
-		sprMadFly = spr_Scarfy_Normal_MadFly;
-		sprMadHurt = spr_Scarfy_Normal_MadHurt;
-		break;
-		sprHurt = sprCalmHurt;
-	}
-	
-	if (state == 1) attackTimer = -1;
-}
-
 //Hurt Sprite
 
 if (attack)
@@ -36,7 +15,7 @@ else
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	//Get Inhaled
 	
@@ -315,6 +294,4 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 else
 {
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

@@ -67,6 +67,7 @@ ability = playerAbilities.none;
 isDirectHit = false;
 hitType = 0;
 isStunned = false;
+isPaused = false;
 
 //Structs
 

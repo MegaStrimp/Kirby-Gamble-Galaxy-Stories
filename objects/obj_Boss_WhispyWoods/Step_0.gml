@@ -30,7 +30,7 @@ if (death)
 event_inherited();
 #endregion
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	#region Hurt Player
 	//if (!death) scr_Enemy_HurtsPlayer(dmg);

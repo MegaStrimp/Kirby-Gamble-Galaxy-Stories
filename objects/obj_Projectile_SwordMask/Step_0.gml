@@ -1,29 +1,11 @@
 ///@description Main
 
-//Characters
+#region Event Inherited
+event_inherited();
+#endregion
 
-if (setupTimer == 0)
+if (!isPaused)
 {
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprNormal = spr_Projectile_SwordMask1;
-		sprDash = spr_Projectile_SwordMask2;
-		sprAir = spr_Projectile_SwordMaskAir;
-		sprSpin = spr_Projectile_SwordMaskSpin;
-		sprCombo = spr_Projectile_SwordMask1;
-		break;
-	}
-}
-
-if (((pausable) and (!global.pause)) or (!pausable))
-{
-	//Event Inherited
-	
-	event_inherited();
-	
 	//Destroy
 	
 	if (instance_exists(owner))

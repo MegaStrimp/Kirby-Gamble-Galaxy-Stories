@@ -1,12 +1,10 @@
 ///@description Initialize Variables
+
 instance_destroy();
+
 //Event Inherited
 
 event_inherited();
-
-//Randomize
-
-randomize();
 
 //Physics
 

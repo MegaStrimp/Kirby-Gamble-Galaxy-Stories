@@ -1,41 +1,10 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_Glunk_Normal_Idle;
-		sprHurt = spr_Glunk_Normal_Hurt;
-		break;
-		
-		//Glunker
-		
-		case 1:
-		sprIdle = spr_Glunk_Glunker_Idle;
-		sprHurt = spr_Glunk_Glunker_Hurt;
-		break;
-	}
-	if (state == 0)
-	{
-		attackTimer = -1;
-	}
-	else
-	{
-		animDirTimerMax = 25;
-		animDirTimer = animDirTimerMax;
-	}
-}
-
 //Event Inherited
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	if (!parasol) scr_Object_Inhale(enemy);
 	
@@ -175,6 +144,4 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 else
 {
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

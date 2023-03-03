@@ -533,7 +533,7 @@ if (global.gamemode != gamemodes.gamblion)
 	{
 		draw_sprite_ext(spr_Hud_Numbers,floor(global.playerLives / 100),livesPosX + 14 + (10 * playerAmount),livesPosY - 8,1,1,image_angle,image_blend,drawAlpha);
 		draw_sprite_ext(spr_Hud_Numbers,(global.playerLives - ((floor(global.playerLives / 100) * 100))) / 10,livesPosX + 29 + (10 * playerAmount),livesPosY - 8,1,1,image_angle,image_blend,drawAlpha);
-		draw_sprite_ext(spr_Hud_Numbers,global.playerLives - (floor(global.playerLives / 10) * 10),livesPosX + 42 + (10 * playerAmount),livesPosY - 8,1,1,image_angle,image_blend,drawAlpha);
+		draw_sprite_ext(spr_Hud_Numbers,global.playerLives - (floor(global.playerLives / 10) * 10),livesPosX + 44 + (10 * playerAmount),livesPosY - 8,1,1,image_angle,image_blend,drawAlpha);
 	}
 	#endregion
 	#endregion

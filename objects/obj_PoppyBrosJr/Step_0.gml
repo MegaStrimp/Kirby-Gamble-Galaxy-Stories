@@ -1,33 +1,10 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_PoppyBrosJr_Normal_Idle;
-		sprThrowReady = spr_PoppyBrosJr_Normal_ThrowReady;
-		sprThrow = spr_PoppyBrosJr_Normal_Throw;
-		sprHand = spr_PoppyBrosJr_Normal_Hand;
-		sprHurt = spr_PoppyBrosJr_Normal_Hurt;
-		break;
-	}
-	if (weaponIndex == 0)
-	{
-		ability = playerAbilities.none;
-		attackTimer = -1;
-	}
-}
-
 //Event Inherited
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	//Get Inhaled
 	

@@ -1,14 +1,10 @@
 ///@description Initialize Variables
 
-#region Randomize
-randomize();
-#endregion
-
 #region Knockback Functions
 func_HurtDefault = function(argument0)
 {
 	image_speed = 1;
-	sprite_index = sprHurt;
+	if (sprHurt != -1) sprite_index = sprHurt;
 	hspDummy = 0;
 	vspDummy = 0;
 	return true;

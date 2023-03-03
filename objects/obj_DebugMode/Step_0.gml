@@ -1886,7 +1886,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		}
 		debugSprite = sprIdle;
 		debugIndex = 0;
-		debugStateSelectedMax = 2;
+		debugStateSelectedMax = 3;
 		if (mouse_check_button_pressed(mb_left))
 		{
 			var spawnedObj = obj_WaddleDee;

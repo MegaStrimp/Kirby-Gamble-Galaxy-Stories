@@ -1,32 +1,11 @@
 ///@description Main
 
-//Characters
+#region Event Inherited
+event_inherited();
+#endregion
 
-if (setupTimer == 0)
+if (!isPaused)
 {
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprRootReady = spr_WhispyWoods_Normal_RootReady;
-		sprRoot1 = spr_WhispyWoods_Normal_Root1;
-		sprRoot2 = spr_WhispyWoods_Normal_Root2;
-		sprRoot3 = spr_WhispyWoods_Normal_Root3;
-		sprRoot1R = spr_WhispyWoods_Normal_Root1R;
-		sprRoot2R = spr_WhispyWoods_Normal_Root2R;
-		sprRoot3R = spr_WhispyWoods_Normal_Root3R;
-		break;
-	}
-	sprite_index = sprRootReady;
-}
-
-if (((pausable) and (!global.pause)) or (!pausable))
-{
-	//Event Inherited
-	
-	event_inherited();
-	
 	//Position
 	
 	x += hsp;

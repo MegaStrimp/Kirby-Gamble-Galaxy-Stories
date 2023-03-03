@@ -1,20 +1,10 @@
 ///@description Main
 
-//Characters
+#region Event Inherited
+event_inherited();
+#endregion
 
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_Projectile_NinjaSlash_Normal_Idle;
-		break;
-	}
-}
-
-if (((pausable) and (!global.pause)) or (!pausable))
+if (!isPaused)
 {
 	//Hit Enemy
 	
@@ -23,10 +13,6 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		didHitEnemy = true;
 		shockTimer = shockTimerMax;
 	}
-	
-	//Event Inherited
-	
-	event_inherited();
 	
 	//Destroy
 	

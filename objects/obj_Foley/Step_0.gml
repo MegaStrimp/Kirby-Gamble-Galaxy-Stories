@@ -1,28 +1,5 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdleNormal = spr_Foley_Normal_Idle;
-		sprIdleExplodeReady = spr_Foley_Normal_Idle_ExplodeReady;
-		sprIdleExplode = spr_Foley_Normal_Idle_Explode;
-		sprWalkNormal = spr_Foley_Normal_Walk;
-		sprWalkExplodeReady = spr_Foley_Normal_Walk_ExplodeReady;
-		sprWalkExplode = spr_Foley_Normal_Walk_Explode;
-		sprHurtIdle = spr_Foley_Normal_Hurt_Idle;
-		sprHurtAttack = spr_Foley_Normal_Hurt_Attack;
-		sprHurt = sprHurtIdle;
-		sprLeaf = spr_Foley_Normal_Leaf;
-		break;
-	}
-}
-
 //Variables
 
 if (sign(hsp) == 0)
@@ -51,7 +28,7 @@ else
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	//Get Inhaled
 	
@@ -250,6 +227,4 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 else
 {
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

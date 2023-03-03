@@ -4,10 +4,6 @@
 
 event_inherited();
 
-//Randomize
-
-randomize();
-
 //Sprites
 
 mask_index = spr_UltraXatch_Normal_Idle;

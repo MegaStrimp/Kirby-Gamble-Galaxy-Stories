@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	if (appear)
 	{

@@ -213,7 +213,8 @@ if (!global.pause)
 				aura.owner = id;
 				aura.abilityType = playerAbilities.spark;
 				aura.sprite_index = spr_Particle_SparkAura;
-				aura.dmg = 6;
+				aura.dmg = kirby_SparkAura_Damage;
+				scr_Attack_SetKnockback(aura,kirby_SparkAura_Strength,kirby_SparkAura_HitStopAffectSource,kirby_SparkAura_HitStopAffectPlayer,kirby_SparkAura_HitStopAffectTarget,kirby_SparkAura_HitStopLength,kirby_SparkAura_HitStopShakeStrength);
 			}
 			sparkMaxCharge = true;
 		}
@@ -832,6 +833,10 @@ if ((mechIndex == -1) and (keySelectPressed))
 				abilityDropStar.sprite_index = spr_AbilityStar_Sleep;
 				break;
 			
+				case playerAbilities.scan:
+				abilityDropStar.sprite_index = spr_AbilityStar_Scan;
+				break;
+			
 				case playerAbilities.mic:
 				abilityDropStar.sprite_index = spr_AbilityStar_Mic;
 				break;
@@ -1370,7 +1375,8 @@ if (!global.pause)
 			projBeam.owner = id;
 			projBeam.abilityType = playerAbilities.beam;
 			projBeam.player = player;
-			projBeam.dmg = 8 + (10 * beamAttack2FirstHit);
+			projBeam.dmg = kirby_BeamAir_Damage + (kirby_BeamAir_FirstHitDamage * beamAttack2FirstHit);
+			scr_Attack_SetKnockback(projBeam,kirby_BeamAir_Strength,kirby_BeamAir_HitStopAffectSource,kirby_BeamAir_HitStopAffectPlayer,kirby_BeamAir_HitStopAffectTarget,kirby_BeamAir_HitStopLength,kirby_BeamAir_HitStopShakeStrength);
 		    projBeam.dirX = -dir;
 		    projBeam.dir = dir;
 			projBeam.image_xscale = projBeam.dirX;
@@ -1449,7 +1455,8 @@ if (!global.pause)
 			projBeam.owner = id;
 			projBeam.abilityType = playerAbilities.beam;
 			projBeam.player = player;
-			projBeam.dmg = 21;
+			projBeam.dmg = kirby_BeamGrabBeam_Damage;
+			scr_Attack_SetKnockback(projBeam,kirby_BeamGrabBeam_Strength,kirby_BeamGrabBeam_HitStopAffectSource,kirby_BeamGrabBeam_HitStopAffectPlayer,kirby_BeamGrabBeam_HitStopAffectTarget,kirby_BeamGrabBeam_HitStopLength,kirby_BeamGrabBeam_HitStopShakeStrength);
 		    projBeam.dirX = dir;
 		    projBeam.dir = dir;
 			projBeam.image_xscale = projBeam.dirX;
@@ -1504,7 +1511,8 @@ if (!global.pause)
 			projBeam.owner = id;
 			projBeam.abilityType = playerAbilities.mysticBeam;
 			projBeam.player = player;
-			projBeam.dmg = 21;
+			projBeam.dmg = kirby_MysticBeamGrabBeam_Damage;
+			scr_Attack_SetKnockback(projBeam,kirby_MysticBeamGrabBeam_Strength,kirby_MysticBeamGrabBeam_HitStopAffectSource,kirby_MysticBeamGrabBeam_HitStopAffectPlayer,kirby_MysticBeamGrabBeam_HitStopAffectTarget,kirby_MysticBeamGrabBeam_HitStopLength,kirby_MysticBeamGrabBeam_HitStopShakeStrength);
 		    projBeam.dirX = dir;
 		    projBeam.dir = dir;
 			projBeam.image_xscale = projBeam.dirX;
@@ -1543,7 +1551,8 @@ if (!global.pause)
 			projBeam.owner = id;
 			projBeam.abilityType = playerAbilities.mysticBeam;
 			projBeam.player = player;
-			projBeam.dmg = 18;
+			projBeam.dmg = kirby_MysticBeamAir_Damage;
+			scr_Attack_SetKnockback(projBeam,kirby_MysticBeamAir_Strength,kirby_MysticBeamAir_HitStopAffectSource,kirby_MysticBeamAir_HitStopAffectPlayer,kirby_MysticBeamAir_HitStopAffectTarget,kirby_MysticBeamAir_HitStopLength,kirby_MysticBeamAir_HitStopShakeStrength);
 		    projBeam.dirX = -dir;
 		    projBeam.dir = dir;
 			projBeam.image_xscale = projBeam.dirX;
@@ -1581,7 +1590,8 @@ if (!global.pause)
 			projBeam.owner = id;
 			projBeam.abilityType = playerAbilities.mysticBeam;
 			projBeam.player = player;
-			projBeam.dmg = 18;
+			projBeam.dmg = kirby_MysticBeamUp_Damage;
+			scr_Attack_SetKnockback(projBeam,kirby_MysticBeamUp_Strength,kirby_MysticBeamUp_HitStopAffectSource,kirby_MysticBeamUp_HitStopAffectPlayer,kirby_MysticBeamUp_HitStopAffectTarget,kirby_MysticBeamUp_HitStopLength,kirby_MysticBeamUp_HitStopShakeStrength);
 		    projBeam.dirX = -dir;
 		    projBeam.dir = dir;
 			projBeam.image_xscale = projBeam.dirX;
@@ -1630,7 +1640,13 @@ if (!global.pause)
 		grav = gravStone;
 		gravLimit = gravLimitStone;
 		stoneMaskProj = instance_create_depth(x,y,depth - 1,obj_Projectile_StoneMask);
-		stoneMaskProj.dmg = 50;
+		stoneMaskProj.dmg = kirby_StoneNormal_Damage;
+		scr_Attack_SetKnockback(stoneMaskProj,kirby_StoneNormal_Strength,kirby_StoneNormal_HitStopAffectSource,kirby_StoneNormal_HitStopAffectPlayer,kirby_StoneNormal_HitStopAffectTarget,kirby_StoneNormal_HitStopLength,kirby_StoneNormal_HitStopShakeStrength);
+		if (playerCharacter == playerCharacters.gooey)
+		{
+			stoneMaskProj.dmg = gooey_StoneNormal_Damage;
+			scr_Attack_SetKnockback(stoneMaskProj,gooey_StoneNormal_Strength,gooey_StoneNormal_HitStopAffectSource,gooey_StoneNormal_HitStopAffectPlayer,gooey_StoneNormal_HitStopAffectTarget,gooey_StoneNormal_HitStopLength,gooey_StoneNormal_HitStopShakeStrength);
+		}
 		stoneMaskProj.hsp = hsp;
 		stoneMaskProj.vsp = vsp;
 		stoneMaskProj.enemy = false;
@@ -1774,7 +1790,8 @@ if (!global.pause)
 		sprite_index = sprStoneAttack2;
 		image_index = 0;
 		stoneFistMaskProj = instance_create_depth(x,y,depth - 1,obj_Projectile_StoneFistMask);
-		stoneFistMaskProj.dmg = 20;
+		stoneFistMaskProj.dmg = kirby_StoneUp_Damage;
+		scr_Attack_SetKnockback(stoneFistMaskProj,kirby_StoneUp_Strength,kirby_StoneUp_HitStopAffectSource,kirby_StoneUp_HitStopAffectPlayer,kirby_StoneUp_HitStopAffectTarget,kirby_StoneUp_HitStopLength,kirby_StoneUp_HitStopShakeStrength);
 		stoneFistMaskProj.dirX = dir;
 		stoneFistMaskProj.enemy = false;
 		stoneFistMaskProj.owner = id;
@@ -1817,12 +1834,13 @@ if (!global.pause)
 		var projectile = instance_create_depth(x + (24 * dir),y - 6,depth - 1,obj_Projectile_Mirror);
 		projectile.owner = id;
 		projectile.abilityType = playerAbilities.mirror;
-		projectile.dmg = 4;
+		projectile.dmg = kirby_MirrorNormal_Damage;
 		if (mirrorFirstAttack)
 		{
-			projectile.dmg = 12;
+			projectile.dmg = kirby_MirrorNormal_FirstTimeDamage;
 			mirrorFirstAttack = false;
 		}
+		scr_Attack_SetKnockback(projectile,kirby_MirrorNormal_Strength,kirby_MirrorNormal_HitStopAffectSource,kirby_MirrorNormal_HitStopAffectPlayer,kirby_MirrorNormal_HitStopAffectTarget,kirby_MirrorNormal_HitStopLength,kirby_MirrorNormal_HitStopShakeStrength);
 		projectile.sprite_index = projectile.sprIdle;
 		projectile.dirX = dir;
 		projectile.image_xscale = projectile.dirX;
@@ -1896,7 +1914,8 @@ if (!global.pause)
 		projectile.owner = id;
 		projectile.abilityType = playerAbilities.fire;
 		projectile.imageSpeed = 1 - (fireMagicCharcoalUpgrade / 4);
-		projectile.dmg = 3;
+		projectile.dmg = kirby_FireNormal_Damage;
+		scr_Attack_SetKnockback(projectile,kirby_FireNormal_Strength,kirby_FireNormal_HitStopAffectSource,kirby_FireNormal_HitStopAffectPlayer,kirby_FireNormal_HitStopAffectTarget,kirby_FireNormal_HitStopLength,kirby_FireNormal_HitStopShakeStrength);
 		projectile.sprite_index = projectile.sprIdle;
 		//projectile.dirX = dir;
 		//projectile.image_xscale = projectile.dirX;
@@ -1947,7 +1966,8 @@ if (!global.pause)
 		var projectile = instance_create_depth(x + (14 * dir),y - 6,depth - 1,obj_Projectile_Ice);
 		projectile.owner = id;
 		projectile.abilityType = playerAbilities.ice;
-		projectile.dmg = 6;
+		projectile.dmg = kirby_IceNormal_Damage;
+		scr_Attack_SetKnockback(projectile,kirby_IceNormal_Strength,kirby_IceNormal_HitStopAffectSource,kirby_IceNormal_HitStopAffectPlayer,kirby_IceNormal_HitStopAffectTarget,kirby_IceNormal_HitStopLength,kirby_IceNormal_HitStopShakeStrength);
 		projectile.sprite_index = projectile.sprIdle;
 		projectile.dirX = dir;
 		projectile.image_xscale = projectile.dirX;
@@ -2499,15 +2519,18 @@ else if (micTimer == 0)
 	switch (micCount)
 	{
 		case 1:
-		micProjectile.dmg = 40;
+		micProjectile.dmg = kirby_MicNormal1_Damage;
+		scr_Attack_SetKnockback(micProjectile,kirby_MicNormal1_Strength,kirby_MicNormal1_HitStopAffectSource,kirby_MicNormal1_HitStopAffectPlayer,kirby_MicNormal1_HitStopAffectTarget,kirby_MicNormal1_HitStopLength,kirby_MicNormal1_HitStopShakeStrength);
 		break;
 								
 		case 2:
-		micProjectile.dmg = 60;
+		micProjectile.dmg = kirby_MicNormal2_Damage;
+		scr_Attack_SetKnockback(micProjectile,kirby_MicNormal2_Strength,kirby_MicNormal2_HitStopAffectSource,kirby_MicNormal2_HitStopAffectPlayer,kirby_MicNormal2_HitStopAffectTarget,kirby_MicNormal2_HitStopLength,kirby_MicNormal2_HitStopShakeStrength);
 		break;
 								
 		case 3:
-		micProjectile.dmg = 80;
+		micProjectile.dmg = kirby_MicNormal3_Damage;
+		scr_Attack_SetKnockback(micProjectile,kirby_MicNormal3_Strength,kirby_MicNormal3_HitStopAffectSource,kirby_MicNormal3_HitStopAffectPlayer,kirby_MicNormal3_HitStopAffectTarget,kirby_MicNormal3_HitStopLength,kirby_MicNormal3_HitStopShakeStrength);
 		break;
 	}
 	micProjectile.enemy = false;

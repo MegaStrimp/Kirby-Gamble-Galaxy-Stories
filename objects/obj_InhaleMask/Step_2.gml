@@ -2,7 +2,7 @@
 
 if (instance_exists(owner))
 {
-	x = owner.x;
-	y = owner.y;
 	image_xscale = owner.image_xscale;
+	x = owner.x - (5 * image_xscale);
+	y = owner.y - 4;
 }

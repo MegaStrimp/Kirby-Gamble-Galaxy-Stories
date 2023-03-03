@@ -9,7 +9,7 @@ if (parasol)
 }
 else
 {
-	/*if (hurt)
+	if (hurt)
 	{
 		gravLimit = 5;
 		grav = .2;
@@ -18,9 +18,7 @@ else
 	{
 		gravLimit = gravLimitNormal;
 		grav = gravNormal;
-	}*/
-	gravLimit = gravLimitNormal;
-	grav = gravNormal;
+	}
 }
 
 var parentPause = ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)));
@@ -345,6 +343,10 @@ if ((parentPause) and (hurtStopTimer < 1))
 				abilityDropStar.sprite_index = spr_AbilityStar_Sleep;
 				break;
 				
+				case playerAbilities.scan:
+				abilityDropStar.sprite_index = spr_AbilityStar_Scan;
+				break;
+				
 				case playerAbilities.mic:
 				abilityDropStar.sprite_index = spr_AbilityStar_Mic;
 				break;
@@ -539,23 +541,21 @@ if ((parentPause) and (hurtStopTimer < 1))
 	#endregion
 	
 	#region Collision
-	if (hp > 0)
+	if ((setupTimer == 0) and (groundFailsafe))
 	{
-		if ((setupTimer == 0) and (groundFailsafe))
+		with (obj_ParentWall)
 		{
-			with (obj_ParentWall)
+			if (owner != other.id)
 			{
-				if (owner != other.id)
+				while (place_meeting(x,y,other))
 				{
-					while (place_meeting(x,y,other))
-					{
-						other.y -= 1;
-					}
+					other.y -= 1;
 				}
 			}
 		}
-		scr_Enemy_Collision();
 	}
+	
+	scr_Enemy_Collision();
 	#endregion
 	
 	#region Bumpers

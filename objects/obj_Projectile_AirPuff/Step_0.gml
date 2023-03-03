@@ -1,35 +1,11 @@
 ///@description Main
 
-//Characters
+#region Event Inherited
+event_inherited();
+#endregion
 
-if (setupTimer == 0)
+if (!isPaused)
 {
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_AirPuff_Normal_Idle;
-		sprDestroy = spr_AirPuff_Normal_Destroy;
-		break;
-		
-		//Whispy Big
-		
-		case 2:
-		sprIdle = spr_AirPuff_WhispyBig_Idle;
-		sprDestroy = spr_AirPuff_WhispyBig_Idle;
-		break;
-	}
-	if (sprDestroy != -1) particleOnHitSpr = sprDestroy;
-	sprite_index = sprIdle;
-}
-
-if (((pausable) and (!global.pause)) or (!pausable))
-{
-	//Event Inherited
-	
-	event_inherited();
-	
 	//Gravity
 	
 	if (vsp < gravLimit)

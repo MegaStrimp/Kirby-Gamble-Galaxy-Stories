@@ -4,10 +4,6 @@
 event_inherited();
 #endregion
 
-#region Randomize
-randomize();
-#endregion
-
 #region Physics
 accel = .15;
 movespeed = 2;

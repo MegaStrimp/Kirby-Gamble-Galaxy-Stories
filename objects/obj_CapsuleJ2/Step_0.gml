@@ -2,30 +2,11 @@
 // You can write your code in this editor
 //@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-    switch (character)
-    {
-        //Normal
-
-        case 0:
-        sprWalk = spr_CapsuleJ2_Normal_Walk;
-        sprDashStart = spr_CapsuleJ2_Normal_DashStart;
-		sprHoverRise = spr_CapsuleJ2_Normal_Hover2;
-		sprHoverFall = spr_CapsuleJ2_Normal_Hover1;
-        sprJetDash = spr_CapsuleJ2_Normal_JetDash;
-        sprHurt = spr_CapsuleJ2_Normal_Hurt;
-        break;
-    }
-}
-
 //Event Inherited
 
 event_inherited();
 
-if((!global.cutscene) and (!global.pause) and (pausedInCutscenes))
+if (!childPause)
 {
 	//Get Inhaled
 	

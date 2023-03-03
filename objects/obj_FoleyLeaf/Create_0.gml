@@ -3,3 +3,4 @@
 //Physics
 
 spd = 1;
+pausedInCutscenes = false;

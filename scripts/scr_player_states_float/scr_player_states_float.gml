@@ -182,7 +182,8 @@ function scr_Player_States_Float()
 					if (audio_is_playing(floatSfx)) audio_stop_sound(snd_Float);
 					var projAirPuff = instance_create_depth(x + ((sprite_get_width(sprFloatSpit) / 2) * dir),y + vsp,depth - 1,obj_Projectile_AirPuff);
 					projAirPuff.owner = id;
-					projAirPuff.dmg = kirby_AirPuffDamage;
+					projAirPuff.dmg = kirby_AirPuff_Damage;
+					scr_Attack_SetKnockback(projAirPuff,kirby_AirPuff_Strength,kirby_AirPuff_HitStopAffectSource,kirby_AirPuff_HitStopAffectPlayer,kirby_AirPuff_HitStopAffectTarget,kirby_AirPuff_HitStopLength,kirby_AirPuff_HitStopShakeStrength);
 					projAirPuff.dirX = dir;
 					projAirPuff.image_xscale = projAirPuff.dirX;
 					projAirPuff.hsp = ((airPuffSpd * dir) + hsp);
@@ -226,7 +227,8 @@ function scr_Player_States_Float()
 					if (audio_is_playing(floatSfx)) audio_stop_sound(snd_Float);
 					var projAirPuff = instance_create_depth(x + ((sprite_get_width(sprFloatSpit) / 2) * dir),y + vsp,depth - 1,obj_Projectile_AirPuff);
 					projAirPuff.owner = id;
-					projAirPuff.dmg = kirby_AirPuffDamage;
+					projAirPuff.dmg = kirby_AirPuff_Damage;
+					scr_Attack_SetKnockback(projAirPuff,kirby_AirPuff_Strength,kirby_AirPuff_HitStopAffectSource,kirby_AirPuff_HitStopAffectPlayer,kirby_AirPuff_HitStopAffectTarget,kirby_AirPuff_HitStopLength,kirby_AirPuff_HitStopShakeStrength);
 					projAirPuff.dirX = dir;
 					projAirPuff.image_xscale = projAirPuff.dirX;
 					projAirPuff.hsp = ((airPuffSpd * dir) + hsp);

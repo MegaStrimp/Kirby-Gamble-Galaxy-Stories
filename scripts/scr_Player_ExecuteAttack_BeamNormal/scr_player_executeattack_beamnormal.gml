@@ -28,7 +28,8 @@ function scr_Player_ExecuteAttack_BeamNormal()
 		projBeam.owner = id;
 		projBeam.abilityType = playerAbilities.beam;
 		projBeam.player = player;
-		projBeam.dmg = 12;
+		projBeam.dmg = kirby_BeamNormal_Damage;
+		scr_Attack_SetKnockback(projBeam,kirby_BeamNormal_Strength,kirby_BeamNormal_HitStopAffectSource,kirby_BeamNormal_HitStopAffectPlayer,kirby_BeamNormal_HitStopAffectTarget,kirby_BeamNormal_HitStopLength,kirby_BeamNormal_HitStopShakeStrength);
 		switch (i)
 		{
 			case 0:

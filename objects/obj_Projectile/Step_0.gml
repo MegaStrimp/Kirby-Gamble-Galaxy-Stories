@@ -12,7 +12,8 @@ else
 	stunTimer = stunTimer - 1;
 }
 
-if (((pausable) and (!global.pause)) or (!pausable)) and (!isStunned)
+isPaused = (((pausable) and (global.pause)) or (isStunned));
+if (!isPaused)
 {
 	//Angle
 	
@@ -173,16 +174,4 @@ if (((pausable) and (!global.pause)) or (!pausable)) and (!isStunned)
 else
 {
 	image_speed = 0;
-}
-
-//Setup Timer
-
-if (setupTimer > 0)
-{
-	setupTimer -= 1;
-}
-else if (setupTimer == 0)
-{
-	if (setupExplode) instance_destroy();
-	setupTimer = -1;
 }

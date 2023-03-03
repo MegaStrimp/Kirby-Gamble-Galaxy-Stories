@@ -1,28 +1,10 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_Chuckie_Idle;
-		sprNeck = spr_Chuckie_Neck;
-		sprHurt = spr_Chuckie_Hurt;
-		break;
-	}
-	
-	if (followedPath != -1) path = path_start(followedPath,spd,path_action_stop,0);
-}
-
 //Event Inherited
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	//Get Inhaled
 	
@@ -92,6 +74,4 @@ else
 {
 	path_speed = 0;
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

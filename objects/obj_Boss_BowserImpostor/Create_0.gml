@@ -37,6 +37,7 @@ hbSetup = true;
 hasXKnockback = false;
 hasYKnockback = false;
 hurtable = false;
+hurtFunction = func_HurtBossDefault;
 phase = 0;
 spawnHealthbar = true;
 attackState = 0;

@@ -1,11 +1,8 @@
 /// @description Initialize Variables
 
 //Event Inherited
+
 event_inherited();
-
-//Randomize
-
-randomize();
 
 //Physics
 
