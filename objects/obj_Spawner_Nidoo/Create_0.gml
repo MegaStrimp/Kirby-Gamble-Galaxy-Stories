@@ -3,12 +3,12 @@
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_Nidoo_Normal_Palette_ShadowGate;
 state = 0;
 hp = nidoo_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.none;
 points = nidoo_Points;
 hurtable = true;

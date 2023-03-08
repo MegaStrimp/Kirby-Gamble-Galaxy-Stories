@@ -20,7 +20,7 @@ sprHurt = spr_Juckle_Normal_Hurt;
 
 paletteIndex = spr_Juckle_Normal_Palette_SpinningCutter;
 hp = juckle_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.cutter;
 points = juckle_Points;
 hasXKnockback = false;

@@ -28,7 +28,7 @@ sprHurt = spr_JungleBomb_Normal_Hurt;
 
 paletteIndex = spr_JungleBomb_Normal_Palette_Pineapple;
 hp = jungleBomb_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.bomb;
 points = jungleBomb_Points;
 parasolX = 2;

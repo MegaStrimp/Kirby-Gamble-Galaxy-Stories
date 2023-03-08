@@ -33,12 +33,15 @@ function scr_Player_States_Normal()
 		}
 		
 		var attackDisableMovement = false;
-		if ((attack)
-		and ((attackNumber != playerAttacks.ufoBeam)
+		if (
+		(attack)
+		and ((attackNumber != playerAttacks.beamAir)
+		and (attackNumber != playerAttacks.ufoBeam)
 		and (attackNumber != playerAttacks.ufoCharge)
 		and (attackNumber != playerAttacks.ufoLaser)
 		and (attackNumber != playerAttacks.cutterAir)
 		and (attackNumber != playerAttacks.fireAerial)
+		and !((attackNumber == playerAttacks.sparkNormal) and (!grounded))
 		and (attackNumber != playerAttacks.swordAir)
 		and (attackNumber != playerAttacks.swordAirDash))
 		) attackDisableMovement = true;
@@ -50,11 +53,13 @@ function scr_Player_States_Normal()
 		
 		var attackDisableDir = false;
 		if (
-		(attackNumber == playerAttacks.ufoBeam)
+		(attackNumber == playerAttacks.beamAir)
+		or (attackNumber == playerAttacks.ufoBeam)
 		or (attackNumber == playerAttacks.cutterAir)
 		or (attackNumber == playerAttacks.fireAerial)
-		or (attackNumber == playerAttacks.fireWheel && !grounded)
+		or ((attackNumber == playerAttacks.fireWheel) and (!grounded))
 		or (attackNumber == playerAttacks.fireNormal)
+		or (attackNumber == playerAttacks.sparkNormal)
 		) attackDisableDir = true;
 		
 		var attackHasGravLerp = false;
@@ -188,6 +193,8 @@ function scr_Player_States_Normal()
 		
 		//Movement
 		
+		var movespeedFinal = movespeed - ((attackNumber == playerAttacks.beamAir) * .25) - ((attackNumber == playerAttacks.sparkNormal) * .25);
+		
 		if ((!hurt) and (walkSquishTimer == -1))
 		{
 			if ((!global.cutscene) and (canWalk) and (!runTurn))
@@ -271,7 +278,7 @@ function scr_Player_States_Normal()
 			}
 			else
 			{
-				if (hspLimit) hsp = clamp(hsp, -movespeed, movespeed);
+				if (hspLimit) hsp = clamp(hsp, -movespeedFinal, movespeedFinal);
 			}
 			
 			if ((((keyLeftHold) and (keyRightHold)) or ((!keyLeftHold) and (!keyRightHold))) or (attackDisableMovement) or (runTurn) or (global.cutscene))
@@ -620,7 +627,7 @@ function scr_Player_States_Normal()
 						var grabEnemy = -1;
 						if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 						{
-							if (place_meeting(x + (16 * dir),y,obj_Enemy)) grabEnemy = instance_place(x + (16 * dir),y,obj_Enemy);
+							if (place_meeting(x + (24 * dir),y,obj_Enemy)) grabEnemy = instance_place(x + (24 * dir),y,obj_Enemy);
 							if (((grabEnemy != -1) and (finalCutterState == 0)) or ((comboBuffer <= 0) and (finalCutterReadInput)))
 							{
 								if ((comboBuffer <= 0) && (finalCutterReadInput || finalCutterState == 0))
@@ -629,6 +636,7 @@ function scr_Player_States_Normal()
 									audio_play_sound(snd_Slash,0,false);
 									attack = true;
 									attackNumber = playerAttacks.finalCutter;
+									invincible = true;
 									cutterCatch = false;
 								}
 							}
@@ -692,6 +700,7 @@ function scr_Player_States_Normal()
 									attack = true;
 									finalCutterState = 2;
 									attackNumber = playerAttacks.finalCutter;
+									invincible = true;
 									cutterCatch = false;
 								}
 							}
@@ -797,6 +806,7 @@ function scr_Player_States_Normal()
 									default:
 									break;
 								}
+								finalCutterStartingY = y;
 								state = playerStates.finalCutter;
 							}
 						}
@@ -2614,6 +2624,7 @@ function scr_Player_States_Normal()
 									{
 										attack = true;
 										attackNumber = playerAttacks.fireNormal;
+										fireNormalAttackTimer = 0;
 										sprite_index = sprFireAttack1;
 								        image_index = 0;
 									}									
@@ -4983,7 +4994,7 @@ function scr_Player_States_Normal()
 		
 		//Walk Squish
 		
-		if ((!walkSquish) and (playerAbility != playerAbilities.ufo) and (place_meeting(x + hspFinal,y,obj_ParentWall)) and (place_meeting(x,y + 1,obj_ParentWall)) and (abs(hspFinal) >= (movespeed / 2)) and (!attack))
+		if ((!walkSquish) and (playerAbility != playerAbilities.ufo) and (place_meeting(x + hspFinal,y,obj_ParentWall)) and (place_meeting(x,y + 1,obj_ParentWall)) and (abs(hspFinal) >= (movespeedFinal / 2)) and (!attack))
 		{
 			var walkSquishWall = instance_place(x + hspFinal,y,obj_ParentWall);
 			var bottomWall = instance_place(x,y + 1,obj_ParentWall);

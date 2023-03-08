@@ -676,7 +676,7 @@ part_type_life(global.partTypeColorfulStars, 30, 40);
 
 #region Global Variables
 #region Meta/Files
-global.versionNumber = "0.7.4";
+global.versionNumber = "0.7.6";
 global.season = seasons.none;
 global.selectedSave = "SaveSlot1.ini";
 #endregion
@@ -743,7 +743,7 @@ global.goldenTomatoAmountMax = 2;
 global.stageNumber = stages.greenGreens;
 global.debug = true;
 //global.debug = false;
-global.debugOverlay = global.debug;
+global.debugOverlay = false;
 global.pause = false;
 global.cutscene = false;
 global.tutorial = false;

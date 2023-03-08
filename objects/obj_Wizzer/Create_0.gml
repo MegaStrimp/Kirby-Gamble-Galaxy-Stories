@@ -28,7 +28,7 @@ sprHurtInhale = spr_Wizzer_Normal_HurtInhale;
 
 paletteIndex = spr_Wizzer_Normal_Palette_NavyShell;
 hp = wizzer_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 hasXKnockback = false;
 hasYKnockback = false;
 ability = playerAbilities.beam;

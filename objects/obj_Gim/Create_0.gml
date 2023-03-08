@@ -32,7 +32,7 @@ sprHandHoldAway = spr_GimHand_Normal_HoldAway;
 
 paletteIndex = spr_Gim_Normal_Palette_SpinningBrown;
 hp = gim_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.yoyo;
 points = gim_Points;
 jump = 3;

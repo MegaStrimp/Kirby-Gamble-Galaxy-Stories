@@ -32,7 +32,7 @@ sprHurt = spr_WaddleDee_Normal_Hurt;
 
 paletteIndex = spr_WaddleDee_Normal_Palette_WaddleWaddle;
 hp = waddleDee_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 points = waddleDee_Points;
 parasolX = 4;
 parasolY = 3;

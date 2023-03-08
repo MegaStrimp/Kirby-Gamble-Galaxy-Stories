@@ -25,7 +25,7 @@ mask_index = sprite_index;
 
 paletteIndex = spr_EnemyParasol_Normal_Palette_FloatyCanvas;
 hp = enemyParasol_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 points = enemyParasol_Points;
 ability = playerAbilities.parasol;
 hasGravity = false;

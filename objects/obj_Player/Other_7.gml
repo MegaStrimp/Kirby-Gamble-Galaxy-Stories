@@ -31,7 +31,7 @@ if (idleAnimation)
 {
 	idleAnimation = false;
 	idleAnimationTimer = 0;
-	idleAnimationTimerMax = choose(10,30,45);
+	idleAnimationTimerMax = choose(60,120,210);
 }
 
 //Walking Animation

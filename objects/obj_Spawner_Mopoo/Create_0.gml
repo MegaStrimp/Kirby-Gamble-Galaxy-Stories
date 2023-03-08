@@ -7,7 +7,7 @@ spd = 2;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 horLoop = 1;
 verLoop = 1;
 horOffset = 0;
@@ -16,7 +16,7 @@ character = 0;
 paletteIndex = spr_Mopoo_Normal_Palette_PuffyCloud;
 state = 0;
 hp = mopoo_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.none;
 points = mopoo_Points;
 hurtable = true;

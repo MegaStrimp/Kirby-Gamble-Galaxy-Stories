@@ -52,7 +52,7 @@ sprHurt = sprHurtCapless;
 
 paletteIndex = spr_Cappy_Normal_Palette_RedCap;
 hp = cappy_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 points = cappy_Points;
 hurtFunction = func_CappyHurt;
 dirXDummy = 1;

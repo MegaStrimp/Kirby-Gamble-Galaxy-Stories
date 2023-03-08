@@ -11,12 +11,12 @@ gravLimitNormal = 1.25;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_Como_Normal_Palette_SpiderGold;
 state = 0;
 hp = como_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.none;
 points = como_Points;
 hurtable = true;

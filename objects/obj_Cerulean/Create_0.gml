@@ -22,7 +22,7 @@ sprHurt = spr_Cerulean_Normal_Hurt;
 
 paletteIndex = spr_Cerulean_Normal_Palette_GreenBean;
 hp = cerulean_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 points = cerulean_Points;
 hasGravity = false;
 hasXCollision = false;

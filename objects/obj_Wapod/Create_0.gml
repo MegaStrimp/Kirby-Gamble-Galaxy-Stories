@@ -23,7 +23,7 @@ sprGhostHurt = spr_Wapod_Normal_Hurt;
 
 paletteIndex = spr_Wapod_Normal_Palette_PhantomPastel;
 hp = wapod_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 points = wapod_Points;
 hasXKnockback = true;
 hasYKnockback = true;

@@ -11,12 +11,12 @@ gravLimitNormal = 5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_Wheelie_Normal_Palette_Turbo;
 state = 0;
 hp = wheelie_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.wheel;
 points = wheelie_Points;
 hurtable = true;

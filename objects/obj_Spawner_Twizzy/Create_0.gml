@@ -16,12 +16,12 @@ gravLimitParasol = .5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_Twizzy_Normal_Palette_FlyingYolk;
 state = 0;
 hp = twizzy_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.none;
 points = twizzy_Points;
 hurtable = true;

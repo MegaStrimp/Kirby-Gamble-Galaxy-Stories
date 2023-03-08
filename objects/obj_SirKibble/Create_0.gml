@@ -28,7 +28,7 @@ sprHurtAir = spr_SirKibble_Normal_HurtAir;
 
 paletteIndex = spr_SirKibble_Normal_Palette_Yellow;
 hp = sirKibble_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.cutter;
 points = sirKibble_Points;
 attack = false;

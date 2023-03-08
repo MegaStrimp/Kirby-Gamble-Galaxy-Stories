@@ -26,7 +26,7 @@ sprHurt = spr_PoppyBrosJr_Normal_Hurt;
 
 paletteIndex = spr_PoppyBrosJr_Normal_Palette_BlueBomber;
 hp = poppyBrosJr_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.bomb;
 points = poppyBrosJr_Points;
 attack = false;

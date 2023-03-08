@@ -22,7 +22,7 @@ sprHurt = spr_Bomber_Normal_Hurt;
 paletteIndex = spr_Bomber_Normal_Palette_ExplodingSkull;
 
 hp = bomber_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.crash;
 stop = false;
 points = bomber_Points;

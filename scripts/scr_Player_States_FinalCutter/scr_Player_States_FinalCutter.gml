@@ -103,14 +103,14 @@ function scr_Player_States_FinalCutter(){
 						vsp = 16;
 						
 						//just until we can disable Kirby's collision with the level temporarily do we need this bit of code:
-						while(place_meeting(x,y-1,obj_Wall)){
-							y++;
-						}
+						//while(place_meeting(x,y-1,obj_Wall)){
+							//y++;
+						//}
 					}
 				}else if (attackTimer > finalCutterEndlag){
 					hsp = 0;
 					vsp = 16;
-					if(grounded){
+					if(grounded) and ((y >= finalCutterStartingY - 12) and (vsp > 0) and (!place_meeting(x,y,obj_ParentWall))){
 						audio_play_sound(snd_FinalCutter,0,false);
 						attackTimer = finalCutterEndlag;
 						vsp = 0;
@@ -145,12 +145,15 @@ function scr_Player_States_FinalCutter(){
 		
 		//Collision
 		
-		//if(finalCutterState != 3){
+		if ((finalCutterState != 3) or ((finalCutterState == 3) and (y >= finalCutterStartingY - 12) and (vsp > 0) and (!place_meeting(x,y,obj_ParentWall))))
+		{
 			scr_Player_Collision(playerMechs.none);
-		//}else{
-		//	x += hsp;
-			//y += vsp;
-		//}
+		}
+		else
+		{
+			x += hsp;
+			y += vsp;
+		}
 	}
 	else
 	{

@@ -24,7 +24,7 @@ function scr_Player_States_MysticBeamGrab()
 		if ((mysticBeamGrabTimer == -1) and (keyAttackPressed))
 		{
 			if (audio_is_playing(snd_BeamDash)) audio_stop_sound(snd_BeamDash);
-			audio_play_sound(snd_BeamDash,0,false);
+			mysticBeamGrabSfx = audio_play_sound(snd_BeamDash,0,false);
 			sprite_index = sprBeamAttack3;
 			image_index = 0;
 			grabObj.direction = 90 + (-dir * 90);

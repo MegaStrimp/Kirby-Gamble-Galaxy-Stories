@@ -26,7 +26,7 @@ sprFlame = spr_Bobo_Normal_Flame;
 
 paletteIndex = spr_Bobo_Normal_Palette_FunnyFlame;
 hp = bobo_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.fire;
 points = bobo_Points;
 parasolX = 2;

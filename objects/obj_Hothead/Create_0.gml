@@ -28,7 +28,7 @@ sprHurt = sprHurtGround;
 
 paletteIndex = spr_Hothead_Normal_Palette_DefaultFlames;
 hp = hothead_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.fire;
 points = hothead_Points;
 parasolX = 2;

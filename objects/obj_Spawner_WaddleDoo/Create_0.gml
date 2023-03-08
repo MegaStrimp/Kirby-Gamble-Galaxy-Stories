@@ -16,7 +16,7 @@ gravLimitParasol = .5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 horLoop = 1;
 verLoop = 1;
 horOffset = 0;
@@ -25,9 +25,9 @@ character = 0;
 paletteIndex = spr_WaddleDoo_Normal_Palette_WaddleWaddle;
 state = 0;
 hp = waddleDoo_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.beam;
-points = waddleDoo_BeamDamage;
+points = waddleDoo_Points;
 hurtable = true;
 hasGravity = true;
 heavy = false;

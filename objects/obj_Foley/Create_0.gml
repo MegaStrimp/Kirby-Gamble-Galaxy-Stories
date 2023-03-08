@@ -31,7 +31,7 @@ sprLeaf = spr_Foley_Normal_Leaf;
 
 paletteIndex = spr_Foley_Normal_Palette_ExplosiveCream;
 hp = foley_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.bomb;
 points = foley_Points;
 hasGravity = false;

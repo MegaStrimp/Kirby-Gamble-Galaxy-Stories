@@ -25,7 +25,7 @@ sprHurt = spr_Bouncy_Normal_Hurt;
 
 paletteIndex = spr_Bouncy_Normal_Palette_HoppingPink;
 hp = bouncy_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 points = bouncy_Points;
 duck = false;
 jump = false;

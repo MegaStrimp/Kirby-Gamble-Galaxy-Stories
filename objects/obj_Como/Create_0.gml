@@ -24,7 +24,7 @@ sprHurt = spr_Como_Normal_Hurt;
 
 paletteIndex = spr_Como_Normal_Palette_SpiderGold;
 hp = como_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 points = como_Points;
 hasGravity = false;
 attack = false;

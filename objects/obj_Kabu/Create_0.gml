@@ -26,7 +26,7 @@ sprHurt = -1;
 
 paletteIndex = spr_Kabu_Normal_Palette_StoneYellow;
 hp = kabu_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 points = kabu_Points;
 parasolX = 2;
 parasolY = 3;

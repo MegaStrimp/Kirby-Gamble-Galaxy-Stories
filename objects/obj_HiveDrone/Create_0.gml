@@ -18,7 +18,7 @@ sprWings = spr_HiveDrone_Normal_Wings;
 
 paletteIndex = spr_HiveDrone_Normal_Palette_GoldHoneycomb;
 hp = 18;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 points = 750;
 wingIndex = 0;
 wingSpd = 0;

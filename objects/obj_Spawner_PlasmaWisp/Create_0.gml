@@ -9,12 +9,12 @@ jumpspeed = 1.5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_PlasmaWisp_Normal_Palette_Plasma;
 state = 0;
 hp = plasmaWisp_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.spark;
 points = plasmaWisp_Points;
 hurtable = true;

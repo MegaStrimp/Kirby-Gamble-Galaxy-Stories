@@ -27,7 +27,7 @@ sprHurt = spr_Tomatoo_Normal_Hurt;
 
 paletteIndex = spr_Tomatoo_Normal_Palette_RedTomato;
 hp = tomatoo_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 points = tomatoo_Points;
 parasolX = 2;
 parasolY = 3;

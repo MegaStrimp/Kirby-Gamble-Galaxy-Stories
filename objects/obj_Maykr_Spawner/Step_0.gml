@@ -29,7 +29,7 @@ if (activeState == 0)
 			
 			case 1:
 			//spawnedItem.sprite_index = spr_Maykr_Debug_Slope;
-			spawnedItem.mask_index = spr_DebugSlopeMask;
+			spawnedItem.mask_index = spr_24x24Slope;
 			spawnedItem.slope = true;
 			spawnedItem.slopeType = "normal";
 			spawnedItem.hasTop = false;

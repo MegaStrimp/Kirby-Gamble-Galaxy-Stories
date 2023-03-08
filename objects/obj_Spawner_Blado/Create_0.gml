@@ -11,7 +11,7 @@ gravLimitNormal = 5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_Blado_Normal_Palette_BrownBlades;
 state = 0;

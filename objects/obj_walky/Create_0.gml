@@ -25,7 +25,7 @@ sprHurt = spr_Walky_Normal_Hurt;
 
 paletteIndex = spr_Walky_Normal_Palette_MicCheck;
 hp = walky_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.mic;
 points = walky_Points;
 attack = false;

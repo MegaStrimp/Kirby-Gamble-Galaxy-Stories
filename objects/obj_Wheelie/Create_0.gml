@@ -24,7 +24,7 @@ sprHurt = spr_Wheelie_Normal_Hurt;
 #region Other Variables
 paletteIndex = spr_Wheelie_Normal_Palette_Turbo;
 hp = wheelie_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.wheel;
 points = wheelie_Points;
 attackNumber = 0;

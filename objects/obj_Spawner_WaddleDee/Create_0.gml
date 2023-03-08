@@ -16,7 +16,7 @@ gravLimitParasol = .5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 horLoop = 1;
 verLoop = 1;
 horOffset = 0;
@@ -25,7 +25,7 @@ character = 0;
 paletteIndex = spr_WaddleDee_Normal_Palette_WaddleWaddle;
 state = 0;
 hp = waddleDee_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.none;
 points = waddleDee_Points;
 hurtable = true;

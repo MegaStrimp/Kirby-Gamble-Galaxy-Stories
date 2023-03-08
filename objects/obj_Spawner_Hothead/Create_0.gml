@@ -11,12 +11,12 @@ gravLimitNormal = 5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_Hothead_Normal_Palette_DefaultFlames;
 state = 0;
 hp = hothead_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.fire;
 points = hothead_Points;
 hurtable = true;

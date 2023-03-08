@@ -20,7 +20,7 @@ sprHurt = spr_Glunk_Normal_Hurt;
 
 paletteIndex = spr_Glunk_Normal_Palette_Melon;
 hp = glunk_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 points = glunk_Points;
 animDir = 1;
 attack = false;

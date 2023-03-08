@@ -16,12 +16,12 @@ gravLimitParasol = .5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_BouncySis_Normal_Palette_GiganticPink;
 state = 0;
 hp = bouncySis_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.none;
 points = bouncySis_Points;
 hurtable = true;

@@ -8,6 +8,5 @@ event_inherited();
 slope = true;
 slopeType = "gentle";
 hasTop = false;
-
-y -= 4;
+slopeYSet = false;
 #endregion

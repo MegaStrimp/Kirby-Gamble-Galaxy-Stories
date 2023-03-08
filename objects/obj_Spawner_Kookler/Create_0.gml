@@ -7,7 +7,7 @@ spd = 2;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 horLoop = 1;
 verLoop = 1;
 horOffset = 0;
@@ -16,7 +16,7 @@ character = 0;
 paletteIndex = spr_Kookler_Normal_Palette_BlueSpin;
 state = 0;
 hp = kookler_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.none;
 points = kookler_Points;
 hurtable = true;

@@ -20,7 +20,7 @@ sndMirror = snd_EnemyIce;
 
 paletteIndex = spr_Simirror_Normal_Palette_MagicalOrange;
 hp = simirror_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.mirror;
 points = simirror_Points;
 first_hit = true;

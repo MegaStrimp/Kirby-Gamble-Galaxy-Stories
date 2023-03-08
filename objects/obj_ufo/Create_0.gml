@@ -21,7 +21,7 @@ sprBeam = spr_Ufo_Normal_Beam;
 
 paletteIndex = spr_Ufo_Normal_Palette_Unearthly;
 hp = ufo_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.ufo;
 points = ufo_Points;
 hasGravity = false;

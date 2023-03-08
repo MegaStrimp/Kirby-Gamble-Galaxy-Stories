@@ -2,7 +2,7 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "rm_DemoStageSelect",
-  "creationCodeFile": "${project_dir}/rooms/rm_StageSelect_Demo/RoomCreationCode.gml",
+  "creationCodeFile": "${project_dir}/rooms/rm_DemoStageSelect/RoomCreationCode.gml",
   "inheritCode": false,
   "inheritCreationOrder": false,
   "inheritLayers": false,

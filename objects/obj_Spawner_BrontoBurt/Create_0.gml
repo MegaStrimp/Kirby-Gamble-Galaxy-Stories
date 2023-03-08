@@ -16,16 +16,19 @@ gravLimitParasol = .5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 horLoop = 1;
 verLoop = 1;
 horOffset = 0;
+horVerOffset = 0;
 verOffset = 0;
+verHorOffset = 0;
+
 character = 0;
 paletteIndex = spr_BrontoBurt_Normal_Palette_ClassicalFlight;
 state = 0;
 hp = brontoBurt_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.none;
 points = brontoBurt_Points;
 hurtable = true;

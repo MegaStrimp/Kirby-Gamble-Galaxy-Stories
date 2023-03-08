@@ -43,7 +43,7 @@ sprHurt = sprCalmHurt;
 
 paletteIndex = spr_Scarfy_Normal_Palette_DeadlyOrange;
 hp = scarfy_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.crash;
 points = scarfy_Points;
 hasGravity = false;

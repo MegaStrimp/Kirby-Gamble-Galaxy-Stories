@@ -67,6 +67,9 @@ if (!childPause)
 			projectile.paletteIndex = paletteIndex;
 			projectile.character = 1;
 			projectile.owner = id;
+			projectile.abilityType = playerAbilities.cutter;
+			projectile.dmg = sirKibble_Cutter_Damage;
+			scr_Attack_SetKnockback(projectile,sirKibble_Cutter_Strength,sirKibble_Cutter_HitStopAffectSource,sirKibble_Cutter_HitStopAffectPlayer,sirKibble_Cutter_HitStopAffectTarget,sirKibble_Cutter_HitStopLength,sirKibble_Cutter_HitStopShakeStrength);
 			projectile.hsp = dirX * projectile.decelMax;
 			projectile.dirX = dirX;
 			projectile.image_xscale = projectile.dirX;

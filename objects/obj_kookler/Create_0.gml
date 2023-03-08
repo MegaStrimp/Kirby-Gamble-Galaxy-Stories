@@ -19,7 +19,7 @@ sprHurt = spr_Kookler_Normal_Hurt;
 
 paletteIndex = spr_Kookler_Normal_Palette_BlueSpin;
 hp = kookler_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 points = kookler_Points;
 hasXCollision = false;
 hasYCollision = false;

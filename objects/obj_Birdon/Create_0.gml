@@ -34,7 +34,7 @@ sprHurt = spr_WaddleDee_Normal_Hurt;
 
 paletteIndex = spr_WaddleDee_Normal_Palette_WaddleWaddle;
 hp = birdon_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 points = birdon_Points;
 parasolX = 4;
 parasolY = 3;

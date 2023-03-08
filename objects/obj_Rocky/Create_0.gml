@@ -27,7 +27,7 @@ sprHurt = sprHurtGround;
 
 paletteIndex = spr_Rocky_Normal_Palette_BrownRock;
 hp = rocky_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.stone;
 points = rocky_Points;
 heavy = true;

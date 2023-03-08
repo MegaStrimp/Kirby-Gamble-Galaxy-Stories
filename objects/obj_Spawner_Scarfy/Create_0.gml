@@ -11,7 +11,7 @@ gravLimitNormal = 1.25;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 horLoop = 1;
 verLoop = 1;
 horOffset = 0;
@@ -20,7 +20,7 @@ character = 0;
 paletteIndex = spr_Scarfy_Normal_Palette_DeadlyOrange;
 state = 0;
 hp = scarfy_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.crash;
 points = scarfy_Points;
 hurtable = true;

@@ -27,7 +27,7 @@ sprCurrent = sprIdle;
 
 paletteIndex = spr_PlasmaWisp_Normal_Palette_Plasma;
 hp = plasmaWisp_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.spark;
 points = plasmaWisp_Points;
 hasGravity = false;

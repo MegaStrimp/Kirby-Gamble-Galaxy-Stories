@@ -17,7 +17,7 @@ sprStar = spr_Particle_BigStar_Yellow;
 
 paletteIndex = spr_Nidoo_Normal_Palette_ShadowGate;
 hp = nidoo_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 points = nidoo_Points;
 hurtable = false;
 active = false;

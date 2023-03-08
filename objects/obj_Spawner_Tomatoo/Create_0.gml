@@ -10,12 +10,12 @@ gravLimitNormal = 6;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_Tomatoo_Normal_Palette_RedTomato;
 state = 0;
 hp = tomatoo_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.none;
 points = tomatoo_Points;
 hurtable = true;

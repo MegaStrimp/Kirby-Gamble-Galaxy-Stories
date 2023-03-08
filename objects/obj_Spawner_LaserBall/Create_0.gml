@@ -11,12 +11,12 @@ gravLimitNormal = 0;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_LaserBall_Normal_Palette_OrangeLaser;
 state = 0;
 hp = laserBall_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.beam;
 points = laserBall_Points;
 hurtable = true;

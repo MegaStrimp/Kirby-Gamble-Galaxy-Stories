@@ -17,12 +17,12 @@ shroomLaunchSpd = -6;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_Cappy_Normal_Palette_RedCap;
 state = 0;
 hp = cappy_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.none;
 points = cappy_Points;
 hurtable = true;

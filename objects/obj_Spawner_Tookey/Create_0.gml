@@ -16,12 +16,12 @@ gravLimitParasol = .5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_Tookey_Normal_Palette_FlyingWhite;
 state = 0;
 hp = tookey_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.none;
 points = tookey_Points;
 hurtable = true;

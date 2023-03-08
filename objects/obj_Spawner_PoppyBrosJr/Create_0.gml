@@ -11,13 +11,13 @@ gravLimitNormal = 5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 attack = false;
 paletteIndex = spr_PoppyBrosJr_Normal_Palette_BlueBomber;
 state = 0;
-hp = gim_Points;
-dmg = baseEnemyContactDamage;
+hp = poppyBrosJr_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.bomb;
 points = poppyBrosJr_Points;
 hurtable = true;

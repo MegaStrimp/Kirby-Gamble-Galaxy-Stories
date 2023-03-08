@@ -29,7 +29,7 @@ sprHurt = spr_BurningLeo_Normal_Hurt;
 
 paletteIndex = spr_BurningLeo_Normal_Palette_FlamingRed;
 hp = burningLeo_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.fire;
 points = burningLeo_Points;
 parasolX = 2;

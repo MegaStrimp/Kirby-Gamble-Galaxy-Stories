@@ -26,7 +26,7 @@ sprHurt = spr_Grizzo_Normal_Hurt;
 
 paletteIndex = spr_Grizzo_Normal_Palette_TanBear;
 hp = grizzo_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 points = grizzo_Points;
 heavy = true;
 gettingInhaled = false;

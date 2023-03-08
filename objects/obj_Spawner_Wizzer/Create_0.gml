@@ -11,7 +11,7 @@ gravLimitNormal = 5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 horLoop = 1;
 verLoop = 1;
 horOffset = 0;
@@ -20,7 +20,7 @@ character = 0;
 paletteIndex = spr_Wizzer_Normal_Palette_NavyShell;
 state = 0;
 hp = wizzer_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.beam;
 points = wizzer_Points;
 hurtable = true;

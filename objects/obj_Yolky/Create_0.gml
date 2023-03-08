@@ -21,7 +21,7 @@ sprHurt = -1;
 
 paletteIndex = spr_Yolky_Normal_Palette_SunnySideUp;
 hp = yolky_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 points = yolky_Points;
 animDir = 1;
 attack = false;

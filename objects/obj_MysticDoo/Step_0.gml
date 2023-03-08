@@ -151,6 +151,9 @@ if (!childPause)
 					projBeam.orbit = 0;
 					projBeam.orbitMax = orbitMax;
 					projBeam.owner = id;
+					projBeam.abilityType = playerAbilities.mysticBeam;
+					projBeam.dmg = mysticDoo_Beam_Damage;
+					scr_Attack_SetKnockback(projBeam,mysticDoo_Beam_Strength,mysticDoo_Beam_HitStopAffectSource,mysticDoo_Beam_HitStopAffectPlayer,mysticDoo_Beam_HitStopAffectTarget,mysticDoo_Beam_HitStopLength,mysticDoo_Beam_HitStopShakeStrength);
 					projBeam.state = 2;
 					projBeam.enemy = true;
 					projBeam.hurtsObject = false;

@@ -76,6 +76,9 @@ if (!childPause)
 		
 		var par = instance_create_depth(x,y,depth,obj_Projectile_ExplosionMask);
 		par.owner = id;
+		par.abilityType = playerAbilities.bomb;
+		par.dmg = searches_Explosion_Damage;
+		scr_Attack_SetKnockback(par,searches_Explosion_Strength,searches_Explosion_HitStopAffectSource,searches_Explosion_HitStopAffectPlayer,searches_Explosion_HitStopAffectTarget,searches_Explosion_HitStopLength,searches_Explosion_HitStopShakeStrength);
 		par.enemy = true;
 		
 		var explosion = instance_create_depth(x,y,depth,obj_DeathParticles);

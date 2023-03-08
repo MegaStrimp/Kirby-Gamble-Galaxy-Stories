@@ -31,7 +31,7 @@ sprHurt = spr_MysticDoo_Normal_Hurt;
 
 paletteIndex = choose(spr_MysticDoo_Normal_Palette_CorruptedTwilight,spr_MysticDoo_Normal_Palette_PalePurple,spr_MysticDoo_Normal_Palette_DarkFlux);
 hp = mysticDoo_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.mysticBeam;
 points = mysticDoo_Points;
 hasGravity = false;

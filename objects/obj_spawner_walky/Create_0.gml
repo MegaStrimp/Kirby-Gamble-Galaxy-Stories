@@ -11,12 +11,12 @@ gravLimitNormal = 5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_Walky_Normal_Palette_MicCheck;
 state = 0;
 hp = walky_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.mic;
 points = walky_Points;
 hurtable = true;

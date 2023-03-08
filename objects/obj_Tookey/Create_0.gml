@@ -24,7 +24,7 @@ sprHurt = spr_Twizzy_Normal_Hurt;
 
 paletteIndex = spr_Tookey_Normal_Palette_FlyingWhite;
 hp = tookey_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 points = tookey_Points;
 hasGravity = true;
 hasXCollision = false;

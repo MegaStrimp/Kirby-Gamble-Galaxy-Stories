@@ -183,6 +183,8 @@ if (!childPause)
 			var cannonSpd = 2.5;
 			var cannonball = instance_create_depth(x + (16 * dirX),y - (4 * dirY),depth,obj_Projectile_Cannonball);
 			cannonball.owner = id;
+			cannonball.dmg = shotzo_Cannon_Damage;
+			scr_Attack_SetKnockback(cannonball,shotzo_Cannon_Strength,shotzo_Cannon_HitStopAffectSource,shotzo_Cannon_HitStopAffectPlayer,shotzo_Cannon_HitStopAffectTarget,shotzo_Cannon_HitStopLength,shotzo_Cannon_HitStopShakeStrength);
 			cannonball.enemy = true;
 			cannonball.destroyableByEnemy = false;
 			cannonball.hurtsObject = false;

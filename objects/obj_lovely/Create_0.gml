@@ -65,7 +65,7 @@ sprFace = sprFaceIdle;
 
 paletteIndex = spr_Gordo_Normal_Palette_ThornyBackside;
 hp = lovely_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 points = lovely_Points;
 hurtable = false;
 hasGravity = false;

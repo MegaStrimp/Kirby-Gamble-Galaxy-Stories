@@ -87,8 +87,8 @@ function scr_Player_CancelAttack(argument0)
 			break;
 			
 			case playerAttacks.beamGrab:
-			case playerAttacks.mysticBeamGrab:
 			if (instance_exists(grabObj)) grabObj.destroyTimer = 0;
+			if (audio_is_playing(beamGrabSfx)) audio_stop_sound(beamGrabSfx);
 			state = playerStates.normal;
 			break;
 			
@@ -105,6 +105,12 @@ function scr_Player_CancelAttack(argument0)
 			case playerAttacks.mysticBeamUp:
 			mysticBeamUpAttackCount = 0;
 			mysticBeamUpAttackTimer = -1;
+			break;
+			
+			case playerAttacks.mysticBeamGrab:
+			if (instance_exists(grabObj)) grabObj.destroyTimer = 0;
+			if (audio_is_playing(mysticBeamGrabSfx)) audio_stop_sound(mysticBeamGrabSfx);
+			state = playerStates.normal;
 			break;
 			
 			case playerAttacks.stoneNormal:
@@ -162,6 +168,7 @@ function scr_Player_CancelAttack(argument0)
 			case playerAttacks.fireWheelClimb:
 			if (instance_exists(fireMaskProj)) instance_destroy(fireMaskProj);
 			invincible = false;
+			hspLimit = true;
 			break;
 			
 			case playerAttacks.fireBack:

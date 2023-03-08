@@ -404,15 +404,18 @@ cutterCatch = false;
 finalCutterReadInput = false;
 finalCutterBuffer = 0;
 finalCutterState = 0; // this is used to determine which attack between Cleaving Cutter, Nonstop Cutter, and Final Cutter is used.
+finalCutterStartingY = y;
 
 beamAttack2FirstHit = false;
 beamCharge = 0;
 beamChargeMax = 45;
 parBeamCycle1 = -1;
+beamGrabSfx = -1;
 
 canMysticBeamShield = true;
 mysticBeamChargeEx = 0;
 mysticBeamUpAttackCount = 0;
+mysticBeamGrabSfx = -1;
 
 stoneParticleCount = 0;
 stoneReleaseParticleCount = 0;
@@ -452,7 +455,7 @@ iceGrab = false;
 
 sparkCooldown = 0;
 sparkHoldCharge = 0;
-sparkHoldChargeMax = 12;
+sparkHoldChargeMax = 9;
 sparkCharge = 0;
 sparkChargeMax = 20;
 sparkChargeDecelMin = .003;
@@ -508,7 +511,7 @@ chargeSfxState = "intro";
 imageAngle = 0;
 idleAnimation = false;
 idleAnimationTimer = 0;
-idleAnimationTimerMax = 30;
+idleAnimationTimerMax = 60;
 fallHopCounter = 0;
 fallHopCounterMax = 10;
 enteredDoor = -1;
@@ -642,7 +645,7 @@ bubblePosTimer = bubblePosTimerMax;
 
 //Zwat's testing grounds
 jetDashAir = 3;
-finalCutterEndlag = 12;
+finalCutterEndlag = 20;
 downInputBuffer = 15;
 downInputBufferTimer = 0;
 jetHoverAccel = 0.7;

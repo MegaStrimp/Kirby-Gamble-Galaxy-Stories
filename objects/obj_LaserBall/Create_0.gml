@@ -39,7 +39,7 @@ sprAura = sprAura1Idle;
 
 paletteIndex = spr_LaserBall_Normal_Palette_OrangeLaser;
 hp = laserBall_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.beam;
 points = laserBall_Points;
 hasGravity = false;

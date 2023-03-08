@@ -512,6 +512,9 @@ if (!childPause)
 				{
 					var projBeam = instance_create_depth(-100,-100,depth,obj_Projectile_Beam);
 					projBeam.owner = id;
+					projBeam.abilityType = playerAbilities.beam;
+					projBeam.dmg = waddleDoo_Beam_Damage;
+					scr_Attack_SetKnockback(projBeam,waddleDoo_Beam_Strength,waddleDoo_Beam_HitStopAffectSource,waddleDoo_Beam_HitStopAffectPlayer,waddleDoo_Beam_HitStopAffectTarget,waddleDoo_Beam_HitStopLength,waddleDoo_Beam_HitStopShakeStrength);
 				    projBeam.angle = 90 + ((40 - (i * 10)) * -dirX);
 					projBeam.spd = (1.2 + (i * .2)) * -dirX;
 					projBeam.orbit = 25 + (i * 15);

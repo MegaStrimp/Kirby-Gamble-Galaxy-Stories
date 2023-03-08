@@ -27,7 +27,7 @@ sprHurt = spr_Sparky_Normal_Hurt;
 
 paletteIndex = spr_Sparky_Normal_Palette_LightningLime;
 hp = sparky_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.spark;
 points = sparky_Points;
 attack = false;

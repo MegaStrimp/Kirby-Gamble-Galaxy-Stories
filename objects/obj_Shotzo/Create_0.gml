@@ -21,7 +21,7 @@ sprHurt = -1;
 
 paletteIndex = spr_Shotzo_Normal_Palette_SteelArmada;
 hp = shotzo_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 points = shotzo_Points;
 parasolY = -3;
 hurtable = false;

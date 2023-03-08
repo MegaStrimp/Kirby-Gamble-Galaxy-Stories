@@ -1922,7 +1922,40 @@ if (!global.pause)
 		projectile.enemy = false;
 		projectile.destroyableByEnemy = false;
 		projectile.destroyableByObject = false;
-		projectile.hsp = 2.5 * dir;
+        if ((!global.cutscene) and (keyLeftHold))
+        {
+			if (dir == 1)
+			{
+				projectile.hsp = 1.5;
+			}
+			else
+			{
+				projectile.hsp = -3;
+			}
+        }
+        else if ((!global.cutscene) and (keyRightHold))
+        {
+            if (dir == 1)
+			{
+				projectile.hsp = 3;
+			}
+			else
+			{
+				projectile.hsp = -1.5;
+			}
+        }
+        else
+        {
+            if (dir == 1)
+			{
+				projectile.hsp = 2;
+			}
+			else
+			{
+				projectile.hsp = -2;
+			}
+        }
+		
         if ((!global.cutscene) and (keyUpHold))
         {
             projectile.vsp = random_range(-.75,.75) - .75;

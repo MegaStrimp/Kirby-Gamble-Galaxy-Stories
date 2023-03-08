@@ -20,7 +20,7 @@ sprHurt = spr_Mopoo_Normal_Hurt;
 
 paletteIndex = spr_Mopoo_Normal_Palette_PuffyCloud;
 hp = mopoo_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 points = mopoo_Points;
 hasXCollision = false;
 hasYCollision = false;

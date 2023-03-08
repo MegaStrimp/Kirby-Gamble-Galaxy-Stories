@@ -12,9 +12,9 @@ jumpspeed = -.5;
 
 destroyOutsideView = true;
 paletteIndex = spr_Wapod_Normal_Palette_PhantomPastel;
-hp = wapod_GhostHp;
-dmg = baseEnemyContactDamage;
-points = wapod_GhostPoints;
+hp = wapod_Ghost_Hp;
+dmg = baseEnemyContact_Damage;
+points = wapod_Ghost_Points;
 hasXCollision = false;
 hasYCollision = false;
 spawnState = true;

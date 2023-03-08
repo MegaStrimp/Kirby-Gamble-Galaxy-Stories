@@ -73,8 +73,10 @@ if (healthbarIndex == 0)
 }
 #endregion
 
-
 #region Debug
-draw_text(x,y - 12,string(hurtTimer));
-draw_text(x,y - 24,string(hurtStopTimer));
+if (global.debugOverlay)
+{
+	draw_text(x,y - 12,string(hurtTimer));
+	draw_text(x,y - 24,string(hurtStopTimer));
+}
 #endregion

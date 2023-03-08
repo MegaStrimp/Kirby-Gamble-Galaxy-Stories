@@ -20,7 +20,7 @@ sprHurt = -1;
 
 paletteIndex = spr_Coconut_Normal_Palette_TropicalBrown;
 hp = coconut_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 points = coconut_Points;
 triggered = false;
 hasGravity = false;

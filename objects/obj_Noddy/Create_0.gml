@@ -25,7 +25,7 @@ sprHurt = spr_Noddy_Normal_Hurt;
 
 paletteIndex = spr_Noddy_Normal_Palette_SleepyPink;
 hp = noddy_Hp;
-dmg = baseEnemyContactDamage;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.sleep;
 points = noddy_Points;
 dirXDummy = 1;
