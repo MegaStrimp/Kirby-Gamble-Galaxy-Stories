@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_Player_ExecuteAttack",
+  "name": "scr_Player_ExecuteAttack_BeamUp",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Execute Attack",
-    "path": "folders/Scripts/Player/Execute Attack.yy",
+    "name": "Beam",
+    "path": "folders/Scripts/Player/Execute Attack/Beam.yy",
   },
 }

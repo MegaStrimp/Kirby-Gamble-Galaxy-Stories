@@ -107,6 +107,9 @@ if (!childPause)
 					var water = instance_create_depth(x,y - (4 * dirY),depth,obj_Projectile_GlunkWater);
 					water.owner = id;
 					water.enemy = true;
+					water.abilityType = playerAbilities.water;
+					water.dmg = glunk_Water_Damage;
+					scr_Attack_SetKnockback(water,glunk_Water_Strength,glunk_Water_HitStopAffectSource,glunk_Water_HitStopAffectPlayer,glunk_Water_HitStopAffectTarget,glunk_Water_HitStopLength,glunk_Water_HitStopShakeStrength);
 					water.destroyableByEnemy = false;
 					water.hurtsObject = false;
 					water.hurtsEnemy = false;

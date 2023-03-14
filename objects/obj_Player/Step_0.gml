@@ -1,5 +1,9 @@
 ///@description Main
 
+#region Inputs
+scr_Player_Inputs(player);
+#endregion
+
 #region Pointers
 switch (player)
 {
@@ -39,7 +43,7 @@ switch (player)
 
 #region Variables
 var canFlash = false;
-if ((invincible) or (attackNumber == playerAttacks.slideJump))
+if ((invincible) or (attackNumber == playerAttacks.slideJump) or (hasInvinCandy))
 {
 	invincibleFlashTimerMax = 2;
 	canFlash = true;
@@ -1168,6 +1172,9 @@ if (!global.pause)
 	        par.image_angle = angle;
 	        par.spdBuiltIn = irandom_range(2,3);
 			par.destroyAfterAnimation = true;
+			par.hasPalette = true;
+			par.paletteSpriteIndex = spr_Particle_BigStar_Palette_Rainbow;
+			par.paletteIndex = 1 + (current_time % 9);
 		    invinCandyParticleTimer = -1;
 		}
 	}

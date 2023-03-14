@@ -172,7 +172,7 @@ if ((!childPause) or ((global.cutscene) and (phase == 0)))
 			if (nearestPlayer.y > y + 24) targetVsp = 1;
 			if (nearestPlayer.y < y - 24) targetVsp = -1;
 			
-			var projectile = instance_create_depth(x + (9 * image_xscale),y - (12 * image_yscale),depth - 1,obj_Projectile_BowserFire);
+			var projectile = instance_create_depth(x + (3 * image_xscale),y - (12 * image_yscale),depth - 1,obj_Projectile_BowserFire);
 			projectile.character = 0;
 			projectile.owner = id;
 			projectile.dirX = dirX;

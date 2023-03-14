@@ -190,6 +190,7 @@ for (var i = 0; i < 4; i++)
 	var palettePointer = global.sprayPaintP1;
 	var characterPointer = global.characterP1;
 	var abilityPointer = global.abilityP1;
+	var invinCandyPointer = (global.invinCandyTimerP1 != -1);
 	switch (i)
 	{
 		case 1:
@@ -201,6 +202,7 @@ for (var i = 0; i < 4; i++)
 		palettePointer = global.sprayPaintP2;
 		characterPointer = global.characterP2;
 		abilityPointer = global.abilityP2;
+		invinCandyPointer = (global.invinCandyTimerP2 != -1);
 		break;
 		
 		case 2:
@@ -212,6 +214,7 @@ for (var i = 0; i < 4; i++)
 		palettePointer = global.sprayPaintP3;
 		characterPointer = global.characterP3;
 		abilityPointer = global.abilityP3;
+		invinCandyPointer = (global.invinCandyTimerP3 != -1);
 		break;
 		
 		case 3:
@@ -223,6 +226,7 @@ for (var i = 0; i < 4; i++)
 		palettePointer = global.sprayPaintP4;
 		characterPointer = global.characterP4;
 		abilityPointer = global.abilityP4;
+		invinCandyPointer = (global.invinCandyTimerP4 != -1);
 		break;
 	}
 	#endregion
@@ -402,6 +406,7 @@ for (var i = 0; i < 4; i++)
 		}
 		
 		draw_sprite_part_ext(spr_Hud_Healthbar_Kirby,flashPointer,0,0,healthbarWidthPointer,healthbarHeightPointer,40 + sep,248,1,1,image_blend,drawAlpha);
+		if (invinCandyPointer) draw_sprite_part_ext(spr_Hud_Healthbar_Rainbow,flashPointer,0,0,healthbarWidthPointer,healthbarHeightPointer,40 + sep,248,1,1,make_color_hsv(current_time % 255,126,126),drawAlpha);
 		
 		//if (healthbarWidthPointer >= 1) draw_sprite_part_ext(spr_Hud_HealthbarCorner_Kirby,flashPointer,0,0,4,7,40 + sep,248,1,1,image_blend,drawAlpha);
 		//if (healthbarWidthPointer >= sprite_get_width(spr_Hud_Healthbar_Kirby)) draw_sprite_part_ext(spr_Hud_HealthbarCorner_Kirby,flashPointer,0,0,4,min(7,healthbarWidthPointer),40 + sep + (healthbarWidthPointer - 3),248,1,1,image_blend,drawAlpha);

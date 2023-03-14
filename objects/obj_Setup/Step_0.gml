@@ -109,32 +109,37 @@ if (global.gameTimeMinutes >= 60)
 #region Controllers
 var controllerSensitivity = .4;
 
+if (!gamepad_is_connected(global.playerGamepad[0])) global.playerGamepad[0] = -1;
+if (!gamepad_is_connected(global.playerGamepad[1])) global.playerGamepad[1] = -1;
+if (!gamepad_is_connected(global.playerGamepad[2])) global.playerGamepad[2] = -1;
+if (!gamepad_is_connected(global.playerGamepad[3])) global.playerGamepad[3] = -1;
+
 for (var i = 0; i < gamepad_get_device_count(); i++)
 {
 	if (global.playerGamepad[0] == -1)
 	{
-		if gamepad_is_connected(i)
+		if ((gamepad_is_connected(i)) and (global.playerGamepad[1] != i) and (global.playerGamepad[2] != i) and (global.playerGamepad[3] != i))
 	    {
 	        global.playerGamepad[0] = i;
 	    }
 	}
 	else if (global.playerGamepad[1] == -1)
 	{
-		if gamepad_is_connected(i)
+		if ((gamepad_is_connected(i)) and (global.playerGamepad[0] != i) and (global.playerGamepad[2] != i) and (global.playerGamepad[3] != i))
 	    {
 	        global.playerGamepad[1] = i;
 	    }
 	}
 	else if (global.playerGamepad[2] == -1)
 	{
-		if gamepad_is_connected(i)
+		if ((gamepad_is_connected(i)) and (global.playerGamepad[0] != i) and (global.playerGamepad[1] != i) and (global.playerGamepad[3] != i))
 	    {
 	        global.playerGamepad[2] = i;
 	    }
 	}
 	else if (global.playerGamepad[3] == -1)
 	{
-		if gamepad_is_connected(i)
+		if ((gamepad_is_connected(i)) and (global.playerGamepad[0] != i) and (global.playerGamepad[1] != i) and (global.playerGamepad[2] != i))
 	    {
 	        global.playerGamepad[3] = i;
 	    }

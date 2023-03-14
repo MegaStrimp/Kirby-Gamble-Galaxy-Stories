@@ -40,6 +40,9 @@ if (!childPause)
 			var par = instance_create_depth(x,y,depth,obj_Projectile_ExplosionMask);
 			par.owner = id;
 			par.enemy = true;
+			par.abilityType = playerAbilities.bomb;
+			par.dmg = onion_Explosion_Damage;
+			scr_Attack_SetKnockback(par,onion_Explosion_Strength,onion_Explosion_HitStopAffectSource,onion_Explosion_HitStopAffectPlayer,onion_Explosion_HitStopAffectTarget,onion_Explosion_HitStopLength,onion_Explosion_HitStopShakeStrength);
 			
 			var explosion = instance_create_depth(x,y,depth,obj_DeathParticles);
 			explosion.state = "explosion1";

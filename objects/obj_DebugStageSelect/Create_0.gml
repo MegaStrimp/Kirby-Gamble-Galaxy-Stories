@@ -17,7 +17,7 @@ for (var i = 0; room_exists(i); i++)
 	stageOffset[i] = 0;
 	stageOffsetLerp[i] = 0;
 }
-//array_sort(stageTitle,true);
+array_sort(stageTitle,true);
 
 textY = 147 - (selection * 36);
 

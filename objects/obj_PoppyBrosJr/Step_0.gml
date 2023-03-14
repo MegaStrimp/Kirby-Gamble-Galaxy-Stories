@@ -111,6 +111,9 @@ if (!childPause)
 					bomb.owner = id;
 					bomb.active = false;
 					bomb.enemy = true;
+					bomb.abilityType = playerAbilities.bomb;
+					bomb.dmg = poppyBrosJr_Bomb_Damage;
+					scr_Attack_SetKnockback(bomb,poppyBrosJr_Bomb_Strength,poppyBrosJr_Bomb_HitStopAffectSource,poppyBrosJr_Bomb_HitStopAffectPlayer,poppyBrosJr_Bomb_HitStopAffectTarget,poppyBrosJr_Bomb_HitStopLength,poppyBrosJr_Bomb_HitStopShakeStrength);
 					bomb.destroyableByWall = false;
 					bomb.destroyableByPlayer = false;
 					bomb.destroyableByEnemy = false;

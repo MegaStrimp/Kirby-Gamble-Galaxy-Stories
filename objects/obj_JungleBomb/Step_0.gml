@@ -47,6 +47,9 @@ if (!childPause)
 					audio_play_sound(snd_BombThrow,0,false);
 					var bomb = instance_create_depth(x,y - 2,depth - 1,obj_Projectile_Bomb);
 					bomb.enemy = true;
+					bomb.abilityType = playerAbilities.bomb;
+					bomb.dmg = jungleBomb_Bomb_Damage;
+					scr_Attack_SetKnockback(bomb,jungleBomb_Bomb_Strength,jungleBomb_Bomb_HitStopAffectSource,jungleBomb_Bomb_HitStopAffectPlayer,jungleBomb_Bomb_HitStopAffectTarget,jungleBomb_Bomb_HitStopLength,jungleBomb_Bomb_HitStopShakeStrength);
 					bomb.destroyableByPlayer = true;
 					bomb.destroyableByEnemy = false;
 					bomb.hurtsObject = false;

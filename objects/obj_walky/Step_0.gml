@@ -133,7 +133,11 @@ if (!childPause)
 			for (var i = 0; i < 3; i++)
 			{
 				var proj = instance_create_depth(x,y,depth,obj_Projectile_WalkyNote);
+				proj.owner = id;
 				proj.enemy = true;
+				proj.abilityType = playerAbilities.mic;
+				proj.dmg = walky_Note_Damage;
+				scr_Attack_SetKnockback(proj,walky_Note_Strength,walky_Note_HitStopAffectSource,walky_Note_HitStopAffectPlayer,walky_Note_HitStopAffectTarget,walky_Note_HitStopLength,walky_Note_HitStopShakeStrength);
 				proj.hurtsObject = false;
 				proj.hurtsEnemy = false;
 				proj.hurtsPlayer = true;

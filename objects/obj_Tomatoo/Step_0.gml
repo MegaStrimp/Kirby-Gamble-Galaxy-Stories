@@ -83,7 +83,11 @@ if (!childPause)
 			for (var i = 0; i < 4; i++)
 			{
 				var proj = instance_create_depth(x,y,depth - 1,obj_Projectile_Tomatoo);
+				proj.owner = id;
 				proj.enemy = true;
+				proj.abilityType = playerAbilities.none;
+				proj.dmg = tomatoo_Shot_Damage;
+				scr_Attack_SetKnockback(proj,tomatoo_Shot_Strength,tomatoo_Shot_HitStopAffectSource,tomatoo_Shot_HitStopAffectPlayer,tomatoo_Shot_HitStopAffectTarget,tomatoo_Shot_HitStopLength,tomatoo_Shot_HitStopShakeStrength);
 				proj.destroyableByPlayer = true;
 				proj.destroyableByEnemy = false;
 				proj.hurtsObject = false;

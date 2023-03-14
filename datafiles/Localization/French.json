@@ -788,9 +788,15 @@
         "Start": "Start",
         "Select": "Select",
         "Press Any Key": "Appuyer sur un bouton",
+        
+        "Control Type": "",
         "Extra Tutorials": "Tutoriels supplémentaires",
         "Auto Swallow": "Aval'tout automatique",
         "Music Intro": "Détail de musique",
+        
+        "Enemy Healthbar": "",
+        
+        "Hit Numbers": "",
         "Default": "Par défaut",
         "Reset": ""
     },

@@ -1321,11 +1321,17 @@
         
         "Press Any Key": "Press Any Key",
         
+        "Control Type": "",
+        
         "Extra Tutorials": "Extra Tutorials",
         
         "Auto Swallow": "Auto Swallow",
         
         "Music Intro": "Music Intro",
+        
+        "Enemy Healthbar": "",
+        
+        "Hit Numbers": "",
         
         "Default": "Default",
         

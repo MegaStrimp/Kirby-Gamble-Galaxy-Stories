@@ -1,6 +1,13 @@
 ///@description Initialize Variables
 
 #region Physics Variables
+xprevious1 = x;
+yprevious1 = y;
+xprevious2 = x;
+yprevious2 = y;
+xprevious3 = x;
+yprevious3 = y;
+
 hsp = 0;
 hspCarry = 0;
 fireDashHsp = 0;
@@ -350,6 +357,7 @@ scaleExY = 0;
 scaleExSpd = .1;
 shakeX = 0;
 shakeY = 0;
+afterimageCount = 0;
 
 hatBackgroundImageIndex = 0;
 hatBackgroundImageIndexSpd = .25;

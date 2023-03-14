@@ -336,6 +336,9 @@ if (!childPause)
 					projectile.hsp = projectile.spd * projectile.dirX;
 					projectile.image_xscale = projectile.dirX;
 					projectile.enemy = true;
+					projectile.abilityType = playerAbilities.beam;
+					projectile.dmg = laserBall_Laser_Damage;
+					scr_Attack_SetKnockback(projectile,laserBall_Laser_Strength,laserBall_Laser_HitStopAffectSource,laserBall_Laser_HitStopAffectPlayer,laserBall_Laser_HitStopAffectTarget,laserBall_Laser_HitStopLength,laserBall_Laser_HitStopShakeStrength);
 					projectile.destroyableByEnemy = false;
 					projectile.hurtsObject = false;
 					projectile.hurtsEnemy = false;

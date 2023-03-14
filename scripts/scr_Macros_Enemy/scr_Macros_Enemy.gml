@@ -2,6 +2,7 @@
 
 function scr_Macros_Enemy()
 {
+	//ADD THESE AND GORDO HITSTOPS
 	#macro baseEnemyContact_Damage 7
 	#macro baseEnemyContact_Strength 0
 	#macro baseEnemyContact_HitStopAffectSource false
@@ -107,7 +108,7 @@ function scr_Macros_Enemy()
 	
 	#macro shotzo_Hp 1
 	#macro shotzo_Points 100
-
+	
 	#macro shotzo_Cannon_Damage 1
 	#macro shotzo_Cannon_Strength 0
 	#macro shotzo_Cannon_HitStopAffectSource false
@@ -120,7 +121,7 @@ function scr_Macros_Enemy()
 	
 	#macro mysticDoo_Hp 27
 	#macro mysticDoo_Points 600
-
+	
 	#macro mysticDoo_Beam_Damage 1
 	#macro mysticDoo_Beam_Strength 0
 	#macro mysticDoo_Beam_HitStopAffectSource false
@@ -138,7 +139,7 @@ function scr_Macros_Enemy()
 	
 	#macro searches_Hp 1
 	#macro searches_Points 500
-
+	
 	#macro searches_Explosion_Damage 1
 	#macro searches_Explosion_Strength 0
 	#macro searches_Explosion_HitStopAffectSource false
@@ -177,7 +178,7 @@ function scr_Macros_Enemy()
 	
 	#macro coconut_Hp 1
 	#macro coconut_Points 100
-	//
+	
 	#macro coconut_Explosion_Damage 1
 	#macro coconut_Explosion_Strength 0
 	#macro coconut_Explosion_HitStopAffectSource false
@@ -208,7 +209,7 @@ function scr_Macros_Enemy()
 	
 	#macro scarfy_Hp 16
 	#macro scarfy_Points 1000
-
+	
 	#macro scarfy_Explosion_Damage 1
 	#macro scarfy_Explosion_Strength 0
 	#macro scarfy_Explosion_HitStopAffectSource false
@@ -244,7 +245,7 @@ function scr_Macros_Enemy()
 	
 	#macro glunk_Hp 16
 	#macro glunk_Points 300
-
+	
 	#macro glunk_Water_Damage 1
 	#macro glunk_Water_Strength 0
 	#macro glunk_Water_HitStopAffectSource false
@@ -262,7 +263,7 @@ function scr_Macros_Enemy()
 	
 	#macro burningLeo_Hp 16
 	#macro burningLeo_Points 500
-
+	
 	#macro burningLeo_Fireball_Damage 1
 	#macro burningLeo_Fireball_Strength 0
 	#macro burningLeo_Fireball_HitStopAffectSource false
@@ -270,7 +271,7 @@ function scr_Macros_Enemy()
 	#macro burningLeo_Fireball_HitStopAffectTarget true
 	#macro burningLeo_Fireball_HitStopLength 7
 	#macro burningLeo_Fireball_HitStopShakeStrength 7
-
+	
 	#macro burningLeo_Firepuff_Damage 1
 	#macro burningLeo_Firepuff_Strength 0
 	#macro burningLeo_Firepuff_HitStopAffectSource false
@@ -283,7 +284,7 @@ function scr_Macros_Enemy()
 	
 	#macro tomatoo_Hp 1
 	#macro tomatoo_Points 200
-
+	
 	#macro tomatoo_Shot_Damage 1
 	#macro tomatoo_Shot_Strength 0
 	#macro tomatoo_Shot_HitStopAffectSource false
@@ -296,7 +297,7 @@ function scr_Macros_Enemy()
 	
 	#macro onion_Hp 1
 	#macro onion_Points 200
-
+	
 	#macro onion_Explosion_Damage 1
 	#macro onion_Explosion_Strength 0
 	#macro onion_Explosion_HitStopAffectSource false
@@ -314,7 +315,7 @@ function scr_Macros_Enemy()
 	
 	#macro gim_Hp 11
 	#macro gim_Points 500
-
+	
 	#macro gim_Yoyo_Damage 1
 	#macro gim_Yoyo_Strength 0
 	#macro gim_Yoyo_HitStopAffectSource false
@@ -327,7 +328,7 @@ function scr_Macros_Enemy()
 	
 	#macro poppyBrosJr_Hp 16
 	#macro poppyBrosJr_Points 400
-
+	
 	#macro poppyBrosJr_Bomb_Damage 1
 	#macro poppyBrosJr_Bomb_Strength 0
 	#macro poppyBrosJr_Bomb_HitStopAffectSource false
@@ -345,7 +346,7 @@ function scr_Macros_Enemy()
 	
 	#macro foley_Hp 8
 	#macro foley_Points 300
-
+	
 	#macro foley_Explosion_Damage 1
 	#macro foley_Explosion_Strength 0
 	#macro foley_Explosion_HitStopAffectSource false
@@ -373,7 +374,7 @@ function scr_Macros_Enemy()
 	
 	#macro bomber_Hp 14
 	#macro bomber_Points 100
-
+	
 	#macro bomber_Explosion_Damage 1
 	#macro bomber_Explosion_Strength 0
 	#macro bomber_Explosion_HitStopAffectSource false
@@ -387,6 +388,14 @@ function scr_Macros_Enemy()
 	#macro simirror_Hp 20
 	#macro simirror_Points 500
 	
+	#macro simirror_Mirror_Damage 1
+	#macro simirror_Mirror_Strength 0
+	#macro simirror_Mirror_HitStopAffectSource false
+	#macro simirror_Mirror_HitStopAffectPlayer false
+	#macro simirror_Mirror_HitStopAffectTarget true
+	#macro simirror_Mirror_HitStopLength 7
+	#macro simirror_Mirror_HitStopShakeStrength 7
+	
 	
 	
 	#macro birdon_Hp 12
@@ -396,7 +405,7 @@ function scr_Macros_Enemy()
 	
 	#macro hothead_Hp 16
 	#macro hothead_Points 500
-
+	
 	#macro hothead_Fireball_Damage 1
 	#macro hothead_Fireball_Strength 0
 	#macro hothead_Fireball_HitStopAffectSource false
@@ -409,7 +418,7 @@ function scr_Macros_Enemy()
 	
 	#macro sparky_Hp 16
 	#macro sparky_Points 300
-
+	
 	#macro sparky_Spark_Damage 1
 	#macro sparky_Spark_Strength 0
 	#macro sparky_Spark_HitStopAffectSource false
@@ -422,7 +431,7 @@ function scr_Macros_Enemy()
 	
 	#macro yolky_Hp 16
 	#macro yolky_Points 300
-
+	
 	#macro yolky_Shot_Damage 1
 	#macro yolky_Shot_Strength 0
 	#macro yolky_Shot_HitStopAffectSource false
@@ -440,7 +449,7 @@ function scr_Macros_Enemy()
 	
 	#macro pacloud_Hp 1
 	#macro pacloud_Points 1
-
+	
 	#macro pacloud_Bite_Damage 1
 	#macro pacloud_Bite_Strength 0
 	#macro pacloud_Bite_HitStopAffectSource false
@@ -453,7 +462,7 @@ function scr_Macros_Enemy()
 	
 	#macro laserBall_Hp 14
 	#macro laserBall_Points 200
-
+	
 	#macro laserBall_Laser_Damage 1
 	#macro laserBall_Laser_Strength 0
 	#macro laserBall_Laser_HitStopAffectSource false
@@ -466,7 +475,7 @@ function scr_Macros_Enemy()
 	
 	#macro juckle_Hp 12
 	#macro juckle_Points 400
-
+	
 	#macro juckle_Cutter_Damage 1
 	#macro juckle_Cutter_Strength 0
 	#macro juckle_Cutter_HitStopAffectSource false
@@ -494,7 +503,7 @@ function scr_Macros_Enemy()
 	
 	#macro flamer_Hp 12
 	#macro flamer_Points 300
-
+	//ADD
 	#macro flamer_Burst_Damage 1
 	#macro flamer_Burst_Strength 0
 	#macro flamer_Burst_HitStopAffectSource false
@@ -512,7 +521,7 @@ function scr_Macros_Enemy()
 	
 	#macro walky_Hp 12
 	#macro walky_Points 890
-
+	
 	#macro walky_Note_Damage 1
 	#macro walky_Note_Strength 0
 	#macro walky_Note_HitStopAffectSource false
@@ -535,7 +544,7 @@ function scr_Macros_Enemy()
 	
 	#macro lovely_Hp 1
 	#macro lovely_Points 100
-
+	
 	#macro lovely_Bite_Damage 1
 	#macro lovely_Bite_Strength 0
 	#macro lovely_Bite_HitStopAffectSource false
@@ -548,7 +557,7 @@ function scr_Macros_Enemy()
 	
 	#macro plasmaWisp_Hp 10
 	#macro plasmaWisp_Points 500
-
+	
 	#macro plasmaWisp_Spark_Damage 1
 	#macro plasmaWisp_Spark_Strength 0
 	#macro plasmaWisp_Spark_HitStopAffectSource false
@@ -556,7 +565,7 @@ function scr_Macros_Enemy()
 	#macro plasmaWisp_Spark_HitStopAffectTarget true
 	#macro plasmaWisp_Spark_HitStopLength 7
 	#macro plasmaWisp_Spark_HitStopShakeStrength 7
-
+	
 	#macro plasmaWisp_Barrage_Damage 1
 	#macro plasmaWisp_Barrage_Strength 0
 	#macro plasmaWisp_Barrage_HitStopAffectSource false
@@ -579,7 +588,7 @@ function scr_Macros_Enemy()
 	
 	#macro wizzer_Hp 6
 	#macro wizzer_Points 300
-
+	
 	#macro wizzer_Beam_Damage 1
 	#macro wizzer_Beam_Strength 0
 	#macro wizzer_Beam_HitStopAffectSource false

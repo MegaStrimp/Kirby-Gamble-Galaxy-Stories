@@ -2,6 +2,13 @@
 
 //Variables
 
+xprevious1 = lerp(xprevious1,x,.2);
+yprevious1 = lerp(yprevious1,y,.2);
+xprevious2 = lerp(xprevious2,xprevious1,.2);
+yprevious2 = lerp(yprevious2,yprevious1,.2);
+xprevious3 = lerp(xprevious3,xprevious2,.2);
+yprevious3 = lerp(yprevious3,yprevious2,.2);
+
 switch (player)
 {
 	case 0:
@@ -80,6 +87,18 @@ if ((playerCharacter == playerCharacters.kirby) and (global.abilitySpraysKeycard
 	}
 }
 
+//Invincibility Candy
+
+if (hasInvinCandy)
+{
+	switch (playerCharacter)
+	{
+		case playerCharacters.kirby:
+		paletteIndexFinal = spr_Kirby_Normal_Palette_Misc_CandyRainbow;
+		break;
+	}
+}
+
 //Black Alpha Box
 
 if ((blackAlphaBox) or (global.tutorial))
@@ -128,63 +147,96 @@ if (((sprite_index != sprStoneAttack1Common) and (sprite_index != sprStoneAttack
 		}
 	}
 }
+var paletteFlashPlayer = paletteFlash;
+if (hasInvinCandy) paletteFlashPlayer = 1 + (current_time % 18);
 
 if ((carriedItem != carriedItems.none) or (playerAbility == playerAbilities.sword) or (playerAbility == playerAbilities.parasol) or (playerAbility == playerAbilities.hammer))
 {
-	var handIndex = scr_Player_Hand(playerCharacter);
-	if ((global.shaders) and (((sprite_index != sprStoneAttack1Common) and (sprite_index != sprStoneAttack1Uncommon) and (sprite_index != sprStoneAttack1Rare)) or (((sprite_index = spr_Kirby_Normal_Stone_Attack1_Common1) or (sprite_index = spr_Kirby_Normal_Stone_Attack1_Common2)) and (image_index = 0)) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common1) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common2))) pal_swap_set(paletteIndexFinal,paletteFlash,false);
-	if (handIndex != -1) draw_sprite_ext(handIndex,image_index,x + drawShakeX,y + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,image_alpha);
-	if ((global.shaders) and (((sprite_index != sprStoneAttack1Common) and (sprite_index != sprStoneAttack1Uncommon) and (sprite_index != sprStoneAttack1Rare)) or (((sprite_index = spr_Kirby_Normal_Stone_Attack1_Common1) or (sprite_index = spr_Kirby_Normal_Stone_Attack1_Common2)) and (image_index = 0)) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common1) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common2))) pal_swap_reset();
-
-	if ((hurt) and (invincibleFlash))
+	for (var i = afterimageCount; i >= 0; i--)
 	{
-		if ((global.shaders) and (((sprite_index != sprStoneAttack1Common) and (sprite_index != sprStoneAttack1Uncommon) and (sprite_index != sprStoneAttack1Rare)) or (((sprite_index = spr_Kirby_Normal_Stone_Attack1_Common1) or (sprite_index = spr_Kirby_Normal_Stone_Attack1_Common2)) and (image_index = 0)) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common1) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common2))) pal_swap_set(paletteIndexFinal,paletteFlash,false);
-		if (handIndex != -1) draw_sprite_ext(handIndex,image_index,x + drawShakeX,y + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,.7);
+		var alphaPointer = 1;
+		var xPointer = x;
+		var yPointer = y;
+		
+		switch (i)
+		{
+			case 1:
+			alphaPointer = .5;
+			xPointer = xprevious1;
+			yPointer = yprevious1;
+			break;
+			
+			case 2:
+			alphaPointer = .35;
+			xPointer = xprevious2;
+			yPointer = yprevious2;
+			break;
+			
+			case 3:
+			alphaPointer = .2;
+			xPointer = xprevious3;
+			yPointer = yprevious3;
+			break;
+		}
+		
+		var handIndex = scr_Player_Hand(playerCharacter);
+		if ((global.shaders) and (((sprite_index != sprStoneAttack1Common) and (sprite_index != sprStoneAttack1Uncommon) and (sprite_index != sprStoneAttack1Rare)) or (((sprite_index = spr_Kirby_Normal_Stone_Attack1_Common1) or (sprite_index = spr_Kirby_Normal_Stone_Attack1_Common2)) and (image_index = 0)) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common1) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common2))) pal_swap_set(paletteIndexFinal,paletteFlashPlayer,false);
+		if (handIndex != -1) draw_sprite_ext(handIndex,image_index,xPointer + drawShakeX,yPointer + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,alphaPointer);
 		if ((global.shaders) and (((sprite_index != sprStoneAttack1Common) and (sprite_index != sprStoneAttack1Uncommon) and (sprite_index != sprStoneAttack1Rare)) or (((sprite_index = spr_Kirby_Normal_Stone_Attack1_Common1) or (sprite_index = spr_Kirby_Normal_Stone_Attack1_Common2)) and (image_index = 0)) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common1) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common2))) pal_swap_reset();
+		
+		if ((hurt) and (invincibleFlash))
+		{
+			if ((global.shaders) and (((sprite_index != sprStoneAttack1Common) and (sprite_index != sprStoneAttack1Uncommon) and (sprite_index != sprStoneAttack1Rare)) or (((sprite_index = spr_Kirby_Normal_Stone_Attack1_Common1) or (sprite_index = spr_Kirby_Normal_Stone_Attack1_Common2)) and (image_index = 0)) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common1) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common2))) pal_swap_set(paletteIndexFinal,paletteFlashPlayer,false);
+			if (handIndex != -1) draw_sprite_ext(handIndex,image_index,xPointer + drawShakeX,yPointer + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,.7 * alphaPointer);
+			if ((global.shaders) and (((sprite_index != sprStoneAttack1Common) and (sprite_index != sprStoneAttack1Uncommon) and (sprite_index != sprStoneAttack1Rare)) or (((sprite_index = spr_Kirby_Normal_Stone_Attack1_Common1) or (sprite_index = spr_Kirby_Normal_Stone_Attack1_Common2)) and (image_index = 0)) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common1) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common2))) pal_swap_reset();
+		}
 	}
 }
 
 var hatAnim = image_index;
 if ((playerAbility == playerAbilities.fire) or (playerAbility == playerAbilities.mysticFire) or (playerAbility == playerAbilities.spark) or (playerAbility == playerAbilities.water)) hatAnim = hatBackgroundImageIndex;
 
-var hatBackgroundIndex = scr_Player_HatBackground(playerAbility,playerCharacter);
-if (hatBackgroundIndex != -1) hatBackgroundImageIndexSpd = sprite_get_speed(hatBackgroundIndex) / 60;
-var abilityHatPalette = scr_Player_HatPalette(playerAbility,playerCharacter);
-if ((global.shaders) and (abilityHatPalette != -1)) pal_swap_set(abilityHatPalette,paletteFlash,false);
-if (hatBackgroundIndex != -1) draw_sprite_ext(hatBackgroundIndex,hatAnim,x + drawShakeX,y + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,image_alpha);
-if ((global.shaders) and (abilityHatPalette != -1)) pal_swap_reset();
-
-var hatShadowIndex = scr_Player_HatShadow(playerAbility,playerCharacter);
-if ((global.shaders) and (((sprite_index != sprStoneAttack1Common) and (sprite_index != sprStoneAttack1Uncommon) and (sprite_index != sprStoneAttack1Rare)) or (((sprite_index = spr_Kirby_Normal_Stone_Attack1_Common1) or (sprite_index = spr_Kirby_Normal_Stone_Attack1_Common2)) and (image_index = 0)) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common1) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common2))) pal_swap_set(paletteIndexFinal,paletteFlash,false);
-draw_sprite_ext(sprite_index,image_index,x + drawShakeX,y + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,image_alpha);
-if (hatShadowIndex != -1) draw_sprite_ext(hatShadowIndex,image_index,x + drawShakeX,y + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,image_alpha);
-if ((global.shaders) and (((sprite_index != sprStoneAttack1Common) and (sprite_index != sprStoneAttack1Uncommon) and (sprite_index != sprStoneAttack1Rare)) or (((sprite_index = spr_Kirby_Normal_Stone_Attack1_Common1) or (sprite_index = spr_Kirby_Normal_Stone_Attack1_Common2)) and (image_index = 0)) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common1) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common2))) pal_swap_reset();
-
-//Invincibility Candy
-
-if (hasInvinCandy)
+for (var i = afterimageCount; i >= 0; i--)
 {
-	gpu_set_blendenable(false);
-	gpu_set_colorwriteenable(false,false,false,true);
-	draw_set_alpha(0);
-	draw_rectangle(0,0,room_width,room_height,false);
+	var alphaPointer = 1;
+	var xPointer = x;
+	var yPointer = y;
 	
-	draw_set_alpha(1);
-	var maskSprite = asset_get_index(sprite_get_name(sprite_index) + "_Mask");
-	if (maskSprite != -1) draw_sprite_ext(maskSprite,image_index,x + drawShakeX,y + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,.25 + ((floor(current_time / 4) % 2) * .25));
-	gpu_set_blendenable(true);
-	gpu_set_colorwriteenable(true,true,true,true);
+	switch (i)
+	{
+		case 1:
+		alphaPointer = .5;
+		xPointer = xprevious1;
+		yPointer = yprevious1;
+		break;
+		
+		case 2:
+		alphaPointer = .35;
+		xPointer = xprevious2;
+		yPointer = yprevious2;
+		break;
+		
+		case 3:
+		alphaPointer = .2;
+		xPointer = xprevious3;
+		yPointer = yprevious3;
+		break;
+	}
 	
-	gpu_set_blendmode_ext(bm_dest_alpha,bm_inv_dest_alpha);
-	gpu_set_alphatestenable(true);
+	var hatBackgroundIndex = scr_Player_HatBackground(playerAbility,playerCharacter);
+	if (hatBackgroundIndex != -1) hatBackgroundImageIndexSpd = sprite_get_speed(hatBackgroundIndex) / 60;
+	var abilityHatPalette = scr_Player_HatPalette(playerAbility,playerCharacter);
+	if ((global.shaders) and (abilityHatPalette != -1)) pal_swap_set(abilityHatPalette,paletteFlash,false);
+	if (hatBackgroundIndex != -1) draw_sprite_ext(hatBackgroundIndex,hatAnim,xPointer + drawShakeX,yPointer + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,alphaPointer);
+	if ((global.shaders) and (abilityHatPalette != -1)) pal_swap_reset();
 	
-	draw_sprite_ext(spr_Texture_Rainbow,0,x,y - 8,.8,.8,(current_time % 90) * 4,c_white,1);
-	
-	gpu_set_alphatestenable(false);
-	gpu_set_blendmode(bm_normal);
-	draw_set_alpha(1);
+	var hatShadowIndex = scr_Player_HatShadow(playerAbility,playerCharacter);
+	if ((global.shaders) and (((sprite_index != sprStoneAttack1Common) and (sprite_index != sprStoneAttack1Uncommon) and (sprite_index != sprStoneAttack1Rare)) or (((sprite_index = spr_Kirby_Normal_Stone_Attack1_Common1) or (sprite_index = spr_Kirby_Normal_Stone_Attack1_Common2)) and (image_index = 0)) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common1) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common2))) pal_swap_set(paletteIndexFinal,paletteFlashPlayer,false);
+	draw_sprite_ext(sprite_index,image_index,xPointer + drawShakeX,yPointer + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,alphaPointer);
+	if (hatShadowIndex != -1) draw_sprite_ext(hatShadowIndex,image_index,xPointer + drawShakeX,yPointer + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,alphaPointer);
+	if ((global.shaders) and (((sprite_index != sprStoneAttack1Common) and (sprite_index != sprStoneAttack1Uncommon) and (sprite_index != sprStoneAttack1Rare)) or (((sprite_index = spr_Kirby_Normal_Stone_Attack1_Common1) or (sprite_index = spr_Kirby_Normal_Stone_Attack1_Common2)) and (image_index = 0)) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common1) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common2))) pal_swap_reset();
 }
-
+	
 #region Mask
 /*
 gpu_set_blendenable(false);
@@ -214,29 +266,58 @@ var abilityHatIndex = scr_Player_AbilityHat(playerAbility,playerCharacter);
 var hatFrontIndex = scr_Player_HatFront(playerAbility,playerCharacter);
 if ((playerAbility == playerAbilities.water) and (hatFrontIndex == spr_Kirby_HatFront_Water_Modern_Idle)) hatAnim = hatFrontImageIndex;
 if (hatFrontIndex != -1) hatFrontImageIndexSpd = sprite_get_speed(hatFrontIndex) / 60;
-if ((global.shaders) and (abilityHatPalette != -1)) pal_swap_set(abilityHatPalette,paletteFlash,false);
-if (abilityHatIndex != -1) draw_sprite_ext(abilityHatIndex,image_index,x + drawShakeX,y + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,image_alpha);
-if (hatFrontIndex != -1) draw_sprite_ext(hatFrontIndex,hatAnim,x + drawShakeX,y + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,image_alpha);
-if ((global.shaders) and (abilityHatPalette != -1)) pal_swap_reset();
 
-if ((hurt) and (invincibleFlash))
+for (var i = afterimageCount; i >= 0; i--)
 {
-	if ((global.shaders) and (abilityHatPalette != -1)) pal_swap_set(abilityHatPalette,3,false);
-	if (hatBackgroundIndex != -1) draw_sprite_ext(hatBackgroundIndex,hatAnim,x + drawShakeX,y + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,.7);
+	var alphaPointer = 1;
+	var xPointer = x;
+	var yPointer = y;
+	
+	switch (i)
+	{
+		case 1:
+		alphaPointer = .5;
+		xPointer = xprevious1;
+		yPointer = yprevious1;
+		break;
+		
+		case 2:
+		alphaPointer = .35;
+		xPointer = xprevious2;
+		yPointer = yprevious2;
+		break;
+		
+		case 3:
+		alphaPointer = .2;
+		xPointer = xprevious3;
+		yPointer = yprevious3;
+		break;
+	}
+	
+	if ((global.shaders) and (abilityHatPalette != -1)) pal_swap_set(abilityHatPalette,paletteFlash,false);
+	if (abilityHatIndex != -1) draw_sprite_ext(abilityHatIndex,image_index,xPointer + drawShakeX,yPointer + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,alphaPointer);
+	if (hatFrontIndex != -1) draw_sprite_ext(hatFrontIndex,hatAnim,xPointer + drawShakeX,yPointer + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,alphaPointer);
 	if ((global.shaders) and (abilityHatPalette != -1)) pal_swap_reset();
 	
-	if ((global.shaders) and (((sprite_index != sprStoneAttack1Common) and (sprite_index != sprStoneAttack1Uncommon) and (sprite_index != sprStoneAttack1Rare)) or (((sprite_index = spr_Kirby_Normal_Stone_Attack1_Common1) or (sprite_index = spr_Kirby_Normal_Stone_Attack1_Common2)) and (image_index = 0)) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common1) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common2))) pal_swap_set(paletteIndexFinal,3,false);
-	draw_sprite_ext(sprite_index,image_index,x + drawShakeX,y + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,.7);
-	if (hatShadowIndex != -1) draw_sprite_ext(hatShadowIndex,image_index,x + drawShakeX,y + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,.7);
-	if ((global.shaders) and (((sprite_index != sprStoneAttack1Common) and (sprite_index != sprStoneAttack1Uncommon) and (sprite_index != sprStoneAttack1Rare)) or (((sprite_index = spr_Kirby_Normal_Stone_Attack1_Common1) or (sprite_index = spr_Kirby_Normal_Stone_Attack1_Common2)) and (image_index = 0)) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common1) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common2))) pal_swap_reset();
+	if ((hurt) and (invincibleFlash))
+	{
+		if ((global.shaders) and (abilityHatPalette != -1)) pal_swap_set(abilityHatPalette,3,false);
+		if (hatBackgroundIndex != -1) draw_sprite_ext(hatBackgroundIndex,hatAnim,xPointer + drawShakeX,yPointer + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,.7);
+		if ((global.shaders) and (abilityHatPalette != -1)) pal_swap_reset();
+	
+		if ((global.shaders) and (((sprite_index != sprStoneAttack1Common) and (sprite_index != sprStoneAttack1Uncommon) and (sprite_index != sprStoneAttack1Rare)) or (((sprite_index = spr_Kirby_Normal_Stone_Attack1_Common1) or (sprite_index = spr_Kirby_Normal_Stone_Attack1_Common2)) and (image_index = 0)) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common1) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common2))) pal_swap_set(paletteIndexFinal,3,false);
+		draw_sprite_ext(sprite_index,image_index,xPointer + drawShakeX,yPointer + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,.7 * alphaPointer);
+		if (hatShadowIndex != -1) draw_sprite_ext(hatShadowIndex,image_index,xPointer + drawShakeX,yPointer + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,.7 * alphaPointer);
+		if ((global.shaders) and (((sprite_index != sprStoneAttack1Common) and (sprite_index != sprStoneAttack1Uncommon) and (sprite_index != sprStoneAttack1Rare)) or (((sprite_index = spr_Kirby_Normal_Stone_Attack1_Common1) or (sprite_index = spr_Kirby_Normal_Stone_Attack1_Common2)) and (image_index = 0)) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common1) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common2))) pal_swap_reset();
+	}
+	
+	var equipmentIndex = scr_Player_Equipment(playerAbility,playerCharacter);
+	var equipmentDir = image_xscale;
+	if (playerAbility == playerAbilities.ufo) equipmentDir = abs(image_xscale);
+	if ((global.shaders) and (abilityHatPalette != -1)) pal_swap_set(abilityHatPalette,paletteFlash,false);
+	if (equipmentIndex != -1) draw_sprite_ext(equipmentIndex,image_index,xPointer + drawShakeX,yPointer + drawShakeY,equipmentDir * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,alphaPointer);
+	if ((global.shaders) and (abilityHatPalette != -1)) pal_swap_reset();
 }
-
-var equipmentIndex = scr_Player_Equipment(playerAbility,playerCharacter);
-var equipmentDir = image_xscale;
-if (playerAbility == playerAbilities.ufo) equipmentDir = abs(image_xscale);
-if ((global.shaders) and (abilityHatPalette != -1)) pal_swap_set(abilityHatPalette,paletteFlash,false);
-if (equipmentIndex != -1) draw_sprite_ext(equipmentIndex,image_index,x + drawShakeX,y + drawShakeY,equipmentDir * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,image_alpha);
-if ((global.shaders) and (abilityHatPalette != -1)) pal_swap_reset();
 
 //Shake
 
@@ -300,7 +381,7 @@ if (global.debugOverlay)
 {
 	draw_set_color(c_black);
 	var i = 0;
-	draw_text(x - 12,y - (12 * (i + 1)),"dialogye - " + string(jumpCoyoteTimeBuffer));
+	draw_text(x - 12,y - (12 * (i + 1)),"dialogye - " + string(hsp));
 	i += 1;
 	draw_text(x - 12,y - (12 * (i + 1)),"dir - " + string(obj_Camera.shakeY));
 	i += 1;

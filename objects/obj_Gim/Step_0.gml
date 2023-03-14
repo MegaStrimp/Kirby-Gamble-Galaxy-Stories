@@ -74,6 +74,11 @@ if (!childPause)
 			if (!instance_exists(throwyo))
 			{
 				throwyo = instance_create_depth(x, y, depth, obj_Projectile_GimYoyo);
+				throwyo.owner = id;
+				throwyo.enemy = true;
+				throwyo.abilityType = playerAbilities.yoyo;
+				throwyo.dmg = gim_Yoyo_Damage;
+				scr_Attack_SetKnockback(throwyo,gim_Yoyo_Strength,gim_Yoyo_HitStopAffectSource,gim_Yoyo_HitStopAffectPlayer,gim_Yoyo_HitStopAffectTarget,gim_Yoyo_HitStopLength,gim_Yoyo_HitStopShakeStrength);
 				throwyo.dirX = dirX;
 			}
 			else if (!instance_exists(throwyo))

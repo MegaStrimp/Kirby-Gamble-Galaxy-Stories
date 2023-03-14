@@ -270,7 +270,7 @@ if (!global.pause)
 	
 	//Animation
 	
-	image_xscale = scale * dir;
+	image_xscale = scale;
 	image_yscale = scale;
 	
 	image_speed = 1 * dir;

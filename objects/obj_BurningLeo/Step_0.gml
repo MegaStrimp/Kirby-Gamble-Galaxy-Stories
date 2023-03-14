@@ -324,6 +324,9 @@ if (!childPause)
 						var fire = instance_create_depth(x,y - 2,depth,obj_Projectile_LeoFireball);
 						fire.owner = id;
 						fire.enemy = true;
+						fire.abilityType = playerAbilities.fire;
+						fire.dmg = burningLeo_Fireball_Damage;
+						scr_Attack_SetKnockback(fire,burningLeo_Fireball_Strength,burningLeo_Fireball_HitStopAffectSource,burningLeo_Fireball_HitStopAffectPlayer,burningLeo_Fireball_HitStopAffectTarget,burningLeo_Fireball_HitStopLength,burningLeo_Fireball_HitStopShakeStrength);
 						fire.destroyableByWall = false;
 						fire.destroyableByPlayer = false;
 						fire.destroyableByEnemy = false;
@@ -350,6 +353,9 @@ if (!childPause)
 							var fire = instance_create_depth(x,y - 2,depth,obj_Projectile_LeoFireball);
 							fire.owner = id;
 							fire.enemy = true;
+							fire.abilityType = playerAbilities.fire;
+							fire.dmg = burningLeo_Fireball_Damage;
+							scr_Attack_SetKnockback(fire,burningLeo_Fireball_Strength,burningLeo_Fireball_HitStopAffectSource,burningLeo_Fireball_HitStopAffectPlayer,burningLeo_Fireball_HitStopAffectTarget,burningLeo_Fireball_HitStopLength,burningLeo_Fireball_HitStopShakeStrength);
 							fire.destroyableByWall = false;
 							fire.destroyableByPlayer = false;
 							fire.destroyableByEnemy = false;
@@ -399,6 +405,9 @@ if (!childPause)
 			var fire = instance_create_depth(x,y - 2,depth,obj_Projectile_LeoFire);
 			fire.owner = id;
 			fire.enemy = true;
+			fire.abilityType = playerAbilities.fire;
+			fire.dmg = burningLeo_Firepuff_Damage;
+			scr_Attack_SetKnockback(fire,burningLeo_Firepuff_Strength,burningLeo_Firepuff_HitStopAffectSource,burningLeo_Firepuff_HitStopAffectPlayer,burningLeo_Firepuff_HitStopAffectTarget,burningLeo_Firepuff_HitStopLength,burningLeo_Firepuff_HitStopShakeStrength);
 			fire.destroyableByWall = false;
 			fire.destroyableByPlayer = false;
 			fire.destroyableByEnemy = false;

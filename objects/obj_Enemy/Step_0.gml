@@ -59,8 +59,7 @@ if ((parentPause) and (hurtStopTimer < 1))
 	if ((knockbackY > -grav) and (knockbackY < grav)) knockbackY = 0;
 	#endregion
 	
-	//Death
-	
+	#region Death
 	if ((!deathAnimationPlayed) and ((death) or ((!hasDeathAnimation) and (hp <= 0))))
 	{
 		deathAnimationPlayed = true;
@@ -230,8 +229,7 @@ if ((parentPause) and (hurtStopTimer < 1))
 			obj_SquadControl.waveEnemyCount[obj_SquadControl.currentWave][squadType] += 1;
 		}
 		
-		//Familiar Ability Bubble
-		
+		#region Familiar Ability Bubble
 		if ((ability != playerAbilities.none) and (!isMiniBoss) and (!isBoss) and (takenIsFamiliar))
 		{
 			var abilityDropStar = instance_create_depth(bubbleX,bubbleY,depth,obj_AbilityDropStar);
@@ -357,6 +355,7 @@ if ((parentPause) and (hurtStopTimer < 1))
 			}
 			while (place_meeting(abilityDropStar.x,abilityDropStar.y + 1,obj_ParentWall)) abilityDropStar.y -= 1;
 		}
+		#endregion
 		
 		#region Bestiary Variables
 		switch (object_index)
@@ -527,10 +526,11 @@ if ((parentPause) and (hurtStopTimer < 1))
 		}
 		#endregion
 		
-		//Destroy
-		
+		#region Destroy
 		if (!isBoss) instance_destroy();
+		#endregion
 	}
+	#endregion
 	
 	#region Animation
 	scaleExX = lerp(scaleExX,0,scaleExSpd);
@@ -720,7 +720,6 @@ if ((parentPause) and (hurtStopTimer < 1))
 	#region Hurt Timer
 	if (hurtTimer > 0)
 	{
-		show_debug_message(1);
 		hurtTimer -= 1;
 	}
 	else if (hurtTimer == 0)
@@ -1029,7 +1028,7 @@ if ((parentPause) and (hurtStopTimer < 1))
 }
 
 #region Set Child Pause
-childPause = (((global.pause) or (hurt) or ((global.cutscene) and (pausedInCutscenes))) or (hurtStopTimer > 0));
+childPause = (((global.pause) or (hurt) or ((global.cutscene) and (pausedInCutscenes))) or ((!isBoss) and (!isMiniBoss) and (hurtStopTimer > 0)));
 #endregion
 
 #region Hurt Stop Timer

@@ -182,6 +182,9 @@ if (!childPause)
 				var par = instance_create_depth(x,y,depth,obj_Projectile_ExplosionMask);
 				par.owner = id;
 				par.enemy = true;
+				par.abilityType = playerAbilities.bomb;
+				par.dmg = scarfy_Explosion_Damage;
+				scr_Attack_SetKnockback(par,scarfy_Explosion_Strength,scarfy_Explosion_HitStopAffectSource,scarfy_Explosion_HitStopAffectPlayer,scarfy_Explosion_HitStopAffectTarget,scarfy_Explosion_HitStopLength,scarfy_Explosion_HitStopShakeStrength);
 				
 				var explosion = instance_create_depth(x,y,depth,obj_DeathParticles);
 				explosion.state = "explosion1";

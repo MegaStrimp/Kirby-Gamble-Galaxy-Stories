@@ -133,6 +133,9 @@ if (!childPause)
 				attackProj = instance_create_depth(x,y,depth + 1,obj_Projectile_SparkNormal);
 				attackProj.owner = id;
 				attackProj.enemy = true;
+				attackProj.abilityType = playerAbilities.spark;
+				attackProj.dmg = sparky_Spark_Damage;
+				scr_Attack_SetKnockback(attackProj,sparky_Spark_Strength,sparky_Spark_HitStopAffectSource,sparky_Spark_HitStopAffectPlayer,sparky_Spark_HitStopAffectTarget,sparky_Spark_HitStopLength,sparky_Spark_HitStopShakeStrength);
 				attackProj.dirX = dirX;
 				attackProj.hurtsObject = false;
 				attackProj.hurtsEnemy = false;

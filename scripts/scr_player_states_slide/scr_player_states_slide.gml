@@ -69,7 +69,7 @@ function scr_Player_States_Slide()
 				{
 					if ((!hurt) and (!attack) and (keyAttackPressed))
 					{
-						var grabEnemy = -1;
+						grabEnemy = -1;
 						if (place_meeting(x + (16 * dir),y,obj_Enemy)) grabEnemy = instance_place(x + (16 * dir),y,obj_Enemy);
 						if ((grabEnemy != -1) and (grabEnemy.hurtable) and (!grabEnemy.hurt) and (!grabEnemy.isBoss))
 						{
@@ -148,7 +148,7 @@ function scr_Player_States_Slide()
 							case playerAbilities.beam:
 						    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 						    {
-								var grabEnemy = -1;
+								grabEnemy = -1;
 								if (place_meeting(x + (16 * dir),y,obj_Enemy)) grabEnemy = instance_place(x + (16 * dir),y,obj_Enemy);
 								if ((grabEnemy != -1) and (grabEnemy.hurtable) and (!grabEnemy.hurt) and (!grabEnemy.isBoss))
 								{
@@ -186,7 +186,7 @@ function scr_Player_States_Slide()
 							case playerAbilities.mysticBeam:
 						    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 						    {
-								var grabEnemy = -1;
+								grabEnemy = -1;
 								if (place_meeting(x + (16 * dir),y,obj_Enemy)) grabEnemy = instance_place(x + (16 * dir),y,obj_Enemy);
 								if ((grabEnemy != -1) and (grabEnemy.hurtable) and (!grabEnemy.hurt) and (!grabEnemy.isBoss))
 								{
@@ -400,7 +400,7 @@ function scr_Player_States_Slide()
 							case playerAbilities.ice:
 							if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 							{
-								var grabEnemy = -1;
+								grabEnemy = -1;
 								if (place_meeting(x + (16 * dir),y,obj_Enemy)) grabEnemy = instance_place(x + (16 * dir),y,obj_Enemy);
 								if ((grabEnemy != -1) and (grabEnemy.hurtable) and (!grabEnemy.hurt) and (!grabEnemy.isBoss))
 								{
@@ -885,7 +885,8 @@ function scr_Player_States_Slide()
 			{
 				hsp = movespeedNormal * dir;
 				scr_Player_CancelSlide();
-				scr_Player_ExecuteAttack(playerAttacks.inhale);
+				
+				scr_Player_ExecuteAttack_Inhale();
 			}
 			canSlideJump = true;
 		}

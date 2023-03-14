@@ -140,11 +140,11 @@ if (!isPaused)
 		if (place_meeting(x,y + floor(vsp + 2),obj_Wall))
 		{
 			jumpCount += 1;
-			var finalVsp = 4;
+			var finalVsp = 6;
 			if (jumpCount == 3)
 			{
 				jumpCount = 0;
-				finalVsp = 8;
+				finalVsp = 10;
 			}
 			vsp -= finalVsp;
 		}

@@ -693,9 +693,20 @@ if ((attack) and (sprite_index == sprMicAttack3))
 
 if ((attack) and (sprite_index == sprMicAttack3Ready))
 {
-	var soundRng = irandom_range(0,99);
+	var soundRng = irandom_range(0,499);
 	var sound = snd_Mic3;
 	if (soundRng == 0) sound = snd_Mic3_Extra1;
+	if (soundRng == 1) sound = snd_Mic3_Extra2;
+	if (soundRng == 2) sound = snd_Mic3_Extra3;
+	if (soundRng == 3) sound = snd_Mic3_Extra4;
+	if (soundRng == 4) sound = snd_Mic3_Extra5;
+	if (soundRng == 5) sound = snd_Mic3_Extra6;
+	if (soundRng == 6) sound = snd_Mic3_Extra7;
+	if (soundRng == 7) sound = snd_Mic3_Extra8;
+	if (soundRng == 8) sound = snd_Mic3_Extra9;
+	if (soundRng == 9) sound = snd_Mic3_Extra10;
+	if (soundRng == 10) sound = snd_Mic3_Extra11;
+	if (soundRng == 11) sound = snd_Mic3_Extra12;
 	if (audio_is_playing(sound)) audio_stop_sound(sound);
 	audio_play_sound(sound,0,false);
 	canMicFlash = true;

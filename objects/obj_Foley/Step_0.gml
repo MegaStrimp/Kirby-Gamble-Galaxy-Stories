@@ -145,6 +145,9 @@ if (!childPause)
 				var par = instance_create_depth(x,y,depth,obj_Projectile_ExplosionMask);
 				par.owner = id;
 				par.enemy = true;
+				par.abilityType = playerAbilities.bomb;
+				par.dmg = foley_Explosion_Damage;
+				scr_Attack_SetKnockback(par,foley_Explosion_Strength,foley_Explosion_HitStopAffectSource,foley_Explosion_HitStopAffectPlayer,foley_Explosion_HitStopAffectTarget,foley_Explosion_HitStopLength,foley_Explosion_HitStopShakeStrength);
 				
 				var explosion = instance_create_depth(x,y,depth,obj_DeathParticles);
 				explosion.state = "explosion1";

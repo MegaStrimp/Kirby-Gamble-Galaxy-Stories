@@ -137,6 +137,9 @@ if (explosion)
 		{
 			projectilePointer.owner = id;
 			projectilePointer.enemy = true;
+			projectilePointer.abilityType = playerAbilities.crash;
+			projectilePointer.dmg = bomber_Explosion_Damage;
+			scr_Attack_SetKnockback(projectilePointer,bomber_Explosion_Strength,bomber_Explosion_HitStopAffectSource,bomber_Explosion_HitStopAffectPlayer,bomber_Explosion_HitStopAffectTarget,bomber_Explosion_HitStopLength,bomber_Explosion_HitStopShakeStrength);
 			projectilePointer.destroyableByWall = false;
 			projectilePointer.destroyableByPlayer = false;
 			projectilePointer.destroyableByEnemy = false;

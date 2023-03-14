@@ -360,3 +360,10 @@ if (hasMintLeaf)
 }
 #endregion
 #endregion
+
+#region Afterimages
+afterimageCount = 0;
+if (
+(hasInvinCandy)
+) afterimageCount = 3;
+#endregion

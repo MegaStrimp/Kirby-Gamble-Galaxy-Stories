@@ -38,11 +38,14 @@ if (sprite_index == sprReady)
 	projectile.paletteIndex = paletteIndex;
 	projectile.character = 0;
 	projectile.owner = id;
+	projectile.enemy = true;
+	projectile.abilityType = playerAbilities.cutter;
+	projectile.dmg = juckle_Cutter_Damage;
+	scr_Attack_SetKnockback(projectile,juckle_Cutter_Strength,juckle_Cutter_HitStopAffectSource,juckle_Cutter_HitStopAffectPlayer,juckle_Cutter_HitStopAffectTarget,juckle_Cutter_HitStopLength,juckle_Cutter_HitStopShakeStrength);
 	projectile.hsp = lengthdir_x(projectile.spd,attackDir);
 	projectile.vsp = lengthdir_y(projectile.spd,attackDir);
 	projectile.image_angle = attackDir;
 	projectile.image_xscale = projectile.dirX;
-	projectile.enemy = true;
 	projectile.destroyableByEnemy = false;
 	projectile.hurtsObject = false;
 	projectile.hurtsEnemy = false;

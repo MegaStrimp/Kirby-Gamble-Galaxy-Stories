@@ -51,6 +51,9 @@ if (!childPause)
 					var proj = instance_create_depth(x,y - (20 * dirY),depth,obj_Projectile_YolkyYolk);
 					proj.owner = id;
 					proj.enemy = true;
+					proj.abilityType = playerAbilities.none;
+					proj.dmg = yolky_Shot_Damage;
+					scr_Attack_SetKnockback(proj,yolky_Shot_Strength,yolky_Shot_HitStopAffectSource,yolky_Shot_HitStopAffectPlayer,yolky_Shot_HitStopAffectTarget,yolky_Shot_HitStopLength,yolky_Shot_HitStopShakeStrength);
 					proj.destroyableByEnemy = false;
 					proj.hurtsObject = false;
 					proj.hurtsEnemy = false;

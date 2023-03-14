@@ -152,6 +152,9 @@ if (!childPause)
 					var fire = instance_create_depth(x,y - 2,depth,obj_Projectile_LeoFireball);
 					fire.owner = id;
 					fire.enemy = true;
+					fire.abilityType = playerAbilities.fire;
+					fire.dmg = hothead_Fireball_Damage;
+					scr_Attack_SetKnockback(fire,hothead_Fireball_Strength,hothead_Fireball_HitStopAffectSource,hothead_Fireball_HitStopAffectPlayer,hothead_Fireball_HitStopAffectTarget,hothead_Fireball_HitStopLength,hothead_Fireball_HitStopShakeStrength);
 					fire.destroyableByWall = false;
 					fire.destroyableByPlayer = false;
 					fire.destroyableByEnemy = false;

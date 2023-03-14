@@ -832,9 +832,13 @@ global.cosmicBladeAbilityKillsTarget = 10;
 
 #region Controller Setup
 global.playerGamepad[0] = -1;
+global.playerGamepadControlType[0] = 0;
 global.playerGamepad[1] = -1;
+global.playerGamepadControlType[1] = 0;
 global.playerGamepad[2] = -1;
+global.playerGamepadControlType[2] = 0;
 global.playerGamepad[3] = -1;
+global.playerGamepadControlType[3] = 0;
 
 for (var i = 0; i < 4; i++)
 {

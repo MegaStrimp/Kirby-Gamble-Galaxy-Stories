@@ -190,6 +190,7 @@
     {"name":"inst_43CF9441","path":"rooms/rm_AsteroidFields1/rm_AsteroidFields1.yy",},
     {"name":"inst_F86665E","path":"rooms/rm_AsteroidFields1/rm_AsteroidFields1.yy",},
     {"name":"inst_6C02C89F","path":"rooms/rm_AsteroidFields1/rm_AsteroidFields1.yy",},
+    {"name":"inst_7F59B76A","path":"rooms/rm_AsteroidFields1/rm_AsteroidFields1.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -425,6 +426,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_43CF9441","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_24x24Slope","path":"objects/obj_24x24Slope/obj_24x24Slope.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":-1.0,"x":2280.0,"y":384.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_F86665E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_24x24Slope","path":"objects/obj_24x24Slope/obj_24x24Slope.yy",},"properties":[],"rotation":0.0,"scaleX":-1.0,"scaleY":-1.0,"x":2136.0,"y":384.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6C02C89F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_24x24Slope","path":"objects/obj_24x24Slope/obj_24x24Slope.yy",},"properties":[],"rotation":0.0,"scaleX":-1.0,"scaleY":-1.0,"x":2112.0,"y":408.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7F59B76A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Wall","path":"objects/obj_Wall/obj_Wall.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1080.0,"y":576.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"BackAssets","assets":[],"depth":1300,"effectEnabled":true,"effectType":null,"gridX":6,"gridY":6,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"tileAsteroidFieldsBack","depth":1400,"effectEnabled":true,"effectType":null,"gridX":24,"gridY":24,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":30,"SerialiseWidth":163,"TileCompressedData":[
