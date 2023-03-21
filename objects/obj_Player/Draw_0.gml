@@ -2,13 +2,6 @@
 
 //Variables
 
-xprevious1 = lerp(xprevious1,x,.2);
-yprevious1 = lerp(yprevious1,y,.2);
-xprevious2 = lerp(xprevious2,xprevious1,.2);
-yprevious2 = lerp(yprevious2,yprevious1,.2);
-xprevious3 = lerp(xprevious3,xprevious2,.2);
-yprevious3 = lerp(yprevious3,yprevious2,.2);
-
 switch (player)
 {
 	case 0:
@@ -148,7 +141,7 @@ if (((sprite_index != sprStoneAttack1Common) and (sprite_index != sprStoneAttack
 	}
 }
 var paletteFlashPlayer = paletteFlash;
-if (hasInvinCandy) paletteFlashPlayer = 1 + (current_time % 18);
+if (hasInvinCandy) paletteFlashPlayer = 1 + floor((current_time / (1 + (invinCandyEnding * 2))) % 18);
 
 if ((carriedItem != carriedItems.none) or (playerAbility == playerAbilities.sword) or (playerAbility == playerAbilities.parasol) or (playerAbility == playerAbilities.hammer))
 {
@@ -235,40 +228,37 @@ for (var i = afterimageCount; i >= 0; i--)
 	draw_sprite_ext(sprite_index,image_index,xPointer + drawShakeX,yPointer + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,alphaPointer);
 	if (hatShadowIndex != -1) draw_sprite_ext(hatShadowIndex,image_index,xPointer + drawShakeX,yPointer + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,alphaPointer);
 	if ((global.shaders) and (((sprite_index != sprStoneAttack1Common) and (sprite_index != sprStoneAttack1Uncommon) and (sprite_index != sprStoneAttack1Rare)) or (((sprite_index = spr_Kirby_Normal_Stone_Attack1_Common1) or (sprite_index = spr_Kirby_Normal_Stone_Attack1_Common2)) and (image_index = 0)) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common1) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common2))) pal_swap_reset();
-}
 	
-#region Mask
-/*
-gpu_set_blendenable(false);
-gpu_set_colorwriteenable(false,false,false,true);
-draw_set_alpha(0);
-draw_rectangle(0,0,room_width,room_height,false);
-
-draw_set_alpha(1);
-var maskSprite = asset_get_index(sprite_get_name(sprite_index) + "_Mask");
-if (maskSprite != -1) draw_sprite_ext(maskSprite,image_index,x + drawShakeX,y + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,image_alpha);
-gpu_set_blendenable(true);
-gpu_set_colorwriteenable(true,true,true,true);
-
-gpu_set_blendmode_ext(bm_dest_alpha,bm_inv_dest_alpha);
-gpu_set_alphatestenable(true);
-
-draw_sprite(spr_Texture_Flux,0,x + drawShakeX,y + drawShakeY);
-
-gpu_set_alphatestenable(false);
-gpu_set_blendmode(bm_normal);
-draw_set_alpha(1);
-*/
-#endregion
-
-var hatAnim = image_index;
-var abilityHatIndex = scr_Player_AbilityHat(playerAbility,playerCharacter);
-var hatFrontIndex = scr_Player_HatFront(playerAbility,playerCharacter);
-if ((playerAbility == playerAbilities.water) and (hatFrontIndex == spr_Kirby_HatFront_Water_Modern_Idle)) hatAnim = hatFrontImageIndex;
-if (hatFrontIndex != -1) hatFrontImageIndexSpd = sprite_get_speed(hatFrontIndex) / 60;
-
-for (var i = afterimageCount; i >= 0; i--)
-{
+	#region Mask
+	/*
+	gpu_set_blendenable(false);
+	gpu_set_colorwriteenable(false,false,false,true);
+	draw_set_alpha(0);
+	draw_rectangle(0,0,room_width,room_height,false);
+	
+	draw_set_alpha(1);
+	var maskSprite = asset_get_index(sprite_get_name(sprite_index) + "_Mask");
+	if (maskSprite != -1) draw_sprite_ext(maskSprite,image_index,x + drawShakeX,y + drawShakeY,image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle + stoneAngle,image_blend,image_alpha);
+	gpu_set_blendenable(true);
+	gpu_set_colorwriteenable(true,true,true,true);
+	
+	gpu_set_blendmode_ext(bm_dest_alpha,bm_inv_dest_alpha);
+	gpu_set_alphatestenable(true);
+	
+	draw_sprite(spr_Texture_Flux,0,x + drawShakeX,y + drawShakeY);
+	
+	gpu_set_alphatestenable(false);
+	gpu_set_blendmode(bm_normal);
+	draw_set_alpha(1);
+	*/
+	#endregion
+	
+	var hatAnim = image_index;
+	var abilityHatIndex = scr_Player_AbilityHat(playerAbility,playerCharacter);
+	var hatFrontIndex = scr_Player_HatFront(playerAbility,playerCharacter);
+	if ((playerAbility == playerAbilities.water) and (hatFrontIndex == spr_Kirby_HatFront_Water_Modern_Idle)) hatAnim = hatFrontImageIndex;
+	if (hatFrontIndex != -1) hatFrontImageIndexSpd = sprite_get_speed(hatFrontIndex) / 60;
+	
 	var alphaPointer = 1;
 	var xPointer = x;
 	var yPointer = y;

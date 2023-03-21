@@ -304,21 +304,25 @@ switch (player)
 {
 	case 0:
 	hasInvinCandy = (global.invinCandyTimerP1 != -1);
+	invinCandyEnding = (global.invinCandyTimerP1 <= 180);
 	hasMintLeaf = (global.mintLeafTimerP1 != -1);
 	break;
 	
 	case 1:
 	hasInvinCandy = (global.invinCandyTimerP2 != -1);
+	invinCandyEnding = (global.invinCandyTimerP2 <= 180);
 	hasMintLeaf = (global.mintLeafTimerP2 != -1);
 	break;
 	
 	case 2:
 	hasInvinCandy = (global.invinCandyTimerP3 != -1);
+	invinCandyEnding = (global.invinCandyTimerP3 <= 180);
 	hasMintLeaf = (global.mintLeafTimerP3 != -1);
 	break;
 	
 	case 3:
 	hasInvinCandy = (global.invinCandyTimerP4 != -1);
+	invinCandyEnding = (global.invinCandyTimerP4 <= 180);
 	hasMintLeaf = (global.mintLeafTimerP4 != -1);
 	break;
 }
@@ -364,6 +368,16 @@ if (hasMintLeaf)
 #region Afterimages
 afterimageCount = 0;
 if (
-(hasInvinCandy)
+((hasInvinCandy) and (!invinCandyEnding))
 ) afterimageCount = 3;
+
+if (!global.pause)
+{
+	xprevious1 = lerp(xprevious1,x,.2);
+	yprevious1 = lerp(yprevious1,y,.2);
+	xprevious2 = lerp(xprevious2,xprevious1,.2);
+	yprevious2 = lerp(yprevious2,yprevious1,.2);
+	xprevious3 = lerp(xprevious3,xprevious2,.2);
+	yprevious3 = lerp(yprevious3,yprevious2,.2);
+}
 #endregion

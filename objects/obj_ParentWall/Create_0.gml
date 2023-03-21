@@ -56,7 +56,7 @@ flashIndex = 1;
 
 setupTimer = 0;
 explodeTimer = -1;
-explodeTimerMax = 5;
+explodeTimerMax = 3;
 flashTimer = -1;
 flashTimerMax = 2;
 invincibleTimer = -1;

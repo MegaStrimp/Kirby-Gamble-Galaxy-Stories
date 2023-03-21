@@ -185,16 +185,19 @@ if (!childPause)
 	}
 	else if (attackTimer == 0)
 	{
-		if (audio_is_playing(snd_EnemyJump1)) audio_stop_sound(snd_EnemyJump1);
-		audio_play_sound(snd_EnemyJump1,0,false);
-		shroom = instance_create_depth(x - 1,y - 9,depth - 1,obj_CappyShroom);
-		shroom.owner = id;
-		shroom.sprite_index = sprShroom;
-		shroom.paletteIndex = paletteIndex;
-		shroom.vsp = shroomLaunchSpd;
-		dirX = walkDirX;
-		image_xscale = scale * dirX;
-		thrown = true;
+		if (state != 0)
+		{
+			if (audio_is_playing(snd_EnemyJump1)) audio_stop_sound(snd_EnemyJump1);
+			audio_play_sound(snd_EnemyJump1,0,false);
+			shroom = instance_create_depth(x - 1,y - 9,depth - 1,obj_CappyShroom);
+			shroom.owner = id;
+			shroom.sprite_index = sprShroom;
+			shroom.paletteIndex = paletteIndex;
+			shroom.vsp = shroomLaunchSpd;
+			dirX = walkDirX;
+			image_xscale = scale * dirX;
+			thrown = true;
+		}
 		attackTimer = -1;
 	}
 }

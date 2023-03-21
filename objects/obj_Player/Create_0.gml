@@ -413,6 +413,7 @@ finalCutterReadInput = false;
 finalCutterBuffer = 0;
 finalCutterState = 0; // this is used to determine which attack between Cleaving Cutter, Nonstop Cutter, and Final Cutter is used.
 finalCutterStartingY = y;
+finalCutterCheckInsideCollision = true;
 
 beamAttack2FirstHit = false;
 beamCharge = 0;
@@ -542,6 +543,7 @@ carriedItemIndex = -1;
 carriedItemState = carriedItemStates.none;
 
 hasInvinCandy = false;
+invinCandyEnding = false;
 invinCandyMask = -1;
 hasMintLeaf = false;
 #endregion

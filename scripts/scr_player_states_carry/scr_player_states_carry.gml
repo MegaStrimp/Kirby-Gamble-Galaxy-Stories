@@ -75,6 +75,12 @@ function scr_Player_States_Carry()
 		
 		//Movement
 		
+		var invinCandyMult = 1;
+		
+		if (hasInvinCandy) invinCandyMult = 1.5;
+		
+		var movespeedFinal = movespeed * invinCandyMult;
+		
 		if ((!hurt))
 		{
 			if ((!global.cutscene) and (!inhaleEnd) and (!spit))
@@ -96,7 +102,7 @@ function scr_Player_States_Carry()
 				hsp = scr_Friction(hsp,decel);
 			}
 		
-			hsp = clamp(hsp, -movespeed, movespeed);
+			hsp = clamp(hsp, -movespeedFinal, movespeedFinal);
 		}
 		
 		if (vsp < gravLimitNormal)

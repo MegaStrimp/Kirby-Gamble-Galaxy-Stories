@@ -50,11 +50,23 @@ if (isMystic)
 #endregion
 
 #region Shake
-drawShakeX = cos(irandom_range(0, 360) / 180 * pi) * shakeX;
-drawShakeY = sin(irandom_range(0, 360) / 180 * pi) * shakeY;
-
-shakeX = max(0,shakeX - shakeDividend);
-shakeY = max(0,shakeY - shakeDividend);
+if (!global.pause)
+{
+	var shakeXRange = cos(irandom_range(0, 360) / 180 * pi);
+	var shakeYRange = sin(irandom_range(0, 360) / 180 * pi);
+	
+	drawShakeX = shakeXRange * shakeX;
+	drawShakeY = shakeYRange * shakeY;
+	
+	shakeX = max(0,shakeX - shakeDividend);
+	shakeY = max(0,shakeY - shakeDividend);
+	
+	if (bossHealthbarShakeTimer != -1)
+	{
+		bossHealthbarShakeX = shakeXRange;
+		bossHealthbarShakeY = shakeYRange;
+	}
+}
 #endregion
 
 #region Healthbar

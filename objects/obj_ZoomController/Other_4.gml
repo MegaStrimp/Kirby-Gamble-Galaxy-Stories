@@ -13,7 +13,7 @@ switch (room)
 	case rm_GreenGreens1:
 	offsetYTarget = -48;
 	zoom = 1.5;
-	zoomTarget = 1.25;
-	delayCounter = 30;
+	zoomTarget = 1;
+	delayCounter = 45;
 	break;
 }

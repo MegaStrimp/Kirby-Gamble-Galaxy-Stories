@@ -66,6 +66,7 @@ function scr_Enemy_Hurt(argument0,argument1)
 		
 		if ((global.enemyHealthbars) and (targetObj.canGetHealthbar) and ((!targetObj.isMiniBoss) or (!targetObj.isBoss))) global.healthbarMarkedEnemy = targetObj.id;
 		targetObj.hp -= hurtSource.dmg;
+		targetObj.bossHealthbarShakeTimer = targetObj.bossHealthbarShakeTimerMax;
 		
 		#region Hit Numbers
 		if (global.hitNumbers)

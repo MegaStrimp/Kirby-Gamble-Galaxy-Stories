@@ -89,6 +89,9 @@ function scr_Player_CancelAttack(argument0)
 			case playerAttacks.beamGrab:
 			if (instance_exists(grabObj)) grabObj.destroyTimer = 0;
 			if (audio_is_playing(beamGrabSfx)) audio_stop_sound(beamGrabSfx);
+			invincible = false;
+			invincibleFlash = false;
+			invincibleFlashTimer = -1;
 			state = playerStates.normal;
 			break;
 			
@@ -110,6 +113,9 @@ function scr_Player_CancelAttack(argument0)
 			case playerAttacks.mysticBeamGrab:
 			if (instance_exists(grabObj)) grabObj.destroyTimer = 0;
 			if (audio_is_playing(mysticBeamGrabSfx)) audio_stop_sound(mysticBeamGrabSfx);
+			invincible = false;
+			invincibleFlash = false;
+			invincibleFlashTimer = -1;
 			state = playerStates.normal;
 			break;
 			
@@ -147,8 +153,16 @@ function scr_Player_CancelAttack(argument0)
 			break;
 			
 			case playerAttacks.ninjaDrop:
-	        invincible = false;
+			invincible = false;
+			invincibleFlash = false;
+			invincibleFlashTimer = -1;
 	        state = playerStates.normal;
+			break;
+			
+			case playerAttacks.bombGrab:
+			invincible = false;
+			invincibleFlash = false;
+			invincibleFlashTimer = -1;
 			break;
 			
 			case playerAttacks.fireNormal:
@@ -175,6 +189,12 @@ function scr_Player_CancelAttack(argument0)
 			if (instance_exists(fireMaskProj)) instance_destroy(fireMaskProj);
 			fireBackCharge = 0;
 			invincible = false;
+			break;
+			
+			case playerAttacks.iceGrab:
+			invincible = false;
+			invincibleFlash = false;
+			invincibleFlashTimer = -1;
 			break;
 			
 			case playerAttacks.sparkNormal:

@@ -70,11 +70,11 @@ function scr_Macros_Player()
 	#macro kirby_CutterNormal_HitStopShakeStrength 7
 	
 	#macro kirby_CutterChargeAttack_Damage 20
-	#macro kirby_CutterChargeAttack_Strength 3.5
-	#macro kirby_CutterChargeAttack_HitStopAffectSource false
+	#macro kirby_CutterChargeAttack_Strength 5
+	#macro kirby_CutterChargeAttack_HitStopAffectSource true
 	#macro kirby_CutterChargeAttack_HitStopAffectPlayer false
 	#macro kirby_CutterChargeAttack_HitStopAffectTarget true
-	#macro kirby_CutterChargeAttack_HitStopLength 7
+	#macro kirby_CutterChargeAttack_HitStopLength 15
 	#macro kirby_CutterChargeAttack_HitStopShakeStrength 7
 	
 	#macro kirby_CutterDash_DamageMin 18
@@ -107,7 +107,7 @@ function scr_Macros_Player()
 	#macro kirby_CutterFinalCutter1_HitStopAffectSource false
 	#macro kirby_CutterFinalCutter1_HitStopAffectPlayer false
 	#macro kirby_CutterFinalCutter1_HitStopAffectTarget true
-	#macro kirby_CutterFinalCutter1_HitStopLength 7
+	#macro kirby_CutterFinalCutter1_HitStopLength 3
 	#macro kirby_CutterFinalCutter1_HitStopShakeStrength 7
 	
 	#macro kirby_CutterFinalCutter2_Damage 8
@@ -115,7 +115,7 @@ function scr_Macros_Player()
 	#macro kirby_CutterFinalCutter2_HitStopAffectSource false
 	#macro kirby_CutterFinalCutter2_HitStopAffectPlayer false
 	#macro kirby_CutterFinalCutter2_HitStopAffectTarget true
-	#macro kirby_CutterFinalCutter2_HitStopLength 7
+	#macro kirby_CutterFinalCutter2_HitStopLength 3
 	#macro kirby_CutterFinalCutter2_HitStopShakeStrength 7
 	
 	#macro kirby_CutterFinalCutter3_Damage 8
@@ -123,7 +123,7 @@ function scr_Macros_Player()
 	#macro kirby_CutterFinalCutter3_HitStopAffectSource false
 	#macro kirby_CutterFinalCutter3_HitStopAffectPlayer false
 	#macro kirby_CutterFinalCutter3_HitStopAffectTarget true
-	#macro kirby_CutterFinalCutter3_HitStopLength 7
+	#macro kirby_CutterFinalCutter3_HitStopLength 3
 	#macro kirby_CutterFinalCutter3_HitStopShakeStrength 7
 	
 	#macro kirby_CutterFinalCutter4_Damage 32
@@ -443,13 +443,13 @@ function scr_Macros_Player()
 	
 	
 	
-	#macro kirby_FireNormal_Damage 3
-	#macro kirby_FireNormal_Strength 3.5
+	#macro kirby_FireNormal_Damage 2
+	#macro kirby_FireNormal_Strength 1
 	#macro kirby_FireNormal_HitStopAffectSource false
 	#macro kirby_FireNormal_HitStopAffectPlayer false
 	#macro kirby_FireNormal_HitStopAffectTarget true
-	#macro kirby_FireNormal_HitStopLength 7
-	#macro kirby_FireNormal_HitStopShakeStrength 7
+	#macro kirby_FireNormal_HitStopLength 3
+	#macro kirby_FireNormal_HitStopShakeStrength 3
 	
 	#macro kirby_FireDash_DamageMin 18
 	#macro kirby_FireDash_DamageMax 21

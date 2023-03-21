@@ -2,7 +2,7 @@
 
 //Draw Aura
 
-draw_sprite(spr_Particle_FoodGlow,0,x,y);
+//draw_sprite(spr_Particle_FoodGlow,0,x,y);
 
 //Draw Self
 

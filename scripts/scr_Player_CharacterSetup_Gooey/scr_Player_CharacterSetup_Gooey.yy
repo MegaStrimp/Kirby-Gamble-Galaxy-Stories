@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Dream Friends",
-    "path": "folders/Scripts/Player/Character Setup/Dream Friends.yy",
+    "name": "Characters",
+    "path": "folders/Scripts/Player/Character Setup/Characters.yy",
   },
 }

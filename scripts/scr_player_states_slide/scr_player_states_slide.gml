@@ -29,6 +29,12 @@ function scr_Player_States_Slide()
 			break;
 		}
 		
+		var invinCandyMult = 1;
+		
+		if (hasInvinCandy) invinCandyMult = 1.5;
+		
+		var movespeedFinal = movespeedSlide * invinCandyMult;
+		
 		//Gravity
 		
 		if (vsp < gravLimitNormal)
@@ -98,6 +104,7 @@ function scr_Player_States_Slide()
 							grabEnemy.death = true;
 							attack = true;
 							attackNumber = playerAttacks.bombGrab;
+							invincible = true;
 							carriedItemIndex.owner = carriedItemIndex;
 							carriedItemIndex.xOffset = 0;
 							carriedItemIndex.yOffset = 0;
@@ -175,6 +182,7 @@ function scr_Player_States_Slide()
 									grabEnemy.death = true;
 									attack = true;
 									attackNumber = playerAttacks.beamGrab;
+									invincible = true;
 									hsp = 0;
 									state = playerStates.beamGrab;
 								}
@@ -212,6 +220,7 @@ function scr_Player_States_Slide()
 									grabEnemy.death = true;
 									attack = true;
 									attackNumber = playerAttacks.mysticBeamGrab;
+									invincible = true;	
 									hsp = 0;
 									state = playerStates.mysticBeamGrab;
 								}
@@ -735,7 +744,7 @@ function scr_Player_States_Slide()
 				scr_Attack_SetKnockback(slideMaskProj,basePlayerSlide_Strength,basePlayerSlide_HitStopAffectSource,basePlayerSlide_HitStopAffectPlayer,basePlayerSlide_HitStopAffectTarget,basePlayerSlide_HitStopLength,basePlayerSlide_HitStopShakeStrength);
 				slideMaskProj.image_xscale = image_xscale;
 				slideMaskProj.image_yscale = image_yscale;
-		        hsp = movespeedSlide * dir;
+		        hsp = movespeedFinal * dir;
 		        duckSlide = true;
 		        duck = false;
 				canSlideJump = false;
@@ -872,7 +881,7 @@ function scr_Player_States_Slide()
 				jumpLimit = false;
 				jumpLimitTimer = 45;
 				attackTimer = 45;
-				hsp = dir * movespeedSlide;
+				hsp = dir * movespeedFinal;
 				var par = instance_create_depth(x,y + 8,depth,obj_Particle);
 				par.sprite_index = spr_Particle_SlideHop;
 				par.dirX = dir;

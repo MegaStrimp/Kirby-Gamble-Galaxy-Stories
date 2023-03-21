@@ -11,6 +11,15 @@ flashP2 = false;
 flashP3 = false;
 flashP4 = false;
 
+shakeXP1 = 0;
+shakeYP1 = 0;
+shakeXP2 = 0;
+shakeYP2 = 0;
+shakeXP3 = 0;
+shakeYP3 = 0;
+shakeXP4 = 0;
+shakeYP4 = 0;
+
 starsPosX = camera_get_view_x(gameView) + 1;
 starsPosY = camera_get_view_y(gameView) + 26;
 
@@ -61,6 +70,12 @@ flashStopP2Timer = -1;
 flashStopP3Timer = -1;
 flashStopP4Timer = -1;
 flashStopTimerMax = 35;
+
+shakeP1Timer = -1;
+shakeP2Timer = -1;
+shakeP3Timer = -1;
+shakeP4Timer = -1;
+shakeTimerMax = 30;
 
 notifTimer = -1;
 

@@ -11,8 +11,11 @@ else
 {
 	if (hurt)
 	{
-		gravLimit = 5;
-		grav = .2;
+		if ((!isMiniBoss) and (!isBoss))
+		{
+			gravLimit = 5;
+			grav = .2;
+		}
 	}
 	else
 	{
@@ -958,6 +961,7 @@ if ((parentPause) and (hurtStopTimer < 1))
 			var collidingSpike = instance_place(x,y,obj_Spike);
 			{
 				hp -= collidingSpike.dmg;
+				bossHealthbarShakeTimer = bossHealthbarShakeTimerMax;
 				other.shakeX = 2;
 				other.shakeY = 2;
 				scr_HurtKnockback(self,collidingSpike);
@@ -1025,10 +1029,23 @@ if ((parentPause) and (hurtStopTimer < 1))
 		shineEffectTimer = shineEffectTimerMax;
 	}
 	#endregion
+	
+	#region Boss Healthbar Shake Timer
+	if (bossHealthbarShakeTimer > 0)
+	{
+		bossHealthbarShakeTimer -= 1;
+	}
+	else if (bossHealthbarShakeTimer == 0)
+	{
+		bossHealthbarShakeX = 0;
+		bossHealthbarShakeY = 0;
+		bossHealthbarShakeTimer = -1;
+	}
+	#endregion
 }
 
 #region Set Child Pause
-childPause = (((global.pause) or (hurt) or ((global.cutscene) and (pausedInCutscenes))) or ((!isBoss) and (!isMiniBoss) and (hurtStopTimer > 0)));
+childPause = (((global.pause) or ((global.cutscene) and (pausedInCutscenes))) or ((!isBoss) and (!isMiniBoss) and ((hurt) or (hurtStopTimer > 0))));
 #endregion
 
 #region Hurt Stop Timer

@@ -1300,7 +1300,7 @@ if (!global.pause)
 	
 	if (runCancelTimer > 0)
 	{
-		runCancelTimer -= 1;
+		if (grounded) runCancelTimer -= 1;
 	}
 	else if (runCancelTimer == 0)
 	{

@@ -19,7 +19,7 @@ function scr_Player_States_FinalCutter(){
 				// move the player forward a tiny bit and spawn a hitbox
 				//hsp = 2*dir;
 				if(attackTimer > 2){
-					hsp += 0.3*dir;
+					if (!place_meeting(x + dir,y,obj_Wall)) hsp += 0.3*dir;
 				}
 				
 				//if(attackTimer <= 5 && keyAttackPressed){
@@ -49,7 +49,7 @@ function scr_Player_States_FinalCutter(){
 				}
 				
 				if(attackTimer > 2){
-					hsp = 0.3*dir;
+					if (!place_meeting(x + dir,y,obj_Wall)) hsp = 0.3*dir;
 				}
 				
 				//if(attackTimer <= 5 && keyAttackPressed){
@@ -91,7 +91,7 @@ function scr_Player_States_FinalCutter(){
 				afterimage.image_alpha = .5;
 				afterimage.paletteIndex = paletteIndex;
 				if(attackTimer > (5940-5)){
-					hsp+=1*dir;
+					if (!place_meeting(x + dir,y,obj_Wall)) hsp+=1*dir;
 					if(attackTimer > (5940-10)){
 						vsp = -10;
 					}
@@ -110,7 +110,7 @@ function scr_Player_States_FinalCutter(){
 				}else if (attackTimer > finalCutterEndlag){
 					hsp = 0;
 					vsp = 16;
-					if(grounded) and ((y >= finalCutterStartingY - 12) and (vsp > 0) and (!place_meeting(x,y,obj_ParentWall))){
+					if(grounded) and ((y >= finalCutterStartingY - 12) and (vsp > 0) and ((!place_meeting(x,y,obj_Wall)) or (!finalCutterCheckInsideCollision))){
 						audio_play_sound(snd_FinalCutter,0,false);
 						attackTimer = finalCutterEndlag;
 						vsp = 0;
@@ -145,7 +145,7 @@ function scr_Player_States_FinalCutter(){
 		
 		//Collision
 		
-		if ((finalCutterState != 3) or ((finalCutterState == 3) and (y >= finalCutterStartingY - 12) and (vsp > 0) and (!place_meeting(x,y,obj_ParentWall))))
+		if ((finalCutterState != 3) or ((finalCutterState == 3) and (y >= finalCutterStartingY - 12) and (vsp > 0) and ((!place_meeting(x,y,obj_Wall)) or (!finalCutterCheckInsideCollision))))
 		{
 			scr_Player_Collision(playerMechs.none);
 		}

@@ -4,18 +4,7 @@ switch (room)
 {
 	case rm_GreenGreens1:
 	offsetYTarget = 0;
-	zoomTarget = 1.5;
-	
-	if (obj_Camera.cameraX > 1368)
-	{
-		offsetYTarget = 0;
-		zoomTarget = 1.5;
-	}
-	else if (obj_Camera.cameraX > 1008)
-	{
-		offsetYTarget = -48;
-		zoomTarget = 1.1;
-	}
+	zoomTarget = 1;
 	
 	if (delayCounter == -1)
 	{

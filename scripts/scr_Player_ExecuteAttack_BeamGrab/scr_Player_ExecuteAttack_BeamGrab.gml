@@ -15,6 +15,7 @@ function scr_Player_ExecuteAttack_BeamGrab(argument0)
 	attack = true;
 	attackable = false;
 	attackNumber = playerAttacks.beamGrab;
+	invincible = true;
 	hsp = 0;
 	state = playerStates.beamGrab;
 	#endregion

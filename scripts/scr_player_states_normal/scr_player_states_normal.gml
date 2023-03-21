@@ -375,7 +375,8 @@ function scr_Player_States_Normal()
 			
 			if ((!canUfoFloat) and (playerAbility != playerAbilities.ufo) and (keyDownPressed) and (downInputBufferTimer > 0))
 			{
-			    if (vsp < 0) vsp = 0;
+				vsp = gravLimit;
+			    //if (vsp < 0) vsp = 0;
 			    //fallHop = true;
 			}
 			
@@ -428,6 +429,7 @@ function scr_Player_States_Normal()
 						grabEnemy.death = true;
 						attack = true;
 						attackNumber = playerAttacks.bombGrab;
+						invincible = true;
 						carriedItemIndex.owner = carriedItemIndex;
 						carriedItemIndex.xOffset = 0;
 						carriedItemIndex.yOffset = 0;
@@ -815,6 +817,7 @@ function scr_Player_States_Normal()
 									break;
 								}
 								finalCutterStartingY = y;
+								finalCutterCheckInsideCollision = !(place_meeting(x,y,obj_Wall));
 								state = playerStates.finalCutter;
 							}
 						}
@@ -1096,6 +1099,7 @@ function scr_Player_States_Normal()
 									grabEnemy.death = true;
 									attack = true;
 									attackNumber = playerAttacks.mysticBeamGrab;
+									invincible = true;
 									hsp = 0;
 									state = playerStates.mysticBeamGrab;
 								}
@@ -2344,7 +2348,14 @@ function scr_Player_States_Normal()
 						
 							if (fireBackCharge < fireBackChargeMax)
 							{
-								if (((dir == 1) and (keyLeftHold)) or ((dir == -1) and (keyRightHold))) fireBackCharge += 1;
+								if (((dir == 1) and (keyLeftHold)) or ((dir == -1) and (keyRightHold)))
+								{
+									fireBackCharge += 1;
+								}
+								else
+								{
+									fireBackCharge = 0;
+								}
 							}
 							else
 							{
@@ -3891,12 +3902,11 @@ function scr_Player_States_Normal()
 		}
 		#endregion
 		
-		//Jump Limit Flash
-		
+		#region Jump Limit Flash		
 		if ((invincibleFlashTimer == -1) and (multiJumpLimit != -1) and (multiJumpCounter >= multiJumpLimit)) invincibleFlashTimer = invincibleFlashTimerMax;
+		#endregion
 		
-		//Auto Jump
-		
+		#region Auto Jump
 		if ((!global.cutscene) and (canAutoJump) and (grounded) and (!place_meeting(x,y - 1,obj_ParentWall)) and (!attack))
 		{
 			switch (playerCharacter)
@@ -3966,9 +3976,9 @@ function scr_Player_States_Normal()
 				break;
 			}
 		}
+		#endregion
 		
-		//Duck
-		
+		#region Duck
 		if ((!global.cutscene) and (canDuck) and (playerAbility != playerAbilities.ufo) and (grounded) and (keyDownHold) and (!attack))
 		{
 			if (vsp == 0)
@@ -3982,9 +3992,9 @@ function scr_Player_States_Normal()
 			    state = playerStates.slide;
 			}
 		}
+		#endregion
 		
-		//Climb
-		
+		#region Climb
 		if ((!global.cutscene) and (playerAbility != playerAbilities.ufo) and (canClimb) and (place_meeting(x,y,obj_Ladder)))
 		{
 		    if ((((!place_meeting(x,y - 1,obj_ParentWall)) and (keyUpHold) and vsp > -1) or ((!place_meeting(x,y + 1,obj_ParentWall)) and (keyDownHold))) and (!attack))
@@ -3999,6 +4009,7 @@ function scr_Player_States_Normal()
 				
 		    }
 		}
+		#endregion
 		
 		//Float
 		
@@ -4029,6 +4040,7 @@ function scr_Player_States_Normal()
 					
 					default:
 					attackTimer = 0;
+					isRunning = false;
 					hurt = false;
 					jumpspeed = jumpspeedFloat;
 					vsp = -jumpspeed;

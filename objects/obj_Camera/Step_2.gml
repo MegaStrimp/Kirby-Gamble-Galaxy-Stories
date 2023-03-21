@@ -4,12 +4,12 @@
 zoomControllerZoom = 1;
 offsetX = 0;
 offsetY = 0;
-/*with (obj_ZoomController)
+with (obj_ZoomController)
 {
 	other.zoomControllerZoom = zoom;
 	other.offsetX = offsetX;
 	other.offsetY = offsetY;
-}*/
+}
 #endregion
 
 #region Zoom

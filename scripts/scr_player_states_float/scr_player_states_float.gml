@@ -35,6 +35,12 @@ function scr_Player_States_Float()
 		
 		//Movement
 		
+		var invinCandyMult = 1;
+		
+		if (hasInvinCandy) invinCandyMult = 1.5;
+		
+		var movespeedFinal = movespeedNormal * invinCandyMult;
+		
 		if (!hurt)
 		{
 			if ((!global.cutscene))
@@ -59,7 +65,7 @@ function scr_Player_States_Float()
 				if ((hsp > -ultiDecel) and (hsp < ultiDecel)) hsp = 0;
 			}
 			
-			hsp = clamp(hsp,-movespeedNormal,movespeedNormal);
+			hsp = clamp(hsp,-movespeedFinal,movespeedFinal);
 		}
 		
 		if (vsp < gravLimitFloat)
@@ -83,8 +89,9 @@ function scr_Player_States_Float()
 			
 			if ((keyDownPressed) and (downInputBufferTimer > 0))
 			{
-			    if (vsp < 0) vsp = 0;
-			    fallHop = true;
+				vsp = gravLimit;
+			    //if (vsp < 0) vsp = 0;
+			    //fallHop = true;
 			}
 		}
 		
