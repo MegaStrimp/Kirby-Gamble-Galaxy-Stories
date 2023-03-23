@@ -1,45 +1,5 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_WaddleDoo_Normal_Idle;
-		sprWalk = spr_WaddleDoo_Normal_Walk;
-		sprDuck = spr_WaddleDoo_Normal_Duck;
-		sprJump = spr_WaddleDoo_Normal_Jump;
-		sprFall = spr_WaddleDoo_Normal_Fall;
-		sprSwing = spr_WaddleDoo_Normal_Swing;
-		sprClimbUp = spr_WaddleDoo_Normal_ClimbUp;
-		sprClimbDown = spr_WaddleDoo_Normal_ClimbDown;
-		sprCharge = spr_WaddleDoo_Normal_Charge;
-		sprAttack = spr_WaddleDoo_Normal_Attack;
-		sprHurt = spr_WaddleDoo_Normal_Hurt;
-		break;
-		
-		//Bandit
-		
-		case 1:
-		sprIdle = spr_WaddleDoo_Bandit_Idle;
-		sprWalk = spr_WaddleDoo_Bandit_Walk;
-		sprDuck = spr_WaddleDoo_Bandit_Duck;
-		sprJump = spr_WaddleDoo_Bandit_Jump;
-		sprFall = spr_WaddleDoo_Bandit_Fall;
-		sprSwing = spr_WaddleDoo_Bandit_Swing;
-		sprClimbUp = spr_WaddleDoo_Bandit_ClimbUp;
-		sprClimbDown = spr_WaddleDoo_Bandit_ClimbDown;
-		sprCharge = spr_WaddleDoo_Bandit_Charge;
-		sprAttack = spr_WaddleDoo_Bandit_Attack;
-		sprHurt = spr_WaddleDoo_Bandit_Hurt;
-		break;
-	}
-}
-
 //Stop Beam Sound
 
 if ((attackState == 2) and (attack))
@@ -70,7 +30,7 @@ if ((attackState == 2) and (attack))
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	//Get Inhaled
 	
@@ -552,6 +512,9 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 				{
 					var projBeam = instance_create_depth(-100,-100,depth,obj_Projectile_Beam);
 					projBeam.owner = id;
+					projBeam.abilityType = playerAbilities.beam;
+					projBeam.dmg = waddleDoo_Beam_Damage;
+					scr_Attack_SetKnockback(projBeam,waddleDoo_Beam_Strength,waddleDoo_Beam_HitStopAffectSource,waddleDoo_Beam_HitStopAffectPlayer,waddleDoo_Beam_HitStopAffectTarget,waddleDoo_Beam_HitStopLength,waddleDoo_Beam_HitStopShakeStrength);
 				    projBeam.angle = 90 + ((40 - (i * 10)) * -dirX);
 					projBeam.spd = (1.2 + (i * .2)) * -dirX;
 					projBeam.orbit = 25 + (i * 15);
@@ -566,8 +529,12 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 					projBeam.hasLimit = false;
 					projBeam.character = 1;
 					projBeam.sprite_index = spr_Projectile_Beam_Enemy;
+					projBeam.pulseTarget = 1;
+					projBeam.imageIndex = projBeam.image_index;
 					projBeam.particleTimer = -1;
 					projBeam.destroyTimer = 60;
+					projBeam.pulseTimerMax = 2;
+					projBeam.pulseTimer = projBeam.pulseTimerMax;
 				}
 				break;
 				
@@ -584,6 +551,4 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 else
 {
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

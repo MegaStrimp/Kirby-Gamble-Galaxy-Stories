@@ -1,27 +1,10 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_Shotzo_Normal_Idle;
-		sprHurt = -1;
-		break;
-	}
-	targetImageIndex = aim;
-	finalIndex = targetImageIndex;
-}
-
 //Event Inherited
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	//Hurt Player
 	
@@ -180,7 +163,7 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 	
 	//Attack Timer
 	
-	if ((!place_meeting(x,y,collisionX)) and (!place_meeting(x,y,collisionY)))
+	if (!((stopOutsideScreen) and (scr_OutsideView())) and (!place_meeting(x,y,collisionX)) and (!place_meeting(x,y,collisionY)))
 	{
 		if (attackTimer > 0)
 		{
@@ -200,6 +183,8 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			var cannonSpd = 2.5;
 			var cannonball = instance_create_depth(x + (16 * dirX),y - (4 * dirY),depth,obj_Projectile_Cannonball);
 			cannonball.owner = id;
+			cannonball.dmg = shotzo_Cannon_Damage;
+			scr_Attack_SetKnockback(cannonball,shotzo_Cannon_Strength,shotzo_Cannon_HitStopAffectSource,shotzo_Cannon_HitStopAffectPlayer,shotzo_Cannon_HitStopAffectTarget,shotzo_Cannon_HitStopLength,shotzo_Cannon_HitStopShakeStrength);
 			cannonball.enemy = true;
 			cannonball.destroyableByEnemy = false;
 			cannonball.hurtsObject = false;
@@ -287,6 +272,4 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 else
 {
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

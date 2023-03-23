@@ -1,36 +1,10 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_Bouncy_Normal_Idle;
-		sprJump = spr_Bouncy_Normal_Jump;
-		sprDuck = spr_Bouncy_Normal_Duck;
-		sprHurt = spr_Bouncy_Normal_Hurt;
-		break;
-		
-		//Robo
-		
-		case 1:
-		sprIdle = spr_Bouncy_Robo_Idle;
-		sprJump = spr_Bouncy_Robo_Jump;
-		sprDuck = spr_Bouncy_Robo_Duck;
-		sprHurt = spr_Bouncy_Robo_Hurt;
-		break;
-	}
-}
-
 //Event Inherited
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	//Get Inhaled
 	
@@ -136,6 +110,4 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 else
 {
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

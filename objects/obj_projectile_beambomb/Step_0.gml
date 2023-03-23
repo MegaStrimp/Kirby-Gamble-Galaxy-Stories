@@ -1,33 +1,16 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprVortexReady = spr_Projectile_BeamBomb_Normal_VortexReady;
-		sprVortex = spr_Projectile_BeamBomb_Normal_Vortex;
-		sprExplosion = spr_Projectile_BeamBomb_Normal_Explosion;
-		sprSonar = spr_Projectile_BeamBomb_Normal_Sonar;
-		break;
-	}
-}
-
 //Variables
 
 hurtsEnemy = didExplode;
 hurtsObject = didExplode;
 
-if (((pausable) and (!global.pause)) or (!pausable))
+#region Event Inherited
+event_inherited();
+#endregion
+
+if (!isPaused)
 {
-	//Event Inherited
-	
-	event_inherited();
-	
 	// Explode on releasing button
 	if(!didExplode && owner.keyAttackReleased){
 		should_explode = true;

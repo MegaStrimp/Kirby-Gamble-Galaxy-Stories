@@ -1,47 +1,14 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_Onion_Normal_Idle;
-		sprHurt = -1;
-		break;
-	}
-	
-	var nearestPlayer = -1;
-	nearestPlayer = instance_nearest(x,y,obj_Player);
-	if (state == 0)
-	{
-		if (nearestPlayer != -1)
-		{
-			direction = point_direction(x,y,nearestPlayer.x,nearestPlayer.y);
-			image_angle = direction + 90;
-		}
-	}
-	else if (state == 1)
-	{
-		groundFailsafe = false;
-		depth = layer_get_depth("Collision");
-	}
-	
-	spd = random_range(spd / 2,spd * 1.5);
-}
-
 //Event Inherited
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	//Variables
 	
-	nearestPlayer = -1;
+	var nearestPlayer = -1;
 	nearestPlayer = instance_nearest(x,y,obj_Player);
 	
 	//Get Inhaled
@@ -63,7 +30,27 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 	{
 		#region Normal
 		case 0:
-		if ((groundCooldown == 0) and ((place_meeting(x,y,collisionX)) or (place_meeting(x,y,collisionY)))) death = true;
+		if ((groundCooldown == 0) and ((place_meeting(x,y,obj_Player)) or (place_meeting(x,y,collisionX)) or (place_meeting(x,y,collisionY))))
+		{
+			if (audio_is_playing(snd_Explosion1)) audio_stop_sound(snd_Explosion1);
+			audio_play_sound(snd_Explosion1,0,false);
+			if (audio_is_playing(snd_Carrot)) audio_stop_sound(snd_Carrot);
+			audio_play_sound(snd_Carrot,0,false);
+			
+			var par = instance_create_depth(x,y,depth,obj_Projectile_ExplosionMask);
+			par.owner = id;
+			par.enemy = true;
+			par.abilityType = playerAbilities.bomb;
+			par.dmg = onion_Explosion_Damage;
+			scr_Attack_SetKnockback(par,onion_Explosion_Strength,onion_Explosion_HitStopAffectSource,onion_Explosion_HitStopAffectPlayer,onion_Explosion_HitStopAffectTarget,onion_Explosion_HitStopLength,onion_Explosion_HitStopShakeStrength);
+			
+			var explosion = instance_create_depth(x,y,depth,obj_DeathParticles);
+			explosion.state = "explosion1";
+			
+			hasDeathKnockback = false;
+			hasDeathParticles = false;
+			death = true;
+		}
 		
 		if (nearestPlayer != -1)
 		{

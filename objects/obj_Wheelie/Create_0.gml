@@ -4,10 +4,6 @@
 event_inherited();
 #endregion
 
-#region Randomize
-randomize();
-#endregion
-
 #region Physics
 accel = .15;
 movespeed = 2;
@@ -27,10 +23,10 @@ sprHurt = spr_Wheelie_Normal_Hurt;
 
 #region Other Variables
 paletteIndex = spr_Wheelie_Normal_Palette_Turbo;
-hp = 14;
-dmg = 1;
+hp = wheelie_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.wheel;
-points = 200;
+points = wheelie_Points;
 attackNumber = 0;
 attackState = 0;
 canTurn = true;

@@ -1,21 +1,14 @@
 ///@description Main
 
-//Characters
+#region Event Inherited
+event_inherited();
+#endregion
 
-if (setupTimer == 0)
-{
-	mask_index = sprite_index;
-}
-
-if (((pausable) and (!global.pause)) or (!pausable))
+if (!isPaused)
 {
 	//Destroy
 	
 	if (!instance_exists(owner)) instance_destroy();
-	
-	//Event Inherited
-	
-	event_inherited();
 	
 	//Sprite Change Timer
 	

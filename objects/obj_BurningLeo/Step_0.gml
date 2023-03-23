@@ -1,31 +1,10 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_BurningLeo_Normal_Idle;
-		sprWalk = spr_BurningLeo_Normal_Walk;
-		sprDuck = spr_BurningLeo_Normal_Duck;
-		sprJump = spr_BurningLeo_Normal_Jump;
-		sprFall = spr_BurningLeo_Normal_Fall;
-		sprCharge = spr_BurningLeo_Normal_Charge;
-		sprAttack = spr_BurningLeo_Normal_Attack;
-		sprHurt = spr_BurningLeo_Normal_Hurt;
-		break;
-	}
-}
-
 //Event Inherited
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	if (!parasol) scr_Object_Inhale(enemy);
 	
@@ -345,6 +324,9 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 						var fire = instance_create_depth(x,y - 2,depth,obj_Projectile_LeoFireball);
 						fire.owner = id;
 						fire.enemy = true;
+						fire.abilityType = playerAbilities.fire;
+						fire.dmg = burningLeo_Fireball_Damage;
+						scr_Attack_SetKnockback(fire,burningLeo_Fireball_Strength,burningLeo_Fireball_HitStopAffectSource,burningLeo_Fireball_HitStopAffectPlayer,burningLeo_Fireball_HitStopAffectTarget,burningLeo_Fireball_HitStopLength,burningLeo_Fireball_HitStopShakeStrength);
 						fire.destroyableByWall = false;
 						fire.destroyableByPlayer = false;
 						fire.destroyableByEnemy = false;
@@ -371,6 +353,9 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 							var fire = instance_create_depth(x,y - 2,depth,obj_Projectile_LeoFireball);
 							fire.owner = id;
 							fire.enemy = true;
+							fire.abilityType = playerAbilities.fire;
+							fire.dmg = burningLeo_Fireball_Damage;
+							scr_Attack_SetKnockback(fire,burningLeo_Fireball_Strength,burningLeo_Fireball_HitStopAffectSource,burningLeo_Fireball_HitStopAffectPlayer,burningLeo_Fireball_HitStopAffectTarget,burningLeo_Fireball_HitStopLength,burningLeo_Fireball_HitStopShakeStrength);
 							fire.destroyableByWall = false;
 							fire.destroyableByPlayer = false;
 							fire.destroyableByEnemy = false;
@@ -420,6 +405,9 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			var fire = instance_create_depth(x,y - 2,depth,obj_Projectile_LeoFire);
 			fire.owner = id;
 			fire.enemy = true;
+			fire.abilityType = playerAbilities.fire;
+			fire.dmg = burningLeo_Firepuff_Damage;
+			scr_Attack_SetKnockback(fire,burningLeo_Firepuff_Strength,burningLeo_Firepuff_HitStopAffectSource,burningLeo_Firepuff_HitStopAffectPlayer,burningLeo_Firepuff_HitStopAffectTarget,burningLeo_Firepuff_HitStopLength,burningLeo_Firepuff_HitStopShakeStrength);
 			fire.destroyableByWall = false;
 			fire.destroyableByPlayer = false;
 			fire.destroyableByEnemy = false;
@@ -476,6 +464,4 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 else
 {
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

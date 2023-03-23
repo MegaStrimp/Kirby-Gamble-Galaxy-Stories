@@ -43,7 +43,7 @@ function scr_PlayMusic(argument0,argument1,argument2,argument3,argument4)
 			global.musicIntroComposer = "Light MetaS";
 			break;
 			
-			case mus_KazooFields: //
+			case mus_KazooFields:
 			global.musicIntroTitle = "Kazoo Fields (SECRET)";
 			global.musicIntroComposer = "Subsandwich";
 			break;
@@ -113,17 +113,22 @@ function scr_PlayMusic(argument0,argument1,argument2,argument3,argument4)
 			global.musicIntroComposer = "Juan but The Don";
 			break;
 			
+			case mus_SMB_Bowser:
+			global.musicIntroTitle = "SMB Castle";
+			global.musicIntroComposer = "Koji Kondo";
+			break;
+			
 			case mus_Cellphone:
 			global.musicIntroTitle = "You Have A Call";
 			global.musicIntroComposer = "Tater-Tot Tunes";
 			break;
 			
-			case mus_ChapterIntro1_1: //
+			case mus_ChapterIntroC1A1: //
 			global.musicIntroTitle = "";
 			global.musicIntroComposer = "Strimp";
 			break;
 			
-			case mus_ChapterIntro1_2: //
+			case mus_ChapterIntroC1A2: //
 			global.musicIntroTitle = "";
 			global.musicIntroComposer = "Strimp";
 			break;
@@ -195,13 +200,6 @@ function scr_PlayMusic(argument0,argument1,argument2,argument3,argument4)
 			global.musicIntroColorComposer = make_color_rgb(255,255,255);
 			break;
 			
-			case "Strimp":
-			global.musicIntroColorBg = make_color_rgb(0,0,0);
-			global.musicIntroColorLight = make_color_rgb(10,10,10);
-			global.musicIntroColorDark = make_color_rgb(5,5,5);
-			global.musicIntroColorComposer = make_color_rgb(255,255,255);
-			break;
-			
 			case "Rhey":
 			global.musicIntroColorBg = make_color_rgb(1,90,102);
 			global.musicIntroColorLight = make_color_rgb(9,206,255);
@@ -213,6 +211,13 @@ function scr_PlayMusic(argument0,argument1,argument2,argument3,argument4)
 			global.musicIntroColorBg = make_color_rgb(184,7,3);
 			global.musicIntroColorLight = make_color_rgb(243,103,10);
 			global.musicIntroColorDark = make_color_rgb(170,72,6);
+			global.musicIntroColorComposer = make_color_rgb(255,255,255);
+			break;
+			
+			default:
+			global.musicIntroColorBg = make_color_rgb(0,0,0);
+			global.musicIntroColorLight = make_color_rgb(86,86,86);
+			global.musicIntroColorDark = make_color_rgb(25,25,25);
 			global.musicIntroColorComposer = make_color_rgb(255,255,255);
 			break;
 		}

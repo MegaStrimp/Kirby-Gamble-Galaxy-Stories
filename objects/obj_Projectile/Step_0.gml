@@ -2,7 +2,18 @@
 
 if ((!pausable) and (!global.pause)) pausable = true;
 
-if (((pausable) and (!global.pause)) or (!pausable))
+if (stunTimer < 1) 
+{
+	isStunned = false
+}
+else
+{
+	isStunned = true;
+	stunTimer = stunTimer - 1;
+}
+
+isPaused = (((pausable) and (global.pause)) or (isStunned));
+if (!isPaused)
 {
 	//Angle
 	
@@ -54,6 +65,36 @@ if (((pausable) and (!global.pause)) or (!pausable))
 						obj.hurtsEnemy = true;
 						obj.hurtsPlayer = false;
 					}
+					if (object_index == obj_Projectile_DoomsdayBomb)
+					{
+						obj.explosionIndex = 1;
+						obj.showHitbox = false;
+					}
+					if (object_index == obj_Projectile_Bomb)
+					{
+						if (audio_is_playing(snd_BombExplode)) audio_stop_sound(snd_BombExplode);
+						audio_play_sound(snd_BombExplode,0,false);
+						if (hasMagma)
+						{
+							for (var i = 0; i < 3; i++)
+							{
+								proj = instance_create_depth(x + ((i - 1) * 15),y - 4,depth,obj_Projectile_SmallFire);
+								obj.owner = id;
+								obj.dmg = 8;
+								obj.enemy = false;
+								obj.destroyableByWall = false;
+								obj.destroyableByEnemy = false;
+								obj.destroyableByObject = false;
+							}
+						}
+					}
+					else
+					{
+						if (audio_is_playing(snd_Explosion1)) audio_stop_sound(snd_Explosion1);
+						audio_play_sound(snd_Explosion1,0,false);
+					}
+					var explosion = instance_create_depth(x,y,depth,obj_DeathParticles);
+					explosion.state = "explosion1";
 				}
 			}
 			instance_destroy();
@@ -133,16 +174,4 @@ if (((pausable) and (!global.pause)) or (!pausable))
 else
 {
 	image_speed = 0;
-}
-
-//Setup Timer
-
-if (setupTimer > 0)
-{
-	setupTimer -= 1;
-}
-else if (setupTimer == 0)
-{
-	if (setupExplode) instance_destroy();
-	setupTimer = -1;
 }

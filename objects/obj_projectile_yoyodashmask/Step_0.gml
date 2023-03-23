@@ -1,6 +1,10 @@
 ///@description Main
 
-if (((pausable) and (!global.pause)) or (!pausable))
+#region Event Inherited
+event_inherited();
+#endregion
+
+if (!isPaused)
 {
 	//Variables
 	
@@ -24,8 +28,4 @@ if (((pausable) and (!global.pause)) or (!pausable))
 			instance_destroy();
 		}
 	}
-	
-	//Event Inherited
-	
-	event_inherited();
 }

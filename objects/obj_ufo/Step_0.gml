@@ -1,28 +1,10 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_Ufo_Normal_Idle;
-		sprWalk = spr_Ufo_Normal_Walk;
-		sprHurt = spr_Ufo_Normal_Hurt;
-		sprBeam = spr_Ufo_Normal_Beam;
-		break;
-	}
-	if (state == 1) moveTimer = -1;
-}
-
 //Event Inherited
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	if (!parasol) scr_Object_Inhale(enemy);
 	
@@ -81,6 +63,4 @@ else
 {
 	pathsp = 0;
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

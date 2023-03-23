@@ -4,10 +4,6 @@
 
 event_inherited();
 
-//Randomize
-
-randomize();
-
 //Physics
 
 accel = .3;
@@ -32,7 +28,7 @@ sprHurt = spr_MrBoogie_Normal_Hurt;
 
 paletteIndex = spr_MrBoogie_Normal_Palette_SlimyGreen;
 hp = 12;
-dmg = 1;
+dmg = baseEnemyContact_Damage;
 points = 200;
 parasolX = 2;
 parasolY = 3;

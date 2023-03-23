@@ -4,10 +4,6 @@
 
 event_inherited();
 
-//Randomize
-
-randomize();
-
 //Sprites
 
 mask_index = spr_24Square_Mask;
@@ -22,7 +18,7 @@ sprWings = spr_HiveDrone_Normal_Wings;
 
 paletteIndex = spr_HiveDrone_Normal_Palette_GoldHoneycomb;
 hp = 18;
-dmg = 1;
+dmg = baseEnemyContact_Damage;
 points = 750;
 wingIndex = 0;
 wingSpd = 0;

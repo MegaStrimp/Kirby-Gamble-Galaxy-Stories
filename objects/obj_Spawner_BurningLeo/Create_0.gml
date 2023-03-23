@@ -16,14 +16,14 @@ gravLimitParasol = .5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_BurningLeo_Normal_Palette_FlamingRed;
 state = 0;
-hp = 16;
-dmg = 1;
+hp = burningLeo_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.fire;
-points = 500;
+points = burningLeo_Points;
 hurtable = true;
 hasGravity = true;
 heavy = false;

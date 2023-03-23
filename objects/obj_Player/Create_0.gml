@@ -1,75 +1,72 @@
 ///@description Initialize Variables
 
-//Randomize
+#region Physics Variables
+xprevious1 = x;
+yprevious1 = y;
+xprevious2 = x;
+yprevious2 = y;
+xprevious3 = x;
+yprevious3 = y;
 
-randomize();
-
-/*
-for (var i = 0; i < 100; i++)
-{
-	var par = instance_create_depth(x + (i * 24),-24,depth + 1,obj_Particle);
-	par.sprite_index = spr_FallingLeaf_Normal_Idle;
-	par.direction = irandom_range(250,290);
-	par.image_blend = choose(c_green,c_yellow,c_lime);
-	par.image_speed = random_range(.75,1.25);
-	par.spdBuiltIn = random_range(1,3);
-	par.destroyAfterAnimation = false;
-}
-instance_create_depth(x,y,-9999,obj_Dialogue);
-*/
-
-//Physics
-
-downHeld = 0;
-gravNormal = .23;
-gravStone = .7;
-gravWheel = .5;
-grav = gravNormal;
-gravFloat = .075;
-gravFireDash = .05;
-gravLimitNormal = 5;
-gravLimitFloat = 0.8;
-gravLimitBeamAir = 3;
-gravLimitStone = 7;
-gravLimitFireDash = 1.25;
-gravLimitWheel = 5;
-gravLimit = gravLimitNormal;
 hsp = 0;
 hspCarry = 0;
 fireDashHsp = 0;
 hspCollision = 0;
 hspFinal = 0;
+
 vsp = 0;
 vspCarry = 0;
 vspCollision = 0;
 vspFinal = 0;
-jumpspeedNormal = 6;
-jumpspeedFloat = 2;
-jumpspeedWheel = 8;
-jumpspeed = jumpspeedNormal;
+
+accel = .3;
+accelFloat = .1;
+accelWheel = .25;
+
+decel = .075;
+decelSlide = .125;
+decelFloat = .025;
+decelYoyoDash = .1;
+decelWheel = .1;
+decelSwordDash = .1;
+decelParasolDash = .1;
+
 movespeedNormal = 1.7;
 movespeedRun = 2.6;
 movespeedSlide = 5;
 movespeedFloat = 1.9;
 movespeedCarry = 2;
 movespeedBurst = 7;
+movespeedWheel = 6;
 movespeedJetKick = 7;
 movespeedJetBoost = 7;
 movespeedJetAirBoostSmall = 7;
 movespeedJetAirDashBoostSmall = 7;
-movespeedWheel = 6;
 movespeed = movespeedNormal;
+
+gravNormal = .23;
+gravFloat = .075;
+gravStone = .7;
+gravFireDash = .05;
+gravWheel = .5;
+gravJetDash = .25;
+grav = gravNormal;
+
+gravLimitNormal = 5;
+gravLimitFloat = 0.8;
+gravLimitBeamAir = 3;
+gravLimitStone = 7;
+gravLimitFireDash = 1.25;
+gravLimitWheel = 5;
+gravLimitJetDash = .65;
+gravLimit = gravLimitNormal;
+
+jumpspeedNormal = 6;
+jumpspeedFloat = 2;
+jumpspeedWheel = 8;
+jumpspeed = jumpspeedNormal;
+
 ufoFloatSpd = 2;
-accel = .3;
-accelFloat = .1;
-accelWheel = .25;
-decel = .075;
-decelSlide = .125;
-decelYoyoDash = .1;
-decelWheel = .1;
-decelSwordDash = .1;
-decelParasolDash = .1;
-decelFloat = .025;
 climbSpeed = 2.5;
 jetCharge = 0;
 jetChargeMax = 45;
@@ -77,7 +74,9 @@ gravJetDash = 0.25;
 gravLimitJetDash = 0.65;
 
 //Sprites
+#endregion
 
+#region Sprites
 maskIndex = spr_16Square_Mask;
 paletteIndex = spr_Kirby_Normal_Palette_FriendlyPink;
 sprIdle = spr_Kirby_Normal_Idle;
@@ -173,6 +172,8 @@ sprHardSwallow = spr_Kirby_Normal_HardSwallow;
 sprAbilityChange = spr_Kirby_Normal_AbilityChange;
 sprWarpStar1 = spr_Kirby_Normal_WarpStar1;
 sprWarpStar2 = spr_Kirby_Normal_WarpStar2;
+sprWarpStar3 = spr_Kirby_Normal_WarpStar3;
+sprWarpStar4 = spr_Kirby_Normal_WarpStar4;
 sprGuard = spr_Kirby_Normal_Guard;
 sprGuardSlope = spr_Kirby_Normal_Guard_Slope;
 sprItemCarryThrow = spr_Kirby_Normal_ItemCarry_Throw;
@@ -274,29 +275,39 @@ sprSleepEnd = spr_Kirby_Normal_SleepEnd;
 sprScanReady = spr_Kirby_Normal_ScanReady;
 sprScan = spr_Kirby_Normal_Scan;
 sprScanEnd = spr_Kirby_Normal_ScanEnd;
+sprMicAttack1Ready = spr_Kirby_Normal_Mic_Attack1Ready;
+sprMicAttack1 = spr_Kirby_Normal_Mic_Attack1;
+sprMicAttack1End = spr_Kirby_Normal_Mic_Attack1End;
+sprMicAttack2Ready = spr_Kirby_Normal_Mic_Attack2Ready;
+sprMicAttack2 = spr_Kirby_Normal_Mic_Attack2;
+sprMicAttack2End = spr_Kirby_Normal_Mic_Attack2End;
+sprMicAttack3Ready = spr_Kirby_Normal_Mic_Attack3Ready;
+sprMicAttack3 = spr_Kirby_Normal_Mic_Attack3;
+sprMicAttack3End = spr_Kirby_Normal_Mic_Attack3End;
 sprHurt = spr_Kirby_Normal_Hurt;
 sprDeath = spr_Kirby_Normal_Death;
+#endregion
 
-//Upgrades
-
+#region Upgrades
 cutterMotorCutterUpgrade = false;
 cutterPropellerWingUpgrade = false;
+cutterSpectralCutterUpgrade = false;
 beamGoldenFlareUpgrade = false;
 mysticBeamVortexInAJarUpgrade = false;
 stoneRockCandyUpgrade = false;
 stoneComboCobaltUpgrade = false;
-bombMultiBombUpgrade = false;
+bombLightShellsUpgrade = false;
 bombEyeBombUpgrade = false;
-bombSmartBombUpgrade = false;
+bombStickyBombUpgrade = false;
 bombMagmaBombUpgrade = false;
 bombExplosivePowderUpgrade = false;
 fireMagicCharcoalUpgrade = false;
 iceEmptyConeUpgrade = false;
 sparkBrightPluggUpgrade = false;
 waterEggSoilUpgrade = false;
+#endregion
 
-//Other Variables
-
+#region Respawn After Death
 if ((global.healthP1 == 0) or (global.healthP2 == 0) or (global.healthP3 == 0) or (global.healthP4 == 0))
 {
 	if (global.pause) global.pause = false;
@@ -309,14 +320,9 @@ if ((global.healthP1 == 0) or (global.healthP2 == 0) or (global.healthP3 == 0) o
 	global.healP3Mod = global.healthP3;
 	global.healP4Mod = global.healthP4;
 }
-player = 0;
-playerCharacter = 0;
-playerAbility = 0;
-hatBackgroundImageIndex = 0;
-hatBackgroundImageIndexSpd = .25;
-hatFrontImageIndex = 0;
-hatFrontImageIndexSpd = .25;
-state = playerStates.normal;
+#endregion
+
+#region Attributes
 hasGravity = true;
 hasJumpLimit = true;
 canWalk = true;
@@ -324,9 +330,9 @@ canRun = true;
 canRunTurn = true;
 canJump = true;
 canMultiJump = false;
-multiJumpCounter = 0;
 multiJumpLimit = -1;
 canAutoJump = false;
+canFallRoll = true;
 canAttack = true;
 canDuck = true;
 canDuckHighJump = false;
@@ -336,104 +342,161 @@ canFloat = true;
 canEnter = true;
 canUfoFloat = false;
 canGetHurt = true;
-run = false;
-runDoubleTap = 20;
-runParticleNum = 0;
-runCancelTimer = -1;
 runImageSpeedIncrease = 0;
-runTurn = false;
-runBuffer = 0;
-walkDuck = false;
-walkSquish = false;
-fallRoll = false;
-fallHop = false;
-duck = false;
-duckJumpCharge = 0;
-duckJumpChargeMax = 45;
-duckSlide = false;
-canSlideJump = false;
+#endregion
+
+#region Character Variables
+player = 0;
+
+playerCharacter = 0;
+playerAbility = 0;
+#endregion
+
+#region Gameplay Variables
+state = playerStates.normal;
+
+dir = 1;
 scale = 1;
 targetScale = 1;
 scaleExX = 0;
 scaleExY = 0;
 scaleExSpd = .1;
-dir = 1;
 shakeX = 0;
 shakeY = 0;
+afterimageCount = 0;
+
+hatBackgroundImageIndex = 0;
+hatBackgroundImageIndexSpd = .25;
+hatFrontImageIndex = 0;
+hatFrontImageIndexSpd = .25;
+
+grounded = false;
+wallAbove = false;
+
+isRunning = false;
+runDoubleTap = 20;
+runParticleNum = 0;
+runCancelTimer = -1;
+runTurn = false;
+runBuffer = 0;
+
+hasJumped = -1;
+jumpCoyoteTimeBuffer = 0;
+jumpCoyoteTimeBufferMax = 4;
+jumpInputBuffer = 0;
+jumpInputBufferMax = 4;
+multiJumpCounter = 0;
+
+walkDuck = false;
+walkSquish = false;
+fallRoll = false;
+fallHop = false;
+
+duck = false;
+duckJumpCharge = 0;
+duckJumpChargeMax = 45;
+duckSlide = false;
+canSlideJump = false;
+
 floatSfx = -1;
 floating = false;
 floatingTimer = -1;
 float = false;
 floatSpit = false;
 airPuffSpd = 7;
+
 attack = false;
 attackable = true;
 attackNumber = playerAttacks.none;
+
+comboBuffer = 0;
+
 cutterCharge = 0;
 cutterChargeMax = 45;
 cutterAirThrown = true;
 cutterCatch = false;
-comboBuffer = 0;
 finalCutterReadInput = false;
 finalCutterBuffer = 0;
 finalCutterState = 0; // this is used to determine which attack between Cleaving Cutter, Nonstop Cutter, and Final Cutter is used.
+finalCutterStartingY = y;
+finalCutterCheckInsideCollision = true;
+
 beamAttack2FirstHit = false;
 beamCharge = 0;
 beamChargeMax = 45;
 parBeamCycle1 = -1;
+beamGrabSfx = -1;
+
 canMysticBeamShield = true;
 mysticBeamChargeEx = 0;
 mysticBeamUpAttackCount = 0;
+mysticBeamGrabSfx = -1;
+
 stoneParticleCount = 0;
 stoneReleaseParticleCount = 0;
 stoneReady = true;
 stoneFallen = false;
 stoneAngle = 0;
 stoneFistReady = true;
+
 ufoCharge = 0;
 ufoChargeMax = 45;
+
 mirrorDashSfx = -1;
 mirrorHold = false;
 mirrorFirstAttack = true;
 mirrorAttackDir = 1;
 mirrorShieldHpMax = 3;
 mirrorShieldHp = mirrorShieldHpMax;
+
 ninjaHoldCharge = 0;
 ninjaHoldChargeMax = 8;
+
 bombDir = 0;
 bombDirMax = 60;
 bombDownReady = false;
+
 fireBackCharge = 0;
 fireBackChargeMax = 60;
 fireDashDir = 1;
 fireLandWheel = 2;
 canFireDashUp = true;
+
 iceReady = true;
 iceRelease = false;
 icePosition = 0;
 iceKick = false;
 iceGrab = false;
+
 sparkCooldown = 0;
 sparkHoldCharge = 0;
-sparkHoldChargeMax = 12;
+sparkHoldChargeMax = 9;
 sparkCharge = 0;
 sparkChargeMax = 20;
 sparkChargeDecelMin = .003;
 sparkChargeDecelMax = .05;
 sparkChargeDecel = sparkChargeDecelMin;
 sparkMaxCharge = false;
+
 wheelDir = 1;
 wheelReady = true;
 wheelTurn = false;
 wheelCrash = false;
+
 wingFeatherPos = 0;
+
 jetCharge = 0;
 jetChargeMax = 45;
+
 waterWalkHatAnim = 0;
+
+canMicFlash = false;
 micFlash = false;
+
 isSleeping = false;
 sleepEnd = false;
 sleepHatParticle = false;
+
 inhaling = false;
 invincible = false;
 invincibleFlash = false;
@@ -456,17 +519,16 @@ jumpLimit = true;
 hspLimit = true;
 bubblePos = 0;
 blackAlphaBox = false;
+
 chargeSfx = -1;
 chargeSfxState = "intro";
+
 imageAngle = 0;
 idleAnimation = false;
 idleAnimationTimer = 0;
-idleAnimationTimerMax = 30;
+idleAnimationTimerMax = 60;
 fallHopCounter = 0;
 fallHopCounterMax = 10;
-carriedItem = carriedItems.none;
-carriedItemIndex = -1;
-carriedItemState = carriedItemStates.none;
 enteredDoor = -1;
 gooeyScaleDir = 1;
 gooeyScaleOffset = 0;
@@ -476,18 +538,23 @@ collisionX = obj_Wall;
 collisionY = obj_Wall;
 inBackground = false;
 warpStarIndex = -1;
+mechIndex = -1;
 downHeld = 0;
-hasInvinCandy = false;
-invinCandyMask = -1;
-hasMintLeaf = false;
+downHeldPlatformMax = 4;
+
 mixAbilities = -1;
 
-//Inputs
+carriedItem = carriedItems.none;
+carriedItemIndex = -1;
+carriedItemState = carriedItemStates.none;
 
-scr_Player_Inputs(player);
+hasInvinCandy = false;
+invinCandyEnding = false;
+invinCandyMask = -1;
+hasMintLeaf = false;
+#endregion
 
-//Timers
-
+#region Timers
 setupTimer = 0;
 characterSetupTimer = 0;
 upgradeSetupTimer = 0;
@@ -575,8 +642,10 @@ sleepEndTimer = -1;
 sleepEndTimerMax = 330;
 scanTimer = -1;
 scanTimerMax = 60;
+micTimer = -1;
+micTimerMax = 120;
 micFlashTimer = -1;
-micFlashTimerMax = 5;
+micFlashTimerMax = 10;
 helperTimer = -1;
 helperTimerMax = 300;
 canGrabTimer = -1;
@@ -588,17 +657,18 @@ deathRestartTimer = -1;
 deathRestartTimerMax = 210;
 bubblePosTimerMax = 20;
 bubblePosTimer = bubblePosTimerMax;
+#endregion
 
 //Zwat's testing grounds
 jetDashAir = 3;
-finalCutterEndlag = 12;
+finalCutterEndlag = 20;
 downInputBuffer = 15;
 downInputBufferTimer = 0;
 jetHoverAccel = 0.7;
 jetHoverMax = 3.5;
 //////////////////
 
-//Create Objects
-
+#region Create Objects
 if (!instance_exists(obj_Pause_Control)) instance_create_depth(x,y,-1000,obj_Pause_Control);
 if (!instance_exists(obj_Hud)) instance_create_depth(x,y,-997,obj_Hud);
+#endregion

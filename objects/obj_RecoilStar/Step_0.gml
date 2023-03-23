@@ -1,33 +1,11 @@
 ///@description Main
 
-if (((pausable) and (!global.pause)) or (!pausable))
+#region Event Inherited
+event_inherited();
+#endregion
+
+if (!isPaused)
 {
-	//Spawn Timer
-	
-	if (spawnTimer > 0)
-	{
-		spawnTimer -= 1;
-	}
-	else if (spawnTimer == 0)
-	{
-		switch (character)
-		{
-			//Normal
-			case 0:
-			sprSpawn = spr_RecoilStar_Normal_Spawn;
-			sprIdle = spr_RecoilStar_Normal_Idle;
-			sprDestroy = spr_RecoilStar_Normal_Destroy;
-			break;
-		}
-		sprite_index = sprSpawn;
-		sprHurt = sprIdle;
-	    spawnTimer = -1;
-	}
-	
-	//Event Inherited
-	
-	event_inherited();
-	
 	//Get Inhaled
 	
 	if (canBeInhaled) scr_Object_Inhale(false);
@@ -51,6 +29,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	}
 	else if (destroyTimer == 0)
 	{
+		if (GAMEMAKERBUG) instance_destroy();
 	    destroyTimer = -1;
 	}
 }

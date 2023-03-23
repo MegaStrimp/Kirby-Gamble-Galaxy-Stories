@@ -8,6 +8,7 @@ if (!global.pause)
 	
 	//Variables
 	
+	hudOffset = lerp(hudOffset,0,.1);
 	for (var i = 0; i < array_length(stageTitle); i++) stageOffset[i] = 0;
 	
 	if (!instance_exists(obj_Fade))

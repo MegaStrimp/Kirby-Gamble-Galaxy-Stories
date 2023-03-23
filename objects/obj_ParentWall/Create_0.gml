@@ -32,9 +32,13 @@ enemyWall = id;
 invincible = false;
 enemyCollisionHitbox = false;
 owner = id;
+ownerScale = -1;
+ownerXOffset = 0;
+ownerYOffset = 0;
 hasTop = true;
 isTop = false;
 canExplode = false;
+topWall = -1;
 topWallSprite = -1;
 topWallMask = spr_24x4Originless_Mask;
 topWallOwner = id;
@@ -46,12 +50,15 @@ shakeY = 0;
 drawShakeX = 0;
 drawShakeY = 0;
 paletteIndex = -1;
+flashIndex = 1;
 
 //Timers
 
 setupTimer = 0;
 explodeTimer = -1;
-explodeTimerMax = 5;
+explodeTimerMax = 3;
+flashTimer = -1;
+flashTimerMax = 2;
 invincibleTimer = -1;
 invincibleTimerMax = 15;
 movementTimer = -1;

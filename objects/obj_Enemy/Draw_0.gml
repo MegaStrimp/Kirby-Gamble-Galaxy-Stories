@@ -1,14 +1,10 @@
 ///@description Draw
 
-//Draw Self
-
+#region Draw Self
 paletteFlash = 1;
 if (invincibleFlash) paletteFlash = 2;
-
-drawShakeX = irandom_range(-shakeX,shakeX);
-drawShakeY = irandom_range(-shakeY,shakeY);
-
 drawPaletteFlash = paletteFlash;
+
 if ((hurt) and (invincibleFlash))
 {
 	if (death)
@@ -24,9 +20,9 @@ if ((hurt) and (invincibleFlash))
 if (global.shaders) pal_swap_set(paletteIndex,drawPaletteFlash,false);
 draw_sprite_ext(sprite_index,image_index,x + ((canShakeX) * drawShakeX),y + ((canShakeY) * drawShakeY),image_xscale * (1 + scaleExX),image_yscale * (1 + scaleExY),imageAngle,image_blend,image_alpha);
 if (global.shaders) pal_swap_reset();
+#endregion
 
-//Flux Overlay
-
+#region Flux Overlay
 if (isMystic)
 {
 	if (!global.pause) fluxOverlayAlpha -= .01;
@@ -51,29 +47,29 @@ if (isMystic)
 	gpu_set_blendmode(bm_normal);
 	draw_set_alpha(1);
 }
+#endregion
 
-//Shake
-
-if (shakeX > 0)
+#region Shake
+if (!global.pause)
 {
-	shakeX -= (sign(shakeX)) / 10;
+	var shakeXRange = cos(irandom_range(0, 360) / 180 * pi);
+	var shakeYRange = sin(irandom_range(0, 360) / 180 * pi);
+	
+	drawShakeX = shakeXRange * shakeX;
+	drawShakeY = shakeYRange * shakeY;
+	
+	shakeX = max(0,shakeX - shakeDividend);
+	shakeY = max(0,shakeY - shakeDividend);
+	
+	if (bossHealthbarShakeTimer != -1)
+	{
+		bossHealthbarShakeX = shakeXRange;
+		bossHealthbarShakeY = shakeYRange;
+	}
 }
-else
-{
-	shakeX = 0;
-}
+#endregion
 
-if (shakeY > 0)
-{
-	shakeY -= (sign(shakeY)) / 10;
-}
-else
-{
-	shakeY = 0;
-}
-
-//Healthbar
-
+#region Healthbar
 if (healthbarIndex == 0)
 {
 	var hbHp = hp;
@@ -87,7 +83,12 @@ if (healthbarIndex == 0)
 		draw_sprite_ext(spr_Healthbar_Enemy_InnerFront,0,x - 8,bbox_top - 18,(healthbarBackHp / hpMax),image_yscale,0,image_blend,image_alpha);
 	}
 }
+#endregion
 
-//Debug
-/*
-draw_text(x,y - 12,string(abs(hsp - (movespeed * walkDirX))));
+#region Debug
+if (global.debugOverlay)
+{
+	draw_text(x,y - 12,string(hurtTimer));
+	draw_text(x,y - 24,string(hurtStopTimer));
+}
+#endregion

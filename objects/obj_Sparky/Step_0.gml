@@ -1,29 +1,10 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_Sparky_Normal_Idle;
-		sprWalk = spr_Sparky_Normal_Walk;
-		sprJump = spr_Sparky_Normal_Jump;
-		sprCharge = spr_Sparky_Normal_Charge;
-		sprAttack = spr_Sparky_Normal_Attack;
-		sprHurt = spr_Sparky_Normal_Hurt;
-		break;
-	}
-}
-
 //Event Inherited
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	if (!parasol) scr_Object_Inhale(enemy);
 	
@@ -152,6 +133,9 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 				attackProj = instance_create_depth(x,y,depth + 1,obj_Projectile_SparkNormal);
 				attackProj.owner = id;
 				attackProj.enemy = true;
+				attackProj.abilityType = playerAbilities.spark;
+				attackProj.dmg = sparky_Spark_Damage;
+				scr_Attack_SetKnockback(attackProj,sparky_Spark_Strength,sparky_Spark_HitStopAffectSource,sparky_Spark_HitStopAffectPlayer,sparky_Spark_HitStopAffectTarget,sparky_Spark_HitStopLength,sparky_Spark_HitStopShakeStrength);
 				attackProj.dirX = dirX;
 				attackProj.hurtsObject = false;
 				attackProj.hurtsEnemy = false;
@@ -218,6 +202,4 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 else
 {
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

@@ -4,10 +4,6 @@
 
 event_inherited();
 
-//Randomize
-
-randomize();
-
 //Physics
 
 accel = .015;
@@ -29,9 +25,9 @@ sprHurt = spr_Grizzo_Normal_Hurt;
 //Other Variables
 
 paletteIndex = spr_Grizzo_Normal_Palette_TanBear;
-hp = 55;
-dmg = 1;
-points = 600;
+hp = grizzo_Hp;
+dmg = baseEnemyContact_Damage;
+points = grizzo_Points;
 heavy = true;
 gettingInhaled = false;
 attack = false;

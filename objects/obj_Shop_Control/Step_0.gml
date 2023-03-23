@@ -65,7 +65,7 @@ if ((activeText) and ((!instance_exists(obj_Dialogue))))
 			case lastArray:
 			if ((keyJumpPressed) or (keyAttackPressed) or (keyStartPressed) or (keySelectPressed))
 			{
-				if ((!global.debug) and (global.canSave)) scr_SaveGame(global.selectedSave);
+				if (global.canSave) scr_SaveGame(global.selectedSave);
 				global.pause = false;
 				if (audio_is_playing(global.musicPlaying)) audio_resume_sound(global.musicPlaying);
 				if (audio_is_playing(mus_Shop)) audio_stop_sound(mus_Shop);

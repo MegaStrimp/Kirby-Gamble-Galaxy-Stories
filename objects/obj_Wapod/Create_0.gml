@@ -4,10 +4,6 @@
 
 event_inherited();
 
-//Randomize
-
-randomize();
-
 //Physics
 
 gravNormal = .2;
@@ -26,9 +22,9 @@ sprGhostHurt = spr_Wapod_Normal_Hurt;
 //Other Variables
 
 paletteIndex = spr_Wapod_Normal_Palette_PhantomPastel;
-hp = 1;
-dmg = 1;
-points = 500;
+hp = wapod_Hp;
+dmg = baseEnemyContact_Damage;
+points = wapod_Points;
 hasXKnockback = true;
 hasYKnockback = true;
 

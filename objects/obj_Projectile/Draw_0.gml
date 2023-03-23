@@ -31,4 +31,5 @@ if ((global.shaders) and (paletteIndex != -1)) pal_swap_reset();
 
 //Debug
 /*
-draw_text(x,y,string(vsp));
+draw_text(x,y,string(stunTimer));
+draw_text(x,y - 12,string(isStunned));

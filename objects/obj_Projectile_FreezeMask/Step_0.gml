@@ -1,11 +1,11 @@
 ///@description Main
 
-if (((pausable) and (!global.pause)) or (!pausable))
+#region Event Inherited
+event_inherited();
+#endregion
+
+if (!isPaused)
 {
-	//Event Inherited
-	
-	event_inherited();
-	
 	//Particle Timer
 	
 	if (particleTimer > 0)

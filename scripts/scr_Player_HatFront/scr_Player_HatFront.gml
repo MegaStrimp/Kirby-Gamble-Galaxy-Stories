@@ -158,6 +158,16 @@ function scr_Player_HatFront(argument0,argument1)
 				switch (sprite_index)
 				{
 					case sprIdle:
+					case sprIdleBlink:
+					case sprIdleNormalSlopeL:
+					case sprIdleNormalSlopeLBlink:
+					case sprIdleNormalSlopeR:
+					case sprIdleNormalSlopeRBlink:
+					case sprIdleSteepSlopeL:
+					case sprIdleSteepSlopeLBlink:
+					case sprIdleSteepSlopeR:
+					case sprIdleSteepSlopeRBlink:
+					case sprItemCarryLightIdle:
 					case sprItemCarryLightIdleNormalSlopeL:
 					case sprItemCarryLightIdleNormalSlopeLBlink:
 					case sprItemCarryLightIdleNormalSlopeR:
@@ -241,6 +251,14 @@ function scr_Player_HatFront(argument0,argument1)
 					
 					case sprWarpStar2:
 					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_WarpStar2;
+					break;
+					
+					case sprWarpStar3:
+					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					hatFrontIndex = spr_Kirby_HatFront_Wing_KSSU_WarpStar4;
 					break;
 					
 					case sprGuard:
@@ -333,6 +351,14 @@ function scr_Player_HatFront(argument0,argument1)
 					
 					case sprWarpStar2:
 					hatFrontIndex = spr_Kirby_HatFront_Water_Modern_WarpStar2;
+					break;
+					
+					case sprWarpStar3:
+					hatFrontIndex = spr_Kirby_HatFront_Water_Modern_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					hatFrontIndex = spr_Kirby_HatFront_Water_Modern_WarpStar4;
 					break;
 				}
 				break;

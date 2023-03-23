@@ -1,9 +1,5 @@
 ///@description Initialize Variables
 
-//Randomize
-
-randomize();
-
 //Event Inherited
 
 event_inherited();
@@ -45,6 +41,7 @@ isUfo = false;
 straightBounce = false;
 jumpCount = 0;
 trailSpr = spr_Projectile_MysticBeam_Air_Trail;
+pulseTarget = 0;
 
 //Sprites
 

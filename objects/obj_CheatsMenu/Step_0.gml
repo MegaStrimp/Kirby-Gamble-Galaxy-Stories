@@ -10,6 +10,11 @@ if (!global.pause)
 	if ((keyUpPressed) or (keyDownPressed)) audio_play_sound(snd_BossHealth,0,false);
 	#endregion
 	
+	if ((selection != "cheats") and (mouse_check_button_pressed(mb_left)) and ((point_in_rectangle(mouse_x,mouse_y,186,74,294,182))))
+	{
+		selection = "cheats";
+	}
+	
 	switch (selection)
 	{
 		case "cheats":
@@ -30,11 +35,19 @@ if (!global.pause)
 		
 		if (!instance_exists(obj_Fade))
 		{
-			if ((keyJumpPressed) or (keyStartPressed) or ((mouse_check_button_pressed(mb_left)) and ((point_in_rectangle(mouse_x,mouse_y,100,59,400,150)))))
+			if ((keyJumpPressed) or (keyStartPressed) or ((mouse_check_button_pressed(mb_left)) and ((point_in_rectangle(mouse_x,mouse_y,186,74,294,182)))))
 			{
-				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
-				audio_play_sound(snd_ButtonYes,0,false);
-				select = true;
+				if (cheatsArray[# discSelection,4])
+				{
+					if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+					audio_play_sound(snd_ButtonYes,0,false);
+					select = true;
+				}
+				else
+				{
+					if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+					audio_play_sound(snd_ButtonNo,0,false);
+				}
 			}
 		}
 		
@@ -105,7 +118,7 @@ if (!global.pause)
 		
 		if (select)
 		{
-			if ((!global.debug) and (global.canSave)) scr_SaveGame(global.selectedSave);
+			if (global.canSave) scr_SaveGame(global.selectedSave);
 			var fade = instance_create_depth(x,y,-999,obj_Fade);
 			fade.targetRoom = rm_Collection;
 			select = false;
@@ -126,7 +139,7 @@ if (!global.pause)
 	
 	if (goBack)
 	{
-		if ((!global.debug) and (global.canSave)) scr_SaveGame(global.selectedSave);
+		if (global.canSave) scr_SaveGame(global.selectedSave);
 		var fade = instance_create_depth(x,y,-999,obj_Fade);
 		fade.targetRoom = rm_Collection;
 		goBack = false;

@@ -1,9 +1,5 @@
 ///@description Initialize Variables
 
-//Randomize
-
-randomize();
-
 //Other Variables
 
 state = 0;

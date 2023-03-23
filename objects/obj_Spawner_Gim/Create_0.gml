@@ -11,14 +11,14 @@ gravLimitNormal = 7;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_Gim_Normal_Palette_SpinningBrown;
 state = 0;
-hp = 11;
-dmg = 1;
+hp = gim_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.yoyo;
-points = 500;
+points = gim_Points;
 hurtable = true;
 hasGravity = true;
 heavy = false;

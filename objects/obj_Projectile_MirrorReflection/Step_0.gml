@@ -1,27 +1,11 @@
 ///@description Main
 
-//Characters
+#region Event Inherited
+event_inherited();
+#endregion
 
-if (setupTimer == 0)
+if (!isPaused)
 {
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_Projectile_MirrorReflection_Normal_Idle;
-		break;
-	}
-	
-	while (place_meeting(x,y + 1,obj_Wall)) y -= 1;
-}
-
-if (((pausable) and (!global.pause)) or (!pausable))
-{
-	//Event Inherited
-	
-	event_inherited();
-	
 	//Movement
 	
 	if (spd < spdMax)

@@ -1,25 +1,11 @@
 ///@description Main
 
-#region Characters
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		#region Normal
-		case 0:
-		sprIdle = spr_Doomsday_Normal_Bomb;
-		break;
-		#endregion
-	}
-}
+#region Event Inherited
+event_inherited();
 #endregion
 
-if (((pausable) and (!global.pause)) or (!pausable))
+if (!isPaused)
 {
-	#region Event Inherited
-	event_inherited();
-	#endregion
-	
 	#region Get Inhaled
 	scr_Object_Inhale(false);
 	#endregion

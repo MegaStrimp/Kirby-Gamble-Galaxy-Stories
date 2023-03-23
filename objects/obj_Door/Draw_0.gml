@@ -15,7 +15,7 @@ if (doorVisible) draw_sprite(sprStar,parIndex,x,y - sprite_get_height(sprite_ind
 
 //Draw Button
 
-if ((tutorial) and ((distance_to_object(obj_Player)) <= 60)) draw_sprite(spr_TutorialSign_Symbol_DpadUp,0,x,y - 48);
+if ((tutorial) and ((distance_to_object(obj_Player)) <= 60)) draw_sprite(spr_Door_Symbol_DpadUp,0,x,y - 48);
 
 //Draw Text
 

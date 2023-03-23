@@ -8,14 +8,14 @@ movespeed = 1.5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_Cerulean_Normal_Palette_GreenBean;
 state = 0;
-hp = 16;
-dmg = 1;
+hp = cerulean_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.none;
-points = 200;
+points = cerulean_Points;
 hurtable = true;
 hasGravity = false;
 heavy = false;

@@ -2,9 +2,12 @@
   "resourceType": "GMPath",
   "resourceVersion": "1.0",
   "name": "pth_Cutscene_Intro",
-  "kind": 1,
   "closed": false,
-  "precision": 4,
+  "kind": 1,
+  "parent": {
+    "name": "Cutscene",
+    "path": "folders/Paths/Cutscene.yy",
+  },
   "points": [
     {"speed":100.0,"x":24.0,"y":840.0,},
     {"speed":100.0,"x":216.0,"y":840.0,},
@@ -14,8 +17,5 @@
     {"speed":100.0,"x":504.0,"y":312.0,},
     {"speed":100.0,"x":528.0,"y":72.0,},
   ],
-  "parent": {
-    "name": "Cutscene",
-    "path": "folders/Paths/Cutscene.yy",
-  },
+  "precision": 4,
 }

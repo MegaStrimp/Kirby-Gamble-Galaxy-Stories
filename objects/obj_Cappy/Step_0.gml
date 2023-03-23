@@ -1,35 +1,5 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdleL = spr_Cappy_Normal_IdleL;
-		sprIdleR = spr_Cappy_Normal_IdleR;
-		sprShroomIdle = spr_Cappy_Normal_ShroomIdle;
-		sprHurtCapless = spr_Cappy_Normal_Hurt;
-		sprShroom = spr_Cappy_Normal_Shroom;
-		break;
-		
-		//Robo
-		
-		case 1:
-		sprIdleL = spr_Cappy_Robo_IdleL;
-		sprIdleR = spr_Cappy_Robo_IdleR;
-		sprShroomIdle = spr_Cappy_Robo_ShroomIdle;
-		sprHurtCapless = spr_Cappy_Robo_Hurt;
-		sprShroom = spr_Cappy_Robo_Shroom;
-		break;
-	}
-	sprHurt = sprHurtCapless;
-	if (state == 1) attackStopTimer = attackStopTimerMax;
-}
-
 //Hurt Sprite
 
 if (thrown)
@@ -45,7 +15,7 @@ else
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	if (!parasol) scr_Object_Inhale(enemy);
 	
@@ -215,22 +185,23 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 	}
 	else if (attackTimer == 0)
 	{
-		if (audio_is_playing(snd_EnemyJump1)) audio_stop_sound(snd_EnemyJump1);
-		audio_play_sound(snd_EnemyJump1,0,false);
-		shroom = instance_create_depth(x - 1,y - 9,depth - 1,obj_CappyShroom);
-		shroom.owner = id;
-		shroom.sprite_index = sprShroom;
-		shroom.paletteIndex = paletteIndex;
-		shroom.vsp = shroomLaunchSpd;
-		dirX = walkDirX;
-		image_xscale = scale * dirX;
-		thrown = true;
+		if (state != 0)
+		{
+			if (audio_is_playing(snd_EnemyJump1)) audio_stop_sound(snd_EnemyJump1);
+			audio_play_sound(snd_EnemyJump1,0,false);
+			shroom = instance_create_depth(x - 1,y - 9,depth - 1,obj_CappyShroom);
+			shroom.owner = id;
+			shroom.sprite_index = sprShroom;
+			shroom.paletteIndex = paletteIndex;
+			shroom.vsp = shroomLaunchSpd;
+			dirX = walkDirX;
+			image_xscale = scale * dirX;
+			thrown = true;
+		}
 		attackTimer = -1;
 	}
 }
 else
 {
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

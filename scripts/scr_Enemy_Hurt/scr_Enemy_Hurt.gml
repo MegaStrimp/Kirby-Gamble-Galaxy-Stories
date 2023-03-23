@@ -5,34 +5,73 @@ function scr_Enemy_Hurt(argument0,argument1)
 	var targetObj = argument0;
 	var hurtSource = argument1;
 	
+	if (hurtSource == targetObj.collidingHitbox) return;
+	
 	var canBeHurt = false;
 	if ((hurtSource.owner != other) and (hurtSource.enemy != targetObj.enemy) and (((hurtSource.object_index == obj_Projectile_ExplosionMask)/* and (!targetObj.explosionResistance)*/) or (hurtSource.object_index != obj_Projectile_ExplosionMask)) and ((((!targetObj.isMiniBoss) and (!targetObj.isBoss)) and (hurtSource.hurtsEnemy)) or (((targetObj.isMiniBoss) or (targetObj.isBoss)) and (hurtSource.hurtsEnemy) and (hurtSource.hurtsBoss)))) canBeHurt = true;
 	if (canBeHurt)
 	{
+		if (!targetObj.hurtFunction(hurtSource)) return;		// if the enemy doesn't want to go through this function, let it pass by
+		
 		if (audio_is_playing(snd_EnemyHurt)) audio_stop_sound(snd_EnemyHurt);
 		audio_play_sound(snd_EnemyHurt,0,false);
 		targetObj.takenDamageType = hurtSource.damageType;
 		targetObj.takenIsFamiliar = hurtSource.isFamiliar;
-		if (hurtSource.dmg >= targetObj.hp)
+		
+		targetObj.hurtStopTimer = targetObj.hurtStopTimerMax;
+		if (is_struct(hurtSource.hitStop))
+		{
+			var hurtLength = hurtSource.hitStop.len;
+			var hitShake = hurtSource.hitStop.shakeStr;
+			
+			if (hitShake == 0)
+			{
+				hitShake = hurtLength * 2.2;
+			}
+			
+			hurtSource.stunTimer = 0;
+			if (hurtSource.hitStop.affectSrc) hurtSource.stunTimer = hurtLength;
+			hurtSource.isStunned = true;
+			
+			if (targetObj.isMiniBoss or isBoss)
+			{
+				hitShake = floor(hitShake / 2);
+				hurtLength = 0;
+			}
+			
+			if (!hurtSource.hitStop.affectTar) hurtLength = 0;
+			targetObj.shakeX = hitShake;
+			targetObj.shakeY = hitShake;
+			targetObj.hurtStopTimer = hurtLength;
+			if (hurtLength) targetObj.shakeDividend = hitShake / (hurtLength + 10);
+		}
+		
+		if (hurtSource.dmg >= (targetObj.hp + 50))
 		{
 			targetObj.bubbleX = x;
 			targetObj.bubbleY = y;
 			targetObj.hurtTimer = ((targetObj.hurtStopTimerMax + 5) * (!targetObj.instaDeath));
 			if ((targetObj.hasDeathKnockback) and (!targetObj.isBoss) and (targetObj.isMiniBoss) and (targetObj.takenDamageType != damageTypes.ice)) targetObj.hurtStopTimer = targetObj.hurtStopTimerMax;
-			targetObj.shake = 1;
-			if (instance_exists(obj_Camera)) obj_Camera.shake = 3;
+			
+			with (obj_Camera)
+			{
+				shakeX = 3;
+				shakeY = 3;
+			}
 		}
 		else
 		{
 			targetObj.hurtTimer = targetObj.hurtTimerMax;
 		}
+		
 		if ((global.enemyHealthbars) and (targetObj.canGetHealthbar) and ((!targetObj.isMiniBoss) or (!targetObj.isBoss))) global.healthbarMarkedEnemy = targetObj.id;
 		targetObj.hp -= hurtSource.dmg;
+		targetObj.bossHealthbarShakeTimer = targetObj.bossHealthbarShakeTimerMax;
 		
 		#region Hit Numbers
 		if (global.hitNumbers)
 		{
-			var hitNumber = instance_create_depth(hurtSource.x,hurtSource.y,-900,obj_HitNumbers);
+			var hitNumber = instance_create_depth(targetObj.x,targetObj.y,-900,obj_HitNumbers);
 			hitNumber.number = hurtSource.dmg;
 			hitNumber.hsp = random_range(-1,1);
 			hitNumber.vsp = -2;
@@ -213,6 +252,10 @@ function scr_Enemy_Hurt(argument0,argument1)
 				break;
 	
 				case playerAbilities.mic:
+				hitNumber.canChangeColor = true;
+				hitNumber.redTarget = 125;
+				hitNumber.greenTarget = 75;
+				hitNumber.blueTarget = 215;
 				hitNumber.shake = 3;
 				hitNumber.clampY = true;
 				break;
@@ -383,18 +426,20 @@ function scr_Enemy_Hurt(argument0,argument1)
 				break;
 			}
 		}
-		targetObj.shakeX = 2;
-		targetObj.shakeY = 2;
 		targetObj.direction = point_direction(targetObj.x,targetObj.y,x,y) + irandom_range(150,210);
-		scr_HurtKnockback(targetObj,hurtSource);
-		if (hurtSource.hsp == 0)
-		{
-			if (x < targetObj.x) targetObj.projectileHitKnockbackDir = -1;
-		}
-		else
-		{
-			targetObj.projectileHitKnockbackDir = -sign(hurtSource.hsp);
-		}
+		
+		targetObj.backupFlags |= targetObj.hasGravity;
+		targetObj.backupFlags |= (targetObj.hasXCollision)  << BFLAGS.BF_XCOLL;
+		targetObj.backupFlags |= (targetObj.hasYCollision) << BFLAGS.BF_YCOLL;
+		targetObj.backupFlags |= (targetObj.destroyOutsideView) << BFLAGS.BF_DESPAWN;
+		
+		targetObj.hasGravity = true;
+		targetObj.hasXCollision = true;
+		targetObj.hasYCollision = true;
+		targetObj.destroyOutsideView = false;
+		if (targetObj.hp <= 0) targetObj.destroyOutsideView = true;
+		
+		scr_HurtKnockback(targetObj, hurtSource);
 		targetObj.hurt = true;
 		if (targetObj.sprHurt != -1) targetObj.hurtImageIndex = irandom_range(0,sprite_get_number(targetObj.sprHurt) - 1);
 		if (!hurtSource.destroyableByEnemy)
@@ -452,4 +497,5 @@ function scr_Enemy_Hurt(argument0,argument1)
 			break;
 		}
 	}
+	targetObj.collidingHitbox = hurtSource;
 }

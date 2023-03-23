@@ -1,26 +1,5 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprCalmIdle = spr_Scarfy_Normal_CalmIdle;
-		sprCalmFly = spr_Scarfy_Normal_CalmFly;
-		sprCalmHurt = spr_Scarfy_Normal_CalmHurt;
-		sprMadFly = spr_Scarfy_Normal_MadFly;
-		sprMadHurt = spr_Scarfy_Normal_MadHurt;
-		break;
-		sprHurt = sprCalmHurt;
-	}
-	
-	if (state == 1) attackTimer = -1;
-}
-
 //Hurt Sprite
 
 if (attack)
@@ -36,7 +15,7 @@ else
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	//Get Inhaled
 	
@@ -203,6 +182,9 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 				var par = instance_create_depth(x,y,depth,obj_Projectile_ExplosionMask);
 				par.owner = id;
 				par.enemy = true;
+				par.abilityType = playerAbilities.bomb;
+				par.dmg = scarfy_Explosion_Damage;
+				scr_Attack_SetKnockback(par,scarfy_Explosion_Strength,scarfy_Explosion_HitStopAffectSource,scarfy_Explosion_HitStopAffectPlayer,scarfy_Explosion_HitStopAffectTarget,scarfy_Explosion_HitStopLength,scarfy_Explosion_HitStopShakeStrength);
 				
 				var explosion = instance_create_depth(x,y,depth,obj_DeathParticles);
 				explosion.state = "explosion1";
@@ -315,6 +297,4 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 else
 {
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

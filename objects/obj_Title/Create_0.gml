@@ -34,9 +34,9 @@ introStateTimer = 30;
 
 //Save Files
 
-if (global.firstTimeBooting)
+if (global.firstTimeSetup)
 {
-	global.firstTimeBooting = false;
+	global.firstTimeSetup = false;
 	scr_SaveConfig("config.ini");
 }
 

@@ -4,10 +4,6 @@
 
 event_inherited();
 
-//Randomize
-
-randomize();
-
 //Physics
 
 accel = .015;
@@ -28,9 +24,9 @@ sprHurt = spr_Bouncy_Normal_Hurt;
 //Other Variables
 
 paletteIndex = spr_Bouncy_Normal_Palette_HoppingPink;
-hp = 16;
-dmg = 1;
-points = 260;
+hp = bouncy_Hp;
+dmg = baseEnemyContact_Damage;
+points = bouncy_Points;
 duck = false;
 jump = false;
 

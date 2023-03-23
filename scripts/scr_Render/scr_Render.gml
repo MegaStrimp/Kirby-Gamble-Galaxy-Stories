@@ -4,6 +4,7 @@ function scr_Render()
 {
 	//Stage Elements
 	
+	//instance_deactivate_object(obj_Enemy);
 	//instance_deactivate_object(obj_ParentWall);
 	instance_deactivate_object(obj_Door);
 	instance_deactivate_object(obj_Bumper);

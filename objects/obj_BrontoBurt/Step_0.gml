@@ -1,45 +1,5 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		if (!joy)
-		{
-			sprIdle = spr_BrontoBurt_Normal_Idle;
-			sprReady = spr_BrontoBurt_Normal_Ready;
-			sprWalk = spr_BrontoBurt_Normal_Walk;
-			sprFly = spr_BrontoBurt_Normal_Fly;
-		}
-		else
-		{
-			sprIdle = spr_BrontoBurt_Normal_Idle_Joy;
-			sprReady = spr_BrontoBurt_Normal_Ready_Joy;
-			sprWalk = spr_BrontoBurt_Normal_Walk_Joy;
-			sprFly = spr_BrontoBurt_Normal_Fly_Joy;
-		}
-		sprHurtGround = spr_BrontoBurt_Normal_HurtGround;
-		sprHurtFly = spr_BrontoBurt_Normal_HurtFly;
-		break;
-		
-		//Alien
-		
-		case 1:
-		sprIdle = spr_BrontoBurt_Alien_Idle;
-		sprReady = spr_BrontoBurt_Alien_Ready;
-		sprWalk = spr_BrontoBurt_Alien_Walk;
-		sprFly = spr_BrontoBurt_Alien_Fly;
-		sprHurtGround = spr_BrontoBurt_Alien_HurtGround;
-		sprHurtFly = spr_BrontoBurt_Alien_HurtFly;
-		break;
-	}
-}
-
 //Hurt Sprite
 
 if (place_meeting(x,y + 1,collisionY))
@@ -55,7 +15,7 @@ else
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	//Get Inhaled
 	
@@ -269,6 +229,4 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 else
 {
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

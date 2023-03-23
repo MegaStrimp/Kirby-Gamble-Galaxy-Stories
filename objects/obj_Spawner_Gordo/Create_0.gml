@@ -16,7 +16,7 @@ gravLimitParasol = .5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 horLoop = 1;
 verLoop = 1;
 horOffset = 0;
@@ -24,10 +24,10 @@ verOffset = 0;
 character = 0;
 paletteIndex = spr_Gordo_Normal_Palette_ThornyBackside;
 state = 0;
-hp = 1;
-dmg = 1;
+hp = gordo_Hp;
+dmg = gordo_ContactDamage;
 ability = playerAbilities.none;
-points = 100;
+points = gordo_Points;
 hurtable = false;
 hasGravity = false;
 heavy = false;

@@ -1,38 +1,14 @@
 ///@description Main
 
-//Setup Timer
+#region Event Inherited
+event_inherited();
+#endregion
 
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_Kirby_Normal_Mirror_Attack3;
-		break;
-	}
-	
-	if (state == 0)
-	{
-		angle = angle + (180 * -dirX) + jumpAngle;
-	}
-	else if (state == 1)
-	{
-		spdBuiltIn = spd + 1;
-		fricSpd = .6;
-	}
-}
-
-if (((pausable) and (!global.pause)) or (!pausable))
+if (!isPaused)
 {
 	//Variables
 	
 	scr_Player_Inputs(player);
-	
-	//Event Inherited
-	
-	event_inherited();
 	
 	if (instance_exists(owner))
     {
@@ -55,11 +31,11 @@ if (((pausable) and (!global.pause)) or (!pausable))
 				{
 		            if (keyUpHold)
 		            {
-		                other.angleSpd = -5;
+		                other.angleSpd = 5;
 		            }
 		            if (keyDownHold)
 		            {
-		                other.angleSpd = 5;
+		                other.angleSpd = -5;
 		            }
 	            }
 			}
@@ -173,13 +149,41 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		}
 		else if (restoreTimer == 0)
 		{
+			#region Variables
+			switch (owner.player)
+			{
+				case 0:
+				var playerAbility = global.abilityP1;
+				var playerCharacter = global.characterP1;
+				var playerSprayPaint = global.sprayPaintP1;
+				break;
+				
+				case 1:
+				var playerAbility = global.abilityP2;
+				var playerCharacter = global.characterP2;
+				var playerSprayPaint = global.sprayPaintP2;
+				break;
+				
+				case 2:
+				var playerAbility = global.abilityP3;
+				var playerCharacter = global.characterP3;
+				var playerSprayPaint = global.sprayPaintP3;
+				break;
+				
+				case 3:
+				var playerAbility = global.abilityP4;
+				var playerCharacter = global.characterP4;
+				var playerSprayPaint = global.sprayPaintP4;
+				break;
+			}
+			#endregion
 			if (state == 0)
 	        {
 	            if (owner.state == playerStates.mirrorDash)
 	            {
 	                owner.visible = true;
 	                owner.attackTimer = 0;
-					owner.fallRoll = true;
+					if ((owner.canFallRoll) and (owner.carriedItem == carriedItems.none) and (playerAbility != playerAbilities.sword) and (playerAbility != playerAbilities.parasol) and (playerAbility != playerAbilities.hammer)) owner.fallRoll = true;
 	                owner.invincible = false;
 	                owner.state = playerStates.normal;
 	            }
@@ -190,7 +194,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	            {
 	                owner.visible = true;
 	                owner.attackTimer = 0;
-					owner.fallRoll = true;
+					if ((owner.canFallRoll) and (owner.carriedItem == carriedItems.none) and (playerAbility != playerAbilities.sword) and (playerAbility != playerAbilities.parasol) and (playerAbility != playerAbilities.hammer)) owner.fallRoll = true;
 	                owner.invincible = false;
 	                owner.state = playerStates.normal;
 	            }

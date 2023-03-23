@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	if (appear)
 	{
@@ -93,6 +93,10 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 					mirror_id = instance_create_depth(x + (20 * dirX), y,depth, obj_Projectile_SimirrorBarrier);
 					mirror_id.dirX = dirX;
 					mirror_id.owner = id;
+					mirror_id.enemy = true;
+					mirror_id.abilityType = playerAbilities.mirror;
+					mirror_id.dmg = simirror_Mirror_Damage;
+					scr_Attack_SetKnockback(mirror_id,simirror_Mirror_Strength,simirror_Mirror_HitStopAffectSource,simirror_Mirror_HitStopAffectPlayer,simirror_Mirror_HitStopAffectTarget,simirror_Mirror_HitStopLength,simirror_Mirror_HitStopShakeStrength);
 					timerState++;
 				}
 				else

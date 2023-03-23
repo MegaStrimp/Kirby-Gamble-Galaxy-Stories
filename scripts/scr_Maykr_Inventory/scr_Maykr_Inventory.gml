@@ -121,8 +121,8 @@ function scr_Maykr_Inventory(argument0,argument1)
 			maykrSprXOffset[i] = sprite_get_xoffset(maykrSpr[i]);
 			maykrSprYOffset[i] = sprite_get_yoffset(maykrSpr[i]);
 			i += 1;
-			maykrInventory[i] = maykrObjects.search;
-			maykrSpr[i] = spr_Search_Normal_Idle;
+			maykrInventory[i] = maykrObjects.searches;
+			maykrSpr[i] = spr_Searches_Normal_Idle;
 			maykrSprXOffset[i] = sprite_get_xoffset(maykrSpr[i]);
 			maykrSprYOffset[i] = sprite_get_yoffset(maykrSpr[i]);
 			i += 1;

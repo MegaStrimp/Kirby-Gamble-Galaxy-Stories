@@ -9,14 +9,14 @@ groundSpdMax = 1.5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
-paletteIndex = spr_Onion_Normal_Palette_OrangeCarrot;
+paletteIndex = choose(spr_Onion_Normal_Palette_OrangeCarrot,spr_Onion_Normal_Palette_BrightOrange,spr_Onion_Normal_Palette_DarkOrange,spr_Onion_Normal_Palette_LightOrange,spr_Onion_Normal_Palette_PaleOrange,spr_Onion_Normal_Palette_SaturatedOrange);
 state = 0;
-hp = 1;
-dmg = 1;
+hp = onion_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.none;
-points = 200;
+points = onion_Points;
 hurtable = true;
 hasGravity = false;
 heavy = false;
@@ -40,12 +40,12 @@ collisionX = obj_ParentWall;
 collisionY = obj_ParentWall;
 hasXKnockback = true;
 hasYKnockback = true;
-hasDeathKnockback = false;
+hasDeathKnockback = true;
 deathOnBottom = true;
-objectOnDeath = true;
+objectOnDeath = false;
 objectOnDeathObj = obj_Projectile_ExplosionMask;
 groundFailsafe = true;
-hasDeathParticles = false;
+hasDeathParticles = true;
 jumpCountMax = 7;
 playerOffset = 48;
 

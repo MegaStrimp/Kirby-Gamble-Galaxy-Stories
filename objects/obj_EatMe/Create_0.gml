@@ -23,3 +23,5 @@ squadType = -1;
 cannedFood = false;
 amongUs = false;
 fishTaco = false;
+dirX = 1;
+dirY = 1;

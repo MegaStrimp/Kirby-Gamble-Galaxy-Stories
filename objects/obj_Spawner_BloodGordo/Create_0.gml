@@ -2,28 +2,20 @@
 
 //Physics
 
-accel = .02;
-decel = .05;
-movespeed = 1;
-jumpspeed = 4;
-grav = 0;
-gravNormal = .2;
-gravParasol = .1;
-gravLimit = 0;
-gravLimitNormal = 5;
-gravLimitParasol = .5;
+spdMin = .02;
+spdMax = .2;
 
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_BloodGordo_Normal_Palette_BloodyThorns;
 state = 0;
-hp = 1;
-dmg = 1;
+hp = bloodGordo_Hp;
+dmg = bloodGordo_ContactDamage;
 ability = playerAbilities.none;
-points = 100;
+points = bloodGordo_Points;
 hurtable = false;
 hasGravity = false;
 heavy = false;
@@ -51,6 +43,7 @@ deathOnBottom = true;
 objectOnDeath = false;
 objectOnDeathObj = obj_Projectile_ExplosionMask;
 groundFailsafe = true;
+radius = 62;
 
 //Timers
 

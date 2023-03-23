@@ -3,6 +3,7 @@
 //Other Variables
 
 hudOffset = -250;
+menuIndex = 0;
 page = 0;
 trophyArray = -1;
 selection = "trophies";

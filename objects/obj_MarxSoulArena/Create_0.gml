@@ -119,10 +119,6 @@ tileRow4d.accel = tileRow4a.accel;
 
 ///@description Initialize Variables
 
-////Randomize
-
-//randomize();
-
 ////Other Variables
 
 //create = true;

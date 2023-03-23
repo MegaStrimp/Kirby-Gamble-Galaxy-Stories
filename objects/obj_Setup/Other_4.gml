@@ -26,6 +26,10 @@ switch (room)
 	if (!instance_exists(obj_Maykr_Control)) instance_create_depth(0,0,-999,obj_Maykr_Control);
 	break;
 	
+	case rm_SMB_BowserImpostor:
+	global.gamemode = gamemodes.gamblion;
+	break;
+	
 	default:
 	global.gamemode = gamemodes.normal;
 	break;

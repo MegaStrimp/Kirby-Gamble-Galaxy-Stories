@@ -27,7 +27,7 @@ if (death)
 event_inherited();
 #endregion
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if ((!global.pause) and (((!global.cutscene) or ((global.cutscene) and (phase == 0))) and (pausedInCutscenes)))
 {
 	#region Hurt Player
 	if (!death) scr_Enemy_HurtsPlayer(dmg);
@@ -56,11 +56,6 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 		
 		#region Phase 2
 		case 3:
-		break;
-		#endregion
-		
-		#region Death
-		case 4:
 		break;
 		#endregion
 	}
@@ -119,6 +114,7 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			spawnState = 0;
 			attackChooseTimer = attackChooseTimerMax;
 			hbActive = true;
+			hurtable = true;
 			break;
 		}
 		phaseChangeTimer = -1;
@@ -149,4 +145,8 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 	}
 	#endregion
 	#endregion
+}
+else
+{
+	image_speed = 0;
 }

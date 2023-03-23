@@ -2,16 +2,45 @@
 
 #region Variables
 clockTicks = ((readyP1) and (readyP2) and (readyP3) and (readyP4));
+
+if (clockTicks)
+{
+	if (audio_is_paused(snd_ClockTick)) audio_resume_sound(snd_ClockTick);
+}
+else
+{
+	if (!audio_is_paused(snd_ClockTick)) audio_pause_sound(snd_ClockTick);
+}
+#endregion
+
+#region Play Sound
+if (!soundPlayed)
+{
+	//audio_play_sound(snd_ClockTick,0,true);
+	soundPlayed = true;
+}
+#endregion
+
+#region Load Textures
+if (!loaded)
+{
+	switch (global.currentStage)
+	{
+		case stages.greenGreens:
+		scr_LoadTexturePage("GreenGreens");
+		break;
+	}
+	loaded = true;
+}
 #endregion
 
 #region Select
 for (var i = 0; i < 4; i++)
 {
 	#region Variables
-	var sep = (118 * i);
-	
 	var hasCoopPointer = global.hasP1;
 	var palettePointer = global.sprayPaintP1;
+	var paletteSelectionPointer = paletteSelectionP1;
 	var characterPointer = global.characterP1;
 	var characterSelectionPointer = characterSelectionP1;
 	var readyPointer = readyP1;
@@ -21,6 +50,7 @@ for (var i = 0; i < 4; i++)
 		case 1:
 		hasCoopPointer = global.hasP2;
 		palettePointer = global.sprayPaintP2;
+		paletteSelectionPointer = paletteSelectionP2;
 		characterPointer = global.characterP2;
 		characterSelectionPointer = characterSelectionP2;
 		readyPointer = readyP2;
@@ -30,6 +60,7 @@ for (var i = 0; i < 4; i++)
 		case 2:
 		hasCoopPointer = global.hasP3;
 		palettePointer = global.sprayPaintP3;
+		paletteSelectionPointer = paletteSelectionP3;
 		characterPointer = global.characterP3;
 		characterSelectionPointer = characterSelectionP3;
 		readyPointer = readyP3;
@@ -39,6 +70,7 @@ for (var i = 0; i < 4; i++)
 		case 3:
 		hasCoopPointer = global.hasP4;
 		palettePointer = global.sprayPaintP4;
+		paletteSelectionPointer = paletteSelectionP4;
 		characterPointer = global.characterP4;
 		characterSelectionPointer = characterSelectionP4;
 		readyPointer = readyP4;
@@ -104,35 +136,316 @@ for (var i = 0; i < 4; i++)
 					break;
 				}
 			}
+			
 			switch (subSelectionPointer)
 			{
 				case 0:
+				var characterHasChangedP1 = false;
+				var characterHasChangedP2 = false;
+				var characterHasChangedP3 = false;
+				var characterHasChangedP4 = false;
+				if (keyUpPressed)
+				{
+					if (characterSelectionPointer > 0)
+					{
+						if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+						audio_play_sound(snd_ButtonChange,0,false);
+						switch (i)
+						{
+							case 0:
+							characterHasChangedP1 = true;
+							characterSelectionP1 -= 1;
+							break;
+							
+							case 1:
+							characterHasChangedP2 = true;
+							characterSelectionP2 -= 1;
+							break;
+							
+							case 2:
+							characterHasChangedP3 = true;
+							characterSelectionP3 -= 1;
+							break;
+							
+							case 3:
+							characterHasChangedP4 = true;
+							characterSelectionP4 -= 1;
+							break;
+						}
+					}
+					else
+					{
+						if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+						audio_play_sound(snd_ButtonNo,0,false);
+					}
+				}
+				
+				if (keyDownPressed)
+				{
+					if (characterSelectionPointer < charactersMax - 1)
+					{
+						if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+						audio_play_sound(snd_ButtonChange,0,false);
+						switch (i)
+						{
+							case 0:
+							characterHasChangedP1 = true;
+							characterSelectionP1 += 1;
+							break;
+							
+							case 1:
+							characterHasChangedP2 = true;
+							characterSelectionP2 += 1;
+							break;
+							
+							case 2:
+							characterHasChangedP3 = true;
+							characterSelectionP3 += 1;
+							break;
+							
+							case 3:
+							characterHasChangedP4 = true;
+							characterSelectionP4 += 1;
+							break;
+						}
+					}
+					else
+					{
+						if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+						audio_play_sound(snd_ButtonNo,0,false);
+					}
+				}
+				
+				if (characterHasChangedP1)
+				{
+					var characterSprayPointer = global.sprayPaintKirbyP1;
+					switch (characterSelectionP1)
+					{
+						case playerCharacters.kirby:
+						characterSprayPointer = global.sprayPaintKirbyP1;
+						break;
+						
+						case playerCharacters.gamble:
+						characterSprayPointer = global.sprayPaintGambleP1;
+						break;
+						
+						case playerCharacters.metaKnight:
+						characterSprayPointer = global.sprayPaintMetaKnightP1;
+						break;
+						
+						case playerCharacters.gooey:
+						characterSprayPointer = global.sprayPaintGooeyP1;
+						break;
+						
+						case playerCharacters.magolor:
+						characterSprayPointer = global.sprayPaintMagolorP1;
+						break;
+					}
+					
+					for (var i = 0; i < spraysMax; i++)
+					{
+						if (spraysArray[# i,0] == characterSprayPointer) paletteSelectionP1 = i;
+					}
+				}
+				
+				if (characterHasChangedP2)
+				{
+					var characterSprayPointer = global.sprayPaintKirbyP2;
+					switch (characterSelectionP2)
+					{
+						case playerCharacters.kirby:
+						characterSprayPointer = global.sprayPaintKirbyP2;
+						break;
+						
+						case playerCharacters.gamble:
+						characterSprayPointer = global.sprayPaintGambleP2;
+						break;
+						
+						case playerCharacters.metaKnight:
+						characterSprayPointer = global.sprayPaintMetaKnightP2;
+						break;
+						
+						case playerCharacters.gooey:
+						characterSprayPointer = global.sprayPaintGooeyP2;
+						break;
+						
+						case playerCharacters.magolor:
+						characterSprayPointer = global.sprayPaintMagolorP2;
+						break;
+					}
+					
+					for (var i = 0; i < spraysMax; i++)
+					{
+						if (spraysArray[# i,0] == characterSprayPointer) paletteSelectionP2 = i;
+					}
+				}
+				
+				if (characterHasChangedP3)
+				{
+					var characterSprayPointer = global.sprayPaintKirbyP3;
+					switch (characterSelectionP3)
+					{
+						case playerCharacters.kirby:
+						characterSprayPointer = global.sprayPaintKirbyP3;
+						break;
+						
+						case playerCharacters.gamble:
+						characterSprayPointer = global.sprayPaintGambleP3;
+						break;
+						
+						case playerCharacters.metaKnight:
+						characterSprayPointer = global.sprayPaintMetaKnightP3;
+						break;
+						
+						case playerCharacters.gooey:
+						characterSprayPointer = global.sprayPaintGooeyP3;
+						break;
+						
+						case playerCharacters.magolor:
+						characterSprayPointer = global.sprayPaintMagolorP3;
+						break;
+					}
+					
+					for (var i = 0; i < spraysMax; i++)
+					{
+						if (spraysArray[# i,0] == characterSprayPointer) paletteSelectionP3 = i;
+					}
+				}
+				
+				if (characterHasChangedP4)
+				{
+					var characterSprayPointer = global.sprayPaintKirbyP4;
+					switch (characterSelectionP4)
+					{
+						case playerCharacters.kirby:
+						characterSprayPointer = global.sprayPaintKirbyP4;
+						break;
+						
+						case playerCharacters.gamble:
+						characterSprayPointer = global.sprayPaintGambleP4;
+						break;
+						
+						case playerCharacters.metaKnight:
+						characterSprayPointer = global.sprayPaintMetaKnightP4;
+						break;
+						
+						case playerCharacters.gooey:
+						characterSprayPointer = global.sprayPaintGooeyP4;
+						break;
+						
+						case playerCharacters.magolor:
+						characterSprayPointer = global.sprayPaintMagolorP4;
+						break;
+					}
+					
+					for (var i = 0; i < spraysMax; i++)
+					{
+						if (spraysArray[# i,0] == characterSprayPointer) paletteSelectionP4 = i;
+					}
+				}
+				
 				if (keyRightPressed)
 				{
-					switch (i)
+					if (charactersArray[# characterSelectionPointer,0] != playerCharacters.helper)
 					{
-						case 0:
-						subSelectionP1 = 1;
-						break;
-						
-						case 1:
-						subSelectionP2 = 1;
-						break;
-						
-						case 2:
-						subSelectionP3 = 1;
-						break;
-						
-						case 3:
-						subSelectionP4 = 1;
-						break;
+						if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+						audio_play_sound(snd_ButtonChange,0,false);
+						switch (i)
+						{
+							case 0:
+							subSelectionP1 = 1;
+							break;
+							
+							case 1:
+							subSelectionP2 = 1;
+							break;
+							
+							case 2:
+							subSelectionP3 = 1;
+							break;
+							
+							case 3:
+							subSelectionP4 = 1;
+							break;
+						}
+					}
+					else
+					{
+						if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+						audio_play_sound(snd_ButtonNo,0,false);
 					}
 				}
 				break;
 				
 				case 1:
+				if (keyUpPressed)
+				{
+					if (paletteSelectionPointer > 0)
+					{
+						if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+						audio_play_sound(snd_ButtonChange,0,false);
+						switch (i)
+						{
+							case 0:
+							paletteSelectionP1 -= 1;
+							break;
+							
+							case 1:
+							paletteSelectionP2 -= 1;
+							break;
+							
+							case 2:
+							paletteSelectionP3 -= 1;
+							break;
+							
+							case 3:
+							paletteSelectionP4 -= 1;
+							break;
+						}
+					}
+					else
+					{
+						if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+						audio_play_sound(snd_ButtonNo,0,false);
+					}
+				}
+				
+				if (keyDownPressed)
+				{
+					if (paletteSelectionPointer < spraysMax - 1)
+					{
+						if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+						audio_play_sound(snd_ButtonChange,0,false);
+						switch (i)
+						{
+							case 0:
+							paletteSelectionP1 += 1;
+							break;
+							
+							case 1:
+							paletteSelectionP2 += 1;
+							break;
+							
+							case 2:
+							paletteSelectionP3 += 1;
+							break;
+							
+							case 3:
+							paletteSelectionP4 += 1;
+							break;
+						}
+					}
+					else
+					{
+						if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+						audio_play_sound(snd_ButtonNo,0,false);
+					}
+				}
+				
 				if (keyLeftPressed)
 				{
+					if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+					audio_play_sound(snd_ButtonChange,0,false);
 					switch (i)
 					{
 						case 0:
@@ -173,109 +486,118 @@ else if (roomChangeTimer == 0)
 	fade.alphaSpd = .02;
 	
 	#region Change Player Attributes
-	var skin = global.skinKirbyP1;
-	switch (global.characterP1)
-	{
-		case playerCharacters.gamble:
-		skin = global.skinGambleP1;
-		break;
-		
-		case playerCharacters.metaKnight:
-		skin = global.skinMetaKnightP1;
-		break;
-		
-		case playerCharacters.helper:
-		skin = -1;
-		break;
-		
-		case playerCharacters.gooey:
-		skin = global.skinGooeyP1;
-		break;
-		
-		case playerCharacters.magolor:
-		skin = global.skinMagolorP1;
-		break;
-	}
-	var finalSkinP1 = scr_Player_SprayPaint(global.sprayPaintKirbyP1,global.characterP1,skin);
-	global.sprayPaintP1 = finalSkinP1;
+	global.characterP1 = charactersArray[# characterSelectionP1,0];
+	global.characterP2 = charactersArray[# characterSelectionP2,0];
+	global.characterP3 = charactersArray[# characterSelectionP3,0];
+	global.characterP4 = charactersArray[# characterSelectionP4,0];
 	
-	var skin = global.skinKirbyP2;
-	switch (global.characterP2)
+	if (global.hasP1)
 	{
-		case playerCharacters.gamble:
-		skin = global.skinGambleP2;
-		break;
-		
-		case playerCharacters.metaKnight:
-		skin = global.skinMetaKnightP2;
-		break;
-		
-		case playerCharacters.helper:
-		skin = -1;
-		break;
-		
-		case playerCharacters.gooey:
-		skin = global.skinGooeyP2;
-		break;
-		
-		case playerCharacters.magolor:
-		skin = global.skinMagolorP2;
-		break;
+		var palette = spraysArray[# paletteSelectionP1,0];
+		switch (global.characterP1)
+		{
+			case playerCharacters.kirby:
+			global.sprayPaintKirbyP1 = palette;
+			break;
+			
+			case playerCharacters.gamble:
+			global.sprayPaintGambleP1 = palette;
+			break;
+			
+			case playerCharacters.metaKnight:
+			global.sprayPaintMetaKnightP1 = palette;
+			break;
+			
+			case playerCharacters.gooey:
+			global.sprayPaintGooeyP1 = palette;
+			break;
+			
+			case playerCharacters.magolor:
+			global.sprayPaintMagolorP1 = palette;
+			break;
+		}
 	}
-	var finalSkinP2 = scr_Player_SprayPaint(global.sprayPaintKirbyP2,global.characterP2,skin);
-	global.sprayPaintP2 = finalSkinP2;
 	
-	var skin = global.skinKirbyP3;
-	switch (global.characterP3)
+	if (global.hasP2)
 	{
-		case playerCharacters.gamble:
-		skin = global.skinGambleP3;
-		break;
-		
-		case playerCharacters.metaKnight:
-		skin = global.skinMetaKnightP3;
-		break;
-		
-		case playerCharacters.helper:
-		skin = -1;
-		break;
-		
-		case playerCharacters.gooey:
-		skin = global.skinGooeyP3;
-		break;
-		
-		case playerCharacters.magolor:
-		skin = global.skinMagolorP3;
-		break;
+		var palette = spraysArray[# paletteSelectionP2,0];
+		switch (global.characterP2)
+		{
+			case playerCharacters.kirby:
+			global.sprayPaintKirbyP2 = palette;
+			break;
+			
+			case playerCharacters.gamble:
+			global.sprayPaintGambleP2 = palette;
+			break;
+			
+			case playerCharacters.metaKnight:
+			global.sprayPaintMetaKnightP2 = palette;
+			break;
+			
+			case playerCharacters.gooey:
+			global.sprayPaintGooeyP2 = palette;
+			break;
+			
+			case playerCharacters.magolor:
+			global.sprayPaintMagolorP2 = palette;
+			break;
+		}
 	}
-	var finalSkinP3 = scr_Player_SprayPaint(global.sprayPaintKirbyP3,global.characterP3,skin);
-	global.sprayPaintP3 = finalSkinP3;
 	
-	var skin = global.skinKirbyP4;
-	switch (global.characterP4)
+	if (global.hasP3)
 	{
-		case playerCharacters.gamble:
-		skin = global.skinGambleP4;
-		break;
-		
-		case playerCharacters.metaKnight:
-		skin = global.skinMetaKnightP4;
-		break;
-		
-		case playerCharacters.helper:
-		skin = -1;
-		break;
-		
-		case playerCharacters.gooey:
-		skin = global.skinGooeyP4;
-		break;
-		
-		case playerCharacters.magolor:
-		skin = global.skinMagolorP4;
-		break;
+		var palette = spraysArray[# paletteSelectionP3,0];
+		switch (global.characterP3)
+		{
+			case playerCharacters.kirby:
+			global.sprayPaintKirbyP3 = palette;
+			break;
+			
+			case playerCharacters.gamble:
+			global.sprayPaintGambleP3 = palette;
+			break;
+			
+			case playerCharacters.metaKnight:
+			global.sprayPaintMetaKnightP3 = palette;
+			break;
+			
+			case playerCharacters.gooey:
+			global.sprayPaintGooeyP3 = palette;
+			break;
+			
+			case playerCharacters.magolor:
+			global.sprayPaintMagolorP3 = palette;
+			break;
+		}
 	}
-	var finalSkinP4 = scr_Player_SprayPaint(global.sprayPaintKirbyP4,global.characterP4,skin);
-	global.sprayPaintP4 = finalSkinP4;
+	
+	if (global.hasP4)
+	{
+		var palette = spraysArray[# paletteSelectionP4,0];
+		switch (global.characterP4)
+		{
+			case playerCharacters.kirby:
+			global.sprayPaintKirbyP4 = palette;
+			break;
+			
+			case playerCharacters.gamble:
+			global.sprayPaintGambleP4 = palette;
+			break;
+			
+			case playerCharacters.metaKnight:
+			global.sprayPaintMetaKnightP4 = palette;
+			break;
+			
+			case playerCharacters.gooey:
+			global.sprayPaintGooeyP4 = palette;
+			break;
+			
+			case playerCharacters.magolor:
+			global.sprayPaintMagolorP4 = palette;
+			break;
+		}
+	}
 	#endregion
 	
 	roomChangeTimer = -1;

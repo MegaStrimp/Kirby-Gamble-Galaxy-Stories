@@ -15,3 +15,4 @@ canBeReflected = false;
 setScale = false;
 state = 0;
 enemy = false;
+isDirectHit = true;

@@ -2,9 +2,12 @@
   "resourceType": "GMPath",
   "resourceVersion": "1.0",
   "name": "pth_PlayerSideYo",
-  "kind": 1,
   "closed": false,
-  "precision": 4,
+  "kind": 1,
+  "parent": {
+    "name": "Player",
+    "path": "folders/Paths/Player.yy",
+  },
   "points": [
     {"speed":100.0,"x":-27.0,"y":-15.0,},
     {"speed":100.0,"x":-27.0,"y":-2.0,},
@@ -16,8 +19,5 @@
     {"speed":100.0,"x":36.0,"y":-10.0,},
     {"speed":100.0,"x":0.0,"y":0.0,},
   ],
-  "parent": {
-    "name": "Player",
-    "path": "folders/Paths/Player.yy",
-  },
+  "precision": 4,
 }

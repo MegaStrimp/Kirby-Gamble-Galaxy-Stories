@@ -1,40 +1,11 @@
 ///@description Main
 
-//Characters
+#region Event Inherited
+event_inherited();
+#endregion
 
-if (setupTimer == 0)
+if (!isPaused)
 {
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprForm1 = spr_Projectile_BeamCharge_Normal_Form1;
-		sprForm2 = spr_Projectile_BeamCharge_Normal_Form2;
-		sprForm3 = spr_Projectile_BeamCharge_Normal_Form3;
-		sprForm4 = spr_Projectile_BeamCharge_Normal_Form4;
-		break;
-		
-		//Gold
-		
-		case 1:
-		sprForm1 = spr_Projectile_BeamCharge_Gold_Form1;
-		sprForm2 = spr_Projectile_BeamCharge_Gold_Form2;
-		sprForm3 = spr_Projectile_BeamCharge_Gold_Form3;
-		sprForm4 = spr_Projectile_BeamCharge_Gold_Form4;
-		break;
-	}
-	sprIdle = sprForm1;
-	scaleEx = scale * 1.25;
-	scale = 0;
-}
-
-if (((pausable) and (!global.pause)) or (!pausable))
-{
-	//Event Inherited
-	
-	event_inherited();
-	
 	//Position
 	
 	x += hsp;
@@ -66,10 +37,10 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		par.destroyTimer = 1;
 		if (instance_exists(owner))
 		{
-			if (((owner.player == 0) and (global.hatTypeBeamP1 == abilityHatSkins.beam_marxSoul))
+			if ((abilityType = playerAbilities.beam) and (((owner.player == 0) and (global.hatTypeBeamP1 == abilityHatSkins.beam_marxSoul))
 			or ((owner.player == 1) and (global.hatTypeBeamP2 == abilityHatSkins.beam_marxSoul))
 			or ((owner.player == 2) and (global.hatTypeBeamP3 == abilityHatSkins.beam_marxSoul))
-			or ((owner.player == 3) and (global.hatTypeBeamP4 == abilityHatSkins.beam_marxSoul)))
+			or ((owner.player == 3) and (global.hatTypeBeamP4 == abilityHatSkins.beam_marxSoul))))
 			{
 				par.sprite_index = spr_Particle_MarxDiamonds;
 				par.image_alpha = .5;

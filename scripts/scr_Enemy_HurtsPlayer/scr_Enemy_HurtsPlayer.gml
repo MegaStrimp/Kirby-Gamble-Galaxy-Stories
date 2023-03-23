@@ -14,7 +14,7 @@ function scr_Enemy_HurtsPlayer(argument0)
 	if ((place_meeting(x,y,obj_Player)) and (((stopWhenHurt) and (!hurt)) or (!stopWhenHurt)) and (!global.cutscene))
 	{
 		collidedPlayer = instance_place(x,y,obj_Player);
-		if ((collidedPlayer.canGetHurt) and (!collidedPlayer.invincible) and (!collidedPlayer.hasInvinCandy))
+		if ((collidedPlayer.canGetHurt) and (!collidedPlayer.invincible) and (!collidedPlayer.hasInvinCandy) and !((object_get_parent(object_index) == obj_Projectile) and (!isDirectHit) and (collidedPlayer.attackNumber == playerAttacks.slideJump)))
 		{
 			//Variables
 			
@@ -22,24 +22,28 @@ function scr_Enemy_HurtsPlayer(argument0)
 			{
 				case 0:
 				var playerHp = global.healthP1;
+				var playerHpMax = global.healthP1Max;
 				var playerAbility = global.abilityP1;
 				var playerCharacter = global.characterP1;
 				break;
 				
 				case 1:
 				var playerHp = global.healthP2;
+				var playerHpMax = global.healthP2Max;
 				var playerAbility = global.abilityP2;
 				var playerCharacter = global.characterP2;
 				break;
 				
 				case 2:
 				var playerHp = global.healthP3;
+				var playerHpMax = global.healthP3Max;
 				var playerAbility = global.abilityP3;
 				var playerCharacter = global.characterP3;
 				break;
 				
 				case 3:
 				var playerHp = global.healthP4;
+				var playerHpMax = global.healthP4Max;
 				var playerAbility = global.abilityP4;
 				var playerCharacter = global.characterP4;
 				break;
@@ -71,11 +75,15 @@ function scr_Enemy_HurtsPlayer(argument0)
 			var oldHealthP3 = global.healthP3;
 			var oldHealthP4 = global.healthP4;
 			
+			var finalResistance = 1;
+			if (playerHp < playerHpMax / 2) finalResistance -= .2;
+			if (playerHp < playerHpMax / 3) finalResistance -= .1;
+			
 			switch (collidedPlayer.player)
 			{
 				case 0:
 				global.healP1Mod = global.healthP1;			
-				global.healthP1 -= dmg;
+				global.healthP1 -= floor(dmg * finalResistance);
 				if (global.healthP1 <= 0 && oldHealthP1 > global.undershotValP1){ // Undershot check, will need to add a check for if attack is a "finishing blow", in which case it will ignore undershot
 					global.healthP1 = global.undershotValP1;
 				}
@@ -92,11 +100,13 @@ function scr_Enemy_HurtsPlayer(argument0)
 						obj_Hud.flashStopP1Timer = obj_Hud.flashStopTimerMax;
 					}
 				}
+				
+				with (obj_Hud) shakeP1Timer = shakeTimerMax;
 				break;
 				
 				case 1:
 				global.healP2Mod = global.healthP2;			
-				global.healthP2 -= dmg;
+				global.healthP2 -= floor(dmg * finalResistance);
 				if (global.healthP2 <= 0 && oldHealthP2 > global.undershotValP2){ // Undershot check, will need to add a check for if attack is a "finishing blow", in which case it will ignore undershot
 					global.healthP2 = global.undershotValP2;
 				}
@@ -113,11 +123,13 @@ function scr_Enemy_HurtsPlayer(argument0)
 						obj_Hud.flashStopP2Timer = obj_Hud.flashStopTimerMax;
 					}
 				}
+				
+				with (obj_Hud) shakeP2Timer = shakeTimerMax;
 				break;
 				
 				case 2:
 				global.healP3Mod = global.healthP3;			
-				global.healthP3 -= dmg;
+				global.healthP3 -= floor(dmg * finalResistance);
 				if (global.healthP3 <= 0 && oldHealthP3 > global.undershotValP3){ // Undershot check, will need to add a check for if attack is a "finishing blow", in which case it will ignore undershot
 					global.healthP3 = global.undershotValP3;
 				}
@@ -134,11 +146,13 @@ function scr_Enemy_HurtsPlayer(argument0)
 						obj_Hud.flashStopP3Timer = obj_Hud.flashStopTimerMax;
 					}
 				}
+				
+				with (obj_Hud) shakeP3Timer = shakeTimerMax;
 				break;
 				
 				case 3:
-				global.healP4Mod = global.healthP4;			
-				global.healthP4 -= dmg;
+				global.healP4Mod = global.healthP4;
+				global.healthP4 -= floor(dmg * finalResistance);
 				if (global.healthP4 <= 0 && oldHealthP4 > global.undershotValP4){ // Undershot check, will need to add a check for if attack is a "finishing blow", in which case it will ignore undershot
 					global.healthP4 = global.undershotValP4;
 				}
@@ -155,6 +169,8 @@ function scr_Enemy_HurtsPlayer(argument0)
 						obj_Hud.flashStopP4Timer = obj_Hud.flashStopTimerMax;
 					}
 				}
+				
+				with (obj_Hud) shakeP4Timer = shakeTimerMax;
 				break;
 			}
 			
@@ -282,6 +298,14 @@ function scr_Enemy_HurtsPlayer(argument0)
 					abilityDropStar.sprite_index = spr_AbilityStar_Sleep;
 					break;
 					
+					case playerAbilities.scan:
+					abilityDropStar.sprite_index = spr_AbilityStar_Scan;
+					break;
+					
+					case playerAbilities.mic:
+					abilityDropStar.sprite_index = spr_AbilityStar_Mic;
+					break;
+					
 					default:
 					abilityDropStar.sprite_index = spr_AbilityStar_Normal;
 					break;
@@ -290,18 +314,26 @@ function scr_Enemy_HurtsPlayer(argument0)
 				{
 					case 0:
 					global.abilityP1 = playerAbilities.none;
+					abilityDropStar.micCount = global.micCountP1;
+					global.micCountP1 = 0;
 					break;
 					
 					case 1:
 					global.abilityP2 = playerAbilities.none;
+					abilityDropStar.micCount = global.micCountP2;
+					global.micCountP2 = 0;
 					break;
 					
 					case 2:
 					global.abilityP3 = playerAbilities.none;
+					abilityDropStar.micCount = global.micCountP3;
+					global.micCountP3 = 0;
 					break;
 					
 					case 3:
 					global.abilityP4 = playerAbilities.none;
+					abilityDropStar.micCount = global.micCountP4;
+					global.micCountP4 = 0;
 					break;
 				}
 			}
@@ -371,21 +403,27 @@ function scr_Enemy_HurtsPlayer(argument0)
 			if (audio_is_playing(snd_EnemyHurt)) audio_stop_sound(snd_EnemyHurt);
 			audio_play_sound(snd_EnemyHurt,0,false);
 			takenDamageType = damageTypes.none;
-			var hitDmg = collidedPlayer.dmg;
-			if (collidedPlayer.hasInvinCandy) hitDmg = 100;
-			if (hitDmg >= hp)
+			var hitDmg = basePlayerContact_Damage;
+			if (collidedPlayer.hasInvinCandy) hitDmg = basePlayerInvinCandyContact_Damage;
+			if (hitDmg >= (hp + 50))
 			{
 				hurtTimer = hurtStopTimerMax + 5;
 				if ((hasDeathKnockback) and (takenDamageType != damageTypes.ice)) hurtStopTimer = hurtStopTimerMax;
 			    shake = 1;
-			    if (instance_exists(obj_Camera)) obj_Camera.shake = 3;
+				with (obj_Camera)
+				{
+					shakeX = 3;
+					shakeY = 3;
+				}
 			}
 			else
 			{
 				hurtTimer = hurtTimerMax;
 			}
 			if ((global.enemyHealthbars) and (!isMiniBoss) and (!isBoss)) global.healthbarMarkedEnemy = id;
+			
 			hp -= hitDmg;
+			bossHealthbarShakeTimer = bossHealthbarShakeTimerMax;
 			invincible = true;
 			invincibleTimer = invincibleTimerMax;
 			invincibleFlashTimer = invincibleFlashTimerMax;

@@ -4,10 +4,6 @@
 event_inherited();
 #endregion
 
-#region Randomize
-randomize();
-#endregion
-
 #region Physics
 decel = .05;
 movespeed = 2;
@@ -44,6 +40,7 @@ hp = 153;
 dmg = 1;
 ability = playerAbilities.mysticBeam;
 points = 2000;
+hurtFunction = func_HurtBossDefault;
 isMiniBoss = true;
 hbSetup = true;
 healthbarIndex = 2;

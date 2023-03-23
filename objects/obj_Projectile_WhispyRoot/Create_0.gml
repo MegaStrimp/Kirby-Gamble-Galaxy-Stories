@@ -1,9 +1,5 @@
 ///@description Initialize Variables
 
-//Randomize
-
-randomize();
-
 //Event Inherited
 
 event_inherited();
@@ -28,6 +24,7 @@ sprite_index = sprRootReady;
 //Other Variables
 
 canBeReflected = false;
+isDirectHit = true;
 character = 0;
 rootIndex = 0;
 recoilTimer = 10;

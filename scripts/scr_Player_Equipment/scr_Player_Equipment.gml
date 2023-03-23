@@ -132,19 +132,19 @@ function scr_Player_Equipment(argument0,argument1)
 			switch (player)
 			{
 				case 0:
-				var altHatToCheck = global.hatTypeBeamP1;
+				var altHatToCheck = global.hatTypeMysticBeamP1;
 				break;
 				
 				case 1:
-				var altHatToCheck = global.hatTypeBeamP2;
+				var altHatToCheck = global.hatTypeMysticBeamP2;
 				break;
 				
 				case 2:
-				var altHatToCheck = global.hatTypeBeamP3;
+				var altHatToCheck = global.hatTypeMysticBeamP3;
 				break;
 				
 				case 3:
-				var altHatToCheck = global.hatTypeBeamP4;
+				var altHatToCheck = global.hatTypeMysticBeamP4;
 				break;
 			}
 			
@@ -597,6 +597,14 @@ function scr_Player_Equipment(argument0,argument1)
 					equipmentIndex = spr_Kirby_Equipment_Parasol_KSSU_WarpStar2;
 					break;
 					
+					case sprWarpStar3:
+					equipmentIndex = spr_Kirby_Equipment_Parasol_KSSU_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					equipmentIndex = spr_Kirby_Equipment_Parasol_KSSU_WarpStar4;
+					break;
+					
 					case sprGuard:
 					equipmentIndex = spr_Kirby_Equipment_Parasol_KSSU_Guard;
 					break;
@@ -792,6 +800,14 @@ function scr_Player_Equipment(argument0,argument1)
 					
 					case sprWarpStar2:
 					//equipmentIndex = spr_Kirby_Equipment_Bell_Modern_WarpStar2;
+					break;
+					
+					case sprWarpStar3:
+					//equipmentIndex = spr_Kirby_Equipment_Bell_Modern_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					//equipmentIndex = spr_Kirby_Equipment_Bell_Modern_WarpStar4;
 					break;
 					
 					case sprGuard:

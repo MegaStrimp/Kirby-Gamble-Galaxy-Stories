@@ -11,14 +11,14 @@ gravLimitNormal = 7;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = AAAAAAAA;
 state = 0;
-hp = AAAAAAAA;
-dmg = 1;
+hp = birdon_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.wing;
-points = AAAAAAAA;
+points = birdon_Points;
 hurtable = true;
 hasGravity = true;
 heavy = false;

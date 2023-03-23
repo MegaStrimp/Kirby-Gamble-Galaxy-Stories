@@ -4,10 +4,6 @@
 
 event_inherited();
 
-//Randomize
-
-randomize();
-
 //Physics
 
 decel = .05;
@@ -30,10 +26,10 @@ sprHurt = sprHurtGround;
 //Other Variables
 
 paletteIndex = spr_Rocky_Normal_Palette_BrownRock;
-hp = 44;
-dmg = 1;
+hp = rocky_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.stone;
-points = 400;
+points = rocky_Points;
 heavy = true;
 particleReleased = false;
 turnCounter = 0;

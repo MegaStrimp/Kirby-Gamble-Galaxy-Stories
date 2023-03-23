@@ -4,10 +4,6 @@
 
 event_inherited();
 
-//Randomize
-
-randomize();
-
 //Physics
 
 decel = .02;
@@ -25,9 +21,9 @@ sprHurt = spr_Cerulean_Normal_Hurt;
 //Other Variables
 
 paletteIndex = spr_Cerulean_Normal_Palette_GreenBean;
-hp = 16;
-dmg = 1;
-points = 200;
+hp = cerulean_Hp;
+dmg = baseEnemyContact_Damage;
+points = cerulean_Points;
 hasGravity = false;
 hasXCollision = false;
 hasYCollision = false;

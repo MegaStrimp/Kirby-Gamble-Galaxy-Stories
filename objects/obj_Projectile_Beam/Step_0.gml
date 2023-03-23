@@ -1,68 +1,10 @@
 ///@description Main
 
-//Characters
+#region Event Inherited
+event_inherited();
+#endregion
 
-if (setupTimer > 0)
-{
-	setupTimer -= 1;
-}
-else if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_Projectile_Beam_Normal;
-		break;
-		
-		//Enemy
-		
-		case 1:
-		sprIdle = spr_Projectile_Beam_Enemy;
-		break;
-		
-		//Mystic Normal
-		
-		case 2:
-		sprIdle = spr_Projectile_MysticBeam_Normal;
-		break;
-		
-		//Mystic Enemy
-		
-		case 3:
-		sprIdle = spr_Projectile_MysticBeam_Enemy;
-		break;
-		
-		//Fire
-		
-		case 4:
-		sprIdle = spr_Projectile_Beam_Fire;
-		break;
-		
-		//Ufo
-		
-		case 5:
-		sprIdle = spr_Projectile_Beam_Ufo;
-		break;
-		
-		//Gold
-		
-		case 6:
-		sprIdle = spr_Projectile_Beam_Gold;
-		break;
-		
-		//Mystic Beam Air
-		
-		case 7:
-		sprIdle = spr_Projectile_MysticBeam_Air;
-		break;
-	}
-	orbitMaxFinal = orbitMax;
-	setupTimer = -1;
-}
-
-if (((pausable) and (!global.pause)) or (!pausable))
+if (!isPaused)
 {
 	//Inputs
 	
@@ -84,10 +26,6 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		    instance_destroy();
 		}
 	}
-	
-	//Event Inherited
-	
-	event_inherited();
 	
 	//Trail
 	
@@ -202,11 +140,11 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		if (place_meeting(x,y + floor(vsp + 2),obj_Wall))
 		{
 			jumpCount += 1;
-			var finalVsp = 4;
+			var finalVsp = 6;
 			if (jumpCount == 3)
 			{
 				jumpCount = 0;
-				finalVsp = 8;
+				finalVsp = 10;
 			}
 			vsp -= finalVsp;
 		}
@@ -303,13 +241,13 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	}
 	else if (pulseTimer == 0)
 	{
-		if (image_index == 0)
+		if (image_index == pulseTarget)
 		{
 			image_index = imageIndex;
 		}
 		else
 		{
-			image_index = 0;
+			image_index = pulseTarget;
 		}
 		pulseTimer = pulseTimerMax;
 	}
@@ -330,7 +268,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		par.destroyTimer = 1;
 		if (instance_exists(owner))
 		{
-			if ((!enemy) and (!isMystic) and
+			if ((!enemy) and (abilityType = playerAbilities.beam) and (!isMystic) and
 			(((player == 0) and (global.hatTypeBeamP1 == abilityHatSkins.beam_marxSoul))
 			or ((player == 1) and (global.hatTypeBeamP2 == abilityHatSkins.beam_marxSoul))
 			or ((player == 2) and (global.hatTypeBeamP3 == abilityHatSkins.beam_marxSoul))

@@ -4,10 +4,6 @@
 
 event_inherited();
 
-//Randomize
-
-randomize();
-
 //Physics
 
 accel = .015;
@@ -31,10 +27,10 @@ sprHurt = sprHurtGround;
 //Other Variables
 
 paletteIndex = spr_Hothead_Normal_Palette_DefaultFlames;
-hp = 16;
-dmg = 1;
+hp = hothead_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.fire;
-points = 500;
+points = hothead_Points;
 parasolX = 2;
 parasolY = 3;
 duck = false;

@@ -4,10 +4,6 @@
 
 event_inherited();
 
-//Randomize
-
-randomize();
-
 //Physics
 
 accel = .015;
@@ -29,10 +25,10 @@ sprHurt = spr_PoppyBrosJr_Normal_Hurt;
 //Other Variables
 
 paletteIndex = spr_PoppyBrosJr_Normal_Palette_BlueBomber;
-hp = 16;
-dmg = 1;
+hp = poppyBrosJr_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.bomb;
-points = 400;
+points = poppyBrosJr_Points;
 attack = false;
 attackState = 0;
 handPos = 0;

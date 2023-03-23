@@ -11,14 +11,14 @@ gravLimitNormal = 5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_Cairn_Normal_Palette_HeavyRock;
 state = 0;
-hp = 44;
-dmg = 1;
+hp = cairn_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.stone;
-points = 400;
+points = cairn_Points;
 hurtable = true;
 hasGravity = true;
 heavy = false;

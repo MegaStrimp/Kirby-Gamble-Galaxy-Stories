@@ -2,9 +2,12 @@
   "resourceType": "GMPath",
   "resourceVersion": "1.0",
   "name": "pth_PlayerUpYo",
-  "kind": 1,
   "closed": false,
-  "precision": 4,
+  "kind": 1,
+  "parent": {
+    "name": "Player",
+    "path": "folders/Paths/Player.yy",
+  },
   "points": [
     {"speed":100.0,"x":24.0,"y":3.0,},
     {"speed":100.0,"x":63.40168,"y":9.676201,},
@@ -15,8 +18,5 @@
     {"speed":100.0,"x":-24.48536,"y":-4.131325,},
     {"speed":100.0,"x":0.0,"y":0.0,},
   ],
-  "parent": {
-    "name": "Player",
-    "path": "folders/Paths/Player.yy",
-  },
+  "precision": 4,
 }

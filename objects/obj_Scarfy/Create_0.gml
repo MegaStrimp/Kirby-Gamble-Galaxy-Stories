@@ -4,6 +4,22 @@
 
 event_inherited();
 
+#region Hurt Function
+function func_ScarfyHurt(hurtSource)
+{
+	sprite_index = sprHurt;
+	
+	if (!attack)
+	{
+		hp = 16 + (hurtSource.dmg / 4);
+		attack = true;
+		imageSpeed = 0.5; // it's hack time
+	}
+	
+	return true;
+}
+#endregion
+
 //Physics
 
 accel = .05;
@@ -26,10 +42,10 @@ sprHurt = sprCalmHurt;
 //Other Variables
 
 paletteIndex = spr_Scarfy_Normal_Palette_DeadlyOrange;
-hp = 16;
-dmg = 1;
+hp = scarfy_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.crash;
-points = 1000;
+points = scarfy_Points;
 hasGravity = false;
 hasXCollision = false;
 hasYCollision = false;
@@ -37,6 +53,7 @@ clampPositionX = false;
 clampPositionY = false;
 //objectOnDeath = true;
 //objectOnDeathObj = obj_Projectile_ExplosionMask;
+hurtFunction = func_ScarfyHurt;
 attack = false;
 attackState = 0;
 imageSpeed = 1;

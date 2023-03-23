@@ -32,12 +32,12 @@
 //}
 //#endregion
 
-if (((pausable) and (!global.pause)) or (!pausable))
+#region Event Inherited
+event_inherited();
+#endregion
+
+if (!isPaused)
 {
-	#region Event Inherited
-	event_inherited();
-	#endregion
-	
 	#region Position
 	hsp -= decel * dirX;
 	if(sign(hsp*dirX) < 0){

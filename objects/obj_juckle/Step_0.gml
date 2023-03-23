@@ -1,36 +1,10 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_Juckle_Normal_Idle;
-		sprReady = spr_Juckle_Normal_Ready;
-		sprAttack = spr_Juckle_Normal_Attack;
-		sprReload = spr_Juckle_Normal_Reload;
-		sprHurt = spr_Juckle_Normal_Hurt;
-		break;
-	}
-	if (state == 0)
-	{
-		attackDir = 90 - (dirX * 90);
-	}
-	else if (state == 1)
-	{
-		attackDir = 90;
-	}
-}
-
 //Event Inherited
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	if (!parasol) scr_Object_Inhale(enemy);
 	
@@ -79,6 +53,4 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 else
 {
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

@@ -19,7 +19,7 @@ function scr_Player_States_FinalCutter(){
 				// move the player forward a tiny bit and spawn a hitbox
 				//hsp = 2*dir;
 				if(attackTimer > 2){
-					hsp += 0.3*dir;
+					if (!place_meeting(x + dir,y,obj_Wall)) hsp += 0.3*dir;
 				}
 				
 				//if(attackTimer <= 5 && keyAttackPressed){
@@ -49,7 +49,7 @@ function scr_Player_States_FinalCutter(){
 				}
 				
 				if(attackTimer > 2){
-					hsp = 0.3*dir;
+					if (!place_meeting(x + dir,y,obj_Wall)) hsp = 0.3*dir;
 				}
 				
 				//if(attackTimer <= 5 && keyAttackPressed){
@@ -91,7 +91,7 @@ function scr_Player_States_FinalCutter(){
 				afterimage.image_alpha = .5;
 				afterimage.paletteIndex = paletteIndex;
 				if(attackTimer > (5940-5)){
-					hsp+=1*dir;
+					if (!place_meeting(x + dir,y,obj_Wall)) hsp+=1*dir;
 					if(attackTimer > (5940-10)){
 						vsp = -10;
 					}
@@ -103,14 +103,14 @@ function scr_Player_States_FinalCutter(){
 						vsp = 16;
 						
 						//just until we can disable Kirby's collision with the level temporarily do we need this bit of code:
-						while(place_meeting(x,y-1,obj_Wall)){
-							y++;
-						}
+						//while(place_meeting(x,y-1,obj_Wall)){
+							//y++;
+						//}
 					}
 				}else if (attackTimer > finalCutterEndlag){
 					hsp = 0;
 					vsp = 16;
-					if(grounded){
+					if(grounded) and ((y >= finalCutterStartingY - 12) and (vsp > 0) and ((!place_meeting(x,y,obj_Wall)) or (!finalCutterCheckInsideCollision))){
 						audio_play_sound(snd_FinalCutter,0,false);
 						attackTimer = finalCutterEndlag;
 						vsp = 0;
@@ -119,7 +119,8 @@ function scr_Player_States_FinalCutter(){
 						finalCutterSlash.owner = id;
 						finalCutterSlash.abilityType = playerAbilities.cutter;
 						finalCutterSlash.paletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
-						finalCutterSlash.dmg = 32;
+						finalCutterSlash.dmg = kirby_CutterFinalCutterProjectile_Damage;
+						scr_Attack_SetKnockback(finalCutterSlash,kirby_CutterFinalCutterProjectile_Strength,kirby_CutterFinalCutterProjectile_HitStopAffectSource,kirby_CutterFinalCutterProjectile_HitStopAffectPlayer,kirby_CutterFinalCutterProjectile_HitStopAffectTarget,kirby_CutterFinalCutterProjectile_HitStopLength,kirby_CutterFinalCutterProjectile_HitStopShakeStrength);
 						finalCutterSlash.sprite_index = finalCutterSlash.sprIdle;
 						finalCutterSlash.hsp = dir * finalCutterSlash.decelMax;
 						finalCutterSlash.dirX = dir;
@@ -144,12 +145,15 @@ function scr_Player_States_FinalCutter(){
 		
 		//Collision
 		
-		//if(finalCutterState != 3){
+		if ((finalCutterState != 3) or ((finalCutterState == 3) and (y >= finalCutterStartingY - 12) and (vsp > 0) and ((!place_meeting(x,y,obj_Wall)) or (!finalCutterCheckInsideCollision))))
+		{
 			scr_Player_Collision(playerMechs.none);
-		//}else{
-		//	x += hsp;
-			//y += vsp;
-		//}
+		}
+		else
+		{
+			x += hsp;
+			y += vsp;
+		}
 	}
 	else
 	{

@@ -125,9 +125,9 @@ function scr_Maykr_GetFromInventory(argument0)
 		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
 		break;
 		
-		case maykrObjects.search:
-		spawnedItemIndex = obj_Spawner_Search;
-		spawnedSprite = spr_Search_Normal_Idle;
+		case maykrObjects.searches:
+		spawnedItemIndex = obj_Spawner_Searches;
+		spawnedSprite = spr_Searches_Normal_Idle;
 		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
 		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
 		break;

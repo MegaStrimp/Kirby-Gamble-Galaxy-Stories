@@ -11,14 +11,14 @@ gravLimitNormal = 5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_Sparky_Normal_Palette_LightningLime;
 state = 0;
-hp = 16;
-dmg = 1;
+hp = sparky_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.spark;
-points = 300;
+points = sparky_Points;
 hurtable = true;
 hasGravity = true;
 heavy = false;

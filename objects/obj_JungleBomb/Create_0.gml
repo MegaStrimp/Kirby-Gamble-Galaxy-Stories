@@ -4,10 +4,6 @@
 
 event_inherited();
 
-//Randomize
-
-randomize();
-
 //Physics
 
 accel = .015;
@@ -31,10 +27,10 @@ sprHurt = spr_JungleBomb_Normal_Hurt;
 //Other Variables
 
 paletteIndex = spr_JungleBomb_Normal_Palette_Pineapple;
-hp = 16;
-dmg = 1;
+hp = jungleBomb_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.bomb;
-points = 300;
+points = jungleBomb_Points;
 parasolX = 2;
 parasolY = 3;
 offScreenTurning = false;

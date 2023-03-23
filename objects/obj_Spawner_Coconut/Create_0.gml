@@ -8,14 +8,14 @@ gravLimitNormal = 6;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_Coconut_Normal_Palette_TropicalBrown;
 state = 0;
-hp = 1;
-dmg = 1;
+hp = coconut_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.none;
-points = 0;
+points = coconut_Points;
 hurtable = true;
 hasGravity = true;
 heavy = false;

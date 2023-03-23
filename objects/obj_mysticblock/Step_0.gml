@@ -23,6 +23,7 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 	#endregion
 	
 	#region Attack Timer
+	if !((stopOutsideScreen) and (scr_OutsideView()))
 	if (attackTimer > 0)
 	{
 		attackTimer -= 1;
@@ -109,6 +110,9 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 					projBeam.centerY = ((sprite_get_height(sprite_index) / 2) * image_yscale);
 					projBeam.owner = id;
 					projBeam.enemy = true;
+					projBeam.abilityType = playerAbilities.mysticBeam;
+					projBeam.dmg = mysticBlock_Beam_Damage;
+					scr_Attack_SetKnockback(projBeam,mysticBlock_Beam_Strength,mysticBlock_Beam_HitStopAffectSource,mysticBlock_Beam_HitStopAffectPlayer,mysticBlock_Beam_HitStopAffectTarget,mysticBlock_Beam_HitStopLength,mysticBlock_Beam_HitStopShakeStrength);
 					projBeam.hurtsObject = false;
 					projBeam.hurtsEnemy = false;
 					projBeam.hurtsPlayer = true;
@@ -143,6 +147,9 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			if (currentBeams % 2 == 0) projBeam.image_index = 1;
 			projBeam.owner = id;
 			projBeam.enemy = true;
+			projBeam.abilityType = playerAbilities.mysticBeam;
+			projBeam.dmg = mysticBlock_Beam_Damage;
+			scr_Attack_SetKnockback(projBeam,mysticBlock_Beam_Strength,mysticBlock_Beam_HitStopAffectSource,mysticBlock_Beam_HitStopAffectPlayer,mysticBlock_Beam_HitStopAffectTarget,mysticBlock_Beam_HitStopLength,mysticBlock_Beam_HitStopShakeStrength);
 			projBeam.hurtsObject = false;
 			projBeam.hurtsEnemy = false;
 			projBeam.hurtsPlayer = true;

@@ -1,27 +1,10 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprPot = spr_Wapod_Normal_Pot;
-		sprGhostSpawn = spr_Wapod_Normal_Spawn;
-		sprGhostIdle = spr_Wapod_Normal_Idle;
-		sprGhostHurt = spr_Wapod_Normal_Hurt;
-		break;
-	}
-}
-
 //Event Inherited
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	//Get Inhaled
 	
@@ -60,6 +43,4 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 else
 {
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

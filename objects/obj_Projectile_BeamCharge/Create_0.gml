@@ -1,9 +1,5 @@
 ///@description Initialize Variables
 
-//Randomize
-
-randomize();
-
 //Event Inherited
 
 event_inherited();
@@ -12,6 +8,7 @@ event_inherited();
 
 hsp = 0;
 vsp = 0;
+angle = 40;
 
 //Sprites
 

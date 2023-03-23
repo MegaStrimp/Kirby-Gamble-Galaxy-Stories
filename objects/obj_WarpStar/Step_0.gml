@@ -45,7 +45,7 @@ if (!global.pause)
 		
 		with (obj_Player)
 		{
-			if (place_meeting(x,y,other))
+			if ((mechIndex == -1) and (place_meeting(x,y,other)))
 			{
 				if (audio_is_playing(snd_WarpStar1)) audio_stop_sound(snd_WarpStar1);
 				audio_play_sound(snd_WarpStar1,0,false);

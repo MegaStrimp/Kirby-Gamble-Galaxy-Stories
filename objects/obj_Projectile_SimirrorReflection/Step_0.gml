@@ -1,10 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-// Inherit the parent event
+#region Event Inherited
 event_inherited();
+#endregion
 
-if (!global.pause)
+if (!isPaused)
 {
 	hsp = abs(hsp) * dirX;
 	

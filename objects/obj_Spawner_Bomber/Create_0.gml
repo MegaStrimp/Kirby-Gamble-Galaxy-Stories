@@ -11,14 +11,14 @@ gravLimitNormal = 5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_Bomber_Normal_Palette_ExplodingSkull;
 state = 0;
-hp = 14;
-dmg = 1;
+hp = bomber_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.crash;
-points = 100;
+points = bomber_Points;
 hurtable = true;
 hasGravity = true;
 heavy = false;

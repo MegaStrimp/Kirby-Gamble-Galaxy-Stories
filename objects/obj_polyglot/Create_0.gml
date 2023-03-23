@@ -169,3 +169,5 @@ function _string_split(_input, _delimiter) {
 
 // Load our default locale's language data
 self._loadStringData();
+
+setLocale(global.languageArray[global.language]);

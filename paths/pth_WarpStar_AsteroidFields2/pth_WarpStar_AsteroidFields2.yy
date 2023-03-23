@@ -2,9 +2,12 @@
   "resourceType": "GMPath",
   "resourceVersion": "1.0",
   "name": "pth_WarpStar_AsteroidFields2",
-  "kind": 1,
   "closed": false,
-  "precision": 4,
+  "kind": 1,
+  "parent": {
+    "name": "Warp Star",
+    "path": "folders/Paths/Warp Star.yy",
+  },
   "points": [
     {"speed":100.0,"x":1254.0,"y":816.0,},
     {"speed":100.0,"x":1326.0,"y":816.0,},
@@ -28,8 +31,5 @@
     {"speed":100.0,"x":786.0,"y":114.0,},
     {"speed":100.0,"x":858.0,"y":-54.0,},
   ],
-  "parent": {
-    "name": "Warp Star",
-    "path": "folders/Paths/Warp Star.yy",
-  },
+  "precision": 4,
 }

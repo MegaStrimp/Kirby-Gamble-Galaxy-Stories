@@ -4,10 +4,6 @@
 
 event_inherited();
 
-//Randomize
-
-randomize();
-
 //Physics
 
 accel = .015;
@@ -32,10 +28,10 @@ sprHurt = spr_BurningLeo_Normal_Hurt;
 //Other Variables
 
 paletteIndex = spr_BurningLeo_Normal_Palette_FlamingRed;
-hp = 16;
-dmg = 1;
+hp = burningLeo_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.fire;
-points = 500;
+points = burningLeo_Points;
 parasolX = 2;
 parasolY = 3;
 duck = false;

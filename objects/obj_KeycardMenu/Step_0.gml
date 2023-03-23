@@ -2,6 +2,8 @@
 
 if (!global.pause)
 {
+	hudOffset = lerp(hudOffset,0,.1);
+	
 	scr_Player_Inputs(0);
 	
 	if ((keyUpPressed) or (keyDownPressed) or (keyLeftPressed) or (keyRightPressed)) audio_play_sound(snd_BossHealth,0,false);
@@ -41,8 +43,8 @@ if (!global.pause)
 		
 		if (select)
 		{
-			var fileName = get_open_filename(working_directory + "keycard file|*.gamblekey",-1);
-			if (fileName != -1)
+			var fileName = get_open_filename(working_directory + "keycard file|*.gamblekey","");
+			if (fileName != "")
 			{
 				var file = file_text_open_read(fileName);
 				file_text_readln(file);
@@ -79,11 +81,6 @@ if (!global.pause)
 					global.abilitySpraysKeycard = true;
 					keycardArray[# 5,1] = true;
 					break;
-					
-					case "55408":
-					global.permaHalloweenKeycard = true;
-					keycardArray[# 6,1] = true;
-					break;
 				}
 				scr_SaveGame(global.selectedSave);
 				file_text_close(file);
@@ -108,7 +105,7 @@ if (!global.pause)
 		}
 		if (keyRightPressed)
 		{
-			if (keycardSelection < keycardsMax)
+			if (keycardSelection < keycardsMax - 1)
 			{
 				keycardSelection += 1;
 			}

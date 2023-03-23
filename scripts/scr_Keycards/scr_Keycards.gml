@@ -64,13 +64,5 @@ function scr_Keycards()
 	i += 1;
 	#endregion
 	
-	#region Perma Halloween
-	keycardArray[# i,0] = spr_KeycardMenu_Icon_PermaHalloween;
-	keycardArray[# i,1] = global.permaHalloweenKeycard;
-	keycardArray[# i,2] = 426;
-	keycardArray[# i,3] = 216;
-	i += 1;
-	#endregion
-	
 	keycardsMax = i;
 }

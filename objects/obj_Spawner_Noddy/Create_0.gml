@@ -11,14 +11,14 @@ gravLimitNormal = 5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_Noddy_Normal_Palette_SleepyPink;
 state = 0;
-hp = 12;
-dmg = 1;
+hp = noddy_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.sleep;
-points = 100;
+points = noddy_Points;
 hurtable = true;
 hasGravity = true;
 heavy = false;

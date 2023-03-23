@@ -11,14 +11,14 @@ gravLimitNormal = 6;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_JungleBomb_Normal_Palette_Pineapple;
 state = 0;
-hp = 126
-dmg = 1;
+hp = jungleBomb_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.bomb;
-points = 300;
+points = jungleBomb_Points;
 hurtable = true;
 hasGravity = true;
 heavy = false;

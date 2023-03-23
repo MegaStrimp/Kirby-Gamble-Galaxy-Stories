@@ -1,9 +1,5 @@
 ///@description Initialize Variables
 
-#region Randomize
-randomize();
-#endregion
-
 #region Start Mode
 scr_Maykr_StartMode();
 #endregion

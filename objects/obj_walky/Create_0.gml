@@ -24,10 +24,10 @@ sprHurt = spr_Walky_Normal_Hurt;
 //Other Variables
 
 paletteIndex = spr_Walky_Normal_Palette_MicCheck;
-hp = 12;
-dmg = 1;
+hp = walky_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.mic;
-points = 890;
+points = walky_Points;
 attack = false;
 
 //Timers

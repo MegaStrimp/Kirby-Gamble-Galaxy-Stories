@@ -129,17 +129,32 @@ if (!global.pause)
 		}
 		explodeTimer = -1;
 	}
+	
+	//Flash Timer
+	
+	if (flashTimer > 0)
+	{
+		flashTimer -= 1;
+	}
+	else if (flashTimer == 0)
+	{
+		if (flashIndex == 1)
+		{
+			flashIndex = 2;
+		}
+		else
+		{
+			flashIndex = 1;
+		}
+		flashTimer = -1;
+	}
 }
 
 //Hurt
 
 if (isTop)
 {
-	if (!instance_exists(topWallOwner))
-	{
-		instance_destroy();
-	}
-	else
+	if (instance_exists(topWallOwner))
 	{
 		if (hp <= 0) topWallOwner.hp = 0;
 	}
@@ -361,11 +376,12 @@ else if (!platform)
 					instance_destroy();
 				}
 			}
-			else if ((!other.owner.invincible) and (other.owner.hp > 0))
+			else if ((other.owner.hurtable) and (!other.owner.invincible) and (other.owner.hp > 0))
 			{
 				scr_Enemy_Hurt(other.owner,id);
 			
-				if ((destroyableByEnemy) and (owner != other.owner) and (!other.owner.enemy))
+				//if ((destroyableByEnemy) and (owner != other.owner) and (!other.owner.enemy))
+				if (destroyableByEnemy)
 				{
 					if (particleOnHit)
 					{

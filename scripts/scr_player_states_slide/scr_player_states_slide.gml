@@ -29,6 +29,12 @@ function scr_Player_States_Slide()
 			break;
 		}
 		
+		var invinCandyMult = 1;
+		
+		if (hasInvinCandy) invinCandyMult = 1.5;
+		
+		var movespeedFinal = movespeedSlide * invinCandyMult;
+		
 		//Gravity
 		
 		if (vsp < gravLimitNormal)
@@ -69,7 +75,7 @@ function scr_Player_States_Slide()
 				{
 					if ((!hurt) and (!attack) and (keyAttackPressed))
 					{
-						var grabEnemy = -1;
+						grabEnemy = -1;
 						if (place_meeting(x + (16 * dir),y,obj_Enemy)) grabEnemy = instance_place(x + (16 * dir),y,obj_Enemy);
 						if ((grabEnemy != -1) and (grabEnemy.hurtable) and (!grabEnemy.hurt) and (!grabEnemy.isBoss))
 						{
@@ -83,7 +89,7 @@ function scr_Player_States_Slide()
 							grabObj.dmg = -1;
 							grabObj.active = false;
 							grabObj.particleTimer = grabObj.particleTimerMax;
-							if (!bombSmartBombUpgrade) grabObj.destroyTimer = 30;
+							if (!bombStickyBombUpgrade) grabObj.destroyTimer = 30;
 							var grabSpr = grabEnemy.sprHurt;
 							if ((grabSpr = -1) or (grabSpr = -1))
 							{
@@ -98,6 +104,7 @@ function scr_Player_States_Slide()
 							grabEnemy.death = true;
 							attack = true;
 							attackNumber = playerAttacks.bombGrab;
+							invincible = true;
 							carriedItemIndex.owner = carriedItemIndex;
 							carriedItemIndex.xOffset = 0;
 							carriedItemIndex.yOffset = 0;
@@ -148,7 +155,7 @@ function scr_Player_States_Slide()
 							case playerAbilities.beam:
 						    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 						    {
-								var grabEnemy = -1;
+								grabEnemy = -1;
 								if (place_meeting(x + (16 * dir),y,obj_Enemy)) grabEnemy = instance_place(x + (16 * dir),y,obj_Enemy);
 								if ((grabEnemy != -1) and (grabEnemy.hurtable) and (!grabEnemy.hurt) and (!grabEnemy.isBoss))
 								{
@@ -159,7 +166,8 @@ function scr_Player_States_Slide()
 									grabObj.owner = id;
 									grabObj.abilityType = playerAbilities.beam;
 									grabObj.dirX = grabEnemy.dirX;
-									grabObj.dmg = 60;
+									grabObj.dmg = kirby_BeamGrab_Damage;
+									scr_Attack_SetKnockback(grabObj,kirby_BeamGrab_Strength,kirby_BeamGrab_HitStopAffectSource,kirby_BeamGrab_HitStopAffectPlayer,kirby_BeamGrab_HitStopAffectTarget,kirby_BeamGrab_HitStopLength,kirby_BeamGrab_HitStopShakeStrength);
 									var grabSpr = grabEnemy.sprHurt;
 									if ((grabSpr = -1) or (grabSpr = -1))
 									{
@@ -174,6 +182,7 @@ function scr_Player_States_Slide()
 									grabEnemy.death = true;
 									attack = true;
 									attackNumber = playerAttacks.beamGrab;
+									invincible = true;
 									hsp = 0;
 									state = playerStates.beamGrab;
 								}
@@ -185,7 +194,7 @@ function scr_Player_States_Slide()
 							case playerAbilities.mysticBeam:
 						    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 						    {
-								var grabEnemy = -1;
+								grabEnemy = -1;
 								if (place_meeting(x + (16 * dir),y,obj_Enemy)) grabEnemy = instance_place(x + (16 * dir),y,obj_Enemy);
 								if ((grabEnemy != -1) and (grabEnemy.hurtable) and (!grabEnemy.hurt) and (!grabEnemy.isBoss))
 								{
@@ -196,7 +205,7 @@ function scr_Player_States_Slide()
 									grabObj.owner = id;
 									grabObj.abilityType = playerAbilities.mysticBeam;
 									grabObj.dirX = grabEnemy.dirX;
-									grabObj.dmg = 60;
+									grabObj.dmg = kirby_MysticBeamGrab_Damage;
 									var grabSpr = grabEnemy.sprHurt;
 									if ((grabSpr = -1) or (grabSpr = -1))
 									{
@@ -211,6 +220,7 @@ function scr_Player_States_Slide()
 									grabEnemy.death = true;
 									attack = true;
 									attackNumber = playerAttacks.mysticBeamGrab;
+									invincible = true;	
 									hsp = 0;
 									state = playerStates.mysticBeamGrab;
 								}
@@ -234,7 +244,8 @@ function scr_Player_States_Slide()
 										projBeam.owner = id;
 										projBeam.abilityType = playerAbilities.mysticBeam;
 										projBeam.player = player;
-										projBeam.dmg = 18;
+										projBeam.dmg = kirby_MysticBeamDown_Damage;
+										scr_Attack_SetKnockback(projBeam,kirby_MysticBeamDown_Strength,kirby_MysticBeamDown_HitStopAffectSource,kirby_MysticBeamDown_HitStopAffectPlayer,kirby_MysticBeamDown_HitStopAffectTarget,kirby_MysticBeamDown_HitStopLength,kirby_MysticBeamDown_HitStopShakeStrength);
 									    projBeam.dirX = projDir;
 									    projBeam.dir = projDir;
 										projBeam.hsp = projSpd;
@@ -262,6 +273,7 @@ function scr_Player_States_Slide()
 								state = playerStates.normal;
 								hsp = 0;
 								vsp = -jumpspeed / 2;
+								grounded = false;
 								jumpLimit = false;
 								jumpLimitTimer = 15;
 								invincible = true;
@@ -325,9 +337,11 @@ function scr_Player_States_Slide()
 									var stoneEnd = instance_create_depth(x,y,depth - 1,obj_Projectile_StoneStop);
 									stoneEnd.owner = id;
 									stoneEnd.abilityType = playerAbilities.stone;
-									stoneEnd.dmg = 205
+									stoneEnd.dmg = kirby_StoneNormalEnd_Damage;
+									scr_Attack_SetKnockback(stoneEnd,kirby_StoneNormalEnd_Strength,kirby_StoneNormalEnd_HitStopAffectSource,kirby_StoneNormalEnd_HitStopAffectPlayer,kirby_StoneNormalEnd_HitStopAffectTarget,kirby_StoneNormalEnd_HitStopLength,kirby_StoneNormalEnd_HitStopShakeStrength);
 									stoneEnd.enemy = false;
 									vsp = -(jumpspeed / 3);
+									grounded = false;	
 									grav = gravNormal;
 									gravLimit = gravLimitNormal;
 									invincible = false;
@@ -362,7 +376,7 @@ function scr_Player_States_Slide()
 								carriedItemIndex.owner = id;
 								carriedItemIndex.abilityType = playerAbilities.bomb;
 								carriedItemIndex.player = player;
-								carriedItemIndex.hasRemoteDetonation = bombSmartBombUpgrade;
+								carriedItemIndex.hasRemoteDetonation = bombStickyBombUpgrade;
 								carriedItemIndex.hasHoming = bombEyeBombUpgrade;
 								carriedItemIndex.hasMagma = bombMagmaBombUpgrade;
 								carriedItemIndex.active = false;
@@ -380,7 +394,7 @@ function scr_Player_States_Slide()
 								carriedItemIndex.hurtsPlayer = false;
 								carriedItemIndex.hurtsProjectile = false;
 								carriedItemIndex.image_xscale = carriedItemIndex.dirX;
-								if (!bombMultiBombUpgrade) carriedItemIndex.selfExplodeTimer = carriedItemIndex.selfExplodeTimerMax;
+								if (!bombLightShellsUpgrade) carriedItemIndex.selfExplodeTimer = carriedItemIndex.selfExplodeTimerMax;
 								if (((player == 0) and (global.hatTypeBombP1 == abilityHatSkins.bomb_modern)) or ((player == 1) and (global.hatTypeBombP2 == abilityHatSkins.bomb_modern))) 
 								{
 									carriedItemIndex.character = 1;
@@ -395,7 +409,7 @@ function scr_Player_States_Slide()
 							case playerAbilities.ice:
 							if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 							{
-								var grabEnemy = -1;
+								grabEnemy = -1;
 								if (place_meeting(x + (16 * dir),y,obj_Enemy)) grabEnemy = instance_place(x + (16 * dir),y,obj_Enemy);
 								if ((grabEnemy != -1) and (grabEnemy.hurtable) and (!grabEnemy.hurt) and (!grabEnemy.isBoss))
 								{
@@ -432,7 +446,7 @@ function scr_Player_States_Slide()
 									sparkProj = instance_create_depth(x,y,depth + 1,obj_Projectile_SparkNormal);
 									sparkProj.owner = id;
 									sparkProj.abilityType = playerAbilities.spark;
-									sparkProj.dmg = 22;
+									sparkProj.dmg = kirby_SparkNormal_Damage;
 									sparkProj.enemy = false;
 									sparkProj.dirX = dir;
 								}
@@ -451,6 +465,7 @@ function scr_Player_States_Slide()
 							state = playerStates.normal;
 							hsp = 0;
 							vsp = -jumpspeed / 2;
+							grounded = false;
 							jumpLimit = false;
 							jumpLimitTimer = 15;
 							invincible = true;
@@ -514,9 +529,11 @@ function scr_Player_States_Slide()
 								var stoneEnd = instance_create_depth(x,y,depth - 1,obj_Projectile_StoneStop);
 								stoneEnd.owner = id;
 								stoneEnd.abilityType = playerAbilities.stone;
-								stoneEnd.dmg = 205
+								stoneEnd.dmg = kirby_StoneNormalEnd_Damage;
+								scr_Attack_SetKnockback(stoneEnd,kirby_StoneNormalEnd_Strength,kirby_StoneNormalEnd_HitStopAffectSource,kirby_StoneNormalEnd_HitStopAffectPlayer,kirby_StoneNormalEnd_HitStopAffectTarget,kirby_StoneNormalEnd_HitStopLength,kirby_StoneNormalEnd_HitStopShakeStrength);
 								stoneEnd.enemy = false;
 								vsp = -(jumpspeed / 3);
+								grounded = false;
 								grav = gravNormal;
 								gravLimit = gravLimitNormal;
 								invincible = false;
@@ -700,6 +717,7 @@ function scr_Player_States_Slide()
 				{
 					if (duckJumpCharge == duckJumpChargeMax - 1)
 					{
+						if (audio_is_playing(snd_Charge_Ready)) audio_stop_sound(snd_Charge_Ready);
 						audio_play_sound(snd_Charge_Ready,0,false);
 						var particle = instance_create_depth(x,y - 4,depth - 1,obj_Particle);
 						particle.sprite_index = spr_Particle_Flash1;
@@ -722,10 +740,11 @@ function scr_Player_States_Slide()
 				slideSfx = audio_play_sound(snd_Slide,0,false);
 				slideMaskProj = instance_create_depth(x,y,depth,obj_Projectile_SlideMask);
 				slideMaskProj.owner = id;
-				slideMaskProj.dmg = dmg;
+				slideMaskProj.dmg = basePlayerSlide_Damage;
+				scr_Attack_SetKnockback(slideMaskProj,basePlayerSlide_Strength,basePlayerSlide_HitStopAffectSource,basePlayerSlide_HitStopAffectPlayer,basePlayerSlide_HitStopAffectTarget,basePlayerSlide_HitStopLength,basePlayerSlide_HitStopShakeStrength);
 				slideMaskProj.image_xscale = image_xscale;
 				slideMaskProj.image_yscale = image_yscale;
-		        hsp = movespeedSlide * dir;
+		        hsp = movespeedFinal * dir;
 		        duckSlide = true;
 		        duck = false;
 				canSlideJump = false;
@@ -759,6 +778,7 @@ function scr_Player_States_Slide()
 						scaleExX = -.25;
 						scaleExY = .25;
 						vsp = -(jumpspeed * 1.25);
+						grounded = false;
 						break;
 						
 						case playerCharacters.waddleDoo:
@@ -775,6 +795,7 @@ function scr_Player_States_Slide()
 						scaleExX = -.25;
 						scaleExY = .25;
 						vsp = -(jumpspeed * 1.25);
+						grounded = false;
 						break;
 						
 						default:
@@ -789,6 +810,7 @@ function scr_Player_States_Slide()
 						sprite_index = sprJump;
 						image_index = 0;
 						vsp = -(jumpspeed * 1.25);
+						grounded = false;
 						break;
 					}
 					if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
@@ -841,6 +863,10 @@ function scr_Player_States_Slide()
 			
 			if ((playerCharacter == playerCharacters.kirby) and (keyJumpPressed) and (canSlideJump))
 			{
+				var dirNew = dir;
+				if (keyLeftHold) dirNew = -1;
+				if (keyRightHold) dirNew = 1;
+				dir = dirNew;
 				var parSquish = instance_create_depth(x,y + 6,depth + 1,obj_Particle);
 				parSquish.sprite_index = spr_Particle_SmallStar;
 				parSquish.destroyTimer = 30;
@@ -851,11 +877,15 @@ function scr_Player_States_Slide()
 				attack = true;
 				attackNumber = playerAttacks.slideJump;
 				hspLimit = false;
-				hspLimitTimer = 30;
+				hspLimitTimer = 45;
 				jumpLimit = false;
-				jumpLimitTimer = 30;
-				attackTimer = 30;
-				hsp = dir * (movespeedSlide * .85);
+				jumpLimitTimer = 45;
+				attackTimer = 45;
+				hsp = dir * movespeedFinal;
+				var par = instance_create_depth(x,y + 8,depth,obj_Particle);
+				par.sprite_index = spr_Particle_SlideHop;
+				par.dirX = dir;
+				par.destroyAfterAnimation = true;
 				scr_Player_CancelSlide();
 				scr_Player_ExecuteJump();
 			}
@@ -864,7 +894,8 @@ function scr_Player_States_Slide()
 			{
 				hsp = movespeedNormal * dir;
 				scr_Player_CancelSlide();
-				scr_Player_ExecuteAttack(playerAttacks.inhale);
+				
+				scr_Player_ExecuteAttack_Inhale();
 			}
 			canSlideJump = true;
 		}

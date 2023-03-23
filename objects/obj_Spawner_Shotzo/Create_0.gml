@@ -16,14 +16,14 @@ gravLimitParasol = .5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_Shotzo_Normal_Palette_SteelArmada;
 state = 0;
-hp = 1;
-dmg = 1;
+hp = shotzo_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.none;
-points = 100;
+points = shotzo_Points;
 hurtable = false;
 hasGravity = true;
 heavy = false;
@@ -54,6 +54,7 @@ groundFailsafe = true;
 aim = 0;
 dir = 0;
 shootCountMax = 3;
+stopOutsideScreen = true;
 
 //Timers
 

@@ -2,6 +2,10 @@
 
 if (!global.pause)
 {
+	//Variables
+	
+	hudOffset = lerp(hudOffset,0,.1);
+	
 	//Inputs
 	
 	scr_Player_Inputs(0);
@@ -30,7 +34,9 @@ if (!global.pause)
 		case 0:
 		xx = 168;
 		yy = 120;
-		targetRoom = rm_Cutscene_Intro;
+		targetRoom = rm_CharacterSelect;
+		targetNextRoom = rm_GreenGreens1;
+		targetStage = stages.greenGreens;
 		text = spr_Menu_StageSelect_Text_GreenGreens;
 		planet = spr_Menu_StageSelect_Planet_Default;
 		break;
@@ -40,7 +46,9 @@ if (!global.pause)
 		case 1:
 		xx = 336;
 		yy = 78;
-		targetRoom = rm_BattleshipHalberd1;
+		targetRoom = rm_CharacterSelect;
+		targetNextRoom = rm_BattleshipHalberd1;
+		targetStage = stages.battleshipHalberd;
 		text = spr_Menu_StageSelect_Text_BattleshipHalberd;
 		planet = spr_Menu_StageSelect_Planet_Default;
 		break;
@@ -50,7 +58,9 @@ if (!global.pause)
 		case 2:
 		xx = 440;
 		yy = 120;
-		targetRoom = rm_AsteroidFields1;
+		targetRoom = rm_CharacterSelect;
+		targetNextRoom = rm_AsteroidFields1;
+		targetStage = stages.asteroidFields;
 		text = spr_Menu_StageSelect_Text_AsteroidFields;
 		planet = spr_Menu_StageSelect_Planet_Default;
 		break;
@@ -70,7 +80,9 @@ if (!global.pause)
 		case 4:
 		xx = 752;
 		yy = 90;
-		targetRoom = rm_GearCube_Hangar1;
+		targetRoom = rm_CharacterSelect;
+		targetNextRoom = rm_GearCube_Hangar1;
+		targetStage = stages.stormTheFortress;
 		text = spr_Menu_StageSelect_Text_GearCube;
 		planet = spr_Menu_StageSelect_Planet_Default;
 		break;
@@ -80,7 +92,9 @@ if (!global.pause)
 		case 5:
 		xx = 912;
 		yy = 144;
-		targetRoom = rm_Aquatia_Harbor1;
+		targetRoom = rm_CharacterSelect;
+		targetNextRoom = rm_Aquatia_Harbor1;
+		targetStage = stages.sandshellBeach;
 		text = spr_Menu_StageSelect_Text_Aquatia;
 		planet = spr_Menu_StageSelect_Planet_Default;
 		break;
@@ -90,7 +104,8 @@ if (!global.pause)
 		case 6:
 		xx = 1080;
 		yy = 72;
-		targetRoom = rm_Aquatia_Harbor1;
+		targetRoom = rm_CharacterSelect;
+		targetStage = stages.cosmicPalace;
 		text = spr_Menu_StageSelect_Text_CosmicPalace;
 		planet = spr_Menu_StageSelect_Planet_Default;
 		break;
@@ -100,7 +115,9 @@ if (!global.pause)
 		case 7:
 		xx = 78;
 		yy = 72;
-		targetRoom = rm_PopstarMoon1;
+		targetRoom = rm_CharacterSelect;
+		targetStage = stages.popstarMoon;
+		targetNextRoom = rm_PopstarMoon1;
 		text = spr_Menu_StageSelect_Text_PopstarMoon;
 		planet = spr_Menu_StageSelect_Planet_Default;
 		break;
@@ -148,8 +165,9 @@ if (!global.pause)
 		{
 			audio_play_sound(snd_Enter,0,false);
 			var fade = instance_create_depth(x,y,-999,obj_Fade);
-			fade.targetRoom = rm_CharacterSelect;
-			global.roomNext = targetRoom;
+			fade.targetRoom = targetRoom;
+			if (targetNextRoom != -1) global.roomNext = targetNextRoom;
+			if (targetStage != -1) global.currentStage = targetStage;
 		}
 	}
 }

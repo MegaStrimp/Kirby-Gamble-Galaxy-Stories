@@ -2,6 +2,10 @@
 
 if (!global.pause)
 {
+	//Variables
+	
+	hudOffset = lerp(hudOffset,0,.1);
+	
 	//Inputs
 	
 	scr_Player_Inputs(0);
@@ -81,6 +85,8 @@ if (!global.pause)
 				break;
 				
 				case 1:
+				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+				audio_play_sound(snd_ButtonNo,0,false);
 				goBack = true;
 				break;
 			}
@@ -145,6 +151,7 @@ if (!global.pause)
 	{
 		var fade = instance_create_depth(x,y,-999,obj_Fade);
 		fade.targetRoom = rm_MainMenu;
+		goBack = false;
 	}
 	
 	//Button Timer

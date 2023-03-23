@@ -1,5 +1,5 @@
 /// @function str(stringKey,[data])
-/// @description Polyglot helper function. 
+/// @description Polyglot helper function.
 /// Looks up the localized string value of stringKey for polyglot's current locale
 /// and interpolates additional data, if available
 /// @param stringKey The JSON path of the string whose localized value to fetch

@@ -2,9 +2,12 @@
   "resourceType": "GMPath",
   "resourceVersion": "1.0",
   "name": "pth_WarpStar_Test",
-  "kind": 1,
   "closed": false,
-  "precision": 4,
+  "kind": 1,
+  "parent": {
+    "name": "Warp Star",
+    "path": "folders/Paths/Warp Star.yy",
+  },
   "points": [
     {"speed":100.0,"x":474.0,"y":312.0,},
     {"speed":100.0,"x":528.0,"y":264.0,},
@@ -41,8 +44,5 @@
     {"speed":100.0,"x":1026.0,"y":-66.0,},
     {"speed":100.0,"x":762.0,"y":330.0,},
   ],
-  "parent": {
-    "name": "Warp Star",
-    "path": "folders/Paths/Warp Star.yy",
-  },
+  "precision": 4,
 }

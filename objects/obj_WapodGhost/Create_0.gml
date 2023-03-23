@@ -4,10 +4,6 @@
 
 event_inherited();
 
-//Randomize
-
-randomize();
-
 //Physics
 
 jumpspeed = -.5;
@@ -16,9 +12,9 @@ jumpspeed = -.5;
 
 destroyOutsideView = true;
 paletteIndex = spr_Wapod_Normal_Palette_PhantomPastel;
-hp = 1;
-dmg = 1;
-points = 500;
+hp = wapod_Ghost_Hp;
+dmg = baseEnemyContact_Damage;
+points = wapod_Ghost_Points;
 hasXCollision = false;
 hasYCollision = false;
 spawnState = true;

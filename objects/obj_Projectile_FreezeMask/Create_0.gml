@@ -1,9 +1,5 @@
 ///@description Initialize Variables
 
-//Randomize
-
-randomize();
-
 //Event Inherited
 
 event_inherited();
@@ -19,6 +15,7 @@ damageType = 3;
 state = 0;
 owner = id;
 enemy = false;
+isDirectHit = true;
 character = 0;
 
 //Timers

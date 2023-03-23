@@ -11,14 +11,14 @@ gravLimitNormal = 7;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_Ufo_Normal_Palette_Unearthly;
 state = 0;
-hp = 16;
-dmg = 1;
+hp = ufo_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.ufo;
-points = 800;
+points = ufo_Points;
 hurtable = true;
 hasGravity = false;
 heavy = false;

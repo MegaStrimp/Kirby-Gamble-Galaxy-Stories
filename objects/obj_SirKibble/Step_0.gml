@@ -1,26 +1,5 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_SirKibble_Normal_Idle;
-		sprWalk = spr_SirKibble_Normal_Walk;
-		sprReady = spr_SirKibble_Normal_Ready;
-		sprAttack = spr_SirKibble_Normal_Attack;
-		sprCatch = spr_SirKibble_Normal_Catch;
-		sprHurt = spr_SirKibble_Normal_Hurt;
-		sprHurtAir = spr_SirKibble_Normal_HurtAir;
-		break;
-	}
-	if (state == 1) attackTimer = -1;
-}
-
 if ((hurt) and (attack))
 {
 	attackStopTimer = 0;
@@ -30,7 +9,7 @@ if ((hurt) and (attack))
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	//Get Inhaled
 	
@@ -88,6 +67,9 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			projectile.paletteIndex = paletteIndex;
 			projectile.character = 1;
 			projectile.owner = id;
+			projectile.abilityType = playerAbilities.cutter;
+			projectile.dmg = sirKibble_Cutter_Damage;
+			scr_Attack_SetKnockback(projectile,sirKibble_Cutter_Strength,sirKibble_Cutter_HitStopAffectSource,sirKibble_Cutter_HitStopAffectPlayer,sirKibble_Cutter_HitStopAffectTarget,sirKibble_Cutter_HitStopLength,sirKibble_Cutter_HitStopShakeStrength);
 			projectile.hsp = dirX * projectile.decelMax;
 			projectile.dirX = dirX;
 			projectile.image_xscale = projectile.dirX;
@@ -233,6 +215,4 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 else
 {
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

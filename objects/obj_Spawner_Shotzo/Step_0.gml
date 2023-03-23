@@ -85,6 +85,7 @@ else if (spawnTimer == 0)
 	spawnedEnemy.aim = aim;
 	spawnedEnemy.dir = dir;
 	spawnedEnemy.shootCountMax = shootCountMax;
+	spawnedEnemy.stopOutsideScreen = stopOutsideScreen;
 	spawnedEnemy.aimTimerMax = aimTimerMax;
 	spawnedEnemy.aimTimer = aimTimer;
 	spawnedEnemy.attackTimerMax = attackTimerMax;

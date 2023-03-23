@@ -8,6 +8,7 @@ if (!global.pause)
 	
 	//Variables
 	
+	hudOffset = lerp(hudOffset,0,.1);
 	for (var i = 0; i < array_length(menuValue); i++) menuOffset[i] = 0;
 	
 	//Set Strings
@@ -84,7 +85,7 @@ if (!global.pause)
 			//demo = true;
 			if (demo)
 			{
-				fade.targetRoom = rm_StageSelect_Demo;
+				fade.targetRoom = rm_DemoStageSelect;
 			}
 			else
 			{
@@ -258,18 +259,37 @@ if (!global.pause)
 		case "Controls":
 		if (!paused)
 		{
-			if (keyDownPressed)
+			if ((controlsGamepad) and (controlsPage == -1))
 			{
-				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
-				audio_play_sound(snd_BossHealth,0,false);
-				subSelection += 1;
+				if (keyRightPressed)
+				{
+					if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+					audio_play_sound(snd_BossHealth,0,false);
+					subSelection += 1;
+				}
+				
+				if (keyLeftPressed)
+				{
+					if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+					audio_play_sound(snd_BossHealth,0,false);
+					subSelection -= 1;
+				}
 			}
-			
-			if (keyUpPressed)
+			else
 			{
-				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
-				audio_play_sound(snd_BossHealth,0,false);
-				subSelection -= 1;
+				if (keyDownPressed)
+				{
+					if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+					audio_play_sound(snd_BossHealth,0,false);
+					subSelection += 1;
+				}
+				
+				if (keyUpPressed)
+				{
+					if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+					audio_play_sound(snd_BossHealth,0,false);
+					subSelection -= 1;
+				}
 			}
 		}
 		
@@ -290,7 +310,13 @@ if (!global.pause)
 				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 				audio_play_sound(snd_ButtonYes,0,false);
 				controlsPage = subSelection;
+				controlsGamepad = false;
 				subSelection = 0;
+				if (global.playerGamepad[controlsPage] != -1)
+				{
+					controlsGamepad = true;
+					subSelection = global.playerGamepadControlType[controlsPage];
+				}
 			}
 			
 			if ((keyAttackPressed) and (!paused))
@@ -312,71 +338,101 @@ if (!global.pause)
 			case 1:
 			case 2:
 			case 3:
-			if (subSelection < 0)
+			if (controlsGamepad)
 			{
-				subSelection += 8;
-			}
-			if (subSelection > 7)
-			{
-				subSelection -= 8;
-			}
-			
-			if ((keyAttackPressed) and (!paused))
-			{
-				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
-				audio_play_sound(snd_ButtonNo,0,false);
-				goBack = true;
-			}
-			
-			if (goBack)
-			{
-				subSelection = controlsPage;
-				controlsPage = -1;
-				goBack = false;
-			}
-			
-			if ((paused) and (keyboard_check_pressed(vk_anykey)))
-			{
-				var pressedKey = keyboard_key;
-				paused = false;
-				switch (subSelection)
+				if (subSelection < 0)
 				{
-					case 0:
-					global.finalKeyLeft[controlsPage] = pressedKey;
-					break;
-					
-					case 1:
-					global.finalKeyRight[controlsPage] = pressedKey;
-					break;
-					
-					case 2:
-					global.finalKeyUp[controlsPage] = pressedKey;
-					break;
-					
-					case 3:
-					global.finalKeyDown[controlsPage] = pressedKey;
-					break;
-					
-					case 4:
-					global.finalKeyJump[controlsPage] = pressedKey;
-					break;
-					
-					case 5:
-					global.finalKeyAttack[controlsPage] = pressedKey;
-					break;
-					
-					case 6:
-					global.finalKeyStart[controlsPage] = pressedKey;
-					break;
-					
-					case 7:
-					global.finalKeySelect[controlsPage] = pressedKey;
-					break;
+					subSelection += 2;
+				}
+				if (subSelection > 1)
+				{
+					subSelection -= 2;
+				}
+				
+				global.playerGamepadControlType[controlsPage] = subSelection;
+				
+				if ((keyAttackPressed) and (!paused))
+				{
+					if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+					audio_play_sound(snd_ButtonNo,0,false);
+					goBack = true;
+				}
+				
+				if (goBack)
+				{
+					subSelection = controlsPage;
+					controlsPage = -1;
+					goBack = false;
 				}
 			}
 			else
 			{
-				if (keyJumpPressed) paused = true;
+				if (subSelection < 0)
+				{
+					subSelection += 8;
+				}
+				if (subSelection > 7)
+				{
+					subSelection -= 8;
+				}
+				
+				if ((keyAttackPressed) and (!paused))
+				{
+					if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+					audio_play_sound(snd_ButtonNo,0,false);
+					goBack = true;
+				}
+				
+				if (goBack)
+				{
+					subSelection = controlsPage;
+					controlsPage = -1;
+					goBack = false;
+				}
+				
+				if ((paused) and (keyboard_check_pressed(vk_anykey)))
+				{
+					var pressedKey = keyboard_key;
+					paused = false;
+					switch (subSelection)
+					{
+						case 0:
+						global.finalKeyLeft[controlsPage] = pressedKey;
+						break;
+						
+						case 1:
+						global.finalKeyRight[controlsPage] = pressedKey;
+						break;
+						
+						case 2:
+						global.finalKeyUp[controlsPage] = pressedKey;
+						break;
+						
+						case 3:
+						global.finalKeyDown[controlsPage] = pressedKey;
+						break;
+						
+						case 4:
+						global.finalKeyJump[controlsPage] = pressedKey;
+						break;
+						
+						case 5:
+						global.finalKeyAttack[controlsPage] = pressedKey;
+						break;
+						
+						case 6:
+						global.finalKeyStart[controlsPage] = pressedKey;
+						break;
+						
+						case 7:
+						global.finalKeySelect[controlsPage] = pressedKey;
+						break;
+					}
+				}
+				else
+				{
+					if (keyJumpPressed) paused = true;
+				}
 			}
 			break;
 		}
@@ -427,7 +483,7 @@ if (!global.pause)
 			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 			audio_play_sound(snd_BossHealth,0,false);
 			global.language = languageVal[subSelection];
-			obj_Polyglot.setLocale(languageArray[subSelection]);
+			obj_Polyglot.setLocale(global.languageArray[subSelection]);
 			setStrings = true;
 		}
 		

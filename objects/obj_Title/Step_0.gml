@@ -159,9 +159,9 @@ if (!global.pause)
 					{
 						if (audio_is_playing(snd_Enter)) audio_stop_sound(snd_Enter);
 						audio_play_sound(snd_Enter,0,false);
-						if ((!global.debug) and (global.canSave)) scr_LoadGame(global.selectedSave);
+						if (global.canSave) scr_LoadGame(global.selectedSave);
 						var fade = instance_create_depth(x,y,-999,obj_Fade);
-						fade.targetRoom = rm_StageSelect_Demo;
+						fade.targetRoom = rm_DemoStageSelect;
 						fade.alpha = 1;
 						fade.state = 1;
 					}
@@ -313,7 +313,7 @@ if (!global.pause)
 				global.selectedSave = "Save3.ini";
 				break;
 			}
-			if ((!global.debug) and (global.canSave)) scr_LoadGame(global.selectedSave);
+			if (global.canSave) scr_LoadGame(global.selectedSave);
 			var fade = instance_create_depth(x,y,-999,obj_Fade);
 			fade.targetRoom = rm_MainMenu;
 			fade.alpha = 1;

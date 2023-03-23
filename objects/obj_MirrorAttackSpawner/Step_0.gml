@@ -15,7 +15,7 @@ if (!global.pause)
             var mirrorKirby = instance_create_depth(x,y,depth,obj_Projectile_MirrorPlayer);
             mirrorKirby.owner = owner;
             mirrorKirby.player = owner.player;
-			mirrorKirby.dmg = 16;
+			mirrorKirby.dmg = kirby_MirrorDash_Damage;
 			mirrorKirby.destroyableByWall = false;
 			mirrorKirby.destroyableByEnemy = false;
 			mirrorKirby.destroyableByObject = false;
@@ -47,7 +47,8 @@ if (!global.pause)
             var mirrorKirby = instance_create_depth(x,y - (24 * amount),depth,obj_Projectile_MirrorPlayer);
             mirrorKirby.owner = owner;
             mirrorKirby.player = owner.player;
-			mirrorKirby.dmg = 18;
+			mirrorKirby.dmg = kirby_MirrorUpDown_Damage;
+			scr_Attack_SetKnockback(mirrorKirby,kirby_MirrorUpDown_Strength,kirby_MirrorUpDown_HitStopAffectSource,kirby_MirrorUpDown_HitStopAffectPlayer,kirby_MirrorUpDown_HitStopAffectTarget,kirby_MirrorUpDown_HitStopLength,kirby_MirrorUpDown_HitStopShakeStrength);
             mirrorKirby.state = 2;
 			mirrorKirby.destroyableByWall = false;
 			mirrorKirby.destroyableByEnemy = false;

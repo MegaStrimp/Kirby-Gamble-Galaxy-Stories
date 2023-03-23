@@ -4,10 +4,6 @@
 
 event_inherited();
 
-//Randomize
-
-randomize();
-
 //Physics
 
 movespeed = 2;
@@ -34,10 +30,10 @@ windupAlarm = room_speed/4;
 //Other Variables
 viewRange = 64;
 paletteIndex = spr_Flamer_Normal_Palette_FieryRed;
-hp = 12;
-dmg = 1;
+hp = flamer_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.fire;
-points = 300;
+points = flamer_Points;
 hasXCollision = false;
 hasYCollision = false;
 hasXKnockback = false;

@@ -11,14 +11,14 @@ gravLimitNormal = 5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_Simirror_Normal_Palette_MagicalOrange;
 state = 0;
-hp = 20;
-dmg = 1;
+hp = simirror_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.mirror;
-points = 500;
+points = simirror_Points;
 hurtable = true;
 hasGravity = true;
 heavy = false;

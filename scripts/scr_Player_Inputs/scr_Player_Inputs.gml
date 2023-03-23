@@ -5,6 +5,7 @@ function scr_Player_Inputs(argument0)
 {
 	var player = argument0;
 	var gpPlayer = global.playerGamepad[player];
+	
 	keyLeftHold = (keyboard_check(global.finalKeyLeft[player]) or (gamepad_button_check(gpPlayer,gp_padl)) or (global.stickLeftHeld[player]));
 	keyLeftPressed = (keyboard_check_pressed(global.finalKeyLeft[player]) or (gamepad_button_check_pressed(gpPlayer,gp_padl)) or (global.stickLeftPressed[player]));
 	keyLeftReleased = (keyboard_check_released(global.finalKeyLeft[player]) or (gamepad_button_check_released(gpPlayer,gp_padl)) or (global.stickLeftReleased[player]));
@@ -21,13 +22,17 @@ function scr_Player_Inputs(argument0)
 	keyDownPressed = (keyboard_check_pressed(global.finalKeyDown[player]) or (gamepad_button_check_pressed(gpPlayer,gp_padd)) or (global.stickDownPressed[player]));
 	keyDownReleased = (keyboard_check_released(global.finalKeyDown[player]) or (gamepad_button_check_released(gpPlayer,gp_padd)) or (global.stickDownReleased[player]));
 	
-	keyJumpHold = (keyboard_check(global.finalKeyJump[player]) or (gamepad_button_check(gpPlayer,gp_face1)));
-	keyJumpPressed = (keyboard_check_pressed(global.finalKeyJump[player]) or (gamepad_button_check_pressed(gpPlayer,gp_face1)));
-	keyJumpReleased = (keyboard_check_released(global.finalKeyJump[player]) or (gamepad_button_check_released(gpPlayer,gp_face1)));
+	var gamepadJump = gp_face2;
+	if (global.playerGamepadControlType[player] == 1) gamepadJump = gp_face1;
+	keyJumpHold = (keyboard_check(global.finalKeyJump[player]) or (gamepad_button_check(gpPlayer,gamepadJump)));
+	keyJumpPressed = (keyboard_check_pressed(global.finalKeyJump[player]) or (gamepad_button_check_pressed(gpPlayer,gamepadJump)));
+	keyJumpReleased = (keyboard_check_released(global.finalKeyJump[player]) or (gamepad_button_check_released(gpPlayer,gamepadJump)));
 	
-	keyAttackHold = (keyboard_check(global.finalKeyAttack[player]) or (gamepad_button_check(gpPlayer,gp_face3)));
-	keyAttackPressed = (keyboard_check_pressed(global.finalKeyAttack[player]) or (gamepad_button_check_pressed(gpPlayer,gp_face3)));
-	keyAttackReleased = (keyboard_check_released(global.finalKeyAttack[player]) or (gamepad_button_check_released(gpPlayer,gp_face3)));
+	var gamepadAttack = gp_face1;
+	if (global.playerGamepadControlType[player] == 1) gamepadAttack = gp_face3;
+	keyAttackHold = (keyboard_check(global.finalKeyAttack[player]) or (gamepad_button_check(gpPlayer,gamepadAttack)));
+	keyAttackPressed = (keyboard_check_pressed(global.finalKeyAttack[player]) or (gamepad_button_check_pressed(gpPlayer,gamepadAttack)));
+	keyAttackReleased = (keyboard_check_released(global.finalKeyAttack[player]) or (gamepad_button_check_released(gpPlayer,gamepadAttack)));
 	
 	keyStartHold = (keyboard_check(global.finalKeyStart[player]) or (gamepad_button_check(gpPlayer,gp_start)));
 	keyStartPressed = (keyboard_check_pressed(global.finalKeyStart[player]) or (gamepad_button_check_pressed(gpPlayer,gp_start)));

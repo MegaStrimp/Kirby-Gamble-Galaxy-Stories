@@ -7,6 +7,76 @@ var musicIntroY = 215 - (48 * (global.hasCoop >= 2));
 hasTreasure = global.inStage;
 #endregion
 
+#region Shake
+if (!global.pause)
+{
+	if (shakeP1Timer != -1)
+	{
+		shakeXP1 = irandom_range(-1,1);
+		shakeYP1 = irandom_range(-1,1);
+	}
+	if (shakeP2Timer != -1)
+	{
+		shakeXP2 = irandom_range(-1,1);
+		shakeYP2 = irandom_range(-1,1);
+	}
+	if (shakeP3Timer != -1)
+	{
+		shakeXP3 = irandom_range(-1,1);
+		shakeYP3 = irandom_range(-1,1);
+	}
+	if (shakeP4Timer != -1)
+	{
+		shakeXP4 = irandom_range(-1,1);
+		shakeYP4 = irandom_range(-1,1);
+	}
+	
+	if (shakeP1Timer > 0)
+	{
+		shakeP1Timer -= 1;
+	}
+	else if (shakeP1Timer == 0)
+	{
+		shakeXP1 = 0;
+		shakeYP1 = 0;
+		shakeP1Timer = -1;
+	}
+	
+	if (shakeP2Timer > 0)
+	{
+		shakeP2Timer -= 1;
+	}
+	else if (shakeP2Timer == 0)
+	{
+		shakeXP2 = 0;
+		shakeYP2 = 0;
+		shakeP2Timer = -1;
+	}
+	
+	if (shakeP3Timer > 0)
+	{
+		shakeP3Timer -= 1;
+	}
+	else if (shakeP3Timer == 0)
+	{
+		shakeXP3 = 0;
+		shakeYP3 = 0;
+		shakeP3Timer = -1;
+	}
+	
+	if (shakeP4Timer > 0)
+	{
+		shakeP4Timer -= 1;
+	}
+	else if (shakeP4Timer == 0)
+	{
+		shakeXP4 = 0;
+		shakeYP4 = 0;
+		shakeP4Timer = -1;
+	}
+}
+#endregion
+
 #region Notification
 var hasNotif = (notifState != 0);
 
@@ -44,7 +114,7 @@ if (global.musicIntro)
 	draw_set_color(global.musicIntroColorDark);
 	draw_rectangle(musicIntroX + 7,musicIntroY + 33,musicIntroX + 145,musicIntroY + 36,false);
 	draw_set_color(global.musicIntroColorLight);
-	draw_text(musicIntroX + 6,musicIntroY + 14,string(global.musicIntroTitle));
+	draw_text_ext(musicIntroX + 6,musicIntroY + 14,string(global.musicIntroTitle),9,140);
 	draw_rectangle(musicIntroX + 7,musicIntroY + 33,musicIntroX + (145 * (1 - (musicIntroTimer / musicIntroTimerMax))),musicIntroY + 36,false);
 	
 	draw_set_alpha(1);
@@ -190,6 +260,9 @@ for (var i = 0; i < 4; i++)
 	var palettePointer = global.sprayPaintP1;
 	var characterPointer = global.characterP1;
 	var abilityPointer = global.abilityP1;
+	var invinCandyPointer = (global.invinCandyTimerP1 != -1);
+	var shakeXPointer = shakeXP1;
+	var shakeYPointer = shakeYP1;
 	switch (i)
 	{
 		case 1:
@@ -201,6 +274,9 @@ for (var i = 0; i < 4; i++)
 		palettePointer = global.sprayPaintP2;
 		characterPointer = global.characterP2;
 		abilityPointer = global.abilityP2;
+		invinCandyPointer = (global.invinCandyTimerP2 != -1);
+		shakeXPointer = shakeXP2;
+		shakeYPointer = shakeYP2;
 		break;
 		
 		case 2:
@@ -212,6 +288,9 @@ for (var i = 0; i < 4; i++)
 		palettePointer = global.sprayPaintP3;
 		characterPointer = global.characterP3;
 		abilityPointer = global.abilityP3;
+		invinCandyPointer = (global.invinCandyTimerP3 != -1);
+		shakeXPointer = shakeXP3;
+		shakeYPointer = shakeYP3;
 		break;
 		
 		case 3:
@@ -223,6 +302,9 @@ for (var i = 0; i < 4; i++)
 		palettePointer = global.sprayPaintP4;
 		characterPointer = global.characterP4;
 		abilityPointer = global.abilityP4;
+		invinCandyPointer = (global.invinCandyTimerP4 != -1);
+		shakeXPointer = shakeXP4;
+		shakeYPointer = shakeYP4;
 		break;
 	}
 	#endregion
@@ -230,7 +312,7 @@ for (var i = 0; i < 4; i++)
 	if (hasCoopPointer)
 	{
 		#region Healthbar Back
-		draw_sprite_ext(spr_Hud_Healthbar_Back,i,40 + sep,248,1,1,image_angle,image_blend,drawAlpha);
+		draw_sprite_ext(spr_Hud_Healthbar_Back,i,40 + sep + shakeXPointer,248 + shakeYPointer,1,1,image_angle,image_blend,drawAlpha);
 		#endregion
 		
 		#region Healthbar
@@ -401,16 +483,22 @@ for (var i = 0; i < 4; i++)
 			break;
 		}
 		
-		draw_sprite_part_ext(spr_Hud_Healthbar_Kirby,flashPointer,0,0,healthbarWidthPointer,healthbarHeightPointer,40 + sep,248,1,1,image_blend,drawAlpha);
+		draw_sprite_part_ext(spr_Hud_Healthbar_Kirby,flashPointer,0,0,healthbarWidthPointer,healthbarHeightPointer,40 + sep + shakeXPointer,248 + shakeYPointer,1,1,image_blend,drawAlpha);
+		if (invinCandyPointer)
+		{
+			if (global.shaders) pal_swap_set(spr_Hud_Healthbar_Rainbow_Palette,1 + ((current_time / 5) % 37),false);
+			draw_sprite_part_ext(spr_Hud_Healthbar_Rainbow,flashPointer,0,0,healthbarWidthPointer,healthbarHeightPointer,40 + sep + shakeXPointer,248 + shakeYPointer,1,1,image_blend,drawAlpha);
+			if (global.shaders) pal_swap_reset();
+		}
 		
 		//if (healthbarWidthPointer >= 1) draw_sprite_part_ext(spr_Hud_HealthbarCorner_Kirby,flashPointer,0,0,4,7,40 + sep,248,1,1,image_blend,drawAlpha);
 		//if (healthbarWidthPointer >= sprite_get_width(spr_Hud_Healthbar_Kirby)) draw_sprite_part_ext(spr_Hud_HealthbarCorner_Kirby,flashPointer,0,0,4,min(7,healthbarWidthPointer),40 + sep + (healthbarWidthPointer - 3),248,1,1,image_blend,drawAlpha);
 		
-		draw_sprite_part_ext(spr_Hud_HealthbarHeal_Kirby,0,healStartPointer,0,sign(healWidthPointer) * healWidthPointer,healthbarHeightPointer,40 + healStartPointer + sep,248,1,1,healBarColorPointer,drawAlpha);
+		draw_sprite_part_ext(spr_Hud_HealthbarHeal_Kirby,0,healStartPointer,0,sign(healWidthPointer) * healWidthPointer,healthbarHeightPointer,40 + healStartPointer + sep + shakeXPointer,248 + shakeYPointer,1,1,healBarColorPointer,drawAlpha);
 		#endregion
 		
 		#region Border
-		draw_sprite_ext(spr_Hud_PlayerHealthbarBorder,i,11 + sep,228,1,1,image_angle,image_blend,drawAlpha);
+		draw_sprite_ext(spr_Hud_PlayerHealthbarBorder,i,11 + sep + shakeXPointer,228 + shakeYPointer,1,1,image_angle,image_blend,drawAlpha);
 		#endregion
 		
 		#region Icon
@@ -419,14 +507,14 @@ for (var i = 0; i < 4; i++)
 		if ((iconIndex == spr_Hud_Icon_Kirby) and (palettePointer == spr_Kirby_Normal_Palette_FriendlyPink)) palettePointer = spr_Hud_Palette_Icon_Kirby;
 		
 		if ((global.shaders) and (abilityPointer == playerAbilities.none)) pal_swap_set(palettePointer,1 + (flashPointer * 2),false);
-		draw_sprite_ext(iconIndex,0,16 + sep,232,1,1,image_angle,image_blend,drawAlpha);
+		draw_sprite_ext(iconIndex,0,16 + sep + shakeXPointer,232 + shakeYPointer,1,1,image_angle,image_blend,drawAlpha);
 		if ((global.shaders) and (abilityPointer == playerAbilities.none)) pal_swap_reset();
 		#endregion
 		
 		#region Golden Tomatoes
 		for (var h = 0; h < global.goldenTomatoAmountMax; h++)
 		{
-			draw_sprite_ext(spr_Hud_GoldenTomato,(goldenTomatoAmountPointer > h),29 + (10 * h) + sep,258,1,1,image_angle,image_blend,drawAlpha);
+			draw_sprite_ext(spr_Hud_GoldenTomato,(goldenTomatoAmountPointer > h),29 + (10 * h) + sep + shakeXPointer,258 + shakeYPointer,1,1,image_angle,image_blend,drawAlpha);
 		}
 		#endregion
 		
@@ -436,126 +524,128 @@ for (var i = 0; i < 4; i++)
 		if ((textIndex == spr_Hud_AbilityText_Kirby) and (palettePointer == spr_Kirby_Normal_Palette_FriendlyPink)) palettePointer = spr_Hud_Palette_Healthbar_Kirby;
 		
 		if ((global.shaders) and (abilityPointer == playerAbilities.none)) pal_swap_set(palettePointer,1 + (flashPointer * 2),false);
-		draw_sprite_ext(textIndex,0,43 + sep,230,1,1,image_angle,image_blend,drawAlpha);
+		draw_sprite_ext(textIndex,0,43 + sep + shakeXPointer,230 + shakeYPointer,1,1,image_angle,image_blend,drawAlpha);
 		if ((global.shaders) and (abilityPointer == playerAbilities.none)) pal_swap_reset();
 		#endregion
 		
 		#region Player Num
-		draw_sprite_ext(spr_Hud_PlayerNum,i,2 + sep,252,1,1,image_angle,image_blend,drawAlpha);
+		draw_sprite_ext(spr_Hud_PlayerNum,i,2 + sep + shakeXPointer,252 + shakeYPointer,1,1,image_angle,image_blend,drawAlpha);
 		#endregion
 	}
 }
 #endregion
 
-#region Lives
-#region Variables
-global.playerLives = clamp(global.playerLives,0,999);
-var livesBg = spr_Hud_Lives_Background1;
-if (global.hasCoop > 0) livesBg = spr_Hud_Lives_Background2;
-var livesPosX = 16;
-var livesPosY = 13 + (hasTreasure * 28);
-var playerAmount = -1;
-#endregion
-
-#region Background
-draw_sprite_ext(livesBg,0,livesPosX - 12,livesPosY - 2,1,1,image_angle,image_blend,drawAlpha);
-#endregion
-
-for (var i = 3; i >= 0; i--)
+if (global.gamemode != gamemodes.gamblion)
 {
-	#region Pointers
-	var sep = (8 * i);
-	
-	var hasCoopPointer = global.hasP1;
-	var palettePointer = global.sprayPaintP1;
-	var characterPointer = global.characterP1;
-	switch (i)
-	{
-		case 1:
-		hasCoopPointer = global.hasP2;
-		palettePointer = global.sprayPaintP2;
-		characterPointer = global.characterP2;
-		break;
-		
-		case 2:
-		hasCoopPointer = global.hasP3;
-		palettePointer = global.sprayPaintP3;
-		characterPointer = global.characterP3;
-		break;
-		
-		case 3:
-		hasCoopPointer = global.hasP4;
-		palettePointer = global.sprayPaintP4;
-		characterPointer = global.characterP4;
-		break;
-	}
+	#region Lives
+	#region Variables
+	global.playerLives = clamp(global.playerLives,0,999);
+	var livesBg = spr_Hud_Lives_Background1;
+	if (global.hasCoop > 0) livesBg = spr_Hud_Lives_Background2;
+	var livesPosX = 16;
+	var livesPosY = 13 + (hasTreasure * 28);
+	var playerAmount = -1;
 	#endregion
-	
-	#region Icons
-	if (hasCoopPointer)
+
+	#region Background
+	draw_sprite_ext(livesBg,0,livesPosX - 12,livesPosY - 2,1,1,image_angle,image_blend,drawAlpha);
+	#endregion
+
+	for (var i = 3; i >= 0; i--)
 	{
-		playerAmount += 1;
-		
-		if ((characterPointer == playerCharacters.kirby) and (palettePointer == spr_Kirby_Normal_Palette_FriendlyPink)) palettePointer = spr_Hud_Palette_Lives_Kirby;
-		
-		var icon = spr_Hud_Lives_Icon_Kirby;
-		
-		switch (characterPointer)
+		#region Pointers
+		var sep = (10 * i);
+	
+		var hasCoopPointer = global.hasP1;
+		var palettePointer = global.sprayPaintP1;
+		var characterPointer = global.characterP1;
+		switch (i)
 		{
-			case playerCharacters.kirby:
-			icon = spr_Hud_Lives_Icon_Kirby;
+			case 1:
+			hasCoopPointer = global.hasP2;
+			palettePointer = global.sprayPaintP2;
+			characterPointer = global.characterP2;
 			break;
-			
-			case playerCharacters.gamble:
-			icon = spr_Hud_Lives_Icon_Gamble;
+		
+			case 2:
+			hasCoopPointer = global.hasP3;
+			palettePointer = global.sprayPaintP3;
+			characterPointer = global.characterP3;
 			break;
-			
-			case playerCharacters.gooey:
-			icon = spr_Hud_Lives_Icon_Gooey;
+		
+			case 3:
+			hasCoopPointer = global.hasP4;
+			palettePointer = global.sprayPaintP4;
+			characterPointer = global.characterP4;
 			break;
 		}
+		#endregion
+	
+		#region Icons
+		if (hasCoopPointer)
+		{
+			playerAmount += 1;
 		
-		if (global.shaders) pal_swap_set(palettePointer,1,false);
-		draw_sprite_ext(icon,0,livesPosX + sep,livesPosY,1,1,image_angle,image_blend,drawAlpha);
-		if (global.shaders) pal_swap_reset();
+			if ((characterPointer == playerCharacters.kirby) and (palettePointer == spr_Kirby_Normal_Palette_FriendlyPink)) palettePointer = spr_Hud_Palette_Lives_Kirby;
+		
+			var icon = spr_Hud_Lives_Icon_Kirby;
+		
+			switch (characterPointer)
+			{
+				case playerCharacters.kirby:
+				icon = spr_Hud_Lives_Icon_Kirby;
+				break;
+			
+				case playerCharacters.gamble:
+				icon = spr_Hud_Lives_Icon_Gamble;
+				break;
+			
+				case playerCharacters.gooey:
+				icon = spr_Hud_Lives_Icon_Gooey;
+				break;
+			}
+		
+			if (global.shaders) pal_swap_set(palettePointer,1,false);
+			draw_sprite_ext(icon,0,livesPosX + sep,livesPosY,1,1,image_angle,image_blend,drawAlpha);
+			if (global.shaders) pal_swap_reset();
+		}
+		#endregion
+	}
+
+	#region Numbers
+	if (global.cheatLifelessEquipped)
+	{
+		draw_sprite_ext(spr_Hud_Infinite,0,livesPosX + 23 + (8 * playerAmount),livesPosY - 6,1,1,image_angle,image_blend,drawAlpha);
+	}
+	else
+	{
+		draw_sprite_ext(spr_Hud_Numbers,floor(global.playerLives / 100),livesPosX + 14 + (10 * playerAmount),livesPosY - 8,1,1,image_angle,image_blend,drawAlpha);
+		draw_sprite_ext(spr_Hud_Numbers,(global.playerLives - ((floor(global.playerLives / 100) * 100))) / 10,livesPosX + 29 + (10 * playerAmount),livesPosY - 8,1,1,image_angle,image_blend,drawAlpha);
+		draw_sprite_ext(spr_Hud_Numbers,global.playerLives - (floor(global.playerLives / 10) * 10),livesPosX + 44 + (10 * playerAmount),livesPosY - 8,1,1,image_angle,image_blend,drawAlpha);
 	}
 	#endregion
-}
+	#endregion
+	
+	#region Point Stars
+	#region Variables
+	global.pointStars = clamp(global.pointStars,0,999);
+	starsPosX = 17;
+	starsPosY = 39 + (hasTreasure * 28);
+	#endregion
 
-#region Numbers
-if (global.cheatLifelessEquipped)
-{
-	draw_sprite_ext(spr_Hud_Infinite,0,livesPosX + 14 + (8 * playerAmount),livesPosY - 10,1,1,image_angle,image_blend,drawAlpha);
-}
-else
-{
-	draw_sprite_ext(spr_Hud_Numbers,floor(global.playerLives / 100),livesPosX + 14 + (8 * playerAmount),livesPosY - 8,1,1,image_angle,image_blend,drawAlpha);
-	draw_sprite_ext(spr_Hud_Numbers,(global.playerLives - ((floor(global.playerLives / 100) * 100))) / 10,livesPosX + 29 + (8 * playerAmount),livesPosY - 8,1,1,image_angle,image_blend,drawAlpha);
-	draw_sprite_ext(spr_Hud_Numbers,global.playerLives - (floor(global.playerLives / 10) * 10),livesPosX + 42 + (8 * playerAmount),livesPosY - 8,1,1,image_angle,image_blend,drawAlpha);
-}
-#endregion
-#endregion
+	#region Icons
+	draw_sprite_ext(spr_Hud_PointStars_Background,0,starsPosX - 13,starsPosY - 4,1,1,image_angle,image_blend,drawAlpha);
+	draw_sprite_ext(spr_Hud_PointStars_Icon,0,starsPosX,starsPosY,1,1,image_angle,image_blend,drawAlpha);
+	#endregion
 
-#region Point Stars
-#region Variables
-global.pointStars = clamp(global.pointStars,0,999);
-starsPosX = 17;
-starsPosY = 39 + (hasTreasure * 28);
-#endregion
+	#region Numbers
+	draw_sprite_ext(spr_Hud_Numbers,floor(global.pointStars / 100),starsPosX + 12,starsPosY - 10,1,1,image_angle,image_blend,drawAlpha);
+	draw_sprite_ext(spr_Hud_Numbers,(global.pointStars - ((floor(global.pointStars / 100) * 100))) / 10,starsPosX + 27,starsPosY - 10,1,1,image_angle,image_blend,drawAlpha);
+	draw_sprite_ext(spr_Hud_Numbers,global.pointStars - (floor(global.pointStars / 10) * 10),starsPosX + 42,starsPosY - 10,1,1,image_angle,image_blend,drawAlpha);
+	#endregion
+	#endregion
 
-#region Icons
-draw_sprite_ext(spr_Hud_PointStars_Background,0,starsPosX - 13,starsPosY - 4,1,1,image_angle,image_blend,drawAlpha);
-draw_sprite_ext(spr_Hud_PointStars_Icon,0,starsPosX,starsPosY,1,1,image_angle,image_blend,drawAlpha);
-#endregion
-
-#region Numbers
-draw_sprite_ext(spr_Hud_Numbers,floor(global.pointStars / 100),starsPosX + 12,starsPosY - 10,1,1,image_angle,image_blend,drawAlpha);
-draw_sprite_ext(spr_Hud_Numbers,(global.pointStars - ((floor(global.pointStars / 100) * 100))) / 10,starsPosX + 27,starsPosY - 10,1,1,image_angle,image_blend,drawAlpha);
-draw_sprite_ext(spr_Hud_Numbers,global.pointStars - (floor(global.pointStars / 10) * 10),starsPosX + 42,starsPosY - 10,1,1,image_angle,image_blend,drawAlpha);
-#endregion
-#endregion
-
-#region Points
+	#region Points
 /*
 var pointsSep = "";
 
@@ -570,6 +660,7 @@ global.points = clamp(global.points,0,999999);
 draw_text(hudX + 25,hudY + 10,pointsSep + string(global.points));
 */
 #endregion
+}
 
 #region Draw Boss Death Overlay
 if (hasBossDeathOverlay)

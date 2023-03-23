@@ -1,27 +1,11 @@
 ///@description Main
 
-//Characters
+#region Event Inherited
+event_inherited();
+#endregion
 
-if (setupTimer == 0)
+if (!isPaused)
 {
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprShield = spr_Projectile_MirrorShield_Normal_Shield;
-		sprRing = spr_Projectile_MirrorShield_Normal_Ring;
-		break;
-	}
-	sprite_index = sprShield;
-}
-
-if (((pausable) and (!global.pause)) or (!pausable))
-{
-	//Event Inherited
-	
-	event_inherited();
-	
 	//Destroy
 	
 	if (!instance_exists(owner)) instance_destroy();
@@ -30,6 +14,10 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	{
 		instance_destroy();
 	}
+	
+	//Animation
+	
+	image_speed = 1;
 	
 	//Sprite Timer
 	
@@ -49,4 +37,8 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		}
 		spriteTimer = spriteTimerMax;
 	}
+}
+else
+{
+	image_speed = 0;
 }

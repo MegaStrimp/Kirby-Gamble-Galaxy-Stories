@@ -140,6 +140,235 @@ function scr_DebugSave()
 	global.eddSprayPaintUnlocked = true;
 	global.musiciansLightSprayPaintUnlocked = true;
 	
+	#region Ability Hat Skins & Paints
+	#region Cutter
+	#region KSSU
+	global.hatPaletteCutterKSSUBloodBladeUnlocked = true;
+	global.hatPaletteCutterKSSUBitcrushedUnlocked = true;
+	global.hatPaletteCutterKSSUMallardGreenUnlocked = true;
+	global.hatPaletteCutterKSSUBlackSwedishUnlocked = true;
+	global.hatPaletteCutterKSSUFluxNostalgiaUnlocked = true;
+	#endregion
+	#endregion
+	
+	#region Beam
+	#region KSSU
+	global.hatPaletteBeamKSSUFluxNostalgiaUnlocked = true;
+	global.hatPaletteBeamKSSUBitcrushedUnlocked = true;
+	#endregion
+	
+	#region Marx Soul
+	global.hatTypeBeamMarxSoulUnlocked = true;
+	
+	global.hatPaletteBeamMarxSoulSummerFruitsUnlocked = true;
+	global.hatPaletteBeamMarxSoulBitcrushedUnlocked = true;
+	#endregion
+	#endregion
+	
+	#region Mystic Beam
+	#region GGS
+	global.hatPaletteMysticBeamGGSMageRoseUnlocked = true;
+	global.hatPaletteMysticBeamGGSBlueberryUnlocked = true;
+	global.hatPaletteMysticBeamGGSSourlimeUnlocked = true;
+	global.hatPaletteMysticBeamGGSMonoUnlocked = true;
+	global.hatPaletteMysticBeamGGSBubblegumUnlocked = true;
+	#endregion
+	#endregion
+	
+	#region Stone
+	global.hatTypeBeamModernUnlocked = true;
+	
+	#region KSSU
+	global.hatPaletteStoneKSSUBitcrushedUnlocked = true;
+	#endregion
+	
+	#region Modern
+	global.hatPaletteStoneModernMoltenRockUnlocked = true;
+	global.hatPaletteStoneModernBitcrushedUnlocked = true;
+	global.hatPaletteStoneModernCryingCobblestoneUnlocked = true;
+	#endregion
+	#endregion
+	
+	#region Mirror
+	global.hatTypeMirrorModernUnlocked = true;
+	
+	#region KSSU
+	global.hatPaletteMirrorKSSUBetaBlockUnlocked = true;
+	global.hatPaletteMirrorKSSUBitcrushedUnlocked = true;
+	#endregion
+	
+	#region Modern
+	global.hatPaletteMirrorModernBetaBlockUnlocked = true;
+	global.hatPaletteMirrorModernBitcrushedUnlocked = true;
+	#endregion
+	#endregion
+	
+	#region Ninja
+	global.hatTypeNinjaModernUnlocked = true;
+	
+	#region KSSU
+	global.hatPaletteNinjaKSSUSilverLinedWarriorUnlocked = true;
+	global.hatPaletteNinjaKSSUBitcrushedUnlocked = true;
+	#endregion
+	
+	#region Modern
+	global.hatPaletteNinjaModernBitcrushedUnlocked = true;
+	global.hatPaletteNinjaModernViridianAmbushUnlocked = true;
+	#endregion
+	#endregion
+	
+	#region Bomb
+	global.hatTypeBombModernUnlocked = true;
+	
+	#region KSSU
+	global.hatPaletteBombKSSUBitcrushedUnlocked = true;
+	global.hatPaletteBombKSSUBloomingPoppyUnlocked = true;
+	#endregion
+	
+	#region Modern
+	global.hatPaletteBombModernBitcrushedUnlocked = true;
+	global.hatPaletteBombModernOutburstingConspiracyUnlocked = true;
+	global.hatPaletteBombModernDragonsCastleUnlocked = true;
+	#endregion
+	#endregion
+	
+	#region Fire
+	#region KSSU
+	global.hatPaletteFireKSSUBlazingBlueUnlocked = true;
+	global.hatPaletteFireKSSUFluxNostalgiaUnlocked = true;
+	global.hatPaletteFireKSSUScarletRoseUnlocked = true;
+	global.hatPaletteFireKSSUBitcrushedUnlocked = true;
+	global.hatPaletteFireKSSUNuclearMeltdownUnlocked = true;
+	global.hatPaletteFireKSSUMidnightInfernoUnlocked = true;
+	global.hatPaletteFireKSSUHotPinkUnlocked = true;
+	#endregion
+	#endregion
+	
+	#region Ice
+	global.hatTypeBombSnowmanUnlocked = true;
+	
+	#region KSSU
+	global.hatPaletteIceKSSUBitcrushedUnlocked = true;
+	global.hatPaletteIceKSSUFrostyObsidianUnlocked = true;
+	global.hatPaletteIceKSSUFluxNostalgiaUnlocked = true;
+	#endregion
+	
+	#region Snowman
+	global.hatPaletteIceSnowmanBitcrushedUnlocked = true;
+	global.hatPaletteIceSnowmanChocolateMousseUnlocked = true;
+	global.hatPaletteIceSnowmanStrawberryCreamUnlocked = true;
+	#endregion
+	#endregion
+	
+	#region Spark
+	#region KSSU
+	global.hatPaletteSparkKSSUBitcrushedUnlocked = true;
+	#endregion
+	#endregion
+	
+	#region Yoyo
+	#region KSSU
+	global.hatPaletteYoyoKSSUBitcrushedUnlocked = true;
+	#endregion
+	#endregion
+	
+	#region Wheel
+	#region KSSU
+	global.hatPaletteWheelKSSUBitcrushedUnlocked = true;
+	global.hatPaletteWheelKSSUMufflerBlueUnlocked = true;
+	global.hatPaletteWheelKSSUFluxNostalgiaUnlocked = true;
+	#endregion
+	#endregion
+	
+	#region Artist
+	#region KSSU
+	global.hatPaletteArtistKSSUBitcrushedUnlocked = true;
+	#endregion
+	#endregion
+	
+	#region Fighter
+	#region KSSU
+	global.hatPaletteFighterKSSUBitcrushedUnlocked = true;
+	#endregion
+	#endregion
+	
+	#region Suplex
+	#region KSSU
+	global.hatPaletteSuplexKSSUBitcrushedUnlocked = true;
+	#endregion
+	#endregion
+	
+	#region Wing
+	#region KSSU
+	global.hatPaletteWingKSSUBitcrushedUnlocked = true;
+	global.hatPaletteWingKSSUPekinBreezeUnlocked = true;
+	global.hatPaletteWingKSSUDynaBladeUnlocked = true;
+	global.hatPaletteWingKSSUNocturneFriendUnlocked = true;
+	#endregion
+	#endregion
+	
+	#region Jet
+	#region KSSU
+	global.hatPaletteJetKSSUSpeedyScarletUnlocked = true;
+	global.hatPaletteJetKSSUBitcrushedUnlocked = true;
+	global.hatPaletteJetKSSULavender01Unlocked = true;
+	global.hatPaletteJetKSSUFluxNostalgiaUnlocked = true;
+	#endregion
+	#endregion
+	
+	#region Sword
+	#region KSSU
+	global.hatPaletteSwordKSSUThunderingCloudUnlocked = true;
+	global.hatPaletteSwordKSSUBitcrushedUnlocked = true;
+	global.hatPaletteSwordKSSUFluxNostalgiaUnlocked = true;
+	#endregion
+	#endregion
+	
+	#region Parasol
+	#region KSSU
+	global.hatPaletteParasolKSSUBitcrushedUnlocked = true;
+	global.hatPaletteParasolKSSUWagasaDeeUnlocked = true;
+	global.hatPaletteParasolKSSUAzureBandannaUnlocked = true;
+	#endregion
+	#endregion
+	
+	#region Hammer
+	#region KSSU
+	global.hatPaletteHammerKSSUConstructionWorkUnlocked = true;
+	global.hatPaletteHammerKSSUBitcrushedUnlocked = true;
+	global.hatPaletteHammerKSSUFluxNostalgiaUnlocked = true;
+	#endregion
+	#endregion
+	
+	#region Bell
+	#region Modern
+	global.hatPaletteBellModernPrestoPurpleUnlocked = true;
+	global.hatPaletteBellModernTempoTealUnlocked = true;
+	global.hatPaletteBellModernRingingRoseUnlocked = true;
+	global.hatPaletteBellModernCandescentCopperUnlocked = true;
+	global.hatPaletteBellModernShiningSilverUnlocked = true;
+	global.hatPaletteBellModernPolishedPlantUnlocked = true;
+	global.hatPaletteBellModernIlluminatedIvoryUnlocked = true;
+	global.hatPaletteBellModernBitcrushedUnlocked = true;
+	#endregion
+	#endregion
+	
+	#region Sleep
+	#region KSSU
+	global.hatPaletteSleepKSSUNoddyPeachUnlocked = true;
+	global.hatPaletteSleepKSSURoyalPurpleUnlocked = true;
+	global.hatPaletteSleepKSSUBitcrushedUnlocked = true;
+	#endregion
+	#endregion
+	
+	#region Scan
+	#region KSSU
+	global.hatPaletteScanKSSUBitcrushedUnlocked = true;
+	global.hatPaletteScanKSSUMilitaryGreenUnlocked = true;
+	#endregion
+	#endregion
+	#endregion
+	
 	global.gambleFamiliarUnlocked = true;
 	global.happyPeaFamiliarUnlocked = true;
 	global.epicJarFamiliarUnlocked = true;
@@ -148,18 +377,23 @@ function scr_DebugSave()
 	
 	global.cutterMotorCutterUpgradeUnlocked = true;
 	global.cutterPropellerWingUpgradeUnlocked = true;
+	global.cutterSpectralCutterUpgradeUnlocked = true;
 	global.beamGoldenFlareUpgradeUnlocked = true;
 	global.mysticBeamVortexInAJarUpgradeUnlocked = true;
 	global.stoneRockCandyUpgradeUnlocked = true;
 	global.stoneComboCobaltUpgradeUnlocked = true;
-	global.bombMultiBombUpgradeUnlocked = true;
+	global.stonePsychicPebbleUpgradeUnlocked = true;
+	global.ufoCowDollUpgradeUnlocked = true;
+	global.bombLightShellsUpgradeUnlocked = true;
 	global.bombEyeBombUpgradeUnlocked = true;
-	global.bombSmartBombUpgradeUnlocked = true;
+	global.bombStickyBombUpgradeUnlocked = true;
 	global.bombMagmaBombUpgradeUnlocked = true;
+	global.bombIceBombUpgradeUnlocked = true;
 	global.bombExplosivePowderUpgradeUnlocked = true;
 	global.fireMagicCharcoalUpgradeUnlocked = true;
 	global.iceEmptyConeUpgradeUnlocked = true;
 	global.sparkBrightPluggUpgradeUnlocked = true;
+	global.parasolWaddleBrellaUpgradeUnlocked = true;
 	global.waterEggSoilUpgradeUnlocked = true;
 	
 	global.cheatLifelessUnlocked = true;
@@ -185,7 +419,7 @@ function scr_DebugSave()
 	global.bestiaryEnemiesMysticDooUnlocked = true;
 	global.bestiaryEnemiesBouncyUnlocked = true;
 	global.bestiaryEnemiesMrBoogieUnlocked = true;
-	global.bestiaryEnemiesSearchUnlocked = true;
+	global.bestiaryEnemiesSearchesUnlocked = true;
 	global.bestiaryEnemiesHiveDroneUnlocked = true;
 	global.bestiaryEnemiesWapodUnlocked = true;
 	global.bestiaryEnemiesFlamebelchUnlocked = true;
@@ -221,7 +455,6 @@ function scr_DebugSave()
 	global.bollCrossoverKeycard = true;
 	
 	global.abilitySpraysKeycard = true;
-	global.permaHalloweenKeycard = true;
 	
 	global.demoBeatGreenGreens = true;
 	global.demoBeatBattleshipHalberd = true;

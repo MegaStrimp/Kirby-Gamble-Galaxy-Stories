@@ -17,7 +17,7 @@ else if (fadeTimer == 0)
 {
 	var fade = instance_create_depth(x,y,depth,obj_Fade);
 	fade.alphaSpd = .005;
-	//fade.targetRoom = rm_StageSelect_Demo;
+	//fade.targetRoom = rm_DemoStageSelect;
 	fade.targetRoom = rm_MainMenu;
 	fadeTimer = -1;
 }

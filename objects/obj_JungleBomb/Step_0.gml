@@ -1,30 +1,10 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_JungleBomb_Normal_Idle;
-		sprWalk = spr_JungleBomb_Normal_Walk;
-		sprDuck = spr_JungleBomb_Normal_Duck;
-		sprJump = spr_JungleBomb_Normal_Jump;
-		sprFall = spr_JungleBomb_Normal_Fall;
-		sprAttack = spr_JungleBomb_Normal_Attack;
-		sprHurt = spr_JungleBomb_Normal_Hurt;
-		break;
-	}
-}
-
 //Event Inherited
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	//Get Inhaled
 	
@@ -67,6 +47,9 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 					audio_play_sound(snd_BombThrow,0,false);
 					var bomb = instance_create_depth(x,y - 2,depth - 1,obj_Projectile_Bomb);
 					bomb.enemy = true;
+					bomb.abilityType = playerAbilities.bomb;
+					bomb.dmg = jungleBomb_Bomb_Damage;
+					scr_Attack_SetKnockback(bomb,jungleBomb_Bomb_Strength,jungleBomb_Bomb_HitStopAffectSource,jungleBomb_Bomb_HitStopAffectPlayer,jungleBomb_Bomb_HitStopAffectTarget,jungleBomb_Bomb_HitStopLength,jungleBomb_Bomb_HitStopShakeStrength);
 					bomb.destroyableByPlayer = true;
 					bomb.destroyableByEnemy = false;
 					bomb.hurtsObject = false;
@@ -428,6 +411,4 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 else
 {
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

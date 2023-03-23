@@ -8,7 +8,7 @@ function scr_Player_States_JetHover()
 		
 		image_speed = 1;
 		fallRoll = false;
-		run = false;
+		isRunning = false;
 		
 		switch (player)
 		{
@@ -123,13 +123,21 @@ function scr_Player_States_JetHover()
 		//			if (audio_is_playing(snd_Float)) audio_stop_sound(snd_Float);
 		//			if (!audio_is_playing(floatSfx)) floatSfx = audio_play_sound(snd_Float,0,false);
 		//			floating = true;
-		//			if (jumpLimit) vsp = -jumpspeedFloat;
+		//			if (jumpLimit)
+		//			{
+		//				vsp = -jumpspeedFloat;
+		//				grounded = false;
+		//			}
 		//			floatingTimer = 10;
 		//			break;
 					
 		//			case playerCharacters.gooey:
 		//			floating = true;
-		//			if ((!(keyDownHold)) and (jumpLimit)) vsp = -jumpspeedFloat;
+		//			if ((!(keyDownHold)) and (jumpLimit))
+		//{
+		//	vsp = -jumpspeedFloat;
+		//	grounded = false;
+		//}
 		//			floatingTimer = 10;
 		//			break;
 		//		}
@@ -165,7 +173,7 @@ function scr_Player_States_JetHover()
 		//	if ((!global.cutscene) and ((grounded) or (enterDoor) or ((place_meeting(x,y,obj_AntiFloat))) or (keyAttackPressed)) and ((!floatSpit) and (sprite_index != sprFloatReady) and (sprite_index != sprItemCarryLightFloatReady)))
 		//	{
 		//		if (audio_is_playing(floatSfx)) audio_stop_sound(snd_Float);
-		//		var projAirPuff = instance_create_depth(x + ((sprite_get_width(sprFloatSpit) / 2) * dir),y + vsp,depth - 1,obj_AirPuff);
+		//		var projAirPuff = instance_create_depth(x + ((sprite_get_width(sprFloatSpit) / 2) * dir),y + vsp,depth - 1,obj_Projectile_AirPuff);
 		//		projAirPuff.owner = id;
 		//		projAirPuff.dmg = 10;
 		//		projAirPuff.dirX = dir;
@@ -243,22 +251,6 @@ function scr_Player_States_JetHover()
 			float = false;
 			floatSpit = false;
 		}
-		
-		//Door
-		/*
-		if ((!global.cutscene) and (position_meeting(x,y,obj_Door)) and (keyUpPressed))
-		{
-			if ((!instance_exists(obj_Fade)) and (hurt = false))
-			{
-			    var nearbyDoor = instance_place(x,y,obj_Door);
-			    fade = instance_create_depth(x,y,-999,obj_Fade);
-				fade.targetRoom = nearbyDoor.targetRoom;
-			    hsp = 0;
-			    vsp = 0;
-			    image_index = 0;
-			    state = playerStates.enter;
-			}
-		}*/
 		
 		
 		//Collision

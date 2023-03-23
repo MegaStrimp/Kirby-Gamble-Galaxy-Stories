@@ -1,6 +1,10 @@
 ///@description Main
 
-if (((pausable) and (!global.pause)) or (!pausable))
+#region Event Inherited
+event_inherited();
+#endregion
+
+if (!isPaused)
 {
 	//Active
 	
@@ -15,10 +19,6 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		shakeX = 1;
 		shakeY = 1;
 	}
-	
-	//Event Inherited
-	
-	event_inherited();
 	
 	//Movement
 	

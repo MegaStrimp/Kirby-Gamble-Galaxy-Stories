@@ -23,9 +23,9 @@ sprHurt = spr_Twizzy_Normal_Hurt;
 //Other Variables
 
 paletteIndex = spr_Twizzy_Normal_Palette_FlyingYolk;
-hp = 6;
-dmg = 1;
-points = 180;
+hp = twizzy_Hp;
+dmg = baseEnemyContact_Damage;
+points = twizzy_Points;
 hasGravity = true;
 hasXCollision = false;
 hasYCollision = false;

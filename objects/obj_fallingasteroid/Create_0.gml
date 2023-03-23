@@ -1,9 +1,5 @@
 ///@description Initialize Variables
 
-#region Randomize
-randomize();
-#endregion
-
 #region Physics
 spd = 2;
 angle = 270;

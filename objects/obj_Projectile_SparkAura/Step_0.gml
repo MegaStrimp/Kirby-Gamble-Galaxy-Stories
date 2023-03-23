@@ -1,6 +1,10 @@
 ///@description Main
 
-if (((pausable) and (!global.pause)) or (!pausable))
+#region Event Inherited
+event_inherited();
+#endregion
+
+if (!isPaused)
 {
 	//Destroy
 	
@@ -20,10 +24,6 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		var collidedEnemy = instance_place(x,y,obj_Enemy);
 		if ((collidedEnemy.hurtable) and (collidedEnemy.hurt)) owner.sparkCharge -= 2;
 	}
-	
-	//Event Inherited
-	
-	event_inherited();
 	
 	//Animation
 	

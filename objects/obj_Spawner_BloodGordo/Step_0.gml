@@ -29,16 +29,8 @@ else if (spawnTimer == 0)
 	spawnedEnemy.spawner = id;
 	spawnedEnemy.spawnerRange = (spawnerRange * 2);
 	spawnedEnemy.paletteIndex = paletteIndex;
-	spawnedEnemy.accel = accel;
-	spawnedEnemy.decel = decel;
-	spawnedEnemy.movespeed = movespeed;
-	spawnedEnemy.jumpspeed = jumpspeed;
-	spawnedEnemy.grav = grav;
-	spawnedEnemy.gravNormal = gravNormal;
-	spawnedEnemy.gravParasol = gravParasol;
-	spawnedEnemy.gravLimit = gravLimit;
-	spawnedEnemy.gravLimitNormal = gravLimitNormal;
-	spawnedEnemy.gravLimitParasol = gravLimitParasol;
+	spawnedEnemy.spdMin = spdMin;
+	spawnedEnemy.spdMax = spdMax;
 	spawnedEnemy.character = character;
 	switch (character)
 	{
@@ -46,7 +38,12 @@ else if (spawnTimer == 0)
 		
 		case 0:
 		spawnedEnemy.sprIdle = spr_BloodGordo_Normal_Idle;
+		spawnedEnemy.sprAngry = spr_BloodGordo_Normal_Angry;
+		spawnedEnemy.sprCautious = spr_BloodGordo_Normal_Cautious;
+		spawnedEnemy.sprSleep = spr_BloodGordo_Normal_Sleep;
+		spawnedEnemy.sprTriggered = spr_BloodGordo_Normal_Triggered;
 		spawnedEnemy.sprHurt = -1;
+		spawnedEnemy.sprAura = spr_BloodGordo_Normal_Aura;
 		break;
 	}
 	spawnedEnemy.state = state;
@@ -82,5 +79,6 @@ else if (spawnTimer == 0)
 	spawnedEnemy.objectOnDeath = objectOnDeath;
 	spawnedEnemy.objectOnDeathObj = objectOnDeathObj;
 	spawnedEnemy.groundFailsafe = groundFailsafe;
+	spawnedEnemy.radius = radius;
 	spawnTimer = -1;
 }

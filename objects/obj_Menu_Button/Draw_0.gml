@@ -258,75 +258,14 @@ switch (state)
 	
 	#region Upgrades
 	case "upgrades":
-	draw_sprite(sprStar,1,x,y);
-	var selected = 0;
-	if ((instance_exists(obj_UpgradesMenu)) and (obj_UpgradesMenu.selection == number)) selected = 1;
-	draw_sprite(spr_Menu_Upgrades_Box,selected,x,y);
-	var active = spr_Menu_Upgrades_Cross;
-	switch (index)
+	if (index == "arrowPrev")
 	{
-		case "Motor Cutter":
-		if (global.cutterMotorCutterUpgradeEquipped) active = spr_Menu_Upgrades_Check;
-		break;
-		
-		case "Propeller Wing":
-		if (global.cutterPropellerWingUpgradeEquipped) active = spr_Menu_Upgrades_Check;
-		break;
-		
-		case "Golden Flare":
-		if (global.beamGoldenFlareUpgradeEquipped) active = spr_Menu_Upgrades_Check;
-		break;
-		
-		case "Vortex In A Jar":
-		if (global.mysticBeamVortexInAJarUpgradeEquipped) active = spr_Menu_Upgrades_Check;
-		break;
-		
-		case "Rock Candy":
-		if (global.stoneRockCandyUpgradeEquipped) active = spr_Menu_Upgrades_Check;
-		break;
-		
-		case "Combo Cobalt":
-		if (global.stoneComboCobaltUpgradeEquipped) active = spr_Menu_Upgrades_Check;
-		break;
-		
-		case "Multi Bomb":
-		if (global.bombMultiBombUpgradeEquipped) active = spr_Menu_Upgrades_Check;
-		break;
-		
-		case "Eye Bomb":
-		if (global.bombEyeBombUpgradeEquipped) active = spr_Menu_Upgrades_Check;
-		break;
-		
-		case "Smart Bomb":
-		if (global.bombSmartBombUpgradeEquipped) active = spr_Menu_Upgrades_Check;
-		break;
-		
-		case "Magma Bomb":
-		if (global.bombMagmaBombUpgradeEquipped) active = spr_Menu_Upgrades_Check;
-		break;
-		
-		case "Explosive Powder":
-		if (global.bombExplosivePowderUpgradeEquipped) active = spr_Menu_Upgrades_Check;
-		break;
-		
-		case "Magic Charcoal":
-		if (global.fireMagicCharcoalUpgradeEquipped) active = spr_Menu_Upgrades_Check;
-		break;
-		
-		case "Empty Cone":
-		if (global.iceEmptyConeUpgradeEquipped) active = spr_Menu_Upgrades_Check;
-		break;
-		
-		case "Bright Plugg":
-		if (global.sparkBrightPluggUpgradeEquipped) active = spr_Menu_Upgrades_Check;
-		break;
-		
-		case "Egg Soil":
-		if (global.waterEggSoilUpgradeEquipped) active = spr_Menu_Upgrades_Check;
-		break;
+		if (obj_UpgradesMenu.upgradeSelection != 0) draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
 	}
-	draw_sprite(sprItem,0,x,y);
-	draw_sprite(active,0,x + 20,y + 20);
+	else if (index == "arrowNext")
+	{
+		if (obj_UpgradesMenu.upgradeSelection < obj_UpgradesMenu.upgradesMax - 1) draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+	}
 	break;
 	#endregion
 	

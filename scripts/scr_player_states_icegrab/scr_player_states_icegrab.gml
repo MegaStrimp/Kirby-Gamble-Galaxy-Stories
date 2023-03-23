@@ -32,7 +32,8 @@ function scr_Player_States_IceGrab()
 			var iceCube = instance_create_depth(x + (8 * dir),y,depth,obj_Projectile_IceCube);
 			iceCube.owner = id;
 			iceCube.abilityType = playerAbilities.ice;
-			iceCube.dmg = 70;
+			iceCube.dmg = kirby_IceGrab_Damage;
+			scr_Attack_SetKnockback(iceCube,kirby_IceGrab_Strength,kirby_IceGrab_HitStopAffectSource,kirby_IceGrab_HitStopAffectPlayer,kirby_IceGrab_HitStopAffectTarget,kirby_IceGrab_HitStopLength,kirby_IceGrab_HitStopShakeStrength);
 			iceCube.dirX = dir;
 			iceCube.state = 1;
 			iceCube.hsp = iceCube.movespeed * dir;

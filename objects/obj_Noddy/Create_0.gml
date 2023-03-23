@@ -4,10 +4,6 @@
 
 event_inherited();
 
-//Randomize
-
-randomize();
-
 //Physics
 
 accel = .015;
@@ -28,10 +24,10 @@ sprHurt = spr_Noddy_Normal_Hurt;
 //Other Variables
 
 paletteIndex = spr_Noddy_Normal_Palette_SleepyPink;
-hp = 12;
-dmg = 1;
+hp = noddy_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.sleep;
-points = 100;
+points = noddy_Points;
 dirXDummy = 1;
 sleep = false;
 sleepReady = false;

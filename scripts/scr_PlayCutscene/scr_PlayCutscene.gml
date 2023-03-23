@@ -11,15 +11,18 @@ function scr_PlayCutscene(argument0)
 	switch (cutsceneNum)
 	{
 		case cutscenes.exTut_Treasure:
+		case cutscenes.exTut_AntiFloat:
 		global.cutscene = true;
 		global.tutorial = true;
 		cutsceneControl.stopsCutscene = true;
 		break;
 		
-		case cutscenes.exTut_AntiFloat:
+		case cutscenes.npc_GreenGreens_AdultDee:
+		case cutscenes.npc_GreenGreens_BebuDee:
+		case cutscenes.npc_GreenGreens_SignmasterDee:
 		global.cutscene = true;
-		global.tutorial = true;
 		cutsceneControl.stopsCutscene = true;
+		cutsceneControl.targetPalette = paletteIndex;
 		break;
 	}
 }

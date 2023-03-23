@@ -1,9 +1,5 @@
 ///@description Initialize Variables
 
-//Randomize
-
-randomize();
-
 //Event Inherited
 
 event_inherited();
@@ -20,6 +16,7 @@ destroyOutsideView = false;
 state = 0;
 owner = id;
 enemy = false;
+isDirectHit = true;
 character = 0;
 xPos = 0;
 yPos = 0;

@@ -4,10 +4,6 @@
 
 event_inherited();
 
-//Randomize
-
-randomize();
-
 //Physics
 
 gravNormal = .2;
@@ -20,9 +16,9 @@ sprHurt = -1;
 //Other Variables
 
 paletteIndex = spr_Cappy_Normal_Palette_RedCap;
-hp = 1;
-dmg = 1;
-points = 200;
+hp = cappy_Shroom_Hp;
+dmg = baseEnemyContact_Damage;
+points = cappy_Shroom_Points;
 
 //Timers
 

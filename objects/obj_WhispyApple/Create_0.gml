@@ -21,7 +21,7 @@ hasSpawner = false;
 destroyOutsideView = true;
 hasGravity = false;
 hp = 1;
-dmg = 1;
+dmg = baseEnemyContact_Damage;
 mask_index = -1;
 
 active = false;

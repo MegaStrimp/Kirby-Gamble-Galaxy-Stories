@@ -1,28 +1,10 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_Bobo_Normal_Idle;
-		sprWalk = spr_Bobo_Normal_Walk;
-		sprFall = spr_Bobo_Normal_Fall;
-		sprHurt = spr_Bobo_Normal_Hurt;
-		sprFlame = spr_Bobo_Normal_Flame;
-		break;
-	}
-}
-
 //Event Inherited
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	//Get Inhaled
 	
@@ -241,6 +223,4 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 else
 {
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

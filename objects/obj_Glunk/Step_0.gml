@@ -1,41 +1,10 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_Glunk_Normal_Idle;
-		sprHurt = spr_Glunk_Normal_Hurt;
-		break;
-		
-		//Glunker
-		
-		case 1:
-		sprIdle = spr_Glunk_Glunker_Idle;
-		sprHurt = spr_Glunk_Glunker_Hurt;
-		break;
-	}
-	if (state == 0)
-	{
-		attackTimer = -1;
-	}
-	else
-	{
-		animDirTimerMax = 25;
-		animDirTimer = animDirTimerMax;
-	}
-}
-
 //Event Inherited
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	if (!parasol) scr_Object_Inhale(enemy);
 	
@@ -138,6 +107,9 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 					var water = instance_create_depth(x,y - (4 * dirY),depth,obj_Projectile_GlunkWater);
 					water.owner = id;
 					water.enemy = true;
+					water.abilityType = playerAbilities.water;
+					water.dmg = glunk_Water_Damage;
+					scr_Attack_SetKnockback(water,glunk_Water_Strength,glunk_Water_HitStopAffectSource,glunk_Water_HitStopAffectPlayer,glunk_Water_HitStopAffectTarget,glunk_Water_HitStopLength,glunk_Water_HitStopShakeStrength);
 					water.destroyableByEnemy = false;
 					water.hurtsObject = false;
 					water.hurtsEnemy = false;
@@ -175,6 +147,4 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 else
 {
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

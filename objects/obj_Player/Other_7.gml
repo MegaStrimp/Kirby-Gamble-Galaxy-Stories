@@ -31,7 +31,7 @@ if (idleAnimation)
 {
 	idleAnimation = false;
 	idleAnimationTimer = 0;
-	idleAnimationTimerMax = choose(10,30,45);
+	idleAnimationTimerMax = choose(60,120,210);
 }
 
 //Walking Animation
@@ -182,7 +182,7 @@ if ((sprite_index == sprAbilityChange) and (state == playerStates.swallow))
 
 //Cutter Attack 1
 
-if (((attackNumber == playerAttacks.cutterNormal) or (attackNumber == "cutterChargeAttack")) and (sprite_index == sprCutterAttack1))
+if (((attackNumber == playerAttacks.cutterNormal) or (attackNumber == playerAttacks.cutterChargeAttack)) and (sprite_index == sprCutterAttack1))
 {
 	attack = false;
 	attackable = true;
@@ -370,7 +370,8 @@ if ((attack) and (sprite_index == sprSparkAttack1Ready))
 		var projectile = instance_create_depth(x + (6 * dir),y - 5,depth - 1,obj_Projectile_Spark);
 		projectile.owner = id;
 		projectile.abilityType = playerAbilities.spark;
-		projectile.dmg = 8;
+		projectile.dmg = kirby_SparkNone_Damage;
+		scr_Attack_SetKnockback(projectile,kirby_SparkNone_Strength,kirby_SparkNone_HitStopAffectSource,kirby_SparkNone_HitStopAffectPlayer,kirby_SparkNone_HitStopAffectTarget,kirby_SparkNone_HitStopLength,kirby_SparkNone_HitStopShakeStrength);
 		projectile.sprite_index = spr_Particle_Spark4;
 		projectile.mask_index = projectile.sprite_index;
 		projectile.movespeed = dir * 8;
@@ -389,7 +390,8 @@ if ((attack) and (sprite_index == sprSparkAttack1Ready))
 		var projectile = instance_create_depth(x + (6 * dir),y - 5,depth - 1,obj_Projectile_Spark);
 		projectile.owner = id;
 		projectile.abilityType = playerAbilities.spark;
-		projectile.dmg = 10;
+		projectile.dmg = kirby_SparkLow_Damage;
+		scr_Attack_SetKnockback(projectile,kirby_SparkLow_Strength,kirby_SparkLow_HitStopAffectSource,kirby_SparkLow_HitStopAffectPlayer,kirby_SparkLow_HitStopAffectTarget,kirby_SparkLow_HitStopLength,kirby_SparkLow_HitStopShakeStrength);
 		projectile.sprite_index = spr_Projectile_Spark_Normal_Low;
 		projectile.mask_index = projectile.sprite_index;
 		projectile.movespeed = dir * 6;
@@ -408,7 +410,8 @@ if ((attack) and (sprite_index == sprSparkAttack1Ready))
 		var projectile = instance_create_depth(x + (6 * dir),y - 7,depth - 1,obj_Projectile_Spark);
 		projectile.owner = id;
 		projectile.abilityType = playerAbilities.spark;
-		projectile.dmg = 30;
+		projectile.dmg = kirby_SparkMid_Damage;
+		scr_Attack_SetKnockback(projectile,kirby_SparkMid_Strength,kirby_SparkMid_HitStopAffectSource,kirby_SparkMid_HitStopAffectPlayer,kirby_SparkMid_HitStopAffectTarget,kirby_SparkMid_HitStopLength,kirby_SparkMid_HitStopShakeStrength);
 		projectile.sprite_index = spr_Particle_SparkAura;
 		projectile.mask_index = spr_30Square_Mask;
 		projectile.imageSpeed = 1;
@@ -471,7 +474,8 @@ if ((attack) and (sprite_index == sprSparkAttack2Ready))
 		var projectile = instance_create_depth(x + (6 * dir),y - 8,depth - 1,obj_Projectile_Spark);
 		projectile.owner = id;
 		projectile.abilityType = playerAbilities.spark;
-		projectile.dmg = 32;
+		projectile.dmg = kirby_SparkHigh_Damage;
+		scr_Attack_SetKnockback(projectile,kirby_SparkHigh_Strength,kirby_SparkHigh_HitStopAffectSource,kirby_SparkHigh_HitStopAffectPlayer,kirby_SparkHigh_HitStopAffectTarget,kirby_SparkHigh_HitStopLength,kirby_SparkHigh_HitStopShakeStrength);
 		projectile.sprite_index = spr_Projectile_Spark_Normal_High;
 		projectile.mask_index = projectile.sprite_index;
 		projectile.movespeed = dir * 6;
@@ -491,7 +495,8 @@ if ((attack) and (sprite_index == sprSparkAttack2Ready))
 		var projectile = instance_create_depth(x + (6 * dir),y - 7,depth - 1,obj_Projectile_Spark);
 		projectile.owner = id;
 		projectile.abilityType = playerAbilities.spark;
-		projectile.dmg = 40;
+		projectile.dmg = kirby_SparkMax_Damage;
+		scr_Attack_SetKnockback(projectile,kirby_SparkMax_Strength,kirby_SparkMax_HitStopAffectSource,kirby_SparkMax_HitStopAffectPlayer,kirby_SparkMax_HitStopAffectTarget,kirby_SparkMax_HitStopLength,kirby_SparkMax_HitStopShakeStrength);
 		projectile.sprite_index = spr_Particle_SparkAura;
 		projectile.mask_index = spr_30Square_Mask;
 		projectile.imageSpeed = 1.5;
@@ -609,13 +614,103 @@ if ((attack) and (sprite_index == sprScanReady))
 	scanProjectile = instance_create_depth(x,y - 6,depth - 1,obj_Projectile_Scan);
 	scanProjectile.owner = id;
 	scanProjectile.abilityType = playerAbilities.scan;
-	scanProjectile.dmg = 10;
+	scanProjectile.dmg = kirby_ScanNormal_Damage;
+	scr_Attack_SetKnockback(scanProjectile,kirby_ScanNormal_Strength,kirby_ScanNormal_HitStopAffectSource,kirby_ScanNormal_HitStopAffectPlayer,kirby_ScanNormal_HitStopAffectTarget,kirby_ScanNormal_HitStopLength,kirby_ScanNormal_HitStopShakeStrength);
 	scanProjectile.sprite_index = scanProjectile.sprIdle;
 	scanProjectile.dirX = dir;
 	scanProjectile.image_xscale = scanProjectile.dirX;
 	scanProjectile.enemy = false;
 	scanProjectile.paletteIndex = paletteIndex;
 	sprite_index = sprScan;
+	image_index = 0;
+}
+
+//Mic Attack 1 End
+
+if ((attack) and (sprite_index == sprMicAttack1End))
+{
+	image_index = image_number - 1;
+}
+
+//Mic Attack 1
+
+if ((attack) and (sprite_index == sprMicAttack1))
+{
+	image_index = 0;
+}
+
+//Mic Attack Ready 1
+
+if ((attack) and (sprite_index == sprMicAttack1Ready))
+{
+	if (audio_is_playing(snd_Mic1)) audio_stop_sound(snd_Mic1);
+	audio_play_sound(snd_Mic1,0,false);
+	canMicFlash = true;
+	sprite_index = sprMicAttack1;
+	image_index = 0;
+}
+
+//Mic Attack 2 End
+
+if ((attack) and (sprite_index == sprMicAttack2End))
+{
+	image_index = image_number - 1;
+}
+
+//Mic Attack 2
+
+if ((attack) and (sprite_index == sprMicAttack2))
+{
+	image_index = 0;
+}
+
+//Mic Attack Ready 2
+
+if ((attack) and (sprite_index == sprMicAttack2Ready))
+{
+	if (audio_is_playing(snd_Mic2)) audio_stop_sound(snd_Mic2);
+	audio_play_sound(snd_Mic2,0,false);
+	canMicFlash = true;
+	sprite_index = sprMicAttack2;
+	image_index = 0;
+}
+
+//Mic Attack 3 End
+
+if ((attack) and (sprite_index == sprMicAttack3End))
+{
+	image_index = image_number - 1;
+}
+
+//Mic Attack 3
+
+if ((attack) and (sprite_index == sprMicAttack3))
+{
+	image_index = 0;
+}
+
+//Mic Attack Ready 3
+
+if ((attack) and (sprite_index == sprMicAttack3Ready))
+{
+	var soundRng = irandom_range(0,499);
+	var sound = snd_Mic3;
+	if (soundRng == 0) sound = snd_Mic3_Extra1;
+	if (soundRng == 1) sound = snd_Mic3_Extra2;
+	if (soundRng == 2) sound = snd_Mic3_Extra3;
+	if (soundRng == 3) sound = snd_Mic3_Extra4;
+	if (soundRng == 4) sound = snd_Mic3_Extra5;
+	if (soundRng == 5) sound = snd_Mic3_Extra6;
+	if (soundRng == 6) sound = snd_Mic3_Extra7;
+	if (soundRng == 7) sound = snd_Mic3_Extra8;
+	if (soundRng == 8) sound = snd_Mic3_Extra9;
+	if (soundRng == 9) sound = snd_Mic3_Extra10;
+	if (soundRng == 10) sound = snd_Mic3_Extra11;
+	if (soundRng == 11) sound = snd_Mic3_Extra12;
+	if (audio_is_playing(sound)) audio_stop_sound(sound);
+	audio_play_sound(sound,0,false);
+	canMicFlash = true;
+	sprite_index = sprMicAttack3;
 	image_index = 0;
 }
 

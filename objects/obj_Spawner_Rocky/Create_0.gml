@@ -11,14 +11,14 @@ gravLimitNormal = 7;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_Rocky_Normal_Palette_BrownRock;
 state = 0;
-hp = 44;
-dmg = 1;
+hp = rocky_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.stone;
-points = 400;
+points = rocky_Points;
 hurtable = true;
 hasGravity = true;
 heavy = true;

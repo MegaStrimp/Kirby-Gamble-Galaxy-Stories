@@ -350,7 +350,7 @@
         {
             "Title": "Mystic Doo",
             
-            "Description": "A Waddle Doo warped by the power of Flux. By utilizing its new power it can create a beam barrier, which can also be launched forward"
+            "Description": "A Waddle Doo warped by the power of Flux. By utilizing its new power it can create a beam barrier, which can also be launched forward."
         },
         
         "Bouncy":
@@ -367,9 +367,9 @@
             "Description": "It's a sentient booger that seems to walk aimlessly, but in reality it’s looking for some tissues."
         },
         
-        "Search":
+        "Searches":
         {
-            "Title": "Search",
+            "Title": "Searches",
             
             "Description": "A small bomb with a face. If you get too close, it'll detonate, so steer clear."
         },
@@ -924,6 +924,26 @@
             "Title": "Mage Rose"
         },
 		
+		"Blueberry":
+        {
+            "Title": "Blueberry"
+        },
+		
+		"Sourlime":
+        {
+            "Title": "Sourlime"
+        },
+		
+		"Mono":
+        {
+            "Title": "Mono"
+        },
+		
+		"Bubblegum":
+        {
+            "Title": "Bubblegum"
+        },
+		
 		"Rocky Road":
         {
             "Title": "Rocky Road"
@@ -999,6 +1019,21 @@
             "Title": "Scarlet Rose"
         },
 		
+		"Nuclear Meltdown":
+        {
+            "Title": "Nuclear Meltdown"
+        },
+		
+		"Midnight Inferno":
+        {
+            "Title": "Midnight Inferno"
+        },
+		
+		"Hot Pink":
+        {
+            "Title": "Hot Pink"
+        },
+		
 		"Frosted Shard":
         {
             "Title": "Frosted Shard"
@@ -1017,6 +1052,11 @@
 		"Chocolate Mousse":
         {
             "Title": "Chocolate Mousse"
+        },
+		
+		"Strawberry Cream":
+        {
+            "Title": "Strawberry Cream"
         },
 		
 		"Electro Marine":
@@ -1064,6 +1104,16 @@
             "Title": "Pekin Breeze"
         },
 		
+		"Dyna Blade":
+        {
+            "Title": "Dyna Blade"
+        },
+		
+		"Nocturne Friend":
+        {
+            "Title": "Nocturne Friend"
+        },
+		
 		"Speed Machine":
         {
             "Title": "Speed Machine"
@@ -1097,6 +1147,11 @@
 		"Wagasa Dee":
         {
             "Title": "Wagasa Dee"
+        },
+		
+		"Azure Bandanna":
+        {
+            "Title": "Azure Bandanna"
         },
 		
 		"Crushing Brown":
@@ -1280,11 +1335,17 @@
         
         "Press Any Key": "Press Any Key",
         
+        "Control Type": "Control Type",
+        
         "Extra Tutorials": "Extra Tutorials",
         
         "Auto Swallow": "Auto Swallow",
         
         "Music Intro": "Music Intro",
+        
+        "Enemy Healthbar": "Enemy Healthbar",
+        
+        "Hit Numbers": "Hit Numbers",
         
         "Default": "Default",
         
@@ -1339,6 +1400,14 @@
 		
 		"Log Into Discord": "Log Into Discord",
 		
+		"Obtain Mystic Beam": "Obtain 'Mystic Beam' Ability",
+		
+		"Master Mystic Beam": "Master 'Mystic Beam' Ability",
+		
+		"Obtain Mystic Fire": "Obtain 'Mystic Fire' Ability",
+		
+		"Master Mystic Fire": "Master 'Mystic Fire' Ability",
+		
 		"Beam Gold Medal": "Get a Gold Medal on Beam Ability Challenge",
 		
 		"Stone Gold Medal": "Get a Gold Medal on Stone Ability Challenge",
@@ -1352,6 +1421,34 @@
 		"Ice Gold Medal": "Get a Gold Medal on Ice Ability Challenge",
 		
 		"Spark Gold Medal": "Get a Gold Medal on Spark Ability Challenge",
+		
+		"Beat Green Greens": "Beat 'Green Greens'",
+		
+		"Beat Battleship Halberd": "Beat 'Battleship Halberd'",
+		
+		"Beat Asteroid Fields": "Beat 'Asteroid Fields'",
+		
+		"Beat Yolk Yard": "Beat 'Yolk Yard'",
+		
+		"Beat Grand Temple Avgo": "Beat 'Grand Temple Avgo'",
+		
+		"Beat Floral Yolk Caves": "Beat 'Floral Yolk Caves'",
+		
+		"Beat Storm The Fortress": "Beat 'Storm The Fortress'",
+		
+		"Beat Central Lab": "Beat 'Central Lab'",
+		
+		"Beat Path To The Nasty Machine": "Beat 'Path To The Nasty Machine'",
+		
+		"Beat Sandshell Beach": "Beat 'Sandshell Beach'",
+		
+		"Beat Up The Straw": "Beat 'Up The Straw'",
+		
+		"Beat Sacred Aquatia": "Beat 'Sacred Aquatia'",
+		
+		"Beat Cosmic Palace": "Beat 'Cosmic Palace'",
+		
+		"Beat Chapter 1": "Beat Chapter 1",
 		
 		"Unlock Gamble": "Unlock Gamble",
 		
@@ -1367,6 +1464,44 @@
 		
 		"Secret": "Secret"
     },
+	
+	"Acts":
+	{
+		"C1A1":
+		{
+			"Index": "Chapter 1 - Act 1",
+			
+			"Title": "Finding Gamble"
+		},
+		
+		"C1A2":
+		{
+			"Index": "Chapter 1 - Act 2",
+			
+			"Title": "Descend of the Friends"
+		},
+		
+		"C1A3":
+		{
+			"Index": "Chapter 1 - Act 3",
+			
+			"Title": "Enter Fluxbender"
+		},
+		
+		"C1A4":
+		{
+			"Index": "Chapter 1 - Act 4",
+			
+			"Title": "Cosmic Hunt"
+		},
+		
+		"C1A5":
+		{
+			"Index": "Chapter 1 - Act 5",
+			
+			"Title": "Riding the Worm"
+		}
+	},
 	
 	"Stages":
 	{
@@ -2096,6 +2231,198 @@
 			"Cosmetic": "Cosmetic",
 			
 			"Game Changer": "Game Changer"
+		}
+	},
+	
+	"Upgrades":
+    {
+		"Heroic Shield":
+		{
+			"Title": "Heroic Shield",
+			
+			"Description": "Gives a shield while guarding!",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Motor Cutter":
+		{
+			"Title": "Motor Cutter",
+			
+			"Description": "Buffs Cutter Ability",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Propeller Wing":
+		{
+			"Title": "Propeller Wing",
+			
+			"Description": "[Up + Attack] to execute a weaker Final Cutter!",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Spectral Cutter":
+		{
+			"Title": "Spectral Cutter",
+			
+			"Description": "Makes your Cutter projectiles piercing!",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Golden Flare":
+		{
+			"Title": "Golden Flare",
+			
+			"Description": "Buffs Beam Ability",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Vortex In A Jar":
+		{
+			"Title": "Vortex In A Jar",
+			
+			"Description": "Buffs Mystic Beam Ability",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Rock Candy":
+		{
+			"Title": "Rock Candy",
+			
+			"Description": "Buffs Stone Ability",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Combo Cobalt":
+		{
+			"Title": "Combo Cobalt",
+			
+			"Description": "Buffs Stone Ability",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Psychic Pebble":
+		{
+			"Title": "Psychic Pebble",
+			
+			"Description": "Buffs Stone Ability",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Cow Doll":
+		{
+			"Title": "Cow Doll",
+			
+			"Description": "Buffs Ufo Ability",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Light Shells":
+		{
+			"Title": "Light Shells",
+			
+			"Description": "Buffs Bomb Ability",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Eye Bomb":
+		{
+			"Title": "Eye Bomb",
+			
+			"Description": "Buffs Bomb Ability",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Sticky Bomb":
+		{
+			"Title": "Sticky Bomb",
+			
+			"Description": "Buffs Bomb Ability",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Magma Bomb":
+		{
+			"Title": "Magma Bomb",
+			
+			"Description": "Buffs Bomb Ability",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Ice Bomb":
+		{
+			"Title": "Ice Bomb",
+			
+			"Description": "Buffs Bomb Ability",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Explosive Powder":
+		{
+			"Title": "Explosive Powder",
+			
+			"Description": "Buffs Bomb Ability",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Magic Charcoal":
+		{
+			"Title": "Magic Charcoal",
+			
+			"Description": "Buffs Fire Ability",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Empty Cone":
+		{
+			"Title": "Empty Cone",
+			
+			"Description": "Buffs Ice Ability",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Bright Plugg":
+		{
+			"Title": "Bright Plugg",
+			
+			"Description": "Buffs Spark Ability",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Waddle Brella":
+		{
+			"Title": "Waddle Brella",
+			
+			"Description": "Buffs Parasol Ability",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Egg Soil":
+		{
+			"Title": "Egg Soil",
+			
+			"Description": "Buffs Water Ability",
+			
+			"Unlock Method": "TBD"
 		}
 	},
 	

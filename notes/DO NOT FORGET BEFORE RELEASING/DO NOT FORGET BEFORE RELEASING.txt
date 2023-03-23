@@ -1,6 +1,14 @@
 * I've commented out some Cheats in the Cheats List. Activate them when they're ready
+* I've commented out some Upgrades in the Upgrades List. Activate them when they're ready
+* I've commented out spoilery Gallery Artwork in the Gallery Artwork List. Activate them when they're ready
+* Unfinished Waddle Dee sprites are set to 'spr_1Up' in scr_BestiaryMenu_Enemies. Fix them when they're ready
+
 * Always check the version number global variable
-* I've also commented out some spoilery gallery artwork that can't be unlocked yet
+* Always compare player mask number to the base sprite number. If there's any missing, make masks of them
+* Always check scr_CharacterSelectMenu_Sprays as you add new sprays AND characters
+* Always check scr_CharacterSelectMenu_Characters as you add new characters
+* Always check scr_SaveGame requirements as you change scr_LoadGame values
+
 * Bandit Dee palette index is set to spr_WaddleDee_Alien_Palette_Graylien for now
 * Waddle Dee skin slide sprites are set to the base skin
 

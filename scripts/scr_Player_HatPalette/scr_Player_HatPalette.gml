@@ -181,19 +181,19 @@ function scr_Player_HatPalette(argument0,argument1)
 			switch (player)
 			{
 				case 0:
-				var altHatToCheck = global.hatTypeBeamP1;
+				var altHatToCheck = global.hatTypeMysticBeamP1;
 				break;
 				
 				case 1:
-				var altHatToCheck = global.hatTypeBeamP2;
+				var altHatToCheck = global.hatTypeMysticBeamP2;
 				break;
 				
 				case 2:
-				var altHatToCheck = global.hatTypeBeamP3;
+				var altHatToCheck = global.hatTypeMysticBeamP3;
 				break;
 				
 				case 3:
-				var altHatToCheck = global.hatTypeBeamP4;
+				var altHatToCheck = global.hatTypeMysticBeamP4;
 				break;
 			}
 			
@@ -203,19 +203,19 @@ function scr_Player_HatPalette(argument0,argument1)
 				switch (player)
 				{
 					case 0:
-					var paletteIndexToCheck = global.hatPaletteBeamKSSUP1;
+					var paletteIndexToCheck = global.hatPaletteMysticBeamGGSP1;
 					break;
 					
 					case 1:
-					var paletteIndexToCheck = global.hatPaletteBeamKSSUP2;
+					var paletteIndexToCheck = global.hatPaletteMysticBeamGGSP2;
 					break;
 					
 					case 2:
-					var paletteIndexToCheck = global.hatPaletteBeamKSSUP3;
+					var paletteIndexToCheck = global.hatPaletteMysticBeamGGSP3;
 					break;
 					
 					case 3:
-					var paletteIndexToCheck = global.hatPaletteBeamKSSUP4;
+					var paletteIndexToCheck = global.hatPaletteMysticBeamGGSP4;
 					break;
 				}
 				
@@ -227,6 +227,22 @@ function scr_Player_HatPalette(argument0,argument1)
 					
 					case abilityHatPaints.mysticBeam_ggs_mageRose:
 					hatPaletteIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Palette_MageRose;
+					break;
+					
+					case abilityHatPaints.mysticBeam_ggs_blueberry:
+					hatPaletteIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Palette_Blueberry;
+					break;
+					
+					case abilityHatPaints.mysticBeam_ggs_sourlime:
+					hatPaletteIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Palette_Sourlime;
+					break;
+					
+					case abilityHatPaints.mysticBeam_ggs_mono:
+					hatPaletteIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Palette_Mono;
+					break;
+					
+					case abilityHatPaints.mysticBeam_ggs_bubblegum:
+					hatPaletteIndex = spr_Kirby_AbilityHat_MysticBeam_GGS_Palette_Bubblegum;
 					break;
 				}
 				break;
@@ -736,6 +752,18 @@ function scr_Player_HatPalette(argument0,argument1)
 					case abilityHatPaints.fire_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Fire_KSSU_Palette_Bitcrushed;
 					break;
+					
+					case abilityHatPaints.fire_kssu_nuclearMeltdown:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Fire_KSSU_Palette_NuclearMeltdown;
+					break;
+					
+					case abilityHatPaints.fire_kssu_midnightInferno:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Fire_KSSU_Palette_MidnightInferno;
+					break;
+					
+					case abilityHatPaints.fire_kssu_hotPink:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Fire_KSSU_Palette_HotPink;
+					break;
 				}
 				break;
 			}
@@ -887,6 +915,10 @@ function scr_Player_HatPalette(argument0,argument1)
 					
 					case abilityHatPaints.ice_snowman_chocolateMousse:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Ice_Snowman_Palette_ChocolateMousse;
+					break;
+					
+					case abilityHatPaints.ice_snowman_strawberryCream:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Ice_Snowman_Palette_StrawberryCream;
 					break;
 				}
 				break;
@@ -1320,6 +1352,14 @@ function scr_Player_HatPalette(argument0,argument1)
 					case abilityHatPaints.wing_kssu_pekinBreeze:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Wing_KSSU_Palette_PekinBreeze;
 					break;
+					
+					case abilityHatPaints.wing_kssu_dynaBlade:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Wing_KSSU_Palette_DynaBlade;
+					break;
+					
+					case abilityHatPaints.wing_kssu_nocturneFriend:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Wing_KSSU_Palette_NocturneFriend;
+					break;
 				}
 				break;
 			}
@@ -1507,6 +1547,10 @@ function scr_Player_HatPalette(argument0,argument1)
 					
 					case abilityHatPaints.parasol_kssu_wagasaDee:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Parasol_KSSU_Palette_WagasaDee;
+					break;
+					
+					case abilityHatPaints.parasol_kssu_azureBandanna:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Parasol_KSSU_Palette_AzureBandanna;
 					break;
 				}
 				break;
@@ -1779,6 +1823,58 @@ function scr_Player_HatPalette(argument0,argument1)
 					
 					case abilityHatPaints.scan_kssu_militaryGreen:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Scan_KSSU_Palette_MilitaryGreen;
+					break;
+				}
+				break;
+			}
+			break;
+			
+			case playerAbilities.mic:
+			switch (player)
+			{
+				case 0:
+				var altHatToCheck = global.hatTypeMicP1;
+				break;
+				
+				case 1:
+				var altHatToCheck = global.hatTypeMicP2;
+				break;
+				
+				case 2:
+				var altHatToCheck = global.hatTypeMicP3;
+				break;
+				
+				case 3:
+				var altHatToCheck = global.hatTypeMicP4;
+				break;
+			}
+			
+			switch (altHatToCheck)
+			{
+				case abilityHatSkins.mic_kssu:
+				switch (player)
+				{
+					case 0:
+					var paletteIndexToCheck = global.hatPaletteMicKSSUP1;
+					break;
+					
+					case 1:
+					var paletteIndexToCheck = global.hatPaletteMicKSSUP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteMicKSSUP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteMicKSSUP4;
+					break;
+				}
+				
+				switch (paletteIndexToCheck)
+				{
+					case abilityHatPaints.mic_kssu_loudMike:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Mic_KSSU_Palette_LoudMike;
 					break;
 				}
 				break;

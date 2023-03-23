@@ -4,10 +4,6 @@
 
 event_inherited();
 
-//Randomize
-
-randomize();
-
 //Physics
 
 movespeed = 1;
@@ -30,9 +26,9 @@ sprHurt = spr_Tomatoo_Normal_Hurt;
 //Other Variables
 
 paletteIndex = spr_Tomatoo_Normal_Palette_RedTomato;
-hp = 1;
-dmg = 1;
-points = 200;
+hp = tomatoo_Hp;
+dmg = baseEnemyContact_Damage;
+points = tomatoo_Points;
 parasolX = 2;
 parasolY = 3;
 clampPositionX = true;

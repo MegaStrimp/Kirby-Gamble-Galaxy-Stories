@@ -95,6 +95,7 @@ else if (spawnTimer == 0)
 	spawnedEnemy.groundFailsafe = groundFailsafe;
 	spawnedEnemy.attackCountMax = attackCountMax;
 	spawnedEnemy.activateRange = activateRange;
+	spawnedEnemy.moveAngleLimitMax = moveAngleLimitMax;
 	spawnedEnemy.attackDir = attackDir;
 	spawnedEnemy.spawnTimer = spawnTimer;
 	spawnedEnemy.attackTimer = attackTimer;

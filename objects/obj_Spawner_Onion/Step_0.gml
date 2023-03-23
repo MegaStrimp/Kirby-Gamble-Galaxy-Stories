@@ -39,6 +39,7 @@ else if (spawnTimer == 0)
 		
 		case 0:
 		spawnedEnemy.sprIdle = spr_Onion_Normal_Idle;
+		spawnedEnemy.sprThrow = spr_Onion_Normal_Throw;
 		spawnedEnemy.sprHurt = -1;
 		break;
 	}

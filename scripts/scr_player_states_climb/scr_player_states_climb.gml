@@ -4,6 +4,35 @@ function scr_Player_States_Climb()
 {
 	if (!global.pause)
 	{
+		#region Variables
+		switch (player)
+		{
+			case 0:
+			var playerAbility = global.abilityP1;
+			var playerCharacter = global.characterP1;
+			var playerSprayPaint = global.sprayPaintP1;
+			break;
+			
+			case 1:
+			var playerAbility = global.abilityP2;
+			var playerCharacter = global.characterP2;
+			var playerSprayPaint = global.sprayPaintP2;
+			break;
+			
+			case 2:
+			var playerAbility = global.abilityP3;
+			var playerCharacter = global.characterP3;
+			var playerSprayPaint = global.sprayPaintP3;
+			break;
+			
+			case 3:
+			var playerAbility = global.abilityP4;
+			var playerCharacter = global.characterP4;
+			var playerSprayPaint = global.sprayPaintP4;
+			break;
+		}
+		#endregion
+		
 		//Movement
 		
 		if (!global.cutscene)
@@ -15,6 +44,7 @@ function scr_Player_States_Climb()
 					image_speed = 1;
 					sprite_index = sprClimbUp;
 					vsp = -climbSpeed;
+					grounded = false;
 				}
 				else
 				{
@@ -25,6 +55,7 @@ function scr_Player_States_Climb()
 				image_speed = 1;
 				sprite_index = sprClimbUp;
 				vsp = -climbSpeed;
+				grounded = false;
 				
 				if ((!place_meeting(x,y,obj_Ladder)) or (!place_meeting(x,y - 8,obj_Ladder)))
 				{
@@ -57,8 +88,9 @@ function scr_Player_States_Climb()
 		
 		if ((!global.cutscene) and (keyJumpPressed) and (!place_meeting(x,y,obj_ParentWall)))
 		{
-			if (carriedItem == carriedItems.none) fallRoll = true;
+			if ((canFallRoll) and (carriedItem == carriedItems.none) and (playerAbility != playerAbilities.sword) and (playerAbility != playerAbilities.parasol) and (playerAbility != playerAbilities.hammer)) fallRoll = true;
 		    vsp = -jumpspeed;
+			grounded = false;
 		    audio_play_sound(snd_Jump,0,false);
 		    state = playerStates.normal;
 		}

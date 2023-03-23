@@ -9,8 +9,8 @@ event_inherited();
 accel = .1;
 movespeed = 1;
 jumpspeed = .5;
-gravNormal = .05;
-gravLimitNormal = 1.25;
+gravNormal = .0;
+gravLimitNormal = 0;
 
 //Sprites
 
@@ -23,14 +23,15 @@ sprHurt = spr_Como_Normal_Hurt;
 //Other Variables
 
 paletteIndex = spr_Como_Normal_Palette_SpiderGold;
-hp = 8;
-dmg = 1;
-points = 300;
+hp = como_Hp;
+dmg = baseEnemyContact_Damage;
+points = como_Points;
 hasGravity = false;
 attack = false;
 hasString = true;
 
 //Timers
-
 attackTimer = -1;
 attackTimerMax = 5;
+fallTimer = 60;
+fallTimerMax = 60*1.5;

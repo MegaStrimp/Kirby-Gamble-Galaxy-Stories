@@ -16,14 +16,14 @@ gravLimitParasol = .5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_SirKibble_Normal_Palette_Yellow;
 state = 0;
-hp = 20;
-dmg = 1;
+hp = sirKibble_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.cutter;
-points = 400;
+points = sirKibble_Points;
 hurtable = true;
 hasGravity = true;
 heavy = false;

@@ -1,9 +1,5 @@
 ///@description Initialize Variables
 
-//Randomize
-
-randomize();
-
 //Other Variables
 
 hudOffset = -250;
@@ -15,6 +11,7 @@ textAlpha = 0;
 goBack = false;
 textY = 147 - (selection * 36);
 paused = false;
+controlsGamepad = false;
 
 menuTitle[5] = 0;
 menuValue[5] = 0;
@@ -66,22 +63,6 @@ for (var i = 0; i < languages.length; i++)
 	languageVal[i] = i;
 }
 
-languageArray =
-[
-	"English",
-    "Turkish",
-    "German",
-    "Italian",
-    "French",
-    "Polish",
-    "Chinese",
-    "Spanish",
-    "Japanese",
-    "Portuguese",
-    "Norwegian",
-    "Arabic"
-]
-
 languageIndex =
 [
 	"Languages.English",
@@ -117,13 +98,12 @@ strAttack = str("Options.Attack");
 strStart = str("Options.Start");
 strSelect = str("Options.Select");
 strPressAnyKey = str("Options.Press Any Key");
+strControlType = str("Options.Control Type");
 strExtraTutorials = str("Options.Extra Tutorials");
 strAutoSwallow = str("Options.Auto Swallow");
 strMusicIntro = str("Options.Music Intro");
-//strEnemyHealthbar = str("Options.Enemy Healthbar");
-//strHitNumbers = str("Options.Hit Numbers");
-strEnemyHealthbars = "Enemy Healthbars";
-strHitNumbers = "Hit Numbers";
+strEnemyHealthbar = str("Options.Enemy Healthbar");
+strHitNumbers = str("Options.Hit Numbers");
 #endregion
 
 }

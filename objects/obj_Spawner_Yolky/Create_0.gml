@@ -8,14 +8,14 @@ gravLimitNormal = 5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_Yolky_Normal_Palette_SunnySideUp;
 state = 0;
-hp = 16;
-dmg = 1;
+hp = yolky_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.none;
-points = 300;
+points = yolky_Points;
 hurtable = true;
 hasGravity = true;
 heavy = false;

@@ -1,4 +1,4 @@
-///@description Enemy Collision
+///@description Enemy - Collision
 
 function scr_Enemy_Collision()
 {

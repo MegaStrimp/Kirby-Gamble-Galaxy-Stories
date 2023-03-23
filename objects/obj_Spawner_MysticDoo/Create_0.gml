@@ -1,9 +1,5 @@
 ///@description Initialize Variables
 
-//Randomize
-
-randomize();
-
 //Physics
 
 accel = .02;
@@ -20,14 +16,14 @@ gravLimitParasol = .5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = choose(spr_MysticDoo_Normal_Palette_CorruptedTwilight,spr_MysticDoo_Normal_Palette_PalePurple,spr_MysticDoo_Normal_Palette_DarkFlux);
 state = 0;
-hp = 27;
-dmg = 1;
+hp = mysticDoo_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.mysticBeam;
-points = 600;
+points = mysticDoo_Points;
 hurtable = true;
 hasGravity = false;
 heavy = false;

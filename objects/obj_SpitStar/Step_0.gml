@@ -25,7 +25,7 @@ switch (state)
 	break;
 }
 
-if (((pausable) and (!global.pause)) or (!pausable))
+if (!isPaused)
 {
 	//Variables
 	

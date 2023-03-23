@@ -1,13 +1,11 @@
 ///@description Main
 
-//Characters
+#region Event Inherited
+event_inherited();
+#endregion
 
-if (((pausable) and (!global.pause)) or (!pausable))
+if (!isPaused)
 {
-	//Event Inherited
-	
-	event_inherited();
-	
 	//Movement
 	
 	movespeed -= decel;

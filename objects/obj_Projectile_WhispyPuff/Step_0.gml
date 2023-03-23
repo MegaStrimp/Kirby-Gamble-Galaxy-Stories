@@ -1,10 +1,10 @@
 ///@description Main
 
-//Event Inherited
-
+#region Event Inherited
 event_inherited();
+#endregion
 
-if (((pausable) and (!global.pause)) or (!pausable))
+if (!isPaused)
 {
 	//Movement
 	

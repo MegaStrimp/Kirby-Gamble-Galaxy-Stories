@@ -16,11 +16,12 @@ function scr_CheatsMenu_Cheats()
 	10 - Equipped
 	11 - Attribute (0 - Cosmetic, 1 - Game Changer, 2 - Hard)
 	12 - Angle
+	13 - Color
 	*/
 	
 	if (ds_exists(cheatsArray,ds_type_grid)) ds_grid_destroy(cheatsArray);
 	
-	cheatsArray = ds_grid_create(10,13);
+	cheatsArray = ds_grid_create(10,14);
 	ds_grid_clear(cheatsArray,-1);
 	
 	var i = 0;
@@ -39,6 +40,7 @@ function scr_CheatsMenu_Cheats()
 	cheatsArray[# i,10] = global.cheatLifelessEquipped;
 	cheatsArray[# i,11] = 1;
 	cheatsArray[# i,12] = 0;
+	cheatsArray[# i,13] = make_color_rgb(248,151,202);
 	i += 1;
 	#endregion
 	
@@ -56,13 +58,13 @@ function scr_CheatsMenu_Cheats()
 	cheatsArray[# i,10] = global.cheatStarstormEquipped;
 	cheatsArray[# i,11] = 1;
 	cheatsArray[# i,12] = 0;
+	cheatsArray[# i,13] = make_color_rgb(255,255,102);
 	i += 1;
 	#endregion*/
 	
 	#region Flipside
 	cheatsArray[# i,0] = cheats.flipside;
-	cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc_Default;
-	cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc_Template;
+	cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc_Flipside;
 	cheatsArray[# i,2] = str("Cheats.Flipside.Title");
 	cheatsArray[# i,3] = str("Cheats.Flipside.Description");
 	cheatsArray[# i,4] = global.cheatFlipsideUnlocked;
@@ -74,6 +76,7 @@ function scr_CheatsMenu_Cheats()
 	cheatsArray[# i,10] = global.cheatFlipsideEquipped;
 	cheatsArray[# i,11] = 0;
 	cheatsArray[# i,12] = 0;
+	cheatsArray[# i,13] = make_color_rgb(50,151,255);
 	i += 1;
 	#endregion
 	
@@ -91,6 +94,7 @@ function scr_CheatsMenu_Cheats()
 	cheatsArray[# i,10] = global.cheatGamerBoyEquipped;
 	cheatsArray[# i,11] = 0;
 	cheatsArray[# i,12] = 0;
+	cheatsArray[# i,13] = make_color_rgb(255,255,102);
 	i += 1;
 	#endregion*/
 	
@@ -108,6 +112,7 @@ function scr_CheatsMenu_Cheats()
 	cheatsArray[# i,10] = global.cheatEyeBleachEquipped;
 	cheatsArray[# i,11] = 0;
 	cheatsArray[# i,12] = 0;
+	cheatsArray[# i,13] = make_color_rgb(255,255,102);
 	i += 1;
 	#endregion*/
 	
@@ -125,6 +130,7 @@ function scr_CheatsMenu_Cheats()
 	cheatsArray[# i,10] = global.cheatAwaitingForTheNewMoonEquipped;
 	cheatsArray[# i,11] = 1;
 	cheatsArray[# i,12] = 0;
+	cheatsArray[# i,13] = make_color_rgb(68,209,43);
 	i += 1;
 	#endregion
 	
@@ -142,6 +148,7 @@ function scr_CheatsMenu_Cheats()
 	cheatsArray[# i,10] = global.cheatGatherBattleEquipped;
 	cheatsArray[# i,11] = 1;
 	cheatsArray[# i,12] = 0;
+	cheatsArray[# i,13] = make_color_rgb(255,255,102);
 	i += 1;
 	#endregion*/
 	
@@ -159,6 +166,7 @@ function scr_CheatsMenu_Cheats()
 	cheatsArray[# i,10] = global.cheatFashionableEquipped;
 	cheatsArray[# i,11] = 0;
 	cheatsArray[# i,12] = 0;
+	cheatsArray[# i,13] = make_color_rgb(255,255,102);
 	i += 1;
 	#endregion*/
 	
@@ -176,25 +184,30 @@ function scr_CheatsMenu_Cheats()
 	cheatsArray[# i,10] = global.cheatStrimpsDinerEquipped;
 	cheatsArray[# i,11] = 2;
 	cheatsArray[# i,12] = 0;
-	i += 1;
-	#endregion
-	
-	/*#region Colored Abilities
-	cheatsArray[# i,0] = cheats.coloredAbilities;
-	cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc_Default;
-	cheatsArray[# i,2] = str("Cheats.Colored Abilities.Title");
-	cheatsArray[# i,3] = str("Cheats.Colored Abilities.Description");
-	cheatsArray[# i,4] = global.abilitySpraysKeycard;
-	cheatsArray[# i,5] = str("Cheats.Colored Abilities.Unlock Method");
-	cheatsArray[# i,6] = 240 + ((i - discSelection) * 100);
-	cheatsArray[# i,7] = 0;
-	cheatsArray[# i,8] = 1;
-	cheatsArray[# i,9] = 1;
-	cheatsArray[# i,10] = global.cheatColoredAbilitiesEquipped;
-	cheatsArray[# i,11] = 0;
-	cheatsArray[# i,12] = 0;
+	cheatsArray[# i,13] = make_color_rgb(255,255,102);
 	i += 1;
 	#endregion*/
+	
+	#region Colored Abilities
+	if (global.abilitySpraysKeycard)
+	{
+		cheatsArray[# i,0] = cheats.coloredAbilities;
+		cheatsArray[# i,1] = spr_Menu_Collection_Cheats_Disc_Default;
+		cheatsArray[# i,2] = str("Cheats.Colored Abilities.Title");
+		cheatsArray[# i,3] = str("Cheats.Colored Abilities.Description");
+		cheatsArray[# i,4] = global.abilitySpraysKeycard;
+		cheatsArray[# i,5] = str("Cheats.Colored Abilities.Unlock Method");
+		cheatsArray[# i,6] = 240 + ((i - discSelection) * 100);
+		cheatsArray[# i,7] = 0;
+		cheatsArray[# i,8] = 1;
+		cheatsArray[# i,9] = 1;
+		cheatsArray[# i,10] = global.cheatColoredAbilitiesEquipped;
+		cheatsArray[# i,11] = 0;
+		cheatsArray[# i,12] = 0;
+		cheatsArray[# i,13] = make_color_rgb(255,255,102);
+		i += 1;
+	}
+	#endregion
 	
 	cheatsMax = i;
 }

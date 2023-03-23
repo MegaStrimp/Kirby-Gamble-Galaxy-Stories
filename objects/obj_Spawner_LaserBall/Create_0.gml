@@ -11,14 +11,14 @@ gravLimitNormal = 0;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_LaserBall_Normal_Palette_OrangeLaser;
 state = 0;
-hp = 14;
-dmg = 1;
+hp = laserBall_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.beam;
-points = 200;
+points = laserBall_Points;
 hurtable = true;
 hasGravity = false;
 heavy = false;
@@ -48,6 +48,7 @@ objectOnDeathObj = obj_Projectile_ExplosionMask;
 groundFailsafe = true;
 attackCountMax = 4;
 activateRange = 72;
+moveAngleLimitMax = 2;
 attackDir = 0;
 
 //Timers

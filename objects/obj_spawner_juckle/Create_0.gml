@@ -3,14 +3,14 @@
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_Juckle_Normal_Palette_SpinningCutter;
 state = 0;
-hp = 12;
-dmg = 1;
+hp = juckle_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.cutter;
-points = 400;
+points = juckle_Points;
 hurtable = true;
 hasGravity = true;
 heavy = false;

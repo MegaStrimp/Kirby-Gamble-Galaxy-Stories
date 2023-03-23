@@ -4,10 +4,6 @@
 
 event_inherited();
 
-//Randomize
-
-randomize();
-
 //Physics
 
 gravNormal = .2;
@@ -23,6 +19,6 @@ sprHurt = spr_Anemonee_Normal_Hurt;
 //Other Variables
 
 paletteIndex = spr_Anemonee_Normal_Palette_VioletYarn;
-hp = 16;
-dmg = 1;
-points = 300;
+hp = anemonee_Hp;
+dmg = baseEnemyContact_Damage;
+points = anemonee_Points;

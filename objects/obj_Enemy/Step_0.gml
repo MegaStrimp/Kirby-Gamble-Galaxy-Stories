@@ -1,7 +1,6 @@
 ///@description Main
 
-//Variables
-
+#region Variables
 if (parasol)
 {
 	gravLimit = gravLimitParasol;
@@ -10,61 +9,31 @@ if (parasol)
 }
 else
 {
-	//if (hurt)
-	//{
-		//gravLimit = 4;
-		//grav = .2;
-	//}
-	//else
-	//{
-		gravLimit = gravLimitNormal;
-		grav = gravNormal;
-	//}
-}
-
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
-{
-	//Destroy Outside View
-	
-	checkEnemySpawners = true;
-	with (obj_Enemy) if ((id != other.id) and (spawner == other.spawner)) other.checkEnemySpawners = false;
-	
-	if ((destroyOutsideView) or (hasSpawner))
+	if (hurt)
 	{
-		var x1 = camera_get_view_x(gameView) - spawnerRange;
-		var y1 = camera_get_view_y(gameView) - spawnerRange;
-		var x2 = camera_get_view_x(gameView) + camera_get_view_width(gameView) + spawnerRange;
-		var y2 = camera_get_view_y(gameView) + camera_get_view_height(gameView) + spawnerRange;
-		
-		if (!point_in_rectangle(x,y,x1,y1,x2,y2))
+		if ((!isMiniBoss) and (!isBoss))
 		{
-			if ((checkEnemySpawners) and (hasSpawner)) spawner.spawn = true;
-			if (instance_exists(parasolObject)) instance_destroy(parasolObject);
-			instance_destroy();
+			gravLimit = 5;
+			grav = .2;
 		}
 	}
+	else
+	{
+		gravLimit = gravLimitNormal;
+		grav = gravNormal;
+	}
+}
+
+var parentPause = ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)));
+#endregion
+
+if ((parentPause) and (hurtStopTimer < 1))
+{
+	#region Destroy Outside View
+	scr_Enemy_DestroyOutsideView();
+	#endregion
 	
-	//Moving Walls
-	/*
-	if (place_meeting(x,y + 1,obj_ParentWall))
-	{
-		var movingWall = instance_place(x,y + 1,obj_ParentWall);
-		if (movingWall.hsp != 0) x += movingWall.hsp;
-		if (movingWall.vsp != 0) y += movingWall.vsp;
-	}
-	if (place_meeting(x,y - 1,obj_ParentWall))
-	{
-		var movingWall = instance_place(x,y - 1,obj_ParentWall);
-		if (movingWall.vsp != 0) y += movingWall.vsp;
-	}
-	if (place_meeting(x + sign(hspFinal),y,obj_ParentWall))
-	{
-		var movingWall = instance_place(x + sign(hspFinal),y,obj_ParentWall);
-		if (movingWall.hsp != 0) x += movingWall.hsp;
-	}
-	*/
-	//Gravity
-	
+	#region Gravity
 	if (hasGravity)
 	{
 		if (vsp < gravLimit)
@@ -77,8 +46,13 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 		}
 	}
 	
-	//Knockback
+	if (gravMinLimit)
+	{
+		vsp = min(0,vsp);
+	}
+	#endregion
 	
+	#region Knockback
 	if (knockbackX >= decel) knockbackX -= decel;
 	if (knockbackX <= -decel) knockbackX += decel;
 	if ((knockbackX > -decel) and (knockbackX < decel)) knockbackX = 0;
@@ -86,9 +60,9 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 	if (knockbackY >= grav) knockbackY -= grav;
 	if (knockbackY <= -grav) knockbackY += grav;
 	if ((knockbackY > -grav) and (knockbackY < grav)) knockbackY = 0;
+	#endregion
 	
-	//Death
-	
+	#region Death
 	if ((!deathAnimationPlayed) and ((death) or ((!hasDeathAnimation) and (hp <= 0))))
 	{
 		deathAnimationPlayed = true;
@@ -258,8 +232,7 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			obj_SquadControl.waveEnemyCount[obj_SquadControl.currentWave][squadType] += 1;
 		}
 		
-		//Familiar Ability Bubble
-		
+		#region Familiar Ability Bubble
 		if ((ability != playerAbilities.none) and (!isMiniBoss) and (!isBoss) and (takenIsFamiliar))
 		{
 			var abilityDropStar = instance_create_depth(bubbleX,bubbleY,depth,obj_AbilityDropStar);
@@ -371,12 +344,21 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 				abilityDropStar.sprite_index = spr_AbilityStar_Sleep;
 				break;
 				
+				case playerAbilities.scan:
+				abilityDropStar.sprite_index = spr_AbilityStar_Scan;
+				break;
+				
+				case playerAbilities.mic:
+				abilityDropStar.sprite_index = spr_AbilityStar_Mic;
+				break;
+				
 				default:
 				abilityDropStar.sprite_index = spr_AbilityStar_Normal;
 				break;
 			}
 			while (place_meeting(abilityDropStar.x,abilityDropStar.y + 1,obj_ParentWall)) abilityDropStar.y -= 1;
 		}
+		#endregion
 		
 		#region Bestiary Variables
 		switch (object_index)
@@ -433,8 +415,8 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			global.bestiaryEnemiesMrBoogieUnlocked = true;
 			break;
 			
-			case obj_Search:
-			global.bestiaryEnemiesSearchUnlocked = true;
+			case obj_Searches:
+			global.bestiaryEnemiesSearchesUnlocked = true;
 			break;
 			
 			case obj_HiveDrone:
@@ -547,41 +529,39 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 		}
 		#endregion
 		
-		//Destroy
-		
+		#region Destroy
 		if (!isBoss) instance_destroy();
+		#endregion
 	}
+	#endregion
 	
-	//Animation
-	
+	#region Animation
 	scaleExX = lerp(scaleExX,0,scaleExSpd);
 	scaleExY = lerp(scaleExY,0,scaleExSpd);
 	
 	image_xscale = scale * dirX;
 	image_yscale = scale * dirY;
+	#endregion
 	
-	//Collision
-	
-	if (hp > 0)
+	#region Collision
+	if ((setupTimer == 0) and (groundFailsafe))
 	{
-		if ((setupTimer == 0) and (groundFailsafe))
+		with (obj_ParentWall)
 		{
-			with (obj_ParentWall)
+			if (owner != other.id)
 			{
-				if (owner != other.id)
+				while (place_meeting(x,y,other))
 				{
-					while (place_meeting(x,y,other))
-					{
-						other.y -= 1;
-					}
+					other.y -= 1;
 				}
 			}
 		}
-		scr_Enemy_Collision();
 	}
 	
-	//Bumpers
+	scr_Enemy_Collision();
+	#endregion
 	
+	#region Bumpers
 	if (place_meeting(x,y,obj_Bumper) and ((hasXKnockback) or ((hasYKnockback))))
 	{
 		//Variables
@@ -627,9 +607,9 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			}
 		}
 	}
+	#endregion
 	
-	//Springs
-	
+	#region Springs
 	if (place_meeting(x,y + 1,obj_Spring))
 	{
 		if (sign(vsp + knockbackY) != -1)
@@ -678,9 +658,9 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			vsp = -finalForce;
 		}
 	}
+	#endregion
 	
-	//Trampolines
-	
+	#region Trampolines
 	if ((place_meeting(x,y - 1,obj_Trampoline)) and (hasYKnockback))
 	{
 		if (sign(vsp + knockbackY) == 1)
@@ -738,9 +718,9 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			knockbackY = -(collidedTrampoline.force / 3) - ((collidedTrampoline.force / collidedTrampoline.jumpCountMax) * collidedTrampoline.jumpCount);
 		}
 	}
+	#endregion
 	
-	//Hurt Timer
-	
+	#region Hurt Timer
 	if (hurtTimer > 0)
 	{
 		hurtTimer -= 1;
@@ -755,23 +735,18 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
         {
             hurt = false;
         }
+		hasGravity = (backupFlags >> BFLAGS.BF_GRAV) & 1;
+		hasXCollision = (backupFlags >> BFLAGS.BF_XCOLL) & 1;
+		hasYCollision = (backupFlags >> BFLAGS.BF_YCOLL) & 1;
+		destroyOutsideView = (backupFlags >> BFLAGS.BF_DESPAWN) & 1;
+		
+		shakeX = 0;
+		shakeY = 0;
 		hurtTimer = -1;
 	}
+	#endregion
 	
-	//Hurt Stop Timer
-	
-	if (hurtStopTimer > 0)
-	{
-		hurtStopTimer -= 1;
-	}
-	else if (hurtStopTimer == 0)
-	{
-		speed = 8;
-		hurtStopTimer = -1;
-	}
-	
-	//Invincible Timer
-	
+	#region Invincible Timer
 	if (invincibleTimer > 0)
 	{
 		invincibleTimer -= 1;
@@ -781,9 +756,9 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 		invincible = false;
 		invincibleTimer = -1;
 	}
+	#endregion
 	
-	//Invincible Flash Timer
-	
+	#region Invincible Flash Timer
 	if (invincible)
 	{
 		if (invincibleFlashTimer > 0)
@@ -808,172 +783,175 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 		invincibleFlash = false;
 		invincibleFlashTimer = -1;
 	}
+	#endregion
 	
-	//Hurt
-	
-	if ((!hurtable) and (collisionHitbox == -1))
+	#region Hurt
+	if (collisionHitbox == -1)
 	{
-		with (obj_Projectile)
+		if (!hurtable)
 		{
-			if (place_meeting(x,y,other))
+			with (obj_Projectile)
 			{
-				if (hsp == 0)
+				if (place_meeting(x,y,other))
 				{
-					if (x < other.x) other.projectileHitKnockbackDir = -1;
-				}
-				else
-				{
-					other.projectileHitKnockbackDir = -sign(hsp);
-				}
-				if ((destroyableByEnemy) and (owner != other) and (!enemy))
-				{
-					if (particleOnHit)
+					if (hsp == 0)
 					{
-						var particle = instance_create_depth(x,y,depth,obj_Particle);
-						particle.sprite_index = particleOnHitSpr;
-						particle.dir = dirX;
-						particle.destroyAfterAnimation = true;
+						if (x < other.x) other.projectileHitKnockbackDir = -1;
 					}
-				
-					if (deathParticlesOnHit)
+					else
 					{
-						var particle = instance_create_depth(x,y,depth,obj_DeathParticles);
-						particle.state = deathParticlesOnHitNumber;
-						particle.dir = dirX;
+						other.projectileHitKnockbackDir = -sign(hsp);
 					}
-				
-					if (objectOnHit)
+					if ((destroyableByEnemy) and (owner != other) and (!enemy))
 					{
-						var proj = instance_create_depth(x,y,depth,objectOnHitObj);
-						if (isBoss)
+						if (particleOnHit)
 						{
-							proj.isBoss = isBoss;
-							proj.owner = owner;
+							var particle = instance_create_depth(x,y,depth,obj_Particle);
+							particle.sprite_index = particleOnHitSpr;
+							particle.dir = dirX;
+							particle.destroyAfterAnimation = true;
 						}
-						if (objectOnHitDmg != -1) proj.dmg = objectOnHitDmg;
-						if (objectOnHitObj == obj_Projectile_ExplosionMask)
+				
+						if (deathParticlesOnHit)
 						{
-							proj.enemy = enemy;
-							proj.hurtsEnemy = !enemy;
-							proj.hurtsPlayer = enemy;
-							if (object_index == obj_Projectile_DoomsdayBomb)
+							var particle = instance_create_depth(x,y,depth,obj_DeathParticles);
+							particle.state = deathParticlesOnHitNumber;
+							particle.dir = dirX;
+						}
+				
+						if (objectOnHit)
+						{
+							var proj = instance_create_depth(x,y,depth,objectOnHitObj);
+							if (isBoss)
 							{
-								proj.explosionIndex = 1;
-								proj.showHitbox = false;
+								proj.isBoss = isBoss;
+								proj.owner = owner;
 							}
-							if (object_index == obj_Projectile_Bomb)
+							if (objectOnHitDmg != -1) proj.dmg = objectOnHitDmg;
+							if (objectOnHitObj == obj_Projectile_ExplosionMask)
 							{
-								if (audio_is_playing(snd_BombExplode)) audio_stop_sound(snd_BombExplode);
-								audio_play_sound(snd_BombExplode,0,false);
-								if (hasMagma)
+								proj.enemy = enemy;
+								proj.hurtsEnemy = !enemy;
+								proj.hurtsPlayer = enemy;
+								if (object_index == obj_Projectile_DoomsdayBomb)
 								{
-									for (var i = 0; i < 3; i++)
+									proj.explosionIndex = 1;
+									proj.showHitbox = false;
+								}
+								if (object_index == obj_Projectile_Bomb)
+								{
+									if (audio_is_playing(snd_BombExplode)) audio_stop_sound(snd_BombExplode);
+									audio_play_sound(snd_BombExplode,0,false);
+									if (hasMagma)
 									{
-										proj = instance_create_depth(x + ((i - 1) * 15),y - 4,depth,obj_Projectile_SmallFire);
-										proj.owner = id;
-										proj.dmg = 8;
-										proj.enemy = false;
-										proj.destroyableByWall = false;
-										proj.destroyableByEnemy = false;
-										proj.destroyableByObject = false;
+										for (var i = 0; i < 3; i++)
+										{
+											proj = instance_create_depth(x + ((i - 1) * 15),y - 4,depth,obj_Projectile_SmallFire);
+											proj.owner = id;
+											proj.dmg = 8;
+											proj.enemy = false;
+											proj.destroyableByWall = false;
+											proj.destroyableByEnemy = false;
+											proj.destroyableByObject = false;
+										}
 									}
 								}
+								else
+								{
+									if (audio_is_playing(snd_Explosion1)) audio_stop_sound(snd_Explosion1);
+									audio_play_sound(snd_Explosion1,0,false);
+								}
+								var explosion = instance_create_depth(x,y,depth,obj_DeathParticles);
+								explosion.state = "explosion1";
 							}
-							else
-							{
-								if (audio_is_playing(snd_Explosion1)) audio_stop_sound(snd_Explosion1);
-								audio_play_sound(snd_Explosion1,0,false);
-							}
-							var explosion = instance_create_depth(x,y,depth,obj_DeathParticles);
-							explosion.state = "explosion1";
 						}
+						instance_destroy();
 					}
-					instance_destroy();
 				}
 			}
 		}
-	}
-	else if ((!invincible) and (hp > 0))
-	{
-		with (obj_Projectile)
+		else if ((!invincible) and (hp > 0))
 		{
-			if (place_meeting(x,y,other))
+			with (obj_Projectile)
 			{
-				scr_Enemy_Hurt(other,id);
-			
-				if ((destroyableByEnemy) and (owner != other) and (!enemy))
+				if (place_meeting(x,y,other))
 				{
-					if (particleOnHit)
+					scr_Enemy_Hurt(other,id);
+			
+					if ((destroyableByEnemy) and (owner != other) and (!enemy))
 					{
-						var particle = instance_create_depth(x,y,depth,obj_Particle);
-						particle.sprite_index = particleOnHitSpr;
-						particle.dir = dirX;
-						particle.destroyAfterAnimation = true;
-					}
-				
-					if (deathParticlesOnHit)
-					{
-						var particle = instance_create_depth(x,y,depth,obj_DeathParticles);
-						particle.state = deathParticlesOnHitNumber;
-						particle.dir = dirX;
-					}
-				
-					if (objectOnHit)
-					{
-						var proj = instance_create_depth(x,y,depth,objectOnHitObj);
-						if (isBoss)
+						if (particleOnHit)
 						{
-							proj.isBoss = isBoss;
-							proj.owner = owner;
+							var particle = instance_create_depth(x,y,depth,obj_Particle);
+							particle.sprite_index = particleOnHitSpr;
+							particle.dir = dirX;
+							particle.destroyAfterAnimation = true;
 						}
-						if (objectOnHitDmg != -1) proj.dmg = objectOnHitDmg;
-						if (objectOnHitObj == obj_Projectile_ExplosionMask)
+				
+						if (deathParticlesOnHit)
 						{
-							if (enemy)
+							var particle = instance_create_depth(x,y,depth,obj_DeathParticles);
+							particle.state = deathParticlesOnHitNumber;
+							particle.dir = dirX;
+						}
+				
+						if (objectOnHit)
+						{
+							var proj = instance_create_depth(x,y,depth,objectOnHitObj);
+							if (isBoss)
 							{
-								proj.enemy = true;
-								proj.hurtsEnemy = false;
-								proj.hurtsPlayer = true;
+								proj.isBoss = isBoss;
+								proj.owner = owner;
 							}
-							else
+							if (objectOnHitDmg != -1) proj.dmg = objectOnHitDmg;
+							if (objectOnHitObj == obj_Projectile_ExplosionMask)
 							{
-								proj.enemy = false;
-								proj.hurtsEnemy = true;
-								proj.hurtsPlayer = false;
-							}
-							if (object_index == obj_Projectile_DoomsdayBomb)
-							{
-								proj.explosionIndex = 1;
-								proj.showHitbox = false;
-							}
-							if (object_index == obj_Projectile_Bomb)
-							{
-								if (audio_is_playing(snd_BombExplode)) audio_stop_sound(snd_BombExplode);
-								audio_play_sound(snd_BombExplode,0,false);
-								if (hasMagma)
+								if (enemy)
 								{
-									for (var i = 0; i < 3; i++)
+									proj.enemy = true;
+									proj.hurtsEnemy = false;
+									proj.hurtsPlayer = true;
+								}
+								else
+								{
+									proj.enemy = false;
+									proj.hurtsEnemy = true;
+									proj.hurtsPlayer = false;
+								}
+								if (object_index == obj_Projectile_DoomsdayBomb)
+								{
+									proj.explosionIndex = 1;
+									proj.showHitbox = false;
+								}
+								if (object_index == obj_Projectile_Bomb)
+								{
+									if (audio_is_playing(snd_BombExplode)) audio_stop_sound(snd_BombExplode);
+									audio_play_sound(snd_BombExplode,0,false);
+									if (hasMagma)
 									{
-										proj = instance_create_depth(x + ((i - 1) * 15),y - 4,depth,obj_Projectile_SmallFire);
-										proj.owner = id;
-										proj.dmg = 8;
-										proj.enemy = false;
-										proj.destroyableByWall = false;
-										proj.destroyableByEnemy = false;
-										proj.destroyableByObject = false;
+										for (var i = 0; i < 3; i++)
+										{
+											proj = instance_create_depth(x + ((i - 1) * 15),y - 4,depth,obj_Projectile_SmallFire);
+											proj.owner = id;
+											proj.dmg = 8;
+											proj.enemy = false;
+											proj.destroyableByWall = false;
+											proj.destroyableByEnemy = false;
+											proj.destroyableByObject = false;
+										}
 									}
 								}
+								else
+								{
+									if (audio_is_playing(snd_Explosion1)) audio_stop_sound(snd_Explosion1);
+									audio_play_sound(snd_Explosion1,0,false);
+								}
+								var explosion = instance_create_depth(x,y,depth,obj_DeathParticles);
+								explosion.state = "explosion1";
 							}
-							else
-							{
-								if (audio_is_playing(snd_Explosion1)) audio_stop_sound(snd_Explosion1);
-								audio_play_sound(snd_Explosion1,0,false);
-							}
-							var explosion = instance_create_depth(x,y,depth,obj_DeathParticles);
-							explosion.state = "explosion1";
 						}
+						instance_destroy();
 					}
-					instance_destroy();
 				}
 			}
 		}
@@ -983,6 +961,7 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			var collidingSpike = instance_place(x,y,obj_Spike);
 			{
 				hp -= collidingSpike.dmg;
+				bossHealthbarShakeTimer = bossHealthbarShakeTimerMax;
 				other.shakeX = 2;
 				other.shakeY = 2;
 				scr_HurtKnockback(self,collidingSpike);
@@ -996,9 +975,9 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			}
 		}
 	}
+	#endregion
 	
-	//Scan
-	
+	#region Scan
 	with (obj_Projectile)
 	{
 		if (place_meeting(x,y,other))
@@ -1035,9 +1014,9 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			}
 		}
 	}
+	#endregion
 	
-	//Shine Effect Timer
-	
+	#region Shine Effect Timer
 	if (shineEffectTimer > 0)
 	{
 		shineEffectTimer -= 1;
@@ -1049,10 +1028,42 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 		particle.destroyAfterAnimation = true;
 		shineEffectTimer = shineEffectTimerMax;
 	}
+	#endregion
+	
+	#region Boss Healthbar Shake Timer
+	if (bossHealthbarShakeTimer > 0)
+	{
+		bossHealthbarShakeTimer -= 1;
+	}
+	else if (bossHealthbarShakeTimer == 0)
+	{
+		bossHealthbarShakeX = 0;
+		bossHealthbarShakeY = 0;
+		bossHealthbarShakeTimer = -1;
+	}
+	#endregion
 }
 
-//Setup Timer
+#region Set Child Pause
+childPause = (((global.pause) or ((global.cutscene) and (pausedInCutscenes))) or ((!isBoss) and (!isMiniBoss) and ((hurt) or (hurtStopTimer > 0))));
+#endregion
 
+#region Hurt Stop Timer
+if (parentPause)
+{
+	if (hurtStopTimer > 0)
+	{
+		hurtStopTimer -= 1;
+	}
+	else if (hurtStopTimer == 0)
+	{
+		show_debug_message("Counting hitstop");
+		hurtStopTimer = -1;
+	}
+}
+#endregion
+
+#region Setup Timer
 if (setupTimer > 0)
 {
 	setupTimer -= 1;
@@ -1073,9 +1084,9 @@ else if (setupTimer == 0)
 	if ((isMiniBoss) or (isBoss)) healthbarBackHp = bossHbHp;
 	setupTimer = -1;
 }
+#endregion
 
-//Debug Delete
-
+#region Debug Delete
 if (global.debug)
 {
 	if ((position_meeting(mouse_x,mouse_y,id)) and (mouse_check_button(mb_right)))
@@ -1083,3 +1094,4 @@ if (global.debug)
 		instance_destroy();
 	}
 }
+#endregion

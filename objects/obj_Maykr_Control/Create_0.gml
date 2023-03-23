@@ -1,9 +1,5 @@
 ///@description Initialize Variables
 
-#region Randomize
-randomize();
-#endregion
-
 #region Mouse
 mouseX = mouse_x;
 mouseY = mouse_y;
@@ -85,7 +81,7 @@ enum maykrObjects
 	shotzo,
 	mysticDoo,
 	bouncy,
-	search,
+	searches,
 	wapod,
 	cappy,
 	coconut,

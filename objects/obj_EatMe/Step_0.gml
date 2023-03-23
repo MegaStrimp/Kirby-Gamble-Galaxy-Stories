@@ -108,25 +108,33 @@ if (!global.pause)
 				obj_SquadControl.waveEnemyCount[obj_SquadControl.currentWave][squadType] += 1;
 			}
 			
-			if (owner.cAbility == playerAbilities.mix)
+			if (global.gamemode != gamemodes.gamblion)
 			{
-				ds_list_add(owner.mixAbilities,ability);
+				if (owner.cAbility == playerAbilities.mix)
+				{
+					ds_list_add(owner.mixAbilities,ability);
+				}
+			
+				if (ability != playerAbilities.none)
+				{
+					if ((owner.cAbility != playerAbilities.none) and (owner.ateAbilityStar == -1) and (owner.cAbility != ability))
+					{
+						if (owner.mixAbilities == -1) owner.mixAbilities = ds_list_create();
+						ds_list_add(owner.mixAbilities,owner.cAbility);
+						ds_list_add(owner.mixAbilities,ability);
+						owner.cAbility = playerAbilities.mix;
+					}
+					else
+					{
+						owner.cAbility = ability;
+					}
+				}
+			}
+			else
+			{
+				owner.cAbility = playerAbilities.none;
 			}
 			
-			if (ability != playerAbilities.none)
-			{
-				if ((owner.cAbility != playerAbilities.none) and (owner.ateAbilityStar == -1) and (owner.cAbility != ability))
-				{
-					if (owner.mixAbilities == -1) owner.mixAbilities = ds_list_create();
-					ds_list_add(owner.mixAbilities,owner.cAbility);
-					ds_list_add(owner.mixAbilities,ability);
-					owner.cAbility = playerAbilities.mix;
-				}
-				else
-				{
-					owner.cAbility = ability;
-				}
-			}
 			if (inhaleType == 0)
 			{
 				owner.sucked += 1;

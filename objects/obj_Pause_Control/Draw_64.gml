@@ -645,7 +645,7 @@ if ((gamePaused) and (visible))
 			{
 				if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 				audio_play_sound(snd_ButtonNo,0,false);
-				if ((!global.debug) and (global.canSave)) scr_SaveGame(global.selectedSave);
+				if (global.canSave) scr_SaveGame(global.selectedSave);
 				var pauseFade = instance_create_depth(x,y,depth - 1,obj_Pause_Fade);
 				pauseFade.alphaSpd = .02;
 		        pauseFade.fade = 1;
@@ -656,7 +656,7 @@ if ((gamePaused) and (visible))
 				//demo = true;
 				if (demo)
 				{
-					fadeTrans.targetRoom = rm_StageSelect_Demo;
+					fadeTrans.targetRoom = rm_DemoStageSelect;
 				}
 				else
 				{

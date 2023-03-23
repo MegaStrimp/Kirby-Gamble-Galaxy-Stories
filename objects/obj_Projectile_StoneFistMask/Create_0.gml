@@ -1,9 +1,5 @@
 ///@description Initialize Variables
 
-//Randomize
-
-randomize();
-
 //Event Inherited
 
 event_inherited();
@@ -18,3 +14,4 @@ canBeReflected = false;
 state = 0;
 owner = id;
 enemy = false;
+isDirectHit = true;

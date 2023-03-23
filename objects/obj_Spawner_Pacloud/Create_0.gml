@@ -11,14 +11,14 @@ gravLimitNormal = 7;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = AAAAAAAA;
 state = 0;
-hp = AAAAAAAA;
-dmg = 1;
+hp = pacloud_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.none;
-points = AAAAAAAA;
+points = pacloud_Points;
 hurtable = true;
 hasGravity = true;
 heavy = false;

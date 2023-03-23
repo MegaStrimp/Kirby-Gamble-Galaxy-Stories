@@ -11,14 +11,14 @@ gravLimitNormal = 1.25;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_Foley_Normal_Palette_ExplosiveCream;
 state = 0;
-hp = 8;
-dmg = 1;
+hp = foley_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.bomb;
-points = 300;
+points = foley_Points;
 hurtable = true;
 hasGravity = true;
 heavy = false;

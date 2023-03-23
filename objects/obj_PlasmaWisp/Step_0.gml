@@ -1,29 +1,10 @@
 ///@description Main
 
-#region Characters
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		#region Normal
-		case 0:
-		sprIdle = spr_PlasmaWisp_Normal_Idle;
-		sprCharge = spr_PlasmaWisp_Normal_Charge;
-		sprAttack = spr_PlasmaWisp_Normal_Shoot;
-		sprAttackBasic = spr_PlasmaWisp_Normal_AttackBasic;
-		sprAttackRecharge = spr_PlasmaWisp_Normal_AttackRecharge;
-		sprHurt = spr_PlasmaWisp_Normal_Hurt;
-		break;
-		#endregion
-	}
-}
-#endregion
-
 #region Event Inherited
 event_inherited();
 #endregion
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	//Get Inhaled
 	
@@ -81,12 +62,15 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 						audio_play_sound(snd_Spark2,0,false);
 						var projectile = instance_create_depth(x + (6 * dirX),y + 2,depth - 1,obj_Projectile_PlasmaWisp);
 						projectile.owner = id;
+						projectile.enemy = true;
+						projectile.abilityType = playerAbilities.spark;
+						projectile.dmg = plasmaWisp_Spark_Damage;
+						scr_Attack_SetKnockback(projectile,plasmaWisp_Spark_Strength,plasmaWisp_Spark_HitStopAffectSource,plasmaWisp_Spark_HitStopAffectPlayer,plasmaWisp_Spark_HitStopAffectTarget,plasmaWisp_Spark_HitStopLength,plasmaWisp_Spark_HitStopShakeStrength);
 						projectile.abilityType = playerAbilities.spark;
 						projectile.character = 1;
 						projectile.sprite_index = spr_Projectile_Spark_Normal_Low;
 						projectile.mask_index = projectile.sprite_index;
 						projectile.hurtsPlayer=1
-						projectile.enemy = true;
 						projectile.dirX = dirX;
 						projectile.image_xscale = dirX;
 						projectile.hsp = dirX * 6;
@@ -115,11 +99,14 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			audio_play_sound(snd_Spark1,0,false);
 			var projectile = instance_create_depth(x + ((-8+random(16)) * dirX),y-8+random(16),depth - 1,obj_Projectile_PlasmaWisp);
 			projectile.owner = id;
+			projectile.enemy = true;
+			projectile.abilityType = playerAbilities.spark;
+			projectile.dmg = plasmaWisp_Barrage_Damage;
+			scr_Attack_SetKnockback(projectile,plasmaWisp_Barrage_Strength,plasmaWisp_Barrage_HitStopAffectSource,plasmaWisp_Barrage_HitStopAffectPlayer,plasmaWisp_Barrage_HitStopAffectTarget,plasmaWisp_Barrage_HitStopLength,plasmaWisp_Barrage_HitStopShakeStrength);
 			projectile.abilityType = playerAbilities.spark;
 			projectile.sprite_index = spr_Projectile_Spark_Normal_None;
 			projectile.mask_index = projectile.sprite_index;
 			projectile.hurtsPlayer=1
-			projectile.enemy = true;
 			projectile.dirX = dirX;
 			projectile.image_xscale = dirX;
 			projectile.image_yscale=0.2
@@ -142,6 +129,4 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 else
 {
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

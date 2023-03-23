@@ -36,6 +36,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	   if (cooldown <= 0)
 	   {
 			index++;
+			dialogueFlowing = true;
 		   
 			/*modifier = "";
 	        if (string_char_at(text[array],index) == "@")
@@ -54,7 +55,11 @@ if (((pausable) and (!global.pause)) or (!pausable))
 				if ((soundPlaying != -1) and (audio_is_playing(soundPlaying))) audio_stop_sound(soundPlaying);
 				if (textSound[array] != -1) soundPlaying = audio_play_sound(textSound[array],0,false);
 			}
-	   }
+		}
+	}
+	else
+	{
+		dialogueFlowing = false;
 	}
 	
 	//Reset Array

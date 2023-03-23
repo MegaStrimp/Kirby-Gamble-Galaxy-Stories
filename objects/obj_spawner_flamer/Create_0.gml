@@ -7,14 +7,14 @@ movespeed = 2;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_Flamer_Normal_Palette_FieryRed;
 state = 0;
-hp = 12;
-dmg = 1;
+hp = flamer_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.fire;
-points = 300;
+points = flamer_Points;
 hurtable = true;
 hasGravity = true;
 heavy = false;

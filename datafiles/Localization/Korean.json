@@ -353,9 +353,9 @@
             "Description": "It's a sentient booger that seems to walk aimlessly, but in reality it’s looking for some tissues."
         },
         
-        "Search":
+        "Searches":
         {
-            "Title": "Search",
+            "Title": "Searches",
             
             "Description": "A small bomb with a face. If you get too close, it'll detonate, so steer clear."
         },
@@ -910,6 +910,26 @@
             "Title": "Mage Rose"
         },
 		
+		"Blueberry":
+        {
+            "Title": ""
+        },
+		
+		"Sourlime":
+        {
+            "Title": ""
+        },
+		
+		"Mono":
+        {
+            "Title": ""
+        },
+		
+		"Bubblegum":
+        {
+            "Title": ""
+        },
+		
 		"Rocky Road":
         {
             "Title": "Rocky Road"
@@ -985,6 +1005,21 @@
             "Title": "Scarlet Rose"
         },
 		
+		"Nuclear Meltdown":
+        {
+            "Title": ""
+        },
+		
+		"Midnight Inferno":
+        {
+            "Title": ""
+        },
+		
+		"Hot Pink":
+        {
+            "Title": ""
+        },
+		
 		"Frosted Shard":
         {
             "Title": "Frosted Shard"
@@ -1003,6 +1038,11 @@
 		"Chocolate Mousse":
         {
             "Title": "Chocolate Mousse"
+        },
+		
+		"Strawberry Cream":
+        {
+            "Title": ""
         },
 		
 		"Electro Marine":
@@ -1050,6 +1090,16 @@
             "Title": "Pekin Breeze"
         },
 		
+		"Dyna Blade":
+        {
+            "Title": ""
+        },
+		
+		"Nocturne Friend":
+        {
+            "Title": ""
+        },
+		
 		"Speed Machine":
         {
             "Title": "Speed Machine"
@@ -1083,6 +1133,11 @@
 		"Wagasa Dee":
         {
             "Title": "Wagasa Dee"
+        },
+		
+		"Azure Bandanna":
+        {
+            "Title": ""
         },
 		
 		"Crushing Brown":
@@ -1266,11 +1321,17 @@
         
         "Press Any Key": "Press Any Key",
         
+        "Control Type": "",
+        
         "Extra Tutorials": "Extra Tutorials",
         
         "Auto Swallow": "Auto Swallow",
         
         "Music Intro": "Music Intro",
+        
+        "Enemy Healthbar": "",
+        
+        "Hit Numbers": "",
         
         "Default": "Default",
         
@@ -1325,6 +1386,14 @@
 		
 		"Log Into Discord": "Log Into Discord",
 		
+		"Obtain Mystic Beam": "",
+		
+		"Master Mystic Beam": "",
+		
+		"Obtain Mystic Fire": "",
+		
+		"Master Mystic Fire": "",
+		
 		"Beam Gold Medal": "Beam Gold Medal",
 		
 		"Stone Gold Medal": "Stone Gold Medal",
@@ -1338,6 +1407,34 @@
 		"Ice Gold Medal": "Ice Gold Medal",
 		
 		"Spark Gold Medal": "Spark Gold Medal",
+		
+		"Beat Green Greens": "",
+		
+		"Beat Battleship Halberd": "",
+		
+		"Beat Asteroid Fields": "",
+		
+		"Beat Yolk Yard": "",
+		
+		"Beat Grand Temple Avgo": "",
+		
+		"Beat Floral Yolk Caves": "",
+		
+		"Beat Storm The Fortress": "",
+		
+		"Beat Central Lab": "",
+		
+		"Beat Path To The Nasty Machine": "",
+		
+		"Beat Sandshell Beach": "",
+		
+		"Beat Up The Straw": "",
+		
+		"Beat Sacred Aquatia": "",
+		
+		"Beat Cosmic Palace": "",
+		
+		"Beat Chapter 1": "",
 		
 		"Unlock Gamble": "Unlock Gamble",
 		
@@ -1353,6 +1450,44 @@
 		
 		"Secret": "Secret"
     },
+	
+	"Acts":
+	{
+		"C1A1":
+		{
+			"Index": "",
+			
+			"Title": ""
+		},
+		
+		"C1A2":
+		{
+			"Index": "",
+			
+			"Title": ""
+		},
+		
+		"C1A3":
+		{
+			"Index": "",
+			
+			"Title": ""
+		},
+		
+		"C1A4":
+		{
+			"Index": "",
+			
+			"Title": ""
+		},
+		
+		"C1A5":
+		{
+			"Index": "",
+			
+			"Title": ""
+		}
+	},
 	
 	"Stages":
 	{
@@ -2082,6 +2217,198 @@
 			"Cosmetic": "",
 			
 			"Game Changer": ""
+		}
+	},
+	
+	"Upgrades":
+    {
+		"Heroic Shield":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Motor Cutter":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Propeller Wing":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Spectral Cutter":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Golden Flare":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Vortex In A Jar":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Rock Candy":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Combo Cobalt":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Psychic Pebble":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Cow Doll":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Light Shells":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Eye Bomb":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Sticky Bomb":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Magma Bomb":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Ice Bomb":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Explosive Powder":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Magic Charcoal":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Empty Cone":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Bright Plugg":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Waddle Brella":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
+		},
+		
+		"Egg Soil":
+		{
+			"Title": "",
+			
+			"Description": "",
+			
+			"Unlock Method": "TBD"
 		}
 	},
 	

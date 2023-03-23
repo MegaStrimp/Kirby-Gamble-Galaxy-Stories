@@ -52,14 +52,19 @@ for (var i = 0; i < cheatsMax; i++)
 	
 	if (cheatsArray[# i,9] != 0)
 	{
-		draw_sprite_ext(cheatsArray[# i,1],discIndexFinal,cheatsArray[# i,6],128 + cheatsArray[# i,7],cheatsArray[# i,8],cheatsArray[# i,8],cheatsArray[# i,12],image_blend,cheatsArray[# i,9]);
-		draw_sprite_ext(spr_Menu_Collection_Cheats_DiscInside,discIndexFinal,cheatsArray[# i,6],128 + cheatsArray[# i,7],cheatsArray[# i,8],cheatsArray[# i,8],image_angle,image_blend,cheatsArray[# i,9]);
-		gpu_set_blendmode(bm_add);
-		draw_sprite_ext(spr_Menu_Collection_Cheats_Shine,discIndexFinal,cheatsArray[# i,6],128 + cheatsArray[# i,7],cheatsArray[# i,8],cheatsArray[# i,8],image_angle,image_blend,cheatsArray[# i,9] * .45);
-		gpu_set_blendmode(bm_normal);
-		if (i == discSelection) draw_sprite_ext(spr_Menu_Collection_Cheats_DiscSelected,0,cheatsArray[# i,6],128 + cheatsArray[# i,7],cheatsArray[# i,8],cheatsArray[# i,8],image_angle,image_blend,cheatsArray[# i,9]);
-		if (cheatsArray[# i,11] == 1) draw_sprite_ext(spr_Menu_Collection_Cheats_GameChanger,cheatsArray[# i,11] - 1,cheatsArray[# i,6] + 11,128 + cheatsArray[# i,7] - 63,cheatsArray[# i,8],cheatsArray[# i,8],image_angle,image_blend,cheatsArray[# i,9]);
-		if (cheatsArray[# i,10]) draw_sprite_ext(spr_Menu_Upgrades_Check,0,cheatsArray[# i,6] + 19,128 + cheatsArray[# i,7] + 20,cheatsArray[# i,8] * 4,cheatsArray[# i,8] * 4,image_angle,image_blend,cheatsArray[# i,9]);
+		var discSprite = cheatsArray[# i,1];
+		if (!cheatsArray[# discSelection,4]) discSprite = spr_Menu_Collection_Cheats_Disc_Locked;
+		draw_sprite_ext(discSprite,0,cheatsArray[# i,6],128 + cheatsArray[# i,7],cheatsArray[# i,8],cheatsArray[# i,8],cheatsArray[# i,12],image_blend,cheatsArray[# i,9] + (.15 * !cheatsArray[# i,4]));
+		draw_sprite_ext(spr_Menu_Collection_Cheats_DiscInside,discIndexFinal,cheatsArray[# i,6],128 + cheatsArray[# i,7],cheatsArray[# i,8],cheatsArray[# i,8],image_angle,image_blend,cheatsArray[# i,9] + (.15 * !cheatsArray[# i,4]));
+		if (i == discSelection) draw_sprite_ext(spr_Menu_Collection_Cheats_DiscSelected,0,cheatsArray[# i,6],128 + cheatsArray[# i,7],cheatsArray[# i,8],cheatsArray[# i,8],image_angle,image_blend,cheatsArray[# i,9] + (.15 * !cheatsArray[# i,4]));
+		if (cheatsArray[# discSelection,4])
+		{
+			gpu_set_blendmode(bm_add);
+			draw_sprite_ext(spr_Menu_Collection_Cheats_Shine,discIndexFinal,cheatsArray[# i,6],128 + cheatsArray[# i,7],cheatsArray[# i,8],cheatsArray[# i,8],image_angle,image_blend,cheatsArray[# i,9] * .45);
+			gpu_set_blendmode(bm_normal);
+			if (cheatsArray[# i,11] == 1) draw_sprite_ext(spr_Menu_Collection_Cheats_GameChanger,cheatsArray[# i,11] - 1,cheatsArray[# i,6] + 11,128 + cheatsArray[# i,7] - 63,cheatsArray[# i,8],cheatsArray[# i,8],image_angle,image_blend,cheatsArray[# i,9] + (.15 * !cheatsArray[# i,4]));
+		}
+		if (cheatsArray[# i,10]) draw_sprite_ext(spr_Menu_Upgrades_Check,0,cheatsArray[# i,6] + 19,128 + cheatsArray[# i,7] + 20,cheatsArray[# i,8] * 4,cheatsArray[# i,8] * 4,image_angle,image_blend,cheatsArray[# i,9] + (.15 * !cheatsArray[# i,4]));
 	}
 }
 #endregion
@@ -90,13 +95,13 @@ else
 draw_set_font(fntDialogueDefault);
 draw_set_halign(fa_center);
 var description = cheatsArray[# discSelection,3];
-if (cheatsArray[# discSelection,4]) description = cheatsArray[# discSelection,5];
-scr_Draw_Text_Color_Outline(240,188,cheatsArray[# discSelection,2],-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
-scr_Draw_Text_Color_Outline(240,219,description,-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
-draw_set_halign(fa_right);
-draw_set_font(fntMedium);
+var titleColor1 = c_white;
+var titleColor2 = c_white;
+var descriptionColor1 = cheatsArray[# discSelection,13];
+var descriptionColor3 = c_white;
 var attributeColor = c_white;
 var attributeText = str("Cheats.Attributes.Cosmetic");
+
 if (cheatsArray[# discSelection,11] == 1)
 {
 	attributeColor = c_yellow;
@@ -107,6 +112,20 @@ else if (cheatsArray[# discSelection,11] == 2)
 	attributeColor = c_red;
 	attributeText = "!!";
 }
+
+if (!cheatsArray[# discSelection,4])
+{
+	description = cheatsArray[# discSelection,5];
+	titleColor1 = c_dkgray;
+	titleColor2 = c_white;
+	descriptionColor1 = c_gray;
+	descriptionColor3 = c_white;
+	attributeText = "";
+}
+scr_Draw_Text_Color_Outline(240,188,cheatsArray[# discSelection,2],-1,-1,titleColor1,titleColor2,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+scr_Draw_Text_Color_Outline(240,219,description,-1,-1,descriptionColor1,descriptionColor3,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+draw_set_halign(fa_right);
+draw_set_font(fntMedium);
 scr_Draw_Text_Color_Outline(454,188,attributeText,-1,-1,attributeColor,attributeColor,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 draw_set_halign(fa_left);
 #endregion

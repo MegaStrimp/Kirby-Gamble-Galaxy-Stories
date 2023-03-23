@@ -1,34 +1,10 @@
 ///@description Main
 
-//Characters
-
-if (setupTimer == 0)
-{
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_Gim_Normal_Idle;
-		sprWalk = spr_Gim_Normal_Walk;
-		sprHurt = spr_Gim_Normal_Hurt;
-		sprJump = spr_Gim_Normal_Jump;
-		sprFall = spr_Gim_Normal_Fall;
-		sprPrep = spr_Gim_Normal_Prep;
-		sprHandFlingDown = spr_GimHand_Normal_FlingDown;
-		sprHandFlingMiddle = spr_GimHand_Normal_FlingMiddle;
-		sprHandFlingUp = spr_GimHand_Normal_FlingUp;
-		sprHandHoldClose = spr_GimHand_Normal_HoldClose;
-		sprHandHoldAway = spr_GimHand_Normal_HoldAway;
-		break;
-	}
-}
-
 //Event Inherited
 
 event_inherited();
 
-if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
+if (!childPause)
 {
 	//Hurt Player
 	
@@ -98,6 +74,11 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 			if (!instance_exists(throwyo))
 			{
 				throwyo = instance_create_depth(x, y, depth, obj_Projectile_GimYoyo);
+				throwyo.owner = id;
+				throwyo.enemy = true;
+				throwyo.abilityType = playerAbilities.yoyo;
+				throwyo.dmg = gim_Yoyo_Damage;
+				scr_Attack_SetKnockback(throwyo,gim_Yoyo_Strength,gim_Yoyo_HitStopAffectSource,gim_Yoyo_HitStopAffectPlayer,gim_Yoyo_HitStopAffectTarget,gim_Yoyo_HitStopLength,gim_Yoyo_HitStopShakeStrength);
 				throwyo.dirX = dirX;
 			}
 			else if (!instance_exists(throwyo))
@@ -192,6 +173,4 @@ if ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)))
 else
 {
 	image_speed = 0;
-	shakeX = 0;
-	shakeY = 0;
 }

@@ -1,99 +1,11 @@
 ///@description Main
 
-//Characters
+#region Event Inherited
+event_inherited();
+#endregion
 
-if (setupTimer == 0)
+if (!isPaused)
 {
-	switch (character)
-	{
-		//Normal
-		
-		case 0:
-		sprIdle = spr_Projectile_Bomb_Normal;
-		sprBig = spr_Projectile_Bomb_Normal_Big;
-		break;
-		
-		//Modern
-		
-		case 1:
-		sprIdle = spr_Projectile_Bomb_Modern;
-		sprBig = spr_Projectile_Bomb_Modern_Big;
-		break;
-		
-		//Egg
-		
-		case 2:
-		sprIdle = spr_Projectile_Bomb_Egg;
-		sprBig = spr_Projectile_Bomb_Egg_Big;
-		break;
-		
-		//Fetus
-		
-		case 3:
-		sprIdle = spr_Projectile_Bomb_Fetus;
-		sprBig = spr_Projectile_Bomb_Fetus;
-		break;
-	}
-	
-	if (hasHoming)
-	{
-		if (hasRemoteDetonation)
-		{
-			if (hasMagma)
-			{
-				sprIdle = spr_Projectile_Bomb_Normal_EyStMa;
-				sprBig = spr_Projectile_Bomb_Normal_EyStMaBig;
-				canRotate = true;
-				hasParticle = false;
-			}
-			else
-			{
-				sprIdle = spr_Projectile_Bomb_Normal_EySt;
-				sprBig = spr_Projectile_Bomb_Normal_EyStBig;
-				canRotate = false;
-				hasParticle = false;
-			}
-		}
-		else if (hasMagma)
-		{
-			sprIdle = spr_Projectile_Bomb_Normal_EyMa;
-			sprBig = spr_Projectile_Bomb_Normal_EyMaBig;
-		}
-		else
-		{
-			sprIdle = spr_Projectile_Bomb_Normal_Ey;
-			sprBig = spr_Projectile_Bomb_Normal_BigEy;
-		}
-	}
-	else if (hasRemoteDetonation)
-	{
-		if (hasMagma)
-		{
-			sprIdle = spr_Projectile_Bomb_Normal_StMa;
-			sprBig = spr_Projectile_Bomb_Normal_StMaBig;
-			canRotate = false;
-			hasParticle = false;
-		}
-		else
-		{
-			sprIdle = spr_Projectile_Bomb_Normal_St;
-			sprBig = spr_Projectile_Bomb_Normal_BigSt;
-			canRotate = false;
-			hasParticle = false;
-		}
-	}
-	else if (hasMagma)
-	{
-		sprIdle = spr_Projectile_Bomb_Normal_Ma;
-		sprBig = spr_Projectile_Bomb_Normal_BigMa;
-		hasParticle = false;
-	}
-}
-
-if (((pausable) and (!global.pause)) or (!pausable))
-{	
-	//Event Inherited
-	
 	if (active)
 	{
 		if (enemy)
@@ -135,8 +47,6 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		hurtsPlayer = false;
 		hurtsProjectile = false;
 	}
-	
-	event_inherited();
 	
 	//Get Inhaled
 	
@@ -198,7 +108,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 					{
 						proj = instance_create_depth(x + ((i - 1) * 15),y - 4,depth,obj_Projectile_SmallFire);
 						proj.owner = id;
-						proj.dmg = 8;
+						proj.dmg = kirby_BombMagmaBombExtra_Damage;
 						proj.enemy = false;
 						proj.destroyableByWall = false;
 						proj.destroyableByEnemy = false;

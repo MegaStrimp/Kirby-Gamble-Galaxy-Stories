@@ -1114,21 +1114,6 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		break;
 		#endregion
 		
-		#region Food
-		case debugObject.food:
-		debugSprite = spr_Food;
-		debugSpriteSelectedMax = 0;
-		debugIndex = 0;
-		debugStateSelectedMax = 0;
-		if (mouse_check_button_pressed(mb_left))
-		{
-			var debugObj = instance_create_layer(x,y,"Environment",obj_Food);
-			debugObj.image_xscale = debugXScale;
-			debugObj.image_yscale = debugYScale;
-		}
-		break;
-		#endregion
-		
 		#region Item Chest
 		case debugObject.itemChest:
 		debugSpriteSelectedMax = 0;
@@ -1235,6 +1220,21 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			debugObj.sprTop = sprTop;
 			debugObj.sprBottom = sprBottom;
 			debugObj.sprite_index = sprIdle;
+			debugObj.image_xscale = debugXScale;
+			debugObj.image_yscale = debugYScale;
+		}
+		break;
+		#endregion
+		
+		#region Food
+		case debugObject.food:
+		debugSprite = spr_Food;
+		debugSpriteSelectedMax = 0;
+		debugIndex = 0;
+		debugStateSelectedMax = 0;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var debugObj = instance_create_layer(x,y,"Environment",obj_Food);
 			debugObj.image_xscale = debugXScale;
 			debugObj.image_yscale = debugYScale;
 		}
@@ -1626,7 +1626,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var sprClimbUp = spr_WaddleDee_Normal_ClimbUp;
 			var sprClimbDown = spr_WaddleDee_Normal_ClimbDown;
 			var sprHurt = spr_WaddleDee_Normal_Hurt;
-			debugPaletteNumberMax = 31;
+			debugPaletteNumberMax = 35;
 			switch (debugPaletteNumber)
 			{
 				case 0:
@@ -1757,6 +1757,22 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 				debugPaletteIndex = spr_WaddleDee_Normal_Palette_ExtremeContrast;
 				break;
 				
+				case 32:
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_NPCOrange1;
+				break;
+				
+				case 33:
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_NPCOrange2;
+				break;
+				
+				case 34:
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_NPCOrange3;
+				break;
+				
+				case 35:
+				debugPaletteIndex = spr_WaddleDee_Normal_Palette_NPCOrange4;
+				break;
+				
 				default:
 				debugPaletteIndex = spr_WaddleDee_Normal_Palette_WaddleWaddle;
 				break;
@@ -1870,7 +1886,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		}
 		debugSprite = sprIdle;
 		debugIndex = 0;
-		debugStateSelectedMax = 2;
+		debugStateSelectedMax = 3;
 		if (mouse_check_button_pressed(mb_left))
 		{
 			var spawnedObj = obj_WaddleDee;
@@ -2525,7 +2541,12 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			#region Normal
 			case 0:
 			var sprIdle = spr_BloodGordo_Normal_Idle;
+			var sprAngry = spr_BloodGordo_Normal_Angry;
+			var sprCautious = spr_BloodGordo_Normal_Cautious;
+			var sprSleep = spr_BloodGordo_Normal_Sleep;
+			var sprTriggered = spr_BloodGordo_Normal_Triggered;
 			var sprHurt = -1;
+			var sprAura = spr_BloodGordo_Normal_Aura;
 			debugPaletteNumberMax = 0;
 			switch (debugPaletteNumber)
 			{
@@ -2542,7 +2563,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		}
 		debugSprite = sprIdle;
 		debugIndex = 0;
-		debugStateSelectedMax = 3;
+		debugStateSelectedMax = 0;
 		if (mouse_check_button_pressed(mb_left))
 		{
 			var spawnedObj = obj_BloodGordo;
@@ -2550,7 +2571,12 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
+			debugObj.sprAngry = sprAngry;
+			debugObj.sprCautious = sprCautious;
+			debugObj.sprSleep = sprSleep;
+			debugObj.sprTriggered = sprTriggered;
 			debugObj.sprHurt = sprHurt;
+			debugObj.sprAura = sprAura;
 			debugObj.sprite_index = sprIdle;
 			debugObj.paletteIndex = debugPaletteIndex;
 			debugObj.image_xscale = debugXScale;
@@ -2923,25 +2949,25 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		break;
 		#endregion
 		
-		#region Search
-		case debugObject.search:
+		#region Searches
+		case debugObject.searches:
 		debugSpriteSelectedMax = 0;
 		switch (debugSpriteSelected)
 		{
 			#region Normal
 			case 0:
-			var sprIdle = spr_Search_Normal_Idle;
-			var sprCharge = spr_Search_Normal_Charge;
-			var sprHurt = spr_Search_Normal_Hurt;
+			var sprIdle = spr_Searches_Normal_Idle;
+			var sprCharge = spr_Searches_Normal_Charge;
+			var sprHurt = spr_Searches_Normal_Hurt;
 			debugPaletteNumberMax = 0;
 			switch (debugPaletteNumber)
 			{
 				case 0:
-				debugPaletteIndex = spr_Search_Normal_Palette_BombshellGray;
+				debugPaletteIndex = spr_Searches_Normal_Palette_BombshellGray;
 				break;
 				
 				default:
-				debugPaletteIndex = spr_Search_Normal_Palette_BombshellGray;
+				debugPaletteIndex = spr_Searches_Normal_Palette_BombshellGray;
 				break;
 			}
 			break;
@@ -2952,8 +2978,8 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		debugStateSelectedMax = 0;
 		if (mouse_check_button_pressed(mb_left))
 		{
-			var spawnedObj = obj_Search;
-			if (spawnerMode) spawnedObj = obj_Spawner_Search;
+			var spawnedObj = obj_Searches;
+			if (spawnerMode) spawnedObj = obj_Spawner_Searches;
 			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
@@ -3968,12 +3994,61 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			#region Normal
 			case 0:
 			var sprIdle = spr_Onion_Normal_Idle;
+			var sprThrow = spr_Onion_Normal_Idle;
 			var sprHurt = -1;
-			debugPaletteNumberMax = 0;
+			debugPaletteNumberMax = 12;
 			switch (debugPaletteNumber)
 			{
 				case 0:
 				debugPaletteIndex = spr_Onion_Normal_Palette_OrangeCarrot;
+				break;
+				
+				case 1:
+				debugPaletteIndex = spr_Onion_Normal_Palette_BrightOrange;
+				break;
+				
+				case 2:
+				debugPaletteIndex = spr_Onion_Normal_Palette_DarkOrange;
+				break;
+				
+				case 3:
+				debugPaletteIndex = spr_Onion_Normal_Palette_LightOrange;
+				break;
+				
+				case 4:
+				debugPaletteIndex = spr_Onion_Normal_Palette_PaleOrange;
+				break;
+				
+				case 5:
+				debugPaletteIndex = spr_Onion_Normal_Palette_SaturatedOrange;
+				break;
+				
+				case 6:
+				debugPaletteIndex = spr_Onion_Normal_Palette_BloodCarrot;
+				break;
+				
+				case 7:
+				debugPaletteIndex = spr_Onion_Normal_Palette_ChilliPepper;
+				break;
+				
+				case 8:
+				debugPaletteIndex = spr_Onion_Normal_Palette_DarkPlum;
+				break;
+				
+				case 9:
+				debugPaletteIndex = spr_Onion_Normal_Palette_GoldenCarrot;
+				break;
+				
+				case 10:
+				debugPaletteIndex = spr_Onion_Normal_Palette_LightOnion;
+				break;
+				
+				case 11:
+				debugPaletteIndex = spr_Onion_Normal_Palette_NeonShroom;
+				break;
+				
+				case 12:
+				debugPaletteIndex = spr_Onion_Normal_Palette_RottenOnion;
 				break;
 				
 				default:
@@ -3993,6 +4068,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
+			debugObj.sprThrow = sprThrow;
 			debugObj.sprHurt = sprHurt;
 			debugObj.sprite_index = sprIdle;
 			debugObj.paletteIndex = debugPaletteIndex;
@@ -4314,11 +4390,11 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			switch (debugPaletteNumber)
 			{
 				case 0:
-				debugPaletteIndex = spr_Blado_Normal_Palette_BrownBlades;
+				debugPaletteIndex = spr_Como_Normal_Palette_SpiderGold;
 				break;
 				
 				default:
-				debugPaletteIndex = spr_Blado_Normal_Palette_BrownBlades;
+				debugPaletteIndex = spr_Como_Normal_Palette_SpiderGold;
 				break;
 			}
 			break;
@@ -5217,11 +5293,11 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			switch (debugPaletteNumber)
 			{
 				case 0:
-				debugPaletteIndex = spr_Flamer_Normal_Palette_FieryRed;
+				debugPaletteIndex = spr_Chuckie_Normal_Palette_BlueSphere;
 				break;
 				
 				default:
-				debugPaletteIndex = spr_Flamer_Normal_Palette_FieryRed;
+				debugPaletteIndex = spr_Chuckie_Normal_Palette_BlueSphere;
 				break;
 			}
 			break;
@@ -5243,7 +5319,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprHurt = sprHurt;
 			debugObj.sprNeck = sprNeck;
-			debugObj.sprite_index = sprIdle;
+			debugObj.sprite_index = sprBox;
 			debugObj.paletteIndex = debugPaletteIndex;
 			debugObj.image_xscale = debugXScale;
 			debugObj.dirX = debugXScale;
@@ -5441,6 +5517,158 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			debugObj.sprAttackRelease = sprAttackRelease;
 			debugObj.sprHurt = sprHurt;
 			debugObj.sprite_index = sprIdle;
+			debugObj.paletteIndex = debugPaletteIndex;
+			debugObj.image_xscale = debugXScale;
+			debugObj.dirX = debugXScale;
+			debugObj.walkDirX = debugXScale;
+			debugObj.image_yscale = debugYScale;
+			debugObj.dirY = debugYScale;
+			debugObj.walkDirY = debugYScale;
+			debugObj.state = debugStateSelected;
+		}
+		break;
+		#endregion
+		
+		#region Wizzer
+		case debugObject.wizzer:
+		debugSpriteSelectedMax = 0;
+		switch (debugSpriteSelected)
+		{
+			#region Normal
+			case 0:
+			var sprIdle = spr_Wizzer_Normal_Idle;
+			var sprOpen = spr_Wizzer_Normal_Open;
+			var sprClose = spr_Wizzer_Normal_Close;
+			var sprReady = spr_Wizzer_Normal_Ready;
+			var sprAttack = spr_Wizzer_Normal_Attack;
+			var sprHurtNormal = spr_Wizzer_Normal_HurtNormal;
+			var sprHurtInhale = spr_Wizzer_Normal_HurtInhale;
+			debugPaletteNumberMax = 5;
+			switch (debugPaletteNumber)
+			{
+				case 0:
+				debugPaletteIndex = spr_Wizzer_Normal_Palette_NavyShell;
+				break;
+				
+				case 1:
+				debugPaletteIndex = spr_Wizzer_Normal_Palette_SeaweedGreen;
+				break;
+				
+				case 2:
+				debugPaletteIndex = spr_Wizzer_Normal_Palette_TropicOrange;
+				break;
+				
+				case 3:
+				debugPaletteIndex = spr_Wizzer_Normal_Palette_MermaidPink;
+				break;
+				
+				case 4:
+				debugPaletteIndex = spr_Wizzer_Normal_Palette_DeepPurple;
+				break;
+				
+				case 5:
+				debugPaletteIndex = spr_Wizzer_Normal_Palette_SweetCream;
+				break;
+				
+				default:
+				debugPaletteIndex = spr_Wizzer_Normal_Palette_NavyShell;
+				break;
+			}
+			break;
+			#endregion
+		}
+		debugSprite = sprIdle;
+		debugIndex = 0;
+		debugStateSelectedMax = 0;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var spawnedObj = obj_Wizzer;
+			//if (spawnerMode) spawnedObj = obj_Spawner_Wizzer;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
+			debugObj.character = debugSpriteSelected;
+			debugObj.sprIdle = sprIdle;
+			debugObj.sprOpen = sprOpen;
+			debugObj.sprClose = sprClose;
+			debugObj.sprReady = sprReady;
+			debugObj.sprAttack = sprAttack;
+			debugObj.sprHurtNormal = sprHurtNormal;
+			debugObj.sprHurtInhale = sprHurtInhale;
+			debugObj.sprite_index = sprIdle;
+			debugObj.paletteIndex = debugPaletteIndex;
+			debugObj.image_xscale = debugXScale;
+			debugObj.dirX = debugXScale;
+			debugObj.walkDirX = debugXScale;
+			debugObj.image_yscale = debugYScale;
+			debugObj.dirY = debugYScale;
+			debugObj.walkDirY = debugYScale;
+			debugObj.state = debugStateSelected;
+		}
+		break;
+		#endregion
+		
+		#region Mopoo
+		case debugObject.mopoo:
+		debugSpriteSelectedMax = 0;
+		switch (debugSpriteSelected)
+		{
+			#region Normal
+			case 0:
+			var sprBody = spr_Mopoo_Normal_Body;
+			var sprHurt = spr_Mopoo_Normal_Hurt;
+			debugPaletteNumberMax = 7;
+			switch (debugPaletteNumber)
+			{
+				case 0:
+				debugPaletteIndex = spr_Mopoo_Normal_Palette_PuffyCloud;
+				break;
+				
+				case 1:
+				debugPaletteIndex = spr_Mopoo_Normal_Palette_Mint;
+				break;
+				
+				case 2:
+				debugPaletteIndex = spr_Mopoo_Normal_Palette_Strawberry;
+				break;
+				
+				case 3:
+				debugPaletteIndex = spr_Mopoo_Normal_Palette_Chocolate;
+				break;
+				
+				case 4:
+				debugPaletteIndex = spr_Mopoo_Normal_Palette_Dusk;
+				break;
+				
+				case 5:
+				debugPaletteIndex = spr_Mopoo_Normal_Palette_Frozen;
+				break;
+				
+				case 6:
+				debugPaletteIndex = spr_Mopoo_Normal_Palette_TooSpooky;
+				break;
+				
+				case 7:
+				debugPaletteIndex = spr_Mopoo_Normal_Palette_Cherry;
+				break;
+				
+				default:
+				debugPaletteIndex = spr_Mopoo_Normal_Palette_PuffyCloud;
+				break;
+			}
+			break;
+			#endregion
+		}
+		debugSprite = sprBody;
+		debugIndex = 0;
+		debugStateSelectedMax = 0;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var spawnedObj = obj_Mopoo;
+			//if (spawnerMode) spawnedObj = obj_Spawner_Mopoo;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
+			debugObj.character = debugSpriteSelected;
+			debugObj.sprBody = sprBody;
+			debugObj.sprHurt = sprHurt;
+			debugObj.sprite_index = sprBody;
 			debugObj.paletteIndex = debugPaletteIndex;
 			debugObj.image_xscale = debugXScale;
 			debugObj.dirX = debugXScale;

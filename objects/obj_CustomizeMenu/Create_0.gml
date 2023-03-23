@@ -1,12 +1,9 @@
 ///@description Initialize Variables
 
-//Randomize
-
-randomize();
-
 //Other Variables
 
 hudOffset = -250;
+menuIndex = 0;
 selection = 0;
 subSelection = -1;
 selectedPlayer = 0;

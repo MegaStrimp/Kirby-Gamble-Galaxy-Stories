@@ -16,14 +16,14 @@ gravLimitParasol = .5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_BroomHatter_Normal_Palette_YellowBroom;
 state = 0;
-hp = 16;
-dmg = 1;
+hp = broomHatter_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.none;
-points = 200;
+points = broomHatter_Points;
 hurtable = true;
 hasGravity = true;
 heavy = false;

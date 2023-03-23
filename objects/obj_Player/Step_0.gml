@@ -1,7 +1,10 @@
 ///@description Main
 
-//Variables
+#region Inputs
+scr_Player_Inputs(player);
+#endregion
 
+#region Pointers
 switch (player)
 {
 	case 0:
@@ -9,6 +12,7 @@ switch (player)
 	var playerCharacter = global.characterP1;
 	var playerIsHelper = global.isHelperP1;
 	var playerFamiliar = global.familiarP1;
+	var micCount = global.micCountP1;
 	break;
 	
 	case 1:
@@ -16,6 +20,7 @@ switch (player)
 	var playerCharacter = global.characterP2;
 	var playerIsHelper = global.isHelperP2;
 	var playerFamiliar = global.familiarP2;
+	var micCount = global.micCountP2;
 	break;
 	
 	case 2:
@@ -23,6 +28,7 @@ switch (player)
 	var playerCharacter = global.characterP3;
 	var playerIsHelper = global.isHelperP3;
 	var playerFamiliar = global.familiarP3;
+	var micCount = global.micCountP3;
 	break;
 	
 	case 3:
@@ -30,45 +36,31 @@ switch (player)
 	var playerCharacter = global.characterP4;
 	var playerIsHelper = global.isHelperP4;
 	var playerFamiliar = global.familiarP4;
+	var micCount = global.micCountP4;
 	break;
 }
+#endregion
 
-//invincibleFlash = false;
-grounded = false;
-if (place_meeting(x,y + 1,obj_ParentWall))
-{
-	var collidingWall = instance_place(x,y + 1,obj_ParentWall);
-	if ((!collidingWall.platform) or ((collidingWall.platform) and (((!keyDownHold) and ((downHeld < 8) or (playerAbility != playerAbilities.ufo))) and !(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal) and (!place_meeting(x,y + vspFinal,obj_Wall))))) grounded = true;
-}
-else if (place_meeting(x,y + 1,obj_Spring))
-{
-	//var collidingSpring = instance_place(x,y + 1,obj_Spring);
-	grounded = true;
-}
-
-wallAbove = false;
-if (place_meeting(x,y - 1,obj_Wall))
-{
-	var collidingWall = instance_place(x,y - 1,obj_Wall);
-	if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + collidingWall.vsp + 20 + vspFinal)))) wallAbove = true;
-}
-
+#region Variables
 var canFlash = false;
-if (invincible)
+if ((invincible) or (attackNumber == playerAttacks.slideJump) or (hasInvinCandy))
 {
 	invincibleFlashTimerMax = 2;
 	canFlash = true;
 }
-if ((cAbility != playerAbilities.none) and (state = playerStates.carry) and (!spit))
+if (
+((cAbility != playerAbilities.none) and (state = playerStates.carry) and (!spit))
+or (playerAbility == playerAbilities.sleep)
+or ((playerAbility == playerAbilities.crash) and (!attack))
+or ((playerAbility == playerAbilities.mic) and (!attack))
+)
 {
 	invincibleFlashTimerMax = 4;
 	canFlash = true;
 }
+#endregion
 
-scr_Player_Inputs(player);
-
-//Clamp To View
-
+#region Clamp To View
 var clampToView = false;
 
 if ((instance_exists(obj_Camera)) and (obj_Camera.targetClampToView)) clampToView = true;
@@ -78,9 +70,9 @@ if ((clampToView) and (!death))
 	x = clamp(x,camera_get_view_x(gameView),camera_get_view_x(gameView) + camera_get_view_width(gameView));
 	y = clamp(y,camera_get_view_y(gameView),camera_get_view_y(gameView) + camera_get_view_height(gameView));
 }
+#endregion
 
-//Death
-
+#region Death
 var goldenTomatoAmountPointer = global.goldenTomatoAmountP1;
 switch (player)
 {
@@ -107,14 +99,14 @@ and (!death))
 	{
 		if (audio_is_playing(snd_Charge_Ready)) audio_stop_sound(snd_Charge_Ready);
 		audio_play_sound(snd_Charge_Ready,0,false);
+		
 		if (instance_exists(obj_Hud))
 		{
 			var particle = instance_create_depth(x,y,depth - 1,obj_Particle);
 			particle.sprite_index = spr_Particle_Flash1;
 			particle.destroyAfterAnimation = true;
 		}
-		//global.healthP1 = global.hpMax;
-		//global.healthP2 = global.hpMax;
+		
 		switch (player)
 		{
 			case 0:
@@ -141,7 +133,6 @@ and (!death))
 	else
 	{
 		audio_stop_all();
-		if (instance_exists(obj_Music)) instance_destroy(obj_Music);
 		audio_play_sound(snd_Hurt,0,false);
 		global.healthbarMarkedEnemy = -1;
 		death = true;
@@ -156,74 +147,42 @@ and (!death))
 		deathTimer = deathTimerMax;
 	}
 }
+#endregion
 
 if (!global.pause)
 {
-	//Moving Walls
-	/*
-	if (place_meeting(x,y + 1,obj_ParentWall))
-	{
-		var movingWall = instance_place(x,y + 1,obj_ParentWall);
-		if (movingWall.hsp != 0) x += movingWall.hsp;
-		if (movingWall.vsp != 0) y += movingWall.vsp;
-	}
-	if (place_meeting(x,y - 1,obj_ParentWall))
-	{
-		var movingWall = instance_place(x,y - 1,obj_ParentWall);
-		if (movingWall.vsp != 0) y += movingWall.vsp;
-	}
-	if (place_meeting(x + sign(hspFinal),y,obj_ParentWall))
-	{
-		var movingWall = instance_place(x + sign(hspFinal),y,obj_ParentWall);
-		if (movingWall.hsp != 0) x += movingWall.hsp;
-	}
-	*/
-	
-	//Down Held
-
+	#region Down Held
     if ((keyDownHold) and (downHeld < 1000)) downHeld += 1;
     if (keyDownReleased || attack || /*state == 5 || */hsp != 0) downHeld = 0;
-	if(playerAbility == playerAbilities.ufo){
-		downHeld = 10;
-	}
+	if (playerAbility == playerAbilities.ufo) downHeld = 10;
+	#endregion
 	
-	//Depth & Scale Changer
+	#region Character Based Variables & Functions
+	if ((playerCharacter != playerCharacters.gordo) and (playerCharacter != playerCharacters.bloodGordo)) imageAngle = 0;
+	#endregion
 	
-	if (place_meeting(x,y,obj_DepthChanger))
-	{
-		var collidedDepthChanger = instance_place(x,y,obj_DepthChanger);
-		if (collidedDepthChanger.targetScale != -1) targetScale = collidedDepthChanger.targetScale;
-		if (collidedDepthChanger.targetDepth != -1) depth = collidedDepthChanger.targetDepth;
-	}
-	
-	scale = lerp(scale,targetScale,.02);
-	
-	if (inBackground)
-	{
-		collisionX = obj_BackgroundWall;
-		collisionY = obj_BackgroundWall;
-	}
-	else
-	{
-		collisionX = obj_ParentWall;
-		collisionY = obj_ParentWall;
-	}
-	
-	//Abilities
-	
+	#region Ability Based Variables & Functions
 	switch (playerAbility)
 	{
 		case playerAbilities.bomb:
+		#region Bomb Down Attack Variable
 		if (state != playerStates.slide) bombDownReady = false;
+		#endregion
 		break;
 		
 		case playerAbilities.fire:
+		#region Fire Particles
 		var maxTimer = fireParticleTimerMax;
-		if ((attackNumber == playerAttacks.fireAerial) or (attackNumber == playerAttacks.fireWheel) or (attackNumber == playerAttacks.fireBack)) maxTimer = floor(fireParticleTimerMax / 2);
-		if (fireParticleTimer == -1) fireParticleTimer = fireParticleTimerMax;
+		if ((attackNumber == playerAttacks.fireAerial) or (attackNumber == playerAttacks.fireWheel) or (attackNumber == playerAttacks.fireBack))
+		{
+			maxTimer = floor(fireParticleTimerMax / 2);
+		}
+		if (fireParticleTimer == -1) fireParticleTimer = maxTimer;
+		#endregion
 		break;
 		
 		case playerAbilities.spark:
+		#region Spark Particles
 		var maxTimer = sparkParticleTimerMax - floor(sparkCharge);
 		if (sparkParticleTimer == -1) sparkParticleTimer = maxTimer;
 		
@@ -238,7 +197,9 @@ if (!global.pause)
 		{
 			sparkChargeDecel = sparkChargeDecelMax;
 		}
+		#endregion
 		
+		#region Spark Charge
 		if ((keyLeftPressed) or (keyRightPressed))
 		{
 			if (audio_is_playing(snd_SparkCharge)) audio_stop_sound(snd_SparkCharge);
@@ -256,58 +217,66 @@ if (!global.pause)
 				aura.owner = id;
 				aura.abilityType = playerAbilities.spark;
 				aura.sprite_index = spr_Particle_SparkAura;
-				aura.dmg = 6;
+				aura.dmg = kirby_SparkAura_Damage;
+				scr_Attack_SetKnockback(aura,kirby_SparkAura_Strength,kirby_SparkAura_HitStopAffectSource,kirby_SparkAura_HitStopAffectPlayer,kirby_SparkAura_HitStopAffectTarget,kirby_SparkAura_HitStopLength,kirby_SparkAura_HitStopShakeStrength);
 			}
 			sparkMaxCharge = true;
 		}
+		#endregion
 		break;
 		
 		case playerAbilities.sword:
+		#region Set Carried Item
 		if (carriedItem == carriedItems.none) carriedItemState = carriedItemStates.light;
+		#endregion
 		break;
 		
 		case playerAbilities.parasol:
+		#region Set Carried Item
 		if (carriedItem == carriedItems.none) carriedItemState = carriedItemStates.light;
+		#endregion
 		break;
 		
 		case playerAbilities.hammer:
+		#region Set Carried Item
 		if (carriedItem == carriedItems.none) carriedItemState = carriedItemStates.light;
+		#endregion
 		break;
 		
 		case playerAbilities.water:
+		#region Water Hat Walk Animation Variable
 		if (sprite_index != sprWalk) waterWalkHatAnim = 0;
+		#endregion
 		break;
 	}
+	#endregion
 	
-	if ((playerCharacter != playerCharacters.gordo) and (playerCharacter != playerCharacters.bloodGordo)) imageAngle = 0;
-	
-	//State Based Variables
-	
+	#region State Based Variables & Functions
 	if (state != playerStates.normal)
 	{
 		fallHop = false;
 		fallHopCounter = 0;
 		iceKick = false;
 	}
+	#endregion
 	
-	//Bumpers
-	
+	#region Bumpers
 	if (place_meeting(x,y,obj_Bumper))
 	{
-		//Variables
-		
+		#region Variables
 		var collidedBumper = instance_place(x,y,obj_Bumper);
 		collidedBumper.hit = true;
 		collidedBumper.hitTimer = collidedBumper.hitTimerMax;
 		jumpLimit = false;
 		jumpLimitTimer = jumpLimitTimerMax + (collidedBumper.force - 6);
+		#endregion
 		
-		//Sound
-		
+		#region Play Sound
+		if (audio_is_playing(snd_Bumper)) audio_stop_sound(snd_Bumper);
 		audio_play_sound(snd_Bumper,0,false);
+		#endregion
 		
-		//Change State To Normal
-		
+		#region Change State To Normal
 		if ((state == playerStates.inhale) or (state == playerStates.climb) or (state == playerStates.slide))
 		{
 			inhaleSoundCont = false;
@@ -315,9 +284,9 @@ if (!global.pause)
 			if (audio_is_playing(snd_Inhale_Loop)) audio_stop_sound(snd_Inhale_Loop);
 			state = playerStates.normal;
 		}
+		#endregion
 		
-		//Vertical Knockback
-		
+		#region Vertical Knockback
 		if (y > ((collidedBumper.y + (sprite_get_height(collidedBumper.sprite_index) / 2 )) + 4))
 		{
 			vsp = collidedBumper.force;
@@ -325,14 +294,15 @@ if (!global.pause)
 		if (y < ((collidedBumper.y + (sprite_get_height(collidedBumper.sprite_index) / 2 )) - 4))
 		{
 			vsp = -collidedBumper.force;
+			grounded = false;
 		}
 		if ((y < ((collidedBumper.y + (sprite_get_height(collidedBumper.sprite_index) / 2 )) + 4)) and (y > ((collidedBumper.y + (sprite_get_height(collidedBumper.sprite_index) / 2 )) - 4)))
 		{
 			vsp = collidedBumper.force / 2;
 		}
+		#endregion
 		
-		//Horizontal Knockback
-	
+		#region Horizontal Knockback
 		if (x > ((collidedBumper.x + (sprite_get_width(collidedBumper.sprite_index) / 2 )) + 4))
 		{
 			hsp = collidedBumper.force;
@@ -341,7 +311,9 @@ if (!global.pause)
 		{
 			hsp = -collidedBumper.force;
 		}
+		#endregion
 	}
+	#endregion
 	
 	//Springs
 	
@@ -369,13 +341,21 @@ if (!global.pause)
 				{
 					finalForce *= 1.25;
 					drawOffsetForce = 16;
-					if (audio_is_playing(snd_BigJump)) audio_stop_sound(snd_BigJump);
-					audio_play_sound(snd_BigJump,0,false);
+					if (audio_is_playing(snd_Cloud_Superjump)) audio_stop_sound(snd_Cloud_Superjump);
+					audio_play_sound(snd_Cloud_Superjump,0,false);
 				}
 				else
 				{
-					if (audio_is_playing(snd_Jump)) audio_stop_sound(snd_Jump);
-					audio_play_sound(snd_Jump,0,false);
+					if (collidedSpring.object_index == obj_BouncyCloudHigh)
+					{
+						if (audio_is_playing(snd_Cloud_Superjump)) audio_stop_sound(snd_Cloud_Superjump);
+						audio_play_sound(snd_Cloud_Superjump,0,false);
+					}
+					else if (collidedSpring.object_index == obj_BouncyCloud)
+					{
+						if (audio_is_playing(snd_Cloud_Bounce)) audio_stop_sound(snd_Cloud_Bounce);
+						audio_play_sound(snd_Cloud_Bounce,0,false);
+					}
 				}
 			
 				if ((collidedSpring.object_index == obj_BouncyCloud) or (collidedSpring.object_index == obj_BouncyCloudHigh))
@@ -384,7 +364,7 @@ if (!global.pause)
 					collidedSpring.yDrawOffset = drawOffsetForce;
 				}
 			
-				if (carriedItem == carriedItems.none) fallRoll = true;
+				if ((canFallRoll) and (carriedItem == carriedItems.none) and (playerAbility != playerAbilities.sword) and (playerAbility != playerAbilities.parasol) and (playerAbility != playerAbilities.hammer)) fallRoll = true;
 				jumpLimit = false;
 				jumpLimitTimer = jumpLimitTimerMax + floor((finalForce - 6) * 3);
 			
@@ -424,6 +404,7 @@ if (!global.pause)
 				//Vertical Knockback
 			
 				vsp = -finalForce;
+				grounded = false;
 			}
 		}
 	}
@@ -495,180 +476,210 @@ if (!global.pause)
 			//Vertical Knockback
 			
 			vsp = -(collidedTrampoline.force / 3) - ((collidedTrampoline.force / collidedTrampoline.jumpCountMax) * collidedTrampoline.jumpCount);
+			grounded = false;
 		}
 	}
 }
 
-//Player States
-
+#region Player States
 switch (state)
 {
-	//Normal
-	
-    case (playerStates.normal):
+	#region Normal
+    case playerStates.normal:
 	scr_Player_States_Normal();
 	break;
+	#endregion
 	
-	//Slide
-	
-    case (playerStates.slide):
+	#region Slide
+    case playerStates.slide:
 	scr_Player_States_Slide();
 	break;
+	#endregion
 	
-	//Float
-	
-    case (playerStates.float):
+	#region Float
+    case playerStates.float:
 	scr_Player_States_Float();
 	break;
+	#endregion
 	
-	//Jet Hover
-	
-    case (playerStates.jetHover):
-	scr_Player_States_JetHover();
-	break;
-	
-	//Climb
-	
-    case (playerStates.climb):
+	#region Climb
+    case playerStates.climb:
 	scr_Player_States_Climb();
 	break;
+	#endregion
 	
-	//Enter
-	
-    case (playerStates.enter):
+	#region Enter
+    case playerStates.enter:
 	scr_Player_States_Enter();
 	break;
+	#endregion
 	
-	//Inhale
-	
-    case (playerStates.inhale):
+	#region Inhale
+    case playerStates.inhale:
 	scr_Player_States_Inhale();
 	break;
+	#endregion
 	
-	//Carry
-	
-    case (playerStates.carry):
+	#region Carry
+    case playerStates.carry:
 	scr_Player_States_Carry();
 	break;
+	#endregion
 	
-	//Swallow
-	
-    case (playerStates.swallow):
+	#region Swallow
+    case playerStates.swallow:
 	scr_Player_States_Swallow();
 	break;
+	#endregion
 	
-	//Cutter Dash
-	
-    case (playerStates.cutterDash):
+	#region Cutter Dash
+    case playerStates.cutterDash:
 	scr_Player_States_CutterDash();
 	break;
+	#endregion
 	
-	//Cutter Drop
-	
-    case (playerStates.cutterDrop):
+	#region Cutter Drop
+    case playerStates.cutterDrop:
 	scr_Player_States_CutterDrop();
 	break;
+	#endregion
 	
-	//Cleaving Cutter, Nonstop Cutter, and Final Cutter
-	
-	case (playerStates.finalCutter):
+	#region Final Cutter
+	case playerStates.finalCutter:
 	scr_Player_States_FinalCutter();
 	break;
+	#endregion
 	
-	//Beam Grab
-	
-    case (playerStates.beamGrab):
+	#region Beam Grab
+    case playerStates.beamGrab:
 	scr_Player_States_BeamGrab();
 	break;
+	#endregion
 	
-	//Mystic Beam Grab
-	
-    case (playerStates.mysticBeamGrab):
+	#region Mystic Beam Grab
+    case playerStates.mysticBeamGrab:
 	scr_Player_States_MysticBeamGrab();
 	break;
+	#endregion
 	
-	//Mirror Dash
-	
-    case (playerStates.mirrorDash):
+	#region Mirror Dash
+    case playerStates.mirrorDash:
 	scr_Player_States_MirrorDash();
 	break;
+	#endregion
 	
-	//Ninja Dash
-	
-    case (playerStates.ninjaDash):
+	#region Ninja Dash
+    case playerStates.ninjaDash:
 	scr_Player_States_NinjaDash();
 	break;
+	#endregion
 	
-	//Ninja Drop
-	
-    case (playerStates.ninjaDrop):
+	#region Ninja Drop
+    case playerStates.ninjaDrop:
 	scr_Player_States_NinjaDrop();
 	break;
+	#endregion
 	
-	//Fire Dash
-	
-    case (playerStates.fireDash):
+	#region Fire Dash
+    case playerStates.fireDash:
 	scr_Player_States_FireDash();
 	break;
+	#endregion
 	
-	//Ice Grab
-	
-    case (playerStates.iceGrab):
+	#region Ice Grab
+    case playerStates.iceGrab:
 	scr_Player_States_IceGrab();
 	break;
+	#endregion
 	
-	//Yoyo Dash
-	
-    case (playerStates.yoyoDash):
+	#region Yoyo Dash
+    case playerStates.yoyoDash:
 	scr_Player_States_YoyoDash();
 	break;
+	#endregion
 	
-	//Wheel Normal
-	
-    case (playerStates.wheelNormal):
+	#region Wheel Normal
+    case playerStates.wheelNormal:
 	scr_Player_States_WheelNormal();
 	break;
+	#endregion
 	
-	//Wing Dash
-	
-    case (playerStates.wingDash):
+	#region Wing Dash
+    case playerStates.wingDash:
 	scr_Player_States_WingDash();
 	break;
+	#endregion
 	
-	//Sword Dash
-	
-    case (playerStates.swordDash):
+	#region Sword Dash
+    case playerStates.swordDash:
 	scr_Player_States_SwordDash();
 	break;
+	#endregion
 	
-	//Parasol Dash
-	
-    case (playerStates.parasolDash):
+	#region Parasol Dash
+    case playerStates.parasolDash:
 	scr_Player_States_ParasolDash();
 	break;
+	#endregion
 	
-	//Jet Dash
+	#region Jet Hover
+    case playerStates.jetHover:
+	scr_Player_States_JetHover();
+	break;
+	#endregion
 	
-    case (playerStates.jetDash):
+	#region Jet Dash
+    case playerStates.jetDash:
 	scr_Player_States_JetDash();
 	break;
+	#endregion
 	
-	//Warp Star
-	
-    case (playerStates.warpStar):
+	#region Warp Star
+    case playerStates.warpStar:
 	scr_Player_States_WarpStar();
 	break;
+	#endregion
 	
-	//Death
+	#region Inside Mech
+    case playerStates.insideMech:
+	scr_Player_States_InsideMech();
+	break;
+	#endregion
 	
-    case (playerStates.death):
+	#region Death
+    case playerStates.death:
 	scr_Player_States_Death();
 	break;
+	#endregion
 }
+#endregion
+
+#region Cancel Fall Roll If Attacking
+if ((attack)
+and (attackNumber != playerAttacks.slideJump)
+) fallRoll = false;
+#endregion
+
+#region Mic Flash
+if ((attackNumber == playerAttacks.micNormal) and (canMicFlash))
+{
+	with (obj_Camera)
+	{
+		shakeX = 2;
+		shakeY = 2;
+	}
+	if (micFlashTimer == -1) micFlashTimer = micFlashTimerMax;
+}
+else
+{
+	micFlash = false;
+	micFlashTimer = -1;
+}
+#endregion
 
 //Select Button
 
-if (keySelectPressed)
+if ((mechIndex == -1) and (keySelectPressed))
 {
 	switch (playerCharacter)
 	{
@@ -699,21 +710,29 @@ if (keySelectPressed)
 				case 0:
 				abilityDropStar.ability = global.abilityP1;
 				global.abilityP1 = playerAbilities.none;
+				abilityDropStar.micCount = global.micCountP1;
+				global.micCountP1 = 0;
 				break;
 				
 				case 1:
 				abilityDropStar.ability = global.abilityP2;
 				global.abilityP2 = playerAbilities.none;
+				abilityDropStar.micCount = global.micCountP2;
+				global.micCountP2 = 0;
 				break;
 				
 				case 2:
 				abilityDropStar.ability = global.abilityP3;
 				global.abilityP3 = playerAbilities.none;
+				abilityDropStar.micCount = global.micCountP3;
+				global.micCountP3 = 0;
 				break;
 				
 				case 3:
 				abilityDropStar.ability = global.abilityP4;
 				global.abilityP4 = playerAbilities.none;
+				abilityDropStar.micCount = global.micCountP4;
+				global.micCountP4 = 0;
 				break;
 			}
 			switch (abilityDropStar.ability)
@@ -813,10 +832,17 @@ if (keySelectPressed)
 				case playerAbilities.water:
 				abilityDropStar.sprite_index = spr_AbilityStar_Water;
 				break;
-				break;
 			
 				case playerAbilities.sleep:
 				abilityDropStar.sprite_index = spr_AbilityStar_Sleep;
+				break;
+			
+				case playerAbilities.scan:
+				abilityDropStar.sprite_index = spr_AbilityStar_Scan;
+				break;
+			
+				case playerAbilities.mic:
+				abilityDropStar.sprite_index = spr_AbilityStar_Mic;
 				break;
 			
 				default:
@@ -892,18 +918,14 @@ if (!global.pause)
 	}
 }
 
-//Hp Clamp
-
-//global.healthP1 = clamp(global.healthP1,0,global.hpMax);
-//global.healthP2 = clamp(global.healthP2,0,global.hpMax);
-
+#region Hp Clamp
 global.healthP1 = clamp(global.healthP1,0,global.healthP1Max);
 global.healthP2 = clamp(global.healthP2,0,global.healthP2Max);
 global.healthP3 = clamp(global.healthP3,0,global.healthP3Max);
 global.healthP4 = clamp(global.healthP4,0,global.healthP4Max);
+#endregion
 
-//Scale
-
+#region Scale
 if ((attackNumber == playerAttacks.stoneNormal) or (attackNumber == playerAttacks.gooeyStoneNormal))
 {
 	image_xscale = scale;
@@ -916,15 +938,15 @@ else
 var hasFlipside = 1;
 if (global.cheatFlipsideEquipped) hasFlipside = -1
 image_yscale = scale * (hasFlipside);
+#endregion
 
-//Masks
-
+#region Masks
 mask_index = maskIndex;
-
 if (state == playerStates.slide)
 {
 	mask_index = spr_Kirby_DuckMask;
 }
+#endregion
 
 if (!global.pause)
 {
@@ -942,6 +964,7 @@ if (!global.pause)
 			sprite_index = sprRoll;
 			image_index = 3;
 			vsp = -3.5;
+			grounded = false;
 			jumpLimit = false;
 			jumpLimitTimer = jumpLimitTimerMax;
 		}
@@ -1149,6 +1172,9 @@ if (!global.pause)
 	        par.image_angle = angle;
 	        par.spdBuiltIn = irandom_range(2,3);
 			par.destroyAfterAnimation = true;
+			par.hasPalette = true;
+			par.paletteSpriteIndex = spr_Particle_BigStar_Palette_Rainbow;
+			par.paletteIndex = 1 + (current_time % 9);
 		    invinCandyParticleTimer = -1;
 		}
 	}
@@ -1216,7 +1242,7 @@ if (!global.pause)
 	}
 	else if (runParticleTimer == 0)
 	{
-		if (run)
+		if (isRunning)
 		{
 			if ((place_meeting(x,y + 1,obj_ParentWall)) and (abs(hsp) >= (movespeedRun * .25)))
 			{
@@ -1274,7 +1300,7 @@ if (!global.pause)
 	
 	if (runCancelTimer > 0)
 	{
-		runCancelTimer -= 1;
+		if (grounded) runCancelTimer -= 1;
 	}
 	else if (runCancelTimer == 0)
 	{
@@ -1282,7 +1308,7 @@ if (!global.pause)
 	    {
 	        runCancelTimer = runCancelTimerMax;
 	        runCancelTimer = -1;
-	        run = false;
+	        isRunning = false;
 	        runDoubleTap = 0;
 	    }
 	    else
@@ -1350,12 +1376,14 @@ if (!global.pause)
 		else if (beamAttack2Timer == 0)
 		{
 			//vsp = -.15;
+			//grounded = false;
 			var projBeam = instance_create_depth(x + (15 * dir),y + 10,depth,obj_Projectile_Beam);
 			projBeam.imageSpeed = 1;
 			projBeam.owner = id;
 			projBeam.abilityType = playerAbilities.beam;
 			projBeam.player = player;
-			projBeam.dmg = 8 + (10 * beamAttack2FirstHit);
+			projBeam.dmg = kirby_BeamAir_Damage + (kirby_BeamAir_FirstHitDamage * beamAttack2FirstHit);
+			scr_Attack_SetKnockback(projBeam,kirby_BeamAir_Strength,kirby_BeamAir_HitStopAffectSource,kirby_BeamAir_HitStopAffectPlayer,kirby_BeamAir_HitStopAffectTarget,kirby_BeamAir_HitStopLength,kirby_BeamAir_HitStopShakeStrength);
 		    projBeam.dirX = -dir;
 		    projBeam.dir = dir;
 			projBeam.image_xscale = projBeam.dirX;
@@ -1369,6 +1397,23 @@ if (!global.pause)
 			{
 				projBeam.character = 6;
 				projBeam.sprite_index = spr_Projectile_Beam_Gold;
+			}
+			if (((player == 0) and (global.hatTypeBeamP1 == abilityHatSkins.beam_marxSoul))
+			or ((player == 1) and (global.hatTypeBeamP2 == abilityHatSkins.beam_marxSoul))
+			or ((player == 2) and (global.hatTypeBeamP3 == abilityHatSkins.beam_marxSoul))
+			or ((player == 3) and (global.hatTypeBeamP4 == abilityHatSkins.beam_marxSoul)))
+			{
+				var rng = choose(0,1);
+				if (rng)
+				{
+					projBeam.character = 9;
+					projBeam.sprite_index = spr_Projectile_Beam_MarxSoul1;
+				}
+				else
+				{
+					projBeam.character = 10;
+					projBeam.sprite_index = spr_Projectile_Beam_MarxSoul2;
+				}
 			}
 			if (beamAttack2FirstHit) beamAttack2FirstHit = false;
 		    beamAttack2Timer = -1;
@@ -1417,7 +1462,8 @@ if (!global.pause)
 			projBeam.owner = id;
 			projBeam.abilityType = playerAbilities.beam;
 			projBeam.player = player;
-			projBeam.dmg = 21;
+			projBeam.dmg = kirby_BeamGrabBeam_Damage;
+			scr_Attack_SetKnockback(projBeam,kirby_BeamGrabBeam_Strength,kirby_BeamGrabBeam_HitStopAffectSource,kirby_BeamGrabBeam_HitStopAffectPlayer,kirby_BeamGrabBeam_HitStopAffectTarget,kirby_BeamGrabBeam_HitStopLength,kirby_BeamGrabBeam_HitStopShakeStrength);
 		    projBeam.dirX = dir;
 		    projBeam.dir = dir;
 			projBeam.image_xscale = projBeam.dirX;
@@ -1431,6 +1477,23 @@ if (!global.pause)
 			{
 				projBeam.character = 6;
 				projBeam.sprite_index = spr_Projectile_Beam_Gold;
+			}
+			if (((player == 0) and (global.hatTypeBeamP1 == abilityHatSkins.beam_marxSoul))
+			or ((player == 1) and (global.hatTypeBeamP2 == abilityHatSkins.beam_marxSoul))
+			or ((player == 2) and (global.hatTypeBeamP3 == abilityHatSkins.beam_marxSoul))
+			or ((player == 3) and (global.hatTypeBeamP4 == abilityHatSkins.beam_marxSoul)))
+			{
+				var rng = choose(0,1);
+				if (rng)
+				{
+					projBeam.character = 9;
+					projBeam.sprite_index = spr_Projectile_Beam_MarxSoul1;
+				}
+				else
+				{
+					projBeam.character = 10;
+					projBeam.sprite_index = spr_Projectile_Beam_MarxSoul2;
+				}
 			}
 		    beamGrabTimer = beamGrabTimerMax - beamGoldenFlareUpgrade;
 		}
@@ -1455,7 +1518,8 @@ if (!global.pause)
 			projBeam.owner = id;
 			projBeam.abilityType = playerAbilities.mysticBeam;
 			projBeam.player = player;
-			projBeam.dmg = 21;
+			projBeam.dmg = kirby_MysticBeamGrabBeam_Damage;
+			scr_Attack_SetKnockback(projBeam,kirby_MysticBeamGrabBeam_Strength,kirby_MysticBeamGrabBeam_HitStopAffectSource,kirby_MysticBeamGrabBeam_HitStopAffectPlayer,kirby_MysticBeamGrabBeam_HitStopAffectTarget,kirby_MysticBeamGrabBeam_HitStopLength,kirby_MysticBeamGrabBeam_HitStopShakeStrength);
 		    projBeam.dirX = dir;
 		    projBeam.dir = dir;
 			projBeam.image_xscale = projBeam.dirX;
@@ -1494,7 +1558,8 @@ if (!global.pause)
 			projBeam.owner = id;
 			projBeam.abilityType = playerAbilities.mysticBeam;
 			projBeam.player = player;
-			projBeam.dmg = 18;
+			projBeam.dmg = kirby_MysticBeamAir_Damage;
+			scr_Attack_SetKnockback(projBeam,kirby_MysticBeamAir_Strength,kirby_MysticBeamAir_HitStopAffectSource,kirby_MysticBeamAir_HitStopAffectPlayer,kirby_MysticBeamAir_HitStopAffectTarget,kirby_MysticBeamAir_HitStopLength,kirby_MysticBeamAir_HitStopShakeStrength);
 		    projBeam.dirX = -dir;
 		    projBeam.dir = dir;
 			projBeam.image_xscale = projBeam.dirX;
@@ -1532,7 +1597,8 @@ if (!global.pause)
 			projBeam.owner = id;
 			projBeam.abilityType = playerAbilities.mysticBeam;
 			projBeam.player = player;
-			projBeam.dmg = 18;
+			projBeam.dmg = kirby_MysticBeamUp_Damage;
+			scr_Attack_SetKnockback(projBeam,kirby_MysticBeamUp_Strength,kirby_MysticBeamUp_HitStopAffectSource,kirby_MysticBeamUp_HitStopAffectPlayer,kirby_MysticBeamUp_HitStopAffectTarget,kirby_MysticBeamUp_HitStopLength,kirby_MysticBeamUp_HitStopShakeStrength);
 		    projBeam.dirX = -dir;
 		    projBeam.dir = dir;
 			projBeam.image_xscale = projBeam.dirX;
@@ -1581,7 +1647,13 @@ if (!global.pause)
 		grav = gravStone;
 		gravLimit = gravLimitStone;
 		stoneMaskProj = instance_create_depth(x,y,depth - 1,obj_Projectile_StoneMask);
-		stoneMaskProj.dmg = 50;
+		stoneMaskProj.dmg = kirby_StoneNormal_Damage;
+		scr_Attack_SetKnockback(stoneMaskProj,kirby_StoneNormal_Strength,kirby_StoneNormal_HitStopAffectSource,kirby_StoneNormal_HitStopAffectPlayer,kirby_StoneNormal_HitStopAffectTarget,kirby_StoneNormal_HitStopLength,kirby_StoneNormal_HitStopShakeStrength);
+		if (playerCharacter == playerCharacters.gooey)
+		{
+			stoneMaskProj.dmg = gooey_StoneNormal_Damage;
+			scr_Attack_SetKnockback(stoneMaskProj,gooey_StoneNormal_Strength,gooey_StoneNormal_HitStopAffectSource,gooey_StoneNormal_HitStopAffectPlayer,gooey_StoneNormal_HitStopAffectTarget,gooey_StoneNormal_HitStopLength,gooey_StoneNormal_HitStopShakeStrength);
+		}
 		stoneMaskProj.hsp = hsp;
 		stoneMaskProj.vsp = vsp;
 		stoneMaskProj.enemy = false;
@@ -1699,6 +1771,7 @@ if (!global.pause)
 			stonePar.dir = dir;
 			stonePar.hasPalette = true;
 			stonePar.paletteSpriteIndex = paletteIndex;
+			if ((playerCharacter == playerCharacters.kirby) and (global.abilitySpraysKeycard) and (global.cheatColoredAbilitiesEquipped)) stonePar.paletteSpriteIndex = spr_Kirby_Normal_Palette_Stone;
 			stonePar.paletteIndex = 1;
 			stonePar.destroyTimer = 7;
 		}
@@ -1724,7 +1797,8 @@ if (!global.pause)
 		sprite_index = sprStoneAttack2;
 		image_index = 0;
 		stoneFistMaskProj = instance_create_depth(x,y,depth - 1,obj_Projectile_StoneFistMask);
-		stoneFistMaskProj.dmg = 20;
+		stoneFistMaskProj.dmg = kirby_StoneUp_Damage;
+		scr_Attack_SetKnockback(stoneFistMaskProj,kirby_StoneUp_Strength,kirby_StoneUp_HitStopAffectSource,kirby_StoneUp_HitStopAffectPlayer,kirby_StoneUp_HitStopAffectTarget,kirby_StoneUp_HitStopLength,kirby_StoneUp_HitStopShakeStrength);
 		stoneFistMaskProj.dirX = dir;
 		stoneFistMaskProj.enemy = false;
 		stoneFistMaskProj.owner = id;
@@ -1767,12 +1841,13 @@ if (!global.pause)
 		var projectile = instance_create_depth(x + (24 * dir),y - 6,depth - 1,obj_Projectile_Mirror);
 		projectile.owner = id;
 		projectile.abilityType = playerAbilities.mirror;
-		projectile.dmg = 4;
+		projectile.dmg = kirby_MirrorNormal_Damage;
 		if (mirrorFirstAttack)
 		{
-			projectile.dmg = 12;
+			projectile.dmg = kirby_MirrorNormal_FirstTimeDamage;
 			mirrorFirstAttack = false;
 		}
+		scr_Attack_SetKnockback(projectile,kirby_MirrorNormal_Strength,kirby_MirrorNormal_HitStopAffectSource,kirby_MirrorNormal_HitStopAffectPlayer,kirby_MirrorNormal_HitStopAffectTarget,kirby_MirrorNormal_HitStopLength,kirby_MirrorNormal_HitStopShakeStrength);
 		projectile.sprite_index = projectile.sprIdle;
 		projectile.dirX = dir;
 		projectile.image_xscale = projectile.dirX;
@@ -1846,14 +1921,48 @@ if (!global.pause)
 		projectile.owner = id;
 		projectile.abilityType = playerAbilities.fire;
 		projectile.imageSpeed = 1 - (fireMagicCharcoalUpgrade / 4);
-		projectile.dmg = 3;
+		projectile.dmg = kirby_FireNormal_Damage;
+		scr_Attack_SetKnockback(projectile,kirby_FireNormal_Strength,kirby_FireNormal_HitStopAffectSource,kirby_FireNormal_HitStopAffectPlayer,kirby_FireNormal_HitStopAffectTarget,kirby_FireNormal_HitStopLength,kirby_FireNormal_HitStopShakeStrength);
 		projectile.sprite_index = projectile.sprIdle;
 		//projectile.dirX = dir;
 		//projectile.image_xscale = projectile.dirX;
 		projectile.enemy = false;
 		projectile.destroyableByEnemy = false;
 		projectile.destroyableByObject = false;
-		projectile.hsp = 2.5 * dir;
+        if ((!global.cutscene) and (keyLeftHold))
+        {
+			if (dir == 1)
+			{
+				projectile.hsp = 1.5;
+			}
+			else
+			{
+				projectile.hsp = -3;
+			}
+        }
+        else if ((!global.cutscene) and (keyRightHold))
+        {
+            if (dir == 1)
+			{
+				projectile.hsp = 3;
+			}
+			else
+			{
+				projectile.hsp = -1.5;
+			}
+        }
+        else
+        {
+            if (dir == 1)
+			{
+				projectile.hsp = 2;
+			}
+			else
+			{
+				projectile.hsp = -2;
+			}
+        }
+		
         if ((!global.cutscene) and (keyUpHold))
         {
             projectile.vsp = random_range(-.75,.75) - .75;
@@ -1897,7 +2006,8 @@ if (!global.pause)
 		var projectile = instance_create_depth(x + (14 * dir),y - 6,depth - 1,obj_Projectile_Ice);
 		projectile.owner = id;
 		projectile.abilityType = playerAbilities.ice;
-		projectile.dmg = 6;
+		projectile.dmg = kirby_IceNormal_Damage;
+		scr_Attack_SetKnockback(projectile,kirby_IceNormal_Strength,kirby_IceNormal_HitStopAffectSource,kirby_IceNormal_HitStopAffectPlayer,kirby_IceNormal_HitStopAffectTarget,kirby_IceNormal_HitStopLength,kirby_IceNormal_HitStopShakeStrength);
 		projectile.sprite_index = projectile.sprIdle;
 		projectile.dirX = dir;
 		projectile.image_xscale = projectile.dirX;
@@ -2083,1813 +2193,7 @@ else
 	}
 }
 
-//Setup Timer
 
-if (setupTimer > 0)
-{
-	setupTimer -= 1;
-}
-else if (setupTimer == 0)
-{
-	if ((playerFamiliar != -1) and ((playerFamiliar == "Gamble") + (playerCharacter = playerCharacters.gamble) != 2))
-	{
-		var followerObject = instance_create_depth(x + (30 * -dir),y - 15,depth,obj_Familiar);
-		followerObject.owner = id;
-		followerObject.character = playerFamiliar;
-	}
-		if ((global.hasCoop > 0) and (instance_number(obj_Player) == 1))
-		{
-		for (var i = 0; i < global.hasCoop; i++)
-		{
-			var xx = x;
-			if (!place_meeting(x - 24,y,obj_ParentWall))
-			{
-				xx = x - (24 * (i + 1));
-			}
-			else if (!place_meeting(x + 24,y,obj_ParentWall))
-			{
-				xx = x + (24 * (i + 1));
-			}
-			else
-			{
-				xx = x;
-			}
-			
-			var newPlayer = instance_create_depth(xx,y,depth,obj_Player);
-			newPlayer.player = i + 1;
-		}
-		player = 0;
-	}
-	setupTimer = -1;
-}
-
-//Character Setup Timer
-
-if (characterSetupTimer > 0)
-{
-	characterSetupTimer -= 1;
-}
-else if (characterSetupTimer == 0)
-{
-	switch (player)
-	{
-		case 0:
-		var sprayPaint = global.sprayPaintP1;
-		var selectedCharacter = global.characterP1;
-		global.isHelperP1 = false;
-		break;
-		
-		case 1:
-		var sprayPaint = global.sprayPaintP2;
-		var selectedCharacter = global.characterP2;
-		global.isHelperP2 = false;
-		break;
-		
-		case 2:
-		var sprayPaint = global.sprayPaintP3;
-		var selectedCharacter = global.characterP3;
-		global.isHelperP3 = false;
-		break;
-		
-		case 3:
-		var sprayPaint = global.sprayPaintP4;
-		var selectedCharacter = global.characterP4;
-		global.isHelperP4 = false;
-		break;
-	}
-	
-	switch (selectedCharacter)
-	{
-		case playerCharacters.kirby:
-		switch (player)
-		{
-			case 0:
-			var skin = global.skinKirbyP1;
-			global.sprayPaintP1 = scr_Player_SprayPaint(global.sprayPaintKirbyP1,playerCharacters.kirby,skin);
-			break;
-			
-			case 1:
-			var skin = global.skinKirbyP2;
-			global.sprayPaintP2 = scr_Player_SprayPaint(global.sprayPaintKirbyP2,playerCharacters.kirby,skin);
-			break;
-			
-			case 2:
-			var skin = global.skinKirbyP3;
-			global.sprayPaintP3 = scr_Player_SprayPaint(global.sprayPaintKirbyP3,playerCharacters.kirby,skin);
-			break;
-			
-			case 3:
-			var skin = global.skinKirbyP4;
-			global.sprayPaintP4 = scr_Player_SprayPaint(global.sprayPaintKirbyP4,playerCharacters.kirby,skin);
-			break;
-		}
-		
-		gravNormal = .23;
-		gravStone = .7;
-		grav = gravNormal;
-		gravFloat = .075;
-		gravFireDash = .05;
-		gravLimitNormal = 5;
-		gravLimitFloat = 1.2;
-		gravLimitBeamAir = 3;
-		gravLimitStone = 7;
-		gravLimitFireDash = 1.25;
-		gravLimit = gravLimitNormal;
-		jumpspeedNormal = 6;
-		jumpspeedFloat = 2;
-		jumpspeedWheel = 8;
-		jumpspeed = jumpspeedNormal;
-		movespeedNormal = 1.7;
-		movespeedRun = 2.6;
-		movespeedSlide = 5;
-		movespeedFloat = 1.9;
-		movespeedCarry = 2;
-		movespeedBurst = 7;
-		movespeed = movespeedNormal;
-		ufoFloatSpd = 2;
-		accel = .3;
-		accelFloat = .1;
-		decel = .075;
-		decelSlide = .125;
-		decelSwordDash = .1;
-		decelFloat = .025;
-		climbSpeed = 2.5;
-		
-		hasGravity = true;
-		hasJumpLimit = true;
-		canWalk = true;
-		canRun = true;
-		canRunTurn = true;
-		canJump = true;
-		canAutoJump = false;
-		canAttack = true;
-		canDuck = true;
-		canDuckHighJump = false;
-		canSlide = true;
-		canClimb = true;
-		canFloat = true;
-		canEnter = true;
-		canUfoFloat = false;
-		canGetHurt = true;
-		runImageSpeedIncrease = 0;
-		
-		maskIndex = spr_16Square_Mask;
-		sprIdle = spr_Kirby_Normal_Idle;
-		sprIdleBlink = spr_Kirby_Normal_IdleBlink;
-		sprIdleNormalSlopeL = spr_Kirby_Normal_Idle_NormalSlopeL;
-		sprIdleNormalSlopeLBlink = spr_Kirby_Normal_Idle_NormalSlopeLBlink;
-		sprIdleNormalSlopeR = spr_Kirby_Normal_Idle_NormalSlopeR;
-		sprIdleNormalSlopeRBlink = spr_Kirby_Normal_Idle_NormalSlopeRBlink;
-		sprIdleSteepSlopeL = spr_Kirby_Normal_Idle_SteepSlopeL;
-		sprIdleSteepSlopeLBlink = spr_Kirby_Normal_Idle_SteepSlopeLBlink;
-		sprIdleSteepSlopeR = spr_Kirby_Normal_Idle_SteepSlopeR;
-		sprIdleSteepSlopeRBlink = spr_Kirby_Normal_Idle_SteepSlopeRBlink;
-		sprItemCarryLightIdle = spr_Kirby_Normal_ItemCarry_Light_Idle;
-		sprItemCarryLightIdleBlink = spr_Kirby_Normal_ItemCarry_Light_IdleBlink;
-		sprItemCarryLightIdleNormalSlopeL = spr_Kirby_Normal_ItemCarry_Light_Idle_NormalSlopeL;
-		sprItemCarryLightIdleNormalSlopeLBlink = spr_Kirby_Normal_ItemCarry_Light_Idle_NormalSlopeLBlink;
-		sprItemCarryLightIdleNormalSlopeR = spr_Kirby_Normal_ItemCarry_Light_Idle_NormalSlopeR;
-		sprItemCarryLightIdleNormalSlopeRBlink = spr_Kirby_Normal_ItemCarry_Light_Idle_NormalSlopeRBlink;
-		sprItemCarryLightIdleSteepSlopeL = spr_Kirby_Normal_ItemCarry_Light_Idle_SteepSlopeL;
-		sprItemCarryLightIdleSteepSlopeLBlink = spr_Kirby_Normal_ItemCarry_Light_Idle_SteepSlopeLBlink;
-		sprItemCarryLightIdleSteepSlopeR = spr_Kirby_Normal_ItemCarry_Light_Idle_SteepSlopeR;
-		sprItemCarryLightIdleSteepSlopeRBlink = spr_Kirby_Normal_ItemCarry_Light_Idle_SteepSlopeRBlink;
-		sprWalk = spr_Kirby_Normal_Walk;
-		sprItemCarryLightWalk = spr_Kirby_Normal_ItemCarry_Light_Walk;
-		sprRun = spr_Kirby_Normal_Run;
-		sprRunTurn = spr_Kirby_Normal_RunTurn;
-		sprJump = spr_Kirby_Normal_Jump;
-		sprRoll = spr_Kirby_Normal_Roll;
-		sprRollDuckReady = spr_Kirby_Normal_RollDuckReady;
-		sprRollDuck = spr_Kirby_Normal_RollDuck;
-		sprBackflip = spr_Kirby_Normal_Backflip;
-		sprFall = spr_Kirby_Normal_Fall;
-		sprSquish = spr_Kirby_Normal_Squish;
-		sprDuck = spr_Kirby_Normal_Duck;
-		sprDuckBlink = spr_Kirby_Normal_DuckBlink;
-		sprDuckNormalSlopeL = spr_Kirby_Normal_Duck_NormalSlopeL;
-		sprDuckNormalSlopeLBlink = spr_Kirby_Normal_Duck_NormalSlopeLBlink;
-		sprDuckNormalSlopeR = spr_Kirby_Normal_Duck_NormalSlopeR;
-		sprDuckNormalSlopeRBlink = spr_Kirby_Normal_Duck_NormalSlopeRBlink;
-		sprDuckSteepSlopeL = spr_Kirby_Normal_Duck_SteepSlopeL;
-		sprDuckSteepSlopeLBlink = spr_Kirby_Normal_Duck_SteepSlopeLBlink;
-		sprDuckSteepSlopeR = spr_Kirby_Normal_Duck_SteepSlopeR;
-		sprDuckSteepSlopeRBlink = spr_Kirby_Normal_Duck_SteepSlopeRBlink;
-		sprItemCarryLightDuck = spr_Kirby_Normal_Duck;
-		sprItemCarryLightDuckBlink = spr_Kirby_Normal_ItemCarry_Light_DuckBlink;
-		sprItemCarryLightDuckNormalSlopeL = spr_Kirby_Normal_ItemCarry_Light_Duck_NormalSlopeL;
-		sprItemCarryLightDuckNormalSlopeLBlink = spr_Kirby_Normal_ItemCarry_Light_Duck_NormalSlopeLBlink;
-		sprItemCarryLightDuckNormalSlopeR = spr_Kirby_Normal_ItemCarry_Light_Duck_NormalSlopeR;
-		sprItemCarryLightDuckNormalSlopeRBlink = spr_Kirby_Normal_ItemCarry_Light_Duck_NormalSlopeRBlink;
-		sprItemCarryLightDuckSteepSlopeL = spr_Kirby_Normal_ItemCarry_Light_Duck_SteepSlopeL;
-		sprItemCarryLightDuckSteepSlopeLBlink = spr_Kirby_Normal_ItemCarry_Light_Duck_SteepSlopeLBlink;
-		sprItemCarryLightDuckSteepSlopeR = spr_Kirby_Normal_ItemCarry_Light_Duck_SteepSlopeR;
-		sprItemCarryLightDuckSteepSlopeRBlink = spr_Kirby_Normal_ItemCarry_Light_Duck_SteepSlopeRBlink;
-		sprItemCarryHeavyDuck = spr_Kirby_Normal_ItemCarry_Heavy_Duck;
-		sprSlide = spr_Kirby_Normal_Slide;
-		sprSlideEnd = spr_Kirby_Normal_SlideEnd;
-		sprFloatReady = spr_Kirby_Normal_FloatReady;
-		sprItemCarryLightFloatReady = spr_Kirby_Normal_ItemCarry_Light_FloatReady;
-		sprFloat = spr_Kirby_Normal_Float;
-		sprItemCarryLightFloat = spr_Kirby_Normal_ItemCarry_Light_Float;
-		sprFlap = spr_Kirby_Normal_Flap;
-		sprItemCarryLightFlap = spr_Kirby_Normal_ItemCarry_Light_Flap;
-		sprFloatSpit = spr_Kirby_Normal_FloatSpit;
-		sprItemCarryLightFloatSpit = spr_Kirby_Normal_ItemCarry_Light_FloatSpit;
-		sprFloatHurt = spr_Kirby_Normal_FloatHurt;
-		sprEnter = spr_Kirby_Normal_Enter;
-		sprClimbUp = spr_Kirby_Normal_ClimbUp;
-		sprClimbDown = spr_Kirby_Normal_ClimbDown;
-		sprInhaleReady = spr_Kirby_Normal_InhaleReady;
-		sprInhale = spr_Kirby_Normal_Inhale;
-		sprInhaleEnd = spr_Kirby_Normal_InhaleEnd;
-		sprCarryIdle = spr_Kirby_Normal_CarryIdle;
-		sprCarryIdleBlink = spr_Kirby_Normal_CarryIdleBlink;
-		sprCarryIdleNormalSlopeL = spr_Kirby_Normal_CarryIdle_NormalSlopeL;
-		sprCarryIdleNormalSlopeLBlink = spr_Kirby_Normal_CarryIdle_NormalSlopeLBlink;
-		sprCarryIdleNormalSlopeR = spr_Kirby_Normal_CarryIdle_NormalSlopeR;
-		sprCarryIdleNormalSlopeRBlink = spr_Kirby_Normal_CarryIdle_NormalSlopeRBlink;
-		sprCarryIdleSteepSlopeL = spr_Kirby_Normal_CarryIdle_SteepSlopeL;
-		sprCarryIdleSteepSlopeLBlink = spr_Kirby_Normal_CarryIdle_SteepSlopeLBlink;
-		sprCarryIdleSteepSlopeR = spr_Kirby_Normal_CarryIdle_SteepSlopeR;
-		sprCarryIdleSteepSlopeRBlink = spr_Kirby_Normal_CarryIdle_SteepSlopeRBlink;
-		sprCarryWalk = spr_Kirby_Normal_CarryWalk;
-		sprCarryJump = spr_Kirby_Normal_CarryJump;
-		sprCarryFall = spr_Kirby_Normal_CarryFall;
-		sprCarryDuck = spr_Kirby_Normal_CarryDuck;
-		sprSpit = spr_Kirby_Normal_Spit;
-		sprSwallow = spr_Kirby_Normal_Swallow;
-		sprHardSwallow = spr_Kirby_Normal_HardSwallow;
-		sprAbilityChange = spr_Kirby_Normal_AbilityChange;
-		sprWarpStar1 = spr_Kirby_Normal_WarpStar1;
-		sprWarpStar2 = spr_Kirby_Normal_WarpStar2;
-		sprGuard = spr_Kirby_Normal_Guard;
-		sprGuardSlope = spr_Kirby_Normal_Guard_Slope;
-		sprItemCarryThrow = spr_Kirby_Normal_ItemCarry_Throw;
-		sprCutterCharge = spr_Kirby_Normal_Cutter_Charge;
-		sprCutterAttack1 = spr_Kirby_Normal_Cutter_Attack1;
-		sprCutterAttack2 = spr_Kirby_Normal_Cutter_Attack2;
-		sprCutterAttack3 = spr_Kirby_Normal_Cutter_Attack3;
-		sprCutterAttack4 = spr_Kirby_Normal_Cutter_Attack4;
-		sprCutterAttack5 = spr_Kirby_Normal_Cutter_Attack5;
-		sprCutterAttack6 = spr_Kirby_Normal_Cutter_Attack6;
-		sprCutterCatch = spr_Kirby_Normal_Cutter_Catch;
-		sprBeamCharge = spr_Kirby_Normal_Beam_Charge;
-		sprBeamAttack1 = spr_Kirby_Normal_Beam_Attack1;
-		sprBeamAttack2 = spr_Kirby_Normal_Beam_Attack2;
-		sprBeamAttack3 = spr_Kirby_Normal_Beam_Attack3;
-		sprBeamAttack4 = spr_Kirby_Normal_Beam_Attack4;
-		sprBeamAttack5 = spr_Kirby_Normal_Beam_Attack5;
-		sprBeamAttack6 = spr_Kirby_Normal_Beam_Attack6;
-		sprMysticBeamAttack1 = spr_Kirby_Normal_MysticBeam_Attack1;
-		sprMysticBeamAttack2 = spr_Kirby_Normal_MysticBeam_Attack2;
-		sprStoneAttack1Ready = spr_Kirby_Normal_Stone_Attack1Ready;
-		if (player == 0)
-		{
-			sprStoneAttack1Common = spr_Kirby_Normal_Stone_Attack1_Common1;
-			sprStoneAttack1Uncommon = spr_Kirby_Normal_Stone_Attack1_Uncommon1;
-			sprStoneAttack1Rare = spr_Kirby_Normal_Stone_Attack1_Rare1;
-		}
-		else
-		{
-			sprStoneAttack1Common = spr_Kirby_Normal_Stone_Attack1_Common2;
-			sprStoneAttack1Uncommon = spr_Kirby_Normal_Stone_Attack1_Uncommon2;
-			sprStoneAttack1Rare = spr_Kirby_Normal_Stone_Attack1_Rare2;
-		}
-		sprStoneAttack2Ready = spr_Kirby_Normal_Stone_Attack2Ready;
-		sprStoneAttack2 = spr_Kirby_Normal_Stone_Attack2;
-		sprStoneAttack2Release = spr_Kirby_Normal_Stone_Attack2Release;
-		sprUfoIdle = spr_Kirby_Normal_Ufo_Idle;
-		sprUfoUp = spr_Kirby_Normal_Ufo_Up;
-		sprUfoDown = spr_Kirby_Normal_Ufo_Down;
-		sprUfoEnter = spr_Kirby_Normal_Ufo_Enter;
-		sprUfoCharge = spr_Kirby_Normal_Ufo_Charge;
-		sprUfoAttack1 = spr_Kirby_Normal_Ufo_Attack1;
-		sprUfoAttack2 = spr_Kirby_Normal_Ufo_Attack2;
-		sprMirrorDash = spr_Kirby_Normal_Mirror_Dash;
-		sprMirrorAttack1 = spr_Kirby_Normal_Mirror_Attack1;
-		sprMirrorAttack2 = spr_Kirby_Normal_Mirror_Attack2;
-		sprMirrorAttack2Release = spr_Kirby_Normal_Mirror_Attack2Release;
-		sprMirrorAttack3 = spr_Kirby_Normal_Mirror_Attack3;
-		sprMirrorAttack4 = spr_Kirby_Normal_Mirror_Attack4;
-		sprMirrorAttack5 = spr_Kirby_Normal_Mirror_Attack5;
-		sprNinjaCharge = spr_Kirby_Normal_Ninja_Charge;
-		sprNinjaAttack1 = spr_Kirby_Normal_Ninja_Attack1;
-		sprNinjaAttack2 = spr_Kirby_Normal_Ninja_Attack2;
-		sprBombReady = spr_Kirby_Normal_Bomb_Ready;
-		sprBombAttack1 = spr_Kirby_Normal_Bomb_Attack1;
-		sprBombAttack2 = spr_Kirby_Normal_Bomb_Attack2;
-		sprBombAttack3Ready = spr_Kirby_Normal_Bomb_Attack3Ready;
-		sprBombAttack3Release = spr_Kirby_Normal_Bomb_Attack3Release;
-		sprBombAttack4 = spr_Kirby_Normal_Bomb_Attack4;
-		sprFireAttack1 = spr_Kirby_Normal_Fire_Attack1;
-		sprFireAttack2 = spr_Kirby_Normal_Fire_Attack2;
-		sprFireAttack3 = spr_Kirby_Normal_Fire_Attack3;
-		sprFireAttack4 = spr_Kirby_Normal_Fire_Attack4;
-		sprFireAttackRelease1 = spr_Kirby_Normal_Fire_AttackRelease1;
-		sprFireAttackRelease2 = spr_Kirby_Normal_Fire_AttackRelease2;
-		sprIceAttack1Ready = spr_Kirby_Normal_Ice_Attack1Ready;
-		sprIceAttack1 = spr_Kirby_Normal_Ice_Attack1;
-		sprIceAttack1Release = spr_Kirby_Normal_Ice_Attack1Release;
-		sprIceKick = spr_Kirby_Normal_Ice_Kick;
-		sprIceGrabReady = spr_Kirby_Normal_Ice_GrabReady;
-		sprIceGrab = spr_Kirby_Normal_Ice_Grab;
-		sprIceGrabRelease = spr_Kirby_Normal_Ice_GrabRelease;
-		sprSparkMaxCharge = spr_Kirby_Normal_Spark_MaxCharge;
-		sprSparkMaxChargeNormalSlopeL = spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeL;
-		sprSparkMaxChargeNormalSlopeR = spr_Kirby_Normal_Spark_MaxCharge_NormalSlopeR;
-		sprSparkMaxChargeSteepSlopeL = spr_Kirby_Normal_Spark_MaxCharge_SteepSlopeL;
-		sprSparkMaxChargeSteepSlopeR = spr_Kirby_Normal_Spark_MaxCharge_SteepSlopeR;
-		sprSparkAttack1Ready = spr_Kirby_Normal_Spark_Attack1Ready;
-		sprSparkAttack1 = spr_Kirby_Normal_Spark_Attack1;
-		sprSparkAttack2Ready = spr_Kirby_Normal_Spark_Attack2Ready;
-		sprSparkAttack2 = spr_Kirby_Normal_Spark_Attack2;
-		sprSparkAttack3 = spr_Kirby_Normal_Spark_Attack3;
-		sprSparkAttack4 = spr_Kirby_Normal_Spark_Attack4;
-		sprYoyoAttack2Ready = spr_Kirby_Normal_Yoyo_Attack2Ready;
-		sprYoyoAttack2 = spr_Kirby_Normal_Yoyo_Attack2;
-		sprYoyoAttack2Release = spr_Kirby_Normal_Yoyo_Attack2Release;
-		sprWingAttack1 = spr_Kirby_Normal_Wing_Attack1;
-		sprWingAttack2Ready = spr_Kirby_Normal_Wing_Attack2Ready;
-		sprWingAttack2 = spr_Kirby_Normal_Wing_Attack2;
-		sprSwordAttack1 = spr_Kirby_Normal_Sword_Attack1;
-		sprSwordAttackDash = spr_Kirby_Normal_Sword_Dash;
-		sprSwordAttackAir = spr_Kirby_Normal_Sword_AttackAir;
-		sprSwordAttackAirDash = spr_Kirby_Normal_Sword_Spin;
-		sprSwordAttackCombo = spr_Kirby_Normal_Sword_Combo;
-		sprSwordAttackBarrageAir = spr_Kirby_Normal_Sword_BarrageAir;
-		sprSwordAttackBarrage = spr_Kirby_Normal_Sword_Barrage;
-		sprSwordAttack1 = spr_Kirby_Normal_Sword_Attack1;
-		sprSwordAttack2 = spr_Kirby_Normal_Sword_Dash;
-		sprParasolAttack2Ready = spr_Kirby_Normal_Parasol_Attack2Ready;
-		sprParasolAttack2 = spr_Kirby_Normal_Parasol_Attack2;
-		sprParasolAttack2Release = spr_Kirby_Normal_Parasol_Attack2Release;
-		sprSleepReady = spr_Kirby_Normal_SleepReady;
-		sprSleep = spr_Kirby_Normal_Sleep;
-		sprSleepEnd = spr_Kirby_Normal_SleepEnd;
-		sprScanReady = spr_Kirby_Normal_ScanReady;
-		sprScan = spr_Kirby_Normal_Scan;
-		sprScanEnd = spr_Kirby_Normal_ScanEnd;
-		sprHurt = spr_Kirby_Normal_Hurt;
-		sprDeath = spr_Kirby_Normal_Death;
-		break;
-		
-		case playerCharacters.gamble:
-		switch (player)
-		{
-			case 0:
-			var skin = global.skinGambleP1;
-			global.sprayPaintP1 = scr_Player_SprayPaint(global.sprayPaintGambleP1,playerCharacters.gamble,skin);
-			break;
-			
-			case 1:
-			var skin = global.skinGambleP2;
-			global.sprayPaintP2 = scr_Player_SprayPaint(global.sprayPaintGambleP2,playerCharacters.gamble,skin);
-			break;
-			
-			case 2:
-			var skin = global.skinGambleP3;
-			global.sprayPaintP3 = scr_Player_SprayPaint(global.sprayPaintGambleP3,playerCharacters.gamble,skin);
-			break;
-			
-			case 3:
-			var skin = global.skinGambleP4;
-			global.sprayPaintP4 = scr_Player_SprayPaint(global.sprayPaintGambleP4,playerCharacters.gamble,skin);
-			break;
-		}
-		
-		gravNormal = .23;
-		gravStone = .7;
-		grav = gravNormal;
-		gravFloat = .075;
-		gravFireDash = .05;
-		gravLimitNormal = 5;
-		gravLimitFloat = 1.2;
-		gravLimitBeamAir = 3;
-		gravLimitStone = 7;
-		gravLimitFireDash = 1.25;
-		gravLimit = gravLimitNormal;
-		jumpspeedNormal = 6;
-		jumpspeedFloat = 1.8;
-		jumpspeedWheel = 8;
-		jumpspeed = jumpspeedNormal;
-		movespeedNormal = 1.7;
-		movespeedRun = 2.6;
-		movespeedSlide = 5;
-		movespeedFloat = 1.9;
-		movespeedCarry = 2;
-		movespeedBurst = 7;
-		movespeed = movespeedNormal;
-		ufoFloatSpd = 2;
-		accel = .2;
-		accelFloat = .1;
-		decel = .075;
-		decelSlide = .125;
-		decelSwordDash = .1;
-		decelFloat = .025;
-		climbSpeed = 2;
-		
-		hasGravity = false;
-		hasJumpLimit = true;
-		canWalk = true;
-		canRun = false;
-		canRunTurn = false;
-		canJump = false;
-		canAutoJump = false;
-		canAttack = true;
-		canDuck = false;
-		canDuckHighJump = false;
-		canSlide = false;
-		canClimb = false;
-		canFloat = false;
-		canEnter = true;
-		canUfoFloat = true;
-		canGetHurt = true;
-		runImageSpeedIncrease = 0;
-		
-		maskIndex = spr_16Square_Mask;
-		sprIdle = spr_Gamble_Normal_Side_Idle;
-		sprWalk = spr_Gamble_Normal_Side_Walk;
-		sprRun = spr_Kirby_Normal_Run;
-		sprJump = spr_Gamble_Normal_Side_Jump;
-		sprRoll = spr_Gamble_Normal_Side_Jump;
-		sprFall = spr_Gamble_Normal_Side_Jump;
-		sprDuck = spr_Gamble_Normal_Side_LayDown;
-		sprEnter = spr_Gamble_Normal_Side_Jump;
-		sprClimbUp = spr_Gamble_Normal_Back_Idle;
-		sprClimbDown = spr_Gamble_Normal_Back_Idle;
-		sprHurt = spr_Gamble_Normal_Side_Walk;
-		sprDeath = spr_Gamble_Normal_Side_Death;
-		break;
-		
-		case playerCharacters.gooey:
-		switch (player)
-		{
-			case 0:
-			var skin = global.skinGooeyP1;
-			global.sprayPaintP1 = scr_Player_SprayPaint(global.sprayPaintGooeyP1,playerCharacters.gooey,skin);
-			break;
-			
-			case 1:
-			var skin = global.skinGooeyP2;
-			global.sprayPaintP2 = scr_Player_SprayPaint(global.sprayPaintGooeyP2,playerCharacters.gooey,skin);
-			break;
-			
-			case 2:
-			var skin = global.skinGooeyP3;
-			global.sprayPaintP3 = scr_Player_SprayPaint(global.sprayPaintGooeyP3,playerCharacters.gooey,skin);
-			break;
-			
-			case 3:
-			var skin = global.skinGooeyP4;
-			global.sprayPaintP4 = scr_Player_SprayPaint(global.sprayPaintGooeyP4,playerCharacters.gooey,skin);
-			break;
-		}
-		
-		#region Physics
-		gravNormal = .23;
-		gravStone = .7;
-		grav = gravNormal;
-		gravFloat = .05;
-		gravFireDash = .05;
-		gravLimitNormal = 5;
-		gravLimitFloat = 1.2;
-		gravLimitBeamAir = 3;
-		gravLimitStone = 7;
-		gravLimitFireDash = 1.25;
-		gravLimit = gravLimitNormal;
-		jumpspeedNormal = 6;
-		jumpspeedFloat = 1.8;
-		jumpspeedWheel = 8;
-		jumpspeed = jumpspeedNormal;
-		movespeedNormal = 1.7;
-		movespeedRun = 2.6;
-		movespeedSlide = 5;
-		movespeedFloat = 1.9;
-		movespeedCarry = 2;
-		movespeedBurst = 7;
-		movespeed = movespeedNormal;
-		ufoFloatSpd = 2;
-		accel = .2;
-		accelFloat = .1;
-		decel = .075;
-		decelSlide = .125;
-		decelSwordDash = .1;
-		decelFloat = .025;
-		climbSpeed = 2.5;
-		#endregion
-		
-		switch (skin)
-		{
-			case "normal":
-			#region Sprites
-			sprIdle = spr_Gooey_Normal_Idle;
-			sprWalk = spr_Gooey_Normal_Walk;
-			sprRun = spr_Gooey_Normal_Run;
-			sprRunTurn = spr_Gooey_Normal_RunTurn;
-			sprJump = spr_Gooey_Normal_Jump;
-			sprRoll = spr_Gooey_Normal_Roll;
-			sprRollDuckReady = spr_Gooey_Normal_RollDuckReady;
-			sprRollDuck = spr_Gooey_Normal_RollDuck;
-			sprBackflip = spr_Gooey_Normal_Backflip;
-			sprFall = spr_Gooey_Normal_Fall;
-			sprSquish = spr_Gooey_Normal_Squish;
-			sprDuck = spr_Gooey_Normal_Duck;
-			sprSlide = spr_Gooey_Normal_Slide;
-			sprSlideEnd = spr_Gooey_Normal_SlideEnd;
-			sprFloat = spr_Gooey_Normal_Float;
-			sprStoneAttack1Ready = spr_Gooey_Normal_Stone_AttackReady;
-			if (player == 0)
-			{
-				sprStoneAttack1Common = spr_Gooey_Normal_Stone_Attack_Common1;
-				sprStoneAttack1Uncommon = spr_Gooey_Normal_Stone_Attack_Uncommon1;
-				sprStoneAttack1Rare = spr_Gooey_Normal_Stone_Attack_Rare1;
-			}
-			else
-			{
-				sprStoneAttack1Common = spr_Gooey_Normal_Stone_Attack_Common2;
-				sprStoneAttack1Uncommon = spr_Gooey_Normal_Stone_Attack_Uncommon2;
-				sprStoneAttack1Rare = spr_Gooey_Normal_Stone_Attack_Rare2;
-			}
-			sprFireAttack2 = spr_Gooey_Normal_Fire_Attack;
-			sprFireAttackRelease1 = spr_Gooey_Normal_Fire_AttackRelease1;
-			sprFireAttackRelease2 = spr_Gooey_Normal_Fire_AttackRelease2;
-			#endregion
-			break;
-			
-			case "pipis":
-			#region Sprites
-			sprIdle = spr_Gooey_Pipis_Idle;
-			sprWalk = spr_Gooey_Normal_Walk;
-			sprRun = spr_Gooey_Normal_Run;
-			sprRunTurn = spr_Gooey_Normal_RunTurn;
-			sprJump = spr_Gooey_Normal_Jump;
-			sprRoll = spr_Gooey_Normal_Roll;
-			sprRollDuckReady = spr_Gooey_Normal_RollDuckReady;
-			sprRollDuck = spr_Gooey_Normal_RollDuck;
-			sprBackflip = spr_Gooey_Normal_Backflip;
-			sprFall = spr_Gooey_Normal_Fall;
-			sprSquish = spr_Gooey_Normal_Squish;
-			sprDuck = spr_Gooey_Normal_Duck;
-			sprSlide = spr_Gooey_Normal_Slide;
-			sprSlideEnd = spr_Gooey_Normal_SlideEnd;
-			sprFloat = spr_Gooey_Normal_Float;
-			sprStoneAttack1Ready = spr_Gooey_Normal_Stone_AttackReady;
-			if (player == 0)
-			{
-				sprStoneAttack1Common = spr_Gooey_Normal_Stone_Attack_Common1;
-				sprStoneAttack1Uncommon = spr_Gooey_Normal_Stone_Attack_Uncommon1;
-				sprStoneAttack1Rare = spr_Gooey_Normal_Stone_Attack_Rare1;
-			}
-			else
-			{
-				sprStoneAttack1Common = spr_Gooey_Normal_Stone_Attack_Common2;
-				sprStoneAttack1Uncommon = spr_Gooey_Normal_Stone_Attack_Uncommon2;
-				sprStoneAttack1Rare = spr_Gooey_Normal_Stone_Attack_Rare2;
-			}
-			sprFireAttack2 = spr_Gooey_Normal_Fire_Attack;
-			sprFireAttackRelease1 = spr_Gooey_Normal_Fire_AttackRelease1;
-			sprFireAttackRelease2 = spr_Gooey_Normal_Fire_AttackRelease2;
-			#endregion
-			break;
-		}
-		break;
-		
-		case playerCharacters.waddleDee:
-		var skin = choose("normal","normal","normal","normal","normal","normal","egg","egg","egg","gold");
-		
-		#region Physics
-		gravNormal = .2;
-		grav = gravNormal;
-		gravLimitNormal = 5;
-		gravLimit = gravLimitNormal;
-		jumpspeedNormal = 5;
-		jumpspeed = jumpspeedNormal;
-		movespeedNormal = 1.3;
-		movespeedRun = 2.3;
-		movespeed = movespeedNormal;
-		accel = .15;
-		decel = .05;
-		climbSpeed = 2;
-		#endregion
-		
-		#region Other Variables
-		hasGravity = true;
-		hasJumpLimit = true;
-		canWalk = true;
-		canRun = true;
-		canRunTurn = false;
-		canJump = true;
-		canMultiJump = false;
-		multiJumpLimit = -1;
-		canAutoJump = false;
-		canAttack = false;
-		canDuck = true;
-		canDuckHighJump = true;
-		canSlide = true;
-		canClimb = true;
-		canFloat = false;
-		canEnter = true;
-		canUfoFloat = false;
-		canGetHurt = true;
-		runImageSpeedIncrease = 0;
-		#endregion
-		
-		switch (skin)
-		{
-			case "normal":
-			#region Palettes
-			var pal;
-			var i = 0;
-			pal[i] = spr_WaddleDee_Normal_Palette_WaddleWaddle;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_BlueberryPie;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_SeenAGhost;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_Hypothermic;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_MidnightForest;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_CelestialGlow;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_InvertedGold;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_CherryBomb;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_Corruption;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_NightVision;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_UpsetStomach;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_FadedWaddle;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_InvisibleSpray;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_Snowball;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_KeyDee;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_BurntToACrisp;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_ImpendingDoom;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_Ultra;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_SherbetSurprise;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_CottonCandy;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_GamerDee;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_Crimson;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_TropicalOcean;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_Mulberry;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_GrandDee;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_SunKissed;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_VitaminDeeMilk;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_SunkenSea;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_GhostlyGhoul;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_Throwback50s;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_Roaring20s;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_ExtremeContrast;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_BubbleGum;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_ParkaDee;
-			i += 1;
-			pal[i] = spr_WaddleDee_Normal_Palette_HalloweenSpirit;
-			#endregion
-			
-			#region Sprites
-			maskIndex = spr_16Square_Mask;
-			sprIdle = spr_WaddleDee_Normal_Idle;
-			sprWalk = spr_WaddleDee_Normal_Walk;
-			sprRun = spr_WaddleDee_Normal_Run;
-			sprJump = spr_WaddleDee_Normal_Jump;
-			sprFall = spr_WaddleDee_Normal_Fall;
-			sprSquish = spr_WaddleDee_Normal_Idle;
-			sprDuck = spr_WaddleDee_Normal_Duck;
-			sprSlide = spr_WaddleDee_Normal_Slide;
-			sprSlideEnd = spr_WaddleDee_Normal_Slide;
-			sprEnter = spr_WaddleDee_Normal_Walk;
-			sprClimbUp = spr_WaddleDee_Normal_ClimbUp;
-			sprClimbDown = spr_WaddleDee_Normal_ClimbDown;
-			sprHurt = spr_WaddleDee_Normal_Hurt;
-			sprDeath = spr_WaddleDee_Normal_Hurt;
-			#endregion
-			break;
-			
-			case "egg":
-			#region Palettes
-			var pal;
-			var i = 0;
-			pal[i] = spr_WaddleDee_Egg_Palette_EggedOn;
-			#endregion
-			
-			#region Sprites
-			maskIndex = spr_16Square_Mask;
-			sprIdle = spr_WaddleDee_Egg_Idle;
-			sprWalk = spr_WaddleDee_Egg_Walk;
-			sprRun = spr_WaddleDee_Normal_Run;
-			sprJump = spr_WaddleDee_Egg_Jump;
-			sprFall = spr_WaddleDee_Egg_Fall;
-			sprSquish = spr_WaddleDee_Egg_Idle;
-			sprDuck = spr_WaddleDee_Egg_Duck;
-			sprSlide = spr_WaddleDee_Normal_Slide;
-			sprSlideEnd = spr_WaddleDee_Normal_Slide;
-			sprEnter = spr_WaddleDee_Egg_Walk;
-			sprClimbUp = spr_WaddleDee_Egg_ClimbUp;
-			sprClimbDown = spr_WaddleDee_Egg_ClimbDown;
-			sprHurt = spr_WaddleDee_Egg_Hurt;
-			sprDeath = spr_WaddleDee_Egg_Hurt;
-			#endregion
-			break;
-			
-			case "gold":
-			#region Palettes
-			var pal;
-			var i = 0;
-			pal[i] = spr_WaddleDee_Gold_Palette_HiddenTreasure;
-			#endregion
-			
-			#region Sprites
-			maskIndex = spr_16Square_Mask;
-			sprIdle = spr_WaddleDee_Gold_Idle;
-			sprWalk = spr_WaddleDee_Gold_Walk;
-			sprRun = spr_WaddleDee_Normal_Run;
-			sprJump = spr_WaddleDee_Gold_Jump;
-			sprFall = spr_WaddleDee_Gold_Fall;
-			sprSquish = spr_WaddleDee_Gold_Idle;
-			sprDuck = spr_WaddleDee_Gold_Duck;
-			sprSlide = spr_WaddleDee_Normal_Slide;
-			sprSlideEnd = spr_WaddleDee_Normal_Slide;
-			sprEnter = spr_WaddleDee_Gold_Walk;
-			sprClimbUp = spr_WaddleDee_Gold_ClimbUp;
-			sprClimbDown = spr_WaddleDee_Gold_ClimbDown;
-			sprHurt = spr_WaddleDee_Gold_Hurt;
-			sprDeath = spr_WaddleDee_Gold_Hurt;
-			#endregion
-			break;
-			
-			case "alien":
-			#region Palettes
-			var pal;
-			var i = 0;
-			pal[i] = spr_WaddleDee_Alien_Palette_Graylien;
-			#endregion
-			
-			#region Sprites
-			maskIndex = spr_16Square_Mask;
-			sprIdle = spr_WaddleDee_Alien_Idle;
-			sprWalk = spr_WaddleDee_Alien_Walk;
-			sprRun = spr_WaddleDee_Normal_Run;
-			sprJump = spr_WaddleDee_Alien_Jump;
-			sprFall = spr_WaddleDee_Alien_Fall;
-			sprSquish = spr_WaddleDee_Alien_Idle;
-			sprDuck = spr_WaddleDee_Alien_Duck;
-			sprSlide = spr_WaddleDee_Normal_Slide;
-			sprSlideEnd = spr_WaddleDee_Normal_Slide;
-			sprEnter = spr_WaddleDee_Alien_Walk;
-			sprClimbUp = spr_WaddleDee_Alien_ClimbUp;
-			sprClimbDown = spr_WaddleDee_Alien_ClimbDown;
-			sprHurt = spr_WaddleDee_Alien_Hurt;
-			sprDeath = spr_WaddleDee_Alien_Hurt;
-			#endregion
-			break;
-			
-			case "bandit":
-			#region Palettes
-			var pal;
-			var i = 0;
-			pal[i] = spr_WaddleDee_Alien_Palette_Graylien;
-			#endregion
-			
-			#region Sprites
-			maskIndex = spr_16Square_Mask;
-			sprIdle = spr_WaddleDee_Bandit_Idle;
-			sprWalk = spr_WaddleDee_Bandit_Walk;
-			sprRun = spr_WaddleDee_Bandit_Run;
-			sprJump = spr_WaddleDee_Bandit_Jump;
-			sprFall = spr_WaddleDee_Bandit_Fall;
-			sprSquish = spr_WaddleDee_Bandit_Idle;
-			sprDuck = spr_WaddleDee_Bandit_Duck;
-			sprSlide = spr_WaddleDee_Bandit_Slide;
-			sprSlideEnd = spr_WaddleDee_Bandit_Slide;
-			sprEnter = spr_WaddleDee_Bandit_Walk;
-			sprClimbUp = spr_WaddleDee_Bandit_ClimbUp;
-			sprClimbDown = spr_WaddleDee_Bandit_ClimbDown;
-			sprHurt = spr_WaddleDee_Bandit_Hurt;
-			sprDeath = spr_WaddleDee_Bandit_Hurt;
-			#endregion
-			break;
-		}
-		
-		switch (player)
-		{
-			case 0:
-			global.sprayPaintP1 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP1 = true;
-			break;
-			
-			case 1:
-			global.sprayPaintP2 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP2 = true;
-			break;
-			
-			case 2:
-			global.sprayPaintP3 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP3 = true;
-			break;
-			
-			case 3:
-			global.sprayPaintP4 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP4 = true;
-			break;
-		}
-		break;
-		
-		case playerCharacters.waddleDoo:
-		var skin = choose("normal");
-		
-		#region Physics
-		gravNormal = .2;
-		grav = gravNormal;
-		gravLimitNormal = 5;
-		gravLimit = gravLimitNormal;
-		jumpspeedNormal = 5;
-		jumpspeed = jumpspeedNormal;
-		movespeedNormal = 1.3;
-		movespeedRun = 2.3;
-		movespeed = movespeedNormal;
-		accel = .15;
-		decel = .05;
-		climbSpeed = 2;
-		#endregion
-		
-		#region Other Variables
-		hasGravity = true;
-		hasJumpLimit = true;
-		canWalk = true;
-		canRun = true;
-		canRunTurn = false;
-		canJump = true;
-		canMultiJump = false;
-		multiJumpLimit = -1;
-		canAutoJump = false;
-		canAttack = true;
-		canDuck = true;
-		canDuckHighJump = true;
-		canSlide = true;
-		canClimb = true;
-		canFloat = false;
-		canEnter = true;
-		canUfoFloat = false;
-		canGetHurt = true;
-		runImageSpeedIncrease = 0;
-		#endregion
-		
-		switch (skin)
-		{
-			case "normal":
-			#region Palettes
-			var pal;
-			var i = 0;
-			pal[i] = spr_WaddleDoo_Normal_Palette_WaddleWaddle;
-			i += 1;
-			pal[i] = spr_WaddleDoo_Normal_Palette_Uranium;
-			i += 1;
-			pal[i] = spr_WaddleDoo_Normal_Palette_IvoryEgg;
-			i += 1;
-			pal[i] = spr_WaddleDoo_Normal_Palette_Kirby;
-			i += 1;
-			pal[i] = spr_WaddleDoo_Normal_Palette_TrueBlue;
-			i += 1;
-			pal[i] = spr_WaddleDoo_Normal_Palette_Lilac;
-			i += 1;
-			pal[i] = spr_WaddleDoo_Normal_Palette_AquaDepths;
-			i += 1;
-			pal[i] = spr_WaddleDoo_Normal_Palette_Ocean;
-			i += 1;
-			pal[i] = spr_WaddleDoo_Normal_Palette_MintyBreeze;
-			i += 1;
-			pal[i] = spr_WaddleDoo_Normal_Palette_FilthyRich;
-			i += 1;
-			pal[i] = spr_WaddleDoo_Normal_Palette_CowardlyBrother;
-			i += 1;
-			pal[i] = spr_WaddleDoo_Normal_Palette_LetsaGo;
-			i += 1;
-			pal[i] = spr_WaddleDoo_Normal_Palette_Choco;
-			i += 1;
-			pal[i] = spr_WaddleDoo_Normal_Palette_Bloodshot;
-			i += 1;
-			pal[i] = spr_WaddleDoo_Normal_Palette_RipeTomato;
-			i += 1;
-			pal[i] = spr_WaddleDoo_Normal_Palette_BeamOfLight;
-			i += 1;
-			pal[i] = spr_WaddleDoo_Normal_Palette_Aluminum;
-			i += 1;
-			pal[i] = spr_WaddleDoo_Normal_Palette_HelperToHero;
-			i += 1;
-			pal[i] = spr_WaddleDoo_Normal_Palette_AngelicGold;
-			i += 1;
-			pal[i] = spr_WaddleDoo_Normal_Palette_FrozenTundra;
-			i += 1;
-			pal[i] = spr_WaddleDoo_Normal_Palette_PinkStar;
-			i += 1;
-			pal[i] = spr_WaddleDoo_Normal_Palette_Brick;
-			i += 1;
-			pal[i] = spr_WaddleDoo_Normal_Palette_CorruptedTwilight;
-			i += 1;
-			pal[i] = spr_WaddleDoo_Normal_Palette_PalePurple;
-			i += 1;
-			pal[i] = spr_WaddleDoo_Normal_Palette_DarkFlux;
-			#endregion
-		
-			#region Sprites
-			maskIndex = spr_16Square_Mask;
-			sprIdle = spr_WaddleDoo_Normal_Idle;
-			sprWalk = spr_WaddleDoo_Normal_Walk;
-			sprRun = spr_WaddleDoo_Normal_Walk;
-			sprRunTurn = spr_WaddleDoo_Normal_RunTurn;
-			sprJump = spr_WaddleDoo_Normal_Jump;
-			sprFall = spr_WaddleDoo_Normal_Fall;
-			sprSquish = spr_WaddleDoo_Normal_Idle;
-			sprDuck = spr_WaddleDoo_Normal_Duck;
-			sprSlide = spr_WaddleDoo_Normal_Slide;
-			sprEnter = spr_WaddleDoo_Normal_Walk;
-			sprClimbUp = spr_WaddleDoo_Normal_ClimbUp;
-			sprClimbDown = spr_WaddleDoo_Normal_ClimbDown;
-			sprHurt = spr_WaddleDoo_Normal_Hurt;
-			sprDeath = spr_WaddleDoo_Normal_Death;
-			sprBeamAttack1 = spr_WaddleDoo_Normal_Attack;
-			#endregion
-			break;
-		}
-		
-		switch (player)
-		{
-			case 0:
-			global.sprayPaintP1 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP1 = true;
-			break;
-			
-			case 1:
-			global.sprayPaintP2 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP2 = true;
-			break;
-			
-			case 2:
-			global.sprayPaintP3 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP3 = true;
-			break;
-			
-			case 3:
-			global.sprayPaintP4 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP4 = true;
-			break;
-		}
-		break;
-		
-		case playerCharacters.brontoBurt:
-		var skin = choose("normal");
-		
-		#region Physics
-		movespeed = .75;
-		jumpspeed = 1.5;
-		gravNormal = .1;
-		grav = gravNormal;
-		gravLimitNormal = 2;
-		gravLimit = gravLimitNormal;
-		jumpspeedNormal = 3;
-		jumpspeed = jumpspeedNormal;
-		movespeedNormal = 2;
-		movespeedRun = 2.5;
-		movespeed = movespeedNormal;
-		accel = .1;
-		decel = .04;
-		climbSpeed = 2;
-		#endregion
-		
-		#region Other Variables
-		hasGravity = true;
-		hasJumpLimit = false;
-		canWalk = true;
-		canRun = true;
-		canRunTurn = false;
-		canJump = true;
-		canAutoJump = false;
-		canMultiJump = true;
-		multiJumpLimit = 5;
-		canAttack = false;
-		canDuck = false;
-		canDuckHighJump = false;
-		canSlide = false;
-		canClimb = false;
-		canFloat = false;
-		canEnter = true;
-		canUfoFloat = false;
-		canGetHurt = true;
-		runImageSpeedIncrease = .75;
-		#endregion
-		
-		switch (skin)
-		{
-			case "normal":
-			#region Palettes
-			var pal;
-			var i = 0;
-			pal[i] = spr_BrontoBurt_Normal_Palette_ClassicalFlight;
-			i += 1;
-			pal[i] = spr_BrontoBurt_Normal_Palette_Acidic;
-			i += 1;
-			pal[i] = spr_BrontoBurt_Normal_Palette_Alien;
-			i += 1;
-			pal[i] = spr_BrontoBurt_Normal_Palette_Black;
-			i += 1;
-			pal[i] = spr_BrontoBurt_Normal_Palette_Green;
-			i += 1;
-			pal[i] = spr_BrontoBurt_Normal_Palette_Light;
-			i += 1;
-			pal[i] = spr_BrontoBurt_Normal_Palette_Pumpkin;
-			i += 1;
-			pal[i] = spr_BrontoBurt_Normal_Palette_Purple;
-			i += 1;
-			pal[i] = spr_BrontoBurt_Normal_Palette_UraniumGreen;
-			i += 1;
-			pal[i] = spr_BrontoBurt_Normal_Palette_UraniumPurple;
-			i += 1;
-			pal[i] = spr_BrontoBurt_Normal_Palette_Cosmic;
-			i += 1;
-			pal[i] = spr_BrontoBurt_Normal_Palette_Avalanche;
-			i += 1;
-			pal[i] = spr_BrontoBurt_Normal_Palette_CreamyPink;
-			#endregion
-			
-			#region Sprites
-			maskIndex = spr_16Square_Mask;
-			sprIdle = spr_BrontoBurt_Normal_Idle;
-			sprWalk = spr_BrontoBurt_Normal_Walk;
-			sprRun = spr_BrontoBurt_Normal_Walk;
-			sprJump = spr_BrontoBurt_Normal_Fly;
-			sprFall = spr_BrontoBurt_Normal_Fly;
-			sprSquish = spr_BrontoBurt_Normal_Ready;
-			sprDuck = spr_BrontoBurt_Normal_Ready;
-			sprEnter = spr_BrontoBurt_Normal_Ready;
-			sprHurt = spr_BrontoBurt_Normal_HurtGround;
-			sprDeath = spr_BrontoBurt_Normal_HurtFly;
-			#endregion
-			break;
-			
-			case "alien":
-			#region Palettes
-			var pal;
-			var i = 0;
-			pal[i] = spr_BrontoBurt_Alien_Palette_Graylien;
-			#endregion
-			
-			#region Sprites
-			maskIndex = spr_16Square_Mask;
-			sprIdle = spr_BrontoBurt_Alien_Idle;
-			sprWalk = spr_BrontoBurt_Alien_Walk;
-			sprRun = spr_BrontoBurt_Alien_Walk;
-			sprJump = spr_BrontoBurt_Alien_Fly;
-			sprFall = spr_BrontoBurt_Alien_Fly;
-			sprSquish = spr_BrontoBurt_Alien_Ready;
-			sprDuck = spr_BrontoBurt_Alien_Ready;
-			sprEnter = spr_BrontoBurt_Alien_Ready;
-			sprHurt = spr_BrontoBurt_Alien_HurtGround;
-			sprDeath = spr_BrontoBurt_Alien_HurtFly;
-			#endregion
-			break;
-		}
-		
-		switch (player)
-		{
-			case 0:
-			global.sprayPaintP1 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP1 = true;
-			break;
-			
-			case 1:
-			global.sprayPaintP2 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP2 = true;
-			break;
-			
-			case 2:
-			global.sprayPaintP3 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP3 = true;
-			break;
-			
-			case 3:
-			global.sprayPaintP4 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP4 = true;
-			break;
-		}
-		break;
-		
-		case playerCharacters.twizzy:
-		var skin = choose("normal");
-		
-		#region Physics
-		movespeed = .75;
-		jumpspeed = 1.5;
-		gravNormal = .1;
-		grav = gravNormal;
-		gravLimitNormal = 2.25;
-		gravLimit = gravLimitNormal;
-		jumpspeedNormal = 3;
-		jumpspeed = jumpspeedNormal;
-		movespeedNormal = 1.75;
-		movespeed = movespeedNormal;
-		accel = .1;
-		decel = .04;
-		climbSpeed = 2;
-		#endregion
-		
-		#region Other Variables
-		hasGravity = true;
-		hasJumpLimit = false;
-		canWalk = true;
-		canRun = false;
-		canRunTurn = false;
-		canJump = true;
-		canAutoJump = false;
-		canMultiJump = true;
-		multiJumpLimit = 6;
-		canAttack = false;
-		canDuck = false;
-		canDuckHighJump = false;
-		canSlide = false;
-		canClimb = false;
-		canFloat = false;
-		canEnter = true;
-		canUfoFloat = false;
-		canGetHurt = true;
-		runImageSpeedIncrease = .75;
-		#endregion
-		
-		switch (skin)
-		{
-			case "normal":
-			#region Palettes
-			var pal;
-			var i = 0;
-			pal[i] = spr_Twizzy_Normal_Palette_FlyingYolk;
-			i += 1;
-			pal[i] = spr_Twizzy_Normal_Palette_Blue;
-			i += 1;
-			pal[i] = spr_Twizzy_Normal_Palette_Dove;
-			i += 1;
-			pal[i] = spr_Twizzy_Normal_Palette_Green;
-			i += 1;
-			pal[i] = spr_Twizzy_Normal_Palette_Orange;
-			i += 1;
-			pal[i] = spr_Twizzy_Normal_Palette_Red;
-			i += 1;
-			pal[i] = spr_Twizzy_Normal_Palette_Toothpaste;
-			#endregion
-			
-			#region Sprites
-			maskIndex = spr_16Square_Mask;
-			sprIdle = spr_Twizzy_Normal_Idle;
-			sprWalk = spr_Twizzy_Normal_Fly;
-			sprRun = spr_Twizzy_Normal_Fly;
-			sprJump = spr_Twizzy_Normal_Fly;
-			sprFall = spr_Twizzy_Normal_Fly;
-			sprSquish = spr_Twizzy_Normal_Idle;
-			sprDuck = spr_Twizzy_Normal_Idle;
-			sprEnter = spr_Twizzy_Normal_Idle;
-			sprHurt = spr_Twizzy_Normal_Hurt;
-			sprDeath = spr_Twizzy_Normal_Hurt;
-			#endregion
-			break;
-		}
-		
-		switch (player)
-		{
-			case 0:
-			global.sprayPaintP1 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP1 = true;
-			break;
-			
-			case 1:
-			global.sprayPaintP2 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP2 = true;
-			break;
-			
-			case 2:
-			global.sprayPaintP3 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP3 = true;
-			break;
-			
-			case 3:
-			global.sprayPaintP4 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP4 = true;
-			break;
-		}
-		break;
-		
-		case playerCharacters.tookey:
-		var skin = choose("normal");
-		
-		#region Physics
-		movespeed = .75;
-		jumpspeed = 1.5;
-		gravNormal = .1;
-		grav = gravNormal;
-		gravLimitNormal = 2.25;
-		gravLimit = gravLimitNormal;
-		jumpspeedNormal = 3;
-		jumpspeed = jumpspeedNormal;
-		movespeedNormal = 1.75;
-		movespeed = movespeedNormal;
-		accel = .1;
-		decel = .04;
-		climbSpeed = 2;
-		#endregion
-		
-		#region Other Variables
-		hasGravity = true;
-		hasJumpLimit = false;
-		canWalk = true;
-		canRun = false;
-		canRunTurn = false;
-		canJump = true;
-		canAutoJump = false;
-		canMultiJump = true;
-		multiJumpLimit = 6;
-		canAttack = false;
-		canDuck = false;
-		canDuckHighJump = false;
-		canSlide = false;
-		canClimb = false;
-		canFloat = false;
-		canEnter = true;
-		canUfoFloat = false;
-		canGetHurt = true;
-		runImageSpeedIncrease = .75;
-		#endregion
-		
-		switch (skin)
-		{
-			case "normal":
-			#region Palettes
-			var pal;
-			var i = 0;
-			pal[i] = spr_Tookey_Normal_Palette_FlyingWhite;
-			i += 1;
-			pal[i] = spr_Tookey_Normal_Palette_Grape;
-			#endregion
-			
-			#region Sprites
-			maskIndex = spr_16Square_Mask;
-			sprIdle = spr_Tookey_Normal_Idle;
-			sprWalk = spr_Tookey_Normal_Fly;
-			sprRun = spr_Tookey_Normal_Fly;
-			sprJump = spr_Tookey_Normal_Fly;
-			sprFall = spr_Tookey_Normal_Fly;
-			sprSquish = spr_Tookey_Normal_Idle;
-			sprDuck = spr_Tookey_Normal_Idle;
-			sprEnter = spr_Tookey_Normal_Idle;
-			sprHurt = spr_Tookey_Normal_Hurt;
-			sprDeath = spr_Tookey_Normal_Hurt;
-			#endregion
-			break;
-		}
-		
-		switch (player)
-		{
-			case 0:
-			global.sprayPaintP1 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP1 = true;
-			break;
-			
-			case 1:
-			global.sprayPaintP2 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP2 = true;
-			break;
-			
-			case 2:
-			global.sprayPaintP3 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP3 = true;
-			break;
-			
-			case 3:
-			global.sprayPaintP4 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP4 = true;
-			break;
-		}
-		break;
-		
-		case playerCharacters.sirKibble:
-		var skin = choose("normal");
-		
-		#region Physics
-		gravNormal = .2;
-		grav = gravNormal;
-		gravLimitNormal = 5;
-		gravLimit = gravLimitNormal;
-		jumpspeedNormal = 5.5;
-		jumpspeed = jumpspeedNormal;
-		movespeedNormal = 1.3;
-		movespeedRun = 2;
-		movespeed = movespeedNormal;
-		accel = .15;
-		decel = .05;
-		climbSpeed = 2;
-		#endregion
-		
-		#region Other Variables
-		hasGravity = true;
-		hasJumpLimit = true;
-		canWalk = true;
-		canRun = true;
-		canRunTurn = false;
-		canJump = true;
-		canAutoJump = false;
-		canMultiJump = false;
-		multiJumpLimit = -1;
-		canAttack = true;
-		canDuck = false;
-		canDuckHighJump = true;
-		canSlide = false;
-		canClimb = true;
-		canFloat = false;
-		canEnter = true;
-		canUfoFloat = false;
-		canGetHurt = true;
-		runImageSpeedIncrease = .5;
-		#endregion
-		
-		switch (skin)
-		{
-			case "normal":
-			#region Palettes
-			var pal;
-			var i = 0;
-			pal[i] = spr_SirKibble_Normal_Palette_Yellow;
-			i += 1;
-			pal[i] = spr_SirKibble_Normal_Palette_Black;
-			i += 1;
-			pal[i] = spr_SirKibble_Normal_Palette_KnightlyPink;
-			i += 1;
-			pal[i] = spr_SirKibble_Normal_Palette_Green;
-			i += 1;
-			pal[i] = spr_SirKibble_Normal_Palette_Jade;
-			i += 1;
-			pal[i] = spr_SirKibble_Normal_Palette_Stone;
-			i += 1;
-			pal[i] = spr_SirKibble_Normal_Palette_Titanium;
-			i += 1;
-			pal[i] = spr_SirKibble_Normal_Palette_Gold;
-			#endregion
-			
-			#region Sprites
-			maskIndex = spr_16Square_Mask;
-			sprIdle = spr_SirKibble_Normal_Idle;
-			sprWalk = spr_SirKibble_Normal_Walk;
-			sprRun = spr_SirKibble_Normal_Walk;
-			sprJump = spr_SirKibble_Normal_Catch;
-			sprFall = spr_SirKibble_Normal_Catch;
-			sprSquish = spr_SirKibble_Normal_Idle;
-			sprDuck = spr_SirKibble_Normal_Idle;
-			sprEnter = spr_SirKibble_Normal_Walk;
-			sprClimbUp = spr_Kirby_Normal_ClimbUp;
-			sprClimbDown = spr_Kirby_Normal_ClimbDown;
-			sprHurt = spr_SirKibble_Normal_Hurt;
-			sprDeath = spr_SirKibble_Normal_HurtAir;
-			sprCutterCharge = spr_SirKibble_Normal_Catch;
-			sprCutterAttack1 = spr_SirKibble_Normal_Attack;
-			sprCutterCatch = spr_SirKibble_Normal_Catch;
-			#endregion
-			break;
-		}
-		
-		switch (player)
-		{
-			case 0:
-			global.sprayPaintP1 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP1 = true;
-			break;
-			
-			case 1:
-			global.sprayPaintP2 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP2 = true;
-			break;
-			
-			case 2:
-			global.sprayPaintP3 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP3 = true;
-			break;
-			
-			case 3:
-			global.sprayPaintP4 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP4 = true;
-			break;
-		}
-		break;
-		
-		case playerCharacters.bouncy:
-		var skin = choose("normal","normal","normal","robo","robo");
-		
-		#region Physics
-		gravNormal = .2;
-		grav = gravNormal;
-		gravLimitNormal = 5;
-		gravLimit = gravLimitNormal;
-		jumpspeedNormal = 5;
-		jumpspeed = jumpspeedNormal;
-		movespeedNormal = 1.3;
-		movespeedRun = 2;
-		movespeed = movespeedNormal;
-		accel = .15;
-		decel = .05;
-		#endregion
-		
-		#region Other Variables
-		hasGravity = true;
-		hasJumpLimit = true;
-		canWalk = true;
-		canRun = false;
-		canRunTurn = false;
-		canJump = false;
-		canAutoJump = true;
-		canMultiJump = false;
-		multiJumpLimit = -1;
-		canAttack = false;
-		canDuck = true;
-		canDuckHighJump = true;
-		canSlide = false;
-		canClimb = false;
-		canFloat = false;
-		canEnter = true;
-		canUfoFloat = false;
-		canGetHurt = true;
-		runImageSpeedIncrease = 0;
-		#endregion
-		
-		switch (skin)
-		{
-			case "normal":
-			#region Palettes
-			var pal;
-			var i = 0;
-			pal[i] = spr_Bouncy_Normal_Palette_HoppingPink;
-			i += 1;
-			pal[i] = spr_Bouncy_Normal_Palette_BerryBounce;
-			i += 1;
-			pal[i] = spr_Bouncy_Normal_Palette_AmberNChrome;
-			i += 1;
-			pal[i] = spr_Bouncy_Normal_Palette_AzureSpring;
-			i += 1;
-			pal[i] = spr_Bouncy_Normal_Palette_DeepSeaDive;
-			i += 1;
-			pal[i] = spr_Bouncy_Normal_Palette_EmeraldEscape;
-			i += 1;
-			pal[i] = spr_Bouncy_Normal_Palette_Exoskeleton;
-			i += 1;
-			pal[i] = spr_Bouncy_Normal_Palette_GoldsMold;
-			i += 1;
-			pal[i] = spr_Bouncy_Normal_Palette_GolfCourse;
-			i += 1;
-			pal[i] = spr_Bouncy_Normal_Palette_GrapeGetaway;
-			i += 1;
-			pal[i] = spr_Bouncy_Normal_Palette_HotSpring;
-			i += 1;
-			pal[i] = spr_Bouncy_Normal_Palette_LightlyBouncing;
-			i += 1;
-			pal[i] = spr_Bouncy_Normal_Palette_OceansBounce;
-			i += 1;
-			pal[i] = spr_Bouncy_Normal_Palette_RustedFlux;
-			i += 1;
-			pal[i] = spr_Bouncy_Normal_Palette_TwistyTumble;
-			#endregion
-			
-			#region Sprites
-			maskIndex = spr_16Square_Mask;
-			sprIdle = spr_Bouncy_Normal_Idle;
-			sprWalk = spr_Bouncy_Normal_Jump;
-			sprJump = spr_Bouncy_Normal_Jump;
-			sprFall = spr_Bouncy_Normal_Idle;
-			sprSquish = spr_Bouncy_Normal_Idle;
-			sprDuck = spr_Bouncy_Normal_Duck;
-			sprEnter = spr_Bouncy_Normal_Idle;
-			sprHurt = spr_Bouncy_Normal_Hurt;
-			sprDeath = spr_Bouncy_Normal_Hurt;
-			#endregion
-			break;
-			
-			case "robo":
-			#region Palettes
-			var pal;
-			var i = 0;
-			pal[i] = spr_Bouncy_Robo_Palette_MechanicalGray;
-			#endregion
-			
-			#region Sprites
-			maskIndex = spr_16Square_Mask;
-			sprIdle = spr_Bouncy_Robo_Idle;
-			sprWalk = spr_Bouncy_Robo_Jump;
-			sprJump = spr_Bouncy_Robo_Jump;
-			sprFall = spr_Bouncy_Robo_Idle;
-			sprSquish = spr_Bouncy_Robo_Idle;
-			sprDuck = spr_Bouncy_Robo_Duck;
-			sprEnter = spr_Bouncy_Robo_Idle;
-			sprHurt = spr_Bouncy_Robo_Hurt;
-			sprDeath = spr_Bouncy_Robo_Hurt;
-			#endregion
-			break;
-		}
-		
-		switch (player)
-		{
-			case 0:
-			global.sprayPaintP1 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP1 = true;
-			break;
-			
-			case 1:
-			global.sprayPaintP2 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP2 = true;
-			break;
-			
-			case 2:
-			global.sprayPaintP3 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP3 = true;
-			break;
-			
-			case 3:
-			global.sprayPaintP4 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP4 = true;
-			break;
-		}
-		break;
-		
-		case playerCharacters.gordo:
-		var skin = choose("normal");
-		
-		#region Physics
-		gravNormal = .2;
-		grav = gravNormal;
-		gravLimitNormal = 5;
-		gravLimit = gravLimitNormal;
-		jumpspeedNormal = 4;
-		jumpspeed = jumpspeedNormal;
-		movespeedNormal = 1.5;
-		movespeedRun = 2;
-		movespeed = movespeedNormal;
-		accel = .15;
-		decel = .05;
-		#endregion
-		
-		#region Other Variables
-		hasGravity = true;
-		hasJumpLimit = false;
-		canWalk = true;
-		canRun = false;
-		canRunTurn = false;
-		canJump = false;
-		canAutoJump = true;
-		canMultiJump = false;
-		multiJumpLimit = -1;
-		canAttack = false;
-		canSlide = false;
-		canClimb = false;
-		canFloat = false;
-		canEnter = true;
-		canUfoFloat = false;
-		canGetHurt = false;
-		runImageSpeedIncrease = 0;
-		#endregion
-		
-		switch (skin)
-		{
-			case "normal":
-			#region Palettes
-			var pal;
-			var i = 0;
-			pal[i] = spr_Gordo_Normal_Palette_ThornyBackside;
-			i += 1;
-			pal[i] = spr_Gordo_Normal_Palette_DarkMetal;
-			i += 1;
-			pal[i] = spr_Gordo_Normal_Palette_Silver;
-			i += 1;
-			pal[i] = spr_Gordo_Normal_Palette_Golden;
-			i += 1;
-			pal[i] = spr_Gordo_Normal_Palette_Nuclear;
-			i += 1;
-			pal[i] = spr_Gordo_Normal_Palette_Crimson;
-			i += 1;
-			pal[i] = spr_Gordo_Normal_Palette_Orange;
-			i += 1;
-			pal[i] = spr_Gordo_Normal_Palette_Crystal;
-			i += 1;
-			pal[i] = spr_Gordo_Normal_Palette_Lunar;
-			i += 1;
-			pal[i] = spr_Gordo_Normal_Palette_Vintage;
-			#endregion
-			
-			#region Sprites
-			maskIndex = spr_16Square_Mask;
-			sprIdle = spr_Gordo_Normal_Idle;
-			sprWalk = spr_Gordo_Normal_Idle;
-			sprJump = spr_Gordo_Normal_Idle;
-			sprFall = spr_Gordo_Normal_Idle;
-			sprSquish = spr_Gordo_Normal_Idle;
-			sprDuck = spr_Gordo_Normal_Idle;
-			sprEnter = spr_Gordo_Normal_Idle;
-			sprHurt = spr_Gordo_Normal_Idle;
-			sprDeath = spr_Gordo_Normal_Idle;
-			#endregion
-			break;
-		}
-		
-		switch (player)
-		{
-			case 0:
-			global.sprayPaintP1 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP1 = true;
-			break;
-			
-			case 1:
-			global.sprayPaintP2 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP2 = true;
-			break;
-			
-			case 2:
-			global.sprayPaintP3 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP3 = true;
-			break;
-			
-			case 3:
-			global.sprayPaintP4 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP4 = true;
-			break;
-		}
-		break;
-		
-		case playerCharacters.bloodGordo:
-		var skin = choose("normal");
-		
-		#region Physics
-		gravNormal = .4;
-		grav = gravNormal;
-		gravLimitNormal = 8;
-		gravLimit = gravLimitNormal;
-		jumpspeedNormal = 6;
-		jumpspeed = jumpspeedNormal;
-		movespeedNormal = 1.5;
-		movespeedRun = 2;
-		movespeed = movespeedNormal;
-		accel = .15;
-		decel = .05;
-		#endregion
-		
-		#region Other Variables
-		hasGravity = true;
-		hasJumpLimit = false;
-		canWalk = true;
-		canRun = false;
-		canRunTurn = false;
-		canJump = false;
-		canAutoJump = true;
-		canMultiJump = false;
-		multiJumpLimit = -1;
-		canAttack = false;
-		canSlide = false;
-		canClimb = false;
-		canFloat = false;
-		canEnter = true;
-		canUfoFloat = false;
-		canGetHurt = false;
-		runImageSpeedIncrease = 0;
-		#endregion
-		
-		switch (skin)
-		{
-			case "normal":
-			#region Palettes
-			var pal;
-			var i = 0;
-			pal[i] = spr_BloodGordo_Normal_Palette_BloodyThorns;
-			#endregion
-			
-			#region Sprites
-			maskIndex = spr_16Square_Mask;
-			sprIdle = spr_BloodGordo_Normal_Idle;
-			sprWalk = spr_BloodGordo_Normal_Idle;
-			sprJump = spr_BloodGordo_Normal_Idle;
-			sprFall = spr_BloodGordo_Normal_Idle;
-			sprSquish = spr_BloodGordo_Normal_Idle;
-			sprDuck = spr_BloodGordo_Normal_Idle;
-			sprEnter = spr_BloodGordo_Normal_Idle;
-			sprHurt = spr_BloodGordo_Normal_Idle;
-			sprDeath = spr_BloodGordo_Normal_Idle;
-			#endregion
-			break;
-		}
-		
-		switch (player)
-		{
-			case 0:
-			global.sprayPaintP1 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP1 = true;
-			break;
-			
-			case 1:
-			global.sprayPaintP2 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP2 = true;
-			break;
-			
-			case 2:
-			global.sprayPaintP3 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP3 = true;
-			break;
-			
-			case 3:
-			global.sprayPaintP4 = pal[irandom_range(0,array_length(pal) - 1)];
-			global.isHelperP4 = true;
-			break;
-		}
-		break;
-	}
-	
-	switch (player)
-	{
-		case 0:
-		paletteIndex = global.sprayPaintP1;
-		break;
-		
-		case 1:
-		paletteIndex = global.sprayPaintP2;
-		break;
-		
-		case 2:
-		paletteIndex = global.sprayPaintP3;
-		break;
-		
-		case 3:
-		paletteIndex = global.sprayPaintP4;
-		break;
-	}
-	
-	if (global.cheatAwaitingForTheNewMoonEquipped)
-	{
-		gravNormal = gravNormal / 4;
-		gravStone = gravStone / 4;
-		gravWheel = gravWheel / 4;
-		grav = grav / 4;
-		gravFloat = gravFloat / 2;
-		gravFireDash = gravFireDash / 2;
-		gravLimitNormal = gravLimitNormal / 2;
-		gravLimitFloat = gravLimitFloat / 2;
-		gravLimitBeamAir = gravLimitBeamAir / 2;
-		gravLimitStone = gravLimitStone / 2;
-		gravLimitFireDash = gravLimitFireDash / 2;
-		gravLimitWheel = gravLimitWheel / 2;
-		gravLimit = gravLimit / 2;
-	}
-	
-	characterSetupTimer = -1;
-}
-
-//Upgrade Setup Timer
-
-if (upgradeSetupTimer > 0)
-{
-	upgradeSetupTimer -= 1;
-}
-else if (upgradeSetupTimer == 0)
-{
-	cutterMotorCutterUpgrade = global.cutterMotorCutterUpgradeEquipped;
-	cutterPropellerWingUpgrade = global.cutterPropellerWingUpgradeEquipped;
-	beamGoldenFlareUpgrade = global.beamGoldenFlareUpgradeEquipped;
-	mysticBeamVortexInAJarUpgrade = global.mysticBeamVortexInAJarUpgradeEquipped;
-	stoneRockCandyUpgrade = global.stoneRockCandyUpgradeEquipped;
-	stoneComboCobaltUpgrade = global.stoneComboCobaltUpgradeEquipped;
-	bombMultiBombUpgrade = global.bombMultiBombUpgradeEquipped;
-	bombEyeBombUpgrade = global.bombEyeBombUpgradeEquipped;
-	bombSmartBombUpgrade = global.bombSmartBombUpgradeEquipped;
-	bombMagmaBombUpgrade = global.bombMagmaBombUpgradeEquipped;
-	bombExplosivePowderUpgrade = global.bombExplosivePowderUpgradeEquipped;
-	fireMagicCharcoalUpgrade = global.fireMagicCharcoalUpgradeEquipped;
-	iceEmptyConeUpgrade = global.iceEmptyConeUpgradeEquipped;
-	sparkBrightPluggUpgrade = global.sparkBrightPluggUpgradeEquipped;
-	waterEggSoilUpgrade = global.waterEggSoilUpgradeEquipped;
-	upgradeSetupTimer = -1;
-}
 
 //Ground Failsafe Timer
 
@@ -3954,6 +2258,7 @@ else if (deathTimer == 0)
 	deathParticleTimer = deathParticleTimerMax;
 	deathRestartTimer = deathRestartTimerMax;
 	vsp = -jumpspeedNormal * 1.25;
+	grounded = false;
 	state = playerStates.death;
     deathTimer = -1;
 }
@@ -4208,12 +2513,103 @@ else if (scanTimer == 0)
 	audio_play_sound(snd_Swallow,0,false);
 	hsp = 0;
 	vsp = 0;
-	run = false;
+	isRunning = false;
 	cAbility = playerAbilities.none;
 	image_index = 0;
 	state = playerStates.swallow;
 	attackTimer = 0;
 	scanTimer = -1;
+}
+
+//Mic Timer
+
+if (micTimer > 0)
+{
+	micTimer -= 1;
+	if (micTimer == 30)
+	{
+		canMicFlash = false;
+		if (sprite_index == sprMicAttack1)
+		{
+			sprite_index = sprMicAttack1End;
+			image_index = 0;
+		}
+		else if (sprite_index == sprMicAttack2)
+		{
+			sprite_index = sprMicAttack2End;
+			image_index = 0;
+		}
+		else if (sprite_index == sprMicAttack3)
+		{
+			sprite_index = sprMicAttack3End;
+			image_index = 0;
+		}
+	}
+}
+else if (micTimer == 0)
+{
+	global.pause = false;
+	image_index = 0;
+	state = playerStates.normal;
+	attackTimer = 0;
+	
+	micProjectile = instance_create_depth(-100,-100,depth,obj_Projectile_MicShot);
+	micProjectile.owner = id;
+	micProjectile.abilityType = playerAbilities.mic;
+	switch (micCount)
+	{
+		case 1:
+		micProjectile.dmg = kirby_MicNormal1_Damage;
+		scr_Attack_SetKnockback(micProjectile,kirby_MicNormal1_Strength,kirby_MicNormal1_HitStopAffectSource,kirby_MicNormal1_HitStopAffectPlayer,kirby_MicNormal1_HitStopAffectTarget,kirby_MicNormal1_HitStopLength,kirby_MicNormal1_HitStopShakeStrength);
+		break;
+								
+		case 2:
+		micProjectile.dmg = kirby_MicNormal2_Damage;
+		scr_Attack_SetKnockback(micProjectile,kirby_MicNormal2_Strength,kirby_MicNormal2_HitStopAffectSource,kirby_MicNormal2_HitStopAffectPlayer,kirby_MicNormal2_HitStopAffectTarget,kirby_MicNormal2_HitStopLength,kirby_MicNormal2_HitStopShakeStrength);
+		break;
+								
+		case 3:
+		micProjectile.dmg = kirby_MicNormal3_Damage;
+		scr_Attack_SetKnockback(micProjectile,kirby_MicNormal3_Strength,kirby_MicNormal3_HitStopAffectSource,kirby_MicNormal3_HitStopAffectPlayer,kirby_MicNormal3_HitStopAffectTarget,kirby_MicNormal3_HitStopLength,kirby_MicNormal3_HitStopShakeStrength);
+		break;
+	}
+	micProjectile.enemy = false;
+	with (obj_Enemy)
+	{
+		if (!scr_OutsideView())
+		{
+			scr_Enemy_Hurt(id,other.micProjectile);
+		}
+	}
+	
+	if (micCount >= 3)
+	{
+		scr_Player_CancelAbility(id);
+		
+		switch (player)
+		{
+			case 0:
+			global.abilityP1 = playerAbilities.none;
+			global.micCountP1 = 0;
+			break;
+				
+			case 1:
+			global.abilityP2 = playerAbilities.none;
+			global.micCountP2 = 0;
+			break;
+				
+			case 2:
+			global.abilityP3 = playerAbilities.none;
+			global.micCountP3 = 0;
+			break;
+				
+			case 3:
+			global.abilityP4 = playerAbilities.none;
+			global.micCountP4 = 0;
+			break;
+		}
+	}
+	micTimer = -1;
 }
 
 //Mic Flash Timer

@@ -11,14 +11,14 @@ gravLimitNormal = 5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_Blado_Normal_Palette_BrownBlades;
 state = 0;
-hp = 1;
-dmg = 1;
+hp = blado_Hp;
+dmg = blado_ContactDamage;
 ability = playerAbilities.none;
-points = 100;
+points = blado_Points;
 hurtable = true;
 hasGravity = true;
 heavy = false;

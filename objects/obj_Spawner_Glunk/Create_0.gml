@@ -8,14 +8,14 @@ gravLimitNormal = 5;
 //Other Variables
 
 spawn = false;
-spawnerRange = 24;
+spawnerRange = 72;
 character = 0;
 paletteIndex = spr_Glunk_Normal_Palette_Melon;
 state = 0;
-hp = 16;
-dmg = 1;
+hp = glunk_Hp;
+dmg = baseEnemyContact_Damage;
 ability = playerAbilities.none;
-points = 300;
+points = glunk_Points;
 hurtable = true;
 hasGravity = true;
 heavy = false;

@@ -1,12 +1,10 @@
 ///@description Initialize Variables
+
 instance_destroy();
+
 //Event Inherited
 
 event_inherited();
-
-//Randomize
-
-randomize();
 
 //Physics
 
@@ -35,9 +33,9 @@ sprHurt = spr_WaddleDee_Normal_Hurt;
 //Other Variables
 
 paletteIndex = spr_WaddleDee_Normal_Palette_WaddleWaddle;
-hp = 12;
-dmg = 1;
-points = 200;
+hp = birdon_Hp;
+dmg = baseEnemyContact_Damage;
+points = birdon_Points;
 parasolX = 4;
 parasolY = 3;
 duck = false;
