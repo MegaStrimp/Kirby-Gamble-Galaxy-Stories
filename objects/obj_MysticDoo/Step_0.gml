@@ -4,6 +4,10 @@
 event_inherited();
 #endregion
 
+#region Friction
+if ((!childPauseHard) and ((grounded) or (!hasYCollision))) hsp = scr_Friction(hsp,decel);
+#endregion
+
 if (!childPause)
 {
 	#region Get Inhaled
@@ -16,10 +20,6 @@ if (!childPause)
 	
 	#region Gravity
 	hasGravity = hurt;
-	#endregion
-	
-	#region Friction
-	hsp = scr_Friction(hsp,decel);
 	#endregion
 	
 	#region Trail
@@ -186,7 +186,7 @@ if (!childPause)
 		}
 	}
 	
-	if ((!hurt) and (place_meeting(x,y + 1,collisionY)))
+	if ((!hurt) and (grounded))
 	{
 		if (slideTimer > 0)
 		{

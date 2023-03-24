@@ -65,6 +65,8 @@ if (!global.pause)
 			var itemY = y;
 			if (!place_meeting(x,touchedPlayer.y - 24,obj_ParentWall)) itemY = touchedPlayer.y - 24;
 			open = true;
+			blinkTimer = 0;
+			destroyTimer = destroyTimerMax;
 			
 			if (!isCollectible)
 			{
@@ -149,14 +151,7 @@ if (!global.pause)
 	}
 	else if (blinkTimer == 0)
 	{
-		if (visible)
-		{
-			visible = false;
-		}
-		else
-		{
-			visible = true;
-		}
+		visible = !visible;
 		blinkTimer = blinkTimerMax;
 	}
 	

@@ -4,6 +4,10 @@
 
 event_inherited();
 
+#region Friction
+if ((!childPauseHard) and ((grounded) or (!hasYCollision))) hsp = scr_Friction(hsp,decel);
+#endregion
+
 if (!childPause)
 {
 	//Variables
@@ -18,10 +22,6 @@ if (!childPause)
 	//Hurt Player
 	
 	scr_Enemy_HurtsPlayer(dmg);
-	
-	//Friction
-	
-	hsp = scr_Friction(hsp,decel);
 	
 	//States
 	
@@ -39,7 +39,7 @@ if (!childPause)
 			image_speed = 0;
 		}
 		
-		if (place_meeting(x,y + 1,collisionY))
+		if (grounded)
 		{
 			if (walkDuck) or (duck)
 			{
@@ -147,7 +147,7 @@ if (!childPause)
 		}
 		else if (jumpTimer == 0)
 		{
-			if ((!hurt) and (place_meeting(x,y + 1,collisionY)) and (!place_meeting(x,y - jumpspeed,collisionY)))
+			if ((!hurt) and (grounded) and (!place_meeting(x,y - jumpspeed,collisionY)))
 			{
 				movespeedFin = 0;
 				switch (jumpState)

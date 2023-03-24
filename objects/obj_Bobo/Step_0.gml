@@ -4,6 +4,10 @@
 
 event_inherited();
 
+#region Friction
+if ((!childPauseHard) and ((grounded) or (!hasYCollision))) hsp = scr_Friction(hsp,decel);
+#endregion
+
 if (!childPause)
 {
 	//Get Inhaled
@@ -13,10 +17,6 @@ if (!childPause)
 	//Hurt Player
 	
 	scr_Enemy_HurtsPlayer(dmg);
-	
-	//Friction
-	
-	hsp = scr_Friction(hsp,decel);
 	
 	//Flame
 	
@@ -103,7 +103,7 @@ if (!childPause)
 					image_speed = 1;
 				}
 				
-				if (place_meeting(x,y + 1,collisionY))
+				if (grounded)
 				{
 					if (hsp == 0)
 					{
@@ -200,7 +200,7 @@ if (!childPause)
 					image_speed = 1;
 				}
 				
-				if (place_meeting(x,y + 1,collisionY))
+				if (grounded)
 				{
 					if (hsp == 0)
 					{

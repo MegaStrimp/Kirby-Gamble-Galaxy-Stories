@@ -121,7 +121,7 @@ if ((!debugCamera) and (objectFollowing == -1))
 					if (global.healthP1 != 0)
 					{
 						cameraTargetX = target.x;
-						if !((target.object_index == obj_Player) and (target.finalCutterState == 3)) cameraTargetY = target.y;
+						cameraTargetY = target.y;
 						cameraX = lerp(cameraX,cameraTargetX - ((viewWidth / zoomFinal) / 2),spd) + ((offsetX + bossOffsetX + cinematicXOffset) / zoomFinal);
 						cameraY = lerp(cameraY,cameraTargetY - ((viewHeight / zoomFinal) / 2),spd) + ((offsetY + bossOffsetY + cinematicYOffset) / zoomFinal);
 						

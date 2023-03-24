@@ -24,7 +24,7 @@ else
 	}
 }
 
-var parentPause = ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)));
+parentPause = ((!global.pause) and !((global.cutscene) and (pausedInCutscenes)));
 #endregion
 
 if ((parentPause) and (hurtStopTimer < 1))
@@ -543,22 +543,11 @@ if ((parentPause) and (hurtStopTimer < 1))
 	image_yscale = scale * dirY;
 	#endregion
 	
-	#region Collision
-	if ((setupTimer == 0) and (groundFailsafe))
+	#region Grounded
+	if (grounded)
 	{
-		with (obj_ParentWall)
-		{
-			if (owner != other.id)
-			{
-				while (place_meeting(x,y,other))
-				{
-					other.y -= 1;
-				}
-			}
-		}
+		if (hasYCollision) vsp = 0;
 	}
-	
-	scr_Enemy_Collision();
 	#endregion
 	
 	#region Bumpers
@@ -1045,7 +1034,8 @@ if ((parentPause) and (hurtStopTimer < 1))
 }
 
 #region Set Child Pause
-childPause = (((global.pause) or ((global.cutscene) and (pausedInCutscenes))) or ((!isBoss) and (!isMiniBoss) and ((hurt) or (hurtStopTimer > 0))));
+childPauseHard = ((global.pause) or ((global.cutscene) and (pausedInCutscenes)));
+childPause = ((childPauseHard) or (/*(!isBoss) and (!isMiniBoss) and */((hurt) or (hurtStopTimer > 0))));
 #endregion
 
 #region Hurt Stop Timer

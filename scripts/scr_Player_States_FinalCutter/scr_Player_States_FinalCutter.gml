@@ -19,7 +19,7 @@ function scr_Player_States_FinalCutter(){
 				// move the player forward a tiny bit and spawn a hitbox
 				//hsp = 2*dir;
 				if(attackTimer > 2){
-					if (!place_meeting(x + dir,y,obj_Wall)) hsp += 0.3*dir;
+					if (!place_meeting(x + dir * 8,y,obj_Wall)) hsp += 0.3*dir;
 				}
 				
 				//if(attackTimer <= 5 && keyAttackPressed){
@@ -49,7 +49,7 @@ function scr_Player_States_FinalCutter(){
 				}
 				
 				if(attackTimer > 2){
-					if (!place_meeting(x + dir,y,obj_Wall)) hsp = 0.3*dir;
+					if (!place_meeting(x + dir * 8,y,obj_Wall)) hsp = 0.3*dir;
 				}
 				
 				//if(attackTimer <= 5 && keyAttackPressed){
@@ -91,7 +91,7 @@ function scr_Player_States_FinalCutter(){
 				afterimage.image_alpha = .5;
 				afterimage.paletteIndex = paletteIndex;
 				if(attackTimer > (5940-5)){
-					if (!place_meeting(x + dir,y,obj_Wall)) hsp+=1*dir;
+					if (!place_meeting(x + dir * 8,y,obj_Wall)) hsp+=1*dir;
 					if(attackTimer > (5940-10)){
 						vsp = -10;
 					}

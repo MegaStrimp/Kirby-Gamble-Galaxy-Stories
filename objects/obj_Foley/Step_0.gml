@@ -28,6 +28,10 @@ else
 
 event_inherited();
 
+#region Friction
+if ((!childPauseHard) and ((grounded) or (!hasYCollision))) hsp = scr_Friction(hsp,decel);
+#endregion
+
 if (!childPause)
 {
 	//Get Inhaled
@@ -37,10 +41,6 @@ if (!childPause)
 	//Hurt Player
 	
 	scr_Enemy_HurtsPlayer(dmg);
-	
-	//Friction
-	
-	hsp = scr_Friction(hsp,decel);
 	
 	//Gravity
 	
@@ -70,7 +70,7 @@ if (!childPause)
 		{
 			//Explode
 			
-			if (place_meeting(x,y + 1,collisionY))
+			if (grounded)
 			{
 				if (audio_is_playing(snd_Explosion1)) audio_stop_sound(snd_Explosion1);
 				audio_play_sound(snd_Explosion1,0,false);
@@ -137,7 +137,7 @@ if (!childPause)
 		{
 			//Explode
 			
-			if (place_meeting(x,y + 1,collisionY))
+			if (grounded)
 			{
 				if (audio_is_playing(snd_Explosion1)) audio_stop_sound(snd_Explosion1);
 				audio_play_sound(snd_Explosion1,0,false);

@@ -4,6 +4,10 @@
 
 event_inherited();
 
+#region Friction
+if ((!childPauseHard) and ((grounded) or (!hasYCollision))) hsp = scr_Friction(hsp,decel);
+#endregion
+
 if (!childPause)
 {
 	//Get Inhaled
@@ -13,10 +17,6 @@ if (!childPause)
 	//Hurt Player
 	
 	scr_Enemy_HurtsPlayer(dmg);
-	
-	//Friction
-	
-	hsp = scr_Friction(hsp,decel);
 	
 	//States
 	
@@ -60,7 +60,7 @@ if (!childPause)
 		
 		//Jump
 		
-		if ((place_meeting(x,y + 1,collisionY)) and (!hurt) and (!attack))
+		if ((grounded) and (!hurt) and (!attack))
 		{
 			if (audio_is_playing(snd_EnemyJump4)) audio_stop_sound(snd_EnemyJump4);
 			audio_play_sound(snd_EnemyJump4,0,false);

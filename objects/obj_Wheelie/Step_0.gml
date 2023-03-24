@@ -4,16 +4,16 @@
 event_inherited();
 #endregion
 
+#region Friction
+if ((!childPauseHard) and ((grounded) or (!hasYCollision))) hsp = scr_Friction(hsp,decel);
+#endregion
+
 if (!childPause)
 {
 	if (!parasol) scr_Object_Inhale(enemy);
 	
 	#region Hurt Player
 	scr_Enemy_HurtsPlayer(dmg);
-	#endregion
-	
-	#region Friction
-	hsp = scr_Friction(hsp,decel);
 	#endregion
 	
 	#region States
@@ -60,7 +60,7 @@ if (!childPause)
 		#region Crash
 		if (crashed)
 		{
-			if ((crashedTimer == -1) and (place_meeting(x,y + 1,collisionY)))
+			if ((crashedTimer == -1) and (grounded))
 			{
 				crashed = false;
 			}
@@ -167,7 +167,7 @@ if (!childPause)
 	#endregion
 	
 	#region Jump Timer
-	if ((!crashed) and (place_meeting(x,y + 1,collisionY)) and (!place_meeting(x,y - jumpspeed,collisionY)))
+	if ((!crashed) and (grounded) and (!place_meeting(x,y - jumpspeed,collisionY)))
 	{
 		if (jumpTimer > 0)
 		{

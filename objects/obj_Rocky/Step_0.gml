@@ -2,7 +2,7 @@
 
 //Hurt Sprite
 
-if (place_meeting(x,y - 1,collisionY))
+if (grounded)
 {
 	sprHurt = sprHurtGround;
 }
@@ -15,6 +15,10 @@ else
 
 event_inherited();
 
+#region Friction
+if ((!childPauseHard) and ((grounded) or (!hasYCollision))) hsp = scr_Friction(hsp,decel);
+#endregion
+
 if (!childPause)
 {
 	if (!parasol) scr_Object_Inhale(enemy);
@@ -22,10 +26,6 @@ if (!childPause)
 	//Hurt Player
 	
 	scr_Enemy_HurtsPlayer(dmg);
-	
-	//Friction
-	
-	hsp = scr_Friction(hsp,decel);
 	
 	//States
 	
@@ -171,6 +171,7 @@ if (!childPause)
 			hasYKnockback = false;
 			hsp = 4;
 			vsp -= jumpspeed;
+			grounded = false;
 			phase2Timer = 7;
 			break;
 			

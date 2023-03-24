@@ -39,6 +39,7 @@ healthbarIndex = 3;
 hasXKnockback = false;
 hasYKnockback = false;
 hurtable = false;
+hurtable = true;
 hurtFunction = func_HurtBossDefault;
 
 phase = 0;

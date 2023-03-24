@@ -21,7 +21,7 @@ function scr_Enemy_Hurt(argument0,argument1)
 		targetObj.hurtStopTimer = targetObj.hurtStopTimerMax;
 		if (is_struct(hurtSource.hitStop))
 		{
-			var hurtLength = hurtSource.hitStop.len;
+			var hurtLength = hurtSource.hitStop.len / (1 + ((targetObj.isMiniBoss) or (targetObj.isBoss)));
 			var hitShake = hurtSource.hitStop.shakeStr;
 			
 			if (hitShake == 0)
@@ -33,17 +33,18 @@ function scr_Enemy_Hurt(argument0,argument1)
 			if (hurtSource.hitStop.affectSrc) hurtSource.stunTimer = hurtLength;
 			hurtSource.isStunned = true;
 			
-			if (targetObj.isMiniBoss or isBoss)
+			if (targetObj.isMiniBoss or targetObj.isBoss)
 			{
 				hitShake = floor(hitShake / 2);
 				hurtLength = 0;
 			}
 			
+			var hurtLengthTarget = hurtLength / (1 + ((targetObj.isMiniBoss) or (targetObj.isBoss)));
 			if (!hurtSource.hitStop.affectTar) hurtLength = 0;
 			targetObj.shakeX = hitShake;
 			targetObj.shakeY = hitShake;
-			targetObj.hurtStopTimer = hurtLength;
-			if (hurtLength) targetObj.shakeDividend = hitShake / (hurtLength + 10);
+			targetObj.hurtStopTimer = hurtLengthTarget;
+			if (hurtLengthTarget) targetObj.shakeDividend = hitShake / (hurtLengthTarget + 10);
 		}
 		
 		if (hurtSource.dmg >= (targetObj.hp + 50))

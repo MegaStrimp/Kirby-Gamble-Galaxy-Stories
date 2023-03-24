@@ -9,6 +9,10 @@ if ((hurt) and (attack))
 
 event_inherited();
 
+#region Friction
+if ((!childPauseHard) and ((grounded) or (!hasYCollision))) hsp = scr_Friction(hsp,decel);
+#endregion
+
 if (!childPause)
 {
 	//Get Inhaled
@@ -18,10 +22,6 @@ if (!childPause)
 	//Hurt Player
 	
 	scr_Enemy_HurtsPlayer(dmg);
-	
-	//Friction
-	
-	hsp = scr_Friction(hsp,decel);
 	
 	//States
 	
@@ -46,7 +46,7 @@ if (!childPause)
 					attack = false;
 					thrown = false;
 				}
-				if ((attackStopTimer == -1) and (!place_meeting(x,y + 1,collisionY))) attackStopTimer = attackStopTimerMax;
+				if ((attackStopTimer == -1) and (!grounded)) attackStopTimer = attackStopTimerMax;
 			}
 			else
 			{
@@ -84,7 +84,7 @@ if (!childPause)
 		if ((hurt) and (sprHurt != -1))
 		{
 			image_speed = 1;
-			if (place_meeting(x,y + 1,collisionY))
+			if (grounded)
 			{
 				sprite_index = sprHurt;
 			}

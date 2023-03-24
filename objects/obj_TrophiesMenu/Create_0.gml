@@ -13,6 +13,11 @@ goBack = false;
 
 scr_Trophies();
 
+#region Timers
+canAutoScrollTimer = -1;
+canAutoScrollTimerMax = 30;
+#endregion
+
 var button = instance_create_depth(480,270,depth - 1,obj_Menu_Button);
 button.owner = id;
 button.sprite_index = spr_Menu_StageSelect_Hud_Back1;

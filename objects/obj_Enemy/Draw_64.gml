@@ -1,15 +1,18 @@
 ///@description Draw GUI
 
 #region Boss Healthbar
+
+bossHealthbarAlphaLerp = 1;
+	
+with (obj_Player)
+{
+	if (point_in_rectangle(x,y,camera_get_view_x(gameView) + 279,camera_get_view_y(gameView) + 2,camera_get_view_x(gameView) + 475,camera_get_view_y(gameView) + 32)) other.bossHealthbarAlphaLerp = .5;
+}
+
+bossHealthbarAlpha = lerp(bossHealthbarAlpha,bossHealthbarAlphaLerp,.2);
+
 if (hbActive)
 {
-	bossHealthbarAlpha = 1;
-	
-	with (obj_Player)
-	{
-		if (point_in_rectangle(x,y,279,2,475,32)) bossHealthbarAlpha = .5;
-	}
-	
 	switch (healthbarIndex)
 	{
 		#region Mini-Boss

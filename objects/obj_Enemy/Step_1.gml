@@ -4,6 +4,11 @@
 if ((isBossMinion) and ((!instance_exists(owner)) or (owner.death))) instance_destroy();
 #endregion
 
+#region Variables
+grounded = (place_meeting(x,y + 1,collisionY));
+wallOnTop = (place_meeting(x,y - 1,collisionY));
+#endregion
+
 #region Hurt Backup Flags
 if (!hurt)
 {

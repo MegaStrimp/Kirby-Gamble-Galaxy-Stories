@@ -28,6 +28,11 @@ enum cheats
 }
 #endregion
 
+#region Timers
+canAutoScrollTimer = -1;
+canAutoScrollTimerMax = 30;
+#endregion
+
 #region Buttons
 var button = instance_create_depth(0,270,depth - 1,obj_Menu_Button);
 button.owner = id;

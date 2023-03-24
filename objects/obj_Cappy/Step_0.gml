@@ -15,6 +15,10 @@ else
 
 event_inherited();
 
+#region Friction
+if ((!childPauseHard) and ((grounded) or (!hasYCollision))) hsp = scr_Friction(hsp,decel);
+#endregion
+
 if (!childPause)
 {
 	if (!parasol) scr_Object_Inhale(enemy);
@@ -22,10 +26,6 @@ if (!childPause)
 	//Hurt Player
 	
 	scr_Enemy_HurtsPlayer(dmg);
-	
-	//Friction
-	
-	hsp = scr_Friction(hsp,decel);
 	
 	//States
 	
@@ -46,7 +46,7 @@ if (!childPause)
 			}
 		}
 		
-		if (place_meeting(x,y + 1,collisionY))
+		if (grounded)
 		{
 			if (audio_is_playing(snd_EnemyJump2)) audio_stop_sound(snd_EnemyJump2);
 			audio_play_sound(snd_EnemyJump2,0,false);
@@ -84,7 +84,7 @@ if (!childPause)
 			scr_AI_HorizontalStraightMovement(false,true);
 		}
 		
-		if (place_meeting(x,y + 1,collisionY))
+		if (grounded)
 		{
 			if (audio_is_playing(snd_EnemyJump2)) audio_stop_sound(snd_EnemyJump2);
 			audio_play_sound(snd_EnemyJump2,0,false);

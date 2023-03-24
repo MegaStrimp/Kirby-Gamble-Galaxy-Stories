@@ -8,6 +8,10 @@ offScreenTurning = !attack;
 
 event_inherited();
 
+#region Friction
+if ((!childPauseHard) and ((grounded) or (!hasYCollision))) hsp = scr_Friction(hsp,decel);
+#endregion
+
 if (!childPause)
 {
 	if (!parasol)
@@ -31,10 +35,6 @@ if (!childPause)
 	//Hurt Player
 	
 	scr_Enemy_HurtsPlayer(dmg);
-	
-	//Friction
-	
-	hsp = scr_Friction(hsp,decel);
 	
 	//States
 	
@@ -61,7 +61,7 @@ if (!childPause)
 			hsp = 3 * walkDirX;
 		}
 		
-		if ((place_meeting(x,y + 1,collisionY)) and (!hurt) and (!attackHop) and (!gettingInhaled))
+		if ((grounded) and (!hurt) and (!attackHop) and (!gettingInhaled))
 		{
 			if ((attackTimer == 0) and (attackState == 0))
 			{
@@ -155,7 +155,7 @@ if (!childPause)
 			switch (attackState)
 			{
 				case 0:
-				if ((place_meeting(x,y + 1,collisionY)) and (vsp >= 0) and (attackHop))
+				if ((grounded) and (vsp >= 0) and (attackHop))
 				{
 					if (audio_is_playing(snd_GrizzoDash)) audio_stop_sound(snd_GrizzoDash);
 					audio_play_sound(snd_GrizzoDash,0,false);

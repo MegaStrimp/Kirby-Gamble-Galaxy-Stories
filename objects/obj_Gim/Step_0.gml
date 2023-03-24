@@ -104,7 +104,7 @@ if (!childPause)
 			sprite_index = sprJump;
 		}
 
-		if (place_meeting(x,y + 1,collisionY))
+		if (grounded)
 		{
 			if (!jump)
 			{

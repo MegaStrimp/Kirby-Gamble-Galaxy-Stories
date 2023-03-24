@@ -4,6 +4,10 @@
 // Inherit the parent event
 event_inherited();
 
+#region Friction
+if ((!childPauseHard) and ((grounded) or (!hasYCollision))) hsp = scr_Friction(hsp,decel);
+#endregion
+
 if (!childPause)
 {
 	scr_Object_Inhale(enemy);
@@ -23,7 +27,7 @@ if (!childPause)
 		image_speed = 1;
 		sprite_index = sprIdle;
 	}
-	if ((!hurt) and (place_meeting(x,y + 1,collisionY)) and (!place_meeting(x,y - jumpspeed,collisionY) and (attack)))
+	if ((!hurt) and (grounded) and (!place_meeting(x,y - jumpspeed,collisionY) and (attack)))
 	{
 		hsp = 0;
 		switch (jumpState)
@@ -92,7 +96,6 @@ if (!childPause)
 	if (place_meeting(x,y + vsp,collisionY))
 	{
 		hsp = 0;
-		hsp = scr_Friction(hsp,decel);
 	}
 	sectionspd = clamp(sectionspd - 0.25, -5, 5);
 	
@@ -106,7 +109,7 @@ if (!childPause)
 		}
 		else if (attackTimer == 0)
 		{
-			if (place_meeting(x,y + 1,collisionY)) attack = true;
+			if (grounded) attack = true;
 		}
 	}
 	middleoffset = clamp(middleoffset + sectionspd, 8, 20);

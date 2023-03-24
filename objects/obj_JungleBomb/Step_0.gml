@@ -4,6 +4,10 @@
 
 event_inherited();
 
+#region Friction
+if ((!childPauseHard) and ((grounded) or (!hasYCollision))) hsp = scr_Friction(hsp,decel);
+#endregion
+
 if (!childPause)
 {
 	//Get Inhaled
@@ -13,10 +17,6 @@ if (!childPause)
 	//Hurt Player
 	
 	scr_Enemy_HurtsPlayer(dmg);
-	
-	//Friction
-	
-	hsp = scr_Friction(hsp,decel);
 	
 	//States
 	
@@ -39,7 +39,7 @@ if (!childPause)
 		
 		if (jumpable)
 		{
-			if (place_meeting(x,y + 1,collisionY))
+			if (grounded)
 			{
 				if (jumpCount == 4)
 				{
@@ -90,7 +90,7 @@ if (!childPause)
 			}
 			else
 			{
-				if (place_meeting(x,y + 1,collisionY))
+				if (grounded)
 				{
 					if ((duck) or (walkDuck))
 					{
@@ -140,7 +140,7 @@ if (!childPause)
 		
 		if (jumpable)
 		{
-			if (place_meeting(x,y + 1,collisionY))
+			if (grounded)
 			{
 				if (jumpCount == 4)
 				{
@@ -187,7 +187,7 @@ if (!childPause)
 			}
 			else
 			{
-				if (place_meeting(x,y + 1,collisionY))
+				if (grounded)
 				{
 					if ((duck) or (walkDuck))
 					{
@@ -245,7 +245,7 @@ if (!childPause)
 		
 		if (jumpable)
 		{
-			if (place_meeting(x,y + 1,collisionY))
+			if (grounded)
 			{
 				if (jumpCount == 4)
 				{
@@ -293,7 +293,7 @@ if (!childPause)
 			}
 			else
 			{
-				if (place_meeting(x,y + 1,collisionY))
+				if (grounded)
 				{
 					if ((duck) or (walkDuck))
 					{
@@ -360,7 +360,7 @@ if (!childPause)
 	{
 		if (jumpCount == 0)
 		{
-			if ((!hurt) and (place_meeting(x,y + 1,collisionY)) and (!place_meeting(x,y - jumpspeed,collisionY)))
+			if ((!hurt) and (grounded) and (!place_meeting(x,y - jumpspeed,collisionY)))
 			{
 				jumpCount += 1;
 				scaleExX = -.15;

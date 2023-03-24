@@ -4,6 +4,10 @@
 
 event_inherited();
 
+#region Friction
+if ((!childPauseHard) and ((grounded) or (!hasYCollision))) hsp = scr_Friction(hsp,decel);
+#endregion
+
 if (!childPause)
 {
 	if (destroyTimer <= (destroyTimerMax / 3)) shakeX = 1;
@@ -23,10 +27,6 @@ if (!childPause)
 	//Hurt Player
 	
 	scr_Enemy_HurtsPlayer(dmg);
-	
-	//Friction
-	
-	hsp = scr_Friction(hsp,decel);
 	
 	//Invincible Timer
 	
@@ -60,7 +60,7 @@ if (!childPause)
 	{
 		case obj_MiniBoss_PoppyBrosSr:
 		mask_index = spr_PoppyBrosSr_Normal_Death;
-		if (place_meeting(x,y + 1,collisionY))
+		if (grounded)
 		{
 			sprite_index = spr_PoppyBrosSr_Normal_Death;
 		}
@@ -72,7 +72,7 @@ if (!childPause)
 		
 		case obj_MiniBoss_Wizzkid:
 		mask_index = spr_Wizzkid_Normal_DeathGround;
-		if (place_meeting(x,y + 1,collisionY))
+		if (grounded)
 		{
 			sprite_index = spr_Wizzkid_Normal_DeathGround;
 		}

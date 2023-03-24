@@ -4,32 +4,38 @@
 event_inherited();
 #endregion
 
+#region Friction
+if ((!childPauseHard) and ((grounded) or (!hasYCollision))) hsp = scr_Friction(hsp,decel);
+#endregion
+
+#region Healthbar
+if (!childPauseHard)
+{
+	if (hbActive)
+	{
+		if (hbSetup)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			bossHbHp += hp / 60;
+			if (bossHbHp >= hp)
+			{
+				bossHbHp = hp;
+				hbSetup = false;
+			}
+		}
+		else
+		{
+			bossHbHp = hp;
+		}
+	}
+}
+#endregion
+
 if (!childPause)
 {
 	#region Hurt Player
 	scr_Enemy_HurtsPlayer(dmg);
-	#endregion
-	
-	#region Friction
-	hsp = scr_Friction(hsp,decel);
-	#endregion
-	
-	#region Healthbar
-	if (hbSetup)
-	{
-		if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
-		audio_play_sound(snd_BossHealth,0,false);
-		bossHbHp += hp / 60;
-		if (bossHbHp >= hp)
-		{
-			bossHbHp = hp;
-			hbSetup = false;
-		}
-	}
-	else
-	{
-		bossHbHp = hp;
-	}
 	#endregion
 	
 	#region Movement
@@ -127,7 +133,7 @@ if (!childPause)
 	}
 	else if (slideTimer == 0)
 	{
-		if (place_meeting(x,y + 1,collisionY))
+		if (grounded)
 		{
 			image_index = 0;
 			hsp = movespeed * walkDirX;

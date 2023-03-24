@@ -30,3 +30,12 @@ if (state == 5)
 	
 	draw_sprite_ext(spr_StaffNeeded,0,0,0,1,1,image_angle,image_blend,alpha);
 }
+
+//Debug
+
+if (global.debug)
+{
+	draw_set_color(c_red);
+	draw_text(4,4,"You are in Debug Mode. Press 'L' to enhance your save!");
+	draw_set_color(c_white);
+}

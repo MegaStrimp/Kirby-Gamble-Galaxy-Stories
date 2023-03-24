@@ -24,6 +24,12 @@ starsPosX = camera_get_view_x(gameView) + 1;
 starsPosY = camera_get_view_y(gameView) + 26;
 
 drawAlpha = 1;
+livesAlpha = 1;
+hbarP1Alpha = 1;
+hbarP2Alpha = 1;
+hbarP3Alpha = 1;
+hbarP4Alpha = 1;
+musicIntroAlpha = 1;
 
 halberdEscapeTimer = 9999;
 
@@ -46,7 +52,7 @@ mixRosterText[0] = spr_Hud_AbilityText_Kirby;
 mixRosterIcon[0] = spr_Hud_Icon_Kirby;
 
 musicIntroActive = false;
-musicIntroAlpha = 0;
+musicIntroFadeAlpha = 0;
 
 hasBossDeathOverlay = false;
 bossDeathColor = c_white;
@@ -69,7 +75,7 @@ flashStopP1Timer = -1;
 flashStopP2Timer = -1;
 flashStopP3Timer = -1;
 flashStopP4Timer = -1;
-flashStopTimerMax = 35;
+flashStopTimerMax = 25;
 
 shakeP1Timer = -1;
 shakeP2Timer = -1;

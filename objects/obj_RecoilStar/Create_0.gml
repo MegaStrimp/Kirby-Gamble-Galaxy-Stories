@@ -30,7 +30,7 @@ owner = id;
 enemy = false;
 canBeInhaled = true;
 GAMEMAKERBUG = false;
-GAMEMAKERBUG = true;
+//GAMEMAKERBUG = true;
 
 //Timers
 

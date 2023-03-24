@@ -16,7 +16,7 @@ if (!childPause)
 	
 	//Destroy
 	
-	if ((place_meeting(x,y + 1,collisionY)) or (place_meeting(x,y - 1,collisionY))) death = true;
+	if ((grounded) or (wallOnTop)) death = true;
 	
 	//Particle Timer
 	

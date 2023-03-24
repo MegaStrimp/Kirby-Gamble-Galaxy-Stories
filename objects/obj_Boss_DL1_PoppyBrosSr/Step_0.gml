@@ -28,6 +28,30 @@ else
 event_inherited();
 #endregion
 
+#region Healthbar
+if (!childPauseHard)
+{
+	if (hbActive)
+	{
+		if (hbSetup)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			bossHbHp += hp / 60;
+			if (bossHbHp >= hp)
+			{
+				bossHbHp = hp;
+				hbSetup = false;
+			}
+		}
+		else
+		{
+			bossHbHp = hp;
+		}
+	}
+}
+#endregion
+
 if ((!childPause) or ((global.cutscene) and (phase == 0)))
 {
 	#region Hurt Player
@@ -39,7 +63,7 @@ if ((!childPause) or ((global.cutscene) and (phase == 0)))
 	{
 		#region Ready Phase 1
 		case 0:
-		if (place_meeting(x,y + 1,collisionY)) phaseChangeTimer = 0;
+		if (grounded) phaseChangeTimer = 0;
 		image_index = image_number - 1;
 		break;
 		#endregion
@@ -47,7 +71,7 @@ if ((!childPause) or ((global.cutscene) and (phase == 0)))
 		#region Phase 1
 		case 1:
 		#region Cancel Attack
-		if ((attackState == 2) and (place_meeting(x,y + 1,collisionY))) attackState = 0;
+		if ((attackState == 2) and (grounded)) attackState = 0;
 		#endregion
 		
 		#region Movement
@@ -64,7 +88,7 @@ if ((!childPause) or ((global.cutscene) and (phase == 0)))
 		#region Jump
 		if (attackState == 0)
 		{
-			if (place_meeting(x,y + 1,collisionY))
+			if (grounded)
 			{
 				if (audio_is_playing(snd_EnemyJump3)) audio_stop_sound(snd_EnemyJump3);
 				audio_play_sound(snd_EnemyJump3,0,false);
@@ -88,6 +112,7 @@ if ((!childPause) or ((global.cutscene) and (phase == 0)))
 					vsp = -jumpspeed * 2;
 					attackTimer = 0;
 				}
+				grounded = false;
 			}
 		}
 		#endregion
@@ -107,27 +132,6 @@ if ((!childPause) or ((global.cutscene) and (phase == 0)))
 		case 3:
 		break;
 		#endregion
-	}
-	#endregion
-	
-	#region Healthbar
-	if (hbActive)
-	{
-		if (hbSetup)
-		{
-			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
-			audio_play_sound(snd_BossHealth,0,false);
-			bossHbHp += hp / 60;
-			if (bossHbHp >= hp)
-			{
-				bossHbHp = hp;
-				hbSetup = false;
-			}
-		}
-		else
-		{
-			bossHbHp = hp;
-		}
 	}
 	#endregion
 	

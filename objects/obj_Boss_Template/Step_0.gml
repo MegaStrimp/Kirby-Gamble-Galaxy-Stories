@@ -27,6 +27,30 @@ if (death)
 event_inherited();
 #endregion
 
+#region Healthbar
+if (!childPauseHard)
+{
+	if (hbActive)
+	{
+		if (hbSetup)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			bossHbHp += hp / 60;
+			if (bossHbHp >= hp)
+			{
+				bossHbHp = hp;
+				hbSetup = false;
+			}
+		}
+		else
+		{
+			bossHbHp = hp;
+		}
+	}
+}
+#endregion
+
 if ((!global.pause) and (((!global.cutscene) or ((global.cutscene) and (phase == 0))) and (pausedInCutscenes)))
 {
 	#region Hurt Player
@@ -58,27 +82,6 @@ if ((!global.pause) and (((!global.cutscene) or ((global.cutscene) and (phase ==
 		case 3:
 		break;
 		#endregion
-	}
-	#endregion
-	
-	#region Healthbar
-	if (hbActive)
-	{
-		if (hbSetup)
-		{
-			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
-			audio_play_sound(snd_BossHealth,0,false);
-			bossHbHp += hp / 60;
-			if (bossHbHp >= hp)
-			{
-				bossHbHp = hp;
-				hbSetup = false;
-			}
-		}
-		else
-		{
-			bossHbHp = hp;
-		}
 	}
 	#endregion
 	

@@ -8,6 +8,10 @@ hurtable = (attackState != 0);
 
 event_inherited();
 
+//Friction
+
+if ((!childPauseHard) and ((grounded) or (!hasYCollision))) hsp = scr_Friction(hsp,decel);
+
 if (!childPause)
 {
 	//Get Inhaled
@@ -32,10 +36,6 @@ if (!childPause)
 	//Hurt Player
 	
 	scr_Enemy_HurtsPlayer(dmg);
-	
-	//Friction
-	
-	hsp = scr_Friction(hsp,decel);
 	
 	//States
 	

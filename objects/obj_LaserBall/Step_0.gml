@@ -76,17 +76,17 @@ dirX = 1;
 event_inherited();
 #endregion
 
+#region Friction
+hsp = scr_Friction(hsp,decel);
+vsp = scr_Friction(vsp,decel);
+#endregion
+
 if (!childPause)
 {
 	if (!parasol) scr_Object_Inhale(enemy);
 	
 	#region Hurt Player
 	scr_Enemy_HurtsPlayer(dmg);
-	#endregion
-	
-	#region Friction
-	hsp = scr_Friction(hsp,decel);
-	vsp = scr_Friction(vsp,decel);
 	#endregion
 	
 	#region States
@@ -170,6 +170,7 @@ if (!childPause)
 			if ((!attack) and (!hurt))
 			{
 			    vsp -= accel * walkDirY;
+				grounded = false;
 			}
 		}
 		else

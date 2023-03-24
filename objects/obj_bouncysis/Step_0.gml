@@ -4,6 +4,10 @@
 
 event_inherited();
 
+//Friction
+
+if ((!childPauseHard) and ((grounded) or (!hasYCollision))) hsp = scr_Friction(hsp,decel);
+
 if (!childPause)
 {
 	//Get Inhaled
@@ -30,10 +34,6 @@ if (!childPause)
 	
 	scr_Enemy_HurtsPlayer(dmg);
 	
-	//Friction
-	
-	hsp = scr_Friction(hsp,decel);
-	
 	//States
 	
 	switch (state)
@@ -46,7 +46,7 @@ if (!childPause)
 			scr_AI_HorizontalStraightMovement(true,true);
 		}
 		
-		if (place_meeting(x,y + 1,collisionY))
+		if (grounded)
 		{
 			duck = true;
 			if (jumpTimer == -1) jumpTimer = jumpTimerMax;
@@ -61,7 +61,7 @@ if (!childPause)
 		{
 			image_speed = 1;
 			
-			if (place_meeting(x,y + 1,collisionY))
+			if (grounded)
 			{
 				if (duck)
 				{
@@ -103,7 +103,7 @@ if (!childPause)
 	}
 	else if (jumpTimer == 0)
 	{
-		if ((!hurt) and (place_meeting(x,y + 1,collisionY)) and (!place_meeting(x,y - jumpspeed,collisionY)))
+		if ((!hurt) and (grounded) and (!place_meeting(x,y - jumpspeed,collisionY)))
 		{
 			if (audio_is_playing(snd_EnemyJump2)) audio_stop_sound(snd_EnemyJump2);
 			audio_play_sound(snd_EnemyJump2,0,false);

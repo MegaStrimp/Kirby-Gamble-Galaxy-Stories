@@ -38,6 +38,8 @@ enum abilityUpgrades
 #endregion
 
 #region Timers
+canAutoScrollTimer = -1;
+canAutoScrollTimerMax = 30;
 particleTimerMax = 5;
 particleTimer = particleTimerMax;
 #endregion

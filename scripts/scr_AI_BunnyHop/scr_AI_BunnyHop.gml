@@ -5,7 +5,7 @@ function scr_AI_BunnyHop()
 {
 	//Bunny Hop
 	
-	if (place_meeting(x,y + 1,collisionY))
+	if (grounded)
 	{
 		vsp = -jumpspeed;
 	}

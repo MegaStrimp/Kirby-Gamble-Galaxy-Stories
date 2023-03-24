@@ -34,7 +34,7 @@ if (!childPause)
 		//Horizontal Straight Movement with Hops
 		
 		case 3:
-		if (place_meeting(x,y + 1,collisionY))
+		if (grounded)
 		{
 			imageAngle += (45 * dirX);
 			

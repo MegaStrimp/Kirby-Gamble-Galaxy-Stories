@@ -4,6 +4,10 @@
 
 event_inherited();
 
+#region Friction
+if ((!childPauseHard) and ((grounded) or (!hasYCollision))) hsp = scr_Friction(hsp,decel);
+#endregion
+
 if (!childPause)
 {
 	//Get Inhaled
@@ -13,10 +17,6 @@ if (!childPause)
 	//Hurt Player
 	
 	scr_Enemy_HurtsPlayer(dmg);
-	
-	//Friction
-	
-	hsp = scr_Friction(hsp,decel);
 	
 	//States
 	
@@ -61,7 +61,7 @@ if (!childPause)
 		case 1:
 		if ((jumpState == 0) and (!hurt) and (!attack))
 		{
-			if ((jumpTimer == -1) and (place_meeting(x,y + 1,collisionY))) jumpTimer = 0;
+			if ((jumpTimer == -1) and (grounded)) jumpTimer = 0;
 		}
 		
 		image_speed = 1;
@@ -132,7 +132,7 @@ if (!childPause)
 		}
 		else if (jumpTimer == 0)
 		{
-			if ((!hurt) and (place_meeting(x,y + 1,collisionY)) and (!place_meeting(x,y - jumpspeed,collisionY)))
+			if ((!hurt) and (grounded) and (!place_meeting(x,y - jumpspeed,collisionY)))
 			{
 				switch (jumpState)
 				{

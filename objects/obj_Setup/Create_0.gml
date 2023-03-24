@@ -677,6 +677,7 @@ part_type_life(global.partTypeColorfulStars, 30, 40);
 #region Global Variables
 #region Meta/Files
 global.versionNumber = "0.7.6";
+global.versionNumber = "BETA 03/23/23";
 global.season = seasons.none;
 global.selectedSave = "SaveSlot1.ini";
 #endregion
