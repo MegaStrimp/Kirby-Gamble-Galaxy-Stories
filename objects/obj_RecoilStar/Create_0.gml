@@ -34,7 +34,6 @@ GAMEMAKERBUG = false;
 
 //Timers
 
-spawnTimer = 0;
 destroyTimer = 60;
 
 //Sound

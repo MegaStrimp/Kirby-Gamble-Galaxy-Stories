@@ -7,6 +7,8 @@ soundCategory = 0;
 trackSelection = 0;
 select = false;
 goBack = false;
+autoScroll = false;
+autoScrollTick = false;
 
 soundPlayed = -1;
 #endregion
@@ -30,6 +32,8 @@ trackString = "Track";
 #region Timers
 canAutoScrollTimer = -1;
 canAutoScrollTimerMax = 30;
+autoScrollTimer = -1;
+autoScrollTimerMax = 2;
 #endregion
 
 #region Buttons

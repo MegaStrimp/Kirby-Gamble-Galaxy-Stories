@@ -53,7 +53,7 @@ function scr_Player_States_NinjaDrop()
 		
 		//Revert Back
 		
-		if ((attackNumber != playerAttacks.ninjaDrop) or (place_meeting(x,y + 1,obj_ParentWall))) attackTimer = 0;
+		if ((attackNumber != playerAttacks.ninjaDrop) or (grounded)) attackTimer = 0;
 		
 		//Collision
 		

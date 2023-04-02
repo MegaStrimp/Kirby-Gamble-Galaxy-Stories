@@ -10,12 +10,16 @@ selection = "trophies";
 trophySelection = 0;
 select = false;
 goBack = false;
+autoScroll = false;
+autoScrollTick = false;
 
 scr_Trophies();
 
 #region Timers
 canAutoScrollTimer = -1;
 canAutoScrollTimerMax = 30;
+autoScrollTimer = -1;
+autoScrollTimerMax = 2;
 #endregion
 
 var button = instance_create_depth(480,270,depth - 1,obj_Menu_Button);

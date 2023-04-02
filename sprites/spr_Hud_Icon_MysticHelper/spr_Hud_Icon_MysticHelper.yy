@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Mystic",
-    "path": "folders/Sprites/Hud/Icons/Mystic.yy",
+    "name": "Characters",
+    "path": "folders/Sprites/Hud/Icons/Characters.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

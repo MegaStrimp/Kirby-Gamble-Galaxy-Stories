@@ -2,5 +2,5 @@
 
 image_index = 1;
 slope = true;
-slopeType = "normal";
+slopeType = slopeTypes.normal;
 hasTop = false;

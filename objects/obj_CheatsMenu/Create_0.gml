@@ -7,6 +7,8 @@ discSelection = 0;
 select = false;
 goBack = false;
 discIndex = 0;
+autoScroll = false;
+autoScrollTick = false;
 cheatsArray = -1;
 
 scr_CheatsMenu_Cheats();
@@ -31,6 +33,8 @@ enum cheats
 #region Timers
 canAutoScrollTimer = -1;
 canAutoScrollTimerMax = 30;
+autoScrollTimer = -1;
+autoScrollTimerMax = 2;
 #endregion
 
 #region Buttons

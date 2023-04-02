@@ -97,7 +97,7 @@ function scr_Player_States_Climb()
 		
 		//Go Under The Ladder
 		
-		if ((place_meeting(x,y + 1,obj_ParentWall)) and (!instance_place(x,y + 1,obj_ParentWall).platform) and (keyDownHold)) state = playerStates.normal;
+		if ((grounded) and (!instance_place(x,y + 1,obj_ParentWall).platform) and (keyDownHold)) state = playerStates.normal;
 		
 		//Move Left or Right
 		

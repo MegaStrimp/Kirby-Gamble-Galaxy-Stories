@@ -2,19 +2,23 @@
 
 if (!global.pause)
 {
+	var cancelAutoScroll = true;
+	
 	hudOffset = lerp(hudOffset,0,.1);
 	
 	scr_Player_Inputs(0);
 	
-	if (!menuIndex)
+	if (!instance_exists(obj_Fade))
 	{
-		if ((keyUpPressed) or (keyDownPressed) or (keyLeftPressed) or (keyRightPressed)) audio_play_sound(snd_BossHealth,0,false);
-	
+		if (!menuIndex)
+		{
 			switch (selection)
 			{
 				case "trophies":
 				if (keyUpPressed)
 				{
+					if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+					audio_play_sound(snd_BossHealth,0,false);
 					if (trophySelection < (page * 12) + 6)
 					{
 						selection = "back";
@@ -26,6 +30,8 @@ if (!global.pause)
 				}
 				if (keyDownPressed)
 				{
+					if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+					audio_play_sound(snd_BossHealth,0,false);
 					if (trophySelection < (page * 12) + 6)
 					{
 						trophySelection += 6;
@@ -35,7 +41,7 @@ if (!global.pause)
 						selection = "back";
 					}
 				}
-				if (keyLeftPressed)
+				if ((keyLeftPressed) or ((autoScrollTick) and (keyLeftHold)))
 				{
 					if ((trophySelection == (page * 12)) and (page != 0))
 					{
@@ -43,9 +49,12 @@ if (!global.pause)
 						audio_play_sound(snd_ButtonChange,0,false);
 						page -= 1;
 					}
+					if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+					audio_play_sound(snd_BossHealth,0,false);
 					trophySelection -= 1;
+					canAutoScrollTimer = canAutoScrollTimerMax;
 				}
-				if (keyRightPressed)
+				if ((keyRightPressed) or ((autoScrollTick) and (keyRightHold)))
 				{
 					if ((trophySelection == ((page + 1) * 12) - 1) and (page < pageMax))
 					{
@@ -53,7 +62,10 @@ if (!global.pause)
 						audio_play_sound(snd_ButtonChange,0,false);
 						page += 1;
 					}
+					if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+					audio_play_sound(snd_BossHealth,0,false);
 					trophySelection += 1;
+					canAutoScrollTimer = canAutoScrollTimerMax;
 				}
 			
 				if (!instance_exists(obj_Fade))
@@ -67,11 +79,13 @@ if (!global.pause)
 						*/
 					}
 				}
-			
+				
 				if (select)
 				{
 					select = false;
 				}
+				
+				cancelAutoScroll = !(((keyLeftHold) or (keyRightHold)) and !((keyLeftHold) and (keyRightHold)));
 				break;
 			
 				case "back":
@@ -80,14 +94,11 @@ if (!global.pause)
 				if (keyLeftPressed) selection = "back";
 				if (keyRightPressed) selection = "back";
 			
-				if (!instance_exists(obj_Fade))
+				if ((keyJumpPressed) or (keyStartPressed))
 				{
-					if ((keyJumpPressed) or (keyStartPressed))
-					{
-						if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
-						audio_play_sound(snd_ButtonNo,0,false);
-						select = true;
-					}
+					if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
+					audio_play_sound(snd_ButtonNo,0,false);
+					select = true;
 				}
 			
 				if (select)
@@ -112,7 +123,47 @@ if (!global.pause)
 				fade.targetRoom = rm_Collection;
 				goBack = false;
 			}
-	
-		trophySelection = clamp(trophySelection,0,trophiesMax - 1);
+		
+			#region Cancel Auto Scroll
+			if (cancelAutoScroll)
+			{
+				autoScroll = false;
+				canAutoScrollTimer = -1;
+				autoScrollTimer = -1;
+			}
+		
+			autoScrollTick = false;
+			#endregion
+		
+			#region Can Auto Scroll Timer
+			if (canAutoScrollTimer > 0)
+			{
+				canAutoScrollTimer -= 1;
+			}
+			else if (canAutoScrollTimer == 0)
+			{
+				autoScroll = true;
+				autoScrollTimer = 0;
+				canAutoScrollTimer = -1;
+			}
+			#endregion
+		
+			if (autoScroll)
+			{
+				#region Auto Scroll Timer
+				if (autoScrollTimer > 0)
+				{
+					autoScrollTimer -= 1;
+				}
+				else if (autoScrollTimer == 0)
+				{
+					autoScrollTick = true;
+					autoScrollTimer = autoScrollTimerMax;
+				}
+				#endregion
+			}
+		}
 	}
 }
+
+trophySelection = clamp(trophySelection,0,trophiesMax - 1);

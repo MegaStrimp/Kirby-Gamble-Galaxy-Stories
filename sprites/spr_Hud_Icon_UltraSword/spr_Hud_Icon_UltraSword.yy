@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Super",
-    "path": "folders/Sprites/Hud/Icons/Super.yy",
+    "name": "Normal",
+    "path": "folders/Sprites/Hud/Icons/Normal.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

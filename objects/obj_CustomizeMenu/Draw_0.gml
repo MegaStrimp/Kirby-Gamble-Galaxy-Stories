@@ -653,12 +653,36 @@ switch (page)
 		hatSprite = spr_AbilityStar_Bell;
 		break;
 		
+		case playerAbilities.water:
+		hatSprite = spr_AbilityStar_Water;
+		break;
+		
+		case playerAbilities.hiJump:
+		hatSprite = spr_AbilityStar_HiJump;
+		break;
+		
+		case playerAbilities.gear:
+		hatSprite = spr_AbilityStar_Gear;
+		break;
+		
 		case playerAbilities.sleep:
-		hatSprite = -1;
+		hatSprite = spr_AbilityStar_Sleep;
 		break;
 		
 		case playerAbilities.scan:
-		hatSprite = -1;
+		hatSprite = spr_AbilityStar_Scan;
+		break;
+		
+		case playerAbilities.crash:
+		hatSprite = spr_AbilityStar_Crash;
+		break;
+		
+		case playerAbilities.mic:
+		hatSprite = spr_AbilityStar_Mic;
+		break;
+		
+		case playerAbilities.chef:
+		hatSprite = spr_AbilityStar_Chef;
 		break;
 	}
 	

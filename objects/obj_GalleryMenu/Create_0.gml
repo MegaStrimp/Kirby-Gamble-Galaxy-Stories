@@ -1,7 +1,6 @@
 ///@description Initialize Variables
 
-//Other Variables
-
+#region Other Variables
 hudOffset = -250;
 menuIndex = 0;
 page = 0;
@@ -18,12 +17,17 @@ select = false;
 goBack = false;
 artworkX = 240;
 artworkMax = 0;
+autoScroll = false;
+autoScrollTick = false;
+#endregion
 
 scr_Gallery_Artwork_Vol1();
 
 #region Timers
 canAutoScrollTimer = -1;
 canAutoScrollTimerMax = 30;
+autoScrollTimer = -1;
+autoScrollTimerMax = 2;
 #endregion
 
 var button = instance_create_depth(0,270,depth - 1,obj_Menu_Button);

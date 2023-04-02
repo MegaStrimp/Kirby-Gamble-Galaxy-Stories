@@ -10,10 +10,11 @@ function scr_Player_ExecuteAttack_BeamDash()
 	#region Attack Attributes
 	attack = true;
 	attackNumber = playerAttacks.beamDash;
+	attackTimer = 60;
 	invincible = true;
 	invincibleTimer = 30;
-	attackTimer = 60;
 	beamDashAttackTimer = 0;
+	if (runTurn) dir *= -1;
 	#endregion
 	
 	#region Attack Sprite

@@ -1,24 +1,26 @@
 ///@description Begin Step
 
 #region Setup Timer
-if (spawnTimer > 0)
+if (setupTimer > 0)
 {
-	spawnTimer -= 1;
+	setupTimer -= 1;
 }
-else if (spawnTimer == 0)
+else if (setupTimer == 0)
 {
 	switch (character)
 	{
-		//Normal
+		#region Normal
 		case 0:
 		sprSpawn = spr_RecoilStar_Normal_Spawn;
 		sprIdle = spr_RecoilStar_Normal_Idle;
 		sprDestroy = spr_RecoilStar_Normal_Destroy;
 		break;
+		#endregion
 	}
 	sprite_index = sprSpawn;
 	if (GAMEMAKERBUG) sprite_index = sprIdle;
 	sprHurt = sprIdle;
+	setupTimer = -1;
 }
 #endregion
 

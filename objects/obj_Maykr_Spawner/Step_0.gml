@@ -31,7 +31,7 @@ if (activeState == 0)
 			//spawnedItem.sprite_index = spr_Maykr_Debug_Slope;
 			spawnedItem.mask_index = spr_24x24Slope;
 			spawnedItem.slope = true;
-			spawnedItem.slopeType = "normal";
+			spawnedItem.slopeType = slopeTypes.normal;
 			spawnedItem.hasTop = false;
 			break;
 			
@@ -39,7 +39,7 @@ if (activeState == 0)
 			//spawnedItem.sprite_index = spr_Maykr_Debug_GentleSlopeSpawner;
 			spawnedItem.mask_index = spr_48x24Slope;
 			spawnedItem.slope = true;
-			spawnedItem.slopeType = "gentle";
+			spawnedItem.slopeType = slopeTypes.gentle;
 			spawnedItem.hasTop = false;
 			break;
 			
@@ -47,7 +47,7 @@ if (activeState == 0)
 			//spawnedItem.sprite_index = spr_Maykr_Debug_SuperGentleSlopeSpawner;
 			spawnedItem.mask_index = spr_72x24Slope;
 			spawnedItem.slope = true;
-			spawnedItem.slopeType = "gentle";
+			spawnedItem.slopeType = slopeTypes.gentle;
 			spawnedItem.hasTop = false;
 			break;
 		}

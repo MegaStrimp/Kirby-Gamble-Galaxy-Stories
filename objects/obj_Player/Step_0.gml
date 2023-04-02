@@ -1244,7 +1244,7 @@ if (!global.pause)
 	{
 		if (isRunning)
 		{
-			if ((place_meeting(x,y + 1,obj_ParentWall)) and (abs(hsp) >= (movespeedRun * .25)))
+			if ((grounded) and (abs(hsp) >= (movespeedRun * .25)))
 			{
 				var collidingWall = instance_place(x,y + 1,obj_ParentWall);
 				if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + collidingWall.vsp + 20 + vspFinal))))
@@ -1319,15 +1319,23 @@ if (!global.pause)
 	
 	//Run Turn Cancel Timer
 	
-	if (runTurnCancelTimer > 0)
+	if ((state = playerStates.normal) and (!attack))
 	{
-		runTurnCancelTimer -= 1;
+		if (runTurnCancelTimer > 0)
+		{
+			runTurnCancelTimer -= 1;
+		}
+		else if (runTurnCancelTimer == 0)
+		{
+			runTurn = false;
+			hsp *= -1;
+		    runTurnCancelTimer = -1;
+		}
 	}
-	else if (runTurnCancelTimer == 0)
+	else
 	{
 		runTurn = false;
-		hsp *= -dir;
-	    runTurnCancelTimer = -1;
+		runTurnCancelTimer = -1;
 	}
 	
 	//Ability Trophy Timer
@@ -1639,7 +1647,7 @@ if (!global.pause)
 	else if (stoneReadyTimer == 0)
 	{
 		stoneReady = false;
-		if (!place_meeting(x,y + 1,obj_ParentWall))
+		if (!grounded)
 		{
 			scaleExX = -.1;
 			scaleExY = .1;
@@ -1989,7 +1997,7 @@ if (!global.pause)
 	}
 	else if (fireReleaseTimer == 0)
 	{
-		if (place_meeting(x,y + 1,obj_ParentWall)) sprite_index = sprFireAttackRelease1;
+		if (grounded) sprite_index = sprFireAttackRelease1;
 	    fireReleaseTimer = -1;
 	}
 	
@@ -2193,8 +2201,6 @@ else
 	}
 }
 
-
-
 //Ground Failsafe Timer
 
 if (groundFailsafeTimer > 0)
@@ -2205,7 +2211,7 @@ else if (groundFailsafeTimer == 0)
 {
 	//Ground Failsafe
 	
-	while (place_meeting(x,y + 1,obj_ParentWall)) y -= 1;
+	while (grounded) y -= 1;
 	groundFailsafeTimer = -1;
 }
 

@@ -14,8 +14,8 @@ function scr_Player_ExecuteAttack_BeamUp(argument0,argument1)
 	
 	#region Attack Attributes
 	attack = true;
-	vsp = 1;
 	attackNumber = playerAttacks.beamUp;
+	vsp = 1;
 	#endregion
 	
 	#region Attack Sprite

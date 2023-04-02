@@ -117,5 +117,5 @@ function scr_Player_ExecuteAttack_BeamNormal(argument0,argument1)
 		}
 		#endregion
 	}
-		#endregion
+	#endregion
 }

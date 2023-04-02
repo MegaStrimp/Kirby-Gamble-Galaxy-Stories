@@ -349,6 +349,9 @@ playerAbility = 0;
 #region Gameplay Variables
 state = playerStates.normal;
 
+speedMultObject = 1;
+speedMultFinal = speedMultObject;
+
 dir = 1;
 scale = 1;
 targetScale = 1;
@@ -365,6 +368,8 @@ hatFrontImageIndex = 0;
 hatFrontImageIndexSpd = .25;
 
 grounded = false;
+groundedSlopeType = -1;
+groundedWallDir = 1;
 wallAbove = false;
 
 isRunning = false;
@@ -501,6 +506,7 @@ ateCappyShroom = false;
 swallow = false;
 cAbility = playerAbilities.none;
 sucked = 0;
+InhaledIntoMouthSound = -1;
 inhaleEnd = false;
 spit = false;
 swallowAction = 0;

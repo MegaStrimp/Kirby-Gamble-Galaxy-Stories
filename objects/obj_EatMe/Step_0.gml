@@ -137,7 +137,13 @@ if (!global.pause)
 			
 			if (inhaleType == 0)
 			{
-				owner.sucked += 1;
+				with (owner)
+				{
+					sucked += 1;
+					if (audio_is_playing(InhaledIntoMouthSound)) audio_stop_sound(InhaledIntoMouthSound);
+					var inhaleSoundIndex = asset_get_index("snd_InhaledIntoMouth" + string(min(sucked,12)));
+					InhaledIntoMouthSound = audio_play_sound(inhaleSoundIndex,0,false);
+				}
 			}
 			else if (inhaleType == 1)
 			{

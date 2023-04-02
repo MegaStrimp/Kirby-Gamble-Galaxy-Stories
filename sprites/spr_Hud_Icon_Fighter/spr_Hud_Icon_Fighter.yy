@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_Hud_Icon_Fighter",
-  "bbox_bottom": 39,
+  "bbox_bottom": 23,
   "bbox_left": 0,
-  "bbox_right": 39,
+  "bbox_right": 23,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,11 +13,11 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"787bca21-d5a0-435d-a1aa-a225cb13526d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1080c186-d224-44ed-898b-a86eab0d16d9",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 40,
+  "height": 24,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9063e984-052e-48ca-9b97-ead05f5de493","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"787bca21-d5a0-435d-a1aa-a225cb13526d","path":"sprites/spr_Hud_Icon_Fighter/spr_Hud_Icon_Fighter.yy",},},},"Disabled":false,"id":"79aa2158-91cc-440f-9d9b-f68c41fa453c","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1080c186-d224-44ed-898b-a86eab0d16d9","path":"sprites/spr_Hud_Icon_Fighter/spr_Hud_Icon_Fighter.yy",},},},"Disabled":false,"id":"73134777-8bed-4ee9-b04c-2352d9cb8bea","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 40,
+  "width": 24,
 }

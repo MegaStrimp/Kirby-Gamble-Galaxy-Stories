@@ -7,6 +7,13 @@ vsp = 0;
 
 //Enums
 
+enum slopeTypes
+{
+	normal,
+	gentle,
+	steep
+}
+
 enum movingWallAttributes
 {
 	asteroidFields1_1,
@@ -22,7 +29,7 @@ enum movingWallAttributes
 //Other Variables
 
 slope = false;
-slopeType = "normal";
+slopeType = slopeTypes.normal;
 platform = false;
 object = false;
 damageType = damageTypes.none;

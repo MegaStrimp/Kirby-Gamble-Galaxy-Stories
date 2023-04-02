@@ -61,6 +61,18 @@ attackNumber = -1;
 state = heavyLobsterStates.normal;
 eyeFlash = false;
 
+grounded = false;
+groundedSlopeType = -1;
+groundedWallDir = 1;
+wallAbove = false;
+
+hasJumped = -1;
+jumpCoyoteTimeBuffer = 0;
+jumpCoyoteTimeBufferMax = 4;
+jumpInputBuffer = 0;
+jumpInputBufferMax = 4;
+multiJumpCounter = 0;
+
 bodyX = x;
 bodyY = y;
 

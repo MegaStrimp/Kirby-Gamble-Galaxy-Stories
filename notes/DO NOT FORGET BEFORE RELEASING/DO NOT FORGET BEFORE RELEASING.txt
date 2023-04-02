@@ -8,6 +8,7 @@
 * Always check scr_CharacterSelectMenu_Sprays as you add new sprays AND characters
 * Always check scr_CharacterSelectMenu_Characters as you add new characters
 * Always check scr_SaveGame requirements as you change scr_LoadGame values
+* Always check to make sure that [if (runTurn) dir *= -1;] is added to the dash execute attack scripts
 
 * Bandit Dee palette index is set to spr_WaddleDee_Alien_Palette_Graylien for now
 * Waddle Dee skin slide sprites are set to the base skin

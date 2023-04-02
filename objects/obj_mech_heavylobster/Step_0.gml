@@ -6,66 +6,6 @@ scr_Player_Inputs(player);
 
 if (!global.pause)
 {
-	#region Variables
-	grounded = false;
-	if (place_meeting(x,y + 1,obj_ParentWall))
-	{
-		collidingWall = instance_place(x,y + 1,obj_ParentWall);
-		if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal)))) grounded = true;
-	}
-	else if (place_meeting(x,y + 1,obj_Spring))
-	{
-		//var collidingSpring = instance_place(x,y + 1,obj_Spring);
-		grounded = true;
-	}
-	
-	wallAbove = false;
-	wallAboveCollidingWall = -1;
-	if (place_meeting(x,y - 1,obj_Wall))
-	{
-		wallAboveCollidingWall = instance_place(x,y - 1,obj_Wall);
-		if ((!wallAboveCollidingWall.platform) or ((wallAboveCollidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > wallAboveCollidingWall.y + wallAboveCollidingWall.vsp + 20 + vspFinal)))) wallAbove = true;
-	}
-	
-	footFrontGrounded = false;
-	if (place_meeting(bodyX,footFrontY - 27,obj_Wall))
-	{
-		footFrontGrounded = true;
-		if (footFrontVsp > .5)
-		{
-			if (audio_is_playing(snd_HeavyLobsterWalk1)) audio_stop_sound(snd_HeavyLobsterWalk1);
-			if (audio_is_playing(snd_HeavyLobsterWalk2)) audio_stop_sound(snd_HeavyLobsterWalk2);
-			audio_play_sound(snd_HeavyLobsterWalk1,0,false);
-			clawFrontY += 3;
-			clawBackY += 3;
-			bodyY += 5;
-			hornIndex = 0;
-			footFrontWalking = false;
-		}
-		footFrontGravFinal = 0;
-		footFrontVsp = 0;
-	}
-	
-	footBackGrounded = false;
-	if (place_meeting(bodyX,footBackY - 21,obj_Wall))
-	{
-		footBackGrounded = true;
-		if (footBackVsp > .5)
-		{
-			if (audio_is_playing(snd_HeavyLobsterWalk1)) audio_stop_sound(snd_HeavyLobsterWalk1);
-			if (audio_is_playing(snd_HeavyLobsterWalk2)) audio_stop_sound(snd_HeavyLobsterWalk2);
-			audio_play_sound(snd_HeavyLobsterWalk2,0,false);
-			clawFrontY += 3;
-			clawBackY += 3;
-			bodyY += 3;
-			hornIndex = 0;
-			footBackWalking = false;
-		}
-		footBackGravFinal = 0;
-		footBackVsp = 0;
-	}
-	#endregion
-	
 	#region Gravity
 	if (vsp < gravLimit)
 	{

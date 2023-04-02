@@ -14,12 +14,15 @@ goBack = false;
 textureX = 0;
 textureY = 0;
 windowActive = false;
+autoScroll = false;
+autoScrollTick = false;
 #endregion
 
 #region Arrays
 bestiaryArray = -1;
 bestiaryCosmeticsArray = -1;
 bestiaryAnimationsArray = -1;
+
 scr_BestiaryMenu_Enemies();
 #endregion
 
@@ -44,6 +47,8 @@ enum bestiaryEnemies
 #region Timers
 canAutoScrollTimer = -1;
 canAutoScrollTimerMax = 30;
+autoScrollTimer = -1;
+autoScrollTimerMax = 2;
 #endregion
 
 #region Buttons

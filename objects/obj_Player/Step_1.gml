@@ -30,13 +30,19 @@ switch (player)
 #endregion
 
 #region Variables
+speedMultFinal = speedMultObject;
+
 var collidingWall = -1;
 
 grounded = false;
+groundedSlopeType = -1;
+groundedWallDir = 1;
 jumpCoyoteTimeBuffer = max(0,jumpCoyoteTimeBuffer - 1);
 if (place_meeting(x,y + 1,obj_ParentWall))
 {
 	collidingWall = instance_place(x,y + 1,obj_ParentWall);
+	if (collidingWall.slope) groundedSlopeType = collidingWall.slopeType;
+	groundedWallDir = sign(collidingWall.image_xscale);
 	if ((!collidingWall.platform) or ((collidingWall.platform) and (((!keyDownHold) or ((downHeld < downHeldPlatformMax) and (playerAbility != playerAbilities.ufo))) and !(round(bbox_bottom) > collidingWall.y - collidingWall.vsp + 20 + vspFinal) and (!place_meeting(x,y + vspFinal,obj_Wall)))))
 	{
 		grounded = true;
@@ -57,6 +63,8 @@ if (place_meeting(x,y - 1,obj_Wall))
 }
 
 jumpInputBuffer = max(0,jumpInputBuffer - 1);
+
+stoneAngle = 0;
 #endregion
 
 #region Setup Timer

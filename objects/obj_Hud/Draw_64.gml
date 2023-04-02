@@ -683,7 +683,7 @@ if (global.gamemode != gamemodes.gamblion)
 	
 	#region Point Stars
 	#region Variables
-	global.pointStars = clamp(global.pointStars,0,999);
+	global.pointStars = clamp(global.pointStars,0,99999);
 	starsPosX = 17;
 	starsPosY = 39 + (hasTreasure * 28);
 	#endregion
@@ -694,9 +694,11 @@ if (global.gamemode != gamemodes.gamblion)
 	#endregion
 
 	#region Numbers
-	draw_sprite_ext(spr_Hud_Numbers,floor(global.pointStars / 100),starsPosX + 12,starsPosY - 10,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
-	draw_sprite_ext(spr_Hud_Numbers,(global.pointStars - ((floor(global.pointStars / 100) * 100))) / 10,starsPosX + 27,starsPosY - 10,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
-	draw_sprite_ext(spr_Hud_Numbers,global.pointStars - (floor(global.pointStars / 10) * 10),starsPosX + 42,starsPosY - 10,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
+	if (global.pointStars > 9999) draw_sprite_ext(spr_Hud_Numbers,floor(global.pointStars / 10000),starsPosX + 12,starsPosY - 10,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
+	if (global.pointStars > 999) draw_sprite_ext(spr_Hud_Numbers,floor(global.pointStars / 1000),starsPosX + 12 + ((global.pointStars > 9999) * 15),starsPosY - 10,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
+	draw_sprite_ext(spr_Hud_Numbers,floor(global.pointStars / 100),starsPosX + 12 + ((global.pointStars > 999) * 15) + ((global.pointStars > 9999) * 15),starsPosY - 10,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
+	draw_sprite_ext(spr_Hud_Numbers,(global.pointStars - ((floor(global.pointStars / 100) * 100))) / 10,starsPosX + 27 + ((global.pointStars > 999) * 15) + ((global.pointStars > 9999) * 15),starsPosY - 10,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
+	draw_sprite_ext(spr_Hud_Numbers,global.pointStars - (floor(global.pointStars / 10) * 10),starsPosX + 42 + ((global.pointStars > 999) * 15) + ((global.pointStars > 9999) * 15),starsPosY - 10,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
 	#endregion
 	#endregion
 

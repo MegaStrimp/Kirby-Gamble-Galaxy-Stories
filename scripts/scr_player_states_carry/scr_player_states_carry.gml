@@ -40,7 +40,7 @@ function scr_Player_States_Carry()
 		    {
 		        if (!isRunning)
 				{
-					if (!place_meeting(x,y + 1,obj_ParentWall))
+					if (!grounded)
 					{
 						var parJump = instance_create_depth(x,y,depth + 1,obj_Particle);
 						parJump.sprite_index = spr_Particle_Jump;
@@ -125,7 +125,7 @@ function scr_Player_States_Carry()
 		
 		//Jump
 		
-		if (place_meeting(x,y + 1,obj_ParentWall))
+		if (grounded)
 		{
 			if ((!global.cutscene) and (keyJumpPressed) and (!inhaleEnd) and (!spit))
 			{
@@ -185,7 +185,7 @@ function scr_Player_States_Carry()
 				if (ateCappyShroom) ateCappyShroom = false;
 		    }
 			
-		    if ((!global.cutscene) and (((global.autoSwallow) and (cAbility != playerAbilities.none)) or ((place_meeting(x,y + 1,obj_ParentWall)) and (!inhaleEnd) and (!spit) and (keyDownPressed))))
+		    if ((!global.cutscene) and (((global.autoSwallow) and (cAbility != playerAbilities.none)) or (((grounded) or (cAbility != playerAbilities.none)) and (!inhaleEnd) and (!spit) and (keyDownPressed))))
 		    {
 				if (cAbility == playerAbilities.mix)
 				{
@@ -692,7 +692,7 @@ function scr_Player_States_Carry()
 						image_speed = 1.5;
 					}
 					
-			        if ((place_meeting(x,y + 1,obj_ParentWall)) and (vsp == 0))
+			        if ((grounded) and (vsp == 0))
 					{
 					    if (hsp == 0)
 						{
@@ -713,15 +713,14 @@ function scr_Player_States_Carry()
 							var carryidlesprite = sprCarryIdle;
 							var carryidleblinksprite = sprCarryIdleBlink;
 							
-							var collidedWall = instance_place(x,y + 1,obj_ParentWall);
-							if ((playerCharacter == playerCharacters.kirby) and (collidedWall.slope))
+							if (playerCharacter == playerCharacters.kirby)
 							{
-								switch (collidedWall.slopeType)
+								switch (groundedSlopeType)
 								{
 									case "normal":
 									if (dir == 1)
 									{
-										if (sign(collidedWall.image_xscale) == 1)
+										if (groundedWallDir == 1)
 										{
 											carryidlesprite = sprCarryIdleNormalSlopeL;
 											carryidleblinksprite = sprCarryIdleNormalSlopeLBlink;
@@ -734,7 +733,7 @@ function scr_Player_States_Carry()
 									}
 									else
 									{
-										if (sign(collidedWall.image_xscale) == 1)
+										if (groundedWallDir == 1)
 										{
 											carryidlesprite = sprCarryIdleNormalSlopeR;
 											carryidleblinksprite = sprCarryIdleNormalSlopeRBlink;
@@ -747,10 +746,10 @@ function scr_Player_States_Carry()
 									}
 									break;
 									
-									case "gentle":
+									case slopeTypes.gentle:
 									if (dir == 1)
 									{
-										if (sign(collidedWall.image_xscale) == 1)
+										if (groundedWallDir == 1)
 										{
 											carryidlesprite = sprCarryIdleNormalSlopeR;
 											carryidleblinksprite = sprCarryIdleNormalSlopeRBlink;
@@ -763,7 +762,7 @@ function scr_Player_States_Carry()
 									}
 									else
 									{
-										if (sign(collidedWall.image_xscale) == 1)
+										if (groundedWallDir == 1)
 										{
 											carryidlesprite = sprCarryIdleNormalSlopeL;
 											carryidleblinksprite = sprCarryIdleNormalSlopeLBlink;
@@ -776,10 +775,10 @@ function scr_Player_States_Carry()
 									}
 									break;
 									
-									case "steep":
+									case slopeTypes.steep:
 									if (dir == 1)
 									{
-										if (sign(collidedWall.image_xscale) == 1)
+										if (groundedWallDir == 1)
 										{
 											carryidlesprite = sprCarryIdleSteepSlopeR;
 											carryidleblinksprite = sprCarryIdleSteepSlopeRBlink;
@@ -792,7 +791,7 @@ function scr_Player_States_Carry()
 									}
 									else
 									{
-										if (sign(collidedWall.image_xscale) == 1)
+										if (groundedWallDir == 1)
 										{
 											carryidlesprite = sprCarryIdleSteepSlopeL;
 											carryidleblinksprite = sprCarryIdleSteepSlopeLBlink;

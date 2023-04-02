@@ -6,6 +6,8 @@ selection = "upgrades";
 upgradeSelection = 0;
 select = false;
 goBack = false;
+autoScroll = false;
+autoScrollTick = false;
 upgradesArray = -1;
 
 scr_UpgradesMenu_Upgrades();
@@ -40,6 +42,8 @@ enum abilityUpgrades
 #region Timers
 canAutoScrollTimer = -1;
 canAutoScrollTimerMax = 30;
+autoScrollTimer = -1;
+autoScrollTimerMax = 2;
 particleTimerMax = 5;
 particleTimer = particleTimerMax;
 #endregion

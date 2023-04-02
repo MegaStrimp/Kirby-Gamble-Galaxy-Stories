@@ -6,26 +6,24 @@ function scr_Player_States_Slide()
 	{
 		//Variables
 		
+		var playerAbility = global.abilityP1;
+		var playerCharacter = global.characterP1;
+		
 		switch (player)
 		{
-			case 0:
-			var playerAbility = global.abilityP1;
-			var playerCharacter = global.characterP1;
-			break;
-			
 			case 1:
-			var playerAbility = global.abilityP2;
-			var playerCharacter = global.characterP2;
+			playerAbility = global.abilityP2;
+			playerCharacter = global.characterP2;
 			break;
 			
 			case 2:
-			var playerAbility = global.abilityP3;
-			var playerCharacter = global.characterP3;
+			playerAbility = global.abilityP3;
+			playerCharacter = global.characterP3;
 			break;
 			
 			case 3:
-			var playerAbility = global.abilityP4;
-			var playerCharacter = global.characterP4;
+			playerAbility = global.abilityP4;
+			playerCharacter = global.characterP4;
 			break;
 		}
 		
@@ -63,7 +61,6 @@ function scr_Player_States_Slide()
 			if (hsp >= decel) hsp -= decel;
 		    if (hsp <= -decel) hsp += decel;
 			if ((hsp > -decel) and (hsp < decel)) hsp = 0;
-		    //hsp = 0;
 			
 			//Abilities
 		
@@ -556,7 +553,7 @@ function scr_Player_States_Slide()
 			
 			if (!attack)
 			{
-			    if (place_meeting(x,y + 1,obj_ParentWall))
+			    if (grounded)
 			    {
 					if (!idleAnimation)
 					{
@@ -575,15 +572,14 @@ function scr_Player_States_Slide()
 					var ducksprite = sprDuck;
 					var duckblinksprite = sprDuckBlink;
 				
-					var collidedWall = instance_place(x,y + 1,obj_ParentWall);
-					if ((playerCharacter == playerCharacters.kirby) and (collidedWall.slope))
+					if (playerCharacter == playerCharacters.kirby)
 					{
-						switch (collidedWall.slopeType)
+						switch (groundedSlopeType)
 						{
-							case "normal":
+							case slopeTypes.normal:
 							if (dir == 1)
 							{
-								if (sign(collidedWall.image_xscale) == 1)
+								if (groundedWallDir == 1)
 								{
 									ducksprite = sprDuckNormalSlopeL;
 									duckblinksprite = sprDuckNormalSlopeLBlink;
@@ -596,7 +592,7 @@ function scr_Player_States_Slide()
 							}
 							else
 							{
-								if (sign(collidedWall.image_xscale) == 1)
+								if (groundedWallDir == 1)
 								{
 									ducksprite = sprDuckNormalSlopeR;
 									duckblinksprite = sprDuckNormalSlopeRBlink;
@@ -609,10 +605,10 @@ function scr_Player_States_Slide()
 							}
 							break;
 						
-							case "gentle":
+							case slopeTypes.gentle:
 							if (dir == 1)
 							{
-								if (sign(collidedWall.image_xscale) == 1)
+								if (groundedWallDir == 1)
 								{
 									ducksprite = sprDuckNormalSlopeR;
 									duckblinksprite = sprDuckNormalSlopeRBlink;
@@ -625,7 +621,7 @@ function scr_Player_States_Slide()
 							}
 							else
 							{
-								if (sign(collidedWall.image_xscale) == 1)
+								if (groundedWallDir == 1)
 								{
 									ducksprite = sprDuckNormalSlopeL;
 									duckblinksprite = sprDuckNormalSlopeLBlink;
@@ -638,10 +634,10 @@ function scr_Player_States_Slide()
 							}
 							break;
 						
-							case "steep":
+							case slopeTypes.steep:
 							if (dir == 1)
 							{
-								if (sign(collidedWall.image_xscale) == 1)
+								if (groundedWallDir == 1)
 								{
 									ducksprite = sprDuckSteepSlopeR;
 									duckblinksprite = sprDuckSteepSlopeRBlink;
@@ -654,7 +650,7 @@ function scr_Player_States_Slide()
 							}
 							else
 							{
-								if (sign(collidedWall.image_xscale) == 1)
+								if (groundedWallDir == 1)
 								{
 									ducksprite = sprDuckSteepSlopeL;
 									duckblinksprite = sprDuckSteepSlopeLBlink;
@@ -734,7 +730,7 @@ function scr_Player_States_Slide()
 				scaleExY = (-.15 / duckJumpChargeMax) * duckJumpCharge;
 			}
 			
-		    if ((!global.cutscene) and (carriedItemState != carriedItemStates.heavy) and (canSlide) and (!duckSlide) and (!attack) and (place_meeting(x,y + 1,obj_ParentWall)) and (keyJumpPressed))
+		    if ((!global.cutscene) and (carriedItemState != carriedItemStates.heavy) and (canSlide) and (!duckSlide) and (!attack) and (grounded) and (keyJumpPressed))
 		    {
 				if (audio_is_playing(snd_Slide)) audio_stop_sound(snd_Slide);
 				slideSfx = audio_play_sound(snd_Slide,0,false);
@@ -836,7 +832,7 @@ function scr_Player_States_Slide()
 			idleAnimation = false;
 			idleAnimationTimer = 0;
 			idleAnimationTimerMax = 30;
-		    if (place_meeting(x,y + 1,obj_ParentWall))
+		    if (grounded)
 		    {
 				if (abs(hsp) > (decelSlide * 5))
 				{

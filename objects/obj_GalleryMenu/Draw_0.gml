@@ -15,7 +15,9 @@ if (page == 1)
 	    var textAlpha = 1;
 	    if ((i < artworkSelection - 1) or (i > artworkSelection + 1)) textAlpha = 0;
 		
+		draw_set_color(c_black);
 		draw_rectangle(152 - 240 + artworkX + (260 * i),42,328 - 240 + artworkX + (260 * i),186,false);
+		draw_set_color(c_white);
 		
 		if (textAlpha != 0)
 		{
@@ -90,8 +92,10 @@ draw_sprite(spr_Menu_MainMenu_Hud_Gallery,0,0 + hudOffset,0);
 artworkZoomAlpha = lerp(artworkZoomAlpha,artworkZoom,.5);
 if (artworkZoomAlpha > 0)
 {
+	draw_set_color(c_black);
 	draw_set_alpha(artworkZoomAlpha);
 	draw_rectangle(camera_get_view_x(gameView),camera_get_view_y(gameView),camera_get_view_x(gameView) + camera_get_view_width(gameView),camera_get_view_y(gameView) + camera_get_view_height(gameView),false);
 	draw_sprite_ext(artworkArray[# artworkSelection,0],0,240,135,artworkArray[# artworkSelection,5] * 1.9,artworkArray[# artworkSelection,5] * 1.9,image_angle,image_blend,artworkZoomAlpha);
 	draw_set_alpha(1);
+	draw_set_color(c_white);
 }

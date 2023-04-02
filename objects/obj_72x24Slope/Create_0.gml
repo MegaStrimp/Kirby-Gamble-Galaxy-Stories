@@ -6,7 +6,7 @@ event_inherited();
 
 #region Slope Attributes
 slope = true;
-slopeType = "gentle";
+slopeType = slopeTypes.gentle;
 hasTop = false;
 slopeYSet = false;
 #endregion

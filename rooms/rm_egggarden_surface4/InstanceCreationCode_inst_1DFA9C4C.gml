@@ -2,5 +2,5 @@
 
 sprite_index = spr_48x24Slope;
 slope = true;
-slopeType = "gentle";
+slopeType = slopeTypes.gentle;
 hasTop = false;
