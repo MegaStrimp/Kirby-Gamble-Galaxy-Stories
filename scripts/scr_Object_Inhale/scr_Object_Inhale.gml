@@ -96,26 +96,38 @@ function scr_Object_Inhale(argument0)
 					if ((image_index == 41) or (image_index == 42)) eatMe.cannedFood = true;
 					if (sprite_index == spr_Food_AmongUs) eatMe.amongUs = true;
 					if (sprite_index == spr_Food_FishTaco) eatMe.fishTaco = true;
+					
+					if (ds_exists(global.collectibleTracker,ds_type_list)) ds_list_add(global.collectibleTracker,id);
 					break;
 					
 					case obj_PepBrew:
 					eatMe.inhaleType = 2;
+					
+					if (ds_exists(global.collectibleTracker,ds_type_list)) ds_list_add(global.collectibleTracker,id);
 					break;
 					
 					case obj_MaximTomato:
 					eatMe.inhaleType = 3;
+					
+					if (ds_exists(global.collectibleTracker,ds_type_list)) ds_list_add(global.collectibleTracker,id);
 					break;
 					
 					case obj_1Up:
 					eatMe.inhaleType = 4;
+					
+					if (ds_exists(global.collectibleTracker,ds_type_list)) ds_list_add(global.collectibleTracker,id);
 					break;
 					
 					case obj_InvincibilityCandy:
 					eatMe.inhaleType = 5;
+					
+					if (ds_exists(global.collectibleTracker,ds_type_list)) ds_list_add(global.collectibleTracker,id);
 					break;
 					
 					case obj_MintLeaf:
 					eatMe.inhaleType = 6;
+					
+					if (ds_exists(global.collectibleTracker,ds_type_list)) ds_list_add(global.collectibleTracker,id);
 					break;
 				}
 				

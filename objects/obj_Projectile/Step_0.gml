@@ -4,7 +4,7 @@ if ((!pausable) and (!global.pause)) pausable = true;
 
 if (stunTimer < 1) 
 {
-	isStunned = false
+	isStunned = false;
 }
 else
 {

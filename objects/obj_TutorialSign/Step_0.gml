@@ -22,8 +22,8 @@ if (!global.pause)
 		{
 			case "walk":
 			if (buttonAnimTimer == -1) buttonAnimTimer = 45;
-		
-			if (!completed)
+			
+			if (!completed) and !((ds_exists(global.collectibleTracker,ds_type_list)) and (ds_list_find_index(global.collectibleTracker,id)))
 			{
 				with (obj_Player)
 				{
@@ -327,6 +327,9 @@ if (!global.pause)
 			var star = instance_create_depth(x - 24 + (starState * 12),y - 18,depth - 2,obj_PointStar);
 			star.hasGravity = true;
 			starState += 1;
+			
+			if (ds_exists(global.collectibleTracker,ds_type_list)) ds_list_add(global.collectibleTracker,id);
+			
 			if (starState == 5)
 			{
 				starTimer = -1;

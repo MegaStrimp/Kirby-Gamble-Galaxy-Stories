@@ -2,7 +2,7 @@
 
 function scr_EndStage()
 {
-	global.collectibleTracking = -1;
+	if (ds_exists(global.collectibleTracker,ds_type_list)) ds_list_destroy(global.collectibleTracker);
 	
 	global.invinCandyTimerP1 = -1;
 	global.invinCandyTimerP2 = -1;

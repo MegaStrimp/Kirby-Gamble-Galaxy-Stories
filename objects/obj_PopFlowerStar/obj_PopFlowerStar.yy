@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Stage Elements",
-    "path": "folders/Objects/Gameplay/Stage Elements.yy",
+    "name": "Pop Flowers",
+    "path": "folders/Objects/Gameplay/Stage Elements/Pop Flowers.yy",
   },
   "parentObjectId": null,
   "persistent": false,

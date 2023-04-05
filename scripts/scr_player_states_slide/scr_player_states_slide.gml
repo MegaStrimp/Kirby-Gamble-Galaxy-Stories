@@ -753,9 +753,6 @@ function scr_Player_States_Slide()
 			{
 				if (duckJumpCharge == duckJumpChargeMax)
 				{
-					var playerCharacter = global.characterP1;
-					if (player == 1) playerCharacter = global.characterP2;
-					
 					switch (playerCharacter)
 					{
 						case playerCharacters.waddleDee:

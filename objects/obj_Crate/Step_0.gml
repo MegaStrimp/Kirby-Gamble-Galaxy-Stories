@@ -88,13 +88,19 @@ if (!global.pause)
 			}
 			global.points += points;
 			
-			var spawnedItem = instance_create_depth(x + (sprite_get_width(sprIdle) / 2),y + (sprite_get_height(sprite_index) / 2),depth - 1,storedItem);
-			if (storedItem == obj_PointStar)
+			if !((ds_exists(global.collectibleTracker,ds_type_list)) and (ds_list_find_index(global.collectibleTracker,id)))
 			{
-				spawnedItem.character = pointStarCharacter;
-				spawnedItem.target = instance_nearest(x,y,obj_Player);
-				spawnedItem.followTarget = true;
+				var spawnedItem = instance_create_depth(x + (sprite_get_width(sprIdle) / 2),y + (sprite_get_height(sprite_index) / 2),depth - 1,storedItem);
+				if (storedItem == obj_PointStar)
+				{
+					spawnedItem.character = pointStarCharacter;
+					spawnedItem.target = instance_nearest(x,y,obj_Player);
+					spawnedItem.followTarget = true;
+				}
 			}
+			
+			if (ds_exists(global.collectibleTracker,ds_type_list)) ds_list_add(global.collectibleTracker,id);
+			
 			instance_destroy();
 		}
 	}

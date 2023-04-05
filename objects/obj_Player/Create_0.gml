@@ -540,7 +540,7 @@ inBackground = false;
 warpStarIndex = -1;
 mechIndex = -1;
 downHeld = 0;
-downHeldPlatformMax = 4;
+downHeldPlatformMax = 8;
 
 mixAbilities = -1;
 

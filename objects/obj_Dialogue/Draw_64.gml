@@ -70,6 +70,7 @@ if (sprPortrait[array] != -1)
 
 draw_set_color(color);
 draw_set_font(textFont);
+scribble_font_set_default(font_get_name(textFont));
 draw_set_alpha(image_alpha);
 draw_set_halign(text_halign);
 var drawTextX = dialogueX + 6;
@@ -78,6 +79,7 @@ if (sprPortrait[array] != -1)
 {
 	drawTextX = dialogueX + 65;
 }
-scr_Draw_Text_Color_Outline(drawTextX,drawTextY,text_displayed,-1,maxPixels,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+scribble(string(text[array])).wrap(maxPixels).draw(drawTextX,drawTextY,typist);
+//scr_Draw_Text_Color_Outline(drawTextX,drawTextY,text_displayed,-1,maxPixels,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 draw_set_halign(fa_left);
 draw_set_alpha(1);

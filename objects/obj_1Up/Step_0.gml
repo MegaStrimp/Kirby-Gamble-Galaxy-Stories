@@ -34,8 +34,12 @@ if (!global.pause)
 	{
 		if (audio_is_playing(snd_1Up)) audio_stop_sound(snd_1Up);
 		audio_play_sound(snd_1Up,0,false);
+		
+		if (ds_exists(global.collectibleTracker,ds_type_list)) ds_list_add(global.collectibleTracker,id);
+		
 		global.points += points;
 		global.playerLives += 1;
+		
 		instance_destroy();
 	}
 

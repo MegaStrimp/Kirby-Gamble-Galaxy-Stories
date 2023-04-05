@@ -983,6 +983,7 @@ if ((parentPause) and (hurtStopTimer < 1))
 						if (instance_exists(obj_Camera)) obj_Camera.freezeFrameTimer = -1;
 						if (instance_exists(obj_Camera)) obj_Camera.freezeFrameTimer = -1;
 						canScan = false;
+						pausable = false;
 						particleTimer = particleTimerMax;
 						owner.cAbility = other.ability;
 						owner.scanTimer = owner.scanTimerMax;

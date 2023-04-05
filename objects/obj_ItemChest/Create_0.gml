@@ -34,9 +34,10 @@ treasureCategory = 0;
 treasureIndex = 0;
 isKeyChest = false;
 
+if ((ds_exists(global.collectibleTracker,ds_type_list)) and (ds_list_find_index(global.collectibleTracker,id))) instance_destroy();
+
 //Timers
 
-setupTimer = 0;
 blinkTimer = -1;
 blinkTimerMax = 2;
 destroyTimer = -1;

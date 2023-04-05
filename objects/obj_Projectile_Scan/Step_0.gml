@@ -49,3 +49,5 @@ else if (particleTimer == 0)
 	par.destroyAfterAnimation = true;
 	particleTimer = particleTimerMax;
 }
+
+show_debug_message(string(image_index));

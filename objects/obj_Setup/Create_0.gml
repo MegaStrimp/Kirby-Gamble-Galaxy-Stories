@@ -738,6 +738,7 @@ global.roomNext = rm_Starcutter;
 global.roomCheckpoint = rm_Setup;
 global.pause = false;
 global.pointStars = 0;
+global.collectibleTracker = -1;
 
 global.goldenTomatoAmountMax = 2;
 

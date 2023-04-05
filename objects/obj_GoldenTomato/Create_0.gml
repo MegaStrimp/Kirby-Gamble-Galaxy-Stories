@@ -30,6 +30,8 @@ hasAura = false;
 shake = 0;
 flash = false;
 
+if ((ds_exists(global.collectibleTracker,ds_type_list)) and (ds_list_find_index(global.collectibleTracker,id))) instance_destroy();
+
 //Timers
 
 auraTimerMax = 2;

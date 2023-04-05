@@ -5,30 +5,28 @@ function scr_Player_States_Normal()
 	if (!global.pause)
 	{
 		#region Variables
+		var playerAbility = global.abilityP1;
+		var playerCharacter = global.characterP1;
+		var playerSprayPaint = global.sprayPaintP1;
+		
 		switch (player)
 		{
-			case 0:
-			var playerAbility = global.abilityP1;
-			var playerCharacter = global.characterP1;
-			var playerSprayPaint = global.sprayPaintP1;
-			break;
-			
 			case 1:
-			var playerAbility = global.abilityP2;
-			var playerCharacter = global.characterP2;
-			var playerSprayPaint = global.sprayPaintP2;
+			playerAbility = global.abilityP2;
+			playerCharacter = global.characterP2;
+			playerSprayPaint = global.sprayPaintP2;
 			break;
 			
 			case 2:
-			var playerAbility = global.abilityP3;
-			var playerCharacter = global.characterP3;
-			var playerSprayPaint = global.sprayPaintP3;
+			playerAbility = global.abilityP3;
+			playerCharacter = global.characterP3;
+			playerSprayPaint = global.sprayPaintP3;
 			break;
 			
 			case 3:
-			var playerAbility = global.abilityP4;
-			var playerCharacter = global.characterP4;
-			var playerSprayPaint = global.sprayPaintP4;
+			playerAbility = global.abilityP4;
+			playerCharacter = global.characterP4;
+			playerSprayPaint = global.sprayPaintP4;
 			break;
 		}
 		
@@ -2403,7 +2401,6 @@ function scr_Player_States_Normal()
 							else if (keyAttackReleased) attackTimer = 10;
 						}
 						break;
-						break;
 						#endregion
 						
 						#region Yoyo
@@ -2414,24 +2411,7 @@ function scr_Player_States_Normal()
 							{
 								if ((isRunning) and (canDashAttack) and (hsp != 0))
 								{
-									invincible = true;
-									vsp = 0;
-									isRunning = false;
-					                attack = true;
-									attackNumber = playerAttacks.yoyoDash;
-									attackable = false;
-					                attackTimer = 45;
-					                state = playerStates.yoyoDash;
-									if (audio_is_playing(snd_Fire3)) audio_stop_sound(snd_Fire3);
-				                    yoyoDashSfx = audio_play_sound(snd_Fire3,0,false);
-									yoyoDashMaskProj = instance_create_depth(x,y,depth,obj_Projectile_YoyoDashMask);
-									yoyoDashMaskProj.owner = id;
-									yoyoDashMaskProj.abilityType = playerAbilities.yoyo;
-									yoyoDashMaskProj.dmgMin = kirby_YoyoDash_DamageMin;
-									yoyoDashMaskProj.dmgMax = kirby_YoyoDash_DamageMax;
-									scr_Attack_SetKnockback(yoyoDashMaskProj,kirby_YoyoDash_Strength,kirby_YoyoDash_HitStopAffectSource,kirby_YoyoDash_HitStopAffectPlayer,kirby_YoyoDash_HitStopAffectTarget,kirby_YoyoDash_HitStopLength,kirby_YoyoDash_HitStopShakeStrength);
-									yoyoDashMaskProj.image_xscale = image_xscale;
-									yoyoDashMaskProj.image_yscale = image_yscale;
+									scr_Player_ExecuteAttack_YoyoDash();
 							    }
 						    }
 					    }
@@ -2442,14 +2422,7 @@ function scr_Player_States_Normal()
 						case playerAbilities.wheel:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
-							attack = true;
-							attackNumber = playerAttacks.wheelNormal;
-							sprite_index = sprWingAttack1;
-							image_index = 0;
-							wheelDir = dir;
-							hsp = 0;
-							wheelReadyTimer = 15;
-							state = playerStates.wheelNormal;
+							scr_Player_ExecuteAttack_WheelNormal();
 					    }
 						break;
 						#endregion
@@ -2460,321 +2433,15 @@ function scr_Player_States_Normal()
 					    {
 							if ((isRunning) and (hsp != 0))
 							{
-								attack = true;
-								sprite_index = sprWingAttack2Ready;
-						        image_index = 0;
+								scr_Player_ExecuteAttack_WingDash();
 							}
 							else
 							{
-								attack = true;
-								attackNumber = playerAttacks.wingNormal;
-								sprite_index = sprWingAttack1;
-								image_index = 0;
+								scr_Player_ExecuteAttack_WingNormal(playerAbility,playerCharacter);
 							}
 					    }
-					
-						if (attackNumber == playerAttacks.wingNormal)
-						{
-							if (attackable)
-							{
-								attackTimer = 10;
-								if (audio_is_playing(snd_WingShot)) audio_stop_sound(snd_WingShot);
-								audio_play_sound(snd_WingShot,0,false);
-							    var projectile = instance_create_depth(x + (10 * dir),y - 1 + (irandom_range(-3,3)),depth - 1,obj_Projectile_WingFeather);
-								projectile.owner = id;
-								projectile.abilityType = playerAbilities.wing;
-								switch (wingFeatherPos)
-								{
-									case 0:
-									projectile.image_index = 2;
-									projectile.hsp = dir * 3;
-									wingFeatherPos += 1;
-									break;
-								
-									case 1:
-									projectile.image_index = 1;
-									projectile.hsp = dir * 3;
-									projectile.vsp = -1;
-									projectile.dirY = -1;
-									wingFeatherPos += 1;
-									break;
-								
-									case 2:
-									projectile.image_index = 1;
-									projectile.hsp = dir * 3;
-									projectile.vsp = 1;
-									wingFeatherPos += 1;
-									break;
-								
-									case 3:
-									projectile.image_index = 2;
-									projectile.hsp = dir * 3;
-									wingFeatherPos += 1;
-									break;
-								
-									case 4:
-									projectile.image_index = 0;
-									projectile.hsp = dir * 3;
-									projectile.vsp = -1.5;
-									projectile.dirY = -1;
-									wingFeatherPos += 1;
-									break;
-								
-									case 5:
-									projectile.image_index = 0;
-									projectile.hsp = dir * 3;
-									projectile.vsp = 1.5;
-									wingFeatherPos = 0;
-									break;
-								}
-								projectile.dmg = kirby_WingNormal_Damage;
-								scr_Attack_SetKnockback(projectile,kirby_WingNormal_Strength,kirby_WingNormal_HitStopAffectSource,kirby_WingNormal_HitStopAffectPlayer,kirby_WingNormal_HitStopAffectTarget,kirby_WingNormal_HitStopLength,kirby_WingNormal_HitStopShakeStrength);
-								projectile.dirX = dir;
-								projectile.image_xscale = projectile.scale * projectile.dirX;
-								projectile.image_yscale = projectile.scale * projectile.dirY;
-								projectile.enemy = false;
-								projectile.paletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
-								attackable = false;
-							}
-						}
-					
-						if (attackNumber == playerAttacks.wingDash)
-						{
-							if (attackable)
-							{
-								wingDashParticleTimer = wingDashParticleTimerMax;
-								isRunning = false;
-				                attack = true;
-								attackable = false;
-				                attackTimer = 35;
-				                state = playerStates.wingDash;
-								if (audio_is_playing(snd_WingDash)) audio_stop_sound(snd_WingDash);
-								wingDashSfx = audio_play_sound(snd_WingDash,0,false);
-								wingMaskProj = instance_create_depth(x,y,depth,obj_Projectile_WingDashMask);
-								wingMaskProj.owner = id;
-								wingMaskProj.abilityType = playerAbilities.wing;
-								wingMaskProj.dmgMax = kirby_WingDash_DamageMax;
-								wingMaskProj.dmgMin = kirby_WingDash_DamageMin;
-								scr_Attack_SetKnockback(wingMaskProj,kirby_WingDash_Strength,kirby_WingDash_HitStopAffectSource,kirby_WingDash_HitStopAffectPlayer,kirby_WingDash_HitStopAffectTarget,kirby_WingDash_HitStopLength,kirby_WingDash_HitStopShakeStrength);
-								wingMaskProj.image_xscale = image_xscale;
-								wingMaskProj.image_yscale = image_yscale;
-							}
-						}
 						break;
 						#endregion
-						/*
-						#region Sword
-						case playerAbilities.sword:
-					    if ((!global.cutscene) and (keyAttackHold) and (!hurt) and (!attack) and (cutterAirThrown))
-						{
-							var cutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_CutterDropMask);
-							cutterMaskProj.owner = id;
-							cutterMaskProj.abilityType = playerAbilities.sword;
-							cutterMaskProj.dmg = 22;
-							cutterMaskProj.image_xscale = image_xscale;
-							cutterMaskProj.image_yscale = image_yscale;
-							invincible = true;
-							attack = true;
-							attackNumber = playerAttacks.cutterAir;
-							sprite_index = sprCutterAttack3;
-							image_index = 0;
-						}
-						
-					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
-					    {
-							if ((isRunning) and (vsp == 0) and (hsp != 0))
-							{
-								attack = true;
-								attackNumber = playerAttacks.swordDash;
-								sprite_index = sprSwordAttack2;
-						        image_index = 0;
-				                cutterCatch = false;
-							}
-							else if (keyDownHold)
-							{
-								var cutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_CutterDropMask);
-								cutterMaskProj.owner = id;
-								cutterMaskProj.abilityType = playerAbilities.sword;
-								cutterMaskProj.dmg = 22;
-								cutterMaskProj.image_xscale = image_xscale;
-								cutterMaskProj.image_yscale = image_yscale;
-								invincible = true;
-								attack = true;
-								attackNumber = playerAttacks.cutterDrop;
-								sprite_index = sprCutterAttack3;
-								image_index = 0;
-				                state = playerStates.cutterDrop;
-							}
-							else
-							{
-								if ((!cutterAirThrown) or (vsp == 0))
-								{
-									if (vsp != 0) cutterAirThrown = true;
-									attack = true;
-									attackNumber = playerAttacks.cutterCharge;
-									sprite_index = sprCutterAttack1;
-									image_index = 0;
-								}
-							}
-					    }
-					
-						if (attackNumber == playerAttacks.cutterCharge)
-						{
-							image_index = 0;
-							if (cutterCharge == cutterChargeMax - 1)
-							{
-								if (audio_is_playing(snd_Charge_Ready)) audio_stop_sound(snd_Charge_Ready);
-								audio_play_sound(snd_Charge_Ready,0,false);
-								var particle = instance_create_depth(x,y - 15,depth - 1,obj_Particle);
-								particle.sprite_index = spr_Particle_Flash1;
-								particle.scale = 1.5;
-								particle.destroyAfterAnimation = true;
-							}
-							cutterCharge += 1;
-							if (cutterCharge >= 6)
-							{
-								if (cutterCharge == 6)
-								{
-									sprite_index = sprCutterCharge;
-									image_index = 0;
-								}
-								if ((!audio_is_playing(snd_Charge_Intro)) and (!audio_is_playing(snd_Charge_Loop)))
-								{
-									if (chargeSfxState == "intro")
-									{
-									    chargeSfx = audio_play_sound(snd_Charge_Intro,0,false);
-									    chargeSfxState = "loop";
-									}
-									else
-									{
-									    chargeSfx = audio_play_sound(snd_Charge_Loop,0,false);
-									}
-								}
-							}
-						
-							if (keyRightHold)
-							{
-								dir = 1;
-							}
-							if (keyLeftHold)
-							{
-								dir = -1;
-							}
-						
-							if (cutterCharge < cutterChargeMax)
-							{
-								if ((!global.cutscene) and (keyAttackReleased))
-								{
-									cutterCharge = 0;
-									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
-									chargeSfxState = "intro";
-									invincibleFlash = false;
-									invincibleFlashTimer = -1;
-									attack = true;
-									attackNumber = playerAttacks.swordNormal;
-									attackTimer = 45;
-									sprite_index = sprSwordAttack1;
-								    image_index = 0;
-								}
-							}
-							else
-							{
-								if (invincibleFlashTimer == -1) invincibleFlashTimer = invincibleFlashTimerMax;
-								if ((!global.cutscene) and (keyAttackReleased))
-								{
-									cutterCharge = 0;
-									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
-									chargeSfxState = "intro";
-									invincibleFlash = false;
-									invincibleFlashTimer = -1;
-									attack = true;
-									attackNumber = playerAttacks.cutterChargeAttack;
-									sprite_index = sprCutterAttack1;
-								    image_index = 0;
-								}
-							}
-						}
-					
-						if (attackNumber == playerAttacks.swordNormal)
-						{
-							if ((round(image_index) == (image_number - 1)) and (attackable))
-							{
-								//if (audio_is_playing(snd_Cutter)) audio_stop_sound(snd_Cutter);
-								//audio_play_sound(snd_Cutter,0,false);
-						        var projectile = instance_create_depth(x,y - 5,depth,obj_Projectile_SwordMask);
-								projectile.owner = id;
-								projectile.abilityType = playerAbilities.sword;
-								projectile.dmg = 12;
-								projectile.sprite_index = projectile.sprIdle;
-								projectile.dirX = dir;
-								projectile.image_xscale = projectile.dirX;
-								projectile.enemy = false;
-								projectile.player = player;
-								attackable = false;
-							}
-						}
-					
-						if (attackNumber == playerAttacks.cutterChargeAttack)
-						{
-							if ((round(image_index) == (image_number - 1)) and (attackable))
-							{
-								if (audio_is_playing(snd_Cutter)) audio_stop_sound(snd_Cutter);
-								audio_play_sound(snd_Cutter,0,false);
-						        var projectile = instance_create_depth(x,y - 8,depth,obj_Projectile_Cutter);
-								projectile.owner = id;
-								projectile.abilityType = playerAbilities.sword;
-								projectile.paletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
-								projectile.dmg = 20;
-								projectile.sprite_index = projectile.sprCharge;
-								projectile.decelMax = projectile.decelMax * 1.2;
-								projectile.hsp = dir * projectile.decelMax;
-								projectile.dirX = dir;
-								projectile.image_xscale = projectile.dirX;
-								projectile.enemy = false;
-								projectile.destroyableByWall = false;
-								projectile.destroyableByEnemy = false;
-								projectile.destroyableByObject = false;
-								projectile.destroyableByProjectile = false;
-								projectile.player = player;
-								projectile.angleSpd = -15;
-								projectile.charge = true;
-								attackable = false;
-							}
-						}
-					
-						if (attackNumber == playerAttacks.swordDash)
-						{
-							if (attackable)
-							{
-				                hsp = (movespeedSlide * 1.25) * dir;
-								isRunning = false;
-				                attack = true;
-								attackable = false;
-				                attackTimer = 45;
-				                state = playerStates.swordDash;
-								if (audio_is_playing(snd_CutterDash)) audio_stop_sound(snd_CutterDash);
-								slideSfx = audio_play_sound(snd_CutterDash,0,false);
-								swordDashMaskProj = instance_create_depth(x,y,depth,obj_Projectile_SwordDashMask);
-								swordDashMaskProj.owner = id;
-								swordDashMaskProj.abilityType = playerAbilities.sword;
-								swordDashMaskProj.dmg = 18;
-								swordDashMaskProj.dmgMax = 18;
-								swordDashMaskProj.dmgMin = 16;
-								swordDashMaskProj.image_xscale = image_xscale;
-								swordDashMaskProj.image_yscale = image_yscale;
-							}
-						}
-					
-						if (attackNumber == playerAttacks.cutterAir)
-						{
-							if (keyAttackReleased)
-							{
-								attackTimer = 0;
-							}
-						}
-						break;
-						#endregion
-						*/
 						
 						#region Sword
 						case playerAbilities.sword: //AKA: -S- fucks around and finds out
@@ -2967,24 +2634,7 @@ function scr_Player_States_Normal()
 							{
 								if ((isRunning) and (canDashAttack) and (hsp != 0))
 								{
-									invincible = true;
-									vsp = 0;
-									isRunning = false;
-					                attack = true;
-									attackNumber = playerAttacks.parasolDash;
-									attackable = false;
-					                attackTimer = 45;
-					                state = playerStates.parasolDash;
-									if (audio_is_playing(snd_Fire3)) audio_stop_sound(snd_Fire3);
-				                    parasolDashSfx = audio_play_sound(snd_Fire3,0,false);
-									parasolDashMaskProj = instance_create_depth(x,y,depth,obj_Projectile_ParasolDashMask);
-									parasolDashMaskProj.owner = id;
-									parasolDashMaskProj.abilityType = playerAbilities.parasol;
-									parasolDashMaskProj.dmgMin = kirby_ParasolDash_DamageMin;
-									parasolDashMaskProj.dmgMax = kirby_ParasolDash_DamageMax;
-									scr_Attack_SetKnockback(parasolDashMaskProj,kirby_ParasolDash_Strength,kirby_ParasolDash_HitStopAffectSource,kirby_ParasolDash_HitStopAffectPlayer,kirby_ParasolDash_HitStopAffectTarget,kirby_ParasolDash_HitStopLength,kirby_ParasolDash_HitStopShakeStrength);
-									parasolDashMaskProj.image_xscale = image_xscale;
-									parasolDashMaskProj.image_yscale = image_yscale;
+									scr_Player_ExecuteAttack_ParasolDash();
 							    }
 						    }
 					    }
@@ -2995,36 +2645,7 @@ function scr_Player_States_Normal()
 						case playerAbilities.sleep:
 						if (!isSleeping)
 						{
-							attack = true;
-							attackable = false;
-							attackNumber = playerAttacks.sleepNormal;
-							isSleeping = true;
-							sleepEndTimer = sleepEndTimerMax;
-							sprite_index = sprSleepReady;
-							image_index = 0;
-							if (hurt) attackTimer = 0;
-						}
-						else
-						{
-							if ((sprite_index = sprSleep) and (floor(image_index) == 1))
-							{
-								if (audio_is_playing(snd_Sleep)) audio_stop_sound(snd_Sleep);
-								audio_play_sound(snd_Sleep,0,false);
-							}
-						}
-						
-						if ((sprite_index = sprSleepEnd) and (sleepHatParticle) and (floor(image_index) == 1))
-						{
-							var par = instance_create_depth(x,y,depth + 1,obj_Particle);
-							par.sprite_index = spr_Particle_SleepHat;
-							par.vsp = -3;
-							par.grav = .2;
-							par.gravLimit = 3;
-							par.hasGravity = true;
-							par.destroyAfterAnimation = true;
-							par.paletteSpriteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
-							par.paletteIndex = 1;
-							sleepHatParticle = false;
+							scr_Player_ExecuteAttack_SleepNormal();
 						}
 						break;
 						#endregion
@@ -3033,11 +2654,7 @@ function scr_Player_States_Normal()
 						case playerAbilities.scan:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (attackable))
 					    {
-					        attack = true;
-					        attackNumber = playerAttacks.scanNormal;
-					        attackable = false;
-							sprite_index = sprScanReady;
-							image_index = 0;
+							scr_Player_ExecuteAttack_ScanNormal();
 					    }
 						break;
 						#endregion
@@ -3046,88 +2663,29 @@ function scr_Player_States_Normal()
 						case playerAbilities.mic:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (attackable))
 					    {
-							global.pause = true;
-					        attack = true;
-					        attackNumber = playerAttacks.micNormal;
-					        attackable = false;
-							micTimer = micTimerMax;
-							attackTimer = micTimerMax;
-							invincibleFlash = false;
+							var micCountPointer = global.micCountP1;
 							switch (player)
 							{
 								case 0:
 								global.micCountP1 += 1;
-								switch (global.micCountP1)
-								{
-									case 1:
-									sprite_index = sprMicAttack1Ready;
-									break;
-									
-									case 2:
-									sprite_index = sprMicAttack2Ready;
-									break;
-									
-									case 3:
-									sprite_index = sprMicAttack3Ready;
-									break;
-								}
 								break;
 								
 								case 1:
+								micCountPointer = global.micCountP2;
 								global.micCountP2 += 1;
-								switch (global.micCountP2)
-								{
-									case 1:
-									sprite_index = sprMicAttack1Ready;
-									break;
-									
-									case 2:
-									sprite_index = sprMicAttack2Ready;
-									break;
-									
-									case 3:
-									sprite_index = sprMicAttack3Ready;
-									break;
-								}
 								break;
 								
 								case 2:
+								micCountPointer = global.micCountP3;
 								global.micCountP3 += 1;
-								switch (global.micCountP3)
-								{
-									case 1:
-									sprite_index = sprMicAttack1Ready;
-									break;
-									
-									case 2:
-									sprite_index = sprMicAttack2Ready;
-									break;
-									
-									case 3:
-									sprite_index = sprMicAttack3Ready;
-									break;
-								}
 								break;
 								
 								case 3:
+								micCountPointer = global.micCountP4;
 								global.micCountP4 += 1;
-								switch (global.micCountP4)
-								{
-									case 1:
-									sprite_index = sprMicAttack1Ready;
-									break;
-									
-									case 2:
-									sprite_index = sprMicAttack2Ready;
-									break;
-									
-									case 3:
-									sprite_index = sprMicAttack3Ready;
-									break;
-								}
 								break;
 							}
-							image_index = 0;
+							scr_Player_ExecuteAttack_MicNormal(micCountPointer);
 					    }
 						break;
 						#endregion
@@ -3692,6 +3250,14 @@ function scr_Player_States_Normal()
 			
 			case playerAttacks.beamAir:
 			scr_Player_AttackPassive_BeamAir();
+			break;
+			
+			case playerAttacks.wingDash:
+			scr_Player_AttackPassive_WingDash();
+			break;
+			
+			case playerAttacks.sleepNormal:
+			scr_Player_AttackPassive_SleepNormal();
 			break;
 		}
 		#endregion

@@ -8,7 +8,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	//Variables
 	
-	text_speed = room_speed / textSpeed;
+	typist.in(textSpeed,2);
 	if (text_length <= 0)
 	{
 		text_length = string_length(text[array]);
@@ -25,6 +25,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 			io_clear();
 			index = text_length;
 			text_displayed = string_copy(text[array],1,index);
+			typist.skip();
 		}
 	}
 	
@@ -37,16 +38,6 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	   {
 			index++;
 			dialogueFlowing = true;
-		   
-			/*modifier = "";
-	        if (string_char_at(text[array],index) == "@")
-	        {
-	            index += 1;
-	            modifier += string(string_char_at(text[array],index));
-	            index += 1;
-	            modifier += string(string_char_at(text[array],index));
-	            index += 1;
-	        }*/
 			
 			text_displayed = string_copy(text[array],1,index);
 			cooldown = text_speed;
@@ -91,8 +82,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		}
 	}
 	
-	//Destroy Timer
-	
+	#region Destroy Timer
 	if (destroyTimer > 0)
 	{
 		destroyTimer -= 1;
@@ -110,4 +100,5 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		if ((changeOwnerState) and (owner != -1) and (instance_exists(owner))) owner.stateExTimer = 5;
 	    destroyTimer = -1;
 	}
+	#endregion
 }

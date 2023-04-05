@@ -481,9 +481,14 @@ else if (roomChangeTimer == 0)
 {
 	if (audio_is_playing(snd_Enter)) audio_stop_sound(snd_Enter);
 	audio_play_sound(snd_Enter,0,false);
+	
 	var fade = instance_create_depth(x,y,-999,obj_Fade);
 	fade.targetRoom = global.roomNext;
 	fade.alphaSpd = .02;
+	
+	#region Start Stage
+	scr_StartStage();
+	#endregion
 	
 	#region Change Player Attributes
 	global.characterP1 = charactersArray[# characterSelectionP1,0];

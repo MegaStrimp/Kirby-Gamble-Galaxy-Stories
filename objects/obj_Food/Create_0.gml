@@ -36,3 +36,5 @@ hasXCollision = true;
 hasYCollision = true;
 collisionX = obj_ParentWall;
 collisionY = obj_ParentWall;
+
+if ((ds_exists(global.collectibleTracker,ds_type_list)) and (ds_list_find_index(global.collectibleTracker,id))) instance_destroy();

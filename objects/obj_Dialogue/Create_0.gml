@@ -60,6 +60,8 @@ maxPixels = 411;
 modifier = "";
 dialogueFlowing = false;
 paletteIndex = -1;
+typist = scribble_typist();
+typist.in(text_speed,2);
 
 //Timers
 

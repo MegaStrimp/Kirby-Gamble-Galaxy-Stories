@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Stage Elements",
-    "path": "folders/Objects/Gameplay/Stage Elements.yy",
+    "name": "Point Stars",
+    "path": "folders/Objects/Gameplay/Stage Elements/Point Stars.yy",
   },
   "parentObjectId": {
     "name": "obj_PointStar",

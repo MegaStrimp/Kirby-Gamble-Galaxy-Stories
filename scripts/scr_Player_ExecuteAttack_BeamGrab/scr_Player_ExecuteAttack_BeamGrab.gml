@@ -1,4 +1,5 @@
 ///@description Execute Attack - Beam Grab
+///@param {real} grabEnemy Grab Enemy
 
 function scr_Player_ExecuteAttack_BeamGrab(argument0)
 {

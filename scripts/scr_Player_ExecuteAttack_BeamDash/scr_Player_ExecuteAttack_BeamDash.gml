@@ -9,6 +9,7 @@ function scr_Player_ExecuteAttack_BeamDash()
 	
 	#region Attack Attributes
 	attack = true;
+	attackable = false;
 	attackNumber = playerAttacks.beamDash;
 	attackTimer = 60;
 	invincible = true;

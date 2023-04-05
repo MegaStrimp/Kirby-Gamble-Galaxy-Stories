@@ -37,9 +37,10 @@ if (page == 1)
 				else
 				{
 					draw_set_font(global.fontGalleryBig);
+					draw_set_font(global.fontGallerySmall);
 				}
 				draw_set_font(global.fontGallerySmall);
-				draw_text_ext_color(artworkX + (260 * i),223,text,-1,-1,c_white,c_white,c_white,c_white,1);
+				draw_text_ext_color(artworkX + (260 * i),221,text,-1,-1,c_white,c_white,c_white,c_white,1);
 				
 				draw_set_valign(fa_top);
 				text = string_lower(artworkArray[# i,2]);
@@ -50,9 +51,10 @@ if (page == 1)
 				else
 				{
 					draw_set_font(global.fontGalleryBig);
+					draw_set_font(global.fontGallerySmall);
 				}
 				draw_set_font(global.fontGallerySmall);
-				draw_text_ext_color(artworkX + (260 * i),232,text,-1,-1,c_white,c_white,c_white,c_white,1);
+				draw_text_ext_color(artworkX + (260 * i),236,text,-1,-1,c_white,c_white,c_white,c_white,1);
 			}
 			else
 			{

@@ -153,8 +153,8 @@ if (!global.pause)
 {
 	#region Down Held
     if ((keyDownHold) and (downHeld < 1000)) downHeld += 1;
-    if (keyDownReleased || attack || /*state == 5 || */hsp != 0) downHeld = 0;
-	if (playerAbility == playerAbilities.ufo) downHeld = 10;
+    if ((keyDownReleased) or (attack) or (duckSlide)) downHeld = 0;
+	if (playerAbility == playerAbilities.ufo) downHeld = downHeldPlatformMax;
 	#endregion
 	
 	#region Character Based Variables & Functions
@@ -1244,7 +1244,7 @@ if (!global.pause)
 	{
 		if (isRunning)
 		{
-			if ((grounded) and (abs(hsp) >= (movespeedRun * .25)))
+			if ((place_meeting(x,y + 1,obj_ParentWall)) and (abs(hsp) >= (movespeedRun * .25)))
 			{
 				var collidingWall = instance_place(x,y + 1,obj_ParentWall);
 				if ((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + collidingWall.vsp + 20 + vspFinal))))
@@ -2211,7 +2211,7 @@ else if (groundFailsafeTimer == 0)
 {
 	//Ground Failsafe
 	
-	while (grounded) y -= 1;
+	while (place_meeting(x,y + 1,obj_ParentWall)) y -= 1;
 	groundFailsafeTimer = -1;
 }
 

@@ -68,6 +68,8 @@ if (!global.pause)
 			blinkTimer = 0;
 			destroyTimer = destroyTimerMax;
 			
+			if (ds_exists(global.collectibleTracker,ds_type_list)) ds_list_add(global.collectibleTracker,id);
+			
 			if (!isCollectible)
 			{
 				var spawnedItem = instance_create_depth(itemX,itemY,depth - 1,storedItem);

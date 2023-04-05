@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Stage Elements",
-    "path": "folders/Objects/Gameplay/Stage Elements.yy",
+    "name": "Food",
+    "path": "folders/Objects/Gameplay/Stage Elements/Food.yy",
   },
   "parentObjectId": null,
   "persistent": false,

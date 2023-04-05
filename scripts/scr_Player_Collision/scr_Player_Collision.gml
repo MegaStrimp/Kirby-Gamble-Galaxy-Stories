@@ -6,22 +6,19 @@ function scr_Player_Collision(argument0)
 	
 	var playerMech = argument0;
 	
+	var playerAbility = global.abilityP1;
 	switch (player)
 	{
-		case 0:
-		var playerAbility = global.abilityP1;
-		break;
-		
 		case 1:
-		var playerAbility = global.abilityP2;
+		playerAbility = global.abilityP2;
 		break;
 		
 		case 2:
-		var playerAbility = global.abilityP3;
+		playerAbility = global.abilityP3;
 		break;
 		
 		case 3:
-		var playerAbility = global.abilityP4;
+		playerAbility = global.abilityP4;
 		break;
 	}
 	
@@ -32,7 +29,7 @@ function scr_Player_Collision(argument0)
 	
 	//Slopes
 	
-	if ((grounded) and (!place_meeting(x + hspFinal,y,obj_ParentWall)))
+	if ((place_meeting(x,y + 1,obj_ParentWall)) and (!place_meeting(x + hspFinal,y,obj_ParentWall)))
 	{
 		collidingWall = instance_place(x,y + 1,obj_ParentWall);
 		if (((!collidingWall.platform) or ((collidingWall.platform) and ((!keyDownHold) and !(round(bbox_bottom) > collidingWall.y + collidingWall.vsp + 20 + vspFinal)))) and (((instance_place(x,y + 1,obj_ParentWall)).slope) or ((place_meeting(x + sign(hspFinal),y,obj_ParentWall) and (instance_place(x + sign(hspFinal),y,obj_ParentWall).slope)))))

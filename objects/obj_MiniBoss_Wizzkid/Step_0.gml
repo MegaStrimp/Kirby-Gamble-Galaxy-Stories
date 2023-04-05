@@ -32,12 +32,12 @@ if (!childPauseHard)
 }
 #endregion
 
+#region Hurt Player
+scr_Enemy_HurtsPlayer(dmg);
+#endregion
+
 if (!childPause)
 {
-	#region Hurt Player
-	scr_Enemy_HurtsPlayer(dmg);
-	#endregion
-	
 	#region Movement
 	if ((!attack) or ((attackNumber == enemyAttacks.wizzkid_laser) and (attackState == 0)))
 	{

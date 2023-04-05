@@ -71,6 +71,9 @@ if (!global.pause)
 	if (destroy)
 	{
 		global.points += points;
+		
+		if (ds_exists(global.collectibleTracker,ds_type_list)) ds_list_add(global.collectibleTracker,id);
+		
 		instance_destroy();
 	}
 	

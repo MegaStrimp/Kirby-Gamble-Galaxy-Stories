@@ -10,6 +10,9 @@ if (!global.pause)
 	}
 	else if (setupTimer == 0)
 	{
+		if ((ds_exists(global.collectibleTracker,ds_type_list)) and (ds_list_find_index(global.collectibleTracker,id))) open = true;
+		if (open) sprite_index = sprOpen;
+		
 		switch (character)
 		{
 			//Green Greens
@@ -115,6 +118,9 @@ if (!global.pause)
 		var particle = instance_create_depth(x,y - 4,depth,obj_Particle);
 		particle.sprite_index = spr_Particle_Sparkle1;
 		particle.destroyAfterAnimation = true;
+		
+		if (ds_exists(global.collectibleTracker,ds_type_list)) ds_list_add(global.collectibleTracker,id);
+		
 		global.points += points;
 	}
 	

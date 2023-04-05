@@ -7,6 +7,19 @@ vsp = 0;
 
 //Enums
 
+enum wallMaterials
+{
+	none,
+	grass,
+	wood,
+	stone,
+	sand,
+	snow,
+	ice,
+	clouds,
+	metal
+}
+
 enum slopeTypes
 {
 	normal,
@@ -58,6 +71,7 @@ drawShakeX = 0;
 drawShakeY = 0;
 paletteIndex = -1;
 flashIndex = 1;
+material = wallMaterials.none;
 
 //Timers
 

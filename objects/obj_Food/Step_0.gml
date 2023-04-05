@@ -70,7 +70,11 @@ if (!global.pause)
 			global.healthP4 += round(global.healthP4Max * .1);
 			break;
 		}
+		
+		if (ds_exists(global.collectibleTracker,ds_type_list)) ds_list_add(global.collectibleTracker,id);
+		
 		global.points += points;
+		
 		instance_destroy();
 	}
 	

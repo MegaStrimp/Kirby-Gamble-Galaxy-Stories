@@ -2608,6 +2608,32 @@
         }
 	},
 	
+	"First Time Setup":
+    {
+		"Checks":
+        {
+            "Authenticating": "Authenticating...",
+			
+			"DirectX": "DirectX",
+			
+			"Discord": "Discord",
+			
+            "Found": "Found",
+			
+            "Not Found": "Not Found"
+        },
+		
+		"Language":
+        {
+            "Select Your Language": "Select Your Language (WIP)"
+        },
+		
+		"Audio":
+        {
+            "Adjust Your Audio": "Adjust Your Audio"
+        }
+	},
+	
 	"Delete Save Menu":
     {
 		"1": "Do you want to delete your save?",

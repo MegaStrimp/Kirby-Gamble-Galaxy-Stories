@@ -1,4 +1,6 @@
 ///@description Execute Attack - Beam Up
+///@param {bool} hasGoldenFlare Has Golden Flare
+///@param {bool} hasMarxSoulHat Has Marx Soul Hat
 
 function scr_Player_ExecuteAttack_BeamUp(argument0,argument1)
 {
