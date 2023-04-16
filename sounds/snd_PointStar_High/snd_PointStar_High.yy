@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 1.368005,
+  "duration": 1.344333,
   "parent": {
     "name": "Objects",
     "path": "folders/Sounds/Sound Effects/Objects.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_pointstar_high.wav",
+  "soundFile": "snd_PointStar_High.wav",
   "type": 1,
   "volume": 1.0,
 }

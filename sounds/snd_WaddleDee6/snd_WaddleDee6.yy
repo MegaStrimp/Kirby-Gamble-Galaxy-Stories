@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.216009,
+  "duration": 0.176781,
   "parent": {
     "name": "Enemies",
     "path": "folders/Sounds/Sound Effects/Enemies.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_waddledee6.wav",
+  "soundFile": "snd_WaddleDee6.wav",
   "type": 1,
   "volume": 1.0,
 }

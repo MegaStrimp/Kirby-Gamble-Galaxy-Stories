@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.941859,
+  "duration": 0.941474,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_1up.wav",
+  "soundFile": "snd_1Up.wav",
   "type": 1,
   "volume": 1.0,
 }

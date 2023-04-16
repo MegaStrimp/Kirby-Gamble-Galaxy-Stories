@@ -17,7 +17,7 @@
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_bossdeath2.wav",
+  "soundFile": "snd_BossDeath2.wav",
   "type": 1,
   "volume": 1.0,
 }

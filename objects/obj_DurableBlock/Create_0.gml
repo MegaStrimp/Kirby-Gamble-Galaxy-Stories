@@ -12,6 +12,8 @@ hp = 1;
 topWallMask = spr_48x4Originless_Mask;
 points = 100;
 character = 0;
+hitEffect = wallHitEffects.starBlock;
+wallStrength = wallStrengths.gold;
 
 //Sprites
 

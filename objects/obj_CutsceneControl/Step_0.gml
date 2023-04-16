@@ -459,6 +459,43 @@ long distances quickly?";
 			}
 			break;
 			#endregion
+			
+			#region NPC - Gamblion - Dreamy Spirit - Test
+			case cutscenes.npc_Gamblion_DreamySpirit_Test:
+			switch (stateEx)
+			{
+				case 0:
+				if (stateExTimer == -1) stateExTimer = 0;
+				break;
+				
+				case 1:
+				var array = 0;
+				var dialogue = instance_create_depth(0,0,-998,obj_Dialogue);
+				dialogue.owner = id;
+				dialogue.paletteIndex = targetPalette;
+				dialogue.changeOwnerState = true;
+				var text = "[rainbow]You're quite good at barely scraping by, aren't you, my resilient little worms?[/rainbow]";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_PinkCheckerboard,spr_Hud_Dialogue_Portrait_DreamySpirit_Normal,snd_TextGamble);
+				array += 1;
+				text = "[rainbow]Yet, I could just blink my eye and squish you like the very apples[/rainbow] Whispy's worthless forest produces-";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_PinkCheckerboard,spr_Hud_Dialogue_Portrait_DreamySpirit_Normal,snd_TextGamble);
+				array += 1;
+				text = "[rainbow]You're depressing me, Kirby. Why the long face?[/rainbow]";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_PinkCheckerboard,spr_Hud_Dialogue_Portrait_DreamySpirit_Normal,snd_TextGamble);
+				array += 1;
+				text = "[rainbow]We are sharing this little place, your dream is my dream; problem solved, right?[/rainbow]";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_PinkCheckerboard,spr_Hud_Dialogue_Portrait_DreamySpirit_Normal,snd_TextGamble);
+				array += 1;
+				text = "[rainbow]So turn that frown upside down...[/rainbow]";
+				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_PinkCheckerboard,spr_Hud_Dialogue_Portrait_DreamySpirit_Normal,snd_TextGamble);
+				break;
+				
+				case 2:
+				destroy = true;
+				break;
+			}
+			break;
+			#endregion
 		}
 		active = false;
 	}

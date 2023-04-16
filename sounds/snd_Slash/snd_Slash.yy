@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.182857,
+  "duration": 0.15771,
   "parent": {
     "name": "Attacks",
     "path": "folders/Sounds/Sound Effects/Attacks.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_slash.wav",
+  "soundFile": "snd_Slash.wav",
   "type": 1,
   "volume": 1.0,
 }

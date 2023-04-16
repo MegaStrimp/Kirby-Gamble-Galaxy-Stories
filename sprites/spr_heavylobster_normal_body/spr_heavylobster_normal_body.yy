@@ -65,8 +65,8 @@
   "swatchColours": null,
   "swfPrecision": 2.525,
   "textureGroupId": {
-    "name": "Halberd",
-    "path": "texturegroups/Halberd",
+    "name": "Mounts",
+    "path": "texturegroups/Mounts",
   },
   "type": 0,
   "VTile": false,

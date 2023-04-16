@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 1.671837,
+  "duration": 1.646259,
   "parent": {
     "name": "Misc",
     "path": "folders/Sounds/Sound Effects/Misc.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_treasurefound.wav",
+  "soundFile": "snd_TreasureFound.wav",
   "type": 1,
   "volume": 1.0,
 }

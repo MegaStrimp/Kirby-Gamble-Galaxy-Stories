@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 1.483311,
+  "duration": 1.429729,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_whispyspike.wav",
+  "soundFile": "snd_WhispySpike.wav",
   "type": 1,
   "volume": 1.0,
 }

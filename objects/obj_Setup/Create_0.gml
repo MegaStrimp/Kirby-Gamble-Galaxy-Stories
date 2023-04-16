@@ -742,17 +742,19 @@ global.collectibleTracker = -1;
 
 global.goldenTomatoAmountMax = 2;
 
-global.stageNumber = stages.greenGreens;
+global.adminAccess = false;
+global.adminAccess = true;
+global.debug = false;
 global.debug = true;
-//global.debug = false;
 global.debugOverlay = false;
 global.pause = false;
 global.cutscene = false;
 global.tutorial = false;
 global.currentNPC = -1;
 global.dialogueFlowing = false;
-global.shaders = false;
-if (shader_is_compiled(shd_pal_swapper)) global.shaders = true;
+global.shaders = (shader_is_compiled(shd_pal_swapper));
+
+global.stageNumber = stages.greenGreens;
 global.chapterIntro = acts.C1A1;
 
 global.hasCoop = 0;
@@ -863,6 +865,7 @@ for (var i = 0; i < 4; i++)
 
 global.saveLoaded = false;
 
+global.discord = true;
 global.discordDetailText = "Startup";
 global.discordStateText = "";
 global.discordLargeImage = "ggs_icon";
@@ -971,6 +974,9 @@ global.fontGalleryBig = font_add_sprite_ext(spr_Menu_Gallery_FontBig,"abcdefghij
 global.fontGallerySmall = font_add_sprite_ext(spr_Menu_Gallery_FontSmall,"abcdefghijklmnopqrstuvwxyz-",true,1);
 
 global.fontBestiary = font_add_sprite_ext(spr_Menu_Collection_Bestiary_Font,"abcdefghijklmnopqrstuvwxyz.!?," + chr(34) + "'()/" + chr(92) + ":;#-0123456789",true,1);
+
+scribble_font_bake_outline_8dir("fnt_DialogueDefault","fnt_DialogueDefault_Outlined",c_black,false);
+scribble_font_bake_outline_8dir("fnt_DialogueDefaultSpecial","fnt_DialogueDefaultSpecial_Outlined",c_black,false);
 #endregion
 
 #region Subtitiles
@@ -2139,7 +2145,11 @@ window_set_caption(windowCaption[0] + " " + windowCaption[1] + " " + windowCapti
 #region Discord Rich Presence Setup
 var appId = "754628961522286702";
 
-if (!rousr_dissonance_create(appId)) Error_msg = "Discord RPC unable to initialize";
+if (!rousr_dissonance_create(appId))
+{
+	global.discord = false;
+	Error_msg = "Discord RPC unable to initialize";
+}
 
 rousr_dissonance_handler_on_ready(example_on_ready, id);
 rousr_dissonance_handler_on_disconnected(example_on_disconnected, id);

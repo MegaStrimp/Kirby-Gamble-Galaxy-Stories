@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.498685,
+  "duration": 0.49737,
   "parent": {
     "name": "Objects",
     "path": "folders/Sounds/Sound Effects/Objects.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_breakingwall.wav",
+  "soundFile": "snd_BreakingWall.wav",
   "type": 1,
   "volume": 1.0,
 }

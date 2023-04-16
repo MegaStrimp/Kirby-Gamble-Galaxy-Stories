@@ -17,7 +17,7 @@
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_jump.wav",
+  "soundFile": "snd_Jump.wav",
   "type": 1,
   "volume": 1.0,
 }

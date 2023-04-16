@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 5.671775,
+  "duration": 5.562834,
   "parent": {
     "name": "Attacks",
     "path": "folders/Sounds/Sound Effects/Attacks.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_Mic3_Extra9.mp3",
+  "soundFile": "snd_Mic3_Extra9.wav",
   "type": 1,
   "volume": 1.0,
 }

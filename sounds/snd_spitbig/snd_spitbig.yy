@@ -17,7 +17,7 @@
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_spitbig.wav",
+  "soundFile": "snd_SpitBig.wav",
   "type": 1,
   "volume": 1.0,
 }

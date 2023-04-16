@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.312948,
+  "duration": 0.529687,
   "parent": {
     "name": "Misc",
     "path": "folders/Sounds/Sound Effects/Misc.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_buttonerror.wav",
+  "soundFile": "snd_ButtonError.wav",
   "type": 1,
   "volume": 1.0,
 }

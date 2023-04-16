@@ -14,7 +14,6 @@ function scr_Player_ExecuteAttack_YoyoDash()
 	attackTimer = 45;
 	state = playerStates.yoyoDash;
 	invincible = true;
-	invincibleTimer = 30;
 	vsp = 0;
 	isRunning = false;
 	if (runTurn) dir *= -1;

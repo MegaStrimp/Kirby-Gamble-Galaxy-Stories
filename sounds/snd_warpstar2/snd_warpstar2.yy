@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 6.501587,
+  "duration": 6.418095,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_warpstar2.wav",
+  "soundFile": "snd_WarpStar2.wav",
   "type": 1,
   "volume": 1.0,
 }

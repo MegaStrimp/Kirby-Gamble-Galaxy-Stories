@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 3.186939,
+  "duration": 3.213061,
   "parent": {
     "name": "Misc",
     "path": "folders/Sounds/Sound Effects/Misc.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_konami.wav",
+  "soundFile": "snd_Konami.wav",
   "type": 1,
   "volume": 1.0,
 }

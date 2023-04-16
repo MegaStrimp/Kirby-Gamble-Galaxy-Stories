@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 1.783311,
+  "duration": 1.756583,
   "parent": {
     "name": "Objects",
     "path": "folders/Sounds/Sound Effects/Objects.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_keydooropen2.wav",
+  "soundFile": "snd_KeyDoorOpen2.wav",
   "type": 1,
   "volume": 1.0,
 }

@@ -17,7 +17,7 @@
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_enemyice.wav",
+  "soundFile": "snd_EnemyIce.wav",
   "type": 1,
   "volume": 1.0,
 }

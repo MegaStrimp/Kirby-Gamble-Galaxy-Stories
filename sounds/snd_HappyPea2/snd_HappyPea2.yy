@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.496327,
+  "duration": 0.466848,
   "parent": {
     "name": "Attacks",
     "path": "folders/Sounds/Sound Effects/Attacks.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_happypea2.wav",
+  "soundFile": "snd_HappyPea2.wav",
   "type": 1,
   "volume": 1.0,
 }

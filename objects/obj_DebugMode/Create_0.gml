@@ -33,6 +33,7 @@ enum debugObject
 	ladder,
 	starBlock,
 	bigStarBlock,
+	metalBlock,
 	durableBlock,
 	crate,
 	breakingWall,

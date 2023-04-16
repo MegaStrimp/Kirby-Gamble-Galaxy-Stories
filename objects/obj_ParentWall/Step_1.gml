@@ -66,6 +66,10 @@ else if (setupTimer == 0)
 	setupTimer = -1;
 }
 
+#region Variables
+speedMultFinal = speedMultObject;
+#endregion
+
 #region Destroy
 if ((enemyCollisionHitbox) and ((!instance_exists(owner)) or (owner.death))) instance_destroy();
 #endregion

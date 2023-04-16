@@ -24,6 +24,7 @@ hp = 1;
 points = 10;
 storedItem = obj_PointStar;
 pointStarCharacter = 0;
+hitEffect = wallHitEffects.starBlock;
 
 //Timers
 

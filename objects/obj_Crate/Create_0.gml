@@ -14,6 +14,7 @@ points = 100;
 character = 0;
 storedItem = obj_PointStar;
 pointStarCharacter = 0;
+hitEffect = wallHitEffects.crate;
 
 //Sprites
 

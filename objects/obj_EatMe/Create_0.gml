@@ -1,13 +1,23 @@
 ///@description Initialize Variables
 
-//Physics
-
+#region Physics
 accel = .3;
 spd = 0;
 spdMax = 3;
+#endregion
 
-//Other Variables
+#region Enums
+enum eatMeTypes
+{
+	none,
+	onion,
+	machMissile,
+	pluid,
+	seashellBoomerang
+}
+#endregion
 
+#region Other Variables
 points = 0;
 dir = 1;
 state = 0;
@@ -25,3 +35,4 @@ amongUs = false;
 fishTaco = false;
 dirX = 1;
 dirY = 1;
+#endregion

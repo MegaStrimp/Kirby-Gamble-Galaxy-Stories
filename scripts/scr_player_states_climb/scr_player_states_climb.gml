@@ -5,30 +5,28 @@ function scr_Player_States_Climb()
 	if (!global.pause)
 	{
 		#region Variables
+		var playerAbility = global.abilityP1;
+		var playerCharacter = global.characterP1;
+		var playerSprayPaint = global.sprayPaintP1;
+		
 		switch (player)
 		{
-			case 0:
-			var playerAbility = global.abilityP1;
-			var playerCharacter = global.characterP1;
-			var playerSprayPaint = global.sprayPaintP1;
-			break;
-			
 			case 1:
-			var playerAbility = global.abilityP2;
-			var playerCharacter = global.characterP2;
-			var playerSprayPaint = global.sprayPaintP2;
+			playerAbility = global.abilityP2;
+			playerCharacter = global.characterP2;
+			playerSprayPaint = global.sprayPaintP2;
 			break;
 			
 			case 2:
-			var playerAbility = global.abilityP3;
-			var playerCharacter = global.characterP3;
-			var playerSprayPaint = global.sprayPaintP3;
+			playerAbility = global.abilityP3;
+			playerCharacter = global.characterP3;
+			playerSprayPaint = global.sprayPaintP3;
 			break;
 			
 			case 3:
-			var playerAbility = global.abilityP4;
-			var playerCharacter = global.characterP4;
-			var playerSprayPaint = global.sprayPaintP4;
+			playerAbility = global.abilityP4;
+			playerCharacter = global.characterP4;
+			playerSprayPaint = global.sprayPaintP4;
 			break;
 		}
 		#endregion
@@ -39,32 +37,19 @@ function scr_Player_States_Climb()
 		{
 			if (keyUpHold)
 			{
-				/*if (place_meeting(x,y - (sprite_get_height(spr_Ladder) / 1.5),obj_Ladder))
-				{
-					image_speed = 1;
-					sprite_index = sprClimbUp;
-					vsp = -climbSpeed;
-					grounded = false;
-				}
-				else
-				{
-					vsp = 0;
-					image_speed = 0;
-				}*/
-				
 				image_speed = 1;
 				sprite_index = sprClimbUp;
 				vsp = -climbSpeed;
 				grounded = false;
 				
-				if ((!place_meeting(x,y,obj_Ladder)) or (!place_meeting(x,y - 8,obj_Ladder)))
+				if (((!place_meeting(x,y,obj_Ladder)) or (!place_meeting(x,y - 8,obj_Ladder))) and ((!place_meeting(x,y,obj_Platform)) or (!place_meeting(x,y - 4,obj_Platform))))
 				{
 					state = playerStates.normal;
 				}
 			}
 			else if (keyDownHold)
 			{
-				if (place_meeting(x,y + (sprite_get_height(spr_Ladder) / 2),obj_Ladder))
+				if ((place_meeting(x,y + (sprite_get_height(spr_Ladder) / 2),obj_Ladder)) or (place_meeting(x,y + 4,obj_Platform)))
 				{
 					image_speed = 1;
 					sprite_index = sprClimbDown;
@@ -110,12 +95,6 @@ function scr_Player_States_Climb()
 		//Animation
 		
 		if ((sprite_index != sprClimbUp) and (sprite_index != sprClimbDown)) sprite_index = sprClimbUp;
-		
-		// Get off ladder with left or right
-		
-		if((!global.cutscene) and (keyLeftPressed || keyRightPressed)){
-			state = playerStates.normal;
-		}
 	}
 	else
 	{

@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 2.037551,
+  "duration": 2.012766,
   "parent": {
     "name": "Attacks",
     "path": "folders/Sounds/Sound Effects/Attacks.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_beamchargemarxalt.wav",
+  "soundFile": "snd_BeamChargeMarxAlt.wav",
   "type": 1,
   "volume": 1.0,
 }

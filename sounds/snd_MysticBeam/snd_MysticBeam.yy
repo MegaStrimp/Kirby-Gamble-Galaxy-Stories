@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.966531,
+  "duration": 0.943469,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_mysticbeam.wav",
+  "soundFile": "snd_MysticBeam.wav",
   "type": 1,
   "volume": 1.0,
 }

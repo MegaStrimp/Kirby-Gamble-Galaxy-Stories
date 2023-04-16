@@ -39,12 +39,31 @@ enum movingWallAttributes
 	asteroidFields5_2
 }
 
+enum wallHitEffects
+{
+	none,
+	starBlock,
+	starBlock_Free,
+	crate,
+	crate_Free,
+	metalBlock,
+	metalBlock_Free,
+}
+
+enum wallStrengths
+{
+	none,
+	metal,
+	gold
+}
+
 //Other Variables
 
 slope = false;
 slopeType = slopeTypes.normal;
 platform = false;
 object = false;
+wallStrength = wallStrengths.none;
 damageType = damageTypes.none;
 hp = 1;
 hasEnemyWall = false;
@@ -72,6 +91,10 @@ drawShakeY = 0;
 paletteIndex = -1;
 flashIndex = 1;
 material = wallMaterials.none;
+hitEffect = wallHitEffects.none;
+hitEffectTimer = 0;
+speedMultObject = 1;
+speedMultFinal = speedMultObject;
 
 //Timers
 

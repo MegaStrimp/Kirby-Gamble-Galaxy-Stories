@@ -2,74 +2,51 @@
 
 if (((pausable) and (!global.pause)) or (!pausable))
 {
-	//Inputs
-	
+	#region Inputs
 	scr_Player_Inputs(0);
+	#endregion
 	
-	//Variables
+	#region Unpause
+	if (typist.get_paused()) typist.unpause();
+	#endregion
 	
+	#region Variables
 	typist.in(textSpeed,2);
-	if (text_length <= 0)
-	{
-		text_length = string_length(text[array]);
-	}
+	if (typewriter) typist.sound_per_char(textSound[array],1,1,1);
+	
+	dialogueFlowing = (typist.get_state() < 1);
 	
 	if ((!hasResetTimer) and ((keyJumpPressed) or (keyStartPressed)))
 	{
-		if (index >= text_length)
+		if (!dialogueFlowing)
 		{
 		     resetArray = true;
 		}
 		else
 		{
 			io_clear();
-			index = text_length;
-			text_displayed = string_copy(text[array],1,index);
 			typist.skip();
 		}
 	}
+	#endregion
 	
+	#region Destroy
 	if (image_alpha <= 0) destroyTimer = 0;
+	#endregion
 	
-	if (index < text_length)
-	{
-	   cooldown--;
-	   if (cooldown <= 0)
-	   {
-			index++;
-			dialogueFlowing = true;
-			
-			text_displayed = string_copy(text[array],1,index);
-			cooldown = text_speed;
-			if (typewriter)
-			{
-				if ((soundPlaying != -1) and (audio_is_playing(soundPlaying))) audio_stop_sound(soundPlaying);
-				if (textSound[array] != -1) soundPlaying = audio_play_sound(textSound[array],0,false);
-			}
-		}
-	}
-	else
-	{
-		dialogueFlowing = false;
-	}
-	
-	//Reset Array
-	
+	#region Reset Array
 	if (resetArray)
 	{
 		io_clear();
 		array += 1;
-		text_displayed = "";
-		text_length = -1;
-		index = 0;
 		resetArray = false;
 		if (array_length(text) == array) destroyTimer = 0;
 	}
+	#endregion
 	
-	if ((hasResetTimer) and (array < array_length(text)) and (index >= string_length(text[array])))
+	if ((hasResetTimer) and (array < array_length(text)) and (!dialogueFlowing))
 	{
-		//Reset Timer
-		
+		#region Reset Timer
 		if (resetTimer > 0)
 		{
 			resetTimer -= 1;
@@ -80,6 +57,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 			resetTimer = -1;
 			if (array + 1 < array_length(resetTimerMax)) resetTimer = resetTimerMax[array + 1];
 		}
+		#endregion
 	}
 	
 	#region Destroy Timer
@@ -100,5 +78,11 @@ if (((pausable) and (!global.pause)) or (!pausable))
 		if ((changeOwnerState) and (owner != -1) and (instance_exists(owner))) owner.stateExTimer = 5;
 	    destroyTimer = -1;
 	}
+	#endregion
+}
+else
+{
+	#region Pause
+	if (!typist.get_paused()) typist.pause();
 	#endregion
 }

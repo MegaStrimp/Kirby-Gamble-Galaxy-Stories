@@ -14,8 +14,8 @@ if (setupTimer == 0)
 		sprMadFly = spr_Scarfy_Normal_MadFly;
 		sprMadHurt = spr_Scarfy_Normal_MadHurt;
 		break;
-		sprHurt = sprCalmHurt;
 	}
+	sprHurt = sprCalmHurt;
 	
 	if (state == 1) attackTimer = -1;
 }

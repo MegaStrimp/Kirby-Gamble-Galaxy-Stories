@@ -4,6 +4,10 @@
 global.healthbarMarkedEnemy = -1;
 #endregion
 
+#region Check Forbidden Levels
+if (!scr_CheckForbiddenLevels(room)) room_goto(rm_Setup);
+#endregion
+
 #region Gradient
 if (!layer_exists("Gradient"))
 {

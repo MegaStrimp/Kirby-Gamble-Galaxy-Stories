@@ -510,6 +510,8 @@ InhaledIntoMouthSound = -1;
 inhaleEnd = false;
 spit = false;
 swallowAction = 0;
+
+
 damageType = damageTypes.none;
 dmg = 15;
 hurt = false;

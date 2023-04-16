@@ -47,7 +47,7 @@
     ],
     "top": 10,
   },
-  "origin": 4,
+  "origin": 9,
   "parent": {
     "name": "Gallery",
     "path": "folders/Sprites/Menu/Collection Menu/Gallery.yy",
@@ -85,7 +85,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 97,
-    "yorigin": 82,
+    "yorigin": 81,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

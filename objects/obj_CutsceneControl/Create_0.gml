@@ -40,5 +40,7 @@ enum cutscenes
 	npc_GreenGreens_TrappedDee1,
 	npc_GreenGreens_TrappedDee2,
 	npc_GreenGreens_TrappedDee3,
-	npc_GreenGreens_TrappedDee4
+	npc_GreenGreens_TrappedDee4,
+	
+	npc_Gamblion_DreamySpirit_Test
 }

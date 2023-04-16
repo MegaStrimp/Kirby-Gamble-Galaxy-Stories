@@ -23,7 +23,7 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ea8af3c0-4a7c-4426-ae94-294e3789832f","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 7,
+  "origin": 9,
   "parent": {
     "name": "Gooey",
     "path": "folders/Sprites/Menu/Collection Menu/Customize/Character Portraits/Gooey.yy",
@@ -59,7 +59,7 @@
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 25,
+    "xorigin": 24,
     "yorigin": 55,
   },
   "swatchColours": null,

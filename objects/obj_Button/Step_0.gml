@@ -166,75 +166,18 @@ if (!global.pause)
 			{
 			    if ((!isTop) and (canExplode))
 				{
-					if (place_meeting(x,y,other))
-					{
-						explodeTimer = explodeTimerMax;
-					}
-					if (place_meeting(x + 24,y,other))
-					{
-						explodeTimer = explodeTimerMax;
-					}
-					if (place_meeting(x - 24,y,other))
-					{
-						explodeTimer = explodeTimerMax;
-					}
-					if (place_meeting(x,y + 24,other))
-					{
-						explodeTimer = explodeTimerMax;
-					}
-					if (place_meeting(x,y - 24,other))
-					{
-						explodeTimer = explodeTimerMax;
-					}
+					if (distance_to_object(other) <= 24) explodeTimer = explodeTimerMax;
 				}
 			}
 			
 			with (obj_BombSolidBlock_Invis)
 			{
-			    if (place_meeting(x,y,other))
-				{
-				    explodeTimer = explodeTimerMax;
-				}
-				if (place_meeting(x + 24,y,other))
-				{
-				    explodeTimer = explodeTimerMax;
-				}
-				if (place_meeting(x - 24,y,other))
-				{
-				    explodeTimer = explodeTimerMax;
-				}
-				if (place_meeting(x,y + 24,other))
-				{
-				    explodeTimer = explodeTimerMax;
-				}
-				if (place_meeting(x,y - 24,other))
-				{
-				    explodeTimer = explodeTimerMax;
-				}
+				if (distance_to_object(other) <= 24) explodeTimer = explodeTimerMax;
 			}
 			
 			with (obj_BombSolidBlock_Create)
 			{
-			    if (place_meeting(x,y,other))
-				{
-				    explodeTimer = explodeTimerMax;
-				}
-				if (place_meeting(x + 24,y,other))
-				{
-				    explodeTimer = explodeTimerMax;
-				}
-				if (place_meeting(x - 24,y,other))
-				{
-				    explodeTimer = explodeTimerMax;
-				}
-				if (place_meeting(x,y + 24,other))
-				{
-				    explodeTimer = explodeTimerMax;
-				}
-				if (place_meeting(x,y - 24,other))
-				{
-				    explodeTimer = explodeTimerMax;
-				}
+				if (distance_to_object(other) <= 24) explodeTimer = explodeTimerMax;
 			}
 			break;
 			#endregion

@@ -31,8 +31,8 @@ if ((keyboard_check(vk_alt)) and (keyboard_check_pressed(ord("S"))))
 
 #region Change Room
 if (keyboard_check_pressed(vk_multiply)) room_restart();
-if ((room != room_last) and (keyboard_check_pressed(vk_subtract))) room_goto_next();
-if ((room != room_first) and (keyboard_check_pressed(vk_divide))) room_goto_previous();
+if ((room != room_last) and (scr_CheckForbiddenLevels(room_get_name(room_next(room)))) and (keyboard_check_pressed(vk_subtract))) room_goto_next();
+if ((room != room_first) and (scr_CheckForbiddenLevels(room_get_name(room_previous(room)))) and (keyboard_check_pressed(vk_divide))) room_goto_previous();
 if (keyboard_check_pressed(vk_add)) game_restart();
 #endregion
 
@@ -487,6 +487,36 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.topWallSprite = topWallSprite;
+			debugObj.sprite_index = sprIdle;
+			debugObj.image_xscale = debugXScale;
+			debugObj.image_yscale = debugYScale;
+		}
+		break;
+		#endregion
+		
+		#region Metal Block
+		case debugObject.metalBlock:
+		debugSpriteSelectedMax = 0;
+		switch (debugSpriteSelected)
+		{
+			#region Normal
+			case 0:
+			var sprIdle = spr_MetalBlock_Normal_Idle;
+			var topWallSprite = spr_MetalBlock_Normal_Top;
+			var sprDebris = spr_MetalBlock_Normal_Debris;
+			break;
+			#endregion
+		}
+		debugSprite = sprIdle;
+		debugIndex = 0;
+		debugStateSelectedMax = 0;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var debugObj = instance_create_layer(x,y,"Environment",obj_MetalBlock);
+			debugObj.character = debugSpriteSelected;
+			debugObj.sprIdle = sprIdle;
+			debugObj.topWallSprite = topWallSprite;
+			debugObj.sprDebris = sprDebris;
 			debugObj.sprite_index = sprIdle;
 			debugObj.image_xscale = debugXScale;
 			debugObj.image_yscale = debugYScale;

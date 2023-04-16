@@ -2594,6 +2594,46 @@
         }
 	},
 	
+	"First Time Setup":
+    {
+		"Checks":
+        {
+            "Authenticating": "Ayarlanıyor...",
+			
+			"DirectX": "DirectX",
+			
+			"Discord": "Discord",
+			
+            "Found": "Bulundu",
+			
+            "Not Found": "Bulunamadı",
+			
+            "Confirm": "Onayla"
+        },
+		
+		"Language":
+        {
+            "Select Your Language": "Dilini Seç"
+        },
+		
+		"Audio":
+        {
+            "Adjust Your Audio": "Sesleri Ayarla"
+        },
+		
+		"Display":
+        {
+            "Adjust Your Display": "Görüntünü Ayarla"
+        },
+		
+		"End":
+        {
+            "Config Complete": "Ayarlamalar tamamlandı - Ayarları tekrar Ana Menüden değiştirebilirsin",
+			
+            "Done": "Oyun şimdi başlamak üzere. İyi eğlenceler!"
+        }
+	},
+	
 	"Delete Save Menu":
     {
 		"1": "Kaydını silmek istiyor musun?",

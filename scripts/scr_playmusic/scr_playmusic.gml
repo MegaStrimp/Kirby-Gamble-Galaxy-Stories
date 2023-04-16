@@ -1,7 +1,7 @@
 ///@description Play Music
 ///@param {real} setMusicPlaying Set Music Playing
 ///@param {real} pause Stop existing music
-///@param {real} soundid Which music to play.
+///@param {asset.GMSound} soundid Which music to play.
 ///@param {real} priority Music priority.
 ///@param {real} loops Can loop or not.
 

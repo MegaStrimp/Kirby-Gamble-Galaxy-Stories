@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.168005,
+  "duration": 0.144708,
   "parent": {
     "name": "Player",
     "path": "folders/Sounds/Sound Effects/Player.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_squishhigh.wav",
+  "soundFile": "snd_SquishHigh.wav",
   "type": 1,
   "volume": 1.0,
 }

@@ -4,7 +4,7 @@
   "name": "spr_Menu_Gallery_Artwork_TunaSandwichMysticLads",
   "bbox_bottom": 977,
   "bbox_left": 0,
-  "bbox_right": 1038,
+  "bbox_right": 1207,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b1a2ba5b-ac74-4874-8493-749fb88d2af7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b677ee76-ccc3-45da-b5c6-1931269af4ab",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 978,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e097a00d-6462-4e0e-a1c7-1ac37c3509a0","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d6d537a3-2693-4d0c-8223-e74c0616d34c","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 4,
@@ -54,12 +54,12 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b1a2ba5b-ac74-4874-8493-749fb88d2af7","path":"sprites/spr_Menu_Gallery_Artwork_TunaSandwichMysticLads/spr_Menu_Gallery_Artwork_TunaSandwichMysticLads.yy",},},},"Disabled":false,"id":"8ac1ae5d-7beb-473b-9fea-57010cdb679d","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b677ee76-ccc3-45da-b5c6-1931269af4ab","path":"sprites/spr_Menu_Gallery_Artwork_TunaSandwichMysticLads/spr_Menu_Gallery_Artwork_TunaSandwichMysticLads.yy",},},},"Disabled":false,"id":"592f15be-02a8-4de3-958e-41a5521d1e54","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 519,
+    "xorigin": 604,
     "yorigin": 489,
   },
   "swatchColours": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 1039,
+  "width": 1208,
 }

@@ -7,6 +7,15 @@ vsp = 0;
 strength = 3.5;
 angle = 45;
 
+//Enums
+
+enum projectileHitEffects
+{
+	none,
+	cutter,
+	explosion1
+}
+
 //Other Variables
 
 owner = id;
@@ -68,6 +77,8 @@ isDirectHit = false;
 hitType = 0;
 isStunned = false;
 isPaused = false;
+hitEffect = projectileHitEffects.none;
+wallStrength = wallStrengths.none;
 
 //Structs
 

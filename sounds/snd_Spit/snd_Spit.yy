@@ -17,7 +17,7 @@
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_spit.wav",
+  "soundFile": "snd_Spit.wav",
   "type": 1,
   "volume": 1.0,
 }

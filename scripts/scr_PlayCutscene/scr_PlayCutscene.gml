@@ -20,6 +20,8 @@ function scr_PlayCutscene(argument0)
 		case cutscenes.npc_GreenGreens_AdultDee:
 		case cutscenes.npc_GreenGreens_BebuDee:
 		case cutscenes.npc_GreenGreens_SignmasterDee:
+		
+		case cutscenes.npc_Gamblion_DreamySpirit_Test:
 		global.cutscene = true;
 		cutsceneControl.stopsCutscene = true;
 		cutsceneControl.targetPalette = paletteIndex;

@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.265533,
+  "duration": 0.264937,
   "parent": {
     "name": "Attacks",
     "path": "folders/Sounds/Sound Effects/Attacks.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_bombthrow.wav",
+  "soundFile": "snd_BombThrow.wav",
   "type": 1,
   "volume": 1.0,
 }

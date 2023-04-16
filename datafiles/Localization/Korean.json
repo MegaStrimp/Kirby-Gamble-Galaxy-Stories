@@ -2594,6 +2594,46 @@
         }
 	},
 	
+	"First Time Setup":
+    {
+		"Checks":
+        {
+            "Authenticating": "",
+			
+			"DirectX": "",
+			
+			"Discord": "",
+			
+            "Found": "",
+			
+            "Not Found": "",
+			
+            "Confirm": ""
+        },
+		
+		"Language":
+        {
+            "Select Your Language": ""
+        },
+		
+		"Audio":
+        {
+            "Adjust Your Audio": ""
+        },
+		
+		"Display":
+        {
+            "Adjust Your Display": ""
+        },
+		
+		"End":
+        {
+            "Config Complete": "",
+			
+            "Done": ""
+        }
+	},
+	
 	"Delete Save Menu":
     {
 		"1": "",

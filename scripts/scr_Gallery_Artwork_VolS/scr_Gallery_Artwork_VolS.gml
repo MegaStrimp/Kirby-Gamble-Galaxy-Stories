@@ -25,7 +25,7 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,2] = "Diamond";
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
-	artworkArray[# i,5] = (140 / max(sprite_get_width(artworkArray[# i,0]),sprite_get_height(artworkArray[# i,0])));
+	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
 	artworkArray[# i,6] = spr_Menu_Gallery_Frame;
 	i += 1;
 	#endregion
@@ -36,7 +36,7 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,2] = "Diamond";
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
-	artworkArray[# i,5] = (140 / max(sprite_get_width(artworkArray[# i,0]),sprite_get_height(artworkArray[# i,0])));
+	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
 	artworkArray[# i,6] = spr_Menu_Gallery_Frame;
 	i += 1;
 	#endregion
@@ -47,7 +47,7 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,2] = "Diamond";
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
-	artworkArray[# i,5] = (140 / max(sprite_get_width(artworkArray[# i,0]),sprite_get_height(artworkArray[# i,0])));
+	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
 	artworkArray[# i,6] = spr_Menu_Gallery_Frame;
 	i += 1;
 	#endregion
@@ -58,7 +58,7 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,2] = "Diamond";
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
-	artworkArray[# i,5] = (140 / max(sprite_get_width(artworkArray[# i,0]),sprite_get_height(artworkArray[# i,0])));
+	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
 	artworkArray[# i,6] = spr_Menu_Gallery_Frame;
 	i += 1;
 	#endregion
@@ -69,7 +69,7 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,2] = "Diamond";
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
-	artworkArray[# i,5] = (140 / max(sprite_get_width(artworkArray[# i,0]),sprite_get_height(artworkArray[# i,0])));
+	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
 	artworkArray[# i,6] = spr_Menu_Gallery_Frame;
 	i += 1;
 	#endregion
@@ -80,7 +80,7 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,2] = "Diamond";
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
-	artworkArray[# i,5] = (140 / max(sprite_get_width(artworkArray[# i,0]),sprite_get_height(artworkArray[# i,0])));
+	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
 	artworkArray[# i,6] = spr_Menu_Gallery_Frame;
 	i += 1;
 	#endregion
@@ -91,7 +91,7 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,2] = "Diamond";
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
-	artworkArray[# i,5] = (140 / max(sprite_get_width(artworkArray[# i,0]),sprite_get_height(artworkArray[# i,0])));
+	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
 	artworkArray[# i,6] = spr_Menu_Gallery_Frame;
 	i += 1;
 	#endregion
@@ -102,7 +102,7 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,2] = "Diamond";
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
-	artworkArray[# i,5] = (140 / max(sprite_get_width(artworkArray[# i,0]),sprite_get_height(artworkArray[# i,0])));
+	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
 	artworkArray[# i,6] = spr_Menu_Gallery_Frame;
 	i += 1;
 	#endregion
@@ -113,7 +113,7 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,2] = "A.M Jazz";
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
-	artworkArray[# i,5] = (140 / max(sprite_get_width(artworkArray[# i,0]),sprite_get_height(artworkArray[# i,0])));
+	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
 	artworkArray[# i,6] = spr_Menu_Gallery_FrameRed;
 	i += 1;
 	#endregion
@@ -124,7 +124,7 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,2] = "Potato Plus";
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
-	artworkArray[# i,5] = (140 / max(sprite_get_width(artworkArray[# i,0]),sprite_get_height(artworkArray[# i,0])));
+	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
 	artworkArray[# i,6] = spr_Menu_Gallery_FrameRed;
 	i += 1;
 	#endregion
@@ -135,7 +135,7 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,2] = "Diamond";
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
-	artworkArray[# i,5] = (140 / max(sprite_get_width(artworkArray[# i,0]),sprite_get_height(artworkArray[# i,0])));
+	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
 	artworkArray[# i,6] = spr_Menu_Gallery_FrameRed;
 	i += 1;
 	#endregion
@@ -146,7 +146,7 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,2] = "Subsandwich";
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
-	artworkArray[# i,5] = (140 / max(sprite_get_width(artworkArray[# i,0]),sprite_get_height(artworkArray[# i,0])));
+	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
 	artworkArray[# i,6] = spr_Menu_Gallery_FrameRed;
 	i += 1;
 	#endregion
@@ -157,7 +157,7 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,2] = "Tuna Sandwich";
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
-	artworkArray[# i,5] = (140 / max(sprite_get_width(artworkArray[# i,0]),sprite_get_height(artworkArray[# i,0])));
+	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
 	artworkArray[# i,6] = spr_Menu_Gallery_FrameRed;
 	i += 1;
 	#endregion

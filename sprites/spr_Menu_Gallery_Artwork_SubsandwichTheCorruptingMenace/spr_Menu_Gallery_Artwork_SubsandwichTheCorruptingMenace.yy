@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a57acc3d-4928-4732-ad2a-a440f5b154c3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"71acc78d-4b60-40b5-8a2b-0ac2d6777993",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 270,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9c565579-960c-4b44-a809-1e00acc5ca2d","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b2192e50-df47-4796-b6e5-a7be303e6c70","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 4,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a57acc3d-4928-4732-ad2a-a440f5b154c3","path":"sprites/spr_Menu_Gallery_Artwork_SubsandwichTheCorruptingMenace/spr_Menu_Gallery_Artwork_SubsandwichTheCorruptingMenace.yy",},},},"Disabled":false,"id":"04515338-d567-44b8-8b4f-80fba85220da","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"71acc78d-4b60-40b5-8a2b-0ac2d6777993","path":"sprites/spr_Menu_Gallery_Artwork_SubsandwichTheCorruptingMenace/spr_Menu_Gallery_Artwork_SubsandwichTheCorruptingMenace.yy",},},},"Disabled":false,"id":"bcb055d6-7944-49b7-8beb-8de098e96f72","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

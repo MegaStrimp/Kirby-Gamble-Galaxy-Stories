@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 6.922449,
+  "duration": 6.855578,
   "parent": {
     "name": "Misc",
     "path": "folders/Sounds/Sound Effects/Misc.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_hideo.wav",
+  "soundFile": "snd_Hideo.wav",
   "type": 1,
   "volume": 1.0,
 }

@@ -17,13 +17,10 @@ sprPortrait[0] = spr_Hud_Dialogue_Portrait_Gamble_Normal;
 
 text[0] = "";
 array = 0;
-text_speed = room_speed / 10;
-textSpeed = 18;
-text_displayed = "";
-text_length = -1;
-text_halign = fa_left;
+textSpeed = 1;
+textHalign = fa_left;
+textValign = fa_top;
 index = 0;
-cooldown = text_speed;
 owner = -1;
 dir = 1;
 spd = .25;
@@ -51,17 +48,17 @@ else
 {
 	draw_set_font(fnt_DialogueDefaultSpecial);
 }
-textFont = fnt_DialogueDefault;
+textFont = "fnt_DialogueDefault";
 hasResetTimer = false;
-color = c_white;
 changeOwnerState = false;
 pausable = true;
 maxPixels = 411;
 modifier = "";
 dialogueFlowing = false;
 paletteIndex = -1;
+
 typist = scribble_typist();
-typist.in(text_speed,2);
+typist.in(textSpeed,2);
 
 //Timers
 

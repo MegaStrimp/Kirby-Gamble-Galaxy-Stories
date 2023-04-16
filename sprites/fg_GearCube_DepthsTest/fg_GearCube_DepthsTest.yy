@@ -65,8 +65,8 @@
   "swatchColours": null,
   "swfPrecision": 2.525,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "GearCube",
+    "path": "texturegroups/GearCube",
   },
   "type": 0,
   "VTile": false,

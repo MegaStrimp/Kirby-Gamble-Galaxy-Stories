@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 1.823991,
+  "duration": 1.800958,
   "parent": {
     "name": "Attacks",
     "path": "folders/Sounds/Sound Effects/Attacks.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_bombexplode.wav",
+  "soundFile": "snd_BombExplode.wav",
   "type": 1,
   "volume": 1.0,
 }

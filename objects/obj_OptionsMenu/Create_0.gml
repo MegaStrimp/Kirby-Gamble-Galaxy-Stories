@@ -56,12 +56,7 @@ menuOffsetLerp[i] = 0;
 #endregion
 
 #region Languages
-var i = 0;
-for (var i = 0; i < languages.length; i++)
-{
-	//languageIndex[i] = scr_Localization_Main(stringAttributes.language,stringAttributes.title,i,0);
-	languageVal[i] = i;
-}
+for (i = 0; i < languages.length; i++) languageVal[i] = i;
 
 languageIndex =
 [
@@ -105,7 +100,6 @@ strMusicIntro = str("Options.Music Intro");
 strEnemyHealthbar = str("Options.Enemy Healthbar");
 strHitNumbers = str("Options.Hit Numbers");
 #endregion
-
 }
 
 updateMenu();

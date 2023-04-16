@@ -17,7 +17,7 @@
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_beambombexplode.wav",
+  "soundFile": "snd_BeamBombExplode.wav",
   "type": 1,
   "volume": 1.0,
 }

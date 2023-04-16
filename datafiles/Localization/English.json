@@ -2620,7 +2620,9 @@
 			
             "Found": "Found",
 			
-            "Not Found": "Not Found"
+            "Not Found": "Not Found",
+			
+            "Confirm": "Confirm"
         },
 		
 		"Language":
@@ -2631,6 +2633,18 @@
 		"Audio":
         {
             "Adjust Your Audio": "Adjust Your Audio"
+        },
+		
+		"Display":
+        {
+            "Adjust Your Display": "Adjust Your Display"
+        },
+		
+		"End":
+        {
+            "Config Complete": "Configuration is complete - You can change the options from the Main Menu",
+			
+            "Done": "The game is set to begin now. Have fun!"
         }
 	},
 	

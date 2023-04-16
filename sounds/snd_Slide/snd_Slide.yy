@@ -17,7 +17,7 @@
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_slide.wav",
+  "soundFile": "snd_Slide.wav",
   "type": 1,
   "volume": 1.0,
 }

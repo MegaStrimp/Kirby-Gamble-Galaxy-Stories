@@ -17,7 +17,7 @@
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_enemybeam.wav",
+  "soundFile": "snd_EnemyBeam.wav",
   "type": 1,
   "volume": 1.0,
 }

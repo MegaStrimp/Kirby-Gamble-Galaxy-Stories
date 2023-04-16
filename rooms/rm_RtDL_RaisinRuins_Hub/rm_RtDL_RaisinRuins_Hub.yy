@@ -2,7 +2,7 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "rm_RtDL_RaisinRuins_Hub",
-  "creationCodeFile": "${project_dir}/rooms/rm_RtDL_CookieCountry1_Hub/RoomCreationCode.gml",
+  "creationCodeFile": "${project_dir}/rooms/rm_RtDL_RaisinRuins_Hub/RoomCreationCode.gml",
   "inheritCode": false,
   "inheritCreationOrder": false,
   "inheritLayers": false,

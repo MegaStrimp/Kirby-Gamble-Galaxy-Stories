@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.914127,
+  "duration": 0.941474,
   "parent": {
     "name": "Attacks",
     "path": "folders/Sounds/Sound Effects/Attacks.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_beamdash.wav",
+  "soundFile": "snd_BeamDash.wav",
   "type": 1,
   "volume": 1.0,
 }

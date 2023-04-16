@@ -24,6 +24,7 @@ topWallMask = spr_48x4Originless_Mask;
 points = 50;
 storedItem = obj_PointStar;
 pointStarCharacter = 1;
+hitEffect = wallHitEffects.starBlock;
 
 //Timers
 

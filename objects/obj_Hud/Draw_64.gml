@@ -668,15 +668,18 @@ if (global.gamemode != gamemodes.gamblion)
 	}
 
 	#region Numbers
+	var livesFont = spr_Hud_Numbers;
+	if (global.playerLives == 999) livesFont = spr_Hud_Numbers_Gold;
+	
 	if (global.cheatLifelessEquipped)
 	{
 		draw_sprite_ext(spr_Hud_Infinite,0,livesPosX + 23 + (8 * playerAmount),livesPosY - 6,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
 	}
 	else
 	{
-		draw_sprite_ext(spr_Hud_Numbers,floor(global.playerLives / 100),livesPosX + 14 + (10 * playerAmount),livesPosY - 8,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
-		draw_sprite_ext(spr_Hud_Numbers,(global.playerLives - ((floor(global.playerLives / 100) * 100))) / 10,livesPosX + 29 + (10 * playerAmount),livesPosY - 8,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
-		draw_sprite_ext(spr_Hud_Numbers,global.playerLives - (floor(global.playerLives / 10) * 10),livesPosX + 44 + (10 * playerAmount),livesPosY - 8,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
+		draw_sprite_ext(livesFont,floor(global.playerLives / 100),livesPosX + 14 + (10 * playerAmount),livesPosY - 8,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
+		draw_sprite_ext(livesFont,(global.playerLives - ((floor(global.playerLives / 100) * 100))) / 10,livesPosX + 29 + (10 * playerAmount),livesPosY - 8,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
+		draw_sprite_ext(livesFont,global.playerLives - (floor(global.playerLives / 10) * 10),livesPosX + 44 + (10 * playerAmount),livesPosY - 8,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
 	}
 	#endregion
 	#endregion
@@ -689,16 +692,30 @@ if (global.gamemode != gamemodes.gamblion)
 	#endregion
 
 	#region Icons
-	draw_sprite_ext(spr_Hud_PointStars_Background,0,starsPosX - 13,starsPosY - 4,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
+	draw_sprite_ext(spr_Hud_PointStars_Background,(global.pointStars > 999) + (global.pointStars > 9999),starsPosX - 13,starsPosY - 4,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
 	draw_sprite_ext(spr_Hud_PointStars_Icon,0,starsPosX,starsPosY,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
 	#endregion
 
 	#region Numbers
-	if (global.pointStars > 9999) draw_sprite_ext(spr_Hud_Numbers,floor(global.pointStars / 10000),starsPosX + 12,starsPosY - 10,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
-	if (global.pointStars > 999) draw_sprite_ext(spr_Hud_Numbers,floor(global.pointStars / 1000),starsPosX + 12 + ((global.pointStars > 9999) * 15),starsPosY - 10,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
-	draw_sprite_ext(spr_Hud_Numbers,floor(global.pointStars / 100),starsPosX + 12 + ((global.pointStars > 999) * 15) + ((global.pointStars > 9999) * 15),starsPosY - 10,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
-	draw_sprite_ext(spr_Hud_Numbers,(global.pointStars - ((floor(global.pointStars / 100) * 100))) / 10,starsPosX + 27 + ((global.pointStars > 999) * 15) + ((global.pointStars > 9999) * 15),starsPosY - 10,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
-	draw_sprite_ext(spr_Hud_Numbers,global.pointStars - (floor(global.pointStars / 10) * 10),starsPosX + 42 + ((global.pointStars > 999) * 15) + ((global.pointStars > 9999) * 15),starsPosY - 10,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
+	var pointStarFont = spr_Hud_Numbers;
+	if (global.pointStars == 99999) pointStarFont = spr_Hud_Numbers_Gold;
+	
+	if (global.pointStars > 9999) draw_sprite_ext(pointStarFont,floor(global.pointStars / 10000),starsPosX + 12,starsPosY - 10,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
+	if (global.pointStars > 999) draw_sprite_ext(pointStarFont,floor(global.pointStars / 1000),starsPosX + 12 + ((global.pointStars > 9999) * 15),starsPosY - 10,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
+	draw_sprite_ext(pointStarFont,floor(global.pointStars / 100),starsPosX + 12 + ((global.pointStars > 999) * 16) + ((global.pointStars > 9999) * 15),starsPosY - 10,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
+	draw_sprite_ext(pointStarFont,(global.pointStars - ((floor(global.pointStars / 100) * 100))) / 10,starsPosX + 27 + ((global.pointStars > 999) * 16) + ((global.pointStars > 9999) * 15),starsPosY - 10,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
+	draw_sprite_ext(pointStarFont,global.pointStars - (floor(global.pointStars / 10) * 10),starsPosX + 42 + ((global.pointStars > 999) * 16) + ((global.pointStars > 9999) * 15),starsPosY - 10,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
+	#endregion
+	
+	#region Comma
+	if (global.pointStars > 9999)
+	{
+		draw_sprite_ext(spr_Hud_Comma,(global.pointStars == 99999),starsPosX + 39,starsPosY,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
+	}
+	else if (global.pointStars > 999)
+	{
+		draw_sprite_ext(spr_Hud_Comma,(global.pointStars == 99999),starsPosX + 24,starsPosY,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
+	}
 	#endregion
 	#endregion
 

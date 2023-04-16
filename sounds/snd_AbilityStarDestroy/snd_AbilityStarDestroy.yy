@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.593243,
+  "duration": 0.591562,
   "parent": {
     "name": "Objects",
     "path": "folders/Sounds/Sound Effects/Objects.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_abilitystardestroy.wav",
+  "soundFile": "snd_AbilityStarDestroy.wav",
   "type": 1,
   "volume": 1.0,
 }

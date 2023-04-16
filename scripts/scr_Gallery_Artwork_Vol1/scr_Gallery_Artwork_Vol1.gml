@@ -25,7 +25,7 @@ function scr_Gallery_Artwork_Vol1()
 	artworkArray[# i,2] = "Subsandwich";
 	artworkArray[# i,3] = global.beatGreenGreens;
 	artworkArray[# i,4] = str("Unlock Methods.Beat Green Greens");
-	artworkArray[# i,5] = (140 / max(sprite_get_width(artworkArray[# i,0]),sprite_get_height(artworkArray[# i,0])));
+	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]))
 	artworkArray[# i,6] = spr_Menu_Gallery_Frame;
 	i += 1;
 	#endregion
@@ -36,7 +36,7 @@ function scr_Gallery_Artwork_Vol1()
 	artworkArray[# i,2] = "Derpyroot";
 	artworkArray[# i,3] = global.mysticBeamAbilityObtained;
 	artworkArray[# i,4] = str("Unlock Methods.Obtain Mystic Beam");
-	artworkArray[# i,5] = (140 / max(sprite_get_width(artworkArray[# i,0]),sprite_get_height(artworkArray[# i,0])));
+	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]))
 	artworkArray[# i,6] = spr_Menu_Gallery_Frame;
 	i += 1;
 	#endregion
@@ -47,7 +47,7 @@ function scr_Gallery_Artwork_Vol1()
 	artworkArray[# i,2] = "Diamond";
 	artworkArray[# i,3] = (global.mysticBeamAbilityKills >= global.mysticBeamAbilityKillsTarget);
 	artworkArray[# i,4] = str("Unlock Methods.Master Mystic Beam");
-	artworkArray[# i,5] = (140 / max(sprite_get_width(artworkArray[# i,0]),sprite_get_height(artworkArray[# i,0])));
+	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]))
 	artworkArray[# i,6] = spr_Menu_Gallery_Frame;
 	i += 1;
 	#endregion
@@ -58,7 +58,7 @@ function scr_Gallery_Artwork_Vol1()
 	artworkArray[# i,2] = "Subsandwich";
 	artworkArray[# i,3] = global.beatYolkYard;
 	artworkArray[# i,4] = str("Unlock Methods.Beat Yolk Yard");
-	artworkArray[# i,5] = (140 / max(sprite_get_width(artworkArray[# i,0]),sprite_get_height(artworkArray[# i,0])));
+	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]))
 	artworkArray[# i,6] = spr_Menu_Gallery_Frame;
 	i += 1;
 	#endregion
@@ -69,7 +69,7 @@ function scr_Gallery_Artwork_Vol1()
 	artworkArray[# i,2] = "Subsandwich";
 	artworkArray[# i,3] = global.mysticFireAbilityObtained;
 	artworkArray[# i,4] = str("Unlock Methods.Obtain Mystic Fire");
-	artworkArray[# i,5] = (140 / max(sprite_get_width(artworkArray[# i,0]),sprite_get_height(artworkArray[# i,0])));
+	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]))
 	artworkArray[# i,6] = spr_Menu_Gallery_Frame;
 	i += 1;
 	#endregion
@@ -80,7 +80,7 @@ function scr_Gallery_Artwork_Vol1()
 	artworkArray[# i,2] = "GoraMonk";
 	artworkArray[# i,3] = global.beatYolkYard;
 	artworkArray[# i,4] = str("Unlock Methods.Beat Yolk Yard");
-	artworkArray[# i,5] = (140 / max(sprite_get_width(artworkArray[# i,0]),sprite_get_height(artworkArray[# i,0])));
+	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]))
 	artworkArray[# i,6] = spr_Menu_Gallery_Frame;
 	i += 1;
 	#endregion
@@ -91,7 +91,7 @@ function scr_Gallery_Artwork_Vol1()
 	artworkArray[# i,2] = "Subsandwich";
 	artworkArray[# i,3] = global.beatGrandTempleAvgo;
 	artworkArray[# i,4] = str("Unlock Methods.Beat Grand Temple Avgo");
-	artworkArray[# i,5] = (140 / max(sprite_get_width(artworkArray[# i,0]),sprite_get_height(artworkArray[# i,0])));
+	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]))
 	artworkArray[# i,6] = spr_Menu_Gallery_Frame;
 	i += 1;
 	#endregion
@@ -102,7 +102,7 @@ function scr_Gallery_Artwork_Vol1()
 	artworkArray[# i,2] = "Subsandwich";
 	artworkArray[# i,3] = global.beatFloralYolkCaves;
 	artworkArray[# i,4] = str("Unlock Methods.Beat Floral Yolk Caves");
-	artworkArray[# i,5] = (140 / max(sprite_get_width(artworkArray[# i,0]),sprite_get_height(artworkArray[# i,0])));
+	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]))
 	artworkArray[# i,6] = spr_Menu_Gallery_Frame;
 	i += 1;
 	#endregion
@@ -113,7 +113,7 @@ function scr_Gallery_Artwork_Vol1()
 	artworkArray[# i,2] = "Subsandwich";
 	artworkArray[# i,3] = global.beatPathToTheNastyMachine;
 	artworkArray[# i,4] = str("Unlock Methods.Beat Path To The Nasty Machine");
-	artworkArray[# i,5] = (140 / max(sprite_get_width(artworkArray[# i,0]),sprite_get_height(artworkArray[# i,0])));
+	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]))
 	artworkArray[# i,6] = spr_Menu_Gallery_Frame;
 	i += 1;
 	#endregion*/
@@ -124,7 +124,7 @@ function scr_Gallery_Artwork_Vol1()
 	artworkArray[# i,2] = "Subsandwich";
 	artworkArray[# i,3] = global.beatCosmicPalace;
 	artworkArray[# i,4] = str("Unlock Methods.Beat Cosmic Palace");
-	artworkArray[# i,5] = (140 / max(sprite_get_width(artworkArray[# i,0]),sprite_get_height(artworkArray[# i,0])));
+	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]))
 	artworkArray[# i,6] = spr_Menu_Gallery_Frame;
 	i += 1;
 	#endregion*/

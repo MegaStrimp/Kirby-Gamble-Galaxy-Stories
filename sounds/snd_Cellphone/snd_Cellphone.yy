@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.940408,
+  "duration": 0.915329,
   "parent": {
     "name": "Misc",
     "path": "folders/Sounds/Sound Effects/Misc.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_cellphone.wav",
+  "soundFile": "snd_Cellphone.wav",
   "type": 1,
   "volume": 1.0,
 }

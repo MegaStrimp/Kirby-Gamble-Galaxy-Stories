@@ -8,7 +8,6 @@ function scr_Player_ExecuteAttack_WingDash()
 	attackNumber = playerAttacks.wingDash;
 	wingDashParticleTimer = wingDashParticleTimerMax;
 	invincible = true;
-	invincibleTimer = 30;
 	if (runTurn) dir *= -1;
 	#endregion
 	

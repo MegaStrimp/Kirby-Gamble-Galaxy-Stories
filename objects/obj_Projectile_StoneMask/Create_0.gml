@@ -14,3 +14,4 @@ canBeReflected = false;
 owner = id;
 enemy = false;
 isDirectHit = true;
+wallStrength = wallStrengths.metal;

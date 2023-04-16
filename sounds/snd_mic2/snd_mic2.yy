@@ -17,7 +17,7 @@
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_mic2.wav",
+  "soundFile": "snd_Mic2.wav",
   "type": 1,
   "volume": 1.0,
 }

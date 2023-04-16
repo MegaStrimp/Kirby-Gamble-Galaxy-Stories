@@ -17,7 +17,7 @@
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_minibossdeath.wav",
+  "soundFile": "snd_MinibossDeath.wav",
   "type": 1,
   "volume": 1.0,
 }

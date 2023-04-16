@@ -17,7 +17,7 @@
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_tomatoosquish3.wav",
+  "soundFile": "snd_TomatooSquish3.wav",
   "type": 1,
   "volume": 1.0,
 }

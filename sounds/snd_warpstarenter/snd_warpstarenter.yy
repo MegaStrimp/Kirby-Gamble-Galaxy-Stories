@@ -17,7 +17,7 @@
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_warpstarenter.wav",
+  "soundFile": "snd_WarpStarEnter.wav",
   "type": 1,
   "volume": 1.0,
 }

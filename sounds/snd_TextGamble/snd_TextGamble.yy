@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.339592,
+  "duration": 0.308005,
   "parent": {
     "name": "Text",
     "path": "folders/Sounds/Sound Effects/Text.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_textgamble.wav",
+  "soundFile": "snd_TextGamble.wav",
   "type": 1,
   "volume": 1.0,
 }

@@ -58,6 +58,7 @@
     {"name":"inst_2CA2F823","path":"rooms/rm_Starcutter/rm_Starcutter.yy",},
     {"name":"inst_4549AB26","path":"rooms/rm_Starcutter/rm_Starcutter.yy",},
     {"name":"inst_429D1EC","path":"rooms/rm_Starcutter/rm_Starcutter.yy",},
+    {"name":"inst_1F649CC4","path":"rooms/rm_Starcutter/rm_Starcutter.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -72,6 +73,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_15B1CB08","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Door","path":"objects/obj_Door/obj_Door.yy",},"properties":[],"rotation":0.0,"scaleX":1.0277778,"scaleY":1.0,"x":183.0,"y":376.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2CA2F823","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Mech_HeavyLobster","path":"objects/obj_Mech_HeavyLobster/obj_Mech_HeavyLobster.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":294.0,"y":312.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_429D1EC","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_SMB_BowserAxe","path":"objects/obj_SMB_BowserAxe/obj_SMB_BowserAxe.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":414.0,"y":360.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1F649CC4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_NPC_Gamblion_DreamySpirit","path":"objects/obj_NPC_Gamblion_DreamySpirit/obj_NPC_Gamblion_DreamySpirit.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":534.0,"y":348.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles","depth":300,"effectEnabled":true,"effectType":null,"gridX":24,"gridY":24,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":20,"SerialiseWidth":45,"TileCompressedData":[
 -675,0,-45,2,-180,12,],"TileDataFormat":1,},"tilesetId":{"name":"ts_GGSDebug","path":"tilesets/ts_GGSDebug/ts_GGSDebug.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},

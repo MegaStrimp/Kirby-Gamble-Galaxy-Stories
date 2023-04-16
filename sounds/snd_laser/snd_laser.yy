@@ -17,7 +17,7 @@
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_laser.wav",
+  "soundFile": "snd_Laser.wav",
   "type": 1,
   "volume": 1.0,
 }

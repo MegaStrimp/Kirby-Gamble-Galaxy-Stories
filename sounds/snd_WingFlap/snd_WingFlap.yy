@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.261224,
+  "duration": 0.23644,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_wingflap.wav",
+  "soundFile": "snd_WingFlap.wav",
   "type": 1,
   "volume": 1.0,
 }

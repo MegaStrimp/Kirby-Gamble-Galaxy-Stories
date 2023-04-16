@@ -389,10 +389,8 @@ function scr_Maykr_ObjectAttributes(argument0,argument1)
 	{
 		case "optionsButton":
 		return hasOptionsButton;
-		break;
 		
 		case "directionButton":
 		return hasDirectionButton;
-		break;
 	}
 }

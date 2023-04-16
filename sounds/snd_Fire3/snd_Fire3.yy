@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.626939,
+  "duration": 0.601837,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_fire3.wav",
+  "soundFile": "snd_Fire3.wav",
   "type": 1,
   "volume": 1.0,
 }

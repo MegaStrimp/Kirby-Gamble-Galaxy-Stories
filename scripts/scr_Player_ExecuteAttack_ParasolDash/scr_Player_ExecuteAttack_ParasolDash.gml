@@ -14,7 +14,6 @@ function scr_Player_ExecuteAttack_ParasolDash()
 	attackTimer = 45;
 	state = playerStates.parasolDash;
 	invincible = true;
-	invincibleTimer = 30;
 	vsp = 0;
 	isRunning = false;
 	if (runTurn) dir *= -1;

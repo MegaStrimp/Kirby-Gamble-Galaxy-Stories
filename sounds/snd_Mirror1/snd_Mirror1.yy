@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.470204,
+  "duration": 0.445102,
   "parent": {
     "name": "Attacks",
     "path": "folders/Sounds/Sound Effects/Attacks.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_mirror1.wav",
+  "soundFile": "snd_Mirror1.wav",
   "type": 1,
   "volume": 1.0,
 }

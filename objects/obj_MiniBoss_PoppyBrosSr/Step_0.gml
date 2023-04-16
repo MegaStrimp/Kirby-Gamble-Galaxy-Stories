@@ -32,12 +32,12 @@ if (!childPauseHard)
 }
 #endregion
 
+#region Hurt Player
+scr_Enemy_HurtsPlayer(dmg);
+#endregion
+
 if (!childPause)
 {
-	#region Hurt Player
-	scr_Enemy_HurtsPlayer(dmg);
-	#endregion
-	
 	#region Movement
 	if (attack)
 	{

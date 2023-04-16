@@ -434,6 +434,20 @@ function scr_Enemy_HurtsPlayer(argument0)
 				hitNumber.number = hitDmg;
 				hitNumber.hsp = random_range(-1,1);
 				hitNumber.vsp = -2;
+				
+				if (collidedPlayer.hasInvinCandy)
+				{
+					hitNumber.flashColor[0] = make_color_rgb(255,37,41);
+					hitNumber.flashColor[1] = make_color_rgb(255,164,44);
+					hitNumber.flashColor[2] = make_color_rgb(255,252,52);
+					hitNumber.flashColor[3] = make_color_rgb(208,255,75);
+					hitNumber.flashColor[4] = make_color_rgb(50,255,145);
+					hitNumber.flashColor[5] = make_color_rgb(44,255,250);
+					hitNumber.flashColor[6] = make_color_rgb(209,66,255);
+					hitNumber.flashColor[7] = make_color_rgb(255,144,240);
+					hitNumber.flashTimerMax = 2;
+					hitNumber.flashTimer = hitNumber.flashTimerMax;
+				}
 			}
 			shakeX = 2;
 			shakeY = 2;

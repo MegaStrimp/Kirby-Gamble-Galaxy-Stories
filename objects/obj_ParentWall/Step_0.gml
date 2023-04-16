@@ -2,8 +2,18 @@
 
 if (!global.pause)
 {
-	//Explode Timer
+	#region Hit Effect Timer
+	if (hitEffectTimer != -1)
+	{
+		hitEffectTimer = max(hitEffectTimer - speedMultFinal,0);
+		if (hitEffectTimer == 0)
+		{
+			hitEffectTimer = -1;
+		}
+	}
+	#endregion
 	
+	#region Explode Timer
 	if (explodeTimer > 0)
 	{
 		explodeTimer -= 1;
@@ -16,110 +26,21 @@ if (!global.pause)
 			{
 			    if ((!isTop) and (canExplode))
 				{
-					if (place_meeting(x,y,other))
-					{
-						explodeTimer = explodeTimerMax;
-					}
-					if (place_meeting(x + 24,y,other))
-					{
-						explodeTimer = explodeTimerMax;
-					}
-					if (place_meeting(x - 24,y,other))
-					{
-						explodeTimer = explodeTimerMax;
-					}
-					if (place_meeting(x,y + 24,other))
-					{
-						explodeTimer = explodeTimerMax;
-					}
-					if (place_meeting(x,y - 24,other))
-					{
-						explodeTimer = explodeTimerMax;
-					}
+					if (distance_to_object(other) <= 24) explodeTimer = explodeTimerMax;
 				}
 			}
 			
 			with (obj_BombSolidBlock_Invis)
 			{
-			    if (place_meeting(x,y,other))
-				{
-				    explodeTimer = explodeTimerMax;
-				}
-				if (place_meeting(x + 24,y,other))
-				{
-				    explodeTimer = explodeTimerMax;
-				}
-				if (place_meeting(x - 24,y,other))
-				{
-				    explodeTimer = explodeTimerMax;
-				}
-				if (place_meeting(x,y + 24,other))
-				{
-				    explodeTimer = explodeTimerMax;
-				}
-				if (place_meeting(x,y - 24,other))
-				{
-				    explodeTimer = explodeTimerMax;
-				}
+				if (distance_to_object(other) <= 24) explodeTimer = explodeTimerMax;
 			}
 			
 			with (obj_BombSolidBlock_Create)
 			{
-			    if (place_meeting(x,y,other))
-				{
-				    explodeTimer = explodeTimerMax;
-				}
-				if (place_meeting(x + 24,y,other))
-				{
-				    explodeTimer = explodeTimerMax;
-				}
-				if (place_meeting(x - 24,y,other))
-				{
-				    explodeTimer = explodeTimerMax;
-				}
-				if (place_meeting(x,y + 24,other))
-				{
-				    explodeTimer = explodeTimerMax;
-				}
-				if (place_meeting(x,y - 24,other))
-				{
-				    explodeTimer = explodeTimerMax;
-				}
+				if (distance_to_object(other) <= 24) explodeTimer = explodeTimerMax;
 			}
 			
-			if (audio_is_playing(snd_BreakingWall)) audio_stop_sound(snd_BreakingWall);
-			audio_play_sound(snd_BreakingWall,0,false);
-			for (var i = 0; i < 2; i++)
-			{
-				var particle = instance_create_depth(x + (sprite_get_width(sprite_index) / 2),y + (sprite_get_height(sprite_index) / 2),depth,obj_Particle);
-				particle.sprite_index = spr_Particle_Aura2;
-				if (i == 0) particle.sprite_index = spr_Particle_Explosion1;
-				particle.imageSpeed = 1;
-				particle.destroyAfterAnimation = true;
-			}
-			for (var i = 0; i < 3; i++)
-			{
-				var particle = instance_create_depth(x + (sprite_get_width(sprite_index) / 2),y + (sprite_get_height(sprite_index) / 2),depth,obj_Particle);
-				particle.sprite_index = spr_Particle_ShrinkingStar1;
-				particle.imageSpeed = 1;
-				particle.destroyAfterAnimation = true;
-				particle.spdBuiltIn = 6;
-				particle.fricSpd = .6;
-				switch (i)
-				{
-					case 0:
-					particle.direction = 90;
-					break;
-					
-					case 1:
-					particle.direction = 215;
-					break;
-					
-					case 2:
-					particle.direction = 325;
-					break;
-				}
-			}
+			scr_HitEffects_Wall(id,-1,wallHitEffects.starBlock_Free);
 			
 			if (hasEnemyWall)
 			{
@@ -129,9 +50,9 @@ if (!global.pause)
 		}
 		explodeTimer = -1;
 	}
+	#endregion
 	
-	//Flash Timer
-	
+	#region Flash Timer
 	if (flashTimer > 0)
 	{
 		flashTimer -= 1;
@@ -148,10 +69,10 @@ if (!global.pause)
 		}
 		flashTimer = -1;
 	}
+	#endregion
 }
 
 //Hurt
-
 if (isTop)
 {
 	if (instance_exists(topWallOwner))
@@ -168,6 +89,8 @@ if (object)
 		{
 			if (place_meeting(x,y,other))
 			{
+				scr_HitEffects_Wall(other.id,-1,other.hitEffect);
+				
 				if (other.damageType == damageTypes.none)
 				{
 					other.hp -= 1;
@@ -179,6 +102,8 @@ if (object)
 		{
 			if (place_meeting(x,y,other))
 			{
+				scr_HitEffects_Wall(other.id,-1,other.hitEffect);
+				
 				if (other.damageType == damageTypes.none)
 				{
 					other.hp -= 10;
@@ -190,9 +115,11 @@ if (object)
 		{
 			if (place_meeting(x,y,other))
 			{
+				scr_HitEffects_Wall(other.id,id,other.hitEffect);
+				
 				if ((hurtsObject) and (owner != other))
 				{
-					if ((other.damageType == damageTypes.none) or (damageType == damageTypes.every) or (other.damageType = damageType))
+					if (((other.damageType == damageTypes.none) or (damageType == damageTypes.every) or (other.damageType = damageType)) and (wallStrength >= other.wallStrength))
 					{
 						other.hp -= dmg;
 						if (!destroyableByObject)
@@ -281,8 +208,7 @@ if (object)
 		}
 	}
 	
-	//Invincible Timer
-	
+	#region Invincible Timer
 	if (invincibleTimer > 0)
 	{
 		invincibleTimer -= 1;
@@ -292,6 +218,7 @@ if (object)
 		invincible = false;
 		invincibleTimer = -1;
 	}
+	#endregion
 }
 else if (!platform)
 {
@@ -460,8 +387,7 @@ else if (!platform)
 	}
 }
 
-//Debug Delete
-
+#region Debug Delete
 if (global.debug)
 {
 	if ((position_meeting(mouse_x,mouse_y,id)) and (mouse_check_button(mb_right)))
@@ -469,3 +395,4 @@ if (global.debug)
 		instance_destroy();
 	}
 }
+#endregion

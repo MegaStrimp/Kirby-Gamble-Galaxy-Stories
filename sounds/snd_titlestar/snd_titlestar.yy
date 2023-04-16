@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 1.38449,
+  "duration": 1.186712,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_titlestar.wav",
+  "soundFile": "snd_TitleStar.wav",
   "type": 1,
   "volume": 1.0,
 }

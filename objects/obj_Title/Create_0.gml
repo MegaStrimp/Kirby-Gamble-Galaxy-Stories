@@ -32,14 +32,6 @@ shineTimer = 0;
 shineTimerMax = 90;
 introStateTimer = 30;
 
-//Save Files
-
-if (global.firstTimeSetup)
-{
-	global.firstTimeSetup = false;
-	scr_SaveConfig("config.ini");
-}
-
 file1Color = 0;
 file2Color = 0;
 file3Color = 0;

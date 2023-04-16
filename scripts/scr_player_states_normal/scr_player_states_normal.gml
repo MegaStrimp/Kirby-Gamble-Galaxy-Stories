@@ -69,7 +69,6 @@ function scr_Player_States_Normal()
 		) attackHasGravLerp = true;
 		
 		var canDashAttack = false;
-		//if (runBuffer < 60) canDashAttack = true;
 		if ((keyLeftHold) or (keyRightHold)) canDashAttack = true;
 		
 		didJump = false;
@@ -685,154 +684,6 @@ function scr_Player_States_Normal()
 								}
 							}
 					    }
-						
-						//PASSIVE
-						if (attackNumber == playerAttacks.cutterCharge)
-						{
-							image_index = 0;
-							if (cutterCharge == cutterChargeMax - 1)
-							{
-								if (audio_is_playing(snd_Charge_Ready)) audio_stop_sound(snd_Charge_Ready);
-								audio_play_sound(snd_Charge_Ready,0,false);
-								var particle = instance_create_depth(x,y - 15,depth - 1,obj_Particle);
-								particle.sprite_index = spr_Particle_Flash1;
-								particle.scale = 1.5;
-								particle.destroyAfterAnimation = true;
-							}
-							cutterCharge += 1;
-							if (cutterCharge >= 6)
-							{
-								if (cutterCharge == 6)
-								{
-									sprite_index = sprCutterCharge;
-									image_index = 0;
-								}
-								if ((!audio_is_playing(snd_Charge_Intro)) and (!audio_is_playing(snd_Charge_Loop)))
-								{
-									if (chargeSfxState == "intro")
-									{
-									    chargeSfx = audio_play_sound(snd_Charge_Intro,0,false);
-									    chargeSfxState = "loop";
-									}
-									else
-									{
-									    chargeSfx = audio_play_sound(snd_Charge_Loop,0,false);
-									}
-								}
-							}
-						
-							if (keyRightHold)
-							{
-								dir = 1;
-							}
-							if (keyLeftHold)
-							{
-								dir = -1;
-							}
-						
-							if (cutterCharge < cutterChargeMax)
-							{
-								if ((!global.cutscene) and (keyAttackReleased))
-								{
-									cutterCharge = 0;
-									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
-									chargeSfxState = "intro";
-									invincibleFlash = false;
-									invincibleFlashTimer = -1;
-									attack = true;
-									attackNumber = playerAttacks.cutterNormal;
-									sprite_index = sprCutterAttack1;
-								    image_index = 0;
-								}
-							}
-							else
-							{
-								if (invincibleFlashTimer == -1) invincibleFlashTimer = invincibleFlashTimerMax;
-								if ((!global.cutscene) and (keyAttackReleased))
-								{
-									cutterCharge = 0;
-									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
-									chargeSfxState = "intro";
-									invincibleFlash = false;
-									invincibleFlashTimer = -1;
-									attack = true;
-									attackNumber = playerAttacks.cutterChargeAttack;
-									sprite_index = sprCutterAttack1;
-								    image_index = 0;
-								}
-							}
-						}
-					
-						//PASSIVE
-						if (attackNumber == playerAttacks.cutterNormal)
-						{
-							if ((round(image_index) == (image_number - 1)) and (attackable))
-							{
-								if (audio_is_playing(snd_Cutter)) audio_stop_sound(snd_Cutter);
-								audio_play_sound(snd_Cutter,0,false);
-						        var projectile = instance_create_depth(x,y - 5,depth,obj_Projectile_Cutter);
-								projectile.owner = id;
-								projectile.abilityType = playerAbilities.cutter;
-								projectile.paletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
-								projectile.dmg = kirby_CutterNormal_Damage;
-								scr_Attack_SetKnockback(projectile,kirby_CutterNormal_Strength,kirby_CutterNormal_HitStopAffectSource,kirby_CutterNormal_HitStopAffectPlayer,kirby_CutterNormal_HitStopAffectTarget,kirby_CutterNormal_HitStopLength,kirby_CutterNormal_HitStopShakeStrength);
-								projectile.sprite_index = projectile.sprIdle;
-								projectile.hsp = dir * projectile.decelMax;
-								projectile.dirX = dir;
-								projectile.image_xscale = projectile.dirX;
-								projectile.enemy = false;
-								projectile.destroyableByObject = false;
-								projectile.player = player;
-								if (cutterSpectralCutterUpgrade)
-								{
-									projectile.destroyableByEnemy = false;
-									projectile.image_alpha = .5;
-								}
-								attackable = false;
-							}
-						}
-					
-						//PASSIVE
-						if (attackNumber == playerAttacks.cutterChargeAttack)
-						{
-							if ((round(image_index) == (image_number - 1)) and (attackable))
-							{
-								if (audio_is_playing(snd_CutterCharge)) audio_stop_sound(snd_CutterCharge);
-								audio_play_sound(snd_CutterCharge,0,false);
-						        var projectile = instance_create_depth(x,y - 8,depth,obj_Projectile_Cutter);
-								projectile.owner = id;
-								projectile.abilityType = playerAbilities.cutter;
-								projectile.paletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
-								projectile.dmg = kirby_CutterChargeAttack_Damage;
-								scr_Attack_SetKnockback(projectile,kirby_CutterChargeAttack_Strength,kirby_CutterChargeAttack_HitStopAffectSource,kirby_CutterChargeAttack_HitStopAffectPlayer,kirby_CutterChargeAttack_HitStopAffectTarget,kirby_CutterChargeAttack_HitStopLength,kirby_CutterChargeAttack_HitStopShakeStrength);
-								projectile.sprite_index = projectile.sprCharge;
-								projectile.decelMax = projectile.decelMax * 1.2;
-								projectile.hsp = dir * projectile.decelMax;
-								projectile.dirX = dir;
-								projectile.image_xscale = projectile.dirX;
-								projectile.enemy = false;
-								projectile.destroyableByEnemy = false;
-								projectile.destroyableByObject = false;
-								projectile.destroyableByProjectile = false;
-								projectile.player = player;
-								projectile.angleSpd = -30;
-								projectile.charge = true;
-								if (cutterSpectralCutterUpgrade)
-								{
-									projectile.image_alpha = .5;
-								}
-								attackable = false;
-							}
-						}
-					
-						//PASSIVE
-						if (attackNumber == playerAttacks.cutterAir)
-						{
-							if (keyAttackReleased)
-							{
-								attackTimer = 0;
-							}
-						}
 						break;
 						#endregion
 						
@@ -913,6 +764,7 @@ function scr_Player_States_Normal()
 							}
 							if (mysticBeamProjCount == 0) canMysticBeamShield = true;
 						}
+						
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
 							if ((keyUpHold) or ((dir = 1) and (keyRightHold)) or ((dir = -1) and (keyLeftHold)))
@@ -921,32 +773,7 @@ function scr_Player_States_Normal()
 								if (place_meeting(x + (16 * dir),y,obj_Enemy)) grabEnemy = instance_place(x + (16 * dir),y,obj_Enemy);
 								if ((grabEnemy != -1) and (grabEnemy.hurtable) and (!grabEnemy.hurt) and (!grabEnemy.isMiniBoss) and (!grabEnemy.isBoss))
 								{
-									if (audio_is_playing(snd_Guard)) audio_stop_sound(snd_Guard);
-									audio_play_sound(snd_Guard,0,false);
-									sprite_index = sprBeamAttack6;
-									grabObj = instance_create_depth(x + (16 * dir),y - 8,depth - 1,obj_Projectile_GrabEnemy);
-									grabObj.owner = id;
-									grabObj.abilityType = playerAbilities.mysticBeam;
-									grabObj.dirX = grabEnemy.dirX;
-									grabObj.dmg = kirby_MysticBeamGrab_Damage;
-									scr_Attack_SetKnockback(grabObj,kirby_MysticBeamGrab_Strength,kirby_MysticBeamGrab_HitStopAffectSource,kirby_MysticBeamGrab_HitStopAffectPlayer,kirby_MysticBeamGrab_HitStopAffectTarget,kirby_MysticBeamGrab_HitStopLength,kirby_MysticBeamGrab_HitStopShakeStrength);
-									var grabSpr = grabEnemy.sprHurt;
-									if ((grabSpr = -1) or (grabSpr = -1))
-									{
-										grabObj.sprite_index = grabEnemy.sprite_index;
-									}
-									else
-									{
-										grabObj.sprite_index = grabSpr;
-									}
-									grabObj.paletteIndex = grabEnemy.paletteIndex;
-									grabEnemy.hasDeathParticles = false;
-									grabEnemy.death = true;
-									attack = true;
-									attackNumber = playerAttacks.mysticBeamGrab;
-									invincible = true;
-									hsp = 0;
-									state = playerStates.mysticBeamGrab;
+									scr_Player_ExecuteAttack_MysticBeamGrab(grabEnemy);
 								}
 							}
 						
@@ -956,377 +783,62 @@ function scr_Player_States_Normal()
 								{
 									if (grounded)
 									{
-										attackTimer = 20;
-										if (audio_is_playing(snd_BeamBombRelease)) audio_stop_sound(snd_BeamBombRelease);
-										audio_play_sound(snd_BeamBombRelease,0,false);
-										attack = true;
-										attackNumber = playerAttacks.mysticBeamDash;
-										sprite_index = sprMysticBeamAttack1;
-									    image_index = 0;
+										scr_Player_ExecuteAttack_MysticBeamDash();
 									}
 									else
 									{
-										attackTimer = 45;
-										if (audio_is_playing(snd_BeamAir)) audio_stop_sound(snd_BeamAir);
-										sndMysticBeam = audio_play_sound(snd_BeamAir,0,false);
-										attack = true;
-										attackNumber = playerAttacks.mysticBeamAir;
-										jumpLimit = false;
-										jumpLimitTimer = jumpLimitTimerMax;
-										vsp = -(jumpspeed / 2);
-										grounded = false;
-										mysticBeamAttack2Timer = 0;
-										sprite_index = sprBeamAttack2;
-									    image_index = 0;
+										scr_Player_ExecuteAttack_MysticBeamAir();
 									}
 								}
 								else
 								{
 									if (keyUpHold)
 									{
-										attackTimer = 45;
-										attack = true;
-										attackNumber = playerAttacks.mysticBeamUp;
-										mysticBeamUpAttackTimer = 0;
-										sprite_index = sprBeamAttack4;
-									    image_index = 0;
+										scr_Player_ExecuteAttack_MysticBeamUp();
 									}
 									else
 									{
 										if (vsp == 0)
 										{
-											attack = true;
-											attackNumber = playerAttacks.mysticBeamCharge;
-											sprite_index = sprBeamCharge;
-											image_index = 0;
+											scr_Player_ExecuteAttack_MysticBeamCharge();
 										}
 										else
 										{
-											if (instance_exists(obj_Projectile_Beam))
+											with (obj_Projectile_Beam)
 											{
-												with (obj_Projectile_Beam)
+												if ((isMystic) and (state == 2) and (owner == other.id))
 												{
-													if ((isMystic) and (state == 2) and (owner == other.id))
-													{
-														if (audio_is_playing(snd_MysticBeamLaunch)) audio_stop_sound(snd_MysticBeamLaunch);
-														audio_play_sound(snd_MysticBeamLaunch,0,false);
-														var proj = instance_create_depth(x,y,depth,obj_Projectile_BarrierBreak);
-														proj.image_angle = angle_difference(angle - 45,image_angle);
-														proj.owner = id;
-														proj.abilityType = playerAbilities.mysticBeam;
-														proj.dmg = kirby_MysticBeamBarrierBreak_Damage;
-														scr_Attack_SetKnockback(proj,kirby_MysticBeamBarrierBreak_Strength,kirby_MysticBeamBarrierBreak_HitStopAffectSource,kirby_MysticBeamBarrierBreak_HitStopAffectPlayer,kirby_MysticBeamBarrierBreak_HitStopAffectTarget,kirby_MysticBeamBarrierBreak_HitStopLength,kirby_MysticBeamBarrierBreak_HitStopShakeStrength);
-														proj.destroyableByEnemy = false;
-														proj.destroyableByObject = false;
-														proj.destroyableByWall = false;
-														var particle = instance_create_depth(other.x,other.y,depth,obj_Particle);
-														particle.sprite_index = spr_Projectile_BarrierBreak_Normal_Tail;
-														particle.image_angle = angle + 45;
-														particle.destroyAfterAnimation = true;
-														instance_destroy();
-													}
+													if (audio_is_playing(snd_MysticBeamLaunch)) audio_stop_sound(snd_MysticBeamLaunch);
+													audio_play_sound(snd_MysticBeamLaunch,0,false);
+													
+													var proj = instance_create_depth(x,y,depth,obj_Projectile_BarrierBreak);
+													proj.image_angle = angle_difference(angle - 45,image_angle);
+													proj.owner = id;
+													proj.abilityType = playerAbilities.mysticBeam;
+													proj.dmg = kirby_MysticBeamBarrierBreak_Damage;
+													scr_Attack_SetKnockback(proj,kirby_MysticBeamBarrierBreak_Strength,kirby_MysticBeamBarrierBreak_HitStopAffectSource,kirby_MysticBeamBarrierBreak_HitStopAffectPlayer,kirby_MysticBeamBarrierBreak_HitStopAffectTarget,kirby_MysticBeamBarrierBreak_HitStopLength,kirby_MysticBeamBarrierBreak_HitStopShakeStrength);
+													proj.destroyableByEnemy = false;
+													proj.destroyableByObject = false;
+													proj.destroyableByWall = false;
+													var particle = instance_create_depth(other.x,other.y,depth,obj_Particle);
+													particle.sprite_index = spr_Projectile_BarrierBreak_Normal_Tail;
+													particle.image_angle = angle + 45;
+													particle.destroyAfterAnimation = true;
+													instance_destroy();
 												}
 											}
+											
 											if (canMysticBeamShield)
 											{
-												if (audio_is_playing(snd_MysticBeam)) audio_stop_sound(snd_MysticBeam);
-												sndMysticBeam = audio_play_sound(snd_MysticBeam,0,false);
-												attack = true;
-												attackNumber = playerAttacks.mysticBeamNormal;
-												sprite_index = sprBeamAttack1;
-												image_index = 0;
+												scr_Player_ExecuteAttack_MysticBeamNormal();
 											}
 											else
 											{
-												attack = true;
-												attackNumber = playerAttacks.mysticBeamBarrierBreak;
-												sprite_index = sprMysticBeamAttack2;
-												image_index = 0;
-												attackTimer = 30;
-												canMysticBeamShield = true;
+												scr_Player_ExecuteAttack_MysticBeamBarrierBreak();
 											}
 										}
 									}
 								}
-							}
-						}
-					
-						if (attackNumber == playerAttacks.mysticBeamCharge)
-						{
-							if (beamCharge == beamChargeMax - 1)
-							{
-								if (audio_is_playing(snd_Charge_Ready)) audio_stop_sound(snd_Charge_Ready);
-								audio_play_sound(snd_Charge_Ready,0,false);
-								var particle = instance_create_depth(x - (16 * dir),y - 15,depth - 1,obj_Particle);
-								particle.sprite_index = spr_Particle_Flash1;
-								particle.scale = 1.5;
-								particle.destroyAfterAnimation = true;
-							}
-							else if (beamCharge == 0) mysticBeamChargeEx = 0;
-							beamCharge += 1;
-							if ((!audio_is_playing(snd_MysticCharge_Intro)) and (!audio_is_playing(snd_MysticCharge_Loop)))
-							{
-								if (chargeSfxState == "intro")
-								{
-								    chargeSfx = audio_play_sound(snd_MysticCharge_Intro,0,false);
-								    chargeSfxState = "loop";
-								}
-								else
-								{
-								    chargeSfx = audio_play_sound(snd_MysticCharge_Loop,0,false);
-								}
-							}
-							
-							if (keyRightHold)
-							{
-								dir = 1;
-							}
-							if (keyLeftHold)
-							{
-								dir = -1;
-							}
-							
-							if (beamCharge < beamChargeMax)
-							{
-								if ((!global.cutscene) and (keyAttackReleased))
-								{
-									if (instance_exists(obj_Projectile_Beam))
-									{
-										with (obj_Projectile_Beam)
-										{
-											if ((isMystic) and (state == 2) and (owner == other.id))
-											{
-												if (audio_is_playing(snd_MysticBeamLaunch)) audio_stop_sound(snd_MysticBeamLaunch);
-												audio_play_sound(snd_MysticBeamLaunch,0,false);
-												var proj = instance_create_depth(x,y,depth,obj_Projectile_BarrierBreak);
-												proj.image_angle = angle_difference(angle - 45,image_angle);
-												proj.owner = id;
-												proj.abilityType = playerAbilities.mysticBeam;
-												proj.dmg = kirby_MysticBeamBarrierBreak_Damage;
-												scr_Attack_SetKnockback(proj,kirby_MysticBeamBarrierBreak_Strength,kirby_MysticBeamBarrierBreak_HitStopAffectSource,kirby_MysticBeamBarrierBreak_HitStopAffectPlayer,kirby_MysticBeamBarrierBreak_HitStopAffectTarget,kirby_MysticBeamBarrierBreak_HitStopLength,kirby_MysticBeamBarrierBreak_HitStopShakeStrength);
-												proj.destroyableByEnemy = false;
-												proj.destroyableByObject = false;
-												proj.destroyableByWall = false;
-												var particle = instance_create_depth(other.x,other.y,depth,obj_Particle);
-												particle.sprite_index = spr_Projectile_BarrierBreak_Normal_Tail;
-												particle.image_angle = angle + 45;
-												particle.destroyAfterAnimation = true;
-												instance_destroy();
-												/*if (audio_is_playing(snd_MysticBeamLaunch)) audio_stop_sound(snd_MysticBeamLaunch);
-												audio_play_sound(snd_MysticBeamLaunch,0,false);
-												other.canMysticBeamShield = false;
-												var par = instance_create_depth(x,y,depth,obj_Particle);
-												par.sprite_index = choose(spr_Particle_BeamFlareWhite,spr_Particle_BeamFlareFlux,spr_Particle_BeamFlareYellow);
-												par.image_index = choose(1,2);
-												par.hsp = random_range(-1,1);
-												par.vsp = random_range(-1,1);
-												par.dir = dirX;
-												par.imageSpeed = 0;
-												par.destroyTimer = irandom_range(5,15);
-												if (place_meeting(x,y,obj_ParentWall)) instance_destroy();
-												dmg = 15;
-												spd = 5;
-												direction = angle;
-											    state = 3;
-											    destroyableByWall = false;
-												alphaTimer = alphaTimerMax;*/
-											}
-										}
-									}
-									
-									beamCharge = 0;
-									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
-									chargeSfxState = "intro";
-									if (canMysticBeamShield)
-									{
-										if (audio_is_playing(snd_MysticBeam)) audio_stop_sound(snd_MysticBeam);
-										sndMysticBeam = audio_play_sound(snd_MysticBeam,0,false);
-										attack = true;
-										attackNumber = playerAttacks.mysticBeamNormal;
-										sprite_index = sprBeamAttack1;
-										image_index = 0;
-									}
-									else
-									{
-										attack = true;
-										attackNumber = playerAttacks.mysticBeamBarrierBreak;
-										sprite_index = sprMysticBeamAttack2;
-										image_index = 0;
-										attackTimer = 30;
-										canMysticBeamShield = true;
-									}
-								}
-							}
-							else
-							{
-								if (invincibleFlashTimer == -1) invincibleFlashTimer = invincibleFlashTimerMax;
-								if ((!global.cutscene) and (keyAttackReleased))
-								{
-									beamCharge = 0;
-									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
-									chargeSfxState = "intro";
-									invincibleFlash = false;
-									invincibleFlashTimer = -1;
-									attack = true;
-									attackNumber = playerAttacks.mysticBeamChargeAttack;
-									sprite_index = sprBeamAttack5;
-								    image_index = 0;
-								}
-							}
-						}
-					
-						if (attackNumber == playerAttacks.mysticBeamNormal)
-						{
-							if (attackable)
-							{
-								attackTimer = 35;
-								parBeamCycle1 = instance_create_depth(-100,-100,depth - 1,obj_Particle);
-			                    parBeamCycle1.followObject = false;
-			                    parBeamCycle1.followedObject = id;
-			                    parBeamCycle1.sprite_index = spr_Particle_MysticBeamCycle;
-								parBeamCycle1.turnSpd = (5 * -dir);
-								parBeamCycle1.turnAroundObject = true;
-								parBeamCycle1.angle = 90 + (10 * dir);
-			                    parBeamCycle1.orbit = 20;
-								parBeamCycle1.invisTimerMax = 2;
-			                    parBeamCycle1.invisTimer = parBeamCycle1.invisTimerMax;
-			                    parBeamCycle1.destroyTimer = attackTimer;
-								var maxBeam = 4;
-								for (var i = 0; i < maxBeam; i++)
-								{
-									var projBeam = instance_create_depth(x,y,depth,obj_Projectile_Beam);
-									projBeam.owner = id;
-									projBeam.abilityType = playerAbilities.mysticBeam;
-									projBeam.player = player;
-									if (i % 2 == 0) projBeam.image_index = 1;
-									projBeam.movespeed = 4;
-									projBeam.jumpspeed = 0;
-								    projBeam.angle = (((360 / maxBeam) * i) * -dir);
-									projBeam.spd = 5 * dir;
-									projBeam.dmg = kirby_MysticBeamNormal_Damage;
-									scr_Attack_SetKnockback(projBeam,kirby_MysticBeamNormal_Strength,kirby_MysticBeamNormal_HitStopAffectSource,kirby_MysticBeamNormal_HitStopAffectPlayer,kirby_MysticBeamNormal_HitStopAffectTarget,kirby_MysticBeamNormal_HitStopLength,kirby_MysticBeamNormal_HitStopShakeStrength);
-									projBeam.dir = dir;
-									projBeam.orbit = 0;
-									projBeam.orbitMax = 35;
-									projBeam.owner = id;
-									projBeam.player = player;
-									projBeam.state = 2;
-									projBeam.enemy = false;
-									projBeam.hurtsObject = true;
-									projBeam.hurtsEnemy = true;
-									projBeam.hurtsPlayer = false;
-									projBeam.destroyableByWall = false;
-									projBeam.destroyableByEnemy = true;
-									projBeam.destroyableByObject = true;
-									projBeam.character = 2;
-									projBeam.sprIdle = spr_Projectile_MysticBeam_Normal;
-									projBeam.isMystic = true;
-									projBeam.trailSpr = spr_Projectile_MysticBeam_Normal_Trail;
-									projBeam.trailTimer = 0;
-									projBeam.destroyTimer = -1;
-								}
-								canMysticBeamShield = false;
-								attackable = false;
-							}
-							if (instance_exists(parBeamCycle1))
-							{
-								if (floor(image_index) == 2) parBeamCycle1.visible = false;
-								if (floor(image_index) == 3)
-								{
-									parBeamCycle1.visible = true;
-									parBeamCycle1.turnSpd = (11 * -dir);
-									parBeamCycle1.orbit = 14;
-								}
-							}
-						}
-					
-						if (attackNumber == playerAttacks.mysticBeamDash)
-						{
-							if (attackable)
-							{
-								isRunning = false;
-								var par = instance_create_depth(x + (16 * dir) + hsp,y - 9,depth - 1,obj_Particle);
-								par.sprite_index = spr_Particle_MysticBeamLaser;
-								par.dir = dir;
-								par.attachedObject = id;
-								par.attachedObjectXOffset = 16 * dir;
-								par.attachedObjectYOffset = -9;
-								par.destroyAfterAnimation = true;
-								beamBombProj = instance_create_depth(x + (17 * dir) + hsp,y - 9,depth + 1,obj_Projectile_BeamBomb);
-								beamBombProj.owner = id;
-								beamBombProj.abilityType = playerAbilities.mysticBeam;
-								beamBombProj.dmg = kirby_MysticBeamDash_Damage;
-								scr_Attack_SetKnockback(beamBombProj,kirby_MysticBeamDash_Strength,kirby_MysticBeamDash_HitStopAffectSource,kirby_MysticBeamDash_HitStopAffectPlayer,kirby_MysticBeamDash_HitStopAffectTarget,kirby_MysticBeamDash_HitStopLength,kirby_MysticBeamDash_HitStopShakeStrength);
-								beamBombProj.hsp = 2 * dir;
-								beamBombProj.destroyableByWall = false;
-								beamBombProj.destroyableByEnemy = false;
-								beamBombProj.destroyableByObject = false;
-								attackable = false;
-							}
-						}
-					
-						if (attackNumber == playerAttacks.mysticBeamAir)
-						{
-							attackable = false;
-							if (mysticBeamAttack2Timer == -1) mysticBeamAttack2Timer = (mysticBeamAttack2TimerMax + irandom_range(-1,1));
-						
-							if (grounded)
-							{
-								audio_stop_sound(sndMysticBeam);
-								mysticBeamAttack2Timer = -1;
-								attack = false;
-								attackable = true;
-								attackNumber = playerAttacks.none;
-							}
-						}
-					
-						if (attackNumber == playerAttacks.mysticBeamChargeAttack)
-						{
-							if (attackable)
-							{
-								scaleExX = .2;
-								scaleExY = -.2;
-								hsp = 1 * -dir;
-								attackTimer = 210;
-								if (audio_is_playing(snd_MysticBeamCharge)) audio_stop_sound(snd_MysticBeamCharge);
-								audio_play_sound(snd_MysticBeamCharge,0,false);
-							    mysticBeamCharge = instance_create_depth(x + (6 * dir),y - 2,depth,obj_Projectile_MysticBeamCharge);
-								mysticBeamCharge.owner = id;
-								mysticBeamCharge.abilityType = playerAbilities.mysticBeam;
-								mysticBeamCharge.player = player;
-								if (mysticBeamVortexInAJarUpgrade)
-								{
-									mysticBeamCharge.character = 1;
-								}
-								else
-								{
-									mysticBeamCharge.character = 0;
-								}
-								mysticBeamCharge.dmg = floor(kirby_MysticBeamChargeAttack_Damage + (mysticBeamChargeEx * kirby_MysticBeamChargeAttack_DamageMult));
-								scr_Attack_SetKnockback(mysticBeamCharge,kirby_MysticBeamChargeAttack_Strength,kirby_MysticBeamChargeAttack_HitStopAffectSource,kirby_MysticBeamChargeAttack_HitStopAffectPlayer,kirby_MysticBeamChargeAttack_HitStopAffectTarget,kirby_MysticBeamChargeAttack_HitStopLength,kirby_MysticBeamChargeAttack_HitStopShakeStrength);
-								mysticBeamCharge.hsp = (2 + (mysticBeamChargeEx / .5)) * dir;
-								mysticBeamCharge.dirX = dir;
-								mysticBeamCharge.image_xscale = mysticBeamCharge.dirX;
-								mysticBeamCharge.enemy = false;
-								mysticBeamCharge.player = player;
-								if (mysticBeamChargeEx > 0) mysticBeamCharge.supercharged = true;
-								attackable = false;
-							}
-						
-							if (instance_exists(mysticBeamCharge))
-							{
-								if (mysticBeamCharge.x < x)
-								{
-									dir = -1;
-								}
-								else
-								{
-									dir = 1;
-								}
-							}
-							else
-							{
-								attackTimer = 0;
 							}
 						}
 						break;
@@ -1338,116 +850,12 @@ function scr_Player_States_Normal()
 					    {
 							if (!keyUpHold)
 							{
-								if (audio_is_playing(snd_StoneReady)) audio_stop_sound(snd_StoneReady);
-								audio_play_sound(snd_StoneReady,0,false);
-								hsp = 0;
-								if (grounded)
-								{
-									if (isRunning) hsp = (movespeedRun * 3) * dir;
-								}
-								else
-								{
-									vsp = -jumpspeed / 2;
-									grounded = false;
-									jumpLimit = false;
-									jumpLimitTimer = 15;
-								}
-								invincible = true;
-					            attack = true;
-					            attackNumber = playerAttacks.stoneNormal;
-					            attackable = false;
-								stoneParticleTimer = 0;
-								sprite_index = sprStoneAttack1Ready;
-								image_index = 0;
+								scr_Player_ExecuteAttack_StoneNormal();
 							}
 							else
 							{
-								if (audio_is_playing(snd_StoneReady)) audio_stop_sound(snd_StoneReady);
-								audio_play_sound(snd_StoneReady,0,false);
-								stoneFistReadyTimer = stoneFistReadyTimerMax;
-					            attack = true;
-					            attackNumber = playerAttacks.stoneUp;
-					            attackable = false;
-								sprite_index = sprStoneAttack2Ready;
-					            image_index = 0;
+								scr_Player_ExecuteAttack_StoneUp();
 							}
-					    }
-					
-						if (attackNumber == playerAttacks.stoneNormal)
-						{
-							if ((!stoneFallen) and (!stoneReady) and (place_meeting(x,y + vsp + 1,obj_ParentWall)) and (sign(vsp) == 1))
-							{
-								if (audio_is_playing(snd_StoneFallen)) audio_stop_sound(snd_StoneFallen);
-								audio_play_sound(snd_StoneFallen,0,false);
-								if ((sprite_index == sprStoneAttack1Rare) and (floor(image_index) == 6))
-								{
-									if (audio_is_playing(snd_JellyStone)) audio_stop_sound(snd_JellyStone);
-									audio_play_sound(snd_JellyStone,0,false);
-								}
-								stoneFallen = true;
-								scaleExX = .2;
-								scaleExY = -.2;
-								shakeY = 3;
-								for (var i = 0; i < 2; i++)
-								{
-									var parXDir = 4;
-									if (i == 1) var parXDir = -4;
-									var par = instance_create_depth(x + parXDir,y + 3,depth - 1,obj_RecoilStar);
-									par.owner = id;
-									par.abilityType = playerAbilities.stone;
-									if (i == 0)
-									{
-										par.hsp = 3;
-									}
-									else if (i == 1)
-									{
-										par.hsp = -3;
-									}
-									par.dir = sign(par.hsp);
-									par.hurtsObject = true;
-									par.hurtsEnemy = true;
-									par.canBeInhaled = false;
-									par.destroyTimer = 15;
-								}
-								if (instance_exists(obj_Camera))
-								{
-									obj_Camera.shakeX = 2;
-									obj_Camera.shakeY = 2;
-								}
-							}
-						
-							if (stoneReady)
-							{
-								shakeX = 2;
-							}
-							else if ((!global.cutscene) and (keyAttackPressed))
-							{
-								if (audio_is_playing(snd_StoneRelease)) audio_stop_sound(snd_StoneRelease);
-								audio_play_sound(snd_StoneRelease,0,false);
-								var stoneEnd = instance_create_depth(x,y,depth - 1,obj_Projectile_StoneStop);
-								stoneEnd.owner = id;
-								stoneEnd.abilityType = playerAbilities.stone;
-								stoneEnd.dmg = kirby_StoneNormalEnd_Damage;
-								scr_Attack_SetKnockback(stoneEnd,kirby_StoneNormalEnd_Strength,kirby_StoneNormalEnd_HitStopAffectSource,kirby_StoneNormalEnd_HitStopAffectPlayer,kirby_StoneNormalEnd_HitStopAffectTarget,kirby_StoneNormalEnd_HitStopLength,kirby_StoneNormalEnd_HitStopShakeStrength);
-								stoneEnd.enemy = false;
-								vsp = -(jumpspeed / 3);
-								grounded = false;
-								grav = gravNormal;
-								gravLimit = gravLimitNormal;
-								invincible = false;
-								attackTimer = 15;
-								stoneReady = true;
-								stoneFallen = false;
-								if (instance_exists(stoneMaskProj)) instance_destroy(stoneMaskProj);
-					            attack = false;
-								attackNumber = playerAttacks.none;
-								if (stoneReleaseParticleTimer == -1) stoneReleaseParticleTimer = stoneReleaseParticleTimerMax;
-							}
-						}
-						
-						if ((!global.cutscene) and (attackNumber == playerAttacks.stoneUp) and (keyAttackReleased) and (stoneFistReady))
-						{
-							stoneFistReadyTimer = 0;
 						}
 						break;
 						#endregion
@@ -1456,143 +864,9 @@ function scr_Player_States_Normal()
 						case playerAbilities.ufo:
 					    if ((!global.cutscene) and (keyAttackPressed) and (!hurt) and (!attack))
 					    {
-							attack = true;
-							attackNumber = playerAttacks.ufoBeam;
-							sprite_index = sprUfoAttack1;
-							image_index = 0;
-							//attackNumber = playerAttacks.ufoCharge;
+							//scr_Player_ExecuteAttack_UfoCharge();
+							scr_Player_ExecuteAttack_UfoBeam();
 					    }
-						
-						if (attackNumber == playerAttacks.ufoCharge)
-						{
-							if (ufoCharge == ufoChargeMax - 1)
-							{
-								audio_play_sound(snd_Charge_Ready,0,false);
-								var particle = instance_create_depth(x - (16 * dir),y - 15,depth - 1,obj_Particle);
-								particle.sprite_index = spr_Particle_Flash1;
-								particle.scale = 1.5;
-								particle.destroyAfterAnimation = true;
-							}
-							ufoCharge += 1;
-							if (ufoCharge >= 6)
-							{
-								if (ufoCharge == 6)
-								{
-									sprite_index = sprUfoCharge;
-									image_index = 0;
-								}
-								if ((!audio_is_playing(snd_Charge_Intro)) and (!audio_is_playing(snd_Charge_Loop)))
-								{
-									if (chargeSfxState == "intro")
-									{
-									    chargeSfx = audio_play_sound(snd_Charge_Intro,0,false);
-									    chargeSfxState = "loop";
-									}
-									else
-									{
-									    chargeSfx = audio_play_sound(snd_Charge_Loop,0,false);
-									}
-								}
-							}
-						
-							if (keyRightHold)
-							{
-								dir = 1;
-							}
-							if (keyLeftHold)
-							{
-								dir = -1;
-							}
-						
-							if (ufoCharge < ufoChargeMax)
-							{
-								if ((!global.cutscene) and (keyAttackReleased))
-								{
-									ufoCharge = 0;
-									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
-									chargeSfxState = "intro";
-									attack = true;
-									attackNumber = playerAttacks.ufoBeam;
-									sprite_index = sprUfoAttack1;
-								    image_index = 0;
-								}
-							}
-							else
-							{
-								if (invincibleFlashTimer == -1) invincibleFlashTimer = invincibleFlashTimerMax;
-								if ((!global.cutscene) and (keyAttackReleased))
-								{
-									ufoCharge = 0;
-									if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
-									chargeSfxState = "intro";
-								}
-							}
-						}
-						
-						if (attackNumber == playerAttacks.ufoBeam)
-						{
-							if ((attackable) and (image_index > 3))
-							{
-								if (audio_is_playing(snd_Beam)) audio_stop_sound(snd_Beam);
-								sndBeam = audio_play_sound(snd_Beam,0,false);
-								attackTimer = 35;
-								for (var i = 0; i < 5; i++)
-								{
-									var projBeam = instance_create_depth(-100,-100,depth + 1,obj_Projectile_Beam);
-									projBeam.owner = id;
-									projBeam.abilityType = playerAbilities.ufo;
-									projBeam.player = player;
-									projBeam.dmg = kirby_UfoBeam_Damage;
-									scr_Attack_SetKnockback(projBeam,kirby_UfoBeam_Strength,kirby_UfoBeam_HitStopAffectSource,kirby_UfoBeam_HitStopAffectPlayer,kirby_UfoBeam_HitStopAffectTarget,kirby_UfoBeam_HitStopLength,kirby_UfoBeam_HitStopShakeStrength);
-									switch (i)
-									{
-										case 0:
-										projBeam.angle = 90 + (40 * -dir);
-										break;
-									
-										case 1:
-										projBeam.angle = 90 + (35 * -dir);
-										break;
-									
-										case 2:
-										projBeam.angle = 90 + (25 * -dir);
-										break;
-									
-										case 3:
-										projBeam.angle = 90 + (10 * -dir);
-										break;
-									
-										case 4:
-										projBeam.angle = 90 - (8 * -dir);
-										break;
-										
-										case 5:
-										projBeam.angle = 90 - (26 * -dir);
-										break;
-									}
-									projBeam.centerX = 0;
-									projBeam.centerY = 0;
-									projBeam.orbit = 25 + (15 * i);
-									projBeam.invisTimer = -1 + (2 * i);
-									if (i > 0) projBeam.visible = false;
-									projBeam.imageIndex = i - 1;
-									if (projBeam.imageIndex < 0) projBeam.imageIndex = 0;
-									if (projBeam.imageIndex > 3) projBeam.imageIndex = 3;
-									projBeam.spd = (3.5 + (i * .4)) * -dir;
-									projBeam.image_index = projBeam.imageIndex;
-									projBeam.enemy = false;
-									projBeam.destroyableByWall = false;
-									projBeam.destroyableByEnemy = false;
-									projBeam.destroyableByObject = false;
-									projBeam.isUfo = true;
-									projBeam.hitInvincibility = projBeam.hitInvincibilityMax;
-									projBeam.pulseTimer = projBeam.pulseTimerMax;
-									projBeam.invisTimerMax = -1;
-									projBeam.destroyTimer = 25 + (2 * i);
-								}
-								attackable = false;
-							}
-						}
 						break;
 						#endregion
 						
@@ -1608,164 +882,29 @@ function scr_Player_States_Normal()
 									{
 										if (keyAttackPressed)
 										{
-									        attack = true;
-											attackable = false;
-											attackTimer = 20;
-								            attackNumber = playerAttacks.mirrorSlash;
-											sprite_index = sprMirrorAttack1;
-											image_index = 0;
-											if (audio_is_playing(snd_Slash)) audio_stop_sound(snd_Slash);
-											audio_play_sound(snd_Slash,0,false);
-											mirrorSlashProj = instance_create_depth(x,y,depth - 1,obj_Projectile_MirrorSlash);
-											mirrorSlashProj.owner = id;
-											mirrorSlashProj.abilityType = playerAbilities.mirror;
-											mirrorSlashProj.dmg = kirby_MirrorSlash_Damage;
-											scr_Attack_SetKnockback(mirrorSlashProj,kirby_MirrorSlash_Strength,kirby_MirrorSlash_HitStopAffectSource,kirby_MirrorSlash_HitStopAffectPlayer,kirby_MirrorSlash_HitStopAffectTarget,kirby_MirrorSlash_HitStopLength,kirby_MirrorSlash_HitStopShakeStrength);
-											mirrorSlashProj.enemy = false;
-											mirrorSlashProj.dirX = dir;
-											mirrorSlashProj.image_xscale = mirrorSlashProj.dirX;
+											scr_Player_ExecuteAttack_MirrorSlash();
 										}
 									}
 									else
 									{
-								        attack = true;
-										attackable = false;
-							            attackNumber = playerAttacks.mirrorDash;
-							            invincible = true;
-										sprite_index = sprMirrorAttack3;
-							            if (audio_is_playing(snd_Mirror2)) audio_stop_sound(snd_Mirror2);
-										audio_play_sound(snd_Mirror2,0,false);
-										for (var i = 0; i < 2; i++)
-										{
-								            var projMirror = instance_create_depth(x,y,depth,obj_Projectile_MirrorPlayer);
-											projMirror.owner = id;
-											projMirror.abilityType = playerAbilities.mirror;
-											projMirror.player = player;
-											projMirror.dmg = kirby_MirrorDash_Damage;
-											scr_Attack_SetKnockback(projMirror,kirby_MirrorDash_Strength,kirby_MirrorDash_HitStopAffectSource,kirby_MirrorDash_HitStopAffectPlayer,kirby_MirrorDash_HitStopAffectTarget,kirby_MirrorDash_HitStopLength,kirby_MirrorDash_HitStopShakeStrength);
-								            projMirror.dirX = 1;
-											projMirror.image_xscale = scale * dir;
-											projMirror.destroyableByWall = false;
-											projMirror.destroyableByEnemy = false;
-											projMirror.destroyableByObject = false;
-								            if (i == 1)
-											{
-												projMirror.dirX = -1;
-												projMirror.image_xscale = -(scale * dir);
-											}
-											if (vsp != 0)
-											{
-												if (hsp > 0)
-												{
-													projMirror.jumpAngle = point_direction(0,0,hsp,vsp);
-												}
-												else if (hsp < 0)
-												{
-													projMirror.jumpAngle = point_direction(0,0,-hsp,-vsp);
-												}
-												projMirror.jumpAngle = point_direction(0,0,-hsp,-vsp);
-											}
-											projMirror.spriteIndex = sprMirrorAttack3;
-											projMirror.paletteIndex = paletteIndex;
-											if ((playerCharacter == playerCharacters.kirby) and (global.abilitySpraysKeycard) and (global.cheatColoredAbilitiesEquipped)) projMirror.paletteIndex = spr_Kirby_Normal_Palette_Mirror;
-											projMirror.hatIndex = scr_Player_AbilityHat(playerAbility,playerCharacter);
-											projMirror.hatShadowIndex = scr_Player_HatShadow(playerAbility,playerCharacter);
-											projMirror.hatPaletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
-										}
-										for (var i = 0; i < 3; i++)
-										{
-								            var par = instance_create_depth(x,y - 7,depth + 1,obj_Particle);
-								            par.direction = random_range(0,359);
-								            par.sprite_index = spr_Particle_Mirror1;
-								            par.spdBuiltIn = irandom_range(1,2);
-											par.destroyAfterAnimation = true;
-										}
-							            state = playerStates.mirrorDash;
+										scr_Player_ExecuteAttack_MirrorDash(playerCharacter,playerAbility);
 									}
 						        }
-						
+								
 						        if (keyDownHold)
 						        {
-						            if (audio_is_playing(snd_Mirror4)) audio_stop_sound(snd_Mirror4);
-									audio_play_sound(snd_Mirror4,0,false);
-						            attack = true;
-						            attackNumber = playerAttacks.mirrorDown;
-						            invincible = true;
-									sprite_index = sprMirrorAttack4;
-						            var mirrorSpawner = instance_create_depth(x,y,depth,obj_MirrorAttackSpawner);
-						            mirrorSpawner.owner = id;
-						            mirrorSpawner.dir = dir;
-									mirrorSpawner.spriteIndex = sprMirrorAttack4;
-									mirrorSpawner.paletteIndex = paletteIndex;
-									mirrorSpawner.hatIndex = scr_Player_AbilityHat(playerAbility,playerCharacter);
-									mirrorSpawner.hatShadowIndex = scr_Player_HatShadow(playerAbility,playerCharacter);
-									mirrorSpawner.hatPaletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
-									for (var i = 0; i < 3; i++)
-									{
-							            var par = instance_create_depth(x,y - 7,depth + 1,obj_Particle);
-							            par.direction = random_range(0,359);
-							            par.sprite_index = spr_Particle_Mirror1;
-							            par.spdBuiltIn = irandom_range(1,2);
-										par.destroyAfterAnimation = true;
-									}
-						            state = playerStates.mirrorDash;
+									scr_Player_ExecuteAttack_MirrorDown(playerCharacter,playerAbility);
 						        }
-						
+								
 								if (keyUpHold)
 						        {
-						            if (audio_is_playing(snd_Mirror5)) audio_stop_sound(snd_Mirror5);
-									audio_play_sound(snd_Mirror5,0,false);
-									attack = true;
-									attackable = false;
-						            attackNumber = playerAttacks.mirrorUp;
-						            invincible = true;
-									sprite_index = sprMirrorAttack5;
-						            var mirrorSpawner = instance_create_depth(x,y,depth,obj_MirrorAttackSpawner);
-									mirrorSpawner.owner = id;
-						            mirrorSpawner.dir = image_xscale;
-						            mirrorSpawner.state = 1;
-									mirrorSpawner.spriteIndex = sprMirrorAttack5;
-									mirrorSpawner.paletteIndex = paletteIndex;
-									mirrorSpawner.hatIndex = scr_Player_AbilityHat(playerAbility,playerCharacter);
-									mirrorSpawner.hatShadowIndex = scr_Player_HatShadow(playerAbility,playerCharacter);
-									mirrorSpawner.hatPaletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
-									for (var i = 0; i < 3; i++)
-									{
-								        var par = instance_create_depth(x,y - 7,depth + 1,obj_Particle);
-								        par.direction = random_range(0,359);
-								        par.sprite_index = spr_Particle_Mirror1;
-								        par.spdBuiltIn = irandom_range(1,2);
-										par.destroyAfterAnimation = true;
-									}
-						            state = playerStates.mirrorDash;
+									scr_Player_ExecuteAttack_MirrorUp(playerCharacter,playerAbility);
 						        }
 							}
 							else if (keyAttackHold)
 							{
-								mirrorHold = true;
-								attack = true;
-								attackable = false;
-								attackNumber = playerAttacks.mirrorNormal;
-								sprite_index = sprMirrorAttack2;
-								image_index = 0;
+								scr_Player_ExecuteAttack_MirrorNormal();
 							}
-						}
-					
-						if (attackNumber == playerAttacks.mirrorNormal)
-						{
-							attack = true;
-							attackable = false;
-							if ((mirrorHold) and (mirrorNormalAttackTimer == -1)) mirrorNormalAttackTimer = mirrorNormalAttackTimerMax;
-					        if ((mirrorHold) and (!global.cutscene) and (keyAttackReleased))
-					        {
-								mirrorHold = false;
-								mirrorFirstAttack = true;
-								mirrorAttackDir = 1;
-					            attackTimer = 15;
-								mirrorNormalAttackTimer = -1;
-								sprite_index = sprMirrorAttack2Release;
-							    image_index = 0;
-					        }
 						}
 					    break;
 						#endregion
@@ -1776,134 +915,17 @@ function scr_Player_States_Normal()
 					    {
 							if ((isRunning) and (canDashAttack) and (vsp == 0) and (hsp != 0))
 							{
-								attack = true;
-								attackNumber = playerAttacks.ninjaDash;
-								sprite_index = sprCutterAttack2;
-						        image_index = 0;
-				                cutterCatch = false;
-								hspLimit = false;
-								hsp = movespeedRun * 1.3;
+								scr_Player_ExecuteAttack_NinjaDash();
 							}
 							else if (keyDownHold)
 							{
-								if (audio_is_playing(snd_Slash)) audio_stop_sound(snd_Slash);
-								audio_play_sound(snd_Slash,0,false);
-								var cutterMaskProj = instance_create_depth(x,y,depth,obj_Projectile_NinjaDropMask);
-								cutterMaskProj.owner = id;
-								cutterMaskProj.abilityType = playerAbilities.ninja;
-								cutterMaskProj.dmg = kirby_NinjaDrop_Damage;
-								scr_Attack_SetKnockback(cutterMaskProj,kirby_NinjaDrop_Strength,kirby_NinjaDrop_HitStopAffectSource,kirby_NinjaDrop_HitStopAffectPlayer,kirby_NinjaDrop_HitStopAffectTarget,kirby_NinjaDrop_HitStopLength,kirby_NinjaDrop_HitStopShakeStrength);
-								cutterMaskProj.image_xscale = image_xscale;
-								cutterMaskProj.image_yscale = image_yscale;
-								invincible = true;
-								attack = true;
-								attackNumber = playerAttacks.ninjaDrop;
-								hsp = 4.5 * dir;
-								vsp = 4.5;
-								sprite_index = sprCutterAttack3;
-								image_index = 0;
-				                state = playerStates.ninjaDrop;
+								scr_Player_ExecuteAttack_NinjaDrop();
 							}
 							else
 							{
-								attack = true;
-								attackNumber = playerAttacks.ninjaHoldCharge;
-								sprite_index = sprNinjaCharge;
-								image_index = 0;
+								scr_Player_ExecuteAttack_NinjaHoldCharge();
 							}
 					    }
-					
-						if (attackNumber == playerAttacks.ninjaHoldCharge)
-						{
-							ninjaHoldCharge += 1;
-						
-							if (ninjaHoldCharge < ninjaHoldChargeMax)
-							{
-								if ((!global.cutscene) and (keyAttackReleased))
-								{
-									ninjaHoldCharge = 0;
-									attack = true;
-									attackNumber = playerAttacks.ninjaNormal;
-									sprite_index = sprNinjaAttack1;
-								    image_index = 0;
-								}
-							}
-							else
-							{
-								if (!global.cutscene)
-								{
-									ninjaHoldCharge = 0;
-									attack = true;
-									attackNumber = playerAttacks.ninjaSlash;
-									sprite_index = sprNinjaAttack2;
-								    image_index = 0;
-								}
-							}
-						}
-					
-						if (attackNumber == playerAttacks.ninjaNormal)
-						{
-							if (attackable)
-							{
-								attackTimer = 4;
-								if (audio_is_playing(snd_NinjaKnife)) audio_stop_sound(snd_NinjaKnife);
-								audio_play_sound(snd_NinjaKnife,0,false);
-							    var projectile = instance_create_depth(x + (8 * dir),y - 5 + (irandom_range(-3,3)),depth - 1,obj_Projectile_NinjaKunai);
-								projectile.owner = id;
-								projectile.abilityType = playerAbilities.ninja;
-								projectile.dmg = kirby_NinjaNormal_Damage;
-								scr_Attack_SetKnockback(projectile,kirby_NinjaNormal_Strength,kirby_NinjaNormal_HitStopAffectSource,kirby_NinjaNormal_HitStopAffectPlayer,kirby_NinjaNormal_HitStopAffectTarget,kirby_NinjaNormal_HitStopLength,kirby_NinjaNormal_HitStopShakeStrength);
-								projectile.hsp = dir * 7;
-								projectile.dirX = dir;
-								projectile.image_xscale = projectile.dirX;
-								projectile.enemy = false;
-								attackable = false;
-							}
-						}
-					
-						if (attackNumber == playerAttacks.ninjaSlash)
-						{
-							if (attackable)
-							{
-								attackTimer = 10;
-								if (audio_is_playing(snd_NinjaSlash)) audio_stop_sound(snd_NinjaSlash);
-								audio_play_sound(snd_NinjaSlash,0,false);
-							    var projectile = instance_create_depth(x + (14 * dir),y - 12,depth - 1,obj_Projectile_NinjaSlash);
-								projectile.owner = id;
-								projectile.abilityType = playerAbilities.ninja;
-								projectile.dmg = kirby_NinjaSlash_Damage;
-								scr_Attack_SetKnockback(projectile,kirby_NinjaSlash_Strength,kirby_NinjaSlash_HitStopAffectSource,kirby_NinjaSlash_HitStopAffectPlayer,kirby_NinjaSlash_HitStopAffectTarget,kirby_NinjaSlash_HitStopLength,kirby_NinjaSlash_HitStopShakeStrength);
-								projectile.dirX = dir;
-								projectile.image_xscale = projectile.dirX;
-								projectile.enemy = false;
-								attackable = false;
-							}
-						}
-						
-						if (attackNumber == playerAttacks.ninjaDash)
-						{
-							if (attackable)
-							{
-				                hsp = movespeedSlide * dir;
-								isRunning = false;
-				                attack = true;
-								attackable = false;
-				                attackTimer = 45;
-				                state = playerStates.ninjaDash;
-								if (audio_is_playing(snd_CutterDash)) audio_stop_sound(snd_CutterDash);
-								slideSfx = audio_play_sound(snd_CutterDash,0,false);
-								ninjaDashMaskProj = instance_create_depth(x + (14 * dir),y - 12,depth - 1,obj_Projectile_NinjaDashMask);
-								ninjaDashMaskProj.owner = id;
-								ninjaDashMaskProj.abilityType = playerAbilities.ninja;
-								ninjaDashMaskProj.dmg = kirby_NinjaDash_Damage;
-								scr_Attack_SetKnockback(ninjaDashMaskProj,kirby_NinjaDash_Strength,kirby_NinjaDash_HitStopAffectSource,kirby_NinjaDash_HitStopAffectPlayer,kirby_NinjaDash_HitStopAffectTarget,kirby_NinjaDash_HitStopLength,kirby_NinjaDash_HitStopShakeStrength);
-								ninjaDashMaskProj.hsp = 4 * dir;
-								ninjaDashMaskProj.vsp = 2;
-								ninjaDashMaskProj.dirX = dir;
-								ninjaDashMaskProj.image_xscale = image_xscale;
-								ninjaDashMaskProj.image_yscale = image_yscale;
-							}
-						}
 						break;
 						#endregion
 						
@@ -1913,13 +935,16 @@ function scr_Player_States_Normal()
 					    {
 							if (audio_is_playing(snd_BombReady)) audio_stop_sound(snd_BombReady);
 							audio_play_sound(snd_BombReady,0,false);
+							
 							sprite_index = sprBombReady;
 							image_index = 0;
+							
 				            attack = true;
-							attackNumber = playerAttacks.bombReady;
 							attackable = false;
+							attackNumber = playerAttacks.bombReady;
 				            attackTimer = 45;
 							fallRoll = false;
+							
 							carriedItem = carriedItems.bomb;
 							carriedItemState = carriedItemStates.heavy;
 							carriedItemIndex = instance_create_depth(x,y - 8,depth - 1,obj_Projectile_Bomb);
@@ -1961,268 +986,42 @@ function scr_Player_States_Normal()
 					    {
 							if ((keyAttackHold) and ((!attack) or (attackNumber == playerAttacks.fireAerial)))
 							{
-								if((place_meeting(x + 1,y,obj_ParentWall) and (!instance_place(x + 1,y,obj_ParentWall).slope) and keyRightHold || place_meeting(x - 1,y,obj_ParentWall)  and (!instance_place(x - 1,y,obj_ParentWall).slope) and keyLeftHold) and attackTimer > 0){
-									attackNumber = playerAttacks.fireWheelClimb;
-									//y -= 5;
-									vsp = -5;
-									grounded = false;
-									grounded = false;
+								if ((place_meeting(x + 1,y,obj_ParentWall) and (!instance_place(x + 1,y,obj_ParentWall).slope) and keyRightHold || place_meeting(x - 1,y,obj_ParentWall)  and (!instance_place(x - 1,y,obj_ParentWall).slope) and keyLeftHold) and attackTimer > 0)
+								{
+									scr_Player_ExecuteAttack_FireWheelClimb();
 								}
+								
 								if ((!grounded) and (place_meeting(x,y + 16,obj_ParentWall) and attackTimer > 0))
 								{
-									if(fireLandWheel = true){
-										hspLimit = false;
-										hsp = (movespeedBurst * (1 + (fireMagicCharcoalUpgrade / 4))) * dir;
-										invincible = true;
-										attack = true;
-										attackNumber = playerAttacks.fireWheel;
-										fireLandWheel = false;
-										if (audio_is_playing(snd_Fire2)) audio_stop_sound(snd_Fire2);
-								        audio_play_sound(snd_Fire2,0,false);
-										sprite_index = sprFireAttack3;
-										image_index = 0;
-										fireMaskProj = instance_create_depth(x,y,depth,obj_Projectile_FireMask);
-										fireMaskProj.owner = id;
-										fireMaskProj.abilityType = playerAbilities.fire;
-										fireMaskProj.sprite_index = sprFireAttack3;
-										fireMaskProj.dmg = kirby_FireWheel_Damage;
-										scr_Attack_SetKnockback(fireMaskProj,kirby_FireWheel_Strength,kirby_FireWheel_HitStopAffectSource,kirby_FireWheel_HitStopAffectPlayer,kirby_FireWheel_HitStopAffectTarget,kirby_FireWheel_HitStopLength,kirby_FireWheel_HitStopShakeStrength);
-										fireMaskProj.image_xscale = image_xscale;
-										fireMaskProj.image_yscale = image_yscale;
-										if (fireMagicCharcoalUpgrade)
-										{
-											for (var i = 0; i < 4; i++)
-											{
-												var extra = instance_create_depth(x,y,depth + 1,obj_Projectile_FireExtra);
-												extra.owner = id;
-												extra.abilityType = playerAbilities.fire;
-												extra.dmg = kirby_FireMagicCharcoalExtra_Damage;
-												scr_Attack_SetKnockback(extra,kirby_FireMagicCharcoalExtra_Strength,kirby_FireMagicCharcoalExtra_HitStopAffectSource,kirby_FireMagicCharcoalExtra_HitStopAffectPlayer,kirby_FireMagicCharcoalExtra_HitStopAffectTarget,kirby_FireMagicCharcoalExtra_HitStopLength,kirby_FireMagicCharcoalExtra_HitStopShakeStrength);
-												extra.paletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
-												switch (i)
-												{
-													case 0:
-													extra.hsp = 2;
-													extra.vsp = -3;
-													break;
-												
-													case 1:
-													extra.hsp = 3;
-													extra.vsp = -4;
-													break;
-												
-													case 2:
-													extra.hsp = -2;
-													extra.vsp = -3;
-													break;
-												
-													case 3:
-													extra.hsp = -3;
-													extra.vsp = -4;
-													break;
-												}
-											}
-										}
-									    fireReleaseTimer = 45;
-									    attackTimer = 60;
-										hspLimitTimer = 45;
-									}else{
+									if (fireLandWheel)
+									{
+										scr_Player_ExecuteAttack_FireWheel(fireMagicCharcoalUpgrade);
+									}
+									else
+									{
 										attackTimer = 0;
 									}
 								}
 							}
+							
 							if ((keyAttackPressed) and (!attack))
 							{
-								if ((isRunning) and (canDashAttack) and (hsp != 0) and (!(keyDownHold && !grounded)))
+								if ((isRunning) and (canDashAttack) and (hsp != 0) and !((keyDownHold) and !(grounded)))
 								{
-									invincible = true;
-									vsp = 0;
-									fireDashHsp = (movespeedBurst * ((fireMagicCharcoalUpgrade / 2) + 1)) * dir;
-									//isRunning = false;
-					                attack = true;
-									attackNumber = playerAttacks.fireDash;
-									fireDashDir = 0;
-									if (fireDashUp > 0)
-									{
-										if (keyUpHold)
-										{
-											fireDashDir = -1;
-											fireDashUp--;
-										}
-									}
-									else
-									{
-										fireDashDir = 1;
-									}
-									attackable = false;
-					                fireReleaseTimer = 35;
-					                attackTimer = 45;
-					                state = playerStates.fireDash;
-									if (audio_is_playing(snd_Fire3)) audio_stop_sound(snd_Fire3);
-				                    audio_play_sound(snd_Fire3,0,false);
-									fireDashMaskProj = instance_create_depth(x,y,depth,obj_Projectile_BurstMask);
-									fireDashMaskProj.owner = id;
-									fireDashMaskProj.abilityType = playerAbilities.fire;
-									fireDashMaskProj.dmgMin = kirby_FireDash_DamageMin;
-									fireDashMaskProj.dmgMax = kirby_FireDash_DamageMax;
-									scr_Attack_SetKnockback(fireDashMaskProj,kirby_FireDash_Strength,kirby_FireDash_HitStopAffectSource,kirby_FireDash_HitStopAffectPlayer,kirby_FireDash_HitStopAffectTarget,kirby_FireDash_HitStopLength,kirby_FireDash_HitStopShakeStrength);
-									fireDashMaskProj.image_xscale = image_xscale;
-									fireDashMaskProj.image_yscale = image_yscale;
-				                    var par = instance_create_depth(x + (dir * 10),y - 4,depth - 1,obj_Particle);
-				                    par.dir = dir;
-				                    par.sprite_index = spr_Particle_Fire2;
-				                    par.scale = 1 + (fireMagicCharcoalUpgrade / 2);
-									par.paletteSpriteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
-									par.paletteIndex = 1;
-									par.destroyAfterAnimation = true;
+									scr_Player_ExecuteAttack_FireDash(fireMagicCharcoalUpgrade);
 								}
 								else
 								{
 									if (keyDownHold)
 									{
-										invincible = true;
-										attack = true;
-										attackTimer = 80;
-										attackNumber = playerAttacks.fireAerial;
-										fireLandWheel = true;
-										if (audio_is_playing(snd_Fire2)) audio_stop_sound(snd_Fire2);
-					                    audio_play_sound(snd_Fire2,0,false);
-										sprite_index = sprFireAttack3;
-								        image_index = 0;
-										fireMaskProj = instance_create_depth(x,y,depth,obj_Projectile_FireMask);
-										fireMaskProj.owner = id;
-										fireMaskProj.abilityType = playerAbilities.fire;
-										fireMaskProj.sprite_index = sprFireAttack3;
-										fireMaskProj.dmg = kirby_FireAerial_Damage;
-										scr_Attack_SetKnockback(fireMaskProj,kirby_FireAerial_Strength,kirby_FireAerial_HitStopAffectSource,kirby_FireAerial_HitStopAffectPlayer,kirby_FireAerial_HitStopAffectTarget,kirby_FireAerial_HitStopLength,kirby_FireAerial_HitStopShakeStrength);
-										fireMaskProj.image_xscale = image_xscale;
-										fireMaskProj.image_yscale = image_yscale;
-										if (fireMagicCharcoalUpgrade)
-										{
-											for (var i = 0; i < 4; i++)
-											{
-												var extra = instance_create_depth(x,y,depth + 1,obj_Projectile_FireExtra);
-												extra.owner = id;
-												extra.abilityType = playerAbilities.fire;
-												extra.dmg = kirby_FireMagicCharcoalExtra_Damage;
-												scr_Attack_SetKnockback(extra,kirby_FireMagicCharcoalExtra_Strength,kirby_FireMagicCharcoalExtra_HitStopAffectSource,kirby_FireMagicCharcoalExtra_HitStopAffectPlayer,kirby_FireMagicCharcoalExtra_HitStopAffectTarget,kirby_FireMagicCharcoalExtra_HitStopLength,kirby_FireMagicCharcoalExtra_HitStopShakeStrength);
-												extra.paletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
-												switch (i)
-												{
-													case 0:
-													extra.hsp = 2;
-													extra.vsp = -3;
-													break;
-												
-													case 1:
-													extra.hsp = 3;
-													extra.vsp = -4;
-													break;
-												
-													case 2:
-													extra.hsp = -2;
-													extra.vsp = -3;
-													break;
-												
-													case 3:
-													extra.hsp = -3;
-													extra.vsp = -4;
-													break;
-												}
-											}
-										}
+										scr_Player_ExecuteAttack_FireAerial(fireMagicCharcoalUpgrade);
 									}
 									else
 									{
-										attack = true;
-										attackNumber = playerAttacks.fireNormal;
-										fireNormalAttackTimer = 0;
-										sprite_index = sprFireAttack1;
-								        image_index = 0;
-									}									
+										scr_Player_ExecuteAttack_FireNormal();
+									}
 								}
 						    }
-						}
-					
-						if (attackNumber == playerAttacks.fireNormal)
-						{
-							shakeX = 1;
-							if (fireNormalAttackTimer == -1) fireNormalAttackTimer = fireNormalAttackTimerMax;
-					        if ((!global.cutscene) and (keyAttackReleased))
-					        {
-					            attackTimer = 0;
-					        }
-						
-							if (fireBackCharge < fireBackChargeMax)
-							{
-								if (((dir == 1) and (keyLeftHold)) or ((dir == -1) and (keyRightHold)))
-								{
-									fireBackCharge += 1;
-								}
-								else
-								{
-									fireBackCharge = 0;
-								}
-							}
-							else
-							{
-								fireMaskProj = instance_create_depth(x,y,depth,obj_Projectile_FireMask);
-								fireMaskProj.owner = id;
-								fireMaskProj.abilityType = playerAbilities.fire;
-								fireMaskProj.sprite_index = sprFireAttack4;
-								fireMaskProj.dmg = kirby_FireBack_Damage;
-								scr_Attack_SetKnockback(fireMaskProj,kirby_FireBack_Strength,kirby_FireBack_HitStopAffectSource,kirby_FireBack_HitStopAffectPlayer,kirby_FireBack_HitStopAffectTarget,kirby_FireBack_HitStopLength,kirby_FireBack_HitStopShakeStrength);
-								fireMaskProj.image_xscale = image_xscale;
-								fireMaskProj.image_yscale = image_yscale;
-								invincible = true;
-								attackNumber = playerAttacks.fireBack;
-								if (audio_is_playing(snd_Fire2)) audio_stop_sound(snd_Fire2);
-								if (audio_is_playing(snd_Fire3)) audio_stop_sound(snd_Fire3);
-				                audio_play_sound(snd_Fire3,0,false);
-								sprite_index = sprFireAttack4;
-								image_index = 0;
-								fireBackCharge = 0;
-							}
-						}
-					
-						if (attackNumber == playerAttacks.fireBack)
-						{
-					        if ((!global.cutscene) and (keyAttackReleased))
-					        {
-					            attackTimer = 0;
-					        }
-						}
-						
-						if(attackNumber == playerAttacks.fireWheel){
-							if(keyJumpPressed && grounded){
-								vsp = -5;
-								grounded = false;
-							}
-							if(vsp > 0 && grounded){
-								attackTimer = 0;
-							}
-							if(place_meeting(x + (1 * dir),y,obj_ParentWall)){
-								attackNumber = playerAttacks.fireWheelClimb;
-								//y -= 5;
-								vsp = -5;
-								grounded = false;
-							}
-						}
-						if(attackNumber == playerAttacks.fireWheelClimb){
-							attackTimer = clamp(attackTimer-1,0,90);
-							hsp = 0;
-							if(!place_meeting(x + (1 * dir),y,obj_ParentWall) || place_meeting(x,y-1,obj_ParentWall) || grounded && vsp >= 0){
-								vsp = -5;
-								grounded = false;
-								attackTimer = 0;
-							}
-							if(place_meeting(x + 1,y,obj_ParentWall) && keyRightHold || place_meeting(x - 1,y,obj_ParentWall) && keyLeftHold){
-								vsp = -5;
-								grounded = false;
-							}
-							if(place_meeting(x + 1,y,obj_ParentWall) && !keyRightHold && keyLeftHold || place_meeting(x - 1,y,obj_ParentWall) && !keyLeftHold && keyRightHold){
-								attackNumber = playerAttacks.fireAerial;
-							}
 						}
 						break;
 						#endregion
@@ -2237,41 +1036,14 @@ function scr_Player_States_Normal()
 								if (place_meeting(x + (16 * dir),y,obj_Enemy)) grabEnemy = instance_place(x + (16 * dir),y,obj_Enemy);
 								if ((grabEnemy != -1) and (grabEnemy.hurtable) and (!grabEnemy.hurt) and (!grabEnemy.isMiniBoss) and (!grabEnemy.isBoss))
 								{
-									if (audio_is_playing(snd_Guard)) audio_stop_sound(snd_Guard);
-									audio_play_sound(snd_Guard,0,false);
-									sprite_index = sprIceGrabReady;
-									image_index = 0;
-									grabEnemy.hasDeathParticles = false;
-									grabEnemy.death = true;
-									iceGrab = false;
-									invincible = true;
-									attack = true;
-									attackNumber = playerAttacks.iceGrab;
-									hsp = 0;
-									state = playerStates.iceGrab;
+									scr_Player_ExecuteAttack_IceGrab(grabEnemy);
 								}
 							}
 							else
 							{
-								attack = true;
-								sprite_index = sprIceAttack1Ready;
-							    image_index = 0;
+								scr_Player_ExecuteAttack_IceNormal();
 							}
 					    }
-					
-						if (attackNumber == playerAttacks.iceNormal)
-						{
-							if ((!iceReady) and (!iceRelease))
-							{
-								if (iceNormalAttackTimer == -1) iceNormalAttackTimer = iceNormalAttackTimerMax;
-						        if ((!global.cutscene) and (keyAttackReleased))
-						        {
-									iceRelease = true;
-									sprite_index = sprIceAttack1Release;
-									image_index = 0;
-						        }
-							}
-						}
 						break;
 						#endregion
 						
@@ -2281,125 +1053,17 @@ function scr_Player_States_Normal()
 					    {
 							if (keyUpHold)
 							{
-								if (audio_is_playing(snd_Spark6)) audio_stop_sound(snd_Spark6);
-								audio_play_sound(snd_Spark6,0,false);
-								var bolt = instance_create_depth(x,y - 4,depth + 1,obj_Projectile_SparkBolt);
-								bolt.owner = id;
-								bolt.abilityType = playerAbilities.spark;
-								attack = true;
-								attackNumber = playerAttacks.sparkUp;
-								sprite_index = sprSparkAttack3;
-								image_index = 0;
-								vsp = -2;
-								grounded = false;
-								attackTimer = 30;
+								scr_Player_ExecuteAttack_SparkUp();
 							}
 							else if ((!grounded) and (keyDownHold))
 							{
-								if (audio_is_playing(snd_Spark6)) audio_stop_sound(snd_Spark6);
-								audio_play_sound(snd_Spark6,0,false);
-								var bolt = instance_create_depth(x,y - 4,depth + 1,obj_Projectile_SparkBolt);
-								bolt.owner = id;
-								bolt.abilityType = playerAbilities.spark;
-								attack = true;
-								attackNumber = playerAttacks.sparkDown;
-								sprite_index = sprSparkAttack4;
-								image_index = 0;
-								attackTimer = 30;
+								scr_Player_ExecuteAttack_SparkDown();
 							}
 							else
 							{
-								attack = true;
-								attackNumber = playerAttacks.sparkHoldCharge;
-								sprite_index = sprSparkMaxCharge;
-								image_index = 0;
+								scr_Player_ExecuteAttack_SparkHoldCharge();
 							}
 					    }
-						
-						if (attackNumber == playerAttacks.sparkHoldCharge)
-						{
-							sparkHoldCharge += 1;
-						
-							if (sparkHoldCharge < sparkHoldChargeMax)
-							{
-								if ((!global.cutscene) and (keyAttackReleased))
-								{
-									sparkHoldCharge = 0;
-									if (sparkMaxCharge)
-									{
-										attack = true;
-										attackNumber = playerAttacks.sparkMax;
-										sprite_index = sprSparkAttack2Ready;
-										image_index = 0;
-										attackTimer = 60;
-									}
-									else if (sparkCharge > 15)
-									{
-										attack = true;
-										attackNumber = playerAttacks.sparkHigh;
-										sprite_index = sprSparkAttack2Ready;
-										image_index = 0;
-										attackTimer = 45;
-									}
-									else if (sparkCharge > 9)
-									{
-										attack = true;
-										attackNumber = playerAttacks.sparkMid;
-										sprite_index = sprSparkAttack1Ready;
-										image_index = 0;
-										attackTimer = 30;
-									}
-									else if (sparkCharge > 4)
-									{
-										attack = true;
-										attackNumber = playerAttacks.sparkLow;
-										sprite_index = sprSparkAttack1Ready;
-										image_index = 0;
-										attackTimer = 20;
-									}
-									else
-									{
-										attack = true;
-										attackNumber = playerAttacks.sparkNone;
-										sprite_index = sprSparkAttack1Ready;
-										image_index = 0;
-										attackTimer = 7;
-									}
-									sparkCharge = 0;
-									sparkMaxCharge = false;
-								}
-							}
-							else
-							{
-								if (!global.cutscene)
-								{
-									sparkHoldCharge = 0;
-									attack = true;
-									attackable = false;
-									sparkCooldown = 30;
-									attackNumber = playerAttacks.sparkNormal;
-									sprite_index = sprSparkAttack4;
-									image_index = 0;
-									sparkProj = instance_create_depth(x,y,depth + 1,obj_Projectile_SparkNormal);
-									sparkProj.owner = id;
-									sparkProj.abilityType = playerAbilities.spark;
-									sparkProj.dmg = kirby_SparkNormal_Damage;
-									scr_Attack_SetKnockback(sparkProj,kirby_SparkNormal_Strength,kirby_SparkNormal_HitStopAffectSource,kirby_SparkNormal_HitStopAffectPlayer,kirby_SparkNormal_HitStopAffectTarget,kirby_SparkNormal_HitStopLength,kirby_SparkNormal_HitStopShakeStrength);
-									sparkProj.enemy = false;
-									sparkProj.dirX = dir;
-								}
-							}
-						}
-						
-						if (attackNumber == playerAttacks.sparkNormal)
-						{
-							if (sparkCooldown > 0) sparkCooldown -= 1;
-							if (sparkCooldown <= 0)
-							{
-								if (keyAttackReleased) attackTimer = 0;
-							}
-							else if (keyAttackReleased) attackTimer = 10;
-						}
 						break;
 						#endregion
 						
@@ -2444,185 +1108,231 @@ function scr_Player_States_Normal()
 						#endregion
 						
 						#region Sword
-						case playerAbilities.sword: //AKA: -S- fucks around and finds out
-							///////////////////////attackTimer Specifics
-							///Stop an attack if attacktimer reaches 0
+						case playerAbilities.sword:
+						//AKA: -S- fucks around and finds out
+						///////////////////////attackTimer Specifics
+						///Stop an attack if attacktimer reaches 0
 							
-							if attackTimer<=0 {attack=false attackable=true; state=playerStates.normal   }
-							
-							///Decreasng it
-							attackTimer--; 
-							
-							
-							if !global.cutscene && keyAttackPressed{
-								if !grounded{ //All of the aerial shit
+						if (!(global.cutscene) and (keyAttackPressed))
+						{
+							if (!grounded)
+							{ //All of the aerial shit
 									
-									{ //this is where the Falling part of the Rising Slash will go
+								{ //this is where the Falling part of the Rising Slash will go
 									
-									}if ((isRunning) and (canDashAttack) and (!hurt) and (!attack)){ //Speen
-											sprite_index=sprSwordAttackAirDash
-											attackTimer =2000;
-											attackNumber=playerAttacks.swordAirDash
-											if (audio_is_playing(snd_NinjaSlash)) audio_stop_sound(snd_NinjaSlash);
-											audio_play_sound(snd_NinjaSlash,0,false);
-											var projectile = instance_create_depth(x + (14 * dir),y - 12,depth - 1,obj_Projectile_SwordMask);
-											projectile.owner = id;
-											projectile.abilityType = playerAbilities.sword;
-											projectile.destroyTimerMax =2000
-											projectile.dmg = kirby_SwordAirDash_Damage;
-											scr_Attack_SetKnockback(projectile,kirby_SwordAirDash_Strength,kirby_SwordAirDash_HitStopAffectSource,kirby_SwordAirDash_HitStopAffectPlayer,kirby_SwordAirDash_HitStopAffectTarget,kirby_SwordAirDash_HitStopLength,kirby_SwordAirDash_HitStopShakeStrength);
-											projectile.dirX = dir;
-											projectile.image_xscale = projectile.dirX;
-											projectile.enemy = false;
-											projectile.deleteTimer =2000
-											projectile.groundedDestroy=true;
-											projectile.sprite_index=projectile.sprSpin
-											attackable = false;
-											attack=true;
-									
-									///////////////////////The regular Aerial Attack
-									}else if ((!isRunning) and (!hurt) and (!attack)){
-										attackNumber=playerAttacks.swordAir
-										attackTimer=2
-										sprite_index=sprSwordAttackAir
-										attackable=true
-									}
-								
-								
-								}else{ //all of the grounded shit
-									///i like the part when Kirby says Dash attack and Dash Attacks all over the enemies
-									if ((isRunning) and (!hurt) and (!attack)){
-								
+								}
+								if ((isRunning) and (canDashAttack) and (!hurt) and (!attack))
+								{ //Speen
+										sprite_index = sprSwordAttackAirDash;
+										image_index = 0;
+										
 										attack = true;
-										attackNumber = playerAttacks.swordDash;
-								
-										state = playerStates.swordDash;
-										sprite_index = sprSwordAttackDash;
-								        image_index = 0;
-										attackTimer=80
-										hspLimitTimer=60
-										hspLimit = false;
-										if (audio_is_playing(snd_Fire3)) audio_stop_sound(snd_Fire3);
-						                slideSfx = audio_play_sound(snd_Fire3,0,false);
-										var projectile = instance_create_depth(x + (14 * dir),y - 12,depth - 1,obj_Projectile_SwordMask);
-										projectile.owner = id;
-										projectile.abilityType = playerAbilities.sword;
-										projectile.destroyTimerMax =20
-										projectile.dmg = kirby_SwordDash_DamageMin;
-										scr_Attack_SetKnockback(projectile,kirby_SwordDash_Strength,kirby_SwordDash_HitStopAffectSource,kirby_SwordDash_HitStopAffectPlayer,kirby_SwordDash_HitStopAffectTarget,kirby_SwordDash_HitStopLength,kirby_SwordDash_HitStopShakeStrength);
-										projectile.dirX = dir;
-										projectile.image_xscale = projectile.dirX;
-										projectile.enemy = false;
-										projectile.deleteTimer =0
-										projectile.sprite_index=projectile.sprDash;
+										attackable = false;
+										attackNumber = playerAttacks.swordAirDash;
+										attackTimer = 2000;
 										
-										
-								
-									///////////////////////Main Slash Activation
-									}else if ((!isRunning) and (!hurt) and (!attack)){
-										attackNumber=playerAttacks.swordNormal
-										attackTimer=2
-										sprite_index=sprSwordAttack1
-										///////////////////////////////////ComboJump 
-									} else if ((!isRunning) and (!hurt) and (attack) and (attackNumber=playerAttacks.swordNormal)){ //Combo 1
-										attackTimer = 60;
-										attackNumber= playerAttacks.swordCombo
 										if (audio_is_playing(snd_NinjaSlash)) audio_stop_sound(snd_NinjaSlash);
 										audio_play_sound(snd_NinjaSlash,0,false);
+										
 										var projectile = instance_create_depth(x + (14 * dir),y - 12,depth - 1,obj_Projectile_SwordMask);
 										projectile.owner = id;
 										projectile.abilityType = playerAbilities.sword;
-										projectile.destroyTimerMax =20
-										projectile.dmg = kirby_SwordCombo_Damage;
-										scr_Attack_SetKnockback(projectile,kirby_SwordCombo_Strength,kirby_SwordCombo_HitStopAffectSource,kirby_SwordCombo_HitStopAffectPlayer,kirby_SwordCombo_HitStopAffectTarget,kirby_SwordCombo_HitStopLength,kirby_SwordCombo_HitStopShakeStrength);
+										projectile.destroyTimerMax = 2000;
+										projectile.dmg = kirby_SwordAirDash_Damage;
+										scr_Attack_SetKnockback(projectile,kirby_SwordAirDash_Strength,kirby_SwordAirDash_HitStopAffectSource,kirby_SwordAirDash_HitStopAffectPlayer,kirby_SwordAirDash_HitStopAffectTarget,kirby_SwordAirDash_HitStopLength,kirby_SwordAirDash_HitStopShakeStrength);
 										projectile.dirX = dir;
 										projectile.image_xscale = projectile.dirX;
 										projectile.enemy = false;
-										projectile.deleteTimer =20
-										projectile.sprite_index=projectile.sprCombo
-										attackable = false;
-										sprite_index=sprSwordAttackCombo
-										grounded=0
-										vsp=-3
-										attack=true
-										///////////////////////////////////Barrage 
-									} else if ((!isRunning) and (!hurt)  and (attackNumber=playerAttacks.swordCombo)){
-										attack=true
-										attackTimer = 60;
-										attackNumber=playerAttacks.swordBarrage
-									}
+										projectile.deleteTimer = 2000;
+										projectile.groundedDestroy = true;
+										projectile.sprite_index = projectile.sprSpin;
+									
+								///////////////////////The regular Aerial Attack
+								}
+								else if ((!isRunning) and (!hurt) and (!attack))
+								{
+									attack = true;
+									attackable = false;
+									attackNumber = playerAttacks.swordAir;
+									attackTimer = 2;
+									
+									sprite_index = sprSwordAttackAir;
+									image_index = 0;
 								}
 							}
-							//////////////////////Main Slash Attack
-							if attackNumber=playerAttacks.swordNormal && attackTimer==0 && attackable{
-								sprite_index=sprSwordAttack1
-								attackTimer = 30;
-								if (audio_is_playing(snd_NinjaSlash)) audio_stop_sound(snd_NinjaSlash);
-								audio_play_sound(snd_NinjaSlash,0,false);
-								var projectile = instance_create_depth(x + (14 * dir),y - 12,depth - 1,obj_Projectile_SwordMask);
-								projectile.owner = id;
-								projectile.abilityType = playerAbilities.sword;
-								projectile.destroyTimerMax =20
-								projectile.dmg = kirby_SwordNormal_Damage;
-								scr_Attack_SetKnockback(projectile,kirby_SwordNormal_Strength,kirby_SwordNormal_HitStopAffectSource,kirby_SwordNormal_HitStopAffectPlayer,kirby_SwordNormal_HitStopAffectTarget,kirby_SwordNormal_HitStopLength,kirby_SwordNormal_HitStopShakeStrength);
-								projectile.dirX = dir;
-								projectile.image_xscale = projectile.dirX;
-								projectile.enemy = false;
-								projectile.deleteTimer =20
-								projectile.sprite=attackNumber;
-								attackable = false;
-								attack=true;
-							}
-							/////////////////////Aerial Attack's things
-							if attackNumber=playerAttacks.swordAir && attackTimer==0 && attackable{
-								sprite_index=sprSwordAttackAir
-								attackTimer =2000;
-								if (audio_is_playing(snd_NinjaSlash)) audio_stop_sound(snd_NinjaSlash);
-								audio_play_sound(snd_NinjaSlash,0,false);
-								var projectile = instance_create_depth(x + (14 * dir),y - 12,depth - 1,obj_Projectile_SwordMask);
-								projectile.owner = id;
-								projectile.abilityType = playerAbilities.sword;
-								projectile.destroyTimerMax =2000
-								projectile.dmg = kirby_SwordAir_Damage;
-								scr_Attack_SetKnockback(projectile,kirby_SwordAir_Strength,kirby_SwordAir_HitStopAffectSource,kirby_SwordAir_HitStopAffectPlayer,kirby_SwordAir_HitStopAffectTarget,kirby_SwordAir_HitStopLength,kirby_SwordAir_HitStopShakeStrength);
-								projectile.dirX = dir;
-								projectile.image_xscale = projectile.dirX;
-								projectile.enemy = false;
-								projectile.deleteTimer =2000
-								projectile.groundedDestroy=true;
-								projectile.sprite_index=projectile.sprAir;
-								attackable = false;
-								attack=true;
-							} 
-							if attackNumber==playerAttacks.swordAir && grounded {attackTimer=0 attackNumber=playerAbilities.none} else if attackNumber==playerAttacks.swordAir {sprite_index=sprSwordAttackAir }
-							if attackNumber==playerAttacks.swordNormal && attackTimer>0 {hsp*=0.9}
-							if attackNumber==playerAttacks.swordCombo && !grounded {hsp*=0.9  if vsp>0 sprite_index=sprSwordAttackBarrageAir}
-							if attackNumber==playerAttacks.swordBarrage && attackTimer>0 {
+							else
+							{
+								//all of the grounded shit
+								///i like the part when Kirby says Dash attack and Dash Attacks all over the enemies
+								if ((isRunning) and (!hurt) and (!attack))
+								{
+									attack = true;
+									attackNumber = playerAttacks.swordDash;
+									state = playerStates.swordDash;
+									attackTimer = 80;
+									hspLimit = false;
+									hspLimitTimer = 60;
 								
-								hsp*=0.9
-								if attackTimer div 10 && attackTimer<=50{
-									sprite_index=sprSwordAttackBarrage
-									if (audio_is_playing(snd_Spark1)) audio_stop_sound(snd_Spark1);
-									audio_play_sound(snd_Spark1,0,false);
-									var projectile = instance_create_depth(x,y-8,depth - 1,obj_Projectile_PlasmaWisp);
+									sprite_index = sprSwordAttackDash;
+								    image_index = 0;
+									
+									if (audio_is_playing(snd_Fire3)) audio_stop_sound(snd_Fire3);
+						            slideSfx = audio_play_sound(snd_Fire3,0,false);
+									
+									var projectile = instance_create_depth(x + (14 * dir),y - 12,depth - 1,obj_Projectile_SwordMask);
 									projectile.owner = id;
 									projectile.abilityType = playerAbilities.sword;
-									projectile.sprite_index = spr_Projectile_Spark_Normal_None;
-									projectile.mask_index = projectile.sprite_index;
-									projectile.hurtsPlayer=0
-									projectile.enemy = false;
+									projectile.destroyTimerMax = 20;
+									projectile.dmg = kirby_SwordDash_DamageMin;
+									scr_Attack_SetKnockback(projectile,kirby_SwordDash_Strength,kirby_SwordDash_HitStopAffectSource,kirby_SwordDash_HitStopAffectPlayer,kirby_SwordDash_HitStopAffectTarget,kirby_SwordDash_HitStopLength,kirby_SwordDash_HitStopShakeStrength);
 									projectile.dirX = dir;
-									projectile.image_xscale = dir;
-									projectile.image_yscale=0.2
-									projectile.hspeed = dir * 6;
-									projectile.vspeed = -0.5+random(1);
-									//projectile.hspeed-=abs(projectile.vspeed)
-									projectile.destroyTimer =20;
+									projectile.image_xscale = projectile.dirX;
+									projectile.enemy = false;
+									projectile.deleteTimer = 0;
+									projectile.sprite_index = projectile.sprDash;
 								}
-								
-								
-							}	
+								else if ((!isRunning) and (!hurt) and (!attack))
+								{
+									///////////////////////Main Slash Activation
+									attack = true;
+									attackable = false;
+									attackNumber = playerAttacks.swordNormal;
+									attackTimer = 2;
+									
+									sprite_index = sprSwordAttack1;
+									image_index = 0;
+									///////////////////////////////////ComboJump 
+								}
+								else if ((!isRunning) and (!hurt) and (attack) and (attackNumber=playerAttacks.swordNormal))
+								{ //Combo 1
+									attack = true;
+									attackable = false;
+									attackTimer = 60;
+									attackNumber = playerAttacks.swordCombo;
+									vsp = -3
+									grounded = false;
+									
+									if (audio_is_playing(snd_NinjaSlash)) audio_stop_sound(snd_NinjaSlash);
+									audio_play_sound(snd_NinjaSlash,0,false);
+									
+									var projectile = instance_create_depth(x + (14 * dir),y - 12,depth - 1,obj_Projectile_SwordMask);
+									projectile.owner = id;
+									projectile.abilityType = playerAbilities.sword;
+									projectile.destroyTimerMax = 20;
+									projectile.dmg = kirby_SwordCombo_Damage;
+									scr_Attack_SetKnockback(projectile,kirby_SwordCombo_Strength,kirby_SwordCombo_HitStopAffectSource,kirby_SwordCombo_HitStopAffectPlayer,kirby_SwordCombo_HitStopAffectTarget,kirby_SwordCombo_HitStopLength,kirby_SwordCombo_HitStopShakeStrength);
+									projectile.dirX = dir;
+									projectile.image_xscale = projectile.dirX;
+									projectile.enemy = false;
+									projectile.deleteTimer = 20;
+									projectile.sprite_index = projectile.sprCombo;
+									
+									sprite_index = sprSwordAttackCombo
+									image_index = 0;
+									///////////////////////////////////Barrage 
+								}
+								else if ((!isRunning) and (!hurt)  and (attackNumber == playerAttacks.swordCombo))
+								{
+									attack = true;
+									attackable = false;
+									attackTimer = 60;
+									attackNumber = playerAttacks.swordBarrage;
+								}
+							}
+						}
+						//////////////////////Main Slash Attack
+						if ((attackNumber == playerAttacks.swordNormal) and (attackTimer == 0) and (attackable))
+						{
+							sprite_index = sprSwordAttack1;
+							image_index = 0;
 							
+							if (audio_is_playing(snd_NinjaSlash)) audio_stop_sound(snd_NinjaSlash);
+							audio_play_sound(snd_NinjaSlash,0,false);
+							
+							var projectile = instance_create_depth(x + (14 * dir),y - 12,depth - 1,obj_Projectile_SwordMask);
+							projectile.owner = id;
+							projectile.abilityType = playerAbilities.sword;
+							projectile.destroyTimerMax =20
+							projectile.dmg = kirby_SwordNormal_Damage;
+							scr_Attack_SetKnockback(projectile,kirby_SwordNormal_Strength,kirby_SwordNormal_HitStopAffectSource,kirby_SwordNormal_HitStopAffectPlayer,kirby_SwordNormal_HitStopAffectTarget,kirby_SwordNormal_HitStopLength,kirby_SwordNormal_HitStopShakeStrength);
+							projectile.dirX = dir;
+							projectile.image_xscale = projectile.dirX;
+							projectile.enemy = false;
+							projectile.deleteTimer =20
+							projectile.sprite = attackNumber;
+							
+							attack = true;
+							attackable = false;
+							attackTimer = 30;
+						}
+						/////////////////////Aerial Attack's things
+						if attackNumber=playerAttacks.swordAir && attackTimer==0 && attackable
+						{
+							sprite_index=sprSwordAttackAir
+							attackTimer =2000;
+							if (audio_is_playing(snd_NinjaSlash)) audio_stop_sound(snd_NinjaSlash);
+							audio_play_sound(snd_NinjaSlash,0,false);
+							var projectile = instance_create_depth(x + (14 * dir),y - 12,depth - 1,obj_Projectile_SwordMask);
+							projectile.owner = id;
+							projectile.abilityType = playerAbilities.sword;
+							projectile.destroyTimerMax =2000
+							projectile.dmg = kirby_SwordAir_Damage;
+							scr_Attack_SetKnockback(projectile,kirby_SwordAir_Strength,kirby_SwordAir_HitStopAffectSource,kirby_SwordAir_HitStopAffectPlayer,kirby_SwordAir_HitStopAffectTarget,kirby_SwordAir_HitStopLength,kirby_SwordAir_HitStopShakeStrength);
+							projectile.dirX = dir;
+							projectile.image_xscale = projectile.dirX;
+							projectile.enemy = false;
+							projectile.deleteTimer =2000
+							projectile.groundedDestroy=true;
+							projectile.sprite_index=projectile.sprAir;
+							attackable = false;
+							attack=true;
+						}
+						
+						if attackNumber == playerAttacks.swordAir && grounded
+						{
+							attackTimer=0 attackNumber=playerAbilities.none
+						}
+						else if attackNumber==playerAttacks.swordAir
+						{
+							sprite_index = sprSwordAttackAir;
+						}
+						
+						if attackNumber == playerAttacks.swordNormal && attackTimer>0
+						{
+							hsp *= .9;
+						}
+						
+						if attackNumber == playerAttacks.swordCombo && !grounded
+						{
+							hsp *= .9;
+							if (vsp > 0) sprite_index = sprSwordAttackBarrageAir;
+						}
+							
+						if (attackNumber == playerAttacks.swordBarrage)
+						{
+							hsp *= 0.9;
+							if ((attackTimer div 10) and (attackTimer<=50))
+							{
+								sprite_index = sprSwordAttackBarrage
+									
+								if (audio_is_playing(snd_Spark1)) audio_stop_sound(snd_Spark1);
+								audio_play_sound(snd_Spark1,0,false);
+									
+								var projectile = instance_create_depth(x,y-8,depth - 1,obj_Projectile_PlasmaWisp);
+								projectile.owner = id;
+								projectile.abilityType = playerAbilities.sword;
+								projectile.sprite_index = spr_Projectile_Spark_Normal_None;
+								projectile.mask_index = projectile.sprite_index;
+								projectile.hurtsPlayer=0
+								projectile.enemy = false;
+								projectile.dirX = dir;
+								projectile.image_xscale = dir;
+								projectile.image_yscale=0.2
+								projectile.hspeed = dir * 6;
+								projectile.vspeed = -0.5+random(1);
+								projectile.destroyTimer =20;
+							}
+						}
 						break;
 						#endregion
 						
@@ -3236,12 +1946,28 @@ function scr_Player_States_Normal()
 		#region Attack Passive
 		switch (attackNumber)
 		{
-			case playerAttacks.beamNormal:
-			scr_Player_AttackPassive_BeamNormal();
+			case playerAttacks.cutterCharge:
+			scr_Player_AttackPassive_CutterCharge();
+			break;
+			
+			case playerAttacks.cutterNormal:
+			scr_Player_AttackPassive_CutterNormal(playerCharacter,playerAbility,cutterSpectralCutterUpgrade);
+			break;
+			
+			case playerAttacks.cutterChargeAttack:
+			scr_Player_AttackPassive_CutterChargeAttack(playerCharacter,playerAbility,cutterSpectralCutterUpgrade);
+			break;
+			
+			case playerAttacks.cutterAir:
+			scr_Player_AttackPassive_CutterAir();
 			break;
 			
 			case playerAttacks.beamCharge:
 			scr_Player_AttackPassive_BeamCharge();
+			break;
+			
+			case playerAttacks.beamNormal:
+			scr_Player_AttackPassive_BeamNormal();
 			break;
 			
 			case playerAttacks.beamDash:
@@ -3250,6 +1976,74 @@ function scr_Player_States_Normal()
 			
 			case playerAttacks.beamAir:
 			scr_Player_AttackPassive_BeamAir();
+			break;
+			
+			case playerAttacks.mysticBeamCharge:
+			scr_Player_AttackPassive_MysticBeamCharge();
+			break;
+			
+			case playerAttacks.mysticBeamNormal:
+			scr_Player_AttackPassive_MysticBeamNormal();
+			break;
+			
+			case playerAttacks.mysticBeamChargeAttack:
+			scr_Player_AttackPassive_MysticBeamChargeAttack();
+			break;
+			
+			case playerAttacks.mysticBeamAir:
+			scr_Player_AttackPassive_MysticBeamAir();
+			break;
+			
+			case playerAttacks.stoneNormal:
+			scr_Player_AttackPassive_StoneNormal();
+			break;
+			
+			case playerAttacks.stoneUp:
+			scr_Player_AttackPassive_StoneUp();
+			break;
+			
+			case playerAttacks.ufoCharge:
+			scr_Player_AttackPassive_UfoCharge();
+			break;
+			
+			case playerAttacks.ufoBeam:
+			scr_Player_AttackPassive_UfoBeam();
+			break;
+			
+			case playerAttacks.mirrorNormal:
+			scr_Player_AttackPassive_MirrorNormal();
+			break;
+			
+			case playerAttacks.ninjaHoldCharge:
+			scr_Player_AttackPassive_NinjaHoldCharge();
+			break;
+			
+			case playerAttacks.fireNormal:
+			scr_Player_AttackPassive_FireNormal();
+			break;
+			
+			case playerAttacks.fireBack:
+			scr_Player_AttackPassive_FireNormal();
+			break;
+			
+			case playerAttacks.fireWheel:
+			scr_Player_AttackPassive_FireWheel();
+			break;
+			
+			case playerAttacks.fireWheelClimb:
+			scr_Player_AttackPassive_FireWheelClimb();
+			break;
+			
+			case playerAttacks.iceNormal:
+			scr_Player_AttackPassive_IceNormal();
+			break;
+			
+			case playerAttacks.sparkHoldCharge:
+			scr_Player_AttackPassive_SparkHoldCharge();
+			break;
+			
+			case playerAttacks.sparkNormal:
+			scr_Player_AttackPassive_SparkNormal();
 			break;
 			
 			case playerAttacks.wingDash:
@@ -4155,7 +2949,9 @@ function scr_Player_States_Normal()
 			}
 		}
 		
+		#region Cutter Catch
 		if ((cutterCatch) and (!attack)) sprite_index = sprCutterCatch;
+		#endregion
 		
 		#region Collision
 		scr_Player_Collision(playerMechs.none);
@@ -4167,8 +2963,7 @@ function scr_Player_States_Normal()
 		shake = 0;
 	}
 	
-	if (attackNumber == playerAttacks.micNormal)
-	{
-		image_speed = 1;
-	}
+	#region Mic Animation
+	if (attackNumber == playerAttacks.micNormal) image_speed = 1;
+	#endregion
 }

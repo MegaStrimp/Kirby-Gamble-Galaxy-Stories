@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.673379,
+  "duration": 0.668005,
   "parent": {
     "name": "Enemies",
     "path": "folders/Sounds/Sound Effects/Enemies.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_leofire.wav",
+  "soundFile": "snd_LeoFire.wav",
   "type": 1,
   "volume": 1.0,
 }

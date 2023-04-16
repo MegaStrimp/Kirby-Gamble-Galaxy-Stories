@@ -17,7 +17,7 @@
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_bosshealth.wav",
+  "soundFile": "snd_BossHealth.wav",
   "type": 1,
   "volume": 1.0,
 }

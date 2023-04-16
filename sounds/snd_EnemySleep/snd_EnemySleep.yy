@@ -17,7 +17,7 @@
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_enemysleep.wav",
+  "soundFile": "snd_EnemySleep.wav",
   "type": 1,
   "volume": 1.0,
 }

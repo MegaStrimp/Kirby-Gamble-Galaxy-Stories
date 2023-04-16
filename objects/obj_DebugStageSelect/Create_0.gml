@@ -11,11 +11,17 @@ autoScroll = false;
 
 //Stages
 
+var roomIndex = 0;
 for (var i = 0; room_exists(i); i++)
 {
-	stageTitle[i] = string(room_get_name(i));
-	stageOffset[i] = 0;
-	stageOffsetLerp[i] = 0;
+	var roomName = string(room_get_name(i));
+	if (scr_CheckForbiddenLevels(roomName))
+	{
+		stageTitle[roomIndex] = roomName;
+		stageOffset[roomIndex] = 0;
+		stageOffsetLerp[roomIndex] = 0;
+		roomIndex += 1;
+	}
 }
 array_sort(stageTitle,true);
 

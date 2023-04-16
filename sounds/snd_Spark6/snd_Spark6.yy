@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.757551,
+  "duration": 0.708073,
   "parent": {
     "name": "Attacks",
     "path": "folders/Sounds/Sound Effects/Attacks.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_spark6.wav",
+  "soundFile": "snd_Spark6.wav",
   "type": 1,
   "volume": 1.0,
 }

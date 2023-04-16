@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.783673,
+  "duration": 0.757868,
   "parent": {
     "name": "Sound Effects",
     "path": "folders/Sounds/Sound Effects.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_explosion1.wav",
+  "soundFile": "snd_Explosion1.wav",
   "type": 1,
   "volume": 1.0,
 }

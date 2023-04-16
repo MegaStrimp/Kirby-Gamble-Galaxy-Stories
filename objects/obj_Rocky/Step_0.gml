@@ -98,10 +98,10 @@ if (!childPause)
 			sprite_index = sprIdle;
 		}
 		break;
-		
-		if ((animDir == 1) and (image_index >= image_number - 1)) image_index = image_number - 1;
-		if ((animDir == -1) and (image_index <= 1)) image_index = 1;
 	}
+	
+	if ((animDir == 1) and (image_index >= image_number - 1)) image_index = image_number - 1;
+	if ((animDir == -1) and (image_index <= 1)) image_index = 1;
 	
 	//Fall
 	

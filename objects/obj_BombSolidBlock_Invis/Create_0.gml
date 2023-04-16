@@ -8,6 +8,7 @@ sprIdle = spr_BombSolidBlock_Normal_Idle;
 
 character = 0;
 spawnedItem = -1;
+hitEffect = wallHitEffects.starBlock;
 
 //Timers
 
