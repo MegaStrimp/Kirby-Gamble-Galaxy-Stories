@@ -17,7 +17,7 @@
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "mus_halberdescape.mp3",
+  "soundFile": "mus_HalberdEscape.mp3",
   "type": 1,
   "volume": 1.0,
 }

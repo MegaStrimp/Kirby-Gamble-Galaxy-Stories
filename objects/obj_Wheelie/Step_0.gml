@@ -8,13 +8,13 @@ event_inherited();
 if ((!childPauseHard) and ((grounded) or (!hasYCollision))) hsp = scr_Friction(hsp,decel);
 #endregion
 
+#region Hurt Player
+scr_Enemy_HurtsPlayer(dmg);
+#endregion
+
 if (!childPause)
 {
 	if (!parasol) scr_Object_Inhale(enemy);
-	
-	#region Hurt Player
-	scr_Enemy_HurtsPlayer(dmg);
-	#endregion
 	
 	#region States
 	switch (state)

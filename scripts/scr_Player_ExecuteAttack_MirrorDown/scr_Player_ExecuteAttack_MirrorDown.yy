@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Mirror",
-    "path": "folders/Scripts/Player/Execute Attack/Mirror.yy",
+    "path": "folders/Scripts/Player/Execute Attacks/Mirror.yy",
   },
 }

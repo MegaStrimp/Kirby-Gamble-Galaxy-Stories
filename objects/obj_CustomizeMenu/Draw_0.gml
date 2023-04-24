@@ -956,7 +956,7 @@ switch (page)
 		switch (abilityHatSkinValue[subSelection][selection])
 		{
 			case abilityHatSkins.sleep_kssu:
-			hatSprite = spr_Kirby_AbilityHat_Sleep_KSSU_Sleep;
+			hatSprite = spr_Kirby_AbilityHat_Sleep_KSSU_SleepReady;
 			break;
 		}
 		break;

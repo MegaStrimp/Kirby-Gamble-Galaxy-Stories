@@ -178,7 +178,7 @@ function scr_Player_States_Carry()
 		        }
 				image_index = 0;
 				spit = true;
-				sucked = 0;
+				scr_Player_ResetSucked(id);
 		        cAbility = playerAbilities.none;
 				if (ateHeavy) ateHeavy = false;
 				if (ateAbilityStar) ateAbilityStar = -1;

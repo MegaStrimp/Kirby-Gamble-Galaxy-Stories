@@ -30,12 +30,12 @@ if (death)
 event_inherited();
 #endregion
 
+#region Hurt Player
+//if (!death) scr_Enemy_HurtsPlayer(dmg);
+#endregion
+
 if (!childPause)
 {
-	#region Hurt Player
-	//if (!death) scr_Enemy_HurtsPlayer(dmg);
-	#endregion
-	
 	#region Phases
 	switch (phase)
 	{

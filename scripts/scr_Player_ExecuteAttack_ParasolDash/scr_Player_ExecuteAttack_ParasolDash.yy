@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Parasol",
-    "path": "folders/Scripts/Player/Execute Attack/Parasol.yy",
+    "path": "folders/Scripts/Player/Execute Attacks/Parasol.yy",
   },
 }

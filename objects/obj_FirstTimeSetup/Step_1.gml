@@ -3,6 +3,7 @@
 #region Set Strings
 if (setStrings)
 {
+	show_debug_message("set strings");
 	string_True = str("Options.True");
 	string_False = str("Options.False");
 	

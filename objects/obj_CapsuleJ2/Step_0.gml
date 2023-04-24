@@ -6,15 +6,15 @@
 
 event_inherited();
 
+//Hurt Player
+
+scr_Enemy_HurtsPlayer(dmg);
+
 if (!childPause)
 {
 	//Get Inhaled
 	
 	if (!parasol) scr_Object_Inhale(enemy);
-	
-	//Hurt Player
-	
-	scr_Enemy_HurtsPlayer(dmg);
 	
 	var playerObj = instance_find(tracking_obj,0);
 	

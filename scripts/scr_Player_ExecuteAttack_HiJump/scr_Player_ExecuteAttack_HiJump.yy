@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Hi Jump",
-    "path": "folders/Scripts/Player/Execute Attack/Hi Jump.yy",
+    "path": "folders/Scripts/Player/Execute Attacks/Hi Jump.yy",
   },
 }

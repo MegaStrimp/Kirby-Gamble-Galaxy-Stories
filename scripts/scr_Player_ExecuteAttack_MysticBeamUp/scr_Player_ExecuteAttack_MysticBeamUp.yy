@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Mystic Beam",
-    "path": "folders/Scripts/Player/Execute Attack/Mystic Beam.yy",
+    "path": "folders/Scripts/Player/Execute Attacks/Mystic Beam.yy",
   },
 }

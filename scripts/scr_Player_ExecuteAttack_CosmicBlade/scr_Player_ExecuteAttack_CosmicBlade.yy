@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Cosmic Blade",
-    "path": "folders/Scripts/Player/Execute Attack/Cosmic Blade.yy",
+    "path": "folders/Scripts/Player/Execute Attacks/Cosmic Blade.yy",
   },
 }

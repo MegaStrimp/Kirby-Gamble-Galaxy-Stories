@@ -10,26 +10,23 @@ function scr_Player_States_Swallow()
 		
 		//Ability Switch
 	
+		var playerAbility = global.abilityP1;
+		var playerCharacter = global.characterP1;
 		switch (player)
 		{
-			case 0:
-			var playerAbility = global.abilityP1;
-			var playerCharacter = global.characterP1;
-			break;
-			
 			case 1:
-			var playerAbility = global.abilityP2;
-			var playerCharacter = global.characterP2;
+			playerAbility = global.abilityP2;
+			playerCharacter = global.characterP2;
 			break;
 			
 			case 2:
-			var playerAbility = global.abilityP3;
-			var playerCharacter = global.characterP3;
+			playerAbility = global.abilityP3;
+			playerCharacter = global.characterP3;
 			break;
 			
 			case 3:
-			var playerAbility = global.abilityP4;
-			var playerCharacter = global.characterP4;
+			playerAbility = global.abilityP4;
+			playerCharacter = global.characterP4;
 			break;
 		}
 
@@ -43,7 +40,7 @@ function scr_Player_States_Swallow()
 			{
 				sprite_index = sprSwallow;
 			}
-			sucked = 0;
+			scr_Player_ResetSucked(id);
 		}
 		else
 		{
@@ -157,14 +154,8 @@ function scr_Player_States_Swallow()
 		}
 		else if (swallowTimer == 0)
 		{
-			sucked = 0;
-			if (((player == 0) and (global.abilityP1 == playerAbilities.wing))
-			or ((player == 1) and (global.abilityP2 == playerAbilities.wing))
-			or ((player == 2) and (global.abilityP3 == playerAbilities.wing))
-			or ((player == 3) and (global.abilityP4 == playerAbilities.wing)))
-			{
-				wingFeatherPos = 0;
-			}
+			scr_Player_ResetSucked(id);
+			if (playerAbility == playerAbilities.wing) wingFeatherPos = 0;
 			swallowAction = 0;
 			swallowActionTimer = -1;
 			global.pause = false;

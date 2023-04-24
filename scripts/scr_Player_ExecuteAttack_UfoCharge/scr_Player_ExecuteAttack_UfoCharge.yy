@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Ufo",
-    "path": "folders/Scripts/Player/Execute Attack/Ufo.yy",
+    "path": "folders/Scripts/Player/Execute Attacks/Ufo.yy",
   },
 }

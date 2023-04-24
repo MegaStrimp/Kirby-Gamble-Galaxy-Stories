@@ -1,38 +1,49 @@
 ///@description Draw
 
 #region Set Draw Attributes
-draw_set_font(fnt_Menu);
 draw_set_color(c_white);
+if (global.language == languages.english)
+{
+	draw_set_font(fnt_DialogueDefault);
+}
+else if ((global.language == languages.chinese) or (global.language == languages.japanese))
+{
+	draw_set_font(global.fontDialogueDefaultKanji);
+}
+else
+{
+	draw_set_font(fnt_DialogueDefaultSpecial);
+}
 #endregion
 
 switch (state)
 {
 	#region Auth 1
 	case firstTimeSetupStates.auth1:
-	draw_text(10,20,"Authenticating...");
+	draw_text(10,20,string_Checks_Authenticating);
 	break;
 	#endregion
 	
 	#region Auth 2
 	case firstTimeSetupStates.auth2:
-	draw_text(10,20,"Authenticating...");
-	draw_text(10,55,"DirextX");
+	draw_text(10,20,string_Checks_Authenticating);
+	draw_text(10,55,string_Checks_DirectX);
 	break;
 	#endregion
 	
 	#region Auth 3
 	case firstTimeSetupStates.auth3:
-	draw_text(10,20,"Authenticating...");
-	draw_text(10,55,"DirextX");
+	draw_text(10,20,string_Checks_Authenticating);
+	draw_text(10,55,string_Checks_DirectX);
 	if (global.shaders)
 	{
 		draw_set_color(c_gray);
-		draw_text(100,55,"Found");
+		draw_text(100,55,string_Checks_Found);
 	}
 	else
 	{
 		draw_set_color(c_dkgray);
-		draw_text(100,55,"Not Found");
+		draw_text(100,55,string_Checks_NotFound);
 	}
 	draw_set_color(c_white);
 	break;
@@ -40,50 +51,50 @@ switch (state)
 	
 	#region Auth 4
 	case firstTimeSetupStates.auth4:
-	draw_text(10,20,"Authenticating...");
-	draw_text(10,55,"DirextX");
+	draw_text(10,20,string_Checks_Authenticating);
+	draw_text(10,55,string_Checks_DirectX);
 	if (global.shaders)
 	{
 		draw_set_color(c_gray);
-		draw_text(100,55,"Found");
+		draw_text(100,55,string_Checks_Found);
 	}
 	else
 	{
 		draw_set_color(c_dkgray);
-		draw_text(100,55,"Not Found");
+		draw_text(100,55,string_Checks_NotFound);
 	}
 	draw_set_color(c_white);
 	
-	draw_text(10,70,"Discord");
+	draw_text(10,70,string_Checks_Discord);
 	break;
 	#endregion
 	
 	#region Auth 5
 	case firstTimeSetupStates.auth5:
-	draw_text(10,20,"Authenticating...");
-	draw_text(10,55,"DirextX");
+	draw_text(10,20,string_Checks_Authenticating);
+	draw_text(10,55,string_Checks_DirectX);
 	if (global.shaders)
 	{
 		draw_set_color(c_gray);
-		draw_text(100,55,"Found");
+		draw_text(100,55,string_Checks_Found);
 	}
 	else
 	{
 		draw_set_color(c_dkgray);
-		draw_text(100,55,"Not Found");
+		draw_text(100,55,string_Checks_NotFound);
 	}
 	draw_set_color(c_white);
 	
-	draw_text(10,70,"Discord");
+	draw_text(10,70,string_Checks_Discord);
 	if (global.discord)
 	{
 		draw_set_color(c_gray);
-		draw_text(100,70,"Found");
+		draw_text(100,70,string_Checks_Found);
 	}
 	else
 	{
 		draw_set_color(c_dkgray);
-		draw_text(100,70,"Not Found");
+		draw_text(100,70,string_Checks_NotFound);
 	}
 	draw_set_color(c_white);
 	break;

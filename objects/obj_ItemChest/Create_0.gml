@@ -38,6 +38,7 @@ if ((ds_exists(global.collectibleTracker,ds_type_list)) and (ds_list_find_index(
 
 //Timers
 
+setupTimer = 0;
 blinkTimer = -1;
 blinkTimerMax = 2;
 destroyTimer = -1;

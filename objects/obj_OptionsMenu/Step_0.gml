@@ -217,8 +217,8 @@ if (!global.pause)
 		switch (subSelection)
 		{
 			case 0:
-			if ((keyRightPressed) and (global.musicVolume < 1)) global.musicVolume += .1;
-			if ((keyLeftPressed) and (global.musicVolume > 0)) global.musicVolume -= .1;
+			if ((keyRightPressed) and (global.musicVolume < 1)) global.musicVolume += .05;
+			if ((keyLeftPressed) and (global.musicVolume > 0)) global.musicVolume -= .05;
 			global.musicVolume = clamp(global.musicVolume,0,1);
 			break;
 			
@@ -227,13 +227,13 @@ if (!global.pause)
 			{
 				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 				audio_play_sound(snd_BossHealth,0,false);
-				global.soundVolume += .1;
+				global.soundVolume += .05;
 			}
 			if ((keyLeftPressed) and (global.soundVolume > 0))
 			{
 				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 				audio_play_sound(snd_BossHealth,0,false);
-				global.soundVolume -= .1;
+				global.soundVolume -= .05;
 			}
 			global.soundVolume = clamp(global.soundVolume,0,1);
 			break;

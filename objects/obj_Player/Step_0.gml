@@ -5,38 +5,36 @@ scr_Player_Inputs(player);
 #endregion
 
 #region Pointers
+var playerAbility = global.abilityP1;
+var playerCharacter = global.characterP1;
+var playerIsHelper = global.isHelperP1;
+var playerFamiliar = global.familiarP1;
+var micCount = global.micCountP1;
+
 switch (player)
 {
-	case 0:
-	var playerAbility = global.abilityP1;
-	var playerCharacter = global.characterP1;
-	var playerIsHelper = global.isHelperP1;
-	var playerFamiliar = global.familiarP1;
-	var micCount = global.micCountP1;
-	break;
-	
 	case 1:
-	var playerAbility = global.abilityP2;
-	var playerCharacter = global.characterP2;
-	var playerIsHelper = global.isHelperP2;
-	var playerFamiliar = global.familiarP2;
-	var micCount = global.micCountP2;
+	playerAbility = global.abilityP2;
+	playerCharacter = global.characterP2;
+	playerIsHelper = global.isHelperP2;
+	playerFamiliar = global.familiarP2;
+	micCount = global.micCountP2;
 	break;
 	
 	case 2:
-	var playerAbility = global.abilityP3;
-	var playerCharacter = global.characterP3;
-	var playerIsHelper = global.isHelperP3;
-	var playerFamiliar = global.familiarP3;
-	var micCount = global.micCountP3;
+	playerAbility = global.abilityP3;
+	playerCharacter = global.characterP3;
+	playerIsHelper = global.isHelperP3;
+	playerFamiliar = global.familiarP3;
+	micCount = global.micCountP3;
 	break;
 	
 	case 3:
-	var playerAbility = global.abilityP4;
-	var playerCharacter = global.characterP4;
-	var playerIsHelper = global.isHelperP4;
-	var playerFamiliar = global.familiarP4;
-	var micCount = global.micCountP4;
+	playerAbility = global.abilityP4;
+	playerCharacter = global.characterP4;
+	playerIsHelper = global.isHelperP4;
+	playerFamiliar = global.familiarP4;
+	micCount = global.micCountP4;
 	break;
 }
 #endregion
@@ -305,11 +303,11 @@ if (!global.pause)
 		#region Horizontal Knockback
 		if (x > ((collidedBumper.x + (sprite_get_width(collidedBumper.sprite_index) / 2 )) + 4))
 		{
-			hsp = collidedBumper.force;
+			hsp = collidedBumper.force * speedMultFinal;
 		}
 		if (x < ((collidedBumper.x + (sprite_get_width(collidedBumper.sprite_index) / 2 )) - 4))
 		{
-			hsp = -collidedBumper.force;
+			hsp = -collidedBumper.force * speedMultFinal;
 		}
 		#endregion
 	}
@@ -403,7 +401,7 @@ if (!global.pause)
 			
 				//Vertical Knockback
 			
-				vsp = -finalForce;
+				vsp = -finalForce * speedMultFinal;
 				grounded = false;
 			}
 		}
@@ -475,7 +473,7 @@ if (!global.pause)
 			
 			//Vertical Knockback
 			
-			vsp = -(collidedTrampoline.force / 3) - ((collidedTrampoline.force / collidedTrampoline.jumpCountMax) * collidedTrampoline.jumpCount);
+			vsp = -(collidedTrampoline.force / 3) - ((collidedTrampoline.force / collidedTrampoline.jumpCountMax) * collidedTrampoline.jumpCount) * speedMultFinal;
 			grounded = false;
 		}
 	}
@@ -963,7 +961,7 @@ if (!global.pause)
 		{
 			sprite_index = sprRoll;
 			image_index = 3;
-			vsp = -3.5;
+			vsp = -3.5 * speedMultFinal;
 			grounded = false;
 			jumpLimit = false;
 			jumpLimitTimer = jumpLimitTimerMax;
@@ -1317,19 +1315,18 @@ if (!global.pause)
 	    }
 	}
 	
-	//Run Turn Cancel Timer
-	
+	#region Run Turn Cancel Timer
 	if ((state = playerStates.normal) and (!attack))
 	{
-		if (runTurnCancelTimer > 0)
+		if (runTurnCancelTimer != -1)
 		{
-			runTurnCancelTimer -= 1;
-		}
-		else if (runTurnCancelTimer == 0)
-		{
-			runTurn = false;
-			hsp *= -1;
-		    runTurnCancelTimer = -1;
+			runTurnCancelTimer = max(runTurnCancelTimer - speedMultFinal,0);
+			if (runTurnCancelTimer == 0)
+			{
+				runTurn = false;
+				hsp *= -1;
+				runTurnCancelTimer = -1;
+			}
 		}
 	}
 	else
@@ -1337,6 +1334,7 @@ if (!global.pause)
 		runTurn = false;
 		runTurnCancelTimer = -1;
 	}
+	#endregion
 	
 	//Ability Trophy Timer
 	
@@ -1670,11 +1668,17 @@ if (!global.pause)
 		stoneMaskProj.hitInvincibility = stoneMaskProj.hitInvincibilityMax;
 		stoneMaskProj.image_xscale = image_xscale;
 		stoneMaskProj.image_yscale = image_yscale;
+		
+		/*
 		var stoneRarity = irandom_range(0,24);
 		if (stoneRarity == 0) sprite_index = sprStoneAttack1Rare;
 		if ((stoneRarity >= 1) and (stoneRarity <= 10)) sprite_index = sprStoneAttack1Uncommon;
 		if ((stoneRarity >= 11) and (stoneRarity <= 24)) sprite_index = sprStoneAttack1Common;
 		image_index = irandom_range(0,image_number - 1);
+		*/
+		
+		sprite_index = scr_WeightedRandomize(stoneVariantArray);
+		image_index = 0;
 	    stoneReadyTimer = -1;
 	}
 	
@@ -2263,7 +2267,7 @@ else if (deathTimer == 0)
 	audio_play_sound(musDeath,0,false);
 	deathParticleTimer = deathParticleTimerMax;
 	deathRestartTimer = deathRestartTimerMax;
-	vsp = -jumpspeedNormal * 1.25;
+	vsp = -jumpspeedNormal * 1.25 * speedMultFinal;
 	grounded = false;
 	state = playerStates.death;
     deathTimer = -1;

@@ -8,13 +8,13 @@ event_inherited();
 if ((!childPauseHard) and ((grounded) or (!hasYCollision))) hsp = scr_Friction(hsp,decel);
 #endregion
 
+scr_Enemy_HurtsPlayer(dmg);
+
 var projectilePointer;
 
 if (!childPause)
 {
 	scr_Object_Inhale(enemy);
-	
-	scr_Enemy_HurtsPlayer(dmg);
 	
 	if (hurt)
 	{

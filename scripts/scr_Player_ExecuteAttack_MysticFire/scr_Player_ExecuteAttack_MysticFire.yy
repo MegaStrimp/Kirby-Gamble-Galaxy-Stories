@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Mystic Fire",
-    "path": "folders/Scripts/Player/Execute Attack/Mystic Fire.yy",
+    "path": "folders/Scripts/Player/Execute Attacks/Mystic Fire.yy",
   },
 }

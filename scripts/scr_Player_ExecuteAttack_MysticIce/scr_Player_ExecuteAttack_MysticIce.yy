@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Mystic Ice",
-    "path": "folders/Scripts/Player/Execute Attack/Mystic Ice.yy",
+    "path": "folders/Scripts/Player/Execute Attacks/Mystic Ice.yy",
   },
 }

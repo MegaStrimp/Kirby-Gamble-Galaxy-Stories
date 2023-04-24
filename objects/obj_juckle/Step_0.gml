@@ -8,13 +8,13 @@ event_inherited();
 
 if ((!childPauseHard) and ((grounded) or (!hasYCollision))) hsp = scr_Friction(hsp,decel);
 
+//Hurt Player
+
+scr_Enemy_HurtsPlayer(dmg);
+
 if (!childPause)
 {
 	if (!parasol) scr_Object_Inhale(enemy);
-	
-	//Hurt Player
-	
-	scr_Enemy_HurtsPlayer(dmg);
 	
 	if (!hurt)
 	{

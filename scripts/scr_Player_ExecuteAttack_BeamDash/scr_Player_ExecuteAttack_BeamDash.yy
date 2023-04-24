@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Beam",
-    "path": "folders/Scripts/Player/Execute Attack/Beam.yy",
+    "path": "folders/Scripts/Player/Execute Attacks/Beam.yy",
   },
 }

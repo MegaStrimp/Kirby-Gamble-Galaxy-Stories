@@ -4,15 +4,15 @@
 event_inherited();
 #endregion
 
+//Hurt Player
+
+scr_Enemy_HurtsPlayer(dmg);
+
 if (!childPause)
 {
 	//Get Inhaled
 	
 	if (!parasol) scr_Object_Inhale(enemy);
-	
-	//Hurt Player
-	
-	scr_Enemy_HurtsPlayer(dmg);
 	/////// Always interrupt to the hurt attackState if you get hurt
 	if (hurt) attackState= 2
 	

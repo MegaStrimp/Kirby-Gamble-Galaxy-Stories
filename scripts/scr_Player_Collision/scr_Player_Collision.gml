@@ -91,9 +91,10 @@ function scr_Player_Collision(argument0)
 					{
 						if (collidingWall.object)
 						{
-							if ((collidingWall.damageType == damageTypes.none) or (collidingWall.damageType = damageType))
+							if (((collidingWall.damageType == damageTypes.none) or (collidingWall.damageType = damageType)) and (collidingWall.wallStrength == wallStrengths.none))
 							{
-								collidingWall.hp -= dmg;
+								collidingWall.hp -= 1;
+								scr_HitEffects_Wall(collidingWall,-1,collidingWall.hitEffect);
 							}
 						}
 					}
@@ -139,9 +140,10 @@ function scr_Player_Collision(argument0)
 				var collidedWall = instance_place(x,y - 1,obj_ParentWall);
 				if (collidedWall.object)
 				{
-					if (((state == playerStates.normal) or (state == playerStates.carry) or (state == playerStates.inhale)) and (!grounded) and (collidedWall.damageType == damageTypes.none) and (sign(vsp) == -1))
+					if (((state == playerStates.normal) or (state == playerStates.carry) or (state == playerStates.inhale)) and (!grounded) and (collidedWall.damageType == damageTypes.none) and (collidedWall.wallStrength == wallStrengths.none) and (sign(vsp) == -1))
 					{
-						collidedWall.hp -= dmg;
+						collidedWall.hp -= 1;
+						scr_HitEffects_Wall(collidedWall,-1,collidedWall.hitEffect);
 					}
 				}
 			}
@@ -164,9 +166,10 @@ function scr_Player_Collision(argument0)
 				var collidedWall = instance_place(x,y - 1,obj_ParentWall);
 				if (collidedWall.object)
 				{
-					if (((state == playerStates.normal) or (state == playerStates.carry) or (state == playerStates.inhale)) and (!grounded) and (collidedWall.damageType == damageTypes.none) and (sign(vsp) == -1))
+					if (((state == playerStates.normal) or (state == playerStates.carry) or (state == playerStates.inhale)) and (!grounded) and (collidedWall.damageType == damageTypes.none) and (collidedWall.wallStrength == wallStrengths.none) and (sign(vsp) == -1))
 					{
 						collidedWall.hp -= dmg;
+						scr_HitEffects_Wall(collidedWall,-1,collidedWall.hitEffect);
 					}
 				}
 			}

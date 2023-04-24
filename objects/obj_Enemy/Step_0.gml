@@ -1036,7 +1036,7 @@ if ((parentPause) and (hurtStopTimer < 1))
 
 #region Set Child Pause
 childPauseHard = ((global.pause) or ((global.cutscene) and (pausedInCutscenes)));
-childPause = ((childPauseHard) or (/*(!isBoss) and (!isMiniBoss) and */((hurt) or (hurtStopTimer > 0))));
+childPause = ((childPauseHard) or ((!isBoss) and (!isMiniBoss) and ((hurt) or (hurtStopTimer > 0))));
 #endregion
 
 #region Hurt Stop Timer

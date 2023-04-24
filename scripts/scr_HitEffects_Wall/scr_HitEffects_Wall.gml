@@ -12,12 +12,15 @@ function scr_HitEffects_Wall(argument0,argument1,argument2)
 	{
 		switch (type)
 		{
+			#region None
 			case wallHitEffects.none:
 			break;
+			#endregion
 			
+			#region Star Block
 			case wallHitEffects.starBlock:
 			case wallHitEffects.starBlock_Free:
-			if (((!isTop) and (hp <= 0)) or (type == wallHitEffects.starBlock_Free))
+			if ((type == wallHitEffects.starBlock_Free) or ((!isTop) and (hp <= 0)))
 			{
 				if (audio_is_playing(snd_BreakingWall)) audio_stop_sound(snd_BreakingWall);
 				audio_play_sound(snd_BreakingWall,0,false);
@@ -56,7 +59,9 @@ function scr_HitEffects_Wall(argument0,argument1,argument2)
 				}
 			}
 			break;
+			#endregion
 			
+			#region Crate
 			case wallHitEffects.crate:
 			case wallHitEffects.crate_Free:
 			if ((type == wallHitEffects.crate_Free) or ((!isTop) and (hp <= 0)))
@@ -82,7 +87,9 @@ function scr_HitEffects_Wall(argument0,argument1,argument2)
 				}
 			}
 			break;
+			#endregion
 			
+			#region Metal Block
 			case wallHitEffects.metalBlock:
 			case wallHitEffects.metalBlock_Free:
 			if ((type == wallHitEffects.metalBlock_Free) or ((wallStrength > targetProjectile.wallStrength) and (hitEffectTimer == -1)))
@@ -101,6 +108,7 @@ function scr_HitEffects_Wall(argument0,argument1,argument2)
 				scr_HitEffects_Wall(targetObject,targetProjectile,wallHitEffects.starBlock_Free);
 			}
 			break;
+			#endregion
 		}
 	}
 }

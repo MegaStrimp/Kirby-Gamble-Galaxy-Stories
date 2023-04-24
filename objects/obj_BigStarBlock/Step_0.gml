@@ -41,7 +41,7 @@ if (!global.pause)
 			if !((ds_exists(global.collectibleTracker,ds_type_list)) and (ds_list_find_index(global.collectibleTracker,id)))
 			{
 				var spawnedItem = instance_create_depth(x + (sprite_get_width(sprite_index) / 2),y + (sprite_get_height(sprite_index) / 2),depth - 1,storedItem);
-				if (storedItem == obj_PointStar)
+				if ((storedItem == obj_PointStar) or (object_get_parent(storedItem) == obj_PointStar))
 				{
 					spawnedItem.character = pointStarCharacter;
 					spawnedItem.target = instance_nearest(x,y,obj_Player);

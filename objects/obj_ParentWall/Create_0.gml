@@ -94,7 +94,7 @@ material = wallMaterials.none;
 hitEffect = wallHitEffects.none;
 hitEffectTimer = 0;
 speedMultObject = 1;
-speedMultFinal = speedMultObject;
+speedMultFinal = speedMultObject * global.globalSpeedMult;
 
 //Timers
 

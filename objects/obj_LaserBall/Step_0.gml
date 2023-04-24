@@ -81,13 +81,13 @@ hsp = scr_Friction(hsp,decel);
 vsp = scr_Friction(vsp,decel);
 #endregion
 
+#region Hurt Player
+scr_Enemy_HurtsPlayer(dmg);
+#endregion
+
 if (!childPause)
 {
 	if (!parasol) scr_Object_Inhale(enemy);
-	
-	#region Hurt Player
-	scr_Enemy_HurtsPlayer(dmg);
-	#endregion
 	
 	#region States
 	switch (state)

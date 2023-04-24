@@ -73,6 +73,7 @@ climbSpeed = 2.5;
 #region Sprites
 maskIndex = spr_16Square_Mask;
 paletteIndex = spr_Kirby_Normal_Palette_FriendlyPink;
+
 sprIdle = spr_Kirby_Normal_Idle;
 sprIdleBlink = spr_Kirby_Normal_IdleBlink;
 sprIdleNormalSlopeL = spr_Kirby_Normal_Idle_NormalSlopeL;
@@ -282,25 +283,6 @@ sprHurt = spr_Kirby_Normal_Hurt;
 sprDeath = spr_Kirby_Normal_Death;
 #endregion
 
-#region Upgrades
-cutterMotorCutterUpgrade = false;
-cutterPropellerWingUpgrade = false;
-cutterSpectralCutterUpgrade = false;
-beamGoldenFlareUpgrade = false;
-mysticBeamVortexInAJarUpgrade = false;
-stoneRockCandyUpgrade = false;
-stoneComboCobaltUpgrade = false;
-bombLightShellsUpgrade = false;
-bombEyeBombUpgrade = false;
-bombStickyBombUpgrade = false;
-bombMagmaBombUpgrade = false;
-bombExplosivePowderUpgrade = false;
-fireMagicCharcoalUpgrade = false;
-iceEmptyConeUpgrade = false;
-sparkBrightPluggUpgrade = false;
-waterEggSoilUpgrade = false;
-#endregion
-
 #region Respawn After Death
 if ((global.healthP1 == 0) or (global.healthP2 == 0) or (global.healthP3 == 0) or (global.healthP4 == 0))
 {
@@ -350,17 +332,7 @@ playerAbility = 0;
 state = playerStates.normal;
 
 speedMultObject = 1;
-speedMultFinal = speedMultObject;
-
-dir = 1;
-scale = 1;
-targetScale = 1;
-scaleExX = 0;
-scaleExY = 0;
-scaleExSpd = .1;
-shakeX = 0;
-shakeY = 0;
-afterimageCount = 0;
+speedMultFinal = speedMultObject * global.globalSpeedMult;
 
 hatBackgroundImageIndex = 0;
 hatBackgroundImageIndexSpd = .25;
@@ -430,6 +402,8 @@ canMysticBeamShield = true;
 mysticBeamChargeEx = 0;
 mysticBeamUpAttackCount = 0;
 mysticBeamGrabSfx = -1;
+
+scr_Player_StoneVariants(playerCharacters.kirby,0);
 
 stoneParticleCount = 0;
 stoneReleaseParticleCount = 0;
@@ -505,12 +479,18 @@ ateAbilityStar = -1;
 ateCappyShroom = false;
 swallow = false;
 cAbility = playerAbilities.none;
+
 sucked = 0;
+suckedArray_None = ds_grid_create(99,2);
+suckedArray_Onion = ds_grid_create(99,2);
+suckedArray_MachMissile = ds_grid_create(99,2);
+suckedArray_Pluid = ds_grid_create(99,2);
+suckedArray_SeashellBoomerang = ds_grid_create(99,2);
+
 InhaledIntoMouthSound = -1;
 inhaleEnd = false;
 spit = false;
 swallowAction = 0;
-
 
 damageType = damageTypes.none;
 dmg = 15;
@@ -520,10 +500,9 @@ tomatolessDeath = false;
 jumpLimit = true;
 hspLimit = true;
 bubblePos = 0;
-blackAlphaBox = false;
 
 chargeSfx = -1;
-chargeSfxState = "intro";
+chargeSfxState = 0;
 
 imageAngle = 0;
 idleAnimation = false;
@@ -554,6 +533,40 @@ hasInvinCandy = false;
 invinCandyEnding = false;
 invinCandyMask = -1;
 hasMintLeaf = false;
+
+hitType = 0;
+#endregion
+
+#region Draw Variables
+dir = 1;
+scale = 1;
+targetScale = 1;
+scaleExX = 0;
+scaleExY = 0;
+scaleExSpd = .1;
+shakeX = 0;
+shakeY = 0;
+afterimageCount = 0;
+blackAlphaBox = false;
+#endregion
+
+#region Upgrades
+cutterMotorCutterUpgrade = false;
+cutterPropellerWingUpgrade = false;
+cutterSpectralCutterUpgrade = false;
+beamGoldenFlareUpgrade = false;
+mysticBeamVortexInAJarUpgrade = false;
+stoneRockCandyUpgrade = false;
+stoneComboCobaltUpgrade = false;
+bombLightShellsUpgrade = false;
+bombEyeBombUpgrade = false;
+bombStickyBombUpgrade = false;
+bombMagmaBombUpgrade = false;
+bombExplosivePowderUpgrade = false;
+fireMagicCharcoalUpgrade = false;
+iceEmptyConeUpgrade = false;
+sparkBrightPluggUpgrade = false;
+waterEggSoilUpgrade = false;
 #endregion
 
 #region Timers
@@ -661,16 +674,16 @@ bubblePosTimerMax = 20;
 bubblePosTimer = bubblePosTimerMax;
 #endregion
 
-//Zwat's testing grounds
+#region Zwat's testing grounds
 jetDashAir = 3;
 finalCutterEndlag = 20;
 downInputBuffer = 15;
 downInputBufferTimer = 0;
 jetHoverAccel = 0.7;
 jetHoverMax = 3.5;
-//////////////////
+#endregion
 
-#region Create Objects
+#region Create Necessary Objects
 if (!instance_exists(obj_Pause_Control)) instance_create_depth(x,y,-1000,obj_Pause_Control);
 if (!instance_exists(obj_Hud)) instance_create_depth(x,y,-997,obj_Hud);
 #endregion

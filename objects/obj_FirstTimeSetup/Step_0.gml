@@ -93,6 +93,16 @@ switch (state)
 			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 			audio_play_sound(snd_BossHealth,0,false);
 			subSelection -= 1;
+			if (subSelection < 0)
+			{
+				subSelection += languageArrayLength;
+			}
+			if (subSelection > languageArrayLength - 1)
+			{
+				subSelection -= languageArrayLength;
+			}
+			global.language = languageVal[subSelection];
+			obj_Polyglot.setLocale(global.languageArray[subSelection]);
 			setStrings = true;
 		}
 		
@@ -101,16 +111,17 @@ switch (state)
 			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 			audio_play_sound(snd_BossHealth,0,false);
 			subSelection += 1;
+			if (subSelection < 0)
+			{
+				subSelection += languageArrayLength;
+			}
+			if (subSelection > languageArrayLength - 1)
+			{
+				subSelection -= languageArrayLength;
+			}
+			global.language = languageVal[subSelection];
+			obj_Polyglot.setLocale(global.languageArray[subSelection]);
 			setStrings = true;
-		}
-		
-		if (subSelection < 0)
-		{
-			subSelection += languageArrayLength;
-		}
-		if (subSelection > languageArrayLength - 1)
-		{
-			subSelection -= languageArrayLength;
 		}
 		
 		if ((keyUpPressed) or (keyDownPressed))
@@ -133,8 +144,6 @@ switch (state)
 		{
 			if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 			audio_play_sound(snd_ButtonYes,0,false);
-			
-			global.language = languageVal[subSelection];
 			
 			state = firstTimeSetupStates.audio;
 			selection = "music";
@@ -165,8 +174,8 @@ switch (state)
 			selection = "sfx";
 		}
 		
-		if ((keyRightPressed) and (global.musicVolume < 1)) global.musicVolume += .1;
-		if ((keyLeftPressed) and (global.musicVolume > 0)) global.musicVolume -= .1;
+		if ((keyRightPressed) and (global.musicVolume < 1)) global.musicVolume += .05;
+		if ((keyLeftPressed) and (global.musicVolume > 0)) global.musicVolume -= .05;
 		global.musicVolume = clamp(global.musicVolume,0,1);
 		break;
 		
@@ -189,13 +198,13 @@ switch (state)
 		{
 			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 			audio_play_sound(snd_BossHealth,0,false);
-			global.soundVolume += .1;
+			global.soundVolume += .05;
 		}
 		if ((keyLeftPressed) and (global.soundVolume > 0))
 		{
 			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 			audio_play_sound(snd_BossHealth,0,false);
-			global.soundVolume -= .1;
+			global.soundVolume -= .05;
 		}
 		global.soundVolume = clamp(global.soundVolume,0,1);
 		break;
@@ -366,7 +375,7 @@ switch (state)
 		scr_SaveConfig("config.ini");
 		
 		var fade = instance_create_depth(x,y,-999,obj_Fade);
-		fade.targetRoom = global.roomNext;
+		fade.targetRoom = rm_Startup;
 	}
 	break;
 	#endregion

@@ -4,12 +4,12 @@
 
 event_inherited();
 
+//Hurt Player
+
+scr_Enemy_HurtsPlayer(dmg);
+
 if (!childPause)
 {
-	//Hurt Player
-	
-	scr_Enemy_HurtsPlayer(dmg);
-	
 	//Parasol
 	
 	if (parasol)
@@ -58,7 +58,8 @@ if (!childPause)
 		case 1:
 		if (instance_exists(target))
 		{
-			var facingPoint = point_direction(x,y,instance_nearest(x,y,target).x,instance_nearest(x,y,target).y);
+			var targetIndex = instance_nearest(x,y,target);
+			var facingPoint = point_direction(x,y,targetIndex.x,targetIndex.y);
 		
 			inRange = true;
 			if (dirY == 1)

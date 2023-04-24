@@ -4,24 +4,24 @@
 
 event_inherited();
 
+//Hurt Player & Hit Ground
+
+if ((sprite_index == sprRelease) and (image_index >= 9)) scr_Enemy_HurtsPlayer(dmg);
+
+if (sprite_index == sprRelease)
+{
+	if (image_index >= 9) scr_Enemy_HurtsPlayer(dmg);
+	
+	if ((image_index >= 10) and (!crashSoundPlayed))
+	{
+		crashSoundPlayed = true;
+		if (audio_is_playing(snd_NidooHit)) audio_stop_sound(snd_NidooHit);
+		audio_play_sound(snd_NidooHit,0,false);
+	}
+}
+
 if (!childPause)
 {
-	//Hurt Player & Hit Ground
-	
-	if ((sprite_index == sprRelease) and (image_index >= 9)) scr_Enemy_HurtsPlayer(dmg);
-	
-	if (sprite_index == sprRelease)
-	{
-		if (image_index >= 9) scr_Enemy_HurtsPlayer(dmg);
-		
-		if ((image_index >= 10) and (!crashSoundPlayed))
-		{
-			crashSoundPlayed = true;
-			if (audio_is_playing(snd_NidooHit)) audio_stop_sound(snd_NidooHit);
-			audio_play_sound(snd_NidooHit,0,false);
-		}
-	}
-	
 	//Activate
 	
 	if (!active)

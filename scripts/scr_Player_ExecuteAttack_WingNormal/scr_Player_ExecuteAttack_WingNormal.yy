@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Wing",
-    "path": "folders/Scripts/Player/Execute Attack/Wing.yy",
+    "path": "folders/Scripts/Player/Execute Attacks/Wing.yy",
   },
 }

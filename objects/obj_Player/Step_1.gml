@@ -5,32 +5,30 @@ scr_Player_Inputs(player);
 #endregion
 
 #region Pointers
+var playerCharacter = global.characterP1;
+var playerFamiliar = global.familiarP1;
+
 switch (player)
 {
-	case 0:
-	var playerCharacter = global.characterP1;
-	var playerFamiliar = global.familiarP1;
-	break;
-	
 	case 1:
-	var playerCharacter = global.characterP2;
-	var playerFamiliar = global.familiarP2;
+	playerCharacter = global.characterP2;
+	playerFamiliar = global.familiarP2;
 	break;
 	
 	case 2:
-	var playerCharacter = global.characterP3;
-	var playerFamiliar = global.familiarP3;
+	playerCharacter = global.characterP3;
+	playerFamiliar = global.familiarP3;
 	break;
 	
 	case 3:
-	var playerCharacter = global.characterP3;
-	var playerFamiliar = global.familiarP4;
+	playerCharacter = global.characterP3;
+	playerFamiliar = global.familiarP4;
 	break;
 }
 #endregion
 
 #region Variables
-speedMultFinal = speedMultObject;
+speedMultFinal = speedMultObject * global.globalSpeedMult;
 
 var collidingWall = -1;
 
@@ -121,6 +119,11 @@ else if (setupTimer == 0)
 		player = 0;
 	}
 	#endregion
+	
+	#region Stone Variants
+	scr_Player_StoneVariants(playerCharacter,player);
+	#endregion
+	
 	setupTimer = -1;
 }
 #endregion
@@ -268,6 +271,10 @@ else if (characterSetupTimer == 0)
 		gravLimitWheel = gravLimitWheel / 2;
 		gravLimit = gravLimit / 2;
 	}
+	#endregion
+	
+	#region Stone Variants
+	scr_Player_StoneVariants(playerCharacter,player);
 	#endregion
 	
 	#region Set Sprite Index

@@ -1,33 +1,30 @@
 ///@description End Step
 
 #region Pointers
+var playerCharacter = global.characterP1;
+
 switch (player)
 {
-	case 0:
-	var playerCharacter = global.characterP1;
-	break;
-	
 	case 1:
-	var playerCharacter = global.characterP2;
+	playerCharacter = global.characterP2;
 	break;
 	
 	case 2:
-	var playerCharacter = global.characterP3;
+	playerCharacter = global.characterP3;
 	break;
 	
 	case 3:
-	var playerCharacter = global.characterP4;
+	playerCharacter = global.characterP4;
 	break;
 }
 #endregion
 
 #region Variables
-if (grounded) and (hasJumped == 1)  hasJumped = -1;
+if (grounded) and (hasJumped == 1) hasJumped = -1;
 if (hasJumped == 0) hasJumped = 1;
 #endregion
 
-//Warp Star
-
+#region Warp Star
 if ((state = playerStates.warpStar) and (instance_exists(warpStarIndex)))
 {
 	switch (playerCharacter)
@@ -47,9 +44,9 @@ if ((state = playerStates.warpStar) and (instance_exists(warpStarIndex)))
 		break;
 	}
 }
+#endregion
 
-//Inside Mech
-
+#region Inside Mech
 if ((state = playerStates.insideMech) and (instance_exists(mechIndex)))
 {
 	switch (playerCharacter)
@@ -61,3 +58,4 @@ if ((state = playerStates.insideMech) and (instance_exists(mechIndex)))
 		break;
 	}
 }
+#endregion

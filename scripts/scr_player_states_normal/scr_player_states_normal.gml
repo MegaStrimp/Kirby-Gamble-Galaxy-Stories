@@ -188,8 +188,7 @@ function scr_Player_States_Normal()
 		}
 		#endregion
 		
-		//Movement
-		
+		#region Movement
 		var invinCandyMult = 1;
 		var beamAirMult = 1;
 		var sparkNormalMult = 1;
@@ -208,7 +207,7 @@ function scr_Player_States_Normal()
 				{
 					if (!attackDisableMovement)
 					{
-						hsp += accel;
+						hsp += accel * (speedMultFinal * speedMultFinal);
 						if ((!runTurn) and (!attackDisableDir)) dir = 1;
 						if ((canRunTurn) and (carriedItem == carriedItems.none) and (grounded) and (isRunning) and (playerAbility != playerAbilities.mirror) and /*(hsp != 0) and */(sign(hsp) != dir))
 						{
@@ -219,7 +218,7 @@ function scr_Player_States_Normal()
 							runParticleTimer = 0;
 							runTurnCancelTimer = runTurnCancelTimerMax;
 							runTurn = true;
-							hsp = max(1,abs(hsp)) * dir;
+							hsp = max(1 * speedMultFinal,abs(hsp)) * dir;
 						}
 					}
 				}
@@ -227,7 +226,7 @@ function scr_Player_States_Normal()
 				{
 					if (!attackDisableMovement)
 					{
-						hsp -= accel;
+						hsp -= accel * (speedMultFinal * speedMultFinal);
 						if ((!runTurn) and (!attackDisableDir)) dir = -1;
 						if ((canRunTurn) and (carriedItem == carriedItems.none) and (grounded) and (isRunning) and (playerAbility != playerAbilities.mirror) and /*(hsp != 0) and */(sign(hsp) != dir))
 						{
@@ -238,7 +237,7 @@ function scr_Player_States_Normal()
 							runParticleTimer = 0;
 							runTurnCancelTimer = runTurnCancelTimerMax;
 							runTurn = true;
-							hsp = max(1,abs(hsp)) * dir;
+							hsp = max(1 * speedMultFinal,abs(hsp)) * dir;
 						}
 					}
 				}
@@ -258,34 +257,34 @@ function scr_Player_States_Normal()
 						{
 							if (!attackDisableMovement)
 							{
-								vsp -= accel;
+								vsp -= accel * (speedMultFinal * speedMultFinal);
 								grounded = false;
 							}
 						}
 						if (keyDownHold)
 						{
-							if (!attackDisableMovement) vsp += accel;
+							if (!attackDisableMovement) vsp += accel * (speedMultFinal * speedMultFinal);
 						}
 					}
 					else
 					{
 						var ufoDeadzone = .3;
-						if (abs(gamepadValX) >= ufoDeadzone) hsp = lengthdir_x(ufoFloatSpd,gamepadAngle) * abs(gamepadValX);
-						if (abs(gamepadValY) >= ufoDeadzone) vsp = lengthdir_y(ufoFloatSpd,gamepadAngle) * abs(gamepadValY);
+						if (abs(gamepadValX) >= ufoDeadzone) hsp = lengthdir_x(ufoFloatSpd * speedMultFinal,gamepadAngle) * abs(gamepadValX);
+						if (abs(gamepadValY) >= ufoDeadzone) vsp = lengthdir_y(ufoFloatSpd * speedMultFinal,gamepadAngle) * abs(gamepadValY);
 					}
 				}
 				
 				if ((((keyDownHold) and (keyUpHold)) or ((!keyDownHold) and (!keyUpHold))) or (attackDisableMovement) or (global.cutscene))
 				{
-					vsp = scr_Friction(vsp,decel);
+					vsp = scr_Friction(vsp,decel * (speedMultFinal * speedMultFinal));
 				}
 				
-				hsp = clamp(hsp, -ufoFloatSpd, ufoFloatSpd);
-				vsp = clamp(vsp, -ufoFloatSpd, ufoFloatSpd);
+				hsp = clamp(hsp, -ufoFloatSpd * speedMultFinal, ufoFloatSpd * speedMultFinal);
+				vsp = clamp(vsp, -ufoFloatSpd * speedMultFinal, ufoFloatSpd * speedMultFinal);
 			}
 			else
 			{
-				if (hspLimit) hsp = clamp(hsp, -movespeedFinal, movespeedFinal);
+				if (hspLimit) hsp = clamp(hsp, -movespeedFinal * speedMultFinal, movespeedFinal * speedMultFinal);
 			}
 			
 			if ((((keyLeftHold) and (keyRightHold)) or ((!keyLeftHold) and (!keyRightHold))) or (attackDisableMovement) or (runTurn) or (global.cutscene))
@@ -295,6 +294,7 @@ function scr_Player_States_Normal()
 				if (attackNumber == playerAttacks.fireWheel) ultiDecel = decelSlide;
 				if (attackNumber == playerAttacks.beamDash) ultiDecel = decel - .02;
 				if (attackNumber == playerAttacks.beamAir) ultiDecel = decel - .05;
+				ultiDecel = ultiDecel * (speedMultFinal * speedMultFinal);
 				if (hsp >= ultiDecel) hsp -= ultiDecel;
 				if (hsp <= -ultiDecel) hsp += ultiDecel;
 				if ((hsp > -ultiDecel) and (hsp < ultiDecel)) hsp = 0;
@@ -308,13 +308,13 @@ function scr_Player_States_Normal()
 		{
 			var gravOffset = 0;
 			if (attackNumber == playerAttacks.beamAir) gravOffset = .05;
-			if (vsp < gravLimit)
+			if (vsp < gravLimit * speedMultFinal)
 			{
-				vsp += grav - gravOffset;
+				vsp += ((grav - gravOffset) * (speedMultFinal * speedMultFinal));
 			}
 			else
 			{
-				vsp = gravLimit - (gravOffset * 5);
+				vsp = ((gravLimit - (gravOffset * 5)) * speedMultFinal);
 				if (((playerCharacter == playerCharacters.kirby) or (playerCharacter == playerCharacters.gooey)) and (fallHopCounter < fallHopCounterMax)) fallHopCounter += 1;
 			}
 		}
@@ -327,6 +327,7 @@ function scr_Player_States_Normal()
 			or (attackNumber == playerAttacks.sparkDown) 
 			) attackHasGravLerpValue = .2;
 			
+			attackHasGravLerpValue = min(attackHasGravLerpValue * speedMultFinal,1)
 			vsp = lerp(vsp,0,attackHasGravLerpValue);
 		}
 		
@@ -339,8 +340,9 @@ function scr_Player_States_Normal()
 				jumpLimitValue = -jumpspeed / 2 + (vspCollision / 2);
 				break;
 			}
-		    if ((hasJumpLimit) and (jumpLimit)) vsp = max(vsp,jumpLimitValue);
+		    if ((hasJumpLimit) and (jumpLimit)) vsp = max(vsp,jumpLimitValue * speedMultFinal);
 		}
+		#endregion
 		
 		#region Grounded
 		if (grounded)
@@ -370,27 +372,24 @@ function scr_Player_States_Normal()
 		}
 		else
 		{
-			//Fast Fall
-			
+			#region Fast Fall
 			if ((!canUfoFloat) and (playerAbility != playerAbilities.ufo) and (keyDownPressed) and (downInputBufferTimer > 0))
 			{
-				vsp = gravLimit;
-			    //if (vsp < 0) vsp = 0;
-			    //fallHop = true;
+				vsp = gravLimit * speedMultFinal;
 			}
+			#endregion
 			
-			//Gamble Float
-			
+			#region Gamble Float Setup
 			if (playerCharacter == playerCharacters.gamble)
 			{
 				canUfoFloat = true; 
 				canJump = false;
 			}
+			#endregion
 		}
 		#endregion
 		
-		//Abilities
-		
+		#region Attacks
 		switch (carriedItem)
 		{
 			#region Bomb
@@ -776,7 +775,7 @@ function scr_Player_States_Normal()
 									scr_Player_ExecuteAttack_MysticBeamGrab(grabEnemy);
 								}
 							}
-						
+							
 							if (!attack)
 							{
 								if (isRunning)
@@ -1461,10 +1460,10 @@ function scr_Player_States_Normal()
 									}
 									if ((!audio_is_playing(snd_Charge_Intro)) and (!audio_is_playing(snd_Charge_Loop)))
 									{
-										if (chargeSfxState == "intro")
+										if (chargeSfxState == 0)
 										{
 										    chargeSfx = audio_play_sound(snd_Charge_Intro,0,false);
-										    chargeSfxState = "loop";
+										    chargeSfxState = 1;
 										}
 										else
 										{
@@ -1488,7 +1487,7 @@ function scr_Player_States_Normal()
 									{
 										jetCharge = 0;
 										if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
-										chargeSfxState = "intro";
+										chargeSfxState = 0;
 										invincibleFlash = false;
 										invincibleFlashTimer = -1;
 										attack = true;
@@ -1504,7 +1503,7 @@ function scr_Player_States_Normal()
 									{
 										jetCharge = 0;
 										if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
-										chargeSfxState = "intro";
+										chargeSfxState = 0;
 										invincibleFlash = false;
 										invincibleFlashTimer = -1;
 										attack = true;
@@ -1825,10 +1824,10 @@ function scr_Player_States_Normal()
 							}
 							if ((!audio_is_playing(snd_Charge_Intro)) and (!audio_is_playing(snd_Charge_Loop)))
 							{
-								if (chargeSfxState == "intro")
+								if (chargeSfxState == 0)
 								{
 									chargeSfx = audio_play_sound(snd_Charge_Intro,0,false);
-									chargeSfxState = "loop";
+									chargeSfxState = 1;
 								}
 								else
 								{
@@ -1852,7 +1851,7 @@ function scr_Player_States_Normal()
 							{
 								cutterCharge = 0;
 								if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
-								chargeSfxState = "intro";
+								chargeSfxState = 0;
 								invincibleFlash = false;
 								invincibleFlashTimer = -1;
 								attack = true;
@@ -1869,7 +1868,7 @@ function scr_Player_States_Normal()
 								
 								cutterCharge = 0;
 								if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
-								chargeSfxState = "intro";
+								chargeSfxState = 0;
 								invincibleFlash = false;
 								invincibleFlashTimer = -1;
 								attack = true;
@@ -1938,10 +1937,12 @@ function scr_Player_States_Normal()
 			#endregion
 		}
 		
+		#region Check If Attacking
 		if (attack)
 		{
 			iceKick = false;
 		}
+		#endregion
 		
 		#region Attack Passive
 		switch (attackNumber)
@@ -2055,6 +2056,7 @@ function scr_Player_States_Normal()
 			break;
 		}
 		#endregion
+		#endregion
 		
 		#region Jump
 		if ((keyJumpPressed) and (!keyDownHold))
@@ -2152,13 +2154,7 @@ function scr_Player_States_Normal()
 		{
 			if (vsp == 0)
 			{
-				scr_Player_SpawnMirrorShield(playerAbility);
-				movespeed = movespeedNormal;
-				isRunning = false;
-			    duck = true;
-			    slide = false;
-				duckSlide = false;
-			    state = playerStates.slide;
+				scr_Player_ExecuteDuck(playerAbility);
 			}
 		}
 		#endregion
@@ -2180,15 +2176,16 @@ function scr_Player_States_Normal()
 		}
 		#endregion
 		
-		//Float
-		
+		#region Float
 		if ((!global.cutscene) and (canFloat) and ((carriedItem == carriedItems.none) and (carriedItemState != carriedItemStates.heavy)) and ((keyJumpPressed) and (!place_meeting(x,y - jumpInputBufferMax,obj_Wall)) and (!place_meeting(x,y,obj_AntiFloat)) and (jumpCoyoteTimeBuffer == 0)) and (!attack))
 		{
 			switch (playerCharacter)
 			{
+				#region Kirby
 				case playerCharacters.kirby:
 				switch(playerAbility)
 				{
+					#region Jet
 					case playerAbilities.jet:
 					attackTimer = 0;
 					hurt = false;
@@ -2203,10 +2200,14 @@ function scr_Player_States_Normal()
 					state = playerStates.jetHover;
 					//add code that makes the player use jet jump instead if jetCHarge >= 120
 					break;
+					#endregion
 					
+					#region Ufo
 					case playerAbilities.ufo:
 					break;
+					#endregion
 					
+					#region Default
 					default:
 					attackTimer = 0;
 					isRunning = false;
@@ -2218,9 +2219,12 @@ function scr_Player_States_Normal()
 					image_index = 0;
 					state = playerStates.float;
 					break;
+					#endregion
 				}
 				break;
-					
+				#endregion
+				
+				#region Gooey
 				case playerCharacters.gooey:
 				attackTimer = 0;
 				hurt = false;
@@ -2231,7 +2235,9 @@ function scr_Player_States_Normal()
 				image_index = 0;
 				state = playerStates.float;
 				break;
-					
+				#endregion
+				
+				#region Default
 				default:
 				attackTimer = 0;
 				hurt = false;
@@ -2242,11 +2248,12 @@ function scr_Player_States_Normal()
 				image_index = 0;
 				state = playerStates.float;
 				break;
+				#endregion
 			}
 		}
+		#endregion
 		
-		//Door
-		
+		#region Enter Door
 		if ((!global.cutscene) and (canEnter) and (position_meeting(x,y,obj_Door)) and (keyUpHold) and (!attack))
 		{
 		    if ((!instance_exists(obj_Fade)) and (!hurt))
@@ -2284,9 +2291,9 @@ function scr_Player_States_Normal()
 			}
 			enteredDoor = -1;
 		}
+		#endregion
 		
-		//Grab Item
-		
+		#region Grab Item
 		if (canGrab)
 		{
 			if (place_meeting(x,y,obj_Key))
@@ -2301,9 +2308,9 @@ function scr_Player_States_Normal()
 				canGrab = false;
 			}
 		}
+		#endregion
 		
-		//Animation
-		
+		#region Animation
 		var heavyItemCarry = false;
 		if (carriedItemState == carriedItemStates.heavy) heavyItemCarry = true;
 		var heavyItemCarrySpd = heavyItemCarry / 2;
@@ -2311,11 +2318,11 @@ function scr_Player_States_Normal()
 		
 		if (fallHop)
 		{
-			image_speed = .75;
+			image_speed = .75 * speedMultFinal;
 		}
 		else
 		{
-			image_speed = 1 + (runImageSpeedIncrease * isRunning) + heavyItemCarrySpd;
+			image_speed = (1 + (runImageSpeedIncrease * isRunning) + heavyItemCarrySpd) * speedMultFinal;
 		}
 		
 		if ((!canUfoFloat) and (playerAbility != playerAbilities.ufo) and !((attack) and (attackDisableAnimation)) and (!hurt) and (!iceKick))
@@ -2781,9 +2788,9 @@ function scr_Player_States_Normal()
 		}
 		
 		if ((hurt) and (playerAbility != playerAbilities.ufo)) sprite_index = sprHurt;
+		#endregion
 		
-		//Walk Duck
-		
+		#region Walk Duck
 		if ((!walkDuck) and (carriedItem == carriedItems.none) and (playerAbility != playerAbilities.ufo) and (place_meeting(x,y + (1 + vsp),obj_ParentWall)) and (vsp > 1) and (!attack))
 		{
 			var collidingWall = instance_place(x,y + (1 + vsp),obj_ParentWall);
@@ -2791,6 +2798,7 @@ function scr_Player_States_Normal()
 			{
 				switch (playerCharacter)
 				{
+					#region Bouncy
 					case playerCharacters.bouncy:
 					image_index = 0;
 					walkDuck = true;
@@ -2812,7 +2820,9 @@ function scr_Player_States_Normal()
 						parSquish.dir = parScaleDir;
 					}
 					break;
-				
+					#endregion
+					
+					#region Gordo
 					case playerCharacters.gordo:
 					image_index = 0;
 					walkDuck = true;
@@ -2835,7 +2845,9 @@ function scr_Player_States_Normal()
 						parSquish.dir = parScaleDir;
 					}
 					break;
-				
+					#endregion
+					
+					#region Blood Gordo
 					case playerCharacters.bloodGordo:
 					image_index = 0;
 					walkDuck = true;
@@ -2858,7 +2870,9 @@ function scr_Player_States_Normal()
 						parSquish.dir = parScaleDir;
 					}
 					break;
-				
+					#endregion
+					
+					#region Default
 					default:
 					var squishSound = snd_SquishLow;
 					sprite_index = sprDuck;
@@ -2890,12 +2904,13 @@ function scr_Player_States_Normal()
 					if (audio_is_playing(squishSound)) audio_stop_sound(squishSound);
 					audio_play_sound(squishSound,0,false);
 					break;
+					#endregion
 				}
 			}
 		}
+		#endregion
 		
-		//Walk Squish
-		
+		#region Walk Squish
 		if ((!walkSquish) and (playerAbility != playerAbilities.ufo) and (place_meeting(x + hspFinal,y,obj_ParentWall)) and (grounded) and (abs(hspFinal) >= (movespeedFinal / 2)) and (!attack))
 		{
 			var walkSquishWall = instance_place(x + hspFinal,y,obj_ParentWall);
@@ -2911,10 +2926,7 @@ function scr_Player_States_Normal()
 				audio_play_sound(snd_SquishLow,0,false);
 				var parDirection = irandom_range(0,359);
 				var parScaleDir = 1;
-				if ((parDirection > 90) and (parDirection <= 270))
-				{
-					parScaleDir = -1;
-				}
+				if ((parDirection > 90) and (parDirection <= 270)) parScaleDir = -1;
 				var parSquish = instance_create_depth(x,y,depth + 1,obj_Particle);
 				parSquish.sprite_index = spr_Particle_ShrinkingStar2;
 				parSquish.destroyAfterAnimation = true;
@@ -2924,7 +2936,9 @@ function scr_Player_States_Normal()
 				parSquish.dir = parScaleDir;
 			}
 		}
+		#endregion
 		
+		#region High Priority Animation
 		if (iceKick)
 		{
 			sprite_index = sprIceKick;
@@ -2949,7 +2963,6 @@ function scr_Player_States_Normal()
 			}
 		}
 		
-		#region Cutter Catch
 		if ((cutterCatch) and (!attack)) sprite_index = sprCutterCatch;
 		#endregion
 		
@@ -2959,11 +2972,13 @@ function scr_Player_States_Normal()
 	}
 	else
 	{
+		#region Paused
 		image_speed = 0;
 		shake = 0;
+		#endregion
 	}
 	
 	#region Mic Animation
-	if (attackNumber == playerAttacks.micNormal) image_speed = 1;
+	if (attackNumber == playerAttacks.micNormal) image_speed = 1 * speedMultFinal;
 	#endregion
 }

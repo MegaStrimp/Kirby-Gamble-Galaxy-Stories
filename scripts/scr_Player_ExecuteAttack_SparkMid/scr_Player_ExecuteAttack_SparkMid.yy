@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Spark",
-    "path": "folders/Scripts/Player/Execute Attack/Spark.yy",
+    "path": "folders/Scripts/Player/Execute Attacks/Spark.yy",
   },
 }

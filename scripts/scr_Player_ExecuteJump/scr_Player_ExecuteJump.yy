@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Misc",
-    "path": "folders/Scripts/Player/Misc.yy",
+    "name": "Execute Moves",
+    "path": "folders/Scripts/Player/Execute Moves.yy",
   },
 }

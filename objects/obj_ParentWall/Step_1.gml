@@ -67,7 +67,7 @@ else if (setupTimer == 0)
 }
 
 #region Variables
-speedMultFinal = speedMultObject;
+speedMultFinal = speedMultObject * global.globalSpeedMult;
 #endregion
 
 #region Destroy

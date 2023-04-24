@@ -4,15 +4,15 @@
 
 event_inherited();
 
+//Hurt Player
+
+scr_Enemy_HurtsPlayer(dmg);
+
 if (!childPause)
 {
 	//Get Inhaled
 	
 	if (state != 1) scr_Object_Inhale(enemy);
-	
-	//Hurt Player
-	
-	scr_Enemy_HurtsPlayer(dmg);
 	
 	//Movement
 	

@@ -807,7 +807,7 @@ function scr_Player_States_Slide()
 						break;
 					}
 					if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
-					chargeSfxState = "intro";
+					chargeSfxState = 0;
 					invincibleFlash = false;
 					invincibleFlashTimer = -1;
 					jumpLimit = false;

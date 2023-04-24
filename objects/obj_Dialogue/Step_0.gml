@@ -16,7 +16,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	dialogueFlowing = (typist.get_state() < 1);
 	
-	if ((!hasResetTimer) and ((keyJumpPressed) or (keyStartPressed)))
+	if ((!hasResetTimer) and ((keyJumpPressed) or (keyAttackPressed) or (keyStartPressed)))
 	{
 		if (!dialogueFlowing)
 		{

@@ -15,6 +15,7 @@ state = 0;
 owner = id;
 enemy = false;
 isDirectHit = true;
+wallStrength = wallStrengths.metal;
 
 //Timers
 

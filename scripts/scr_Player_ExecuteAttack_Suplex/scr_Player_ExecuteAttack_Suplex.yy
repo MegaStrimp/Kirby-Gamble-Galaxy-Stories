@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Suplex",
-    "path": "folders/Scripts/Player/Execute Attack/Suplex.yy",
+    "path": "folders/Scripts/Player/Execute Attacks/Suplex.yy",
   },
 }

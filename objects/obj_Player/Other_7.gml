@@ -1,41 +1,38 @@
 ///@description Animation End
 
-//Variables
+#region Variables
+var playerAbility = global.abilityP1;
+var playerCharacter = global.characterP1;
 
 switch (player)
 {
-	case 0:
-	var playerAbility = global.abilityP1;
-	var playerCharacter = global.characterP1;
-	break;
-	
 	case 1:
-	var playerAbility = global.abilityP2;
-	var playerCharacter = global.characterP2;
+	playerAbility = global.abilityP2;
+	playerCharacter = global.characterP2;
 	break;
 	
 	case 2:
-	var playerAbility = global.abilityP3;
-	var playerCharacter = global.characterP3;
+	playerAbility = global.abilityP3;
+	playerCharacter = global.characterP3;
 	break;
 	
 	case 3:
-	var playerAbility = global.abilityP4;
-	var playerCharacter = global.characterP4;
+	playerAbility = global.abilityP4;
+	playerCharacter = global.characterP4;
 	break;
 }
+#endregion
 
-//Idle Animation
-
+#region Idle Animation
 if (idleAnimation)
 {
 	idleAnimation = false;
 	idleAnimationTimer = 0;
 	idleAnimationTimerMax = choose(60,120,210);
 }
+#endregion
 
-//Walking Animation
-
+#region Walking Animation
 if (sprite_index == sprWalk)
 {
 	if (playerAbility == playerAbilities.water)
@@ -50,26 +47,28 @@ if (sprite_index == sprWalk)
 		}
 	}
 }
+#endregion
 
-//Falling Animation
-
+#region Falling Animation
 switch (playerCharacter)
 {
+	#region Waddle Dee
 	case playerCharacters.waddleDee:
 	if (sprite_index == sprFall) image_index = image_number - 1;
 	break;
+	#endregion
 }
+#endregion
 
-//Fall Roll
-
+#region Fall Roll
 if ((fallRoll) and (sprite_index == sprRoll)) fallRoll = false;
+#endregion
 
-//Fall Hop
-
+#region Fall Hop
 if ((fallHop) and (sprite_index == sprRoll)) fallHop = false;
+#endregion
 
-//Float Ready
-
+#region Float Ready
 if ((!float) and ((sprite_index == sprFloatReady) or (sprite_index == sprItemCarryLightFloatReady)))
 {
 	if (carriedItem == carriedItems.none)
@@ -83,9 +82,9 @@ if ((!float) and ((sprite_index == sprFloatReady) or (sprite_index == sprItemCar
 	image_index = 0;
 	float = true;
 }
+#endregion
 
-//Flap
-
+#region Flap
 if ((sprite_index == sprFlap) or (sprite_index == sprItemCarryLightFlap))
 {
 	if (carriedItem == carriedItems.none)
@@ -98,9 +97,9 @@ if ((sprite_index == sprFlap) or (sprite_index == sprItemCarryLightFlap))
 	}
 	image_index = 0;
 }
+#endregion
 
-//Float Spit
-
+#region Float Spit
 if ((floatSpit) and ((sprite_index == sprFloatSpit) or (sprite_index == sprItemCarryLightFloatSpit)))
 {
 	floatSpit = false;
@@ -122,33 +121,33 @@ if ((floatSpit) and ((sprite_index == sprFloatSpit) or (sprite_index == sprItemC
 		image_index = 0;
 	}
 }
+#endregion
 
-//Inhale Ready
-
+#region Inhale Ready
 if ((!inhaling) and (sprite_index == sprInhaleReady)) inhaling = true;
+#endregion
 
-//Inhale End
-
+#region Inhale End
 if ((inhaleEnd) and (state == playerStates.carry)) inhaleEnd = false;
+#endregion
 
-//Carry Jump
-
+#region Carry Jump
 if (sprite_index == sprCarryJump) image_index = image_number - 1;
+#endregion
 
-//Carry Fall
-
+#region Carry Fall
 if (sprite_index == sprCarryFall) image_index = image_number - 2;
+#endregion
 
-//Spit
-
+#region Spit
 if (sprite_index == sprSpit)
 {
 	spit = false;
     state = playerStates.normal;
 }
+#endregion
 
-//Swallow
-
+#region Swallow
 if (((sprite_index == sprSwallow) or (sprite_index == sprHardSwallow)) and (state == playerStates.swallow))
 {
 	if (((player == 0) and (global.abilityP1 == playerAbilities.none))
@@ -165,9 +164,9 @@ if (((sprite_index == sprSwallow) or (sprite_index == sprHardSwallow)) and (stat
 		image_speed = 0;
 	}
 }
+#endregion
 
-//Ability Change
-
+#region Ability Change
 if ((sprite_index == sprAbilityChange) and (state == playerStates.swallow))
 {
 	if (((player == 0) and (global.abilityP1 != playerAbilities.none))
@@ -179,75 +178,75 @@ if ((sprite_index == sprAbilityChange) and (state == playerStates.swallow))
 		image_speed = 0;
 	}
 }
+#endregion
 
-//Cutter Attack 1
-
+#region Cutter Attack 1
 if (((attackNumber == playerAttacks.cutterNormal) or (attackNumber == playerAttacks.cutterChargeAttack)) and (sprite_index == sprCutterAttack1))
 {
 	attack = false;
 	attackable = true;
 	attackNumber = playerAttacks.none;
 }
+#endregion
 
-//Cutter Attack 2
-
+#region Cutter Attack 2
 if (sprite_index == sprCutterAttack2) image_index = image_number - 1;
+#endregion
 
-//Final Cutter
-
+#region Final Cutter
 if ((sprite_index == sprCutterAttack4) or (sprite_index == sprCutterAttack5) or (sprite_index == sprCutterAttack6)) image_index = image_number - 1;
+#endregion
 
-//Sir Kibble Cutter Attack 1
-
+#region Sir Kibble Cutter Attack 1
 if (((attackNumber == "sirKibbleCutterNormal") or (attackNumber == "sirKibbleCutterChargeAttack")) and (sprite_index == sprCutterAttack1))
 {
 	attack = false;
 	attackNumber = playerAttacks.none;
 	attackTimer = 45;
 }
+#endregion
 
-//Beam Normal Attack
-
+#region Beam Normal Attack
 if ((attackNumber == playerAttacks.beamNormal) and (sprite_index == sprBeamAttack1)) image_index = image_number - 1;
+#endregion
 
-//Beam Up Attack
-
+#region Beam Up Attack
 if ((attackNumber == playerAttacks.beamUp) and (sprite_index == sprBeamAttack4))
 {
 	image_index = image_number - 1;
 	if (attackTimer == -1) attackTimer = 0;
 }
+#endregion
 
-//Beam Charge Attack
-
+#region Beam Charge Attack
 if ((attackNumber == playerAttacks.beamChargeAttack) and (sprite_index == sprBeamAttack5)) image_index = image_number - 1;
+#endregion
 
-//Mystic Beam Normal Attack
-
+#region Mystic Beam Normal Attack
 if ((attackNumber == playerAttacks.mysticBeamNormal) and (sprite_index == sprBeamAttack1)) image_index = image_number - 1;
+#endregion
 
-//Mystic Beam Barrier Break
-
+#region Mystic Beam Barrier Break
 if ((attackNumber == playerAttacks.mysticBeamBarrierBreak) and (sprite_index == sprMysticBeamAttack2)) image_index = image_number - 1;
+#endregion
 
-//Mystic Beam Beam Bomb
-
+#region Mystic Beam Beam Bomb
 if ((attackNumber == playerAttacks.mysticBeamDash) and (sprite_index == sprMysticBeamAttack1)) image_index = image_number - 1;
+#endregion
 
-//Mystic Beam Charge Attack
-
+#region Mystic Beam Charge Attack
 if ((attackNumber == playerAttacks.mysticBeamChargeAttack) and (sprite_index == sprBeamAttack5)) image_index = image_number - 1;
+#endregion
 
-//Mystic Beam Up Attack
-
+#region Mystic Beam Up Attack
 if ((attackNumber == playerAttacks.mysticBeamUp) and (sprite_index == sprBeamAttack4))
 {
 	image_index = image_number - 1;
 	if (attackTimer == -1) attackTimer = 0;
 }
+#endregion
 
-//Stone Normal Attack Ready
-
+#region Stone Normal Attack Ready
 if (((attackNumber == playerAttacks.stoneNormal) or (attackNumber == playerAttacks.gooeyStoneNormal)) and (sprite_index == sprStoneAttack1Ready))
 {
 	image_index = image_number - 1;
@@ -256,29 +255,29 @@ if (((attackNumber == playerAttacks.stoneNormal) or (attackNumber == playerAttac
 	par.destroyTimer = 2;
 	if (stoneReadyTimer == -1) stoneReadyTimer = stoneReadyTimerMax;
 }
+#endregion
 
-//Stone Up Attack
-
+#region Stone Up Attack
 if ((attackNumber == playerAttacks.stoneUp) and ((sprite_index == sprStoneAttack2Ready) or (sprite_index == sprStoneAttack2) or (sprite_index == sprStoneAttack2Release))) image_index = image_number - 1;
+#endregion
 
-//Ufo Charge
-
+#region Ufo Charge
 if ((attackNumber == playerAttacks.ufoCharge) and (sprite_index == sprUfoCharge)) image_index = image_number - 4;
+#endregion
 
-//Ufo Beam Attack
-
+#region Ufo Beam Attack
 if ((attackNumber == playerAttacks.ufoBeam) and (sprite_index == sprUfoAttack1)) image_index = image_number - 1;
+#endregion
 
-//Ufo Laser Attack
-
+#region Ufo Laser Attack
 if ((attackNumber == playerAttacks.ufoLaser) and (sprite_index == sprUfoAttack2)) image_index = image_number - 1;
+#endregion
 
-//Mirror Slash Attack
-
+#region Mirror Slash Attack
 if ((attackNumber == playerAttacks.mirrorSlash) and (sprite_index == sprMirrorAttack1)) image_index = image_number - 1;
+#endregion
 
-//Bomb Ready
-
+#region Bomb Ready
 if ((attackNumber == playerAttacks.bombReady) and (sprite_index == sprBombReady))
 {
 	if (bombDownReady)
@@ -294,46 +293,46 @@ if ((attackNumber == playerAttacks.bombReady) and (sprite_index == sprBombReady)
 		image_index = image_number - 1;
 	}
 }
+#endregion
 
-//Bomb Normal Attack
-
+#region Bomb Normal Attack
 if ((attackNumber == playerAttacks.bombNormal) and (sprite_index == sprBombAttack2)) image_index = image_number - 1;
+#endregion
 
-//Bomb Dash Attack Release
-
+#region Bomb Dash Attack Release
 if ((attackNumber == playerAttacks.bombDash) and (sprite_index == sprBombAttack3Release))
 {
 	attackTimer = 0;
 	image_index = image_number - 1;
 }
+#endregion
 
-//Bomb Dash Attack Ready
-
+#region Bomb Dash Attack Ready
 if ((attackNumber == playerAttacks.bombDash) and (sprite_index == sprBombAttack3Ready))
 {
 	sprite_index = sprBombAttack3Release;
 	image_index = 0;
 }
+#endregion
 
-//Fire Attack Release
-
+#region Fire Attack Release
 if (sprite_index == sprFireAttackRelease1)
 {
 	sprite_index = sprFireAttackRelease2;
 	image_index = 0;
 }
+#endregion
 
-//Ice Normal Attack Ready
-
+#region Ice Normal Attack Ready
 if (sprite_index == sprIceAttack1Ready)
 {
 	iceReady = false;
 	attackNumber = playerAttacks.iceNormal;
 	sprite_index = sprIceAttack1;
 }
+#endregion
 
-//Ice Normal Attack Release
-
+#region Ice Normal Attack Release
 if ((attackNumber == playerAttacks.iceNormal) and (sprite_index == sprIceAttack1Release))
 {
 	iceReady = true;
@@ -341,25 +340,26 @@ if ((attackNumber == playerAttacks.iceNormal) and (sprite_index == sprIceAttack1
 	iceNormalAttackTimer = -1;
 	attackTimer = 0;
 }
+#endregion
 
-//Ice Kick Attack
-
+#region Ice Kick Attack
 if ((iceKick) and (sprite_index == sprIceKick)) image_index = image_number - 1;
+#endregion
 
-//Ice Grab
-
+#region Ice Grab
 if (sprite_index == sprIceGrabReady)
 {
 	sprite_index = sprIceGrab;
 	image_index = 0;
 }
+#endregion
 
-//Spark Attack 1 Ready
-
+#region Spark Attack 1 Ready
 if ((attack) and (sprite_index == sprSparkAttack1Ready))
 {
 	switch (attackNumber)
 	{
+		#region Spark None
 		case playerAttacks.sparkNone:
 		if (audio_is_playing(snd_Spark1)) audio_stop_sound(snd_Spark1);
 		audio_play_sound(snd_Spark1,0,false);
@@ -383,7 +383,9 @@ if ((attack) and (sprite_index == sprSparkAttack1Ready))
 		projectile.spriteChangeTimer = 4;
 		projectile.destroyTimer = 8;
 		break;
+		#endregion
 		
+		#region Spark Low
 		case playerAttacks.sparkLow:
 		if (audio_is_playing(snd_Spark2)) audio_stop_sound(snd_Spark2);
 		audio_play_sound(snd_Spark2,0,false);
@@ -403,7 +405,9 @@ if ((attack) and (sprite_index == sprSparkAttack1Ready))
 		projectile.particleTimer = projectile.particleTimerMax;
 		projectile.destroyTimer = 60;
 		break;
+		#endregion
 		
+		#region Spark Mid
 		case playerAttacks.sparkMid:
 		if (audio_is_playing(snd_Spark3)) audio_stop_sound(snd_Spark3);
 		audio_play_sound(snd_Spark3,0,false);
@@ -453,21 +457,23 @@ if ((attack) and (sprite_index == sprSparkAttack1Ready))
 			par.angle = parangle;
 		}
 		break;
+		#endregion
 	}
 	sprite_index = sprSparkAttack1;
 	image_index = 0;
 }
+#endregion
 
-//Spark Attack 2
-
+#region Spark Attack 2
 if (sprite_index == sprSparkAttack2) image_index = 2;
+#endregion
 
-//Spark Attack 2 Ready
-
+#region Spark Attack 2 Ready
 if ((attack) and (sprite_index == sprSparkAttack2Ready))
 {
 	switch (attackNumber)
 	{
+		#region Spark High
 		case playerAttacks.sparkHigh:
 		if (audio_is_playing(snd_Spark4)) audio_stop_sound(snd_Spark4);
 		audio_play_sound(snd_Spark4,0,false);
@@ -488,7 +494,9 @@ if ((attack) and (sprite_index == sprSparkAttack2Ready))
 		projectile.paletteSpriteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
 		projectile.paletteIndex = 1;
 		break;
+		#endregion
 		
+		#region Spark Max
 		case playerAttacks.sparkMax:
 		if (audio_is_playing(snd_Spark5)) audio_stop_sound(snd_Spark5);
 		audio_play_sound(snd_Spark5,0,false);
@@ -538,75 +546,69 @@ if ((attack) and (sprite_index == sprSparkAttack2Ready))
 			par.angle = parangle;
 		}
 		break;
+		#endregion
 	}
 	sprite_index = sprSparkAttack2;
 	image_index = 0;
 }
+#endregion
 
-//Wing Dash Attack
-
+#region Wing Dash Attack
 if ((attack) and (sprite_index == sprWingAttack2Ready))
 {
 	sprite_index = sprWingAttack2;
 	image_index = 0;
 	attackNumber = playerAttacks.wingDash;
 }
+#endregion
 
-//Sword Attack 1
+#region Sword Attack 1
+if (sprite_index == sprSwordAttack1) image_index = image_number - 1;
+#endregion
 
-if (sprite_index == sprSwordAttack1)
-{
-	image_index = image_number - 1;
-}
-
-//Sword Attack 2
-
+#region Sword Attack 2
 if (sprite_index == sprSwordAttackDash) image_index = image_number - 2;
+#endregion
 
+#region Sword Attack Air
+if (sprite_index == sprSwordAttackAir) image_index = image_number - 1;
+#endregion
 
-//Sword Attack Air
-
-if (sprite_index == sprSwordAttackAir)
-{
-	image_index = image_number - 1;
-}
-
-//Sleep Ready
-
+#region Sleep Ready
 if ((attack) and (sprite_index == sprSleepReady))
 {
 	sleepParticleTimer = 0;
 	sprite_index = sprSleep;
 	image_index = 0;
 }
+#endregion
 
-//Sleep End
-
+#region Sleep End
 if ((attack) and (sprite_index == sprSleepEnd))
 {
 	attackTimer = 0;
 	image_index = 0;
 }
+#endregion
 
-//Scan End
-
+#region Scan End
 if ((attack) and (sprite_index == sprScanEnd))
 {
 	image_index = 0;
 	attackTimer = 0;
 }
+#endregion
 
-//Scan
-
+#region Scan
 if ((attack) and (sprite_index == sprScan))
 {
 	if (instance_exists(scanProjectile)) instance_destroy(scanProjectile);
 	sprite_index = sprScanEnd;
 	image_index = 0;
 }
+#endregion
 
-//Scan Ready
-
+#region Scan Ready
 if ((attack) and (sprite_index == sprScanReady))
 {
 	if (audio_is_playing(snd_Scan)) audio_stop_sound(snd_Scan);
@@ -624,23 +626,17 @@ if ((attack) and (sprite_index == sprScanReady))
 	sprite_index = sprScan;
 	image_index = 0;
 }
+#endregion
 
-//Mic Attack 1 End
+#region Mic Attack 1 End
+if ((attack) and (sprite_index == sprMicAttack1End)) image_index = image_number - 1;
+#endregion
 
-if ((attack) and (sprite_index == sprMicAttack1End))
-{
-	image_index = image_number - 1;
-}
+#region Mic Attack 1
+if ((attack) and (sprite_index == sprMicAttack1)) image_index = 0;
+#endregion
 
-//Mic Attack 1
-
-if ((attack) and (sprite_index == sprMicAttack1))
-{
-	image_index = 0;
-}
-
-//Mic Attack Ready 1
-
+#region Mic Attack Ready 1
 if ((attack) and (sprite_index == sprMicAttack1Ready))
 {
 	if (audio_is_playing(snd_Mic1)) audio_stop_sound(snd_Mic1);
@@ -649,23 +645,17 @@ if ((attack) and (sprite_index == sprMicAttack1Ready))
 	sprite_index = sprMicAttack1;
 	image_index = 0;
 }
+#endregion
 
-//Mic Attack 2 End
+#region Mic Attack 2 End
+if ((attack) and (sprite_index == sprMicAttack2End)) image_index = image_number - 1;
+#endregion
 
-if ((attack) and (sprite_index == sprMicAttack2End))
-{
-	image_index = image_number - 1;
-}
+#region Mic Attack 2
+if ((attack) and (sprite_index == sprMicAttack2)) image_index = 0;
+#endregion
 
-//Mic Attack 2
-
-if ((attack) and (sprite_index == sprMicAttack2))
-{
-	image_index = 0;
-}
-
-//Mic Attack Ready 2
-
+#region Mic Attack Ready 2
 if ((attack) and (sprite_index == sprMicAttack2Ready))
 {
 	if (audio_is_playing(snd_Mic2)) audio_stop_sound(snd_Mic2);
@@ -674,23 +664,17 @@ if ((attack) and (sprite_index == sprMicAttack2Ready))
 	sprite_index = sprMicAttack2;
 	image_index = 0;
 }
+#endregion
 
-//Mic Attack 3 End
+#region Mic Attack 3 End
+if ((attack) and (sprite_index == sprMicAttack3End)) image_index = image_number - 1;
+#endregion
 
-if ((attack) and (sprite_index == sprMicAttack3End))
-{
-	image_index = image_number - 1;
-}
+#region Mic Attack 3
+if ((attack) and (sprite_index == sprMicAttack3)) image_index = 0;
+#endregion
 
-//Mic Attack 3
-
-if ((attack) and (sprite_index == sprMicAttack3))
-{
-	image_index = 0;
-}
-
-//Mic Attack Ready 3
-
+#region Mic Attack Ready 3
 if ((attack) and (sprite_index == sprMicAttack3Ready))
 {
 	var soundRng = irandom_range(0,499);
@@ -713,7 +697,8 @@ if ((attack) and (sprite_index == sprMicAttack3Ready))
 	sprite_index = sprMicAttack3;
 	image_index = 0;
 }
+#endregion
 
-//Bouncy
-
+#region Bouncy
 if ((playerCharacter == playerCharacters.bouncy) and ((sprite_index == sprJump) or (sprite_index == sprDuck))) image_index = image_number - 1;
+#endregion

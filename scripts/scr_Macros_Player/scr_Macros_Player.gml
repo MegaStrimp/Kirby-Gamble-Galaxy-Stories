@@ -103,7 +103,7 @@ function scr_Macros_Player()
 	#macro kirby_CutterDrop_HitStopShakeStrength 7
 	
 	#macro kirby_CutterFinalCutter1_Damage 8
-	#macro kirby_CutterFinalCutter1_Strength 3.5
+	#macro kirby_CutterFinalCutter1_Strength 1.5
 	#macro kirby_CutterFinalCutter1_HitStopAffectSource false
 	#macro kirby_CutterFinalCutter1_HitStopAffectPlayer false
 	#macro kirby_CutterFinalCutter1_HitStopAffectTarget true
@@ -111,7 +111,7 @@ function scr_Macros_Player()
 	#macro kirby_CutterFinalCutter1_HitStopShakeStrength 7
 	
 	#macro kirby_CutterFinalCutter2_Damage 8
-	#macro kirby_CutterFinalCutter2_Strength 3.5
+	#macro kirby_CutterFinalCutter2_Strength 1.5
 	#macro kirby_CutterFinalCutter2_HitStopAffectSource false
 	#macro kirby_CutterFinalCutter2_HitStopAffectPlayer false
 	#macro kirby_CutterFinalCutter2_HitStopAffectTarget true
@@ -119,7 +119,7 @@ function scr_Macros_Player()
 	#macro kirby_CutterFinalCutter2_HitStopShakeStrength 7
 	
 	#macro kirby_CutterFinalCutter3_Damage 8
-	#macro kirby_CutterFinalCutter3_Strength 3.5
+	#macro kirby_CutterFinalCutter3_Strength 1.5
 	#macro kirby_CutterFinalCutter3_HitStopAffectSource false
 	#macro kirby_CutterFinalCutter3_HitStopAffectPlayer false
 	#macro kirby_CutterFinalCutter3_HitStopAffectTarget true
@@ -127,7 +127,7 @@ function scr_Macros_Player()
 	#macro kirby_CutterFinalCutter3_HitStopShakeStrength 7
 	
 	#macro kirby_CutterFinalCutter4_Damage 32
-	#macro kirby_CutterFinalCutter4_Strength 3.5
+	#macro kirby_CutterFinalCutter4_Strength 2
 	#macro kirby_CutterFinalCutter4_HitStopAffectSource false
 	#macro kirby_CutterFinalCutter4_HitStopAffectPlayer false
 	#macro kirby_CutterFinalCutter4_HitStopAffectTarget true

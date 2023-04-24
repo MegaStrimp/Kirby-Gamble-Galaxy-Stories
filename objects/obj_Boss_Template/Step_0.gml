@@ -51,12 +51,12 @@ if (!childPauseHard)
 }
 #endregion
 
+#region Hurt Player
+if (!death) scr_Enemy_HurtsPlayer(dmg);
+#endregion
+
 if ((!global.pause) and (((!global.cutscene) or ((global.cutscene) and (phase == 0))) and (pausedInCutscenes)))
 {
-	#region Hurt Player
-	if (!death) scr_Enemy_HurtsPlayer(dmg);
-	#endregion
-	
 	#region Phases
 	switch (phase)
 	{

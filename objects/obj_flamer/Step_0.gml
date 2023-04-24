@@ -8,8 +8,9 @@ event_inherited();
 if ((!childPauseHard) and ((grounded) or (!hasYCollision))) hsp = scr_Friction(hsp,decel);
 #endregion
 
+//Hurt Player
 
-
+scr_Enemy_HurtsPlayer(dmg);
 
 //idle state:
 
@@ -22,10 +23,6 @@ if (!childPause)
 	//Get Inhaled
 	
 	if (!parasol) scr_Object_Inhale(enemy);
-	
-	//Hurt Player
-	
-	scr_Enemy_HurtsPlayer(dmg);
 	
 	var playerInRange = false;
 	var playerIsDiagonal = false;

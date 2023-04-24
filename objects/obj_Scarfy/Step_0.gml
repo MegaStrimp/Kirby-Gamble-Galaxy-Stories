@@ -19,6 +19,10 @@ event_inherited();
 if ((!childPauseHard) and ((grounded) or (!hasYCollision))) hsp = scr_Friction(hsp,decel);
 #endregion
 
+//Hurt Player
+
+scr_Enemy_HurtsPlayer(dmg);
+
 if (!childPause)
 {
 	//Get Inhaled
@@ -41,10 +45,6 @@ if (!childPause)
 		shakeX = 0;
 		shakeY = 0;
 	}
-	
-	//Hurt Player
-	
-	scr_Enemy_HurtsPlayer(dmg);
 	
 	//Key Scarfy
 	

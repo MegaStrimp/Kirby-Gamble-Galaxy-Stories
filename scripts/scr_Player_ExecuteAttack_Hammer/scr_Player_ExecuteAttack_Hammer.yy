@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Hammer",
-    "path": "folders/Scripts/Player/Execute Attack/Hammer.yy",
+    "path": "folders/Scripts/Player/Execute Attacks/Hammer.yy",
   },
 }

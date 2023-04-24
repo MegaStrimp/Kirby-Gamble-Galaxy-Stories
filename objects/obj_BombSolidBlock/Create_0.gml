@@ -15,6 +15,7 @@ inhaleXOffset = (sprite_get_width(sprite_index) / 2);
 inhaleYOffset = (sprite_get_height(sprite_index) / 2);
 hp = 1;
 points = 10;
+storedItem = obj_PointStar;
 character = 0;
 
 //Sprites

@@ -9,33 +9,33 @@ if(keyboard_check_pressed(ord("T"))){
 	attackNumber = state_damaged;
 	knockbackX = 2;
 	knockbackY = -2;
-	
 }
+
+#region Variables
+var playerInRange = false;
+var playerIsDiagonal = false;
+var playerDir = 0;
+var playerXscale = 1;
+var playerIsStraightAbove = false;
+
+if (instance_exists(obj_Player))
+{
+	playerInRange = collision_circle(originX,originY,viewRange,obj_Player,1,1)!= noone;
+	playerIsDiagonal = (abs(obj_Player.y-originY) >= 32 && abs(obj_Player.x-originX) > 32); //if the player is more than 8 pixels higher or lower than LOVEY
+	playerIsStraightAbove = (abs(obj_Player.y-originY) >= 32 && abs(obj_Player.x-originX) <= 32);
+	playerDir = point_direction(originX,originY,obj_Player.x,obj_Player.y);
+	playerXscale = sign(obj_Player.x-x);
+}
+#endregion
+
+#region Hurt Player
+if ((playerInRange) and (!hurt)) scr_Enemy_HurtsPlayer(dmg);
+#endregion
+
 if (!childPause)
 {
-	#region Variables
-	var playerInRange = false;
-	var playerIsDiagonal = false;
-	var playerDir = 0;
-	var playerXscale = 1;
-	var playerIsStraightAbove = false;
-	
-	if (instance_exists(obj_Player))
-	{
-		playerInRange = collision_circle(originX,originY,viewRange,obj_Player,1,1)!= noone;
-		playerIsDiagonal = (abs(obj_Player.y-originY) >= 32 && abs(obj_Player.x-originX) > 32); //if the player is more than 8 pixels higher or lower than LOVEY
-		playerIsStraightAbove = (abs(obj_Player.y-originY) >= 32 && abs(obj_Player.x-originX) <= 32);
-		playerDir = point_direction(originX,originY,obj_Player.x,obj_Player.y);
-		playerXscale = sign(obj_Player.x-x);
-	}
-	#endregion
-	
 	#region Get Inhaled
 	if (place_meeting(x,y,obj_InhaleMask)) shakeX = 2;
-	#endregion
-	
-	#region Hurt Player
-	if ((playerInRange) and (!hurt)) scr_Enemy_HurtsPlayer(dmg);
 	#endregion
 	
 	#region Hurt State

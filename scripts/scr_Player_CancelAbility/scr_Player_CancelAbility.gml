@@ -36,7 +36,7 @@ function scr_Player_CancelAbility(argument0)
 		sparkMaxCharge = false;
 		isSleeping = false;
 		if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
-		chargeSfxState = "intro";
+		chargeSfxState = 0;
 		attack = false;
 		attackable = true;
 		attackNumber = playerAttacks.none;

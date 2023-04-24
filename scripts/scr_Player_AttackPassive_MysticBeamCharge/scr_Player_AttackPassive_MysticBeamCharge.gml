@@ -32,10 +32,10 @@ function scr_Player_AttackPassive_MysticBeamCharge()
 		#region Sound Effects
 		if ((!audio_is_playing(snd_Charge_Intro)) and (!audio_is_playing(snd_Charge_Loop)))
 		{
-			if (chargeSfxState == "intro")
+			if (chargeSfxState == 0)
 			{
 				chargeSfx = audio_play_sound(snd_Charge_Intro,0,false);
-				chargeSfxState = "loop";
+				chargeSfxState = 1;
 			}
 			else
 			{
@@ -65,7 +65,7 @@ function scr_Player_AttackPassive_MysticBeamCharge()
 			#region Cancel Charge
 			beamCharge = 0;
 			if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
-			chargeSfxState = "intro";
+			chargeSfxState = 0;
 			#endregion
 			
 			#region Barrier Break
@@ -119,7 +119,7 @@ function scr_Player_AttackPassive_MysticBeamCharge()
 			#region Cancel Charge
 			beamCharge = 0;
 			if (audio_is_playing(chargeSfx)) audio_stop_sound(chargeSfx);
-			chargeSfxState = "intro";
+			chargeSfxState = 0;
 			invincibleFlash = false;
 			invincibleFlashTimer = -1;
 			#endregion

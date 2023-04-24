@@ -89,12 +89,11 @@ if (object)
 		{
 			if (place_meeting(x,y,other))
 			{
-				scr_HitEffects_Wall(other.id,-1,other.hitEffect);
-				
 				if (other.damageType == damageTypes.none)
 				{
 					other.hp -= 1;
 				}
+				scr_HitEffects_Wall(other.id,-1,other.hitEffect);
 			}
 		}
 		
@@ -102,12 +101,11 @@ if (object)
 		{
 			if (place_meeting(x,y,other))
 			{
-				scr_HitEffects_Wall(other.id,-1,other.hitEffect);
-				
 				if (other.damageType == damageTypes.none)
 				{
 					other.hp -= 10;
 				}
+				scr_HitEffects_Wall(other.id,-1,other.hitEffect);
 			}
 		}
 		
@@ -115,8 +113,6 @@ if (object)
 		{
 			if (place_meeting(x,y,other))
 			{
-				scr_HitEffects_Wall(other.id,id,other.hitEffect);
-				
 				if ((hurtsObject) and (owner != other))
 				{
 					if (((other.damageType == damageTypes.none) or (damageType == damageTypes.every) or (other.damageType = damageType)) and (wallStrength >= other.wallStrength))
@@ -129,6 +125,7 @@ if (object)
 						}
 					}
 				}
+				scr_HitEffects_Wall(other.id,id,other.hitEffect);
 				
 				if ((destroyableByObject) and (owner != other.id))
 				{

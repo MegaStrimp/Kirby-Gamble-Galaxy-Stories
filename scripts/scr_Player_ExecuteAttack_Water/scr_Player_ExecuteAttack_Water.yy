@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Water",
-    "path": "folders/Scripts/Player/Execute Attack/Water.yy",
+    "path": "folders/Scripts/Player/Execute Attacks/Water.yy",
   },
 }

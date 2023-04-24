@@ -17,7 +17,7 @@
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "mus_titledemo.mp3",
+  "soundFile": "mus_TitleDemo.mp3",
   "type": 1,
   "volume": 1.0,
 }

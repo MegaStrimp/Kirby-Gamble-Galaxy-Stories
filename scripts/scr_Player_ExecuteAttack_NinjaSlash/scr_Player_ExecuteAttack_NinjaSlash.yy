@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Ninja",
-    "path": "folders/Scripts/Player/Execute Attack/Ninja.yy",
+    "path": "folders/Scripts/Player/Execute Attacks/Ninja.yy",
   },
 }

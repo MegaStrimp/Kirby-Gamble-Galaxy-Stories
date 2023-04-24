@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Mystic Cutter",
-    "path": "folders/Scripts/Player/Execute Attack/Mystic Cutter.yy",
+    "path": "folders/Scripts/Player/Execute Attacks/Mystic Cutter.yy",
   },
 }

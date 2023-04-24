@@ -677,7 +677,7 @@ part_type_life(global.partTypeColorfulStars, 30, 40);
 #region Global Variables
 #region Meta/Files
 global.versionNumber = "0.7.6";
-global.versionNumber = "BETA 03/23/23";
+global.versionNumber = "BETA 04/17/23 - Public Randomness";
 global.season = seasons.none;
 global.selectedSave = "SaveSlot1.ini";
 #endregion
@@ -791,6 +791,7 @@ global.inStage = false;
 for (var i = 0; i < 4; i++) global.stageCollectibleTreasures[i] = -1;
 global.hasInvinCandy = false;
 global.hasMintLeaf = false;
+global.globalSpeedMult = 1;
 
 #region Demo
 global.demoBeatGreenGreens = false;

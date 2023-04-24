@@ -15,7 +15,7 @@ function scr_Player_ExecuteJump()
 		parJump.spdBuiltIn = 6;
 		parJump.fricSpd = .6;
 		parJump.direction = 90 + (20 * dir);
-		vsp = -jumpspeed + (vspCollision / 2);
+		vsp = -jumpspeed * speedMultFinal + (vspCollision / 2);
 		break;
 				
 		case playerCharacters.waddleDee:
@@ -31,7 +31,7 @@ function scr_Player_ExecuteJump()
 		parJump.direction = 90 + (20 * dir);
 		sprite_index = sprJump;
 		image_index = 0;
-		vsp = -jumpspeed + (vspCollision / 2);
+		vsp = -jumpspeed * speedMultFinal + (vspCollision / 2);
 		break;
 				
 		case playerCharacters.waddleDoo:
@@ -45,7 +45,7 @@ function scr_Player_ExecuteJump()
 		parJump.direction = 90 + (20 * dir);
 		sprite_index = sprJump;
 		image_index = 0;
-		vsp = -jumpspeed + (vspCollision / 2);
+		vsp = -jumpspeed * speedMultFinal + (vspCollision / 2);
 		break;
 				
 		case playerCharacters.brontoBurt:
@@ -59,7 +59,7 @@ function scr_Player_ExecuteJump()
 		parJump.direction = 90 + (20 * dir);
 		sprite_index = sprJump;
 		image_index = 0;
-		vsp = -jumpspeed + (vspCollision / 2);
+		vsp = -jumpspeed * speedMultFinal + (vspCollision / 2);
 		break;
 				
 		case playerCharacters.twizzy:
@@ -73,7 +73,7 @@ function scr_Player_ExecuteJump()
 		parJump.direction = 90 + (20 * dir);
 		sprite_index = sprJump;
 		image_index = 0;
-		vsp = -jumpspeed + (vspCollision / 2);
+		vsp = -jumpspeed * speedMultFinal + (vspCollision / 2);
 		break;
 				
 		case playerCharacters.tookey:
@@ -87,7 +87,7 @@ function scr_Player_ExecuteJump()
 		parJump.direction = 90 + (20 * dir);
 		sprite_index = sprJump;
 		image_index = 0;
-		vsp = -jumpspeed + (vspCollision / 2);
+		vsp = -jumpspeed * speedMultFinal + (vspCollision / 2);
 		break;
 				
 		case playerCharacters.sirKibble:
@@ -101,7 +101,7 @@ function scr_Player_ExecuteJump()
 		parJump.direction = 90 + (20 * dir);
 		sprite_index = sprJump;
 		image_index = 0;
-		vsp = -jumpspeed + (vspCollision / 2);
+		vsp = -jumpspeed * speedMultFinal + (vspCollision / 2);
 		break;
 				
 		case playerCharacters.bouncy:
@@ -109,7 +109,7 @@ function scr_Player_ExecuteJump()
 		audio_play_sound(snd_Jump,0,false);
 		sprite_index = sprJump;
 		image_index = 0;
-		vsp = -jumpspeed + (vspCollision / 2);
+		vsp = -jumpspeed * speedMultFinal + (vspCollision / 2);
 		break;
 				
 		default:
@@ -118,10 +118,10 @@ function scr_Player_ExecuteJump()
 		if ((canFallRoll) and (carriedItem == carriedItems.none) and (playerAbility != playerAbilities.sword) and (playerAbility != playerAbilities.parasol) and (playerAbility != playerAbilities.hammer)) fallRoll = true;
 		sprite_index = sprJump;
 		image_index = 0;
-		vsp = -jumpspeed + (vspCollision / 2);
+		vsp = -jumpspeed * speedMultFinal + (vspCollision / 2);
 		if (attackNumber == playerAttacks.slideJump)
 		{
-			vsp = -(jumpspeed * .7) + (vspCollision / 2);
+			vsp = -(jumpspeed * .7 * speedMultFinal) + (vspCollision / 2);
 		}
 		else
 		{

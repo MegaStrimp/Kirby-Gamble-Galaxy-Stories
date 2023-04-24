@@ -19,12 +19,12 @@ if (setupTimer == 0)
 
 event_inherited();
 
+//Hurt Player
+
+scr_Enemy_HurtsPlayer(dmg);
+
 if (!global.pause)
 {
-	//Hurt Player
-	
-	scr_Enemy_HurtsPlayer(dmg);
-	
 	//Scale Ex
 	
 	var scaleSpd = crownScaleSpd;

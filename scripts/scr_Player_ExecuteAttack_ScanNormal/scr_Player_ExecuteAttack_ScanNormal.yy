@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Scan",
-    "path": "folders/Scripts/Player/Execute Attack/Scan.yy",
+    "path": "folders/Scripts/Player/Execute Attacks/Scan.yy",
   },
 }

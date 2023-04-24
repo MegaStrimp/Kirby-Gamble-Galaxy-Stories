@@ -4,13 +4,13 @@
 
 event_inherited();
 
+//Hurt Player
+
+scr_Enemy_HurtsPlayer(dmg);
+
 if (!childPause)
 {
-	//Hurt Player
-	
 	scr_Object_Inhale(enemy);
-	
-	scr_Enemy_HurtsPlayer(dmg);
 	
 	hsp = scr_Friction(hsp, decel);
 	

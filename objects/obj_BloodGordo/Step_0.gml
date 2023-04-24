@@ -4,12 +4,12 @@
 
 event_inherited();
 
+//Hurt Player
+
+scr_Enemy_HurtsPlayer(dmg);
+
 if (!childPause)
 {
-	//Hurt Player
-	
-	scr_Enemy_HurtsPlayer(dmg);
-	
 	//States
 	
 	switch (state)

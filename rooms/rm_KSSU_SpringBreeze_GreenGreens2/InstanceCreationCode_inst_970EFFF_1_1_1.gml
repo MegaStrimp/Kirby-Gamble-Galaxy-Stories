@@ -1,3 +1,4 @@
 ///@description Creation Code
 
-targetRoom = rm_StageSelect;
+visible = false;
+targetRoom = rm_KSSU_SpringBreeze_GreenGreens1;

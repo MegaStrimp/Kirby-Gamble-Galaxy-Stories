@@ -75,7 +75,7 @@ if (!global.pause)
 			}
 			if (collidedPlayer.state = playerStates.carry)
 			{
-				collidedPlayer.sucked = 0;
+				scr_Player_ResetSucked(collidedPlayer);
 				collidedPlayer.cAbility = playerAbilities.none;
 				collidedPlayer.ateHeavy = false;
 				collidedPlayer.ateAbilityStar = -1;

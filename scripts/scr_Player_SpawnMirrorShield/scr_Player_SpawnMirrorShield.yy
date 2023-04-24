@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Draw",
-    "path": "folders/Scripts/Player/Draw.yy",
+    "name": "Execute Moves",
+    "path": "folders/Scripts/Player/Execute Moves.yy",
   },
 }
