@@ -28,6 +28,7 @@ followedPath = pth_Enemy_Chuckie;
 sound1Played = false;
 sound2Played = false;
 sound3Played = false;
+inhaledFunction = scr_Enemy_Inhaled_Chuckie;
 
 //Timers
 

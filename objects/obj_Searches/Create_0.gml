@@ -21,6 +21,7 @@ ability = playerAbilities.crash;
 points = searches_Points;
 hasXKnockback = true;
 hasYKnockback = true;
+soundPlaying = -1;
 
 charge = false;
 scaleExTemp = 0;

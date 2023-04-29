@@ -1048,6 +1048,7 @@ if (parentPause)
 	}
 	else if (hurtStopTimer == 0)
 	{
+		shakeDividend = shakeDividendDefault;
 		show_debug_message("Counting hitstop");
 		hurtStopTimer = -1;
 	}

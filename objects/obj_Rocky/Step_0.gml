@@ -101,7 +101,7 @@ if (!childPause)
 	}
 	
 	if ((animDir == 1) and (image_index >= image_number - 1)) image_index = image_number - 1;
-	if ((animDir == -1) and (image_index <= 1)) image_index = 1;
+	if ((animDir == -1) and (image_index <= 0)) image_index = 1;
 	
 	//Fall
 	
@@ -134,6 +134,8 @@ if (!childPause)
 			obj_Camera.shakeX = 2;
 			obj_Camera.shakeY = 2;
 		}
+		
+		if (state == 2) image_index = 0;
 	}
 	
 	#region Attack Timer

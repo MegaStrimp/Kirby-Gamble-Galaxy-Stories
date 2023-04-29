@@ -12,8 +12,8 @@
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy",
+    "name": "Debug",
+    "path": "folders/Tile Sets/Debug.yy",
   },
   "spriteId": {
     "name": "tile_GGSDebug",

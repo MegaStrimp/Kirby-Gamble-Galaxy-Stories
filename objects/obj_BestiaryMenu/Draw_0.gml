@@ -110,6 +110,10 @@ draw_sprite(bestiaryArray[# bestiarySelection,8],0,447,32);
 draw_sprite(bestiaryArray[# bestiarySelection,5],0,153,122);
 #endregion
 
+#region Set Bar Font
+draw_set_font(global.fontBestiary);
+#endregion
+
 #region Skin Bar
 if (bestiaryArray[# bestiarySelection,10] > 0)
 {
@@ -117,16 +121,40 @@ if (bestiaryArray[# bestiarySelection,10] > 0)
 	
 	draw_sprite(spr_Menu_Collection_Bestiary_Hud_UpButton,(selection == "skinBarUp"),464,86);
 	draw_sprite(spr_Menu_Collection_Bestiary_Hud_DownButton,(selection == "skinBarDown"),464,94);
+	
+	var skinNumber = "00" + string(skinSelected);
+	if (skinSelected > 99)
+	{
+		skinNumber = string(skinSelected);
+	}
+	else if (skinSelected > 9)
+	{
+		skinNumber = "0" + string(skinSelected);
+	}
+	
+	draw_text(426,89,skinNumber);
 }
 #endregion
 
 #region Color Bar
-if (array_length(bestiaryCosmeticsArray[bestiaryArray[# bestiarySelection,9]][colorSelected]) > 1)
+if (array_length(bestiaryCosmeticsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1)
 {
 	draw_sprite(spr_Menu_Collection_Bestiary_Hud_ColorBar,0,346,107);
 	
 	draw_sprite(spr_Menu_Collection_Bestiary_Hud_UpButton,(selection == "colorBarUp"),464,109);
 	draw_sprite(spr_Menu_Collection_Bestiary_Hud_DownButton,(selection == "colorBarDown"),464,117);
+	
+	var colorNumber = "00" + string(colorSelected);
+	if (colorSelected > 99)
+	{
+		colorNumber = string(colorSelected);
+	}
+	else if (colorSelected > 9)
+	{
+		colorNumber = "0" + string(colorSelected);
+	}
+	
+	draw_text(426,112,colorNumber);
 }
 #endregion
 
@@ -137,6 +165,18 @@ if (array_length(bestiaryAnimationsArray[bestiaryArray[# bestiarySelection,9]][s
 	
 	draw_sprite(spr_Menu_Collection_Bestiary_Hud_UpButton,(selection == "animBarUp"),464,132);
 	draw_sprite(spr_Menu_Collection_Bestiary_Hud_DownButton,(selection == "animBarDown"),464,140);
+	
+	var animNumber = "00" + string(animSelected);
+	if (animSelected > 99)
+	{
+		animNumber = string(animSelected);
+	}
+	else if (animSelected > 9)
+	{
+		animNumber = "0" + string(animSelected);
+	}
+	
+	draw_text(426,135,animNumber);
 }
 #endregion
 #endregion

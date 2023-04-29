@@ -21,3 +21,7 @@ if (setupTimer == 0)
 #region Event Inherited
 event_inherited();
 #endregion
+
+#region Destroy
+if (!instance_exists(owner)) instance_destroy();
+#endregion

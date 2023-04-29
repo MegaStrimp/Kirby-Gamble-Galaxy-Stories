@@ -153,10 +153,12 @@ parentPause = false;
 childPauseHard = false;
 childPause = false;
 hurtFunction = func_HurtDefault;
+inhaledFunction = -1;
 hurtType = 0;
 collidingHitbox = -1; // use for practical purposes. clear after enemy recovers
 backupFlags = 0;
-shakeDividend = 0;
+shakeDividendDefault = .1;
+shakeDividend = shakeDividendDefault;
 #endregion
 
 #region Timers

@@ -1,5 +1,9 @@
 ///@description Main
 
+#region Stop Sound
+if ((hurt) and (audio_is_playing(soundPlaying))) audio_stop_sound(soundPlaying);
+#endregion
+
 //Variables
 
 if (sign(hsp) == 0)
@@ -215,7 +219,7 @@ if (!childPause)
 			
 			case 1:
 			if (audio_is_playing(snd_FoleyDrop)) audio_stop_sound(snd_FoleyDrop);
-			audio_play_sound(snd_FoleyDrop,0,false);
+			soundPlaying = audio_play_sound(snd_FoleyDrop,0,false);
 			jumpspeed = 4;
 			gravNormal = .2;
 			gravLimitNormal = 5;

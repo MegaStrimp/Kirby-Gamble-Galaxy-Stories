@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "tile_GearCube_Hangar",
-  "bbox_bottom": 74,
-  "bbox_left": 21,
-  "bbox_right": 98,
+  "bbox_bottom": 119,
+  "bbox_left": 0,
+  "bbox_right": 479,
   "bbox_top": 16,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"52b84ed4-be5a-4413-845c-4d04c64ab924",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"db2ed529-a7df-467d-94fa-d56068ecc7c1",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 96,
+  "height": 1200,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"37875274-49cf-4c0f-b022-5a1e771ad933","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f096cf42-582d-4d24-b501-6bc7ccd67442","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"52b84ed4-be5a-4413-845c-4d04c64ab924","path":"sprites/tile_GearCube_Hangar/tile_GearCube_Hangar.yy",},},},"Disabled":false,"id":"addf4a42-415c-4f32-a036-f1e6d2268bc7","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"db2ed529-a7df-467d-94fa-d56068ecc7c1","path":"sprites/tile_GearCube_Hangar/tile_GearCube_Hangar.yy",},},},"Disabled":false,"id":"139162e2-522c-43bd-9be7-236212b70269","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 120,
+  "width": 480,
 }

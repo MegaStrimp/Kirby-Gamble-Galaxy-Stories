@@ -16,7 +16,7 @@ else
 event_inherited();
 
 #region Friction
-if ((!childPauseHard) and ((grounded) or (!hasYCollision))) hsp = scr_Friction(hsp,decel);
+if ((!childPauseHard) and ((grounded) or (attack) or (!hasYCollision))) hsp = scr_Friction(hsp,decel);
 #endregion
 
 //Hurt Player

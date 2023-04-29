@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy",
+    "name": "Green Greens",
+    "path": "folders/Tile Sets/Sweet Breeze/KSSU/Green Greens.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy",
+    "name": "Debug",
+    "path": "folders/Tile Sets/Debug.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

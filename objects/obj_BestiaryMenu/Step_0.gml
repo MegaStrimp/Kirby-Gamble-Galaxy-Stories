@@ -12,6 +12,7 @@ if (!global.pause)
 	{
 		switch (selection)
 		{
+			#region Bestiary
 			case "bestiary":
 			if (((keyUpPressed) or ((autoScrollTick) and (keyUpHold))) and (bestiarySelection != 0))
 			{
@@ -47,13 +48,45 @@ if (!global.pause)
 			{
 				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 				audio_play_sound(snd_BossHealth,0,false);
-				selection = "back";
+				
+				if (bestiaryArray[# bestiarySelection,10] > 0) //Skin
+				{
+					selection = "skinBarUp";
+				}
+				else if (array_length(bestiaryCosmeticsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1) //Color
+				{
+					selection = "colorBarUp";
+				}
+				else if (array_length(bestiaryAnimationsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1) //Anim
+				{
+					selection = "animBarUp";
+				}
+				else //None
+				{
+					selection = "back";
+				}
 			}
 			if (keyRightPressed)
 			{
 				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 				audio_play_sound(snd_BossHealth,0,false);
-				selection = "back";
+				
+				if (bestiaryArray[# bestiarySelection,10] > 0) //Skin
+				{
+					selection = "skinBarUp";
+				}
+				else if (array_length(bestiaryCosmeticsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1) //Color
+				{
+					selection = "colorBarUp";
+				}
+				else if (array_length(bestiaryAnimationsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1) //Anim
+				{
+					selection = "animBarUp";
+				}
+				else //None
+				{
+					selection = "back";
+				}
 			}
 			
 			if (!instance_exists(obj_Fade))
@@ -62,6 +95,7 @@ if (!global.pause)
 				{
 					if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
 					audio_play_sound(snd_ButtonYes,0,false);
+					
 					select = true;
 				}
 			}
@@ -71,21 +105,391 @@ if (!global.pause)
 				select = false;
 			}
 			
-			cancelAutoScroll = !(((keyLeftHold) or (keyRightHold)) and !((keyLeftHold) and (keyRightHold)));
+			cancelAutoScroll = !(((keyUpHold) or (keyDownHold)) and !((keyUpHold) and (keyDownHold)));
 			break;
+			#endregion
 			
+			#region Skin Bar Up
+			case "skinBarUp":
+			if (keyUpPressed)
+			{
+				if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+				audio_play_sound(snd_ButtonChange,0,false);
+				
+				selection = "back";
+			}
+			if (keyDownPressed)
+			{
+				if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+				audio_play_sound(snd_ButtonChange,0,false);
+				
+				selection = "skinBarDown";
+			}
+			if (keyLeftPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				
+				selection = "bestiary";
+			}
+			if (keyRightPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				
+				selection = "bestiary";
+			}
+			
+			if ((keyJumpPressed) or (keyStartPressed) or ((mouse_check_button_pressed(mb_left)) and ((point_in_rectangle(mouse_x,mouse_y,149,38,331,190)))))
+			{
+				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+				audio_play_sound(snd_ButtonYes,0,false);
+				
+				select = true;
+			}
+			
+			if (select)
+			{
+				colorSelected = 0;
+				animSelected = 0;
+				
+				skinSelected += 1;
+				if (skinSelected >= bestiaryArray[# bestiarySelection,10]) skinSelected -= bestiaryArray[# bestiarySelection,10];
+				
+				select = false;
+			}
+			break;
+			#endregion
+			
+			#region Skin Bar Down
+			case "skinBarDown":
+			if (keyUpPressed)
+			{
+				if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+				audio_play_sound(snd_ButtonChange,0,false);
+				
+				selection = "skinBarUp";
+			}
+			if (keyDownPressed)
+			{
+				if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+				audio_play_sound(snd_ButtonChange,0,false);
+				
+				if (array_length(bestiaryCosmeticsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1) //Color
+				{
+					selection = "colorBarUp";
+				}
+				else if (array_length(bestiaryAnimationsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1) //Anim
+				{
+					selection = "animBarUp";
+				}
+				else //None
+				{
+					selection = "back";
+				}
+			}
+			if (keyLeftPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				
+				selection = "bestiary";
+			}
+			if (keyRightPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				
+				selection = "bestiary";
+			}
+			
+			if ((keyJumpPressed) or (keyStartPressed) or ((mouse_check_button_pressed(mb_left)) and ((point_in_rectangle(mouse_x,mouse_y,149,38,331,190)))))
+			{
+				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+				audio_play_sound(snd_ButtonYes,0,false);
+				
+				select = true;
+			}
+			
+			if (select)
+			{
+				colorSelected = 0;
+				animSelected = 0;
+				
+				skinSelected -= 1;
+				if (skinSelected < 0) skinSelected += bestiaryArray[# bestiarySelection,10];
+				
+				select = false;
+			}
+			break;
+			#endregion
+			
+			#region Color Bar Up
+			case "colorBarUp":
+			if (keyUpPressed)
+			{
+				if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+				audio_play_sound(snd_ButtonChange,0,false);
+				
+				if (bestiaryArray[# bestiarySelection,10] > 0) //Skin
+				{
+					selection = "skinBarDown";
+				}
+				else //None
+				{
+					selection = "back";
+				}
+			}
+			if (keyDownPressed)
+			{
+				if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+				audio_play_sound(snd_ButtonChange,0,false);
+				
+				selection = "colorBarDown";
+			}
+			if (keyLeftPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				
+				selection = "bestiary";
+			}
+			if (keyRightPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				
+				selection = "bestiary";
+			}
+			
+			if ((keyJumpPressed) or (keyStartPressed) or ((mouse_check_button_pressed(mb_left)) and ((point_in_rectangle(mouse_x,mouse_y,149,38,331,190)))))
+			{
+				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+				audio_play_sound(snd_ButtonYes,0,false);
+				
+				select = true;
+			}
+			
+			if (select)
+			{
+				colorSelected += 1;
+				if (colorSelected >= array_length(bestiaryCosmeticsArray[bestiaryArray[# bestiarySelection,9]][skinSelected])) colorSelected -= array_length(bestiaryCosmeticsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]);
+				
+				select = false;
+			}
+			break;
+			#endregion
+			
+			#region Color Bar Down
+			case "colorBarDown":
+			if (keyUpPressed)
+			{
+				if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+				audio_play_sound(snd_ButtonChange,0,false);
+				
+				selection = "colorBarUp";
+			}
+			if (keyDownPressed)
+			{
+				if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+				audio_play_sound(snd_ButtonChange,0,false);
+				
+				if (array_length(bestiaryAnimationsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1) //Anim
+				{
+					selection = "animBarUp";
+				}
+				else //None
+				{
+					selection = "back";
+				}
+			}
+			if (keyLeftPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				
+				selection = "bestiary";
+			}
+			if (keyRightPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				
+				selection = "bestiary";
+			}
+			
+			if ((keyJumpPressed) or (keyStartPressed) or ((mouse_check_button_pressed(mb_left)) and ((point_in_rectangle(mouse_x,mouse_y,149,38,331,190)))))
+			{
+				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+				audio_play_sound(snd_ButtonYes,0,false);
+				
+				select = true;
+			}
+			
+			if (select)
+			{
+				colorSelected -= 1;
+				if (colorSelected < 0) colorSelected += array_length(bestiaryCosmeticsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]);
+				
+				select = false;
+			}
+			break;
+			#endregion
+			
+			#region Anim Bar Up
+			case "animBarUp":
+			if (keyUpPressed)
+			{
+				if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+				audio_play_sound(snd_ButtonChange,0,false);
+				
+				if (array_length(bestiaryCosmeticsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1) //Color
+				{
+					selection = "colorBarDown";
+				}
+				else if (bestiaryArray[# bestiarySelection,10] > 0) //Skin
+				{
+					selection = "skinBarDown";
+				}
+				else //None
+				{
+					selection = "back";
+				}
+			}
+			if (keyDownPressed)
+			{
+				if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+				audio_play_sound(snd_ButtonChange,0,false);
+				
+				selection = "animBarDown";
+			}
+			if (keyLeftPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				
+				selection = "bestiary";
+			}
+			if (keyRightPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				
+				selection = "bestiary";
+			}
+			
+			if ((keyJumpPressed) or (keyStartPressed) or ((mouse_check_button_pressed(mb_left)) and ((point_in_rectangle(mouse_x,mouse_y,149,38,331,190)))))
+			{
+				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+				audio_play_sound(snd_ButtonYes,0,false);
+				
+				select = true;
+			}
+			
+			if (select)
+			{
+				animSelected += 1;
+				if (animSelected >= array_length(bestiaryAnimationsArray[bestiaryArray[# bestiarySelection,9]][skinSelected])) animSelected -= array_length(bestiaryAnimationsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]);
+				
+				select = false;
+			}
+			break;
+			#endregion
+			
+			#region Anim Bar Down
+			case "animBarDown":
+			if (keyUpPressed)
+			{
+				if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+				audio_play_sound(snd_ButtonChange,0,false);
+				
+				selection = "animBarUp";
+			}
+			if (keyDownPressed)
+			{
+				if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
+				audio_play_sound(snd_ButtonChange,0,false);
+				
+				selection = "back";
+			}
+			if (keyLeftPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				
+				selection = "bestiary";
+			}
+			if (keyRightPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				
+				selection = "bestiary";
+			}
+			
+			if ((keyJumpPressed) or (keyStartPressed) or ((mouse_check_button_pressed(mb_left)) and ((point_in_rectangle(mouse_x,mouse_y,149,38,331,190)))))
+			{
+				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+				audio_play_sound(snd_ButtonYes,0,false);
+				
+				select = true;
+			}
+			
+			if (select)
+			{
+				animSelected -= 1;
+				if (animSelected < 0) animSelected += array_length(bestiaryAnimationsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]);
+				
+				select = false;
+			}
+			break;
+			#endregion
+			
+			#region Back
 			case "back":
 			if (keyUpPressed)
 			{
 				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 				audio_play_sound(snd_BossHealth,0,false);
-				selection = "back";
+				
+				if (array_length(bestiaryAnimationsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1) //Anim
+				{
+					selection = "animBarDown";
+				}
+				else if (array_length(bestiaryCosmeticsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1) //Color
+				{
+					selection = "colorBarDown";
+				}
+				else if (bestiaryArray[# bestiarySelection,10] > 0) //Skin
+				{
+					selection = "skinBarDown";
+				}
+				else //None
+				{
+					selection = "back";
+				}
 			}
 			if (keyDownPressed)
 			{
 				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 				audio_play_sound(snd_BossHealth,0,false);
-				selection = "back";
+				
+				if (bestiaryArray[# bestiarySelection,10] > 0) //Skin
+				{
+					selection = "skinBarUp";
+				}
+				else if (array_length(bestiaryCosmeticsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1) //Color
+				{
+					selection = "colorBarUp";
+				}
+				else if (array_length(bestiaryAnimationsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1) //Anim
+				{
+					selection = "animBarUp";
+				}
+				else //None
+				{
+					selection = "back";
+				}
 			}
 			if (keyLeftPressed)
 			{
@@ -118,6 +522,7 @@ if (!global.pause)
 				select = false;
 			}
 			break;
+			#endregion
 		}
 		
 		if (keyAttackPressed)

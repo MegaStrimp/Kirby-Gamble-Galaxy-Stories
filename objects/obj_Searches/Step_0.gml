@@ -1,5 +1,9 @@
 ///@description Main
 
+#region Stop Sound
+if ((hurt) and (audio_is_playing(soundPlaying))) audio_stop_sound(soundPlaying);
+#endregion
+
 //Event Inherited
 
 event_inherited();
@@ -19,7 +23,7 @@ if (!childPause)
 	if ((!charge) and ((instance_exists(obj_Player)) and (distance_to_object(obj_Player) < 90)))
 	{
 		if (audio_is_playing(snd_SearchesActive)) audio_stop_sound(snd_SearchesActive);
-		audio_play_sound(snd_SearchesActive,0,false);
+		soundPlaying = audio_play_sound(snd_SearchesActive,0,false);
 		charge = true;
 		explodeTimer = explodeTimerMax;
 	}

@@ -2248,18 +2248,22 @@ else if (deathTimer == 0)
 	{
 		case 0:
 		global.abilityP1 = playerAbilities.none;
+		global.invinCandyTimerP1 = -1;
 		break;
 		
 		case 1:
 		global.abilityP2 = playerAbilities.none;
+		global.invinCandyTimerP2 = -1;
 		break;
 		
 		case 2:
 		global.abilityP3 = playerAbilities.none;
+		global.invinCandyTimerP3 = -1;
 		break;
 		
 		case 3:
 		global.abilityP4 = playerAbilities.none;
+		global.invinCandyTimerP4 = -1;
 		break;
 	}
 	var musDeath = mus_Death1;

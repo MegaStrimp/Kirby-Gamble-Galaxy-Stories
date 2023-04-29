@@ -12,8 +12,8 @@
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy",
+    "name": "Green Greens",
+    "path": "folders/Tile Sets/GGS/Green Greens.yy",
   },
   "spriteId": {
     "name": "tile_GreenGreens_Caves",

@@ -11,6 +11,14 @@ function scr_Object_Inhale(argument0)
 	if ((place_meeting(x,y,obj_InhaleMask)) and (instance_number(obj_EatMe) < 5))
 	{
 		var inhaleMask = instance_place(x,y,obj_InhaleMask);
+		
+		#region Enemy Inhaled Function
+		if ((object_get_parent(object_index) == obj_Enemy) and (inhaledFunction != -1))
+		{
+			script_execute(inhaledFunction);
+		}
+		#endregion
+		
 		if (object_index == obj_AbilityDropStar)
 		{
 			if (isBubble)
@@ -82,7 +90,10 @@ function scr_Object_Inhale(argument0)
 				eatMe.image_yscale = abs(image_yscale);
 				eatMe.dirX = sign(image_xscale);
 				eatMe.dirY = sign(image_yscale);
-				if (object_get_parent(object_index) == obj_Enemy) eatMe.squadType = squadType;
+				if (object_get_parent(object_index) == obj_Enemy)
+				{
+					eatMe.squadType = squadType;
+				}
 				if (variable_instance_exists(id,"paletteIndex")) eatMe.paletteIndex = paletteIndex;
 				switch (object_index)
 				{

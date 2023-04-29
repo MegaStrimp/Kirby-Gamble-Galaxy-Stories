@@ -4,7 +4,7 @@
   "name": "tile_GreenGreens_Caves",
   "bbox_bottom": 191,
   "bbox_left": 0,
-  "bbox_right": 217,
+  "bbox_right": 239,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,20 +13,20 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a1760b60-77ab-413d-855e-43beaf965ca3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b7185c11-7a71-4595-acad-9d581f0a8817",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 192,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"cbfa5b0b-8161-4dd8-b2a5-5b9020b239e3","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"aa077d2d-8a33-4300-ac78-6457e5bf77b0","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy",
+    "name": "Green Greens",
+    "path": "folders/Tile Sets/GGS/Green Greens.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a1760b60-77ab-413d-855e-43beaf965ca3","path":"sprites/tile_GreenGreens_Caves/tile_GreenGreens_Caves.yy",},},},"Disabled":false,"id":"f5bee89a-70f2-4c19-8fb8-ec05179dce7a","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b7185c11-7a71-4595-acad-9d581f0a8817","path":"sprites/tile_GreenGreens_Caves/tile_GreenGreens_Caves.yy",},},},"Disabled":false,"id":"e6550532-a1b5-4611-a6d8-e34779c1cb7f","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

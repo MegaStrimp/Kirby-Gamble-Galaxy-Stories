@@ -47,7 +47,7 @@ if (!childPause)
 		if (!hurt)
 		{
 			scr_AI_VerticalWaveMovement(false);
-			if (!attack) scr_AI_HorizontalStraightMovement(true,true);
+			if (!attack) scr_AI_HorizontalStraightMovement(true,false);
 		}
 		
 		image_speed = 1;
