@@ -110,7 +110,7 @@ enum debugObject
 	yolky,
 	wheelie,
 	laserBall,
-	juckle,
+	jackle,
 	kookler,
 	ufo,
 	bouncySis,

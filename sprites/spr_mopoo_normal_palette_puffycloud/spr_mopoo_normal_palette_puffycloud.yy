@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Palettes",
-    "path": "folders/Sprites/Enemies/Mopoo/Palettes.yy",
+    "path": "folders/Sprites/Enemies/Mopoo/Normal/Palettes.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

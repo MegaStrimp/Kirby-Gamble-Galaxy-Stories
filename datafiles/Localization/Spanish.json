@@ -277,280 +277,427 @@
         {
             "Title": "Waddle Dee",
             
-            "Description": "El ciudadano más común del Planeta Pop. Muchos deciden trabajar para el Rey Dedede, algunos incluso empuñando lanzas o sombrillas."
+            "Description": ""
         },
         
         "Waddle Doo":
         {
             "Title": "Waddle Doo",
             
-            "Description": "Estas criaturas son conocidas por lanzar un rayo a través de su único gran ojo."
+            "Description": ""
         },
         
         "Bronto Burt":
         {
             "Title": "Bronto",
             
-            "Description": "Un enemigo volador que echa a volar cuando alguien se acerca, y a veces tratará de estrellarse contra ti."
+            "Description": ""
         },
         
         "Twizzy":
         {
             "Title": "Twizzy",
             
-            "Description": "Un Tookey bebé, nunca visto lejos de su madre. Son famosos por chocarse contra otros por diversión."
+            "Description": ""
         },
         
         "Tookey":
         {
             "Title": "Tookey",
             
-            "Description": "La versión adulta de Twizzy que siempre está junto a sus polluelos. Atacará a quien sea que se acerque a sus pequeños."
+            "Description": ""
         },
         
         "Sir Kibble":
         {
             "Title": "Sir Kibble",
             
-            "Description": "Un caballero de la clase de los cuchillos bumerán. Concentrando su energía, puede lanzar una cuchilla más grande."
+            "Description": ""
         },
         
         "Gordo":
         {
             "Title": "Gordo",
             
-            "Description": "¡Una bola de pinchos invencible! Puede romper estrellas de habilidad al tocarlas."
+            "Description": ""
         },
         
         "Blood Gordo":
         {
             "Title": "Gordo Sangriento",
             
-            "Description": "Una variante muy agresiva del clásico Gordo. Sus pinchos cortan el aire y su metal brilla como un sol rojizo."
+            "Description": ""
         },
         
         "Shotzo":
         {
             "Title": "Shotzo",
             
-            "Description": "Estos cañones son habituales en la Hal Abarda y en el Castillo Dedede. Hay dos tipos: de tiro simple y de tiro triple."
+            "Description": ""
         },
         
         "Mystic Doo":
         {
             "Title": "Doo Místico",
             
-            "Description": "Un Waddle Doo corrompido por el Flux. Su nuevo poder le permite crear una barrera de rayos que puede disparar hacia delante."
+            "Description": ""
         },
         
         "Bouncy":
         {
             "Title": "Bouncy",
             
-            "Description": "¡Un amiguito muy adorable! Bouncy bota y rebota sin parar. Una vida simple pero feliz. Esa carita resulta familiar..."
+            "Description": ""
         },
         
         "Mr Boogie":
         {
             "Title": "Sr. Boogie",
             
-            "Description": "Un moco viviente que parece vagar sin rumbo, pero en realidad está buscando algún pañuelo."
+            "Description": ""
         },
         
         "Searches":
         {
             "Title": "Searches",
             
-            "Description": "Una pequeña bomba con cara. Si te acercas demasiado, explotará, así que mantente bien lejos."
+            "Description": ""
         },
         
         "Hive Drone":
         {
             "Title": "Hive Drone",
             
-            "Description": "Un robot minero cuyo único propósito es extraer un misterioso mineral llamado Alexandrum."
+            "Description": ""
         },
         
         "Wapod":
         {
             "Title": "Wapod",
             
-            "Description": "Estos fantasmas se parecen extrañamente a los Waddle Dees, pero seguro que es pura casualidad. Salen de jarrones y ascienden hacia el infinito."
+            "Description": ""
         },
         
         "Flamebelch":
         {
             "Title": "Flamebelch",
             
-            "Description": "Una antigua vela que ha cobrado vida gracias al Flux. Detesta los refrescos gaseosos; siempre le dan hipo."
+            "Description": ""
         },
         
         "Cappy":
         {
             "Title": "Cozy",
             
-            "Description": "Uno de los habitantes nativos del planeta Pop. Estos tímidos seres lanzan su sombrero champiñón al aire cuando te acercas, y entran en pánico si se lo roban."
+            "Description": ""
         },
         
         "Broom Hatter":
         {
             "Title": "Sombrescoba",
             
-            "Description": "Estos pequeñines tienen un objetivo: limpiar todo lo que puedan, lo cual se convierte en un mal hábito que les hace estrellarse con cualquiera que se ponga delante. Aunque parezcan brujos, no son malos."
+            "Description": ""
         },
         
         "Coconut":
         {
             "Title": "Coco",
             
-            "Description": "Estos frutos de palmeras están llenos de explosivos que esparcen las semillas de su interior, pero solo caen cuando pasas por debajo, ¡así que ten cuidado!"
+            "Description": ""
         },
         
         "Noddy":
         {
             "Title": "Noddy",
             
-            "Description": "Un enemigo que prefiere dormir antes que luchar. Se le suele ver cerca de la Fuente de los Sueños."
+            "Description": ""
         },
         
         "Blado":
         {
             "Title": "Filo",
             
-            "Description": "¡Shing! Este airado personaje rueda por el suelo veloz como un coche de carreras, tratando de cortar a sus enemigos. Fue creado por la mente de una misteriosa pintora, y su aspecto recuerda al de los Gordo."
+            "Description": ""
         },
         
         "Scarfy":
         {
             "Title": "Scarfy",
             
-            "Description": "Este engañoso enemigo parece adorable, pero si lo enfadas se pondrá hecho una furia y explotará tras unos segundos. No se puede absorber."
+            "Description": ""
         },
         
         "Rocky":
         {
             "Title": "Pedroso",
             
-            "Description": "Una roca viviente que intentará aplastar a sus enemigos con su cuerpo. Otorga la habilidad Piedra al absorberlo."
+            "Description": ""
         },
         
         "Grizzo":
         {
             "Title": "Grizzo",
             
-            "Description": "Un gran oso que vive en densos bosques. Si se le provoca, usará sus zarpas para agarrar a los enemigos y arañarles."
+            "Description": ""
         },
         
         "Jungle Bomb":
         {
             "Title": "Jungle Bomb",
             
-            "Description": "Un pequeño brote de piña que puede escupir bombas, pudiendo lanzar hasta 3."
+            "Description": ""
         },
         
         "Glunk":
         {
             "Title": "Anemonia",
             
-            "Description": "Una planta acuática que lanza proyectiles de agua por la boca, disparando hasta 5 cada vez."
+            "Description": ""
         },
         
         "Kabu":
         {
             "Title": "Kabu",
             
-            "Description": "Estas estatuas ancestrales giran a través de las tierras, chocandose contra quien sea tan desafortunado como para encontrarse en su camino."
+            "Description": ""
         },
         
         "Burning Leo":
         {
             "Title": "Burning Leo",
             
-            "Description": "Una criatura cabezona capaz de hacer muchos ataques de fuego, como disparar una bola de llamas."
+            "Description": ""
         },
         
         "Tomatoo":
         {
             "Title": "Tomatee",
             
-            "Description": "Una criatura que se parece mucho a un delicioso vegetal rojo. ¿O es una fruta? Siempre será un misterio."
+            "Description": ""
         },
         
         "'Onion'":
         {
             "Title": "Onión",
             
-            "Description": "Onión, al contrario de su nombre, es una especie de zanahoria misil nativa de los Jardines Ovalados. Les gusta esconderse en la tierra y emboscar a cualquiera que pase por delante."
+            "Description": ""
         },
         
         "Anemonee":
         {
             "Title": "Anemonito",
             
-            "Description": "Una criatura acuática con largos pelos sobresaliendo de su cabeza. Va bailando de un lado a otro siguiendo las olas de los océanos en los que residen."
+            "Description": ""
         },
         
         "Gim":
         {
             "Title": "Gim",
             
-            "Description": "Gim es un fanático de los yo-yós y también es un maestro usándolos. Se rumorea que tiene una colección de más de 50 yo-yós diferentes."
+            "Description": ""
         },
         
         "Poppy Bros Jr":
         {
             "Title": "Bomby Bros Jr.",
             
-            "Description": "Un niño que solo da problemas y tiene un amor innato por las explosiones. Nadie sabe de donde saca todas esas bombas."
+            "Description": ""
         },
         
         "Bobo":
         {
             "Title": "Bobo",
             
-            "Description": "Una criatura que parece una bola de fuego andante. Es más caliente que un Hot Head, pero no parece que piense mucho."
+            "Description": ""
         },
         
         "Foley":
         {
             "Title": "Fruma",
             
-            "Description": "No te dejes engañar por su apariencia. Esta criatura puede volar y explotar a voluntad. Se dejará caer desde el cielo como un misil para hacerte explotar. ¡Ten cuidado!"
+            "Description": ""
         },
         
         "Nidoo":
         {
             "Title": "Nidoo",
             
-            "Description": "¡Eso no es una puerta! Si intentas entrar por una de estas, te asaltará e intentará aplastarte."
+            "Description": ""
         },
         
         "Como":
         {
             "Title": "Como",
             
-            "Description": "Nativos de Grass Land, estos arácnidos se balancean desde los árboles, esperando chocarse con alguien. Aunque no suele ocurrir. Se dice que hay una versión alternativa de esta especie que camina a dos patas..."
+            "Description": ""
         }
         ,
         "Cairn":
         {
             "Title": "Cairn",
             
-            "Description": "Una bonita pila de piedras. Salta un montón. ¡Boing!"
+            "Description": ""
         },
         
         "Bomber":
         {
             "Title": "Bomber",
             
-            "Description": "Enemigo extremadamente peligroso. Saltará de sitios altos y creará grandes explosiones que te dejarán frito."
+            "Description": ""
         },
         
         "Simirror":
         {
             "Title": "Espejín",
             
-            "Description": "Un poderoso mago con poderes de espejo. ¡Puede crear clones de sí mismo, desaparecer y mucho más!"
+            "Description": ""
+        },
+		
+		"Hothead":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Sparky":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Yolky":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Wheelie":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Pacloud":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Laser Ball":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Jackle":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Kookler":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Ufo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Bouncy Sis":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Flamer":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Chuckie":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Walky":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Mystic Block":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Lovely":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Plasma Wisp":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Capsule J2":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Cerulean":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Wizzer":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Mopoo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Golem":
+        {
+            "Title": "",
+            
+            "Description": ""
         }
     },
     
@@ -2511,7 +2658,7 @@
 
         "2": "No es fácil mantener un sitio así, ¿sabéis?",
 
-        "3": "Vine con un amigo, pero se debió de perder en medio de todo el conflicto con ese tipo siniestro…"
+        "3": "Vine con un amigo, pero se debió de perder en medio de todo el conflicto con ese tipo siniestro..."
       },
 
       "Are You Okay": {

@@ -328,9 +328,9 @@ function scr_Maykr_GetFromInventory(argument0)
 		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
 		break;
 		
-		case maykrObjects.juckle:
-		spawnedItemIndex = obj_Spawner_Juckle;
-		spawnedSprite = spr_Juckle_Normal_Idle;
+		case maykrObjects.jackle:
+		spawnedItemIndex = obj_Spawner_Jackle;
+		spawnedSprite = spr_Jackle_Normal_Idle;
 		spawnedXOffset = sprite_get_xoffset(spawnedSprite);
 		spawnedYOffset = sprite_get_yoffset(spawnedSprite);
 		break;

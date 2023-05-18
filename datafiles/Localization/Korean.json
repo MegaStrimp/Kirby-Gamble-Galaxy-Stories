@@ -273,280 +273,427 @@
         {
             "Title": "Waddle Dee",
             
-            "Description": "The most common of Popstar residents. Many have chosen to work for King Dedede, some even choosing to wield spears or parasols."
+            "Description": ""
         },
         
         "Waddle Doo":
         {
             "Title": "Waddle Doo",
             
-            "Description": "These creatures are known to shoot a beam out of their singular large eye."
+            "Description": ""
         },
         
         "Bronto Burt":
         {
             "Title": "Bronto Burt",
             
-            "Description": "A flying foe who takes to the skies whenever someone gets near, and will try and ram into you sometimes."
+            "Description": ""
         },
         
         "Twizzy":
         {
             "Title": "Twizzy",
             
-            "Description": "A baby Tookey, never seen far from its mother. They are known to ram into others for fun."
+            "Description": ""
         },
         
         "Tookey":
         {
             "Title": "Tookey",
             
-            "Description": "The adult variant of Twizzy that is always found near its chicks. It will ram into anyone who gets near its babies."
+            "Description": ""
         },
         
         "Sir Kibble":
         {
             "Title": "Sir Kibble",
             
-            "Description": "A knight of the bladed boomerang variety. By channeling his energy he can throw a larger blade."
+            "Description": ""
         },
         
         "Gordo":
         {
             "Title": "Gordo",
             
-            "Description": "An invincible ball of spikes, yowch! Can break ability stars upon contact."
+            "Description": ""
         },
         
         "Blood Gordo":
         {
             "Title": "Blood Gordo",
             
-            "Description": "A very angry variant of the classic Gordo. This version's horns pierce the air, and it's metal shines like a red sun."
+            "Description": ""
         },
         
         "Shotzo":
         {
             "Title": "Shotzo",
             
-            "Description": "These cannons are a staple of the Halberd and Castle Dedede's arsenals. Can come in single shot and 3 round burst flavors."
+            "Description": ""
         },
         
         "Mystic Doo":
         {
             "Title": "Mystic Doo",
             
-            "Description": "A Waddle Doo warped by the power of Flux. By utilizing its new power it can create a beam barrier, which can also be launched forward"
+            "Description": ""
         },
         
         "Bouncy":
         {
             "Title": "Bouncy",
             
-            "Description": "Such a pleasant little friend! Bouncies bounce up and down. A simple life, but a happy one. That little face looks familiar..."
+            "Description": ""
         },
         
         "Mr Boogie":
         {
             "Title": "Mr. Boogie",
             
-            "Description": "It's a sentient booger that seems to walk aimlessly, but in reality it’s looking for some tissues."
+            "Description": ""
         },
         
         "Searches":
         {
             "Title": "Searches",
             
-            "Description": "A small bomb with a face. If you get too close, it'll detonate, so steer clear."
+            "Description": ""
         },
         
         "Hive Drone":
         {
             "Title": "Hive Drone",
             
-            "Description": "A mining bot, built for the sole purpose of harvesting Alexandrum, a mysterious mineral."
+            "Description": ""
         },
         
         "Wapod":
         {
             "Title": "Wapod",
             
-            "Description": "These ghosts look oddly like Waddle Dees. It's probably a coincidence. They pop out of pots like funny genies, and fly up, up, and away!"
+            "Description": ""
         },
         
         "Flamebelch":
         {
             "Title": "Flamebelch",
             
-            "Description": "An old candle brought to life by flux. Has a distinct dislike for sodas, as it causes it to have severe hiccups."
+            "Description": ""
         },
         
         "Cappy":
         {
             "Title": "Cappy",
             
-            "Description": "One of the native residents of Popstar, these shy creatures will shoot their mushroom caps into the air when approached, and will panic if their cap is stolen."
+            "Description": ""
         },
         
         "Broom Hatter":
         {
             "Title": "Broom Hatter",
             
-            "Description": "These little guys have one goal; clean everything they can. This results in a bit of a bad habit, being ramming into people by accident. Despite their witchy appearances, they mean well."
+            "Description": ""
         },
         
         "Coconut":
         {
             "Title": "Coconut",
             
-            "Description": "These palm tree fruits are packed with explosives to spread the seeds inside, but only fall when you run under, so watch out!"
+            "Description": ""
         },
         
         "Noddy":
         {
             "Title": "Noddy",
             
-            "Description": "An enemy who prefers sleeping over fighting, most commonly found near the Fountain of Dreams."
+            "Description": ""
         },
         
         "Blado":
         {
             "Title": "Blado",
             
-            "Description": "Shing! This angry fellow rolls across the ground, quick as a racecar, trying to slice up it's foes. This creature was devised by the mind of a mysterious painter, and looks a bit like a Gordo."
+            "Description": ""
         },
         
         "Scarfy":
         {
             "Title": "Scarfy",
             
-            "Description": "This deceiving enemy looks cute at first glance, but anger it and it will become rabid and explode after a few seconds. Cannot be swallowed."
+            "Description": ""
         },
         
         "Rocky":
         {
             "Title": "Rocky",
             
-            "Description": "A sentient boulder that tries to crush threats with its body. Grants the stone ability upon swallowing."
+            "Description": ""
         },
         
         "Grizzo":
         {
             "Title": "Grizzo",
             
-            "Description": "A large bear that lives in dense forests. It can use its claws to grab onto foes and scratch them, usually when provoked."
+            "Description": ""
         },
         
         "Jungle Bomb":
         {
             "Title": "Jungle Bomb",
             
-            "Description": "A small pineapple sapling. Jungle Bombs will puke up bombs at threats, up to 3."
+            "Description": ""
         },
         
         "Glunk":
         {
             "Title": "Glunk",
             
-            "Description": "An aquatic plant who will periodically shoot water out of its mouth, up to 5 projectiles at a time."
+            "Description": ""
         },
         
         "Kabu":
         {
             "Title": "Kabu",
             
-            "Description": "These ancient statues spin across the land, ramming into whoever is unfortunate enough to be in their path."
+            "Description": ""
         },
         
         "Burning Leo":
         {
             "Title": "Burning Leo",
             
-            "Description": "A hotheaded creature capable of many fire based attacks, such as shooting a flame ball."
+            "Description": ""
         },
         
         "Tomatoo":
         {
             "Title": "Tomatoo",
             
-            "Description": "A creature that looks a lot like a juicy red vegetable. Or is it a fruit? It will forever be a mystery."
+            "Description": ""
         },
         
         "Onion":
         {
             "Title": "'Onion'",
             
-            "Description": "Onion, contrary to its name, is a missile like carrot creature native to egg gardens. They like to hide in the soil and ambush people passing by."
+            "Description": ""
         },
         
         "Anemonee":
         {
             "Title": "Anemonee",
             
-            "Description": "An aquatic creature with long tendrils jutting from its head. It dances back and forth to the waves of the oceans they reside in."
+            "Description": ""
         },
         
         "Gim":
         {
             "Title": "Gim",
             
-            "Description": "Gim is a fanatic of all things yoyos, and is a master of wielding them. Rumor has it their collection has over 50 different yoyos!"
+            "Description": ""
         },
         
         "Poppy Bros Jr":
         {
             "Title": "Poppy Bros Jr.",
             
-            "Description": "A trouble making kid with an innate love for explosives. Nobody knows where they get all of those bombs from."
+            "Description": ""
         },
         
         "Bobo":
         {
             "Title": "Bobo",
             
-            "Description": "A creature that appears to be a walking fireball. Hotter than a Hothead, but doesn't seem to think very much. "
+            "Description": ""
         },
         
         "Foley":
         {
             "Title": "Foley",
             
-            "Description": "Don't underestimate this guy by his cute appearance. This creature can fly and explode at will. It will drop out of the sky like an airstrike to explode, so look out!"
+            "Description": ""
         },
         
         "Nidoo":
         {
             "Title": "Nidoo",
             
-            "Description": "That's no door! If you try to go through these fake doors, they'll jump up and try to squish you!"
+            "Description": ""
         },
         
         "Como":
         {
             "Title": "Como",
             
-            "Description": "Native to Grass Land, these arachnids dangle from trees, hoping someone will bump into them. This rarely happens. It's said there is a variant of this species that can walk on two legs..."
+            "Description": ""
         }
         ,
         "Cairn":
         {
             "Title": "Cairn",
             
-            "Description": "A stack of cute rocks. Very jumpy fellows. Boing!"
+            "Description": ""
         },
         
         "Bomber":
         {
             "Title": "Bomber",
             
-            "Description": "Highly dangerous enemy. It will leap from ledges and release a big explosion, which will hurt you pretty badly."
+            "Description": ""
         },
         
         "Simirror":
         {
             "Title": "Simirror",
             
-            "Description": "A powerful magician, with strong mirror-oriented magic. He can create clones of himself, warp around, and more!"
+            "Description": ""
+        },
+		
+		"Hothead":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Sparky":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Yolky":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Wheelie":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Pacloud":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Laser Ball":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Jackle":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Kookler":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Ufo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Bouncy Sis":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Flamer":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Chuckie":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Walky":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Mystic Block":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Lovely":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Plasma Wisp":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Capsule J2":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Cerulean":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Wizzer":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Mopoo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Golem":
+        {
+            "Title": "",
+            
+            "Description": ""
         }
     },
     
@@ -2517,7 +2664,7 @@
 			
 			"2": "It's not easy running that place, you know!",
 			
-			"3": "I brought a friend with me too, but I think he may have gotten caught up in the conflict with that shady man…"
+			"3": "I brought a friend with me too, but I think he may have gotten caught up in the conflict with that shady man..."
         },
 		
 		"Are You Okay":

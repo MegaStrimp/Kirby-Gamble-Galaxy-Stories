@@ -2,7 +2,7 @@
 
 Waddle Block - Default
 Mystic Doo - Default
-Juckle - Default
+Jackle - Default
 Ufo - Default
 Bouncy Sis - Default
 Flamer - Default

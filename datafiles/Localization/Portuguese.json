@@ -277,280 +277,427 @@
         {
             "Title": "Waddle Dee",
             
-            "Description": "Os moradores mais comuns de Popstar. Muitos escolheram trabalhar para o Rei Dedede, alguns até escolhendo empunhar lanças ou sombrinhas."
+            "Description": ""
         },
         
         "Waddle Doo":
         {
             "Title": "Waddle Doo",
             
-            "Description": "Essas criaturas são conhecidas por atirar um raio de seu único olho."
+            "Description": ""
         },
         
         "Bronto Burt":
         {
             "Title": "Brontopiu",
             
-            "Description": "Um inimigo voador que sobe aos céus sempre que alguém chega perto, e às vezes vai tentar bater em você."
+            "Description": ""
         },
         
         "Twizzy":
         {
             "Title": "Piupiu",
             
-            "Description": "Um bebê Cocorico, nunca visto longe de sua mãe. Eles são conhecidos por bater nos outros por diversão."
+            "Description": ""
         },
         
         "Tookey":
         {
             "Title": "Cocorico",
             
-            "Description": "A variante adulta do Piupiu que sempre é encontrada perto de seus pintinhos. Ela vai bater em qualquer um que chegar perto de seus bebês."
+            "Description": ""
         },
         
         "Sir Kibble":
         {
             "Title": "Sr. Kibble",
             
-            "Description": "Um cavaleiro que usa um bumerangue laminado. Ao canalizar sua energia, ele pode lançar uma lâmina maior."
+            "Description": ""
         },
         
         "Gordo":
         {
             "Title": "Espinhaldo",
             
-            "Description": "Uma bola de espinhos invencível, ai! Pode quebrar estrelas de habilidade se elas tocarem ele."
+            "Description": ""
         },
         
         "Blood Gordo":
         {
             "Title": "Espinhaldo Sangrento",
             
-            "Description": "Uma variante muito raivosa do clássico Espinhaldo. Os chifres dessa versão perfuram o ar, e seu metal brilha como um sol vermelho."
+            "Description": ""
         },
         
         "Shotzo":
         {
             "Title": "Canhozo",
             
-            "Description": "Esses canhões são característicos dos arsenais do Halberd e do Castelo Dedede. Eles ou atiram uma vez ou atiram 3 em uma rajada circular."
+            "Description": ""
         },
         
         "Mystic Doo":
         {
             "Title": "Doo Místico",
             
-            "Description": "Um Waddle Doo distorcido pelo poder do Fluxo. Usando seu novo poder, ele pode criar uma barreira de raio, que também pode ser lançada para frente"
+            "Description": ""
         },
         
         "Bouncy":
         {
             "Title": "Quica",
             
-            "Description": "Um amiguinho tão simpático! As Quicas saltam para cima e para baixo. Uma vida simples, mas feliz. Suas carinhas parecem familiar..."
+            "Description": ""
         },
         
         "Mr Boogie":
         {
             "Title": "Sr. Boogie",
             
-            "Description": "É um meleca com vida que parece andar sem rumo, mas na realidade está procurando alguns lenços de papel."
+            "Description": ""
         },
         
         "Searches":
         {
             "Title": "Bombusca",
             
-            "Description": "Uma pequena bomba com uma cara. Se você chegar muito perto, ela vai detonar, então fique longe."
+            "Description": ""
         },
         
         "Hive Drone":
         {
             "Title": "Drone Colmeia",
             
-            "Description": "Um robô de mineração, construído com o único propósito de coletar Alexandrum, um mineral misterioso."
+            "Description": ""
         },
         
         "Wapod":
         {
             "Title": "Wapot",
             
-            "Description": "Esses fantasmas se parecem muito com Waddle Dees. Deve ser só coincidência. Eles saem de potes como gênios engraçados, e voam para cima, para cima, e para longe!"
+            "Description": ""
         },
         
         "Flamebelch":
         {
             "Title": "Expelchama",
             
-            "Description": "Uma vela velha trazida à vida pelo fluxo. Tem uma aversão por refrigerantes, porque eles fazem com que ela tenha soluços graves."
+            "Description": ""
         },
         
         "Cappy":
         {
             "Title": "Cappy",
             
-            "Description": "Um dos moradores nativos do planeta Pop, essas criaturas tímidas vão atirar seus chapéus de cogumelo para o ar quando se aproximar, e entrarão em pânico se seu chapéu for roubado."
+            "Description": ""
         },
         
         "Broom Hatter":
         {
             "Title": "Bruxassoura",
             
-            "Description": "Esses carinhas têm um objetivo; limpar tudo o que puderem. Isso faz eles terem um mau hábito de atropelar as pessoas por acidente. Apesar de sua aparência de bruxa, eles têm boas intenções."
+            "Description": ""
         },
         
         "Coconut":
         {
             "Title": "Coco",
             
-            "Description": "Esses frutos de palmeiras são cheios de explosivos para espalhar suas sementes de dentro, mas só caem quando você corre por baixo deles, então tome cuidado!"
+            "Description": ""
         },
         
         "Noddy":
         {
             "Title": "Noddy",
             
-            "Description": "Um inimigo que prefere dormir em vez de lutar, mais comumente encontrado perto da Fonte dos Sonhos."
+            "Description": ""
         },
         
         "Blado":
         {
             "Title": "Lâmino",
             
-            "Description": "Shing! Esse sujeito zangado rola pelo chão, rápido como um carro de corrida, tentando cortar seus inimigos. Essa criatura foi concebida pela mente de um misterioso pintor, e se parece um pouco com um Espinhaldo."
+            "Description": ""
         },
         
         "Scarfy":
         {
             "Title": "Scarfy",
             
-            "Description": "Esse inimigo enganador parece fofo à primeira vista, mas se você provocar ele, ele vai ficar raivoso e vai explodir depois de alguns segundos. Não pode ser engolido."
+            "Description": ""
         },
         
         "Rocky":
         {
             "Title": "Rochinha",
             
-            "Description": "Um pedregulho com vida que tenta esmagar ameaças com seu corpo. Dá a habilidade Pedra quando engolido."
+            "Description": ""
         },
         
         "Grizzo":
         {
             "Title": "Grizzo",
             
-            "Description": "Um grande urso que vive em florestas densas. Ele pode usar suas garras para agarrar inimigos e arranhar eles, geralmente quando provocado."
+            "Description": ""
         },
         
         "Jungle Bomb":
         {
             "Title": "Bomba da Selva",
             
-            "Description": "Uma pequena muda de abacaxi. Bombas da Selva vão cuspir até 3 bombas em ameaças."
+            "Description": ""
         },
         
         "Glunk":
         {
             "Title": "Anemon",
             
-            "Description": "Uma planta aquática que periodicamente dispara água pela boca, até 5 projéteis de cada vez."
+            "Description": ""
         },
         
         "Kabu":
         {
             "Title": "Kabu",
             
-            "Description": "Essas estátuas antigas giram pela terra, batendo em quem tiver a infelicidade de estar em seu caminho."
+            "Description": ""
         },
         
         "Burning Leo":
         {
             "Title": "Léo Flamejante",
             
-            "Description": "Uma criatura de cabeça quente capaz de muitos ataques de fogo, como atirar uma bola flamejante."
+            "Description": ""
         },
         
         "Tomatoo":
         {
             "Title": "Tomatee",
             
-            "Description": "Uma criatura que se parece muito com um suculento legume vermelho. Ou será que é uma fruta? Será para sempre um mistério."
+            "Description": ""
         },
         
         "'Onion'":
         {
             "Title": "'Cebola'",
             
-            "Description": "Cebola, ao contrário de seu nome, é uma criatura que parece uma cenoura nativa de jardins de ovos. Ele gosta de se esconder no solo e atacar as pessoas que passam."
+            "Description": ""
         },
         
         "Anemonee":
         {
             "Title": "Anêmonal",
             
-            "Description": "Uma criatura aquática com longos tentáculos saindo de sua cabeça. Ele dança para frente e para trás nas ondas dos oceanos onde residem."
+            "Description": ""
         },
         
         "Gim":
         {
             "Title": "Gim",
             
-            "Description": "Gim é um fanático por todas as coisas relacionadas a ioiôs, e é um mestre deles. Há rumores de que sua coleção tem mais de 50 ioiôs diferentes!"
+            "Description": ""
         },
         
         "Poppy Bros Jr":
         {
             "Title": "Bomby Bros. Jr.",
             
-            "Description": "Um garoto arteiro que ama explosivos. Ninguém sabe de onde ele tira todas essas bombas."
+            "Description": ""
         },
         
         "Bobo":
         {
             "Title": "Bubo",
             
-            "Description": "Uma criatura que parece ser uma bola de fogo ambulante. Mais quente do que um Cabeça Quente, mas não parece pensar muito."
+            "Description": ""
         },
         
         "Foley":
         {
             "Title": "Granado",
             
-            "Description": "Não subestime esse cara por sua aparência fofa. Essa criatura pode voar e explodir do nada. Ele vai cair do céu como um ataque aéreo para explodir, então tome cuidado!"
+            "Description": ""
         },
         
         "Nidoo":
         {
             "Title": "Tapor",
             
-            "Description": "Isso não é uma porta! Se você tentar passar por essas portas falsas, elas vão pular e tentarão te esmagar!"
+            "Description": ""
         },
         
         "Como":
         {
             "Title": "Racno",
             
-            "Description": "Nativos da Terra da Grama, esses aracnídeos ficam pendurados em árvores, esperando que alguém esbarre neles. Isso raramente acontece. Dizem que existe uma variante dessa espécie que pode andar sobre duas pernas..."
+            "Description": ""
         }
         ,
         "Cairn":
         {
             "Title": "Moledro",
             
-            "Description": "Uma pilha de pedras fofas. Camaradas muito pulantes. Boing!"
+            "Description": ""
         },
         
         "Bomber":
         {
             "Title": "Bombo",
             
-            "Description": "Um inimigo extremamente perigoso. Ele vai saltar de parapeitos e vai liberar uma grande explosão, que vai te machucar bastante."
+            "Description": ""
         },
         
         "Simirror":
         {
             "Title": "Sespelho",
             
-            "Description": "Um mago poderoso, que usa magia de espelhos. Ele pode criar clones de si mesmo, teleportar, e muito mais!"
+            "Description": ""
+        },
+		
+		"Hothead":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Sparky":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Yolky":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Wheelie":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Pacloud":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Laser Ball":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Jackle":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Kookler":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Ufo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Bouncy Sis":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Flamer":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Chuckie":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Walky":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Mystic Block":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Lovely":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Plasma Wisp":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Capsule J2":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Cerulean":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Wizzer":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Mopoo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Golem":
+        {
+            "Title": "",
+            
+            "Description": ""
         }
     },
     
@@ -2521,7 +2668,7 @@
 			
 			"2": "Não é fácil tomar conta daquele lugar, sabe!",
 			
-			"3": "Eu trouxe um amigo comigo também, mas eu acho que ele se envolveu no conflito com aquele homem suspeito…"
+			"3": "Eu trouxe um amigo comigo também, mas eu acho que ele se envolveu no conflito com aquele homem suspeito..."
         },
 		
 		"Are You Okay":

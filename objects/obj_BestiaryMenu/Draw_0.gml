@@ -72,7 +72,9 @@ for (var i = 0; i < min((bestiaryMax - (page * 12)),12); i++)
 			col2 = c_blue;
 		}
 	}
-	draw_text_color(25,65 + (16 * i),"#" + string(bestiaryArray[# iFinal,0]) + "-" + bestiaryArray[# iFinal,1],col1,col1,col2,col2,1);
+	var entryTitle = bestiaryArray[# iFinal,1];
+	if (string_length(entryTitle) > 11) entryTitle = string_copy(entryTitle,0,9) + "...";
+	draw_text_color(25,65 + (16 * i),"#" + string(bestiaryArray[# iFinal,0]) + "-" + entryTitle,col1,col1,col2,col2,1);
 }
 #endregion
 
@@ -80,7 +82,7 @@ for (var i = 0; i < min((bestiaryMax - (page * 12)),12); i++)
 #region Draw Sprite
 var sprite = bestiaryAnimationsArray[bestiaryArray[# bestiarySelection,9]][skinSelected][animSelected];
 var palette = bestiaryCosmeticsArray[bestiaryArray[# bestiarySelection,9]][skinSelected][colorSelected];
-var spriteScale = 2;
+var spriteScale = bestiaryArray[# bestiarySelection,10];
 
 if ((global.shaders) and (palette != -1)) pal_swap_set(palette,1,false);
 draw_sprite_ext(sprite,animIndex,240,130 - ((sprite_get_height(sprite) - sprite_get_yoffset(sprite)) * spriteScale),spriteScale,spriteScale,image_angle,image_blend,image_alpha);
@@ -115,7 +117,7 @@ draw_set_font(global.fontBestiary);
 #endregion
 
 #region Skin Bar
-if (bestiaryArray[# bestiarySelection,10] > 0)
+if (bestiaryArray[# bestiarySelection,11] > 0)
 {
 	draw_sprite(spr_Menu_Collection_Bestiary_Hud_SkinBar,0,346,84);
 	

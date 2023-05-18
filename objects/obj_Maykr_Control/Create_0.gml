@@ -109,7 +109,7 @@ enum maykrObjects
 	yolky,
 	wheelie,
 	laserBall,
-	juckle,
+	jackle,
 	kookler,
 	ufo,
 	bouncySis,

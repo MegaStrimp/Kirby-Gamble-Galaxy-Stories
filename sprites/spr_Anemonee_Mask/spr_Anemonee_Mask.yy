@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "Anemonee",
-    "path": "folders/Sprites/Enemies/Anemonee.yy",
+    "name": "Masks",
+    "path": "folders/Sprites/Enemies/Anemonee/Masks.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

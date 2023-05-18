@@ -97,34 +97,35 @@ function scr_Player_States_Normal()
 			{
 				if ((keyLeftPressed) or (keyRightPressed))
 				{
-				    if (runDoubleTap > 0)
+				    if ((runDoubleTap > 0) and (!isRunning))
 				    {
-						if (!isRunning)
+						if (audio_is_playing(snd_DashBegin)) audio_stop_sound(snd_DashBegin);
+						audio_play_sound(snd_DashBegin,0,false);
+						
+						if (!grounded)
 						{
-							if (!grounded)
-							{
-								var parJump = instance_create_depth(x,y,depth + 1,obj_Particle);
-								parJump.sprite_index = spr_Particle_Jump;
-								parJump.destroyAfterAnimation = true;
-								parJump.spdBuiltIn = 6;
-								parJump.fricSpd = .6;
-								parJump.direction = 180;
-								if (dir == -1) parJump.direction = 0;
-							}
-							if (audio_is_playing(snd_DashBegin)) audio_stop_sound(snd_DashBegin);
-							audio_play_sound(snd_DashBegin,0,false);
-							if (playerAbility == playerAbilities.mirror)
-							{
-								mirrorDashParticleTimer = 0;
-							}
-							else
-							{
-								runParticleTimer = 0;
-							}
-							runBuffer = 0;
-							isRunning = true;
+							var parJump = instance_create_depth(x,y,depth + 1,obj_Particle);
+							parJump.sprite_index = spr_Particle_Jump;
+							parJump.destroyAfterAnimation = true;
+							parJump.spdBuiltIn = 6;
+							parJump.fricSpd = .6;
+							parJump.direction = 180;
+							if (dir == -1) parJump.direction = 0;
 						}
+						
+						if (playerAbility == playerAbilities.mirror)
+						{
+							mirrorDashParticleTimer = 0;
+						}
+						else
+						{
+							runParticleTimer = 0;
+						}
+						
+						runBuffer = 0;
+						isRunning = true;
 				    }
+					
 				    runDoubleTap = 20;
 			    }
 				

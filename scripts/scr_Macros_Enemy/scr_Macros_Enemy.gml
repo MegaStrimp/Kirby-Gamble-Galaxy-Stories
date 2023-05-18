@@ -473,16 +473,16 @@ function scr_Macros_Enemy()
 	
 	
 	
-	#macro juckle_Hp 12
-	#macro juckle_Points 400
+	#macro jackle_Hp 12
+	#macro jackle_Points 400
 	
-	#macro juckle_Cutter_Damage 1
-	#macro juckle_Cutter_Strength 0
-	#macro juckle_Cutter_HitStopAffectSource false
-	#macro juckle_Cutter_HitStopAffectPlayer false
-	#macro juckle_Cutter_HitStopAffectTarget true
-	#macro juckle_Cutter_HitStopLength 7
-	#macro juckle_Cutter_HitStopShakeStrength 7
+	#macro jackle_Cutter_Damage 1
+	#macro jackle_Cutter_Strength 0
+	#macro jackle_Cutter_HitStopAffectSource false
+	#macro jackle_Cutter_HitStopAffectPlayer false
+	#macro jackle_Cutter_HitStopAffectTarget true
+	#macro jackle_Cutter_HitStopLength 7
+	#macro jackle_Cutter_HitStopShakeStrength 7
 	
 	
 	

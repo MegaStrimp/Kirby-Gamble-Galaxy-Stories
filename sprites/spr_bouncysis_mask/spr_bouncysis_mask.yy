@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "Bouncy Sis",
-    "path": "folders/Sprites/Enemies/Bouncy Sis.yy",
+    "name": "Masks",
+    "path": "folders/Sprites/Enemies/Bouncy Sis/Masks.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

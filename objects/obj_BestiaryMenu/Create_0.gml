@@ -1,5 +1,16 @@
 ///@description Initialize Variables
 
+/*
+TO-DO
+
+* Add sorting options
+* Add entry categories
+* Add description pages
+* Add localized titles and descriptions
+* Add special cases
+* Add mouse support
+*/
+
 #region Other Variables
 hudOffset = -250;
 selection = "bestiary";
@@ -26,24 +37,6 @@ bestiaryAnimationsArray = -1;
 scr_BestiaryMenu_Enemies();
 #endregion
 
-#region Enums
-enum bestiaryEnemies
-{
-	waddleDee,
-	waddleDoo,
-	brontoBurt,
-	twizzy,
-	tookey,
-	sirKibble,
-	gordo,
-	bloodGordo,
-	shotzo,
-	mysticDoo,
-	bouncy,
-	searches
-}
-#endregion
-
 #region Timers
 canAutoScrollTimer = -1;
 canAutoScrollTimerMax = 30;
@@ -57,4 +50,5 @@ button.owner = id;
 button.sprite_index = spr_Menu_StageSelect_Hud_Back1;
 button.state = "back";
 button.canChangeImageIndex = true;
+button.changeAlphaWhenNotSelected = true;
 #endregion

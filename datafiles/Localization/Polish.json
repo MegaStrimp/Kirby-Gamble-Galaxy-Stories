@@ -225,7 +225,7 @@
         {
             "Title": "Sen",
             
-            "Description": "chrrrrrrrr….. je-jeszcze pięć minut...….chrrrrr…."
+            "Description": "chrrrrrrrr..... je-jeszcze pięć minut.......chrrrrr...."
         },
 		
 		"Scan":
@@ -277,280 +277,427 @@
         {
             "Title": "Waddle Dee",
             
-            "Description": "Jedni z najbardziej zwyczajnych mieszkańców planety Popstar. Sporo wybrało prace dla Króla Dedede, niektórzy nawet potrafią dobrze władać włóczniami lub parasolkami."
+            "Description": ""
         },
         
         "Waddle Doo":
         {
             "Title": "Waddle Doo",
             
-            "Description": "Te stworzenia są dobrze znane z wystrzeliwania promieni elektrycznych z ich jedynego, sporego, oka."
+            "Description": ""
         },
         
         "Bronto Burt":
         {
             "Title": "Muszka Owocowa",
             
-            "Description": "Latający przeciwnik, który unosi się kiedy ktoś podejdzie za blisko, wtem zacznie czasami próbować się w ciebie wbić."
+            "Description": ""
         },
         
         "Twizzy":
         {
             "Title": "Kurrrczątko",
             
-            "Description": "Młody Kurrrczak, nigdy nie widziana z dala od jej własnej matki. Są znane z taranowania siebie nawzajem dla zabawy."
+            "Description": ""
         },
         
         "Tookey":
         {
             "Title": "Kurrrczak",
             
-            "Description": "Starsze Kurrrczątko, które jest zawsze spotykane blisko jej dzieci. Staranuje każdego, kto będzie blisko jej rodziny."
+            "Description": ""
         },
         
         "Sir Kibble":
         {
             "Title": "Sir Kibble",
             
-            "Description": "Rycerz z odmiennym ostrzem bumerangowym. Poprzez przekierowanie jego energii, może wyrzucić większe ostrze."
+            "Description": ""
         },
         
         "Gordo":
         {
             "Title": "Jeżowiec",
             
-            "Description": "Nieśmiertelna kula kolców, auć! Tylko podejdź do niej, a twoja gwiazda zdolności jest zniszczona."
+            "Description": ""
         },
         
         "Blood Gordo":
         {
             "Title": "Krwawy Jeżowiec",
             
-            "Description": "Bardzo nerwowy gatunek oryginalnego Jeżowca. Rogi tej odmiany przebijają niebo, oraz ich metalowy materiał świeci "
+            "Description": ""
         },
         
         "Shotzo":
         {
             "Title": "Strzelec",
             
-            "Description": "Te armaty są podstawą Halberdu oraz arsenału Zamka Dedede. Czasem wystrzelą jeden pocisk, a czasem wystrzelą "
+            "Description": ""
         },
         
         "Mystic Doo":
         {
             "Title": "Mityczny Doo",
             
-            "Description": "Waddle Doo obdarowany mocami Flux'a. Wykorzystując jego nowe zdolności, potrafi stworzyć bariere z jego promieni elektrycznych, które może wystrzelić poziomo."
+            "Description": ""
         },
         
         "Bouncy":
         {
             "Title": "Sprężystka",
             
-            "Description": "Cóż za mały, miły koleżka! Odbija się z góry na dół. Proste życie, ale miłe..... Poznaje tą mimike....."
+            "Description": ""
         },
         
         "Mr Boogie":
         {
             "Title": "Glutowiec",
             
-            "Description": "Jest to żyjący glut nosowy, który z chodzeniem za bardzo się nie zna, ale w rzeczywistości chodzi obłąkany, szukając chusteczek higienicznych."
+            "Description": ""
         },
         
         "Searches":
         {
             "Title": "Wyszukiwarka",
             
-            "Description": "Mała bomba z twarzą. Jeśli podejdziesz za blisko, wybuchie, więc omijaj jak ognia jeśli ci życie miłe."
+            "Description": ""
         },
         
         "Hive Drone":
         {
             "Title": "Rój Dronów",
             
-            "Description": "Robot kopiący, zbudowany dla jedynego celu, zbiór Alexandrium, tajemniczego minerału."
+            "Description": ""
         },
         
         "Wapod":
         {
             "Title": "Waddle'owy Strąk",
             
-            "Description": "Te duchy wyglądają 1:1 jak Waddle Dee. Pewnie to tylko przypadek. Wychodzą z doniczek jak ci śmieszni dżinowie, i wznoszą się, wysoko, wyżej i najwyżej!"
+            "Description": ""
         },
         
         "Flamebelch":
         {
             "Title": "Ognisty Ziew",
             
-            "Description": "Stara świeca przywrócona do życia przez Flux'a. Posiada sporą nienawiść do coli, z racji że powoduje u niego sporo czkawek."
+            "Description": ""
         },
         
         "Cappy":
         {
             "Title": "Trzonek",
             
-            "Description": "Jedni z najbardziej zaludnionych mieszkańców planety popstar, te nieśmiałe stworzenia wystrzelą swoje trzony w powietrze gdy blisko nich, wtem spanikują jeśli ich trzon zostanie porwany."
+            "Description": ""
         },
         
         "Broom Hatter":
         {
             "Title": "Sprzątający Kapelusznik",
             
-            "Description": "Ci koledzy mają jedną robote; wysprzątać wszystko co się da. Wynikuje to złym przyzwyczajeniom, często potykają się o inne istoty żyjące przez przypadek. Nawet jeśli wyglądają jak wiedźmy, nie chcieli na złość."
+            "Description": ""
         },
         
         "Coconut":
         {
             "Title": "Kokos",
             
-            "Description": "Te owoce palmowca są pełne materiału wybuchowego który rozprzestrzenia nasiona z wewnątrz, ale spadają gdy będziesz pod nimi, więc uważaj!"
+            "Description": ""
         },
         
         "Noddy":
         {
             "Title": "Śpioch",
             
-            "Description": "Przeciwnik który raczej woli sobie zdrzemnąć niż walczyć, często widywany blisko Fontanny Marzeń."
+            "Description": ""
         },
         
         "Blado":
         {
             "Title": "Siekierowiec",
             
-            "Description": "Szing! Ten poddenerwowany kolega toczy sie po ziemi, tak szybko jak wyścigowiec, tnąc wszystko co zajdzie w jego droge. To stworzenie było stworzone przez umysł nieznajomego malarza, troche przypomina Jeżowca."
+            "Description": ""
         },
         
         "Scarfy":
         {
             "Title": "Upiór",
             
-            "Description": "Ten przeciwnik może wydawać się słodki, ale gdy wnerwiony, stanie się szybki i wybuchnie po paru sekundach. NIE MOŻE być pochłonięty."
+            "Description": ""
         },
         
         "Rocky":
         {
             "Title": "Głazik",
             
-            "Description": "Świadomy głaz który próbuje zgnieść zagrożenie swoim ciężkim ciałem. Daje ci kamienną moc po pochłonięciu."
+            "Description": ""
         },
         
         "Grizzo":
         {
             "Title": "Pizzly",
             
-            "Description": "Spory niedźwiedź który żyje w gęstych lasach. Może użyć swoich szponów żeby złapać i poszarpać swoich wrogów, szczególnie gdy sprowokowany. "
+            "Description": ""
         },
         
         "Jungle Bomb":
         {
             "Title": "Bombowiec Dżunglowy",
             
-            "Description": "Młode drzewko ananasa. Bombowiec dżunglowy wypluje z siebie maksymalnie 3 bomby na wrogów, nie musze ci mówić kim dla niego jesteś."
+            "Description": ""
         },
         
         "Glunk":
         {
             "Title": "Uklwiał",
             
-            "Description": "Egzotyczna roślina wodna która wystrzeli z siebie aż 5 bąbelków powietrza, albo wody."
+            "Description": ""
         },
         
         "Kabu":
         {
             "Title": "Kabu",
             
-            "Description": "Te starożytne posągi kręcą się wokół własnej osi, wrzucająć się w każdego, kto stoi im na drodze."
+            "Description": ""
         },
         
         "Burning Leo":
         {
             "Title": "Płonący Leo",
             
-            "Description": "Gorącogłowe stworzenie posiadające zdolność władania nad ogniem, przykładem może być wystrzeliwanie kul ognia."
+            "Description": ""
         },
         
         "Tomatoo":
         {
             "Title": "Pomidoor",
             
-            "Description": "Stworzenie wyglądające bardzo jak soczysty czerwony owoc. A może jest to warzywo? Nigdy się nie dowiemy."
+            "Description": ""
         },
         
         "'Onion'":
         {
             "Title": "Cebulak",
             
-            "Description": "Cebulak, ironicznie względem nazwy, jest to marchewkowy pocisk, często występujący w ogrodach jajecznych. Lubią "
+            "Description": ""
         },
         
         "Anemonee":
         {
             "Title": "Włukwiał",
             
-            "Description": "Morskie stworzenie z długimi mackami wychodzącymi z jego głowy. Tańczą w rytm fali oceanu które zamieszkują."
+            "Description": ""
         },
         
         "Gim":
         {
             "Title": "Dżim",
             
-            "Description": "Dżim to weteran obsługi nad yoyo, więdzą o nich prawie wszystko. Krąży plotka że posiadają w kolekcji pondad 50 różnych yoyo!"
+            "Description": ""
         },
         
         "Poppy Bros Jr":
         {
             "Title": "Makowy Brat Jr.",
             
-            "Description": "Wręcz kochający kłopoty dzieciak ze sporą miłością do wybuchów! Nikt do tej pory nie wie jak tak mały smarkacz może trzymać tak dużo bomb. "
+            "Description": ""
         },
         
         "Bobo":
         {
             "Title": "Bobo",
             
-            "Description": "Stworzenie które wygląda na chodzącą kule ognia. Gorący jak słońce, chyba przez to ciepło mózg mu się prawie wypalił."
+            "Description": ""
         },
         
         "Foley":
         {
             "Title": "Listo-spad",
             
-            "Description": "Nie oceniaj tego gościa po słodkiej okładce. To stworzenie może latać i wybuchać na zawołanie. Zrzuci się z niebios jak nalot żeby na ciebie wybuchnąć, więc uważaj!"
+            "Description": ""
         },
         
         "Nidoo":
         {
             "Title": "Współlokator",
             
-            "Description": "To nie są drzwi! Jeśli przez nie przejdziesz, podskoczą i spróbują cie zgnieść!"
+            "Description": ""
         },
         
         "Como":
         {
             "Title": "Ptasznik",
             
-            "Description": "Często zamieszkujące Trawiaste Niziny, te pajęczaki zwisają z drzew, mając nadzieje żeby ktoś w nich się wbił. To się rzadko zdarza. Mówi się, że istnieje rodzaj Ptasznika, który chodzi na dwóch nogach..."
+            "Description": ""
         }
         ,
         "Cairn":
         {
             "Title": "Żwirek",
             
-            "Description": "Górka żwiru. Bardzo skoczni przyjaciele. Boing!"
+            "Description": ""
         },
         
         "Bomber":
         {
             "Title": "Bombowiec",
             
-            "Description": "Bardzo niebezpieczny przeciwnik. Będzie skakał w te i nazad, wypuszczając spory wybuch, to zaboli i jeszcze bardziej."
+            "Description": ""
         },
         
         "Simirror":
         {
             "Title": "Lustrzany",
             
-            "Description": "Mocarny czarodzej, z mocarną magią lustrzaną. Potrafi stworzyć klony samego siebie, teleportować się i jeszcze "
+            "Description": ""
+        },
+		
+		"Hothead":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Sparky":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Yolky":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Wheelie":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Pacloud":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Laser Ball":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Jackle":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Kookler":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Ufo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Bouncy Sis":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Flamer":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Chuckie":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Walky":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Mystic Block":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Lovely":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Plasma Wisp":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Capsule J2":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Cerulean":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Wizzer":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Mopoo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Golem":
+        {
+            "Title": "",
+            
+            "Description": ""
         }
     },
     
@@ -2521,14 +2668,14 @@
 			
 			"2": "Nie łatwo tam prowadzić to miejsce!",
 			
-			"3": "Wziąłem ze sobą też znajomego, ale możliwe że mógł wejść w konflikt z tym zacienionym chłopem…"
+			"3": "Wziąłem ze sobą też znajomego, ale możliwe że mógł wejść w konflikt z tym zacienionym chłopem..."
         },
 		
 		"Are You Okay":
         {
 			"1": "Będąc szczery, mam troche gęsiej skórki po starciu z tym gościem.",
 			
-			"2": "Ta magia którą użył na mnie, coś o niej się nie zgadzało…",
+			"2": "Ta magia którą użył na mnie, coś o niej się nie zgadzało...",
 			
 			"3": "Dzięki że przynajmniej wbiłeś mi lekki po rozum do głowy! Kto wie co się mogło zdarzyć jeśli tam ciebie nie było."
         },

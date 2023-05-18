@@ -12,4 +12,5 @@ owner = -1;
 followCamera = false;
 imageIndex = 0;
 canChangeImageIndex = false;
+changeAlphaWhenNotSelected = false;
 xOffset = 0;

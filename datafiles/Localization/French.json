@@ -128,7 +128,7 @@
         },
         "Sleep": {
             "Title": "Sommeil",
-            "Description": "Bâille… Encore 5 minutes… zzzzzzzzzzz..."
+            "Description": "Bâille... Encore 5 minutes... zzzzzzzzzzz..."
         },
         "Scan": {
             "Title": "Copieur",
@@ -158,163 +158,310 @@
     "Enemies": {
         "Waddle Dee": {
             "Title": "Waddle Dee",
-            "Description": "Les habitants de la planète Pop les plus nombreux. Beaucoup ont choisi de travailler pour le Roi DaDiDou, certains portent une lance ou un parasol."
+            "Description": ""
         },
         "Waddle Doo": {
             "Title": "Waddle Doo",
-            "Description": "Ces créatures sont connues pour lancer des rayons avec leur grand œil."
+            "Description": ""
         },
         "Bronto Burt": {
             "Title": "Buzzy Brut",
-            "Description": "Un ennemi ailé qui s'envole dès que quelqu'un s'approche, et qui s'attaque parfois aux autres."
+            "Description": ""
         },
         "Twizzy": {
             "Title": "Pioupiou",
-            "Description": "Un Tookey nourrisson qui n'est jamais loin de sa mère. Il s'attaque aux autres pour s'amuser."
+            "Description": ""
         },
         "Tookey": {
             "Title": "Tookey",
-            "Description": "La version adulte des Pioupiou qui se trouve toujours près de ses poussins. Il s'attaque à quiconque s'en approche."
+            "Description": ""
         },
         "Sir Kibble": {
             "Title": "Duc Hache Viande",
-            "Description": "Un chevalier se spécialisant dans les lames boomerang. Il peut lancer des lames plus grandes en concentrant son énergie."
+            "Description": ""
         },
         "Gordo": {
             "Title": "Minérisson",
-            "Description": "Une boule de pointes invulnérable. Il peut casser les étoiles des dons d'imitation qui le touchent."
+            "Description": ""
         },
         "Blood Gordo": {
             "Title": "Minérisson sanglant",
-            "Description": "Une variante en colère du Minérisson de base. Ses cornes transpercent l'air, et son métal brille comme un soleil rouge."
+            "Description": ""
         },
         "Shotzo": {
             "Title": "Shotzo",
-            "Description": "Ces canons sont souvent utilisés par le Halberd et l'arsenal du château DaDiDou. Certains ne tirent qu'un boulet à la fois, d'autres trois à la suite."
+            "Description": ""
         },
         "Mystic Doo": {
             "Title": "Mystic Doo",
-            "Description": "Un Waddle Doo transformé par le pouvoir du flux. En utilisant son nouveau pouvoir, il peut créer une barrière de rayons qu'il peut aussi lancer vers l'avant."
+            "Description": ""
         },
         "Bouncy": {
             "Title": "Bouncy",
-            "Description": "Comme il est adorable ! Les Bouncy bondissent sans arrêt. Une vie simple, mais joyeuse. Ce visage ressemble à celui d'un autre..."
+            "Description": ""
         },
         "Mr Boogie": {
             "Title": "Mr. Boogie",
-            "Description": "Une morve vivante qui semble errer sans but, mais qui cherche en réalité un mouchoir."
+            "Description": ""
         },
         "Searches": {
             "Title": "Searches",
-            "Description": "Une petite bombe qui possède un visage. Elle explose lorsque l'on s'en approche trop."
+            "Description": ""
         },
         "Hive Drone": {
             "Title": "Hive Drone",
-            "Description": "Un robot minier, construit dans le but de collecter de l'Alexandrum, un minéral mystérieux."
+            "Description": ""
         },
         "Wapod": {
             "Title": "Warpot",
-            "Description": "Ces fantômes ressemblent curieusement aux Waddle Dee. Probablement une coincidence. Ils sortent de jarres comme des génies, et s'envolent vers le haut dans les airs !"
+            "Description": ""
         },
         "Flamebelch": {
             "Title": "Flamebelch",
-            "Description": "Une vieille bougie animée par le flux. Il méprise particulièrement les boissons gazeuses, qui lui donne des hoquets graves."
+            "Description": ""
         },
         "Cappy": {
             "Title": "Cappenois",
-            "Description": "L'un des habitants indigènes de la planète Pop. Ces êtres timides lancent leur bonnet en forme de champignon dans les airs quand on s'en approche, et paniquent quand leur bonnet se fait voler."
+            "Description": ""
         },
         "Broom Hatter": {
             "Title": "Chabalai",
-            "Description": "Ces petits êtres ne jurent que par le ménage. Cela leur donne une manie de percuter les gens par accident. Malgré leur apparence de sorcière, ils n'ont que de bonnes intentions."
+            "Description": ""
         },
         "Coconut": {
             "Title": "Noix de coco",
-            "Description": "Ces fruits de palmiers contiennent des explosifs pour répandre leurs graines contenues à l'intérieur, mais ne tombent que lorsque l'on passe en dessous, prudence !"
+            "Description": ""
         },
         "Noddy": {
             "Title": "Noddy",
-            "Description": "Un ennemi qui préfère dormir que se battre, se trouvant le plus souvent près de la Fontaine des Rêves."
+            "Description": ""
         },
         "Blado": {
             "Title": "Hachi",
-            "Description": "Cet individu énervé roule sur le sol, rapide comme une voiture de course, en essayant de découper ses ennemis. Il a été conçu par l'esprit d'un peintre mystérieux, et ressemble à un Minérisson."
+            "Description": ""
         },
         "Scarfy": {
             "Title": "Scarfy",
-            "Description": "Cet ennemi semble amical à première vue, mais devient fou de rage lorsqu'on le dérange, et finit par exploser quelques secondes plus tard. Il ne peut pas être avalé."
+            "Description": ""
         },
         "Rocky": {
             "Title": "Choiroc",
-            "Description": "Un rocher vivant qui essaie de démolir les menaces avec son corps. Il confère la capacité Rocher quand il est avalé."
+            "Description": ""
         },
         "Grizzo": {
             "Title": "Grizzlee",
-            "Description": "Un ours imposant vivant dans les forêts denses. Il peut utiliser ses griffes pour s'agripper à ses ennemis et les griffer, généralement lorsqu'on le provoque."
+            "Description": ""
         },
         "Jungle Bomb": {
             "Title": "Jungle Bomb",
-            "Description": "Une pousse d'ananas. Les Jungle Bomb peuvent lancer jusqu'à trois bombes à ses ennemis."
+            "Description": ""
         },
         "Glunk": {
             "Title": "Crachémone",
-            "Description": "Une plante aquatique qui tire des projectiles d'eau à intervalles réguliers, jusqu'à cinq à la fois."
+            "Description": ""
         },
         "Kabu": {
             "Title": "Kabu",
-            "Description": "Ces statues antiques tournoient sur la terre, percutant tout ceux qui se trouvent sur son chemin."
+            "Description": ""
         },
         "Burning Leo": {
             "Title": "Léo Laflam",
-            "Description": "Une tête brûlée capable d'utiliser un grand nombre d'attaques de feu, comme lancer une boule de feu par exemple."
+            "Description": ""
         },
         "Tomatoo": {
             "Title": "Tomatee",
-            "Description": "Une créature qui ressemble à un légume rouge juteux. Ou est-ce un fruit ? Personne ne le sait."
+            "Description": ""
         },
         "Onion'": {
             "Title": "Oignon",
-            "Description": "L'Oignon, contrairement à ce que son nom indique, est une carotte en forme de missile provenant de la Vallée des œufs. Ils aiment se cacher dans le sol et embusquer les passants."
+            "Description": ""
         },
         "Anemonee": {
             "Title": "Anémona",
-            "Description": "Une créature aquatique possédant de longues vrilles sortant de sa tête. Il dance selon les vagues des océans dans lesquels il réside."
+            "Description": ""
         },
         "Gim": {
             "Title": "Jim",
-            "Description": "Jim est un fanatique de tout ce qui concerne les yoyos, et en maîtrise le contrôle parfaitement. Il aurait plus de cinquante yoyos différents dans sa collection !"
+            "Description": ""
         },
         "Poppy Bros Jr": {
             "Title": "Bébépoppy",
-            "Description": "Un garnement qui adore les explosifs. Personne ne sait d'où il sort toutes ces bombes."
+            "Description": ""
         },
         "Bobo": {
             "Title": "Bobo",
-            "Description": "Une créature ressemblant à une boule de feu ambulante. Plus chaud qu'un Brultête, mais ne semble pas très futé."
+            "Description": ""
         },
         "Foley": {
             "Title": "Grenady",
-            "Description": "Ne sous-estimez pas cet ennemi avec une tête mignonne. Cette créature peut voler et se faire exploser lorsqu'elle le souhaite. Il tombe du ciel pour exploser, prenez garde !"
+            "Description": ""
         },
         "Nidoo": {
             "Title": "Nidoo",
-            "Description": "Ce n'est pas une porte ! Si vous essayez d'y entrer, ils vont tenter de vous aplatir !"
+            "Description": ""
         },
         "Como": {
             "Title": "Como",
-            "Description": "Originaires de Grass Land, ces arachnides pendent depuis les arbres, en espérant blesser quelqu'un. Cela n'arrive presque jamais. Il y aurait apparemment une variante de cette espèce capable de marcher sur deux pieds..."
+            "Description": ""
         },
         "Cairn": {
             "Title": "Cairn",
-            "Description": "Une pile de petites pierres. Ils sautillent très souvent. Boing !"
+            "Description": ""
         },
         "Bomber": {
             "Title": "Bombinet",
-            "Description": "Un ennemi très dangereux. Il saute depuis des rebords et déclenche une grosse explosion, qui peut causer de lourds dégâts."
+            "Description": ""
         },
         "Simirror": {
             "Title": "Simiroir",
-            "Description": "Une puissant magicien, dont la specialité est la magie des miroirs. Il peut créer des clones de lui-même, se téléporter, et faire bien d'autres choses encore !"
+            "Description": ""
+        },
+		
+		"Hothead":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Sparky":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Yolky":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Wheelie":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Pacloud":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Laser Ball":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Jackle":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Kookler":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Ufo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Bouncy Sis":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Flamer":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Chuckie":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Walky":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Mystic Block":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Lovely":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Plasma Wisp":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Capsule J2":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Cerulean":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Wizzer":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Mopoo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Golem":
+        {
+            "Title": "",
+            
+            "Description": ""
         }
     },
     "Spray Paints": {
@@ -1896,7 +2043,7 @@
         "Why Were You At Egg Garden": {
             "1": "Eh bien, je voulais me faire une petite pause loin du parc d'attractions sur la planète Pop.",
             "2": "Ce n'est pas facile de s'occuper de cet endroit, vous savez !",
-            "3": "J'étais venu avec un ami, mais je crois qu'il s'est fait prendre dans des embrouilles avec l'autre individu louche…"
+            "3": "J'étais venu avec un ami, mais je crois qu'il s'est fait prendre dans des embrouilles avec l'autre individu louche..."
         },
         "Are You Okay": {
             "1": "Je vous avoue que ma rencontre avec cet homme m’a un peu secoué.",

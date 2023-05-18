@@ -47,7 +47,7 @@ switch (state)
 	#region Back
 	case "back":
 	var buttonAlpha = 1;
-	if ((owner.object_index == obj_GalleryMenu) and (owner.artworkZoom)) buttonAlpha = .3;
+	if (((changeAlphaWhenNotSelected) and (owner.selection != state)) or ((owner.object_index == obj_GalleryMenu) and (owner.artworkZoom))) buttonAlpha = .3;
 	if (canChangeImageIndex)
 	{
 		var selected = 0;

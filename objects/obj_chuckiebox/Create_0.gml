@@ -6,8 +6,8 @@ event_inherited();
 
 #region Sprites
 sprBox = spr_Chuckie_Box;
-sprBoxOpen = spr_Chuckie_BoxOpen;
-sprBoxClose = spr_Chuckie_BoxClose;
+sprBoxOpen = spr_Chuckie_Box_Open;
+sprBoxClose = spr_Chuckie_Box_Close;
 sprBoxDead = spr_Chuckie_Box_Dead;
 sprIdle = spr_Chuckie_Idle;
 sprNeck = spr_Chuckie_Neck;

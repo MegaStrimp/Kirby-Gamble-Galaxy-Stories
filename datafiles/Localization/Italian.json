@@ -78,7 +78,7 @@
         {
             "Title": "Pietra",
             
-            "Description": "Trasformati in una roccia per diventare impenetrabile! Un momento… Cosa sono queste strane statue?"
+            "Description": "Trasformati in una roccia per diventare impenetrabile! Un momento... Cosa sono queste strane statue?"
         },
 		
 		"Ufo":
@@ -218,14 +218,14 @@
         {
             "Title": "Acqua",
             
-            "Description": "Sfrutta la potenza dell’acqua per far fuori i nemici… O surfare!"
+            "Description": "Sfrutta la potenza dell’acqua per far fuori i nemici... O surfare!"
         },
 		
 		"Sleep":
         {
             "Title": "Sonno",
             
-            "Description": "Yamn… Altri 5 minuti… zzzzzzzzzzz.."
+            "Description": "Yamn... Altri 5 minuti... zzzzzzzzzzz.."
         },
 		
 		"Scan":
@@ -277,280 +277,427 @@
         {
             "Title": "Waddle Dee",
             
-            "Description": "I più comuni abitanti del Pianeta Pop. Molti hanno deciso di lavorare per King Dedede, altri di branidre lance o parasoli."
+            "Description": ""
         },
         
         "Waddle Doo":
         {
             "Title": "Waddle Doo",
             
-            "Description": "Queste creature sono note per sparare un raggio con il loro unico grande occhio."
+            "Description": ""
         },
         
         "Bronto Burt":
         {
             "Title": "Brontottero",
             
-            "Description": "Un nemico volante che scende dai cieli quando qualcuno gli si avvicina per poi attaccarlo."
+            "Description": ""
         },
         
         "Twizzy":
         {
             "Title": "Piopio",
             
-            "Description": "Un piccolo Cluck che non si è mai separato dalla mamma. Di solito attaccano per divertimento."
+            "Description": ""
         },
         
         "Tookey":
         {
             "Title": "Cluck",
             
-            "Description": "La variante adulta del Piopio che attaccherà chiunque si avvicini ai suoi piccoli."
+            "Description": ""
         },
         
         "Sir Kibble":
         {
             "Title": "Duc de' Zac",
             
-            "Description": "Un cavaliere con una lama a forma di boomerang, che diventa più grande se viene usata più energia."
+            "Description": ""
         },
         
         "Gordo":
         {
             "Title": "Bombospino",
             
-            "Description": "Un'invincibile palla di spine, yowch! Può distruggere la stella di un'abilità al primo contatto."
+            "Description": ""
         },
         
         "Blood Gordo":
         {
             "Title": "Bombospino Sanguinolento",
             
-            "Description": "Una variante molto aggressiva del classico Bombospino."
+            "Description": ""
         },
         
         "Shotzo":
         {
             "Title": "Shotzo",
             
-            "Description": "Questi cannoni sono un classico della Halberd e dell'arsenale del castello di Dedede. Con un solo sparo possono far uscire tre palle di cannone."
+            "Description": ""
         },
         
         "Mystic Doo":
         {
             "Title": "Waddle Doo Mistico",
             
-            "Description": "Un Waddle Doo alterato dal potere del Flusso Mistico. Con i suoi nuovi poteri può creare una barriera che può anche essere lanciata."
+            "Description": ""
         },
         
         "Bouncy":
         {
             "Title": "Bouncy",
             
-            "Description": "Un amico così piacevole! Va su e giù. Una vita semplice, ma felice. Quella piccola faccia sembra familiare..."
+            "Description": ""
         },
         
         "Mr Boogie":
         {
             "Title": "Mr. Boogie",
             
-            "Description": "Una caccoletta senziente che cammina a zonzo, anche se a dire il vero un obiettivo non gli manca."
+            "Description": ""
         },
         
         "Searches":
         {
             "Title": "Searches",
             
-            "Description": "Una piccola bomba che esplode se ti avvicini troppo ad essa, attento!"
+            "Description": ""
         },
         
         "Hive Drone":
         {
             "Title": "Hive Drone",
             
-            "Description": "Un robot minatore che ha il solo scopo di trovare un minerale misterioso: l'Alexandrum."
+            "Description": ""
         },
         
         "Wapod":
         {
             "Title": "Wampolla",
             
-            "Description": "Questi fantasmi somigliano leggermente ai Waddle Dee. Forse è una coincidenza. Escono come dei buffi geni e poi volano via."
+            "Description": ""
         },
         
         "Flamebelch":
         {
             "Title": "Flamebelch",
             
-            "Description": "Una vecchia candela nata dal Flusso Mistico. Odia particolarmente le bibite che gli fanno venire il singhiozzo."
+            "Description": ""
         },
         
         "Cappy":
         {
             "Title": "Cozy",
             
-            "Description": "Tra i primi abitanti del Pianeta Pop, queste timide creature lanciano in aria il loro cappello quando qualcuno si avvicina, e appena questo viene rubato vanno in panico."
+            "Description": ""
         },
         
         "Broom Hatter":
         {
             "Title": "Maga Spazzolina",
             
-            "Description": "Questi piccoletti hanno un solo scopo: pulire tutto quello che possono. Ogni tanto colpiscono qualcuno, ma non farti ingannare dalle apparenze: hanno la testa sulle spalle."
+            "Description": ""
         },
         
         "Coconut":
         {
             "Title": "Noce di Cocco",
             
-            "Description": "Questi frutti di palma sono dotati di un potente esplsivo e cadono se ci passi sotto, attenzione!"
+            "Description": ""
         },
         
         "Noddy":
         {
             "Title": "Noddy",
             
-            "Description": "Un nemico che al posto di combattere preferisce schiacciare un pisolino. Lo trovi soprattutto vicino alla Fontana dei Sogni."
+            "Description": ""
         },
         
         "Blado":
         {
             "Title": "Hachi",
             
-            "Description": "Shing! Questa palletta è veloce come una macchina da corsa ed è capace di ferire tutti i suoi avversari. Questa creatura è stata colpita da un pittore misterioso e somiglia ad un Bombospino."
+            "Description": ""
         },
         
         "Scarfy":
         {
             "Title": "Scarfy",
             
-            "Description": "Questo nemico all'apparenza è innocuo, ma poi si arrabbierà e dopo qualche secondo esploderà! Non può essere risucchiato."
+            "Description": ""
         },
         
         "Rocky":
         {
             "Title": "Rocky",
             
-            "Description": "Un macigno senziente che attacca i nemici con il suo corpo. Dà l'Abilità Pietra se risucchiato."
+            "Description": ""
         },
         
         "Grizzo":
         {
             "Title": "Grizzo",
             
-            "Description": "Un grande orso che vive nelle foreste. Attacca i nemici con i suoi artigli."
+            "Description": ""
         },
         
         "Jungle Bomb":
         {
             "Title": "Jungle Bomb",
             
-            "Description": "Un piccolo ananas a forma di alberello. I Jungle Bomb possono lanciare fino a tre bombe."
+            "Description": ""
         },
         
         "Glunk":
         {
             "Title": "Glunk",
             
-            "Description": "Una pianta acquatica che lancerà fino a cinque proiettili alla volta."
+            "Description": ""
         },
         
         "Kabu":
         {
             "Title": "Kabu",
             
-            "Description": "Queste antiche statue roteano e colpiscono gli sprovveduti che si trovano sulla loro strada."
+            "Description": ""
         },
         
         "Burning Leo":
         {
             "Title": "Fiammelleo",
             
-            "Description": "Una creatura dalla testa infuocata che usa potenti attacchi di fuoco come delle palle di fuoco."
+            "Description": ""
         },
         
         "Tomatoo":
         {
             "Title": "Tomatoo",
             
-            "Description": "Una creatura che somiglia tanto ad una succosissima verdura. O un frutto? Sarà per sempre un mistero..."
+            "Description": ""
         },
         
         "'Onion'":
         {
             "Title": "Onion",
             
-            "Description": "Onion, seppur con un nome ingannevole, è un missile a forma di carota nato nei Giardini delle Uova."
+            "Description": ""
         },
         
         "Anemonee":
         {
             "Title": "Anemòn",
             
-            "Description": "Una creatura acquatica con lunghi viticci che sporgono dalla sua testa. Balla avanti e indietro sulle onde degli oceani in cui risiede."
+            "Description": ""
         },
         
         "Gim":
         {
             "Title": "Gim",
             
-            "Description": "Gim è un fanatico di tutto ciò che riguarda gli yo-yo, nonché maestro nel brandirli. Voci di corridoio dicono che abbia collezionato più di 50 yo-yo!"
+            "Description": ""
         },
         
         "Poppy Bros Jr":
         {
             "Title": "Bomby Bros Jr.",
             
-            "Description": "Una peste con una passione innata per gli esplosivi. Nessuno sa dove riesca a prendere tutte quelle granate."
+            "Description": ""
         },
         
         "Bobo":
         {
             "Title": "Bobo",
             
-            "Description": "Una palla di fuoco che sa camminare anche se non sembra avere molti altri pensieri in testa."
+            "Description": ""
         },
         
         "Foley":
         {
             "Title": "Granado",
             
-            "Description": "Non sottovalutare questo piccoletto solo perché sembra tenero. Sa volare e persino esplodere. Cadrà dal cielo e ti attaccherà, attento!"
+            "Description": ""
         },
         
         "Nidoo":
         {
             "Title": "Nidoo",
             
-            "Description": "No, non è una porta! Se cerchi di entrarci dentro ti salterà addosso e ti farà molto male."
+            "Description": ""
         },
         
         "Como":
         {
             "Title": "Racno",
             
-            "Description": "Nato a Grass Land, questo ragno scende dagli alberi e attacca gli indesiderati, anche se non sempre ha successo. Si dice che ci sia una variante bipede."
+            "Description": ""
         }
         ,
         "Cairn":
         {
             "Title": "Cairn",
             
-            "Description": "Una piccola colonna di pietre a cui piace saltare. Boing!"
+            "Description": ""
         },
         
         "Bomber":
         {
             "Title": "Bomber",
             
-            "Description": "Un nemico estremamente pericoloso che, pur di colpirti, si precipiterà dalle sporgenze. Non abbassare la guardia, fa malissimo. "
+            "Description": ""
         },
         
         "Simirror":
         {
             "Title": "Magospecchio",
             
-            "Description": "Un potente mago in grado di clonarsi, di teletrasportarsi e di fare molte altre cose."
+            "Description": ""
+        },
+		
+		"Hothead":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Sparky":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Yolky":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Wheelie":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Pacloud":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Laser Ball":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Jackle":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Kookler":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Ufo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Bouncy Sis":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Flamer":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Chuckie":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Walky":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Mystic Block":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Lovely":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Plasma Wisp":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Capsule J2":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Cerulean":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Wizzer":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Mopoo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Golem":
+        {
+            "Title": "",
+            
+            "Description": ""
         }
     },
     

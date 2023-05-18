@@ -26,8 +26,8 @@
   "nineSlice": null,
   "origin": 1,
   "parent": {
-    "name": "Como",
-    "path": "folders/Sprites/Enemies/Como.yy",
+    "name": "String",
+    "path": "folders/Sprites/Enemies/Como/String.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

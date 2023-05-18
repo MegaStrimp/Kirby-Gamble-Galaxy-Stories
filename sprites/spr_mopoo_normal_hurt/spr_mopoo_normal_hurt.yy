@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Mopoo",
-    "path": "folders/Sprites/Enemies/Mopoo.yy",
+    "name": "Normal",
+    "path": "folders/Sprites/Enemies/Mopoo/Normal.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

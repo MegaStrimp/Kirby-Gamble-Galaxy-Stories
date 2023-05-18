@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "Onion",
-    "path": "folders/Sprites/Enemies/Onion.yy",
+    "name": "Masks",
+    "path": "folders/Sprites/Enemies/Onion/Masks.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

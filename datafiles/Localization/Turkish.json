@@ -273,280 +273,427 @@
         {
             "Title": "Waddle Dee",
             
-            "Description": "En yaygın Popstar yerlisi. Çoğu Kral Dedede için çalışmakta, bazılarının mızrağı ve şemsiyesi bile var."
+            "Description": ""
         },
         
         "Waddle Doo":
         {
             "Title": "Waddle Doo",
             
-            "Description": "Bu yaratıklar gözlerinden ışın atmalarıyla bilinir."
+            "Description": ""
         },
         
         "Bronto Burt":
         {
             "Title": "Bronto Burt",
             
-            "Description": "Bu uçan düşman, yanına yaklaşan olursa hemen uçup kaçmaya başlar. Bazen sana saldırmaya kalkışır."
+            "Description": ""
         },
         
         "Twizzy":
         {
             "Title": "Twizzy",
             
-            "Description": "Tookey'in bebek hali. Annelerinden uzak kalmazlar. Eğlence için birilerine saldırmalarıyla bilinirler."
+            "Description": ""
         },
         
         "Tookey":
         {
             "Title": "Tookey",
             
-            "Description": "Twizzy'nin büyümüş hali. Genelde yavrularının yanında dururlar. Onları rahatsız eden herkese kafa atarlar."
+            "Description": ""
         },
         
         "Sir Kibble":
         {
             "Title": "Sör Kibble",
             
-            "Description": "Bıçaklı bumerang şovalyesi. Gücüne odaklanıp daha büyük bir bıçak fırlatabilir."
+            "Description": ""
         },
         
         "Gordo":
         {
             "Title": "Gordo",
             
-            "Description": "Yenilmez dikenli bir top! Özellik Yıldızlarını bir dokunuşta kırarlar."
+            "Description": ""
         },
         
         "Blood Gordo":
         {
             "Title": "Kanlı Gordo",
             
-            "Description": "Normal Gordo'nun daha kızgın hali. Kanlı Gordo'nun dikenleri havayı deler, ve metali kızıl bir güneş gibi parlar."
+            "Description": ""
         },
         
         "Shotzo":
         {
             "Title": "Shotzo",
             
-            "Description": "Bu toplar çoğunlukla Halberd Gemisi ve Dedede Kalesinde bulunurlar. Bazen birden fazla top ateşleyebilirler."
+            "Description": ""
         },
         
         "Mystic Doo":
         {
             "Title": "Mistik Doo",
             
-            "Description": "Flux'ın gücü ile değişmiş bir Waddle Doo. Yeni gücüyle bir ışın kalkanı yapıp onu fırlatabilir."
+            "Description": ""
         },
         
         "Bouncy":
         {
             "Title": "Bouncy",
             
-            "Description": "Küçük tatlı bir arkadaş! Mutlu bir şekilde yukarı aşağı zıplar. Yüzü biraz tanıdık görünüyor..."
+            "Description": ""
         },
         
         "Mr. Boogie":
         {
             "Title": "Bay Boogie",
             
-            "Description": "Amaçsızca yürüyormuş gibi görünen bir sümük, ama aslında bir peçete arıyor."
+            "Description": ""
         },
         
         "Searches":
         {
             "Title": "Searches",
             
-            "Description": "Küçük, suratlı bir bomba. Yaklaşırsan patlayabilir, o yüzden uzak dur."
+            "Description": ""
         },
         
         "Hive Drone":
         {
             "Title": "Kovan Dronu",
             
-            "Description": "Bir kazı robotu. Gizemli maden Alexandrum'u kazması için tasarlanmış."
+            "Description": ""
         },
         
         "Wapod":
         {
             "Title": "Wapod",
             
-            "Description": "Bu hayaletler aynı Waddle Dee'lere benziyor, ne tesadüf. Komik bir cin gibi kavanozdan çıkıp çok, çooook uzaklara uçuyorlar!"
+            "Description": ""
         },
         
         "Flamebelch":
         {
             "Title": "Flamebelch",
             
-            "Description": "Flux tarafından hayat verilmiş eski bir mum. Sodadan nefret eder, hemen hıçkırık yapıyor."
+            "Description": ""
         },
         
         "Cappy":
         {
             "Title": "Cappy",
             
-            "Description": "Popstar'ın bir başka yerlisi. Bu utangaç yaratıklar onlara yaklaşıldığında mantarlarını havaya atarlar. Şapkaları çalınınca panik olurlar."
+            "Description": ""
         },
         
         "Broom Hatter":
         {
             "Title": "Broom Hatter",
             
-            "Description": "Bu ufak yaratıkların tek bir görevi var; her şeyi tertemiz yapmak. Bazen kendilerini işe kaptırıp yanlışlıkla diğer yaratıklara çarpıyorlar. Cadı gibi görünseler de iyi yaratıklardır."
+            "Description": ""
         },
         
         "Coconut":
         {
             "Title": "Hindistan Cevizi",
             
-            "Description": "Bu palmiye meyvelerinin içinde tohumlarını daha uzağa serpebilmeleri için patlayıcılar vardır. Sakın altında durma!"
+            "Description": ""
         },
         
         "Noddy":
         {
             "Title": "Noddy",
             
-            "Description": "Savaşmak yerine uykuyu tercih eden bir yaratık. Çoğunlukla Rüya Çeşmesinde bulunurlar."
+            "Description": ""
         },
         
         "Blado":
         {
             "Title": "Blado",
             
-            "Description": "Bu sinirli yaratık bir yarış arabası gibi yerde yuvarlanır ve düşmanlarına zarar verir. Bu yaratıklar gizemli bir ressam tarafından tasarlanmış, ve biraz Gordo'ya benziyorlar."
+            "Description": ""
         },
         
         "Scarfy":
         {
             "Title": "Scarfy",
             
-            "Description": "Bu yaratık ilk başta şirin görünebilir, ama eğer sinirlenirse vahşileşir ve birkaç saniye sonra patlar. Onu yiyemezsin."
+            "Description": ""
         },
         
         "Rocky":
         {
             "Title": "Rocky",
             
-            "Description": "Tehditleri vücuduyla ezmeye çalışan bir kaya. Yenirse Taş özelliği verir."
+            "Description": ""
         },
         
         "Grizzo":
         {
             "Title": "Grizzo",
             
-            "Description": "Kalabalık ormanlarda yaşayan koca bir ayı. Sinirlenirse pençeleriyle düşmanlarını çizmeye başlar."
+            "Description": ""
         },
         
         "Jungle Bomb":
         {
             "Title": "Jungle Bomb",
             
-            "Description": "Küçük bir ananas fidanı. Jungle Bomb'lar tehditlere karşı 3'e kadar bomba fırlatırlar!"
+            "Description": ""
         },
         
         "Glunk":
         {
             "Title": "Glunk",
             
-            "Description": "Ağzından su fırlatan bir su bitkisi. Aynı anda 5 kere ateş edebilir."
+            "Description": ""
         },
         
         "Kabu":
         {
             "Title": "Kabu",
             
-            "Description": "Bu antik heykeller yerde dönüp yoluna çıkan herkese saldırır."
+            "Description": ""
         },
         
         "Burning Leo":
         {
             "Title": "Yanan Leo",
             
-            "Description": "Ateş saldırıları yapabilen sıcak bir yaratık. Dev bir ateş topu fırlatabilir."
+            "Description": ""
         },
         
         "Tomatoo":
         {
             "Title": "Tomatoo",
             
-            "Description": "Sulu kırmızı bir sebzeye benziyor. Yoksa bir meyve mi? Asla bilemeyeceğiz."
+            "Description": ""
         },
         
         "'Onion'":
         {
             "Title": "'Soğan'",
             
-            "Description": "Soğan, isminin aksine, füzeye benzeyen bir havuç yaratığıdır. Yumurta bahçelerinde bulunurlar. Toprakta saklanıp yakınından geçenlere saldırırlar."
+            "Description": ""
         },
         
         "Anemonee":
         {
             "Title": "Anemonee",
             
-            "Description": "Kafasında uzun dalları olan bir su yaratığı. Bulundukları okyanusun dalgalarıyla dans ederler."
+            "Description": ""
         },
         
         "Gim":
         {
             "Title": "Gim",
             
-            "Description": "Gim yoyoları çok sever ve onları kullanmakta çok iyidir. Söylentilere göre koleksiyonunda 50'den fazla yoyosu var!"
+            "Description": ""
         },
         
         "Poppy Bros Jr.":
         {
             "Title": "Poppy Kardeş",
             
-            "Description": "Patlayıcıları seven yaramaz bir çocuk. Bu kadar bombayı nereden bulduğunu kimse bilmiyor."
+            "Description": ""
         },
         
         "Bobo":
         {
             "Title": "Bobo",
             
-            "Description": "Yürüyen ateş topuna benzeyen bir yaratık. Hotheadlerden daha sıcak, ama çok da zeki değil."
+            "Description": ""
         },
         
         "Foley":
         {
             "Title": "Foley",
             
-            "Description": "Bu yaratığın tatlı göründüğüne aldanmayın. Foleyler uçup istedikleri zaman kendilerini fırlatıp patlayabilirler. Dikkatli ol!"
+            "Description": ""
         },
         
         "Nidoo":
         {
             "Title": "Nidoo",
             
-            "Description": "Bu kapı falan değil! Eğer bu sahte kapılara girmeye çalışırsan, zıplayıp seni ezmeye kalkışırlar!"
+            "Description": ""
         },
         
         "Como":
         {
             "Title": "Como",
             
-            "Description": "Bu örümcekler, ağaçlarda sallanıp birilerinin gelmesini beklerler. Bu türün iki ayaklı bir varyantı olduğu söylenir."
+            "Description": ""
         }
         ,
         "Cairn":
         {
             "Title": "Cairn",
             
-            "Description": "Şirin bir kaya yığını. Zıplamayı çok severler. Boing!"
+            "Description": ""
         },
         
         "Bomber":
         {
             "Title": "Bombacı",
             
-            "Description": "Fazlasıyla tehlikeli bir düşman. Kenarlardan atlayarak canını çok acıtabilen bir patlama yaratır."
+            "Description": ""
         },
         
         "Simirror":
         {
             "Title": "Simirror",
             
-            "Description": "Güçlü bir ayna sihirbazı. Kendi klonlarını yaratıp ışınlanabilir!"
+            "Description": ""
+        },
+		
+		"Hothead":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Sparky":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Yolky":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Wheelie":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Pacloud":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Laser Ball":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Jackle":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Kookler":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Ufo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Bouncy Sis":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Flamer":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Chuckie":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Walky":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Mystic Block":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Lovely":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Plasma Wisp":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Capsule J2":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Cerulean":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Wizzer":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Mopoo":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Golem":
+        {
+            "Title": "",
+            
+            "Description": ""
         }
     },
     
