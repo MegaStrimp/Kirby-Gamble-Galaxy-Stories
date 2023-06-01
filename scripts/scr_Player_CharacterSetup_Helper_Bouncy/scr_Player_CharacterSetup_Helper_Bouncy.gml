@@ -136,6 +136,7 @@ function scr_Player_CharacterSetup_Helper_Bouncy(argument0)
 		canUfoFloat = false;
 		canGetHurt = true;
 		runImageSpeedIncrease = 0;
+		hasIdleAnimation = false;
 		#endregion
 		
 		#region Sprites & Masks
@@ -148,7 +149,7 @@ function scr_Player_CharacterSetup_Helper_Bouncy(argument0)
 			sprJump = spr_Bouncy_Normal_Jump;
 			sprFall = spr_Bouncy_Normal_Idle;
 			sprSquish = spr_Bouncy_Normal_Idle;
-			sprDuck = spr_Bouncy_Normal_Duck;
+			sprDuck = spr_Bouncy_Normal_LongDuck;
 			sprEnter = spr_Bouncy_Normal_Idle;
 			sprHurt = spr_Bouncy_Normal_Hurt;
 			sprDeath = spr_Bouncy_Normal_Hurt;

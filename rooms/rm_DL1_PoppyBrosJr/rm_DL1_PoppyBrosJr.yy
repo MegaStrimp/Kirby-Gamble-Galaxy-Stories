@@ -60,8 +60,8 @@
 114,47,48,-3,0,7,47,48,0,0,114,47,48,-3,0,7,68,69,70,0,35,36,37,-3,0,7,47,48,0,0,
 114,47,48,-3,0,27,47,48,0,0,114,47,48,0,0,35,36,37,0,0,68,69,70,0,103,0,47,48,0,0,
 114,47,48,-3,0,14,47,48,0,0,114,47,48,0,0,68,67,70,0,103,-6,0,7,47,48,0,0,114,47,48,
--3,0,7,47,48,0,0,114,47,48,-3,0,12,100,2,0,35,36,37,103,101,0,0,47,48,-3,102,2,47,48,
--3,102,2,47,48,-3,102,2,47,48,-30,18,-120,51,],"TileDataFormat":1,},"tilesetId":{"name":"ts_DL1_Main","path":"tilesets/ts_DL1_Main/ts_DL1_Main.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+-3,0,7,47,48,0,0,114,47,48,-3,0,17,100,2,0,35,36,37,103,101,0,0,47,48,55,55,102,47,48,
+-3,55,7,47,48,55,55,102,47,48,-30,18,-120,51,],"TileDataFormat":1,},"tilesetId":{"name":"ts_DL1_Main","path":"tilesets/ts_DL1_Main/ts_DL1_Main.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Collision","depth":400,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_606DBEBA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_16x16ToplessWall","path":"objects/obj_16x16ToplessWall/obj_16x16ToplessWall.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":464.0,"y":192.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_278EDA19","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_16x16ToplessWall","path":"objects/obj_16x16ToplessWall/obj_16x16ToplessWall.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":448.0,"y":192.0,},

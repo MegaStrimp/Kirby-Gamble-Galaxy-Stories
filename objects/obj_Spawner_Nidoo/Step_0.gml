@@ -28,6 +28,8 @@ else if (spawnTimer == 0)
 	spawnedEnemy.hasSpawner = true;
 	spawnedEnemy.spawner = id;
 	spawnedEnemy.spawnerRange = (spawnerRange * 2);
+	spawnedEnemy.gravNormal = gravNormal;
+	spawnedEnemy.gravLimitNormal = gravLimitNormal;
 	spawnedEnemy.paletteIndex = paletteIndex;
 	spawnedEnemy.character = character;
 	switch (character)

@@ -118,6 +118,7 @@ enum debugObject
 	chuckie,
 	walky,
 	mysticBlock,
+	lovely,
 	plasmaWisp,
 	cerulean,
 	wizzer,

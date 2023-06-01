@@ -14,6 +14,14 @@ switch (global.roomPrevious)
 	selection = "maykr";
 	break;
 	
+	case rm_GamblionTitle:
+	selection = "gamblion";
+	break;
+	
+	case rm_StrimpsMatrix_Title:
+	selection = "strimpsMatrix";
+	break;
+	
 	case rm_Collection:
 	selection = "collection";
 	break;

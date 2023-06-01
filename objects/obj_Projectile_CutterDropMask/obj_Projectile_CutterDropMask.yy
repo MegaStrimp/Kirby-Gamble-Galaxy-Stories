@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_CutterDash_Mask",
-    "path": "sprites/spr_CutterDash_Mask/spr_CutterDash_Mask.yy",
+    "name": "spr_CutterDrop_Mask",
+    "path": "sprites/spr_CutterDrop_Mask/spr_CutterDrop_Mask.yy",
   },
   "spriteMaskId": null,
   "visible": false,

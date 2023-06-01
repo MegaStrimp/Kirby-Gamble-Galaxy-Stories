@@ -13,7 +13,7 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2354d411-b661-4fc5-bdc1-bb3b0551950f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7002f5ff-44eb-4d45-aef0-0b374b4acd55",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"2354d411-b661-4fc5-bdc1-bb3b0551950f","path":"sprites/spr_Bouncy_Normal_Palette_GolfCourse/spr_Bouncy_Normal_Palette_GolfCourse.yy",},},},"Disabled":false,"id":"25b0a405-d22a-4a14-a53e-68ab43de41e0","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"7002f5ff-44eb-4d45-aef0-0b374b4acd55","path":"sprites/spr_Bouncy_Normal_Palette_GolfCourse/spr_Bouncy_Normal_Palette_GolfCourse.yy",},},},"Disabled":false,"id":"6e38c9b3-1e30-460b-8a9b-db3df88da6f6","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

@@ -12,7 +12,7 @@ if (sprite_index == sprRelease)
 {
 	if (image_index >= 9) scr_Enemy_HurtsPlayer(dmg);
 	
-	if ((image_index >= 10) and (!crashSoundPlayed))
+	if ((image_index >= 10) and (!crashSoundPlayed) and ((grounded) or (!hasYCollision)))
 	{
 		crashSoundPlayed = true;
 		if (audio_is_playing(snd_NidooHit)) audio_stop_sound(snd_NidooHit);
@@ -22,10 +22,10 @@ if (sprite_index == sprRelease)
 
 if (!childPause)
 {
-	//Activate
-	
 	if (!active)
 	{
+		//Activate
+		
 		with (obj_Player)
 		{
 			if ((position_meeting(x,y,other)) and (keyUpPressed))
@@ -37,10 +37,7 @@ if (!childPause)
 				other.image_index = 0;
 			}
 		}
-	}
-	
-	if (!active)
-	{
+		
 		//Particle Index
 		
 		parIndex += parIndexSpd;
@@ -64,6 +61,10 @@ if (!childPause)
 				particleTimer = particleTimerMax;
 			}
 		}
+	}
+	else
+	{
+		if (image_index >= 8) hasGravity = true;
 	}
 	
 	//Animation

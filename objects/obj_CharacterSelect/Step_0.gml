@@ -11,6 +11,8 @@ else
 {
 	if (!audio_is_paused(snd_ClockTick)) audio_pause_sound(snd_ClockTick);
 }
+
+var cancelAutoScroll = true;
 #endregion
 
 #region Play Sound
@@ -28,6 +30,40 @@ if (!loaded)
 	{
 		case stages.greenGreens:
 		scr_LoadTexturePage("GreenGreens");
+		break;
+		
+		case stages.battleshipHalberd:
+		scr_LoadTexturePage("Halberd");
+		break;
+		
+		case stages.asteroidFields:
+		scr_LoadTexturePage("AsteroidFields");
+		break;
+		
+		case stages.yolkYard:
+		case stages.grandTempleAvgo:
+		case stages.floralYolkCaves:
+		scr_LoadTexturePage("EggGarden");
+		break;
+		
+		case stages.stormTheFortress:
+		case stages.centralLab:
+		case stages.pathToTheNastyMachine:
+		scr_LoadTexturePage("GearCube");
+		break;
+		
+		case stages.sandshellBeach:
+		case stages.upTheStraw:
+		case stages.sacredAquatia:
+		scr_LoadTexturePage("Aquatia");
+		break;
+		
+		case stages.cosmicPalace:
+		scr_LoadTexturePage("CosmicPalace");
+		break;
+		
+		case stages.popstarMoon:
+		scr_LoadTexturePage("PopstarMoon");
 		break;
 	}
 	loaded = true;
@@ -144,7 +180,7 @@ for (var i = 0; i < 4; i++)
 				var characterHasChangedP2 = false;
 				var characterHasChangedP3 = false;
 				var characterHasChangedP4 = false;
-				if (keyUpPressed)
+				if ((keyUpPressed) or ((autoScrollTick) and (keyUpHold)))
 				{
 					if (characterSelectionPointer > 0)
 					{
@@ -178,9 +214,11 @@ for (var i = 0; i < 4; i++)
 						if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 						audio_play_sound(snd_ButtonNo,0,false);
 					}
+					
+					if (!autoScroll) canAutoScrollTimer = canAutoScrollTimerMax;
 				}
 				
-				if (keyDownPressed)
+				if ((keyDownPressed) or ((autoScrollTick) and (keyDownHold)))
 				{
 					if (characterSelectionPointer < charactersMax - 1)
 					{
@@ -214,6 +252,8 @@ for (var i = 0; i < 4; i++)
 						if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 						audio_play_sound(snd_ButtonNo,0,false);
 					}
+					
+					if (!autoScroll) canAutoScrollTimer = canAutoScrollTimerMax;
 				}
 				
 				if (characterHasChangedP1)
@@ -378,7 +418,7 @@ for (var i = 0; i < 4; i++)
 				break;
 				
 				case 1:
-				if (keyUpPressed)
+				if ((keyUpPressed) or ((autoScrollTick) and (keyUpHold)))
 				{
 					if (paletteSelectionPointer > 0)
 					{
@@ -408,9 +448,11 @@ for (var i = 0; i < 4; i++)
 						if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 						audio_play_sound(snd_ButtonNo,0,false);
 					}
+					
+					if (!autoScroll) canAutoScrollTimer = canAutoScrollTimerMax;
 				}
 				
-				if (keyDownPressed)
+				if ((keyDownPressed) or ((autoScrollTick) and (keyDownHold)))
 				{
 					if (paletteSelectionPointer < spraysMax - 1)
 					{
@@ -440,6 +482,8 @@ for (var i = 0; i < 4; i++)
 						if (audio_is_playing(snd_ButtonNo)) audio_stop_sound(snd_ButtonNo);
 						audio_play_sound(snd_ButtonNo,0,false);
 					}
+					
+					if (!autoScroll) canAutoScrollTimer = canAutoScrollTimerMax;
 				}
 				
 				if (keyLeftPressed)
@@ -467,6 +511,47 @@ for (var i = 0; i < 4; i++)
 				}
 				break;
 			}
+		}
+		
+		cancelAutoScroll = !(((keyUpHold) or (keyDownHold)) and !((keyUpHold) and (keyDownHold)));
+		
+		#region Cancel Auto Scroll
+		if (cancelAutoScroll)
+		{
+			autoScroll = false;
+			canAutoScrollTimer = -1;
+			autoScrollTimer = -1;
+		}
+		
+		autoScrollTick = false;
+		#endregion
+		
+		#region Can Auto Scroll Timer
+		if (canAutoScrollTimer > 0)
+		{
+			canAutoScrollTimer -= 1;
+		}
+		else if (canAutoScrollTimer == 0)
+		{
+			autoScroll = true;
+			autoScrollTimer = 0;
+			canAutoScrollTimer = -1;
+		}
+		#endregion
+		
+		if (autoScroll)
+		{
+			#region Auto Scroll Timer
+			if (autoScrollTimer > 0)
+			{
+				autoScrollTimer -= 1;
+			}
+			else if (autoScrollTimer == 0)
+			{
+				autoScrollTick = true;
+				autoScrollTimer = autoScrollTimerMax;
+			}
+			#endregion
 		}
 	}
 }

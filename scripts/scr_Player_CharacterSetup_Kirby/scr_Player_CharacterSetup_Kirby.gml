@@ -86,6 +86,7 @@ function scr_Player_CharacterSetup_Kirby(argument0)
 		canUfoFloat = false;
 		canGetHurt = true;
 		runImageSpeedIncrease = 0;
+		hasIdleAnimation = true;
 		#endregion
 		
 		#region Sprites & Masks

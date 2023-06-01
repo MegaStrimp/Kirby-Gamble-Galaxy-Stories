@@ -110,9 +110,9 @@ button.owner = id;
 button.sprite_index = spr_Menu_StageSelect_Hud_Back2;
 button.state = "back";
 
-var button = instance_create_depth(259,8,depth - 1,obj_Menu_Button);
+var button = instance_create_depth(252,0,depth - 1,obj_Menu_Button);
 button.owner = id;
-button.sprite_index = spr_Maykr_TopHud_Reset;
+button.sprite_index = spr_Menu_Options_Reset;
 button.state = "options";
 button.index = "reset";
 #endregion

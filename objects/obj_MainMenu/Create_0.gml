@@ -66,6 +66,14 @@ if (global.gamblionUnlocked)
 	button.state = "mainMenu";
 	button.index = "gamblion";
 }
+if (global.strimpsMatrixUnlocked)
+{
+	var button = instance_create_depth(226,193,depth,obj_Menu_Button);
+	button.owner = id;
+	button.sprite_index = spr_Menu_MainMenu_Button_StrimpsMatrix;
+	button.state = "mainMenu";
+	button.index = "strimpsMatrix";
+}
 if (global.bitcrushedUnlocked)
 {
 	var button = instance_create_depth(423,51,depth,obj_Menu_Button);

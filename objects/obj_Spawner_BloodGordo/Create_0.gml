@@ -43,6 +43,7 @@ deathOnBottom = true;
 objectOnDeath = false;
 objectOnDeathObj = obj_Projectile_ExplosionMask;
 groundFailsafe = true;
+triggerTresholdMax = 20;
 radius = 62;
 
 //Timers

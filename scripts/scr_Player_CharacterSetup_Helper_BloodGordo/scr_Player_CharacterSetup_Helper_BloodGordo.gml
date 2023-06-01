@@ -100,6 +100,7 @@ function scr_Player_CharacterSetup_Helper_BloodGordo(argument0)
 		canUfoFloat = false;
 		canGetHurt = false;
 		runImageSpeedIncrease = 0;
+		hasIdleAnimation = false;
 		#endregion
 		
 		#region Sprites & Masks

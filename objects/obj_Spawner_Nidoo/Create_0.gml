@@ -1,5 +1,10 @@
 ///@description Initialize Variables
 
+//Physics
+
+gravNormal = .5;
+gravLimitNormal = 5;
+
 //Other Variables
 
 spawn = false;
@@ -12,7 +17,7 @@ dmg = baseEnemyContact_Damage;
 ability = playerAbilities.none;
 points = nidoo_Points;
 hurtable = true;
-hasGravity = true;
+hasGravity = false;
 heavy = false;
 inhaleXOffset = 0;
 inhaleYOffset = 0;

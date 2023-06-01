@@ -13,7 +13,7 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"85585a74-9fcd-4f27-b6b0-db3fb0df3548",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6f7711af-612e-46a7-8134-c4b1933f12d2",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"85585a74-9fcd-4f27-b6b0-db3fb0df3548","path":"sprites/spr_Bouncy_Normal_Palette_EmeraldEscape/spr_Bouncy_Normal_Palette_EmeraldEscape.yy",},},},"Disabled":false,"id":"9e072633-59ab-41a9-b842-9dbb905c1a7c","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6f7711af-612e-46a7-8134-c4b1933f12d2","path":"sprites/spr_Bouncy_Normal_Palette_EmeraldEscape/spr_Bouncy_Normal_Palette_EmeraldEscape.yy",},},},"Disabled":false,"id":"400d7811-7798-4bd6-8159-1606eb831744","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

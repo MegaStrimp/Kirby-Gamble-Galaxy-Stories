@@ -333,6 +333,15 @@ switch (state)
 	break;
 	#endregion
 	
+	#region Strimp's Matrix Title
+	case "strimpsMatrixTitle":
+	if (obj_StrimpsMatrix_Title.windowIndex == -1)
+	{
+		draw_sprite(sprite_index,(obj_StrimpsMatrix_Title.selection == index),x,y);
+	}
+	break;
+	#endregion
+	
 	#region Default
 	default:
 	draw_self();

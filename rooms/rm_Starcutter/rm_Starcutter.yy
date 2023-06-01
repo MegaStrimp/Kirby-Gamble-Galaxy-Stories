@@ -61,6 +61,7 @@
     {"name":"inst_1F649CC4","path":"rooms/rm_Starcutter/rm_Starcutter.yy",},
     {"name":"inst_23B3A140","path":"rooms/rm_Starcutter/rm_Starcutter.yy",},
     {"name":"inst_6FA45FAC","path":"rooms/rm_Starcutter/rm_Starcutter.yy",},
+    {"name":"inst_310F00C","path":"rooms/rm_Starcutter/rm_Starcutter.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -69,6 +70,7 @@
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Enemies","depth":100,"effectEnabled":true,"effectType":null,"gridX":6,"gridY":6,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4549AB26","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Como","path":"objects/obj_Como/obj_Como.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":36.0,"y":276.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_310F00C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_BloodGordo","path":"objects/obj_BloodGordo/obj_BloodGordo.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":138.0,"y":270.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Environment","depth":200,"effectEnabled":true,"effectType":null,"gridX":6,"gridY":6,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4ECD6334","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Door","path":"objects/obj_Door/obj_Door.yy",},"properties":[],"rotation":0.0,"scaleX":1.0277778,"scaleY":1.0,"x":84.333336,"y":376.0,},

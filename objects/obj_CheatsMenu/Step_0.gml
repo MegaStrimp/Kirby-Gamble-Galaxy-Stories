@@ -13,7 +13,11 @@ if (!global.pause)
 	if (!instance_exists(obj_Fade))
 	{
 		#region Sound
-		if ((keyUpPressed) or (keyDownPressed)) audio_play_sound(snd_BossHealth,0,false);
+		if ((keyUpPressed) or (keyDownPressed))
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+		}
 		#endregion
 	
 		if ((selection != "cheats") and (mouse_check_button_pressed(mb_left)) and ((point_in_rectangle(mouse_x,mouse_y,186,74,294,182))))

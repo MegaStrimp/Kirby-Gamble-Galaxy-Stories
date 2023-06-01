@@ -12,7 +12,11 @@ if (!global.pause)
 	
 	//Buttons
 	
-	if ((keyUpPressed) or (keyDownPressed) or (keyLeftPressed) or (keyRightPressed)) audio_play_sound(snd_BossHealth,0,false);
+	if ((keyUpPressed) or (keyDownPressed) or (keyLeftPressed) or (keyRightPressed))
+	{
+		if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+		audio_play_sound(snd_BossHealth,0,false);
+	}
 	
 	if (!instance_exists(obj_Fade))
 	{
@@ -151,7 +155,11 @@ if (!global.pause)
 		case "collection":
 		if (keyUpPressed)
 		{
-			if (global.gamblionUnlocked)
+			if (global.strimpsMatrixUnlocked)
+			{
+				selection = "strimpsMatrix";
+			}
+			else if (global.gamblionUnlocked)
 			{
 				selection = "gamblion";
 			}
@@ -181,6 +189,10 @@ if (!global.pause)
 			else if (global.gamblionUnlocked)
 			{
 				selection = "gamblion";
+			}
+			else if (global.strimpsMatrixUnlocked)
+			{
+				selection = "strimpsMatrix";
 			}
 			else
 			{
@@ -258,6 +270,10 @@ if (!global.pause)
 			{
 				selection = "gamblion";
 			}
+			else if (global.strimpsMatrixUnlocked)
+			{
+				selection = "strimpsMatrix";
+			}
 			else
 			{
 				selection = "collection";
@@ -311,6 +327,10 @@ if (!global.pause)
 			if (global.gamblionUnlocked)
 			{
 				selection = "gamblion";
+			}
+			else if (global.strimpsMatrixUnlocked)
+			{
+				selection = "strimpsMatrix";
 			}
 			else
 			{
@@ -368,7 +388,17 @@ if (!global.pause)
 				selection = "collection";
 			}
 		}
-		if (keyDownPressed) selection = "collection";
+		if (keyDownPressed)
+		{
+			if (global.strimpsMatrixUnlocked)
+			{
+				selection = "strimpsMatrix";
+			}
+			else
+			{
+				selection = "collection";
+			}
+		}
 		if (keyLeftPressed) selection = "storyMode";
 		if (keyRightPressed)
 		{
@@ -396,6 +426,58 @@ if (!global.pause)
 		{
 			var fade = instance_create_depth(x,y,-999,obj_Fade);
 			fade.targetRoom = rm_GamblionTitle;
+			select = false;
+		}
+		break;
+		
+		case "strimpsMatrix":
+		if (keyUpPressed)
+		{
+			if (global.gamblionUnlocked)
+			{
+				selection = "gamblion";
+			}
+			else if (global.skylandsUnlocked)
+			{
+				selection = "skylands";
+			}
+			else if (global.maykrUnlocked)
+			{
+				selection = "maykr";
+			}
+			else
+			{
+				selection = "collection";
+			}
+		}
+		if (keyDownPressed) selection = "collection";
+		if (keyLeftPressed) selection = "storyMode";
+		if (keyRightPressed)
+		{
+			if (global.bitcrushedUnlocked)
+			{
+				selection = "bitcrushed";
+			}
+			else
+			{
+				selection = "storyMode";
+			}
+		}
+		
+		if (!instance_exists(obj_Fade))
+		{
+			if ((keyJumpPressed) or (keyStartPressed))
+			{
+				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+				audio_play_sound(snd_ButtonYes,0,false);
+				select = true;
+			}
+		}
+		
+		if (select)
+		{
+			var fade = instance_create_depth(x,y,-999,obj_Fade);
+			fade.targetRoom = rm_StrimpsMatrix_Title;
 			select = false;
 		}
 		break;

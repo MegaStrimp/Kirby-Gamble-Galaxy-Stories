@@ -13,7 +13,7 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8d535254-71ce-4331-9dc1-f2d14869c912",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"43e9f8c1-a160-41d3-82fd-6c0303228222",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"8d535254-71ce-4331-9dc1-f2d14869c912","path":"sprites/spr_Bouncy_Normal_Palette_GoldsMold/spr_Bouncy_Normal_Palette_GoldsMold.yy",},},},"Disabled":false,"id":"8d6f561f-d3b5-4eb0-b20e-71d71d285998","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"43e9f8c1-a160-41d3-82fd-6c0303228222","path":"sprites/spr_Bouncy_Normal_Palette_GoldsMold/spr_Bouncy_Normal_Palette_GoldsMold.yy",},},},"Disabled":false,"id":"ffc6ac53-6d82-4e31-a829-94f51b02ae65","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

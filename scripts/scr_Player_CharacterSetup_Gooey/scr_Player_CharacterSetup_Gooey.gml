@@ -86,6 +86,7 @@ function scr_Player_CharacterSetup_Gooey(argument0)
 		canUfoFloat = false;
 		canGetHurt = true;
 		runImageSpeedIncrease = 0;
+		hasIdleAnimation = false;
 		#endregion
 		
 		#region Sprites & Masks

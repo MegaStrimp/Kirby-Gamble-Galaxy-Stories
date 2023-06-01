@@ -127,6 +127,8 @@ function scr_LoadGame(argument0)
 	global.skylandsUnlockedFirstTime = ini_read_real("unlocks","skylandsUnlockedFirstTime",false);
 	global.gamblionUnlocked = ini_read_real("unlocks","gamblionUnlocked",false);
 	global.gamblionUnlockedFirstTime = ini_read_real("unlocks","gamblionUnlockedFirstTime",false);
+	global.strimpsMatrixUnlocked = ini_read_real("unlocks","strimpsMatrixUnlocked",false);
+	global.strimpsMatrixUnlockedFirstTime = ini_read_real("unlocks","strimpsMatrixUnlockedFirstTime",false);
 	global.bitcrushedUnlocked = ini_read_real("unlocks","bitcrushedUnlocked",false);
 	global.bitcrushedUnlockedFirstTime = ini_read_real("unlocks","bitcrushedUnlockedFirstTime",false);
 	global.samuraiKirbyUnlocked = ini_read_real("unlocks","samuraiKirbyUnlocked",false);

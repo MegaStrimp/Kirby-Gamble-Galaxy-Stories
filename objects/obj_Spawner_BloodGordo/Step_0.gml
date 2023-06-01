@@ -79,6 +79,7 @@ else if (spawnTimer == 0)
 	spawnedEnemy.objectOnDeath = objectOnDeath;
 	spawnedEnemy.objectOnDeathObj = objectOnDeathObj;
 	spawnedEnemy.groundFailsafe = groundFailsafe;
+	spawnedEnemy.triggerTresholdMax = triggerTresholdMax;
 	spawnedEnemy.radius = radius;
 	spawnTimer = -1;
 }

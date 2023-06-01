@@ -21,7 +21,6 @@ if (!global.pause)
 				dialogue.owner = id;
 				dialogue.changeOwnerState = true;
 				dialogue.hasResetTimer = true;
-				dialogue.textSpeed = 25;
 				var text = "After all this time.";
 				scr_Dialogue(dialogue,array,text,-1,-1,-1,snd_TextMatch);
 				dialogue.resetTimerMax[array] = 210;
@@ -46,7 +45,6 @@ if (!global.pause)
 				dialogue.owner = id;
 				dialogue.changeOwnerState = true;
 				dialogue.hasResetTimer = true;
-				dialogue.textSpeed = 25;
 				dialogue.targetRoom = rm_Title;
 				var text = "I am finally free.";
 				scr_Dialogue(dialogue,array,text,spr_Hud_Dialogue_Textbox_Normal,spr_Hud_Dialogue_Background_TealDiamond,spr_Hud_Dialogue_Portrait_ShadowMatch_Normal,snd_TextMatch);

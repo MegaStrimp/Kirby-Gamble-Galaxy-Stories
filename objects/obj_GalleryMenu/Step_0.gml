@@ -17,7 +17,11 @@ if (!global.pause)
 				switch (page)
 				{
 					case 0:
-					if ((keyUpPressed) or (keyDownPressed) or (keyLeftPressed) or (keyRightPressed)) audio_play_sound(snd_BossHealth,0,false);
+					if ((keyUpPressed) or (keyDownPressed) or (keyLeftPressed) or (keyRightPressed))
+					{
+						if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+						audio_play_sound(snd_BossHealth,0,false);
+					}
 		
 					switch (selection)
 					{
@@ -161,8 +165,12 @@ if (!global.pause)
 					switch (selection)
 					{
 						case "artwork":
-						if ((keyUpPressed) or (keyDownPressed)) audio_play_sound(snd_BossHealth,0,false);
-				
+						if ((keyUpPressed) or (keyDownPressed))
+						{
+							if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+							audio_play_sound(snd_BossHealth,0,false);
+						}
+						
 						if (keyUpPressed) selection = "download";
 						if (keyDownPressed) selection = "download";
 						if (((keyLeftPressed) or ((autoScrollTick) and (keyLeftHold))) and (artworkSelection != 0))
@@ -205,7 +213,11 @@ if (!global.pause)
 						break;
 			
 						case "download":
-						if ((keyUpPressed) or (keyDownPressed) or (keyLeftPressed) or (keyRightPressed)) audio_play_sound(snd_BossHealth,0,false);
+						if ((keyUpPressed) or (keyDownPressed) or (keyLeftPressed) or (keyRightPressed))
+						{
+							if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+							audio_play_sound(snd_BossHealth,0,false);
+						}
 				
 						if (keyUpPressed) selection = "artwork";
 						if (keyDownPressed) selection = "artwork";
@@ -238,7 +250,11 @@ if (!global.pause)
 						break;
 			
 						case "back":
-						if ((keyUpPressed) or (keyDownPressed) or (keyLeftPressed) or (keyRightPressed)) audio_play_sound(snd_BossHealth,0,false);
+						if ((keyUpPressed) or (keyDownPressed) or (keyLeftPressed) or (keyRightPressed))
+						{
+							if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+							audio_play_sound(snd_BossHealth,0,false);
+						}
 				
 						if (keyUpPressed) selection = "artwork";
 						if (keyDownPressed) selection = "artwork";
@@ -265,6 +281,7 @@ if (!global.pause)
 			
 					if ((selection != "artwork") and (mouse_check_button_pressed(mb_left)) and ((point_in_rectangle(mouse_x,mouse_y,149,38,331,190))))
 					{
+					if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 						audio_play_sound(snd_BossHealth,0,false);
 						selection = "artwork";
 					}

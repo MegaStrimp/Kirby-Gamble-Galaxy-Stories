@@ -2798,6 +2798,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var sprIdle = spr_Bouncy_Normal_Idle;
 			var sprJump = spr_Bouncy_Normal_Jump;
 			var sprDuck = spr_Bouncy_Normal_Duck;
+			var sprLongDuck = spr_Bouncy_Normal_LongDuck;
 			var sprHurt = spr_Bouncy_Normal_Hurt;
 			debugPaletteNumberMax = 14;
 			switch (debugPaletteNumber)
@@ -2874,6 +2875,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			var sprIdle = spr_Bouncy_Robo_Idle;
 			var sprJump = spr_Bouncy_Robo_Jump;
 			var sprDuck = spr_Bouncy_Robo_Duck;
+			var sprDuck = spr_Bouncy_Robo_Duck;
 			var sprHurt = spr_Bouncy_Robo_Hurt;
 			debugPaletteNumberMax = 0;
 			switch (debugPaletteNumber)
@@ -2901,6 +2903,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprJump = sprJump;
 			debugObj.sprDuck = sprDuck;
+			debugObj.sprLongDuck = sprLongDuck;
 			debugObj.sprHurt = sprHurt;
 			debugObj.sprite_index = sprIdle;
 			debugObj.paletteIndex = debugPaletteIndex;
@@ -5452,6 +5455,67 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			debugObj.sprite_index = sprIdle;
 			debugObj.image_xscale = debugXScale;
 			debugObj.image_yscale = debugYScale;
+		}
+		break;
+		#endregion
+		
+		#region Lovely
+		case debugObject.lovely:
+		debugSpriteSelectedMax = 0;
+		switch (debugSpriteSelected)
+		{
+			#region Normal
+			case 0:
+			var sprIdle = spr_Lovely_Normal_Face;
+			var sprAttack = spr_Lovely_Normal_Face_Attack;
+			var sprAttackDiagonal = spr_Lovely_Normal_Face_Attack_Diagonal;
+			var sprFaceIdle = spr_Lovely_Normal_Eyes_Blink;
+			var sprFaceWink = spr_Lovely_Normal_Eyes_Wink;
+			var sprFaceHurt = spr_Lovely_Normal_Eyes_Damaged;
+			var sprBalls = spr_Lovely_Normal_Balls;
+			var sprBody = spr_Lovely_Normal_Body;
+			var sprHurt = spr_Lovely_Normal_Face_Damaged;
+			debugPaletteNumberMax = 0;
+			switch (debugPaletteNumber)
+			{
+				case 0:
+				debugPaletteIndex = spr_Lovely_Normal_Palette_BloomingFlower;
+				break;
+				
+				default:
+				debugPaletteIndex = spr_Lovely_Normal_Palette_BloomingFlower;
+				break;
+			}
+			break;
+			#endregion
+		}
+		debugSprite = sprBody;
+		debugIndex = 0;
+		debugStateSelectedMax = 0;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			var spawnedObj = obj_LovelyBody;
+			//if (spawnerMode) spawnedObj = obj_Spawner_Lovely;
+			var debugObj = instance_create_layer(x,y,"Enemies",spawnedObj);
+			debugObj.character = debugSpriteSelected;
+			debugObj.sprIdle = sprIdle;
+			debugObj.sprAttack = sprAttack;
+			debugObj.sprAttackDiagonal = sprAttackDiagonal;
+			debugObj.sprFaceIdle = sprFaceIdle;
+			debugObj.sprFaceWink = sprFaceWink;
+			debugObj.sprFaceHurt = sprFaceHurt;
+			debugObj.sprBalls = sprBalls;
+			debugObj.sprBody = sprBody;
+			debugObj.sprHurt = sprHurt;
+			debugObj.sprite_index = sprBody;
+			debugObj.paletteIndex = debugPaletteIndex;
+			debugObj.image_xscale = debugXScale;
+			debugObj.dirX = debugXScale;
+			debugObj.walkDirX = debugXScale;
+			debugObj.image_yscale = debugYScale;
+			debugObj.dirY = debugYScale;
+			debugObj.walkDirY = debugYScale;
+			debugObj.state = debugStateSelected;
 		}
 		break;
 		#endregion

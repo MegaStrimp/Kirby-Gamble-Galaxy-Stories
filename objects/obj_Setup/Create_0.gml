@@ -88,10 +88,10 @@ enum playerCharacters
 	kirby,
 	gamble,
 	metaKnight,
-	keeby,
 	helper,
 	gooey,
 	magolor,
+	keeby,
 	
 	waddleDee,
 	waddleDoo,
@@ -732,7 +732,6 @@ global.skylandsLives = 2;
 #endregion
 
 global.currentStage = stages.greenGreens;
-global.currentStage = stages.yolkYard;
 global.roomPrevious = rm_Setup;
 global.roomNext = rm_Starcutter;
 global.roomCheckpoint = rm_Setup;

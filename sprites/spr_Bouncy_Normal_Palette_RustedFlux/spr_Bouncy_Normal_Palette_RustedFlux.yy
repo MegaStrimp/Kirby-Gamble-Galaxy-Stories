@@ -13,7 +13,7 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"911b8a73-dbe2-4177-a7bd-fe9ad7f8703f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"98f27840-3386-46d1-b6bd-5c2fd2828ffa",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"911b8a73-dbe2-4177-a7bd-fe9ad7f8703f","path":"sprites/spr_Bouncy_Normal_Palette_RustedFlux/spr_Bouncy_Normal_Palette_RustedFlux.yy",},},},"Disabled":false,"id":"2b963bcd-3a29-490b-a0ee-cb5525e6a788","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"98f27840-3386-46d1-b6bd-5c2fd2828ffa","path":"sprites/spr_Bouncy_Normal_Palette_RustedFlux/spr_Bouncy_Normal_Palette_RustedFlux.yy",},},},"Disabled":false,"id":"9f182cef-a44f-4ddc-84e4-fe266a54d104","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

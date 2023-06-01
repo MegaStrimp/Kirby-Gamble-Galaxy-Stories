@@ -6,7 +6,11 @@ if (!global.pause)
 	
 	scr_Player_Inputs(0);
 	
-	if ((keyUpPressed) or (keyDownPressed) or (keyLeftPressed) or (keyRightPressed)) audio_play_sound(snd_BossHealth,0,false);
+	if ((keyUpPressed) or (keyDownPressed) or (keyLeftPressed) or (keyRightPressed))
+	{
+		if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+		audio_play_sound(snd_BossHealth,0,false);
+	}
 	
 	switch (selection)
 	{

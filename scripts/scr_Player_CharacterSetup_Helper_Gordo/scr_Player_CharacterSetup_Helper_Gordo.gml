@@ -118,6 +118,7 @@ function scr_Player_CharacterSetup_Helper_Gordo(argument0)
 		canUfoFloat = false;
 		canGetHurt = false;
 		runImageSpeedIncrease = 0;
+		hasIdleAnimation = false;
 		#endregion
 		
 		#region Sprites & Masks

@@ -115,6 +115,7 @@ function scr_Player_CharacterSetup_Helper_SirKibble(argument0)
 		canUfoFloat = false;
 		canGetHurt = true;
 		runImageSpeedIncrease = .5;
+		hasIdleAnimation = false;
 		#endregion
 		
 		#region Sprites & Masks

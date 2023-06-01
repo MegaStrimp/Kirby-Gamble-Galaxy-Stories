@@ -32,25 +32,41 @@ if (!childPause)
 				{
 					if (other.retreated)
 					{
-						if (audio_is_playing(snd_Charge_Ready)) audio_stop_sound(snd_Charge_Ready);
-						audio_play_sound(snd_Charge_Ready,0,false);
-						var particle = instance_create_depth(other.x,other.y,other.depth - 1,obj_Particle);
-						particle.sprite_index = spr_Particle_BloodGordo;
-						particle.destroyAfterAnimation = true;
-						other.triggered = true;
+						if (other.triggerTreshold == -1)
+						{
+							other.triggerTreshold = other.triggerTresholdMax;
+						}
+						else if (other.triggerTreshold == 0)
+						{
+							if (audio_is_playing(snd_Charge_Ready)) audio_stop_sound(snd_Charge_Ready);
+							audio_play_sound(snd_Charge_Ready,0,false);
+							var particle = instance_create_depth(other.x,other.y,other.depth - 1,obj_Particle);
+							particle.sprite_index = spr_Particle_BloodGordo;
+							particle.destroyAfterAnimation = true;
+							other.triggered = true;
+						}
 					}
-					other.targetX = x;
-					other.targetY = y;
-					other.targetSet = true;
-					other.retreated = false;
+					
+					if (other.triggered)
+					{
+						if (other.triggerTreshold <= 0)
+						{
+							other.targetX = x;
+							other.targetY = y;
+							other.targetSet = true;
+							other.retreated = false;
+						}
+					}
 				}
 				else if ((distance_to_point(other.x,other.y)) <= other.radius + 24)
 				{
 					other.cautious = true;
 					other.retreated = true;
+					other.triggerTreshold = -1;
 				}
 			}
 		}
+		triggerTreshold = max(-1,triggerTreshold - 1);
 		
 		if (targetSet)
 		{

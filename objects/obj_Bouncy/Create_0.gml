@@ -19,6 +19,7 @@ mask_index = spr_16Square_Mask;
 sprIdle = spr_Bouncy_Normal_Idle;
 sprJump = spr_Bouncy_Normal_Jump;
 sprDuck = spr_Bouncy_Normal_Duck;
+sprLongDuck = spr_Bouncy_Normal_LongDuck;
 sprHurt = spr_Bouncy_Normal_Hurt;
 
 //Other Variables

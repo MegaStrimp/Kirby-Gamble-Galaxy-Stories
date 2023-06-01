@@ -11,6 +11,7 @@ if (setupTimer == 0)
 		sprIdle = spr_Bouncy_Normal_Idle;
 		sprJump = spr_Bouncy_Normal_Jump;
 		sprDuck = spr_Bouncy_Normal_Duck;
+		sprLongDuck = spr_Bouncy_Normal_LongDuck;
 		sprHurt = spr_Bouncy_Normal_Hurt;
 		break;
 		
@@ -20,6 +21,7 @@ if (setupTimer == 0)
 		sprIdle = spr_Bouncy_Robo_Idle;
 		sprJump = spr_Bouncy_Robo_Jump;
 		sprDuck = spr_Bouncy_Robo_Duck;
+		sprLongDuck = spr_Bouncy_Robo_Duck;
 		sprHurt = spr_Bouncy_Robo_Hurt;
 		break;
 	}

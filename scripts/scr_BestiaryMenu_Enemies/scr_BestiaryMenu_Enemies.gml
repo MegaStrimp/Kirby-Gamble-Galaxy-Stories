@@ -1191,7 +1191,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesCappyUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_DL1;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Helper;
 	bestiaryArray[# i,9] = bestiaryEnemies.cappy;
@@ -1293,7 +1293,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesCoconutUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_Adventure;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Helper;
 	bestiaryArray[# i,9] = bestiaryEnemies.coconut;
@@ -1359,7 +1359,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesBladoUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_CC;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 4;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Helper;
 	bestiaryArray[# i,9] = bestiaryEnemies.blado;
@@ -1389,7 +1389,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesScarfyUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_DL1;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Crash;
 	bestiaryArray[# i,9] = bestiaryEnemies.scarfy;
@@ -1429,7 +1429,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesRockyUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_Adventure;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Helper;
 	bestiaryArray[# i,9] = bestiaryEnemies.rocky;
@@ -1489,7 +1489,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesGrizzoUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_DL1;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Helper;
 	bestiaryArray[# i,9] = bestiaryEnemies.grizzo;
@@ -1541,7 +1541,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesJungleBombUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_KSS;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 3;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Helper;
 	bestiaryArray[# i,9] = bestiaryEnemies.jungleBomb;
@@ -1585,7 +1585,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesGlunkUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_DL1;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Helper;
 	bestiaryArray[# i,9] = bestiaryEnemies.glunk;
@@ -1675,7 +1675,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesBurningLeoUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_KSS;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Fire;
 	bestiaryArray[# i,9] = bestiaryEnemies.burningLeo;
@@ -1731,7 +1731,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesTomatooUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_GGS;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Helper;
 	bestiaryArray[# i,9] = bestiaryEnemies.tomatoo;
@@ -1773,7 +1773,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesOnionUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_GGS;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Helper;
 	bestiaryArray[# i,9] = bestiaryEnemies.onion;
@@ -1861,7 +1861,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesPoppyBrosJrUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_DL1;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Bomb;
 	bestiaryArray[# i,9] = bestiaryEnemies.poppyBrosJr;
@@ -1909,7 +1909,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesBoboUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_DL3;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Fire;
 	bestiaryArray[# i,9] = bestiaryEnemies.bobo;
@@ -1946,7 +1946,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesFoleyUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_AM;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Bomb;
 	bestiaryArray[# i,9] = bestiaryEnemies.foley;
@@ -2027,7 +2027,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,2] = string_lower(str("Enemies.Como.Description"));
 	bestiaryArray[# i,3] = global.bestiaryEnemiesComoUnlocked;
 	bestiaryArray[# i,4] = "";
-	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_DL1;
+	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_DL3;
 	bestiaryArray[# i,6] = 1;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Helper;
@@ -2062,7 +2062,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesCairnUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_64;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Stone;
 	bestiaryArray[# i,9] = bestiaryEnemies.cairn;
@@ -2096,7 +2096,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesBomberUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_Adventure;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 3;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Crash;
 	bestiaryArray[# i,9] = bestiaryEnemies.bomber;
@@ -2134,7 +2134,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesSimirrorUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_KSS;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Mirror;
 	bestiaryArray[# i,9] = bestiaryEnemies.simirror;
@@ -2172,7 +2172,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesGimUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_KSS;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Yoyo;
 	bestiaryArray[# i,9] = bestiaryEnemies.gim;
@@ -2218,7 +2218,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesHotheadUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_Adventure;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Fire;
 	bestiaryArray[# i,9] = bestiaryEnemies.hothead;
@@ -2264,7 +2264,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesSparkyUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_Adventure;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Spark;
 	bestiaryArray[# i,9] = bestiaryEnemies.sparky;
@@ -2304,7 +2304,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesYolkyUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_GGS;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Helper;
 	bestiaryArray[# i,9] = bestiaryEnemies.yolky;
@@ -2342,7 +2342,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesWheelieUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_Adventure;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Wheel;
 	bestiaryArray[# i,9] = bestiaryEnemies.wheelie;
@@ -2400,7 +2400,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesPacloudUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_RtDL;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Helper;
 	bestiaryArray[# i,9] = bestiaryEnemies.pacloud;
@@ -2440,7 +2440,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesLaserBallUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_KSS;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Beam;
 	bestiaryArray[# i,9] = bestiaryEnemies.laserBall;
@@ -2476,7 +2476,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesJackleUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_RtDL;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Cutter;
 	bestiaryArray[# i,9] = bestiaryEnemies.jackle;
@@ -2548,7 +2548,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesUfoUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_Adventure;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Helper;
 	bestiaryArray[# i,9] = bestiaryEnemies.ufo;
@@ -2620,7 +2620,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesFlamerUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_Adventure;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Helper;
 	bestiaryArray[# i,9] = bestiaryEnemies.flamer;
@@ -2662,7 +2662,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesChuckieUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_DL1;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Helper;
 	bestiaryArray[# i,9] = bestiaryEnemies.chuckie;
@@ -2703,7 +2703,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesWalkyUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_Adventure;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Mic;
 	bestiaryArray[# i,9] = bestiaryEnemies.walky;
@@ -2739,7 +2739,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesMysticBlockUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_GGS;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 3;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Helper;
 	bestiaryArray[# i,9] = bestiaryEnemies.mysticBlock;
@@ -2787,7 +2787,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesLovelyUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_KSS;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Helper;
 	bestiaryArray[# i,9] = bestiaryEnemies.lovely;
@@ -2822,7 +2822,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesPlasmaWispUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_KSS;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Spark;
 	bestiaryArray[# i,9] = bestiaryEnemies.plasmaWisp;
@@ -2862,7 +2862,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesCapsuleJ2Unlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_KSSU;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Jet;
 	bestiaryArray[# i,9] = bestiaryEnemies.capsuleJ2;
@@ -2938,7 +2938,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesWizzerUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_DL1;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Beam;
 	bestiaryArray[# i,9] = bestiaryEnemies.wizzer;
@@ -3029,7 +3029,7 @@ function scr_BestiaryMenu_Enemies()
 	bestiaryArray[# i,3] = global.bestiaryEnemiesGolemUnlocked;
 	bestiaryArray[# i,4] = "";
 	bestiaryArray[# i,5] = spr_Menu_Collection_Bestiary_GameIcon_AM;
-	bestiaryArray[# i,6] = 1;
+	bestiaryArray[# i,6] = 2;
 	bestiaryArray[# i,7] = spr_Hud_Dialogue_Background_OrangeCheckerboard;
 	bestiaryArray[# i,8] = spr_Hud_Icon_Stone;
 	bestiaryArray[# i,9] = bestiaryEnemies.golem;

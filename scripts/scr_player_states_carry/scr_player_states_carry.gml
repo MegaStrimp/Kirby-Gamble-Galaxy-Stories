@@ -139,8 +139,15 @@ function scr_Player_States_Carry()
 		
 		if (!hurt)
 		{
-		    if ((!global.cutscene) and ((enteredDoor != -1) or (keyAttackPressed)) and (!inhaleEnd) and (!spit))
+			if ((!spit) and (keyAttackPressed))
+			{
+				spitBuffer = true;
+			}
+			
+		    if ((!global.cutscene) and ((enteredDoor != -1) or (spitBuffer)) and (!inhaleEnd) and (!spit))
 		    {
+				spitBuffer = false;
+				
 				audio_play_sound(snd_Spit,0,false);
 				for (var i = 0; i < 2; i++)
 				{
@@ -185,8 +192,15 @@ function scr_Player_States_Carry()
 				if (ateCappyShroom) ateCappyShroom = false;
 		    }
 			
-		    if ((!global.cutscene) and (((global.autoSwallow) and (cAbility != playerAbilities.none)) or (((grounded) or (cAbility != playerAbilities.none)) and (!inhaleEnd) and (!spit) and (keyDownPressed))))
+			if ((!spit) and (keyDownPressed))
+			{
+				swallowBuffer = true;
+			}
+			
+		    if ((!global.cutscene) and (((global.autoSwallow) and (cAbility != playerAbilities.none)) or (((grounded) or (cAbility != playerAbilities.none)) and (!inhaleEnd) and (!spit) and (swallowBuffer))))
 		    {
+				swallowBuffer = false;
+				
 				if (cAbility == playerAbilities.mix)
 				{
 					global.mixActive = player;
@@ -696,17 +710,20 @@ function scr_Player_States_Carry()
 					{
 					    if (hsp == 0)
 						{
-							if (!idleAnimation)
+							if (hasIdleAnimation)
 							{
-								if (idleAnimationTimer < idleAnimationTimerMax)
+								if (!idleAnimation)
 								{
-									idleAnimationTimer += 1;
-								}
-								else
-								{
-									image_index = 0;
-									idleAnimationTimer = 0;
-									idleAnimation = true;
+									if (idleAnimationTimer < idleAnimationTimerMax)
+									{
+										idleAnimationTimer += 1;
+									}
+									else
+									{
+										image_index = 0;
+										idleAnimationTimer = 0;
+										idleAnimation = true;
+									}
 								}
 							}
 							
@@ -806,7 +823,7 @@ function scr_Player_States_Carry()
 								}
 							}
 							
-							if (idleAnimation)
+							if ((hasIdleAnimation) and (idleAnimation))
 							{
 								switch (playerCharacter)
 								{
@@ -826,10 +843,14 @@ function scr_Player_States_Carry()
 						}
 						else
 						{
-							if (idleAnimation) image_index = 0;
-							idleAnimation = false;
-							idleAnimationTimer = 0;
-							idleAnimationTimerMax = 30;
+							if (hasIdleAnimation)
+							{
+								if (idleAnimation) image_index = 0;
+								idleAnimation = false;
+								idleAnimationTimer = 0;
+								idleAnimationTimerMax = 30;
+							}
+							
 							sprite_index = sprCarryWalk;
 						}
 					}

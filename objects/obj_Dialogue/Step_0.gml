@@ -12,7 +12,7 @@ if (((pausable) and (!global.pause)) or (!pausable))
 	
 	#region Variables
 	typist.in(textSpeed,2);
-	if (typewriter) typist.sound_per_char(textSound[array],1,1,1);
+	if (typewriter) typist.sound(textSound[array],250,1,1,1);
 	
 	dialogueFlowing = (typist.get_state() < 1);
 	

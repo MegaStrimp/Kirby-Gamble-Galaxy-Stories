@@ -151,7 +151,7 @@ if (!global.pause)
 {
 	#region Down Held
     if ((keyDownHold) and (downHeld < 1000)) downHeld += 1;
-    if ((keyDownReleased) or (attack) or (duckSlide)) downHeld = 0;
+    if ((keyDownReleased) or (duckSlide) or (attack) or (duckSlide)) downHeld = 0;
 	if (playerAbility == playerAbilities.ufo) downHeld = downHeldPlatformMax;
 	#endregion
 	

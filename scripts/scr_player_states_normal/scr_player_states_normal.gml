@@ -2332,17 +2332,20 @@ function scr_Player_States_Normal()
 			{
 				if (hsp == 0)
 				{
-					if (!idleAnimation)
+					if (hasIdleAnimation)
 					{
-						if ((idleAnimationTimer < idleAnimationTimerMax) and !((carriedItemIndex.object_index == obj_Projectile_Bomb) and (carriedItemIndex.selfExplodeTimer <= 90)))
+						if (!idleAnimation)
 						{
-							idleAnimationTimer += 1;
-						}
-						else
-						{
-							image_index = 0;
-							idleAnimationTimer = 0;
-							idleAnimation = true;
+							if ((idleAnimationTimer < idleAnimationTimerMax) and !((carriedItemIndex.object_index == obj_Projectile_Bomb) and (carriedItemIndex.selfExplodeTimer <= 90)))
+							{
+								idleAnimationTimer += 1;
+							}
+							else
+							{
+								image_index = 0;
+								idleAnimationTimer = 0;
+								idleAnimation = true;
+							}
 						}
 					}
 					
@@ -2624,7 +2627,7 @@ function scr_Player_States_Normal()
 						}
 					}
 					
-					if ((idleAnimation) and (!sparkMaxCharge) and (!((carriedItemIndex.object_index == obj_Projectile_Bomb) and (carriedItemIndex.selfExplodeTimer <= 90))))
+					if ((hasIdleAnimation) and (idleAnimation) and (!sparkMaxCharge) and (!((carriedItemIndex.object_index == obj_Projectile_Bomb) and (carriedItemIndex.selfExplodeTimer <= 90))))
 					{
 						switch (playerCharacter)
 						{
@@ -2648,10 +2651,14 @@ function scr_Player_States_Normal()
 				}
 				else
 				{
-					if (idleAnimation) image_index = 0;
-					idleAnimation = false;
-					idleAnimationTimer = 0;
-					idleAnimationTimerMax = 30;
+					if (hasIdleAnimation)
+					{
+						if (idleAnimation) image_index = 0;
+						idleAnimation = false;
+						idleAnimationTimer = 0;
+						idleAnimationTimerMax = 30;
+					}
+					
 					if (isRunning)
 					{
 						if (playerAbility == playerAbilities.mirror)
@@ -2694,24 +2701,17 @@ function scr_Player_States_Normal()
 						}
 					}
 				}
-				
-				if (playerCharacter == playerCharacters.gooey)
-				{
-					gooeyScaleOffset += (.002 * gooeyScaleDir);
-					if ((abs(gooeyScaleOffset) >= .1)) gooeyScaleDir *= -1;
-					
-					scaleExX = -(gooeyScaleOffset / 2);
-					scaleExY = gooeyScaleOffset;
-				}
 			}
 			else
 			{
-				if (idleAnimation) image_index = 0;
-				idleAnimation = false;
-				idleAnimationTimer = 0;
-				idleAnimationTimerMax = 30;
-				gooeyScaleDir = 1;
-				gooeyScaleOffset = 0;
+				if (hasIdleAnimation)
+				{
+					if (idleAnimation) image_index = 0;
+					idleAnimation = false;
+					idleAnimationTimer = 0;
+					idleAnimationTimerMax = 30;
+				}
+				
 				if (fallHop)
 				{
 					sprite_index = sprRoll;

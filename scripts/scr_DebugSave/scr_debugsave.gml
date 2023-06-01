@@ -90,6 +90,7 @@ function scr_DebugSave()
 	global.skylandsUnlocked = true;
 	global.gamblionUnlocked = true;
 	global.bitcrushedUnlocked = true;
+	global.strimpsMatrixUnlocked = true;
 	global.samuraiKirbyUnlocked = true;
 	
 	global.kirbyUnlocked = true;

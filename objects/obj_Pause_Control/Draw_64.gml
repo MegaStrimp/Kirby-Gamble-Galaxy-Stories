@@ -609,10 +609,10 @@ if ((gamePaused) and (visible))
 		draw_sprite(spr_PauseMenu_CursorArrow,0,0 + arrowX,0 + arrowY + cursorPos);
 	}
 	
-	if ((!cellphoneActive) and (keyStartPressed) or ((abilityPage[page] == spr_PauseMenu_Exit) and (keyJumpPressed)))
+	if ((!cellphoneActive) and (keyStartPressed) or ((abilityPage[page] == spr_PauseMenu_Exit) and ((keyJumpPressed) or (keyAttackPressed))))
     {
 		if (abilityPage[page] != spr_PauseMenu_Exit) cursorSelection = 0;
-		if (cursorSelection == 0)
+		if ((cursorSelection == 0) or ((abilityPage[page] == spr_PauseMenu_Exit) and (keyAttackPressed)))
 		{
 			if (!instance_exists(obj_Pause_Fade))
 			{

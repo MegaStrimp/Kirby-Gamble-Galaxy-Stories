@@ -86,6 +86,7 @@ function scr_Player_CharacterSetup_Gamble(argument0)
 		canUfoFloat = true;
 		canGetHurt = true;
 		runImageSpeedIncrease = 0;
+		hasIdleAnimation = false;
 		#endregion
 		
 		#region Sprites & Masks

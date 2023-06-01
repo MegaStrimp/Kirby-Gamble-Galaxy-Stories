@@ -86,15 +86,17 @@ function scr_Player_Collision(argument0)
 			{
 				if place_meeting(x + hspFinal,y - yplus,obj_ParentWall)
 				{
-					collidingWall = instance_place(x + hspFinal,y - yplus,obj_ParentWall);
 					if (duckSlide)
 					{
-						if (collidingWall.object)
+						with (obj_ParentWall)
 						{
-							if (((collidingWall.damageType == damageTypes.none) or (collidingWall.damageType = damageType)) and (collidingWall.wallStrength == wallStrengths.none))
+							if ((object) and (place_meeting(x - other.hspFinal,y + other.yplus,other)))
 							{
-								collidingWall.hp -= 1;
-								scr_HitEffects_Wall(collidingWall,-1,collidingWall.hitEffect);
+								if (((damageType == damageTypes.none) or (damageType = other.damageType)) and (wallStrength == wallStrengths.none))
+								{
+									hp -= 1;
+									scr_HitEffects_Wall(id,-1,hitEffect);
+								}
 							}
 						}
 					}
@@ -128,6 +130,18 @@ function scr_Player_Collision(argument0)
 	
 	if (place_meeting(x,y + vspFinal,obj_ParentWall))
 	{
+		with (obj_ParentWall)
+		{
+			if ((object) and (place_meeting(x,y - other.vspFinal,other)))
+			{
+				if (((other.state == playerStates.normal) or (other.state == playerStates.carry) or (other.state == playerStates.inhale)) and (!other.grounded) and (damageType == damageTypes.none) and (wallStrength == wallStrengths.none) and (sign(other.vsp) == -1))
+				{
+					hp -= 1;
+					scr_HitEffects_Wall(id,-1,hitEffect);
+				}
+			}
+		}
+		
 		collidingWall = instance_place(x,y + vspFinal,obj_ParentWall);
 		if (!collidingWall.platform)
 		{
@@ -135,18 +149,7 @@ function scr_Player_Collision(argument0)
 			{
 				y += sign(vspFinal) / 10;
 			}
-			if (place_meeting(x,y - 1,obj_ParentWall))
-			{
-				var collidedWall = instance_place(x,y - 1,obj_ParentWall);
-				if (collidedWall.object)
-				{
-					if (((state == playerStates.normal) or (state == playerStates.carry) or (state == playerStates.inhale)) and (!grounded) and (collidedWall.damageType == damageTypes.none) and (collidedWall.wallStrength == wallStrengths.none) and (sign(vsp) == -1))
-					{
-						collidedWall.hp -= 1;
-						scr_HitEffects_Wall(collidedWall,-1,collidedWall.hitEffect);
-					}
-				}
-			}
+			
 			vsp = 0;
 			vspFinal = 0;
 		}

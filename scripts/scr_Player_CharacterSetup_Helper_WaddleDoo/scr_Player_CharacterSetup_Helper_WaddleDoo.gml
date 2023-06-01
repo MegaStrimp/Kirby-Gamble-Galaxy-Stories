@@ -157,6 +157,7 @@ function scr_Player_CharacterSetup_Helper_WaddleDoo(argument0)
 		canUfoFloat = false;
 		canGetHurt = true;
 		runImageSpeedIncrease = 0;
+		hasIdleAnimation = false;
 		#endregion
 		
 		#region Sprites & Masks

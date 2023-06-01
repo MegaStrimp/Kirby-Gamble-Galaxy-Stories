@@ -13,7 +13,7 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e868a86e-6083-44f0-8bd6-a4e9c7522e79",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d898bf0a-9251-408e-9b37-dc18c089aa20",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e868a86e-6083-44f0-8bd6-a4e9c7522e79","path":"sprites/spr_Bouncy_Normal_Palette_AzureSpring/spr_Bouncy_Normal_Palette_AzureSpring.yy",},},},"Disabled":false,"id":"03d046b1-dda6-42ab-b5bf-87e4f89deb5e","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d898bf0a-9251-408e-9b37-dc18c089aa20","path":"sprites/spr_Bouncy_Normal_Palette_AzureSpring/spr_Bouncy_Normal_Palette_AzureSpring.yy",},},},"Disabled":false,"id":"def161c2-70a4-4d9d-91e0-e5c1f6f66886","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

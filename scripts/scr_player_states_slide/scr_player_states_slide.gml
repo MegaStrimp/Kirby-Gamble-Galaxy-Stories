@@ -555,17 +555,20 @@ function scr_Player_States_Slide()
 			{
 			    if (grounded)
 			    {
-					if (!idleAnimation)
+					if (hasIdleAnimation)
 					{
-						if (idleAnimationTimer < idleAnimationTimerMax)
+						if (!idleAnimation)
 						{
-							idleAnimationTimer += 1;
-						}
-						else
-						{
-							image_index = 0;
-							idleAnimationTimer = 0;
-							idleAnimation = true;
+							if (idleAnimationTimer < idleAnimationTimerMax)
+							{
+								idleAnimationTimer += 1;
+							}
+							else
+							{
+								image_index = 0;
+								idleAnimationTimer = 0;
+								idleAnimation = true;
+							}
 						}
 					}
 				
@@ -679,7 +682,7 @@ function scr_Player_States_Slide()
 						}
 					}
 					
-					if (idleAnimation)
+					if ((hasIdleAnimation) and (idleAnimation))
 					{
 						switch (playerCharacter)
 						{
@@ -699,10 +702,14 @@ function scr_Player_States_Slide()
 			    }
 				else
 				{
-					if (idleAnimation) image_index = 0;
-					idleAnimation = false;
-					idleAnimationTimer = 0;
-					idleAnimationTimerMax = 30;
+					if (hasIdleAnimation)
+					{
+						if (idleAnimation) image_index = 0;
+						idleAnimation = false;
+						idleAnimationTimer = 0;
+						idleAnimationTimerMax = 30;
+					}
+					
 					sprite_index = sprFall;
 				}
 			}
@@ -825,10 +832,14 @@ function scr_Player_States_Slide()
 		    if (hsp <= -decelSlide) hsp += decelSlide;
 			if ((hsp > -decelSlide) and (hsp < decelSlide)) hsp = 0;
 			
-			if (idleAnimation) image_index = 0;
-			idleAnimation = false;
-			idleAnimationTimer = 0;
-			idleAnimationTimerMax = 30;
+			if (hasIdleAnimation)
+			{
+				if (idleAnimation) image_index = 0;
+				idleAnimation = false;
+				idleAnimationTimer = 0;
+				idleAnimationTimerMax = 30;
+			}
+			
 		    if (grounded)
 		    {
 				if (abs(hsp) > (decelSlide * 5))

@@ -26,6 +26,9 @@ subSelectionP4 = 0;
 clockTicks = true;
 soundPlayed = false;
 loaded = false;
+
+autoScroll = false;
+autoScrollTick = false;
 #endregion
 
 #region Arrays
@@ -157,4 +160,8 @@ for (var i = 0; i < spraysMax; i++)
 #region Timers
 roomChangeTimerMax = 180;
 roomChangeTimer = roomChangeTimerMax;
+canAutoScrollTimer = -1;
+canAutoScrollTimerMax = 30;
+autoScrollTimer = -1;
+autoScrollTimerMax = 2;
 #endregion

@@ -24,7 +24,7 @@ switch (player)
 #endregion
 
 #region Idle Animation
-if (idleAnimation)
+if ((hasIdleAnimation) and (idleAnimation))
 {
 	idleAnimation = false;
 	idleAnimationTimer = 0;

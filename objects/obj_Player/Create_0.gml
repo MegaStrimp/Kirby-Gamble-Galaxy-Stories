@@ -478,6 +478,7 @@ ateHeavy = false;
 ateAbilityStar = -1;
 ateCappyShroom = false;
 swallow = false;
+swallowBuffer = false;
 cAbility = playerAbilities.none;
 
 sucked = 0;
@@ -490,6 +491,7 @@ suckedArray_SeashellBoomerang = ds_grid_create(99,2);
 InhaledIntoMouthSound = -1;
 inhaleEnd = false;
 spit = false;
+spitBuffer = false;
 swallowAction = 0;
 
 damageType = damageTypes.none;
@@ -505,14 +507,13 @@ chargeSfx = -1;
 chargeSfxState = 0;
 
 imageAngle = 0;
+hasIdleAnimation = true;
 idleAnimation = false;
 idleAnimationTimer = 0;
 idleAnimationTimerMax = 60;
 fallHopCounter = 0;
 fallHopCounterMax = 10;
 enteredDoor = -1;
-gooeyScaleDir = 1;
-gooeyScaleOffset = 0;
 canGrab = true;
 didJump = false;
 collisionX = obj_Wall;

@@ -17,7 +17,7 @@ sprPortrait[0] = spr_Hud_Dialogue_Portrait_Gamble_Normal;
 
 text[0] = "";
 array = 0;
-textSpeed = 1;
+textSpeed = .7;
 textHalign = fa_left;
 textValign = fa_top;
 index = 0;

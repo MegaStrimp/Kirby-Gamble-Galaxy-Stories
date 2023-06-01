@@ -128,6 +128,8 @@ function scr_SaveGame(argument0)
 	if (global.skylandsUnlockedFirstTime != false) ini_write_real("unlocks","skylandsUnlockedFirstTime",global.skylandsUnlockedFirstTime);
 	if (global.gamblionUnlocked != false) ini_write_real("unlocks","gamblionUnlocked",global.gamblionUnlocked);
 	if (global.gamblionUnlockedFirstTime != false) ini_write_real("unlocks","gamblionUnlockedFirstTime",global.gamblionUnlockedFirstTime);
+	if (global.strimpsMatrixUnlocked != false) ini_write_real("unlocks","strimpsMatrixUnlocked",global.strimpsMatrixUnlocked);
+	if (global.strimpsMatrixUnlockedFirstTime != false) ini_write_real("unlocks","strimpsMatrixUnlockedFirstTime",global.strimpsMatrixUnlockedFirstTime);
 	if (global.bitcrushedUnlocked != false) ini_write_real("unlocks","bitcrushedUnlocked",global.bitcrushedUnlocked);
 	if (global.bitcrushedUnlockedFirstTime != false) ini_write_real("unlocks","bitcrushedUnlockedFirstTime",global.bitcrushedUnlockedFirstTime);
 	if (global.samuraiKirbyUnlocked != false) ini_write_real("unlocks","samuraiKirbyUnlocked",global.samuraiKirbyUnlocked);

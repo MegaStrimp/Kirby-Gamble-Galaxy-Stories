@@ -13,7 +13,7 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c53b89a6-6594-49fb-a496-18c0a5626282",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a6ba91b9-047d-4a4e-ae3f-547e9098c6b0",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c53b89a6-6594-49fb-a496-18c0a5626282","path":"sprites/spr_Bouncy_Normal_Palette_TwistyTumble/spr_Bouncy_Normal_Palette_TwistyTumble.yy",},},},"Disabled":false,"id":"4814ce01-c311-489c-b45d-b7e9d01dbd88","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a6ba91b9-047d-4a4e-ae3f-547e9098c6b0","path":"sprites/spr_Bouncy_Normal_Palette_TwistyTumble/spr_Bouncy_Normal_Palette_TwistyTumble.yy",},},},"Disabled":false,"id":"6f2953e7-5279-4e36-8315-d06d930477c0","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
