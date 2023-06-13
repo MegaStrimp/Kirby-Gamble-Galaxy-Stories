@@ -5,9 +5,8 @@
 global.discordDetailText = "Gear Cube - Depths";
 global.discordLargeImage = "greengreens_icon";
 
-//Stage Number
+//Stage Attributes
 
-global.stageNumber = 5;
 global.roomCheckpoint = room;
 
 //Music

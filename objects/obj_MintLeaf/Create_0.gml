@@ -33,7 +33,7 @@ auraTimer = auraTimerMax;
 
 //Sprites
 
-sprIdle = spr_MintLeaf;
+sprIdle = spr_MintLeaf_Normal;
 
 //Other Variables
 

@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 38.4,
   "parent": {
-    "name": "Subgames",
-    "path": "folders/Sounds/Music/Subgames.yy",
+    "name": "Maykr",
+    "path": "folders/Sounds/Music/Subgames/Maykr.yy",
   },
   "preload": false,
   "sampleRate": 44100,

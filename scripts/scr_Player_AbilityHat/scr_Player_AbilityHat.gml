@@ -206,8 +206,12 @@ function scr_Player_AbilityHat(argument0,argument1)
 					abilityHatIndex = spr_Kirby_AbilityHat_Cutter_KSSU_Hurt;
 					break;
 					
-					case sprCutterCharge:
-					abilityHatIndex = spr_Kirby_AbilityHat_Cutter_KSSU_Charge;
+					case sprCutterChargeReady:
+					abilityHatIndex = spr_Kirby_AbilityHat_Cutter_KSSU_ChargeReady;
+					break;
+					
+					case sprCutterChargeEnd:
+					abilityHatIndex = spr_Kirby_AbilityHat_Cutter_KSSU_ChargeEnd;
 					break;
 					
 					case sprCutterAttack1:
@@ -2240,6 +2244,199 @@ function scr_Player_AbilityHat(argument0,argument1)
 					case sprNinjaAttack2:
 					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Modern_Attack2;
 					break;
+					
+					default:
+					abilityHatIndex = -1;
+					break;
+				}
+				break;
+				
+				case abilityHatSkins.ninja_samurai:
+				switch (sprite_index)
+				{
+					case sprIdle:
+					case sprIdleBlink:
+					case sprIdleNormalSlopeL:
+					case sprIdleNormalSlopeLBlink:
+					case sprIdleNormalSlopeR:
+					case sprIdleNormalSlopeRBlink:
+					case sprIdleSteepSlopeL:
+					case sprIdleSteepSlopeLBlink:
+					case sprIdleSteepSlopeR:
+					case sprIdleSteepSlopeRBlink:
+					case sprItemCarryLightIdle:
+					case sprItemCarryLightIdleNormalSlopeL:
+					case sprItemCarryLightIdleNormalSlopeLBlink:
+					case sprItemCarryLightIdleNormalSlopeR:
+					case sprItemCarryLightIdleNormalSlopeRBlink:
+					case sprItemCarryLightIdleSteepSlopeL:
+					case sprItemCarryLightIdleSteepSlopeLBlink:
+					case sprItemCarryLightIdleSteepSlopeR:
+					case sprItemCarryLightIdleSteepSlopeRBlink:
+					case sprItemCarryHeavyIdle:
+					case sprItemCarryHeavyIdleSlopeL:
+					case sprItemCarryHeavyIdleSlopeR:
+					case sprItemCarryThrow:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_Idle;
+					break;
+					
+					case sprWalk:
+					case sprItemCarryLightWalk:
+					case sprItemCarryHeavyWalk:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_Walk;
+					break;
+					
+					case sprRun:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_Run;
+					break;
+					
+					case sprRunTurn:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_RunTurn;
+					break;
+					
+					case sprJump:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_Jump;
+					break;
+					
+					case sprRoll:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_Roll;
+					break;
+					
+					case sprRollDuckReady:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_Roll;
+					break;
+					
+					case sprRollDuck:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_RollDuck;
+					break;
+					
+					case sprBackflip:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_Backflip;
+					break;
+					
+					case sprFall:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_Fall;
+					break;
+					
+					case sprSquish:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_Squish;
+					break;
+					
+					case sprDuck:
+					case sprDuckBlink:
+					case sprDuckNormalSlopeL:
+					case sprDuckNormalSlopeLBlink:
+					case sprDuckNormalSlopeR:
+					case sprDuckNormalSlopeRBlink:
+					case sprDuckSteepSlopeL:
+					case sprDuckSteepSlopeLBlink:
+					case sprDuckSteepSlopeR:
+					case sprDuckSteepSlopeRBlink:
+					case sprItemCarryLightDuck:
+					case sprItemCarryLightDuckBlink:
+					case sprItemCarryLightDuckNormalSlopeL:
+					case sprItemCarryLightDuckNormalSlopeLBlink:
+					case sprItemCarryLightDuckNormalSlopeR:
+					case sprItemCarryLightDuckNormalSlopeRBlink:
+					case sprItemCarryLightDuckSteepSlopeL:
+					case sprItemCarryLightDuckSteepSlopeLBlink:
+					case sprItemCarryLightDuckSteepSlopeR:
+					case sprItemCarryLightDuckSteepSlopeRBlink:
+					case sprItemCarryHeavyDuck:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_Duck;
+					break;
+					
+					case sprSlide:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_Slide;
+					break;
+					
+					case sprSlideEnd:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_SlideEnd;
+					break;
+					
+					case sprFloatReady:
+					case sprItemCarryLightFloatReady:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_FloatReady;
+					break;
+					
+					case sprFloat:
+					case sprItemCarryLightFloat:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_Float;
+					break;
+					
+					case sprFlap:
+					case sprItemCarryLightFlap:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_Flap;
+					break;
+					
+					case sprFloatSpit:
+					case sprItemCarryLightFloatSpit:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_FloatSpit;
+					break;
+					
+					case sprFloatHurt:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_FloatHurt;
+					break;
+					
+					case sprEnter:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_Enter;
+					break;
+					
+					case sprClimbUp:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_ClimbUp;
+					break;
+					
+					case sprClimbDown:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_ClimbDown;
+					break;
+					
+					case sprAbilityChange:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_AbilityChange;
+					break;
+					
+					case sprWarpStar1:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_WarpStar1;
+					break;
+					
+					case sprWarpStar2:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_WarpStar2;
+					break;
+					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_WarpStar4;
+					break;
+					
+					case sprGuard:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_Guard;
+					break;
+					
+					case sprGuardSlope:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_Guard_Slope;
+					break;
+					
+					case sprHurt:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_Hurt;
+					break;
+					
+					case sprDeath:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_Samurai_Death;
+					break;
+					
+					/*case sprNinjaCharge:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_KSSU_Charge;
+					break;
+					
+					case sprNinjaAttack1:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_KSSU_Attack1;
+					break;
+					
+					case sprNinjaAttack2:
+					abilityHatIndex = spr_Kirby_AbilityHat_Ninja_KSSU_Attack2;
+					break;*/
 					
 					default:
 					abilityHatIndex = -1;

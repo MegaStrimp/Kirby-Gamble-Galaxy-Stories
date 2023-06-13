@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Maykr",
-    "path": "folders/Backgrounds/Maykr.yy",
+    "path": "folders/Backgrounds/Subgames/Maykr.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

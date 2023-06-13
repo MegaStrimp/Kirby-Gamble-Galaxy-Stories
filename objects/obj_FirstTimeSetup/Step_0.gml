@@ -282,7 +282,7 @@ switch (state)
 			selection = "confirm";
 		}
 		
-		if ((!global.fullscreen) and ((keyJumpPressed) or (keyLeftPressed)))
+		if ((!global.fullscreen) and (keyLeftPressed))
 		{
 			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 			audio_play_sound(snd_BossHealth,0,false);
@@ -295,7 +295,7 @@ switch (state)
 			}
 		}
 		
-		if (keyRightPressed)
+		if ((keyJumpPressed) or (keyRightPressed))
 		{
 			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 			audio_play_sound(snd_BossHealth,0,false);

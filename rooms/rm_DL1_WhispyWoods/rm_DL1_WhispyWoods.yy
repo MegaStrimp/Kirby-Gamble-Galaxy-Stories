@@ -2,7 +2,7 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "rm_DL1_WhispyWoods",
-  "creationCodeFile": "${project_dir}/rooms/rm_DL1_WhispyWoods/RoomCreationCode.gml",
+  "creationCodeFile": "rooms/rm_DL1_WhispyWoods/RoomCreationCode.gml",
   "inheritCode": false,
   "inheritCreationOrder": false,
   "inheritLayers": false,

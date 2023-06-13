@@ -248,6 +248,7 @@ function scr_SaveGame(argument0)
 	
 	#region Ninja
 	if (global.hatTypeNinjaModernUnlocked != false) ini_write_real("unlocks","hatTypeNinjaModernUnlocked",global.hatTypeNinjaModernUnlocked);
+	if (global.hatTypeNinjaSamuraiUnlocked != false) ini_write_real("unlocks","hatTypeNinjaSamuraiUnlocked",global.hatTypeNinjaSamuraiUnlocked);
 	
 	#region KSSU
 	if (global.hatPaletteNinjaKSSUSilverLinedWarriorUnlocked != false) ini_write_real("unlocks","hatPaletteNinjaKSSUSilverLinedWarriorUnlocked",global.hatPaletteNinjaKSSUSilverLinedWarriorUnlocked);
@@ -257,6 +258,9 @@ function scr_SaveGame(argument0)
 	#region Modern
 	if (global.hatPaletteNinjaModernBitcrushedUnlocked != false) ini_write_real("unlocks","hatPaletteNinjaModernBitcrushedUnlocked",global.hatPaletteNinjaModernBitcrushedUnlocked);
 	if (global.hatPaletteNinjaModernViridianAmbushUnlocked != false) ini_write_real("unlocks","hatPaletteNinjaModernViridianAmbushUnlocked",global.hatPaletteNinjaModernViridianAmbushUnlocked);
+	#endregion
+	
+	#region Samurai
 	#endregion
 	#endregion
 	
@@ -710,6 +714,7 @@ function scr_SaveGame(argument0)
 	if (global.hatPaletteMirrorModernP1 != abilityHatPaints.mirror_modern_jesterReflection) ini_write_real("playerCustomization","hatPaletteMirrorModernP1",global.hatPaletteMirrorModernP1);
 	if (global.hatPaletteNinjaKSSUP1 != abilityHatPaints.ninja_kssu_stealthyMaroon) ini_write_real("playerCustomization","hatPaletteNinjaKSSUP1",global.hatPaletteNinjaKSSUP1);
 	if (global.hatPaletteNinjaModernP1 != abilityHatPaints.ninja_modern_stealthyMaroon) ini_write_real("playerCustomization","hatPaletteNinjaModernP1",global.hatPaletteNinjaModernP1);
+	if (global.hatPaletteNinjaSamuraiP1 != abilityHatPaints.ninja_samurai_menacingBlack) ini_write_real("playerCustomization","hatPaletteNinjaSamuraiP1",global.hatPaletteNinjaSamuraiP1);
 	if (global.hatPaletteBombKSSUP1 != abilityHatPaints.bomb_kssu_explosiveB) ini_write_real("playerCustomization","hatPaletteBombKSSUP1",global.hatPaletteBombKSSUP1);
 	if (global.hatPaletteBombModernP1 != abilityHatPaints.bomb_modern_explosiveB) ini_write_real("playerCustomization","hatPaletteBombModernP1",global.hatPaletteBombModernP1);
 	if (global.hatPaletteFireKSSUP1 != abilityHatPaints.fire_kssu_scorchingScarlet) ini_write_real("playerCustomization","hatPaletteFireKSSUP1",global.hatPaletteFireKSSUP1);
@@ -744,6 +749,7 @@ function scr_SaveGame(argument0)
 	if (global.hatPaletteMirrorModernP2 != abilityHatPaints.mirror_modern_jesterReflection) ini_write_real("playerCustomization","hatPaletteMirrorModernP2",global.hatPaletteMirrorModernP2);
 	if (global.hatPaletteNinjaKSSUP2 != abilityHatPaints.ninja_kssu_stealthyMaroon) ini_write_real("playerCustomization","hatPaletteNinjaKSSUP2",global.hatPaletteNinjaKSSUP2);
 	if (global.hatPaletteNinjaModernP2 != abilityHatPaints.ninja_modern_stealthyMaroon) ini_write_real("playerCustomization","hatPaletteNinjaModernP2",global.hatPaletteNinjaModernP2);
+	if (global.hatPaletteNinjaSamuraiP2 != abilityHatPaints.ninja_samurai_menacingBlack) ini_write_real("playerCustomization","hatPaletteNinjaSamuraiP2",global.hatPaletteNinjaSamuraiP2);
 	if (global.hatPaletteBombKSSUP2 != abilityHatPaints.bomb_kssu_explosiveB) ini_write_real("playerCustomization","hatPaletteBombKSSUP2",global.hatPaletteBombKSSUP2);
 	if (global.hatPaletteBombModernP2 != abilityHatPaints.bomb_modern_explosiveB) ini_write_real("playerCustomization","hatPaletteBombModernP2",global.hatPaletteBombModernP2);
 	if (global.hatPaletteFireKSSUP2 != abilityHatPaints.fire_kssu_scorchingScarlet) ini_write_real("playerCustomization","hatPaletteFireKSSUP2",global.hatPaletteFireKSSUP2);
@@ -778,6 +784,7 @@ function scr_SaveGame(argument0)
 	if (global.hatPaletteMirrorModernP3 != abilityHatPaints.mirror_modern_jesterReflection) ini_write_real("playerCustomization","hatPaletteMirrorModernP3",global.hatPaletteMirrorModernP3);
 	if (global.hatPaletteNinjaKSSUP3 != abilityHatPaints.ninja_kssu_stealthyMaroon) ini_write_real("playerCustomization","hatPaletteNinjaKSSUP3",global.hatPaletteNinjaKSSUP3);
 	if (global.hatPaletteNinjaModernP3 != abilityHatPaints.ninja_modern_stealthyMaroon) ini_write_real("playerCustomization","hatPaletteNinjaModernP3",global.hatPaletteNinjaModernP3);
+	if (global.hatPaletteNinjaSamuraiP3 != abilityHatPaints.ninja_samurai_menacingBlack) ini_write_real("playerCustomization","hatPaletteNinjaSamuraiP3",global.hatPaletteNinjaSamuraiP3);
 	if (global.hatPaletteBombKSSUP3 != abilityHatPaints.bomb_kssu_explosiveB) ini_write_real("playerCustomization","hatPaletteBombKSSUP3",global.hatPaletteBombKSSUP3);
 	if (global.hatPaletteBombModernP3 != abilityHatPaints.bomb_modern_explosiveB) ini_write_real("playerCustomization","hatPaletteBombModernP3",global.hatPaletteBombModernP3);
 	if (global.hatPaletteFireKSSUP3 != abilityHatPaints.fire_kssu_scorchingScarlet) ini_write_real("playerCustomization","hatPaletteFireKSSUP3",global.hatPaletteFireKSSUP3);
@@ -812,6 +819,7 @@ function scr_SaveGame(argument0)
 	if (global.hatPaletteMirrorModernP4 != abilityHatPaints.mirror_modern_jesterReflection) ini_write_real("playerCustomization","hatPaletteMirrorModernP4",global.hatPaletteMirrorModernP4);
 	if (global.hatPaletteNinjaKSSUP4 != abilityHatPaints.ninja_kssu_stealthyMaroon) ini_write_real("playerCustomization","hatPaletteNinjaKSSUP4",global.hatPaletteNinjaKSSUP4);
 	if (global.hatPaletteNinjaModernP4 != abilityHatPaints.ninja_modern_stealthyMaroon) ini_write_real("playerCustomization","hatPaletteNinjaModernP4",global.hatPaletteNinjaModernP4);
+	if (global.hatPaletteNinjaSamuraiP4 != abilityHatPaints.ninja_samurai_menacingBlack) ini_write_real("playerCustomization","hatPaletteNinjaSamuraiP4",global.hatPaletteNinjaSamuraiP4);
 	if (global.hatPaletteBombKSSUP4 != abilityHatPaints.bomb_kssu_explosiveB) ini_write_real("playerCustomization","hatPaletteBombKSSUP4",global.hatPaletteBombKSSUP4);
 	if (global.hatPaletteBombModernP4 != abilityHatPaints.bomb_modern_explosiveB) ini_write_real("playerCustomization","hatPaletteBombModernP4",global.hatPaletteBombModernP4);
 	if (global.hatPaletteFireKSSUP4 != abilityHatPaints.fire_kssu_scorchingScarlet) ini_write_real("playerCustomization","hatPaletteFireKSSUP4",global.hatPaletteFireKSSUP4);

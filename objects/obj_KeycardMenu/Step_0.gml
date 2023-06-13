@@ -2,15 +2,12 @@
 
 if (!global.pause)
 {
+	#region Variables
+	var cancelAutoScroll = true;
 	hudOffset = lerp(hudOffset,0,.1);
+	#endregion
 	
 	scr_Player_Inputs(0);
-	
-	if ((keyUpPressed) or (keyDownPressed) or (keyLeftPressed) or (keyRightPressed))
-	{
-		if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
-		audio_play_sound(snd_BossHealth,0,false);
-	}
 	
 	/*
 	if ((keyLeftPressed) and (page != 0))
@@ -30,10 +27,32 @@ if (!global.pause)
 	switch (selection)
 	{
 		case "upload":
-		if (keyUpPressed) selection = "back";
-		if (keyDownPressed) selection = "back";
-		if (keyLeftPressed) selection = "keycards";
-		if (keyRightPressed) selection = "keycards";
+		if (keyUpPressed)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			selection = "back";
+		}
+		if (keyDownPressed)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			selection = "back";
+		}
+		if (keyLeftPressed)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			selection = "keycards";
+			canAutoScrollTimer = canAutoScrollTimerMax;
+		}
+		if (keyRightPressed)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			selection = "keycards";
+			canAutoScrollTimer = canAutoScrollTimerMax;
+		}
 		
 		if (!instance_exists(obj_Fade))
 		{
@@ -91,13 +110,18 @@ if (!global.pause)
 			}
 			select = false;
 		}
+		
+		cancelAutoScroll = !(((keyLeftHold) or (keyRightHold)) and !((keyLeftHold) and (keyRightHold)));
 		break;
 		
 		case "keycards":
 		//if (keyUpPressed) selection = "back";
 		//if (keyDownPressed) selection = "back";
-		if (keyLeftPressed)
+		if ((keyLeftPressed) or ((autoScrollTick) and (keyLeftHold)))
 		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			
 			if (keycardSelection == 0)
 			{
 				selection = "upload";
@@ -106,13 +130,17 @@ if (!global.pause)
 			{
 				keycardSelection -= 1;
 			}
+			canAutoScrollTimer = canAutoScrollTimerMax;
 		}
-		if (keyRightPressed)
+		if ((keyRightPressed) or ((autoScrollTick) and (keyRightHold)))
 		{
 			if (keycardSelection < keycardsMax - 1)
 			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
 				keycardSelection += 1;
 			}
+			canAutoScrollTimer = canAutoScrollTimerMax;
 		}
 		
 		if (!instance_exists(obj_Fade))
@@ -129,13 +157,35 @@ if (!global.pause)
 		{
 			select = false;
 		}
+		
+		cancelAutoScroll = !(((keyLeftHold) or (keyRightHold)) and !((keyLeftHold) and (keyRightHold)));
 		break;
 		
 		case "back":
-		if (keyUpPressed) selection = "upload";
-		if (keyDownPressed) selection = "upload";
-		if (keyLeftPressed) selection = "back";
-		if (keyRightPressed) selection = "back";
+		if (keyUpPressed)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			selection = "upload";
+		}
+		if (keyDownPressed)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			selection = "upload";
+		}
+		if (keyLeftPressed)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			selection = "back";
+		}
+		if (keyRightPressed)
+		{
+			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+			audio_play_sound(snd_BossHealth,0,false);
+			selection = "back";
+		}
 		
 		if (!instance_exists(obj_Fade))
 		{
@@ -168,6 +218,45 @@ if (!global.pause)
 		var fade = instance_create_depth(x,y,-999,obj_Fade);
 		fade.targetRoom = rm_MainMenu;
 		goBack = false;
+	}
+	
+	#region Cancel Auto Scroll
+	if (cancelAutoScroll)
+	{
+		autoScroll = false;
+		canAutoScrollTimer = -1;
+		autoScrollTimer = -1;
+	}
+	
+	autoScrollTick = false;
+	#endregion
+	
+	#region Can Auto Scroll Timer
+	if (canAutoScrollTimer > 0)
+	{
+		canAutoScrollTimer -= 1;
+	}
+	else if (canAutoScrollTimer == 0)
+	{
+		autoScroll = true;
+		autoScrollTimer = 0;
+		canAutoScrollTimer = -1;
+	}
+	#endregion
+	
+	if (autoScroll)
+	{
+		#region Auto Scroll Timer
+		if (autoScrollTimer > 0)
+		{
+			autoScrollTimer -= 1;
+		}
+		else if (autoScrollTimer == 0)
+		{
+			autoScrollTick = true;
+			autoScrollTimer = autoScrollTimerMax;
+		}
+		#endregion
 	}
 	
 	//Camera

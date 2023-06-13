@@ -41,7 +41,7 @@ if (!global.pause)
 						selection = "back";
 					}
 				}
-				if ((keyLeftPressed) or ((autoScrollTick) and (keyLeftHold)))
+				if (((keyLeftPressed) or ((autoScrollTick) and (keyLeftHold))) and (trophySelection != 0))
 				{
 					if ((trophySelection == (page * 12)) and (page != 0))
 					{
@@ -54,7 +54,7 @@ if (!global.pause)
 					trophySelection -= 1;
 					canAutoScrollTimer = canAutoScrollTimerMax;
 				}
-				if ((keyRightPressed) or ((autoScrollTick) and (keyRightHold)))
+				if (((keyRightPressed) or ((autoScrollTick) and (keyRightHold))) and (trophySelection < trophiesMax - 1))
 				{
 					if ((trophySelection == ((page + 1) * 12) - 1) and (page < pageMax))
 					{

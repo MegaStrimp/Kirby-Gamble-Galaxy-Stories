@@ -2,7 +2,7 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "rm_EggGarden_Caves3",
-  "creationCodeFile": "${project_dir}/rooms/rm_EggGarden_Caves3/RoomCreationCode.gml",
+  "creationCodeFile": "rooms/rm_EggGarden_Caves3/RoomCreationCode.gml",
   "inheritCode": false,
   "inheritCreationOrder": false,
   "inheritLayers": false,

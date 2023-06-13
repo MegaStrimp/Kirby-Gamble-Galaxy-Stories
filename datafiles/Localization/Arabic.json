@@ -974,6 +974,11 @@
             "Title": ""
         },
 		
+		"Menacing Black":
+        {
+            "Title": ""
+        },
+		
 		"Explosive B":
         {
             "Title": ""
@@ -1253,8 +1258,7 @@
             "Title": "",
 			
 			"Description": ""
-        }
-	},
+        },
         
         "Blood Gordo":
         {
@@ -1578,7 +1582,7 @@
             "Description": ""
         },
 		
-		"MysticBlock":
+		"Mystic Block":
         {
             "Title": "",
             

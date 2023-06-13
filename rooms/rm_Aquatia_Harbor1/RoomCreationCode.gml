@@ -5,9 +5,8 @@
 global.discordDetailText = "Aquatia - Harbor";
 global.discordLargeImage = "aquatiaharbor_icon";
 
-//Stage Number
+//Stage Attributes
 
-global.stageNumber = 4;
 global.roomCheckpoint = room;
 
 //Backgrounds

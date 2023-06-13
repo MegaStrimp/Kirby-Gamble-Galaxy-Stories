@@ -1456,7 +1456,7 @@ function scr_Player_States_Normal()
 								{
 									//if (jetCharge == 6)
 									{
-										sprite_index = sprCutterCharge; // change this later
+										sprite_index = sprCutterChargeReady; // change this later
 										image_index = 0;
 									}
 									if ((!audio_is_playing(snd_Charge_Intro)) and (!audio_is_playing(snd_Charge_Loop)))

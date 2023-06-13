@@ -6,7 +6,7 @@ function scr_Player_AttackPassive_CutterCharge()
 	if (cutterCharge == cutterChargeMax - 1)
 	{
 		audio_play_sound(snd_Charge_Ready,0,false);
-		var particle = instance_create_depth(x - (16 * dir),y - 15,depth - 1,obj_Particle);
+		var particle = instance_create_depth(x - (6 * dir),y - 31,depth - 1,obj_Particle);
 		particle.sprite_index = spr_Particle_Flash1;
 		particle.scale = 1.5;
 		particle.destroyAfterAnimation = true;
@@ -23,7 +23,13 @@ function scr_Player_AttackPassive_CutterCharge()
 		#region Charge Sprite
 		if (cutterCharge == 6)
 		{
-			sprite_index = sprCutterCharge;
+			sprite_index = sprCutterChargeReady;
+			image_index = 0;
+		}
+		
+		if (cutterCharge == cutterChargeMax - 10)
+		{
+			sprite_index = sprCutterChargeEnd;
 			image_index = 0;
 		}
 		#endregion

@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Nightmare Ordeal",
-    "path": "folders/Backgrounds/Nightmare Ordeal.yy",
+    "path": "folders/Backgrounds/Subgames/Nightmare Ordeal.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

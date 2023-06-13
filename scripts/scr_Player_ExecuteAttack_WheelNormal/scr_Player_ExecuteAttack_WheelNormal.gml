@@ -10,7 +10,10 @@ function scr_Player_ExecuteAttack_WheelNormal()
 	if (runTurn) dir *= -1;
 	wheelDir = dir;
 	hsp = 0;
+	wheelTurnCounter = wheelTurnCounterMax;
 	wheelReadyTimer = 15;
+	wheelSpeedOffset = wheelSpeedOffsetMax;
+	wheelSpeedOffsetCounter = wheelSpeedOffsetCounterMax;
 	#endregion
 	
 	#region Attack Sprite

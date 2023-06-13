@@ -5,9 +5,8 @@
 global.discordDetailText = "HEAVEN";
 global.discordLargeImage = "ggs_icon";
 
-//Stage Number
+//Stage Attributes
 
-global.stageNumber = 0;
 global.roomCheckpoint = room;
 
 //Music

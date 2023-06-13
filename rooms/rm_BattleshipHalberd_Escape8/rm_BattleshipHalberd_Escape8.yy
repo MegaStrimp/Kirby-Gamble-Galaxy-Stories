@@ -2,7 +2,7 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "rm_BattleshipHalberd_Escape8",
-  "creationCodeFile": "${project_dir}/rooms/rm_BattleshipHalberd_Escape8/RoomCreationCode.gml",
+  "creationCodeFile": "rooms/rm_BattleshipHalberd_Escape8/RoomCreationCode.gml",
   "inheritCode": false,
   "inheritCreationOrder": false,
   "inheritLayers": false,

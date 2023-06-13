@@ -44,14 +44,17 @@ draw_sprite(spr_Menu_Collection_Bestiary_Hud_Normal,0,0,0);
 if (global.language == languages.english)
 {
 	draw_set_font(global.fontBestiary);
+	scribble_font_set_default("spr_Menu_Collection_Bestiary_Font");
 }
 else if ((global.language == languages.chinese) or (global.language == languages.japanese))
 {
 	draw_set_font(fnt_SmallKanji);
+	scribble_font_set_default("fnt_SmallKanji");
 }
 else
 {
 	draw_set_font(fnt_SmallSpecial);
+	scribble_font_set_default("fnt_SmallSpecial");
 }
 
 for (var i = 0; i < min((bestiaryMax - (page * 12)),12); i++)
@@ -103,6 +106,7 @@ draw_set_valign(fa_middle);
 draw_text_color(344,64,bestiaryArray[# bestiarySelection,1],c_black,c_black,c_black,c_black,1);
 draw_text_color(344,63,bestiaryArray[# bestiarySelection,1],col1,col1,col2,col2,1);
 draw_set_valign(fa_top);
+//scribble(string(bestiaryArray[# bestiarySelection,2])).wrap(273,71).page(descriptionPage).draw(152,167);
 draw_text_ext_color(152,168,bestiaryArray[# bestiarySelection,2],11,316,c_black,c_black,c_black,c_black,1);
 draw_text_ext_color(152,167,bestiaryArray[# bestiarySelection,2],11,316,col1,col1,col2,col2,1);
 #endregion

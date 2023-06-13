@@ -2,7 +2,7 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "rm_DoomsdayArena",
-  "creationCodeFile": "${project_dir}/rooms/rm_DoomsdayArena/RoomCreationCode.gml",
+  "creationCodeFile": "rooms/rm_DoomsdayArena/RoomCreationCode.gml",
   "inheritCode": false,
   "inheritCreationOrder": false,
   "inheritLayers": false,

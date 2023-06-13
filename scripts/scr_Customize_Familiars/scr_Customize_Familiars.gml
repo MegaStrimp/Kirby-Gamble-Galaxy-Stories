@@ -16,47 +16,26 @@ function scr_Customize_Familiars()
 	familiarPaint[i][0] = spr_Kirby_Normal_Palette_FriendlyPink;
 	familiarPaint[i][1] = spr_Kirby_Normal_Palette_FriendlyPink;
 	familiarPaint[i][2] = spr_Kirby_Normal_Palette_FriendlyPink;
-	familiarPaint[i][3] = spr_Kirby_Normal_Palette_FriendlyPink;
-	familiarPaint[i][4] = spr_Kirby_Normal_Palette_FriendlyPink;
-	familiarPaint[i][5] = spr_Kirby_Normal_Palette_FriendlyPink;
 	
 	familiarLevel[i] = global.gambleFamiliarLevel;
 	familiarExp[i] = global.gambleFamiliarExp;
 	familiarMaxExp[i][1] = 100;
 	familiarMaxExp[i][2] = 100;
 	familiarMaxExp[i][3] = 100;
-	familiarMaxExp[i][4] = 100;
-	familiarMaxExp[i][5] = 100;
-	familiarMaxExp[i][6] = 100;
-	familiarMaxExp[i][7] = 100;
-	familiarMaxExp[i][8] = 100;
-	familiarMaxExp[i][9] = 100;
 	
 	var h = 0;
 	familiarStatTitle[i][h] = "ATK";
+	familiarStat[i][h][0] = 0;
 	familiarStat[i][h][1] = 0;
 	familiarStat[i][h][2] = 0;
-	familiarStat[i][h][3] = 0;
-	familiarStat[i][h][4] = 0;
-	familiarStat[i][h][5] = 0;
-	familiarStat[i][h][6] = 0;
-	familiarStat[i][h][7] = 0;
-	familiarStat[i][h][8] = 0;
-	familiarStat[i][h][9] = 0;
 	
 	h += 1;
 	familiarStatTitle[i][h] = "SPD";
+	familiarStat[i][h][0] = 0;
 	familiarStat[i][h][1] = 0;
 	familiarStat[i][h][2] = 0;
-	familiarStat[i][h][3] = 0;
-	familiarStat[i][h][4] = 0;
-	familiarStat[i][h][5] = 0;
-	familiarStat[i][h][6] = 0;
-	familiarStat[i][h][7] = 0;
-	familiarStat[i][h][8] = 0;
-	familiarStat[i][h][9] = 0;
 	
-	familiarColor[i] = make_color_rgb(248,160,216);
+	familiarColor[i] = make_color_rgb(237,138,0);
 	familiarOffset[i] = 0;
 	familiarOffsetLerp[i] = 0;
 	i += 1;
@@ -74,35 +53,20 @@ function scr_Customize_Familiars()
 	familiarPaint[i][0] = spr_Kirby_Normal_Palette_FriendlyPink;
 	familiarPaint[i][1] = spr_Kirby_Normal_Palette_FriendlyPink;
 	familiarPaint[i][2] = spr_Kirby_Normal_Palette_FriendlyPink;
-	familiarPaint[i][3] = spr_Kirby_Normal_Palette_FriendlyPink;
-	familiarPaint[i][4] = spr_Kirby_Normal_Palette_FriendlyPink;
-	familiarPaint[i][5] = spr_Kirby_Normal_Palette_FriendlyPink;
 	
 	familiarLevel[i] = global.happyPeaFamiliarLevel;
 	familiarExp[i] = global.happyPeaFamiliarExp;
 	familiarMaxExp[i][1] = 100;
 	familiarMaxExp[i][2] = 100;
 	familiarMaxExp[i][3] = 100;
-	familiarMaxExp[i][4] = 100;
-	familiarMaxExp[i][5] = 100;
-	familiarMaxExp[i][6] = 100;
-	familiarMaxExp[i][7] = 100;
-	familiarMaxExp[i][8] = 100;
-	familiarMaxExp[i][9] = 100;
 	
 	var h = 0;
 	familiarStatTitle[i][h] = "ATK";
+	familiarStat[i][h][0] = 0;
 	familiarStat[i][h][1] = 0;
 	familiarStat[i][h][2] = 0;
-	familiarStat[i][h][3] = 0;
-	familiarStat[i][h][4] = 0;
-	familiarStat[i][h][5] = 0;
-	familiarStat[i][h][6] = 0;
-	familiarStat[i][h][7] = 0;
-	familiarStat[i][h][8] = 0;
-	familiarStat[i][h][9] = 0;
 	
-	familiarColor[i] = make_color_rgb(248,160,216);
+	familiarColor[i] = make_color_rgb(200,240,56);
 	familiarOffset[i] = 0;
 	familiarOffsetLerp[i] = 0;
 	i += 1;
@@ -120,35 +84,20 @@ function scr_Customize_Familiars()
 	familiarPaint[i][0] = spr_Kirby_Normal_Palette_FriendlyPink;
 	familiarPaint[i][1] = spr_Kirby_Normal_Palette_FriendlyPink;
 	familiarPaint[i][2] = spr_Kirby_Normal_Palette_FriendlyPink;
-	familiarPaint[i][3] = spr_Kirby_Normal_Palette_FriendlyPink;
-	familiarPaint[i][4] = spr_Kirby_Normal_Palette_FriendlyPink;
-	familiarPaint[i][5] = spr_Kirby_Normal_Palette_FriendlyPink;
 	
 	familiarLevel[i] = global.epicJarFamiliarLevel;
 	familiarExp[i] = global.epicJarFamiliarExp;
 	familiarMaxExp[i][1] = 100;
 	familiarMaxExp[i][2] = 100;
 	familiarMaxExp[i][3] = 100;
-	familiarMaxExp[i][4] = 100;
-	familiarMaxExp[i][5] = 100;
-	familiarMaxExp[i][6] = 100;
-	familiarMaxExp[i][7] = 100;
-	familiarMaxExp[i][8] = 100;
-	familiarMaxExp[i][9] = 100;
 	
 	var h = 0;
 	familiarStatTitle[i][h] = "ATK";
+	familiarStat[i][h][0] = 0;
 	familiarStat[i][h][1] = 0;
 	familiarStat[i][h][2] = 0;
-	familiarStat[i][h][3] = 0;
-	familiarStat[i][h][4] = 0;
-	familiarStat[i][h][5] = 0;
-	familiarStat[i][h][6] = 0;
-	familiarStat[i][h][7] = 0;
-	familiarStat[i][h][8] = 0;
-	familiarStat[i][h][9] = 0;
 	
-	familiarColor[i] = make_color_rgb(248,160,216);
+	familiarColor[i] = make_color_rgb(239,183,172);
 	familiarOffset[i] = 0;
 	familiarOffsetLerp[i] = 0;
 	i += 1;
@@ -166,35 +115,20 @@ function scr_Customize_Familiars()
 	familiarPaint[i][0] = spr_Kirby_Normal_Palette_FriendlyPink;
 	familiarPaint[i][1] = spr_Kirby_Normal_Palette_FriendlyPink;
 	familiarPaint[i][2] = spr_Kirby_Normal_Palette_FriendlyPink;
-	familiarPaint[i][3] = spr_Kirby_Normal_Palette_FriendlyPink;
-	familiarPaint[i][4] = spr_Kirby_Normal_Palette_FriendlyPink;
-	familiarPaint[i][5] = spr_Kirby_Normal_Palette_FriendlyPink;
 	
 	familiarLevel[i] = global.krackleFamiliarLevel;
 	familiarExp[i] = global.krackleFamiliarExp;
 	familiarMaxExp[i][1] = 100;
 	familiarMaxExp[i][2] = 100;
 	familiarMaxExp[i][3] = 100;
-	familiarMaxExp[i][4] = 100;
-	familiarMaxExp[i][5] = 100;
-	familiarMaxExp[i][6] = 100;
-	familiarMaxExp[i][7] = 100;
-	familiarMaxExp[i][8] = 100;
-	familiarMaxExp[i][9] = 100;
 	
 	var h = 0;
 	familiarStatTitle[i][h] = "ATK";
+	familiarStat[i][h][0] = 0;
 	familiarStat[i][h][1] = 0;
 	familiarStat[i][h][2] = 0;
-	familiarStat[i][h][3] = 0;
-	familiarStat[i][h][4] = 0;
-	familiarStat[i][h][5] = 0;
-	familiarStat[i][h][6] = 0;
-	familiarStat[i][h][7] = 0;
-	familiarStat[i][h][8] = 0;
-	familiarStat[i][h][9] = 0;
 	
-	familiarColor[i] = make_color_rgb(248,160,216);
+	familiarColor[i] = make_color_rgb(179,227,249);
 	familiarOffset[i] = 0;
 	familiarOffsetLerp[i] = 0;
 	i += 1;
@@ -206,51 +140,30 @@ function scr_Customize_Familiars()
 	familiarDescription[i] = str("Familiars.Omega Matter.Description");
 	familiarUnlocked[i] = global.omegaMatterFamiliarUnlocked;
 	familiarUnlockMethod[i] = "TBD";
-	familiarSprite[i] = spr_Menu_Collection_Customize_Familiar_Gamble;
+	familiarSprite[i] = spr_Menu_Collection_Customize_Familiar_OmegaMatter;
 	
 	familiarPaintTitle[i][0] = "Test Palette";
 	familiarPaint[i][0] = spr_Kirby_Normal_Palette_FriendlyPink;
 	familiarPaint[i][1] = spr_Kirby_Normal_Palette_FriendlyPink;
 	familiarPaint[i][2] = spr_Kirby_Normal_Palette_FriendlyPink;
-	familiarPaint[i][3] = spr_Kirby_Normal_Palette_FriendlyPink;
-	familiarPaint[i][4] = spr_Kirby_Normal_Palette_FriendlyPink;
-	familiarPaint[i][5] = spr_Kirby_Normal_Palette_FriendlyPink;
 	
 	familiarLevel[i] = global.omegaMatterFamiliarLevel;
 	familiarExp[i] = global.omegaMatterFamiliarExp;
 	familiarMaxExp[i][1] = 100;
 	familiarMaxExp[i][2] = 100;
 	familiarMaxExp[i][3] = 100;
-	familiarMaxExp[i][4] = 100;
-	familiarMaxExp[i][5] = 100;
-	familiarMaxExp[i][6] = 100;
-	familiarMaxExp[i][7] = 100;
-	familiarMaxExp[i][8] = 100;
-	familiarMaxExp[i][9] = 100;
 	
 	var h = 0;
 	familiarStatTitle[i][h] = "ATK";
+	familiarStat[i][h][0] = 0;
 	familiarStat[i][h][1] = 0;
 	familiarStat[i][h][2] = 0;
-	familiarStat[i][h][3] = 0;
-	familiarStat[i][h][4] = 0;
-	familiarStat[i][h][5] = 0;
-	familiarStat[i][h][6] = 0;
-	familiarStat[i][h][7] = 0;
-	familiarStat[i][h][8] = 0;
-	familiarStat[i][h][9] = 0;
 	
 	h += 1;
 	familiarStatTitle[i][h] = "SPD";
+	familiarStat[i][h][0] = 0;
 	familiarStat[i][h][1] = 0;
 	familiarStat[i][h][2] = 0;
-	familiarStat[i][h][3] = 0;
-	familiarStat[i][h][4] = 0;
-	familiarStat[i][h][5] = 0;
-	familiarStat[i][h][6] = 0;
-	familiarStat[i][h][7] = 0;
-	familiarStat[i][h][8] = 0;
-	familiarStat[i][h][9] = 0;
 	
 	familiarColor[i] = make_color_rgb(248,160,216);
 	familiarOffset[i] = 0;

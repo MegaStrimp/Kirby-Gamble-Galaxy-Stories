@@ -14,7 +14,7 @@ function scr_Gallery_Artwork_VolS()
 	
 	if (ds_exists(artworkArray,ds_type_grid)) ds_grid_destroy(artworkArray);
 	
-	artworkArray = ds_grid_create(13,7);
+	artworkArray = ds_grid_create(13,8);
 	ds_grid_clear(artworkArray,-1);
 	
 	var i = 0;
@@ -26,7 +26,8 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
 	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
-	artworkArray[# i,6] = spr_Menu_Gallery_Frame;
+	artworkArray[# i,6] = spr_Menu_Gallery_FrameYellow_Normal;
+	artworkArray[# i,7] = spr_Menu_Gallery_Canvas_Normal;
 	i += 1;
 	#endregion
 	
@@ -37,7 +38,8 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
 	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
-	artworkArray[# i,6] = spr_Menu_Gallery_Frame;
+	artworkArray[# i,6] = spr_Menu_Gallery_FrameYellow_Normal;
+	artworkArray[# i,7] = spr_Menu_Gallery_Canvas_Normal;
 	i += 1;
 	#endregion
 	
@@ -48,7 +50,8 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
 	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
-	artworkArray[# i,6] = spr_Menu_Gallery_Frame;
+	artworkArray[# i,6] = spr_Menu_Gallery_FrameYellow_Normal;
+	artworkArray[# i,7] = spr_Menu_Gallery_Canvas_Normal;
 	i += 1;
 	#endregion
 	
@@ -59,7 +62,8 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
 	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
-	artworkArray[# i,6] = spr_Menu_Gallery_Frame;
+	artworkArray[# i,6] = spr_Menu_Gallery_FrameYellow_Normal;
+	artworkArray[# i,7] = spr_Menu_Gallery_Canvas_Normal;
 	i += 1;
 	#endregion
 	
@@ -70,7 +74,8 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
 	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
-	artworkArray[# i,6] = spr_Menu_Gallery_Frame;
+	artworkArray[# i,6] = spr_Menu_Gallery_FrameYellow_Normal;
+	artworkArray[# i,7] = spr_Menu_Gallery_Canvas_Normal;
 	i += 1;
 	#endregion
 	
@@ -81,7 +86,8 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
 	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
-	artworkArray[# i,6] = spr_Menu_Gallery_Frame;
+	artworkArray[# i,6] = spr_Menu_Gallery_FrameYellow_Normal;
+	artworkArray[# i,7] = spr_Menu_Gallery_Canvas_Normal;
 	i += 1;
 	#endregion
 	
@@ -92,7 +98,8 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
 	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
-	artworkArray[# i,6] = spr_Menu_Gallery_Frame;
+	artworkArray[# i,6] = spr_Menu_Gallery_FrameYellow_Normal;
+	artworkArray[# i,7] = spr_Menu_Gallery_Canvas_Normal;
 	i += 1;
 	#endregion
 	
@@ -103,7 +110,8 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
 	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
-	artworkArray[# i,6] = spr_Menu_Gallery_Frame;
+	artworkArray[# i,6] = spr_Menu_Gallery_FrameYellow_Normal;
+	artworkArray[# i,7] = spr_Menu_Gallery_Canvas_Normal;
 	i += 1;
 	#endregion
 	
@@ -114,7 +122,8 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
 	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
-	artworkArray[# i,6] = spr_Menu_Gallery_FrameRed;
+	artworkArray[# i,6] = spr_Menu_Gallery_FrameRed_Normal;
+	artworkArray[# i,7] = spr_Menu_Gallery_Canvas_Normal;
 	i += 1;
 	#endregion
 	
@@ -125,7 +134,8 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
 	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
-	artworkArray[# i,6] = spr_Menu_Gallery_FrameRed;
+	artworkArray[# i,6] = spr_Menu_Gallery_FrameRed_Normal;
+	artworkArray[# i,7] = spr_Menu_Gallery_Canvas_Normal;
 	i += 1;
 	#endregion
 	
@@ -136,7 +146,8 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
 	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
-	artworkArray[# i,6] = spr_Menu_Gallery_FrameRed;
+	artworkArray[# i,6] = spr_Menu_Gallery_FrameRed_Tall;
+	artworkArray[# i,7] = spr_Menu_Gallery_Canvas_Tall;
 	i += 1;
 	#endregion
 	
@@ -147,7 +158,8 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
 	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
-	artworkArray[# i,6] = spr_Menu_Gallery_FrameRed;
+	artworkArray[# i,6] = spr_Menu_Gallery_FrameRed_Normal;
+	artworkArray[# i,7] = spr_Menu_Gallery_Canvas_Normal;
 	i += 1;
 	#endregion
 	
@@ -158,7 +170,8 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
 	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
-	artworkArray[# i,6] = spr_Menu_Gallery_FrameRed;
+	artworkArray[# i,6] = spr_Menu_Gallery_FrameRed_Normal;
+	artworkArray[# i,7] = spr_Menu_Gallery_Canvas_Normal;
 	i += 1;
 	#endregion
 	

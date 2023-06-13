@@ -60,13 +60,14 @@ if (!isPaused)
 		if ((sign(hsp) == -sign(dirX)) and (place_meeting(x,y,owner)))
 		{
 			var collidedPlayer = instance_place(x,y,owner);
-			if (((collidedPlayer.player == 0) and ((global.abilityP1 == playerAbilities.cutter) or (global.characterP1 == playerCharacters.sirKibble)))
+			if ((!collidedPlayer.attack) and (((collidedPlayer.player == 0) and ((global.abilityP1 == playerAbilities.cutter) or (global.characterP1 == playerCharacters.sirKibble)))
 			or ((collidedPlayer.player == 1) and ((global.abilityP2 == playerAbilities.cutter) or (global.characterP2 == playerCharacters.sirKibble)))
 			or ((collidedPlayer.player == 2) and ((global.abilityP3 == playerAbilities.cutter) or (global.characterP3 == playerCharacters.sirKibble)))
-			or ((collidedPlayer.player == 3) and ((global.abilityP4 == playerAbilities.cutter) or (global.characterP4 == playerCharacters.sirKibble))))
+			or ((collidedPlayer.player == 3) and ((global.abilityP4 == playerAbilities.cutter) or (global.characterP4 == playerCharacters.sirKibble)))))
 			{
 				if (audio_is_playing(snd_CutterCatch)) audio_stop_sound(snd_CutterCatch);
 				audio_play_sound(snd_CutterCatch,0,false);
+				
 				collidedPlayer.cutterCatch = true;
 				collidedPlayer.cutterCatchTimer = collidedPlayer.cutterCatchTimerMax;
 			}

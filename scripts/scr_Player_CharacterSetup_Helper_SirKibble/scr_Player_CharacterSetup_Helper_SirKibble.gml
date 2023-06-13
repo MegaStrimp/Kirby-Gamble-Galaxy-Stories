@@ -135,7 +135,8 @@ function scr_Player_CharacterSetup_Helper_SirKibble(argument0)
 			sprClimbDown = spr_Kirby_Normal_ClimbDown;
 			sprHurt = spr_SirKibble_Normal_Hurt;
 			sprDeath = spr_SirKibble_Normal_HurtAir;
-			sprCutterCharge = spr_SirKibble_Normal_Catch;
+			sprCutterChargeReady = spr_SirKibble_Normal_Catch;
+			sprCutterChargeEnd = spr_SirKibble_Normal_Catch;
 			sprCutterAttack1 = spr_SirKibble_Normal_Attack;
 			sprCutterCatch = spr_SirKibble_Normal_Catch;
 			

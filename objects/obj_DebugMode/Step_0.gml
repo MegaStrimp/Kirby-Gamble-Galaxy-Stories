@@ -1326,7 +1326,7 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 		
 		#region Mint Leaf
 		case debugObject.mintLeaf:
-		debugSprite = spr_MintLeaf;
+		debugSprite = spr_MintLeaf_Normal;
 		debugSpriteSelectedMax = 0;
 		debugIndex = 0;
 		debugStateSelectedMax = 0;

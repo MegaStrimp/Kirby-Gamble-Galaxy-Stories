@@ -719,56 +719,56 @@
 		
 		"Red":
         {
-            "Title": "Czerwony"
+            "Title": "Czerwony",
             
             "Description": "Czerwony jak świeża truskawka, mniam!"
         },
 		
 		"Green":
         {
-            "Title": "Zielony"
+            "Title": "Zielony",
             
             "Description": "Nie martw się, on nie jest chory."
         },
 		
 		"Dreamy Blueberry":
         {
-            "Title": "Senna Jagoda"
+            "Title": "Senna Jagoda",
             
             "Description": "Przypomina mi pyszną jagódkę!"
         },
 		
 		"Carbon":
         {
-            "Title": "Węglowy"
+            "Title": "Węglowy",
             
             "Description": ""
         },
 		
 		"Cherry":
         {
-            "Title": "Wisienka"
+            "Title": "Wisienka",
             
             "Description": ""
         },
 		
 		"Deep Fried Kirb":
         {
-            "Title": "Z Frytkownicy"
+            "Title": "Z Frytkownicy",
             
             "Description": ""
         },
 		
 		"Emerald":
         {
-            "Title": "Szmaragdowy"
+            "Title": "Szmaragdowy",
             
             "Description": ""
         },
 		
 		"GameKirb":
         {
-            "Title": "Growy Kirby"
+            "Title": "Growy Kirby",
             
             "Description": ""
         },
@@ -1121,6 +1121,11 @@
             "Title": "Niebieskawy Krzak"
         },
 		
+		"Menacing Black":
+        {
+            "Title": ""
+        },
+		
 		"Explosive B":
         {
             "Title": "Wy-B-Uchowe"
@@ -1369,8 +1374,10 @@
 	
 	"Familiars":
     {
-		"Gamble": "?"
+		"Gamble":
         {
+            "Title": "?",
+			
 			"Description": "?"
         },
 		

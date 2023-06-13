@@ -11,8 +11,17 @@ keycardArray = -1;
 select = false;
 goBack = false;
 xx = 0;
+autoScroll = false;
+autoScrollTick = false;
 
 scr_Keycards();
+
+#region Timers
+canAutoScrollTimer = -1;
+canAutoScrollTimerMax = 30;
+autoScrollTimer = -1;
+autoScrollTimerMax = 2;
+#endregion
 
 var button = instance_create_depth(0,270,depth - 1,obj_Menu_Button);
 button.owner = id;

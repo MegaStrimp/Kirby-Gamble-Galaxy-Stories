@@ -5,9 +5,8 @@
 global.discordDetailText = "Working On A Beta";
 global.discordLargeImage = "ggs_icon";
 
-//Stage Number
+//Stage Attributes
 
-global.stageNumber = 4;
 global.roomCheckpoint = room;
 
 //Music

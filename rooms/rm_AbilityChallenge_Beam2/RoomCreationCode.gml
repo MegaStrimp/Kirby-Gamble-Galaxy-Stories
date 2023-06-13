@@ -6,9 +6,8 @@ global.discordDetailText = "Ability Challenge - Beam";
 global.discordLargeImage = "beam_icon";
 global.abilityP1 = playerAbilities.beam;
 
-//Stage Number
+//Stage Attributes
 
-global.stageNumber = 0;
 global.roomCheckpoint = room;
 
 //Backgrounds

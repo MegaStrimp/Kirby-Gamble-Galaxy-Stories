@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 6,
   "parent": {
-    "name": "Hat",
-    "path": "folders/Sprites/Characters/Kirby/Ability Hats/Ufo/Hat.yy",
+    "name": "Shadow",
+    "path": "folders/Sprites/Characters/Kirby/Ability Hats/Ufo/Shadow.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

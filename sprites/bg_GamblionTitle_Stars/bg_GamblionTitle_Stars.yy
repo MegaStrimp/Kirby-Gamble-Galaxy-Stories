@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Gamblion",
-    "path": "folders/Backgrounds/Maykr/Gamblion.yy",
+    "path": "folders/Backgrounds/Subgames/Maykr/Gamblion.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

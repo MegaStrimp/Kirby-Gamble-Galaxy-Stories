@@ -25,7 +25,7 @@ function scr_Player_ExecuteAttack_NinjaNormal()
 	projectile.abilityType = playerAbilities.ninja;
 	projectile.dmg = kirby_NinjaNormal_Damage;
 	scr_Attack_SetKnockback(projectile,kirby_NinjaNormal_Strength,kirby_NinjaNormal_HitStopAffectSource,kirby_NinjaNormal_HitStopAffectPlayer,kirby_NinjaNormal_HitStopAffectTarget,kirby_NinjaNormal_HitStopLength,kirby_NinjaNormal_HitStopShakeStrength);
-	projectile.hsp = dir * 7;
+	projectile.hsp = dir * 10;
 	projectile.dirX = dir;
 	projectile.image_xscale = projectile.dirX;
 	projectile.enemy = false;

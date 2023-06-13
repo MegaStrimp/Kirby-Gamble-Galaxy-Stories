@@ -48,7 +48,8 @@ gravNormal = .23;
 gravFloat = .075;
 gravStone = .7;
 gravFireDash = .05;
-gravWheel = .5;
+gravWheel = .2;
+gravWheelTurnJump = .5;
 gravJetDash = .25;
 grav = gravNormal;
 
@@ -57,13 +58,14 @@ gravLimitFloat = 0.8;
 gravLimitBeamAir = 3;
 gravLimitStone = 7;
 gravLimitFireDash = 1.25;
-gravLimitWheel = 5;
+gravLimitWheel = 2.5;
+gravLimitWheelTurnJump = 5;
 gravLimitJetDash = .65;
 gravLimit = gravLimitNormal;
 
 jumpspeedNormal = 6;
 jumpspeedFloat = 2;
-jumpspeedWheel = 8;
+jumpspeedWheel = 2;
 jumpspeed = jumpspeedNormal;
 
 ufoFloatSpd = 2;
@@ -172,7 +174,8 @@ sprWarpStar4 = spr_Kirby_Normal_WarpStar4;
 sprGuard = spr_Kirby_Normal_Guard;
 sprGuardSlope = spr_Kirby_Normal_Guard_Slope;
 sprItemCarryThrow = spr_Kirby_Normal_ItemCarry_Throw;
-sprCutterCharge = spr_Kirby_Normal_Cutter_Charge;
+sprCutterChargeReady = spr_Kirby_Normal_Cutter_ChargeReady;
+sprCutterChargeEnd = spr_Kirby_Normal_Cutter_ChargeEnd;
 sprCutterAttack1 = spr_Kirby_Normal_Cutter_Attack1;
 sprCutterAttack2 = spr_Kirby_Normal_Cutter_Attack2;
 sprCutterAttack3 = spr_Kirby_Normal_Cutter_Attack3;
@@ -453,8 +456,14 @@ sparkMaxCharge = false;
 
 wheelDir = 1;
 wheelReady = true;
-wheelTurn = false;
+wheelTurnCounter = 0;
+wheelTurnCounterMax = 60;
+wheelTurnJump = false;
 wheelCrash = false;
+wheelSpeedOffset = 0;
+wheelSpeedOffsetMax = 2;
+wheelSpeedOffsetCounter = 0;
+wheelSpeedOffsetCounterMax = 45;
 
 wingFeatherPos = 0;
 

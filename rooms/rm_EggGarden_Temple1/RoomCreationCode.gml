@@ -5,9 +5,8 @@
 global.discordDetailText = "Egg Garden - Temple";
 global.discordLargeImage = "egggardensurface_icon";
 
-//Stage Number
+//Stage Attributes
 
-global.stageNumber = 5;
 global.roomCheckpoint = room;
 
 //Backgrounds

@@ -137,7 +137,7 @@ if (!global.pause)
 			case 1:
 			if (!global.fullscreen)
 			{
-				if ((keyJumpPressed) or (keyLeftPressed))
+				if (keyLeftPressed)
 				{
 					if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 					audio_play_sound(snd_BossHealth,0,false);
@@ -150,7 +150,7 @@ if (!global.pause)
 					}
 				}
 				
-				if (keyRightPressed)
+				if ((keyJumpPressed) or (keyRightPressed))
 				{
 					if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 					audio_play_sound(snd_BossHealth,0,false);
@@ -483,6 +483,7 @@ if (!global.pause)
 			if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 			audio_play_sound(snd_BossHealth,0,false);
 			global.language = languageVal[subSelection];
+			show_debug_message(string(global.languageArray[subSelection]))
 			obj_Polyglot.setLocale(global.languageArray[subSelection]);
 			setStrings = true;
 		}

@@ -586,6 +586,34 @@ function scr_Player_HatPalette(argument0,argument1)
 					break;
 				}
 				break;
+				
+				case abilityHatSkins.ninja_samurai:
+				switch (player)
+				{
+					case 0:
+					var paletteIndexToCheck = global.hatPaletteNinjaModernP1;
+					break;
+					
+					case 1:
+					var paletteIndexToCheck = global.hatPaletteNinjaModernP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteNinjaModernP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteNinjaModernP4;
+					break;
+				}
+				
+				switch (paletteIndexToCheck)
+				{
+					case abilityHatPaints.ninja_samurai_menacingBlack:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Ninja_Samurai_Palette_MenacingBlack;
+					break;
+				}
+				break;
 			}
 			break;
 			

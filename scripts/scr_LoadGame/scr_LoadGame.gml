@@ -247,6 +247,7 @@ function scr_LoadGame(argument0)
 	
 	#region Ninja
 	global.hatTypeNinjaModernUnlocked = ini_read_real("unlocks","hatTypeNinjaModernUnlocked",false);
+	global.hatTypeNinjaSamuraiUnlocked = ini_read_real("unlocks","hatTypeNinjaSamuraiUnlocked",false);
 	
 	#region KSSU
 	global.hatPaletteNinjaKSSUSilverLinedWarriorUnlocked = ini_read_real("unlocks","hatPaletteNinjaKSSUSilverLinedWarriorUnlocked",false);
@@ -256,6 +257,9 @@ function scr_LoadGame(argument0)
 	#region Modern
 	global.hatPaletteNinjaModernBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteNinjaModernBitcrushedUnlocked",false);
 	global.hatPaletteNinjaModernViridianAmbushUnlocked = ini_read_real("unlocks","hatPaletteNinjaModernViridianAmbushUnlocked",false);
+	#endregion
+	
+	#region Samurai
 	#endregion
 	#endregion
 	
@@ -709,6 +713,7 @@ function scr_LoadGame(argument0)
 	global.hatPaletteMirrorModernP1 = ini_read_real("playerCustomization","hatPaletteMirrorModernP1",abilityHatPaints.mirror_modern_jesterReflection);
 	global.hatPaletteNinjaKSSUP1 = ini_read_real("playerCustomization","hatPaletteNinjaKSSUP1",abilityHatPaints.ninja_kssu_stealthyMaroon);
 	global.hatPaletteNinjaModernP1 = ini_read_real("playerCustomization","hatPaletteNinjaModernP1",abilityHatPaints.ninja_modern_stealthyMaroon);
+	global.hatPaletteNinjaSamuraiP1 = ini_read_real("playerCustomization","hatPaletteNinjaSamuraiP1",abilityHatPaints.ninja_samurai_menacingBlack);
 	global.hatPaletteBombKSSUP1 = ini_read_real("playerCustomization","hatPaletteBombKSSUP1",abilityHatPaints.bomb_kssu_explosiveB);
 	global.hatPaletteBombModernP1 = ini_read_real("playerCustomization","hatPaletteBombModernP1",abilityHatPaints.bomb_modern_explosiveB);
 	global.hatPaletteFireKSSUP1 = ini_read_real("playerCustomization","hatPaletteFireKSSUP1",abilityHatPaints.fire_kssu_scorchingScarlet);
@@ -743,6 +748,7 @@ function scr_LoadGame(argument0)
 	global.hatPaletteMirrorModernP2 = ini_read_real("playerCustomization","hatPaletteMirrorModernP2",abilityHatPaints.mirror_modern_jesterReflection);
 	global.hatPaletteNinjaKSSUP2 = ini_read_real("playerCustomization","hatPaletteNinjaKSSUP2",abilityHatPaints.ninja_kssu_stealthyMaroon);
 	global.hatPaletteNinjaModernP2 = ini_read_real("playerCustomization","hatPaletteNinjaModernP2",abilityHatPaints.ninja_modern_stealthyMaroon);
+	global.hatPaletteNinjaSamuraiP2 = ini_read_real("playerCustomization","hatPaletteNinjaSamuraiP2",abilityHatPaints.ninja_samurai_menacingBlack);
 	global.hatPaletteBombKSSUP2 = ini_read_real("playerCustomization","hatPaletteBombKSSUP2",abilityHatPaints.bomb_kssu_explosiveB);
 	global.hatPaletteBombModernP2 = ini_read_real("playerCustomization","hatPaletteBombModernP2",abilityHatPaints.bomb_modern_explosiveB);
 	global.hatPaletteFireKSSUP2 = ini_read_real("playerCustomization","hatPaletteFireKSSUP2",abilityHatPaints.fire_kssu_scorchingScarlet);
@@ -777,6 +783,7 @@ function scr_LoadGame(argument0)
 	global.hatPaletteMirrorModernP3 = ini_read_real("playerCustomization","hatPaletteMirrorModernP3",abilityHatPaints.mirror_modern_jesterReflection);
 	global.hatPaletteNinjaKSSUP3 = ini_read_real("playerCustomization","hatPaletteNinjaKSSUP3",abilityHatPaints.ninja_kssu_stealthyMaroon);
 	global.hatPaletteNinjaModernP3 = ini_read_real("playerCustomization","hatPaletteNinjaModernP3",abilityHatPaints.ninja_modern_stealthyMaroon);
+	global.hatPaletteNinjaSamuraiP3 = ini_read_real("playerCustomization","hatPaletteNinjaSamuraiP3",abilityHatPaints.ninja_samurai_menacingBlack);
 	global.hatPaletteBombKSSUP3 = ini_read_real("playerCustomization","hatPaletteBombKSSUP3",abilityHatPaints.bomb_kssu_explosiveB);
 	global.hatPaletteBombModernP3 = ini_read_real("playerCustomization","hatPaletteBombModernP3",abilityHatPaints.bomb_modern_explosiveB);
 	global.hatPaletteFireKSSUP3 = ini_read_real("playerCustomization","hatPaletteFireKSSUP3",abilityHatPaints.fire_kssu_scorchingScarlet);
@@ -811,6 +818,7 @@ function scr_LoadGame(argument0)
 	global.hatPaletteMirrorModernP4 = ini_read_real("playerCustomization","hatPaletteMirrorModernP4",abilityHatPaints.mirror_modern_jesterReflection);
 	global.hatPaletteNinjaKSSUP4 = ini_read_real("playerCustomization","hatPaletteNinjaKSSUP4",abilityHatPaints.ninja_kssu_stealthyMaroon);
 	global.hatPaletteNinjaModernP4 = ini_read_real("playerCustomization","hatPaletteNinjaModernP4",abilityHatPaints.ninja_modern_stealthyMaroon);
+	global.hatPaletteNinjaSamuraiP4 = ini_read_real("playerCustomization","hatPaletteNinjaSamuraiP4",abilityHatPaints.ninja_samurai_menacingBlack);
 	global.hatPaletteBombKSSUP4 = ini_read_real("playerCustomization","hatPaletteBombKSSUP4",abilityHatPaints.bomb_kssu_explosiveB);
 	global.hatPaletteBombModernP4 = ini_read_real("playerCustomization","hatPaletteBombModernP4",abilityHatPaints.bomb_modern_explosiveB);
 	global.hatPaletteFireKSSUP4 = ini_read_real("playerCustomization","hatPaletteFireKSSUP4",abilityHatPaints.fire_kssu_scorchingScarlet);

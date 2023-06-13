@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_MintLeaf",
-    "path": "sprites/spr_MintLeaf/spr_MintLeaf.yy",
+    "name": "spr_MintLeaf_Normal",
+    "path": "sprites/spr_MintLeaf_Normal/spr_MintLeaf_Normal.yy",
   },
   "spriteMaskId": null,
   "visible": true,

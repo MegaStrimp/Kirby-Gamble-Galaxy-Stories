@@ -180,6 +180,10 @@ if ((sprite_index == sprAbilityChange) and (state == playerStates.swallow))
 }
 #endregion
 
+#region Cutter Charge
+if ((sprite_index == sprCutterChargeReady) or (sprite_index == sprCutterChargeEnd)) image_index = image_number - 1;
+#endregion
+
 #region Cutter Attack 1
 if (((attackNumber == playerAttacks.cutterNormal) or (attackNumber == playerAttacks.cutterChargeAttack)) and (sprite_index == sprCutterAttack1))
 {

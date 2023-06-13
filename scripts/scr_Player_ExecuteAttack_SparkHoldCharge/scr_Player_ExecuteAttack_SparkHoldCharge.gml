@@ -6,6 +6,7 @@ function scr_Player_ExecuteAttack_SparkHoldCharge()
 	attack = true;
 	attackable = false;
 	attackNumber = playerAttacks.sparkHoldCharge;
+	attackTimer = -1;
 	#endregion
 	
 	#region Attack Sprite

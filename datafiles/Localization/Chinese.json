@@ -644,7 +644,7 @@
             "Description": ""
         },
 		
-		"MysticBlock":
+		"Mystic Block":
         {
             "Title": "",
             
@@ -1117,6 +1117,11 @@
         },
 		
 		"Viridian Ambush":
+        {
+            "Title": ""
+        },
+		
+		"Menacing Black":
         {
             "Title": ""
         },

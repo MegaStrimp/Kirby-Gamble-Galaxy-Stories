@@ -358,7 +358,8 @@ enum abilityHatSkins
 	sleep_kssu,
 	scan_kssu,
 	crash_kssu,
-	mic_kssu
+	mic_kssu,
+	ninja_samurai
 }
 
 enum abilityHatPaints
@@ -475,7 +476,8 @@ enum abilityHatPaints
 	ice_snowman_strawberryCream,
 	fire_kssu_nuclearMeltdown,
 	fire_kssu_midnightInferno,
-	fire_kssu_hotPink
+	fire_kssu_hotPink,
+	ninja_samurai_menacingBlack
 }
 
 enum damageTypes
@@ -791,6 +793,7 @@ for (var i = 0; i < 4; i++) global.stageCollectibleTreasures[i] = -1;
 global.hasInvinCandy = false;
 global.hasMintLeaf = false;
 global.globalSpeedMult = 1;
+global.currentTimePausable = 0;
 
 #region Demo
 global.demoBeatGreenGreens = false;

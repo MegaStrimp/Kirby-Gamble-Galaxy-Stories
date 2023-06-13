@@ -38,8 +38,12 @@ function scr_Player_Equipment(argument0,argument1)
 				case abilityHatSkins.cutter_kssu:
 				switch (sprite_index)
 				{
-					case sprCutterCharge:
-					equipmentIndex = spr_Kirby_Equipment_Cutter_KSSU_Charge;
+					case sprCutterChargeReady:
+					equipmentIndex = spr_Kirby_Equipment_Cutter_KSSU_ChargeReady;
+					break;
+					
+					case sprCutterChargeEnd:
+					equipmentIndex = spr_Kirby_Equipment_Cutter_KSSU_ChargeEnd;
 					break;
 				}
 				break;

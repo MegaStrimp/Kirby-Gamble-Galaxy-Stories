@@ -5,9 +5,8 @@
 global.discordDetailText = "Lor Starcutter";
 global.discordLargeImage = "ggs_icon";
 
-//Stage Number
+//Stage Attributes
 
-global.stageNumber = 4;
 global.roomCheckpoint = room;
 global.isHub = true;
 

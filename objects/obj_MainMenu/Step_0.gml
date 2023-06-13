@@ -425,7 +425,7 @@ if (!global.pause)
 		if (select)
 		{
 			var fade = instance_create_depth(x,y,-999,obj_Fade);
-			fade.targetRoom = rm_GamblionTitle;
+			fade.targetRoom = rm_Gamblion_Title;
 			select = false;
 		}
 		break;

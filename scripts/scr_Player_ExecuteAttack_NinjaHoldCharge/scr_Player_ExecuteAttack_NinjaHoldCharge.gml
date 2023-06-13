@@ -6,6 +6,7 @@ function scr_Player_ExecuteAttack_NinjaHoldCharge()
 	attack = true;
 	attackable = false;
 	attackNumber = playerAttacks.ninjaHoldCharge;
+	attackTimer = -1;
 	#endregion
 	
 	#region Attack Sprite

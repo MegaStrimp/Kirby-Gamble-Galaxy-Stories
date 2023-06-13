@@ -184,7 +184,8 @@ function scr_Player_CharacterSetup_Kirby(argument0)
 		sprGuard = spr_Kirby_Normal_Guard;
 		sprGuardSlope = spr_Kirby_Normal_Guard_Slope;
 		sprItemCarryThrow = spr_Kirby_Normal_ItemCarry_Throw;
-		sprCutterCharge = spr_Kirby_Normal_Cutter_Charge;
+		sprCutterChargeReady = spr_Kirby_Normal_Cutter_ChargeReady;
+		sprCutterChargeEnd = spr_Kirby_Normal_Cutter_ChargeEnd;
 		sprCutterAttack1 = spr_Kirby_Normal_Cutter_Attack1;
 		sprCutterAttack2 = spr_Kirby_Normal_Cutter_Attack2;
 		sprCutterAttack3 = spr_Kirby_Normal_Cutter_Attack3;

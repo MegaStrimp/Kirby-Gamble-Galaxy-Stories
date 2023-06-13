@@ -35,8 +35,8 @@ function scr_RoomSetup(argument0,argument1)
 		global.discordLargeImage = "greengreens_icon";
 		#endregion
 		
-		#region Stage Number
-		global.stageNumber = 1;
+		#region Stage Attributes
+		global.stageNumber = stages.greenGreens;
 		global.roomCheckpoint = room;
 		#endregion
 		
@@ -95,8 +95,8 @@ function scr_RoomSetup(argument0,argument1)
 		global.discordLargeImage = "asteroidfields_icon";
 		#endregion
 		
-		#region Stage Number
-		global.stageNumber = 3;
+		#region Stage Attributes
+		global.stageNumber = stages.asteroidFields;
 		global.roomCheckpoint = room;
 		#endregion
 		

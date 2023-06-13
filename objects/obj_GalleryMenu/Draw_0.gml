@@ -17,7 +17,7 @@ if (page == 1)
 		
 		if (textAlpha != 0)
 		{
-			draw_sprite(spr_Menu_Gallery_Canvas,0,artworkX + (260 * i),114);
+			draw_sprite(artworkArray[# i,7],0,artworkX + (260 * i),114);
 			
 			draw_set_halign(fa_center);
 			draw_set_valign(fa_bottom);

@@ -14,7 +14,7 @@ switch (global.roomPrevious)
 	selection = "maykr";
 	break;
 	
-	case rm_GamblionTitle:
+	case rm_Gamblion_Title:
 	selection = "gamblion";
 	break;
 	

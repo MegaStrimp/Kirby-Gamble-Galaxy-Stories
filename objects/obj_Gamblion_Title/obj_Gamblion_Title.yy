@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Gamblion",
-    "path": "folders/Objects/Gameplay/Subgames/Gamblion.yy",
+    "name": "Menus",
+    "path": "folders/Objects/Gameplay/Subgames/Gamblion/Menus.yy",
   },
   "parentObjectId": null,
   "persistent": false,

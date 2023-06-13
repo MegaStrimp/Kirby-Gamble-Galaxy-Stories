@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Strimp's Matrix",
-    "path": "folders/Backgrounds/Strimp's Matrix.yy",
+    "path": "folders/Backgrounds/Subgames/Strimp's Matrix.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -5,8 +5,7 @@ global.discordDetailText = "vs. DL1 Poppy Bros Sr.";
 global.discordLargeImage = "greengreens_icon";
 #endregion
 
-#region Stage Number
-global.stageNumber = 1;
+#region Stage Attributes
 global.roomCheckpoint = room;
 #endregion
 

@@ -2,7 +2,7 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "rm_GearCube_Hangar1",
-  "creationCodeFile": "${project_dir}/rooms/rm_GearCube_Hangar1/RoomCreationCode.gml",
+  "creationCodeFile": "rooms/rm_GearCube_Hangar1/RoomCreationCode.gml",
   "inheritCode": false,
   "inheritCreationOrder": false,
   "inheritLayers": false,

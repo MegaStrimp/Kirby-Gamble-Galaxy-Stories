@@ -206,6 +206,7 @@ function scr_DebugSave()
 	
 	#region Ninja
 	global.hatTypeNinjaModernUnlocked = true;
+	global.hatTypeNinjaSamuraiUnlocked = true;
 	
 	#region KSSU
 	global.hatPaletteNinjaKSSUSilverLinedWarriorUnlocked = true;

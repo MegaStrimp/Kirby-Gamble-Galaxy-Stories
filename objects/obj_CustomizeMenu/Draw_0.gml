@@ -53,10 +53,10 @@ switch (page)
 		break;
 	}
 	
-	scr_Draw_Text_Color_Outline(26 + player1OffsetLerp,75,"P1",-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
-	scr_Draw_Text_Color_Outline(26 + player2OffsetLerp,111,"P2",-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
-	scr_Draw_Text_Color_Outline(26 + player3OffsetLerp,147,"P3",-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
-	scr_Draw_Text_Color_Outline(26 + player4OffsetLerp,183,"P4",-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	scr_Draw_Text_Color_Outline(26 + player1OffsetLerp,75,"P1",-1,-1,make_color_rgb(248,160,216),c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	scr_Draw_Text_Color_Outline(26 + player2OffsetLerp,111,"P2",-1,-1, make_color_rgb(248,208,0),c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	scr_Draw_Text_Color_Outline(26 + player3OffsetLerp,147,"P3",-1,-1,make_color_rgb(248,0,56),c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	scr_Draw_Text_Color_Outline(26 + player4OffsetLerp,183,"P4",-1,-1,make_color_rgb(120,248,40),c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 	break;
 	#endregion
 	
@@ -133,9 +133,14 @@ switch (page)
 	    if ((i == selection - 1) or (i == selection + 1)) textAlpha = .66;
 	    if ((i == selection - 2) or (i == selection + 2)) textAlpha = .33;
 	    if ((i < selection - 2) or (i > selection + 2)) textAlpha = 0;
-		var col = c_dkgray;
-		if (characterUnlocked[i]) col = c_white;
-		if (textAlpha != 0) scr_Draw_Text_Color_Outline(26 + characterOffsetLerp[i],textY + (36 * i),characterTitle[i],-1,-1,col,col,textAlpha,c_black,c_black,textAlpha,2,5,image_xscale,image_yscale,image_angle);
+		var col1 = c_dkgray;
+		var col2 = c_dkgray;
+		if (characterUnlocked[i])
+		{
+			col1 = characterColor[i];
+			col2 = c_white;
+		}
+		if (textAlpha != 0) scr_Draw_Text_Color_Outline(26 + characterOffsetLerp[i],textY + (36 * i),characterTitle[i],-1,-1,col1,col2,textAlpha,c_black,c_black,textAlpha,2,5,image_xscale,image_yscale,image_angle);
 	}
 	break;
 	#endregion
@@ -152,13 +157,15 @@ switch (page)
 	draw_roundrect(126,188,476,268,false);
 	draw_set_alpha(1);
 	
-	draw_set_halign(fa_center);
-	var col1 = c_white;
-	var col2 = c_white;
+	var col1 = c_dkgray;
+	var col2 = c_dkgray;
+	if (characterSkinUnlocked[subSelection][selection])
+	{
+		col1 = characterSkinColor[subSelection][selection];
+		col2 = c_white;
+	}
 	scr_Draw_Text_Color_Outline(301,192,characterSkinTitleDraw[subSelection][selection],-1,350,col1,col2,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 	draw_set_halign(fa_left);
-	
-	var textColor = c_white;
 	
 	if (characterSkinSprite[subSelection][selection] != -1) draw_sprite_ext(characterSkinSprite[subSelection][selection],0,242,140,1,1,image_angle,image_blend,image_alpha);
 	
@@ -175,7 +182,7 @@ switch (page)
 		var selectedOffset = 0;
 		if (characterSkinUnlocked[subSelection][i])
 		{
-			col1 = textColor;
+			col1 = characterSkinColor[subSelection][i];
 			col2 = c_white;
 		}
 		if (characterSkinValue[subSelection][i] == playerSkin)
@@ -213,9 +220,14 @@ switch (page)
 	    if ((i == selection - 1) or (i == selection + 1)) textAlpha = .66;
 	    if ((i == selection - 2) or (i == selection + 2)) textAlpha = .33;
 	    if ((i < selection - 2) or (i > selection + 2)) textAlpha = 0;
-		var col = c_dkgray;
-		if (characterUnlocked[i]) col = c_white;
-		if (textAlpha != 0) scr_Draw_Text_Color_Outline(26 + characterOffsetLerp[i],textY + (36 * i),characterTitle[i],-1,-1,col,col,textAlpha,c_black,c_black,textAlpha,2,5,image_xscale,image_yscale,image_angle);
+		var col1 = c_dkgray;
+		var col2 = c_dkgray;
+		if (characterUnlocked[i])
+		{
+			col1 = characterColor[i];
+			col2 = c_white;
+		}
+		if (textAlpha != 0) scr_Draw_Text_Color_Outline(26 + characterOffsetLerp[i],textY + (36 * i),characterTitle[i],-1,-1,col1,col2,textAlpha,c_black,c_black,textAlpha,2,5,image_xscale,image_yscale,image_angle);
 	}
 	break;
 	#endregion
@@ -362,7 +374,7 @@ switch (page)
 		switch (sprayPaintTitle[selection])
 		{
 			default:
-			characterSprite = spr_Menu_Collection_Customize_Gooey_Normal;
+			characterSprite = spr_Menu_Collection_Customize_MetaKnight_Normal;
 			characterPaint = sprayPaintMetaKnightNormal[selection];
 			break;
 		}
@@ -504,7 +516,7 @@ switch (page)
 		switch (sprayPaintTitle[selection])
 		{
 			default:
-			characterSprite = spr_Menu_Collection_Customize_Gooey_Normal;
+			characterSprite = spr_Menu_Collection_Customize_Magolor_Normal;
 			characterPaint = sprayPaintMagolorNormal[selection];
 			break;
 		}
@@ -556,12 +568,16 @@ switch (page)
 	draw_set_alpha(1);
 	
 	draw_set_halign(fa_center);
-	var col1 = c_white;
-	var col2 = c_white;
+	var col1 = c_dkgray;
+	var col2 = c_dkgray;
+	if (abilityHatUnlocked[selection])
+	{
+		col1 = abilityHatColor[selection];
+		col2 = c_white;
+	}
 	scr_Draw_Text_Color_Outline(301,192,abilityHatTitle[selection],-1,-1,col1,col2,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 	draw_set_halign(fa_left);
 	
-	var textColor = c_white;
 	hatSprite = -1;
 	switch (abilityHatValue[selection])
 	{
@@ -700,7 +716,7 @@ switch (page)
 		var col2 = c_dkgray;
 		if (abilityHatUnlocked[i])
 		{
-			col1 = textColor;
+			col1 = abilityHatColor[i];
 			col2 = c_white;
 		}
 		if (textAlpha != 0) scr_Draw_Text_Color_Outline(14 + abilityHatOffsetLerp[i],textY + (36 * i),abilityHatTitle[i],-1,-1,col1,col2,textAlpha,c_black,c_black,textAlpha,2,5,image_xscale,image_yscale,image_angle);
@@ -721,12 +737,16 @@ switch (page)
 	draw_set_alpha(1);
 	
 	draw_set_halign(fa_center);
-	var col1 = c_white;
-	var col2 = c_white;
+	var col1 = c_dkgray;
+	var col2 = c_dkgray;
+	if (abilityHatSkinUnlocked[subSelection][selection])
+	{
+		col1 = abilityHatSkinColor[subSelection][selection];
+		col2 = c_white;
+	}
 	scr_Draw_Text_Color_Outline(301,192,abilityHatSkinTitle[subSelection][selection],-1,350,col1,col2,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 	draw_set_halign(fa_left);
 	
-	var textColor = c_white;
 	hatSprite = -1;
 	hatFrontSprite = -1;
 	hatBackgroundSprite = -1;
@@ -799,6 +819,10 @@ switch (page)
 			
 			case abilityHatSkins.ninja_modern:
 			hatSprite = spr_Kirby_AbilityHat_Ninja_Modern_Idle;
+			break;
+			
+			case abilityHatSkins.ninja_samurai:
+			hatSprite = spr_Kirby_AbilityHat_Ninja_Samurai_Idle;
 			break;
 		}
 		break;
@@ -995,7 +1019,7 @@ switch (page)
 		var selectedOffset = 0;
 		if (abilityHatSkinUnlocked[subSelection][i])
 		{
-			col1 = textColor;
+			col1 = abilityHatSkinColor[subSelection][i];
 			col2 = c_white;
 		}
 		if (abilityHatSkinValue[subSelection][i] == playerHatSkin)
@@ -1023,12 +1047,16 @@ switch (page)
 	draw_set_alpha(1);
 	
 	draw_set_halign(fa_center);
-	var col1 = c_white;
-	var col2 = c_white;
+	var col1 = c_dkgray;
+	var col2 = c_dkgray
+	if (abilityHatPaintUnlocked[subSelection][selectedSkin][selection])
+	{
+		col1 = abilityHatPaintColor[subSelection][selectedSkin][selection];
+		col2 = c_white;
+	}
 	scr_Draw_Text_Color_Outline(301,192,abilityHatPaintTitle[subSelection][selectedSkin][selection],-1,350,col1,col2,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
 	draw_set_halign(fa_left);
 	
-	var textColor = c_white;
 	hatSprite = -1;
 	hatFrontSprite = -1;
 	hatBackgroundSprite = -1;
@@ -1101,6 +1129,10 @@ switch (page)
 			
 			case abilityHatSkins.ninja_modern:
 			hatSprite = spr_Kirby_AbilityHat_Ninja_Modern_Idle;
+			break;
+			
+			case abilityHatSkins.ninja_samurai:
+			hatSprite = spr_Kirby_AbilityHat_Ninja_Samurai_Idle;
 			break;
 		}
 		break;
@@ -1298,7 +1330,7 @@ switch (page)
 		var selectedOffset = 0;
 		if (abilityHatPaintUnlocked[subSelection][selectedSkin][i])
 		{
-			col1 = textColor;
+			col1 = abilityHatPaintColor[subSelection][selectedSkin][i];
 			col2 = c_white;
 		}
 		if (abilityHatPaintValue[subSelection][selectedSkin][i] == playerHatPaint)

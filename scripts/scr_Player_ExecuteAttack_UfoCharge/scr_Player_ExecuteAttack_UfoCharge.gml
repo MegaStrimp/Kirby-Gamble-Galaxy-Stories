@@ -5,5 +5,6 @@ function scr_Player_ExecuteAttack_UfoCharge()
 	#region Attack Attributes
 	attack = true;
 	attackNumber = playerAttacks.ufoCharge;
+	attackTimer = -1;
 	#endregion
 }

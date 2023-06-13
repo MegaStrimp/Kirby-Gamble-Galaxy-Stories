@@ -2,7 +2,7 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "rm_DL1_PoppyBrosJr",
-  "creationCodeFile": "${project_dir}/rooms/rm_DL1_PoppyBrosJr/RoomCreationCode.gml",
+  "creationCodeFile": "rooms/rm_DL1_PoppyBrosJr/RoomCreationCode.gml",
   "inheritCode": false,
   "inheritCreationOrder": false,
   "inheritLayers": false,

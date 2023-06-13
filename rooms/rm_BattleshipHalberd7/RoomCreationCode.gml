@@ -5,9 +5,8 @@
 global.discordDetailText = "Battleship Halberd";
 global.discordLargeImage = "halberd_icon";
 
-//Stage Number
+//Stage Attributes
 
-global.stageNumber = 2;
 global.roomCheckpoint = room;
 
 //Backgrounds

@@ -5,9 +5,8 @@
 global.discordDetailText = "Green Greens";
 global.discordLargeImage = "greengreens_icon";
 
-//Stage Number
+//Stage Attributes
 
-global.stageNumber = 4;
 global.roomCheckpoint = room;
 
 //Music

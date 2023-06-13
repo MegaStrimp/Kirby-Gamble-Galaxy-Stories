@@ -6,6 +6,7 @@ function scr_Player_ExecuteAttack_MysticBeamCharge()
 	attack = true;
 	attackable = false;
 	attackNumber = playerAttacks.mysticBeamCharge;
+	attackTimer = -1;
 	#endregion
 	
 	#region Attack Sprite

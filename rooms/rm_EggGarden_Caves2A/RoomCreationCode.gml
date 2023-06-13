@@ -5,9 +5,8 @@
 global.discordDetailText = "Egg Garden - Caves";
 global.discordLargeImage = "ggs_icon";
 
-//Stage Number
+//Stage Attributes
 
-global.stageNumber = 4;
 global.roomCheckpoint = room;
 
 //Backgrounds
