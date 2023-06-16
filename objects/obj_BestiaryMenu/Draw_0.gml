@@ -106,9 +106,11 @@ draw_set_valign(fa_middle);
 draw_text_color(344,64,bestiaryArray[# bestiarySelection,1],c_black,c_black,c_black,c_black,1);
 draw_text_color(344,63,bestiaryArray[# bestiarySelection,1],col1,col1,col2,col2,1);
 draw_set_valign(fa_top);
-//scribble(string(bestiaryArray[# bestiarySelection,2])).wrap(273,71).page(descriptionPage).draw(152,167);
-draw_text_ext_color(152,168,bestiaryArray[# bestiarySelection,2],11,316,c_black,c_black,c_black,c_black,1);
-draw_text_ext_color(152,167,bestiaryArray[# bestiarySelection,2],11,316,col1,col1,col2,col2,1);
+
+var writtenText = scribble(string(bestiaryArray[# bestiarySelection,2])).wrap(273,71).line_height(11,11).page(descriptionPage);
+scribble("[c_black]" + string(bestiaryArray[# bestiarySelection,2])).wrap(273,71).line_height(11,11).page(descriptionPage).draw(152,168);
+writtenText.draw(152,167);
+totalDescriptionPages = writtenText.get_page_count();
 #endregion
 
 #region Icons

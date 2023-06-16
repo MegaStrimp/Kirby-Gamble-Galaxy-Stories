@@ -2,7 +2,7 @@
 
 //Variables
 
-global.discordDetailText = "Gamblion";
+global.discordDetailText = "Strimp's Matrix";
 global.discordLargeImage = "ggs_icon";
 
 //Backgrounds
@@ -12,8 +12,8 @@ layer_background_yscale(layer_background_get_id("Background"),.5);
 
 //Music
 
-if (!audio_is_playing(mus_Maykr))
+if (!audio_is_playing(mus_StrimpsMatrix_Title))
 {
 	audio_stop_all();
-	scr_PlayMusic(true,false,mus_Maykr,0,true);
+	scr_PlayMusic(true,false,mus_StrimpsMatrix_Title,0,true);
 }

@@ -22,10 +22,22 @@ function scr_Player_Collision(argument0)
 		break;
 	}
 	
-	hspFinal = hsp + hspCollision;
-	vspFinal = vsp + vspCollision;
-	hspFinal = hsp;
-	vspFinal = vsp;
+	hspWind = 0;
+	vspWind = 0;
+	
+	with (obj_Wind)
+	{
+		if (place_meeting(x,y,other))
+		{
+			other.hspWind = lengthdir_x(force,angle);
+			if (!other.grounded) other.vspWind = lengthdir_y(force,angle);
+		}
+	}
+	
+	//hspFinal = hsp + hspCollision + hspWind;
+	//vspFinal = vsp + vspCollision + vspWind;
+	hspFinal = hsp + hspWind;
+	vspFinal = vsp + vspWind;
 	
 	//Slopes
 	
@@ -118,7 +130,7 @@ function scr_Player_Collision(argument0)
 			}
 			else
 			{
-				y -= yplus
+				y -= yplus;
 			}
 		}
 		

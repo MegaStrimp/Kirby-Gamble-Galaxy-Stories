@@ -12,11 +12,13 @@ hsp = 0;
 hspCarry = 0;
 fireDashHsp = 0;
 hspCollision = 0;
+hspWind = 0;
 hspFinal = 0;
 
 vsp = 0;
 vspCarry = 0;
 vspCollision = 0;
+vspWind = 0;
 vspFinal = 0;
 
 accel = .3;

@@ -26,6 +26,7 @@ if (!global.pause)
 				colorSelected = 0;
 				animSelected = 0;
 				animIndex = 0;
+				totalDescriptionPages = 0;
 				bestiarySelection -= 1;
 				if (!autoScroll) canAutoScrollTimer = canAutoScrollTimerMax;
 			}
@@ -41,6 +42,7 @@ if (!global.pause)
 				colorSelected = 0;
 				animSelected = 0;
 				animIndex = 0;
+				totalDescriptionPages = 0;
 				bestiarySelection += 1;
 				if (!autoScroll) canAutoScrollTimer = canAutoScrollTimerMax;
 			}

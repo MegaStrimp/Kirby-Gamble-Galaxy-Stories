@@ -21,6 +21,7 @@ animSelected = 0;
 animIndex = 0;
 page = 0;
 descriptionPage = 0;
+totalDescriptionPages = 0;
 select = false;
 goBack = false;
 textureX = 0;
