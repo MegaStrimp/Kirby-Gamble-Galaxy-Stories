@@ -14,7 +14,7 @@ function scr_Gallery_Artwork_VolS()
 	
 	if (ds_exists(artworkArray,ds_type_grid)) ds_grid_destroy(artworkArray);
 	
-	artworkArray = ds_grid_create(13,8);
+	artworkArray = ds_grid_create(16,8);
 	ds_grid_clear(artworkArray,-1);
 	
 	var i = 0;
@@ -145,7 +145,7 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,2] = "Diamond";
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
-	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
+	artworkArray[# i,5] = (86 / sprite_get_width(artworkArray[# i,0]));
 	artworkArray[# i,6] = spr_Menu_Gallery_FrameRed_Tall;
 	artworkArray[# i,7] = spr_Menu_Gallery_Canvas_Tall;
 	i += 1;
@@ -167,6 +167,42 @@ function scr_Gallery_Artwork_VolS()
 	artworkArray[# i,0] = spr_Menu_Gallery_Artwork_TunaSandwichMysticLads;
 	artworkArray[# i,1] = "Mystic Lads";
 	artworkArray[# i,2] = "Tuna Sandwich";
+	artworkArray[# i,3] = true;
+	artworkArray[# i,4] = "Test";
+	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
+	artworkArray[# i,6] = spr_Menu_Gallery_FrameRed_Normal;
+	artworkArray[# i,7] = spr_Menu_Gallery_Canvas_Normal;
+	i += 1;
+	#endregion
+	
+	#region Gamble Cyon - EleCyon
+	artworkArray[# i,0] = spr_Menu_Gallery_Artwork_EleCyonGambleCyon;
+	artworkArray[# i,1] = "Gamble Cyon";
+	artworkArray[# i,2] = "EleCyon";
+	artworkArray[# i,3] = true;
+	artworkArray[# i,4] = "Test";
+	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
+	artworkArray[# i,6] = spr_Menu_Gallery_FrameRed_Normal;
+	artworkArray[# i,7] = spr_Menu_Gallery_Canvas_Normal;
+	i += 1;
+	#endregion
+	
+	#region Holy Gamble - Solvalinky
+	artworkArray[# i,0] = spr_Menu_Gallery_Artwork_SolvalinkyHolyGamble;
+	artworkArray[# i,1] = "Holy Gamble";
+	artworkArray[# i,2] = "Solvalinky";
+	artworkArray[# i,3] = true;
+	artworkArray[# i,4] = "Test";
+	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));
+	artworkArray[# i,6] = spr_Menu_Gallery_FrameRed_Normal;
+	artworkArray[# i,7] = spr_Menu_Gallery_Canvas_Normal;
+	i += 1;
+	#endregion
+	
+	#region Gamble Battle Royale - Weedy Shroom
+	artworkArray[# i,0] = spr_Menu_Gallery_Artwork_WeedyShroomGambleBattleRoyale;
+	artworkArray[# i,1] = "Gamble Battle Royale";
+	artworkArray[# i,2] = "Weedy Shroom";
 	artworkArray[# i,3] = true;
 	artworkArray[# i,4] = "Test";
 	artworkArray[# i,5] = (168 / sprite_get_width(artworkArray[# i,0]));

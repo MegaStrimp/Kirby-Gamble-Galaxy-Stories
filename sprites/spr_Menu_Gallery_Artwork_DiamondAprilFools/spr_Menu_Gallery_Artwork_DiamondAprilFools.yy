@@ -4,7 +4,7 @@
   "name": "spr_Menu_Gallery_Artwork_DiamondAprilFools",
   "bbox_bottom": 1663,
   "bbox_left": 0,
-  "bbox_right": 1581,
+  "bbox_right": 935,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9711a742-ebd9-4d5d-9921-ac8b0018e4db",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ca95df57-d139-401e-acd0-1edb010309a6",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 1664,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"0adb8544-2fe7-41cf-90eb-b89c13d4256a","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"758815b3-e394-4bfe-bb49-f1dcb0c836a9","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 4,
@@ -54,12 +54,12 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9711a742-ebd9-4d5d-9921-ac8b0018e4db","path":"sprites/spr_Menu_Gallery_Artwork_DiamondAprilFools/spr_Menu_Gallery_Artwork_DiamondAprilFools.yy",},},},"Disabled":false,"id":"ed6c0c7b-6718-4282-8a89-b0ffcb3e2fe6","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ca95df57-d139-401e-acd0-1edb010309a6","path":"sprites/spr_Menu_Gallery_Artwork_DiamondAprilFools/spr_Menu_Gallery_Artwork_DiamondAprilFools.yy",},},},"Disabled":false,"id":"9856fd57-5b3e-45c4-8399-cc88203fd143","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 791,
+    "xorigin": 468,
     "yorigin": 832,
   },
   "swatchColours": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 1582,
+  "width": 936,
 }

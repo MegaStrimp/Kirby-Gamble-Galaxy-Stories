@@ -13,7 +13,7 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"acde902b-cd98-4783-8e5f-b714a9250d1f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"884e2770-ea28-4e79-a340-b526af403683",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"acde902b-cd98-4783-8e5f-b714a9250d1f","path":"sprites/spr_Background_GreenGreens_Stone1/spr_Background_GreenGreens_Stone1.yy",},},},"Disabled":false,"id":"e897ccc9-86f6-4a9f-822d-0056d28198c5","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"884e2770-ea28-4e79-a340-b526af403683","path":"sprites/spr_Background_GreenGreens_Stone1/spr_Background_GreenGreens_Stone1.yy",},},},"Disabled":false,"id":"20b6b5c8-1ec1-4312-b530-77e3ce18bdea","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

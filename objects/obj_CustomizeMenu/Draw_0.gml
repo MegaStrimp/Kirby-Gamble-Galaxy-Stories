@@ -96,17 +96,43 @@ switch (page)
 		break;
 	}
 	
-	var sprayPaintCol = c_white;
-	var hatSkinCol = c_white;
-	var hatPaintCol = c_white;
-	if (!global.shaders) sprayPaintCol = c_dkgray;
-	if (abilityCount == 0) hatSkinCol = c_dkgray;
-	if ((!global.shaders) or (abilityCount == 0)) hatPaintCol = c_dkgray;
-	scr_Draw_Text_Color_Outline(26 + skinsOffsetLerp,75,strSkins,-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
-	scr_Draw_Text_Color_Outline(26 + sprayPaintsOffsetLerp,111,strSprayPaints,-1,-1,sprayPaintCol,sprayPaintCol,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
-	scr_Draw_Text_Color_Outline(26 + hatSkinsOffsetLerp,147,strHatSkins,-1,-1,hatSkinCol,hatSkinCol,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
-	scr_Draw_Text_Color_Outline(26 + hatPaintsOffsetLerp,183,strHatPaints,-1,-1,hatPaintCol,hatPaintCol,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
-	scr_Draw_Text_Color_Outline(26 + familiarsOffsetLerp,219,strFamiliars,-1,-1,c_white,c_white,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	var skinCol1 = make_color_rgb(248,160,216);
+	var skinCol2 = c_white;
+	var sprayPaintCol1 = make_color_rgb(248,0,0);
+	var sprayPaintCol2 = c_white;
+	var hatSkinCol1 = make_color_rgb(248,160,48);
+	var hatSkinCol2 = c_white;
+	var hatPaintCol1 = make_color_rgb(255,91,146);
+	var hatPaintCol2 = c_white;
+	var familiarCol1 = make_color_rgb(255,255,0);
+	var familiarCol2 = c_white;
+	if (!global.shaders)
+	{
+		sprayPaintCol1 = c_dkgray;
+		sprayPaintCol2 = c_dkgray;
+	}
+	if (abilityCount == 0)
+	{
+		hatSkinCol1 = c_dkgray;
+		hatSkinCol2 = c_dkgray;
+	}
+	if ((!global.shaders) or (abilityCount == 0))
+	{
+		hatPaintCol1 = c_dkgray;
+		hatPaintCol2 = c_dkgray;
+	}
+	
+	scr_Draw_Text_Color_Outline(26 + skinsOffsetLerp,75,strSkins,-1,-1,skinCol1,skinCol2,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	scr_Draw_Text_Color_Outline(26 + sprayPaintsOffsetLerp,111,strSprayPaints,-1,-1,sprayPaintCol1,sprayPaintCol2,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	scr_Draw_Text_Color_Outline(26 + hatSkinsOffsetLerp,147,strHatSkins,-1,-1,hatSkinCol1,hatSkinCol2,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	scr_Draw_Text_Color_Outline(26 + hatPaintsOffsetLerp,183,strHatPaints,-1,-1,hatPaintCol1,hatPaintCol2,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	scr_Draw_Text_Color_Outline(26 + familiarsOffsetLerp,219,strFamiliars,-1,-1,familiarCol1,familiarCol2,1,c_black,c_black,1,2,5,image_xscale,image_yscale,image_angle);
+	
+	draw_sprite(spr_Menu_Collection_Customize_Icon_Skins,0,33 + skinsOffsetLerp + string_width(strSkins),75);
+	if (sprayPaintCol2 != c_dkgray) draw_sprite(spr_Menu_Collection_Customize_Icon_SprayPaints,0,33 + sprayPaintsOffsetLerp + string_width(strSprayPaints),111);
+	if (hatSkinCol2 != c_dkgray) draw_sprite(spr_Menu_Collection_Customize_Icon_HatSkins,0,33 + hatSkinsOffsetLerp + string_width(strHatSkins),147);
+	if (hatPaintCol2 != c_dkgray) draw_sprite(spr_Menu_Collection_Customize_Icon_HatPaints,0,33 + hatPaintsOffsetLerp + string_width(strHatPaints),183);
+	draw_sprite(spr_Menu_Collection_Customize_Icon_Familiars,0,33 + familiarsOffsetLerp + string_width(strFamiliars),219);
 	break;
 	#endregion
 	
@@ -938,31 +964,28 @@ switch (page)
 		break;
 		
 		case playerAbilities.sword:
-		switch (abilityHatSkinValue[subSelection][selection])
+		switch (abilityHatSkinValue[subSelection][selectedSkin])
 		{
 			case abilityHatSkins.sword_kssu:
-			//hatSprite = spr_Kirby_AbilityHat_Sword_KSSU_Idle;
-			hatSprite = -1;
+			hatSprite = spr_Kirby_AbilityHat_Sword_KSSU_ItemCarry_Light_Idle;
 			break;
 		}
 		break;
 		
 		case playerAbilities.parasol:
-		switch (abilityHatSkinValue[subSelection][selection])
+		switch (abilityHatSkinValue[subSelection][selectedSkin])
 		{
 			case abilityHatSkins.parasol_kssu:
-			//hatSprite = spr_Kirby_AbilityHat_Parasol_KSSU_Idle;
-			hatSprite = -1;
+			equipmentSprite = spr_Kirby_Equipment_Parasol_KSSU_ItemCarry_Light_Idle;
 			break;
 		}
 		break;
 		
 		case playerAbilities.hammer:
-		switch (abilityHatSkinValue[subSelection][selection])
+		switch (abilityHatSkinValue[subSelection][selectedSkin])
 		{
 			case abilityHatSkins.hammer_kssu:
-			//hatSprite = spr_Kirby_AbilityHat_Hammer_KSSU_Idle;
-			hatSprite = -1;
+			hatSprite = spr_Kirby_AbilityHat_Hammer_KSSU_ItemCarry_Light_Idle;
 			break;
 		}
 		break;
@@ -972,6 +995,7 @@ switch (page)
 		{
 			case abilityHatSkins.bell_modern:
 			hatSprite = spr_Kirby_AbilityHat_Bell_Modern_Idle;
+			equipmentSprite = spr_Kirby_Equipment_Bell_Modern_Idle;
 			break;
 		}
 		break;
@@ -1279,6 +1303,7 @@ switch (page)
 		{
 			case abilityHatSkins.bell_modern:
 			hatSprite = spr_Kirby_AbilityHat_Bell_Modern_Idle;
+			equipmentSprite = spr_Kirby_Equipment_Bell_Modern_Idle;
 			break;
 		}
 		break;

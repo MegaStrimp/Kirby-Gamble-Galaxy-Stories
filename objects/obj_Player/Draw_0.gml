@@ -35,7 +35,7 @@ var drawShakeY = irandom_range(-shakeY,shakeY);
 var paletteIndexFinal = paletteIndex;
 
 var canDrawPalettes = (
-((attackNumber != playerAttacks.stoneNormal) and ((sprite_index != spr_Kirby_Normal_StoneVariant_P1_Normal) or (sprite_index != spr_Kirby_Normal_StoneVariant_P2_Normal) or (sprite_index != spr_Kirby_Normal_StoneVariant_P3_Normal) or (sprite_index != spr_Kirby_Normal_StoneVariant_P4_Normal)))
+((attackNumber != playerAttacks.stoneNormal) and ((sprite_index != spr_Kirby_Normal_StoneVariant_P1_Normal) or (sprite_index != spr_Kirby_Normal_StoneVariant_P2_Normal) or (sprite_index != spr_Kirby_Normal_StoneVariant_P3_Normal) or (sprite_index != spr_Kirby_Normal_StoneVariant_P4_Normal) or (sprite_index != spr_Gooey_Normal_StoneVariant_P1_Normal) or (sprite_index != spr_Gooey_Normal_StoneVariant_P2_Normal) or (sprite_index != spr_Gooey_Normal_StoneVariant_P3_Normal) or (sprite_index != spr_Gooey_Normal_StoneVariant_P4_Normal)))
 );
 
 if ((playerCharacter == playerCharacters.kirby) and (global.abilitySpraysKeycard) and (global.cheatColoredAbilitiesEquipped))

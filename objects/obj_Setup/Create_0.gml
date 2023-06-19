@@ -477,7 +477,18 @@ enum abilityHatPaints
 	fire_kssu_nuclearMeltdown,
 	fire_kssu_midnightInferno,
 	fire_kssu_hotPink,
-	ninja_samurai_menacingBlack
+	ninja_samurai_menacingBlack,
+	beam_kssu_chessmaster,
+	beam_kssu_cottonCandy,
+	beam_kssu_frostyMage,
+	beam_kssu_lemonLime,
+	beam_kssu_mixingPaints,
+	beam_kssu_whosIdeaWasThis,
+	cutter_kssu_silverAndGold,
+	ninja_samurai_classicRed,
+	ninja_samurai_darkBrown,
+	ninja_samurai_ripperBlond,
+	stone_modern_theBronzeJade
 }
 
 enum damageTypes
@@ -679,6 +690,7 @@ part_type_life(global.partTypeColorfulStars, 30, 40);
 #region Global Variables
 #region Meta/Files
 global.versionNumber = "0.7.7";
+global.versionNumber = "Hello Astral";
 //global.versionNumber = "BETA 04/17/23 - Public Randomness";
 global.season = seasons.none;
 global.selectedSave = "SaveSlot1.ini";
@@ -976,7 +988,7 @@ global.fontMaykrWhite = font_add_sprite_ext(spr_Maykr_Font_White,"abcdefghijklmn
 global.fontGalleryBig = font_add_sprite_ext(spr_Menu_Gallery_FontBig,"abcdefghijklmnopqrstuvwxyz-",true,1);
 global.fontGallerySmall = font_add_sprite_ext(spr_Menu_Gallery_FontSmall,"abcdefghijklmnopqrstuvwxyz-",true,1);
 
-global.fontBestiary = font_add_sprite_ext(spr_Menu_Collection_Bestiary_Font,"abcdefghijklmnopqrstuvwxyz.!?," + chr(34) + "'()/" + chr(92) + ":;#-0123456789",true,1);
+global.fontBestiary = font_add_sprite_ext(spr_Menu_Collection_Bestiary_Font,"abcdefghijklmnopqrstuvwxyz.!?," + chr(34) + "'()/" + chr(92) + ":;#-*0123456789",true,1);
 
 scribble_font_bake_outline_8dir("fnt_DialogueDefault","fnt_DialogueDefault_Outlined",c_black,false);
 scribble_font_bake_outline_8dir("fnt_DialogueDefaultSpecial","fnt_DialogueDefaultSpecial_Outlined",c_black,false);

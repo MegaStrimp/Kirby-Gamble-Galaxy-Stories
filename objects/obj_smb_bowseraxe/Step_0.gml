@@ -17,3 +17,13 @@ if (!global.pause)
 	if (inhalePower >= inhalePowerMax) scr_Object_Inhale(false);
 	#endregion
 }
+
+#region Debug Delete
+if (global.debug)
+{
+	if ((position_meeting(mouse_x,mouse_y,id)) and (mouse_check_button(mb_right)))
+	{
+		instance_destroy();
+	}
+}
+#endregion

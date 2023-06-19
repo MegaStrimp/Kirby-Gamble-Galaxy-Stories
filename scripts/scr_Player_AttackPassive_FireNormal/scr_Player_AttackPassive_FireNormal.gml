@@ -6,10 +6,6 @@ function scr_Player_AttackPassive_FireNormal()
 	shakeX = 1;
 	#endregion
 	
-	#region Set Attack Timer
-	if (fireNormalAttackTimer == -1) fireNormalAttackTimer = fireNormalAttackTimerMax;
-	#endregion
-	
 	#region Cancel Attack
 	if ((!global.cutscene) and (keyAttackReleased)) attackTimer = 0;
 	#endregion
@@ -17,6 +13,10 @@ function scr_Player_AttackPassive_FireNormal()
 	#region Fire Back Attack
 	if (fireBackCharge < fireBackChargeMax)
 	{
+		#region Set Attack Timer
+		if (fireNormalAttackTimer == -1) fireNormalAttackTimer = fireNormalAttackTimerMax;
+		#endregion
+		
 		#region Fire Back Charge
 		if (((dir == 1) and (keyLeftHold)) or ((dir == -1) and (keyRightHold)))
 		{
@@ -40,7 +40,7 @@ function scr_Player_AttackPassive_FireNormal()
 		attack = true;
 		attackable = false;
 		attackNumber = playerAttacks.fireBack;
-		fireBackCharge = 0;
+		fireNormalAttackTimer = -1;
 		#endregion
 		
 		#region Attack Sprite

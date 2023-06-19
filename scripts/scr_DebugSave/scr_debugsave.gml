@@ -149,6 +149,7 @@ function scr_DebugSave()
 	global.hatPaletteCutterKSSUMallardGreenUnlocked = true;
 	global.hatPaletteCutterKSSUBlackSwedishUnlocked = true;
 	global.hatPaletteCutterKSSUFluxNostalgiaUnlocked = true;
+	global.hatPaletteCutterKSSUSliverAndGoldUnlocked = true;
 	#endregion
 	#endregion
 	
@@ -156,6 +157,12 @@ function scr_DebugSave()
 	#region KSSU
 	global.hatPaletteBeamKSSUFluxNostalgiaUnlocked = true;
 	global.hatPaletteBeamKSSUBitcrushedUnlocked = true;
+	global.hatPaletteBeamKSSUChessmasterUnlocked = true;
+	global.hatPaletteBeamKSSUCottonCandyUnlocked = true;
+	global.hatPaletteBeamKSSUFrostyMageUnlocked = true;
+	global.hatPaletteBeamKSSULemonLimeUnlocked = true;
+	global.hatPaletteBeamKSSUMixingPaintsUnlocked = true;
+	global.hatPaletteBeamKSSUWhosIdeaWasThisUnlocked = true;
 	#endregion
 	
 	#region Marx Soul
@@ -187,6 +194,7 @@ function scr_DebugSave()
 	global.hatPaletteStoneModernMoltenRockUnlocked = true;
 	global.hatPaletteStoneModernBitcrushedUnlocked = true;
 	global.hatPaletteStoneModernCryingCobblestoneUnlocked = true;
+	global.hatPaletteStoneModernTheBronzeJadeUnlocked = true;
 	#endregion
 	#endregion
 	
@@ -216,6 +224,12 @@ function scr_DebugSave()
 	#region Modern
 	global.hatPaletteNinjaModernBitcrushedUnlocked = true;
 	global.hatPaletteNinjaModernViridianAmbushUnlocked = true;
+	#endregion
+	
+	#region Samurai
+	global.hatPaletteNinjaSamuraiClassicRedUnlocked = true;
+	global.hatPaletteNinjaSamuraiDarkBrownUnlocked = true;
+	global.hatPaletteNinjaSamuraiRipperBlondUnlocked = true;
 	#endregion
 	#endregion
 	

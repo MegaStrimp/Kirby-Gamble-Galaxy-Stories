@@ -1411,6 +1411,28 @@ if (!global.pause)
 						}
 						selectedHatSkin = 1;
 						break;
+					
+						case abilityHatSkins.ninja_samurai:
+						switch (selectedPlayer)
+						{
+							case 0:
+							playerHatPaint = global.hatPaletteNinjaSamuraiP1;
+							break;
+						
+							case 1:
+							playerHatPaint = global.hatPaletteNinjaSamuraiP2;
+							break;
+						
+							case 2:
+							playerHatPaint = global.hatPaletteNinjaSamuraiP3;
+							break;
+						
+							case 3:
+							playerHatPaint = global.hatPaletteNinjaSamuraiP4;
+							break;
+						}
+						selectedHatSkin = 2;
+						break;
 					}
 					break;
 				
@@ -3077,6 +3099,27 @@ if (!global.pause)
 							
 								case 3:
 								global.hatPaletteNinjaModernP4 = playerHatPaint;
+								break;
+							}
+							break;
+						
+							case abilityHatSkins.ninja_samurai:
+							switch (selectedPlayer)
+							{
+								case 0:
+								global.hatPaletteNinjaSamuraiP1 = playerHatPaint;
+								break;
+							
+								case 1:
+								global.hatPaletteNinjaSamuraiP2 = playerHatPaint;
+								break;
+							
+								case 2:
+								global.hatPaletteNinjaSamuraiP3 = playerHatPaint;
+								break;
+							
+								case 3:
+								global.hatPaletteNinjaSamuraiP4 = playerHatPaint;
 								break;
 							}
 							break;

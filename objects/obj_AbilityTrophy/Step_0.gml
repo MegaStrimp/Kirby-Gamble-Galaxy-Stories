@@ -102,6 +102,11 @@ if (!global.pause)
 				global.abilityP4 = ability;
 				break;
 			}
+			if (collidedPlayer.attackNumber == playerAttacks.slideJump)
+			{
+				collidedPlayer.hspLimit = true;
+				collidedPlayer.hspLimitTimer = -1;
+			}
 		}
 		else
 		{

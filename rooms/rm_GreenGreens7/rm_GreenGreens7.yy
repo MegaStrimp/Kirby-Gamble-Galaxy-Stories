@@ -98,6 +98,7 @@
     {"name":"inst_16A7FFC","path":"rooms/rm_GreenGreens7/rm_GreenGreens7.yy",},
     {"name":"inst_1313169A","path":"rooms/rm_GreenGreens7/rm_GreenGreens7.yy",},
     {"name":"inst_3128B6EA","path":"rooms/rm_GreenGreens7/rm_GreenGreens7.yy",},
+    {"name":"inst_4EE4FF25","path":"rooms/rm_GreenGreens7/rm_GreenGreens7.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -182,7 +183,7 @@
 3,73,40,73,-7,0,-3,73,2,91,92,-6,73,-14,0,-12,90,-23,0,-8,73,1,40,-4,73,3,42,73,73,-19,0,-6,90,1,43,
 -6,90,3,59,60,90,-19,0,-2,73,1,40,-7,73,6,40,73,73,76,77,73,-23,0,-9,90,3,93,94,90,-19,0,-6,73,-7,0,
 -3,73,-19,0,-11,90,1,43,-4,90,-19,0,-5,73,4,40,73,57,58,-4,73,3,57,58,73,-19,0,3,90,59,60,-4,90,9,74,
-75,90,41,90,90,74,75,90,-19,0,4,73,76,77,44,-3,73,9,91,92,73,73,40,73,91,92,73,-19,0,3,90,93,94,-8,90,
+75,90,41,90,90,74,75,90,-19,0,4,73,76,77,0,-3,73,9,91,92,73,73,40,73,91,92,73,-19,0,3,90,93,94,-8,90,
 -24,0,2,73,42,-5,73,-28,0,-3,90,-2,0,-4,90,3,59,60,90,-23,0,-2,73,11,40,73,73,57,58,73,73,76,77,73,0,
 -3,73,-19,0,-5,90,11,74,75,43,90,93,94,41,90,90,41,90,-22,0,-2,73,4,91,92,73,40,-7,73,-19,0,-5,90,-4,0,
 -3,90,-23,0,-5,73,7,57,58,73,73,42,73,73,-23,0,7,90,59,60,90,41,74,75,-5,90,-23,0,7,73,76,77,73,42,91,
@@ -192,6 +193,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_76956FE7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Background_GreenGreens4","path":"objects/obj_Background_GreenGreens4/obj_Background_GreenGreens4.yy",},"properties":[],"rotation":-6.0,"scaleX":0.15,"scaleY":0.15,"x":762.0,"y":726.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5606A55B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Background_GreenGreens4","path":"objects/obj_Background_GreenGreens4/obj_Background_GreenGreens4.yy",},"properties":[],"rotation":-6.0,"scaleX":0.15,"scaleY":0.15,"x":55.0,"y":705.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4BBDA0BA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Background_GreenGreens4","path":"objects/obj_Background_GreenGreens4/obj_Background_GreenGreens4.yy",},"properties":[],"rotation":0.0,"scaleX":0.15,"scaleY":0.15,"x":43.0,"y":729.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4EE4FF25","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Background_GreenGreens_BirdNest","path":"objects/obj_Background_GreenGreens_BirdNest/obj_Background_GreenGreens_BirdNest.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":288.0,"y":408.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Collision","depth":1200,"effectEnabled":true,"effectType":null,"gridX":24,"gridY":24,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_44DF9AC4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_48x24Slope","path":"objects/obj_48x24Slope/obj_48x24Slope.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":-1.0,"x":480.0,"y":120.0,},

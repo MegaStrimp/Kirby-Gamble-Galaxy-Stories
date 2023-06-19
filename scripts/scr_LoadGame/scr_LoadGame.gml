@@ -190,6 +190,7 @@ function scr_LoadGame(argument0)
 	global.hatPaletteCutterKSSUMallardGreenUnlocked = ini_read_real("unlocks","hatPaletteCutterKSSUMallardGreenUnlocked",false);
 	global.hatPaletteCutterKSSUBlackSwedishUnlocked = ini_read_real("unlocks","hatPaletteCutterKSSUBlackSwedishUnlocked",false);
 	global.hatPaletteCutterKSSUFluxNostalgiaUnlocked = ini_read_real("unlocks","hatPaletteCutterKSSUFluxNostalgiaUnlocked",false);
+	global.hatPaletteCutterKSSUSliverAndGoldUnlocked = ini_read_real("unlocks","hatPaletteCutterKSSUSliverAndGoldUnlocked",false);
 	#endregion
 	#endregion
 	
@@ -197,6 +198,12 @@ function scr_LoadGame(argument0)
 	#region KSSU
 	global.hatPaletteBeamKSSUFluxNostalgiaUnlocked = ini_read_real("unlocks","hatPaletteBeamKSSUFluxNostalgiaUnlocked",false);
 	global.hatPaletteBeamKSSUBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteBeamKSSUBitcrushedUnlocked",false);
+	global.hatPaletteBeamKSSUChessmasterUnlocked = ini_read_real("unlocks","hatPaletteBeamKSSUChessmasterUnlocked",false);
+	global.hatPaletteBeamKSSUCottonCandyUnlocked = ini_read_real("unlocks","hatPaletteBeamKSSUCottonCandyUnlocked",false);
+	global.hatPaletteBeamKSSUFrostyMageUnlocked = ini_read_real("unlocks","hatPaletteBeamKSSUFrostyMageUnlocked",false);
+	global.hatPaletteBeamKSSULemonLimeUnlocked = ini_read_real("unlocks","hatPaletteBeamKSSULemonLimeUnlocked",false);
+	global.hatPaletteBeamKSSUMixingPaintsUnlocked = ini_read_real("unlocks","hatPaletteBeamKSSUMixingPaintsUnlocked",false);
+	global.hatPaletteBeamKSSUWhosIdeaWasThisUnlocked = ini_read_real("unlocks","hatPaletteBeamKSSUWhosIdeaWasThisUnlocked",false);
 	#endregion
 	
 	#region Marx Soul
@@ -218,7 +225,7 @@ function scr_LoadGame(argument0)
 	#endregion
 	
 	#region Stone
-	global.hatTypeBeamModernUnlocked = ini_read_real("unlocks","hatTypeBeamModernUnlocked",false);
+	global.hatTypeStoneModernUnlocked = ini_read_real("unlocks","hatTypeStoneModernUnlocked",false);
 	
 	#region KSSU
 	global.hatPaletteStoneKSSUBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteStoneKSSUBitcrushedUnlocked",false);
@@ -228,6 +235,7 @@ function scr_LoadGame(argument0)
 	global.hatPaletteStoneModernMoltenRockUnlocked = ini_read_real("unlocks","hatPaletteStoneModernMoltenRockUnlocked",false);
 	global.hatPaletteStoneModernBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteStoneModernBitcrushedUnlocked",false);
 	global.hatPaletteStoneModernCryingCobblestoneUnlocked = ini_read_real("unlocks","hatPaletteStoneModernCryingCobblestoneUnlocked",false);
+	global.hatPaletteStoneModernTheBronzeJadeUnlocked = ini_read_real("unlocks","hatPaletteStoneModernTheBronzeJadeUnlocked",false);
 	#endregion
 	#endregion
 	
@@ -261,6 +269,9 @@ function scr_LoadGame(argument0)
 	
 	#region Samurai
 	#endregion
+	global.hatPaletteNinjaSamuraiClassicRedUnlocked = ini_read_real("unlocks","hatPaletteNinjaSamuraiClassicRedUnlocked",false);
+	global.hatPaletteNinjaSamuraiDarkBrownUnlocked = ini_read_real("unlocks","hatPaletteNinjaSamuraiDarkBrownUnlocked",false);
+	global.hatPaletteNinjaSamuraiRipperBlondUnlocked = ini_read_real("unlocks","hatPaletteNinjaSamuraiRipperBlondUnlocked",false);
 	#endregion
 	
 	#region Bomb

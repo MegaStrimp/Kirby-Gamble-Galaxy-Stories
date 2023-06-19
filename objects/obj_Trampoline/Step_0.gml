@@ -67,8 +67,7 @@ else
 	shake = 0;
 }
 
-//Debug Delete
-
+#region Debug Delete
 if (global.debug)
 {
 	if ((position_meeting(mouse_x,mouse_y,id)) and (mouse_check_button(mb_right)))
@@ -76,3 +75,4 @@ if (global.debug)
 		instance_destroy();
 	}
 }
+#endregion

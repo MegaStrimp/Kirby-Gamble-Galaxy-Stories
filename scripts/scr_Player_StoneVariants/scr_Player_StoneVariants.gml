@@ -89,6 +89,12 @@ function scr_Player_StoneVariants(argument0,argument1)
 			i += 1;
 			stoneVariantArray[i][0] = spr_Kirby_Normal_StoneVariant_P1_3DS;
 			stoneVariantArray[i][1] = 1;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Kirby_Normal_StoneVariant_P1_Pokey;
+			stoneVariantArray[i][1] = 1;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Kirby_Normal_StoneVariant_P1_Pikmin;
+			stoneVariantArray[i][1] = 1;
 			break;
 			#endregion
 			
@@ -158,6 +164,12 @@ function scr_Player_StoneVariants(argument0,argument1)
 			stoneVariantArray[i][1] = 2;
 			i += 1;
 			stoneVariantArray[i][0] = spr_Kirby_Normal_StoneVariant_P2_3DS;
+			stoneVariantArray[i][1] = 1;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Kirby_Normal_StoneVariant_P2_Pokey;
+			stoneVariantArray[i][1] = 1;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Kirby_Normal_StoneVariant_P2_Pikmin;
 			stoneVariantArray[i][1] = 1;
 			break;
 			#endregion
@@ -229,6 +241,12 @@ function scr_Player_StoneVariants(argument0,argument1)
 			i += 1;
 			stoneVariantArray[i][0] = spr_Kirby_Normal_StoneVariant_P3_3DS;
 			stoneVariantArray[i][1] = 1;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Kirby_Normal_StoneVariant_P3_Pokey;
+			stoneVariantArray[i][1] = 1;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Kirby_Normal_StoneVariant_P3_Pikmin;
+			stoneVariantArray[i][1] = 1;
 			break;
 			#endregion
 			
@@ -299,6 +317,12 @@ function scr_Player_StoneVariants(argument0,argument1)
 			i += 1;
 			stoneVariantArray[i][0] = spr_Kirby_Normal_StoneVariant_P4_3DS;
 			stoneVariantArray[i][1] = 1;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Kirby_Normal_StoneVariant_P4_Pokey;
+			stoneVariantArray[i][1] = 1;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Kirby_Normal_StoneVariant_P4_Pikmin;
+			stoneVariantArray[i][1] = 1;
 			break;
 			#endregion
 		}
@@ -307,6 +331,136 @@ function scr_Player_StoneVariants(argument0,argument1)
 		
 		#region Gooey
 		case playerCharacters.gooey:
+		switch (player)
+		{
+			#region Default/P1
+			default:
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P1_Normal;
+			stoneVariantArray[i][1] = 10;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P1_Slider;
+			stoneVariantArray[i][1] = 10;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P1_Chuchu;
+			stoneVariantArray[i][1] = 9;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P1_Blocky;
+			stoneVariantArray[i][1] = 9;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P1_Efreeti;
+			stoneVariantArray[i][1] = 8;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P1_CaptainStitch;
+			stoneVariantArray[i][1] = 7;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P1_AltFriends;
+			stoneVariantArray[i][1] = 6;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P1_Kirby;
+			stoneVariantArray[i][1] = 9;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P1_Jelly;
+			stoneVariantArray[i][1] = 1;
+			i += 1;
+			break;
+			#endregion
+			
+			#region P2
+			case 1:
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P2_Normal;
+			stoneVariantArray[i][1] = 10;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P2_Slider;
+			stoneVariantArray[i][1] = 10;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P2_Chuchu;
+			stoneVariantArray[i][1] = 9;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P2_Blocky;
+			stoneVariantArray[i][1] = 9;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P2_Efreeti;
+			stoneVariantArray[i][1] = 8;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P2_CaptainStitch;
+			stoneVariantArray[i][1] = 7;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P2_AltFriends;
+			stoneVariantArray[i][1] = 6;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P2_Kirby;
+			stoneVariantArray[i][1] = 9;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P2_Jelly;
+			stoneVariantArray[i][1] = 1;
+			i += 1;
+			break;
+			#endregion
+			
+			#region P3
+			case 2:
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P3_Normal;
+			stoneVariantArray[i][1] = 10;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P3_Slider;
+			stoneVariantArray[i][1] = 10;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P3_Chuchu;
+			stoneVariantArray[i][1] = 9;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P3_Blocky;
+			stoneVariantArray[i][1] = 9;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P3_Efreeti;
+			stoneVariantArray[i][1] = 8;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P3_CaptainStitch;
+			stoneVariantArray[i][1] = 7;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P3_AltFriends;
+			stoneVariantArray[i][1] = 6;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P3_Kirby;
+			stoneVariantArray[i][1] = 9;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P3_Jelly;
+			stoneVariantArray[i][1] = 1;
+			i += 1;
+			break;
+			#endregion
+			
+			#region P4
+			case 3:
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P4_Normal;
+			stoneVariantArray[i][1] = 10;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P4_Slider;
+			stoneVariantArray[i][1] = 10;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P4_Chuchu;
+			stoneVariantArray[i][1] = 9;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P4_Blocky;
+			stoneVariantArray[i][1] = 9;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P4_Efreeti;
+			stoneVariantArray[i][1] = 8;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P4_CaptainStitch;
+			stoneVariantArray[i][1] = 7;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P4_AltFriends;
+			stoneVariantArray[i][1] = 6;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P4_Kirby;
+			stoneVariantArray[i][1] = 9;
+			i += 1;
+			stoneVariantArray[i][0] = spr_Gooey_Normal_StoneVariant_P4_Jelly;
+			stoneVariantArray[i][1] = 1;
+			i += 1;
+			break;
+			#endregion
+		}
 		break;
 		#endregion
 	}

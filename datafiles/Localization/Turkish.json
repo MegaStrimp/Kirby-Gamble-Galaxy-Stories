@@ -1004,367 +1004,590 @@
 	{
 		"Slicing Gold":
         {
-            "Title": "Keskin Altın"
+            "Title": "Keskin Altın",
+            
+            "Description": ""
         },
 		
 		"Blood Blade":
         {
-            "Title": "Kanlı Bıçak"
+            "Title": "Kanlı Bıçak",
+            
+            "Description": ""
         },
 		
 		"Bitcrushed":
         {
-            "Title": "Eski Pixel"
+            "Title": "Eski Pixel",
+            
+            "Description": ""
         },
 		
 		"Mallard Green":
         {
-            "Title": "Yeşilbaş"
+            "Title": "Yeşilbaş",
+            
+            "Description": ""
         },
 		
 		"Black Swedish":
         {
-            "Title": "Siyah Ördek"
+            "Title": "Siyah Ördek",
+            
+            "Description": ""
         },
 		
 		"Flux Nostalgia":
         {
-            "Title": "Flux Nostaljisi"
+            "Title": "Flux Nostaljisi",
+            
+            "Description": ""
+        },
+		
+		"Silver and Gold":
+        {
+            "Title": "Gümüş ve Altın",
+            
+            "Description": ""
         },
 		
 		"Sparkling Beam":
         {
-            "Title": "Parlayan Işın"
+            "Title": "Parlayan Işın",
+            
+            "Description": ""
+        },
+		
+		"Chessmaster":
+        {
+            "Title": "Satranç Ustası",
+            
+            "Description": ""
+        },
+		
+		"Cotton Candy":
+        {
+            "Title": "Pamuk Şeker",
+            
+            "Description": ""
+        },
+		
+		"Frosty Mage":
+        {
+            "Title": "Buzlu Büyücü",
+            
+            "Description": ""
+        },
+		
+		"Lemon Lime":
+        {
+            "Title": "Yeşil Limon",
+            
+            "Description": ""
+        },
+		
+		"Mixing Paints":
+        {
+            "Title": "Karışık Boya",
+            
+            "Description": ""
+        },
+		
+		"Who's Idea Was This":
+        {
+            "Title": "Bu Kimin Fikriydi",
+            
+            "Description": ""
         },
 		
 		"Jester Spirit":
         {
-            "Title": "Soytarı Ruhu"
+            "Title": "Soytarı Ruhu",
+            
+            "Description": ""
         },
 		
 		"Summer Fruits":
         {
-            "Title": "Yaz Meyveleri"
+            "Title": "Yaz Meyveleri",
+            
+            "Description": ""
         },
 		
 		"Nasty Flux":
         {
-            "Title": "Kötü Flux"
+            "Title": "Kötü Flux",
+            
+            "Description": ""
         },
 		
 		"Mage Rose":
         {
-            "Title": "Gül Büyücüsü"
+            "Title": "Gül Büyücüsü",
+            
+            "Description": ""
         },
 		
 		"Blueberry":
         {
-            "Title": "Böğürtlen"
+            "Title": "Böğürtlen",
+            
+            "Description": ""
         },
 		
 		"Sourlime":
         {
-            "Title": "Ekşi Limon"
+            "Title": "Ekşi Limon",
+            
+            "Description": ""
         },
 		
 		"Mono":
         {
-            "Title": "Mono"
+            "Title": "Mono",
+            
+            "Description": ""
         },
 		
 		"Bubblegum":
         {
-            "Title": "Sakız"
+            "Title": "Sakız",
+            
+            "Description": ""
         },
 		
 		"Rocky Road":
         {
-            "Title": "Taşlı Yol"
+            "Title": "Taşlı Yol",
+            
+            "Description": ""
         },
 		
 		"Molten Rock":
         {
-            "Title": "Erimiş Kaya"
+            "Title": "Erimiş Kaya",
+            
+            "Description": ""
         },
 		
 		"Crying Cobblestone":
         {
-            "Title": "Ağlayan Taş"
+            "Title": "Ağlayan Taş",
+            
+            "Description": ""
+        },
+		
+		"The Bronze Jade":
+        {
+            "Title": "Bronz Yakut",
+            
+            "Description": ""
         },
 		
 		"Jester Reflection":
         {
-            "Title": "Soytarı'nın Yansıması"
+            "Title": "Soytarı'nın Yansıması",
+            
+            "Description": ""
         },
 		
 		"Beta Block":
         {
-            "Title": "Beta Block"
+            "Title": "Beta Block",
+            
+            "Description": ""
         },
 		
 		"Stealthy Maroon":
         {
-            "Title": "Sinsi Bordo"
+            "Title": "Sinsi Bordo",
+            
+            "Description": ""
         },
 		
 		"Sliver-Lined Warrior":
         {
-            "Title": "Gümüş Kaplı Savaşçı"
+            "Title": "Gümüş Kaplı Savaşçı",
+            
+            "Description": ""
         },
 		
 		"Viridian Ambush":
         {
-            "Title": "Viridyen Tuzak"
+            "Title": "Viridyen Tuzak",
+            
+            "Description": ""
         },
 		
 		"Menacing Black":
         {
-            "Title": "Tehditkar Siyah"
+            "Title": "Tehditkar Siyah",
+            
+            "Description": ""
+        },
+		
+		"Classic Red":
+        {
+            "Title": "Klasik Kırmızı",
+            
+            "Description": ""
+        },
+		
+		"Dark Brown":
+        {
+            "Title": "Koyu Kahve",
+            
+            "Description": ""
+        },
+		
+		"Ripper Blond":
+        {
+            "Title": "Keskin Sarışın",
+            
+            "Description": ""
         },
 		
 		"Explosive B":
         {
-            "Title": "Patlayıcı B"
+            "Title": "Patlayıcı B",
+            
+            "Description": ""
         },
 		
 		"Blooming Poppy":
         {
-            "Title": "Gelincik Sarısı"
+            "Title": "Gelincik Sarısı",
+            
+            "Description": ""
         },
 		
 		"Outbursting Conspiracy":
         {
-            "Title": "Patlayan Komplo"
+            "Title": "Patlayan Komplo",
+            
+            "Description": ""
         },
 		
 		"Dragon's Castle":
         {
-            "Title": "Ejderin Kalesi"
+            "Title": "Ejderin Kalesi",
+            
+            "Description": ""
         },
 		
 		"Scorching Scarlet":
         {
-            "Title": "Kavurucu Kızıl"
+            "Title": "Kavurucu Kızıl",
+            
+            "Description": ""
         },
 		
 		"Blazing Blue":
         {
-            "Title": "Yakıcı Mavi"
+            "Title": "Yakıcı Mavi",
+            
+            "Description": ""
         },
 		
 		"Scarlet Rose":
         {
-            "Title": "Kızıl Gül"
+            "Title": "Kızıl Gül",
+            
+            "Description": ""
         },
 		
 		"Nuclear Meltdown":
         {
-            "Title": "Nükleer Patlama"
+            "Title": "Nükleer Patlama",
+            
+            "Description": ""
         },
 		
 		"Midnight Inferno":
         {
-            "Title": "Gece Ateşi"
+            "Title": "Gece Ateşi",
+            
+            "Description": ""
         },
 		
 		"Hot Pink":
         {
-            "Title": "Sıcak Pembe"
+            "Title": "Sıcak Pembe",
+            
+            "Description": ""
         },
 		
 		"Frosted Shard":
         {
-            "Title": "Buz Parçası"
+            "Title": "Buz Parçası",
+            
+            "Description": ""
         },
 		
 		"Frosty Obsidian":
         {
-            "Title": "Donan Obsidiyen"
+            "Title": "Donan Obsidiyen",
+            
+            "Description": ""
         },
 		
 		"Chilly":
         {
-            "Title": "Buzlu"
+            "Title": "Buzlu",
+            
+            "Description": ""
         },
 		
 		"Chocolate Mousse":
         {
-            "Title": "Çikolatalı Köpük"
+            "Title": "Çikolatalı Köpük",
+            
+            "Description": ""
         },
 		
 		"Strawberry Cream":
         {
-            "Title": "Çilekli Krema"
+            "Title": "Çilekli Krema",
+            
+            "Description": ""
         },
 		
 		"Electro Marine":
         {
-            "Title": "Elektro Daniz"
+            "Title": "Elektro Daniz",
+            
+            "Description": ""
         },
 		
 		"Spinning Violet":
         {
-            "Title": "Dönen Menekşe"
+            "Title": "Dönen Menekşe",
+            
+            "Description": ""
         },
 		
 		"Rushing Red":
         {
-            "Title": "Firarlı Kırmızı"
+            "Title": "Firarlı Kırmızı",
+            
+            "Description": ""
         },
 		
 		"Muffler Blue":
         {
-            "Title": "Mavi Atkı"
+            "Title": "Mavi Atkı",
+            
+            "Description": ""
         },
 		
 		"Dapper Painter":
         {
-            "Title": "Hoş Boyacı"
+            "Title": "Hoş Boyacı",
+            
+            "Description": ""
         },
 		
 		"Crimson Champion":
         {
-            "Title": "Kızıl Şampiyon"
+            "Title": "Kızıl Şampiyon",
+            
+            "Description": ""
         },
 		
 		"Blue Banner":
         {
-            "Title": "Mavi Bayrak"
+            "Title": "Mavi Bayrak",
+            
+            "Description": ""
         },
 		
 		"Rainbow Flight":
         {
-            "Title": "Gökkuşağı Uçuşu"
+            "Title": "Gökkuşağı Uçuşu",
+            
+            "Description": ""
         },
 		
 		"Pekin Breeze":
         {
-            "Title": "Pekin Ördeği"
+            "Title": "Pekin Ördeği",
+            
+            "Description": ""
         },
 		
 		"Dyna Blade":
         {
-            "Title": "Dyna Blade"
+            "Title": "Dyna Blade",
+            
+            "Description": ""
         },
 		
 		"Nocturne Friend":
         {
-            "Title": "Mor Arkadaş"
+            "Title": "Mor Arkadaş",
+            
+            "Description": ""
         },
 		
 		"Speed Machine":
         {
-            "Title": "Hız Makinesi"
+            "Title": "Hız Makinesi",
+            
+            "Description": ""
         },
 		
 		"Speedy Scarlet":
         {
-            "Title": "Hızlı Kızıl"
+            "Title": "Hızlı Kızıl",
+            
+            "Description": ""
         },
 		
 		"Lavender-01":
         {
-            "Title": "Eflatun-01"
+            "Title": "Eflatun-01",
+            
+            "Description": ""
         },
 		
 		"Slicing Green":
         {
-            "Title": "Keskin Yeşil"
+            "Title": "Keskin Yeşil",
+            
+            "Description": ""
         },
 		
 		"Thundering Cloud":
         {
-            "Title": "Fırtınalı Bulut"
+            "Title": "Fırtınalı Bulut",
+            
+            "Description": ""
         },
 		
 		"Lazy Red":
         {
-            "Title": "Tembel Kırmızı"
+            "Title": "Tembel Kırmızı",
+            
+            "Description": ""
         },
 		
 		"Wagasa Dee":
         {
-            "Title": "Wagasa Dee"
+            "Title": "Wagasa Dee",
+            
+            "Description": ""
         },
 		
 		"Azure Bandanna":
         {
-            "Title": "Mavi Bandana"
+            "Title": "Mavi Bandana",
+            
+            "Description": ""
         },
 		
 		"Crushing Brown":
         {
-            "Title": "Ezici Kahverengi"
+            "Title": "Ezici Kahverengi",
+            
+            "Description": ""
         },
 		
 		"Construction Work":
         {
-            "Title": "İnşaat İşi"
+            "Title": "İnşaat İşi",
+            
+            "Description": ""
         },
 		
 		"Dazzling Default":
         {
-            "Title": "Göz Kamaştırıcı Varsayılan"
+            "Title": "Göz Kamaştırıcı Varsayılan",
+            
+            "Description": ""
         },
 		
 		"Presto Purple":
         {
-            "Title": "Presto Mor"
+            "Title": "Presto Mor",
+            
+            "Description": ""
         },
 		
 		"Tempo Teal":
         {
-            "Title": "Tempo Mavi"
+            "Title": "Tempo Mavi",
+            
+            "Description": ""
         },
 		
 		"Ringing Rose":
         {
-            "Title": "Güllü Zil"
+            "Title": "Güllü Zil",
+            
+            "Description": ""
         },
 		
 		"Candescent Copper":
         {
-            "Title": "Mum Işığı Bakır"
+            "Title": "Mum Işığı Bakır",
+            
+            "Description": ""
         },
 		
 		"Shining Silver":
         {
-            "Title": "Parlak Gümüş"
+            "Title": "Parlak Gümüş",
+            
+            "Description": ""
         },
 		
 		"Polished Plant":
         {
-            "Title": "Cilalı Bitki"
+            "Title": "Cilalı Bitki",
+            
+            "Description": ""
         },
 		
 		"Illuminated Ivory":
         {
-            "Title": "Işıklı Fil Dişi"
+            "Title": "Işıklı Fil Dişi",
+            
+            "Description": ""
         },
 		
 		"Bubbly Green":
         {
-            "Title": "Baloncuk Yeşili"
+            "Title": "Baloncuk Yeşili",
+            
+            "Description": ""
         },
 		
 		"Noddy Peach":
         {
-            "Title": "Noddy Şeftalisi"
+            "Title": "Noddy Şeftalisi",
+            
+            "Description": ""
         },
 		
 		"Royal Purple":
         {
-            "Title": "Soylu Mor"
+            "Title": "Soylu Mor",
+            
+            "Description": ""
         },
 		
 		"Metallic Red":
         {
-            "Title": "Metalik Kırmızı"
+            "Title": "Metalik Kırmızı",
+            
+            "Description": ""
         },
 		
 		"Military Green":
         {
-            "Title": "Asker Yeşili"
+            "Title": "Asker Yeşili",
+            
+            "Description": ""
         }
 	},
 	

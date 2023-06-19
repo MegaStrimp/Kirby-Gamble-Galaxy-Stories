@@ -17,8 +17,6 @@ if (page == 1)
 		
 		if (textAlpha != 0)
 		{
-			draw_sprite(artworkArray[# i,7],0,artworkX + (260 * i),114);
-			
 			draw_set_halign(fa_center);
 			draw_set_valign(fa_bottom);
 			if (artworkArray[# i,3]) 
@@ -81,6 +79,8 @@ if (page == 1)
 			
 			draw_set_halign(fa_left);
 			draw_set_valign(fa_top);
+			
+			draw_sprite(artworkArray[# i,7],0,artworkX + (260 * i),114);
 		}
 	}
 }

@@ -35,6 +35,11 @@ function scr_Player_CancelAttack(argument0)
 		
 		switch (attackNumber)
 		{
+			case playerAttacks.slideJump:
+			hspLimit = true;
+			jumpLimit = true;
+			break;
+			
 			case playerAttacks.cutterDash:
 			if (audio_is_playing(slideSfx)) audio_stop_sound(slideSfx);
 	        if (instance_exists(cutterDashMaskProj)) instance_destroy(cutterDashMaskProj);
@@ -167,6 +172,7 @@ function scr_Player_CancelAttack(argument0)
 			
 			case playerAttacks.fireNormal:
 			fireNormalAttackTimer = -1;
+			fireBackCharge = 0;
 			break;
 			
 			case playerAttacks.fireDash:

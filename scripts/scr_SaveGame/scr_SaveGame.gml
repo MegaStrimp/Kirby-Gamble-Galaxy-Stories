@@ -191,6 +191,7 @@ function scr_SaveGame(argument0)
 	if (global.hatPaletteCutterKSSUMallardGreenUnlocked != false) ini_write_real("unlocks","hatPaletteCutterKSSUMallardGreenUnlocked",global.hatPaletteCutterKSSUMallardGreenUnlocked);
 	if (global.hatPaletteCutterKSSUBlackSwedishUnlocked != false) ini_write_real("unlocks","hatPaletteCutterKSSUBlackSwedishUnlocked",global.hatPaletteCutterKSSUBlackSwedishUnlocked);
 	if (global.hatPaletteCutterKSSUFluxNostalgiaUnlocked != false) ini_write_real("unlocks","hatPaletteCutterKSSUFluxNostalgiaUnlocked",global.hatPaletteCutterKSSUFluxNostalgiaUnlocked);
+	if (global.hatPaletteCutterKSSUSliverAndGoldUnlocked != false) ini_write_real("unlocks","hatPaletteCutterKSSUSliverAndGoldUnlocked",global.hatPaletteCutterKSSUSliverAndGoldUnlocked);
 	#endregion
 	#endregion
 	
@@ -198,6 +199,12 @@ function scr_SaveGame(argument0)
 	#region KSSU
 	if (global.hatPaletteBeamKSSUFluxNostalgiaUnlocked != false) ini_write_real("unlocks","hatPaletteBeamKSSUFluxNostalgiaUnlocked",global.hatPaletteBeamKSSUFluxNostalgiaUnlocked);
 	if (global.hatPaletteBeamKSSUBitcrushedUnlocked != false) ini_write_real("unlocks","hatPaletteBeamKSSUBitcrushedUnlocked",global.hatPaletteBeamKSSUBitcrushedUnlocked);
+	if (global.hatPaletteBeamKSSUChessmasterUnlocked != false) ini_write_real("unlocks","hatPaletteBeamKSSUChessmasterUnlocked",global.hatPaletteBeamKSSUChessmasterUnlocked);
+	if (global.hatPaletteBeamKSSUCottonCandyUnlocked != false) ini_write_real("unlocks","hatPaletteBeamKSSUCottonCandyUnlocked",global.hatPaletteBeamKSSUCottonCandyUnlocked);
+	if (global.hatPaletteBeamKSSUFrostyMageUnlocked != false) ini_write_real("unlocks","hatPaletteBeamKSSUFrostyMageUnlocked",global.hatPaletteBeamKSSUFrostyMageUnlocked);
+	if (global.hatPaletteBeamKSSULemonLimeUnlocked != false) ini_write_real("unlocks","hatPaletteBeamKSSULemonLimeUnlocked",global.hatPaletteBeamKSSULemonLimeUnlocked);
+	if (global.hatPaletteBeamKSSUMixingPaintsUnlocked != false) ini_write_real("unlocks","hatPaletteBeamKSSUMixingPaintsUnlocked",global.hatPaletteBeamKSSUMixingPaintsUnlocked);
+	if (global.hatPaletteBeamKSSUWhosIdeaWasThisUnlocked != false) ini_write_real("unlocks","hatPaletteBeamKSSUWhosIdeaWasThisUnlocked",global.hatPaletteBeamKSSUWhosIdeaWasThisUnlocked);
 	#endregion
 	
 	#region Marx Soul
@@ -219,7 +226,7 @@ function scr_SaveGame(argument0)
 	#endregion
 	
 	#region Stone
-	if (global.hatTypeBeamModernUnlocked != false) ini_write_real("unlocks","hatTypeBeamModernUnlocked",global.hatTypeBeamModernUnlocked);
+	if (global.hatTypeStoneModernUnlocked != false) ini_write_real("unlocks","hatTypeStoneModernUnlocked",global.hatTypeStoneModernUnlocked);
 	
 	#region KSSU
 	if (global.hatPaletteStoneKSSUBitcrushedUnlocked != false) ini_write_real("unlocks","hatPaletteStoneKSSUBitcrushedUnlocked",global.hatPaletteStoneKSSUBitcrushedUnlocked);
@@ -229,6 +236,7 @@ function scr_SaveGame(argument0)
 	if (global.hatPaletteStoneModernMoltenRockUnlocked != false) ini_write_real("unlocks","hatPaletteStoneModernMoltenRockUnlocked",global.hatPaletteStoneModernMoltenRockUnlocked);
 	if (global.hatPaletteStoneModernBitcrushedUnlocked != false) ini_write_real("unlocks","hatPaletteStoneModernBitcrushedUnlocked",global.hatPaletteStoneModernBitcrushedUnlocked);
 	if (global.hatPaletteStoneModernCryingCobblestoneUnlocked != false) ini_write_real("unlocks","hatPaletteStoneModernCryingCobblestoneUnlocked",global.hatPaletteStoneModernCryingCobblestoneUnlocked);
+	if (global.hatPaletteStoneModernTheBronzeJadeUnlocked != false) ini_write_real("unlocks","hatPaletteStoneModernTheBronzeJadeUnlocked",global.hatPaletteStoneModernTheBronzeJadeUnlocked);
 	#endregion
 	#endregion
 	
@@ -261,6 +269,9 @@ function scr_SaveGame(argument0)
 	#endregion
 	
 	#region Samurai
+	if (global.hatPaletteNinjaSamuraiClassicRedUnlocked != false) ini_write_real("unlocks","hatPaletteNinjaSamuraiClassicRedUnlocked",global.hatPaletteNinjaSamuraiClassicRedUnlocked);
+	if (global.hatPaletteNinjaSamuraiDarkBrownUnlocked != false) ini_write_real("unlocks","hatPaletteNinjaSamuraiDarkBrownUnlocked",global.hatPaletteNinjaSamuraiDarkBrownUnlocked);
+	if (global.hatPaletteNinjaSamuraiRipperBlondUnlocked != false) ini_write_real("unlocks","hatPaletteNinjaSamuraiRipperBlondUnlocked",global.hatPaletteNinjaSamuraiRipperBlondUnlocked);
 	#endregion
 	#endregion
 	

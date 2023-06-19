@@ -111,32 +111,6 @@ function scr_Player_CharacterSetup_Gooey(argument0)
 			sprSlideEnd = spr_Gooey_Normal_SlideEnd;
 			sprFloat = spr_Gooey_Normal_Float;
 			sprStoneAttack1Ready = spr_Gooey_Normal_Stone_AttackReady;
-			switch (player)
-			{
-				case 0:
-				sprStoneAttack1Common = spr_Gooey_Normal_Stone_Attack_Common1;
-				sprStoneAttack1Uncommon = spr_Gooey_Normal_Stone_Attack_Uncommon1;
-				sprStoneAttack1Rare = spr_Gooey_Normal_Stone_Attack_Rare1;
-				break;
-				
-				case 1:
-				sprStoneAttack1Common = spr_Gooey_Normal_Stone_Attack_Common2;
-				sprStoneAttack1Uncommon = spr_Gooey_Normal_Stone_Attack_Uncommon2;
-				sprStoneAttack1Rare = spr_Gooey_Normal_Stone_Attack_Rare2;
-				break;
-				
-				case 2:
-				sprStoneAttack1Common = spr_Gooey_Normal_Stone_Attack_Common1;
-				sprStoneAttack1Uncommon = spr_Gooey_Normal_Stone_Attack_Uncommon1;
-				sprStoneAttack1Rare = spr_Gooey_Normal_Stone_Attack_Rare1;
-				break;
-				
-				case 3:
-				sprStoneAttack1Common = spr_Gooey_Normal_Stone_Attack_Common1;
-				sprStoneAttack1Uncommon = spr_Gooey_Normal_Stone_Attack_Uncommon1;
-				sprStoneAttack1Rare = spr_Gooey_Normal_Stone_Attack_Rare1;
-				break;
-			}
 			sprFireAttack2 = spr_Gooey_Normal_Fire_Attack;
 			sprFireAttackRelease1 = spr_Gooey_Normal_Fire_AttackRelease1;
 			sprFireAttackRelease2 = spr_Gooey_Normal_Fire_AttackRelease2;
@@ -163,32 +137,6 @@ function scr_Player_CharacterSetup_Gooey(argument0)
 			sprSlideEnd = spr_Gooey_Normal_SlideEnd;
 			sprFloat = spr_Gooey_Normal_Float;
 			sprStoneAttack1Ready = spr_Gooey_Pipis_Stone_AttackReady;
-			switch (player)
-			{
-				case 0:
-				sprStoneAttack1Common = spr_Gooey_Normal_Stone_Attack_Common1;
-				sprStoneAttack1Uncommon = spr_Gooey_Normal_Stone_Attack_Uncommon1;
-				sprStoneAttack1Rare = spr_Gooey_Normal_Stone_Attack_Rare1;
-				break;
-				
-				case 1:
-				sprStoneAttack1Common = spr_Gooey_Normal_Stone_Attack_Common2;
-				sprStoneAttack1Uncommon = spr_Gooey_Normal_Stone_Attack_Uncommon2;
-				sprStoneAttack1Rare = spr_Gooey_Normal_Stone_Attack_Rare2;
-				break;
-				
-				case 2:
-				sprStoneAttack1Common = spr_Gooey_Normal_Stone_Attack_Common1;
-				sprStoneAttack1Uncommon = spr_Gooey_Normal_Stone_Attack_Uncommon1;
-				sprStoneAttack1Rare = spr_Gooey_Normal_Stone_Attack_Rare1;
-				break;
-				
-				case 3:
-				sprStoneAttack1Common = spr_Gooey_Normal_Stone_Attack_Common1;
-				sprStoneAttack1Uncommon = spr_Gooey_Normal_Stone_Attack_Uncommon1;
-				sprStoneAttack1Rare = spr_Gooey_Normal_Stone_Attack_Rare1;
-				break;
-			}
 			sprFireAttack2 = spr_Gooey_Pipis_Fire_Attack;
 			sprFireAttackRelease1 = spr_Gooey_Pipis_Fire_AttackRelease1;
 			sprFireAttackRelease2 = spr_Gooey_Pipis_Fire_AttackRelease2;

@@ -15,6 +15,7 @@ spawnRange = 200;
 #region Other Variables
 active = false;
 angle = 0;
+pausedInCutscenes = true;
 #endregion
 
 #region Timers

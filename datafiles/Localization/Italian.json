@@ -1008,367 +1008,590 @@
 	{
 		"Slicing Gold":
         {
-            "Title": "Oro Tagliente"
+            "Title": "Oro Tagliente",
+            
+            "Description": ""
         },
 		
 		"Blood Blade":
         {
-            "Title": "Lama Sanguinolenta"
+            "Title": "Lama Sanguinolenta",
+            
+            "Description": ""
         },
 		
 		"Bitcrushed":
         {
-            "Title": "Retro-izzato"
+            "Title": "Retro-izzato",
+            
+            "Description": ""
         },
 		
 		"Mallard Green":
         {
-            "Title": "Verde Anatra"
+            "Title": "Verde Anatra",
+            
+            "Description": ""
         },
 		
 		"Black Swedish":
         {
-            "Title": "Nero Svedese"
+            "Title": "Nero Svedese",
+            
+            "Description": ""
         },
 		
 		"Flux Nostalgia":
         {
-            "Title": "Flusso Nostalgia"
+            "Title": "Flusso Nostalgia",
+            
+            "Description": ""
+        },
+		
+		"Silver and Gold":
+        {
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Sparkling Beam":
         {
-            "Title": "Raggio Scintillante"
+            "Title": "Raggio Scintillante",
+            
+            "Description": ""
+        },
+		
+		"Chessmaster":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Cotton Candy":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Frosty Mage":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Lemon Lime":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Mixing Paints":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Who's Idea Was This":
+        {
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Jester Spirit":
         {
-            "Title": "Spirito del Giullare"
+            "Title": "Spirito del Giullare",
+            
+            "Description": ""
         },
 		
 		"Summer Fruits":
         {
-            "Title": "Frutti Estivi"
+            "Title": "Frutti Estivi",
+            
+            "Description": ""
         },
 		
 		"Nasty Flux":
         {
-            "Title": "Flusso Ostile"
+            "Title": "Flusso Ostile",
+            
+            "Description": ""
         },
 		
 		"Mage Rose":
         {
-            "Title": "Rosa Mago"
+            "Title": "Rosa Mago",
+            
+            "Description": ""
         },
 		
 		"Blueberry":
         {
-            "Title": ""
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Sourlime":
         {
-            "Title": ""
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Mono":
         {
-            "Title": ""
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Bubblegum":
         {
-            "Title": ""
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Rocky Road":
         {
-            "Title": "Via Rocciosa"
+            "Title": "Via Rocciosa",
+            
+            "Description": ""
         },
 		
 		"Molten Rock":
         {
-            "Title": "Roccia Colante"
+            "Title": "Roccia Colante",
+            
+            "Description": ""
         },
 		
 		"Crying Cobblestone":
         {
-            "Title": "Ciottolo Piangente"
+            "Title": "Ciottolo Piangente",
+            
+            "Description": ""
+        },
+		
+		"The Bronze Jade":
+        {
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Jester Reflection":
         {
-            "Title": "Riflesso del Giullare"
+            "Title": "Riflesso del Giullare",
+            
+            "Description": ""
         },
 		
 		"Beta Block":
         {
-            "Title": "Blocco Beta"
+            "Title": "Blocco Beta",
+            
+            "Description": ""
         },
 		
 		"Stealthy Maroon":
         {
-            "Title": "Bordeaux Furtivo"
+            "Title": "Bordeaux Furtivo",
+            
+            "Description": ""
         },
 		
 		"Sliver-Lined Warrior":
         {
-            "Title": "Guerriero Argentato"
+            "Title": "Guerriero Argentato",
+            
+            "Description": ""
         },
 		
 		"Viridian Ambush":
         {
-            "Title": "Imboscata Verde"
+            "Title": "Imboscata Verde",
+            
+            "Description": ""
         },
 		
 		"Menacing Black":
         {
-            "Title": ""
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Classic Red":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Dark Brown":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Ripper Blond":
+        {
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Explosive B":
         {
-            "Title": "Esplosivo B"
+            "Title": "Esplosivo B",
+            
+            "Description": ""
         },
 		
 		"Blooming Poppy":
         {
-            "Title": "Papavero Florido"
+            "Title": "Papavero Florido",
+            
+            "Description": ""
         },
 		
 		"Outbursting Conspiracy":
         {
-            "Title": "Cospirazione Esplosiva"
+            "Title": "Cospirazione Esplosiva",
+            
+            "Description": ""
         },
 		
 		"Dragon's Castle":
         {
-            "Title": "Castello del Dragone"
+            "Title": "Castello del Dragone",
+            
+            "Description": ""
         },
 		
 		"Scorching Scarlet":
         {
-            "Title": "Scarlatto Rovente"
+            "Title": "Scarlatto Rovente",
+            
+            "Description": ""
         },
 		
 		"Blazing Blue":
         {
-            "Title": "Blu Infiammato"
+            "Title": "Blu Infiammato",
+            
+            "Description": ""
         },
 		
 		"Scarlet Rose":
         {
-            "Title": "Rosa Scarlatto"
+            "Title": "Rosa Scarlatto",
+            
+            "Description": ""
         },
 		
 		"Nuclear Meltdown":
         {
-            "Title": ""
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Midnight Inferno":
         {
-            "Title": ""
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Hot Pink":
         {
-            "Title": ""
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Frosted Shard":
         {
-            "Title": "Frammento Gelido"
+            "Title": "Frammento Gelido",
+            
+            "Description": ""
         },
 		
 		"Frosty Obsidian":
         {
-            "Title": "Ossidiana Gelido"
+            "Title": "Ossidiana Gelido",
+            
+            "Description": ""
         },
 		
 		"Chilly":
         {
-            "Title": "Chilly"
+            "Title": "Chilly",
+            
+            "Description": ""
         },
 		
 		"Chocolate Mousse":
         {
-            "Title": "Mousse al Cioccolato"
+            "Title": "Mousse al Cioccolato",
+            
+            "Description": ""
         },
 		
 		"Strawberry Cream":
         {
-            "Title": ""
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Electro Marine":
         {
-            "Title": "Marina Elettrica"
+            "Title": "Marina Elettrica",
+            
+            "Description": ""
         },
 		
 		"Spinning Violet":
         {
-            "Title": "Violetto Rotante"
+            "Title": "Violetto Rotante",
+            
+            "Description": ""
         },
 		
 		"Rushing Red":
         {
-            "Title": "Red Frettoloso"
+            "Title": "Red Frettoloso",
+            
+            "Description": ""
         },
 		
 		"Muffler Blue":
         {
-            "Title": "Sciarpa Blu"
+            "Title": "Sciarpa Blu",
+            
+            "Description": ""
         },
 		
 		"Dapper Painter":
         {
-            "Title": "Pittore Elegante"
+            "Title": "Pittore Elegante",
+            
+            "Description": ""
         },
 		
 		"Crimson Champion":
         {
-            "Title": "Campione Cremisi"
+            "Title": "Campione Cremisi",
+            
+            "Description": ""
         },
 		
 		"Blue Banner":
         {
-            "Title": "Striscione Blu"
+            "Title": "Striscione Blu",
+            
+            "Description": ""
         },
 		
 		"Rainbow Flight":
         {
-            "Title": "Volo Arcobaleno"
+            "Title": "Volo Arcobaleno",
+            
+            "Description": ""
         },
 		
 		"Pekin Breeze":
         {
-            "Title": "Brezza di Pechino"
+            "Title": "Brezza di Pechino",
+            
+            "Description": ""
         },
 		
 		"Dyna Blade":
         {
-            "Title": ""
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Nocturne Friend":
         {
-            "Title": ""
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Speed Machine":
         {
-            "Title": "Macchina della Velocità"
+            "Title": "Macchina della Velocità",
+            
+            "Description": ""
         },
 		
 		"Speedy Scarlet":
         {
-            "Title": "Scarlatto Veloce"
+            "Title": "Scarlatto Veloce",
+            
+            "Description": ""
         },
 		
 		"Lavender-01":
         {
-            "Title": "Lavanda-01"
+            "Title": "Lavanda-01",
+            
+            "Description": ""
         },
 		
 		"Slicing Green":
         {
-            "Title": "Verde Tagliente"
+            "Title": "Verde Tagliente",
+            
+            "Description": ""
         },
 		
 		"Thundering Cloud":
         {
-            "Title": "Nuvola Tonante"
+            "Title": "Nuvola Tonante",
+            
+            "Description": ""
         },
 		
 		"Lazy Red":
         {
-            "Title": "Rosso Pigrone"
+            "Title": "Rosso Pigrone",
+            
+            "Description": ""
         },
 		
 		"Wagasa Dee":
         {
-            "Title": "Wagasa Dee"
+            "Title": "Wagasa Dee",
+            
+            "Description": ""
         },
 		
 		"Azure Bandanna":
         {
-            "Title": ""
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Crushing Brown":
         {
-            "Title": "Marrone Distruttivo"
+            "Title": "Marrone Distruttivo",
+            
+            "Description": ""
         },
 		
 		"Construction Work":
         {
-            "Title": "Lavoro di Costruzione"
+            "Title": "Lavoro di Costruzione",
+            
+            "Description": ""
         },
 		
 		"Dazzling Default":
         {
-            "Title": "Default Lucente"
+            "Title": "Default Lucente",
+            
+            "Description": ""
         },
 		
 		"Presto Purple":
         {
-            "Title": "Viola Presto"
+            "Title": "Viola Presto",
+            
+            "Description": ""
         },
 		
 		"Tempo Teal":
         {
-            "Title": "Blu Ritmico"
+            "Title": "Blu Ritmico",
+            
+            "Description": ""
         },
 		
 		"Ringing Rose":
         {
-            "Title": "Rosa Sonoro"
+            "Title": "Rosa Sonoro",
+            
+            "Description": ""
         },
 		
 		"Candescent Copper":
         {
-            "Title": "Rame Incandescente"
+            "Title": "Rame Incandescente",
+            
+            "Description": ""
         },
 		
 		"Shining Silver":
         {
-            "Title": "Argento Splendente"
+            "Title": "Argento Splendente",
+            
+            "Description": ""
         },
 		
 		"Polished Plant":
         {
-            "Title": "Pianta Raffinata"
+            "Title": "Pianta Raffinata",
+            
+            "Description": ""
         },
 		
 		"Illuminated Ivory":
         {
-            "Title": "Avorio Illuminato"
+            "Title": "Avorio Illuminato",
+            
+            "Description": ""
         },
 		
 		"Bubbly Green":
         {
-            "Title": "Verde Spumeggiante"
+            "Title": "Verde Spumeggiante",
+            
+            "Description": ""
         },
 		
 		"Noddy Peach":
         {
-            "Title": "Noddy Color Pesca"
+            "Title": "Noddy Color Pesca",
+            
+            "Description": ""
         },
 		
 		"Royal Purple":
         {
-            "Title": "Viola Reale"
+            "Title": "Viola Reale",
+            
+            "Description": ""
         },
 		
 		"Metallic Red":
         {
-            "Title": "Rosso Metallico"
+            "Title": "Rosso Metallico",
+            
+            "Description": ""
         },
 		
 		"Military Green":
         {
-            "Title": "Verde Militare"
+            "Title": "Verde Militare",
+            
+            "Description": ""
         }
 	},
 	

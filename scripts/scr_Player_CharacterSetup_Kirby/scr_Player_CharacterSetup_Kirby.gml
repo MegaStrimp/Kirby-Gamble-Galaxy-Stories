@@ -203,32 +203,6 @@ function scr_Player_CharacterSetup_Kirby(argument0)
 		sprMysticBeamAttack1 = spr_Kirby_Normal_MysticBeam_Attack1;
 		sprMysticBeamAttack2 = spr_Kirby_Normal_MysticBeam_Attack2;
 		sprStoneAttack1Ready = spr_Kirby_Normal_Stone_Attack1Ready;
-		switch (player)
-		{
-			case 0:
-			sprStoneAttack1Common = spr_Kirby_Normal_Stone_Attack1_Common1;
-			sprStoneAttack1Uncommon = spr_Kirby_Normal_Stone_Attack1_Uncommon1;
-			sprStoneAttack1Rare = spr_Kirby_Normal_Stone_Attack1_Rare1;
-			break;
-			
-			case 1:
-			sprStoneAttack1Common = spr_Kirby_Normal_Stone_Attack1_Common1;
-			sprStoneAttack1Uncommon = spr_Kirby_Normal_Stone_Attack1_Uncommon1;
-			sprStoneAttack1Rare = spr_Kirby_Normal_Stone_Attack1_Rare1;
-			break;
-			
-			case 2:
-			sprStoneAttack1Common = spr_Kirby_Normal_Stone_Attack1_Common2;
-			sprStoneAttack1Uncommon = spr_Kirby_Normal_Stone_Attack1_Uncommon2;
-			sprStoneAttack1Rare = spr_Kirby_Normal_Stone_Attack1_Rare2;
-			break;
-			
-			case 3:
-			sprStoneAttack1Common = spr_Kirby_Normal_Stone_Attack1_Common1;
-			sprStoneAttack1Uncommon = spr_Kirby_Normal_Stone_Attack1_Uncommon1;
-			sprStoneAttack1Rare = spr_Kirby_Normal_Stone_Attack1_Rare1;
-			break;
-		}
 		sprStoneAttack2Ready = spr_Kirby_Normal_Stone_Attack2Ready;
 		sprStoneAttack2 = spr_Kirby_Normal_Stone_Attack2;
 		sprStoneAttack2Release = spr_Kirby_Normal_Stone_Attack2Release;

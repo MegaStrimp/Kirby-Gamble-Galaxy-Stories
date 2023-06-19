@@ -30,6 +30,7 @@
     {"name":"inst_198BDE53","path":"rooms/rm_GreenGreens8/rm_GreenGreens8.yy",},
     {"name":"inst_4A8A6AA9","path":"rooms/rm_GreenGreens8/rm_GreenGreens8.yy",},
     {"name":"inst_4EF47EB","path":"rooms/rm_GreenGreens8/rm_GreenGreens8.yy",},
+    {"name":"inst_16663E54","path":"rooms/rm_GreenGreens8/rm_GreenGreens8.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -68,10 +69,12 @@
 -44,-2147483648,-2,73,1,40,-4,73,2,57,58,-3,73,-7,-2147483648,5,0,90,45,90,
 43,-3,90,6,74,75,41,90,90,0,-6,-2147483648,1,0,-4,73,9,40,57,58,
 91,92,42,73,73,0,-6,-2147483648,-6,90,8,74,75,90,41,90,59,60,90,-3,
--2147483648,5,73,57,58,40,40,-3,73,8,42,91,92,44,73,73,76,77,-4,73,
+-2147483648,5,73,57,58,40,40,-3,73,8,42,91,92,0,73,73,76,77,-4,73,
 6,90,74,75,90,90,43,-8,90,3,93,94,41,-3,90,3,-2147483648,0,0,-18,
 -2147483648,-2,0,-18,-2147483648,-2,0,-37,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"ts_GreenGreens_Tree","path":"tilesets/ts_GreenGreens_Tree/ts_GreenGreens_Tree.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
-    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"MoreBackgroundElements","depth":900,"effectEnabled":true,"effectType":null,"gridX":6,"gridY":6,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
+    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"MoreBackgroundElements","depth":900,"effectEnabled":true,"effectType":null,"gridX":6,"gridY":6,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_16663E54","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Background_GreenGreens_BirdNest","path":"objects/obj_Background_GreenGreens_BirdNest/obj_Background_GreenGreens_BirdNest.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":264.0,"y":144.0,},
+      ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Collision","depth":1000,"effectEnabled":true,"effectType":null,"gridX":24,"gridY":24,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1093B061","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Wall","path":"objects/obj_Wall/obj_Wall.yy",},"properties":[],"rotation":0.0,"scaleX":20.0,"scaleY":5.0,"x":0.0,"y":192.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_22BD16AA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Wall","path":"objects/obj_Wall/obj_Wall.yy",},"properties":[],"rotation":0.0,"scaleX":3.0,"scaleY":1.0,"x":0.0,"y":120.0,},

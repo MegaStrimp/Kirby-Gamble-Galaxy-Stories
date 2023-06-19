@@ -76,6 +76,14 @@ function scr_Player_HatPalette(argument0,argument1)
 					case abilityHatPaints.cutter_kssu_blackSwedish:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Cutter_KSSU_Palette_BlackSwedish;
 					break;
+					
+					case abilityHatPaints.cutter_kssu_fluxNostalgia:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Cutter_KSSU_Palette_FluxNostalgia;
+					break;
+					
+					case abilityHatPaints.cutter_kssu_silverAndGold:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Cutter_KSSU_Palette_SilverAndGold;
+					break;
 				}
 				break;
 			}
@@ -135,6 +143,30 @@ function scr_Player_HatPalette(argument0,argument1)
 					
 					case abilityHatPaints.beam_kssu_bitcrushed:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Beam_KSSU_Palette_Bitcrushed;
+					break;
+					
+					case abilityHatPaints.beam_kssu_chessmaster:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Beam_KSSU_Palette_Chessmaster;
+					break;
+					
+					case abilityHatPaints.beam_kssu_cottonCandy:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Beam_KSSU_Palette_CottonCandy;
+					break;
+					
+					case abilityHatPaints.beam_kssu_frostyMage:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Beam_KSSU_Palette_FrostyMage;
+					break;
+					
+					case abilityHatPaints.beam_kssu_lemonLime:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Beam_KSSU_Palette_LemonLime;
+					break;
+					
+					case abilityHatPaints.beam_kssu_mixingPaints:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Beam_KSSU_Palette_MixingPaints;
+					break;
+					
+					case abilityHatPaints.beam_kssu_whosIdeaWasThis:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Beam_KSSU_Palette_WhosIdeaWasThis;
 					break;
 				}
 				break;
@@ -339,6 +371,10 @@ function scr_Player_HatPalette(argument0,argument1)
 					
 					case abilityHatPaints.stone_modern_cryingCobblestone:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Stone_Modern_Palette_CryingCobblestone;
+					break;
+					
+					case abilityHatPaints.stone_modern_theBronzeJade:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Stone_Modern_Palette_TheBronzeJade;
 					break;
 				}
 				break;
@@ -611,6 +647,18 @@ function scr_Player_HatPalette(argument0,argument1)
 				{
 					case abilityHatPaints.ninja_samurai_menacingBlack:
 					hatPaletteIndex = spr_Kirby_AbilityHat_Ninja_Samurai_Palette_MenacingBlack;
+					break;
+					
+					case abilityHatPaints.ninja_samurai_classicRed:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Ninja_Samurai_Palette_ClassicRed;
+					break;
+					
+					case abilityHatPaints.ninja_samurai_darkBrown:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Ninja_Samurai_Palette_DarkBrown;
+					break;
+					
+					case abilityHatPaints.ninja_samurai_ripperBlond:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Ninja_Samurai_Palette_RipperBlond;
 					break;
 				}
 				break;

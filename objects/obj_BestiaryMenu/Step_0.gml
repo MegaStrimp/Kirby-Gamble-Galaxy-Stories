@@ -26,7 +26,7 @@ if (!global.pause)
 				colorSelected = 0;
 				animSelected = 0;
 				animIndex = 0;
-				totalDescriptionPages = 0;
+				totalDescriptionPages = 1;
 				bestiarySelection -= 1;
 				if (!autoScroll) canAutoScrollTimer = canAutoScrollTimerMax;
 			}
@@ -42,7 +42,7 @@ if (!global.pause)
 				colorSelected = 0;
 				animSelected = 0;
 				animIndex = 0;
-				totalDescriptionPages = 0;
+				totalDescriptionPages = 1;
 				bestiarySelection += 1;
 				if (!autoScroll) canAutoScrollTimer = canAutoScrollTimerMax;
 			}
@@ -51,19 +51,26 @@ if (!global.pause)
 				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 				audio_play_sound(snd_BossHealth,0,false);
 				
-				if (bestiaryArray[# bestiarySelection,11] > 0) //Skin
+				if (bestiaryArray[# bestiarySelection,3])
 				{
-					selection = "skinBarUp";
+					if (bestiaryArray[# bestiarySelection,11] > 0) //Skin
+					{
+						selection = "skinBarUp";
+					}
+					else if (array_length(bestiaryCosmeticsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1) //Color
+					{
+						selection = "colorBarUp";
+					}
+					else if (array_length(bestiaryAnimationsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1) //Anim
+					{
+						selection = "animBarUp";
+					}
+					else //None
+					{
+						selection = "back";
+					}
 				}
-				else if (array_length(bestiaryCosmeticsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1) //Color
-				{
-					selection = "colorBarUp";
-				}
-				else if (array_length(bestiaryAnimationsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1) //Anim
-				{
-					selection = "animBarUp";
-				}
-				else //None
+				else
 				{
 					selection = "back";
 				}
@@ -73,19 +80,26 @@ if (!global.pause)
 				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 				audio_play_sound(snd_BossHealth,0,false);
 				
-				if (bestiaryArray[# bestiarySelection,11] > 0) //Skin
+				if (bestiaryArray[# bestiarySelection,3])
 				{
-					selection = "skinBarUp";
+					if (bestiaryArray[# bestiarySelection,11] > 0) //Skin
+					{
+						selection = "skinBarUp";
+					}
+					else if (array_length(bestiaryCosmeticsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1) //Color
+					{
+						selection = "colorBarUp";
+					}
+					else if (array_length(bestiaryAnimationsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1) //Anim
+					{
+						selection = "animBarUp";
+					}
+					else //None
+					{
+						selection = "back";
+					}
 				}
-				else if (array_length(bestiaryCosmeticsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1) //Color
-				{
-					selection = "colorBarUp";
-				}
-				else if (array_length(bestiaryAnimationsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1) //Anim
-				{
-					selection = "animBarUp";
-				}
-				else //None
+				else
 				{
 					selection = "back";
 				}
@@ -202,6 +216,10 @@ if (!global.pause)
 				{
 					selection = "animBarUp";
 				}
+				else if (totalDescriptionPages != 1) //Description Arrow
+				{
+					selection = "descriptionArrowUp";
+				}
 				else //None
 				{
 					selection = "back";
@@ -317,6 +335,10 @@ if (!global.pause)
 				{
 					selection = "animBarUp";
 				}
+				else if (totalDescriptionPages != 1) //Description Arrow
+				{
+					selection = "descriptionArrowUp";
+				}
 				else //None
 				{
 					selection = "back";
@@ -429,7 +451,14 @@ if (!global.pause)
 				if (audio_is_playing(snd_ButtonChange)) audio_stop_sound(snd_ButtonChange);
 				audio_play_sound(snd_ButtonChange,0,false);
 				
-				selection = "back";
+				if (totalDescriptionPages != 1) //Description Arrow
+				{
+					selection = "descriptionArrowUp";
+				}
+				else //None
+				{
+					selection = "back";
+				}
 			}
 			if (keyLeftPressed)
 			{
@@ -464,8 +493,8 @@ if (!global.pause)
 			break;
 			#endregion
 			
-			#region Back
-			case "back":
+			#region Description Arrow Up
+			case "descriptionArrowUp":
 			if (keyUpPressed)
 			{
 				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
@@ -492,20 +521,150 @@ if (!global.pause)
 			{
 				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
 				audio_play_sound(snd_BossHealth,0,false);
+				selection = "descriptionArrowDown";
+			}
+			if (keyLeftPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				selection = "bestiary";
+			}
+			if (keyRightPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				selection = "bestiary";
+			}
+			
+			if (!instance_exists(obj_Fade))
+			{
+				if ((keyJumpPressed) or (keyStartPressed))
+				{
+					if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+					audio_play_sound(snd_ButtonYes,0,false);
+					select = true;
+				}
+			}
+			
+			if (select)
+			{
+				descriptionPage += 1;
+				if (descriptionPage >= totalDescriptionPages) descriptionPage = 0;
+				select = false;
+			}
+			break;
+			#endregion
+			
+			#region Description Arrow Down
+			case "descriptionArrowDown":
+			if (keyUpPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				selection = "descriptionArrowUp";
+			}
+			if (keyDownPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				selection = "back";
+			}
+			if (keyLeftPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				selection = "bestiary";
+			}
+			if (keyRightPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				selection = "bestiary";
+			}
+			
+			if (!instance_exists(obj_Fade))
+			{
+				if ((keyJumpPressed) or (keyStartPressed))
+				{
+					if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+					audio_play_sound(snd_ButtonYes,0,false);
+					select = true;
+				}
+			}
+			
+			if (select)
+			{
+				descriptionPage -= 1;
+				if (descriptionPage < 0) descriptionPage = totalDescriptionPages - 1;
+				select = false;
+			}
+			break;
+			#endregion
+			
+			#region Back
+			case "back":
+			if (keyUpPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
 				
-				if (bestiaryArray[# bestiarySelection,11] > 0) //Skin
+				if (bestiaryArray[# bestiarySelection,3])
 				{
-					selection = "skinBarUp";
+					if (totalDescriptionPages != 1) //Description Arrow
+					{
+						selection = "descriptionArrowDown";
+					}
+					else if (array_length(bestiaryAnimationsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1) //Anim
+					{
+						selection = "animBarDown";
+					}
+					else if (array_length(bestiaryCosmeticsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1) //Color
+					{
+						selection = "colorBarDown";
+					}
+					else if (bestiaryArray[# bestiarySelection,11] > 0) //Skin
+					{
+						selection = "skinBarDown";
+					}
+					else //None
+					{
+						selection = "back";
+					}
 				}
-				else if (array_length(bestiaryCosmeticsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1) //Color
+				else
 				{
-					selection = "colorBarUp";
+					selection = "back";
 				}
-				else if (array_length(bestiaryAnimationsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1) //Anim
+			}
+			if (keyDownPressed)
+			{
+				if (audio_is_playing(snd_BossHealth)) audio_stop_sound(snd_BossHealth);
+				audio_play_sound(snd_BossHealth,0,false);
+				
+				if (bestiaryArray[# bestiarySelection,3])
 				{
-					selection = "animBarUp";
+					if (bestiaryArray[# bestiarySelection,11] > 0) //Skin
+					{
+						selection = "skinBarUp";
+					}
+					else if (array_length(bestiaryCosmeticsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1) //Color
+					{
+						selection = "colorBarUp";
+					}
+					else if (array_length(bestiaryAnimationsArray[bestiaryArray[# bestiarySelection,9]][skinSelected]) > 1) //Anim
+					{
+						selection = "animBarUp";
+					}
+					else if (totalDescriptionPages != 1) //Description Arrow
+					{
+						selection = "descriptionArrowUp";
+					}
+					else //None
+					{
+						selection = "back";
+					}
 				}
-				else //None
+				else
 				{
 					selection = "back";
 				}

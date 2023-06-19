@@ -24,6 +24,7 @@ switch (rng)
 	sprite_index = spr_Food_FishTaco;
 	break;
 }
+mask_index = spr_16Square_Mask;
 sprHurt = -1;
 points = 10;
 ability = playerAbilities.none;

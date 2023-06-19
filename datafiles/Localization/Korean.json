@@ -1004,367 +1004,590 @@
 	{
 		"Slicing Gold":
         {
-            "Title": "Slicing Gold"
+            "Title": "Slicing Gold",
+            
+            "Description": ""
         },
 		
 		"Blood Blade":
         {
-            "Title": "Blood Blade"
+            "Title": "Blood Blade",
+            
+            "Description": ""
         },
 		
 		"Bitcrushed":
         {
-            "Title": "Bitcrushed"
+            "Title": "Bitcrushed",
+            
+            "Description": ""
         },
 		
 		"Mallard Green":
         {
-            "Title": "Mallard Green"
+            "Title": "Mallard Green",
+            
+            "Description": ""
         },
 		
 		"Black Swedish":
         {
-            "Title": "Black Swedish"
+            "Title": "Black Swedish",
+            
+            "Description": ""
         },
 		
 		"Flux Nostalgia":
         {
-            "Title": "Flux Nostalgia"
+            "Title": "Flux Nostalgia",
+            
+            "Description": ""
+        },
+		
+		"Silver and Gold":
+        {
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Sparkling Beam":
         {
-            "Title": "Sparkling Beam"
+            "Title": "Sparkling Beam",
+            
+            "Description": ""
+        },
+		
+		"Chessmaster":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Cotton Candy":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Frosty Mage":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Lemon Lime":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Mixing Paints":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Who's Idea Was This":
+        {
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Jester Spirit":
         {
-            "Title": "Jester Spirit"
+            "Title": "Jester Spirit",
+            
+            "Description": ""
         },
 		
 		"Summer Fruits":
         {
-            "Title": "Summer Fruits"
+            "Title": "Summer Fruits",
+            
+            "Description": ""
         },
 		
 		"Nasty Flux":
         {
-            "Title": "Nasty Flux"
+            "Title": "Nasty Flux",
+            
+            "Description": ""
         },
 		
 		"Mage Rose":
         {
-            "Title": "Mage Rose"
+            "Title": "Mage Rose",
+            
+            "Description": ""
         },
 		
 		"Blueberry":
         {
-            "Title": ""
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Sourlime":
         {
-            "Title": ""
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Mono":
         {
-            "Title": ""
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Bubblegum":
         {
-            "Title": ""
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Rocky Road":
         {
-            "Title": "Rocky Road"
+            "Title": "Rocky Road",
+            
+            "Description": ""
         },
 		
 		"Molten Rock":
         {
-            "Title": "Molten Rock"
+            "Title": "Molten Rock",
+            
+            "Description": ""
         },
 		
 		"Crying Cobblestone":
         {
-            "Title": "Crying Cobblestone"
+            "Title": "Crying Cobblestone",
+            
+            "Description": ""
+        },
+		
+		"The Bronze Jade":
+        {
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Jester Reflection":
         {
-            "Title": "Jester Reflection"
+            "Title": "Jester Reflection",
+            
+            "Description": ""
         },
 		
 		"Beta Block":
         {
-            "Title": "Beta Block"
+            "Title": "Beta Block",
+            
+            "Description": ""
         },
 		
 		"Stealthy Maroon":
         {
-            "Title": "Stealthy Maroon"
+            "Title": "Stealthy Maroon",
+            
+            "Description": ""
         },
 		
 		"Sliver-Lined Warrior":
         {
-            "Title": "Sliver-Lined Warrior"
+            "Title": "Sliver-Lined Warrior",
+            
+            "Description": ""
         },
 		
 		"Viridian Ambush":
         {
-            "Title": "Viridian Ambush"
+            "Title": "Viridian Ambush",
+            
+            "Description": ""
         },
 		
 		"Menacing Black":
         {
-            "Title": ""
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Classic Red":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Dark Brown":
+        {
+            "Title": "",
+            
+            "Description": ""
+        },
+		
+		"Ripper Blond":
+        {
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Explosive B":
         {
-            "Title": "Explosive B"
+            "Title": "Explosive B",
+            
+            "Description": ""
         },
 		
 		"Blooming Poppy":
         {
-            "Title": "Blooming Poppy"
+            "Title": "Blooming Poppy",
+            
+            "Description": ""
         },
 		
 		"Outbursting Conspiracy":
         {
-            "Title": "Outbursting Conspiracy"
+            "Title": "Outbursting Conspiracy",
+            
+            "Description": ""
         },
 		
 		"Dragon's Castle":
         {
-            "Title": "Dragon's Castle"
+            "Title": "Dragon's Castle",
+            
+            "Description": ""
         },
 		
 		"Scorching Scarlet":
         {
-            "Title": "Scorching Scarlet"
+            "Title": "Scorching Scarlet",
+            
+            "Description": ""
         },
 		
 		"Blazing Blue":
         {
-            "Title": "Blazing Blue"
+            "Title": "Blazing Blue",
+            
+            "Description": ""
         },
 		
 		"Scarlet Rose":
         {
-            "Title": "Scarlet Rose"
+            "Title": "Scarlet Rose",
+            
+            "Description": ""
         },
 		
 		"Nuclear Meltdown":
         {
-            "Title": ""
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Midnight Inferno":
         {
-            "Title": ""
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Hot Pink":
         {
-            "Title": ""
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Frosted Shard":
         {
-            "Title": "Frosted Shard"
+            "Title": "Frosted Shard",
+            
+            "Description": ""
         },
 		
 		"Frosty Obsidian":
         {
-            "Title": "Frosty Obsidian"
+            "Title": "Frosty Obsidian",
+            
+            "Description": ""
         },
 		
 		"Chilly":
         {
-            "Title": "Chilly"
+            "Title": "Chilly",
+            
+            "Description": ""
         },
 		
 		"Chocolate Mousse":
         {
-            "Title": "Chocolate Mousse"
+            "Title": "Chocolate Mousse",
+            
+            "Description": ""
         },
 		
 		"Strawberry Cream":
         {
-            "Title": ""
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Electro Marine":
         {
-            "Title": "Electro Marine"
+            "Title": "Electro Marine",
+            
+            "Description": ""
         },
 		
 		"Spinning Violet":
         {
-            "Title": "Spinning Violet"
+            "Title": "Spinning Violet",
+            
+            "Description": ""
         },
 		
 		"Rushing Red":
         {
-            "Title": "Rushing Red"
+            "Title": "Rushing Red",
+            
+            "Description": ""
         },
 		
 		"Muffler Blue":
         {
-            "Title": "Muffler Blue"
+            "Title": "Muffler Blue",
+            
+            "Description": ""
         },
 		
 		"Dapper Painter":
         {
-            "Title": "Dapper Painter"
+            "Title": "Dapper Painter",
+            
+            "Description": ""
         },
 		
 		"Crimson Champion":
         {
-            "Title": "Crimson Champion"
+            "Title": "Crimson Champion",
+            
+            "Description": ""
         },
 		
 		"Blue Banner":
         {
-            "Title": "Blue Banner"
+            "Title": "Blue Banner",
+            
+            "Description": ""
         },
 		
 		"Rainbow Flight":
         {
-            "Title": "Rainbow Flight"
+            "Title": "Rainbow Flight",
+            
+            "Description": ""
         },
 		
 		"Pekin Breeze":
         {
-            "Title": "Pekin Breeze"
+            "Title": "Pekin Breeze",
+            
+            "Description": ""
         },
 		
 		"Dyna Blade":
         {
-            "Title": ""
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Nocturne Friend":
         {
-            "Title": ""
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Speed Machine":
         {
-            "Title": "Speed Machine"
+            "Title": "Speed Machine",
+            
+            "Description": ""
         },
 		
 		"Speedy Scarlet":
         {
-            "Title": "Speedy Scarlet"
+            "Title": "Speedy Scarlet",
+            
+            "Description": ""
         },
 		
 		"Lavender-01":
         {
-            "Title": "Lavender-01"
+            "Title": "Lavender-01",
+            
+            "Description": ""
         },
 		
 		"Slicing Green":
         {
-            "Title": "Slicing Green"
+            "Title": "Slicing Green",
+            
+            "Description": ""
         },
 		
 		"Thundering Cloud":
         {
-            "Title": "Thundering Cloud"
+            "Title": "Thundering Cloud",
+            
+            "Description": ""
         },
 		
 		"Lazy Red":
         {
-            "Title": "Lazy Red"
+            "Title": "Lazy Red",
+            
+            "Description": ""
         },
 		
 		"Wagasa Dee":
         {
-            "Title": "Wagasa Dee"
+            "Title": "Wagasa Dee",
+            
+            "Description": ""
         },
 		
 		"Azure Bandanna":
         {
-            "Title": ""
+            "Title": "",
+            
+            "Description": ""
         },
 		
 		"Crushing Brown":
         {
-            "Title": "Crushing Brown"
+            "Title": "Crushing Brown",
+            
+            "Description": ""
         },
 		
 		"Construction Work":
         {
-            "Title": "Construction Work"
+            "Title": "Construction Work",
+            
+            "Description": ""
         },
 		
 		"Dazzling Default":
         {
-            "Title": "Dazzling Default"
+            "Title": "Dazzling Default",
+            
+            "Description": ""
         },
 		
 		"Presto Purple":
         {
-            "Title": "Presto Purple"
+            "Title": "Presto Purple",
+            
+            "Description": ""
         },
 		
 		"Tempo Teal":
         {
-            "Title": "Tempo Teal"
+            "Title": "Tempo Teal",
+            
+            "Description": ""
         },
 		
 		"Ringing Rose":
         {
-            "Title": "Ringing Rose"
+            "Title": "Ringing Rose",
+            
+            "Description": ""
         },
 		
 		"Candescent Copper":
         {
-            "Title": "Candescent Copper"
+            "Title": "Candescent Copper",
+            
+            "Description": ""
         },
 		
 		"Shining Silver":
         {
-            "Title": "Shining Silver"
+            "Title": "Shining Silver",
+            
+            "Description": ""
         },
 		
 		"Polished Plant":
         {
-            "Title": "Polished Plant"
+            "Title": "Polished Plant",
+            
+            "Description": ""
         },
 		
 		"Illuminated Ivory":
         {
-            "Title": "Illuminated Ivory"
+            "Title": "Illuminated Ivory",
+            
+            "Description": ""
         },
 		
 		"Bubbly Green":
         {
-            "Title": "Bubbly Green"
+            "Title": "Bubbly Green",
+            
+            "Description": ""
         },
 		
 		"Noddy Peach":
         {
-            "Title": "Noddy Peach"
+            "Title": "Noddy Peach",
+            
+            "Description": ""
         },
 		
 		"Royal Purple":
         {
-            "Title": "Royal Purple"
+            "Title": "Royal Purple",
+            
+            "Description": ""
         },
 		
 		"Metallic Red":
         {
-            "Title": "Metallic Red"
+            "Title": "Metallic Red",
+            
+            "Description": ""
         },
 		
 		"Military Green":
         {
-            "Title": "Military Green"
+            "Title": "Military Green",
+            
+            "Description": ""
         }
 	},
 	

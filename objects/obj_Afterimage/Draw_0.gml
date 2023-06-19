@@ -65,10 +65,10 @@ if (instance_exists(owner))
 		if (hatBackgroundIndex != -1) draw_sprite_ext(hatBackgroundIndex,hatAnim,x + drawShakeX,y + drawShakeY,owner.image_xscale * (1 + owner.scaleExX),owner.image_yscale * (1 + owner.scaleExY),owner.imageAngle,owner.image_blend,image_alpha);
 		if ((global.shaders) and (abilityHatPalette != -1)) pal_swap_reset();
 		
-		if ((global.shaders) and (((owner.sprite_index != owner.sprStoneAttack1Common) and (owner.sprite_index != owner.sprStoneAttack1Uncommon) and (owner.sprite_index != owner.sprStoneAttack1Rare)) or (owner.sprite_index = (owner.sprStoneAttack1Common) and (owner.image_index = 0)))) pal_swap_set(paletteIndex,paletteFlash,false);
+		if (global.shaders) pal_swap_set(paletteIndex,paletteFlash,false);
 		draw_sprite_ext(owner.sprite_index,owner.image_index,x + drawShakeX,y + drawShakeY,owner.image_xscale * (1 + owner.scaleExX),owner.image_yscale * (1 + owner.scaleExY),owner.imageAngle,owner.image_blend,image_alpha);
 		if (hatShadowIndex != -1) draw_sprite_ext(hatShadowIndex,owner.image_index,x + drawShakeX,y + drawShakeY,owner.image_xscale * (1 + owner.scaleExX),owner.image_yscale * (1 + owner.scaleExY),owner.imageAngle,owner.image_blend,image_alpha);
-		if ((global.shaders) and (((owner.sprite_index != owner.sprStoneAttack1Common) and (owner.sprite_index != owner.sprStoneAttack1Uncommon) and (owner.sprite_index != owner.sprStoneAttack1Rare)) or (owner.sprite_index = (owner.sprStoneAttack1Common) and (owner.image_index = 0)))) pal_swap_reset();
+		if (global.shaders) pal_swap_reset();
 		
 		if ((global.shaders) and (abilityHatPalette != -1)) pal_swap_set(abilityHatPalette,paletteFlash,false);
 		if (abilityHatIndex != -1) draw_sprite_ext(abilityHatIndex,owner.image_index,x + drawShakeX,y + drawShakeY,owner.image_xscale * (1 + owner.scaleExX),owner.image_yscale * (1 + owner.scaleExY),owner.imageAngle,owner.image_blend,image_alpha);
@@ -81,10 +81,10 @@ if (instance_exists(owner))
 			if (hatBackgroundIndex != -1) draw_sprite_ext(hatBackgroundIndex,hatAnim,x + drawShakeX,y + drawShakeY,owner.image_xscale * (1 + owner.scaleExX),owner.image_yscale * (1 + owner.scaleExY),owner.imageAngle,owner.image_blend,.7);
 			if ((global.shaders) and (abilityHatPalette != -1)) pal_swap_reset();
 			
-			if ((global.shaders) and (((owner.sprite_index != owner.sprStoneAttack1Common) and (owner.sprite_index != owner.sprStoneAttack1Uncommon) and (owner.sprite_index != owner.sprStoneAttack1Rare)) or (((sprite_index = spr_Kirby_Normal_Stone_Attack1_Common1) or (sprite_index = spr_Kirby_Normal_Stone_Attack1_Common2)) and (image_index = 0)) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common1) or (sprite_index = spr_Gooey_Normal_Stone_Attack_Common2))) pal_swap_set(paletteIndex,3,false);
+			if (global.shaders) pal_swap_set(paletteIndex,3,false);
 			draw_sprite_ext(owner.sprite_index,owner.image_index,x + drawShakeX,y + drawShakeY,owner.image_xscale * (1 + owner.scaleExX),owner.image_yscale * (1 + owner.scaleExY),owner.imageAngle,owner.image_blend,.7);
 			if (hatShadowIndex != -1) draw_sprite_ext(hatShadowIndex,owner.image_index,x + drawShakeX,y + drawShakeY,owner.image_xscale * (1 + owner.scaleExX),owner.image_yscale * (1 + owner.scaleExY),owner.imageAngle,owner.image_blend,.7);
-			if ((global.shaders) and (((owner.sprite_index != owner.sprStoneAttack1Common) and (owner.sprite_index != owner.sprStoneAttack1Uncommon) and (owner.sprite_index != owner.sprStoneAttack1Rare)) or (owner.sprite_index = (owner.sprStoneAttack1Common) and (owner.image_index = 0)))) pal_swap_reset();
+			if (global.shaders) pal_swap_reset();
 		}
 		
 		/*var abilityHatIndex = scr_Player_AbilityHat(playerAbility,playerCharacter);

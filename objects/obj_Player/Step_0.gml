@@ -1669,14 +1669,6 @@ if (!global.pause)
 		stoneMaskProj.image_xscale = image_xscale;
 		stoneMaskProj.image_yscale = image_yscale;
 		
-		/*
-		var stoneRarity = irandom_range(0,24);
-		if (stoneRarity == 0) sprite_index = sprStoneAttack1Rare;
-		if ((stoneRarity >= 1) and (stoneRarity <= 10)) sprite_index = sprStoneAttack1Uncommon;
-		if ((stoneRarity >= 11) and (stoneRarity <= 24)) sprite_index = sprStoneAttack1Common;
-		image_index = irandom_range(0,image_number - 1);
-		*/
-		
 		sprite_index = scr_WeightedRandomize(stoneVariantArray);
 		image_index = 0;
 	    stoneReadyTimer = -1;

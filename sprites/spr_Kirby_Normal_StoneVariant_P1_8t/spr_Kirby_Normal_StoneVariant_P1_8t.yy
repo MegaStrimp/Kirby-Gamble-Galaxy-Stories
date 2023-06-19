@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "Stone Variants",
-    "path": "folders/Sprites/Characters/Kirby/Normal/Stone Variants.yy",
+    "name": "P1",
+    "path": "folders/Sprites/Characters/Kirby/Normal/Stone Variants/P1.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
