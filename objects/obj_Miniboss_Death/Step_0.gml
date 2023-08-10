@@ -1,8 +1,8 @@
 ///@description Main
 
-//Event Inherited
-
+#region Event Inherited
 event_inherited();
+#endregion
 
 #region Friction
 if ((!childPauseHard) and ((grounded) or (!hasYCollision))) hsp = scr_Friction(hsp,decel);
@@ -89,3 +89,8 @@ else
 	shakeX = 0;
 	shakeY = 0;
 }
+
+#region Clamp Position
+x = clamp(x,camera_get_view_x(gameView),camera_get_view_x(gameView) + camera_get_view_width(gameView));
+y = clamp(y,camera_get_view_y(gameView),camera_get_view_y(gameView) + camera_get_view_height(gameView));
+#endregion

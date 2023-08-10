@@ -70,8 +70,10 @@ function scr_Enemy_Hurt(argument0,argument1)
 		}
 		
 		if ((global.enemyHealthbars) and (targetObj.canGetHealthbar) and ((!targetObj.isMiniBoss) or (!targetObj.isBoss))) global.healthbarMarkedEnemy = targetObj.id;
+		targetObj.playerLastHit = hurtSource.owner;
 		targetObj.hp -= hurtSource.dmg;
 		targetObj.bossHealthbarShakeTimer = targetObj.bossHealthbarShakeTimerMax;
+		targetObj.invincibleFlashTimer = targetObj.invincibleFlashTimerMax;
 		
 		#region Hit Numbers
 		if (global.hitNumbers)
@@ -467,7 +469,6 @@ function scr_Enemy_Hurt(argument0,argument1)
 		{
 			targetObj.invincible = true;
 			targetObj.invincibleTimer = hitInvincibility;
-			targetObj.invincibleFlashTimer = targetObj.invincibleFlashTimerMax;
 		}
 		if (targetObj.isMystic) targetObj.fluxOverlayAlpha = .8;
 					

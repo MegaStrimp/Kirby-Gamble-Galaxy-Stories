@@ -309,8 +309,14 @@ function scr_DebugSave()
 	#endregion
 	
 	#region Suplex
+	global.hatTypeSuplexBuggzyUnlocked = true;
+	
 	#region KSSU
 	global.hatPaletteSuplexKSSUBitcrushedUnlocked = true;
+	#endregion
+	
+	#region Buggzy
+	global.hatPaletteSuplexBuggzyBitcrushedUnlocked = true;
 	#endregion
 	#endregion
 	

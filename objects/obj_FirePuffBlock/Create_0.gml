@@ -6,7 +6,12 @@ event_inherited();
 
 #region Sprites
 sprIdle = spr_FirePuffBlock_Normal_Idle;
-topWallSprite = spr_FirePuffBlock_Normal_Top;
+sprIdleReady = spr_FirePuffBlock_Normal_Idle_Ready;
+sprIdleFire = spr_FirePuffBlock_Normal_Idle_Fire;
+sprTop = spr_FirePuffBlock_Normal_Top;
+sprTopReady = spr_FirePuffBlock_Normal_Top_Ready;
+sprTopFire = spr_FirePuffBlock_Normal_Top_Fire;
+topWallSprite = sprTop;
 #endregion
 
 #region Other Variables

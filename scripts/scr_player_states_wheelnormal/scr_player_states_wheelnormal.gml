@@ -130,7 +130,7 @@ function scr_Player_States_WheelNormal()
 		#endregion
 		
 		#region Afterimages
-		if (current_time % 2 == 0)
+		if (global.currentTimePausable % 2 == 0)
 		{
 			var afterimage = instance_create_depth(x - (wheelDir * 6),y,depth,obj_Afterimage);
 			afterimage.owner = id;

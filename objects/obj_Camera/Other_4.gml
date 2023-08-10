@@ -31,8 +31,8 @@ switch (room)
 	
 	case rm_StageSelect:
 	{
-		cameraX = (obj_StageSelect.x - ((viewWidth / zoom) / 2) + ((offsetX + cinematicXOffset) / zoom));
-		cameraY = (obj_StageSelect.y - ((viewHeight / zoom) / 2) + ((offsetY + cinematicYOffset) / zoom));
+		cameraX = (obj_StageSelect.x - ((viewWidth / zoom) / 2) + (offsetX / zoom));
+		cameraY = (obj_StageSelect.y - ((viewHeight / zoom) / 2) + (offsetY / zoom));
 	}
 	break;
 	

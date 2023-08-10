@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Misc",
-    "path": "folders/Sprites/Subgames/Gamblion/Misc.yy",
+    "name": "Title",
+    "path": "folders/Sprites/Subgames/Gamblion/Title.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

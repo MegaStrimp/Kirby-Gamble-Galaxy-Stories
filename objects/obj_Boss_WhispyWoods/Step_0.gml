@@ -10,7 +10,7 @@ if (death)
 		var fade = instance_create_depth(x,y,-999,obj_FadeTimer);
 		fade.alphaSpd = .005;
 		fade.targetRoom = rm_DemoEnd;
-		fade.fadeTimer = 60;
+		fade.fadeTimer = 160;
 	}
 	
 	idleAnimation = false;

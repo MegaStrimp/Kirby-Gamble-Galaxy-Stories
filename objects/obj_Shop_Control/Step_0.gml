@@ -172,6 +172,7 @@ else if (hexTimer == 0)
 	    instance_activate_object(obj_Setup);
 	    instance_activate_object(obj_DebugMode);
 	    instance_activate_object(obj_Dialogue);
+	    instance_activate_object(input_controller_object);
 	    active = true;
 		activeTimer = 15;
 		hexTimer = -1;

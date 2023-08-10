@@ -129,7 +129,7 @@ function scr_Player_States_Normal()
 				    runDoubleTap = 20;
 			    }
 				
-				if (abs(gamepad_axis_value(global.playerGamepad[player],gp_axislh)) == 1)
+				/*if (abs(gamepad_axis_value(global.playerGamepad[player],gp_axislh)) == 1)
 				{
 					if (!isRunning)
 					{
@@ -156,7 +156,7 @@ function scr_Player_States_Normal()
 						runBuffer = 0;
 						isRunning = true;
 					}
-				}
+				}*/
 			}
 		}
 		
@@ -248,12 +248,12 @@ function scr_Player_States_Normal()
 			{
 				if (!global.cutscene)
 				{
-					var gamepadValX = gamepad_axis_value(global.playerGamepad[player],gp_axislh);
+					/*var gamepadValX = gamepad_axis_value(global.playerGamepad[player],gp_axislh);
 					var gamepadValY = gamepad_axis_value(global.playerGamepad[player],gp_axislv);
 					var gamepadAngle = point_direction(0,0,gamepadValX,gamepadValY);
 					
 					if (global.playerGamepad[player] == -1)
-					{
+					{*/
 						if (keyUpHold)
 						{
 							if (!attackDisableMovement)
@@ -266,13 +266,13 @@ function scr_Player_States_Normal()
 						{
 							if (!attackDisableMovement) vsp += accel * (speedMultFinal * speedMultFinal);
 						}
-					}
+					/*}
 					else
 					{
 						var ufoDeadzone = .3;
 						if (abs(gamepadValX) >= ufoDeadzone) hsp = lengthdir_x(ufoFloatSpd * speedMultFinal,gamepadAngle) * abs(gamepadValX);
 						if (abs(gamepadValY) >= ufoDeadzone) vsp = lengthdir_y(ufoFloatSpd * speedMultFinal,gamepadAngle) * abs(gamepadValY);
-					}
+					}*/
 				}
 				
 				if ((((keyDownHold) and (keyUpHold)) or ((!keyDownHold) and (!keyUpHold))) or (attackDisableMovement) or (global.cutscene))

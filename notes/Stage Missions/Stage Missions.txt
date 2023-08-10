@@ -1,0 +1,2 @@
+Stage missions and stage collectibles are set as global variables in scr_SaveGame and scr_LoadGame.
+Formatting is "global.stageMission_XXXXXX[missionNum]" and "global.stageCollectible_XXXXXX[collectibleNum]"

@@ -23,6 +23,9 @@ hurtsEnemy = active;
 hurtsBoss = active;
 hurtsProjectile = active;
 destroyableByWall = active;
+followOwner = true;
+followOffsetX = 0;
+followOffsetY = 0;
 
 //Timers
 

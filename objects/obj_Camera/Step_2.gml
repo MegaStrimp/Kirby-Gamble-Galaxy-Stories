@@ -19,7 +19,6 @@ zoomFinal = (zoom * hitZoom) * zoomControllerZoom;
 if (!global.pause) hitZoom = lerp(hitZoom,1,.05);
 #endregion
 
-
 var zoomMax = 100;
 if (room_width >= room_height)
 {
@@ -64,9 +63,12 @@ switch (room)
 
 //Camera Position
 
+var canFollow = true;
+
 if ((!debugCamera) and (objectFollowing == -1))
 {
-	if (!global.cutscene)
+	//if (!global.cutscene)
+	if (canFollow)
 	{
 		switch (room)
 		{
@@ -81,18 +83,13 @@ if ((!debugCamera) and (objectFollowing == -1))
 			case rm_StageSelect:
 			if (instance_exists(obj_StageSelect))
 			{
-				cameraX = lerp(cameraX,obj_StageSelect.x - ((viewWidth / zoomFinal) / 2),spd) + ((offsetX + cinematicXOffset) / zoomFinal);
-				cameraY = lerp(cameraY,obj_StageSelect.y - ((viewHeight / zoomFinal) / 2),spd) + ((offsetY + cinematicYOffset) / zoomFinal);
+				cameraX = lerp(cameraX,obj_StageSelect.x - ((viewWidth / zoomFinal) / 2),spd) + (offsetX / zoomFinal);
+				cameraY = lerp(cameraY,obj_StageSelect.y - ((viewHeight / zoomFinal) / 2),spd) + (offsetY / zoomFinal);
 			}
 			else
 			{
 				state = "followingKirby";
 			}
-			break;
-			
-			case rm_Cutscene_Intro:
-			cameraX = x;
-			cameraY = y;
 			break;
 			
 			case rm_Cutscene_MeetingGamble:
@@ -105,8 +102,8 @@ if ((!debugCamera) and (objectFollowing == -1))
 			{
 				offsetX += offsetXSpd;
 				offsetY += offsetYSpd;
-				cameraX = cameraXStart + ((offsetX + cinematicXOffset) / zoomFinal);
-				cameraY = cameraYStart + ((offsetY + cinematicYOffset) / zoomFinal);
+				cameraX = cameraXStart + (offset / zoomFinal);
+				cameraY = cameraYStart + (offsetY / zoomFinal);
 			}
 			else
 			{
@@ -122,8 +119,8 @@ if ((!debugCamera) and (objectFollowing == -1))
 					{
 						cameraTargetX = target.x;
 						cameraTargetY = target.y;
-						cameraX = lerp(cameraX,cameraTargetX - ((viewWidth / zoomFinal) / 2),spd) + ((offsetX + bossOffsetX + cinematicXOffset) / zoomFinal);
-						cameraY = lerp(cameraY,cameraTargetY - ((viewHeight / zoomFinal) / 2),spd) + ((offsetY + bossOffsetY + cinematicYOffset) / zoomFinal);
+						cameraX = lerp(cameraX,cameraTargetX - ((viewWidth / zoomFinal) / 2),spd);
+						cameraY = lerp(cameraY,cameraTargetY - ((viewHeight / zoomFinal) / 2),spd);
 						
 						with (obj_BigMovingWall)
 						{
@@ -133,8 +130,6 @@ if ((!debugCamera) and (objectFollowing == -1))
 								{
 									other.cameraX = x + ((sprite_get_width(sprite_index) * image_xscale) / 2) + xOffset - ((other.viewWidth / other.zoomFinal) / 2);
 									other.cameraY = y + yOffset - ((other.viewHeight / other.zoomFinal) / 2);
-									//other.cameraX = lerp(other.cameraX,x + ((sprite_get_width(sprite_index) * image_xscale) / 2) + xOffset - ((other.viewWidth / other.zoomFinal) / 2),other.spd) + ((other.offsetX + other.bossOffsetX + other.cinematicXOffset) / other.zoomFinal);
-									//other.cameraY = lerp(other.cameraY,y + yOffset - ((other.viewHeight / other.zoomFinal) / 2),other.spd) + ((other.offsetY + other.bossOffsetY + other.cinematicYOffset) / other.zoomFinal);
 								}
 								if (active)
 								{
@@ -150,14 +145,14 @@ if ((!debugCamera) and (objectFollowing == -1))
 							{
 								case 1:
 								targetClampToView = true;
-								cameraX = lerp(cameraX,obj_Boss_WhispyWoods.x + (obj_Boss_WhispyWoods.dirX * 180) - ((viewWidth / zoomFinal) / 2),.1) + ((offsetX + bossOffsetX + cinematicXOffset) / zoomFinal);
-								cameraY = lerp(cameraY,0,.1) + ((offsetY + bossOffsetY + cinematicYOffset) / zoomFinal);
+								cameraX = lerp(cameraX,obj_Boss_WhispyWoods.x + (obj_Boss_WhispyWoods.dirX * 180) - ((viewWidth / zoomFinal) / 2),.1) + ((offsetX + bossOffsetX) / zoomFinal);
+								cameraY = lerp(cameraY,0,.1) + ((offsetY + bossOffsetY) / zoomFinal);
 								break;
 							
 								case 3:
 								targetClampToView = true;
-								cameraX = lerp(cameraX,obj_Boss_WhispyWoods.x + ((obj_Boss_WhispyWoods.dirX) * (200 - (abs(obj_Boss_WhispyWoods.hsp) * 100))) - ((viewWidth / zoomFinal) / 2),.1) + ((offsetX + bossOffsetX + cinematicXOffset) / zoomFinal);
-								cameraY = lerp(cameraY,obj_Boss_WhispyWoods.y - ((viewHeight / zoomFinal) / 2),.1) + ((offsetY + bossOffsetY + cinematicYOffset) / zoomFinal);
+								cameraX = lerp(cameraX,obj_Boss_WhispyWoods.x + ((obj_Boss_WhispyWoods.dirX) * (200 - (abs(obj_Boss_WhispyWoods.hsp) * 100))) - ((viewWidth / zoomFinal) / 2),.1) + ((offsetX + bossOffsetX) / zoomFinal);
+								cameraY = lerp(cameraY,obj_Boss_WhispyWoods.y - ((viewHeight / zoomFinal) / 2),.1) + ((offsetY + bossOffsetY) / zoomFinal);
 								break;
 							}
 						}
@@ -169,15 +164,6 @@ if ((!debugCamera) and (objectFollowing == -1))
 					{
 						cameraX = room_width / 2;
 						cameraY = room_height / 2;
-					}
-				}
-			
-				with (obj_Enemy)
-				{
-				    if (isBoss)
-					{
-						if (bossOffsetX != -1) other.cameraX = bossOffsetX;
-						if (bossOffsetY != -1) other.cameraY = bossOffsetY;
 					}
 				}
 				break;
@@ -301,8 +287,8 @@ else
 	sShakeY = irandom_range(-shakeY,shakeY);
 }
 
-var cameraXFinal = cameraX + sShakeX;
-var cameraYFinal = cameraY + sShakeY;
+var cameraXFinal = cameraX + sShakeX + offsetX;
+var cameraYFinal = cameraY + sShakeY + offsetY;
 if (gravMinLimit)
 {
 	cameraXFinal = min(cameraXFinal,camera_get_view_x(gameView));

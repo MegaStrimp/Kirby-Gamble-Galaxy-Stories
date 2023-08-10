@@ -5049,6 +5049,179 @@ function scr_Player_AbilityHat(argument0,argument1)
 				}
 				break;
 				
+				case abilityHatSkins.suplex_buggzy:
+				switch (sprite_index)
+				{
+					case sprIdle:
+					case sprIdleBlink:
+					case sprIdleNormalSlopeL:
+					case sprIdleNormalSlopeLBlink:
+					case sprIdleNormalSlopeR:
+					case sprIdleNormalSlopeRBlink:
+					case sprIdleSteepSlopeL:
+					case sprIdleSteepSlopeLBlink:
+					case sprIdleSteepSlopeR:
+					case sprIdleSteepSlopeRBlink:
+					case sprItemCarryLightIdle:
+					case sprItemCarryLightIdleNormalSlopeL:
+					case sprItemCarryLightIdleNormalSlopeLBlink:
+					case sprItemCarryLightIdleNormalSlopeR:
+					case sprItemCarryLightIdleNormalSlopeRBlink:
+					case sprItemCarryLightIdleSteepSlopeL:
+					case sprItemCarryLightIdleSteepSlopeLBlink:
+					case sprItemCarryLightIdleSteepSlopeR:
+					case sprItemCarryLightIdleSteepSlopeRBlink:
+					case sprItemCarryHeavyIdle:
+					case sprItemCarryHeavyIdleSlopeL:
+					case sprItemCarryHeavyIdleSlopeR:
+					case sprItemCarryThrow:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_Buggzy_Idle;
+					break;
+					
+					case sprWalk:
+					case sprItemCarryLightWalk:
+					case sprItemCarryHeavyWalk:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_Walk;
+					break;
+					
+					case sprRun:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_Run;
+					break;
+					
+					case sprRunTurn:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_RunTurn;
+					break;
+					
+					case sprJump:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_Jump;
+					break;
+					
+					case sprRoll:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_Roll;
+					break;
+					
+					case sprRollDuckReady:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_Roll;
+					break;
+					
+					case sprBackflip:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_Backflip;
+					break;
+					
+					case sprFall:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_Fall;
+					break;
+					
+					case sprSquish:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_Squish;
+					break;
+					
+					case sprDuck:
+					case sprDuckBlink:
+					case sprDuckNormalSlopeL:
+					case sprDuckNormalSlopeLBlink:
+					case sprDuckNormalSlopeR:
+					case sprDuckNormalSlopeRBlink:
+					case sprDuckSteepSlopeL:
+					case sprDuckSteepSlopeLBlink:
+					case sprDuckSteepSlopeR:
+					case sprDuckSteepSlopeRBlink:
+					case sprItemCarryLightDuck:
+					case sprItemCarryLightDuckBlink:
+					case sprItemCarryLightDuckNormalSlopeL:
+					case sprItemCarryLightDuckNormalSlopeLBlink:
+					case sprItemCarryLightDuckNormalSlopeR:
+					case sprItemCarryLightDuckNormalSlopeRBlink:
+					case sprItemCarryLightDuckSteepSlopeL:
+					case sprItemCarryLightDuckSteepSlopeLBlink:
+					case sprItemCarryLightDuckSteepSlopeR:
+					case sprItemCarryLightDuckSteepSlopeRBlink:
+					case sprItemCarryHeavyDuck:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_Duck;
+					break;
+					
+					case sprSlide:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_Slide;
+					break;
+					
+					case sprSlideEnd:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_SlideEnd;
+					break;
+					
+					case sprFloatReady:
+					case sprItemCarryLightFloatReady:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_FloatReady;
+					break;
+					
+					case sprFloat:
+					case sprItemCarryLightFloat:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_Float;
+					break;
+					
+					case sprFlap:
+					case sprItemCarryLightFlap:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_Flap;
+					break;
+					
+					case sprFloatSpit:
+					case sprItemCarryLightFloatSpit:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_FloatSpit;
+					break;
+					
+					case sprFloatHurt:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_FloatHurt;
+					break;
+					
+					case sprEnter:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_Enter;
+					break;
+					
+					case sprClimbUp:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_ClimbUp;
+					break;
+					
+					case sprClimbDown:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_ClimbDown;
+					break;
+					
+					case sprAbilityChange:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_AbilityChange;
+					break;
+					
+					case sprWarpStar1:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_WarpStar1;
+					break;
+					
+					case sprWarpStar2:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_WarpStar2;
+					break;
+					
+					case sprWarpStar3:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_WarpStar3;
+					break;
+					
+					case sprWarpStar4:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_WarpStar4;
+					break;
+					
+					case sprGuard:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_Guard;
+					break;
+					
+					case sprGuardSlope:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_Guard_Slope;
+					break;
+					
+					case sprHurt:
+					abilityHatIndex = spr_Kirby_AbilityHat_Suplex_KSSU_Hurt;
+					break;
+					
+					default:
+					abilityHatIndex = -1;
+					break;
+				}
+				break;
+				
 				default:
 				abilityHatIndex = -1;
 				break;

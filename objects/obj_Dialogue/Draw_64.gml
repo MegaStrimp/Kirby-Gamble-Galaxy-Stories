@@ -10,7 +10,8 @@ if ((owner != -1) and (instance_exists(owner)) and (owner.object_index == obj_Sh
 }
 
 var dialogueX = 1 + dialogueXOffset;
-var dialogueY = camera_get_view_height(gameView) - 1 - (23 * global.cutscene) + dialogueYOffset;
+var dialogueY = 270 - 1 - (23 * global.cutscene) + dialogueYOffset;
+
 if (sprBackground[array] != -1)
 {
 	var xSpace = sprite_get_width(sprBackground[array]);
@@ -30,7 +31,7 @@ if (sprBackground[array] != -1)
 	hsp += .15;
 	if (hsp >= xSpace) hsp -= xSpace;
 	
-	gpu_set_blendenable(false)
+	gpu_set_blendenable(false);
 	gpu_set_colorwriteenable(false,false,false,true);
 	draw_set_alpha(0);
 	draw_rectangle(0,0,room_width,room_height,false);

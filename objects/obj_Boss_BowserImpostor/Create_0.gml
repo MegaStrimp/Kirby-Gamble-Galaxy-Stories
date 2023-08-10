@@ -26,6 +26,7 @@ sprDeath = spr_SMB_BowserImpostor_Death;
 #endregion
 
 #region Other Variables
+paletteIndex = spr_SMB_BowserImpostor_Palette_Normal;
 hp = 300;
 dmg = 1;
 points = 1000;

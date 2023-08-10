@@ -50,7 +50,7 @@ if ((!childPause) or ((global.cutscene) and (phase == 0)))
 		
 		if (spawnState >= 2)
 		{
-			//if ((current_time % 2) == 0)
+			//if ((global.currentTimePausable % 2) == 0)
 			//{
 				var par = instance_create_depth(x + irandom_range(-20,20),y + irandom_range(-20,20),depth,obj_Particle);
 				par.sprite_index = spr_Particle_BlackSmoke;
@@ -105,7 +105,7 @@ if ((!childPause) or ((global.cutscene) and (phase == 0)))
 			}
 			else if (attackState == 3)
 			{
-				if ((current_time % 20) == 0)
+				if ((global.currentTimePausable % 20) == 0)
 				{
 					if (audio_is_playing(snd_Spit)) audio_stop_sound(snd_Spit);
 					audio_play_sound(snd_Spit,0,false);
@@ -175,7 +175,7 @@ if ((!childPause) or ((global.cutscene) and (phase == 0)))
 			}
 			else if (attackState == 3)
 			{
-				//if ((current_time % 2) == 0)
+				//if ((global.currentTimePausable % 2) == 0)
 				//{
 					var par = instance_create_depth(x + irandom_range(-20,20),y + irandom_range(-20,20),depth,obj_Particle);
 					par.sprite_index = spr_Particle_BlackSmoke;

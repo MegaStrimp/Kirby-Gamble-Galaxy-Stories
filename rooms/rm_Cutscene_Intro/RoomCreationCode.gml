@@ -9,10 +9,10 @@ global.discordLargeImage = "greengreens_icon";
 
 global.roomCheckpoint = room;
 
-//Music
+//Camera
 
-if (!audio_is_playing(mus_Cutscene_Intro))
+if (instance_exists(obj_Camera))
 {
-	audio_stop_all();
-	scr_PlayMusic(true,false,mus_Cutscene_Intro,0,false);
+	obj_Camera.x = 100;
+	obj_Camera.y = 100;
 }

@@ -110,8 +110,8 @@ if ((parentPause) and (hurtStopTimer < 1))
 				}
 				
 				var deathObj = instance_create_depth(x,y - 12,depth,obj_Miniboss_Death);
-				deathObj.hsp = 2 * projectileHitKnockbackDir;
-				deathObj.vsp = -6;
+				deathObj.hsp = .5 * projectileHitKnockbackDir;
+				deathObj.vsp = -4;
 				deathObj.ownerIndex = object_index;
 				deathObj.paletteIndex = paletteIndex;
 				deathObj.points = points;
@@ -122,7 +122,7 @@ if ((parentPause) and (hurtStopTimer < 1))
 			{
 				for (var i = 0; i < 3; i++)
 				{
-					var particle = instance_create_depth(x,y,depth,obj_Particle);
+					var particle = instance_create_depth(x + bossDeathParOffsetX,y + bossDeathParOffsetY,depth,obj_Particle);
 					particle.followObject = false;
 					particle.followedObject = id;
 					particle.turnAroundObject = true;
@@ -142,14 +142,14 @@ if ((parentPause) and (hurtStopTimer < 1))
 				{
 					var parDirection = (45 * i);
 				
-					var par = instance_create_depth(x,y,depth - 1,obj_Particle);
+					var par = instance_create_depth(x + bossDeathParOffsetX,y + bossDeathParOffsetY,depth - 1,obj_Particle);
 					par.sprite_index = spr_SpitStar_Small;
 					par.image_index = 1;
 					par.imageSpeed = 0;
 					par.spdBuiltIn = 6;
-					par.fricSpd = .2;
+					par.fricSpd = .1;
 					par.direction = parDirection;
-					par.destroyTimer = 45;
+					par.destroyTimer = 90;
 					var parScaleDir = 1;
 					if ((par.direction > 90) and (par.direction <= 270))
 					{
@@ -529,9 +529,25 @@ if ((parentPause) and (hurtStopTimer < 1))
 		}
 		#endregion
 		
-		#region Destroy
-		if (!isBoss) instance_destroy();
-		#endregion
+		if (!isBoss)
+		{
+			#region Drop Point Stars
+			var targetId = id;
+			if (hasSpawner) targetId = spawner;
+			if ((!((ds_exists(global.collectibleTracker,ds_type_list)) and (ds_list_find_index(global.collectibleTracker,targetId)))) and ((playerLastHit != -1) and (instance_exists(playerLastHit))))
+			{
+				var spawnedItem = instance_create_depth(x,y,depth - 1,obj_PointStar);
+				spawnedItem.target = playerLastHit;
+				spawnedItem.followTarget = true;
+				
+				if (ds_exists(global.collectibleTracker,ds_type_list)) ds_list_add(global.collectibleTracker,targetId);
+			}
+			#endregion
+			
+			#region Destroy
+			instance_destroy();
+			#endregion
+		}
 	}
 	#endregion
 	
@@ -748,28 +764,12 @@ if ((parentPause) and (hurtStopTimer < 1))
 	#endregion
 	
 	#region Invincible Flash Timer
-	if (invincible)
+	if (invincibleFlashTimer > 0)
 	{
-		if (invincibleFlashTimer > 0)
-		{
-			invincibleFlashTimer -= 1;
-		}
-		else if (invincibleFlashTimer == 0)
-		{
-			if (invincibleFlash)
-			{
-				invincibleFlash = false;
-			}
-			else
-			{
-				invincibleFlash = true;
-			}
-			invincibleFlashTimer = invincibleFlashTimerMax;
-		}
+		invincibleFlashTimer -= 1;
 	}
-	else
+	else if (invincibleFlashTimer == 0)
 	{
-		invincibleFlash = false;
 		invincibleFlashTimer = -1;
 	}
 	#endregion

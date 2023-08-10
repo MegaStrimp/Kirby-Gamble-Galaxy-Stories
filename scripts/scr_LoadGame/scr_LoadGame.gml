@@ -114,8 +114,209 @@ function scr_LoadGame(argument0)
 	global.soundTestMenuFirstTime = ini_read_real("progression","soundTestMenuFirstTime",false);
 	global.galleryMenuFirstTime = ini_read_real("progression","galleryMenuFirstTime",false);
 	
-	global.shopGearCubeFirstTime = ini_read_real("shop","shopGearCubeFirstTime",true);
-	global.shopGearCubeNewItem = ini_read_real("shop","shopGearCubeNewItem",false);
+	global.shopGearCubeFirstTime = ini_read_real("progression","shopGearCubeFirstTime",true);
+	global.shopGearCubeNewItem = ini_read_real("progression","shopGearCubeNewItem",false);
+	
+	#region Stage Missions
+	#region Control
+	#endregion
+	
+	#region Green Greens
+	global.stageComplete_GreenGreens = ini_read_real("progression","stageComplete_GreenGreens",false);
+	
+	global.stageMission_GreenGreens[0] = ini_read_real("progression","stageMission_GreenGreens_0",false);
+	global.stageMission_GreenGreens[1] = ini_read_real("progression","stageMission_GreenGreens_1",false);
+	global.stageMission_GreenGreens[2] = ini_read_real("progression","stageMission_GreenGreens_2",false);
+	global.stageMission_GreenGreens[3] = ini_read_real("progression","stageMission_GreenGreens_3",false);
+	
+	global.stageCollectible_GreenGreens[0] = ini_read_real("progression","stageCollectible_GreenGreens_0",false);
+	global.stageCollectible_GreenGreens[1] = ini_read_real("progression","stageCollectible_GreenGreens_1",false);
+	global.stageCollectible_GreenGreens[2] = ini_read_real("progression","stageCollectible_GreenGreens_2",false);
+	global.stageCollectible_GreenGreens[3] = ini_read_real("progression","stageCollectible_GreenGreens_3",false);
+	#endregion
+	
+	#region Battleship Halberd
+	global.stageComplete_BattleshipHalberd = ini_read_real("progression","stageComplete_BattleshipHalberd",false);
+	
+	global.stageMission_BattleshipHalberd[0] = ini_read_real("progression","stageMission_BattleshipHalberd_0",false);
+	global.stageMission_BattleshipHalberd[1] = ini_read_real("progression","stageMission_BattleshipHalberd_1",false);
+	global.stageMission_BattleshipHalberd[2] = ini_read_real("progression","stageMission_BattleshipHalberd_2",false);
+	global.stageMission_BattleshipHalberd[3] = ini_read_real("progression","stageMission_BattleshipHalberd_3",false);
+	
+	global.stageCollectible_BattleshipHalberd[0] = ini_read_real("progression","stageCollectible_BattleshipHalberd_0",false);
+	global.stageCollectible_BattleshipHalberd[1] = ini_read_real("progression","stageCollectible_BattleshipHalberd_1",false);
+	global.stageCollectible_BattleshipHalberd[2] = ini_read_real("progression","stageCollectible_BattleshipHalberd_2",false);
+	global.stageCollectible_BattleshipHalberd[3] = ini_read_real("progression","stageCollectible_BattleshipHalberd_3",false);
+	#endregion
+	
+	#region Asteroid Fields
+	global.stageComplete_AsteroidFields = ini_read_real("progression","stageComplete_AsteroidFields",false);
+	
+	global.stageMission_AsteroidFields[0] = ini_read_real("progression","stageMission_AsteroidFields_0",false);
+	global.stageMission_AsteroidFields[1] = ini_read_real("progression","stageMission_AsteroidFields_1",false);
+	global.stageMission_AsteroidFields[2] = ini_read_real("progression","stageMission_AsteroidFields_2",false);
+	global.stageMission_AsteroidFields[3] = ini_read_real("progression","stageMission_AsteroidFields_3",false);
+	
+	global.stageCollectible_AsteroidFields[0] = ini_read_real("progression","stageCollectible_AsteroidFields_0",false);
+	global.stageCollectible_AsteroidFields[1] = ini_read_real("progression","stageCollectible_AsteroidFields_1",false);
+	global.stageCollectible_AsteroidFields[2] = ini_read_real("progression","stageCollectible_AsteroidFields_2",false);
+	global.stageCollectible_AsteroidFields[3] = ini_read_real("progression","stageCollectible_AsteroidFields_3",false);
+	#endregion
+	
+	#region Yolk Yard
+	global.stageComplete_YolkYard = ini_read_real("progression","stageComplete_YolkYard",false);
+	
+	global.stageMission_YolkYard[0] = ini_read_real("progression","stageMission_YolkYard_0",false);
+	global.stageMission_YolkYard[1] = ini_read_real("progression","stageMission_YolkYard_1",false);
+	global.stageMission_YolkYard[2] = ini_read_real("progression","stageMission_YolkYard_2",false);
+	global.stageMission_YolkYard[3] = ini_read_real("progression","stageMission_YolkYard_3",false);
+	
+	global.stageCollectible_YolkYard[0] = ini_read_real("progression","stageCollectible_YolkYard_0",false);
+	global.stageCollectible_YolkYard[1] = ini_read_real("progression","stageCollectible_YolkYard_1",false);
+	global.stageCollectible_YolkYard[2] = ini_read_real("progression","stageCollectible_YolkYard_2",false);
+	global.stageCollectible_YolkYard[3] = ini_read_real("progression","stageCollectible_YolkYard_3",false);
+	#endregion
+	
+	#region Grand Temple Avgo
+	global.stageComplete_GrandTempleAvgo = ini_read_real("progression","stageComplete_GrandTempleAvgo",false);
+	
+	global.stageMission_GrandTempleAvgo[0] = ini_read_real("progression","stageMission_GrandTempleAvgo_0",false);
+	global.stageMission_GrandTempleAvgo[1] = ini_read_real("progression","stageMission_GrandTempleAvgo_1",false);
+	global.stageMission_GrandTempleAvgo[2] = ini_read_real("progression","stageMission_GrandTempleAvgo_2",false);
+	global.stageMission_GrandTempleAvgo[3] = ini_read_real("progression","stageMission_GrandTempleAvgo_3",false);
+	
+	global.stageCollectible_GrandTempleAvgo[0] = ini_read_real("progression","stageCollectible_GrandTempleAvgo_0",false);
+	global.stageCollectible_GrandTempleAvgo[1] = ini_read_real("progression","stageCollectible_GrandTempleAvgo_1",false);
+	global.stageCollectible_GrandTempleAvgo[2] = ini_read_real("progression","stageCollectible_GrandTempleAvgo_2",false);
+	global.stageCollectible_GrandTempleAvgo[3] = ini_read_real("progression","stageCollectible_GrandTempleAvgo_3",false);
+	#endregion
+	
+	#region Floral Yolk Caves
+	global.stageComplete_FloralYolkCaves = ini_read_real("progression","stageComplete_FloralYolkCaves",false);
+	
+	global.stageMission_FloralYolkCaves[0] = ini_read_real("progression","stageMission_FloralYolkCaves_0",false);
+	global.stageMission_FloralYolkCaves[1] = ini_read_real("progression","stageMission_FloralYolkCaves_1",false);
+	global.stageMission_FloralYolkCaves[2] = ini_read_real("progression","stageMission_FloralYolkCaves_2",false);
+	global.stageMission_FloralYolkCaves[3] = ini_read_real("progression","stageMission_FloralYolkCaves_3",false);
+	
+	global.stageCollectible_FloralYolkCaves[0] = ini_read_real("progression","stageCollectible_FloralYolkCaves_0",false);
+	global.stageCollectible_FloralYolkCaves[1] = ini_read_real("progression","stageCollectible_FloralYolkCaves_1",false);
+	global.stageCollectible_FloralYolkCaves[2] = ini_read_real("progression","stageCollectible_FloralYolkCaves_2",false);
+	global.stageCollectible_FloralYolkCaves[3] = ini_read_real("progression","stageCollectible_FloralYolkCaves_3",false);
+	#endregion
+	
+	#region Storm The Fortress
+	global.stageComplete_StormTheFortress = ini_read_real("progression","stageComplete_StormTheFortress",false);
+	
+	global.stageMission_StormTheFortress[0] = ini_read_real("progression","stageMission_StormTheFortress_0",false);
+	global.stageMission_StormTheFortress[1] = ini_read_real("progression","stageMission_StormTheFortress_1",false);
+	global.stageMission_StormTheFortress[2] = ini_read_real("progression","stageMission_StormTheFortress_2",false);
+	global.stageMission_StormTheFortress[3] = ini_read_real("progression","stageMission_StormTheFortress_3",false);
+	
+	global.stageCollectible_StormTheFortress[0] = ini_read_real("progression","stageCollectible_StormTheFortress_0",false);
+	global.stageCollectible_StormTheFortress[1] = ini_read_real("progression","stageCollectible_StormTheFortress_1",false);
+	global.stageCollectible_StormTheFortress[2] = ini_read_real("progression","stageCollectible_StormTheFortress_2",false);
+	global.stageCollectible_StormTheFortress[3] = ini_read_real("progression","stageCollectible_StormTheFortress_3",false);
+	#endregion
+	
+	#region Central Lab
+	global.stageComplete_CentralLab = ini_read_real("progression","stageComplete_CentralLab",false);
+	
+	global.stageMission_CentralLab[0] = ini_read_real("progression","stageMission_CentralLab_0",false);
+	global.stageMission_CentralLab[1] = ini_read_real("progression","stageMission_CentralLab_1",false);
+	global.stageMission_CentralLab[2] = ini_read_real("progression","stageMission_CentralLab_2",false);
+	global.stageMission_CentralLab[3] = ini_read_real("progression","stageMission_CentralLab_3",false);
+	
+	global.stageCollectible_CentralLab[0] = ini_read_real("progression","stageCollectible_CentralLab_0",false);
+	global.stageCollectible_CentralLab[1] = ini_read_real("progression","stageCollectible_CentralLab_1",false);
+	global.stageCollectible_CentralLab[2] = ini_read_real("progression","stageCollectible_CentralLab_2",false);
+	global.stageCollectible_CentralLab[3] = ini_read_real("progression","stageCollectible_CentralLab_3",false);
+	#endregion
+	
+	#region Path to the Nasty Machine
+	global.stageComplete_PathToTheNastyMachine = ini_read_real("progression","stageComplete_PathToTheNastyMachine",false);
+	
+	global.stageMission_PathToTheNastyMachine[0] = ini_read_real("progression","stageMission_PathToTheNastyMachine_0",false);
+	global.stageMission_PathToTheNastyMachine[1] = ini_read_real("progression","stageMission_PathToTheNastyMachine_1",false);
+	global.stageMission_PathToTheNastyMachine[2] = ini_read_real("progression","stageMission_PathToTheNastyMachine_2",false);
+	global.stageMission_PathToTheNastyMachine[3] = ini_read_real("progression","stageMission_PathToTheNastyMachine_3",false);
+	
+	global.stageCollectible_PathToTheNastyMachine[0] = ini_read_real("progression","stageCollectible_PathToTheNastyMachine_0",false);
+	global.stageCollectible_PathToTheNastyMachine[1] = ini_read_real("progression","stageCollectible_PathToTheNastyMachine_1",false);
+	global.stageCollectible_PathToTheNastyMachine[2] = ini_read_real("progression","stageCollectible_PathToTheNastyMachine_2",false);
+	global.stageCollectible_PathToTheNastyMachine[3] = ini_read_real("progression","stageCollectible_PathToTheNastyMachine_3",false);
+	#endregion
+	
+	#region Sandshell Beach
+	global.stageComplete_SandshellBeach = ini_read_real("progression","stageComplete_SandshellBeach",false);
+	
+	global.stageMission_SandshellBeach[0] = ini_read_real("progression","stageMission_SandshellBeach_0",false);
+	global.stageMission_SandshellBeach[1] = ini_read_real("progression","stageMission_SandshellBeach_1",false);
+	global.stageMission_SandshellBeach[2] = ini_read_real("progression","stageMission_SandshellBeach_2",false);
+	global.stageMission_SandshellBeach[3] = ini_read_real("progression","stageMission_SandshellBeach_3",false);
+	
+	global.stageCollectible_SandshellBeach[0] = ini_read_real("progression","stageCollectible_SandshellBeach_0",false);
+	global.stageCollectible_SandshellBeach[1] = ini_read_real("progression","stageCollectible_SandshellBeach_1",false);
+	global.stageCollectible_SandshellBeach[2] = ini_read_real("progression","stageCollectible_SandshellBeach_2",false);
+	global.stageCollectible_SandshellBeach[3] = ini_read_real("progression","stageCollectible_SandshellBeach_3",false);
+	#endregion
+	
+	#region Up The Straw
+	global.stageComplete_UpTheStraw = ini_read_real("progression","stageComplete_UpTheStraw",false);
+	
+	global.stageMission_UpTheStraw[0] = ini_read_real("progression","stageMission_UpTheStraw_0",false);
+	global.stageMission_UpTheStraw[1] = ini_read_real("progression","stageMission_UpTheStraw_1",false);
+	global.stageMission_UpTheStraw[2] = ini_read_real("progression","stageMission_UpTheStraw_2",false);
+	global.stageMission_UpTheStraw[3] = ini_read_real("progression","stageMission_UpTheStraw_3",false);
+	
+	global.stageCollectible_UpTheStraw[0] = ini_read_real("progression","stageCollectible_UpTheStraw_0",false);
+	global.stageCollectible_UpTheStraw[1] = ini_read_real("progression","stageCollectible_UpTheStraw_1",false);
+	global.stageCollectible_UpTheStraw[2] = ini_read_real("progression","stageCollectible_UpTheStraw_2",false);
+	global.stageCollectible_UpTheStraw[3] = ini_read_real("progression","stageCollectible_UpTheStraw_3",false);
+	#endregion
+	
+	#region Sacred Aquatia
+	global.stageComplete_SacredAquatia = ini_read_real("progression","stageComplete_SacredAquatia",false);
+	
+	global.stageMission_SacredAquatia[0] = ini_read_real("progression","stageMission_SacredAquatia_0",false);
+	global.stageMission_SacredAquatia[1] = ini_read_real("progression","stageMission_SacredAquatia_1",false);
+	global.stageMission_SacredAquatia[2] = ini_read_real("progression","stageMission_SacredAquatia_2",false);
+	global.stageMission_SacredAquatia[3] = ini_read_real("progression","stageMission_SacredAquatia_3",false);
+	
+	global.stageCollectible_SacredAquatia[0] = ini_read_real("progression","stageCollectible_SacredAquatia_0",false);
+	global.stageCollectible_SacredAquatia[1] = ini_read_real("progression","stageCollectible_SacredAquatia_1",false);
+	global.stageCollectible_SacredAquatia[2] = ini_read_real("progression","stageCollectible_SacredAquatia_2",false);
+	global.stageCollectible_SacredAquatia[3] = ini_read_real("progression","stageCollectible_SacredAquatia_3",false);
+	#endregion
+	
+	#region Cosmic Palace
+	global.stageComplete_CosmicPalace = ini_read_real("progression","stageComplete_CosmicPalace",false);
+	
+	global.stageMission_CosmicPalace[0] = ini_read_real("progression","stageMission_CosmicPalace_0",false);
+	global.stageMission_CosmicPalace[1] = ini_read_real("progression","stageMission_CosmicPalace_1",false);
+	global.stageMission_CosmicPalace[2] = ini_read_real("progression","stageMission_CosmicPalace_2",false);
+	global.stageMission_CosmicPalace[3] = ini_read_real("progression","stageMission_CosmicPalace_3",false);
+	
+	global.stageCollectible_CosmicPalace[0] = ini_read_real("progression","stageCollectible_CosmicPalace_0",false);
+	global.stageCollectible_CosmicPalace[1] = ini_read_real("progression","stageCollectible_CosmicPalace_1",false);
+	global.stageCollectible_CosmicPalace[2] = ini_read_real("progression","stageCollectible_CosmicPalace_2",false);
+	global.stageCollectible_CosmicPalace[3] = ini_read_real("progression","stageCollectible_CosmicPalace_3",false);
+	#endregion
+	
+	#region Popstar Moon
+	global.stageComplete_PopstarMoon = ini_read_real("progression","stageComplete_PopstarMoon",false);
+	
+	global.stageMission_PopstarMoon[0] = ini_read_real("progression","stageMission_PopstarMoon_0",false);
+	global.stageMission_PopstarMoon[1] = ini_read_real("progression","stageMission_PopstarMoon_1",false);
+	global.stageMission_PopstarMoon[2] = ini_read_real("progression","stageMission_PopstarMoon_2",false);
+	global.stageMission_PopstarMoon[3] = ini_read_real("progression","stageMission_PopstarMoon_3",false);
+	
+	global.stageCollectible_PopstarMoon[0] = ini_read_real("progression","stageCollectible_PopstarMoon_0",false);
+	global.stageCollectible_PopstarMoon[1] = ini_read_real("progression","stageCollectible_PopstarMoon_1",false);
+	global.stageCollectible_PopstarMoon[2] = ini_read_real("progression","stageCollectible_PopstarMoon_2",false);
+	global.stageCollectible_PopstarMoon[3] = ini_read_real("progression","stageCollectible_PopstarMoon_3",false);
+	#endregion
+	#endregion
 	
 	global.collectionMenuUnlocked = ini_read_real("unlocks","collectionMenuUnlocked",false);
 	global.collectionMenuUnlockedFirstTime = ini_read_real("unlocks","collectionMenuUnlockedFirstTime",false);
@@ -350,8 +551,14 @@ function scr_LoadGame(argument0)
 	#endregion
 	
 	#region Suplex
+	global.hatTypeSuplexBuggzyUnlocked = ini_read_real("unlocks","hatTypeSuplexBuggzyUnlocked",false);
+	
 	#region KSSU
 	global.hatPaletteSuplexKSSUBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteSuplexKSSUBitcrushedUnlocked",false);
+	#endregion
+	
+	#region KSSU
+	global.hatPaletteSuplexBuggzyBitcrushedUnlocked = ini_read_real("unlocks","hatPaletteSuplexBuggzyBitcrushedUnlocked",false);
 	#endregion
 	#endregion
 	
@@ -628,6 +835,7 @@ function scr_LoadGame(argument0)
 	global.hatTypeScanP1 = ini_read_real("playerCustomization","hatTypeScanP1",abilityHatSkins.scan_kssu);
 	global.hatTypeCrashP1 = ini_read_real("playerCustomization","hatTypeCrashP1",abilityHatSkins.crash_kssu);
 	global.hatTypeMicP1 = ini_read_real("playerCustomization","hatTypeMicP1",abilityHatSkins.mic_kssu);
+	global.hatTypeSuplexP1 = abilityHatSkins.suplex_buggzy;
 	
 	global.hatTypeCutterP2 = ini_read_real("playerCustomization","hatTypeCutterP2",abilityHatSkins.cutter_kssu);
 	global.hatTypeBeamP2 = ini_read_real("playerCustomization","hatTypeBeamP2",abilityHatSkins.beam_kssu);
@@ -737,6 +945,7 @@ function scr_LoadGame(argument0)
 	global.hatPaletteArtistModernP1 = ini_read_real("playerCustomization","hatPaletteArtistModernP1",0);
 	global.hatPaletteFighterKSSUP1 = ini_read_real("playerCustomization","hatPaletteFighterKSSUP1",abilityHatPaints.fighter_kssu_crimsonChampion);
 	global.hatPaletteSuplexKSSUP1 = ini_read_real("playerCustomization","hatPaletteSuplexKSSUP1",abilityHatPaints.suplex_kssu_blueBanner);
+	global.hatPaletteSuplexBuggzyP1 = ini_read_real("playerCustomization","hatPaletteSuplexBuggzyP1",abilityHatPaints.suplex_buggzy_beetleViolet);
 	global.hatPaletteWingKSSUP1 = ini_read_real("playerCustomization","hatPaletteWingKSSUP1",abilityHatPaints.wing_kssu_rainbowFlight);
 	global.hatPaletteJetKSSUP1 = ini_read_real("playerCustomization","hatPaletteJetKSSUP1",abilityHatPaints.jet_kssu_speedMachine);
 	global.hatPaletteSwordKSSUP1 = ini_read_real("playerCustomization","hatPaletteSwordKSSUP1",abilityHatPaints.sword_kssu_slicingGreen);
@@ -772,6 +981,7 @@ function scr_LoadGame(argument0)
 	global.hatPaletteArtistModernP2 = ini_read_real("playerCustomization","hatPaletteArtistModernP2",0);
 	global.hatPaletteFighterKSSUP2 = ini_read_real("playerCustomization","hatPaletteFighterKSSUP2",abilityHatPaints.fighter_kssu_crimsonChampion);
 	global.hatPaletteSuplexKSSUP2 = ini_read_real("playerCustomization","hatPaletteSuplexKSSUP2",abilityHatPaints.suplex_kssu_blueBanner);
+	global.hatPaletteSuplexBuggzyP2 = ini_read_real("playerCustomization","hatPaletteSuplexBuggzyP2",abilityHatPaints.suplex_buggzy_beetleViolet);
 	global.hatPaletteWingKSSUP2 = ini_read_real("playerCustomization","hatPaletteWingKSSUP2",abilityHatPaints.wing_kssu_rainbowFlight);
 	global.hatPaletteJetKSSUP2 = ini_read_real("playerCustomization","hatPaletteJetKSSUP2",abilityHatPaints.jet_kssu_speedMachine);
 	global.hatPaletteSwordKSSUP2 = ini_read_real("playerCustomization","hatPaletteSwordKSSUP2",abilityHatPaints.sword_kssu_slicingGreen);
@@ -807,6 +1017,7 @@ function scr_LoadGame(argument0)
 	global.hatPaletteArtistModernP3 = ini_read_real("playerCustomization","hatPaletteArtistModernP3",0);
 	global.hatPaletteFighterKSSUP3 = ini_read_real("playerCustomization","hatPaletteFighterKSSUP3",abilityHatPaints.fighter_kssu_crimsonChampion);
 	global.hatPaletteSuplexKSSUP3 = ini_read_real("playerCustomization","hatPaletteSuplexKSSUP3",abilityHatPaints.suplex_kssu_blueBanner);
+	global.hatPaletteSuplexBuggzyP3 = ini_read_real("playerCustomization","hatPaletteSuplexBuggzyP3",abilityHatPaints.suplex_buggzy_beetleViolet);
 	global.hatPaletteWingKSSUP3 = ini_read_real("playerCustomization","hatPaletteWingKSSUP3",abilityHatPaints.wing_kssu_rainbowFlight);
 	global.hatPaletteJetKSSUP3 = ini_read_real("playerCustomization","hatPaletteJetKSSUP3",abilityHatPaints.jet_kssu_speedMachine);
 	global.hatPaletteSwordKSSUP3 = ini_read_real("playerCustomization","hatPaletteSwordKSSUP3",abilityHatPaints.sword_kssu_slicingGreen);
@@ -842,6 +1053,7 @@ function scr_LoadGame(argument0)
 	global.hatPaletteArtistModernP4 = ini_read_real("playerCustomization","hatPaletteArtistModernP4",0);
 	global.hatPaletteFighterKSSUP4 = ini_read_real("playerCustomization","hatPaletteFighterKSSUP4",abilityHatPaints.fighter_kssu_crimsonChampion);
 	global.hatPaletteSuplexKSSUP4 = ini_read_real("playerCustomization","hatPaletteSuplexKSSUP4",abilityHatPaints.suplex_kssu_blueBanner);
+	global.hatPaletteSuplexBuggzyP4 = ini_read_real("playerCustomization","hatPaletteSuplexBuggzyP4",abilityHatPaints.suplex_buggzy_beetleViolet);
 	global.hatPaletteWingKSSUP4 = ini_read_real("playerCustomization","hatPaletteWingKSSUP4",abilityHatPaints.wing_kssu_rainbowFlight);
 	global.hatPaletteJetKSSUP4 = ini_read_real("playerCustomization","hatPaletteJetKSSUP4",abilityHatPaints.jet_kssu_speedMachine);
 	global.hatPaletteSwordKSSUP4 = ini_read_real("playerCustomization","hatPaletteSwordKSSUP4",abilityHatPaints.sword_kssu_slicingGreen);

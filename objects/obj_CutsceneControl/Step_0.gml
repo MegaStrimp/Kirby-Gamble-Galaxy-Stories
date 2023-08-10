@@ -101,7 +101,7 @@ if (!global.pause)
 				dialogue.sprTextbox[array] = -1;
 				dialogue.sprBackground[array] = -1;
 				dialogue.sprPortrait[array] = -1;
-				dialogue.textSound[array] = snd_ButtonYes;
+				dialogue.textSound[array] = snd_TextGamble;
 				dialogue.hasResetTimer = true;
 				dialogue.resetTimerMax[array] = 210;
 				dialogue.resetTimer = dialogue.resetTimerMax[array];
@@ -110,7 +110,7 @@ if (!global.pause)
 				dialogue.sprTextbox[array] = -1;
 				dialogue.sprBackground[array] = -1;
 				dialogue.sprPortrait[array] = -1;
-				dialogue.textSound[array] = snd_ButtonYes;
+				dialogue.textSound[array] = snd_TextGamble;
 				dialogue.hasResetTimer = true;
 				dialogue.resetTimerMax[array] = 210;
 				array += 1;
@@ -118,7 +118,7 @@ if (!global.pause)
 				dialogue.sprTextbox[array] = -1;
 				dialogue.sprBackground[array] = -1;
 				dialogue.sprPortrait[array] = -1;
-				dialogue.textSound[array] = snd_ButtonYes;
+				dialogue.textSound[array] = snd_TextGamble;
 				dialogue.hasResetTimer = true;
 				dialogue.resetTimerMax[array] = 270;
 				array += 1;
@@ -126,7 +126,7 @@ if (!global.pause)
 				dialogue.sprTextbox[array] = -1;
 				dialogue.sprBackground[array] = -1;
 				dialogue.sprPortrait[array] = -1;
-				dialogue.textSound[array] = snd_ButtonYes;
+				dialogue.textSound[array] = snd_TextGamble;
 				dialogue.hasResetTimer = true;
 				dialogue.resetTimerMax[array] = -1;
 				destroy = true;

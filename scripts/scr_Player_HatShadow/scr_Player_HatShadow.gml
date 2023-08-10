@@ -3863,6 +3863,155 @@ function scr_Player_HatShadow(argument0,argument1)
 				case abilityHatSkins.suplex_kssu:
 				hatShadowIndex = -1;
 				break;
+				
+				case abilityHatSkins.suplex_buggzy:
+				switch (sprite_index)
+				{
+					case sprIdle:
+					case sprIdleBlink:
+					case sprIdleNormalSlopeL:
+					case sprIdleNormalSlopeLBlink:
+					case sprIdleNormalSlopeR:
+					case sprIdleNormalSlopeRBlink:
+					case sprIdleSteepSlopeL:
+					case sprIdleSteepSlopeLBlink:
+					case sprIdleSteepSlopeR:
+					case sprIdleSteepSlopeRBlink:
+					case sprItemCarryLightIdle:
+					case sprItemCarryLightIdleNormalSlopeL:
+					case sprItemCarryLightIdleNormalSlopeLBlink:
+					case sprItemCarryLightIdleNormalSlopeR:
+					case sprItemCarryLightIdleNormalSlopeRBlink:
+					case sprItemCarryLightIdleSteepSlopeL:
+					case sprItemCarryLightIdleSteepSlopeLBlink:
+					case sprItemCarryLightIdleSteepSlopeR:
+					case sprItemCarryLightIdleSteepSlopeRBlink:
+					case sprItemCarryHeavyIdle:
+					case sprItemCarryHeavyIdleSlopeL:
+					case sprItemCarryHeavyIdleSlopeR:
+					case sprItemCarryThrow:
+					hatShadowIndex = spr_Kirby_HatShadow_Fighter_Buggzy_Idle;
+					break;
+					
+					/*case sprWalk:
+					case sprItemCarryLightWalk:
+					case sprItemCarryHeavyWalk:
+					hatShadowIndex = spr_Kirby_HatShadow_Fighter_KSSU_Walk;
+					break;
+					
+					case sprRun:
+					hatShadowIndex = spr_Kirby_HatShadow_Fighter_KSSU_Run;
+					break;
+					
+					case sprRunTurn:
+					hatShadowIndex = spr_Kirby_HatShadow_Fighter_KSSU_RunTurn;
+					break;
+					
+					case sprJump:
+					hatShadowIndex = spr_Kirby_HatShadow_Fighter_KSSU_Jump;
+					break;
+					
+					case sprRoll:
+					hatShadowIndex = spr_Kirby_HatShadow_Fighter_KSSU_Roll;
+					break;
+					
+					case sprRollDuckReady:
+					hatShadowIndex = spr_Kirby_HatShadow_Fighter_KSSU_Roll;
+					break;
+					
+					case sprBackflip:
+					hatShadowIndex = spr_Kirby_HatShadow_Fighter_KSSU_Backflip;
+					break;
+					
+					case sprFall:
+					hatShadowIndex = spr_Kirby_HatShadow_Fighter_KSSU_Fall;
+					break;
+					
+					case sprDuck:
+					case sprDuckBlink:
+					case sprDuckNormalSlopeL:
+					case sprDuckNormalSlopeLBlink:
+					case sprDuckNormalSlopeR:
+					case sprDuckNormalSlopeRBlink:
+					case sprDuckSteepSlopeL:
+					case sprDuckSteepSlopeLBlink:
+					case sprDuckSteepSlopeR:
+					case sprDuckSteepSlopeRBlink:
+					case sprItemCarryLightDuck:
+					case sprItemCarryLightDuckBlink:
+					case sprItemCarryLightDuckNormalSlopeL:
+					case sprItemCarryLightDuckNormalSlopeLBlink:
+					case sprItemCarryLightDuckNormalSlopeR:
+					case sprItemCarryLightDuckNormalSlopeRBlink:
+					case sprItemCarryLightDuckSteepSlopeL:
+					case sprItemCarryLightDuckSteepSlopeLBlink:
+					case sprItemCarryLightDuckSteepSlopeR:
+					case sprItemCarryLightDuckSteepSlopeRBlink:
+					case sprItemCarryHeavyDuck:
+					hatShadowIndex = spr_Kirby_HatShadow_Fighter_KSSU_Duck;
+					break;
+					
+					case sprSlide:
+					hatShadowIndex = spr_Kirby_HatShadow_Fighter_KSSU_Slide;
+					break;
+					
+					case sprSlideEnd:
+					hatShadowIndex = spr_Kirby_HatShadow_Fighter_KSSU_SlideEnd;
+					break;
+					
+					case sprFloatReady:
+					case sprItemCarryLightFloatReady:
+					hatShadowIndex = spr_Kirby_HatShadow_Fighter_KSSU_FloatReady;
+					break;
+					
+					case sprFloat:
+					case sprItemCarryLightFloat:
+					hatShadowIndex = spr_Kirby_HatShadow_Fighter_KSSU_Float;
+					break;
+					
+					case sprFlap:
+					case sprItemCarryLightFlap:
+					hatShadowIndex = spr_Kirby_HatShadow_Fighter_KSSU_Flap;
+					break;
+					
+					case sprFloatSpit:
+					case sprItemCarryLightFloatSpit:
+					hatShadowIndex = spr_Kirby_HatShadow_Fighter_KSSU_FloatSpit;
+					break;
+					
+					case sprFloatHurt:
+					hatShadowIndex = spr_Kirby_HatShadow_Fighter_KSSU_FloatHurt;
+					break;
+					
+					case sprEnter:
+					hatShadowIndex = spr_Kirby_HatShadow_Fighter_KSSU_Enter;
+					break;
+					
+					case sprClimbUp:
+					hatShadowIndex = spr_Kirby_HatShadow_Fighter_KSSU_ClimbUp;
+					break;
+					
+					case sprClimbDown:
+					hatShadowIndex = spr_Kirby_HatShadow_Fighter_KSSU_ClimbDown;
+					break;
+					
+					case sprAbilityChange:
+					hatShadowIndex = spr_Kirby_HatShadow_Fighter_KSSU_AbilityChange;
+					break;
+					
+					case sprGuard:
+					hatShadowIndex = spr_Kirby_HatShadow_Fighter_KSSU_Guard;
+					break;
+					
+					case sprGuardSlope:
+					hatShadowIndex = spr_Kirby_HatShadow_Fighter_KSSU_Guard_Slope;
+					break;
+					
+					case sprHurt:
+					hatShadowIndex = spr_Kirby_HatShadow_Fighter_KSSU_Hurt;
+					break;*/
+				}
+				break;
 			}
 			break;
 			

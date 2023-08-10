@@ -37,6 +37,9 @@ function scr_Player_ExecuteAttack_BeamGrab(argument0)
 	#region Grab Projectile
 	grabObj = instance_create_depth(x + (16 * dir),y - 8,depth - 1,obj_Projectile_GrabEnemy);
 	grabObj.owner = id;
+	grabObj.followOwner = true;
+	grabObj.followOffsetX = 16 * dir;
+	grabObj.followOffsetY = -8;
 	grabObj.abilityType = playerAbilities.beam;
 	grabObj.dirX = 1;
 	grabObj.dmg = kirby_BeamGrab_Damage;

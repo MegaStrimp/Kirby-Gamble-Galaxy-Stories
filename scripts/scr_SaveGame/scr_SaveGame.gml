@@ -115,8 +115,209 @@ function scr_SaveGame(argument0)
 	if (global.soundTestMenuFirstTime != false) ini_write_real("progression","soundTestMenuFirstTime",global.soundTestMenuFirstTime);
 	if (global.galleryMenuFirstTime != false) ini_write_real("progression","galleryMenuFirstTime",global.galleryMenuFirstTime);
 	
-	if (global.shopGearCubeFirstTime != true) ini_write_real("shop","shopGearCubeFirstTime",global.shopGearCubeFirstTime);
-	if (global.shopGearCubeNewItem != false) ini_write_real("shop","shopGearCubeNewItem",global.shopGearCubeNewItem);
+	if (global.shopGearCubeFirstTime != true) ini_write_real("progression","shopGearCubeFirstTime",global.shopGearCubeFirstTime);
+	if (global.shopGearCubeNewItem != false) ini_write_real("progression","shopGearCubeNewItem",global.shopGearCubeNewItem);
+	
+	#region Stage Missions
+	#region Control
+	#endregion
+	
+	#region Green Greens
+	if (global.stageComplete_GreenGreens != false) ini_write_real("progression","stageComplete_GreenGreens",global.stageComplete_GreenGreens);
+	
+	if (global.stageMission_GreenGreens[0] != false) ini_write_real("progression","stageMission_GreenGreens_0",global.stageMission_GreenGreens[0]);
+	if (global.stageMission_GreenGreens[1] != false) ini_write_real("progression","stageMission_GreenGreens_1",global.stageMission_GreenGreens[1]);
+	if (global.stageMission_GreenGreens[2] != false) ini_write_real("progression","stageMission_GreenGreens_2",global.stageMission_GreenGreens[2]);
+	if (global.stageMission_GreenGreens[3] != false) ini_write_real("progression","stageMission_GreenGreens_3",global.stageMission_GreenGreens[3]);
+	
+	if (global.stageCollectible_GreenGreens[0] != false) ini_write_real("progression","stageCollectible_GreenGreens_0",global.stageCollectible_GreenGreens[0]);
+	if (global.stageCollectible_GreenGreens[1] != false) ini_write_real("progression","stageCollectible_GreenGreens_1",global.stageCollectible_GreenGreens[1]);
+	if (global.stageCollectible_GreenGreens[2] != false) ini_write_real("progression","stageCollectible_GreenGreens_2",global.stageCollectible_GreenGreens[2]);
+	if (global.stageCollectible_GreenGreens[3] != false) ini_write_real("progression","stageCollectible_GreenGreens_3",global.stageCollectible_GreenGreens[3]);
+	#endregion
+	
+	#region Battleship Halberd
+	if (global.stageComplete_BattleshipHalberd != false) ini_write_real("progression","stageComplete_BattleshipHalberd",global.stageComplete_BattleshipHalberd);
+	
+	if (global.stageMission_BattleshipHalberd[0] != false) ini_write_real("progression","stageMission_BattleshipHalberd_0",global.stageMission_BattleshipHalberd[0]);
+	if (global.stageMission_BattleshipHalberd[1] != false) ini_write_real("progression","stageMission_BattleshipHalberd_1",global.stageMission_BattleshipHalberd[1]);
+	if (global.stageMission_BattleshipHalberd[2] != false) ini_write_real("progression","stageMission_BattleshipHalberd_2",global.stageMission_BattleshipHalberd[2]);
+	if (global.stageMission_BattleshipHalberd[3] != false) ini_write_real("progression","stageMission_BattleshipHalberd_3",global.stageMission_BattleshipHalberd[3]);
+	
+	if (global.stageCollectible_BattleshipHalberd[0] != false) ini_write_real("progression","stageCollectible_BattleshipHalberd_0",global.stageCollectible_BattleshipHalberd[0]);
+	if (global.stageCollectible_BattleshipHalberd[1] != false) ini_write_real("progression","stageCollectible_BattleshipHalberd_1",global.stageCollectible_BattleshipHalberd[1]);
+	if (global.stageCollectible_BattleshipHalberd[2] != false) ini_write_real("progression","stageCollectible_BattleshipHalberd_2",global.stageCollectible_BattleshipHalberd[2]);
+	if (global.stageCollectible_BattleshipHalberd[3] != false) ini_write_real("progression","stageCollectible_BattleshipHalberd_3",global.stageCollectible_BattleshipHalberd[3]);
+	#endregion
+	
+	#region Asteroid Fields
+	if (global.stageComplete_AsteroidFields != false) ini_write_real("progression","stageComplete_AsteroidFields",global.stageComplete_AsteroidFields);
+	
+	if (global.stageMission_AsteroidFields[0] != false) ini_write_real("progression","stageMission_AsteroidFields_0",global.stageMission_AsteroidFields[0]);
+	if (global.stageMission_AsteroidFields[1] != false) ini_write_real("progression","stageMission_AsteroidFields_1",global.stageMission_AsteroidFields[1]);
+	if (global.stageMission_AsteroidFields[2] != false) ini_write_real("progression","stageMission_AsteroidFields_2",global.stageMission_AsteroidFields[2]);
+	if (global.stageMission_AsteroidFields[3] != false) ini_write_real("progression","stageMission_AsteroidFields_3",global.stageMission_AsteroidFields[3]);
+	
+	if (global.stageCollectible_AsteroidFields[0] != false) ini_write_real("progression","stageCollectible_AsteroidFields_0",global.stageCollectible_AsteroidFields[0]);
+	if (global.stageCollectible_AsteroidFields[1] != false) ini_write_real("progression","stageCollectible_AsteroidFields_1",global.stageCollectible_AsteroidFields[1]);
+	if (global.stageCollectible_AsteroidFields[2] != false) ini_write_real("progression","stageCollectible_AsteroidFields_2",global.stageCollectible_AsteroidFields[2]);
+	if (global.stageCollectible_AsteroidFields[3] != false) ini_write_real("progression","stageCollectible_AsteroidFields_3",global.stageCollectible_AsteroidFields[3]);
+	#endregion
+	
+	#region Yolk Yard
+	if (global.stageComplete_YolkYard != false) ini_write_real("progression","stageComplete_YolkYard",global.stageComplete_YolkYard);
+	
+	if (global.stageMission_YolkYard[0] != false) ini_write_real("progression","stageMission_YolkYard_0",global.stageMission_YolkYard[0]);
+	if (global.stageMission_YolkYard[1] != false) ini_write_real("progression","stageMission_YolkYard_1",global.stageMission_YolkYard[1]);
+	if (global.stageMission_YolkYard[2] != false) ini_write_real("progression","stageMission_YolkYard_2",global.stageMission_YolkYard[2]);
+	if (global.stageMission_YolkYard[3] != false) ini_write_real("progression","stageMission_YolkYard_3",global.stageMission_YolkYard[3]);
+	
+	if (global.stageCollectible_YolkYard[0] != false) ini_write_real("progression","stageCollectible_YolkYard_0",global.stageCollectible_YolkYard[0]);
+	if (global.stageCollectible_YolkYard[1] != false) ini_write_real("progression","stageCollectible_YolkYard_1",global.stageCollectible_YolkYard[1]);
+	if (global.stageCollectible_YolkYard[2] != false) ini_write_real("progression","stageCollectible_YolkYard_2",global.stageCollectible_YolkYard[2]);
+	if (global.stageCollectible_YolkYard[3] != false) ini_write_real("progression","stageCollectible_YolkYard_3",global.stageCollectible_YolkYard[3]);
+	#endregion
+	
+	#region Grand Temple Avgo
+	if (global.stageComplete_GrandTempleAvgo != false) ini_write_real("progression","stageComplete_GrandTempleAvgo",global.stageComplete_GrandTempleAvgo);
+	
+	if (global.stageMission_GrandTempleAvgo[0] != false) ini_write_real("progression","stageMission_GrandTempleAvgo_0",global.stageMission_GrandTempleAvgo[0]);
+	if (global.stageMission_GrandTempleAvgo[1] != false) ini_write_real("progression","stageMission_GrandTempleAvgo_1",global.stageMission_GrandTempleAvgo[1]);
+	if (global.stageMission_GrandTempleAvgo[2] != false) ini_write_real("progression","stageMission_GrandTempleAvgo_2",global.stageMission_GrandTempleAvgo[2]);
+	if (global.stageMission_GrandTempleAvgo[3] != false) ini_write_real("progression","stageMission_GrandTempleAvgo_3",global.stageMission_GrandTempleAvgo[3]);
+	
+	if (global.stageCollectible_GrandTempleAvgo[0] != false) ini_write_real("progression","stageCollectible_GrandTempleAvgo_0",global.stageCollectible_GrandTempleAvgo[0]);
+	if (global.stageCollectible_GrandTempleAvgo[1] != false) ini_write_real("progression","stageCollectible_GrandTempleAvgo_1",global.stageCollectible_GrandTempleAvgo[1]);
+	if (global.stageCollectible_GrandTempleAvgo[2] != false) ini_write_real("progression","stageCollectible_GrandTempleAvgo_2",global.stageCollectible_GrandTempleAvgo[2]);
+	if (global.stageCollectible_GrandTempleAvgo[3] != false) ini_write_real("progression","stageCollectible_GrandTempleAvgo_3",global.stageCollectible_GrandTempleAvgo[3]);
+	#endregion
+	
+	#region Floral Yolk Caves
+	if (global.stageComplete_FloralYolkCaves != false) ini_write_real("progression","stageComplete_FloralYolkCaves",global.stageComplete_FloralYolkCaves);
+	
+	if (global.stageMission_FloralYolkCaves[0] != false) ini_write_real("progression","stageMission_FloralYolkCaves_0",global.stageMission_FloralYolkCaves[0]);
+	if (global.stageMission_FloralYolkCaves[1] != false) ini_write_real("progression","stageMission_FloralYolkCaves_1",global.stageMission_FloralYolkCaves[1]);
+	if (global.stageMission_FloralYolkCaves[2] != false) ini_write_real("progression","stageMission_FloralYolkCaves_2",global.stageMission_FloralYolkCaves[2]);
+	if (global.stageMission_FloralYolkCaves[3] != false) ini_write_real("progression","stageMission_FloralYolkCaves_3",global.stageMission_FloralYolkCaves[3]);
+	
+	if (global.stageCollectible_FloralYolkCaves[0] != false) ini_write_real("progression","stageCollectible_FloralYolkCaves_0",global.stageCollectible_FloralYolkCaves[0]);
+	if (global.stageCollectible_FloralYolkCaves[1] != false) ini_write_real("progression","stageCollectible_FloralYolkCaves_1",global.stageCollectible_FloralYolkCaves[1]);
+	if (global.stageCollectible_FloralYolkCaves[2] != false) ini_write_real("progression","stageCollectible_FloralYolkCaves_2",global.stageCollectible_FloralYolkCaves[2]);
+	if (global.stageCollectible_FloralYolkCaves[3] != false) ini_write_real("progression","stageCollectible_FloralYolkCaves_3",global.stageCollectible_FloralYolkCaves[3]);
+	#endregion
+	
+	#region Storm The Fortress
+	if (global.stageComplete_StormTheFortress != false) ini_write_real("progression","stageComplete_StormTheFortress",global.stageComplete_StormTheFortress);
+	
+	if (global.stageMission_StormTheFortress[0] != false) ini_write_real("progression","stageMission_StormTheFortress_0",global.stageMission_StormTheFortress[0]);
+	if (global.stageMission_StormTheFortress[1] != false) ini_write_real("progression","stageMission_StormTheFortress_1",global.stageMission_StormTheFortress[1]);
+	if (global.stageMission_StormTheFortress[2] != false) ini_write_real("progression","stageMission_StormTheFortress_2",global.stageMission_StormTheFortress[2]);
+	if (global.stageMission_StormTheFortress[3] != false) ini_write_real("progression","stageMission_StormTheFortress_3",global.stageMission_StormTheFortress[3]);
+	
+	if (global.stageCollectible_StormTheFortress[0] != false) ini_write_real("progression","stageCollectible_StormTheFortress_0",global.stageCollectible_StormTheFortress[0]);
+	if (global.stageCollectible_StormTheFortress[1] != false) ini_write_real("progression","stageCollectible_StormTheFortress_1",global.stageCollectible_StormTheFortress[1]);
+	if (global.stageCollectible_StormTheFortress[2] != false) ini_write_real("progression","stageCollectible_StormTheFortress_2",global.stageCollectible_StormTheFortress[2]);
+	if (global.stageCollectible_StormTheFortress[3] != false) ini_write_real("progression","stageCollectible_StormTheFortress_3",global.stageCollectible_StormTheFortress[3]);
+	#endregion
+	
+	#region Central Lab
+	if (global.stageComplete_CentralLab != false) ini_write_real("progression","stageComplete_CentralLab",global.stageComplete_CentralLab);
+	
+	if (global.stageMission_CentralLab[0] != false) ini_write_real("progression","stageMission_CentralLab_0",global.stageMission_CentralLab[0]);
+	if (global.stageMission_CentralLab[1] != false) ini_write_real("progression","stageMission_CentralLab_1",global.stageMission_CentralLab[1]);
+	if (global.stageMission_CentralLab[2] != false) ini_write_real("progression","stageMission_CentralLab_2",global.stageMission_CentralLab[2]);
+	if (global.stageMission_CentralLab[3] != false) ini_write_real("progression","stageMission_CentralLab_3",global.stageMission_CentralLab[3]);
+	
+	if (global.stageCollectible_CentralLab[0] != false) ini_write_real("progression","stageCollectible_CentralLab_0",global.stageCollectible_CentralLab[0]);
+	if (global.stageCollectible_CentralLab[1] != false) ini_write_real("progression","stageCollectible_CentralLab_1",global.stageCollectible_CentralLab[1]);
+	if (global.stageCollectible_CentralLab[2] != false) ini_write_real("progression","stageCollectible_CentralLab_2",global.stageCollectible_CentralLab[2]);
+	if (global.stageCollectible_CentralLab[3] != false) ini_write_real("progression","stageCollectible_CentralLab_3",global.stageCollectible_CentralLab[3]);
+	#endregion
+	
+	#region Path to the Nasty Machine
+	if (global.stageComplete_PathToTheNastyMachine != false) ini_write_real("progression","stageComplete_PathToTheNastyMachine",global.stageComplete_PathToTheNastyMachine);
+	
+	if (global.stageMission_PathToTheNastyMachine[0] != false) ini_write_real("progression","stageMission_PathToTheNastyMachine_0",global.stageMission_PathToTheNastyMachine[0]);
+	if (global.stageMission_PathToTheNastyMachine[1] != false) ini_write_real("progression","stageMission_PathToTheNastyMachine_1",global.stageMission_PathToTheNastyMachine[1]);
+	if (global.stageMission_PathToTheNastyMachine[2] != false) ini_write_real("progression","stageMission_PathToTheNastyMachine_2",global.stageMission_PathToTheNastyMachine[2]);
+	if (global.stageMission_PathToTheNastyMachine[3] != false) ini_write_real("progression","stageMission_PathToTheNastyMachine_3",global.stageMission_PathToTheNastyMachine[3]);
+	
+	if (global.stageCollectible_PathToTheNastyMachine[0] != false) ini_write_real("progression","stageCollectible_PathToTheNastyMachine_0",global.stageCollectible_PathToTheNastyMachine[0]);
+	if (global.stageCollectible_PathToTheNastyMachine[1] != false) ini_write_real("progression","stageCollectible_PathToTheNastyMachine_1",global.stageCollectible_PathToTheNastyMachine[1]);
+	if (global.stageCollectible_PathToTheNastyMachine[2] != false) ini_write_real("progression","stageCollectible_PathToTheNastyMachine_2",global.stageCollectible_PathToTheNastyMachine[2]);
+	if (global.stageCollectible_PathToTheNastyMachine[3] != false) ini_write_real("progression","stageCollectible_PathToTheNastyMachine_3",global.stageCollectible_PathToTheNastyMachine[3]);
+	#endregion
+	
+	#region Sandshell Beach
+	if (global.stageComplete_SandshellBeach != false) ini_write_real("progression","stageComplete_SandshellBeach",global.stageComplete_SandshellBeach);
+	
+	if (global.stageMission_SandshellBeach[0] != false) ini_write_real("progression","stageMission_SandshellBeach_0",global.stageMission_SandshellBeach[0]);
+	if (global.stageMission_SandshellBeach[1] != false) ini_write_real("progression","stageMission_SandshellBeach_1",global.stageMission_SandshellBeach[1]);
+	if (global.stageMission_SandshellBeach[2] != false) ini_write_real("progression","stageMission_SandshellBeach_2",global.stageMission_SandshellBeach[2]);
+	if (global.stageMission_SandshellBeach[3] != false) ini_write_real("progression","stageMission_SandshellBeach_3",global.stageMission_SandshellBeach[3]);
+	
+	if (global.stageCollectible_SandshellBeach[0] != false) ini_write_real("progression","stageCollectible_SandshellBeach_0",global.stageCollectible_SandshellBeach[0]);
+	if (global.stageCollectible_SandshellBeach[1] != false) ini_write_real("progression","stageCollectible_SandshellBeach_1",global.stageCollectible_SandshellBeach[1]);
+	if (global.stageCollectible_SandshellBeach[2] != false) ini_write_real("progression","stageCollectible_SandshellBeach_2",global.stageCollectible_SandshellBeach[2]);
+	if (global.stageCollectible_SandshellBeach[3] != false) ini_write_real("progression","stageCollectible_SandshellBeach_3",global.stageCollectible_SandshellBeach[3]);
+	#endregion
+	
+	#region Up The Straw
+	if (global.stageComplete_UpTheStraw != false) ini_write_real("progression","stageComplete_UpTheStraw",global.stageComplete_UpTheStraw);
+	
+	if (global.stageMission_UpTheStraw[0] != false) ini_write_real("progression","stageMission_UpTheStraw_0",global.stageMission_UpTheStraw[0]);
+	if (global.stageMission_UpTheStraw[1] != false) ini_write_real("progression","stageMission_UpTheStraw_1",global.stageMission_UpTheStraw[1]);
+	if (global.stageMission_UpTheStraw[2] != false) ini_write_real("progression","stageMission_UpTheStraw_2",global.stageMission_UpTheStraw[2]);
+	if (global.stageMission_UpTheStraw[3] != false) ini_write_real("progression","stageMission_UpTheStraw_3",global.stageMission_UpTheStraw[3]);
+	
+	if (global.stageCollectible_UpTheStraw[0] != false) ini_write_real("progression","stageCollectible_UpTheStraw_0",global.stageCollectible_UpTheStraw[0]);
+	if (global.stageCollectible_UpTheStraw[1] != false) ini_write_real("progression","stageCollectible_UpTheStraw_1",global.stageCollectible_UpTheStraw[1]);
+	if (global.stageCollectible_UpTheStraw[2] != false) ini_write_real("progression","stageCollectible_UpTheStraw_2",global.stageCollectible_UpTheStraw[2]);
+	if (global.stageCollectible_UpTheStraw[3] != false) ini_write_real("progression","stageCollectible_UpTheStraw_3",global.stageCollectible_UpTheStraw[3]);
+	#endregion
+	
+	#region Sacred Aquatia
+	if (global.stageComplete_SacredAquatia != false) ini_write_real("progression","stageComplete_SacredAquatia",global.stageComplete_SacredAquatia);
+	
+	if (global.stageMission_SacredAquatia[0] != false) ini_write_real("progression","stageMission_SacredAquatia_0",global.stageMission_SacredAquatia[0]);
+	if (global.stageMission_SacredAquatia[1] != false) ini_write_real("progression","stageMission_SacredAquatia_1",global.stageMission_SacredAquatia[1]);
+	if (global.stageMission_SacredAquatia[2] != false) ini_write_real("progression","stageMission_SacredAquatia_2",global.stageMission_SacredAquatia[2]);
+	if (global.stageMission_SacredAquatia[3] != false) ini_write_real("progression","stageMission_SacredAquatia_3",global.stageMission_SacredAquatia[3]);
+	
+	if (global.stageCollectible_SacredAquatia[0] != false) ini_write_real("progression","stageCollectible_SacredAquatia_0",global.stageCollectible_SacredAquatia[0]);
+	if (global.stageCollectible_SacredAquatia[1] != false) ini_write_real("progression","stageCollectible_SacredAquatia_1",global.stageCollectible_SacredAquatia[1]);
+	if (global.stageCollectible_SacredAquatia[2] != false) ini_write_real("progression","stageCollectible_SacredAquatia_2",global.stageCollectible_SacredAquatia[2]);
+	if (global.stageCollectible_SacredAquatia[3] != false) ini_write_real("progression","stageCollectible_SacredAquatia_3",global.stageCollectible_SacredAquatia[3]);
+	#endregion
+	
+	#region Cosmic Palace
+	if (global.stageComplete_CosmicPalace != false) ini_write_real("progression","stageComplete_CosmicPalace",global.stageComplete_CosmicPalace);
+	
+	if (global.stageMission_CosmicPalace[0] != false) ini_write_real("progression","stageMission_CosmicPalace_0",global.stageMission_CosmicPalace[0]);
+	if (global.stageMission_CosmicPalace[1] != false) ini_write_real("progression","stageMission_CosmicPalace_1",global.stageMission_CosmicPalace[1]);
+	if (global.stageMission_CosmicPalace[2] != false) ini_write_real("progression","stageMission_CosmicPalace_2",global.stageMission_CosmicPalace[2]);
+	if (global.stageMission_CosmicPalace[3] != false) ini_write_real("progression","stageMission_CosmicPalace_3",global.stageMission_CosmicPalace[3]);
+	
+	if (global.stageCollectible_CosmicPalace[0] != false) ini_write_real("progression","stageCollectible_CosmicPalace_0",global.stageCollectible_CosmicPalace[0]);
+	if (global.stageCollectible_CosmicPalace[1] != false) ini_write_real("progression","stageCollectible_CosmicPalace_1",global.stageCollectible_CosmicPalace[1]);
+	if (global.stageCollectible_CosmicPalace[2] != false) ini_write_real("progression","stageCollectible_CosmicPalace_2",global.stageCollectible_CosmicPalace[2]);
+	if (global.stageCollectible_CosmicPalace[3] != false) ini_write_real("progression","stageCollectible_CosmicPalace_3",global.stageCollectible_CosmicPalace[3]);
+	#endregion
+	
+	#region Popstar Moon
+	if (global.stageComplete_PopstarMoon != false) ini_write_real("progression","stageComplete_PopstarMoon",global.stageComplete_PopstarMoon);
+	
+	if (global.stageMission_PopstarMoon[0] != false) ini_write_real("progression","stageMission_PopstarMoon_0",global.stageMission_PopstarMoon[0]);
+	if (global.stageMission_PopstarMoon[1] != false) ini_write_real("progression","stageMission_PopstarMoon_1",global.stageMission_PopstarMoon[1]);
+	if (global.stageMission_PopstarMoon[2] != false) ini_write_real("progression","stageMission_PopstarMoon_2",global.stageMission_PopstarMoon[2]);
+	if (global.stageMission_PopstarMoon[3] != false) ini_write_real("progression","stageMission_PopstarMoon_3",global.stageMission_PopstarMoon[3]);
+	
+	if (global.stageCollectible_PopstarMoon[0] != false) ini_write_real("progression","stageCollectible_PopstarMoon_0",global.stageCollectible_PopstarMoon[0]);
+	if (global.stageCollectible_PopstarMoon[1] != false) ini_write_real("progression","stageCollectible_PopstarMoon_1",global.stageCollectible_PopstarMoon[1]);
+	if (global.stageCollectible_PopstarMoon[2] != false) ini_write_real("progression","stageCollectible_PopstarMoon_2",global.stageCollectible_PopstarMoon[2]);
+	if (global.stageCollectible_PopstarMoon[3] != false) ini_write_real("progression","stageCollectible_PopstarMoon_3",global.stageCollectible_PopstarMoon[3]);
+	#endregion
+	#endregion
 	
 	if (global.collectionMenuUnlocked != false) ini_write_real("unlocks","collectionMenuUnlocked",global.collectionMenuUnlocked);
 	if (global.collectionMenuUnlockedFirstTime != false) ini_write_real("unlocks","collectionMenuUnlockedFirstTime",global.collectionMenuUnlockedFirstTime);
@@ -353,6 +554,12 @@ function scr_SaveGame(argument0)
 	#region Suplex
 	#region KSSU
 	if (global.hatPaletteSuplexKSSUBitcrushedUnlocked != false) ini_write_real("unlocks","hatPaletteSuplexKSSUBitcrushedUnlocked",global.hatPaletteSuplexKSSUBitcrushedUnlocked);
+	#endregion
+	
+	#region Buggzy
+	if (global.hatTypeSuplexBuggzyUnlocked != false) ini_write_real("unlocks","hatTypeSuplexBuggzyUnlocked",global.hatTypeSuplexBuggzyUnlocked);
+	
+	if (global.hatPaletteSuplexBuggzyBitcrushedUnlocked != false) ini_write_real("unlocks","hatPaletteSuplexBuggzyBitcrushedUnlocked",global.hatPaletteSuplexBuggzyBitcrushedUnlocked);
 	#endregion
 	#endregion
 	
@@ -738,6 +945,7 @@ function scr_SaveGame(argument0)
 	if (global.hatPaletteArtistModernP1 != 0) ini_write_real("playerCustomization","hatPaletteArtistModernP1",global.hatPaletteArtistModernP1);
 	if (global.hatPaletteFighterKSSUP1 != abilityHatPaints.fighter_kssu_crimsonChampion) ini_write_real("playerCustomization","hatPaletteFighterKSSUP1",global.hatPaletteFighterKSSUP1);
 	if (global.hatPaletteSuplexKSSUP1 != abilityHatPaints.suplex_kssu_blueBanner) ini_write_real("playerCustomization","hatPaletteSuplexKSSUP1",global.hatPaletteSuplexKSSUP1);
+	if (global.hatPaletteSuplexBuggzyP1 != abilityHatPaints.suplex_buggzy_beetleViolet) ini_write_real("playerCustomization","hatPaletteSuplexBuggzyP1",global.hatPaletteSuplexBuggzyP1);
 	if (global.hatPaletteWingKSSUP1 != abilityHatPaints.wing_kssu_rainbowFlight) ini_write_real("playerCustomization","hatPaletteWingKSSUP1",global.hatPaletteWingKSSUP1);
 	if (global.hatPaletteJetKSSUP1 != abilityHatPaints.jet_kssu_speedMachine) ini_write_real("playerCustomization","hatPaletteJetKSSUP1",global.hatPaletteJetKSSUP1);
 	if (global.hatPaletteSwordKSSUP1 != abilityHatPaints.sword_kssu_slicingGreen) ini_write_real("playerCustomization","hatPaletteSwordKSSUP1",global.hatPaletteSwordKSSUP1);
@@ -773,6 +981,7 @@ function scr_SaveGame(argument0)
 	if (global.hatPaletteArtistModernP2 != 0) ini_write_real("playerCustomization","hatPaletteArtistModernP2",global.hatPaletteArtistModernP2);
 	if (global.hatPaletteFighterKSSUP2 != abilityHatPaints.fighter_kssu_crimsonChampion) ini_write_real("playerCustomization","hatPaletteFighterKSSUP2",global.hatPaletteFighterKSSUP2);
 	if (global.hatPaletteSuplexKSSUP2 != abilityHatPaints.suplex_kssu_blueBanner) ini_write_real("playerCustomization","hatPaletteSuplexKSSUP2",global.hatPaletteSuplexKSSUP2);
+	if (global.hatPaletteSuplexBuggzyP2 != abilityHatPaints.suplex_buggzy_beetleViolet) ini_write_real("playerCustomization","hatPaletteSuplexBuggzyP2",global.hatPaletteSuplexBuggzyP2);
 	if (global.hatPaletteWingKSSUP2 != abilityHatPaints.wing_kssu_rainbowFlight) ini_write_real("playerCustomization","hatPaletteWingKSSUP2",global.hatPaletteWingKSSUP2);
 	if (global.hatPaletteJetKSSUP2 != abilityHatPaints.jet_kssu_speedMachine) ini_write_real("playerCustomization","hatPaletteJetKSSUP2",global.hatPaletteJetKSSUP2);
 	if (global.hatPaletteSwordKSSUP2 != abilityHatPaints.sword_kssu_slicingGreen) ini_write_real("playerCustomization","hatPaletteSwordKSSUP2",global.hatPaletteSwordKSSUP2);
@@ -808,6 +1017,7 @@ function scr_SaveGame(argument0)
 	if (global.hatPaletteArtistModernP3 != 0) ini_write_real("playerCustomization","hatPaletteArtistModernP3",global.hatPaletteArtistModernP3);
 	if (global.hatPaletteFighterKSSUP3 != abilityHatPaints.fighter_kssu_crimsonChampion) ini_write_real("playerCustomization","hatPaletteFighterKSSUP3",global.hatPaletteFighterKSSUP3);
 	if (global.hatPaletteSuplexKSSUP3 != abilityHatPaints.suplex_kssu_blueBanner) ini_write_real("playerCustomization","hatPaletteSuplexKSSUP3",global.hatPaletteSuplexKSSUP3);
+	if (global.hatPaletteSuplexBuggzyP3 != abilityHatPaints.suplex_buggzy_beetleViolet) ini_write_real("playerCustomization","hatPaletteSuplexBuggzyP3",global.hatPaletteSuplexBuggzyP3);
 	if (global.hatPaletteWingKSSUP3 != abilityHatPaints.wing_kssu_rainbowFlight) ini_write_real("playerCustomization","hatPaletteWingKSSUP3",global.hatPaletteWingKSSUP3);
 	if (global.hatPaletteJetKSSUP3 != abilityHatPaints.jet_kssu_speedMachine) ini_write_real("playerCustomization","hatPaletteJetKSSUP3",global.hatPaletteJetKSSUP3);
 	if (global.hatPaletteSwordKSSUP3 != abilityHatPaints.sword_kssu_slicingGreen) ini_write_real("playerCustomization","hatPaletteSwordKSSUP3",global.hatPaletteSwordKSSUP3);
@@ -843,6 +1053,7 @@ function scr_SaveGame(argument0)
 	if (global.hatPaletteArtistModernP4 != 0) ini_write_real("playerCustomization","hatPaletteArtistModernP4",global.hatPaletteArtistModernP4);
 	if (global.hatPaletteFighterKSSUP4 != abilityHatPaints.fighter_kssu_crimsonChampion) ini_write_real("playerCustomization","hatPaletteFighterKSSUP4",global.hatPaletteFighterKSSUP4);
 	if (global.hatPaletteSuplexKSSUP4 != abilityHatPaints.suplex_kssu_blueBanner) ini_write_real("playerCustomization","hatPaletteSuplexKSSUP4",global.hatPaletteSuplexKSSUP4);
+	if (global.hatPaletteSuplexBuggzyP4 != abilityHatPaints.suplex_buggzy_beetleViolet) ini_write_real("playerCustomization","hatPaletteSuplexBuggzyP4",global.hatPaletteSuplexBuggzyP4);
 	if (global.hatPaletteWingKSSUP4 != abilityHatPaints.wing_kssu_rainbowFlight) ini_write_real("playerCustomization","hatPaletteWingKSSUP4",global.hatPaletteWingKSSUP4);
 	if (global.hatPaletteJetKSSUP4 != abilityHatPaints.jet_kssu_speedMachine) ini_write_real("playerCustomization","hatPaletteJetKSSUP4",global.hatPaletteJetKSSUP4);
 	if (global.hatPaletteSwordKSSUP4 != abilityHatPaints.sword_kssu_slicingGreen) ini_write_real("playerCustomization","hatPaletteSwordKSSUP4",global.hatPaletteSwordKSSUP4);

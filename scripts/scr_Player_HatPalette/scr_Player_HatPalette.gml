@@ -1370,6 +1370,38 @@ function scr_Player_HatPalette(argument0,argument1)
 					break;
 				}
 				break;
+				
+				case abilityHatSkins.suplex_buggzy:
+				switch (player)
+				{
+					case 0:
+					var paletteIndexToCheck = global.hatPaletteSuplexBuggzyP1;
+					break;
+					
+					case 1:
+					var paletteIndexToCheck = global.hatPaletteSuplexBuggzyP2;
+					break;
+					
+					case 2:
+					var paletteIndexToCheck = global.hatPaletteSuplexBuggzyP3;
+					break;
+					
+					case 3:
+					var paletteIndexToCheck = global.hatPaletteSuplexBuggzyP4;
+					break;
+				}
+				
+				switch (paletteIndexToCheck)
+				{
+					case abilityHatPaints.suplex_buggzy_beetleViolet:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Suplex_KSSU_Palette_BlueBanner;
+					break;
+					
+					case abilityHatPaints.suplex_buggzy_bitcrushed:
+					hatPaletteIndex = spr_Kirby_AbilityHat_Suplex_KSSU_Palette_Bitcrushed;
+					break;
+				}
+				break;
 			}
 			break;
 			

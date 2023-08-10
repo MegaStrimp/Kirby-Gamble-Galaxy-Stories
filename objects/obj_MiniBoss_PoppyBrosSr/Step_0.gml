@@ -279,8 +279,8 @@ if (!childPause)
 			bomb.active = true;
 			bomb.destroyableByPlayer = true;
 			bomb.destroyableByEnemy = false;
-			bomb.hsp = 2.5 * dirX;
-			bomb.vsp = -4.5;
+			bomb.hsp = random_range(2,3) * dirX;
+			bomb.vsp = -3.5;
 			bomb.angleSpd = bomb.hsp * 4;
 		}
 		isAttacking = false;

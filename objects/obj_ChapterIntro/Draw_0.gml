@@ -18,7 +18,7 @@ gpu_set_colorwriteenable(true,true,true,true);
 gpu_set_blendmode_ext(bm_dest_alpha,bm_inv_dest_alpha);
 gpu_set_alphatestenable(true);
 
-draw_sprite_ext(spr_CharacterSelect_Background_Chapter1_Texture,0,80,60,image_xscale,image_yscale,((current_time / 4) % 360),c_white,1);
+draw_sprite_ext(spr_CharacterSelect_Background_Chapter1_Texture,0,80,60,image_xscale,image_yscale,((global.currentTimePausable / 4) % 360),c_white,1);
 
 gpu_set_alphatestenable(false);
 gpu_set_blendmode(bm_normal);

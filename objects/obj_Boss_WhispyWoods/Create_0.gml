@@ -35,6 +35,7 @@ points = 200;
 canShakeX = false;
 canShakeY = false;
 isBoss = true;
+bossDeathParOffsetY = -70;
 healthbarIndex = 3;
 hasXKnockback = false;
 hasYKnockback = false;

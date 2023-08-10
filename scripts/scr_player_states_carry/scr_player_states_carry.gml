@@ -162,6 +162,7 @@ function scr_Player_States_Carry()
 					parSpit.dir = parDir;
 				}
 				var projSpitStar = instance_create_depth(x + (4 * dir),y - 4,depth - 1,obj_SpitStar);
+				projSpitStar.owner = id;
 				projSpitStar.dirX = dir;
 				projSpitStar.image_xscale = projSpitStar.dirX;
 		        if (sucked < 2)

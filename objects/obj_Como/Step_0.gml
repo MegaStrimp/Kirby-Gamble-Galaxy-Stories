@@ -1,5 +1,10 @@
 ///@description Main
 
+//Hurt Sprite
+
+sprHurt = sprHurt1;
+if (grounded) sprHurt = sprHurt2;
+
 //Event Inherited
 
 event_inherited();

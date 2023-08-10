@@ -14,8 +14,6 @@
   "For3D": false,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dcff035f-bac9-4587-ab5a-279fe8310441",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"279953f0-3216-4a48-b18e-c7166501863b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bd33c0e6-ba2e-4398-84b3-bac86aac18c9",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -45,7 +43,7 @@
     "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "eventStubScript": null,
     "eventToFunction": {},
-    "length": 3.0,
+    "length": 1.0,
     "lockOrigin": true,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
@@ -57,8 +55,6 @@
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"dcff035f-bac9-4587-ab5a-279fe8310441","path":"sprites/spr_FirePuffBlock_Normal_Top/spr_FirePuffBlock_Normal_Top.yy",},},},"Disabled":false,"id":"782e3279-cb81-4190-85e6-70bf6082df44","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"279953f0-3216-4a48-b18e-c7166501863b","path":"sprites/spr_FirePuffBlock_Normal_Top/spr_FirePuffBlock_Normal_Top.yy",},},},"Disabled":false,"id":"ab3bd6fd-e3e6-4315-8c0a-43071cc548fd","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"bd33c0e6-ba2e-4398-84b3-bac86aac18c9","path":"sprites/spr_FirePuffBlock_Normal_Top/spr_FirePuffBlock_Normal_Top.yy",},},},"Disabled":false,"id":"d14ddeee-4b07-4b3c-a7b8-92fe06301a62","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

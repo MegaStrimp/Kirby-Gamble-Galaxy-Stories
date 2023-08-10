@@ -312,11 +312,12 @@ if (!global.pause)
 				controlsPage = subSelection;
 				controlsGamepad = false;
 				subSelection = 0;
-				if (global.playerGamepad[controlsPage] != -1)
+				//STRIMPTODO Add Input's gamepad check
+				/*if (global.playerGamepad[controlsPage] != -1)
 				{
 					controlsGamepad = true;
 					subSelection = global.playerGamepadControlType[controlsPage];
-				}
+				}*/
 			}
 			
 			if ((keyAttackPressed) and (!paused))

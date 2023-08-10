@@ -79,6 +79,8 @@ points = 0;
 isMiniBoss = false;
 isBoss = false;
 isBossMinion = false;
+bossDeathParOffsetX = 0;
+bossDeathParOffsetY = 0;
 hurtable = true;
 hasGravity = true;
 gravMinLimit = false;
@@ -159,6 +161,7 @@ collidingHitbox = -1; // use for practical purposes. clear after enemy recovers
 backupFlags = 0;
 shakeDividendDefault = .1;
 shakeDividend = shakeDividendDefault;
+playerLastHit = -1;
 #endregion
 
 #region Timers
@@ -172,7 +175,7 @@ invincibleTimer = -1;
 invincibleTimerMax = 180;
 invincibleTimerMax = 20;
 invincibleFlashTimer = -1;
-invincibleFlashTimerMax = 2;
+invincibleFlashTimerMax = 10;
 shineEffectTimer = -1;
 shineEffectTimerMax = 6;
 bossHealthbarShakeTimer = -1;

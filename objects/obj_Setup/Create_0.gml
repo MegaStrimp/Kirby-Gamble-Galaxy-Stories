@@ -359,7 +359,8 @@ enum abilityHatSkins
 	scan_kssu,
 	crash_kssu,
 	mic_kssu,
-	ninja_samurai
+	ninja_samurai,
+	suplex_buggzy
 }
 
 enum abilityHatPaints
@@ -488,7 +489,9 @@ enum abilityHatPaints
 	ninja_samurai_classicRed,
 	ninja_samurai_darkBrown,
 	ninja_samurai_ripperBlond,
-	stone_modern_theBronzeJade
+	stone_modern_theBronzeJade,
+	suplex_buggzy_beetleViolet,
+	suplex_buggzy_bitcrushed
 }
 
 enum damageTypes
@@ -689,8 +692,7 @@ part_type_life(global.partTypeColorfulStars, 30, 40);
 
 #region Global Variables
 #region Meta/Files
-global.versionNumber = "0.7.7";
-global.versionNumber = "Hello Astral";
+global.versionNumber = "0.7.8";
 //global.versionNumber = "BETA 04/17/23 - Public Randomness";
 global.season = seasons.none;
 global.selectedSave = "SaveSlot1.ini";
@@ -752,6 +754,8 @@ global.roomCheckpoint = rm_Setup;
 global.pause = false;
 global.pointStars = 0;
 global.collectibleTracker = -1;
+
+global.stageCollectibleMax = -1;
 
 global.goldenTomatoAmountMax = 2;
 
@@ -849,35 +853,6 @@ global.ultraSwordAbilityKillsTarget = 10;
 global.cosmicBladeAbilityKillsTarget = 10;
 #endregion
 
-#region Controller Setup
-global.playerGamepad[0] = -1;
-global.playerGamepadControlType[0] = 0;
-global.playerGamepad[1] = -1;
-global.playerGamepadControlType[1] = 0;
-global.playerGamepad[2] = -1;
-global.playerGamepadControlType[2] = 0;
-global.playerGamepad[3] = -1;
-global.playerGamepadControlType[3] = 0;
-
-for (var i = 0; i < 4; i++)
-{
-    global.stickLeftPressed[i] = false;
-    global.stickRightPressed[i] = false;
-    global.stickUpPressed[i] = false;
-    global.stickDownPressed[i] = false;
-	
-    global.stickLeftHeld[i] = false;
-    global.stickRightHeld[i] = false;
-    global.stickUpHeld[i] = false;
-    global.stickDownHeld[i] = false;
-	
-    global.stickLeftReleased[i] = false;
-    global.stickRightReleased[i] = false;
-    global.stickUpReleased[i] = false;
-    global.stickDownReleased[i] = false;
-}
-#endregion
-
 global.saveLoaded = false;
 
 global.discord = true;
@@ -915,8 +890,6 @@ global.mintLeafTimerP3 = -1;
 global.mintLeafTimerP3Max = 900;
 global.mintLeafTimerP4 = -1;
 global.mintLeafTimerP4Max = 900;
-
-controllerPressedResetTimer = -1;
 #endregion
 
 #region Language Array
@@ -962,7 +935,7 @@ scr_LoadConfig("config.ini");
 window_set_fullscreen(global.fullscreen);
 
 //global.extraModeUnlocked = true;
-global.maykrUnlocked = true;
+//global.maykrUnlocked = true;
 global.storyModeUnlocked = false;
 //global.skylandsUnlocked = true;
 //global.gamblionUnlocked = true;

@@ -18,7 +18,8 @@ mask_index = spr_16Square_Mask;
 
 sprIdle = spr_Como_Normal_Idle;
 sprFall = spr_Como_Normal_Fall;
-sprHurt = spr_Como_Normal_Hurt;
+sprHurt1 = spr_Como_Normal_Hurt1;
+sprHurt2 = spr_Como_Normal_Hurt2;
 
 //Other Variables
 

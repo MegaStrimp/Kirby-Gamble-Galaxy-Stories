@@ -2042,7 +2042,9 @@ function scr_BestiaryMenu_Enemies()
 	animIndex += 1;
 	bestiaryAnimationsArray[bestiaryEnemies.como][skinIndex][animIndex] = spr_Como_Normal_Fall;
 	animIndex += 1;
-	bestiaryAnimationsArray[bestiaryEnemies.como][skinIndex][animIndex] = spr_Como_Normal_Hurt;
+	bestiaryAnimationsArray[bestiaryEnemies.como][skinIndex][animIndex] = spr_Como_Normal_Hurt1;
+	animIndex += 1;
+	bestiaryAnimationsArray[bestiaryEnemies.como][skinIndex][animIndex] = spr_Como_Normal_Hurt2;
 	animIndex += 1;
 	
 	paletteIndex = 0;

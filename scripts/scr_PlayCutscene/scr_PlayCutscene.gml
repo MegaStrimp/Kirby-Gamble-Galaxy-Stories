@@ -17,9 +17,10 @@ function scr_PlayCutscene(argument0)
 		cutsceneControl.stopsCutscene = true;
 		break;
 		
+		case cutscenes.npc_GreenGreens_SignmasterDee:
+		with (obj_ZoomController) zoomTarget = 1.5;
 		case cutscenes.npc_GreenGreens_AdultDee:
 		case cutscenes.npc_GreenGreens_BebuDee:
-		case cutscenes.npc_GreenGreens_SignmasterDee:
 		
 		case cutscenes.npc_Gamblion_DreamySpirit_Test:
 		global.cutscene = true;

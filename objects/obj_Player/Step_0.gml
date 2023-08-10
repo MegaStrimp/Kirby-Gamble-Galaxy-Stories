@@ -1172,7 +1172,7 @@ if (!global.pause)
 			par.destroyAfterAnimation = true;
 			par.hasPalette = true;
 			par.paletteSpriteIndex = spr_Particle_BigStar_Palette_Rainbow;
-			par.paletteIndex = 1 + (current_time % 9);
+			par.paletteIndex = 1 + (global.currentTimePausable % 9);
 		    invinCandyParticleTimer = -1;
 		}
 	}

@@ -541,7 +541,7 @@ for (var i = 0; i < 4; i++)
 		draw_sprite_part_ext(spr_Hud_Healthbar_Kirby,flashPointer,0,0,healthbarWidthPointer,healthbarHeightPointer,40 + sep + shakeXPointer,248 + shakeYPointer,1,1,image_blend,drawAlpha * alphaPointer);
 		if (invinCandyPointer)
 		{
-			if (global.shaders) pal_swap_set(spr_Hud_Healthbar_Rainbow_Palette,1 + ((current_time / 5) % 37),false);
+			if (global.shaders) pal_swap_set(spr_Hud_Healthbar_Rainbow_Palette,1 + ((global.currentTimePausable / 5) % 37),false);
 			draw_sprite_part_ext(spr_Hud_Healthbar_Rainbow,flashPointer,0,0,healthbarWidthPointer,healthbarHeightPointer,40 + sep + shakeXPointer,248 + shakeYPointer,1,1,image_blend,drawAlpha * alphaPointer);
 			if (global.shaders) pal_swap_reset();
 		}

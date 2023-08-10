@@ -4419,7 +4419,8 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			case 0:
 			var sprIdle = spr_Como_Normal_Idle;
 			var sprFall = spr_Como_Normal_Fall;
-			var sprHurt = spr_Como_Normal_Hurt;
+			var sprHurt1 = spr_Como_Normal_Hurt1;
+			var sprHurt2 = spr_Como_Normal_Hurt2;
 			debugPaletteNumberMax = 0;
 			switch (debugPaletteNumber)
 			{
@@ -4445,7 +4446,8 @@ if ((visible) and (!position_meeting(mouse_x,mouse_y,obj_Menu_Button)))
 			debugObj.character = debugSpriteSelected;
 			debugObj.sprIdle = sprIdle;
 			debugObj.sprFall = sprFall;
-			debugObj.sprHurt = sprHurt;
+			debugObj.sprHurt1 = sprHurt1;
+			debugObj.sprHurt2 = sprHurt2;
 			debugObj.sprite_index = sprIdle;
 			debugObj.paletteIndex = debugPaletteIndex;
 			debugObj.image_xscale = debugXScale;

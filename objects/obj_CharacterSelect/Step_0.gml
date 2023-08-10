@@ -572,7 +572,7 @@ else if (roomChangeTimer == 0)
 	fade.alphaSpd = .02;
 	
 	#region Start Stage
-	scr_StartStage();
+	scr_StartStage(global.currentStage);
 	#endregion
 	
 	#region Change Player Attributes

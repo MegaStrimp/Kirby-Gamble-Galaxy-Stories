@@ -145,7 +145,7 @@ if (canDrawPalettes)
 	}
 }
 var paletteFlashPlayer = paletteFlash;
-if (hasInvinCandy) paletteFlashPlayer = 1 + floor((current_time / (1 + (invinCandyEnding * 2))) % 18);
+if (hasInvinCandy) paletteFlashPlayer = 1 + floor((global.currentTimePausable / (1 + (invinCandyEnding * 2))) % 18);
 
 if ((carriedItem != carriedItems.none) or (playerAbility == playerAbilities.sword) or (playerAbility == playerAbilities.parasol) or (playerAbility == playerAbilities.hammer))
 {

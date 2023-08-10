@@ -1,11 +1,12 @@
 ///@description Draw
 
 #region Draw Self
+var invincibleFlashFinal = ((invincibleFlashTimer) and (global.currentTimePausable % 2 == 0))
 paletteFlash = 1;
-if (invincibleFlash) paletteFlash = 2;
+if (invincibleFlashFinal) paletteFlash = 2;
 drawPaletteFlash = paletteFlash;
 
-if ((hurt) and (invincibleFlash))
+if ((hurt) and (invincibleFlashFinal))
 {
 	if (death)
 	{

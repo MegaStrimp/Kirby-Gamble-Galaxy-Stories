@@ -42,7 +42,8 @@ else if (spawnTimer == 0)
 		case 0:
 		spawnedEnemy.sprIdle = spr_Como_Normal_Idle;
 		spawnedEnemy.sprFall = spr_Como_Normal_Fall;
-		spawnedEnemy.sprHurt = spr_Como_Normal_Hurt;
+		spawnedEnemy.sprHurt1 = spr_Como_Normal_Hurt1;
+		spawnedEnemy.sprHurt2 = spr_Como_Normal_Hurt2;
 		break;
 	}
 	spawnedEnemy.sprite_index = spawnedEnemy.sprIdle;

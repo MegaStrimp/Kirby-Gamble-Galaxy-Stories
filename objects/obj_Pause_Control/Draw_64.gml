@@ -15,6 +15,7 @@ if ((gamePaused) and (visible))
         instance_activate_object(obj_DebugMode);
         instance_activate_object(obj_Pause_Fade);
         instance_activate_object(obj_Fade);
+	    instance_activate_object(input_controller_object);
         deactivated = true;
     }
 	
