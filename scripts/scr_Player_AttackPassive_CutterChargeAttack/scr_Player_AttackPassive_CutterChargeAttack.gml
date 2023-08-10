@@ -24,7 +24,7 @@ function scr_Player_AttackPassive_CutterChargeAttack(argument0,argument1,argumen
 		#endregion
 		
 		#region Cutter Projectile
-		var projectile = instance_create_depth(x,y - 8,depth,obj_Projectile_Cutter);
+		var projectile = instance_create_depth(x + 16*dir,y - 8,depth,obj_Projectile_Cutter);
 		projectile.owner = id;
 		projectile.abilityType = playerAbilities.cutter;
 		projectile.paletteIndex = scr_Player_HatPalette(playerAbility,playerCharacter);
