@@ -1,6 +1,6 @@
 # Kirby Gamble Galaxy Stories
 
-![Gameplay](Github/Assets/Green Greens.png)
+![Gameplay](Github/Assets/GreenGreens.png)
 
 Kirby Gamble Galaxy Stories is a fangame of HAL Laboratories' Kirby series. It is the most ambitious and biggest Kirby fangame in development with over 20 worlds, lots of Sub-Games, and 30+ abilities, including Super Abilities and the newly introduced Mystic Abilities. Go through various planets and learn Gamble's mystery and the impending doom that awaits...
 
