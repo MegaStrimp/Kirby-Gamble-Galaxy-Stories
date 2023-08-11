@@ -6092,6 +6092,7 @@
     {"name":"spr_Menu_Saves_Text","order":2,"path":"sprites/spr_Menu_Saves_Text/spr_Menu_Saves_Text.yy",},
     {"name":"spr_Menu_Shop_Background_PhilEye","order":1,"path":"sprites/spr_Menu_Shop_Background_PhilEye/spr_Menu_Shop_Background_PhilEye.yy",},
     {"name":"spr_Menu_Shop_Background_PhilFront","order":2,"path":"sprites/spr_Menu_Shop_Background_PhilFront/spr_Menu_Shop_Background_PhilFront.yy",},
+    {"name":"spr_Menu_MainMenu_Button_Github","order":23,"path":"sprites/spr_Menu_MainMenu_Button_Github/spr_Menu_MainMenu_Button_Github.yy",},
     {"name":"spr_Menu_Shop_Background_PhilLight","order":3,"path":"sprites/spr_Menu_Shop_Background_PhilLight/spr_Menu_Shop_Background_PhilLight.yy",},
     {"name":"spr_Menu_Trophies_Hud","order":1,"path":"sprites/spr_Menu_Trophies_Hud/spr_Menu_Trophies_Hud.yy",},
     {"name":"input_trigger_effect_get_strength","order":3,"path":"scripts/input_trigger_effect_get_strength/input_trigger_effect_get_strength.yy",},

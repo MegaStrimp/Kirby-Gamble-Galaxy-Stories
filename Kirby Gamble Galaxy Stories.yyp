@@ -7059,6 +7059,7 @@
     {"id":{"name":"spr_Menu_Shop_Background_Phil","path":"sprites/spr_Menu_Shop_Background_Phil/spr_Menu_Shop_Background_Phil.yy",},},
     {"id":{"name":"spr_Menu_Shop_Background_PhilEye","path":"sprites/spr_Menu_Shop_Background_PhilEye/spr_Menu_Shop_Background_PhilEye.yy",},},
     {"id":{"name":"spr_Menu_Shop_Background_PhilFront","path":"sprites/spr_Menu_Shop_Background_PhilFront/spr_Menu_Shop_Background_PhilFront.yy",},},
+    {"id":{"name":"spr_Menu_MainMenu_Button_Github","path":"sprites/spr_Menu_MainMenu_Button_Github/spr_Menu_MainMenu_Button_Github.yy",},},
     {"id":{"name":"spr_Menu_Shop_Background_PhilLight","path":"sprites/spr_Menu_Shop_Background_PhilLight/spr_Menu_Shop_Background_PhilLight.yy",},},
     {"id":{"name":"spr_Menu_Trophies_Hud","path":"sprites/spr_Menu_Trophies_Hud/spr_Menu_Trophies_Hud.yy",},},
     {"id":{"name":"input_direction","path":"scripts/input_direction/input_direction.yy",},},

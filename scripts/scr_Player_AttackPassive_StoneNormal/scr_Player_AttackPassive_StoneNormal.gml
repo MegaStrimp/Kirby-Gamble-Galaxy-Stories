@@ -9,7 +9,10 @@ function scr_Player_AttackPassive_StoneNormal()
 		if (audio_is_playing(snd_StoneFallen)) audio_stop_sound(snd_StoneFallen);
 		audio_play_sound(snd_StoneFallen,0,false);
 		
-		if ((sprite_index == sprStoneAttack1Rare) and (floor(image_index) == 6))
+		var jellyStone = false;
+		//STRIMPTODO Add Jelly Marx stone sprites
+		//if ((sprite_index == spr_Kirby_Normal_StoneVariant_P1_JellyMarx) or (sprite_index == spr_Kirby_Normal_StoneVariant_P2_JellyMarx) or (sprite_index == spr_Kirby_Normal_StoneVariant_P3_JellyMarx) or (sprite_index == spr_Kirby_Normal_StoneVariant_P4_JellyMarx)) jellyStone = true;
+		if (jellyStone)
 		{
 			if (audio_is_playing(snd_JellyStone)) audio_stop_sound(snd_JellyStone);
 			audio_play_sound(snd_JellyStone,0,false);

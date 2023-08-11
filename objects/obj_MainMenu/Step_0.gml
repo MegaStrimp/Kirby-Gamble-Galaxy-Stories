@@ -588,7 +588,7 @@ if (!global.pause)
 		}
 		if (keyDownPressed) selection = "collection";
 		if (keyLeftPressed) selection = "back";
-		if (keyRightPressed) selection = "keycards";
+		if (keyRightPressed) selection = "github";
 		
 		if (!instance_exists(obj_Fade))
 		{
@@ -607,6 +607,39 @@ if (!global.pause)
 		}
 		break;
 		
+		case "github":
+		if (keyUpPressed)
+		{
+			if (global.extraModeUnlocked)
+			{
+				selection = "extraMode";
+			}
+			else
+			{
+				selection = "storyMode";
+			}
+		}
+		if (keyDownPressed) selection = "collection";
+		if (keyLeftPressed) selection = "discord";
+		if (keyRightPressed) selection = "keycards";
+		
+		if (!instance_exists(obj_Fade))
+		{
+			if ((keyJumpPressed) or (keyStartPressed))
+			{
+				if (audio_is_playing(snd_ButtonYes)) audio_stop_sound(snd_ButtonYes);
+				audio_play_sound(snd_ButtonYes,0,false);
+				select = true;
+			}
+		}
+		
+		if (select)
+		{
+			url_open("https://github.com/MegaStrimp/Kirby-Gamble-Galaxy-Stories");
+			select = false;
+		}
+		break;
+		
 		case "keycards":
 		if (keyUpPressed)
 		{
@@ -620,7 +653,7 @@ if (!global.pause)
 			}
 		}
 		if (keyDownPressed) selection = "storyMode";
-		if (keyLeftPressed) selection = "discord";
+		if (keyLeftPressed) selection = "github";
 		if (keyRightPressed) selection = "credits";
 		
 		if (!instance_exists(obj_Fade))
