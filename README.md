@@ -10,6 +10,8 @@ Game Maker
 
 Anyone's free to make pull requests. Make sure to properly tag your commits and open issues first if you can.
 
+**Please credit MegaStrimp and Team Gamble if you use parts of the code in your own projects!**
+
 ## Legal
 
 "Kirby Gamble Galaxy Stories" is an unofficial, non-profit art project made by the fans of Hal Laboratories' Kirby series. We do not accept donations in any way, shape or form. This project was just made for fun and no other greater goal.
