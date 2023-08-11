@@ -1,18 +1,26 @@
 # Kirby Gamble Galaxy Stories
 
+![Gameplay](Github/Assets/GreenGreens.png)
+
 Kirby Gamble Galaxy Stories is a fangame of HAL Laboratories' Kirby series. It is the most ambitious and biggest Kirby fangame in development with over 20 worlds, lots of Sub-Games, and 30+ abilities, including Super Abilities and the newly introduced Mystic Abilities. Go through various planets and learn Gamble's mystery and the impending doom that awaits...
 
 ## Built With
 
-Game Maker
+![Customization Screen](Github/Assets/Customize.png)
+
+Game Maker (Studio 2)
 
 ## Contributing
+
+![Gallery](Github/Assets/Gallery.png)
 
 Anyone's free to make pull requests. Make sure to properly tag your commits and open issues first if you can.
 
 **Please credit MegaStrimp and Team Gamble if you use parts of the code in your own projects!**
 
 ## Legal
+
+![Co-Op](Github/Assets/Halberd.png)
 
 "Kirby Gamble Galaxy Stories" is an unofficial, non-profit art project made by the fans of Hal Laboratories' Kirby series. We do not accept donations in any way, shape or form. This project was just made for fun and no other greater goal.
 Team Gamble does not take any financial gains from this project, and ads are disabled in every distribution place we're associated with; this includes the Kirby Gamble Galaxy Stories Youtube channel.
