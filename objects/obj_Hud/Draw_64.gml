@@ -4,7 +4,7 @@
 var musicIntroX = 326;
 var musicIntroY = 215 - (48 * (global.hasCoop >= 2));
 
-hasTreasure = global.inStage;
+hasTreasure = global.stageCollectibleMax != -1;
 #endregion
 
 #region Hud Alphas
@@ -288,11 +288,20 @@ if (hasTreasure)
 {
 	draw_sprite(spr_Hud_Collectible_Background,0,2,1);
 	draw_sprite(spr_Hud_Collectible_Chest,0,1,1);
-	for (var i = 0; i < array_length(global.stageCollectibleTreasures); i++)
+	for (var i = 0; i < global.stageCollectibleMax; i++)
 	{
+		var treasureObtained = false;
+		
+		switch (global.currentStage)
+		{
+			case stages.greenGreens:
+			treasureObtained = global.stageCollectible_GreenGreens[i];
+			break;
+		}
+		
 		var spr = spr_Hud_Collectible_Dot;
-		if (global.stageCollectibleTreasures[i]) spr = spr_Hud_Collectible_Key;
-		draw_sprite(spr_Hud_Collectible_Dot,0,42 + (i * 17),19 - i);
+		if (treasureObtained) spr = spr_Hud_Collectible_Key;
+		draw_sprite(spr,0,42 + (i * 17),19 - i);
 	}
 }
 #endregion

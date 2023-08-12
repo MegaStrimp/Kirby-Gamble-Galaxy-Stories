@@ -4,6 +4,8 @@ function scr_EndStage()
 {
 	if (ds_exists(global.collectibleTracker,ds_type_list)) ds_list_destroy(global.collectibleTracker);
 	
+	global.stageCollectibleMax = -1;
+	
 	global.invinCandyTimerP1 = -1;
 	global.invinCandyTimerP2 = -1;
 	global.invinCandyTimerP3 = -1;

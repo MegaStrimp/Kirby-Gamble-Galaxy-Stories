@@ -805,7 +805,6 @@ global.musicIntroColorComposer = make_color_rgb(255,255,255);
 global.mixActive = -1;
 global.canSave = true;
 global.inStage = false;
-for (var i = 0; i < 4; i++) global.stageCollectibleTreasures[i] = -1;
 global.hasInvinCandy = false;
 global.hasMintLeaf = false;
 global.globalSpeedMult = 1;

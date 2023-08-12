@@ -1077,6 +1077,8 @@
     {"name":"KSSU","order":1,"path":"folders/Tile Sets/Sweet Breeze/KSSU.yy",},
     {"name":"Green Greens","order":1,"path":"folders/Tile Sets/Sweet Breeze/KSSU/Green Greens.yy",},
     {"name":"Timelines","order":24,"path":"folders/Timelines.yy",},
+    {"name":"Stage Collectibles","order":60,"path":"folders/Sprites/Stage Elements/Stage Collectibles.yy",},
+    {"name":"Trapped Dees","order":1,"path":"folders/Sprites/Stage Elements/Stage Collectibles/Trapped Dees.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_Kirby_HatShadow_Bell_Modern_Hurt","order":25,"path":"sprites/spr_Kirby_HatShadow_Bell_Modern_Hurt/spr_Kirby_HatShadow_Bell_Modern_Hurt.yy",},

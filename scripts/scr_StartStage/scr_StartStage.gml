@@ -8,15 +8,11 @@ function scr_StartStage()
 	#endregion
 	
 	#region Stage Collectibles
-	if (!loaded)
+	switch (global.currentStage)
 	{
-		switch (global.currentStage)
-		{
-			case stages.greenGreens:
-			global.stageCollectibleMax = 4;
-			break;
-		}
-		loaded = true;
+		case stages.greenGreens:
+		global.stageCollectibleMax = 4;
+		break;
 	}
 	#endregion
 }

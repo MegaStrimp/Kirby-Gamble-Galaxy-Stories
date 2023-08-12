@@ -87,6 +87,7 @@ function scr_DebugSave()
 	global.beatChapter1 = true;
 	
 	global.extraModeUnlocked = true;
+	global.maykrUnlocked = true;
 	global.skylandsUnlocked = true;
 	global.gamblionUnlocked = true;
 	global.bitcrushedUnlocked = true;
