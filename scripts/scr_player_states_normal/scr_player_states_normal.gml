@@ -2028,7 +2028,7 @@ function scr_Player_States_Normal()
 			break;
 			
 			case playerAttacks.fireBack:
-			scr_Player_AttackPassive_FireNormal();
+			scr_Player_AttackPassive_FireBack();
 			break;
 			
 			case playerAttacks.fireWheel:

@@ -1279,6 +1279,8 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Halberd","folderPath":"folders/Sprites/Stage Elements/Pop Flower/Halberd.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Spike","folderPath":"folders/Sprites/Stage Elements/Spike.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Spring","folderPath":"folders/Sprites/Stage Elements/Spring.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Stage Collectibles","folderPath":"folders/Sprites/Stage Elements/Stage Collectibles.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Trapped Dees","folderPath":"folders/Sprites/Stage Elements/Stage Collectibles/Trapped Dees.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Stage Doors","folderPath":"folders/Sprites/Stage Elements/Stage Doors.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Egg Garden","folderPath":"folders/Sprites/Stage Elements/Stage Doors/Egg Garden.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Star Block","folderPath":"folders/Sprites/Stage Elements/Star Block.yy",},
@@ -1335,8 +1337,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"KSSU","folderPath":"folders/Tile Sets/Sweet Breeze/KSSU.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Green Greens","folderPath":"folders/Tile Sets/Sweet Breeze/KSSU/Green Greens.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Stage Collectibles","folderPath":"folders/Sprites/Stage Elements/Stage Collectibles.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Trapped Dees","folderPath":"folders/Sprites/Stage Elements/Stage Collectibles/Trapped Dees.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"ARIALUNI.TTF","CopyToMask":3035461389054378222,"filePath":"datafiles",},
