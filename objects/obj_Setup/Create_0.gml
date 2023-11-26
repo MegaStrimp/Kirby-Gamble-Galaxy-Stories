@@ -4,6 +4,12 @@
 randomize();
 #endregion
 
+#region Load Main Texture Pages
+scr_LoadTexturePage("Default");
+scr_LoadTexturePage("Characters");
+scr_LoadTexturePage("AbilityHats");
+#endregion
+
 #region Set Macros and Enums
 #macro gameView view_camera[0]
 

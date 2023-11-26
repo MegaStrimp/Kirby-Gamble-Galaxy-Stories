@@ -17,10 +17,11 @@ if (hbActive)
 	{
 		#region Mini-Boss
 		case 1:
+		case 2: //Temporary Flux Hbar
 		bossHbHp = max(bossHbHp,0);
 		if (!global.pause) healthbarBackHp = lerp(healthbarBackHp,bossHbHp,.025);
 		
-		if (sprBossIcon != -1) draw_sprite_ext(sprBossIcon,0,306 + bossHealthbarShakeX,7 + bossHealthbarShakeY,1,1,image_angle,image_blend,bossHealthbarAlpha);
+		if (sprBossIcon != -1) draw_sprite_ext(sprBossIcon,0,307 + bossHealthbarShakeX,8 + bossHealthbarShakeY,1,1,image_angle,image_blend,bossHealthbarAlpha);
 		draw_sprite_ext(spr_Healthbar_MiniBoss_Bg,0,333 + bossHealthbarShakeX,20 + bossHealthbarShakeY,1,1,image_angle,image_blend,bossHealthbarAlpha);
 		draw_sprite_part_ext(spr_Healthbar_MiniBoss_InnerBack,0,0,0,sprite_get_width(spr_Healthbar_MiniBoss_InnerBack) * (healthbarBackHp / hpMax),sprite_get_height(spr_Healthbar_MiniBoss_InnerBack),333 + bossHealthbarShakeX,20 + bossHealthbarShakeY,1,1,image_blend,bossHealthbarAlpha);
 		draw_sprite_part_ext(spr_Healthbar_MiniBoss_InnerFront,0,0,0,sprite_get_width(spr_Healthbar_MiniBoss_InnerFront) * (bossHbHp / hpMax),sprite_get_height(spr_Healthbar_MiniBoss_InnerFront),333 + bossHealthbarShakeX,20 + bossHealthbarShakeY,1,1,image_blend,bossHealthbarAlpha);
@@ -29,7 +30,7 @@ if (hbActive)
 		break;
 		#endregion
 		
-		#region Flux Mini-Boss
+		/*#region Flux Mini-Boss
 		case 2:
 		bossHbHp = max(bossHbHp,0);
 		if (!global.pause) healthbarBackHp = lerp(healthbarBackHp,bossHbHp,.025);
@@ -41,14 +42,14 @@ if (hbActive)
 		draw_sprite_ext(spr_Healthbar_Flux_Border,0,278 + bossHealthbarShakeX,4 + bossHealthbarShakeY,1,1,image_angle,image_blend,bossHealthbarAlpha);
 		if (sprBossText != -1) draw_sprite_ext(sprBossText,0,329 + bossHealthbarShakeX,7 + bossHealthbarShakeY,1,1,image_angle,image_blend,bossHealthbarAlpha);
 		break;
-		#endregion
+		#endregion*/
 		
 		#region Boss
 		case 3:
 		bossHbHp = max(bossHbHp,0);
 		if (!global.pause) healthbarBackHp = lerp(healthbarBackHp,bossHbHp,.025);
 		
-		if (sprBossIcon != -1) draw_sprite_ext(sprBossIcon,0,283 + bossHealthbarShakeX,9 + bossHealthbarShakeY,1,1,image_angle,image_blend,bossHealthbarAlpha);
+		if (sprBossIcon != -1) draw_sprite_ext(sprBossIcon,0,283 + bossHealthbarShakeX,8 + bossHealthbarShakeY,1,1,image_angle,image_blend,bossHealthbarAlpha);
 		draw_sprite_ext(spr_Healthbar_Boss_Bg,0,309 + bossHealthbarShakeX,20 + bossHealthbarShakeY,1,1,image_angle,image_blend,bossHealthbarAlpha);
 		draw_sprite_part_ext(spr_Healthbar_Boss_InnerBack,0,0,0,sprite_get_width(spr_Healthbar_Boss_InnerBack) * (healthbarBackHp / hpMax),sprite_get_height(spr_Healthbar_Boss_InnerBack),309 + bossHealthbarShakeX,20 + bossHealthbarShakeY,1,1,image_blend,bossHealthbarAlpha);
 		draw_sprite_part_ext(spr_Healthbar_Boss_InnerFront,0,0,0,sprite_get_width(spr_Healthbar_Boss_InnerFront) * (bossHbHp / hpMax),sprite_get_height(spr_Healthbar_Boss_InnerFront),309 + bossHealthbarShakeX,20 + bossHealthbarShakeY,1,1,image_blend,bossHealthbarAlpha);

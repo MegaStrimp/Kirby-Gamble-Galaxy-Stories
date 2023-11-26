@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Icons",
-    "path": "folders/Sprites/Hud/Healthbars/Icons.yy",
+    "name": "DL1",
+    "path": "folders/Sprites/Hud/Healthbars/Icons/DL1.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

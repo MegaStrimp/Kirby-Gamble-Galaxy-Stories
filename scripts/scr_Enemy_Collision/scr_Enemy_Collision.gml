@@ -98,18 +98,21 @@ function scr_Enemy_Collision()
 		}
 	}
 	
-	//Off Screen Turning
-	
-	if (offScreenTurning)
+	if (sprite_exists(mask_index))
 	{
-		if (x <= ((sprite_get_width(mask_index) / 2) + 1)) walkDirX = 1;
-		if (x >= (room_width - ((sprite_get_width(mask_index) / 2) + 1))) walkDirX = -1;
-		if (y <= ((sprite_get_height(mask_index) / 2) + 1)) walkDirY = 1;
-		if (y >= (room_height - ((sprite_get_height(mask_index) / 2) + 1))) walkDirY = -1;
+		//Off Screen Turning
+		
+		if (offScreenTurning)
+		{
+			if (x <= ((sprite_get_width(mask_index) / 2) + 1)) walkDirX = 1;
+			if (x >= (room_width - ((sprite_get_width(mask_index) / 2) + 1))) walkDirX = -1;
+			if (y <= ((sprite_get_height(mask_index) / 2) + 1)) walkDirY = 1;
+			if (y >= (room_height - ((sprite_get_height(mask_index) / 2) + 1))) walkDirY = -1;
+		}
+		
+		//Clamp Position
+		
+		if (clampPositionX) x = clamp(x,0 + (sprite_get_width(mask_index) / 2),room_width - (sprite_get_width(mask_index) / 2));
+		if (clampPositionY) y = clamp(y,0 + (sprite_get_height(mask_index) / 2),room_height + 32 + (sprite_get_height(mask_index) / 2));
 	}
-	
-	//Clamp Position
-	
-	if (clampPositionX) x = clamp(x,0 + (sprite_get_width(mask_index) / 2),room_width - (sprite_get_width(mask_index) / 2));
-	if (clampPositionY) y = clamp(y,0 + (sprite_get_height(mask_index) / 2),room_height + 32 + (sprite_get_height(mask_index) / 2));
 }

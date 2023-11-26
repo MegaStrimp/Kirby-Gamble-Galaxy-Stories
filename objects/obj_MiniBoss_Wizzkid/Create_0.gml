@@ -30,7 +30,7 @@ sprLaserProjStart = spr_Wizzkid_Normal_LaserProjStart;
 sprLaserProjLoop = spr_Wizzkid_Normal_LaserProjLoop;
 sprLaserProjParticle = spr_Wizzkid_Normal_LaserProjParticle;
 
-sprBossIcon = spr_Healthbar_Boss_Icon_Wizzkid;
+sprBossIcon = spr_Healthbar_Boss_Icon_GGS_Wizzkid;
 sprBossText = spr_Healthbar_Boss_Text_Wizzkid;
 #endregion
 

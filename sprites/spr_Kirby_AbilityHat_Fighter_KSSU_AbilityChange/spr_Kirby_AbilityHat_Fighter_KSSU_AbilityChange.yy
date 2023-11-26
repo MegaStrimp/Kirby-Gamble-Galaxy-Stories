@@ -91,8 +91,8 @@
   "swatchColours": null,
   "swfPrecision": 2.525,
   "textureGroupId": {
-    "name": "Characters",
-    "path": "texturegroups/Characters",
+    "name": "AbilityHats",
+    "path": "texturegroups/AbilityHats",
   },
   "type": 0,
   "VTile": false,

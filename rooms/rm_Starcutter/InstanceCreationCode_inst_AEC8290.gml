@@ -1,0 +1,1 @@
+moveWidth = 48

@@ -644,38 +644,54 @@ if (global.gamemode != gamemodes.gamblion)
 			break;
 		}
 		#endregion
-	
+		
 		#region Icons
 		if (hasCoopPointer)
 		{
 			playerAmount += 1;
 		
 			if ((characterPointer == playerCharacters.kirby) and (palettePointer == spr_Kirby_Normal_Palette_FriendlyPink)) palettePointer = spr_Hud_Palette_Lives_Kirby;
-		
+			
 			var icon = spr_Hud_Lives_Icon_Kirby;
-		
+			
 			switch (characterPointer)
 			{
 				case playerCharacters.kirby:
 				icon = spr_Hud_Lives_Icon_Kirby;
 				break;
-			
+				
 				case playerCharacters.gamble:
 				icon = spr_Hud_Lives_Icon_Gamble;
 				break;
-			
+				
+				case playerCharacters.metaKnight:
+				icon = spr_Hud_Lives_Icon_MetaKnight;
+				break;
+				
+				case playerCharacters.helper:
+				icon = spr_Hud_Lives_Icon_Helper;
+				break;
+				
 				case playerCharacters.gooey:
 				icon = spr_Hud_Lives_Icon_Gooey;
 				break;
+				
+				case playerCharacters.magolor:
+				icon = spr_Hud_Lives_Icon_Magolor;
+				break;
+				
+				case 666:
+				icon = spr_Hud_Lives_Icon_BandanaDee;
+				break;
 			}
-		
+			
 			if (global.shaders) pal_swap_set(palettePointer,1,false);
 			draw_sprite_ext(icon,0,livesPosX + sep,livesPosY,1,1,image_angle,image_blend,drawAlpha * livesAlpha);
 			if (global.shaders) pal_swap_reset();
 		}
 		#endregion
 	}
-
+	
 	#region Numbers
 	var livesFont = spr_Hud_Numbers;
 	if (global.playerLives == 999) livesFont = spr_Hud_Numbers_Gold;

@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Icons",
-    "path": "folders/Sprites/Hud/Healthbars/Icons.yy",
+    "name": "SMB",
+    "path": "folders/Sprites/Hud/Healthbars/Icons/SMB.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

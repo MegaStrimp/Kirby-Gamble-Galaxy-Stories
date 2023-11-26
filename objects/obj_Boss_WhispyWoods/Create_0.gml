@@ -24,7 +24,7 @@ sprGamble = spr_WhispyWoods_Normal_Gamble;
 sprGambleLeaf = spr_WhispyWoods_Normal_GambleLeaf;
 sprApple = spr_WhispyWoods_Normal_Apple;
 
-sprBossIcon = spr_Healthbar_Boss_Icon_WhispyWoods;
+sprBossIcon = spr_Healthbar_Boss_Icon_GGS_WhispyWoods;
 sprBossText = spr_Healthbar_Boss_Text_WhispyWoods;
 #endregion
 
